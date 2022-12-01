@@ -40,7 +40,7 @@ proto.cv.scanner.v1 = require('./scanner_pb.js');
  * @struct
  * @final
  */
-proto.cv.scanner.v1.CvScannerClient =
+proto.cv.scanner.v1.ScannerClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options.format = 'text';
@@ -66,7 +66,7 @@ proto.cv.scanner.v1.CvScannerClient =
  * @struct
  * @final
  */
-proto.cv.scanner.v1.CvScannerPromiseClient =
+proto.cv.scanner.v1.ScannerPromiseClient =
     function(hostname, credentials, options) {
   if (!options) options = {};
   options.format = 'text';
@@ -90,8 +90,8 @@ proto.cv.scanner.v1.CvScannerPromiseClient =
  *   !proto.cv.scanner.v1.ScanCVRequest,
  *   !proto.cv.scanner.v1.ScanCVResponse>}
  */
-const methodDescriptor_CvScanner_ScanCV = new grpc.web.MethodDescriptor(
-  '/cv.scanner.v1.CvScanner/ScanCV',
+const methodDescriptor_Scanner_ScanCV = new grpc.web.MethodDescriptor(
+  '/cv.scanner.v1.Scanner/ScanCV',
   grpc.web.MethodType.UNARY,
   proto.cv.scanner.v1.ScanCVRequest,
   proto.cv.scanner.v1.ScanCVResponse,
@@ -116,13 +116,13 @@ const methodDescriptor_CvScanner_ScanCV = new grpc.web.MethodDescriptor(
  * @return {!grpc.web.ClientReadableStream<!proto.cv.scanner.v1.ScanCVResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.cv.scanner.v1.CvScannerClient.prototype.scanCV =
+proto.cv.scanner.v1.ScannerClient.prototype.scanCV =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/cv.scanner.v1.CvScanner/ScanCV',
+      '/cv.scanner.v1.Scanner/ScanCV',
       request,
       metadata || {},
-      methodDescriptor_CvScanner_ScanCV,
+      methodDescriptor_Scanner_ScanCV,
       callback);
 };
 
@@ -135,13 +135,13 @@ proto.cv.scanner.v1.CvScannerClient.prototype.scanCV =
  * @return {!Promise<!proto.cv.scanner.v1.ScanCVResponse>}
  *     Promise that resolves to the response
  */
-proto.cv.scanner.v1.CvScannerPromiseClient.prototype.scanCV =
+proto.cv.scanner.v1.ScannerPromiseClient.prototype.scanCV =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/cv.scanner.v1.CvScanner/ScanCV',
+      '/cv.scanner.v1.Scanner/ScanCV',
       request,
       metadata || {},
-      methodDescriptor_CvScanner_ScanCV);
+      methodDescriptor_Scanner_ScanCV);
 };
 
 

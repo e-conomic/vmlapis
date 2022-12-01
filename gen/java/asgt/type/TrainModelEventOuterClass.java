@@ -201,7 +201,8 @@ public final class TrainModelEventOuterClass {
       }
 
       public static final int TYPE_FIELD_NUMBER = 1;
-      private volatile java.lang.Object type_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object type_ = "";
       /**
        * <code>string type = 1 [json_name = "type"];</code>
        * @return The type.
@@ -239,7 +240,8 @@ public final class TrainModelEventOuterClass {
       }
 
       public static final int PATH_FIELD_NUMBER = 2;
-      private volatile java.lang.Object path_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object path_ = "";
       /**
        * <code>string path = 2 [json_name = "path"];</code>
        * @return The path.
@@ -473,10 +475,9 @@ public final class TrainModelEventOuterClass {
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           type_ = "";
-
           path_ = "";
-
           return this;
         }
 
@@ -503,10 +504,19 @@ public final class TrainModelEventOuterClass {
         @java.lang.Override
         public asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact buildPartial() {
           asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact result = new asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact(this);
-          result.type_ = type_;
-          result.path_ = path_;
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.type_ = type_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.path_ = path_;
+          }
         }
 
         @java.lang.Override
@@ -555,10 +565,12 @@ public final class TrainModelEventOuterClass {
           if (other == asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.getDefaultInstance()) return this;
           if (!other.getType().isEmpty()) {
             type_ = other.type_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (!other.getPath().isEmpty()) {
             path_ = other.path_;
+            bitField0_ |= 0x00000002;
             onChanged();
           }
           this.mergeUnknownFields(other.getUnknownFields());
@@ -589,12 +601,12 @@ public final class TrainModelEventOuterClass {
                   break;
                 case 10: {
                   type_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 18: {
                   path_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 18
                 default: {
@@ -612,6 +624,7 @@ public final class TrainModelEventOuterClass {
           } // finally
           return this;
         }
+        private int bitField0_;
 
         private java.lang.Object type_ = "";
         /**
@@ -654,11 +667,9 @@ public final class TrainModelEventOuterClass {
          */
         public Builder setType(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           type_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -667,8 +678,8 @@ public final class TrainModelEventOuterClass {
          * @return This builder for chaining.
          */
         public Builder clearType() {
-          
           type_ = getDefaultInstance().getType();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -679,12 +690,10 @@ public final class TrainModelEventOuterClass {
          */
         public Builder setTypeBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           type_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -730,11 +739,9 @@ public final class TrainModelEventOuterClass {
          */
         public Builder setPath(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           path_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -743,8 +750,8 @@ public final class TrainModelEventOuterClass {
          * @return This builder for chaining.
          */
         public Builder clearPath() {
-          
           path_ = getDefaultInstance().getPath();
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
@@ -755,12 +762,10 @@ public final class TrainModelEventOuterClass {
          */
         public Builder setPathBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           path_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -851,11 +856,11 @@ public final class TrainModelEventOuterClass {
      */
     @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
-      return getDataset();
+      return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
 
     public static final int MODEL_VERSION_FIELD_NUMBER = 4;
-    private long modelVersion_;
+    private long modelVersion_ = 0L;
     /**
      * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
      * @return The modelVersion.
@@ -866,7 +871,8 @@ public final class TrainModelEventOuterClass {
     }
 
     public static final int STATUS_FIELD_NUMBER = 5;
-    private volatile java.lang.Object status_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object status_ = "";
     /**
      * <code>string status = 5 [json_name = "status"];</code>
      * @return The status.
@@ -904,7 +910,8 @@ public final class TrainModelEventOuterClass {
     }
 
     public static final int STATUS_MESSAGE_FIELD_NUMBER = 6;
-    private volatile java.lang.Object statusMessage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object statusMessage_ = "";
     /**
      * <code>string status_message = 6 [json_name = "statusMessage"];</code>
      * @return The statusMessage.
@@ -942,6 +949,7 @@ public final class TrainModelEventOuterClass {
     }
 
     public static final int ARTIFACTS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> artifacts_;
     /**
      * <code>repeated .asgt.type.TrainModelEvent.Artifact artifacts = 7 [json_name = "artifacts"];</code>
@@ -1219,25 +1227,22 @@ public final class TrainModelEventOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (datasetBuilder_ == null) {
-          dataset_ = null;
-        } else {
-          dataset_ = null;
+        bitField0_ = 0;
+        dataset_ = null;
+        if (datasetBuilder_ != null) {
+          datasetBuilder_.dispose();
           datasetBuilder_ = null;
         }
         modelVersion_ = 0L;
-
         status_ = "";
-
         statusMessage_ = "";
-
         if (artifactsBuilder_ == null) {
           artifacts_ = java.util.Collections.emptyList();
         } else {
           artifacts_ = null;
           artifactsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -1264,26 +1269,40 @@ public final class TrainModelEventOuterClass {
       @java.lang.Override
       public asgt.type.TrainModelEventOuterClass.TrainModelEvent buildPartial() {
         asgt.type.TrainModelEventOuterClass.TrainModelEvent result = new asgt.type.TrainModelEventOuterClass.TrainModelEvent(this);
-        int from_bitField0_ = bitField0_;
-        if (datasetBuilder_ == null) {
-          result.dataset_ = dataset_;
-        } else {
-          result.dataset_ = datasetBuilder_.build();
-        }
-        result.modelVersion_ = modelVersion_;
-        result.status_ = status_;
-        result.statusMessage_ = statusMessage_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.type.TrainModelEventOuterClass.TrainModelEvent result) {
         if (artifactsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             artifacts_ = java.util.Collections.unmodifiableList(artifacts_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.artifacts_ = artifacts_;
         } else {
           result.artifacts_ = artifactsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(asgt.type.TrainModelEventOuterClass.TrainModelEvent result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dataset_ = datasetBuilder_ == null
+              ? dataset_
+              : datasetBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.modelVersion_ = modelVersion_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.statusMessage_ = statusMessage_;
+        }
       }
 
       @java.lang.Override
@@ -1338,17 +1357,19 @@ public final class TrainModelEventOuterClass {
         }
         if (!other.getStatus().isEmpty()) {
           status_ = other.status_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getStatusMessage().isEmpty()) {
           statusMessage_ = other.statusMessage_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (artifactsBuilder_ == null) {
           if (!other.artifacts_.isEmpty()) {
             if (artifacts_.isEmpty()) {
               artifacts_ = other.artifacts_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureArtifactsIsMutable();
               artifacts_.addAll(other.artifacts_);
@@ -1361,7 +1382,7 @@ public final class TrainModelEventOuterClass {
               artifactsBuilder_.dispose();
               artifactsBuilder_ = null;
               artifacts_ = other.artifacts_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000010);
               artifactsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getArtifactsFieldBuilder() : null;
@@ -1400,22 +1421,22 @@ public final class TrainModelEventOuterClass {
                 input.readMessage(
                     getDatasetFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 32: {
                 modelVersion_ = input.readInt64();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 32
               case 42: {
                 status_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 42
               case 50: {
                 statusMessage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 50
               case 58: {
@@ -1456,7 +1477,7 @@ public final class TrainModelEventOuterClass {
        * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
-        return datasetBuilder_ != null || dataset_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
@@ -1478,11 +1499,11 @@ public final class TrainModelEventOuterClass {
             throw new NullPointerException();
           }
           dataset_ = value;
-          onChanged();
         } else {
           datasetBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1492,11 +1513,11 @@ public final class TrainModelEventOuterClass {
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
         if (datasetBuilder_ == null) {
           dataset_ = builderForValue.build();
-          onChanged();
         } else {
           datasetBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1504,38 +1525,38 @@ public final class TrainModelEventOuterClass {
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
-          if (dataset_ != null) {
-            dataset_ =
-              asgt.type.DatasetOuterClass.Dataset.newBuilder(dataset_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            dataset_ != null &&
+            dataset_ != asgt.type.DatasetOuterClass.Dataset.getDefaultInstance()) {
+            getDatasetBuilder().mergeFrom(value);
           } else {
             dataset_ = value;
           }
-          onChanged();
         } else {
           datasetBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder clearDataset() {
-        if (datasetBuilder_ == null) {
-          dataset_ = null;
-          onChanged();
-        } else {
-          dataset_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dataset_ = null;
+        if (datasetBuilder_ != null) {
+          datasetBuilder_.dispose();
           datasetBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDatasetFieldBuilder().getBuilder();
       }
@@ -1584,6 +1605,7 @@ public final class TrainModelEventOuterClass {
       public Builder setModelVersion(long value) {
         
         modelVersion_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1592,7 +1614,7 @@ public final class TrainModelEventOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearModelVersion() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         modelVersion_ = 0L;
         onChanged();
         return this;
@@ -1639,11 +1661,9 @@ public final class TrainModelEventOuterClass {
        */
       public Builder setStatus(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         status_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1652,8 +1672,8 @@ public final class TrainModelEventOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
         status_ = getDefaultInstance().getStatus();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1664,12 +1684,10 @@ public final class TrainModelEventOuterClass {
        */
       public Builder setStatusBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         status_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1715,11 +1733,9 @@ public final class TrainModelEventOuterClass {
        */
       public Builder setStatusMessage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         statusMessage_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1728,8 +1744,8 @@ public final class TrainModelEventOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStatusMessage() {
-        
         statusMessage_ = getDefaultInstance().getStatusMessage();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1740,12 +1756,10 @@ public final class TrainModelEventOuterClass {
        */
       public Builder setStatusMessageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         statusMessage_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1753,9 +1767,9 @@ public final class TrainModelEventOuterClass {
       private java.util.List<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact> artifacts_ =
         java.util.Collections.emptyList();
       private void ensureArtifactsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           artifacts_ = new java.util.ArrayList<asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact>(artifacts_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -1905,7 +1919,7 @@ public final class TrainModelEventOuterClass {
       public Builder clearArtifacts() {
         if (artifactsBuilder_ == null) {
           artifacts_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           artifactsBuilder_.clear();
@@ -1982,7 +1996,7 @@ public final class TrainModelEventOuterClass {
           artifactsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact, asgt.type.TrainModelEventOuterClass.TrainModelEvent.Artifact.Builder, asgt.type.TrainModelEventOuterClass.TrainModelEvent.ArtifactOrBuilder>(
                   artifacts_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           artifacts_ = null;

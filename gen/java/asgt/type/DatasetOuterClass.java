@@ -220,7 +220,8 @@ public final class DatasetOuterClass {
     }
 
     public static final int CONSUMER_FIELD_NUMBER = 1;
-    private volatile java.lang.Object consumer_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object consumer_ = "";
     /**
      * <code>string consumer = 1 [json_name = "consumer"];</code>
      * @return The consumer.
@@ -258,7 +259,8 @@ public final class DatasetOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <code>string name = 2 [json_name = "name"];</code>
      * @return The name.
@@ -296,7 +298,8 @@ public final class DatasetOuterClass {
     }
 
     public static final int TYPE_FIELD_NUMBER = 3;
-    private volatile java.lang.Object type_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
     /**
      * <code>string type = 3 [json_name = "type"];</code>
      * @return The type.
@@ -334,6 +337,7 @@ public final class DatasetOuterClass {
     }
 
     public static final int TAGS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 4 [json_name = "tags"];</code>
@@ -369,6 +373,7 @@ public final class DatasetOuterClass {
     }
 
     public static final int TARGETS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList targets_;
     /**
      * <code>repeated string targets = 5 [json_name = "targets"];</code>
@@ -426,7 +431,7 @@ public final class DatasetOuterClass {
      */
     @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
-      return getRetentionPolicy();
+      return retentionPolicy_ == null ? asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
 
     public static final int CREATED_AT_FIELD_NUMBER = 10;
@@ -452,7 +457,7 @@ public final class DatasetOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
-      return getCreatedAt();
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
 
     public static final int UPDATED_AT_FIELD_NUMBER = 11;
@@ -478,11 +483,11 @@ public final class DatasetOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
-      return getUpdatedAt();
+      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
     }
 
     public static final int SIZE_FIELD_NUMBER = 12;
-    private long size_;
+    private long size_ = 0L;
     /**
      * <pre>
      * Number of samples in the dataset reflecting added entries that meet the retention policy
@@ -519,7 +524,7 @@ public final class DatasetOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getTruncatedAtOrBuilder() {
-      return getTruncatedAt();
+      return truncatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : truncatedAt_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -839,40 +844,33 @@ public final class DatasetOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         consumer_ = "";
-
         name_ = "";
-
         type_ = "";
-
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
-        if (retentionPolicyBuilder_ == null) {
-          retentionPolicy_ = null;
-        } else {
-          retentionPolicy_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        retentionPolicy_ = null;
+        if (retentionPolicyBuilder_ != null) {
+          retentionPolicyBuilder_.dispose();
           retentionPolicyBuilder_ = null;
         }
-        if (createdAtBuilder_ == null) {
-          createdAt_ = null;
-        } else {
-          createdAt_ = null;
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
           createdAtBuilder_ = null;
         }
-        if (updatedAtBuilder_ == null) {
-          updatedAt_ = null;
-        } else {
-          updatedAt_ = null;
+        updatedAt_ = null;
+        if (updatedAtBuilder_ != null) {
+          updatedAtBuilder_.dispose();
           updatedAtBuilder_ = null;
         }
         size_ = 0L;
-
-        if (truncatedAtBuilder_ == null) {
-          truncatedAt_ = null;
-        } else {
-          truncatedAt_ = null;
+        truncatedAt_ = null;
+        if (truncatedAtBuilder_ != null) {
+          truncatedAtBuilder_.dispose();
           truncatedAtBuilder_ = null;
         }
         return this;
@@ -901,43 +899,59 @@ public final class DatasetOuterClass {
       @java.lang.Override
       public asgt.type.DatasetOuterClass.Dataset buildPartial() {
         asgt.type.DatasetOuterClass.Dataset result = new asgt.type.DatasetOuterClass.Dataset(this);
-        int from_bitField0_ = bitField0_;
-        result.consumer_ = consumer_;
-        result.name_ = name_;
-        result.type_ = type_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.tags_ = tags_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          targets_ = targets_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.targets_ = targets_;
-        if (retentionPolicyBuilder_ == null) {
-          result.retentionPolicy_ = retentionPolicy_;
-        } else {
-          result.retentionPolicy_ = retentionPolicyBuilder_.build();
-        }
-        if (createdAtBuilder_ == null) {
-          result.createdAt_ = createdAt_;
-        } else {
-          result.createdAt_ = createdAtBuilder_.build();
-        }
-        if (updatedAtBuilder_ == null) {
-          result.updatedAt_ = updatedAt_;
-        } else {
-          result.updatedAt_ = updatedAtBuilder_.build();
-        }
-        result.size_ = size_;
-        if (truncatedAtBuilder_ == null) {
-          result.truncatedAt_ = truncatedAt_;
-        } else {
-          result.truncatedAt_ = truncatedAtBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.type.DatasetOuterClass.Dataset result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.tags_ = tags_;
+        if (((bitField0_ & 0x00000010) != 0)) {
+          targets_ = targets_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.targets_ = targets_;
+      }
+
+      private void buildPartial0(asgt.type.DatasetOuterClass.Dataset result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.consumer_ = consumer_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.retentionPolicy_ = retentionPolicyBuilder_ == null
+              ? retentionPolicy_
+              : retentionPolicyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.createdAt_ = createdAtBuilder_ == null
+              ? createdAt_
+              : createdAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.updatedAt_ = updatedAtBuilder_ == null
+              ? updatedAt_
+              : updatedAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.size_ = size_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.truncatedAt_ = truncatedAtBuilder_ == null
+              ? truncatedAt_
+              : truncatedAtBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -986,20 +1000,23 @@ public final class DatasetOuterClass {
         if (other == asgt.type.DatasetOuterClass.Dataset.getDefaultInstance()) return this;
         if (!other.getConsumer().isEmpty()) {
           consumer_ = other.consumer_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -1009,7 +1026,7 @@ public final class DatasetOuterClass {
         if (!other.targets_.isEmpty()) {
           if (targets_.isEmpty()) {
             targets_ = other.targets_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureTargetsIsMutable();
             targets_.addAll(other.targets_);
@@ -1059,17 +1076,17 @@ public final class DatasetOuterClass {
                 break;
               case 10: {
                 consumer_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 type_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
@@ -1088,33 +1105,33 @@ public final class DatasetOuterClass {
                 input.readMessage(
                     getRetentionPolicyFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 74
               case 82: {
                 input.readMessage(
                     getCreatedAtFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 82
               case 90: {
                 input.readMessage(
                     getUpdatedAtFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 90
               case 96: {
                 size_ = input.readInt64();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 96
               case 106: {
                 input.readMessage(
                     getTruncatedAtFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 106
               default: {
@@ -1175,11 +1192,9 @@ public final class DatasetOuterClass {
        */
       public Builder setConsumer(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         consumer_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1188,8 +1203,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearConsumer() {
-        
         consumer_ = getDefaultInstance().getConsumer();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1200,12 +1215,10 @@ public final class DatasetOuterClass {
        */
       public Builder setConsumerBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         consumer_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1251,11 +1264,9 @@ public final class DatasetOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1264,8 +1275,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1276,12 +1287,10 @@ public final class DatasetOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1327,11 +1336,9 @@ public final class DatasetOuterClass {
        */
       public Builder setType(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         type_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1340,8 +1347,8 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        
         type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1352,21 +1359,19 @@ public final class DatasetOuterClass {
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         type_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000008;
          }
       }
       /**
@@ -1409,10 +1414,8 @@ public final class DatasetOuterClass {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.set(index, value);
         onChanged();
         return this;
@@ -1424,10 +1427,8 @@ public final class DatasetOuterClass {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
         return this;
@@ -1451,7 +1452,7 @@ public final class DatasetOuterClass {
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1462,10 +1463,8 @@ public final class DatasetOuterClass {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
@@ -1474,9 +1473,9 @@ public final class DatasetOuterClass {
 
       private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTargetsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000010;
          }
       }
       /**
@@ -1519,10 +1518,8 @@ public final class DatasetOuterClass {
        */
       public Builder setTargets(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTargetsIsMutable();
         targets_.set(index, value);
         onChanged();
         return this;
@@ -1534,10 +1531,8 @@ public final class DatasetOuterClass {
        */
       public Builder addTargets(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTargetsIsMutable();
         targets_.add(value);
         onChanged();
         return this;
@@ -1561,7 +1556,7 @@ public final class DatasetOuterClass {
        */
       public Builder clearTargets() {
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -1572,10 +1567,8 @@ public final class DatasetOuterClass {
        */
       public Builder addTargetsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTargetsIsMutable();
         targets_.add(value);
         onChanged();
@@ -1590,7 +1583,7 @@ public final class DatasetOuterClass {
        * @return Whether the retentionPolicy field is set.
        */
       public boolean hasRetentionPolicy() {
-        return retentionPolicyBuilder_ != null || retentionPolicy_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
@@ -1612,11 +1605,11 @@ public final class DatasetOuterClass {
             throw new NullPointerException();
           }
           retentionPolicy_ = value;
-          onChanged();
         } else {
           retentionPolicyBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1626,11 +1619,11 @@ public final class DatasetOuterClass {
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder builderForValue) {
         if (retentionPolicyBuilder_ == null) {
           retentionPolicy_ = builderForValue.build();
-          onChanged();
         } else {
           retentionPolicyBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1638,38 +1631,38 @@ public final class DatasetOuterClass {
        */
       public Builder mergeRetentionPolicy(asgt.type.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
-          if (retentionPolicy_ != null) {
-            retentionPolicy_ =
-              asgt.type.RetentionPolicyOuterClass.RetentionPolicy.newBuilder(retentionPolicy_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            retentionPolicy_ != null &&
+            retentionPolicy_ != asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance()) {
+            getRetentionPolicyBuilder().mergeFrom(value);
           } else {
             retentionPolicy_ = value;
           }
-          onChanged();
         } else {
           retentionPolicyBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
        */
       public Builder clearRetentionPolicy() {
-        if (retentionPolicyBuilder_ == null) {
-          retentionPolicy_ = null;
-          onChanged();
-        } else {
-          retentionPolicy_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        retentionPolicy_ = null;
+        if (retentionPolicyBuilder_ != null) {
+          retentionPolicyBuilder_.dispose();
           retentionPolicyBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 9 [json_name = "retentionPolicy"];</code>
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder getRetentionPolicyBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getRetentionPolicyFieldBuilder().getBuilder();
       }
@@ -1709,7 +1702,7 @@ public final class DatasetOuterClass {
        * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
-        return createdAtBuilder_ != null || createdAt_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
@@ -1731,11 +1724,11 @@ public final class DatasetOuterClass {
             throw new NullPointerException();
           }
           createdAt_ = value;
-          onChanged();
         } else {
           createdAtBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1745,11 +1738,11 @@ public final class DatasetOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdAtBuilder_ == null) {
           createdAt_ = builderForValue.build();
-          onChanged();
         } else {
           createdAtBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1757,38 +1750,38 @@ public final class DatasetOuterClass {
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
-          if (createdAt_ != null) {
-            createdAt_ =
-              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            createdAt_ != null &&
+            createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedAtBuilder().mergeFrom(value);
           } else {
             createdAt_ = value;
           }
-          onChanged();
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
        */
       public Builder clearCreatedAt() {
-        if (createdAtBuilder_ == null) {
-          createdAt_ = null;
-          onChanged();
-        } else {
-          createdAt_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
           createdAtBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 10 [json_name = "createdAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getCreatedAtFieldBuilder().getBuilder();
       }
@@ -1828,7 +1821,7 @@ public final class DatasetOuterClass {
        * @return Whether the updatedAt field is set.
        */
       public boolean hasUpdatedAt() {
-        return updatedAtBuilder_ != null || updatedAt_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
@@ -1850,11 +1843,11 @@ public final class DatasetOuterClass {
             throw new NullPointerException();
           }
           updatedAt_ = value;
-          onChanged();
         } else {
           updatedAtBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -1864,11 +1857,11 @@ public final class DatasetOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (updatedAtBuilder_ == null) {
           updatedAt_ = builderForValue.build();
-          onChanged();
         } else {
           updatedAtBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -1876,38 +1869,38 @@ public final class DatasetOuterClass {
        */
       public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
         if (updatedAtBuilder_ == null) {
-          if (updatedAt_ != null) {
-            updatedAt_ =
-              com.google.protobuf.Timestamp.newBuilder(updatedAt_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            updatedAt_ != null &&
+            updatedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getUpdatedAtBuilder().mergeFrom(value);
           } else {
             updatedAt_ = value;
           }
-          onChanged();
         } else {
           updatedAtBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
        */
       public Builder clearUpdatedAt() {
-        if (updatedAtBuilder_ == null) {
-          updatedAt_ = null;
-          onChanged();
-        } else {
-          updatedAt_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        updatedAt_ = null;
+        if (updatedAtBuilder_ != null) {
+          updatedAtBuilder_.dispose();
           updatedAtBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp updated_at = 11 [json_name = "updatedAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getUpdatedAtFieldBuilder().getBuilder();
       }
@@ -1964,6 +1957,7 @@ public final class DatasetOuterClass {
       public Builder setSize(long value) {
         
         size_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -1976,7 +1970,7 @@ public final class DatasetOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSize() {
-        
+        bitField0_ = (bitField0_ & ~0x00000100);
         size_ = 0L;
         onChanged();
         return this;
@@ -1990,7 +1984,7 @@ public final class DatasetOuterClass {
        * @return Whether the truncatedAt field is set.
        */
       public boolean hasTruncatedAt() {
-        return truncatedAtBuilder_ != null || truncatedAt_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
@@ -2012,11 +2006,11 @@ public final class DatasetOuterClass {
             throw new NullPointerException();
           }
           truncatedAt_ = value;
-          onChanged();
         } else {
           truncatedAtBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -2026,11 +2020,11 @@ public final class DatasetOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (truncatedAtBuilder_ == null) {
           truncatedAt_ = builderForValue.build();
-          onChanged();
         } else {
           truncatedAtBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -2038,38 +2032,38 @@ public final class DatasetOuterClass {
        */
       public Builder mergeTruncatedAt(com.google.protobuf.Timestamp value) {
         if (truncatedAtBuilder_ == null) {
-          if (truncatedAt_ != null) {
-            truncatedAt_ =
-              com.google.protobuf.Timestamp.newBuilder(truncatedAt_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            truncatedAt_ != null &&
+            truncatedAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getTruncatedAtBuilder().mergeFrom(value);
           } else {
             truncatedAt_ = value;
           }
-          onChanged();
         } else {
           truncatedAtBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
        */
       public Builder clearTruncatedAt() {
-        if (truncatedAtBuilder_ == null) {
-          truncatedAt_ = null;
-          onChanged();
-        } else {
-          truncatedAt_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        truncatedAt_ = null;
+        if (truncatedAtBuilder_ != null) {
+          truncatedAtBuilder_.dispose();
           truncatedAtBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp truncated_at = 13 [json_name = "truncatedAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getTruncatedAtBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getTruncatedAtFieldBuilder().getBuilder();
       }

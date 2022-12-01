@@ -5,7 +5,7 @@ import grpc
 from cv.scanner.v1 import scanner_pb2 as cv_dot_scanner_dot_v1_dot_scanner__pb2
 
 
-class CvScannerStub(object):
+class ScannerStub(object):
     """Missing associated documentation comment in .proto file."""
 
     def __init__(self, channel):
@@ -15,13 +15,13 @@ class CvScannerStub(object):
             channel: A grpc.Channel.
         """
         self.ScanCV = channel.unary_unary(
-                '/cv.scanner.v1.CvScanner/ScanCV',
+                '/cv.scanner.v1.Scanner/ScanCV',
                 request_serializer=cv_dot_scanner_dot_v1_dot_scanner__pb2.ScanCVRequest.SerializeToString,
                 response_deserializer=cv_dot_scanner_dot_v1_dot_scanner__pb2.ScanCVResponse.FromString,
                 )
 
 
-class CvScannerServicer(object):
+class ScannerServicer(object):
     """Missing associated documentation comment in .proto file."""
 
     def ScanCV(self, request, context):
@@ -31,7 +31,7 @@ class CvScannerServicer(object):
         raise NotImplementedError('Method not implemented!')
 
 
-def add_CvScannerServicer_to_server(servicer, server):
+def add_ScannerServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'ScanCV': grpc.unary_unary_rpc_method_handler(
                     servicer.ScanCV,
@@ -40,12 +40,12 @@ def add_CvScannerServicer_to_server(servicer, server):
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
-            'cv.scanner.v1.CvScanner', rpc_method_handlers)
+            'cv.scanner.v1.Scanner', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
 
 
  # This class is part of an EXPERIMENTAL API.
-class CvScanner(object):
+class Scanner(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
@@ -59,7 +59,7 @@ class CvScanner(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/cv.scanner.v1.CvScanner/ScanCV',
+        return grpc.experimental.unary_unary(request, target, '/cv.scanner.v1.Scanner/ScanCV',
             cv_dot_scanner_dot_v1_dot_scanner__pb2.ScanCVRequest.SerializeToString,
             cv_dot_scanner_dot_v1_dot_scanner__pb2.ScanCVResponse.FromString,
             options, channel_credentials,

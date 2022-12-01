@@ -3,7 +3,7 @@ import * as grpcWeb from 'grpc-web';
 import * as cv_scanner_v1_scanner_pb from '../../../cv/scanner/v1/scanner_pb';
 
 
-export class CvScannerClient {
+export class ScannerClient {
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
                options?: null | { [index: string]: any; });
@@ -17,7 +17,7 @@ export class CvScannerClient {
 
 }
 
-export class CvScannerPromiseClient {
+export class ScannerPromiseClient {
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
                options?: null | { [index: string]: any; });

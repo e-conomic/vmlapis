@@ -46,7 +46,6 @@ public interface FeaturesOrBuilder extends
    *
    * <code>map&lt;string, .tensorflow.Feature&gt; feature = 1 [json_name = "feature"];</code>
    */
-
   /* nullable */
 org.tensorflow.example.Feature getFeatureOrDefault(
       java.lang.String key,
@@ -59,7 +58,6 @@ org.tensorflow.example.Feature defaultValue);
    *
    * <code>map&lt;string, .tensorflow.Feature&gt; feature = 1 [json_name = "feature"];</code>
    */
-
   org.tensorflow.example.Feature getFeatureOrThrow(
       java.lang.String key);
 }

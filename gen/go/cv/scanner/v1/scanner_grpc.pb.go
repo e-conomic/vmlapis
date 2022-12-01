@@ -18,84 +18,84 @@ import (
 // Requires gRPC-Go v1.32.0 or later.
 const _ = grpc.SupportPackageIsVersion7
 
-// CvScannerClient is the client API for CvScanner service.
+// ScannerClient is the client API for Scanner service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
-type CvScannerClient interface {
+type ScannerClient interface {
 	ScanCV(ctx context.Context, in *ScanCVRequest, opts ...grpc.CallOption) (*ScanCVResponse, error)
 }
 
-type cvScannerClient struct {
+type scannerClient struct {
 	cc grpc.ClientConnInterface
 }
 
-func NewCvScannerClient(cc grpc.ClientConnInterface) CvScannerClient {
-	return &cvScannerClient{cc}
+func NewScannerClient(cc grpc.ClientConnInterface) ScannerClient {
+	return &scannerClient{cc}
 }
 
-func (c *cvScannerClient) ScanCV(ctx context.Context, in *ScanCVRequest, opts ...grpc.CallOption) (*ScanCVResponse, error) {
+func (c *scannerClient) ScanCV(ctx context.Context, in *ScanCVRequest, opts ...grpc.CallOption) (*ScanCVResponse, error) {
 	out := new(ScanCVResponse)
-	err := c.cc.Invoke(ctx, "/cv.scanner.v1.CvScanner/ScanCV", in, out, opts...)
+	err := c.cc.Invoke(ctx, "/cv.scanner.v1.Scanner/ScanCV", in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
 	return out, nil
 }
 
-// CvScannerServer is the server API for CvScanner service.
-// All implementations should embed UnimplementedCvScannerServer
+// ScannerServer is the server API for Scanner service.
+// All implementations should embed UnimplementedScannerServer
 // for forward compatibility
-type CvScannerServer interface {
+type ScannerServer interface {
 	ScanCV(context.Context, *ScanCVRequest) (*ScanCVResponse, error)
 }
 
-// UnimplementedCvScannerServer should be embedded to have forward compatible implementations.
-type UnimplementedCvScannerServer struct {
+// UnimplementedScannerServer should be embedded to have forward compatible implementations.
+type UnimplementedScannerServer struct {
 }
 
-func (UnimplementedCvScannerServer) ScanCV(context.Context, *ScanCVRequest) (*ScanCVResponse, error) {
+func (UnimplementedScannerServer) ScanCV(context.Context, *ScanCVRequest) (*ScanCVResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method ScanCV not implemented")
 }
 
-// UnsafeCvScannerServer may be embedded to opt out of forward compatibility for this service.
-// Use of this interface is not recommended, as added methods to CvScannerServer will
+// UnsafeScannerServer may be embedded to opt out of forward compatibility for this service.
+// Use of this interface is not recommended, as added methods to ScannerServer will
 // result in compilation errors.
-type UnsafeCvScannerServer interface {
-	mustEmbedUnimplementedCvScannerServer()
+type UnsafeScannerServer interface {
+	mustEmbedUnimplementedScannerServer()
 }
 
-func RegisterCvScannerServer(s grpc.ServiceRegistrar, srv CvScannerServer) {
-	s.RegisterService(&CvScanner_ServiceDesc, srv)
+func RegisterScannerServer(s grpc.ServiceRegistrar, srv ScannerServer) {
+	s.RegisterService(&Scanner_ServiceDesc, srv)
 }
 
-func _CvScanner_ScanCV_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _Scanner_ScanCV_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(ScanCVRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(CvScannerServer).ScanCV(ctx, in)
+		return srv.(ScannerServer).ScanCV(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: "/cv.scanner.v1.CvScanner/ScanCV",
+		FullMethod: "/cv.scanner.v1.Scanner/ScanCV",
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(CvScannerServer).ScanCV(ctx, req.(*ScanCVRequest))
+		return srv.(ScannerServer).ScanCV(ctx, req.(*ScanCVRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
 
-// CvScanner_ServiceDesc is the grpc.ServiceDesc for CvScanner service.
+// Scanner_ServiceDesc is the grpc.ServiceDesc for Scanner service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
-var CvScanner_ServiceDesc = grpc.ServiceDesc{
-	ServiceName: "cv.scanner.v1.CvScanner",
-	HandlerType: (*CvScannerServer)(nil),
+var Scanner_ServiceDesc = grpc.ServiceDesc{
+	ServiceName: "cv.scanner.v1.Scanner",
+	HandlerType: (*ScannerServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
 			MethodName: "ScanCV",
-			Handler:    _CvScanner_ScanCV_Handler,
+			Handler:    _Scanner_ScanCV_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -250,7 +250,7 @@ public final class ModelOuterClass {
     }
 
     public static final int VERSION_FIELD_NUMBER = 3;
-    private long version_;
+    private long version_ = 0L;
     /**
      * <code>int64 version = 3 [json_name = "version", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The version.
@@ -283,11 +283,11 @@ public final class ModelOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
-      return getCreatedAt();
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
 
     public static final int DATASET_SIZE_FIELD_NUMBER = 5;
-    private int datasetSize_;
+    private int datasetSize_ = 0;
     /**
      * <code>int32 dataset_size = 5 [json_name = "datasetSize", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The datasetSize.
@@ -298,7 +298,7 @@ public final class ModelOuterClass {
     }
 
     public static final int TRAINING_SIZE_FIELD_NUMBER = 6;
-    private int trainingSize_;
+    private int trainingSize_ = 0;
     /**
      * <code>int32 training_size = 6 [json_name = "trainingSize", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The trainingSize.
@@ -309,6 +309,7 @@ public final class ModelOuterClass {
     }
 
     public static final int CONFIDENCE_SCORES_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> confidenceScores_;
     /**
      * <code>repeated .asgt.type.TargetMetrics confidence_scores = 7 [json_name = "confidenceScores", (.gen_bq_schema.bigquery) = { ... }</code>
@@ -349,7 +350,7 @@ public final class ModelOuterClass {
     }
 
     public static final int INPUT_TYPE_FIELD_NUMBER = 8;
-    private int inputType_;
+    private int inputType_ = 0;
     /**
      * <code>.asgt.type.Model.InputType input_type = 8 [json_name = "inputType"];</code>
      * @return The enum numeric value on the wire for inputType.
@@ -362,13 +363,13 @@ public final class ModelOuterClass {
      * @return The inputType.
      */
     @java.lang.Override public asgt.type.ModelOuterClass.Model.InputType getInputType() {
-      @SuppressWarnings("deprecation")
-      asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.valueOf(inputType_);
+      asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.forNumber(inputType_);
       return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
     }
 
     public static final int DATASET_TYPE_FIELD_NUMBER = 9;
-    private volatile java.lang.Object datasetType_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object datasetType_ = "";
     /**
      * <code>string dataset_type = 9 [json_name = "datasetType"];</code>
      * @return The datasetType.
@@ -665,29 +666,24 @@ public final class ModelOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         version_ = 0L;
-
-        if (createdAtBuilder_ == null) {
-          createdAt_ = null;
-        } else {
-          createdAt_ = null;
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
           createdAtBuilder_ = null;
         }
         datasetSize_ = 0;
-
         trainingSize_ = 0;
-
         if (confidenceScoresBuilder_ == null) {
           confidenceScores_ = java.util.Collections.emptyList();
         } else {
           confidenceScores_ = null;
           confidenceScoresBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000010);
         inputType_ = 0;
-
         datasetType_ = "";
-
         return this;
       }
 
@@ -714,28 +710,46 @@ public final class ModelOuterClass {
       @java.lang.Override
       public asgt.type.ModelOuterClass.Model buildPartial() {
         asgt.type.ModelOuterClass.Model result = new asgt.type.ModelOuterClass.Model(this);
-        int from_bitField0_ = bitField0_;
-        result.version_ = version_;
-        if (createdAtBuilder_ == null) {
-          result.createdAt_ = createdAt_;
-        } else {
-          result.createdAt_ = createdAtBuilder_.build();
-        }
-        result.datasetSize_ = datasetSize_;
-        result.trainingSize_ = trainingSize_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.type.ModelOuterClass.Model result) {
         if (confidenceScoresBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             confidenceScores_ = java.util.Collections.unmodifiableList(confidenceScores_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.confidenceScores_ = confidenceScores_;
         } else {
           result.confidenceScores_ = confidenceScoresBuilder_.build();
         }
-        result.inputType_ = inputType_;
-        result.datasetType_ = datasetType_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(asgt.type.ModelOuterClass.Model result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.version_ = version_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.createdAt_ = createdAtBuilder_ == null
+              ? createdAt_
+              : createdAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.datasetSize_ = datasetSize_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.trainingSize_ = trainingSize_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.inputType_ = inputType_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.datasetType_ = datasetType_;
+        }
       }
 
       @java.lang.Override
@@ -798,7 +812,7 @@ public final class ModelOuterClass {
           if (!other.confidenceScores_.isEmpty()) {
             if (confidenceScores_.isEmpty()) {
               confidenceScores_ = other.confidenceScores_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureConfidenceScoresIsMutable();
               confidenceScores_.addAll(other.confidenceScores_);
@@ -811,7 +825,7 @@ public final class ModelOuterClass {
               confidenceScoresBuilder_.dispose();
               confidenceScoresBuilder_ = null;
               confidenceScores_ = other.confidenceScores_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000010);
               confidenceScoresBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getConfidenceScoresFieldBuilder() : null;
@@ -825,6 +839,7 @@ public final class ModelOuterClass {
         }
         if (!other.getDatasetType().isEmpty()) {
           datasetType_ = other.datasetType_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -855,24 +870,24 @@ public final class ModelOuterClass {
                 break;
               case 24: {
                 version_ = input.readInt64();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 24
               case 34: {
                 input.readMessage(
                     getCreatedAtFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 34
               case 40: {
                 datasetSize_ = input.readInt32();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 40
               case 48: {
                 trainingSize_ = input.readInt32();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 48
               case 58: {
@@ -890,12 +905,12 @@ public final class ModelOuterClass {
               } // case 58
               case 64: {
                 inputType_ = input.readEnum();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 64
               case 74: {
                 datasetType_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 74
               default: {
@@ -932,6 +947,7 @@ public final class ModelOuterClass {
       public Builder setVersion(long value) {
         
         version_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -940,7 +956,7 @@ public final class ModelOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         version_ = 0L;
         onChanged();
         return this;
@@ -954,7 +970,7 @@ public final class ModelOuterClass {
        * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
-        return createdAtBuilder_ != null || createdAt_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
@@ -976,11 +992,11 @@ public final class ModelOuterClass {
             throw new NullPointerException();
           }
           createdAt_ = value;
-          onChanged();
         } else {
           createdAtBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -990,11 +1006,11 @@ public final class ModelOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdAtBuilder_ == null) {
           createdAt_ = builderForValue.build();
-          onChanged();
         } else {
           createdAtBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1002,38 +1018,38 @@ public final class ModelOuterClass {
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
-          if (createdAt_ != null) {
-            createdAt_ =
-              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            createdAt_ != null &&
+            createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedAtBuilder().mergeFrom(value);
           } else {
             createdAt_ = value;
           }
-          onChanged();
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
        */
       public Builder clearCreatedAt() {
-        if (createdAtBuilder_ == null) {
-          createdAt_ = null;
-          onChanged();
-        } else {
-          createdAt_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
           createdAtBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 4 [json_name = "createdAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getCreatedAtFieldBuilder().getBuilder();
       }
@@ -1082,6 +1098,7 @@ public final class ModelOuterClass {
       public Builder setDatasetSize(int value) {
         
         datasetSize_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1090,7 +1107,7 @@ public final class ModelOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDatasetSize() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         datasetSize_ = 0;
         onChanged();
         return this;
@@ -1113,6 +1130,7 @@ public final class ModelOuterClass {
       public Builder setTrainingSize(int value) {
         
         trainingSize_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1121,7 +1139,7 @@ public final class ModelOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTrainingSize() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         trainingSize_ = 0;
         onChanged();
         return this;
@@ -1130,9 +1148,9 @@ public final class ModelOuterClass {
       private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> confidenceScores_ =
         java.util.Collections.emptyList();
       private void ensureConfidenceScoresIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           confidenceScores_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics>(confidenceScores_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -1282,7 +1300,7 @@ public final class ModelOuterClass {
       public Builder clearConfidenceScores() {
         if (confidenceScoresBuilder_ == null) {
           confidenceScores_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           confidenceScoresBuilder_.clear();
@@ -1359,7 +1377,7 @@ public final class ModelOuterClass {
           confidenceScoresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder>(
                   confidenceScores_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           confidenceScores_ = null;
@@ -1381,8 +1399,8 @@ public final class ModelOuterClass {
        * @return This builder for chaining.
        */
       public Builder setInputTypeValue(int value) {
-        
         inputType_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1392,8 +1410,7 @@ public final class ModelOuterClass {
        */
       @java.lang.Override
       public asgt.type.ModelOuterClass.Model.InputType getInputType() {
-        @SuppressWarnings("deprecation")
-        asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.valueOf(inputType_);
+        asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.forNumber(inputType_);
         return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
       }
       /**
@@ -1405,7 +1422,7 @@ public final class ModelOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000020;
         inputType_ = value.getNumber();
         onChanged();
         return this;
@@ -1415,7 +1432,7 @@ public final class ModelOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearInputType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         inputType_ = 0;
         onChanged();
         return this;
@@ -1462,11 +1479,9 @@ public final class ModelOuterClass {
        */
       public Builder setDatasetType(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         datasetType_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1475,8 +1490,8 @@ public final class ModelOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDatasetType() {
-        
         datasetType_ = getDefaultInstance().getDatasetType();
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -1487,12 +1502,10 @@ public final class ModelOuterClass {
        */
       public Builder setDatasetTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         datasetType_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }

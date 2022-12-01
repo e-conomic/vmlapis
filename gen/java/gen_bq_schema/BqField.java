@@ -155,7 +155,7 @@ public final class BqField {
     }
 
     public static final int REQUIRE_FIELD_NUMBER = 1;
-    private boolean require_;
+    private boolean require_ = false;
     /**
      * <pre>
      * Flag to specify that a field should be marked as 'REQUIRED' when
@@ -171,7 +171,8 @@ public final class BqField {
     }
 
     public static final int TYPE_OVERRIDE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object typeOverride_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object typeOverride_ = "";
     /**
      * <pre>
      * Optionally override whatever type is resolved by the schema
@@ -223,7 +224,7 @@ public final class BqField {
     }
 
     public static final int IGNORE_FIELD_NUMBER = 3;
-    private boolean ignore_;
+    private boolean ignore_ = false;
     /**
      * <pre>
      * Optionally omit a field from BigQuery schema.
@@ -238,7 +239,8 @@ public final class BqField {
     }
 
     public static final int DESCRIPTION_FIELD_NUMBER = 4;
-    private volatile java.lang.Object description_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object description_ = "";
     /**
      * <pre>
      * Set the description for a field in BigQuery schema.
@@ -284,7 +286,8 @@ public final class BqField {
     }
 
     public static final int NAME_FIELD_NUMBER = 5;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * Customize the name of the field in the BigQuery schema.
@@ -565,16 +568,12 @@ public final class BqField {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         require_ = false;
-
         typeOverride_ = "";
-
         ignore_ = false;
-
         description_ = "";
-
         name_ = "";
-
         return this;
       }
 
@@ -601,13 +600,28 @@ public final class BqField {
       @java.lang.Override
       public gen_bq_schema.BqField.BigQueryFieldOptions buildPartial() {
         gen_bq_schema.BqField.BigQueryFieldOptions result = new gen_bq_schema.BqField.BigQueryFieldOptions(this);
-        result.require_ = require_;
-        result.typeOverride_ = typeOverride_;
-        result.ignore_ = ignore_;
-        result.description_ = description_;
-        result.name_ = name_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(gen_bq_schema.BqField.BigQueryFieldOptions result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.require_ = require_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.typeOverride_ = typeOverride_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.ignore_ = ignore_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.description_ = description_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.name_ = name_;
+        }
       }
 
       @java.lang.Override
@@ -659,6 +673,7 @@ public final class BqField {
         }
         if (!other.getTypeOverride().isEmpty()) {
           typeOverride_ = other.typeOverride_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.getIgnore() != false) {
@@ -666,10 +681,12 @@ public final class BqField {
         }
         if (!other.getDescription().isEmpty()) {
           description_ = other.description_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -700,27 +717,27 @@ public final class BqField {
                 break;
               case 8: {
                 require_ = input.readBool();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 typeOverride_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 24: {
                 ignore_ = input.readBool();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 34: {
                 description_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               default: {
@@ -738,6 +755,7 @@ public final class BqField {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private boolean require_ ;
       /**
@@ -766,6 +784,7 @@ public final class BqField {
       public Builder setRequire(boolean value) {
         
         require_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -779,7 +798,7 @@ public final class BqField {
        * @return This builder for chaining.
        */
       public Builder clearRequire() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         require_ = false;
         onChanged();
         return this;
@@ -847,11 +866,9 @@ public final class BqField {
        */
       public Builder setTypeOverride(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         typeOverride_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -867,8 +884,8 @@ public final class BqField {
        * @return This builder for chaining.
        */
       public Builder clearTypeOverride() {
-        
         typeOverride_ = getDefaultInstance().getTypeOverride();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -886,12 +903,10 @@ public final class BqField {
        */
       public Builder setTypeOverrideBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         typeOverride_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -921,6 +936,7 @@ public final class BqField {
       public Builder setIgnore(boolean value) {
         
         ignore_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -933,7 +949,7 @@ public final class BqField {
        * @return This builder for chaining.
        */
       public Builder clearIgnore() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         ignore_ = false;
         onChanged();
         return this;
@@ -992,11 +1008,9 @@ public final class BqField {
        */
       public Builder setDescription(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         description_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1009,8 +1023,8 @@ public final class BqField {
        * @return This builder for chaining.
        */
       public Builder clearDescription() {
-        
         description_ = getDefaultInstance().getDescription();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1025,12 +1039,10 @@ public final class BqField {
        */
       public Builder setDescriptionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         description_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1088,11 +1100,9 @@ public final class BqField {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1105,8 +1115,8 @@ public final class BqField {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -1121,12 +1131,10 @@ public final class BqField {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }

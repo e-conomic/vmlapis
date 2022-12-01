@@ -497,7 +497,7 @@ public final class GrpcService {
     }
 
     public static final int LIVE_FIELD_NUMBER = 1;
-    private boolean live_;
+    private boolean live_ = false;
     /**
      * <pre>
      *&#64;&#64;
@@ -712,8 +712,8 @@ public final class GrpcService {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         live_ = false;
-
         return this;
       }
 
@@ -740,9 +740,16 @@ public final class GrpcService {
       @java.lang.Override
       public inference.GrpcService.ServerLiveResponse buildPartial() {
         inference.GrpcService.ServerLiveResponse result = new inference.GrpcService.ServerLiveResponse(this);
-        result.live_ = live_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ServerLiveResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.live_ = live_;
+        }
       }
 
       @java.lang.Override
@@ -820,7 +827,7 @@ public final class GrpcService {
                 break;
               case 8: {
                 live_ = input.readBool();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               default: {
@@ -838,6 +845,7 @@ public final class GrpcService {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private boolean live_ ;
       /**
@@ -872,6 +880,7 @@ public final class GrpcService {
       public Builder setLive(boolean value) {
         
         live_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -888,7 +897,7 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder clearLive() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         live_ = false;
         onChanged();
         return this;
@@ -1440,7 +1449,7 @@ public final class GrpcService {
     }
 
     public static final int READY_FIELD_NUMBER = 1;
-    private boolean ready_;
+    private boolean ready_ = false;
     /**
      * <pre>
      *&#64;&#64;
@@ -1655,8 +1664,8 @@ public final class GrpcService {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         ready_ = false;
-
         return this;
       }
 
@@ -1683,9 +1692,16 @@ public final class GrpcService {
       @java.lang.Override
       public inference.GrpcService.ServerReadyResponse buildPartial() {
         inference.GrpcService.ServerReadyResponse result = new inference.GrpcService.ServerReadyResponse(this);
-        result.ready_ = ready_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ServerReadyResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ready_ = ready_;
+        }
       }
 
       @java.lang.Override
@@ -1763,7 +1779,7 @@ public final class GrpcService {
                 break;
               case 8: {
                 ready_ = input.readBool();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               default: {
@@ -1781,6 +1797,7 @@ public final class GrpcService {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private boolean ready_ ;
       /**
@@ -1815,6 +1832,7 @@ public final class GrpcService {
       public Builder setReady(boolean value) {
         
         ready_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1831,7 +1849,7 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder clearReady() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         ready_ = false;
         onChanged();
         return this;
@@ -2011,7 +2029,8 @@ public final class GrpcService {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -2065,7 +2084,8 @@ public final class GrpcService {
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object version_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object version_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string version
@@ -2323,10 +2343,9 @@ public final class GrpcService {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         version_ = "";
-
         return this;
       }
 
@@ -2353,10 +2372,19 @@ public final class GrpcService {
       @java.lang.Override
       public inference.GrpcService.ModelReadyRequest buildPartial() {
         inference.GrpcService.ModelReadyRequest result = new inference.GrpcService.ModelReadyRequest(this);
-        result.name_ = name_;
-        result.version_ = version_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ModelReadyRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+        }
       }
 
       @java.lang.Override
@@ -2405,10 +2433,12 @@ public final class GrpcService {
         if (other == inference.GrpcService.ModelReadyRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getVersion().isEmpty()) {
           version_ = other.version_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2439,12 +2469,12 @@ public final class GrpcService {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 version_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -2462,6 +2492,7 @@ public final class GrpcService {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -2528,11 +2559,9 @@ public final class GrpcService {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2549,8 +2578,8 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2569,12 +2598,10 @@ public final class GrpcService {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2644,11 +2671,9 @@ public final class GrpcService {
        */
       public Builder setVersion(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         version_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2665,8 +2690,8 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        
         version_ = getDefaultInstance().getVersion();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2685,12 +2710,10 @@ public final class GrpcService {
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         version_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2825,7 +2848,7 @@ public final class GrpcService {
     }
 
     public static final int READY_FIELD_NUMBER = 1;
-    private boolean ready_;
+    private boolean ready_ = false;
     /**
      * <pre>
      *&#64;&#64;
@@ -3040,8 +3063,8 @@ public final class GrpcService {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         ready_ = false;
-
         return this;
       }
 
@@ -3068,9 +3091,16 @@ public final class GrpcService {
       @java.lang.Override
       public inference.GrpcService.ModelReadyResponse buildPartial() {
         inference.GrpcService.ModelReadyResponse result = new inference.GrpcService.ModelReadyResponse(this);
-        result.ready_ = ready_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ModelReadyResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ready_ = ready_;
+        }
       }
 
       @java.lang.Override
@@ -3148,7 +3178,7 @@ public final class GrpcService {
                 break;
               case 8: {
                 ready_ = input.readBool();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               default: {
@@ -3166,6 +3196,7 @@ public final class GrpcService {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private boolean ready_ ;
       /**
@@ -3200,6 +3231,7 @@ public final class GrpcService {
       public Builder setReady(boolean value) {
         
         ready_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3216,7 +3248,7 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder clearReady() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         ready_ = false;
         onChanged();
         return this;
@@ -3870,7 +3902,8 @@ public final class GrpcService {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -3924,7 +3957,8 @@ public final class GrpcService {
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object version_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object version_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -3978,6 +4012,7 @@ public final class GrpcService {
     }
 
     public static final int EXTENSIONS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList extensions_;
     /**
      * <pre>
@@ -4266,12 +4301,11 @@ public final class GrpcService {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         version_ = "";
-
         extensions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -4298,16 +4332,28 @@ public final class GrpcService {
       @java.lang.Override
       public inference.GrpcService.ServerMetadataResponse buildPartial() {
         inference.GrpcService.ServerMetadataResponse result = new inference.GrpcService.ServerMetadataResponse(this);
-        int from_bitField0_ = bitField0_;
-        result.name_ = name_;
-        result.version_ = version_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          extensions_ = extensions_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.extensions_ = extensions_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.GrpcService.ServerMetadataResponse result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          extensions_ = extensions_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.extensions_ = extensions_;
+      }
+
+      private void buildPartial0(inference.GrpcService.ServerMetadataResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+        }
       }
 
       @java.lang.Override
@@ -4356,16 +4402,18 @@ public final class GrpcService {
         if (other == inference.GrpcService.ServerMetadataResponse.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getVersion().isEmpty()) {
           version_ = other.version_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.extensions_.isEmpty()) {
           if (extensions_.isEmpty()) {
             extensions_ = other.extensions_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureExtensionsIsMutable();
             extensions_.addAll(other.extensions_);
@@ -4400,12 +4448,12 @@ public final class GrpcService {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 version_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
@@ -4496,11 +4544,9 @@ public final class GrpcService {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4517,8 +4563,8 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4537,12 +4583,10 @@ public final class GrpcService {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4612,11 +4656,9 @@ public final class GrpcService {
        */
       public Builder setVersion(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         version_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4633,8 +4675,8 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        
         version_ = getDefaultInstance().getVersion();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -4653,21 +4695,19 @@ public final class GrpcService {
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         version_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
       private com.google.protobuf.LazyStringList extensions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureExtensionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           extensions_ = new com.google.protobuf.LazyStringArrayList(extensions_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -4750,10 +4790,8 @@ public final class GrpcService {
        */
       public Builder setExtensions(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureExtensionsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureExtensionsIsMutable();
         extensions_.set(index, value);
         onChanged();
         return this;
@@ -4773,10 +4811,8 @@ public final class GrpcService {
        */
       public Builder addExtensions(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureExtensionsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureExtensionsIsMutable();
         extensions_.add(value);
         onChanged();
         return this;
@@ -4816,7 +4852,7 @@ public final class GrpcService {
        */
       public Builder clearExtensions() {
         extensions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -4835,10 +4871,8 @@ public final class GrpcService {
        */
       public Builder addExtensionsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureExtensionsIsMutable();
         extensions_.add(value);
         onChanged();
@@ -5021,7 +5055,8 @@ public final class GrpcService {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -5075,7 +5110,8 @@ public final class GrpcService {
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object version_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object version_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string version
@@ -5335,10 +5371,9 @@ public final class GrpcService {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         version_ = "";
-
         return this;
       }
 
@@ -5365,10 +5400,19 @@ public final class GrpcService {
       @java.lang.Override
       public inference.GrpcService.ModelMetadataRequest buildPartial() {
         inference.GrpcService.ModelMetadataRequest result = new inference.GrpcService.ModelMetadataRequest(this);
-        result.name_ = name_;
-        result.version_ = version_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ModelMetadataRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+        }
       }
 
       @java.lang.Override
@@ -5417,10 +5461,12 @@ public final class GrpcService {
         if (other == inference.GrpcService.ModelMetadataRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getVersion().isEmpty()) {
           version_ = other.version_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -5451,12 +5497,12 @@ public final class GrpcService {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 version_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -5474,6 +5520,7 @@ public final class GrpcService {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -5540,11 +5587,9 @@ public final class GrpcService {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5561,8 +5606,8 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -5581,12 +5626,10 @@ public final class GrpcService {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5659,11 +5702,9 @@ public final class GrpcService {
        */
       public Builder setVersion(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         version_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5681,8 +5722,8 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        
         version_ = getDefaultInstance().getVersion();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -5702,12 +5743,10 @@ public final class GrpcService {
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         version_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -6229,7 +6268,8 @@ public final class GrpcService {
       }
 
       public static final int NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object name_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object name_ = "";
       /**
        * <pre>
        *&#64;&#64;
@@ -6283,7 +6323,8 @@ public final class GrpcService {
       }
 
       public static final int DATATYPE_FIELD_NUMBER = 2;
-      private volatile java.lang.Object datatype_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object datatype_ = "";
       /**
        * <pre>
        *&#64;&#64;
@@ -6337,6 +6378,7 @@ public final class GrpcService {
       }
 
       public static final int SHAPE_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
       private com.google.protobuf.Internal.LongList shape_;
       /**
        * <pre>
@@ -6624,12 +6666,10 @@ public final class GrpcService {
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           name_ = "";
-
           datatype_ = "";
-
           shape_ = emptyLongList();
-          bitField0_ = (bitField0_ & ~0x00000001);
           return this;
         }
 
@@ -6656,16 +6696,28 @@ public final class GrpcService {
         @java.lang.Override
         public inference.GrpcService.ModelMetadataResponse.TensorMetadata buildPartial() {
           inference.GrpcService.ModelMetadataResponse.TensorMetadata result = new inference.GrpcService.ModelMetadataResponse.TensorMetadata(this);
-          int from_bitField0_ = bitField0_;
-          result.name_ = name_;
-          result.datatype_ = datatype_;
-          if (((bitField0_ & 0x00000001) != 0)) {
-            shape_.makeImmutable();
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.shape_ = shape_;
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.GrpcService.ModelMetadataResponse.TensorMetadata result) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            shape_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.shape_ = shape_;
+        }
+
+        private void buildPartial0(inference.GrpcService.ModelMetadataResponse.TensorMetadata result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.name_ = name_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.datatype_ = datatype_;
+          }
         }
 
         @java.lang.Override
@@ -6714,16 +6766,18 @@ public final class GrpcService {
           if (other == inference.GrpcService.ModelMetadataResponse.TensorMetadata.getDefaultInstance()) return this;
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (!other.getDatatype().isEmpty()) {
             datatype_ = other.datatype_;
+            bitField0_ |= 0x00000002;
             onChanged();
           }
           if (!other.shape_.isEmpty()) {
             if (shape_.isEmpty()) {
               shape_ = other.shape_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureShapeIsMutable();
               shape_.addAll(other.shape_);
@@ -6758,12 +6812,12 @@ public final class GrpcService {
                   break;
                 case 10: {
                   name_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 18: {
                   datatype_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 18
                 case 24: {
@@ -6864,11 +6918,9 @@ public final class GrpcService {
          */
         public Builder setName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -6885,8 +6937,8 @@ public final class GrpcService {
          * @return This builder for chaining.
          */
         public Builder clearName() {
-          
           name_ = getDefaultInstance().getName();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -6905,12 +6957,10 @@ public final class GrpcService {
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -6980,11 +7030,9 @@ public final class GrpcService {
          */
         public Builder setDatatype(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           datatype_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -7001,8 +7049,8 @@ public final class GrpcService {
          * @return This builder for chaining.
          */
         public Builder clearDatatype() {
-          
           datatype_ = getDefaultInstance().getDatatype();
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
@@ -7021,22 +7069,20 @@ public final class GrpcService {
          */
         public Builder setDatatypeBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           datatype_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
 
         private com.google.protobuf.Internal.LongList shape_ = emptyLongList();
         private void ensureShapeIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
+          if (!((bitField0_ & 0x00000004) != 0)) {
             shape_ = mutableCopy(shape_);
-            bitField0_ |= 0x00000001;
-           }
+            bitField0_ |= 0x00000004;
+          }
         }
         /**
          * <pre>
@@ -7053,7 +7099,7 @@ public final class GrpcService {
          */
         public java.util.List<java.lang.Long>
             getShapeList() {
-          return ((bitField0_ & 0x00000001) != 0) ?
+          return ((bitField0_ & 0x00000004) != 0) ?
                    java.util.Collections.unmodifiableList(shape_) : shape_;
         }
         /**
@@ -7106,6 +7152,7 @@ public final class GrpcService {
          */
         public Builder setShape(
             int index, long value) {
+          
           ensureShapeIsMutable();
           shape_.setLong(index, value);
           onChanged();
@@ -7126,6 +7173,7 @@ public final class GrpcService {
          * @return This builder for chaining.
          */
         public Builder addShape(long value) {
+          
           ensureShapeIsMutable();
           shape_.addLong(value);
           onChanged();
@@ -7168,7 +7216,7 @@ public final class GrpcService {
          */
         public Builder clearShape() {
           shape_ = emptyLongList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
           return this;
         }
@@ -7237,7 +7285,8 @@ public final class GrpcService {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -7291,6 +7340,7 @@ public final class GrpcService {
     }
 
     public static final int VERSIONS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList versions_;
     /**
      * <pre>
@@ -7358,7 +7408,8 @@ public final class GrpcService {
     }
 
     public static final int PLATFORM_FIELD_NUMBER = 3;
-    private volatile java.lang.Object platform_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object platform_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -7412,6 +7463,7 @@ public final class GrpcService {
     }
 
     public static final int INPUTS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<inference.GrpcService.ModelMetadataResponse.TensorMetadata> inputs_;
     /**
      * <pre>
@@ -7492,6 +7544,7 @@ public final class GrpcService {
     }
 
     public static final int OUTPUTS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<inference.GrpcService.ModelMetadataResponse.TensorMetadata> outputs_;
     /**
      * <pre>
@@ -7819,26 +7872,25 @@ public final class GrpcService {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         versions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         platform_ = "";
-
         if (inputsBuilder_ == null) {
           inputs_ = java.util.Collections.emptyList();
         } else {
           inputs_ = null;
           inputsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (outputsBuilder_ == null) {
           outputs_ = java.util.Collections.emptyList();
         } else {
           outputs_ = null;
           outputsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -7865,34 +7917,46 @@ public final class GrpcService {
       @java.lang.Override
       public inference.GrpcService.ModelMetadataResponse buildPartial() {
         inference.GrpcService.ModelMetadataResponse result = new inference.GrpcService.ModelMetadataResponse(this);
-        int from_bitField0_ = bitField0_;
-        result.name_ = name_;
-        if (((bitField0_ & 0x00000001) != 0)) {
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.GrpcService.ModelMetadataResponse result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
           versions_ = versions_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         }
         result.versions_ = versions_;
-        result.platform_ = platform_;
         if (inputsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             inputs_ = java.util.Collections.unmodifiableList(inputs_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.inputs_ = inputs_;
         } else {
           result.inputs_ = inputsBuilder_.build();
         }
         if (outputsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             outputs_ = java.util.Collections.unmodifiableList(outputs_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.outputs_ = outputs_;
         } else {
           result.outputs_ = outputsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ModelMetadataResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.platform_ = platform_;
+        }
       }
 
       @java.lang.Override
@@ -7941,12 +8005,13 @@ public final class GrpcService {
         if (other == inference.GrpcService.ModelMetadataResponse.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.versions_.isEmpty()) {
           if (versions_.isEmpty()) {
             versions_ = other.versions_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureVersionsIsMutable();
             versions_.addAll(other.versions_);
@@ -7955,13 +8020,14 @@ public final class GrpcService {
         }
         if (!other.getPlatform().isEmpty()) {
           platform_ = other.platform_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (inputsBuilder_ == null) {
           if (!other.inputs_.isEmpty()) {
             if (inputs_.isEmpty()) {
               inputs_ = other.inputs_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureInputsIsMutable();
               inputs_.addAll(other.inputs_);
@@ -7974,7 +8040,7 @@ public final class GrpcService {
               inputsBuilder_.dispose();
               inputsBuilder_ = null;
               inputs_ = other.inputs_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000008);
               inputsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getInputsFieldBuilder() : null;
@@ -7987,7 +8053,7 @@ public final class GrpcService {
           if (!other.outputs_.isEmpty()) {
             if (outputs_.isEmpty()) {
               outputs_ = other.outputs_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureOutputsIsMutable();
               outputs_.addAll(other.outputs_);
@@ -8000,7 +8066,7 @@ public final class GrpcService {
               outputsBuilder_.dispose();
               outputsBuilder_ = null;
               outputs_ = other.outputs_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000010);
               outputsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOutputsFieldBuilder() : null;
@@ -8037,7 +8103,7 @@ public final class GrpcService {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
@@ -8048,7 +8114,7 @@ public final class GrpcService {
               } // case 18
               case 26: {
                 platform_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
@@ -8159,11 +8225,9 @@ public final class GrpcService {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8180,8 +8244,8 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -8200,21 +8264,19 @@ public final class GrpcService {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
 
       private com.google.protobuf.LazyStringList versions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureVersionsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           versions_ = new com.google.protobuf.LazyStringArrayList(versions_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -8297,10 +8359,8 @@ public final class GrpcService {
        */
       public Builder setVersions(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureVersionsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureVersionsIsMutable();
         versions_.set(index, value);
         onChanged();
         return this;
@@ -8320,10 +8380,8 @@ public final class GrpcService {
        */
       public Builder addVersions(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureVersionsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureVersionsIsMutable();
         versions_.add(value);
         onChanged();
         return this;
@@ -8363,7 +8421,7 @@ public final class GrpcService {
        */
       public Builder clearVersions() {
         versions_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -8382,10 +8440,8 @@ public final class GrpcService {
        */
       public Builder addVersionsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureVersionsIsMutable();
         versions_.add(value);
         onChanged();
@@ -8457,11 +8513,9 @@ public final class GrpcService {
        */
       public Builder setPlatform(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         platform_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8478,8 +8532,8 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder clearPlatform() {
-        
         platform_ = getDefaultInstance().getPlatform();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -8498,12 +8552,10 @@ public final class GrpcService {
        */
       public Builder setPlatformBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         platform_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8511,9 +8563,9 @@ public final class GrpcService {
       private java.util.List<inference.GrpcService.ModelMetadataResponse.TensorMetadata> inputs_ =
         java.util.Collections.emptyList();
       private void ensureInputsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           inputs_ = new java.util.ArrayList<inference.GrpcService.ModelMetadataResponse.TensorMetadata>(inputs_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -8751,7 +8803,7 @@ public final class GrpcService {
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
           inputs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           inputsBuilder_.clear();
@@ -8884,7 +8936,7 @@ public final class GrpcService {
           inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.GrpcService.ModelMetadataResponse.TensorMetadata, inference.GrpcService.ModelMetadataResponse.TensorMetadata.Builder, inference.GrpcService.ModelMetadataResponse.TensorMetadataOrBuilder>(
                   inputs_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           inputs_ = null;
@@ -8895,9 +8947,9 @@ public final class GrpcService {
       private java.util.List<inference.GrpcService.ModelMetadataResponse.TensorMetadata> outputs_ =
         java.util.Collections.emptyList();
       private void ensureOutputsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           outputs_ = new java.util.ArrayList<inference.GrpcService.ModelMetadataResponse.TensorMetadata>(outputs_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -9135,7 +9187,7 @@ public final class GrpcService {
       public Builder clearOutputs() {
         if (outputsBuilder_ == null) {
           outputs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           outputsBuilder_.clear();
@@ -9268,7 +9320,7 @@ public final class GrpcService {
           outputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.GrpcService.ModelMetadataResponse.TensorMetadata, inference.GrpcService.ModelMetadataResponse.TensorMetadata.Builder, inference.GrpcService.ModelMetadataResponse.TensorMetadataOrBuilder>(
                   outputs_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           outputs_ = null;
@@ -9911,6 +9963,7 @@ public final class GrpcService {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         parameterChoiceCase_ = 0;
         parameterChoice_ = null;
         return this;
@@ -9939,18 +9992,19 @@ public final class GrpcService {
       @java.lang.Override
       public inference.GrpcService.InferParameter buildPartial() {
         inference.GrpcService.InferParameter result = new inference.GrpcService.InferParameter(this);
-        if (parameterChoiceCase_ == 1) {
-          result.parameterChoice_ = parameterChoice_;
-        }
-        if (parameterChoiceCase_ == 2) {
-          result.parameterChoice_ = parameterChoice_;
-        }
-        if (parameterChoiceCase_ == 3) {
-          result.parameterChoice_ = parameterChoice_;
-        }
-        result.parameterChoiceCase_ = parameterChoiceCase_;
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.InferParameter result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(inference.GrpcService.InferParameter result) {
+        result.parameterChoiceCase_ = parameterChoiceCase_;
+        result.parameterChoice_ = this.parameterChoice_;
       }
 
       @java.lang.Override
@@ -10088,6 +10142,7 @@ public final class GrpcService {
         return this;
       }
 
+      private int bitField0_;
 
       /**
        * <pre>
@@ -10133,6 +10188,7 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder setBoolParam(boolean value) {
+        
         parameterChoiceCase_ = 1;
         parameterChoice_ = value;
         onChanged();
@@ -10202,6 +10258,7 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder setInt64Param(long value) {
+        
         parameterChoiceCase_ = 2;
         parameterChoice_ = value;
         onChanged();
@@ -10315,10 +10372,8 @@ public final class GrpcService {
        */
       public Builder setStringParam(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  parameterChoiceCase_ = 3;
+        if (value == null) { throw new NullPointerException(); }
+        parameterChoiceCase_ = 3;
         parameterChoice_ = value;
         onChanged();
         return this;
@@ -10356,10 +10411,8 @@ public final class GrpcService {
        */
       public Builder setStringParamBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         parameterChoiceCase_ = 3;
         parameterChoice_ = value;
         onChanged();
@@ -10874,6 +10927,7 @@ public final class GrpcService {
     }
 
     public static final int BOOL_CONTENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.BooleanList boolContents_;
     /**
      * <pre>
@@ -10932,6 +10986,7 @@ public final class GrpcService {
     private int boolContentsMemoizedSerializedSize = -1;
 
     public static final int INT_CONTENTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList intContents_;
     /**
      * <pre>
@@ -10993,6 +11048,7 @@ public final class GrpcService {
     private int intContentsMemoizedSerializedSize = -1;
 
     public static final int INT64_CONTENTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.LongList int64Contents_;
     /**
      * <pre>
@@ -11051,6 +11107,7 @@ public final class GrpcService {
     private int int64ContentsMemoizedSerializedSize = -1;
 
     public static final int UINT_CONTENTS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList uintContents_;
     /**
      * <pre>
@@ -11112,6 +11169,7 @@ public final class GrpcService {
     private int uintContentsMemoizedSerializedSize = -1;
 
     public static final int UINT64_CONTENTS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.LongList uint64Contents_;
     /**
      * <pre>
@@ -11170,6 +11228,7 @@ public final class GrpcService {
     private int uint64ContentsMemoizedSerializedSize = -1;
 
     public static final int FP32_CONTENTS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.FloatList fp32Contents_;
     /**
      * <pre>
@@ -11228,6 +11287,7 @@ public final class GrpcService {
     private int fp32ContentsMemoizedSerializedSize = -1;
 
     public static final int FP64_CONTENTS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.DoubleList fp64Contents_;
     /**
      * <pre>
@@ -11286,6 +11346,7 @@ public final class GrpcService {
     private int fp64ContentsMemoizedSerializedSize = -1;
 
     public static final int BYTES_CONTENTS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.ByteString> bytesContents_;
     /**
      * <pre>
@@ -11728,22 +11789,15 @@ public final class GrpcService {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         boolContents_ = emptyBooleanList();
-        bitField0_ = (bitField0_ & ~0x00000001);
         intContents_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000002);
         int64Contents_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000004);
         uintContents_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000008);
         uint64Contents_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000010);
         fp32Contents_ = emptyFloatList();
-        bitField0_ = (bitField0_ & ~0x00000020);
         fp64Contents_ = emptyDoubleList();
-        bitField0_ = (bitField0_ & ~0x00000040);
         bytesContents_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -11770,7 +11824,13 @@ public final class GrpcService {
       @java.lang.Override
       public inference.GrpcService.InferTensorContents buildPartial() {
         inference.GrpcService.InferTensorContents result = new inference.GrpcService.InferTensorContents(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.GrpcService.InferTensorContents result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           boolContents_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
@@ -11811,8 +11871,10 @@ public final class GrpcService {
           bitField0_ = (bitField0_ & ~0x00000080);
         }
         result.bytesContents_ = bytesContents_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.InferTensorContents result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -12105,7 +12167,7 @@ public final class GrpcService {
         if (!((bitField0_ & 0x00000001) != 0)) {
           boolContents_ = mutableCopy(boolContents_);
           bitField0_ |= 0x00000001;
-         }
+        }
       }
       /**
        * <pre>
@@ -12179,6 +12241,7 @@ public final class GrpcService {
        */
       public Builder setBoolContents(
           int index, boolean value) {
+        
         ensureBoolContentsIsMutable();
         boolContents_.setBoolean(index, value);
         onChanged();
@@ -12200,6 +12263,7 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder addBoolContents(boolean value) {
+        
         ensureBoolContentsIsMutable();
         boolContents_.addBoolean(value);
         onChanged();
@@ -12254,7 +12318,7 @@ public final class GrpcService {
         if (!((bitField0_ & 0x00000002) != 0)) {
           intContents_ = mutableCopy(intContents_);
           bitField0_ |= 0x00000002;
-         }
+        }
       }
       /**
        * <pre>
@@ -12332,6 +12396,7 @@ public final class GrpcService {
        */
       public Builder setIntContents(
           int index, int value) {
+        
         ensureIntContentsIsMutable();
         intContents_.setInt(index, value);
         onChanged();
@@ -12354,6 +12419,7 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder addIntContents(int value) {
+        
         ensureIntContentsIsMutable();
         intContents_.addInt(value);
         onChanged();
@@ -12410,7 +12476,7 @@ public final class GrpcService {
         if (!((bitField0_ & 0x00000004) != 0)) {
           int64Contents_ = mutableCopy(int64Contents_);
           bitField0_ |= 0x00000004;
-         }
+        }
       }
       /**
        * <pre>
@@ -12484,6 +12550,7 @@ public final class GrpcService {
        */
       public Builder setInt64Contents(
           int index, long value) {
+        
         ensureInt64ContentsIsMutable();
         int64Contents_.setLong(index, value);
         onChanged();
@@ -12505,6 +12572,7 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder addInt64Contents(long value) {
+        
         ensureInt64ContentsIsMutable();
         int64Contents_.addLong(value);
         onChanged();
@@ -12559,7 +12627,7 @@ public final class GrpcService {
         if (!((bitField0_ & 0x00000008) != 0)) {
           uintContents_ = mutableCopy(uintContents_);
           bitField0_ |= 0x00000008;
-         }
+        }
       }
       /**
        * <pre>
@@ -12637,6 +12705,7 @@ public final class GrpcService {
        */
       public Builder setUintContents(
           int index, int value) {
+        
         ensureUintContentsIsMutable();
         uintContents_.setInt(index, value);
         onChanged();
@@ -12659,6 +12728,7 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder addUintContents(int value) {
+        
         ensureUintContentsIsMutable();
         uintContents_.addInt(value);
         onChanged();
@@ -12715,7 +12785,7 @@ public final class GrpcService {
         if (!((bitField0_ & 0x00000010) != 0)) {
           uint64Contents_ = mutableCopy(uint64Contents_);
           bitField0_ |= 0x00000010;
-         }
+        }
       }
       /**
        * <pre>
@@ -12789,6 +12859,7 @@ public final class GrpcService {
        */
       public Builder setUint64Contents(
           int index, long value) {
+        
         ensureUint64ContentsIsMutable();
         uint64Contents_.setLong(index, value);
         onChanged();
@@ -12810,6 +12881,7 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder addUint64Contents(long value) {
+        
         ensureUint64ContentsIsMutable();
         uint64Contents_.addLong(value);
         onChanged();
@@ -12864,7 +12936,7 @@ public final class GrpcService {
         if (!((bitField0_ & 0x00000020) != 0)) {
           fp32Contents_ = mutableCopy(fp32Contents_);
           bitField0_ |= 0x00000020;
-         }
+        }
       }
       /**
        * <pre>
@@ -12938,6 +13010,7 @@ public final class GrpcService {
        */
       public Builder setFp32Contents(
           int index, float value) {
+        
         ensureFp32ContentsIsMutable();
         fp32Contents_.setFloat(index, value);
         onChanged();
@@ -12959,6 +13032,7 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder addFp32Contents(float value) {
+        
         ensureFp32ContentsIsMutable();
         fp32Contents_.addFloat(value);
         onChanged();
@@ -13013,7 +13087,7 @@ public final class GrpcService {
         if (!((bitField0_ & 0x00000040) != 0)) {
           fp64Contents_ = mutableCopy(fp64Contents_);
           bitField0_ |= 0x00000040;
-         }
+        }
       }
       /**
        * <pre>
@@ -13087,6 +13161,7 @@ public final class GrpcService {
        */
       public Builder setFp64Contents(
           int index, double value) {
+        
         ensureFp64ContentsIsMutable();
         fp64Contents_.setDouble(index, value);
         onChanged();
@@ -13108,6 +13183,7 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder addFp64Contents(double value) {
+        
         ensureFp64ContentsIsMutable();
         fp64Contents_.addDouble(value);
         onChanged();
@@ -13162,7 +13238,7 @@ public final class GrpcService {
         if (!((bitField0_ & 0x00000080) != 0)) {
           bytesContents_ = new java.util.ArrayList<com.google.protobuf.ByteString>(bytesContents_);
           bitField0_ |= 0x00000080;
-         }
+        }
       }
       /**
        * <pre>
@@ -13236,10 +13312,8 @@ public final class GrpcService {
        */
       public Builder setBytesContents(
           int index, com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureBytesContentsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureBytesContentsIsMutable();
         bytesContents_.set(index, value);
         onChanged();
         return this;
@@ -13260,10 +13334,8 @@ public final class GrpcService {
        * @return This builder for chaining.
        */
       public Builder addBytesContents(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureBytesContentsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureBytesContentsIsMutable();
         bytesContents_.add(value);
         onChanged();
         return this;
@@ -13512,7 +13584,6 @@ public final class GrpcService {
      *
      * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
      */
-
     /* nullable */
 inference.GrpcService.InferParameter getParametersOrDefault(
         java.lang.String key,
@@ -13528,7 +13599,6 @@ inference.GrpcService.InferParameter defaultValue);
      *
      * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
      */
-
     inference.GrpcService.InferParameter getParametersOrThrow(
         java.lang.String key);
 
@@ -13983,7 +14053,6 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
-
       /* nullable */
 inference.GrpcService.InferParameter getParametersOrDefault(
           java.lang.String key,
@@ -13999,7 +14068,6 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
-
       inference.GrpcService.InferParameter getParametersOrThrow(
           java.lang.String key);
 
@@ -14109,7 +14177,8 @@ inference.GrpcService.InferParameter defaultValue);
       }
 
       public static final int NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object name_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object name_ = "";
       /**
        * <pre>
        *&#64;&#64;
@@ -14163,7 +14232,8 @@ inference.GrpcService.InferParameter defaultValue);
       }
 
       public static final int DATATYPE_FIELD_NUMBER = 2;
-      private volatile java.lang.Object datatype_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object datatype_ = "";
       /**
        * <pre>
        *&#64;&#64;
@@ -14217,6 +14287,7 @@ inference.GrpcService.InferParameter defaultValue);
       }
 
       public static final int SHAPE_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
       private com.google.protobuf.Internal.LongList shape_;
       /**
        * <pre>
@@ -14280,6 +14351,7 @@ inference.GrpcService.InferParameter defaultValue);
                     com.google.protobuf.WireFormat.FieldType.MESSAGE,
                     inference.GrpcService.InferParameter.getDefaultInstance());
       }
+      @SuppressWarnings("serial")
       private com.google.protobuf.MapField<
           java.lang.String, inference.GrpcService.InferParameter> parameters_;
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
@@ -14290,7 +14362,6 @@ inference.GrpcService.InferParameter defaultValue);
         }
         return parameters_;
       }
-
       public int getParametersCount() {
         return internalGetParameters().getMap().size();
       }
@@ -14304,7 +14375,6 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
-
       @java.lang.Override
       public boolean containsParameters(
           java.lang.String key) {
@@ -14330,7 +14400,6 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.GrpcService.InferParameter> getParametersMap() {
         return internalGetParameters().getMap();
       }
@@ -14345,10 +14414,11 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
-      public inference.GrpcService.InferParameter getParametersOrDefault(
+      public /* nullable */
+inference.GrpcService.InferParameter getParametersOrDefault(
           java.lang.String key,
-          inference.GrpcService.InferParameter defaultValue) {
+          /* nullable */
+inference.GrpcService.InferParameter defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.GrpcService.InferParameter> map =
             internalGetParameters().getMap();
@@ -14365,7 +14435,6 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public inference.GrpcService.InferParameter getParametersOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -14427,7 +14496,7 @@ inference.GrpcService.InferParameter defaultValue);
        */
       @java.lang.Override
       public inference.GrpcService.InferTensorContentsOrBuilder getContentsOrBuilder() {
-        return getContents();
+        return contents_ == null ? inference.GrpcService.InferTensorContents.getDefaultInstance() : contents_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -14723,17 +14792,14 @@ inference.GrpcService.InferParameter defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           name_ = "";
-
           datatype_ = "";
-
           shape_ = emptyLongList();
-          bitField0_ = (bitField0_ & ~0x00000001);
           internalGetMutableParameters().clear();
-          if (contentsBuilder_ == null) {
-            contents_ = null;
-          } else {
-            contents_ = null;
+          contents_ = null;
+          if (contentsBuilder_ != null) {
+            contentsBuilder_.dispose();
             contentsBuilder_ = null;
           }
           return this;
@@ -14762,23 +14828,37 @@ inference.GrpcService.InferParameter defaultValue);
         @java.lang.Override
         public inference.GrpcService.ModelInferRequest.InferInputTensor buildPartial() {
           inference.GrpcService.ModelInferRequest.InferInputTensor result = new inference.GrpcService.ModelInferRequest.InferInputTensor(this);
-          int from_bitField0_ = bitField0_;
-          result.name_ = name_;
-          result.datatype_ = datatype_;
-          if (((bitField0_ & 0x00000001) != 0)) {
-            shape_.makeImmutable();
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.shape_ = shape_;
-          result.parameters_ = internalGetParameters();
-          result.parameters_.makeImmutable();
-          if (contentsBuilder_ == null) {
-            result.contents_ = contents_;
-          } else {
-            result.contents_ = contentsBuilder_.build();
-          }
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.GrpcService.ModelInferRequest.InferInputTensor result) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            shape_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.shape_ = shape_;
+        }
+
+        private void buildPartial0(inference.GrpcService.ModelInferRequest.InferInputTensor result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.name_ = name_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.datatype_ = datatype_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.parameters_ = internalGetParameters();
+            result.parameters_.makeImmutable();
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.contents_ = contentsBuilder_ == null
+                ? contents_
+                : contentsBuilder_.build();
+          }
         }
 
         @java.lang.Override
@@ -14827,16 +14907,18 @@ inference.GrpcService.InferParameter defaultValue);
           if (other == inference.GrpcService.ModelInferRequest.InferInputTensor.getDefaultInstance()) return this;
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (!other.getDatatype().isEmpty()) {
             datatype_ = other.datatype_;
+            bitField0_ |= 0x00000002;
             onChanged();
           }
           if (!other.shape_.isEmpty()) {
             if (shape_.isEmpty()) {
               shape_ = other.shape_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureShapeIsMutable();
               shape_.addAll(other.shape_);
@@ -14845,6 +14927,7 @@ inference.GrpcService.InferParameter defaultValue);
           }
           internalGetMutableParameters().mergeFrom(
               other.internalGetParameters());
+          bitField0_ |= 0x00000008;
           if (other.hasContents()) {
             mergeContents(other.getContents());
           }
@@ -14876,12 +14959,12 @@ inference.GrpcService.InferParameter defaultValue);
                   break;
                 case 10: {
                   name_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 18: {
                   datatype_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 18
                 case 24: {
@@ -14906,13 +14989,14 @@ inference.GrpcService.InferParameter defaultValue);
                       ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                   internalGetMutableParameters().getMutableMap().put(
                       parameters__.getKey(), parameters__.getValue());
+                  bitField0_ |= 0x00000008;
                   break;
                 } // case 34
                 case 42: {
                   input.readMessage(
                       getContentsFieldBuilder().getBuilder(),
                       extensionRegistry);
-
+                  bitField0_ |= 0x00000010;
                   break;
                 } // case 42
                 default: {
@@ -14997,11 +15081,9 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -15018,8 +15100,8 @@ inference.GrpcService.InferParameter defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearName() {
-          
           name_ = getDefaultInstance().getName();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -15038,12 +15120,10 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -15113,11 +15193,9 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setDatatype(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           datatype_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -15134,8 +15212,8 @@ inference.GrpcService.InferParameter defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearDatatype() {
-          
           datatype_ = getDefaultInstance().getDatatype();
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
@@ -15154,22 +15232,20 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setDatatypeBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           datatype_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
 
         private com.google.protobuf.Internal.LongList shape_ = emptyLongList();
         private void ensureShapeIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
+          if (!((bitField0_ & 0x00000004) != 0)) {
             shape_ = mutableCopy(shape_);
-            bitField0_ |= 0x00000001;
-           }
+            bitField0_ |= 0x00000004;
+          }
         }
         /**
          * <pre>
@@ -15185,7 +15261,7 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public java.util.List<java.lang.Long>
             getShapeList() {
-          return ((bitField0_ & 0x00000001) != 0) ?
+          return ((bitField0_ & 0x00000004) != 0) ?
                    java.util.Collections.unmodifiableList(shape_) : shape_;
         }
         /**
@@ -15235,6 +15311,7 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setShape(
             int index, long value) {
+          
           ensureShapeIsMutable();
           shape_.setLong(index, value);
           onChanged();
@@ -15254,6 +15331,7 @@ inference.GrpcService.InferParameter defaultValue);
          * @return This builder for chaining.
          */
         public Builder addShape(long value) {
+          
           ensureShapeIsMutable();
           shape_.addLong(value);
           onChanged();
@@ -15294,7 +15372,7 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder clearShape() {
           shape_ = emptyLongList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
           return this;
         }
@@ -15302,7 +15380,7 @@ inference.GrpcService.InferParameter defaultValue);
         private com.google.protobuf.MapField<
             java.lang.String, inference.GrpcService.InferParameter> parameters_;
         private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
-        internalGetParameters() {
+            internalGetParameters() {
           if (parameters_ == null) {
             return com.google.protobuf.MapField.emptyMapField(
                 ParametersDefaultEntryHolder.defaultEntry);
@@ -15310,8 +15388,7 @@ inference.GrpcService.InferParameter defaultValue);
           return parameters_;
         }
         private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
-        internalGetMutableParameters() {
-          onChanged();;
+            internalGetMutableParameters() {
           if (parameters_ == null) {
             parameters_ = com.google.protobuf.MapField.newMapField(
                 ParametersDefaultEntryHolder.defaultEntry);
@@ -15319,9 +15396,10 @@ inference.GrpcService.InferParameter defaultValue);
           if (!parameters_.isMutable()) {
             parameters_ = parameters_.copy();
           }
+          bitField0_ |= 0x00000008;
+          onChanged();
           return parameters_;
         }
-
         public int getParametersCount() {
           return internalGetParameters().getMap().size();
         }
@@ -15335,7 +15413,6 @@ inference.GrpcService.InferParameter defaultValue);
          *
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
          */
-
         @java.lang.Override
         public boolean containsParameters(
             java.lang.String key) {
@@ -15361,7 +15438,6 @@ inference.GrpcService.InferParameter defaultValue);
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
         public java.util.Map<java.lang.String, inference.GrpcService.InferParameter> getParametersMap() {
           return internalGetParameters().getMap();
         }
@@ -15376,10 +15452,11 @@ inference.GrpcService.InferParameter defaultValue);
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
-        public inference.GrpcService.InferParameter getParametersOrDefault(
+        public /* nullable */
+inference.GrpcService.InferParameter getParametersOrDefault(
             java.lang.String key,
-            inference.GrpcService.InferParameter defaultValue) {
+            /* nullable */
+inference.GrpcService.InferParameter defaultValue) {
           if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, inference.GrpcService.InferParameter> map =
               internalGetParameters().getMap();
@@ -15396,7 +15473,6 @@ inference.GrpcService.InferParameter defaultValue);
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
         public inference.GrpcService.InferParameter getParametersOrThrow(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -15407,8 +15483,8 @@ inference.GrpcService.InferParameter defaultValue);
           }
           return map.get(key);
         }
-
         public Builder clearParameters() {
+          bitField0_ = (bitField0_ & ~0x00000008);
           internalGetMutableParameters().getMutableMap()
               .clear();
           return this;
@@ -15423,7 +15499,6 @@ inference.GrpcService.InferParameter defaultValue);
          *
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
          */
-
         public Builder removeParameters(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -15436,7 +15511,8 @@ inference.GrpcService.InferParameter defaultValue);
          */
         @java.lang.Deprecated
         public java.util.Map<java.lang.String, inference.GrpcService.InferParameter>
-        getMutableParameters() {
+            getMutableParameters() {
+          bitField0_ |= 0x00000008;
           return internalGetMutableParameters().getMutableMap();
         }
         /**
@@ -15453,12 +15529,10 @@ inference.GrpcService.InferParameter defaultValue);
             java.lang.String key,
             inference.GrpcService.InferParameter value) {
           if (key == null) { throw new NullPointerException("map key"); }
-          if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+          if (value == null) { throw new NullPointerException("map value"); }
           internalGetMutableParameters().getMutableMap()
               .put(key, value);
+          bitField0_ |= 0x00000008;
           return this;
         }
         /**
@@ -15471,11 +15545,11 @@ inference.GrpcService.InferParameter defaultValue);
          *
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
          */
-
         public Builder putAllParameters(
             java.util.Map<java.lang.String, inference.GrpcService.InferParameter> values) {
           internalGetMutableParameters().getMutableMap()
               .putAll(values);
+          bitField0_ |= 0x00000008;
           return this;
         }
 
@@ -15496,7 +15570,7 @@ inference.GrpcService.InferParameter defaultValue);
          * @return Whether the contents field is set.
          */
         public boolean hasContents() {
-          return contentsBuilder_ != null || contents_ != null;
+          return ((bitField0_ & 0x00000010) != 0);
         }
         /**
          * <pre>
@@ -15536,11 +15610,11 @@ inference.GrpcService.InferParameter defaultValue);
               throw new NullPointerException();
             }
             contents_ = value;
-            onChanged();
           } else {
             contentsBuilder_.setMessage(value);
           }
-
+          bitField0_ |= 0x00000010;
+          onChanged();
           return this;
         }
         /**
@@ -15559,11 +15633,11 @@ inference.GrpcService.InferParameter defaultValue);
             inference.GrpcService.InferTensorContents.Builder builderForValue) {
           if (contentsBuilder_ == null) {
             contents_ = builderForValue.build();
-            onChanged();
           } else {
             contentsBuilder_.setMessage(builderForValue.build());
           }
-
+          bitField0_ |= 0x00000010;
+          onChanged();
           return this;
         }
         /**
@@ -15580,17 +15654,18 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder mergeContents(inference.GrpcService.InferTensorContents value) {
           if (contentsBuilder_ == null) {
-            if (contents_ != null) {
-              contents_ =
-                inference.GrpcService.InferTensorContents.newBuilder(contents_).mergeFrom(value).buildPartial();
+            if (((bitField0_ & 0x00000010) != 0) &&
+              contents_ != null &&
+              contents_ != inference.GrpcService.InferTensorContents.getDefaultInstance()) {
+              getContentsBuilder().mergeFrom(value);
             } else {
               contents_ = value;
             }
-            onChanged();
           } else {
             contentsBuilder_.mergeFrom(value);
           }
-
+          bitField0_ |= 0x00000010;
+          onChanged();
           return this;
         }
         /**
@@ -15606,14 +15681,13 @@ inference.GrpcService.InferParameter defaultValue);
          * <code>.inference.InferTensorContents contents = 5 [json_name = "contents"];</code>
          */
         public Builder clearContents() {
-          if (contentsBuilder_ == null) {
-            contents_ = null;
-            onChanged();
-          } else {
-            contents_ = null;
+          bitField0_ = (bitField0_ & ~0x00000010);
+          contents_ = null;
+          if (contentsBuilder_ != null) {
+            contentsBuilder_.dispose();
             contentsBuilder_ = null;
           }
-
+          onChanged();
           return this;
         }
         /**
@@ -15629,7 +15703,7 @@ inference.GrpcService.InferParameter defaultValue);
          * <code>.inference.InferTensorContents contents = 5 [json_name = "contents"];</code>
          */
         public inference.GrpcService.InferTensorContents.Builder getContentsBuilder() {
-          
+          bitField0_ |= 0x00000010;
           onChanged();
           return getContentsFieldBuilder().getBuilder();
         }
@@ -15825,7 +15899,6 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 2 [json_name = "parameters"];</code>
        */
-
       /* nullable */
 inference.GrpcService.InferParameter getParametersOrDefault(
           java.lang.String key,
@@ -15841,7 +15914,6 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 2 [json_name = "parameters"];</code>
        */
-
       inference.GrpcService.InferParameter getParametersOrThrow(
           java.lang.String key);
     }
@@ -15907,7 +15979,8 @@ inference.GrpcService.InferParameter defaultValue);
       }
 
       public static final int NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object name_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object name_ = "";
       /**
        * <pre>
        *&#64;&#64;
@@ -15972,6 +16045,7 @@ inference.GrpcService.InferParameter defaultValue);
                     com.google.protobuf.WireFormat.FieldType.MESSAGE,
                     inference.GrpcService.InferParameter.getDefaultInstance());
       }
+      @SuppressWarnings("serial")
       private com.google.protobuf.MapField<
           java.lang.String, inference.GrpcService.InferParameter> parameters_;
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
@@ -15982,7 +16056,6 @@ inference.GrpcService.InferParameter defaultValue);
         }
         return parameters_;
       }
-
       public int getParametersCount() {
         return internalGetParameters().getMap().size();
       }
@@ -15996,7 +16069,6 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 2 [json_name = "parameters"];</code>
        */
-
       @java.lang.Override
       public boolean containsParameters(
           java.lang.String key) {
@@ -16022,7 +16094,6 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 2 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.GrpcService.InferParameter> getParametersMap() {
         return internalGetParameters().getMap();
       }
@@ -16037,10 +16108,11 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 2 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
-      public inference.GrpcService.InferParameter getParametersOrDefault(
+      public /* nullable */
+inference.GrpcService.InferParameter getParametersOrDefault(
           java.lang.String key,
-          inference.GrpcService.InferParameter defaultValue) {
+          /* nullable */
+inference.GrpcService.InferParameter defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.GrpcService.InferParameter> map =
             internalGetParameters().getMap();
@@ -16057,7 +16129,6 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 2 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public inference.GrpcService.InferParameter getParametersOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -16308,8 +16379,8 @@ inference.GrpcService.InferParameter defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           name_ = "";
-
           internalGetMutableParameters().clear();
           return this;
         }
@@ -16337,12 +16408,20 @@ inference.GrpcService.InferParameter defaultValue);
         @java.lang.Override
         public inference.GrpcService.ModelInferRequest.InferRequestedOutputTensor buildPartial() {
           inference.GrpcService.ModelInferRequest.InferRequestedOutputTensor result = new inference.GrpcService.ModelInferRequest.InferRequestedOutputTensor(this);
-          int from_bitField0_ = bitField0_;
-          result.name_ = name_;
-          result.parameters_ = internalGetParameters();
-          result.parameters_.makeImmutable();
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.GrpcService.ModelInferRequest.InferRequestedOutputTensor result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.name_ = name_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.parameters_ = internalGetParameters();
+            result.parameters_.makeImmutable();
+          }
         }
 
         @java.lang.Override
@@ -16391,10 +16470,12 @@ inference.GrpcService.InferParameter defaultValue);
           if (other == inference.GrpcService.ModelInferRequest.InferRequestedOutputTensor.getDefaultInstance()) return this;
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           internalGetMutableParameters().mergeFrom(
               other.internalGetParameters());
+          bitField0_ |= 0x00000002;
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -16423,7 +16504,7 @@ inference.GrpcService.InferParameter defaultValue);
                   break;
                 case 10: {
                   name_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 18: {
@@ -16432,6 +16513,7 @@ inference.GrpcService.InferParameter defaultValue);
                       ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                   internalGetMutableParameters().getMutableMap().put(
                       parameters__.getKey(), parameters__.getValue());
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 18
                 default: {
@@ -16516,11 +16598,9 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -16537,8 +16617,8 @@ inference.GrpcService.InferParameter defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearName() {
-          
           name_ = getDefaultInstance().getName();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -16557,12 +16637,10 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -16570,7 +16648,7 @@ inference.GrpcService.InferParameter defaultValue);
         private com.google.protobuf.MapField<
             java.lang.String, inference.GrpcService.InferParameter> parameters_;
         private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
-        internalGetParameters() {
+            internalGetParameters() {
           if (parameters_ == null) {
             return com.google.protobuf.MapField.emptyMapField(
                 ParametersDefaultEntryHolder.defaultEntry);
@@ -16578,8 +16656,7 @@ inference.GrpcService.InferParameter defaultValue);
           return parameters_;
         }
         private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
-        internalGetMutableParameters() {
-          onChanged();;
+            internalGetMutableParameters() {
           if (parameters_ == null) {
             parameters_ = com.google.protobuf.MapField.newMapField(
                 ParametersDefaultEntryHolder.defaultEntry);
@@ -16587,9 +16664,10 @@ inference.GrpcService.InferParameter defaultValue);
           if (!parameters_.isMutable()) {
             parameters_ = parameters_.copy();
           }
+          bitField0_ |= 0x00000002;
+          onChanged();
           return parameters_;
         }
-
         public int getParametersCount() {
           return internalGetParameters().getMap().size();
         }
@@ -16603,7 +16681,6 @@ inference.GrpcService.InferParameter defaultValue);
          *
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 2 [json_name = "parameters"];</code>
          */
-
         @java.lang.Override
         public boolean containsParameters(
             java.lang.String key) {
@@ -16629,7 +16706,6 @@ inference.GrpcService.InferParameter defaultValue);
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 2 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
         public java.util.Map<java.lang.String, inference.GrpcService.InferParameter> getParametersMap() {
           return internalGetParameters().getMap();
         }
@@ -16644,10 +16720,11 @@ inference.GrpcService.InferParameter defaultValue);
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 2 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
-        public inference.GrpcService.InferParameter getParametersOrDefault(
+        public /* nullable */
+inference.GrpcService.InferParameter getParametersOrDefault(
             java.lang.String key,
-            inference.GrpcService.InferParameter defaultValue) {
+            /* nullable */
+inference.GrpcService.InferParameter defaultValue) {
           if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, inference.GrpcService.InferParameter> map =
               internalGetParameters().getMap();
@@ -16664,7 +16741,6 @@ inference.GrpcService.InferParameter defaultValue);
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 2 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
         public inference.GrpcService.InferParameter getParametersOrThrow(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -16675,8 +16751,8 @@ inference.GrpcService.InferParameter defaultValue);
           }
           return map.get(key);
         }
-
         public Builder clearParameters() {
+          bitField0_ = (bitField0_ & ~0x00000002);
           internalGetMutableParameters().getMutableMap()
               .clear();
           return this;
@@ -16691,7 +16767,6 @@ inference.GrpcService.InferParameter defaultValue);
          *
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 2 [json_name = "parameters"];</code>
          */
-
         public Builder removeParameters(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -16704,7 +16779,8 @@ inference.GrpcService.InferParameter defaultValue);
          */
         @java.lang.Deprecated
         public java.util.Map<java.lang.String, inference.GrpcService.InferParameter>
-        getMutableParameters() {
+            getMutableParameters() {
+          bitField0_ |= 0x00000002;
           return internalGetMutableParameters().getMutableMap();
         }
         /**
@@ -16721,12 +16797,10 @@ inference.GrpcService.InferParameter defaultValue);
             java.lang.String key,
             inference.GrpcService.InferParameter value) {
           if (key == null) { throw new NullPointerException("map key"); }
-          if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+          if (value == null) { throw new NullPointerException("map value"); }
           internalGetMutableParameters().getMutableMap()
               .put(key, value);
+          bitField0_ |= 0x00000002;
           return this;
         }
         /**
@@ -16739,11 +16813,11 @@ inference.GrpcService.InferParameter defaultValue);
          *
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 2 [json_name = "parameters"];</code>
          */
-
         public Builder putAllParameters(
             java.util.Map<java.lang.String, inference.GrpcService.InferParameter> values) {
           internalGetMutableParameters().getMutableMap()
               .putAll(values);
+          bitField0_ |= 0x00000002;
           return this;
         }
         @java.lang.Override
@@ -16811,7 +16885,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int MODEL_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object modelName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modelName_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string model_name
@@ -16863,7 +16938,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int MODEL_VERSION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object modelVersion_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modelVersion_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string model_version
@@ -16917,7 +16993,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string id
@@ -16982,6 +17059,7 @@ inference.GrpcService.InferParameter defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   inference.GrpcService.InferParameter.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, inference.GrpcService.InferParameter> parameters_;
     private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
@@ -16992,7 +17070,6 @@ inference.GrpcService.InferParameter defaultValue);
       }
       return parameters_;
     }
-
     public int getParametersCount() {
       return internalGetParameters().getMap().size();
     }
@@ -17006,7 +17083,6 @@ inference.GrpcService.InferParameter defaultValue);
      *
      * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
      */
-
     @java.lang.Override
     public boolean containsParameters(
         java.lang.String key) {
@@ -17032,7 +17108,6 @@ inference.GrpcService.InferParameter defaultValue);
      * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, inference.GrpcService.InferParameter> getParametersMap() {
       return internalGetParameters().getMap();
     }
@@ -17047,10 +17122,11 @@ inference.GrpcService.InferParameter defaultValue);
      * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
-    public inference.GrpcService.InferParameter getParametersOrDefault(
+    public /* nullable */
+inference.GrpcService.InferParameter getParametersOrDefault(
         java.lang.String key,
-        inference.GrpcService.InferParameter defaultValue) {
+        /* nullable */
+inference.GrpcService.InferParameter defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, inference.GrpcService.InferParameter> map =
           internalGetParameters().getMap();
@@ -17067,7 +17143,6 @@ inference.GrpcService.InferParameter defaultValue);
      * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
     public inference.GrpcService.InferParameter getParametersOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -17080,6 +17155,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int INPUTS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<inference.GrpcService.ModelInferRequest.InferInputTensor> inputs_;
     /**
      * <pre>
@@ -17160,6 +17236,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int OUTPUTS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<inference.GrpcService.ModelInferRequest.InferRequestedOutputTensor> outputs_;
     /**
      * <pre>
@@ -17250,6 +17327,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int RAW_INPUT_CONTENTS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.ByteString> rawInputContents_;
     /**
      * <pre>
@@ -17657,12 +17735,10 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         modelName_ = "";
-
         modelVersion_ = "";
-
         id_ = "";
-
         internalGetMutableParameters().clear();
         if (inputsBuilder_ == null) {
           inputs_ = java.util.Collections.emptyList();
@@ -17670,16 +17746,15 @@ inference.GrpcService.InferParameter defaultValue);
           inputs_ = null;
           inputsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         if (outputsBuilder_ == null) {
           outputs_ = java.util.Collections.emptyList();
         } else {
           outputs_ = null;
           outputsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000020);
         rawInputContents_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -17706,37 +17781,53 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.ModelInferRequest buildPartial() {
         inference.GrpcService.ModelInferRequest result = new inference.GrpcService.ModelInferRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.modelName_ = modelName_;
-        result.modelVersion_ = modelVersion_;
-        result.id_ = id_;
-        result.parameters_ = internalGetParameters();
-        result.parameters_.makeImmutable();
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.GrpcService.ModelInferRequest result) {
         if (inputsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             inputs_ = java.util.Collections.unmodifiableList(inputs_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.inputs_ = inputs_;
         } else {
           result.inputs_ = inputsBuilder_.build();
         }
         if (outputsBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             outputs_ = java.util.Collections.unmodifiableList(outputs_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.outputs_ = outputs_;
         } else {
           result.outputs_ = outputsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000008) != 0)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           rawInputContents_ = java.util.Collections.unmodifiableList(rawInputContents_);
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.rawInputContents_ = rawInputContents_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ModelInferRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.modelName_ = modelName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.modelVersion_ = modelVersion_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.parameters_ = internalGetParameters();
+          result.parameters_.makeImmutable();
+        }
       }
 
       @java.lang.Override
@@ -17785,23 +17876,27 @@ inference.GrpcService.InferParameter defaultValue);
         if (other == inference.GrpcService.ModelInferRequest.getDefaultInstance()) return this;
         if (!other.getModelName().isEmpty()) {
           modelName_ = other.modelName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getModelVersion().isEmpty()) {
           modelVersion_ = other.modelVersion_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         internalGetMutableParameters().mergeFrom(
             other.internalGetParameters());
+        bitField0_ |= 0x00000008;
         if (inputsBuilder_ == null) {
           if (!other.inputs_.isEmpty()) {
             if (inputs_.isEmpty()) {
               inputs_ = other.inputs_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureInputsIsMutable();
               inputs_.addAll(other.inputs_);
@@ -17814,7 +17909,7 @@ inference.GrpcService.InferParameter defaultValue);
               inputsBuilder_.dispose();
               inputsBuilder_ = null;
               inputs_ = other.inputs_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000010);
               inputsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getInputsFieldBuilder() : null;
@@ -17827,7 +17922,7 @@ inference.GrpcService.InferParameter defaultValue);
           if (!other.outputs_.isEmpty()) {
             if (outputs_.isEmpty()) {
               outputs_ = other.outputs_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureOutputsIsMutable();
               outputs_.addAll(other.outputs_);
@@ -17840,7 +17935,7 @@ inference.GrpcService.InferParameter defaultValue);
               outputsBuilder_.dispose();
               outputsBuilder_ = null;
               outputs_ = other.outputs_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000020);
               outputsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOutputsFieldBuilder() : null;
@@ -17852,7 +17947,7 @@ inference.GrpcService.InferParameter defaultValue);
         if (!other.rawInputContents_.isEmpty()) {
           if (rawInputContents_.isEmpty()) {
             rawInputContents_ = other.rawInputContents_;
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureRawInputContentsIsMutable();
             rawInputContents_.addAll(other.rawInputContents_);
@@ -17887,17 +17982,17 @@ inference.GrpcService.InferParameter defaultValue);
                 break;
               case 10: {
                 modelName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 modelVersion_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
@@ -17906,6 +18001,7 @@ inference.GrpcService.InferParameter defaultValue);
                     ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableParameters().getMutableMap().put(
                     parameters__.getKey(), parameters__.getValue());
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
@@ -18019,11 +18115,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setModelName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         modelName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -18039,8 +18133,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearModelName() {
-        
         modelName_ = getDefaultInstance().getModelName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -18058,12 +18152,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setModelNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         modelName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -18133,11 +18225,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setModelVersion(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         modelVersion_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -18154,8 +18244,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearModelVersion() {
-        
         modelVersion_ = getDefaultInstance().getModelVersion();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -18174,12 +18264,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setModelVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         modelVersion_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -18249,11 +18337,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -18270,8 +18356,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -18290,12 +18376,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -18303,7 +18387,7 @@ inference.GrpcService.InferParameter defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, inference.GrpcService.InferParameter> parameters_;
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
-      internalGetParameters() {
+          internalGetParameters() {
         if (parameters_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               ParametersDefaultEntryHolder.defaultEntry);
@@ -18311,8 +18395,7 @@ inference.GrpcService.InferParameter defaultValue);
         return parameters_;
       }
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
-      internalGetMutableParameters() {
-        onChanged();;
+          internalGetMutableParameters() {
         if (parameters_ == null) {
           parameters_ = com.google.protobuf.MapField.newMapField(
               ParametersDefaultEntryHolder.defaultEntry);
@@ -18320,9 +18403,10 @@ inference.GrpcService.InferParameter defaultValue);
         if (!parameters_.isMutable()) {
           parameters_ = parameters_.copy();
         }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return parameters_;
       }
-
       public int getParametersCount() {
         return internalGetParameters().getMap().size();
       }
@@ -18336,7 +18420,6 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
-
       @java.lang.Override
       public boolean containsParameters(
           java.lang.String key) {
@@ -18362,7 +18445,6 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.GrpcService.InferParameter> getParametersMap() {
         return internalGetParameters().getMap();
       }
@@ -18377,10 +18459,11 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
-      public inference.GrpcService.InferParameter getParametersOrDefault(
+      public /* nullable */
+inference.GrpcService.InferParameter getParametersOrDefault(
           java.lang.String key,
-          inference.GrpcService.InferParameter defaultValue) {
+          /* nullable */
+inference.GrpcService.InferParameter defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.GrpcService.InferParameter> map =
             internalGetParameters().getMap();
@@ -18397,7 +18480,6 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public inference.GrpcService.InferParameter getParametersOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -18408,8 +18490,8 @@ inference.GrpcService.InferParameter defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearParameters() {
+        bitField0_ = (bitField0_ & ~0x00000008);
         internalGetMutableParameters().getMutableMap()
             .clear();
         return this;
@@ -18424,7 +18506,6 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
-
       public Builder removeParameters(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -18437,7 +18518,8 @@ inference.GrpcService.InferParameter defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, inference.GrpcService.InferParameter>
-      getMutableParameters() {
+          getMutableParameters() {
+        bitField0_ |= 0x00000008;
         return internalGetMutableParameters().getMutableMap();
       }
       /**
@@ -18454,12 +18536,10 @@ inference.GrpcService.InferParameter defaultValue);
           java.lang.String key,
           inference.GrpcService.InferParameter value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableParameters().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -18472,20 +18552,20 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
-
       public Builder putAllParameters(
           java.util.Map<java.lang.String, inference.GrpcService.InferParameter> values) {
         internalGetMutableParameters().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000008;
         return this;
       }
 
       private java.util.List<inference.GrpcService.ModelInferRequest.InferInputTensor> inputs_ =
         java.util.Collections.emptyList();
       private void ensureInputsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           inputs_ = new java.util.ArrayList<inference.GrpcService.ModelInferRequest.InferInputTensor>(inputs_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -18723,7 +18803,7 @@ inference.GrpcService.InferParameter defaultValue);
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
           inputs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           inputsBuilder_.clear();
@@ -18856,7 +18936,7 @@ inference.GrpcService.InferParameter defaultValue);
           inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.GrpcService.ModelInferRequest.InferInputTensor, inference.GrpcService.ModelInferRequest.InferInputTensor.Builder, inference.GrpcService.ModelInferRequest.InferInputTensorOrBuilder>(
                   inputs_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           inputs_ = null;
@@ -18867,9 +18947,9 @@ inference.GrpcService.InferParameter defaultValue);
       private java.util.List<inference.GrpcService.ModelInferRequest.InferRequestedOutputTensor> outputs_ =
         java.util.Collections.emptyList();
       private void ensureOutputsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           outputs_ = new java.util.ArrayList<inference.GrpcService.ModelInferRequest.InferRequestedOutputTensor>(outputs_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -19129,7 +19209,7 @@ inference.GrpcService.InferParameter defaultValue);
       public Builder clearOutputs() {
         if (outputsBuilder_ == null) {
           outputs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           outputsBuilder_.clear();
@@ -19276,7 +19356,7 @@ inference.GrpcService.InferParameter defaultValue);
           outputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.GrpcService.ModelInferRequest.InferRequestedOutputTensor, inference.GrpcService.ModelInferRequest.InferRequestedOutputTensor.Builder, inference.GrpcService.ModelInferRequest.InferRequestedOutputTensorOrBuilder>(
                   outputs_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           outputs_ = null;
@@ -19286,10 +19366,10 @@ inference.GrpcService.InferParameter defaultValue);
 
       private java.util.List<com.google.protobuf.ByteString> rawInputContents_ = java.util.Collections.emptyList();
       private void ensureRawInputContentsIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           rawInputContents_ = new java.util.ArrayList<com.google.protobuf.ByteString>(rawInputContents_);
-          bitField0_ |= 0x00000008;
-         }
+          bitField0_ |= 0x00000040;
+        }
       }
       /**
        * <pre>
@@ -19323,7 +19403,7 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public java.util.List<com.google.protobuf.ByteString>
           getRawInputContentsList() {
-        return ((bitField0_ & 0x00000008) != 0) ?
+        return ((bitField0_ & 0x00000040) != 0) ?
                  java.util.Collections.unmodifiableList(rawInputContents_) : rawInputContents_;
       }
       /**
@@ -19427,10 +19507,8 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setRawInputContents(
           int index, com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRawInputContentsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureRawInputContentsIsMutable();
         rawInputContents_.set(index, value);
         onChanged();
         return this;
@@ -19467,10 +19545,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder addRawInputContents(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRawInputContentsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureRawInputContentsIsMutable();
         rawInputContents_.add(value);
         onChanged();
         return this;
@@ -19546,7 +19622,7 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder clearRawInputContents() {
         rawInputContents_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -19747,7 +19823,6 @@ inference.GrpcService.InferParameter defaultValue);
      *
      * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
      */
-
     /* nullable */
 inference.GrpcService.InferParameter getParametersOrDefault(
         java.lang.String key,
@@ -19763,7 +19838,6 @@ inference.GrpcService.InferParameter defaultValue);
      *
      * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
      */
-
     inference.GrpcService.InferParameter getParametersOrThrow(
         java.lang.String key);
 
@@ -20143,7 +20217,6 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
-
       /* nullable */
 inference.GrpcService.InferParameter getParametersOrDefault(
           java.lang.String key,
@@ -20159,7 +20232,6 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
-
       inference.GrpcService.InferParameter getParametersOrThrow(
           java.lang.String key);
 
@@ -20269,7 +20341,8 @@ inference.GrpcService.InferParameter defaultValue);
       }
 
       public static final int NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object name_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object name_ = "";
       /**
        * <pre>
        *&#64;&#64;
@@ -20323,7 +20396,8 @@ inference.GrpcService.InferParameter defaultValue);
       }
 
       public static final int DATATYPE_FIELD_NUMBER = 2;
-      private volatile java.lang.Object datatype_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object datatype_ = "";
       /**
        * <pre>
        *&#64;&#64;
@@ -20377,6 +20451,7 @@ inference.GrpcService.InferParameter defaultValue);
       }
 
       public static final int SHAPE_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
       private com.google.protobuf.Internal.LongList shape_;
       /**
        * <pre>
@@ -20440,6 +20515,7 @@ inference.GrpcService.InferParameter defaultValue);
                     com.google.protobuf.WireFormat.FieldType.MESSAGE,
                     inference.GrpcService.InferParameter.getDefaultInstance());
       }
+      @SuppressWarnings("serial")
       private com.google.protobuf.MapField<
           java.lang.String, inference.GrpcService.InferParameter> parameters_;
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
@@ -20450,7 +20526,6 @@ inference.GrpcService.InferParameter defaultValue);
         }
         return parameters_;
       }
-
       public int getParametersCount() {
         return internalGetParameters().getMap().size();
       }
@@ -20464,7 +20539,6 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
-
       @java.lang.Override
       public boolean containsParameters(
           java.lang.String key) {
@@ -20490,7 +20564,6 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.GrpcService.InferParameter> getParametersMap() {
         return internalGetParameters().getMap();
       }
@@ -20505,10 +20578,11 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
-      public inference.GrpcService.InferParameter getParametersOrDefault(
+      public /* nullable */
+inference.GrpcService.InferParameter getParametersOrDefault(
           java.lang.String key,
-          inference.GrpcService.InferParameter defaultValue) {
+          /* nullable */
+inference.GrpcService.InferParameter defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.GrpcService.InferParameter> map =
             internalGetParameters().getMap();
@@ -20525,7 +20599,6 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public inference.GrpcService.InferParameter getParametersOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -20587,7 +20660,7 @@ inference.GrpcService.InferParameter defaultValue);
        */
       @java.lang.Override
       public inference.GrpcService.InferTensorContentsOrBuilder getContentsOrBuilder() {
-        return getContents();
+        return contents_ == null ? inference.GrpcService.InferTensorContents.getDefaultInstance() : contents_;
       }
 
       private byte memoizedIsInitialized = -1;
@@ -20883,17 +20956,14 @@ inference.GrpcService.InferParameter defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           name_ = "";
-
           datatype_ = "";
-
           shape_ = emptyLongList();
-          bitField0_ = (bitField0_ & ~0x00000001);
           internalGetMutableParameters().clear();
-          if (contentsBuilder_ == null) {
-            contents_ = null;
-          } else {
-            contents_ = null;
+          contents_ = null;
+          if (contentsBuilder_ != null) {
+            contentsBuilder_.dispose();
             contentsBuilder_ = null;
           }
           return this;
@@ -20922,23 +20992,37 @@ inference.GrpcService.InferParameter defaultValue);
         @java.lang.Override
         public inference.GrpcService.ModelInferResponse.InferOutputTensor buildPartial() {
           inference.GrpcService.ModelInferResponse.InferOutputTensor result = new inference.GrpcService.ModelInferResponse.InferOutputTensor(this);
-          int from_bitField0_ = bitField0_;
-          result.name_ = name_;
-          result.datatype_ = datatype_;
-          if (((bitField0_ & 0x00000001) != 0)) {
-            shape_.makeImmutable();
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.shape_ = shape_;
-          result.parameters_ = internalGetParameters();
-          result.parameters_.makeImmutable();
-          if (contentsBuilder_ == null) {
-            result.contents_ = contents_;
-          } else {
-            result.contents_ = contentsBuilder_.build();
-          }
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.GrpcService.ModelInferResponse.InferOutputTensor result) {
+          if (((bitField0_ & 0x00000004) != 0)) {
+            shape_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.shape_ = shape_;
+        }
+
+        private void buildPartial0(inference.GrpcService.ModelInferResponse.InferOutputTensor result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.name_ = name_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.datatype_ = datatype_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.parameters_ = internalGetParameters();
+            result.parameters_.makeImmutable();
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.contents_ = contentsBuilder_ == null
+                ? contents_
+                : contentsBuilder_.build();
+          }
         }
 
         @java.lang.Override
@@ -20987,16 +21071,18 @@ inference.GrpcService.InferParameter defaultValue);
           if (other == inference.GrpcService.ModelInferResponse.InferOutputTensor.getDefaultInstance()) return this;
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (!other.getDatatype().isEmpty()) {
             datatype_ = other.datatype_;
+            bitField0_ |= 0x00000002;
             onChanged();
           }
           if (!other.shape_.isEmpty()) {
             if (shape_.isEmpty()) {
               shape_ = other.shape_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureShapeIsMutable();
               shape_.addAll(other.shape_);
@@ -21005,6 +21091,7 @@ inference.GrpcService.InferParameter defaultValue);
           }
           internalGetMutableParameters().mergeFrom(
               other.internalGetParameters());
+          bitField0_ |= 0x00000008;
           if (other.hasContents()) {
             mergeContents(other.getContents());
           }
@@ -21036,12 +21123,12 @@ inference.GrpcService.InferParameter defaultValue);
                   break;
                 case 10: {
                   name_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 18: {
                   datatype_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 18
                 case 24: {
@@ -21066,13 +21153,14 @@ inference.GrpcService.InferParameter defaultValue);
                       ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                   internalGetMutableParameters().getMutableMap().put(
                       parameters__.getKey(), parameters__.getValue());
+                  bitField0_ |= 0x00000008;
                   break;
                 } // case 34
                 case 42: {
                   input.readMessage(
                       getContentsFieldBuilder().getBuilder(),
                       extensionRegistry);
-
+                  bitField0_ |= 0x00000010;
                   break;
                 } // case 42
                 default: {
@@ -21157,11 +21245,9 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -21178,8 +21264,8 @@ inference.GrpcService.InferParameter defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearName() {
-          
           name_ = getDefaultInstance().getName();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -21198,12 +21284,10 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -21273,11 +21357,9 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setDatatype(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           datatype_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -21294,8 +21376,8 @@ inference.GrpcService.InferParameter defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearDatatype() {
-          
           datatype_ = getDefaultInstance().getDatatype();
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
@@ -21314,22 +21396,20 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setDatatypeBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           datatype_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
 
         private com.google.protobuf.Internal.LongList shape_ = emptyLongList();
         private void ensureShapeIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
+          if (!((bitField0_ & 0x00000004) != 0)) {
             shape_ = mutableCopy(shape_);
-            bitField0_ |= 0x00000001;
-           }
+            bitField0_ |= 0x00000004;
+          }
         }
         /**
          * <pre>
@@ -21345,7 +21425,7 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public java.util.List<java.lang.Long>
             getShapeList() {
-          return ((bitField0_ & 0x00000001) != 0) ?
+          return ((bitField0_ & 0x00000004) != 0) ?
                    java.util.Collections.unmodifiableList(shape_) : shape_;
         }
         /**
@@ -21395,6 +21475,7 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setShape(
             int index, long value) {
+          
           ensureShapeIsMutable();
           shape_.setLong(index, value);
           onChanged();
@@ -21414,6 +21495,7 @@ inference.GrpcService.InferParameter defaultValue);
          * @return This builder for chaining.
          */
         public Builder addShape(long value) {
+          
           ensureShapeIsMutable();
           shape_.addLong(value);
           onChanged();
@@ -21454,7 +21536,7 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder clearShape() {
           shape_ = emptyLongList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
           return this;
         }
@@ -21462,7 +21544,7 @@ inference.GrpcService.InferParameter defaultValue);
         private com.google.protobuf.MapField<
             java.lang.String, inference.GrpcService.InferParameter> parameters_;
         private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
-        internalGetParameters() {
+            internalGetParameters() {
           if (parameters_ == null) {
             return com.google.protobuf.MapField.emptyMapField(
                 ParametersDefaultEntryHolder.defaultEntry);
@@ -21470,8 +21552,7 @@ inference.GrpcService.InferParameter defaultValue);
           return parameters_;
         }
         private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
-        internalGetMutableParameters() {
-          onChanged();;
+            internalGetMutableParameters() {
           if (parameters_ == null) {
             parameters_ = com.google.protobuf.MapField.newMapField(
                 ParametersDefaultEntryHolder.defaultEntry);
@@ -21479,9 +21560,10 @@ inference.GrpcService.InferParameter defaultValue);
           if (!parameters_.isMutable()) {
             parameters_ = parameters_.copy();
           }
+          bitField0_ |= 0x00000008;
+          onChanged();
           return parameters_;
         }
-
         public int getParametersCount() {
           return internalGetParameters().getMap().size();
         }
@@ -21495,7 +21577,6 @@ inference.GrpcService.InferParameter defaultValue);
          *
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
          */
-
         @java.lang.Override
         public boolean containsParameters(
             java.lang.String key) {
@@ -21521,7 +21602,6 @@ inference.GrpcService.InferParameter defaultValue);
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
         public java.util.Map<java.lang.String, inference.GrpcService.InferParameter> getParametersMap() {
           return internalGetParameters().getMap();
         }
@@ -21536,10 +21616,11 @@ inference.GrpcService.InferParameter defaultValue);
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
-        public inference.GrpcService.InferParameter getParametersOrDefault(
+        public /* nullable */
+inference.GrpcService.InferParameter getParametersOrDefault(
             java.lang.String key,
-            inference.GrpcService.InferParameter defaultValue) {
+            /* nullable */
+inference.GrpcService.InferParameter defaultValue) {
           if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, inference.GrpcService.InferParameter> map =
               internalGetParameters().getMap();
@@ -21556,7 +21637,6 @@ inference.GrpcService.InferParameter defaultValue);
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
         public inference.GrpcService.InferParameter getParametersOrThrow(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -21567,8 +21647,8 @@ inference.GrpcService.InferParameter defaultValue);
           }
           return map.get(key);
         }
-
         public Builder clearParameters() {
+          bitField0_ = (bitField0_ & ~0x00000008);
           internalGetMutableParameters().getMutableMap()
               .clear();
           return this;
@@ -21583,7 +21663,6 @@ inference.GrpcService.InferParameter defaultValue);
          *
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
          */
-
         public Builder removeParameters(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -21596,7 +21675,8 @@ inference.GrpcService.InferParameter defaultValue);
          */
         @java.lang.Deprecated
         public java.util.Map<java.lang.String, inference.GrpcService.InferParameter>
-        getMutableParameters() {
+            getMutableParameters() {
+          bitField0_ |= 0x00000008;
           return internalGetMutableParameters().getMutableMap();
         }
         /**
@@ -21613,12 +21693,10 @@ inference.GrpcService.InferParameter defaultValue);
             java.lang.String key,
             inference.GrpcService.InferParameter value) {
           if (key == null) { throw new NullPointerException("map key"); }
-          if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+          if (value == null) { throw new NullPointerException("map value"); }
           internalGetMutableParameters().getMutableMap()
               .put(key, value);
+          bitField0_ |= 0x00000008;
           return this;
         }
         /**
@@ -21631,11 +21709,11 @@ inference.GrpcService.InferParameter defaultValue);
          *
          * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
          */
-
         public Builder putAllParameters(
             java.util.Map<java.lang.String, inference.GrpcService.InferParameter> values) {
           internalGetMutableParameters().getMutableMap()
               .putAll(values);
+          bitField0_ |= 0x00000008;
           return this;
         }
 
@@ -21656,7 +21734,7 @@ inference.GrpcService.InferParameter defaultValue);
          * @return Whether the contents field is set.
          */
         public boolean hasContents() {
-          return contentsBuilder_ != null || contents_ != null;
+          return ((bitField0_ & 0x00000010) != 0);
         }
         /**
          * <pre>
@@ -21696,11 +21774,11 @@ inference.GrpcService.InferParameter defaultValue);
               throw new NullPointerException();
             }
             contents_ = value;
-            onChanged();
           } else {
             contentsBuilder_.setMessage(value);
           }
-
+          bitField0_ |= 0x00000010;
+          onChanged();
           return this;
         }
         /**
@@ -21719,11 +21797,11 @@ inference.GrpcService.InferParameter defaultValue);
             inference.GrpcService.InferTensorContents.Builder builderForValue) {
           if (contentsBuilder_ == null) {
             contents_ = builderForValue.build();
-            onChanged();
           } else {
             contentsBuilder_.setMessage(builderForValue.build());
           }
-
+          bitField0_ |= 0x00000010;
+          onChanged();
           return this;
         }
         /**
@@ -21740,17 +21818,18 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder mergeContents(inference.GrpcService.InferTensorContents value) {
           if (contentsBuilder_ == null) {
-            if (contents_ != null) {
-              contents_ =
-                inference.GrpcService.InferTensorContents.newBuilder(contents_).mergeFrom(value).buildPartial();
+            if (((bitField0_ & 0x00000010) != 0) &&
+              contents_ != null &&
+              contents_ != inference.GrpcService.InferTensorContents.getDefaultInstance()) {
+              getContentsBuilder().mergeFrom(value);
             } else {
               contents_ = value;
             }
-            onChanged();
           } else {
             contentsBuilder_.mergeFrom(value);
           }
-
+          bitField0_ |= 0x00000010;
+          onChanged();
           return this;
         }
         /**
@@ -21766,14 +21845,13 @@ inference.GrpcService.InferParameter defaultValue);
          * <code>.inference.InferTensorContents contents = 5 [json_name = "contents"];</code>
          */
         public Builder clearContents() {
-          if (contentsBuilder_ == null) {
-            contents_ = null;
-            onChanged();
-          } else {
-            contents_ = null;
+          bitField0_ = (bitField0_ & ~0x00000010);
+          contents_ = null;
+          if (contentsBuilder_ != null) {
+            contentsBuilder_.dispose();
             contentsBuilder_ = null;
           }
-
+          onChanged();
           return this;
         }
         /**
@@ -21789,7 +21867,7 @@ inference.GrpcService.InferParameter defaultValue);
          * <code>.inference.InferTensorContents contents = 5 [json_name = "contents"];</code>
          */
         public inference.GrpcService.InferTensorContents.Builder getContentsBuilder() {
-          
+          bitField0_ |= 0x00000010;
           onChanged();
           return getContentsFieldBuilder().getBuilder();
         }
@@ -21903,7 +21981,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int MODEL_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object modelName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modelName_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string model_name
@@ -21955,7 +22034,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int MODEL_VERSION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object modelVersion_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modelVersion_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string model_version
@@ -22007,7 +22087,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string id
@@ -22070,6 +22151,7 @@ inference.GrpcService.InferParameter defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   inference.GrpcService.InferParameter.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, inference.GrpcService.InferParameter> parameters_;
     private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
@@ -22080,7 +22162,6 @@ inference.GrpcService.InferParameter defaultValue);
       }
       return parameters_;
     }
-
     public int getParametersCount() {
       return internalGetParameters().getMap().size();
     }
@@ -22094,7 +22175,6 @@ inference.GrpcService.InferParameter defaultValue);
      *
      * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
      */
-
     @java.lang.Override
     public boolean containsParameters(
         java.lang.String key) {
@@ -22120,7 +22200,6 @@ inference.GrpcService.InferParameter defaultValue);
      * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, inference.GrpcService.InferParameter> getParametersMap() {
       return internalGetParameters().getMap();
     }
@@ -22135,10 +22214,11 @@ inference.GrpcService.InferParameter defaultValue);
      * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
-    public inference.GrpcService.InferParameter getParametersOrDefault(
+    public /* nullable */
+inference.GrpcService.InferParameter getParametersOrDefault(
         java.lang.String key,
-        inference.GrpcService.InferParameter defaultValue) {
+        /* nullable */
+inference.GrpcService.InferParameter defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, inference.GrpcService.InferParameter> map =
           internalGetParameters().getMap();
@@ -22155,7 +22235,6 @@ inference.GrpcService.InferParameter defaultValue);
      * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
     public inference.GrpcService.InferParameter getParametersOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -22168,6 +22247,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int OUTPUTS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<inference.GrpcService.ModelInferResponse.InferOutputTensor> outputs_;
     /**
      * <pre>
@@ -22248,6 +22328,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int RAW_OUTPUT_CONTENTS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.ByteString> rawOutputContents_;
     /**
      * <pre>
@@ -22642,12 +22723,10 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         modelName_ = "";
-
         modelVersion_ = "";
-
         id_ = "";
-
         internalGetMutableParameters().clear();
         if (outputsBuilder_ == null) {
           outputs_ = java.util.Collections.emptyList();
@@ -22655,9 +22734,8 @@ inference.GrpcService.InferParameter defaultValue);
           outputs_ = null;
           outputsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         rawOutputContents_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -22684,28 +22762,44 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.ModelInferResponse buildPartial() {
         inference.GrpcService.ModelInferResponse result = new inference.GrpcService.ModelInferResponse(this);
-        int from_bitField0_ = bitField0_;
-        result.modelName_ = modelName_;
-        result.modelVersion_ = modelVersion_;
-        result.id_ = id_;
-        result.parameters_ = internalGetParameters();
-        result.parameters_.makeImmutable();
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.GrpcService.ModelInferResponse result) {
         if (outputsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             outputs_ = java.util.Collections.unmodifiableList(outputs_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.outputs_ = outputs_;
         } else {
           result.outputs_ = outputsBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000020) != 0)) {
           rawOutputContents_ = java.util.Collections.unmodifiableList(rawOutputContents_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000020);
         }
         result.rawOutputContents_ = rawOutputContents_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ModelInferResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.modelName_ = modelName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.modelVersion_ = modelVersion_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.parameters_ = internalGetParameters();
+          result.parameters_.makeImmutable();
+        }
       }
 
       @java.lang.Override
@@ -22754,23 +22848,27 @@ inference.GrpcService.InferParameter defaultValue);
         if (other == inference.GrpcService.ModelInferResponse.getDefaultInstance()) return this;
         if (!other.getModelName().isEmpty()) {
           modelName_ = other.modelName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getModelVersion().isEmpty()) {
           modelVersion_ = other.modelVersion_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         internalGetMutableParameters().mergeFrom(
             other.internalGetParameters());
+        bitField0_ |= 0x00000008;
         if (outputsBuilder_ == null) {
           if (!other.outputs_.isEmpty()) {
             if (outputs_.isEmpty()) {
               outputs_ = other.outputs_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureOutputsIsMutable();
               outputs_.addAll(other.outputs_);
@@ -22783,7 +22881,7 @@ inference.GrpcService.InferParameter defaultValue);
               outputsBuilder_.dispose();
               outputsBuilder_ = null;
               outputs_ = other.outputs_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000010);
               outputsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOutputsFieldBuilder() : null;
@@ -22795,7 +22893,7 @@ inference.GrpcService.InferParameter defaultValue);
         if (!other.rawOutputContents_.isEmpty()) {
           if (rawOutputContents_.isEmpty()) {
             rawOutputContents_ = other.rawOutputContents_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000020);
           } else {
             ensureRawOutputContentsIsMutable();
             rawOutputContents_.addAll(other.rawOutputContents_);
@@ -22830,17 +22928,17 @@ inference.GrpcService.InferParameter defaultValue);
                 break;
               case 10: {
                 modelName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 modelVersion_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
@@ -22849,6 +22947,7 @@ inference.GrpcService.InferParameter defaultValue);
                     ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableParameters().getMutableMap().put(
                     parameters__.getKey(), parameters__.getValue());
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
@@ -22949,11 +23048,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setModelName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         modelName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -22969,8 +23066,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearModelName() {
-        
         modelName_ = getDefaultInstance().getModelName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -22988,12 +23085,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setModelNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         modelName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -23060,11 +23155,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setModelVersion(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         modelVersion_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -23080,8 +23173,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearModelVersion() {
-        
         modelVersion_ = getDefaultInstance().getModelVersion();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -23099,12 +23192,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setModelVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         modelVersion_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -23171,11 +23262,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -23191,8 +23280,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -23210,12 +23299,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -23223,7 +23310,7 @@ inference.GrpcService.InferParameter defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, inference.GrpcService.InferParameter> parameters_;
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
-      internalGetParameters() {
+          internalGetParameters() {
         if (parameters_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               ParametersDefaultEntryHolder.defaultEntry);
@@ -23231,8 +23318,7 @@ inference.GrpcService.InferParameter defaultValue);
         return parameters_;
       }
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.InferParameter>
-      internalGetMutableParameters() {
-        onChanged();;
+          internalGetMutableParameters() {
         if (parameters_ == null) {
           parameters_ = com.google.protobuf.MapField.newMapField(
               ParametersDefaultEntryHolder.defaultEntry);
@@ -23240,9 +23326,10 @@ inference.GrpcService.InferParameter defaultValue);
         if (!parameters_.isMutable()) {
           parameters_ = parameters_.copy();
         }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return parameters_;
       }
-
       public int getParametersCount() {
         return internalGetParameters().getMap().size();
       }
@@ -23256,7 +23343,6 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
-
       @java.lang.Override
       public boolean containsParameters(
           java.lang.String key) {
@@ -23282,7 +23368,6 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.GrpcService.InferParameter> getParametersMap() {
         return internalGetParameters().getMap();
       }
@@ -23297,10 +23382,11 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
-      public inference.GrpcService.InferParameter getParametersOrDefault(
+      public /* nullable */
+inference.GrpcService.InferParameter getParametersOrDefault(
           java.lang.String key,
-          inference.GrpcService.InferParameter defaultValue) {
+          /* nullable */
+inference.GrpcService.InferParameter defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.GrpcService.InferParameter> map =
             internalGetParameters().getMap();
@@ -23317,7 +23403,6 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public inference.GrpcService.InferParameter getParametersOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -23328,8 +23413,8 @@ inference.GrpcService.InferParameter defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearParameters() {
+        bitField0_ = (bitField0_ & ~0x00000008);
         internalGetMutableParameters().getMutableMap()
             .clear();
         return this;
@@ -23344,7 +23429,6 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
-
       public Builder removeParameters(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -23357,7 +23441,8 @@ inference.GrpcService.InferParameter defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, inference.GrpcService.InferParameter>
-      getMutableParameters() {
+          getMutableParameters() {
+        bitField0_ |= 0x00000008;
         return internalGetMutableParameters().getMutableMap();
       }
       /**
@@ -23374,12 +23459,10 @@ inference.GrpcService.InferParameter defaultValue);
           java.lang.String key,
           inference.GrpcService.InferParameter value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableParameters().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
@@ -23392,20 +23475,20 @@ inference.GrpcService.InferParameter defaultValue);
        *
        * <code>map&lt;string, .inference.InferParameter&gt; parameters = 4 [json_name = "parameters"];</code>
        */
-
       public Builder putAllParameters(
           java.util.Map<java.lang.String, inference.GrpcService.InferParameter> values) {
         internalGetMutableParameters().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000008;
         return this;
       }
 
       private java.util.List<inference.GrpcService.ModelInferResponse.InferOutputTensor> outputs_ =
         java.util.Collections.emptyList();
       private void ensureOutputsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           outputs_ = new java.util.ArrayList<inference.GrpcService.ModelInferResponse.InferOutputTensor>(outputs_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -23643,7 +23726,7 @@ inference.GrpcService.InferParameter defaultValue);
       public Builder clearOutputs() {
         if (outputsBuilder_ == null) {
           outputs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           outputsBuilder_.clear();
@@ -23776,7 +23859,7 @@ inference.GrpcService.InferParameter defaultValue);
           outputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.GrpcService.ModelInferResponse.InferOutputTensor, inference.GrpcService.ModelInferResponse.InferOutputTensor.Builder, inference.GrpcService.ModelInferResponse.InferOutputTensorOrBuilder>(
                   outputs_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           outputs_ = null;
@@ -23786,10 +23869,10 @@ inference.GrpcService.InferParameter defaultValue);
 
       private java.util.List<com.google.protobuf.ByteString> rawOutputContents_ = java.util.Collections.emptyList();
       private void ensureRawOutputContentsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           rawOutputContents_ = new java.util.ArrayList<com.google.protobuf.ByteString>(rawOutputContents_);
-          bitField0_ |= 0x00000004;
-         }
+          bitField0_ |= 0x00000020;
+        }
       }
       /**
        * <pre>
@@ -23823,7 +23906,7 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public java.util.List<com.google.protobuf.ByteString>
           getRawOutputContentsList() {
-        return ((bitField0_ & 0x00000004) != 0) ?
+        return ((bitField0_ & 0x00000020) != 0) ?
                  java.util.Collections.unmodifiableList(rawOutputContents_) : rawOutputContents_;
       }
       /**
@@ -23927,10 +24010,8 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setRawOutputContents(
           int index, com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRawOutputContentsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureRawOutputContentsIsMutable();
         rawOutputContents_.set(index, value);
         onChanged();
         return this;
@@ -23967,10 +24048,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder addRawOutputContents(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureRawOutputContentsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureRawOutputContentsIsMutable();
         rawOutputContents_.add(value);
         onChanged();
         return this;
@@ -24046,7 +24125,7 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder clearRawOutputContents() {
         rawOutputContents_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000020);
         onChanged();
         return this;
       }
@@ -24237,7 +24316,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int ERROR_MESSAGE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object errorMessage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object errorMessage_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -24339,7 +24419,7 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.GrpcService.ModelInferResponseOrBuilder getInferResponseOrBuilder() {
-      return getInferResponse();
+      return inferResponse_ == null ? inference.GrpcService.ModelInferResponse.getDefaultInstance() : inferResponse_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -24553,12 +24633,11 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         errorMessage_ = "";
-
-        if (inferResponseBuilder_ == null) {
-          inferResponse_ = null;
-        } else {
-          inferResponse_ = null;
+        inferResponse_ = null;
+        if (inferResponseBuilder_ != null) {
+          inferResponseBuilder_.dispose();
           inferResponseBuilder_ = null;
         }
         return this;
@@ -24587,14 +24666,21 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.ModelStreamInferResponse buildPartial() {
         inference.GrpcService.ModelStreamInferResponse result = new inference.GrpcService.ModelStreamInferResponse(this);
-        result.errorMessage_ = errorMessage_;
-        if (inferResponseBuilder_ == null) {
-          result.inferResponse_ = inferResponse_;
-        } else {
-          result.inferResponse_ = inferResponseBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ModelStreamInferResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.errorMessage_ = errorMessage_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.inferResponse_ = inferResponseBuilder_ == null
+              ? inferResponse_
+              : inferResponseBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -24643,6 +24729,7 @@ inference.GrpcService.InferParameter defaultValue);
         if (other == inference.GrpcService.ModelStreamInferResponse.getDefaultInstance()) return this;
         if (!other.getErrorMessage().isEmpty()) {
           errorMessage_ = other.errorMessage_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasInferResponse()) {
@@ -24676,14 +24763,14 @@ inference.GrpcService.InferParameter defaultValue);
                 break;
               case 10: {
                 errorMessage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getInferResponseFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -24701,6 +24788,7 @@ inference.GrpcService.InferParameter defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object errorMessage_ = "";
       /**
@@ -24770,11 +24858,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setErrorMessage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         errorMessage_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -24792,8 +24878,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearErrorMessage() {
-        
         errorMessage_ = getDefaultInstance().getErrorMessage();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -24813,12 +24899,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setErrorMessageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         errorMessage_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -24839,7 +24923,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the inferResponse field is set.
        */
       public boolean hasInferResponse() {
-        return inferResponseBuilder_ != null || inferResponse_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -24877,11 +24961,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           inferResponse_ = value;
-          onChanged();
         } else {
           inferResponseBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -24899,11 +24983,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.GrpcService.ModelInferResponse.Builder builderForValue) {
         if (inferResponseBuilder_ == null) {
           inferResponse_ = builderForValue.build();
-          onChanged();
         } else {
           inferResponseBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -24919,17 +25003,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeInferResponse(inference.GrpcService.ModelInferResponse value) {
         if (inferResponseBuilder_ == null) {
-          if (inferResponse_ != null) {
-            inferResponse_ =
-              inference.GrpcService.ModelInferResponse.newBuilder(inferResponse_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            inferResponse_ != null &&
+            inferResponse_ != inference.GrpcService.ModelInferResponse.getDefaultInstance()) {
+            getInferResponseBuilder().mergeFrom(value);
           } else {
             inferResponse_ = value;
           }
-          onChanged();
         } else {
           inferResponseBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -24944,14 +25029,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.ModelInferResponse infer_response = 2 [json_name = "inferResponse"];</code>
        */
       public Builder clearInferResponse() {
-        if (inferResponseBuilder_ == null) {
-          inferResponse_ = null;
-          onChanged();
-        } else {
-          inferResponse_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        inferResponse_ = null;
+        if (inferResponseBuilder_ != null) {
+          inferResponseBuilder_.dispose();
           inferResponseBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -24966,7 +25050,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.ModelInferResponse infer_response = 2 [json_name = "inferResponse"];</code>
        */
       public inference.GrpcService.ModelInferResponse.Builder getInferResponseBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getInferResponseFieldBuilder().getBuilder();
       }
@@ -25188,7 +25272,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -25242,7 +25327,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object version_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object version_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string version
@@ -25500,10 +25586,9 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         version_ = "";
-
         return this;
       }
 
@@ -25530,10 +25615,19 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.ModelConfigRequest buildPartial() {
         inference.GrpcService.ModelConfigRequest result = new inference.GrpcService.ModelConfigRequest(this);
-        result.name_ = name_;
-        result.version_ = version_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ModelConfigRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+        }
       }
 
       @java.lang.Override
@@ -25582,10 +25676,12 @@ inference.GrpcService.InferParameter defaultValue);
         if (other == inference.GrpcService.ModelConfigRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getVersion().isEmpty()) {
           version_ = other.version_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -25616,12 +25712,12 @@ inference.GrpcService.InferParameter defaultValue);
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 version_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -25639,6 +25735,7 @@ inference.GrpcService.InferParameter defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -25705,11 +25802,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -25726,8 +25821,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -25746,12 +25841,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -25821,11 +25914,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setVersion(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         version_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -25842,8 +25933,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        
         version_ = getDefaultInstance().getVersion();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -25862,12 +25953,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         version_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -26073,7 +26162,7 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelConfigOrBuilder getConfigOrBuilder() {
-      return getConfig();
+      return config_ == null ? inference.ModelConfigOuterClass.ModelConfig.getDefaultInstance() : config_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -26277,10 +26366,10 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (configBuilder_ == null) {
-          config_ = null;
-        } else {
-          config_ = null;
+        bitField0_ = 0;
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
           configBuilder_ = null;
         }
         return this;
@@ -26309,13 +26398,18 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.ModelConfigResponse buildPartial() {
         inference.GrpcService.ModelConfigResponse result = new inference.GrpcService.ModelConfigResponse(this);
-        if (configBuilder_ == null) {
-          result.config_ = config_;
-        } else {
-          result.config_ = configBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ModelConfigResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.config_ = configBuilder_ == null
+              ? config_
+              : configBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -26395,7 +26489,7 @@ inference.GrpcService.InferParameter defaultValue);
                 input.readMessage(
                     getConfigFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -26413,6 +26507,7 @@ inference.GrpcService.InferParameter defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private inference.ModelConfigOuterClass.ModelConfig config_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -26430,7 +26525,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the config field is set.
        */
       public boolean hasConfig() {
-        return configBuilder_ != null || config_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -26468,11 +26563,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           config_ = value;
-          onChanged();
         } else {
           configBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -26490,11 +26585,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.ModelConfigOuterClass.ModelConfig.Builder builderForValue) {
         if (configBuilder_ == null) {
           config_ = builderForValue.build();
-          onChanged();
         } else {
           configBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -26510,17 +26605,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeConfig(inference.ModelConfigOuterClass.ModelConfig value) {
         if (configBuilder_ == null) {
-          if (config_ != null) {
-            config_ =
-              inference.ModelConfigOuterClass.ModelConfig.newBuilder(config_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            config_ != null &&
+            config_ != inference.ModelConfigOuterClass.ModelConfig.getDefaultInstance()) {
+            getConfigBuilder().mergeFrom(value);
           } else {
             config_ = value;
           }
-          onChanged();
         } else {
           configBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -26535,14 +26631,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.ModelConfig config = 1 [json_name = "config"];</code>
        */
       public Builder clearConfig() {
-        if (configBuilder_ == null) {
-          config_ = null;
-          onChanged();
-        } else {
-          config_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        config_ = null;
+        if (configBuilder_ != null) {
+          configBuilder_.dispose();
           configBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -26557,7 +26652,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.ModelConfig config = 1 [json_name = "config"];</code>
        */
       public inference.ModelConfigOuterClass.ModelConfig.Builder getConfigBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getConfigFieldBuilder().getBuilder();
       }
@@ -26779,7 +26874,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string name
@@ -26833,7 +26929,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object version_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object version_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string version
@@ -27091,10 +27188,9 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         version_ = "";
-
         return this;
       }
 
@@ -27121,10 +27217,19 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.ModelStatisticsRequest buildPartial() {
         inference.GrpcService.ModelStatisticsRequest result = new inference.GrpcService.ModelStatisticsRequest(this);
-        result.name_ = name_;
-        result.version_ = version_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ModelStatisticsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+        }
       }
 
       @java.lang.Override
@@ -27173,10 +27278,12 @@ inference.GrpcService.InferParameter defaultValue);
         if (other == inference.GrpcService.ModelStatisticsRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getVersion().isEmpty()) {
           version_ = other.version_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -27207,12 +27314,12 @@ inference.GrpcService.InferParameter defaultValue);
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 version_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -27230,6 +27337,7 @@ inference.GrpcService.InferParameter defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -27296,11 +27404,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -27317,8 +27423,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -27337,12 +27443,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -27412,11 +27516,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setVersion(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         version_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -27433,8 +27535,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        
         version_ = getDefaultInstance().getVersion();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -27453,12 +27555,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         version_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -27605,7 +27705,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int COUNT_FIELD_NUMBER = 1;
-    private long count_;
+    private long count_ = 0L;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint64 count
@@ -27623,7 +27723,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int NS_FIELD_NUMBER = 2;
-    private long ns_;
+    private long ns_ = 0L;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint64 total_time_ns
@@ -27849,10 +27949,9 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         count_ = 0L;
-
         ns_ = 0L;
-
         return this;
       }
 
@@ -27879,10 +27978,19 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.StatisticDuration buildPartial() {
         inference.GrpcService.StatisticDuration result = new inference.GrpcService.StatisticDuration(this);
-        result.count_ = count_;
-        result.ns_ = ns_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.StatisticDuration result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.count_ = count_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ns_ = ns_;
+        }
       }
 
       @java.lang.Override
@@ -27963,12 +28071,12 @@ inference.GrpcService.InferParameter defaultValue);
                 break;
               case 8: {
                 count_ = input.readUInt64();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 ns_ = input.readUInt64();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -27986,6 +28094,7 @@ inference.GrpcService.InferParameter defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private long count_ ;
       /**
@@ -28018,6 +28127,7 @@ inference.GrpcService.InferParameter defaultValue);
       public Builder setCount(long value) {
         
         count_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -28033,7 +28143,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearCount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         count_ = 0L;
         onChanged();
         return this;
@@ -28070,6 +28180,7 @@ inference.GrpcService.InferParameter defaultValue);
       public Builder setNs(long value) {
         
         ns_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -28085,7 +28196,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearNs() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         ns_ = 0L;
         onChanged();
         return this;
@@ -28658,7 +28769,7 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.GrpcService.StatisticDurationOrBuilder getSuccessOrBuilder() {
-      return getSuccess();
+      return success_ == null ? inference.GrpcService.StatisticDuration.getDefaultInstance() : success_;
     }
 
     public static final int FAIL_FIELD_NUMBER = 2;
@@ -28708,7 +28819,7 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.GrpcService.StatisticDurationOrBuilder getFailOrBuilder() {
-      return getFail();
+      return fail_ == null ? inference.GrpcService.StatisticDuration.getDefaultInstance() : fail_;
     }
 
     public static final int QUEUE_FIELD_NUMBER = 3;
@@ -28761,7 +28872,7 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.GrpcService.StatisticDurationOrBuilder getQueueOrBuilder() {
-      return getQueue();
+      return queue_ == null ? inference.GrpcService.StatisticDuration.getDefaultInstance() : queue_;
     }
 
     public static final int COMPUTE_INPUT_FIELD_NUMBER = 4;
@@ -28823,7 +28934,7 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.GrpcService.StatisticDurationOrBuilder getComputeInputOrBuilder() {
-      return getComputeInput();
+      return computeInput_ == null ? inference.GrpcService.StatisticDuration.getDefaultInstance() : computeInput_;
     }
 
     public static final int COMPUTE_INFER_FIELD_NUMBER = 5;
@@ -28879,7 +28990,7 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.GrpcService.StatisticDurationOrBuilder getComputeInferOrBuilder() {
-      return getComputeInfer();
+      return computeInfer_ == null ? inference.GrpcService.StatisticDuration.getDefaultInstance() : computeInfer_;
     }
 
     public static final int COMPUTE_OUTPUT_FIELD_NUMBER = 6;
@@ -28941,7 +29052,7 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.GrpcService.StatisticDurationOrBuilder getComputeOutputOrBuilder() {
-      return getComputeOutput();
+      return computeOutput_ == null ? inference.GrpcService.StatisticDuration.getDefaultInstance() : computeOutput_;
     }
 
     public static final int CACHE_HIT_FIELD_NUMBER = 7;
@@ -29024,7 +29135,7 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.GrpcService.StatisticDurationOrBuilder getCacheHitOrBuilder() {
-      return getCacheHit();
+      return cacheHit_ == null ? inference.GrpcService.StatisticDuration.getDefaultInstance() : cacheHit_;
     }
 
     public static final int CACHE_MISS_FIELD_NUMBER = 8;
@@ -29095,7 +29206,7 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.GrpcService.StatisticDurationOrBuilder getCacheMissOrBuilder() {
-      return getCacheMiss();
+      return cacheMiss_ == null ? inference.GrpcService.StatisticDuration.getDefaultInstance() : cacheMiss_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -29411,52 +29522,45 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (successBuilder_ == null) {
-          success_ = null;
-        } else {
-          success_ = null;
+        bitField0_ = 0;
+        success_ = null;
+        if (successBuilder_ != null) {
+          successBuilder_.dispose();
           successBuilder_ = null;
         }
-        if (failBuilder_ == null) {
-          fail_ = null;
-        } else {
-          fail_ = null;
+        fail_ = null;
+        if (failBuilder_ != null) {
+          failBuilder_.dispose();
           failBuilder_ = null;
         }
-        if (queueBuilder_ == null) {
-          queue_ = null;
-        } else {
-          queue_ = null;
+        queue_ = null;
+        if (queueBuilder_ != null) {
+          queueBuilder_.dispose();
           queueBuilder_ = null;
         }
-        if (computeInputBuilder_ == null) {
-          computeInput_ = null;
-        } else {
-          computeInput_ = null;
+        computeInput_ = null;
+        if (computeInputBuilder_ != null) {
+          computeInputBuilder_.dispose();
           computeInputBuilder_ = null;
         }
-        if (computeInferBuilder_ == null) {
-          computeInfer_ = null;
-        } else {
-          computeInfer_ = null;
+        computeInfer_ = null;
+        if (computeInferBuilder_ != null) {
+          computeInferBuilder_.dispose();
           computeInferBuilder_ = null;
         }
-        if (computeOutputBuilder_ == null) {
-          computeOutput_ = null;
-        } else {
-          computeOutput_ = null;
+        computeOutput_ = null;
+        if (computeOutputBuilder_ != null) {
+          computeOutputBuilder_.dispose();
           computeOutputBuilder_ = null;
         }
-        if (cacheHitBuilder_ == null) {
-          cacheHit_ = null;
-        } else {
-          cacheHit_ = null;
+        cacheHit_ = null;
+        if (cacheHitBuilder_ != null) {
+          cacheHitBuilder_.dispose();
           cacheHitBuilder_ = null;
         }
-        if (cacheMissBuilder_ == null) {
-          cacheMiss_ = null;
-        } else {
-          cacheMiss_ = null;
+        cacheMiss_ = null;
+        if (cacheMissBuilder_ != null) {
+          cacheMissBuilder_.dispose();
           cacheMissBuilder_ = null;
         }
         return this;
@@ -29485,48 +29589,53 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.InferStatistics buildPartial() {
         inference.GrpcService.InferStatistics result = new inference.GrpcService.InferStatistics(this);
-        if (successBuilder_ == null) {
-          result.success_ = success_;
-        } else {
-          result.success_ = successBuilder_.build();
-        }
-        if (failBuilder_ == null) {
-          result.fail_ = fail_;
-        } else {
-          result.fail_ = failBuilder_.build();
-        }
-        if (queueBuilder_ == null) {
-          result.queue_ = queue_;
-        } else {
-          result.queue_ = queueBuilder_.build();
-        }
-        if (computeInputBuilder_ == null) {
-          result.computeInput_ = computeInput_;
-        } else {
-          result.computeInput_ = computeInputBuilder_.build();
-        }
-        if (computeInferBuilder_ == null) {
-          result.computeInfer_ = computeInfer_;
-        } else {
-          result.computeInfer_ = computeInferBuilder_.build();
-        }
-        if (computeOutputBuilder_ == null) {
-          result.computeOutput_ = computeOutput_;
-        } else {
-          result.computeOutput_ = computeOutputBuilder_.build();
-        }
-        if (cacheHitBuilder_ == null) {
-          result.cacheHit_ = cacheHit_;
-        } else {
-          result.cacheHit_ = cacheHitBuilder_.build();
-        }
-        if (cacheMissBuilder_ == null) {
-          result.cacheMiss_ = cacheMiss_;
-        } else {
-          result.cacheMiss_ = cacheMissBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.InferStatistics result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.success_ = successBuilder_ == null
+              ? success_
+              : successBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.fail_ = failBuilder_ == null
+              ? fail_
+              : failBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.queue_ = queueBuilder_ == null
+              ? queue_
+              : queueBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.computeInput_ = computeInputBuilder_ == null
+              ? computeInput_
+              : computeInputBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.computeInfer_ = computeInferBuilder_ == null
+              ? computeInfer_
+              : computeInferBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.computeOutput_ = computeOutputBuilder_ == null
+              ? computeOutput_
+              : computeOutputBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.cacheHit_ = cacheHitBuilder_ == null
+              ? cacheHit_
+              : cacheHitBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.cacheMiss_ = cacheMissBuilder_ == null
+              ? cacheMiss_
+              : cacheMissBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -29627,56 +29736,56 @@ inference.GrpcService.InferParameter defaultValue);
                 input.readMessage(
                     getSuccessFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getFailFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getQueueFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getComputeInputFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 input.readMessage(
                     getComputeInferFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 input.readMessage(
                     getComputeOutputFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 input.readMessage(
                     getCacheHitFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
                     getCacheMissFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               default: {
@@ -29694,6 +29803,7 @@ inference.GrpcService.InferParameter defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private inference.GrpcService.StatisticDuration success_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -29712,7 +29822,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the success field is set.
        */
       public boolean hasSuccess() {
-        return successBuilder_ != null || success_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -29752,11 +29862,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           success_ = value;
-          onChanged();
         } else {
           successBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -29775,11 +29885,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.GrpcService.StatisticDuration.Builder builderForValue) {
         if (successBuilder_ == null) {
           success_ = builderForValue.build();
-          onChanged();
         } else {
           successBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -29796,17 +29906,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeSuccess(inference.GrpcService.StatisticDuration value) {
         if (successBuilder_ == null) {
-          if (success_ != null) {
-            success_ =
-              inference.GrpcService.StatisticDuration.newBuilder(success_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            success_ != null &&
+            success_ != inference.GrpcService.StatisticDuration.getDefaultInstance()) {
+            getSuccessBuilder().mergeFrom(value);
           } else {
             success_ = value;
           }
-          onChanged();
         } else {
           successBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -29822,14 +29933,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration success = 1 [json_name = "success"];</code>
        */
       public Builder clearSuccess() {
-        if (successBuilder_ == null) {
-          success_ = null;
-          onChanged();
-        } else {
-          success_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        success_ = null;
+        if (successBuilder_ != null) {
+          successBuilder_.dispose();
           successBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -29845,7 +29955,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration success = 1 [json_name = "success"];</code>
        */
       public inference.GrpcService.StatisticDuration.Builder getSuccessBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getSuccessFieldBuilder().getBuilder();
       }
@@ -29911,7 +30021,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the fail field is set.
        */
       public boolean hasFail() {
-        return failBuilder_ != null || fail_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -29949,11 +30059,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           fail_ = value;
-          onChanged();
         } else {
           failBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -29971,11 +30081,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.GrpcService.StatisticDuration.Builder builderForValue) {
         if (failBuilder_ == null) {
           fail_ = builderForValue.build();
-          onChanged();
         } else {
           failBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -29991,17 +30101,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeFail(inference.GrpcService.StatisticDuration value) {
         if (failBuilder_ == null) {
-          if (fail_ != null) {
-            fail_ =
-              inference.GrpcService.StatisticDuration.newBuilder(fail_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            fail_ != null &&
+            fail_ != inference.GrpcService.StatisticDuration.getDefaultInstance()) {
+            getFailBuilder().mergeFrom(value);
           } else {
             fail_ = value;
           }
-          onChanged();
         } else {
           failBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -30016,14 +30127,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration fail = 2 [json_name = "fail"];</code>
        */
       public Builder clearFail() {
-        if (failBuilder_ == null) {
-          fail_ = null;
-          onChanged();
-        } else {
-          fail_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        fail_ = null;
+        if (failBuilder_ != null) {
+          failBuilder_.dispose();
           failBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -30038,7 +30148,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration fail = 2 [json_name = "fail"];</code>
        */
       public inference.GrpcService.StatisticDuration.Builder getFailBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getFailFieldBuilder().getBuilder();
       }
@@ -30103,7 +30213,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the queue field is set.
        */
       public boolean hasQueue() {
-        return queueBuilder_ != null || queue_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -30143,11 +30253,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           queue_ = value;
-          onChanged();
         } else {
           queueBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -30166,11 +30276,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.GrpcService.StatisticDuration.Builder builderForValue) {
         if (queueBuilder_ == null) {
           queue_ = builderForValue.build();
-          onChanged();
         } else {
           queueBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -30187,17 +30297,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeQueue(inference.GrpcService.StatisticDuration value) {
         if (queueBuilder_ == null) {
-          if (queue_ != null) {
-            queue_ =
-              inference.GrpcService.StatisticDuration.newBuilder(queue_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            queue_ != null &&
+            queue_ != inference.GrpcService.StatisticDuration.getDefaultInstance()) {
+            getQueueBuilder().mergeFrom(value);
           } else {
             queue_ = value;
           }
-          onChanged();
         } else {
           queueBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -30213,14 +30324,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration queue = 3 [json_name = "queue"];</code>
        */
       public Builder clearQueue() {
-        if (queueBuilder_ == null) {
-          queue_ = null;
-          onChanged();
-        } else {
-          queue_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        queue_ = null;
+        if (queueBuilder_ != null) {
+          queueBuilder_.dispose();
           queueBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -30236,7 +30346,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration queue = 3 [json_name = "queue"];</code>
        */
       public inference.GrpcService.StatisticDuration.Builder getQueueBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getQueueFieldBuilder().getBuilder();
       }
@@ -30306,7 +30416,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the computeInput field is set.
        */
       public boolean hasComputeInput() {
-        return computeInputBuilder_ != null || computeInput_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -30352,11 +30462,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           computeInput_ = value;
-          onChanged();
         } else {
           computeInputBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -30378,11 +30488,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.GrpcService.StatisticDuration.Builder builderForValue) {
         if (computeInputBuilder_ == null) {
           computeInput_ = builderForValue.build();
-          onChanged();
         } else {
           computeInputBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -30402,17 +30512,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeComputeInput(inference.GrpcService.StatisticDuration value) {
         if (computeInputBuilder_ == null) {
-          if (computeInput_ != null) {
-            computeInput_ =
-              inference.GrpcService.StatisticDuration.newBuilder(computeInput_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            computeInput_ != null &&
+            computeInput_ != inference.GrpcService.StatisticDuration.getDefaultInstance()) {
+            getComputeInputBuilder().mergeFrom(value);
           } else {
             computeInput_ = value;
           }
-          onChanged();
         } else {
           computeInputBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -30431,14 +30542,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration compute_input = 4 [json_name = "computeInput"];</code>
        */
       public Builder clearComputeInput() {
-        if (computeInputBuilder_ == null) {
-          computeInput_ = null;
-          onChanged();
-        } else {
-          computeInput_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        computeInput_ = null;
+        if (computeInputBuilder_ != null) {
+          computeInputBuilder_.dispose();
           computeInputBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -30457,7 +30567,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration compute_input = 4 [json_name = "computeInput"];</code>
        */
       public inference.GrpcService.StatisticDuration.Builder getComputeInputBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getComputeInputFieldBuilder().getBuilder();
       }
@@ -30531,7 +30641,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the computeInfer field is set.
        */
       public boolean hasComputeInfer() {
-        return computeInferBuilder_ != null || computeInfer_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -30573,11 +30683,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           computeInfer_ = value;
-          onChanged();
         } else {
           computeInferBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -30597,11 +30707,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.GrpcService.StatisticDuration.Builder builderForValue) {
         if (computeInferBuilder_ == null) {
           computeInfer_ = builderForValue.build();
-          onChanged();
         } else {
           computeInferBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -30619,17 +30729,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeComputeInfer(inference.GrpcService.StatisticDuration value) {
         if (computeInferBuilder_ == null) {
-          if (computeInfer_ != null) {
-            computeInfer_ =
-              inference.GrpcService.StatisticDuration.newBuilder(computeInfer_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            computeInfer_ != null &&
+            computeInfer_ != inference.GrpcService.StatisticDuration.getDefaultInstance()) {
+            getComputeInferBuilder().mergeFrom(value);
           } else {
             computeInfer_ = value;
           }
-          onChanged();
         } else {
           computeInferBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -30646,14 +30757,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration compute_infer = 5 [json_name = "computeInfer"];</code>
        */
       public Builder clearComputeInfer() {
-        if (computeInferBuilder_ == null) {
-          computeInfer_ = null;
-          onChanged();
-        } else {
-          computeInfer_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        computeInfer_ = null;
+        if (computeInferBuilder_ != null) {
+          computeInferBuilder_.dispose();
           computeInferBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -30670,7 +30780,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration compute_infer = 5 [json_name = "computeInfer"];</code>
        */
       public inference.GrpcService.StatisticDuration.Builder getComputeInferBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getComputeInferFieldBuilder().getBuilder();
       }
@@ -30742,7 +30852,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the computeOutput field is set.
        */
       public boolean hasComputeOutput() {
-        return computeOutputBuilder_ != null || computeOutput_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -30788,11 +30898,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           computeOutput_ = value;
-          onChanged();
         } else {
           computeOutputBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -30814,11 +30924,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.GrpcService.StatisticDuration.Builder builderForValue) {
         if (computeOutputBuilder_ == null) {
           computeOutput_ = builderForValue.build();
-          onChanged();
         } else {
           computeOutputBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -30838,17 +30948,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeComputeOutput(inference.GrpcService.StatisticDuration value) {
         if (computeOutputBuilder_ == null) {
-          if (computeOutput_ != null) {
-            computeOutput_ =
-              inference.GrpcService.StatisticDuration.newBuilder(computeOutput_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            computeOutput_ != null &&
+            computeOutput_ != inference.GrpcService.StatisticDuration.getDefaultInstance()) {
+            getComputeOutputBuilder().mergeFrom(value);
           } else {
             computeOutput_ = value;
           }
-          onChanged();
         } else {
           computeOutputBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -30867,14 +30978,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration compute_output = 6 [json_name = "computeOutput"];</code>
        */
       public Builder clearComputeOutput() {
-        if (computeOutputBuilder_ == null) {
-          computeOutput_ = null;
-          onChanged();
-        } else {
-          computeOutput_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        computeOutput_ = null;
+        if (computeOutputBuilder_ != null) {
+          computeOutputBuilder_.dispose();
           computeOutputBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -30893,7 +31003,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration compute_output = 6 [json_name = "computeOutput"];</code>
        */
       public inference.GrpcService.StatisticDuration.Builder getComputeOutputBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getComputeOutputFieldBuilder().getBuilder();
       }
@@ -30976,7 +31086,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the cacheHit field is set.
        */
       public boolean hasCacheHit() {
-        return cacheHitBuilder_ != null || cacheHit_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
@@ -31036,11 +31146,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           cacheHit_ = value;
-          onChanged();
         } else {
           cacheHitBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -31069,11 +31179,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.GrpcService.StatisticDuration.Builder builderForValue) {
         if (cacheHitBuilder_ == null) {
           cacheHit_ = builderForValue.build();
-          onChanged();
         } else {
           cacheHitBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -31100,17 +31210,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeCacheHit(inference.GrpcService.StatisticDuration value) {
         if (cacheHitBuilder_ == null) {
-          if (cacheHit_ != null) {
-            cacheHit_ =
-              inference.GrpcService.StatisticDuration.newBuilder(cacheHit_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            cacheHit_ != null &&
+            cacheHit_ != inference.GrpcService.StatisticDuration.getDefaultInstance()) {
+            getCacheHitBuilder().mergeFrom(value);
           } else {
             cacheHit_ = value;
           }
-          onChanged();
         } else {
           cacheHitBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -31136,14 +31247,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration cache_hit = 7 [json_name = "cacheHit"];</code>
        */
       public Builder clearCacheHit() {
-        if (cacheHitBuilder_ == null) {
-          cacheHit_ = null;
-          onChanged();
-        } else {
-          cacheHit_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        cacheHit_ = null;
+        if (cacheHitBuilder_ != null) {
+          cacheHitBuilder_.dispose();
           cacheHitBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -31169,7 +31279,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration cache_hit = 7 [json_name = "cacheHit"];</code>
        */
       public inference.GrpcService.StatisticDuration.Builder getCacheHitBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getCacheHitFieldBuilder().getBuilder();
       }
@@ -31262,7 +31372,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the cacheMiss field is set.
        */
       public boolean hasCacheMiss() {
-        return cacheMissBuilder_ != null || cacheMiss_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <pre>
@@ -31314,11 +31424,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           cacheMiss_ = value;
-          onChanged();
         } else {
           cacheMissBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -31343,11 +31453,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.GrpcService.StatisticDuration.Builder builderForValue) {
         if (cacheMissBuilder_ == null) {
           cacheMiss_ = builderForValue.build();
-          onChanged();
         } else {
           cacheMissBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -31370,17 +31480,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeCacheMiss(inference.GrpcService.StatisticDuration value) {
         if (cacheMissBuilder_ == null) {
-          if (cacheMiss_ != null) {
-            cacheMiss_ =
-              inference.GrpcService.StatisticDuration.newBuilder(cacheMiss_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            cacheMiss_ != null &&
+            cacheMiss_ != inference.GrpcService.StatisticDuration.getDefaultInstance()) {
+            getCacheMissBuilder().mergeFrom(value);
           } else {
             cacheMiss_ = value;
           }
-          onChanged();
         } else {
           cacheMissBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -31402,14 +31513,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration cache_miss = 8 [json_name = "cacheMiss"];</code>
        */
       public Builder clearCacheMiss() {
-        if (cacheMissBuilder_ == null) {
-          cacheMiss_ = null;
-          onChanged();
-        } else {
-          cacheMiss_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        cacheMiss_ = null;
+        if (cacheMissBuilder_ != null) {
+          cacheMissBuilder_.dispose();
           cacheMissBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -31431,7 +31541,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration cache_miss = 8 [json_name = "cacheMiss"];</code>
        */
       public inference.GrpcService.StatisticDuration.Builder getCacheMissBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getCacheMissFieldBuilder().getBuilder();
       }
@@ -31751,7 +31861,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int BATCH_SIZE_FIELD_NUMBER = 1;
-    private long batchSize_;
+    private long batchSize_ = 0L;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint64 batch_size
@@ -31821,7 +31931,7 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.GrpcService.StatisticDurationOrBuilder getComputeInputOrBuilder() {
-      return getComputeInput();
+      return computeInput_ == null ? inference.GrpcService.StatisticDuration.getDefaultInstance() : computeInput_;
     }
 
     public static final int COMPUTE_INFER_FIELD_NUMBER = 3;
@@ -31871,7 +31981,7 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.GrpcService.StatisticDurationOrBuilder getComputeInferOrBuilder() {
-      return getComputeInfer();
+      return computeInfer_ == null ? inference.GrpcService.StatisticDuration.getDefaultInstance() : computeInfer_;
     }
 
     public static final int COMPUTE_OUTPUT_FIELD_NUMBER = 4;
@@ -31927,7 +32037,7 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.GrpcService.StatisticDurationOrBuilder getComputeOutputOrBuilder() {
-      return getComputeOutput();
+      return computeOutput_ == null ? inference.GrpcService.StatisticDuration.getDefaultInstance() : computeOutput_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -32175,24 +32285,21 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         batchSize_ = 0L;
-
-        if (computeInputBuilder_ == null) {
-          computeInput_ = null;
-        } else {
-          computeInput_ = null;
+        computeInput_ = null;
+        if (computeInputBuilder_ != null) {
+          computeInputBuilder_.dispose();
           computeInputBuilder_ = null;
         }
-        if (computeInferBuilder_ == null) {
-          computeInfer_ = null;
-        } else {
-          computeInfer_ = null;
+        computeInfer_ = null;
+        if (computeInferBuilder_ != null) {
+          computeInferBuilder_.dispose();
           computeInferBuilder_ = null;
         }
-        if (computeOutputBuilder_ == null) {
-          computeOutput_ = null;
-        } else {
-          computeOutput_ = null;
+        computeOutput_ = null;
+        if (computeOutputBuilder_ != null) {
+          computeOutputBuilder_.dispose();
           computeOutputBuilder_ = null;
         }
         return this;
@@ -32221,24 +32328,31 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.InferBatchStatistics buildPartial() {
         inference.GrpcService.InferBatchStatistics result = new inference.GrpcService.InferBatchStatistics(this);
-        result.batchSize_ = batchSize_;
-        if (computeInputBuilder_ == null) {
-          result.computeInput_ = computeInput_;
-        } else {
-          result.computeInput_ = computeInputBuilder_.build();
-        }
-        if (computeInferBuilder_ == null) {
-          result.computeInfer_ = computeInfer_;
-        } else {
-          result.computeInfer_ = computeInferBuilder_.build();
-        }
-        if (computeOutputBuilder_ == null) {
-          result.computeOutput_ = computeOutput_;
-        } else {
-          result.computeOutput_ = computeOutputBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.InferBatchStatistics result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.batchSize_ = batchSize_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.computeInput_ = computeInputBuilder_ == null
+              ? computeInput_
+              : computeInputBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.computeInfer_ = computeInferBuilder_ == null
+              ? computeInfer_
+              : computeInferBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.computeOutput_ = computeOutputBuilder_ == null
+              ? computeOutput_
+              : computeOutputBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -32325,28 +32439,28 @@ inference.GrpcService.InferParameter defaultValue);
                 break;
               case 8: {
                 batchSize_ = input.readUInt64();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 input.readMessage(
                     getComputeInputFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getComputeInferFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getComputeOutputFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               default: {
@@ -32364,6 +32478,7 @@ inference.GrpcService.InferParameter defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private long batchSize_ ;
       /**
@@ -32396,6 +32511,7 @@ inference.GrpcService.InferParameter defaultValue);
       public Builder setBatchSize(long value) {
         
         batchSize_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -32411,7 +32527,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearBatchSize() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         batchSize_ = 0L;
         onChanged();
         return this;
@@ -32435,7 +32551,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the computeInput field is set.
        */
       public boolean hasComputeInput() {
-        return computeInputBuilder_ != null || computeInput_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -32477,11 +32593,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           computeInput_ = value;
-          onChanged();
         } else {
           computeInputBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -32501,11 +32617,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.GrpcService.StatisticDuration.Builder builderForValue) {
         if (computeInputBuilder_ == null) {
           computeInput_ = builderForValue.build();
-          onChanged();
         } else {
           computeInputBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -32523,17 +32639,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeComputeInput(inference.GrpcService.StatisticDuration value) {
         if (computeInputBuilder_ == null) {
-          if (computeInput_ != null) {
-            computeInput_ =
-              inference.GrpcService.StatisticDuration.newBuilder(computeInput_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            computeInput_ != null &&
+            computeInput_ != inference.GrpcService.StatisticDuration.getDefaultInstance()) {
+            getComputeInputBuilder().mergeFrom(value);
           } else {
             computeInput_ = value;
           }
-          onChanged();
         } else {
           computeInputBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -32550,14 +32667,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration compute_input = 2 [json_name = "computeInput"];</code>
        */
       public Builder clearComputeInput() {
-        if (computeInputBuilder_ == null) {
-          computeInput_ = null;
-          onChanged();
-        } else {
-          computeInput_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        computeInput_ = null;
+        if (computeInputBuilder_ != null) {
+          computeInputBuilder_.dispose();
           computeInputBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -32574,7 +32690,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration compute_input = 2 [json_name = "computeInput"];</code>
        */
       public inference.GrpcService.StatisticDuration.Builder getComputeInputBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getComputeInputFieldBuilder().getBuilder();
       }
@@ -32642,7 +32758,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the computeInfer field is set.
        */
       public boolean hasComputeInfer() {
-        return computeInferBuilder_ != null || computeInfer_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -32680,11 +32796,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           computeInfer_ = value;
-          onChanged();
         } else {
           computeInferBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -32702,11 +32818,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.GrpcService.StatisticDuration.Builder builderForValue) {
         if (computeInferBuilder_ == null) {
           computeInfer_ = builderForValue.build();
-          onChanged();
         } else {
           computeInferBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -32722,17 +32838,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeComputeInfer(inference.GrpcService.StatisticDuration value) {
         if (computeInferBuilder_ == null) {
-          if (computeInfer_ != null) {
-            computeInfer_ =
-              inference.GrpcService.StatisticDuration.newBuilder(computeInfer_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            computeInfer_ != null &&
+            computeInfer_ != inference.GrpcService.StatisticDuration.getDefaultInstance()) {
+            getComputeInferBuilder().mergeFrom(value);
           } else {
             computeInfer_ = value;
           }
-          onChanged();
         } else {
           computeInferBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -32747,14 +32864,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration compute_infer = 3 [json_name = "computeInfer"];</code>
        */
       public Builder clearComputeInfer() {
-        if (computeInferBuilder_ == null) {
-          computeInfer_ = null;
-          onChanged();
-        } else {
-          computeInfer_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        computeInfer_ = null;
+        if (computeInferBuilder_ != null) {
+          computeInferBuilder_.dispose();
           computeInferBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -32769,7 +32885,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration compute_infer = 3 [json_name = "computeInfer"];</code>
        */
       public inference.GrpcService.StatisticDuration.Builder getComputeInferBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getComputeInferFieldBuilder().getBuilder();
       }
@@ -32835,7 +32951,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the computeOutput field is set.
        */
       public boolean hasComputeOutput() {
-        return computeOutputBuilder_ != null || computeOutput_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -32877,11 +32993,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           computeOutput_ = value;
-          onChanged();
         } else {
           computeOutputBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -32901,11 +33017,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.GrpcService.StatisticDuration.Builder builderForValue) {
         if (computeOutputBuilder_ == null) {
           computeOutput_ = builderForValue.build();
-          onChanged();
         } else {
           computeOutputBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -32923,17 +33039,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeComputeOutput(inference.GrpcService.StatisticDuration value) {
         if (computeOutputBuilder_ == null) {
-          if (computeOutput_ != null) {
-            computeOutput_ =
-              inference.GrpcService.StatisticDuration.newBuilder(computeOutput_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            computeOutput_ != null &&
+            computeOutput_ != inference.GrpcService.StatisticDuration.getDefaultInstance()) {
+            getComputeOutputBuilder().mergeFrom(value);
           } else {
             computeOutput_ = value;
           }
-          onChanged();
         } else {
           computeOutputBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -32950,14 +33067,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration compute_output = 4 [json_name = "computeOutput"];</code>
        */
       public Builder clearComputeOutput() {
-        if (computeOutputBuilder_ == null) {
-          computeOutput_ = null;
-          onChanged();
-        } else {
-          computeOutput_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        computeOutput_ = null;
+        if (computeOutputBuilder_ != null) {
+          computeOutputBuilder_.dispose();
           computeOutputBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -32974,7 +33090,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.StatisticDuration compute_output = 4 [json_name = "computeOutput"];</code>
        */
       public inference.GrpcService.StatisticDuration.Builder getComputeOutputBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getComputeOutputFieldBuilder().getBuilder();
       }
@@ -33368,7 +33484,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string name
@@ -33420,7 +33537,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int VERSION_FIELD_NUMBER = 2;
-    private volatile java.lang.Object version_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object version_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string version
@@ -33472,7 +33590,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int LAST_INFERENCE_FIELD_NUMBER = 3;
-    private long lastInference_;
+    private long lastInference_ = 0L;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint64 last_inference
@@ -33491,7 +33609,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int INFERENCE_COUNT_FIELD_NUMBER = 4;
-    private long inferenceCount_;
+    private long inferenceCount_ = 0L;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint64 last_inference
@@ -33516,7 +33634,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int EXECUTION_COUNT_FIELD_NUMBER = 5;
-    private long executionCount_;
+    private long executionCount_ = 0L;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint64 last_inference
@@ -33586,10 +33704,11 @@ inference.GrpcService.InferParameter defaultValue);
      */
     @java.lang.Override
     public inference.GrpcService.InferStatisticsOrBuilder getInferenceStatsOrBuilder() {
-      return getInferenceStats();
+      return inferenceStats_ == null ? inference.GrpcService.InferStatistics.getDefaultInstance() : inferenceStats_;
     }
 
     public static final int BATCH_STATS_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<inference.GrpcService.InferBatchStatistics> batchStats_;
     /**
      * <pre>
@@ -33954,20 +34073,15 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         version_ = "";
-
         lastInference_ = 0L;
-
         inferenceCount_ = 0L;
-
         executionCount_ = 0L;
-
-        if (inferenceStatsBuilder_ == null) {
-          inferenceStats_ = null;
-        } else {
-          inferenceStats_ = null;
+        inferenceStats_ = null;
+        if (inferenceStatsBuilder_ != null) {
+          inferenceStatsBuilder_.dispose();
           inferenceStatsBuilder_ = null;
         }
         if (batchStatsBuilder_ == null) {
@@ -33976,7 +34090,7 @@ inference.GrpcService.InferParameter defaultValue);
           batchStats_ = null;
           batchStatsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000040);
         return this;
       }
 
@@ -34003,28 +34117,46 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.ModelStatistics buildPartial() {
         inference.GrpcService.ModelStatistics result = new inference.GrpcService.ModelStatistics(this);
-        int from_bitField0_ = bitField0_;
-        result.name_ = name_;
-        result.version_ = version_;
-        result.lastInference_ = lastInference_;
-        result.inferenceCount_ = inferenceCount_;
-        result.executionCount_ = executionCount_;
-        if (inferenceStatsBuilder_ == null) {
-          result.inferenceStats_ = inferenceStats_;
-        } else {
-          result.inferenceStats_ = inferenceStatsBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.GrpcService.ModelStatistics result) {
         if (batchStatsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             batchStats_ = java.util.Collections.unmodifiableList(batchStats_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000040);
           }
           result.batchStats_ = batchStats_;
         } else {
           result.batchStats_ = batchStatsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ModelStatistics result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.version_ = version_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.lastInference_ = lastInference_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.inferenceCount_ = inferenceCount_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.executionCount_ = executionCount_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.inferenceStats_ = inferenceStatsBuilder_ == null
+              ? inferenceStats_
+              : inferenceStatsBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -34073,10 +34205,12 @@ inference.GrpcService.InferParameter defaultValue);
         if (other == inference.GrpcService.ModelStatistics.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getVersion().isEmpty()) {
           version_ = other.version_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.getLastInference() != 0L) {
@@ -34095,7 +34229,7 @@ inference.GrpcService.InferParameter defaultValue);
           if (!other.batchStats_.isEmpty()) {
             if (batchStats_.isEmpty()) {
               batchStats_ = other.batchStats_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000040);
             } else {
               ensureBatchStatsIsMutable();
               batchStats_.addAll(other.batchStats_);
@@ -34108,7 +34242,7 @@ inference.GrpcService.InferParameter defaultValue);
               batchStatsBuilder_.dispose();
               batchStatsBuilder_ = null;
               batchStats_ = other.batchStats_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000040);
               batchStatsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBatchStatsFieldBuilder() : null;
@@ -34145,34 +34279,34 @@ inference.GrpcService.InferParameter defaultValue);
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 version_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 24: {
                 lastInference_ = input.readUInt64();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 32: {
                 inferenceCount_ = input.readUInt64();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 40: {
                 executionCount_ = input.readUInt64();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 50: {
                 input.readMessage(
                     getInferenceStatsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
@@ -34267,11 +34401,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -34287,8 +34419,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -34306,12 +34438,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -34378,11 +34508,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setVersion(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         version_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -34398,8 +34526,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearVersion() {
-        
         version_ = getDefaultInstance().getVersion();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -34417,12 +34545,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setVersionBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         version_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -34460,6 +34586,7 @@ inference.GrpcService.InferParameter defaultValue);
       public Builder setLastInference(long value) {
         
         lastInference_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -34476,7 +34603,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearLastInference() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         lastInference_ = 0L;
         onChanged();
         return this;
@@ -34527,6 +34654,7 @@ inference.GrpcService.InferParameter defaultValue);
       public Builder setInferenceCount(long value) {
         
         inferenceCount_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -34549,7 +34677,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearInferenceCount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         inferenceCount_ = 0L;
         onChanged();
         return this;
@@ -34604,6 +34732,7 @@ inference.GrpcService.InferParameter defaultValue);
       public Builder setExecutionCount(long value) {
         
         executionCount_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -34628,7 +34757,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearExecutionCount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         executionCount_ = 0L;
         onChanged();
         return this;
@@ -34649,7 +34778,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return Whether the inferenceStats field is set.
        */
       public boolean hasInferenceStats() {
-        return inferenceStatsBuilder_ != null || inferenceStats_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -34685,11 +34814,11 @@ inference.GrpcService.InferParameter defaultValue);
             throw new NullPointerException();
           }
           inferenceStats_ = value;
-          onChanged();
         } else {
           inferenceStatsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -34706,11 +34835,11 @@ inference.GrpcService.InferParameter defaultValue);
           inference.GrpcService.InferStatistics.Builder builderForValue) {
         if (inferenceStatsBuilder_ == null) {
           inferenceStats_ = builderForValue.build();
-          onChanged();
         } else {
           inferenceStatsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -34725,17 +34854,18 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder mergeInferenceStats(inference.GrpcService.InferStatistics value) {
         if (inferenceStatsBuilder_ == null) {
-          if (inferenceStats_ != null) {
-            inferenceStats_ =
-              inference.GrpcService.InferStatistics.newBuilder(inferenceStats_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            inferenceStats_ != null &&
+            inferenceStats_ != inference.GrpcService.InferStatistics.getDefaultInstance()) {
+            getInferenceStatsBuilder().mergeFrom(value);
           } else {
             inferenceStats_ = value;
           }
-          onChanged();
         } else {
           inferenceStatsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -34749,14 +34879,13 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.InferStatistics inference_stats = 6 [json_name = "inferenceStats"];</code>
        */
       public Builder clearInferenceStats() {
-        if (inferenceStatsBuilder_ == null) {
-          inferenceStats_ = null;
-          onChanged();
-        } else {
-          inferenceStats_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        inferenceStats_ = null;
+        if (inferenceStatsBuilder_ != null) {
+          inferenceStatsBuilder_.dispose();
           inferenceStatsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -34770,7 +34899,7 @@ inference.GrpcService.InferParameter defaultValue);
        * <code>.inference.InferStatistics inference_stats = 6 [json_name = "inferenceStats"];</code>
        */
       public inference.GrpcService.InferStatistics.Builder getInferenceStatsBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getInferenceStatsFieldBuilder().getBuilder();
       }
@@ -34819,9 +34948,9 @@ inference.GrpcService.InferParameter defaultValue);
       private java.util.List<inference.GrpcService.InferBatchStatistics> batchStats_ =
         java.util.Collections.emptyList();
       private void ensureBatchStatsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           batchStats_ = new java.util.ArrayList<inference.GrpcService.InferBatchStatistics>(batchStats_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000040;
          }
       }
 
@@ -35092,7 +35221,7 @@ inference.GrpcService.InferParameter defaultValue);
       public Builder clearBatchStats() {
         if (batchStatsBuilder_ == null) {
           batchStats_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
           batchStatsBuilder_.clear();
@@ -35246,7 +35375,7 @@ inference.GrpcService.InferParameter defaultValue);
           batchStatsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.GrpcService.InferBatchStatistics, inference.GrpcService.InferBatchStatistics.Builder, inference.GrpcService.InferBatchStatisticsOrBuilder>(
                   batchStats_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           batchStats_ = null;
@@ -35430,6 +35559,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int MODEL_STATS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<inference.GrpcService.ModelStatistics> modelStats_;
     /**
      * <pre>
@@ -35702,6 +35832,7 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (modelStatsBuilder_ == null) {
           modelStats_ = java.util.Collections.emptyList();
         } else {
@@ -35735,7 +35866,13 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.ModelStatisticsResponse buildPartial() {
         inference.GrpcService.ModelStatisticsResponse result = new inference.GrpcService.ModelStatisticsResponse(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.GrpcService.ModelStatisticsResponse result) {
         if (modelStatsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             modelStats_ = java.util.Collections.unmodifiableList(modelStats_);
@@ -35745,8 +35882,10 @@ inference.GrpcService.InferParameter defaultValue);
         } else {
           result.modelStats_ = modelStatsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ModelStatisticsResponse result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -36955,6 +37094,7 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         parameterChoiceCase_ = 0;
         parameterChoice_ = null;
         return this;
@@ -36983,21 +37123,19 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.ModelRepositoryParameter buildPartial() {
         inference.GrpcService.ModelRepositoryParameter result = new inference.GrpcService.ModelRepositoryParameter(this);
-        if (parameterChoiceCase_ == 1) {
-          result.parameterChoice_ = parameterChoice_;
-        }
-        if (parameterChoiceCase_ == 2) {
-          result.parameterChoice_ = parameterChoice_;
-        }
-        if (parameterChoiceCase_ == 3) {
-          result.parameterChoice_ = parameterChoice_;
-        }
-        if (parameterChoiceCase_ == 4) {
-          result.parameterChoice_ = parameterChoice_;
-        }
-        result.parameterChoiceCase_ = parameterChoiceCase_;
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.ModelRepositoryParameter result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(inference.GrpcService.ModelRepositoryParameter result) {
+        result.parameterChoiceCase_ = parameterChoiceCase_;
+        result.parameterChoice_ = this.parameterChoice_;
       }
 
       @java.lang.Override
@@ -37144,6 +37282,7 @@ inference.GrpcService.InferParameter defaultValue);
         return this;
       }
 
+      private int bitField0_;
 
       /**
        * <pre>
@@ -37189,6 +37328,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder setBoolParam(boolean value) {
+        
         parameterChoiceCase_ = 1;
         parameterChoice_ = value;
         onChanged();
@@ -37258,6 +37398,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder setInt64Param(long value) {
+        
         parameterChoiceCase_ = 2;
         parameterChoice_ = value;
         onChanged();
@@ -37371,10 +37512,8 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setStringParam(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  parameterChoiceCase_ = 3;
+        if (value == null) { throw new NullPointerException(); }
+        parameterChoiceCase_ = 3;
         parameterChoice_ = value;
         onChanged();
         return this;
@@ -37412,10 +37551,8 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setStringParamBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         parameterChoiceCase_ = 3;
         parameterChoice_ = value;
         onChanged();
@@ -37466,10 +37603,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder setBytesParam(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  parameterChoiceCase_ = 4;
+        if (value == null) { throw new NullPointerException(); }
+        parameterChoiceCase_ = 4;
         parameterChoice_ = value;
         onChanged();
         return this;
@@ -37652,7 +37787,8 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int REPOSITORY_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object repositoryName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object repositoryName_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string repository_name
@@ -37706,7 +37842,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int READY_FIELD_NUMBER = 2;
-    private boolean ready_;
+    private boolean ready_ = false;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: bool ready
@@ -37930,10 +38066,9 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         repositoryName_ = "";
-
         ready_ = false;
-
         return this;
       }
 
@@ -37960,10 +38095,19 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.RepositoryIndexRequest buildPartial() {
         inference.GrpcService.RepositoryIndexRequest result = new inference.GrpcService.RepositoryIndexRequest(this);
-        result.repositoryName_ = repositoryName_;
-        result.ready_ = ready_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.RepositoryIndexRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.repositoryName_ = repositoryName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ready_ = ready_;
+        }
       }
 
       @java.lang.Override
@@ -38012,6 +38156,7 @@ inference.GrpcService.InferParameter defaultValue);
         if (other == inference.GrpcService.RepositoryIndexRequest.getDefaultInstance()) return this;
         if (!other.getRepositoryName().isEmpty()) {
           repositoryName_ = other.repositoryName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getReady() != false) {
@@ -38045,12 +38190,12 @@ inference.GrpcService.InferParameter defaultValue);
                 break;
               case 10: {
                 repositoryName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 ready_ = input.readBool();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -38068,6 +38213,7 @@ inference.GrpcService.InferParameter defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object repositoryName_ = "";
       /**
@@ -38134,11 +38280,9 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setRepositoryName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         repositoryName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -38155,8 +38299,8 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearRepositoryName() {
-        
         repositoryName_ = getDefaultInstance().getRepositoryName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -38175,12 +38319,10 @@ inference.GrpcService.InferParameter defaultValue);
        */
       public Builder setRepositoryNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         repositoryName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -38216,6 +38358,7 @@ inference.GrpcService.InferParameter defaultValue);
       public Builder setReady(boolean value) {
         
         ready_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -38231,7 +38374,7 @@ inference.GrpcService.InferParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearReady() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         ready_ = false;
         onChanged();
         return this;
@@ -38584,7 +38727,8 @@ inference.GrpcService.InferParameter defaultValue);
       }
 
       public static final int NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object name_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object name_ = "";
       /**
        * <pre>
        *&#64;&#64;
@@ -38638,7 +38782,8 @@ inference.GrpcService.InferParameter defaultValue);
       }
 
       public static final int VERSION_FIELD_NUMBER = 2;
-      private volatile java.lang.Object version_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object version_ = "";
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: string version
@@ -38690,7 +38835,8 @@ inference.GrpcService.InferParameter defaultValue);
       }
 
       public static final int STATE_FIELD_NUMBER = 3;
-      private volatile java.lang.Object state_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object state_ = "";
       /**
        * <pre>
        *&#64;&#64;
@@ -38744,7 +38890,8 @@ inference.GrpcService.InferParameter defaultValue);
       }
 
       public static final int REASON_FIELD_NUMBER = 4;
-      private volatile java.lang.Object reason_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object reason_ = "";
       /**
        * <pre>
        *&#64;&#64;
@@ -39022,14 +39169,11 @@ inference.GrpcService.InferParameter defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           name_ = "";
-
           version_ = "";
-
           state_ = "";
-
           reason_ = "";
-
           return this;
         }
 
@@ -39056,12 +39200,25 @@ inference.GrpcService.InferParameter defaultValue);
         @java.lang.Override
         public inference.GrpcService.RepositoryIndexResponse.ModelIndex buildPartial() {
           inference.GrpcService.RepositoryIndexResponse.ModelIndex result = new inference.GrpcService.RepositoryIndexResponse.ModelIndex(this);
-          result.name_ = name_;
-          result.version_ = version_;
-          result.state_ = state_;
-          result.reason_ = reason_;
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.GrpcService.RepositoryIndexResponse.ModelIndex result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.name_ = name_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.version_ = version_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.state_ = state_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.reason_ = reason_;
+          }
         }
 
         @java.lang.Override
@@ -39110,18 +39267,22 @@ inference.GrpcService.InferParameter defaultValue);
           if (other == inference.GrpcService.RepositoryIndexResponse.ModelIndex.getDefaultInstance()) return this;
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (!other.getVersion().isEmpty()) {
             version_ = other.version_;
+            bitField0_ |= 0x00000002;
             onChanged();
           }
           if (!other.getState().isEmpty()) {
             state_ = other.state_;
+            bitField0_ |= 0x00000004;
             onChanged();
           }
           if (!other.getReason().isEmpty()) {
             reason_ = other.reason_;
+            bitField0_ |= 0x00000008;
             onChanged();
           }
           this.mergeUnknownFields(other.getUnknownFields());
@@ -39152,22 +39313,22 @@ inference.GrpcService.InferParameter defaultValue);
                   break;
                 case 10: {
                   name_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 18: {
                   version_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 18
                 case 26: {
                   state_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000004;
                   break;
                 } // case 26
                 case 34: {
                   reason_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000008;
                   break;
                 } // case 34
                 default: {
@@ -39185,6 +39346,7 @@ inference.GrpcService.InferParameter defaultValue);
           } // finally
           return this;
         }
+        private int bitField0_;
 
         private java.lang.Object name_ = "";
         /**
@@ -39251,11 +39413,9 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -39272,8 +39432,8 @@ inference.GrpcService.InferParameter defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearName() {
-          
           name_ = getDefaultInstance().getName();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -39292,12 +39452,10 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -39364,11 +39522,9 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setVersion(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           version_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -39384,8 +39540,8 @@ inference.GrpcService.InferParameter defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearVersion() {
-          
           version_ = getDefaultInstance().getVersion();
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
@@ -39403,12 +39559,10 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setVersionBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           version_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -39478,11 +39632,9 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setState(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           state_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -39499,8 +39651,8 @@ inference.GrpcService.InferParameter defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearState() {
-          
           state_ = getDefaultInstance().getState();
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
           return this;
         }
@@ -39519,12 +39671,10 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setStateBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           state_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -39594,11 +39744,9 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setReason(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           reason_ = value;
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -39615,8 +39763,8 @@ inference.GrpcService.InferParameter defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearReason() {
-          
           reason_ = getDefaultInstance().getReason();
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
           return this;
         }
@@ -39635,12 +39783,10 @@ inference.GrpcService.InferParameter defaultValue);
          */
         public Builder setReasonBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           reason_ = value;
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -39709,6 +39855,7 @@ inference.GrpcService.InferParameter defaultValue);
     }
 
     public static final int MODELS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<inference.GrpcService.RepositoryIndexResponse.ModelIndex> models_;
     /**
      * <pre>
@@ -39986,6 +40133,7 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (modelsBuilder_ == null) {
           models_ = java.util.Collections.emptyList();
         } else {
@@ -40019,7 +40167,13 @@ inference.GrpcService.InferParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.RepositoryIndexResponse buildPartial() {
         inference.GrpcService.RepositoryIndexResponse result = new inference.GrpcService.RepositoryIndexResponse(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.GrpcService.RepositoryIndexResponse result) {
         if (modelsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             models_ = java.util.Collections.unmodifiableList(models_);
@@ -40029,8 +40183,10 @@ inference.GrpcService.InferParameter defaultValue);
         } else {
           result.models_ = modelsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.RepositoryIndexResponse result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -40715,7 +40871,6 @@ inference.GrpcService.InferParameter defaultValue);
      *
      * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
      */
-
     /* nullable */
 inference.GrpcService.ModelRepositoryParameter getParametersOrDefault(
         java.lang.String key,
@@ -40731,7 +40886,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
      *
      * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
      */
-
     inference.GrpcService.ModelRepositoryParameter getParametersOrThrow(
         java.lang.String key);
   }
@@ -40798,7 +40952,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
     }
 
     public static final int REPOSITORY_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object repositoryName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object repositoryName_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string repository_name
@@ -40852,7 +41007,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
     }
 
     public static final int MODEL_NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object modelName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modelName_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string repository_name
@@ -40915,6 +41071,7 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   inference.GrpcService.ModelRepositoryParameter.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, inference.GrpcService.ModelRepositoryParameter> parameters_;
     private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.ModelRepositoryParameter>
@@ -40925,7 +41082,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
       }
       return parameters_;
     }
-
     public int getParametersCount() {
       return internalGetParameters().getMap().size();
     }
@@ -40939,7 +41095,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
      *
      * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
      */
-
     @java.lang.Override
     public boolean containsParameters(
         java.lang.String key) {
@@ -40965,7 +41120,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
      * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, inference.GrpcService.ModelRepositoryParameter> getParametersMap() {
       return internalGetParameters().getMap();
     }
@@ -40980,10 +41134,11 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
      * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
-    public inference.GrpcService.ModelRepositoryParameter getParametersOrDefault(
+    public /* nullable */
+inference.GrpcService.ModelRepositoryParameter getParametersOrDefault(
         java.lang.String key,
-        inference.GrpcService.ModelRepositoryParameter defaultValue) {
+        /* nullable */
+inference.GrpcService.ModelRepositoryParameter defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, inference.GrpcService.ModelRepositoryParameter> map =
           internalGetParameters().getMap();
@@ -41000,7 +41155,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
      * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
     public inference.GrpcService.ModelRepositoryParameter getParametersOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -41261,10 +41415,9 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         repositoryName_ = "";
-
         modelName_ = "";
-
         internalGetMutableParameters().clear();
         return this;
       }
@@ -41292,13 +41445,23 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.RepositoryModelLoadRequest buildPartial() {
         inference.GrpcService.RepositoryModelLoadRequest result = new inference.GrpcService.RepositoryModelLoadRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.repositoryName_ = repositoryName_;
-        result.modelName_ = modelName_;
-        result.parameters_ = internalGetParameters();
-        result.parameters_.makeImmutable();
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.RepositoryModelLoadRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.repositoryName_ = repositoryName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.modelName_ = modelName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.parameters_ = internalGetParameters();
+          result.parameters_.makeImmutable();
+        }
       }
 
       @java.lang.Override
@@ -41347,14 +41510,17 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
         if (other == inference.GrpcService.RepositoryModelLoadRequest.getDefaultInstance()) return this;
         if (!other.getRepositoryName().isEmpty()) {
           repositoryName_ = other.repositoryName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getModelName().isEmpty()) {
           modelName_ = other.modelName_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         internalGetMutableParameters().mergeFrom(
             other.internalGetParameters());
+        bitField0_ |= 0x00000004;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -41383,12 +41549,12 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
                 break;
               case 10: {
                 repositoryName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 modelName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
@@ -41397,6 +41563,7 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
                     ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableParameters().getMutableMap().put(
                     parameters__.getKey(), parameters__.getValue());
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -41481,11 +41648,9 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        */
       public Builder setRepositoryName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         repositoryName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -41502,8 +41667,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearRepositoryName() {
-        
         repositoryName_ = getDefaultInstance().getRepositoryName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -41522,12 +41687,10 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        */
       public Builder setRepositoryNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         repositoryName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -41594,11 +41757,9 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        */
       public Builder setModelName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         modelName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -41614,8 +41775,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearModelName() {
-        
         modelName_ = getDefaultInstance().getModelName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -41633,12 +41794,10 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        */
       public Builder setModelNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         modelName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -41646,7 +41805,7 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, inference.GrpcService.ModelRepositoryParameter> parameters_;
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.ModelRepositoryParameter>
-      internalGetParameters() {
+          internalGetParameters() {
         if (parameters_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               ParametersDefaultEntryHolder.defaultEntry);
@@ -41654,8 +41813,7 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
         return parameters_;
       }
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.ModelRepositoryParameter>
-      internalGetMutableParameters() {
-        onChanged();;
+          internalGetMutableParameters() {
         if (parameters_ == null) {
           parameters_ = com.google.protobuf.MapField.newMapField(
               ParametersDefaultEntryHolder.defaultEntry);
@@ -41663,9 +41821,10 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
         if (!parameters_.isMutable()) {
           parameters_ = parameters_.copy();
         }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return parameters_;
       }
-
       public int getParametersCount() {
         return internalGetParameters().getMap().size();
       }
@@ -41679,7 +41838,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        *
        * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
        */
-
       @java.lang.Override
       public boolean containsParameters(
           java.lang.String key) {
@@ -41705,7 +41863,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.GrpcService.ModelRepositoryParameter> getParametersMap() {
         return internalGetParameters().getMap();
       }
@@ -41720,10 +41877,11 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
-      public inference.GrpcService.ModelRepositoryParameter getParametersOrDefault(
+      public /* nullable */
+inference.GrpcService.ModelRepositoryParameter getParametersOrDefault(
           java.lang.String key,
-          inference.GrpcService.ModelRepositoryParameter defaultValue) {
+          /* nullable */
+inference.GrpcService.ModelRepositoryParameter defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.GrpcService.ModelRepositoryParameter> map =
             internalGetParameters().getMap();
@@ -41740,7 +41898,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public inference.GrpcService.ModelRepositoryParameter getParametersOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -41751,8 +41908,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearParameters() {
+        bitField0_ = (bitField0_ & ~0x00000004);
         internalGetMutableParameters().getMutableMap()
             .clear();
         return this;
@@ -41767,7 +41924,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        *
        * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
        */
-
       public Builder removeParameters(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -41780,7 +41936,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, inference.GrpcService.ModelRepositoryParameter>
-      getMutableParameters() {
+          getMutableParameters() {
+        bitField0_ |= 0x00000004;
         return internalGetMutableParameters().getMutableMap();
       }
       /**
@@ -41797,12 +41954,10 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
           java.lang.String key,
           inference.GrpcService.ModelRepositoryParameter value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableParameters().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
@@ -41815,11 +41970,11 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        *
        * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
        */
-
       public Builder putAllParameters(
           java.util.Map<java.lang.String, inference.GrpcService.ModelRepositoryParameter> values) {
         internalGetMutableParameters().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000004;
         return this;
       }
       @java.lang.Override
@@ -42411,7 +42566,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
      *
      * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
      */
-
     /* nullable */
 inference.GrpcService.ModelRepositoryParameter getParametersOrDefault(
         java.lang.String key,
@@ -42427,7 +42581,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
      *
      * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
      */
-
     inference.GrpcService.ModelRepositoryParameter getParametersOrThrow(
         java.lang.String key);
   }
@@ -42494,7 +42647,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
     }
 
     public static final int REPOSITORY_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object repositoryName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object repositoryName_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string repository_name
@@ -42548,7 +42702,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
     }
 
     public static final int MODEL_NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object modelName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modelName_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string repository_name
@@ -42611,6 +42766,7 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   inference.GrpcService.ModelRepositoryParameter.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, inference.GrpcService.ModelRepositoryParameter> parameters_;
     private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.ModelRepositoryParameter>
@@ -42621,7 +42777,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
       }
       return parameters_;
     }
-
     public int getParametersCount() {
       return internalGetParameters().getMap().size();
     }
@@ -42635,7 +42790,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
      *
      * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
      */
-
     @java.lang.Override
     public boolean containsParameters(
         java.lang.String key) {
@@ -42661,7 +42815,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
      * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, inference.GrpcService.ModelRepositoryParameter> getParametersMap() {
       return internalGetParameters().getMap();
     }
@@ -42676,10 +42829,11 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
      * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
-    public inference.GrpcService.ModelRepositoryParameter getParametersOrDefault(
+    public /* nullable */
+inference.GrpcService.ModelRepositoryParameter getParametersOrDefault(
         java.lang.String key,
-        inference.GrpcService.ModelRepositoryParameter defaultValue) {
+        /* nullable */
+inference.GrpcService.ModelRepositoryParameter defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, inference.GrpcService.ModelRepositoryParameter> map =
           internalGetParameters().getMap();
@@ -42696,7 +42850,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
      * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
     public inference.GrpcService.ModelRepositoryParameter getParametersOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -42957,10 +43110,9 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         repositoryName_ = "";
-
         modelName_ = "";
-
         internalGetMutableParameters().clear();
         return this;
       }
@@ -42988,13 +43140,23 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.RepositoryModelUnloadRequest buildPartial() {
         inference.GrpcService.RepositoryModelUnloadRequest result = new inference.GrpcService.RepositoryModelUnloadRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.repositoryName_ = repositoryName_;
-        result.modelName_ = modelName_;
-        result.parameters_ = internalGetParameters();
-        result.parameters_.makeImmutable();
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.RepositoryModelUnloadRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.repositoryName_ = repositoryName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.modelName_ = modelName_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.parameters_ = internalGetParameters();
+          result.parameters_.makeImmutable();
+        }
       }
 
       @java.lang.Override
@@ -43043,14 +43205,17 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
         if (other == inference.GrpcService.RepositoryModelUnloadRequest.getDefaultInstance()) return this;
         if (!other.getRepositoryName().isEmpty()) {
           repositoryName_ = other.repositoryName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getModelName().isEmpty()) {
           modelName_ = other.modelName_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         internalGetMutableParameters().mergeFrom(
             other.internalGetParameters());
+        bitField0_ |= 0x00000004;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -43079,12 +43244,12 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
                 break;
               case 10: {
                 repositoryName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 modelName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
@@ -43093,6 +43258,7 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
                     ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableParameters().getMutableMap().put(
                     parameters__.getKey(), parameters__.getValue());
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -43177,11 +43343,9 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        */
       public Builder setRepositoryName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         repositoryName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -43198,8 +43362,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearRepositoryName() {
-        
         repositoryName_ = getDefaultInstance().getRepositoryName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -43218,12 +43382,10 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        */
       public Builder setRepositoryNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         repositoryName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -43290,11 +43452,9 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        */
       public Builder setModelName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         modelName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -43310,8 +43470,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearModelName() {
-        
         modelName_ = getDefaultInstance().getModelName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -43329,12 +43489,10 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        */
       public Builder setModelNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         modelName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -43342,7 +43500,7 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, inference.GrpcService.ModelRepositoryParameter> parameters_;
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.ModelRepositoryParameter>
-      internalGetParameters() {
+          internalGetParameters() {
         if (parameters_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               ParametersDefaultEntryHolder.defaultEntry);
@@ -43350,8 +43508,7 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
         return parameters_;
       }
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.ModelRepositoryParameter>
-      internalGetMutableParameters() {
-        onChanged();;
+          internalGetMutableParameters() {
         if (parameters_ == null) {
           parameters_ = com.google.protobuf.MapField.newMapField(
               ParametersDefaultEntryHolder.defaultEntry);
@@ -43359,9 +43516,10 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
         if (!parameters_.isMutable()) {
           parameters_ = parameters_.copy();
         }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return parameters_;
       }
-
       public int getParametersCount() {
         return internalGetParameters().getMap().size();
       }
@@ -43375,7 +43533,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        *
        * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
        */
-
       @java.lang.Override
       public boolean containsParameters(
           java.lang.String key) {
@@ -43401,7 +43558,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.GrpcService.ModelRepositoryParameter> getParametersMap() {
         return internalGetParameters().getMap();
       }
@@ -43416,10 +43572,11 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
-      public inference.GrpcService.ModelRepositoryParameter getParametersOrDefault(
+      public /* nullable */
+inference.GrpcService.ModelRepositoryParameter getParametersOrDefault(
           java.lang.String key,
-          inference.GrpcService.ModelRepositoryParameter defaultValue) {
+          /* nullable */
+inference.GrpcService.ModelRepositoryParameter defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.GrpcService.ModelRepositoryParameter> map =
             internalGetParameters().getMap();
@@ -43436,7 +43593,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public inference.GrpcService.ModelRepositoryParameter getParametersOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -43447,8 +43603,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearParameters() {
+        bitField0_ = (bitField0_ & ~0x00000004);
         internalGetMutableParameters().getMutableMap()
             .clear();
         return this;
@@ -43463,7 +43619,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        *
        * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
        */
-
       public Builder removeParameters(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -43476,7 +43631,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, inference.GrpcService.ModelRepositoryParameter>
-      getMutableParameters() {
+          getMutableParameters() {
+        bitField0_ |= 0x00000004;
         return internalGetMutableParameters().getMutableMap();
       }
       /**
@@ -43493,12 +43649,10 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
           java.lang.String key,
           inference.GrpcService.ModelRepositoryParameter value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableParameters().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
@@ -43511,11 +43665,11 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        *
        * <code>map&lt;string, .inference.ModelRepositoryParameter&gt; parameters = 3 [json_name = "parameters"];</code>
        */
-
       public Builder putAllParameters(
           java.util.Map<java.lang.String, inference.GrpcService.ModelRepositoryParameter> values) {
         internalGetMutableParameters().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000004;
         return this;
       }
       @java.lang.Override
@@ -44082,7 +44236,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -44332,8 +44487,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         return this;
       }
 
@@ -44360,9 +44515,16 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
       @java.lang.Override
       public inference.GrpcService.SystemSharedMemoryStatusRequest buildPartial() {
         inference.GrpcService.SystemSharedMemoryStatusRequest result = new inference.GrpcService.SystemSharedMemoryStatusRequest(this);
-        result.name_ = name_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.SystemSharedMemoryStatusRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
       }
 
       @java.lang.Override
@@ -44411,6 +44573,7 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
         if (other == inference.GrpcService.SystemSharedMemoryStatusRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -44441,7 +44604,7 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -44459,6 +44622,7 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -44528,11 +44692,9 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -44550,8 +44712,8 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -44571,12 +44733,10 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -44707,7 +44867,6 @@ inference.GrpcService.ModelRepositoryParameter defaultValue);
      *
      * <code>map&lt;string, .inference.SystemSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
      */
-
     /* nullable */
 inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus getRegionsOrDefault(
         java.lang.String key,
@@ -44725,7 +44884,6 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
      *
      * <code>map&lt;string, .inference.SystemSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
      */
-
     inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus getRegionsOrThrow(
         java.lang.String key);
   }
@@ -44927,7 +45085,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       }
 
       public static final int NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object name_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object name_ = "";
       /**
        * <pre>
        *&#64;&#64;
@@ -44981,7 +45140,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       }
 
       public static final int KEY_FIELD_NUMBER = 2;
-      private volatile java.lang.Object key_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object key_ = "";
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: string shared_memory_key
@@ -45035,7 +45195,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       }
 
       public static final int OFFSET_FIELD_NUMBER = 3;
-      private long offset_;
+      private long offset_ = 0L;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: uint64 offset
@@ -45054,7 +45214,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       }
 
       public static final int BYTE_SIZE_FIELD_NUMBER = 4;
-      private long byteSize_;
+      private long byteSize_ = 0L;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: uint64 byte_size
@@ -45300,14 +45460,11 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           name_ = "";
-
           key_ = "";
-
           offset_ = 0L;
-
           byteSize_ = 0L;
-
           return this;
         }
 
@@ -45334,12 +45491,25 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         @java.lang.Override
         public inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus buildPartial() {
           inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus result = new inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus(this);
-          result.name_ = name_;
-          result.key_ = key_;
-          result.offset_ = offset_;
-          result.byteSize_ = byteSize_;
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.name_ = name_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.key_ = key_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.offset_ = offset_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.byteSize_ = byteSize_;
+          }
         }
 
         @java.lang.Override
@@ -45388,10 +45558,12 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
           if (other == inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus.getDefaultInstance()) return this;
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (!other.getKey().isEmpty()) {
             key_ = other.key_;
+            bitField0_ |= 0x00000002;
             onChanged();
           }
           if (other.getOffset() != 0L) {
@@ -45428,22 +45600,22 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
                   break;
                 case 10: {
                   name_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 18: {
                   key_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 18
                 case 24: {
                   offset_ = input.readUInt64();
-
+                  bitField0_ |= 0x00000004;
                   break;
                 } // case 24
                 case 32: {
                   byteSize_ = input.readUInt64();
-
+                  bitField0_ |= 0x00000008;
                   break;
                 } // case 32
                 default: {
@@ -45461,6 +45633,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
           } // finally
           return this;
         }
+        private int bitField0_;
 
         private java.lang.Object name_ = "";
         /**
@@ -45527,11 +45700,9 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
          */
         public Builder setName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -45548,8 +45719,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
          * @return This builder for chaining.
          */
         public Builder clearName() {
-          
           name_ = getDefaultInstance().getName();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -45568,12 +45739,10 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -45643,11 +45812,9 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
          */
         public Builder setKey(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           key_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -45664,8 +45831,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
          * @return This builder for chaining.
          */
         public Builder clearKey() {
-          
           key_ = getDefaultInstance().getKey();
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
@@ -45684,12 +45851,10 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
          */
         public Builder setKeyBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           key_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -45727,6 +45892,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         public Builder setOffset(long value) {
           
           offset_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -45743,7 +45909,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
          * @return This builder for chaining.
          */
         public Builder clearOffset() {
-          
+          bitField0_ = (bitField0_ & ~0x00000004);
           offset_ = 0L;
           onChanged();
           return this;
@@ -45780,6 +45946,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         public Builder setByteSize(long value) {
           
           byteSize_ = value;
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -45795,7 +45962,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
          * @return This builder for chaining.
          */
         public Builder clearByteSize() {
-          
+          bitField0_ = (bitField0_ & ~0x00000008);
           byteSize_ = 0L;
           onChanged();
           return this;
@@ -45876,6 +46043,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus> regions_;
     private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus>
@@ -45886,7 +46054,6 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       }
       return regions_;
     }
-
     public int getRegionsCount() {
       return internalGetRegions().getMap().size();
     }
@@ -45902,7 +46069,6 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
      *
      * <code>map&lt;string, .inference.SystemSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
      */
-
     @java.lang.Override
     public boolean containsRegions(
         java.lang.String key) {
@@ -45930,7 +46096,6 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
      * <code>map&lt;string, .inference.SystemSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus> getRegionsMap() {
       return internalGetRegions().getMap();
     }
@@ -45947,10 +46112,11 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
      * <code>map&lt;string, .inference.SystemSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
      */
     @java.lang.Override
-
-    public inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus getRegionsOrDefault(
+    public /* nullable */
+inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus getRegionsOrDefault(
         java.lang.String key,
-        inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue) {
+        /* nullable */
+inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus> map =
           internalGetRegions().getMap();
@@ -45969,7 +46135,6 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
      * <code>map&lt;string, .inference.SystemSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
      */
     @java.lang.Override
-
     public inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus getRegionsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -46210,6 +46375,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         internalGetMutableRegions().clear();
         return this;
       }
@@ -46237,11 +46403,17 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       @java.lang.Override
       public inference.GrpcService.SystemSharedMemoryStatusResponse buildPartial() {
         inference.GrpcService.SystemSharedMemoryStatusResponse result = new inference.GrpcService.SystemSharedMemoryStatusResponse(this);
-        int from_bitField0_ = bitField0_;
-        result.regions_ = internalGetRegions();
-        result.regions_.makeImmutable();
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.SystemSharedMemoryStatusResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.regions_ = internalGetRegions();
+          result.regions_.makeImmutable();
+        }
       }
 
       @java.lang.Override
@@ -46290,6 +46462,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         if (other == inference.GrpcService.SystemSharedMemoryStatusResponse.getDefaultInstance()) return this;
         internalGetMutableRegions().mergeFrom(
             other.internalGetRegions());
+        bitField0_ |= 0x00000001;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -46322,6 +46495,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
                     RegionsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableRegions().getMutableMap().put(
                     regions__.getKey(), regions__.getValue());
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -46344,7 +46518,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       private com.google.protobuf.MapField<
           java.lang.String, inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus> regions_;
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus>
-      internalGetRegions() {
+          internalGetRegions() {
         if (regions_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               RegionsDefaultEntryHolder.defaultEntry);
@@ -46352,8 +46526,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         return regions_;
       }
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus>
-      internalGetMutableRegions() {
-        onChanged();;
+          internalGetMutableRegions() {
         if (regions_ == null) {
           regions_ = com.google.protobuf.MapField.newMapField(
               RegionsDefaultEntryHolder.defaultEntry);
@@ -46361,9 +46534,10 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         if (!regions_.isMutable()) {
           regions_ = regions_.copy();
         }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return regions_;
       }
-
       public int getRegionsCount() {
         return internalGetRegions().getMap().size();
       }
@@ -46379,7 +46553,6 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        *
        * <code>map&lt;string, .inference.SystemSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
        */
-
       @java.lang.Override
       public boolean containsRegions(
           java.lang.String key) {
@@ -46407,7 +46580,6 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        * <code>map&lt;string, .inference.SystemSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus> getRegionsMap() {
         return internalGetRegions().getMap();
       }
@@ -46424,10 +46596,11 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        * <code>map&lt;string, .inference.SystemSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
        */
       @java.lang.Override
-
-      public inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus getRegionsOrDefault(
+      public /* nullable */
+inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus getRegionsOrDefault(
           java.lang.String key,
-          inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue) {
+          /* nullable */
+inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus> map =
             internalGetRegions().getMap();
@@ -46446,7 +46619,6 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        * <code>map&lt;string, .inference.SystemSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
        */
       @java.lang.Override
-
       public inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus getRegionsOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -46457,8 +46629,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         }
         return map.get(key);
       }
-
       public Builder clearRegions() {
+        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableRegions().getMutableMap()
             .clear();
         return this;
@@ -46475,7 +46647,6 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        *
        * <code>map&lt;string, .inference.SystemSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
        */
-
       public Builder removeRegions(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -46488,7 +46659,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus>
-      getMutableRegions() {
+          getMutableRegions() {
+        bitField0_ |= 0x00000001;
         return internalGetMutableRegions().getMutableMap();
       }
       /**
@@ -46507,12 +46679,10 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
           java.lang.String key,
           inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableRegions().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -46527,11 +46697,11 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        *
        * <code>map&lt;string, .inference.SystemSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
        */
-
       public Builder putAllRegions(
           java.util.Map<java.lang.String, inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus> values) {
         internalGetMutableRegions().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000001;
         return this;
       }
       @java.lang.Override
@@ -46736,7 +46906,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -46790,7 +46961,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
     }
 
     public static final int KEY_FIELD_NUMBER = 2;
-    private volatile java.lang.Object key_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object key_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string shared_memory_key
@@ -46844,7 +47016,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
     }
 
     public static final int OFFSET_FIELD_NUMBER = 3;
-    private long offset_;
+    private long offset_ = 0L;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint64 offset
@@ -46863,7 +47035,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
     }
 
     public static final int BYTE_SIZE_FIELD_NUMBER = 4;
-    private long byteSize_;
+    private long byteSize_ = 0L;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint64 byte_size
@@ -47109,14 +47281,11 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         key_ = "";
-
         offset_ = 0L;
-
         byteSize_ = 0L;
-
         return this;
       }
 
@@ -47143,12 +47312,25 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       @java.lang.Override
       public inference.GrpcService.SystemSharedMemoryRegisterRequest buildPartial() {
         inference.GrpcService.SystemSharedMemoryRegisterRequest result = new inference.GrpcService.SystemSharedMemoryRegisterRequest(this);
-        result.name_ = name_;
-        result.key_ = key_;
-        result.offset_ = offset_;
-        result.byteSize_ = byteSize_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.SystemSharedMemoryRegisterRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.key_ = key_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.offset_ = offset_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.byteSize_ = byteSize_;
+        }
       }
 
       @java.lang.Override
@@ -47197,10 +47379,12 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         if (other == inference.GrpcService.SystemSharedMemoryRegisterRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getKey().isEmpty()) {
           key_ = other.key_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.getOffset() != 0L) {
@@ -47237,22 +47421,22 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 key_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 24: {
                 offset_ = input.readUInt64();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 32: {
                 byteSize_ = input.readUInt64();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               default: {
@@ -47270,6 +47454,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -47336,11 +47521,9 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -47357,8 +47540,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -47377,12 +47560,10 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -47452,11 +47633,9 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        */
       public Builder setKey(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         key_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -47473,8 +47652,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        * @return This builder for chaining.
        */
       public Builder clearKey() {
-        
         key_ = getDefaultInstance().getKey();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -47493,12 +47672,10 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        */
       public Builder setKeyBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         key_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -47536,6 +47713,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       public Builder setOffset(long value) {
         
         offset_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -47552,7 +47730,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        * @return This builder for chaining.
        */
       public Builder clearOffset() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         offset_ = 0L;
         onChanged();
         return this;
@@ -47589,6 +47767,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       public Builder setByteSize(long value) {
         
         byteSize_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -47604,7 +47783,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        * @return This builder for chaining.
        */
       public Builder clearByteSize() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         byteSize_ = 0L;
         onChanged();
         return this;
@@ -48173,7 +48352,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -48423,8 +48603,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         return this;
       }
 
@@ -48451,9 +48631,16 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       @java.lang.Override
       public inference.GrpcService.SystemSharedMemoryUnregisterRequest buildPartial() {
         inference.GrpcService.SystemSharedMemoryUnregisterRequest result = new inference.GrpcService.SystemSharedMemoryUnregisterRequest(this);
-        result.name_ = name_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.SystemSharedMemoryUnregisterRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
       }
 
       @java.lang.Override
@@ -48502,6 +48689,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         if (other == inference.GrpcService.SystemSharedMemoryUnregisterRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -48532,7 +48720,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -48550,6 +48738,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -48619,11 +48808,9 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -48641,8 +48828,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -48662,12 +48849,10 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -49235,7 +49420,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -49485,8 +49671,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         return this;
       }
 
@@ -49513,9 +49699,16 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
       @java.lang.Override
       public inference.GrpcService.CudaSharedMemoryStatusRequest buildPartial() {
         inference.GrpcService.CudaSharedMemoryStatusRequest result = new inference.GrpcService.CudaSharedMemoryStatusRequest(this);
-        result.name_ = name_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.CudaSharedMemoryStatusRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
       }
 
       @java.lang.Override
@@ -49564,6 +49757,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         if (other == inference.GrpcService.CudaSharedMemoryStatusRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -49594,7 +49788,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -49612,6 +49806,7 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -49681,11 +49876,9 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -49703,8 +49896,8 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -49724,12 +49917,10 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -49860,7 +50051,6 @@ inference.GrpcService.SystemSharedMemoryStatusResponse.RegionStatus defaultValue
      *
      * <code>map&lt;string, .inference.CudaSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
      */
-
     /* nullable */
 inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus getRegionsOrDefault(
         java.lang.String key,
@@ -49878,7 +50068,6 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
      *
      * <code>map&lt;string, .inference.CudaSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
      */
-
     inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus getRegionsOrThrow(
         java.lang.String key);
   }
@@ -50050,7 +50239,8 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
       }
 
       public static final int NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object name_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object name_ = "";
       /**
        * <pre>
        *&#64;&#64;
@@ -50104,7 +50294,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
       }
 
       public static final int DEVICE_ID_FIELD_NUMBER = 2;
-      private long deviceId_;
+      private long deviceId_ = 0L;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: uin64 device_id
@@ -50122,7 +50312,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
       }
 
       public static final int BYTE_SIZE_FIELD_NUMBER = 3;
-      private long byteSize_;
+      private long byteSize_ = 0L;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: uint64 byte_size
@@ -50358,12 +50548,10 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           name_ = "";
-
           deviceId_ = 0L;
-
           byteSize_ = 0L;
-
           return this;
         }
 
@@ -50390,11 +50578,22 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
         @java.lang.Override
         public inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus buildPartial() {
           inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus result = new inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus(this);
-          result.name_ = name_;
-          result.deviceId_ = deviceId_;
-          result.byteSize_ = byteSize_;
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.name_ = name_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.deviceId_ = deviceId_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.byteSize_ = byteSize_;
+          }
         }
 
         @java.lang.Override
@@ -50443,6 +50642,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
           if (other == inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus.getDefaultInstance()) return this;
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (other.getDeviceId() != 0L) {
@@ -50479,17 +50679,17 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
                   break;
                 case 10: {
                   name_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 16: {
                   deviceId_ = input.readUInt64();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 16
                 case 24: {
                   byteSize_ = input.readUInt64();
-
+                  bitField0_ |= 0x00000004;
                   break;
                 } // case 24
                 default: {
@@ -50507,6 +50707,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
           } // finally
           return this;
         }
+        private int bitField0_;
 
         private java.lang.Object name_ = "";
         /**
@@ -50573,11 +50774,9 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
          */
         public Builder setName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -50594,8 +50793,8 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearName() {
-          
           name_ = getDefaultInstance().getName();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -50614,12 +50813,10 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -50655,6 +50852,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
         public Builder setDeviceId(long value) {
           
           deviceId_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -50670,7 +50868,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearDeviceId() {
-          
+          bitField0_ = (bitField0_ & ~0x00000002);
           deviceId_ = 0L;
           onChanged();
           return this;
@@ -50707,6 +50905,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
         public Builder setByteSize(long value) {
           
           byteSize_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -50722,7 +50921,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearByteSize() {
-          
+          bitField0_ = (bitField0_ & ~0x00000004);
           byteSize_ = 0L;
           onChanged();
           return this;
@@ -50803,6 +51002,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus> regions_;
     private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus>
@@ -50813,7 +51013,6 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
       }
       return regions_;
     }
-
     public int getRegionsCount() {
       return internalGetRegions().getMap().size();
     }
@@ -50829,7 +51028,6 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
      *
      * <code>map&lt;string, .inference.CudaSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
      */
-
     @java.lang.Override
     public boolean containsRegions(
         java.lang.String key) {
@@ -50857,7 +51055,6 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
      * <code>map&lt;string, .inference.CudaSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus> getRegionsMap() {
       return internalGetRegions().getMap();
     }
@@ -50874,10 +51071,11 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
      * <code>map&lt;string, .inference.CudaSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
      */
     @java.lang.Override
-
-    public inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus getRegionsOrDefault(
+    public /* nullable */
+inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus getRegionsOrDefault(
         java.lang.String key,
-        inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue) {
+        /* nullable */
+inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus> map =
           internalGetRegions().getMap();
@@ -50896,7 +51094,6 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
      * <code>map&lt;string, .inference.CudaSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
      */
     @java.lang.Override
-
     public inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus getRegionsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -51137,6 +51334,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         internalGetMutableRegions().clear();
         return this;
       }
@@ -51164,11 +51362,17 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
       @java.lang.Override
       public inference.GrpcService.CudaSharedMemoryStatusResponse buildPartial() {
         inference.GrpcService.CudaSharedMemoryStatusResponse result = new inference.GrpcService.CudaSharedMemoryStatusResponse(this);
-        int from_bitField0_ = bitField0_;
-        result.regions_ = internalGetRegions();
-        result.regions_.makeImmutable();
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.CudaSharedMemoryStatusResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.regions_ = internalGetRegions();
+          result.regions_.makeImmutable();
+        }
       }
 
       @java.lang.Override
@@ -51217,6 +51421,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
         if (other == inference.GrpcService.CudaSharedMemoryStatusResponse.getDefaultInstance()) return this;
         internalGetMutableRegions().mergeFrom(
             other.internalGetRegions());
+        bitField0_ |= 0x00000001;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -51249,6 +51454,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
                     RegionsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableRegions().getMutableMap().put(
                     regions__.getKey(), regions__.getValue());
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -51271,7 +51477,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus> regions_;
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus>
-      internalGetRegions() {
+          internalGetRegions() {
         if (regions_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               RegionsDefaultEntryHolder.defaultEntry);
@@ -51279,8 +51485,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
         return regions_;
       }
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus>
-      internalGetMutableRegions() {
-        onChanged();;
+          internalGetMutableRegions() {
         if (regions_ == null) {
           regions_ = com.google.protobuf.MapField.newMapField(
               RegionsDefaultEntryHolder.defaultEntry);
@@ -51288,9 +51493,10 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
         if (!regions_.isMutable()) {
           regions_ = regions_.copy();
         }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return regions_;
       }
-
       public int getRegionsCount() {
         return internalGetRegions().getMap().size();
       }
@@ -51306,7 +51512,6 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        *
        * <code>map&lt;string, .inference.CudaSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
        */
-
       @java.lang.Override
       public boolean containsRegions(
           java.lang.String key) {
@@ -51334,7 +51539,6 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        * <code>map&lt;string, .inference.CudaSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus> getRegionsMap() {
         return internalGetRegions().getMap();
       }
@@ -51351,10 +51555,11 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        * <code>map&lt;string, .inference.CudaSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
        */
       @java.lang.Override
-
-      public inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus getRegionsOrDefault(
+      public /* nullable */
+inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus getRegionsOrDefault(
           java.lang.String key,
-          inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue) {
+          /* nullable */
+inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus> map =
             internalGetRegions().getMap();
@@ -51373,7 +51578,6 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        * <code>map&lt;string, .inference.CudaSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
        */
       @java.lang.Override
-
       public inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus getRegionsOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -51384,8 +51588,8 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearRegions() {
+        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableRegions().getMutableMap()
             .clear();
         return this;
@@ -51402,7 +51606,6 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        *
        * <code>map&lt;string, .inference.CudaSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
        */
-
       public Builder removeRegions(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -51415,7 +51618,8 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus>
-      getMutableRegions() {
+          getMutableRegions() {
+        bitField0_ |= 0x00000001;
         return internalGetMutableRegions().getMutableMap();
       }
       /**
@@ -51434,12 +51638,10 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
           java.lang.String key,
           inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableRegions().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -51454,11 +51656,11 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        *
        * <code>map&lt;string, .inference.CudaSharedMemoryStatusResponse.RegionStatus&gt; regions = 1 [json_name = "regions"];</code>
        */
-
       public Builder putAllRegions(
           java.util.Map<java.lang.String, inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus> values) {
         internalGetMutableRegions().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000001;
         return this;
       }
       @java.lang.Override
@@ -51647,7 +51849,8 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -51701,7 +51904,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
     }
 
     public static final int RAW_HANDLE_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString rawHandle_;
+    private com.google.protobuf.ByteString rawHandle_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: bytes raw_handle
@@ -51719,7 +51922,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
     }
 
     public static final int DEVICE_ID_FIELD_NUMBER = 3;
-    private long deviceId_;
+    private long deviceId_ = 0L;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: int64 device_id
@@ -51737,7 +51940,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
     }
 
     public static final int BYTE_SIZE_FIELD_NUMBER = 4;
-    private long byteSize_;
+    private long byteSize_ = 0L;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint64 byte_size
@@ -51984,14 +52187,11 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         rawHandle_ = com.google.protobuf.ByteString.EMPTY;
-
         deviceId_ = 0L;
-
         byteSize_ = 0L;
-
         return this;
       }
 
@@ -52018,12 +52218,25 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
       @java.lang.Override
       public inference.GrpcService.CudaSharedMemoryRegisterRequest buildPartial() {
         inference.GrpcService.CudaSharedMemoryRegisterRequest result = new inference.GrpcService.CudaSharedMemoryRegisterRequest(this);
-        result.name_ = name_;
-        result.rawHandle_ = rawHandle_;
-        result.deviceId_ = deviceId_;
-        result.byteSize_ = byteSize_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.CudaSharedMemoryRegisterRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.rawHandle_ = rawHandle_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.deviceId_ = deviceId_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.byteSize_ = byteSize_;
+        }
       }
 
       @java.lang.Override
@@ -52072,6 +52285,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
         if (other == inference.GrpcService.CudaSharedMemoryRegisterRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getRawHandle() != com.google.protobuf.ByteString.EMPTY) {
@@ -52111,22 +52325,22 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 rawHandle_ = input.readBytes();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 24: {
                 deviceId_ = input.readInt64();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 32: {
                 byteSize_ = input.readUInt64();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               default: {
@@ -52144,6 +52358,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -52210,11 +52425,9 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -52231,8 +52444,8 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -52251,12 +52464,10 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -52290,11 +52501,9 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        * @return This builder for chaining.
        */
       public Builder setRawHandle(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         rawHandle_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -52310,7 +52519,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearRawHandle() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         rawHandle_ = getDefaultInstance().getRawHandle();
         onChanged();
         return this;
@@ -52347,6 +52556,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
       public Builder setDeviceId(long value) {
         
         deviceId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -52362,7 +52572,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearDeviceId() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         deviceId_ = 0L;
         onChanged();
         return this;
@@ -52399,6 +52609,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
       public Builder setByteSize(long value) {
         
         byteSize_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -52414,7 +52625,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearByteSize() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         byteSize_ = 0L;
         onChanged();
         return this;
@@ -52983,7 +53194,8 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -53233,8 +53445,8 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         return this;
       }
 
@@ -53261,9 +53473,16 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
       @java.lang.Override
       public inference.GrpcService.CudaSharedMemoryUnregisterRequest buildPartial() {
         inference.GrpcService.CudaSharedMemoryUnregisterRequest result = new inference.GrpcService.CudaSharedMemoryUnregisterRequest(this);
-        result.name_ = name_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.CudaSharedMemoryUnregisterRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
       }
 
       @java.lang.Override
@@ -53312,6 +53531,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
         if (other == inference.GrpcService.CudaSharedMemoryUnregisterRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -53342,7 +53562,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -53360,6 +53580,7 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -53429,11 +53650,9 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -53451,8 +53670,8 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -53472,12 +53691,10 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -54020,7 +54237,6 @@ inference.GrpcService.CudaSharedMemoryStatusResponse.RegionStatus defaultValue);
      *
      * <code>map&lt;string, .inference.TraceSettingRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
-
     /* nullable */
 inference.GrpcService.TraceSettingRequest.SettingValue getSettingsOrDefault(
         java.lang.String key,
@@ -54037,7 +54253,6 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
      *
      * <code>map&lt;string, .inference.TraceSettingRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
-
     inference.GrpcService.TraceSettingRequest.SettingValue getSettingsOrThrow(
         java.lang.String key);
 
@@ -54245,6 +54460,7 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
       }
 
       public static final int VALUE_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
       private com.google.protobuf.LazyStringList value_;
       /**
        * <pre>
@@ -54515,6 +54731,7 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000001);
           return this;
@@ -54543,14 +54760,22 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
         @java.lang.Override
         public inference.GrpcService.TraceSettingRequest.SettingValue buildPartial() {
           inference.GrpcService.TraceSettingRequest.SettingValue result = new inference.GrpcService.TraceSettingRequest.SettingValue(this);
-          int from_bitField0_ = bitField0_;
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.GrpcService.TraceSettingRequest.SettingValue result) {
           if (((bitField0_ & 0x00000001) != 0)) {
             value_ = value_.getUnmodifiableView();
             bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.value_ = value_;
-          onBuilt();
-          return result;
+        }
+
+        private void buildPartial0(inference.GrpcService.TraceSettingRequest.SettingValue result) {
+          int from_bitField0_ = bitField0_;
         }
 
         @java.lang.Override
@@ -54743,10 +54968,8 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
          */
         public Builder setValue(
             int index, java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureValueIsMutable();
+          if (value == null) { throw new NullPointerException(); }
+          ensureValueIsMutable();
           value_.set(index, value);
           onChanged();
           return this;
@@ -54766,10 +54989,8 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
          */
         public Builder addValue(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureValueIsMutable();
+          if (value == null) { throw new NullPointerException(); }
+          ensureValueIsMutable();
           value_.add(value);
           onChanged();
           return this;
@@ -54828,10 +55049,8 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
          */
         public Builder addValueBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           ensureValueIsMutable();
           value_.add(value);
           onChanged();
@@ -54913,6 +55132,7 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   inference.GrpcService.TraceSettingRequest.SettingValue.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, inference.GrpcService.TraceSettingRequest.SettingValue> settings_;
     private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.TraceSettingRequest.SettingValue>
@@ -54923,7 +55143,6 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
       }
       return settings_;
     }
-
     public int getSettingsCount() {
       return internalGetSettings().getMap().size();
     }
@@ -54938,7 +55157,6 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
      *
      * <code>map&lt;string, .inference.TraceSettingRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
-
     @java.lang.Override
     public boolean containsSettings(
         java.lang.String key) {
@@ -54965,7 +55183,6 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
      * <code>map&lt;string, .inference.TraceSettingRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, inference.GrpcService.TraceSettingRequest.SettingValue> getSettingsMap() {
       return internalGetSettings().getMap();
     }
@@ -54981,10 +55198,11 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
      * <code>map&lt;string, .inference.TraceSettingRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
     @java.lang.Override
-
-    public inference.GrpcService.TraceSettingRequest.SettingValue getSettingsOrDefault(
+    public /* nullable */
+inference.GrpcService.TraceSettingRequest.SettingValue getSettingsOrDefault(
         java.lang.String key,
-        inference.GrpcService.TraceSettingRequest.SettingValue defaultValue) {
+        /* nullable */
+inference.GrpcService.TraceSettingRequest.SettingValue defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, inference.GrpcService.TraceSettingRequest.SettingValue> map =
           internalGetSettings().getMap();
@@ -55002,7 +55220,6 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
      * <code>map&lt;string, .inference.TraceSettingRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
     @java.lang.Override
-
     public inference.GrpcService.TraceSettingRequest.SettingValue getSettingsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -55015,7 +55232,8 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
     }
 
     public static final int MODEL_NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object modelName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modelName_ = "";
     /**
      * <pre>
      *&#64;&#64;
@@ -55309,9 +55527,9 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         internalGetMutableSettings().clear();
         modelName_ = "";
-
         return this;
       }
 
@@ -55338,12 +55556,20 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
       @java.lang.Override
       public inference.GrpcService.TraceSettingRequest buildPartial() {
         inference.GrpcService.TraceSettingRequest result = new inference.GrpcService.TraceSettingRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.settings_ = internalGetSettings();
-        result.settings_.makeImmutable();
-        result.modelName_ = modelName_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.TraceSettingRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.settings_ = internalGetSettings();
+          result.settings_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.modelName_ = modelName_;
+        }
       }
 
       @java.lang.Override
@@ -55392,8 +55618,10 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
         if (other == inference.GrpcService.TraceSettingRequest.getDefaultInstance()) return this;
         internalGetMutableSettings().mergeFrom(
             other.internalGetSettings());
+        bitField0_ |= 0x00000001;
         if (!other.getModelName().isEmpty()) {
           modelName_ = other.modelName_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -55428,11 +55656,12 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
                     SettingsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableSettings().getMutableMap().put(
                     settings__.getKey(), settings__.getValue());
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 modelName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -55455,7 +55684,7 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, inference.GrpcService.TraceSettingRequest.SettingValue> settings_;
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.TraceSettingRequest.SettingValue>
-      internalGetSettings() {
+          internalGetSettings() {
         if (settings_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               SettingsDefaultEntryHolder.defaultEntry);
@@ -55463,8 +55692,7 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
         return settings_;
       }
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.TraceSettingRequest.SettingValue>
-      internalGetMutableSettings() {
-        onChanged();;
+          internalGetMutableSettings() {
         if (settings_ == null) {
           settings_ = com.google.protobuf.MapField.newMapField(
               SettingsDefaultEntryHolder.defaultEntry);
@@ -55472,9 +55700,10 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
         if (!settings_.isMutable()) {
           settings_ = settings_.copy();
         }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return settings_;
       }
-
       public int getSettingsCount() {
         return internalGetSettings().getMap().size();
       }
@@ -55489,7 +55718,6 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
        *
        * <code>map&lt;string, .inference.TraceSettingRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
-
       @java.lang.Override
       public boolean containsSettings(
           java.lang.String key) {
@@ -55516,7 +55744,6 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
        * <code>map&lt;string, .inference.TraceSettingRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.GrpcService.TraceSettingRequest.SettingValue> getSettingsMap() {
         return internalGetSettings().getMap();
       }
@@ -55532,10 +55759,11 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
        * <code>map&lt;string, .inference.TraceSettingRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
       @java.lang.Override
-
-      public inference.GrpcService.TraceSettingRequest.SettingValue getSettingsOrDefault(
+      public /* nullable */
+inference.GrpcService.TraceSettingRequest.SettingValue getSettingsOrDefault(
           java.lang.String key,
-          inference.GrpcService.TraceSettingRequest.SettingValue defaultValue) {
+          /* nullable */
+inference.GrpcService.TraceSettingRequest.SettingValue defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.GrpcService.TraceSettingRequest.SettingValue> map =
             internalGetSettings().getMap();
@@ -55553,7 +55781,6 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
        * <code>map&lt;string, .inference.TraceSettingRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
       @java.lang.Override
-
       public inference.GrpcService.TraceSettingRequest.SettingValue getSettingsOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -55564,8 +55791,8 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearSettings() {
+        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableSettings().getMutableMap()
             .clear();
         return this;
@@ -55581,7 +55808,6 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
        *
        * <code>map&lt;string, .inference.TraceSettingRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
-
       public Builder removeSettings(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -55594,7 +55820,8 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, inference.GrpcService.TraceSettingRequest.SettingValue>
-      getMutableSettings() {
+          getMutableSettings() {
+        bitField0_ |= 0x00000001;
         return internalGetMutableSettings().getMutableMap();
       }
       /**
@@ -55612,12 +55839,10 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
           java.lang.String key,
           inference.GrpcService.TraceSettingRequest.SettingValue value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableSettings().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -55631,11 +55856,11 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
        *
        * <code>map&lt;string, .inference.TraceSettingRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
-
       public Builder putAllSettings(
           java.util.Map<java.lang.String, inference.GrpcService.TraceSettingRequest.SettingValue> values) {
         internalGetMutableSettings().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000001;
         return this;
       }
 
@@ -55707,11 +55932,9 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
        */
       public Builder setModelName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         modelName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -55729,8 +55952,8 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearModelName() {
-        
         modelName_ = getDefaultInstance().getModelName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -55750,12 +55973,10 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
        */
       public Builder setModelNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         modelName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -55882,7 +56103,6 @@ inference.GrpcService.TraceSettingRequest.SettingValue defaultValue);
      *
      * <code>map&lt;string, .inference.TraceSettingResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
-
     /* nullable */
 inference.GrpcService.TraceSettingResponse.SettingValue getSettingsOrDefault(
         java.lang.String key,
@@ -55899,7 +56119,6 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
      *
      * <code>map&lt;string, .inference.TraceSettingResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
-
     inference.GrpcService.TraceSettingResponse.SettingValue getSettingsOrThrow(
         java.lang.String key);
   }
@@ -56074,6 +56293,7 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
       }
 
       public static final int VALUE_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
       private com.google.protobuf.LazyStringList value_;
       /**
        * <pre>
@@ -56342,6 +56562,7 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           value_ = com.google.protobuf.LazyStringArrayList.EMPTY;
           bitField0_ = (bitField0_ & ~0x00000001);
           return this;
@@ -56370,14 +56591,22 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
         @java.lang.Override
         public inference.GrpcService.TraceSettingResponse.SettingValue buildPartial() {
           inference.GrpcService.TraceSettingResponse.SettingValue result = new inference.GrpcService.TraceSettingResponse.SettingValue(this);
-          int from_bitField0_ = bitField0_;
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.GrpcService.TraceSettingResponse.SettingValue result) {
           if (((bitField0_ & 0x00000001) != 0)) {
             value_ = value_.getUnmodifiableView();
             bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.value_ = value_;
-          onBuilt();
-          return result;
+        }
+
+        private void buildPartial0(inference.GrpcService.TraceSettingResponse.SettingValue result) {
+          int from_bitField0_ = bitField0_;
         }
 
         @java.lang.Override
@@ -56570,10 +56799,8 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
          */
         public Builder setValue(
             int index, java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureValueIsMutable();
+          if (value == null) { throw new NullPointerException(); }
+          ensureValueIsMutable();
           value_.set(index, value);
           onChanged();
           return this;
@@ -56593,10 +56820,8 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
          */
         public Builder addValue(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureValueIsMutable();
+          if (value == null) { throw new NullPointerException(); }
+          ensureValueIsMutable();
           value_.add(value);
           onChanged();
           return this;
@@ -56655,10 +56880,8 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
          */
         public Builder addValueBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           ensureValueIsMutable();
           value_.add(value);
           onChanged();
@@ -56740,6 +56963,7 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   inference.GrpcService.TraceSettingResponse.SettingValue.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, inference.GrpcService.TraceSettingResponse.SettingValue> settings_;
     private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.TraceSettingResponse.SettingValue>
@@ -56750,7 +56974,6 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
       }
       return settings_;
     }
-
     public int getSettingsCount() {
       return internalGetSettings().getMap().size();
     }
@@ -56765,7 +56988,6 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
      *
      * <code>map&lt;string, .inference.TraceSettingResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
-
     @java.lang.Override
     public boolean containsSettings(
         java.lang.String key) {
@@ -56792,7 +57014,6 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
      * <code>map&lt;string, .inference.TraceSettingResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, inference.GrpcService.TraceSettingResponse.SettingValue> getSettingsMap() {
       return internalGetSettings().getMap();
     }
@@ -56808,10 +57029,11 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
      * <code>map&lt;string, .inference.TraceSettingResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
     @java.lang.Override
-
-    public inference.GrpcService.TraceSettingResponse.SettingValue getSettingsOrDefault(
+    public /* nullable */
+inference.GrpcService.TraceSettingResponse.SettingValue getSettingsOrDefault(
         java.lang.String key,
-        inference.GrpcService.TraceSettingResponse.SettingValue defaultValue) {
+        /* nullable */
+inference.GrpcService.TraceSettingResponse.SettingValue defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, inference.GrpcService.TraceSettingResponse.SettingValue> map =
           internalGetSettings().getMap();
@@ -56829,7 +57051,6 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
      * <code>map&lt;string, .inference.TraceSettingResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
     @java.lang.Override
-
     public inference.GrpcService.TraceSettingResponse.SettingValue getSettingsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -57070,6 +57291,7 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         internalGetMutableSettings().clear();
         return this;
       }
@@ -57097,11 +57319,17 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
       @java.lang.Override
       public inference.GrpcService.TraceSettingResponse buildPartial() {
         inference.GrpcService.TraceSettingResponse result = new inference.GrpcService.TraceSettingResponse(this);
-        int from_bitField0_ = bitField0_;
-        result.settings_ = internalGetSettings();
-        result.settings_.makeImmutable();
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.TraceSettingResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.settings_ = internalGetSettings();
+          result.settings_.makeImmutable();
+        }
       }
 
       @java.lang.Override
@@ -57150,6 +57378,7 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
         if (other == inference.GrpcService.TraceSettingResponse.getDefaultInstance()) return this;
         internalGetMutableSettings().mergeFrom(
             other.internalGetSettings());
+        bitField0_ |= 0x00000001;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -57182,6 +57411,7 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
                     SettingsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableSettings().getMutableMap().put(
                     settings__.getKey(), settings__.getValue());
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -57204,7 +57434,7 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, inference.GrpcService.TraceSettingResponse.SettingValue> settings_;
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.TraceSettingResponse.SettingValue>
-      internalGetSettings() {
+          internalGetSettings() {
         if (settings_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               SettingsDefaultEntryHolder.defaultEntry);
@@ -57212,8 +57442,7 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
         return settings_;
       }
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.TraceSettingResponse.SettingValue>
-      internalGetMutableSettings() {
-        onChanged();;
+          internalGetMutableSettings() {
         if (settings_ == null) {
           settings_ = com.google.protobuf.MapField.newMapField(
               SettingsDefaultEntryHolder.defaultEntry);
@@ -57221,9 +57450,10 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
         if (!settings_.isMutable()) {
           settings_ = settings_.copy();
         }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return settings_;
       }
-
       public int getSettingsCount() {
         return internalGetSettings().getMap().size();
       }
@@ -57238,7 +57468,6 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
        *
        * <code>map&lt;string, .inference.TraceSettingResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
-
       @java.lang.Override
       public boolean containsSettings(
           java.lang.String key) {
@@ -57265,7 +57494,6 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
        * <code>map&lt;string, .inference.TraceSettingResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.GrpcService.TraceSettingResponse.SettingValue> getSettingsMap() {
         return internalGetSettings().getMap();
       }
@@ -57281,10 +57509,11 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
        * <code>map&lt;string, .inference.TraceSettingResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
       @java.lang.Override
-
-      public inference.GrpcService.TraceSettingResponse.SettingValue getSettingsOrDefault(
+      public /* nullable */
+inference.GrpcService.TraceSettingResponse.SettingValue getSettingsOrDefault(
           java.lang.String key,
-          inference.GrpcService.TraceSettingResponse.SettingValue defaultValue) {
+          /* nullable */
+inference.GrpcService.TraceSettingResponse.SettingValue defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.GrpcService.TraceSettingResponse.SettingValue> map =
             internalGetSettings().getMap();
@@ -57302,7 +57531,6 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
        * <code>map&lt;string, .inference.TraceSettingResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
       @java.lang.Override
-
       public inference.GrpcService.TraceSettingResponse.SettingValue getSettingsOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -57313,8 +57541,8 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearSettings() {
+        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableSettings().getMutableMap()
             .clear();
         return this;
@@ -57330,7 +57558,6 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
        *
        * <code>map&lt;string, .inference.TraceSettingResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
-
       public Builder removeSettings(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -57343,7 +57570,8 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, inference.GrpcService.TraceSettingResponse.SettingValue>
-      getMutableSettings() {
+          getMutableSettings() {
+        bitField0_ |= 0x00000001;
         return internalGetMutableSettings().getMutableMap();
       }
       /**
@@ -57361,12 +57589,10 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
           java.lang.String key,
           inference.GrpcService.TraceSettingResponse.SettingValue value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableSettings().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -57380,11 +57606,11 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
        *
        * <code>map&lt;string, .inference.TraceSettingResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
-
       public Builder putAllSettings(
           java.util.Map<java.lang.String, inference.GrpcService.TraceSettingResponse.SettingValue> values) {
         internalGetMutableSettings().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000001;
         return this;
       }
       @java.lang.Override
@@ -57506,7 +57732,6 @@ inference.GrpcService.TraceSettingResponse.SettingValue defaultValue);
      *
      * <code>map&lt;string, .inference.LogSettingsRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
-
     /* nullable */
 inference.GrpcService.LogSettingsRequest.SettingValue getSettingsOrDefault(
         java.lang.String key,
@@ -57522,7 +57747,6 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
      *
      * <code>map&lt;string, .inference.LogSettingsRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
-
     inference.GrpcService.LogSettingsRequest.SettingValue getSettingsOrThrow(
         java.lang.String key);
   }
@@ -58141,6 +58365,7 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           parameterChoiceCase_ = 0;
           parameterChoice_ = null;
           return this;
@@ -58169,18 +58394,19 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
         @java.lang.Override
         public inference.GrpcService.LogSettingsRequest.SettingValue buildPartial() {
           inference.GrpcService.LogSettingsRequest.SettingValue result = new inference.GrpcService.LogSettingsRequest.SettingValue(this);
-          if (parameterChoiceCase_ == 1) {
-            result.parameterChoice_ = parameterChoice_;
-          }
-          if (parameterChoiceCase_ == 2) {
-            result.parameterChoice_ = parameterChoice_;
-          }
-          if (parameterChoiceCase_ == 3) {
-            result.parameterChoice_ = parameterChoice_;
-          }
-          result.parameterChoiceCase_ = parameterChoiceCase_;
+          if (bitField0_ != 0) { buildPartial0(result); }
+          buildPartialOneofs(result);
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.GrpcService.LogSettingsRequest.SettingValue result) {
+          int from_bitField0_ = bitField0_;
+        }
+
+        private void buildPartialOneofs(inference.GrpcService.LogSettingsRequest.SettingValue result) {
+          result.parameterChoiceCase_ = parameterChoiceCase_;
+          result.parameterChoice_ = this.parameterChoice_;
         }
 
         @java.lang.Override
@@ -58318,6 +58544,7 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
           return this;
         }
 
+        private int bitField0_;
 
         /**
          * <pre>
@@ -58363,6 +58590,7 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
          * @return This builder for chaining.
          */
         public Builder setBoolParam(boolean value) {
+          
           parameterChoiceCase_ = 1;
           parameterChoice_ = value;
           onChanged();
@@ -58432,6 +58660,7 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
          * @return This builder for chaining.
          */
         public Builder setUint32Param(int value) {
+          
           parameterChoiceCase_ = 2;
           parameterChoice_ = value;
           onChanged();
@@ -58545,10 +58774,8 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
          */
         public Builder setStringParam(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  parameterChoiceCase_ = 3;
+          if (value == null) { throw new NullPointerException(); }
+          parameterChoiceCase_ = 3;
           parameterChoice_ = value;
           onChanged();
           return this;
@@ -58586,10 +58813,8 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
          */
         public Builder setStringParamBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           parameterChoiceCase_ = 3;
           parameterChoice_ = value;
           onChanged();
@@ -58671,6 +58896,7 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   inference.GrpcService.LogSettingsRequest.SettingValue.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, inference.GrpcService.LogSettingsRequest.SettingValue> settings_;
     private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.LogSettingsRequest.SettingValue>
@@ -58681,7 +58907,6 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
       }
       return settings_;
     }
-
     public int getSettingsCount() {
       return internalGetSettings().getMap().size();
     }
@@ -58695,7 +58920,6 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
      *
      * <code>map&lt;string, .inference.LogSettingsRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
-
     @java.lang.Override
     public boolean containsSettings(
         java.lang.String key) {
@@ -58721,7 +58945,6 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
      * <code>map&lt;string, .inference.LogSettingsRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, inference.GrpcService.LogSettingsRequest.SettingValue> getSettingsMap() {
       return internalGetSettings().getMap();
     }
@@ -58736,10 +58959,11 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
      * <code>map&lt;string, .inference.LogSettingsRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
     @java.lang.Override
-
-    public inference.GrpcService.LogSettingsRequest.SettingValue getSettingsOrDefault(
+    public /* nullable */
+inference.GrpcService.LogSettingsRequest.SettingValue getSettingsOrDefault(
         java.lang.String key,
-        inference.GrpcService.LogSettingsRequest.SettingValue defaultValue) {
+        /* nullable */
+inference.GrpcService.LogSettingsRequest.SettingValue defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, inference.GrpcService.LogSettingsRequest.SettingValue> map =
           internalGetSettings().getMap();
@@ -58756,7 +58980,6 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
      * <code>map&lt;string, .inference.LogSettingsRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
     @java.lang.Override
-
     public inference.GrpcService.LogSettingsRequest.SettingValue getSettingsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -58997,6 +59220,7 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         internalGetMutableSettings().clear();
         return this;
       }
@@ -59024,11 +59248,17 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
       @java.lang.Override
       public inference.GrpcService.LogSettingsRequest buildPartial() {
         inference.GrpcService.LogSettingsRequest result = new inference.GrpcService.LogSettingsRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.settings_ = internalGetSettings();
-        result.settings_.makeImmutable();
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.LogSettingsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.settings_ = internalGetSettings();
+          result.settings_.makeImmutable();
+        }
       }
 
       @java.lang.Override
@@ -59077,6 +59307,7 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
         if (other == inference.GrpcService.LogSettingsRequest.getDefaultInstance()) return this;
         internalGetMutableSettings().mergeFrom(
             other.internalGetSettings());
+        bitField0_ |= 0x00000001;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -59109,6 +59340,7 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
                     SettingsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableSettings().getMutableMap().put(
                     settings__.getKey(), settings__.getValue());
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -59131,7 +59363,7 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, inference.GrpcService.LogSettingsRequest.SettingValue> settings_;
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.LogSettingsRequest.SettingValue>
-      internalGetSettings() {
+          internalGetSettings() {
         if (settings_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               SettingsDefaultEntryHolder.defaultEntry);
@@ -59139,8 +59371,7 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
         return settings_;
       }
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.LogSettingsRequest.SettingValue>
-      internalGetMutableSettings() {
-        onChanged();;
+          internalGetMutableSettings() {
         if (settings_ == null) {
           settings_ = com.google.protobuf.MapField.newMapField(
               SettingsDefaultEntryHolder.defaultEntry);
@@ -59148,9 +59379,10 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
         if (!settings_.isMutable()) {
           settings_ = settings_.copy();
         }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return settings_;
       }
-
       public int getSettingsCount() {
         return internalGetSettings().getMap().size();
       }
@@ -59164,7 +59396,6 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
        *
        * <code>map&lt;string, .inference.LogSettingsRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
-
       @java.lang.Override
       public boolean containsSettings(
           java.lang.String key) {
@@ -59190,7 +59421,6 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
        * <code>map&lt;string, .inference.LogSettingsRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.GrpcService.LogSettingsRequest.SettingValue> getSettingsMap() {
         return internalGetSettings().getMap();
       }
@@ -59205,10 +59435,11 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
        * <code>map&lt;string, .inference.LogSettingsRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
       @java.lang.Override
-
-      public inference.GrpcService.LogSettingsRequest.SettingValue getSettingsOrDefault(
+      public /* nullable */
+inference.GrpcService.LogSettingsRequest.SettingValue getSettingsOrDefault(
           java.lang.String key,
-          inference.GrpcService.LogSettingsRequest.SettingValue defaultValue) {
+          /* nullable */
+inference.GrpcService.LogSettingsRequest.SettingValue defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.GrpcService.LogSettingsRequest.SettingValue> map =
             internalGetSettings().getMap();
@@ -59225,7 +59456,6 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
        * <code>map&lt;string, .inference.LogSettingsRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
       @java.lang.Override
-
       public inference.GrpcService.LogSettingsRequest.SettingValue getSettingsOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -59236,8 +59466,8 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearSettings() {
+        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableSettings().getMutableMap()
             .clear();
         return this;
@@ -59252,7 +59482,6 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
        *
        * <code>map&lt;string, .inference.LogSettingsRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
-
       public Builder removeSettings(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -59265,7 +59494,8 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, inference.GrpcService.LogSettingsRequest.SettingValue>
-      getMutableSettings() {
+          getMutableSettings() {
+        bitField0_ |= 0x00000001;
         return internalGetMutableSettings().getMutableMap();
       }
       /**
@@ -59282,12 +59512,10 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
           java.lang.String key,
           inference.GrpcService.LogSettingsRequest.SettingValue value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableSettings().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -59300,11 +59528,11 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
        *
        * <code>map&lt;string, .inference.LogSettingsRequest.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
-
       public Builder putAllSettings(
           java.util.Map<java.lang.String, inference.GrpcService.LogSettingsRequest.SettingValue> values) {
         internalGetMutableSettings().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000001;
         return this;
       }
       @java.lang.Override
@@ -59426,7 +59654,6 @@ inference.GrpcService.LogSettingsRequest.SettingValue defaultValue);
      *
      * <code>map&lt;string, .inference.LogSettingsResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
-
     /* nullable */
 inference.GrpcService.LogSettingsResponse.SettingValue getSettingsOrDefault(
         java.lang.String key,
@@ -59442,7 +59669,6 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
      *
      * <code>map&lt;string, .inference.LogSettingsResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
-
     inference.GrpcService.LogSettingsResponse.SettingValue getSettingsOrThrow(
         java.lang.String key);
   }
@@ -60061,6 +60287,7 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           parameterChoiceCase_ = 0;
           parameterChoice_ = null;
           return this;
@@ -60089,18 +60316,19 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
         @java.lang.Override
         public inference.GrpcService.LogSettingsResponse.SettingValue buildPartial() {
           inference.GrpcService.LogSettingsResponse.SettingValue result = new inference.GrpcService.LogSettingsResponse.SettingValue(this);
-          if (parameterChoiceCase_ == 1) {
-            result.parameterChoice_ = parameterChoice_;
-          }
-          if (parameterChoiceCase_ == 2) {
-            result.parameterChoice_ = parameterChoice_;
-          }
-          if (parameterChoiceCase_ == 3) {
-            result.parameterChoice_ = parameterChoice_;
-          }
-          result.parameterChoiceCase_ = parameterChoiceCase_;
+          if (bitField0_ != 0) { buildPartial0(result); }
+          buildPartialOneofs(result);
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.GrpcService.LogSettingsResponse.SettingValue result) {
+          int from_bitField0_ = bitField0_;
+        }
+
+        private void buildPartialOneofs(inference.GrpcService.LogSettingsResponse.SettingValue result) {
+          result.parameterChoiceCase_ = parameterChoiceCase_;
+          result.parameterChoice_ = this.parameterChoice_;
         }
 
         @java.lang.Override
@@ -60238,6 +60466,7 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
           return this;
         }
 
+        private int bitField0_;
 
         /**
          * <pre>
@@ -60283,6 +60512,7 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
          * @return This builder for chaining.
          */
         public Builder setBoolParam(boolean value) {
+          
           parameterChoiceCase_ = 1;
           parameterChoice_ = value;
           onChanged();
@@ -60352,6 +60582,7 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
          * @return This builder for chaining.
          */
         public Builder setUint32Param(int value) {
+          
           parameterChoiceCase_ = 2;
           parameterChoice_ = value;
           onChanged();
@@ -60465,10 +60696,8 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
          */
         public Builder setStringParam(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  parameterChoiceCase_ = 3;
+          if (value == null) { throw new NullPointerException(); }
+          parameterChoiceCase_ = 3;
           parameterChoice_ = value;
           onChanged();
           return this;
@@ -60506,10 +60735,8 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
          */
         public Builder setStringParamBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           parameterChoiceCase_ = 3;
           parameterChoice_ = value;
           onChanged();
@@ -60591,6 +60818,7 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   inference.GrpcService.LogSettingsResponse.SettingValue.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, inference.GrpcService.LogSettingsResponse.SettingValue> settings_;
     private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.LogSettingsResponse.SettingValue>
@@ -60601,7 +60829,6 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
       }
       return settings_;
     }
-
     public int getSettingsCount() {
       return internalGetSettings().getMap().size();
     }
@@ -60615,7 +60842,6 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
      *
      * <code>map&lt;string, .inference.LogSettingsResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
-
     @java.lang.Override
     public boolean containsSettings(
         java.lang.String key) {
@@ -60641,7 +60867,6 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
      * <code>map&lt;string, .inference.LogSettingsResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, inference.GrpcService.LogSettingsResponse.SettingValue> getSettingsMap() {
       return internalGetSettings().getMap();
     }
@@ -60656,10 +60881,11 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
      * <code>map&lt;string, .inference.LogSettingsResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
     @java.lang.Override
-
-    public inference.GrpcService.LogSettingsResponse.SettingValue getSettingsOrDefault(
+    public /* nullable */
+inference.GrpcService.LogSettingsResponse.SettingValue getSettingsOrDefault(
         java.lang.String key,
-        inference.GrpcService.LogSettingsResponse.SettingValue defaultValue) {
+        /* nullable */
+inference.GrpcService.LogSettingsResponse.SettingValue defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, inference.GrpcService.LogSettingsResponse.SettingValue> map =
           internalGetSettings().getMap();
@@ -60676,7 +60902,6 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
      * <code>map&lt;string, .inference.LogSettingsResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
      */
     @java.lang.Override
-
     public inference.GrpcService.LogSettingsResponse.SettingValue getSettingsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -60917,6 +61142,7 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         internalGetMutableSettings().clear();
         return this;
       }
@@ -60944,11 +61170,17 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
       @java.lang.Override
       public inference.GrpcService.LogSettingsResponse buildPartial() {
         inference.GrpcService.LogSettingsResponse result = new inference.GrpcService.LogSettingsResponse(this);
-        int from_bitField0_ = bitField0_;
-        result.settings_ = internalGetSettings();
-        result.settings_.makeImmutable();
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.GrpcService.LogSettingsResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.settings_ = internalGetSettings();
+          result.settings_.makeImmutable();
+        }
       }
 
       @java.lang.Override
@@ -60997,6 +61229,7 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
         if (other == inference.GrpcService.LogSettingsResponse.getDefaultInstance()) return this;
         internalGetMutableSettings().mergeFrom(
             other.internalGetSettings());
+        bitField0_ |= 0x00000001;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -61029,6 +61262,7 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
                     SettingsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableSettings().getMutableMap().put(
                     settings__.getKey(), settings__.getValue());
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -61051,7 +61285,7 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, inference.GrpcService.LogSettingsResponse.SettingValue> settings_;
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.LogSettingsResponse.SettingValue>
-      internalGetSettings() {
+          internalGetSettings() {
         if (settings_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               SettingsDefaultEntryHolder.defaultEntry);
@@ -61059,8 +61293,7 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
         return settings_;
       }
       private com.google.protobuf.MapField<java.lang.String, inference.GrpcService.LogSettingsResponse.SettingValue>
-      internalGetMutableSettings() {
-        onChanged();;
+          internalGetMutableSettings() {
         if (settings_ == null) {
           settings_ = com.google.protobuf.MapField.newMapField(
               SettingsDefaultEntryHolder.defaultEntry);
@@ -61068,9 +61301,10 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
         if (!settings_.isMutable()) {
           settings_ = settings_.copy();
         }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return settings_;
       }
-
       public int getSettingsCount() {
         return internalGetSettings().getMap().size();
       }
@@ -61084,7 +61318,6 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
        *
        * <code>map&lt;string, .inference.LogSettingsResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
-
       @java.lang.Override
       public boolean containsSettings(
           java.lang.String key) {
@@ -61110,7 +61343,6 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
        * <code>map&lt;string, .inference.LogSettingsResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.GrpcService.LogSettingsResponse.SettingValue> getSettingsMap() {
         return internalGetSettings().getMap();
       }
@@ -61125,10 +61357,11 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
        * <code>map&lt;string, .inference.LogSettingsResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
       @java.lang.Override
-
-      public inference.GrpcService.LogSettingsResponse.SettingValue getSettingsOrDefault(
+      public /* nullable */
+inference.GrpcService.LogSettingsResponse.SettingValue getSettingsOrDefault(
           java.lang.String key,
-          inference.GrpcService.LogSettingsResponse.SettingValue defaultValue) {
+          /* nullable */
+inference.GrpcService.LogSettingsResponse.SettingValue defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.GrpcService.LogSettingsResponse.SettingValue> map =
             internalGetSettings().getMap();
@@ -61145,7 +61378,6 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
        * <code>map&lt;string, .inference.LogSettingsResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
       @java.lang.Override
-
       public inference.GrpcService.LogSettingsResponse.SettingValue getSettingsOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -61156,8 +61388,8 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearSettings() {
+        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableSettings().getMutableMap()
             .clear();
         return this;
@@ -61172,7 +61404,6 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
        *
        * <code>map&lt;string, .inference.LogSettingsResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
-
       public Builder removeSettings(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -61185,7 +61416,8 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, inference.GrpcService.LogSettingsResponse.SettingValue>
-      getMutableSettings() {
+          getMutableSettings() {
+        bitField0_ |= 0x00000001;
         return internalGetMutableSettings().getMutableMap();
       }
       /**
@@ -61202,12 +61434,10 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
           java.lang.String key,
           inference.GrpcService.LogSettingsResponse.SettingValue value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableSettings().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -61220,11 +61450,11 @@ inference.GrpcService.LogSettingsResponse.SettingValue defaultValue);
        *
        * <code>map&lt;string, .inference.LogSettingsResponse.SettingValue&gt; settings = 1 [json_name = "settings"];</code>
        */
-
       public Builder putAllSettings(
           java.util.Map<java.lang.String, inference.GrpcService.LogSettingsResponse.SettingValue> values) {
         internalGetMutableSettings().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000001;
         return this;
       }
       @java.lang.Override

@@ -89,7 +89,8 @@ public final class TargetValueOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
@@ -127,7 +128,8 @@ public final class TargetValueOuterClass {
     }
 
     public static final int VALUE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object value_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
     /**
      * <code>string value = 2 [json_name = "value"];</code>
      * @return The value.
@@ -365,10 +367,9 @@ public final class TargetValueOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         value_ = "";
-
         return this;
       }
 
@@ -395,10 +396,19 @@ public final class TargetValueOuterClass {
       @java.lang.Override
       public asgt.type.TargetValueOuterClass.TargetValue buildPartial() {
         asgt.type.TargetValueOuterClass.TargetValue result = new asgt.type.TargetValueOuterClass.TargetValue(this);
-        result.name_ = name_;
-        result.value_ = value_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.TargetValueOuterClass.TargetValue result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = value_;
+        }
       }
 
       @java.lang.Override
@@ -447,10 +457,12 @@ public final class TargetValueOuterClass {
         if (other == asgt.type.TargetValueOuterClass.TargetValue.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getValue().isEmpty()) {
           value_ = other.value_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -481,12 +493,12 @@ public final class TargetValueOuterClass {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 value_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -504,6 +516,7 @@ public final class TargetValueOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -546,11 +559,9 @@ public final class TargetValueOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -559,8 +570,8 @@ public final class TargetValueOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -571,12 +582,10 @@ public final class TargetValueOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -622,11 +631,9 @@ public final class TargetValueOuterClass {
        */
       public Builder setValue(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         value_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -635,8 +642,8 @@ public final class TargetValueOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearValue() {
-        
         value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -647,12 +654,10 @@ public final class TargetValueOuterClass {
        */
       public Builder setValueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         value_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }

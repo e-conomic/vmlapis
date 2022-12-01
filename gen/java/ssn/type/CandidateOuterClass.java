@@ -252,7 +252,7 @@ public final class CandidateOuterClass {
     }
 
     public static final int LEVEL_FIELD_NUMBER = 1;
-    private int level_;
+    private int level_ = 0;
     /**
      * <pre>
      * A bucketized representation of confidence, which is intended to give clients
@@ -275,8 +275,7 @@ public final class CandidateOuterClass {
      * @return The level.
      */
     @java.lang.Override public ssn.type.CandidateOuterClass.Confidence.Level getLevel() {
-      @SuppressWarnings("deprecation")
-      ssn.type.CandidateOuterClass.Confidence.Level result = ssn.type.CandidateOuterClass.Confidence.Level.valueOf(level_);
+      ssn.type.CandidateOuterClass.Confidence.Level result = ssn.type.CandidateOuterClass.Confidence.Level.forNumber(level_);
       return result == null ? ssn.type.CandidateOuterClass.Confidence.Level.UNRECOGNIZED : result;
     }
 
@@ -315,7 +314,7 @@ public final class CandidateOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
-      return getValue();
+      return value_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : value_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -521,12 +520,11 @@ public final class CandidateOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         level_ = 0;
-
-        if (valueBuilder_ == null) {
-          value_ = null;
-        } else {
-          value_ = null;
+        value_ = null;
+        if (valueBuilder_ != null) {
+          valueBuilder_.dispose();
           valueBuilder_ = null;
         }
         return this;
@@ -555,14 +553,21 @@ public final class CandidateOuterClass {
       @java.lang.Override
       public ssn.type.CandidateOuterClass.Confidence buildPartial() {
         ssn.type.CandidateOuterClass.Confidence result = new ssn.type.CandidateOuterClass.Confidence(this);
-        result.level_ = level_;
-        if (valueBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = valueBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.type.CandidateOuterClass.Confidence result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.level_ = level_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = valueBuilder_ == null
+              ? value_
+              : valueBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -643,14 +648,14 @@ public final class CandidateOuterClass {
                 break;
               case 8: {
                 level_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 input.readMessage(
                     getValueFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -668,6 +673,7 @@ public final class CandidateOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int level_ = 0;
       /**
@@ -693,8 +699,8 @@ public final class CandidateOuterClass {
        * @return This builder for chaining.
        */
       public Builder setLevelValue(int value) {
-        
         level_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -709,8 +715,7 @@ public final class CandidateOuterClass {
        */
       @java.lang.Override
       public ssn.type.CandidateOuterClass.Confidence.Level getLevel() {
-        @SuppressWarnings("deprecation")
-        ssn.type.CandidateOuterClass.Confidence.Level result = ssn.type.CandidateOuterClass.Confidence.Level.valueOf(level_);
+        ssn.type.CandidateOuterClass.Confidence.Level result = ssn.type.CandidateOuterClass.Confidence.Level.forNumber(level_);
         return result == null ? ssn.type.CandidateOuterClass.Confidence.Level.UNRECOGNIZED : result;
       }
       /**
@@ -727,7 +732,7 @@ public final class CandidateOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         level_ = value.getNumber();
         onChanged();
         return this;
@@ -742,7 +747,7 @@ public final class CandidateOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevel() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         level_ = 0;
         onChanged();
         return this;
@@ -760,7 +765,7 @@ public final class CandidateOuterClass {
        * @return Whether the value field is set.
        */
       public boolean hasValue() {
-        return valueBuilder_ != null || value_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -790,11 +795,11 @@ public final class CandidateOuterClass {
             throw new NullPointerException();
           }
           value_ = value;
-          onChanged();
         } else {
           valueBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -808,11 +813,11 @@ public final class CandidateOuterClass {
           com.google.protobuf.FloatValue.Builder builderForValue) {
         if (valueBuilder_ == null) {
           value_ = builderForValue.build();
-          onChanged();
         } else {
           valueBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -824,17 +829,18 @@ public final class CandidateOuterClass {
        */
       public Builder mergeValue(com.google.protobuf.FloatValue value) {
         if (valueBuilder_ == null) {
-          if (value_ != null) {
-            value_ =
-              com.google.protobuf.FloatValue.newBuilder(value_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            value_ != null &&
+            value_ != com.google.protobuf.FloatValue.getDefaultInstance()) {
+            getValueBuilder().mergeFrom(value);
           } else {
             value_ = value;
           }
-          onChanged();
         } else {
           valueBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -845,14 +851,13 @@ public final class CandidateOuterClass {
        * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder clearValue() {
-        if (valueBuilder_ == null) {
-          value_ = null;
-          onChanged();
-        } else {
-          value_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        value_ = null;
+        if (valueBuilder_ != null) {
+          valueBuilder_.dispose();
           valueBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -863,7 +868,7 @@ public final class CandidateOuterClass {
        * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public com.google.protobuf.FloatValue.Builder getValueBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getValueFieldBuilder().getBuilder();
       }
@@ -1326,7 +1331,8 @@ public final class CandidateOuterClass {
     }
 
     public static final int VALUE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object value_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object value_ = "";
     /**
      * <pre>
      * Normalized value 01-01-2019
@@ -1372,7 +1378,8 @@ public final class CandidateOuterClass {
     }
 
     public static final int TEXT_FIELD_NUMBER = 2;
-    private volatile java.lang.Object text_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object text_ = "";
     /**
      * <pre>
      * The text as found on the document "1. Jan"
@@ -1454,7 +1461,7 @@ public final class CandidateOuterClass {
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
-      return getConfidence();
+      return confidence_ == null ? ssn.type.CandidateOuterClass.Confidence.getDefaultInstance() : confidence_;
     }
 
     public static final int BOUNDING_BOX_FIELD_NUMBER = 4;
@@ -1534,11 +1541,11 @@ public final class CandidateOuterClass {
      */
     @java.lang.Override
     public ssn.type.Geometry.BoundingPolyOrBuilder getBoundingBoxOrBuilder() {
-      return getBoundingBox();
+      return boundingBox_ == null ? ssn.type.Geometry.BoundingPoly.getDefaultInstance() : boundingBox_;
     }
 
     public static final int TYPE_FIELD_NUMBER = 5;
-    private int type_;
+    private int type_ = 0;
     /**
      * <pre>
      * Indicate the type of the candidate
@@ -1559,13 +1566,12 @@ public final class CandidateOuterClass {
      * @return The type.
      */
     @java.lang.Override public ssn.type.CandidateOuterClass.Candidate.Type getType() {
-      @SuppressWarnings("deprecation")
-      ssn.type.CandidateOuterClass.Candidate.Type result = ssn.type.CandidateOuterClass.Candidate.Type.valueOf(type_);
+      ssn.type.CandidateOuterClass.Candidate.Type result = ssn.type.CandidateOuterClass.Candidate.Type.forNumber(type_);
       return result == null ? ssn.type.CandidateOuterClass.Candidate.Type.UNRECOGNIZED : result;
     }
 
     public static final int PAGE_REF_FIELD_NUMBER = 6;
-    private int pageRef_;
+    private int pageRef_ = 0;
     /**
      * <pre>
      * A reference to the page where the candidate was found.
@@ -1615,7 +1621,7 @@ public final class CandidateOuterClass {
      */
     @java.lang.Override
     public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getModelMetadataOrBuilder() {
-      return getModelMetadata();
+      return modelMetadata_ == null ? ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance() : modelMetadata_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1884,30 +1890,24 @@ public final class CandidateOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         value_ = "";
-
         text_ = "";
-
-        if (confidenceBuilder_ == null) {
-          confidence_ = null;
-        } else {
-          confidence_ = null;
+        confidence_ = null;
+        if (confidenceBuilder_ != null) {
+          confidenceBuilder_.dispose();
           confidenceBuilder_ = null;
         }
-        if (boundingBoxBuilder_ == null) {
-          boundingBox_ = null;
-        } else {
-          boundingBox_ = null;
+        boundingBox_ = null;
+        if (boundingBoxBuilder_ != null) {
+          boundingBoxBuilder_.dispose();
           boundingBoxBuilder_ = null;
         }
         type_ = 0;
-
         pageRef_ = 0;
-
-        if (modelMetadataBuilder_ == null) {
-          modelMetadata_ = null;
-        } else {
-          modelMetadata_ = null;
+        modelMetadata_ = null;
+        if (modelMetadataBuilder_ != null) {
+          modelMetadataBuilder_.dispose();
           modelMetadataBuilder_ = null;
         }
         return this;
@@ -1936,27 +1936,40 @@ public final class CandidateOuterClass {
       @java.lang.Override
       public ssn.type.CandidateOuterClass.Candidate buildPartial() {
         ssn.type.CandidateOuterClass.Candidate result = new ssn.type.CandidateOuterClass.Candidate(this);
-        result.value_ = value_;
-        result.text_ = text_;
-        if (confidenceBuilder_ == null) {
-          result.confidence_ = confidence_;
-        } else {
-          result.confidence_ = confidenceBuilder_.build();
-        }
-        if (boundingBoxBuilder_ == null) {
-          result.boundingBox_ = boundingBox_;
-        } else {
-          result.boundingBox_ = boundingBoxBuilder_.build();
-        }
-        result.type_ = type_;
-        result.pageRef_ = pageRef_;
-        if (modelMetadataBuilder_ == null) {
-          result.modelMetadata_ = modelMetadata_;
-        } else {
-          result.modelMetadata_ = modelMetadataBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.type.CandidateOuterClass.Candidate result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.value_ = value_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.text_ = text_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.confidence_ = confidenceBuilder_ == null
+              ? confidence_
+              : confidenceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.boundingBox_ = boundingBoxBuilder_ == null
+              ? boundingBox_
+              : boundingBoxBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.pageRef_ = pageRef_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.modelMetadata_ = modelMetadataBuilder_ == null
+              ? modelMetadata_
+              : modelMetadataBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -2005,10 +2018,12 @@ public final class CandidateOuterClass {
         if (other == ssn.type.CandidateOuterClass.Candidate.getDefaultInstance()) return this;
         if (!other.getValue().isEmpty()) {
           value_ = other.value_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getText().isEmpty()) {
           text_ = other.text_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasConfidence()) {
@@ -2054,43 +2069,43 @@ public final class CandidateOuterClass {
                 break;
               case 10: {
                 value_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 text_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getConfidenceFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getBoundingBoxFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 40: {
                 type_ = input.readEnum();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 48: {
                 pageRef_ = input.readUInt32();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 48
               case 58: {
                 input.readMessage(
                     getModelMetadataFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               default: {
@@ -2108,6 +2123,7 @@ public final class CandidateOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object value_ = "";
       /**
@@ -2162,11 +2178,9 @@ public final class CandidateOuterClass {
        */
       public Builder setValue(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         value_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2179,8 +2193,8 @@ public final class CandidateOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearValue() {
-        
         value_ = getDefaultInstance().getValue();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2195,12 +2209,10 @@ public final class CandidateOuterClass {
        */
       public Builder setValueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         value_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2261,11 +2273,9 @@ public final class CandidateOuterClass {
        */
       public Builder setText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         text_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2279,8 +2289,8 @@ public final class CandidateOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearText() {
-        
         text_ = getDefaultInstance().getText();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2296,12 +2306,10 @@ public final class CandidateOuterClass {
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         text_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2318,7 +2326,7 @@ public final class CandidateOuterClass {
        * @return Whether the confidence field is set.
        */
       public boolean hasConfidence() {
-        return confidenceBuilder_ != null || confidence_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -2348,11 +2356,11 @@ public final class CandidateOuterClass {
             throw new NullPointerException();
           }
           confidence_ = value;
-          onChanged();
         } else {
           confidenceBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2366,11 +2374,11 @@ public final class CandidateOuterClass {
           ssn.type.CandidateOuterClass.Confidence.Builder builderForValue) {
         if (confidenceBuilder_ == null) {
           confidence_ = builderForValue.build();
-          onChanged();
         } else {
           confidenceBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2382,17 +2390,18 @@ public final class CandidateOuterClass {
        */
       public Builder mergeConfidence(ssn.type.CandidateOuterClass.Confidence value) {
         if (confidenceBuilder_ == null) {
-          if (confidence_ != null) {
-            confidence_ =
-              ssn.type.CandidateOuterClass.Confidence.newBuilder(confidence_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            confidence_ != null &&
+            confidence_ != ssn.type.CandidateOuterClass.Confidence.getDefaultInstance()) {
+            getConfidenceBuilder().mergeFrom(value);
           } else {
             confidence_ = value;
           }
-          onChanged();
         } else {
           confidenceBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -2403,14 +2412,13 @@ public final class CandidateOuterClass {
        * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public Builder clearConfidence() {
-        if (confidenceBuilder_ == null) {
-          confidence_ = null;
-          onChanged();
-        } else {
-          confidence_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        confidence_ = null;
+        if (confidenceBuilder_ != null) {
+          confidenceBuilder_.dispose();
           confidenceBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2421,7 +2429,7 @@ public final class CandidateOuterClass {
        * <code>.ssn.type.Confidence confidence = 3 [json_name = "confidence"];</code>
        */
       public ssn.type.CandidateOuterClass.Confidence.Builder getConfidenceBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getConfidenceFieldBuilder().getBuilder();
       }
@@ -2487,7 +2495,7 @@ public final class CandidateOuterClass {
        * @return Whether the boundingBox field is set.
        */
       public boolean hasBoundingBox() {
-        return boundingBoxBuilder_ != null || boundingBox_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -2545,11 +2553,11 @@ public final class CandidateOuterClass {
             throw new NullPointerException();
           }
           boundingBox_ = value;
-          onChanged();
         } else {
           boundingBoxBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2577,11 +2585,11 @@ public final class CandidateOuterClass {
           ssn.type.Geometry.BoundingPoly.Builder builderForValue) {
         if (boundingBoxBuilder_ == null) {
           boundingBox_ = builderForValue.build();
-          onChanged();
         } else {
           boundingBoxBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2607,17 +2615,18 @@ public final class CandidateOuterClass {
        */
       public Builder mergeBoundingBox(ssn.type.Geometry.BoundingPoly value) {
         if (boundingBoxBuilder_ == null) {
-          if (boundingBox_ != null) {
-            boundingBox_ =
-              ssn.type.Geometry.BoundingPoly.newBuilder(boundingBox_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            boundingBox_ != null &&
+            boundingBox_ != ssn.type.Geometry.BoundingPoly.getDefaultInstance()) {
+            getBoundingBoxBuilder().mergeFrom(value);
           } else {
             boundingBox_ = value;
           }
-          onChanged();
         } else {
           boundingBoxBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2642,14 +2651,13 @@ public final class CandidateOuterClass {
        * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public Builder clearBoundingBox() {
-        if (boundingBoxBuilder_ == null) {
-          boundingBox_ = null;
-          onChanged();
-        } else {
-          boundingBox_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        boundingBox_ = null;
+        if (boundingBoxBuilder_ != null) {
+          boundingBoxBuilder_.dispose();
           boundingBoxBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2674,7 +2682,7 @@ public final class CandidateOuterClass {
        * <code>.ssn.type.BoundingPoly bounding_box = 4 [json_name = "boundingBox"];</code>
        */
       public ssn.type.Geometry.BoundingPoly.Builder getBoundingBoxBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getBoundingBoxFieldBuilder().getBuilder();
       }
@@ -2764,8 +2772,8 @@ public final class CandidateOuterClass {
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
-        
         type_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -2779,8 +2787,7 @@ public final class CandidateOuterClass {
        */
       @java.lang.Override
       public ssn.type.CandidateOuterClass.Candidate.Type getType() {
-        @SuppressWarnings("deprecation")
-        ssn.type.CandidateOuterClass.Candidate.Type result = ssn.type.CandidateOuterClass.Candidate.Type.valueOf(type_);
+        ssn.type.CandidateOuterClass.Candidate.Type result = ssn.type.CandidateOuterClass.Candidate.Type.forNumber(type_);
         return result == null ? ssn.type.CandidateOuterClass.Candidate.Type.UNRECOGNIZED : result;
       }
       /**
@@ -2796,7 +2803,7 @@ public final class CandidateOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000010;
         type_ = value.getNumber();
         onChanged();
         return this;
@@ -2810,7 +2817,7 @@ public final class CandidateOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         type_ = 0;
         onChanged();
         return this;
@@ -2843,6 +2850,7 @@ public final class CandidateOuterClass {
       public Builder setPageRef(int value) {
         
         pageRef_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -2856,7 +2864,7 @@ public final class CandidateOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPageRef() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         pageRef_ = 0;
         onChanged();
         return this;
@@ -2874,7 +2882,7 @@ public final class CandidateOuterClass {
        * @return Whether the modelMetadata field is set.
        */
       public boolean hasModelMetadata() {
-        return modelMetadataBuilder_ != null || modelMetadata_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
@@ -2904,11 +2912,11 @@ public final class CandidateOuterClass {
             throw new NullPointerException();
           }
           modelMetadata_ = value;
-          onChanged();
         } else {
           modelMetadataBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -2922,11 +2930,11 @@ public final class CandidateOuterClass {
           ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
         if (modelMetadataBuilder_ == null) {
           modelMetadata_ = builderForValue.build();
-          onChanged();
         } else {
           modelMetadataBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -2938,17 +2946,18 @@ public final class CandidateOuterClass {
        */
       public Builder mergeModelMetadata(ssn.type.CandidateOuterClass.ModelSpec value) {
         if (modelMetadataBuilder_ == null) {
-          if (modelMetadata_ != null) {
-            modelMetadata_ =
-              ssn.type.CandidateOuterClass.ModelSpec.newBuilder(modelMetadata_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            modelMetadata_ != null &&
+            modelMetadata_ != ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance()) {
+            getModelMetadataBuilder().mergeFrom(value);
           } else {
             modelMetadata_ = value;
           }
-          onChanged();
         } else {
           modelMetadataBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -2959,14 +2968,13 @@ public final class CandidateOuterClass {
        * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public Builder clearModelMetadata() {
-        if (modelMetadataBuilder_ == null) {
-          modelMetadata_ = null;
-          onChanged();
-        } else {
-          modelMetadata_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        modelMetadata_ = null;
+        if (modelMetadataBuilder_ != null) {
+          modelMetadataBuilder_.dispose();
           modelMetadataBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -2977,7 +2985,7 @@ public final class CandidateOuterClass {
        * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
        */
       public ssn.type.CandidateOuterClass.ModelSpec.Builder getModelMetadataBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getModelMetadataFieldBuilder().getBuilder();
       }
@@ -3173,7 +3181,8 @@ public final class CandidateOuterClass {
     }
 
     public static final int MODEL_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object modelName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modelName_ = "";
     /**
      * <pre>
      * The name of the TensorFlow Serving model
@@ -3253,7 +3262,7 @@ public final class CandidateOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.Int64ValueOrBuilder getModelVerOrBuilder() {
-      return getModelVer();
+      return modelVer_ == null ? com.google.protobuf.Int64Value.getDefaultInstance() : modelVer_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3459,12 +3468,11 @@ public final class CandidateOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         modelName_ = "";
-
-        if (modelVerBuilder_ == null) {
-          modelVer_ = null;
-        } else {
-          modelVer_ = null;
+        modelVer_ = null;
+        if (modelVerBuilder_ != null) {
+          modelVerBuilder_.dispose();
           modelVerBuilder_ = null;
         }
         return this;
@@ -3493,14 +3501,21 @@ public final class CandidateOuterClass {
       @java.lang.Override
       public ssn.type.CandidateOuterClass.ModelSpec buildPartial() {
         ssn.type.CandidateOuterClass.ModelSpec result = new ssn.type.CandidateOuterClass.ModelSpec(this);
-        result.modelName_ = modelName_;
-        if (modelVerBuilder_ == null) {
-          result.modelVer_ = modelVer_;
-        } else {
-          result.modelVer_ = modelVerBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.type.CandidateOuterClass.ModelSpec result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.modelName_ = modelName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.modelVer_ = modelVerBuilder_ == null
+              ? modelVer_
+              : modelVerBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -3549,6 +3564,7 @@ public final class CandidateOuterClass {
         if (other == ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance()) return this;
         if (!other.getModelName().isEmpty()) {
           modelName_ = other.modelName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasModelVer()) {
@@ -3582,14 +3598,14 @@ public final class CandidateOuterClass {
                 break;
               case 10: {
                 modelName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getModelVerFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -3607,6 +3623,7 @@ public final class CandidateOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object modelName_ = "";
       /**
@@ -3661,11 +3678,9 @@ public final class CandidateOuterClass {
        */
       public Builder setModelName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         modelName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3678,8 +3693,8 @@ public final class CandidateOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearModelName() {
-        
         modelName_ = getDefaultInstance().getModelName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3694,12 +3709,10 @@ public final class CandidateOuterClass {
        */
       public Builder setModelNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         modelName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3716,7 +3729,7 @@ public final class CandidateOuterClass {
        * @return Whether the modelVer field is set.
        */
       public boolean hasModelVer() {
-        return modelVerBuilder_ != null || modelVer_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -3746,11 +3759,11 @@ public final class CandidateOuterClass {
             throw new NullPointerException();
           }
           modelVer_ = value;
-          onChanged();
         } else {
           modelVerBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3764,11 +3777,11 @@ public final class CandidateOuterClass {
           com.google.protobuf.Int64Value.Builder builderForValue) {
         if (modelVerBuilder_ == null) {
           modelVer_ = builderForValue.build();
-          onChanged();
         } else {
           modelVerBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3780,17 +3793,18 @@ public final class CandidateOuterClass {
        */
       public Builder mergeModelVer(com.google.protobuf.Int64Value value) {
         if (modelVerBuilder_ == null) {
-          if (modelVer_ != null) {
-            modelVer_ =
-              com.google.protobuf.Int64Value.newBuilder(modelVer_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            modelVer_ != null &&
+            modelVer_ != com.google.protobuf.Int64Value.getDefaultInstance()) {
+            getModelVerBuilder().mergeFrom(value);
           } else {
             modelVer_ = value;
           }
-          onChanged();
         } else {
           modelVerBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3801,14 +3815,13 @@ public final class CandidateOuterClass {
        * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public Builder clearModelVer() {
-        if (modelVerBuilder_ == null) {
-          modelVer_ = null;
-          onChanged();
-        } else {
-          modelVer_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        modelVer_ = null;
+        if (modelVerBuilder_ != null) {
+          modelVerBuilder_.dispose();
           modelVerBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -3819,7 +3832,7 @@ public final class CandidateOuterClass {
        * <code>.google.protobuf.Int64Value model_ver = 2 [json_name = "modelVer"];</code>
        */
       public com.google.protobuf.Int64Value.Builder getModelVerBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getModelVerFieldBuilder().getBuilder();
       }
@@ -4012,7 +4025,8 @@ public final class CandidateOuterClass {
     }
 
     public static final int TEXT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object text_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object text_ = "";
     /**
      * <pre>
      * Text of the line without the amount
@@ -4060,7 +4074,7 @@ public final class CandidateOuterClass {
     }
 
     public static final int AMOUNT_FIELD_NUMBER = 2;
-    private double amount_;
+    private double amount_ = 0D;
     /**
      * <pre>
      * Normalized amount (price) of the line
@@ -4076,7 +4090,7 @@ public final class CandidateOuterClass {
     }
 
     public static final int PAGE_REF_FIELD_NUMBER = 6;
-    private int pageRef_;
+    private int pageRef_ = 0;
     /**
      * <pre>
      * A reference to the page where the line was found.
@@ -4302,12 +4316,10 @@ public final class CandidateOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         text_ = "";
-
         amount_ = 0D;
-
         pageRef_ = 0;
-
         return this;
       }
 
@@ -4334,11 +4346,22 @@ public final class CandidateOuterClass {
       @java.lang.Override
       public ssn.type.CandidateOuterClass.LineCandidate buildPartial() {
         ssn.type.CandidateOuterClass.LineCandidate result = new ssn.type.CandidateOuterClass.LineCandidate(this);
-        result.text_ = text_;
-        result.amount_ = amount_;
-        result.pageRef_ = pageRef_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.type.CandidateOuterClass.LineCandidate result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.text_ = text_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.pageRef_ = pageRef_;
+        }
       }
 
       @java.lang.Override
@@ -4387,6 +4410,7 @@ public final class CandidateOuterClass {
         if (other == ssn.type.CandidateOuterClass.LineCandidate.getDefaultInstance()) return this;
         if (!other.getText().isEmpty()) {
           text_ = other.text_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getAmount() != 0D) {
@@ -4423,17 +4447,17 @@ public final class CandidateOuterClass {
                 break;
               case 10: {
                 text_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 17: {
                 amount_ = input.readDouble();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 17
               case 48: {
                 pageRef_ = input.readUInt32();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 48
               default: {
@@ -4451,6 +4475,7 @@ public final class CandidateOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object text_ = "";
       /**
@@ -4508,11 +4533,9 @@ public final class CandidateOuterClass {
        */
       public Builder setText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         text_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4526,8 +4549,8 @@ public final class CandidateOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearText() {
-        
         text_ = getDefaultInstance().getText();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4543,12 +4566,10 @@ public final class CandidateOuterClass {
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         text_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4580,6 +4601,7 @@ public final class CandidateOuterClass {
       public Builder setAmount(double value) {
         
         amount_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -4593,7 +4615,7 @@ public final class CandidateOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         amount_ = 0D;
         onChanged();
         return this;
@@ -4626,6 +4648,7 @@ public final class CandidateOuterClass {
       public Builder setPageRef(int value) {
         
         pageRef_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4639,7 +4662,7 @@ public final class CandidateOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPageRef() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         pageRef_ = 0;
         onChanged();
         return this;

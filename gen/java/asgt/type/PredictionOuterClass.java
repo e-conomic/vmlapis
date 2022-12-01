@@ -256,7 +256,7 @@ public final class PredictionOuterClass {
     }
 
     public static final int LEVEL_FIELD_NUMBER = 1;
-    private int level_;
+    private int level_ = 0;
     /**
      * <pre>
      * A bucketized representation of confidence, which is intended to give clients
@@ -279,8 +279,7 @@ public final class PredictionOuterClass {
      * @return The level.
      */
     @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getLevel() {
-      @SuppressWarnings("deprecation")
-      asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(level_);
+      asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.forNumber(level_);
       return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
     }
 
@@ -319,7 +318,7 @@ public final class PredictionOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.FloatValueOrBuilder getValueOrBuilder() {
-      return getValue();
+      return value_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : value_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -529,12 +528,11 @@ public final class PredictionOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         level_ = 0;
-
-        if (valueBuilder_ == null) {
-          value_ = null;
-        } else {
-          value_ = null;
+        value_ = null;
+        if (valueBuilder_ != null) {
+          valueBuilder_.dispose();
           valueBuilder_ = null;
         }
         return this;
@@ -563,14 +561,21 @@ public final class PredictionOuterClass {
       @java.lang.Override
       public asgt.type.PredictionOuterClass.Confidence buildPartial() {
         asgt.type.PredictionOuterClass.Confidence result = new asgt.type.PredictionOuterClass.Confidence(this);
-        result.level_ = level_;
-        if (valueBuilder_ == null) {
-          result.value_ = value_;
-        } else {
-          result.value_ = valueBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.PredictionOuterClass.Confidence result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.level_ = level_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.value_ = valueBuilder_ == null
+              ? value_
+              : valueBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -651,14 +656,14 @@ public final class PredictionOuterClass {
                 break;
               case 8: {
                 level_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 input.readMessage(
                     getValueFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -676,6 +681,7 @@ public final class PredictionOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int level_ = 0;
       /**
@@ -701,8 +707,8 @@ public final class PredictionOuterClass {
        * @return This builder for chaining.
        */
       public Builder setLevelValue(int value) {
-        
         level_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -717,8 +723,7 @@ public final class PredictionOuterClass {
        */
       @java.lang.Override
       public asgt.type.PredictionOuterClass.Confidence.Level getLevel() {
-        @SuppressWarnings("deprecation")
-        asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(level_);
+        asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.forNumber(level_);
         return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
       }
       /**
@@ -735,7 +740,7 @@ public final class PredictionOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         level_ = value.getNumber();
         onChanged();
         return this;
@@ -750,7 +755,7 @@ public final class PredictionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLevel() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         level_ = 0;
         onChanged();
         return this;
@@ -768,7 +773,7 @@ public final class PredictionOuterClass {
        * @return Whether the value field is set.
        */
       public boolean hasValue() {
-        return valueBuilder_ != null || value_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -798,11 +803,11 @@ public final class PredictionOuterClass {
             throw new NullPointerException();
           }
           value_ = value;
-          onChanged();
         } else {
           valueBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -816,11 +821,11 @@ public final class PredictionOuterClass {
           com.google.protobuf.FloatValue.Builder builderForValue) {
         if (valueBuilder_ == null) {
           value_ = builderForValue.build();
-          onChanged();
         } else {
           valueBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -832,17 +837,18 @@ public final class PredictionOuterClass {
        */
       public Builder mergeValue(com.google.protobuf.FloatValue value) {
         if (valueBuilder_ == null) {
-          if (value_ != null) {
-            value_ =
-              com.google.protobuf.FloatValue.newBuilder(value_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            value_ != null &&
+            value_ != com.google.protobuf.FloatValue.getDefaultInstance()) {
+            getValueBuilder().mergeFrom(value);
           } else {
             value_ = value;
           }
-          onChanged();
         } else {
           valueBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -853,14 +859,13 @@ public final class PredictionOuterClass {
        * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public Builder clearValue() {
-        if (valueBuilder_ == null) {
-          value_ = null;
-          onChanged();
-        } else {
-          value_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        value_ = null;
+        if (valueBuilder_ != null) {
+          valueBuilder_.dispose();
           valueBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -871,7 +876,7 @@ public final class PredictionOuterClass {
        * <code>.google.protobuf.FloatValue value = 2 [json_name = "value"];</code>
        */
       public com.google.protobuf.FloatValue.Builder getValueBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getValueFieldBuilder().getBuilder();
       }
@@ -1198,7 +1203,8 @@ public final class PredictionOuterClass {
         }
 
         public static final int VALUE_FIELD_NUMBER = 1;
-        private volatile java.lang.Object value_;
+        @SuppressWarnings("serial")
+        private volatile java.lang.Object value_ = "";
         /**
          * <code>string value = 1 [json_name = "value", (.gen_bq_schema.bigquery) = { ... }</code>
          * @return The value.
@@ -1258,7 +1264,7 @@ public final class PredictionOuterClass {
          */
         @java.lang.Override
         public asgt.type.PredictionOuterClass.ConfidenceOrBuilder getConfidenceOrBuilder() {
-          return getConfidence();
+          return confidence_ == null ? asgt.type.PredictionOuterClass.Confidence.getDefaultInstance() : confidence_;
         }
 
         private byte memoizedIsInitialized = -1;
@@ -1464,12 +1470,11 @@ public final class PredictionOuterClass {
           @java.lang.Override
           public Builder clear() {
             super.clear();
+            bitField0_ = 0;
             value_ = "";
-
-            if (confidenceBuilder_ == null) {
-              confidence_ = null;
-            } else {
-              confidence_ = null;
+            confidence_ = null;
+            if (confidenceBuilder_ != null) {
+              confidenceBuilder_.dispose();
               confidenceBuilder_ = null;
             }
             return this;
@@ -1498,14 +1503,21 @@ public final class PredictionOuterClass {
           @java.lang.Override
           public asgt.type.PredictionOuterClass.Prediction.Target.Candidate buildPartial() {
             asgt.type.PredictionOuterClass.Prediction.Target.Candidate result = new asgt.type.PredictionOuterClass.Prediction.Target.Candidate(this);
-            result.value_ = value_;
-            if (confidenceBuilder_ == null) {
-              result.confidence_ = confidence_;
-            } else {
-              result.confidence_ = confidenceBuilder_.build();
-            }
+            if (bitField0_ != 0) { buildPartial0(result); }
             onBuilt();
             return result;
+          }
+
+          private void buildPartial0(asgt.type.PredictionOuterClass.Prediction.Target.Candidate result) {
+            int from_bitField0_ = bitField0_;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.value_ = value_;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.confidence_ = confidenceBuilder_ == null
+                  ? confidence_
+                  : confidenceBuilder_.build();
+            }
           }
 
           @java.lang.Override
@@ -1554,6 +1566,7 @@ public final class PredictionOuterClass {
             if (other == asgt.type.PredictionOuterClass.Prediction.Target.Candidate.getDefaultInstance()) return this;
             if (!other.getValue().isEmpty()) {
               value_ = other.value_;
+              bitField0_ |= 0x00000001;
               onChanged();
             }
             if (other.hasConfidence()) {
@@ -1587,14 +1600,14 @@ public final class PredictionOuterClass {
                     break;
                   case 10: {
                     value_ = input.readStringRequireUtf8();
-
+                    bitField0_ |= 0x00000001;
                     break;
                   } // case 10
                   case 18: {
                     input.readMessage(
                         getConfidenceFieldBuilder().getBuilder(),
                         extensionRegistry);
-
+                    bitField0_ |= 0x00000002;
                     break;
                   } // case 18
                   default: {
@@ -1612,6 +1625,7 @@ public final class PredictionOuterClass {
             } // finally
             return this;
           }
+          private int bitField0_;
 
           private java.lang.Object value_ = "";
           /**
@@ -1654,11 +1668,9 @@ public final class PredictionOuterClass {
            */
           public Builder setValue(
               java.lang.String value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  
+            if (value == null) { throw new NullPointerException(); }
             value_ = value;
+            bitField0_ |= 0x00000001;
             onChanged();
             return this;
           }
@@ -1667,8 +1679,8 @@ public final class PredictionOuterClass {
            * @return This builder for chaining.
            */
           public Builder clearValue() {
-            
             value_ = getDefaultInstance().getValue();
+            bitField0_ = (bitField0_ & ~0x00000001);
             onChanged();
             return this;
           }
@@ -1679,12 +1691,10 @@ public final class PredictionOuterClass {
            */
           public Builder setValueBytes(
               com.google.protobuf.ByteString value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-            
+            if (value == null) { throw new NullPointerException(); }
+            checkByteStringIsUtf8(value);
             value_ = value;
+            bitField0_ |= 0x00000001;
             onChanged();
             return this;
           }
@@ -1697,7 +1707,7 @@ public final class PredictionOuterClass {
            * @return Whether the confidence field is set.
            */
           public boolean hasConfidence() {
-            return confidenceBuilder_ != null || confidence_ != null;
+            return ((bitField0_ & 0x00000002) != 0);
           }
           /**
            * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
@@ -1719,11 +1729,11 @@ public final class PredictionOuterClass {
                 throw new NullPointerException();
               }
               confidence_ = value;
-              onChanged();
             } else {
               confidenceBuilder_.setMessage(value);
             }
-
+            bitField0_ |= 0x00000002;
+            onChanged();
             return this;
           }
           /**
@@ -1733,11 +1743,11 @@ public final class PredictionOuterClass {
               asgt.type.PredictionOuterClass.Confidence.Builder builderForValue) {
             if (confidenceBuilder_ == null) {
               confidence_ = builderForValue.build();
-              onChanged();
             } else {
               confidenceBuilder_.setMessage(builderForValue.build());
             }
-
+            bitField0_ |= 0x00000002;
+            onChanged();
             return this;
           }
           /**
@@ -1745,38 +1755,38 @@ public final class PredictionOuterClass {
            */
           public Builder mergeConfidence(asgt.type.PredictionOuterClass.Confidence value) {
             if (confidenceBuilder_ == null) {
-              if (confidence_ != null) {
-                confidence_ =
-                  asgt.type.PredictionOuterClass.Confidence.newBuilder(confidence_).mergeFrom(value).buildPartial();
+              if (((bitField0_ & 0x00000002) != 0) &&
+                confidence_ != null &&
+                confidence_ != asgt.type.PredictionOuterClass.Confidence.getDefaultInstance()) {
+                getConfidenceBuilder().mergeFrom(value);
               } else {
                 confidence_ = value;
               }
-              onChanged();
             } else {
               confidenceBuilder_.mergeFrom(value);
             }
-
+            bitField0_ |= 0x00000002;
+            onChanged();
             return this;
           }
           /**
            * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public Builder clearConfidence() {
-            if (confidenceBuilder_ == null) {
-              confidence_ = null;
-              onChanged();
-            } else {
-              confidence_ = null;
+            bitField0_ = (bitField0_ & ~0x00000002);
+            confidence_ = null;
+            if (confidenceBuilder_ != null) {
+              confidenceBuilder_.dispose();
               confidenceBuilder_ = null;
             }
-
+            onChanged();
             return this;
           }
           /**
            * <code>.asgt.type.Confidence confidence = 2 [json_name = "confidence"];</code>
            */
           public asgt.type.PredictionOuterClass.Confidence.Builder getConfidenceBuilder() {
-            
+            bitField0_ |= 0x00000002;
             onChanged();
             return getConfidenceFieldBuilder().getBuilder();
           }
@@ -1872,7 +1882,8 @@ public final class PredictionOuterClass {
       }
 
       public static final int NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object name_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object name_ = "";
       /**
        * <code>string name = 1 [json_name = "name"];</code>
        * @return The name.
@@ -1910,6 +1921,7 @@ public final class PredictionOuterClass {
       }
 
       public static final int CANDIDATES_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
       private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> candidates_;
       /**
        * <code>repeated .asgt.type.Prediction.Target.Candidate candidates = 2 [json_name = "candidates"];</code>
@@ -2149,15 +2161,15 @@ public final class PredictionOuterClass {
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           name_ = "";
-
           if (candidatesBuilder_ == null) {
             candidates_ = java.util.Collections.emptyList();
           } else {
             candidates_ = null;
             candidatesBuilder_.clear();
           }
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           return this;
         }
 
@@ -2184,19 +2196,29 @@ public final class PredictionOuterClass {
         @java.lang.Override
         public asgt.type.PredictionOuterClass.Prediction.Target buildPartial() {
           asgt.type.PredictionOuterClass.Prediction.Target result = new asgt.type.PredictionOuterClass.Prediction.Target(this);
-          int from_bitField0_ = bitField0_;
-          result.name_ = name_;
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(asgt.type.PredictionOuterClass.Prediction.Target result) {
           if (candidatesBuilder_ == null) {
-            if (((bitField0_ & 0x00000001) != 0)) {
+            if (((bitField0_ & 0x00000002) != 0)) {
               candidates_ = java.util.Collections.unmodifiableList(candidates_);
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             }
             result.candidates_ = candidates_;
           } else {
             result.candidates_ = candidatesBuilder_.build();
           }
-          onBuilt();
-          return result;
+        }
+
+        private void buildPartial0(asgt.type.PredictionOuterClass.Prediction.Target result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.name_ = name_;
+          }
         }
 
         @java.lang.Override
@@ -2245,13 +2267,14 @@ public final class PredictionOuterClass {
           if (other == asgt.type.PredictionOuterClass.Prediction.Target.getDefaultInstance()) return this;
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (candidatesBuilder_ == null) {
             if (!other.candidates_.isEmpty()) {
               if (candidates_.isEmpty()) {
                 candidates_ = other.candidates_;
-                bitField0_ = (bitField0_ & ~0x00000001);
+                bitField0_ = (bitField0_ & ~0x00000002);
               } else {
                 ensureCandidatesIsMutable();
                 candidates_.addAll(other.candidates_);
@@ -2264,7 +2287,7 @@ public final class PredictionOuterClass {
                 candidatesBuilder_.dispose();
                 candidatesBuilder_ = null;
                 candidates_ = other.candidates_;
-                bitField0_ = (bitField0_ & ~0x00000001);
+                bitField0_ = (bitField0_ & ~0x00000002);
                 candidatesBuilder_ = 
                   com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                      getCandidatesFieldBuilder() : null;
@@ -2301,7 +2324,7 @@ public final class PredictionOuterClass {
                   break;
                 case 10: {
                   name_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 18: {
@@ -2375,11 +2398,9 @@ public final class PredictionOuterClass {
          */
         public Builder setName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -2388,8 +2409,8 @@ public final class PredictionOuterClass {
          * @return This builder for chaining.
          */
         public Builder clearName() {
-          
           name_ = getDefaultInstance().getName();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -2400,12 +2421,10 @@ public final class PredictionOuterClass {
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -2413,9 +2432,9 @@ public final class PredictionOuterClass {
         private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target.Candidate> candidates_ =
           java.util.Collections.emptyList();
         private void ensureCandidatesIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
+          if (!((bitField0_ & 0x00000002) != 0)) {
             candidates_ = new java.util.ArrayList<asgt.type.PredictionOuterClass.Prediction.Target.Candidate>(candidates_);
-            bitField0_ |= 0x00000001;
+            bitField0_ |= 0x00000002;
            }
         }
 
@@ -2565,7 +2584,7 @@ public final class PredictionOuterClass {
         public Builder clearCandidates() {
           if (candidatesBuilder_ == null) {
             candidates_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             onChanged();
           } else {
             candidatesBuilder_.clear();
@@ -2642,7 +2661,7 @@ public final class PredictionOuterClass {
             candidatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                 asgt.type.PredictionOuterClass.Prediction.Target.Candidate, asgt.type.PredictionOuterClass.Prediction.Target.Candidate.Builder, asgt.type.PredictionOuterClass.Prediction.Target.CandidateOrBuilder>(
                     candidates_,
-                    ((bitField0_ & 0x00000001) != 0),
+                    ((bitField0_ & 0x00000002) != 0),
                     getParentForChildren(),
                     isClean());
             candidates_ = null;
@@ -2714,6 +2733,7 @@ public final class PredictionOuterClass {
     }
 
     public static final int TARGETS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.type.PredictionOuterClass.Prediction.Target> targets_;
     /**
      * <code>repeated .asgt.type.Prediction.Target targets = 1 [json_name = "targets"];</code>
@@ -2943,6 +2963,7 @@ public final class PredictionOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (targetsBuilder_ == null) {
           targets_ = java.util.Collections.emptyList();
         } else {
@@ -2976,7 +2997,13 @@ public final class PredictionOuterClass {
       @java.lang.Override
       public asgt.type.PredictionOuterClass.Prediction buildPartial() {
         asgt.type.PredictionOuterClass.Prediction result = new asgt.type.PredictionOuterClass.Prediction(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.type.PredictionOuterClass.Prediction result) {
         if (targetsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             targets_ = java.util.Collections.unmodifiableList(targets_);
@@ -2986,8 +3013,10 @@ public final class PredictionOuterClass {
         } else {
           result.targets_ = targetsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(asgt.type.PredictionOuterClass.Prediction result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override

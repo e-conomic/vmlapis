@@ -272,11 +272,12 @@ public final class TrainingOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
-      return getCreatedAt();
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
 
     public static final int STATUS_FIELD_NUMBER = 2;
-    private volatile java.lang.Object status_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object status_ = "";
     /**
      * <code>string status = 2 [json_name = "status"];</code>
      * @return The status.
@@ -314,7 +315,8 @@ public final class TrainingOuterClass {
     }
 
     public static final int TRAINING_STATUS_FIELD_NUMBER = 3;
-    private volatile java.lang.Object trainingStatus_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object trainingStatus_ = "";
     /**
      * <pre>
      * Status of the training.
@@ -376,7 +378,8 @@ public final class TrainingOuterClass {
     }
 
     public static final int TRAINING_STATUS_MESSAGE_FIELD_NUMBER = 4;
-    private volatile java.lang.Object trainingStatusMessage_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object trainingStatusMessage_ = "";
     /**
      * <pre>
      * Additional information about the training status.
@@ -456,7 +459,7 @@ public final class TrainingOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getFinishTimeOrBuilder() {
-      return getFinishTime();
+      return finishTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : finishTime_;
     }
 
     public static final int DATASET_FIELD_NUMBER = 6;
@@ -494,7 +497,7 @@ public final class TrainingOuterClass {
      */
     @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
-      return getDataset();
+      return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
 
     public static final int SCHEDULE_TIME_FIELD_NUMBER = 7;
@@ -532,7 +535,7 @@ public final class TrainingOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getScheduleTimeOrBuilder() {
-      return getScheduleTime();
+      return scheduleTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : scheduleTime_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -806,34 +809,28 @@ public final class TrainingOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (createdAtBuilder_ == null) {
-          createdAt_ = null;
-        } else {
-          createdAt_ = null;
+        bitField0_ = 0;
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
           createdAtBuilder_ = null;
         }
         status_ = "";
-
         trainingStatus_ = "";
-
         trainingStatusMessage_ = "";
-
-        if (finishTimeBuilder_ == null) {
-          finishTime_ = null;
-        } else {
-          finishTime_ = null;
+        finishTime_ = null;
+        if (finishTimeBuilder_ != null) {
+          finishTimeBuilder_.dispose();
           finishTimeBuilder_ = null;
         }
-        if (datasetBuilder_ == null) {
-          dataset_ = null;
-        } else {
-          dataset_ = null;
+        dataset_ = null;
+        if (datasetBuilder_ != null) {
+          datasetBuilder_.dispose();
           datasetBuilder_ = null;
         }
-        if (scheduleTimeBuilder_ == null) {
-          scheduleTime_ = null;
-        } else {
-          scheduleTime_ = null;
+        scheduleTime_ = null;
+        if (scheduleTimeBuilder_ != null) {
+          scheduleTimeBuilder_.dispose();
           scheduleTimeBuilder_ = null;
         }
         return this;
@@ -862,31 +859,42 @@ public final class TrainingOuterClass {
       @java.lang.Override
       public asgt.v2.type.TrainingOuterClass.Training buildPartial() {
         asgt.v2.type.TrainingOuterClass.Training result = new asgt.v2.type.TrainingOuterClass.Training(this);
-        if (createdAtBuilder_ == null) {
-          result.createdAt_ = createdAt_;
-        } else {
-          result.createdAt_ = createdAtBuilder_.build();
-        }
-        result.status_ = status_;
-        result.trainingStatus_ = trainingStatus_;
-        result.trainingStatusMessage_ = trainingStatusMessage_;
-        if (finishTimeBuilder_ == null) {
-          result.finishTime_ = finishTime_;
-        } else {
-          result.finishTime_ = finishTimeBuilder_.build();
-        }
-        if (datasetBuilder_ == null) {
-          result.dataset_ = dataset_;
-        } else {
-          result.dataset_ = datasetBuilder_.build();
-        }
-        if (scheduleTimeBuilder_ == null) {
-          result.scheduleTime_ = scheduleTime_;
-        } else {
-          result.scheduleTime_ = scheduleTimeBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.type.TrainingOuterClass.Training result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.createdAt_ = createdAtBuilder_ == null
+              ? createdAt_
+              : createdAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.status_ = status_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.trainingStatus_ = trainingStatus_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.trainingStatusMessage_ = trainingStatusMessage_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.finishTime_ = finishTimeBuilder_ == null
+              ? finishTime_
+              : finishTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.dataset_ = datasetBuilder_ == null
+              ? dataset_
+              : datasetBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.scheduleTime_ = scheduleTimeBuilder_ == null
+              ? scheduleTime_
+              : scheduleTimeBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -938,14 +946,17 @@ public final class TrainingOuterClass {
         }
         if (!other.getStatus().isEmpty()) {
           status_ = other.status_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getTrainingStatus().isEmpty()) {
           trainingStatus_ = other.trainingStatus_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getTrainingStatusMessage().isEmpty()) {
           trainingStatusMessage_ = other.trainingStatusMessage_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (other.hasFinishTime()) {
@@ -987,43 +998,43 @@ public final class TrainingOuterClass {
                 input.readMessage(
                     getCreatedAtFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 status_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 trainingStatus_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 trainingStatusMessage_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 input.readMessage(
                     getFinishTimeFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 input.readMessage(
                     getDatasetFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 input.readMessage(
                     getScheduleTimeFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               default: {
@@ -1041,6 +1052,7 @@ public final class TrainingOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.protobuf.Timestamp createdAt_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1054,7 +1066,7 @@ public final class TrainingOuterClass {
        * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
-        return createdAtBuilder_ != null || createdAt_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -1084,11 +1096,11 @@ public final class TrainingOuterClass {
             throw new NullPointerException();
           }
           createdAt_ = value;
-          onChanged();
         } else {
           createdAtBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1102,11 +1114,11 @@ public final class TrainingOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdAtBuilder_ == null) {
           createdAt_ = builderForValue.build();
-          onChanged();
         } else {
           createdAtBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1118,17 +1130,18 @@ public final class TrainingOuterClass {
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
-          if (createdAt_ != null) {
-            createdAt_ =
-              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            createdAt_ != null &&
+            createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedAtBuilder().mergeFrom(value);
           } else {
             createdAt_ = value;
           }
-          onChanged();
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1139,14 +1152,13 @@ public final class TrainingOuterClass {
        * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
        */
       public Builder clearCreatedAt() {
-        if (createdAtBuilder_ == null) {
-          createdAt_ = null;
-          onChanged();
-        } else {
-          createdAt_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
           createdAtBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1157,7 +1169,7 @@ public final class TrainingOuterClass {
        * <code>.google.protobuf.Timestamp created_at = 1 [json_name = "createdAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getCreatedAtFieldBuilder().getBuilder();
       }
@@ -1238,11 +1250,9 @@ public final class TrainingOuterClass {
        */
       public Builder setStatus(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         status_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1251,8 +1261,8 @@ public final class TrainingOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearStatus() {
-        
         status_ = getDefaultInstance().getStatus();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1263,12 +1273,10 @@ public final class TrainingOuterClass {
        */
       public Builder setStatusBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         status_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1350,11 +1358,9 @@ public final class TrainingOuterClass {
        */
       public Builder setTrainingStatus(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         trainingStatus_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1375,8 +1381,8 @@ public final class TrainingOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTrainingStatus() {
-        
         trainingStatus_ = getDefaultInstance().getTrainingStatus();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1399,12 +1405,10 @@ public final class TrainingOuterClass {
        */
       public Builder setTrainingStatusBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         trainingStatus_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1462,11 +1466,9 @@ public final class TrainingOuterClass {
        */
       public Builder setTrainingStatusMessage(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         trainingStatusMessage_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1479,8 +1481,8 @@ public final class TrainingOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTrainingStatusMessage() {
-        
         trainingStatusMessage_ = getDefaultInstance().getTrainingStatusMessage();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1495,12 +1497,10 @@ public final class TrainingOuterClass {
        */
       public Builder setTrainingStatusMessageBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         trainingStatusMessage_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1517,7 +1517,7 @@ public final class TrainingOuterClass {
        * @return Whether the finishTime field is set.
        */
       public boolean hasFinishTime() {
-        return finishTimeBuilder_ != null || finishTime_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -1547,11 +1547,11 @@ public final class TrainingOuterClass {
             throw new NullPointerException();
           }
           finishTime_ = value;
-          onChanged();
         } else {
           finishTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1565,11 +1565,11 @@ public final class TrainingOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (finishTimeBuilder_ == null) {
           finishTime_ = builderForValue.build();
-          onChanged();
         } else {
           finishTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1581,17 +1581,18 @@ public final class TrainingOuterClass {
        */
       public Builder mergeFinishTime(com.google.protobuf.Timestamp value) {
         if (finishTimeBuilder_ == null) {
-          if (finishTime_ != null) {
-            finishTime_ =
-              com.google.protobuf.Timestamp.newBuilder(finishTime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            finishTime_ != null &&
+            finishTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getFinishTimeBuilder().mergeFrom(value);
           } else {
             finishTime_ = value;
           }
-          onChanged();
         } else {
           finishTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -1602,14 +1603,13 @@ public final class TrainingOuterClass {
        * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
        */
       public Builder clearFinishTime() {
-        if (finishTimeBuilder_ == null) {
-          finishTime_ = null;
-          onChanged();
-        } else {
-          finishTime_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        finishTime_ = null;
+        if (finishTimeBuilder_ != null) {
+          finishTimeBuilder_.dispose();
           finishTimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1620,7 +1620,7 @@ public final class TrainingOuterClass {
        * <code>.google.protobuf.Timestamp finish_time = 5 [json_name = "finishTime"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getFinishTimeBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getFinishTimeFieldBuilder().getBuilder();
       }
@@ -1672,7 +1672,7 @@ public final class TrainingOuterClass {
        * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
-        return datasetBuilder_ != null || dataset_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -1702,11 +1702,11 @@ public final class TrainingOuterClass {
             throw new NullPointerException();
           }
           dataset_ = value;
-          onChanged();
         } else {
           datasetBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1720,11 +1720,11 @@ public final class TrainingOuterClass {
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
         if (datasetBuilder_ == null) {
           dataset_ = builderForValue.build();
-          onChanged();
         } else {
           datasetBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1736,17 +1736,18 @@ public final class TrainingOuterClass {
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
-          if (dataset_ != null) {
-            dataset_ =
-              asgt.type.DatasetOuterClass.Dataset.newBuilder(dataset_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            dataset_ != null &&
+            dataset_ != asgt.type.DatasetOuterClass.Dataset.getDefaultInstance()) {
+            getDatasetBuilder().mergeFrom(value);
           } else {
             dataset_ = value;
           }
-          onChanged();
         } else {
           datasetBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1757,14 +1758,13 @@ public final class TrainingOuterClass {
        * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
        */
       public Builder clearDataset() {
-        if (datasetBuilder_ == null) {
-          dataset_ = null;
-          onChanged();
-        } else {
-          dataset_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        dataset_ = null;
+        if (datasetBuilder_ != null) {
+          datasetBuilder_.dispose();
           datasetBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1775,7 +1775,7 @@ public final class TrainingOuterClass {
        * <code>.asgt.type.Dataset dataset = 6 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getDatasetFieldBuilder().getBuilder();
       }
@@ -1827,7 +1827,7 @@ public final class TrainingOuterClass {
        * @return Whether the scheduleTime field is set.
        */
       public boolean hasScheduleTime() {
-        return scheduleTimeBuilder_ != null || scheduleTime_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <pre>
@@ -1857,11 +1857,11 @@ public final class TrainingOuterClass {
             throw new NullPointerException();
           }
           scheduleTime_ = value;
-          onChanged();
         } else {
           scheduleTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1875,11 +1875,11 @@ public final class TrainingOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (scheduleTimeBuilder_ == null) {
           scheduleTime_ = builderForValue.build();
-          onChanged();
         } else {
           scheduleTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1891,17 +1891,18 @@ public final class TrainingOuterClass {
        */
       public Builder mergeScheduleTime(com.google.protobuf.Timestamp value) {
         if (scheduleTimeBuilder_ == null) {
-          if (scheduleTime_ != null) {
-            scheduleTime_ =
-              com.google.protobuf.Timestamp.newBuilder(scheduleTime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            scheduleTime_ != null &&
+            scheduleTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getScheduleTimeBuilder().mergeFrom(value);
           } else {
             scheduleTime_ = value;
           }
-          onChanged();
         } else {
           scheduleTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1912,14 +1913,13 @@ public final class TrainingOuterClass {
        * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
        */
       public Builder clearScheduleTime() {
-        if (scheduleTimeBuilder_ == null) {
-          scheduleTime_ = null;
-          onChanged();
-        } else {
-          scheduleTime_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        scheduleTime_ = null;
+        if (scheduleTimeBuilder_ != null) {
+          scheduleTimeBuilder_.dispose();
           scheduleTimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1930,7 +1930,7 @@ public final class TrainingOuterClass {
        * <code>.google.protobuf.Timestamp schedule_time = 7 [json_name = "scheduleTime"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getScheduleTimeBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getScheduleTimeFieldBuilder().getBuilder();
       }

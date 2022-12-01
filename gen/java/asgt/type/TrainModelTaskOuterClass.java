@@ -117,7 +117,7 @@ public final class TrainModelTaskOuterClass {
      */
     @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
-      return getDataset();
+      return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
 
     public static final int REVISION_FIELD_NUMBER = 2;
@@ -143,11 +143,11 @@ public final class TrainModelTaskOuterClass {
      */
     @java.lang.Override
     public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
-      return getRevision();
+      return revision_ == null ? asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
     }
 
     public static final int MODEL_VERSION_FIELD_NUMBER = 4;
-    private long modelVersion_;
+    private long modelVersion_ = 0L;
     /**
      * <code>int64 model_version = 4 [json_name = "modelVersion"];</code>
      * @return The modelVersion.
@@ -378,20 +378,18 @@ public final class TrainModelTaskOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (datasetBuilder_ == null) {
-          dataset_ = null;
-        } else {
-          dataset_ = null;
+        bitField0_ = 0;
+        dataset_ = null;
+        if (datasetBuilder_ != null) {
+          datasetBuilder_.dispose();
           datasetBuilder_ = null;
         }
-        if (revisionBuilder_ == null) {
-          revision_ = null;
-        } else {
-          revision_ = null;
+        revision_ = null;
+        if (revisionBuilder_ != null) {
+          revisionBuilder_.dispose();
           revisionBuilder_ = null;
         }
         modelVersion_ = 0L;
-
         return this;
       }
 
@@ -418,19 +416,26 @@ public final class TrainModelTaskOuterClass {
       @java.lang.Override
       public asgt.type.TrainModelTaskOuterClass.TrainModelTask buildPartial() {
         asgt.type.TrainModelTaskOuterClass.TrainModelTask result = new asgt.type.TrainModelTaskOuterClass.TrainModelTask(this);
-        if (datasetBuilder_ == null) {
-          result.dataset_ = dataset_;
-        } else {
-          result.dataset_ = datasetBuilder_.build();
-        }
-        if (revisionBuilder_ == null) {
-          result.revision_ = revision_;
-        } else {
-          result.revision_ = revisionBuilder_.build();
-        }
-        result.modelVersion_ = modelVersion_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.TrainModelTaskOuterClass.TrainModelTask result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dataset_ = datasetBuilder_ == null
+              ? dataset_
+              : datasetBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.revision_ = revisionBuilder_ == null
+              ? revision_
+              : revisionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.modelVersion_ = modelVersion_;
+        }
       }
 
       @java.lang.Override
@@ -516,19 +521,19 @@ public final class TrainModelTaskOuterClass {
                 input.readMessage(
                     getDatasetFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getRevisionFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 32: {
                 modelVersion_ = input.readInt64();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 32
               default: {
@@ -546,6 +551,7 @@ public final class TrainModelTaskOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private asgt.type.DatasetOuterClass.Dataset dataset_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -555,7 +561,7 @@ public final class TrainModelTaskOuterClass {
        * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
-        return datasetBuilder_ != null || dataset_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
@@ -577,11 +583,11 @@ public final class TrainModelTaskOuterClass {
             throw new NullPointerException();
           }
           dataset_ = value;
-          onChanged();
         } else {
           datasetBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -591,11 +597,11 @@ public final class TrainModelTaskOuterClass {
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
         if (datasetBuilder_ == null) {
           dataset_ = builderForValue.build();
-          onChanged();
         } else {
           datasetBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -603,38 +609,38 @@ public final class TrainModelTaskOuterClass {
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
-          if (dataset_ != null) {
-            dataset_ =
-              asgt.type.DatasetOuterClass.Dataset.newBuilder(dataset_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            dataset_ != null &&
+            dataset_ != asgt.type.DatasetOuterClass.Dataset.getDefaultInstance()) {
+            getDatasetBuilder().mergeFrom(value);
           } else {
             dataset_ = value;
           }
-          onChanged();
         } else {
           datasetBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder clearDataset() {
-        if (datasetBuilder_ == null) {
-          dataset_ = null;
-          onChanged();
-        } else {
-          dataset_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dataset_ = null;
+        if (datasetBuilder_ != null) {
+          datasetBuilder_.dispose();
           datasetBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDatasetFieldBuilder().getBuilder();
       }
@@ -674,7 +680,7 @@ public final class TrainModelTaskOuterClass {
        * @return Whether the revision field is set.
        */
       public boolean hasRevision() {
-        return revisionBuilder_ != null || revision_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
@@ -696,11 +702,11 @@ public final class TrainModelTaskOuterClass {
             throw new NullPointerException();
           }
           revision_ = value;
-          onChanged();
         } else {
           revisionBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -710,11 +716,11 @@ public final class TrainModelTaskOuterClass {
           asgt.type.RevisionOuterClass.Revision.Builder builderForValue) {
         if (revisionBuilder_ == null) {
           revision_ = builderForValue.build();
-          onChanged();
         } else {
           revisionBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -722,38 +728,38 @@ public final class TrainModelTaskOuterClass {
        */
       public Builder mergeRevision(asgt.type.RevisionOuterClass.Revision value) {
         if (revisionBuilder_ == null) {
-          if (revision_ != null) {
-            revision_ =
-              asgt.type.RevisionOuterClass.Revision.newBuilder(revision_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            revision_ != null &&
+            revision_ != asgt.type.RevisionOuterClass.Revision.getDefaultInstance()) {
+            getRevisionBuilder().mergeFrom(value);
           } else {
             revision_ = value;
           }
-          onChanged();
         } else {
           revisionBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public Builder clearRevision() {
-        if (revisionBuilder_ == null) {
-          revision_ = null;
-          onChanged();
-        } else {
-          revision_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        revision_ = null;
+        if (revisionBuilder_ != null) {
+          revisionBuilder_.dispose();
           revisionBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public asgt.type.RevisionOuterClass.Revision.Builder getRevisionBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getRevisionFieldBuilder().getBuilder();
       }
@@ -802,6 +808,7 @@ public final class TrainModelTaskOuterClass {
       public Builder setModelVersion(long value) {
         
         modelVersion_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -810,7 +817,7 @@ public final class TrainModelTaskOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearModelVersion() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         modelVersion_ = 0L;
         onChanged();
         return this;

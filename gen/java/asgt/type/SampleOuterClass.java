@@ -121,10 +121,11 @@ public final class SampleOuterClass {
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.DataOrBuilder getDataOrBuilder() {
-      return getData();
+      return data_ == null ? asgt.type.DataOuterClass.Data.getDefaultInstance() : data_;
     }
 
     public static final int TARGET_VALUES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_;
     /**
      * <code>repeated .asgt.type.TargetValue target_values = 2 [json_name = "targetValues"];</code>
@@ -370,10 +371,10 @@ public final class SampleOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (dataBuilder_ == null) {
-          data_ = null;
-        } else {
-          data_ = null;
+        bitField0_ = 0;
+        data_ = null;
+        if (dataBuilder_ != null) {
+          dataBuilder_.dispose();
           dataBuilder_ = null;
         }
         if (targetValuesBuilder_ == null) {
@@ -382,7 +383,7 @@ public final class SampleOuterClass {
           targetValues_ = null;
           targetValuesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -409,23 +410,31 @@ public final class SampleOuterClass {
       @java.lang.Override
       public asgt.type.SampleOuterClass.Sample buildPartial() {
         asgt.type.SampleOuterClass.Sample result = new asgt.type.SampleOuterClass.Sample(this);
-        int from_bitField0_ = bitField0_;
-        if (dataBuilder_ == null) {
-          result.data_ = data_;
-        } else {
-          result.data_ = dataBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.type.SampleOuterClass.Sample result) {
         if (targetValuesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             targetValues_ = java.util.Collections.unmodifiableList(targetValues_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.targetValues_ = targetValues_;
         } else {
           result.targetValues_ = targetValuesBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(asgt.type.SampleOuterClass.Sample result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.data_ = dataBuilder_ == null
+              ? data_
+              : dataBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -479,7 +488,7 @@ public final class SampleOuterClass {
           if (!other.targetValues_.isEmpty()) {
             if (targetValues_.isEmpty()) {
               targetValues_ = other.targetValues_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureTargetValuesIsMutable();
               targetValues_.addAll(other.targetValues_);
@@ -492,7 +501,7 @@ public final class SampleOuterClass {
               targetValuesBuilder_.dispose();
               targetValuesBuilder_ = null;
               targetValues_ = other.targetValues_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               targetValuesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getTargetValuesFieldBuilder() : null;
@@ -531,7 +540,7 @@ public final class SampleOuterClass {
                 input.readMessage(
                     getDataFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
@@ -572,7 +581,7 @@ public final class SampleOuterClass {
        * @return Whether the data field is set.
        */
       public boolean hasData() {
-        return dataBuilder_ != null || data_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
@@ -594,11 +603,11 @@ public final class SampleOuterClass {
             throw new NullPointerException();
           }
           data_ = value;
-          onChanged();
         } else {
           dataBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -608,11 +617,11 @@ public final class SampleOuterClass {
           asgt.type.DataOuterClass.Data.Builder builderForValue) {
         if (dataBuilder_ == null) {
           data_ = builderForValue.build();
-          onChanged();
         } else {
           dataBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -620,38 +629,38 @@ public final class SampleOuterClass {
        */
       public Builder mergeData(asgt.type.DataOuterClass.Data value) {
         if (dataBuilder_ == null) {
-          if (data_ != null) {
-            data_ =
-              asgt.type.DataOuterClass.Data.newBuilder(data_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            data_ != null &&
+            data_ != asgt.type.DataOuterClass.Data.getDefaultInstance()) {
+            getDataBuilder().mergeFrom(value);
           } else {
             data_ = value;
           }
-          onChanged();
         } else {
           dataBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public Builder clearData() {
-        if (dataBuilder_ == null) {
-          data_ = null;
-          onChanged();
-        } else {
-          data_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        data_ = null;
+        if (dataBuilder_ != null) {
+          dataBuilder_.dispose();
           dataBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Data data = 1 [json_name = "data"];</code>
        */
       public asgt.type.DataOuterClass.Data.Builder getDataBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDataFieldBuilder().getBuilder();
       }
@@ -686,9 +695,9 @@ public final class SampleOuterClass {
       private java.util.List<asgt.type.TargetValueOuterClass.TargetValue> targetValues_ =
         java.util.Collections.emptyList();
       private void ensureTargetValuesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           targetValues_ = new java.util.ArrayList<asgt.type.TargetValueOuterClass.TargetValue>(targetValues_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -838,7 +847,7 @@ public final class SampleOuterClass {
       public Builder clearTargetValues() {
         if (targetValuesBuilder_ == null) {
           targetValues_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           targetValuesBuilder_.clear();
@@ -915,7 +924,7 @@ public final class SampleOuterClass {
           targetValuesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.TargetValueOuterClass.TargetValue, asgt.type.TargetValueOuterClass.TargetValue.Builder, asgt.type.TargetValueOuterClass.TargetValueOrBuilder>(
                   targetValues_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           targetValues_ = null;

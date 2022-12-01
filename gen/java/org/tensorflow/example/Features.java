@@ -67,6 +67,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 org.tensorflow.example.Feature.getDefaultInstance());
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, org.tensorflow.example.Feature> feature_;
   private com.google.protobuf.MapField<java.lang.String, org.tensorflow.example.Feature>
@@ -77,7 +78,6 @@ private static final long serialVersionUID = 0L;
     }
     return feature_;
   }
-
   public int getFeatureCount() {
     return internalGetFeature().getMap().size();
   }
@@ -88,7 +88,6 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, .tensorflow.Feature&gt; feature = 1 [json_name = "feature"];</code>
    */
-
   @java.lang.Override
   public boolean containsFeature(
       java.lang.String key) {
@@ -111,7 +110,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .tensorflow.Feature&gt; feature = 1 [json_name = "feature"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, org.tensorflow.example.Feature> getFeatureMap() {
     return internalGetFeature().getMap();
   }
@@ -123,10 +121,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .tensorflow.Feature&gt; feature = 1 [json_name = "feature"];</code>
    */
   @java.lang.Override
-
-  public org.tensorflow.example.Feature getFeatureOrDefault(
+  public /* nullable */
+org.tensorflow.example.Feature getFeatureOrDefault(
       java.lang.String key,
-      org.tensorflow.example.Feature defaultValue) {
+      /* nullable */
+org.tensorflow.example.Feature defaultValue) {
     if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, org.tensorflow.example.Feature> map =
         internalGetFeature().getMap();
@@ -140,7 +139,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .tensorflow.Feature&gt; feature = 1 [json_name = "feature"];</code>
    */
   @java.lang.Override
-
   public org.tensorflow.example.Feature getFeatureOrThrow(
       java.lang.String key) {
     if (key == null) { throw new NullPointerException("map key"); }
@@ -373,6 +371,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       internalGetMutableFeature().clear();
       return this;
     }
@@ -400,11 +399,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.tensorflow.example.Features buildPartial() {
       org.tensorflow.example.Features result = new org.tensorflow.example.Features(this);
-      int from_bitField0_ = bitField0_;
-      result.feature_ = internalGetFeature();
-      result.feature_.makeImmutable();
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(org.tensorflow.example.Features result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.feature_ = internalGetFeature();
+        result.feature_.makeImmutable();
+      }
     }
 
     @java.lang.Override
@@ -453,6 +458,7 @@ private static final long serialVersionUID = 0L;
       if (other == org.tensorflow.example.Features.getDefaultInstance()) return this;
       internalGetMutableFeature().mergeFrom(
           other.internalGetFeature());
+      bitField0_ |= 0x00000001;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -485,6 +491,7 @@ private static final long serialVersionUID = 0L;
                   FeatureDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               internalGetMutableFeature().getMutableMap().put(
                   feature__.getKey(), feature__.getValue());
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -507,7 +514,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, org.tensorflow.example.Feature> feature_;
     private com.google.protobuf.MapField<java.lang.String, org.tensorflow.example.Feature>
-    internalGetFeature() {
+        internalGetFeature() {
       if (feature_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             FeatureDefaultEntryHolder.defaultEntry);
@@ -515,8 +522,7 @@ private static final long serialVersionUID = 0L;
       return feature_;
     }
     private com.google.protobuf.MapField<java.lang.String, org.tensorflow.example.Feature>
-    internalGetMutableFeature() {
-      onChanged();;
+        internalGetMutableFeature() {
       if (feature_ == null) {
         feature_ = com.google.protobuf.MapField.newMapField(
             FeatureDefaultEntryHolder.defaultEntry);
@@ -524,9 +530,10 @@ private static final long serialVersionUID = 0L;
       if (!feature_.isMutable()) {
         feature_ = feature_.copy();
       }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return feature_;
     }
-
     public int getFeatureCount() {
       return internalGetFeature().getMap().size();
     }
@@ -537,7 +544,6 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .tensorflow.Feature&gt; feature = 1 [json_name = "feature"];</code>
      */
-
     @java.lang.Override
     public boolean containsFeature(
         java.lang.String key) {
@@ -560,7 +566,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .tensorflow.Feature&gt; feature = 1 [json_name = "feature"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, org.tensorflow.example.Feature> getFeatureMap() {
       return internalGetFeature().getMap();
     }
@@ -572,10 +577,11 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .tensorflow.Feature&gt; feature = 1 [json_name = "feature"];</code>
      */
     @java.lang.Override
-
-    public org.tensorflow.example.Feature getFeatureOrDefault(
+    public /* nullable */
+org.tensorflow.example.Feature getFeatureOrDefault(
         java.lang.String key,
-        org.tensorflow.example.Feature defaultValue) {
+        /* nullable */
+org.tensorflow.example.Feature defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, org.tensorflow.example.Feature> map =
           internalGetFeature().getMap();
@@ -589,7 +595,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .tensorflow.Feature&gt; feature = 1 [json_name = "feature"];</code>
      */
     @java.lang.Override
-
     public org.tensorflow.example.Feature getFeatureOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -600,8 +605,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearFeature() {
+      bitField0_ = (bitField0_ & ~0x00000001);
       internalGetMutableFeature().getMutableMap()
           .clear();
       return this;
@@ -613,7 +618,6 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .tensorflow.Feature&gt; feature = 1 [json_name = "feature"];</code>
      */
-
     public Builder removeFeature(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -626,7 +630,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, org.tensorflow.example.Feature>
-    getMutableFeature() {
+        getMutableFeature() {
+      bitField0_ |= 0x00000001;
       return internalGetMutableFeature().getMutableMap();
     }
     /**
@@ -640,12 +645,10 @@ private static final long serialVersionUID = 0L;
         java.lang.String key,
         org.tensorflow.example.Feature value) {
       if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableFeature().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000001;
       return this;
     }
     /**
@@ -655,11 +658,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .tensorflow.Feature&gt; feature = 1 [json_name = "feature"];</code>
      */
-
     public Builder putAllFeature(
         java.util.Map<java.lang.String, org.tensorflow.example.Feature> values) {
       internalGetMutableFeature().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000001;
       return this;
     }
     @java.lang.Override

@@ -89,7 +89,7 @@ public final class SuggesterServiceOuterClass {
     }
 
     public static final int SUGGEST_LIMIT_FIELD_NUMBER = 1;
-    private int suggestLimit_;
+    private int suggestLimit_ = 0;
     /**
      * <pre>
      * Maximum number of suggestions to return per target
@@ -104,7 +104,7 @@ public final class SuggesterServiceOuterClass {
     }
 
     public static final int MIN_CONFIDENCE_FIELD_NUMBER = 2;
-    private int minConfidence_;
+    private int minConfidence_ = 0;
     /**
      * <pre>
      * Not implemented yet.
@@ -125,8 +125,7 @@ public final class SuggesterServiceOuterClass {
      * @return The minConfidence.
      */
     @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
-      @SuppressWarnings("deprecation")
-      asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
+      asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.forNumber(minConfidence_);
       return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
     }
 
@@ -328,10 +327,9 @@ public final class SuggesterServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         suggestLimit_ = 0;
-
         minConfidence_ = 0;
-
         return this;
       }
 
@@ -358,10 +356,19 @@ public final class SuggesterServiceOuterClass {
       @java.lang.Override
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptions buildPartial() {
         asgt.v2.SuggesterServiceOuterClass.SuggestOptions result = new asgt.v2.SuggesterServiceOuterClass.SuggestOptions(this);
-        result.suggestLimit_ = suggestLimit_;
-        result.minConfidence_ = minConfidence_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.SuggesterServiceOuterClass.SuggestOptions result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.suggestLimit_ = suggestLimit_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.minConfidence_ = minConfidence_;
+        }
       }
 
       @java.lang.Override
@@ -442,12 +449,12 @@ public final class SuggesterServiceOuterClass {
                 break;
               case 8: {
                 suggestLimit_ = input.readInt32();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 minConfidence_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -465,6 +472,7 @@ public final class SuggesterServiceOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int suggestLimit_ ;
       /**
@@ -491,6 +499,7 @@ public final class SuggesterServiceOuterClass {
       public Builder setSuggestLimit(int value) {
         
         suggestLimit_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -503,7 +512,7 @@ public final class SuggesterServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSuggestLimit() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         suggestLimit_ = 0;
         onChanged();
         return this;
@@ -531,8 +540,8 @@ public final class SuggesterServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder setMinConfidenceValue(int value) {
-        
         minConfidence_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -546,8 +555,7 @@ public final class SuggesterServiceOuterClass {
        */
       @java.lang.Override
       public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
-        @SuppressWarnings("deprecation")
-        asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
+        asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.forNumber(minConfidence_);
         return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
       }
       /**
@@ -563,7 +571,7 @@ public final class SuggesterServiceOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         minConfidence_ = value.getNumber();
         onChanged();
         return this;
@@ -577,7 +585,7 @@ public final class SuggesterServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMinConfidence() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         minConfidence_ = 0;
         onChanged();
         return this;
@@ -754,7 +762,8 @@ public final class SuggesterServiceOuterClass {
     }
 
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object datasetName_ = "";
     /**
      * <pre>
      * Name of the dataset to make prediction against
@@ -834,7 +843,7 @@ public final class SuggesterServiceOuterClass {
      */
     @java.lang.Override
     public asgt.v2.type.DataOuterClass.DataOrBuilder getInputOrBuilder() {
-      return getInput();
+      return input_ == null ? asgt.v2.type.DataOuterClass.Data.getDefaultInstance() : input_;
     }
 
     public static final int OPTIONS_FIELD_NUMBER = 3;
@@ -860,7 +869,7 @@ public final class SuggesterServiceOuterClass {
      */
     @java.lang.Override
     public asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
-      return getOptions();
+      return options_ == null ? asgt.v2.SuggesterServiceOuterClass.SuggestOptions.getDefaultInstance() : options_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1082,18 +1091,16 @@ public final class SuggesterServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         datasetName_ = "";
-
-        if (inputBuilder_ == null) {
-          input_ = null;
-        } else {
-          input_ = null;
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
           inputBuilder_ = null;
         }
-        if (optionsBuilder_ == null) {
-          options_ = null;
-        } else {
-          options_ = null;
+        options_ = null;
+        if (optionsBuilder_ != null) {
+          optionsBuilder_.dispose();
           optionsBuilder_ = null;
         }
         return this;
@@ -1122,19 +1129,26 @@ public final class SuggesterServiceOuterClass {
       @java.lang.Override
       public asgt.v2.SuggesterServiceOuterClass.SuggestRequest buildPartial() {
         asgt.v2.SuggesterServiceOuterClass.SuggestRequest result = new asgt.v2.SuggesterServiceOuterClass.SuggestRequest(this);
-        result.datasetName_ = datasetName_;
-        if (inputBuilder_ == null) {
-          result.input_ = input_;
-        } else {
-          result.input_ = inputBuilder_.build();
-        }
-        if (optionsBuilder_ == null) {
-          result.options_ = options_;
-        } else {
-          result.options_ = optionsBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.SuggesterServiceOuterClass.SuggestRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.datasetName_ = datasetName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.input_ = inputBuilder_ == null
+              ? input_
+              : inputBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.options_ = optionsBuilder_ == null
+              ? options_
+              : optionsBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -1183,6 +1197,7 @@ public final class SuggesterServiceOuterClass {
         if (other == asgt.v2.SuggesterServiceOuterClass.SuggestRequest.getDefaultInstance()) return this;
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasInput()) {
@@ -1219,21 +1234,21 @@ public final class SuggesterServiceOuterClass {
                 break;
               case 10: {
                 datasetName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getInputFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getOptionsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -1251,6 +1266,7 @@ public final class SuggesterServiceOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object datasetName_ = "";
       /**
@@ -1305,11 +1321,9 @@ public final class SuggesterServiceOuterClass {
        */
       public Builder setDatasetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1322,8 +1336,8 @@ public final class SuggesterServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
-        
         datasetName_ = getDefaultInstance().getDatasetName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1338,12 +1352,10 @@ public final class SuggesterServiceOuterClass {
        */
       public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1360,7 +1372,7 @@ public final class SuggesterServiceOuterClass {
        * @return Whether the input field is set.
        */
       public boolean hasInput() {
-        return inputBuilder_ != null || input_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -1390,11 +1402,11 @@ public final class SuggesterServiceOuterClass {
             throw new NullPointerException();
           }
           input_ = value;
-          onChanged();
         } else {
           inputBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1408,11 +1420,11 @@ public final class SuggesterServiceOuterClass {
           asgt.v2.type.DataOuterClass.Data.Builder builderForValue) {
         if (inputBuilder_ == null) {
           input_ = builderForValue.build();
-          onChanged();
         } else {
           inputBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1424,17 +1436,18 @@ public final class SuggesterServiceOuterClass {
        */
       public Builder mergeInput(asgt.v2.type.DataOuterClass.Data value) {
         if (inputBuilder_ == null) {
-          if (input_ != null) {
-            input_ =
-              asgt.v2.type.DataOuterClass.Data.newBuilder(input_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            input_ != null &&
+            input_ != asgt.v2.type.DataOuterClass.Data.getDefaultInstance()) {
+            getInputBuilder().mergeFrom(value);
           } else {
             input_ = value;
           }
-          onChanged();
         } else {
           inputBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1445,14 +1458,13 @@ public final class SuggesterServiceOuterClass {
        * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public Builder clearInput() {
-        if (inputBuilder_ == null) {
-          input_ = null;
-          onChanged();
-        } else {
-          input_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        input_ = null;
+        if (inputBuilder_ != null) {
+          inputBuilder_.dispose();
           inputBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1463,7 +1475,7 @@ public final class SuggesterServiceOuterClass {
        * <code>.asgt.v2.type.Data input = 2 [json_name = "input"];</code>
        */
       public asgt.v2.type.DataOuterClass.Data.Builder getInputBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getInputFieldBuilder().getBuilder();
       }
@@ -1511,7 +1523,7 @@ public final class SuggesterServiceOuterClass {
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
-        return optionsBuilder_ != null || options_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
@@ -1533,11 +1545,11 @@ public final class SuggesterServiceOuterClass {
             throw new NullPointerException();
           }
           options_ = value;
-          onChanged();
         } else {
           optionsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1547,11 +1559,11 @@ public final class SuggesterServiceOuterClass {
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder builderForValue) {
         if (optionsBuilder_ == null) {
           options_ = builderForValue.build();
-          onChanged();
         } else {
           optionsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -1559,38 +1571,38 @@ public final class SuggesterServiceOuterClass {
        */
       public Builder mergeOptions(asgt.v2.SuggesterServiceOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
-          if (options_ != null) {
-            options_ =
-              asgt.v2.SuggesterServiceOuterClass.SuggestOptions.newBuilder(options_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            options_ != null &&
+            options_ != asgt.v2.SuggesterServiceOuterClass.SuggestOptions.getDefaultInstance()) {
+            getOptionsBuilder().mergeFrom(value);
           } else {
             options_ = value;
           }
-          onChanged();
         } else {
           optionsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
-        if (optionsBuilder_ == null) {
-          options_ = null;
-          onChanged();
-        } else {
-          options_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        options_ = null;
+        if (optionsBuilder_ != null) {
+          optionsBuilder_.dispose();
           optionsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder getOptionsBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getOptionsFieldBuilder().getBuilder();
       }
@@ -1782,7 +1794,7 @@ public final class SuggesterServiceOuterClass {
      */
     @java.lang.Override
     public asgt.type.PredictionOuterClass.PredictionOrBuilder getPredictionOrBuilder() {
-      return getPrediction();
+      return prediction_ == null ? asgt.type.PredictionOuterClass.Prediction.getDefaultInstance() : prediction_;
     }
 
     public static final int MODEL_FIELD_NUMBER = 2;
@@ -1808,7 +1820,7 @@ public final class SuggesterServiceOuterClass {
      */
     @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
-      return getModel();
+      return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2020,16 +2032,15 @@ public final class SuggesterServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (predictionBuilder_ == null) {
-          prediction_ = null;
-        } else {
-          prediction_ = null;
+        bitField0_ = 0;
+        prediction_ = null;
+        if (predictionBuilder_ != null) {
+          predictionBuilder_.dispose();
           predictionBuilder_ = null;
         }
-        if (modelBuilder_ == null) {
-          model_ = null;
-        } else {
-          model_ = null;
+        model_ = null;
+        if (modelBuilder_ != null) {
+          modelBuilder_.dispose();
           modelBuilder_ = null;
         }
         return this;
@@ -2058,18 +2069,23 @@ public final class SuggesterServiceOuterClass {
       @java.lang.Override
       public asgt.v2.SuggesterServiceOuterClass.SuggestResponse buildPartial() {
         asgt.v2.SuggesterServiceOuterClass.SuggestResponse result = new asgt.v2.SuggesterServiceOuterClass.SuggestResponse(this);
-        if (predictionBuilder_ == null) {
-          result.prediction_ = prediction_;
-        } else {
-          result.prediction_ = predictionBuilder_.build();
-        }
-        if (modelBuilder_ == null) {
-          result.model_ = model_;
-        } else {
-          result.model_ = modelBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.SuggesterServiceOuterClass.SuggestResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.prediction_ = predictionBuilder_ == null
+              ? prediction_
+              : predictionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.model_ = modelBuilder_ == null
+              ? model_
+              : modelBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -2152,14 +2168,14 @@ public final class SuggesterServiceOuterClass {
                 input.readMessage(
                     getPredictionFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getModelFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -2177,6 +2193,7 @@ public final class SuggesterServiceOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private asgt.type.PredictionOuterClass.Prediction prediction_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2186,7 +2203,7 @@ public final class SuggesterServiceOuterClass {
        * @return Whether the prediction field is set.
        */
       public boolean hasPrediction() {
-        return predictionBuilder_ != null || prediction_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
@@ -2208,11 +2225,11 @@ public final class SuggesterServiceOuterClass {
             throw new NullPointerException();
           }
           prediction_ = value;
-          onChanged();
         } else {
           predictionBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2222,11 +2239,11 @@ public final class SuggesterServiceOuterClass {
           asgt.type.PredictionOuterClass.Prediction.Builder builderForValue) {
         if (predictionBuilder_ == null) {
           prediction_ = builderForValue.build();
-          onChanged();
         } else {
           predictionBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2234,38 +2251,38 @@ public final class SuggesterServiceOuterClass {
        */
       public Builder mergePrediction(asgt.type.PredictionOuterClass.Prediction value) {
         if (predictionBuilder_ == null) {
-          if (prediction_ != null) {
-            prediction_ =
-              asgt.type.PredictionOuterClass.Prediction.newBuilder(prediction_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            prediction_ != null &&
+            prediction_ != asgt.type.PredictionOuterClass.Prediction.getDefaultInstance()) {
+            getPredictionBuilder().mergeFrom(value);
           } else {
             prediction_ = value;
           }
-          onChanged();
         } else {
           predictionBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public Builder clearPrediction() {
-        if (predictionBuilder_ == null) {
-          prediction_ = null;
-          onChanged();
-        } else {
-          prediction_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        prediction_ = null;
+        if (predictionBuilder_ != null) {
+          predictionBuilder_.dispose();
           predictionBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Prediction prediction = 1 [json_name = "prediction"];</code>
        */
       public asgt.type.PredictionOuterClass.Prediction.Builder getPredictionBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getPredictionFieldBuilder().getBuilder();
       }
@@ -2305,7 +2322,7 @@ public final class SuggesterServiceOuterClass {
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
-        return modelBuilder_ != null || model_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
@@ -2327,11 +2344,11 @@ public final class SuggesterServiceOuterClass {
             throw new NullPointerException();
           }
           model_ = value;
-          onChanged();
         } else {
           modelBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2341,11 +2358,11 @@ public final class SuggesterServiceOuterClass {
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
         if (modelBuilder_ == null) {
           model_ = builderForValue.build();
-          onChanged();
         } else {
           modelBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -2353,38 +2370,38 @@ public final class SuggesterServiceOuterClass {
        */
       public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
-          if (model_ != null) {
-            model_ =
-              asgt.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            model_ != null &&
+            model_ != asgt.type.ModelOuterClass.Model.getDefaultInstance()) {
+            getModelBuilder().mergeFrom(value);
           } else {
             model_ = value;
           }
-          onChanged();
         } else {
           modelBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder clearModel() {
-        if (modelBuilder_ == null) {
-          model_ = null;
-          onChanged();
-        } else {
-          model_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        model_ = null;
+        if (modelBuilder_ != null) {
+          modelBuilder_.dispose();
           modelBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getModelFieldBuilder().getBuilder();
       }
@@ -2605,7 +2622,8 @@ public final class SuggesterServiceOuterClass {
     }
 
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object datasetName_ = "";
     /**
      * <pre>
      * Name of the dataset to make prediction against
@@ -2651,6 +2669,7 @@ public final class SuggesterServiceOuterClass {
     }
 
     public static final int INPUTS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.v2.type.DataOuterClass.Data> inputs_;
     /**
      * <pre>
@@ -2733,7 +2752,7 @@ public final class SuggesterServiceOuterClass {
      */
     @java.lang.Override
     public asgt.v2.SuggesterServiceOuterClass.SuggestOptionsOrBuilder getOptionsOrBuilder() {
-      return getOptions();
+      return options_ == null ? asgt.v2.SuggesterServiceOuterClass.SuggestOptions.getDefaultInstance() : options_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2952,19 +2971,18 @@ public final class SuggesterServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         datasetName_ = "";
-
         if (inputsBuilder_ == null) {
           inputs_ = java.util.Collections.emptyList();
         } else {
           inputs_ = null;
           inputsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (optionsBuilder_ == null) {
-          options_ = null;
-        } else {
-          options_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        options_ = null;
+        if (optionsBuilder_ != null) {
+          optionsBuilder_.dispose();
           optionsBuilder_ = null;
         }
         return this;
@@ -2993,24 +3011,34 @@ public final class SuggesterServiceOuterClass {
       @java.lang.Override
       public asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest buildPartial() {
         asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest result = new asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.datasetName_ = datasetName_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest result) {
         if (inputsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             inputs_ = java.util.Collections.unmodifiableList(inputs_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.inputs_ = inputs_;
         } else {
           result.inputs_ = inputsBuilder_.build();
         }
-        if (optionsBuilder_ == null) {
-          result.options_ = options_;
-        } else {
-          result.options_ = optionsBuilder_.build();
+      }
+
+      private void buildPartial0(asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.datasetName_ = datasetName_;
         }
-        onBuilt();
-        return result;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.options_ = optionsBuilder_ == null
+              ? options_
+              : optionsBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -3059,13 +3087,14 @@ public final class SuggesterServiceOuterClass {
         if (other == asgt.v2.SuggesterServiceOuterClass.BatchSuggestRequest.getDefaultInstance()) return this;
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (inputsBuilder_ == null) {
           if (!other.inputs_.isEmpty()) {
             if (inputs_.isEmpty()) {
               inputs_ = other.inputs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureInputsIsMutable();
               inputs_.addAll(other.inputs_);
@@ -3078,7 +3107,7 @@ public final class SuggesterServiceOuterClass {
               inputsBuilder_.dispose();
               inputsBuilder_ = null;
               inputs_ = other.inputs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               inputsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getInputsFieldBuilder() : null;
@@ -3118,7 +3147,7 @@ public final class SuggesterServiceOuterClass {
                 break;
               case 10: {
                 datasetName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
@@ -3138,7 +3167,7 @@ public final class SuggesterServiceOuterClass {
                 input.readMessage(
                     getOptionsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -3211,11 +3240,9 @@ public final class SuggesterServiceOuterClass {
        */
       public Builder setDatasetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3228,8 +3255,8 @@ public final class SuggesterServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
-        
         datasetName_ = getDefaultInstance().getDatasetName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3244,12 +3271,10 @@ public final class SuggesterServiceOuterClass {
        */
       public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3257,9 +3282,9 @@ public final class SuggesterServiceOuterClass {
       private java.util.List<asgt.v2.type.DataOuterClass.Data> inputs_ =
         java.util.Collections.emptyList();
       private void ensureInputsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           inputs_ = new java.util.ArrayList<asgt.v2.type.DataOuterClass.Data>(inputs_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -3453,7 +3478,7 @@ public final class SuggesterServiceOuterClass {
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
           inputs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           inputsBuilder_.clear();
@@ -3558,7 +3583,7 @@ public final class SuggesterServiceOuterClass {
           inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.v2.type.DataOuterClass.Data, asgt.v2.type.DataOuterClass.Data.Builder, asgt.v2.type.DataOuterClass.DataOrBuilder>(
                   inputs_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           inputs_ = null;
@@ -3574,7 +3599,7 @@ public final class SuggesterServiceOuterClass {
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
-        return optionsBuilder_ != null || options_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
@@ -3596,11 +3621,11 @@ public final class SuggesterServiceOuterClass {
             throw new NullPointerException();
           }
           options_ = value;
-          onChanged();
         } else {
           optionsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3610,11 +3635,11 @@ public final class SuggesterServiceOuterClass {
           asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder builderForValue) {
         if (optionsBuilder_ == null) {
           options_ = builderForValue.build();
-          onChanged();
         } else {
           optionsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -3622,38 +3647,38 @@ public final class SuggesterServiceOuterClass {
        */
       public Builder mergeOptions(asgt.v2.SuggesterServiceOuterClass.SuggestOptions value) {
         if (optionsBuilder_ == null) {
-          if (options_ != null) {
-            options_ =
-              asgt.v2.SuggesterServiceOuterClass.SuggestOptions.newBuilder(options_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            options_ != null &&
+            options_ != asgt.v2.SuggesterServiceOuterClass.SuggestOptions.getDefaultInstance()) {
+            getOptionsBuilder().mergeFrom(value);
           } else {
             options_ = value;
           }
-          onChanged();
         } else {
           optionsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
-        if (optionsBuilder_ == null) {
-          options_ = null;
-          onChanged();
-        } else {
-          options_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        options_ = null;
+        if (optionsBuilder_ != null) {
+          optionsBuilder_.dispose();
           optionsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.v2.SuggestOptions options = 3 [json_name = "options"];</code>
        */
       public asgt.v2.SuggesterServiceOuterClass.SuggestOptions.Builder getOptionsBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getOptionsFieldBuilder().getBuilder();
       }
@@ -3833,6 +3858,7 @@ public final class SuggesterServiceOuterClass {
     }
 
     public static final int PREDICTIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_;
     /**
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
@@ -3895,7 +3921,7 @@ public final class SuggesterServiceOuterClass {
      */
     @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
-      return getModel();
+      return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4104,6 +4130,7 @@ public final class SuggesterServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (predictionsBuilder_ == null) {
           predictions_ = java.util.Collections.emptyList();
         } else {
@@ -4111,10 +4138,9 @@ public final class SuggesterServiceOuterClass {
           predictionsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
-        if (modelBuilder_ == null) {
-          model_ = null;
-        } else {
-          model_ = null;
+        model_ = null;
+        if (modelBuilder_ != null) {
+          modelBuilder_.dispose();
           modelBuilder_ = null;
         }
         return this;
@@ -4143,7 +4169,13 @@ public final class SuggesterServiceOuterClass {
       @java.lang.Override
       public asgt.v2.SuggesterServiceOuterClass.BatchSuggestResponse buildPartial() {
         asgt.v2.SuggesterServiceOuterClass.BatchSuggestResponse result = new asgt.v2.SuggesterServiceOuterClass.BatchSuggestResponse(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.v2.SuggesterServiceOuterClass.BatchSuggestResponse result) {
         if (predictionsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             predictions_ = java.util.Collections.unmodifiableList(predictions_);
@@ -4153,13 +4185,15 @@ public final class SuggesterServiceOuterClass {
         } else {
           result.predictions_ = predictionsBuilder_.build();
         }
-        if (modelBuilder_ == null) {
-          result.model_ = model_;
-        } else {
-          result.model_ = modelBuilder_.build();
+      }
+
+      private void buildPartial0(asgt.v2.SuggesterServiceOuterClass.BatchSuggestResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.model_ = modelBuilder_ == null
+              ? model_
+              : modelBuilder_.build();
         }
-        onBuilt();
-        return result;
       }
 
       @java.lang.Override
@@ -4278,7 +4312,7 @@ public final class SuggesterServiceOuterClass {
                 input.readMessage(
                     getModelFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -4546,7 +4580,7 @@ public final class SuggesterServiceOuterClass {
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
-        return modelBuilder_ != null || model_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
@@ -4568,11 +4602,11 @@ public final class SuggesterServiceOuterClass {
             throw new NullPointerException();
           }
           model_ = value;
-          onChanged();
         } else {
           modelBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4582,11 +4616,11 @@ public final class SuggesterServiceOuterClass {
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
         if (modelBuilder_ == null) {
           model_ = builderForValue.build();
-          onChanged();
         } else {
           modelBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4594,38 +4628,38 @@ public final class SuggesterServiceOuterClass {
        */
       public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
-          if (model_ != null) {
-            model_ =
-              asgt.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            model_ != null &&
+            model_ != asgt.type.ModelOuterClass.Model.getDefaultInstance()) {
+            getModelBuilder().mergeFrom(value);
           } else {
             model_ = value;
           }
-          onChanged();
         } else {
           modelBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder clearModel() {
-        if (modelBuilder_ == null) {
-          model_ = null;
-          onChanged();
-        } else {
-          model_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        model_ = null;
+        if (modelBuilder_ != null) {
+          modelBuilder_.dispose();
           modelBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getModelFieldBuilder().getBuilder();
       }

@@ -7,9 +7,9 @@ import "google/api/http.proto";
 import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/candidate.proto";
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/cv/cv/v1;cv";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/cv/scanner/v1;cv";
 
-service CvScanner {
+service Scanner {
   rpc ScanCV(ScanCVRequest) returns (ScanCVResponse) {
     option (google.api.http) = {
       post: "/v1/document:scan"
@@ -76,9 +76,6 @@ message Feature {
   }
   // The feature type.
   Type type = 1;
-  // Maximum number of results of this type. Does not apply to
-  // `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
+
   int32 max_results = 2;
-  // The minimum confidence for predictions that the caller wants returned
-  // ssn.type.Confidence.Level min_confidence = 3;
 }

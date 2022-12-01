@@ -92,7 +92,8 @@ public final class TrainStatisticsOuterClass {
     }
 
     public static final int CLASS_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object className_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object className_ = "";
     /**
      * <code>string class_name = 1 [json_name = "className"];</code>
      * @return The className.
@@ -130,7 +131,7 @@ public final class TrainStatisticsOuterClass {
     }
 
     public static final int RELATIVE_DATASET_PROPORTION_FIELD_NUMBER = 2;
-    private float relativeDatasetProportion_;
+    private float relativeDatasetProportion_ = 0F;
     /**
      * <pre>
      * name of the target class in a target (classification task)
@@ -145,7 +146,7 @@ public final class TrainStatisticsOuterClass {
     }
 
     public static final int ABSOLUTE_DATASET_PROPORTION_FIELD_NUMBER = 3;
-    private int absoluteDatasetProportion_;
+    private int absoluteDatasetProportion_ = 0;
     /**
      * <pre>
      * percentage of samples belonging to a single class
@@ -370,12 +371,10 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         className_ = "";
-
         relativeDatasetProportion_ = 0F;
-
         absoluteDatasetProportion_ = 0;
-
         return this;
       }
 
@@ -402,11 +401,22 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public asgt.type.TrainStatisticsOuterClass.TargetStat buildPartial() {
         asgt.type.TrainStatisticsOuterClass.TargetStat result = new asgt.type.TrainStatisticsOuterClass.TargetStat(this);
-        result.className_ = className_;
-        result.relativeDatasetProportion_ = relativeDatasetProportion_;
-        result.absoluteDatasetProportion_ = absoluteDatasetProportion_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.TrainStatisticsOuterClass.TargetStat result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.className_ = className_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.relativeDatasetProportion_ = relativeDatasetProportion_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.absoluteDatasetProportion_ = absoluteDatasetProportion_;
+        }
       }
 
       @java.lang.Override
@@ -455,6 +465,7 @@ public final class TrainStatisticsOuterClass {
         if (other == asgt.type.TrainStatisticsOuterClass.TargetStat.getDefaultInstance()) return this;
         if (!other.getClassName().isEmpty()) {
           className_ = other.className_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getRelativeDatasetProportion() != 0F) {
@@ -491,17 +502,17 @@ public final class TrainStatisticsOuterClass {
                 break;
               case 10: {
                 className_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 21: {
                 relativeDatasetProportion_ = input.readFloat();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 21
               case 24: {
                 absoluteDatasetProportion_ = input.readInt32();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               default: {
@@ -519,6 +530,7 @@ public final class TrainStatisticsOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object className_ = "";
       /**
@@ -561,11 +573,9 @@ public final class TrainStatisticsOuterClass {
        */
       public Builder setClassName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         className_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -574,8 +584,8 @@ public final class TrainStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearClassName() {
-        
         className_ = getDefaultInstance().getClassName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -586,12 +596,10 @@ public final class TrainStatisticsOuterClass {
        */
       public Builder setClassNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         className_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -621,6 +629,7 @@ public final class TrainStatisticsOuterClass {
       public Builder setRelativeDatasetProportion(float value) {
         
         relativeDatasetProportion_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -633,7 +642,7 @@ public final class TrainStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearRelativeDatasetProportion() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         relativeDatasetProportion_ = 0F;
         onChanged();
         return this;
@@ -664,6 +673,7 @@ public final class TrainStatisticsOuterClass {
       public Builder setAbsoluteDatasetProportion(int value) {
         
         absoluteDatasetProportion_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -676,7 +686,7 @@ public final class TrainStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAbsoluteDatasetProportion() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         absoluteDatasetProportion_ = 0;
         onChanged();
         return this;
@@ -835,6 +845,7 @@ public final class TrainStatisticsOuterClass {
     }
 
     public static final int TARGET_STATS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.type.TrainStatisticsOuterClass.TargetStat> targetStats_;
     /**
      * <pre>
@@ -1084,6 +1095,7 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (targetStatsBuilder_ == null) {
           targetStats_ = java.util.Collections.emptyList();
         } else {
@@ -1117,7 +1129,13 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public asgt.type.TrainStatisticsOuterClass.TargetStats buildPartial() {
         asgt.type.TrainStatisticsOuterClass.TargetStats result = new asgt.type.TrainStatisticsOuterClass.TargetStats(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.type.TrainStatisticsOuterClass.TargetStats result) {
         if (targetStatsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             targetStats_ = java.util.Collections.unmodifiableList(targetStats_);
@@ -1127,8 +1145,10 @@ public final class TrainStatisticsOuterClass {
         } else {
           result.targetStats_ = targetStatsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(asgt.type.TrainStatisticsOuterClass.TargetStats result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -1855,7 +1875,8 @@ public final class TrainStatisticsOuterClass {
     }
 
     public static final int FEATURE_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object featureName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object featureName_ = "";
     /**
      * <code>string feature_name = 1 [json_name = "featureName"];</code>
      * @return The featureName.
@@ -1893,7 +1914,7 @@ public final class TrainStatisticsOuterClass {
     }
 
     public static final int FEATURE_TYPE_FIELD_NUMBER = 2;
-    private int featureType_;
+    private int featureType_ = 0;
     /**
      * <pre>
      * name of the feature
@@ -1914,13 +1935,12 @@ public final class TrainStatisticsOuterClass {
      * @return The featureType.
      */
     @java.lang.Override public asgt.type.TrainStatisticsOuterClass.FeatureStat.Type getFeatureType() {
-      @SuppressWarnings("deprecation")
-      asgt.type.TrainStatisticsOuterClass.FeatureStat.Type result = asgt.type.TrainStatisticsOuterClass.FeatureStat.Type.valueOf(featureType_);
+      asgt.type.TrainStatisticsOuterClass.FeatureStat.Type result = asgt.type.TrainStatisticsOuterClass.FeatureStat.Type.forNumber(featureType_);
       return result == null ? asgt.type.TrainStatisticsOuterClass.FeatureStat.Type.UNRECOGNIZED : result;
     }
 
     public static final int INFORMATION_GAIN_FIELD_NUMBER = 3;
-    private float informationGain_;
+    private float informationGain_ = 0F;
     /**
      * <pre>
      * type of the feature
@@ -2144,12 +2164,10 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         featureName_ = "";
-
         featureType_ = 0;
-
         informationGain_ = 0F;
-
         return this;
       }
 
@@ -2176,11 +2194,22 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public asgt.type.TrainStatisticsOuterClass.FeatureStat buildPartial() {
         asgt.type.TrainStatisticsOuterClass.FeatureStat result = new asgt.type.TrainStatisticsOuterClass.FeatureStat(this);
-        result.featureName_ = featureName_;
-        result.featureType_ = featureType_;
-        result.informationGain_ = informationGain_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.TrainStatisticsOuterClass.FeatureStat result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.featureName_ = featureName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.featureType_ = featureType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.informationGain_ = informationGain_;
+        }
       }
 
       @java.lang.Override
@@ -2229,6 +2258,7 @@ public final class TrainStatisticsOuterClass {
         if (other == asgt.type.TrainStatisticsOuterClass.FeatureStat.getDefaultInstance()) return this;
         if (!other.getFeatureName().isEmpty()) {
           featureName_ = other.featureName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.featureType_ != 0) {
@@ -2265,17 +2295,17 @@ public final class TrainStatisticsOuterClass {
                 break;
               case 10: {
                 featureName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 featureType_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 29: {
                 informationGain_ = input.readFloat();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 29
               default: {
@@ -2293,6 +2323,7 @@ public final class TrainStatisticsOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object featureName_ = "";
       /**
@@ -2335,11 +2366,9 @@ public final class TrainStatisticsOuterClass {
        */
       public Builder setFeatureName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         featureName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2348,8 +2377,8 @@ public final class TrainStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFeatureName() {
-        
         featureName_ = getDefaultInstance().getFeatureName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2360,12 +2389,10 @@ public final class TrainStatisticsOuterClass {
        */
       public Builder setFeatureNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         featureName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2392,8 +2419,8 @@ public final class TrainStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder setFeatureTypeValue(int value) {
-        
         featureType_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2407,8 +2434,7 @@ public final class TrainStatisticsOuterClass {
        */
       @java.lang.Override
       public asgt.type.TrainStatisticsOuterClass.FeatureStat.Type getFeatureType() {
-        @SuppressWarnings("deprecation")
-        asgt.type.TrainStatisticsOuterClass.FeatureStat.Type result = asgt.type.TrainStatisticsOuterClass.FeatureStat.Type.valueOf(featureType_);
+        asgt.type.TrainStatisticsOuterClass.FeatureStat.Type result = asgt.type.TrainStatisticsOuterClass.FeatureStat.Type.forNumber(featureType_);
         return result == null ? asgt.type.TrainStatisticsOuterClass.FeatureStat.Type.UNRECOGNIZED : result;
       }
       /**
@@ -2424,7 +2450,7 @@ public final class TrainStatisticsOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         featureType_ = value.getNumber();
         onChanged();
         return this;
@@ -2438,7 +2464,7 @@ public final class TrainStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFeatureType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         featureType_ = 0;
         onChanged();
         return this;
@@ -2469,6 +2495,7 @@ public final class TrainStatisticsOuterClass {
       public Builder setInformationGain(float value) {
         
         informationGain_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -2481,7 +2508,7 @@ public final class TrainStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearInformationGain() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         informationGain_ = 0F;
         onChanged();
         return this;
@@ -2640,6 +2667,7 @@ public final class TrainStatisticsOuterClass {
     }
 
     public static final int FEATURE_STATS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.type.TrainStatisticsOuterClass.FeatureStat> featureStats_;
     /**
      * <pre>
@@ -2889,6 +2917,7 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (featureStatsBuilder_ == null) {
           featureStats_ = java.util.Collections.emptyList();
         } else {
@@ -2922,7 +2951,13 @@ public final class TrainStatisticsOuterClass {
       @java.lang.Override
       public asgt.type.TrainStatisticsOuterClass.FeatureStats buildPartial() {
         asgt.type.TrainStatisticsOuterClass.FeatureStats result = new asgt.type.TrainStatisticsOuterClass.FeatureStats(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.type.TrainStatisticsOuterClass.FeatureStats result) {
         if (featureStatsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             featureStats_ = java.util.Collections.unmodifiableList(featureStats_);
@@ -2932,8 +2967,10 @@ public final class TrainStatisticsOuterClass {
         } else {
           result.featureStats_ = featureStatsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(asgt.type.TrainStatisticsOuterClass.FeatureStats result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -3480,7 +3517,6 @@ public final class TrainStatisticsOuterClass {
      *
      * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
-
     /* nullable */
 asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrDefault(
         java.lang.String key,
@@ -3493,7 +3529,6 @@ asgt.type.TrainStatisticsOuterClass.TargetStats defaultValue);
      *
      * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
-
     asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrThrow(
         java.lang.String key);
 
@@ -3536,7 +3571,6 @@ asgt.type.TrainStatisticsOuterClass.TargetStats defaultValue);
      *
      * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
-
     /* nullable */
 asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrDefault(
         java.lang.String key,
@@ -3549,7 +3583,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
      *
      * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
-
     asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrThrow(
         java.lang.String key);
 
@@ -3629,6 +3662,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   asgt.type.TrainStatisticsOuterClass.TargetStats.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats> targetStatsByTarget_;
     private com.google.protobuf.MapField<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats>
@@ -3639,7 +3673,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
       }
       return targetStatsByTarget_;
     }
-
     public int getTargetStatsByTargetCount() {
       return internalGetTargetStatsByTarget().getMap().size();
     }
@@ -3650,7 +3683,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
      *
      * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
-
     @java.lang.Override
     public boolean containsTargetStatsByTarget(
         java.lang.String key) {
@@ -3673,7 +3705,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
      * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats> getTargetStatsByTargetMap() {
       return internalGetTargetStatsByTarget().getMap();
     }
@@ -3685,10 +3716,11 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
      * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
     @java.lang.Override
-
-    public asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrDefault(
+    public /* nullable */
+asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrDefault(
         java.lang.String key,
-        asgt.type.TrainStatisticsOuterClass.TargetStats defaultValue) {
+        /* nullable */
+asgt.type.TrainStatisticsOuterClass.TargetStats defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats> map =
           internalGetTargetStatsByTarget().getMap();
@@ -3702,7 +3734,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
      * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
      */
     @java.lang.Override
-
     public asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -3726,6 +3757,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   asgt.type.TrainStatisticsOuterClass.FeatureStats.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats> featureStatsByTarget_;
     private com.google.protobuf.MapField<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats>
@@ -3736,7 +3768,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
       }
       return featureStatsByTarget_;
     }
-
     public int getFeatureStatsByTargetCount() {
       return internalGetFeatureStatsByTarget().getMap().size();
     }
@@ -3747,7 +3778,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
      *
      * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
-
     @java.lang.Override
     public boolean containsFeatureStatsByTarget(
         java.lang.String key) {
@@ -3770,7 +3800,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
      * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats> getFeatureStatsByTargetMap() {
       return internalGetFeatureStatsByTarget().getMap();
     }
@@ -3782,10 +3811,11 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
      * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
     @java.lang.Override
-
-    public asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrDefault(
+    public /* nullable */
+asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrDefault(
         java.lang.String key,
-        asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue) {
+        /* nullable */
+asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats> map =
           internalGetFeatureStatsByTarget().getMap();
@@ -3799,7 +3829,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
      * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
      */
     @java.lang.Override
-
     public asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -3812,7 +3841,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
     }
 
     public static final int SIMILARITY_INDEX_FIELD_NUMBER = 3;
-    private float similarityIndex_;
+    private float similarityIndex_ = 0F;
     /**
      * <pre>
      * measure of train/test similarity
@@ -4086,10 +4115,10 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         internalGetMutableTargetStatsByTarget().clear();
         internalGetMutableFeatureStatsByTarget().clear();
         similarityIndex_ = 0F;
-
         return this;
       }
 
@@ -4116,14 +4145,24 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
       @java.lang.Override
       public asgt.type.TrainStatisticsOuterClass.TrainStatistics buildPartial() {
         asgt.type.TrainStatisticsOuterClass.TrainStatistics result = new asgt.type.TrainStatisticsOuterClass.TrainStatistics(this);
-        int from_bitField0_ = bitField0_;
-        result.targetStatsByTarget_ = internalGetTargetStatsByTarget();
-        result.targetStatsByTarget_.makeImmutable();
-        result.featureStatsByTarget_ = internalGetFeatureStatsByTarget();
-        result.featureStatsByTarget_.makeImmutable();
-        result.similarityIndex_ = similarityIndex_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.TrainStatisticsOuterClass.TrainStatistics result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.targetStatsByTarget_ = internalGetTargetStatsByTarget();
+          result.targetStatsByTarget_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.featureStatsByTarget_ = internalGetFeatureStatsByTarget();
+          result.featureStatsByTarget_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.similarityIndex_ = similarityIndex_;
+        }
       }
 
       @java.lang.Override
@@ -4172,8 +4211,10 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         if (other == asgt.type.TrainStatisticsOuterClass.TrainStatistics.getDefaultInstance()) return this;
         internalGetMutableTargetStatsByTarget().mergeFrom(
             other.internalGetTargetStatsByTarget());
+        bitField0_ |= 0x00000001;
         internalGetMutableFeatureStatsByTarget().mergeFrom(
             other.internalGetFeatureStatsByTarget());
+        bitField0_ |= 0x00000002;
         if (other.getSimilarityIndex() != 0F) {
           setSimilarityIndex(other.getSimilarityIndex());
         }
@@ -4209,6 +4250,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
                     TargetStatsByTargetDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableTargetStatsByTarget().getMutableMap().put(
                     targetStatsByTarget__.getKey(), targetStatsByTarget__.getValue());
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
@@ -4217,11 +4259,12 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
                     FeatureStatsByTargetDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableFeatureStatsByTarget().getMutableMap().put(
                     featureStatsByTarget__.getKey(), featureStatsByTarget__.getValue());
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 29: {
                 similarityIndex_ = input.readFloat();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 29
               default: {
@@ -4244,7 +4287,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats> targetStatsByTarget_;
       private com.google.protobuf.MapField<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats>
-      internalGetTargetStatsByTarget() {
+          internalGetTargetStatsByTarget() {
         if (targetStatsByTarget_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               TargetStatsByTargetDefaultEntryHolder.defaultEntry);
@@ -4252,8 +4295,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         return targetStatsByTarget_;
       }
       private com.google.protobuf.MapField<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats>
-      internalGetMutableTargetStatsByTarget() {
-        onChanged();;
+          internalGetMutableTargetStatsByTarget() {
         if (targetStatsByTarget_ == null) {
           targetStatsByTarget_ = com.google.protobuf.MapField.newMapField(
               TargetStatsByTargetDefaultEntryHolder.defaultEntry);
@@ -4261,9 +4303,10 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         if (!targetStatsByTarget_.isMutable()) {
           targetStatsByTarget_ = targetStatsByTarget_.copy();
         }
+        bitField0_ |= 0x00000001;
+        onChanged();
         return targetStatsByTarget_;
       }
-
       public int getTargetStatsByTargetCount() {
         return internalGetTargetStatsByTarget().getMap().size();
       }
@@ -4274,7 +4317,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        *
        * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
        */
-
       @java.lang.Override
       public boolean containsTargetStatsByTarget(
           java.lang.String key) {
@@ -4297,7 +4339,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats> getTargetStatsByTargetMap() {
         return internalGetTargetStatsByTarget().getMap();
       }
@@ -4309,10 +4350,11 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
        */
       @java.lang.Override
-
-      public asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrDefault(
+      public /* nullable */
+asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrDefault(
           java.lang.String key,
-          asgt.type.TrainStatisticsOuterClass.TargetStats defaultValue) {
+          /* nullable */
+asgt.type.TrainStatisticsOuterClass.TargetStats defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats> map =
             internalGetTargetStatsByTarget().getMap();
@@ -4326,7 +4368,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
        */
       @java.lang.Override
-
       public asgt.type.TrainStatisticsOuterClass.TargetStats getTargetStatsByTargetOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -4337,8 +4378,8 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearTargetStatsByTarget() {
+        bitField0_ = (bitField0_ & ~0x00000001);
         internalGetMutableTargetStatsByTarget().getMutableMap()
             .clear();
         return this;
@@ -4350,7 +4391,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        *
        * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
        */
-
       public Builder removeTargetStatsByTarget(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -4363,7 +4403,8 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats>
-      getMutableTargetStatsByTarget() {
+          getMutableTargetStatsByTarget() {
+        bitField0_ |= 0x00000001;
         return internalGetMutableTargetStatsByTarget().getMutableMap();
       }
       /**
@@ -4377,12 +4418,10 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
           java.lang.String key,
           asgt.type.TrainStatisticsOuterClass.TargetStats value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableTargetStatsByTarget().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000001;
         return this;
       }
       /**
@@ -4392,18 +4431,18 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        *
        * <code>map&lt;string, .asgt.type.TargetStats&gt; target_stats_by_target = 1 [json_name = "targetStatsByTarget"];</code>
        */
-
       public Builder putAllTargetStatsByTarget(
           java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.TargetStats> values) {
         internalGetMutableTargetStatsByTarget().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000001;
         return this;
       }
 
       private com.google.protobuf.MapField<
           java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats> featureStatsByTarget_;
       private com.google.protobuf.MapField<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats>
-      internalGetFeatureStatsByTarget() {
+          internalGetFeatureStatsByTarget() {
         if (featureStatsByTarget_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               FeatureStatsByTargetDefaultEntryHolder.defaultEntry);
@@ -4411,8 +4450,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         return featureStatsByTarget_;
       }
       private com.google.protobuf.MapField<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats>
-      internalGetMutableFeatureStatsByTarget() {
-        onChanged();;
+          internalGetMutableFeatureStatsByTarget() {
         if (featureStatsByTarget_ == null) {
           featureStatsByTarget_ = com.google.protobuf.MapField.newMapField(
               FeatureStatsByTargetDefaultEntryHolder.defaultEntry);
@@ -4420,9 +4458,10 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         if (!featureStatsByTarget_.isMutable()) {
           featureStatsByTarget_ = featureStatsByTarget_.copy();
         }
+        bitField0_ |= 0x00000002;
+        onChanged();
         return featureStatsByTarget_;
       }
-
       public int getFeatureStatsByTargetCount() {
         return internalGetFeatureStatsByTarget().getMap().size();
       }
@@ -4433,7 +4472,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        *
        * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
        */
-
       @java.lang.Override
       public boolean containsFeatureStatsByTarget(
           java.lang.String key) {
@@ -4456,7 +4494,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats> getFeatureStatsByTargetMap() {
         return internalGetFeatureStatsByTarget().getMap();
       }
@@ -4468,10 +4505,11 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
        */
       @java.lang.Override
-
-      public asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrDefault(
+      public /* nullable */
+asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrDefault(
           java.lang.String key,
-          asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue) {
+          /* nullable */
+asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats> map =
             internalGetFeatureStatsByTarget().getMap();
@@ -4485,7 +4523,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
        */
       @java.lang.Override
-
       public asgt.type.TrainStatisticsOuterClass.FeatureStats getFeatureStatsByTargetOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -4496,8 +4533,8 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearFeatureStatsByTarget() {
+        bitField0_ = (bitField0_ & ~0x00000002);
         internalGetMutableFeatureStatsByTarget().getMutableMap()
             .clear();
         return this;
@@ -4509,7 +4546,6 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        *
        * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
        */
-
       public Builder removeFeatureStatsByTarget(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -4522,7 +4558,8 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats>
-      getMutableFeatureStatsByTarget() {
+          getMutableFeatureStatsByTarget() {
+        bitField0_ |= 0x00000002;
         return internalGetMutableFeatureStatsByTarget().getMutableMap();
       }
       /**
@@ -4536,12 +4573,10 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
           java.lang.String key,
           asgt.type.TrainStatisticsOuterClass.FeatureStats value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableFeatureStatsByTarget().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000002;
         return this;
       }
       /**
@@ -4551,11 +4586,11 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        *
        * <code>map&lt;string, .asgt.type.FeatureStats&gt; feature_stats_by_target = 2 [json_name = "featureStatsByTarget"];</code>
        */
-
       public Builder putAllFeatureStatsByTarget(
           java.util.Map<java.lang.String, asgt.type.TrainStatisticsOuterClass.FeatureStats> values) {
         internalGetMutableFeatureStatsByTarget().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000002;
         return this;
       }
 
@@ -4584,6 +4619,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
       public Builder setSimilarityIndex(float value) {
         
         similarityIndex_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -4596,7 +4632,7 @@ asgt.type.TrainStatisticsOuterClass.FeatureStats defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearSimilarityIndex() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         similarityIndex_ = 0F;
         onChanged();
         return this;

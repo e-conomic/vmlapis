@@ -3,8 +3,8 @@
 
 package cv.scanner.v1;
 
-public final class Scanner {
-  private Scanner() {}
+public final class ScannerOuterClass {
+  private ScannerOuterClass() {}
   public static void registerAllExtensions(
       com.google.protobuf.ExtensionRegistryLite registry) {
   }
@@ -36,12 +36,12 @@ public final class Scanner {
     /**
      * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
      */
-    java.util.List<cv.scanner.v1.Scanner.Feature> 
+    java.util.List<cv.scanner.v1.ScannerOuterClass.Feature> 
         getFeaturesList();
     /**
      * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
      */
-    cv.scanner.v1.Scanner.Feature getFeatures(int index);
+    cv.scanner.v1.ScannerOuterClass.Feature getFeatures(int index);
     /**
      * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
      */
@@ -49,12 +49,12 @@ public final class Scanner {
     /**
      * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
      */
-    java.util.List<? extends cv.scanner.v1.Scanner.FeatureOrBuilder> 
+    java.util.List<? extends cv.scanner.v1.ScannerOuterClass.FeatureOrBuilder> 
         getFeaturesOrBuilderList();
     /**
      * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
      */
-    cv.scanner.v1.Scanner.FeatureOrBuilder getFeaturesOrBuilder(
+    cv.scanner.v1.ScannerOuterClass.FeatureOrBuilder getFeaturesOrBuilder(
         int index);
 
     /**
@@ -113,15 +113,15 @@ public final class Scanner {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_ScanCVRequest_descriptor;
+      return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_ScanCVRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_ScanCVRequest_fieldAccessorTable
+      return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_ScanCVRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              cv.scanner.v1.Scanner.ScanCVRequest.class, cv.scanner.v1.Scanner.ScanCVRequest.Builder.class);
+              cv.scanner.v1.ScannerOuterClass.ScanCVRequest.class, cv.scanner.v1.ScannerOuterClass.ScanCVRequest.Builder.class);
     }
 
     public static final int DOCUMENT_FIELD_NUMBER = 1;
@@ -147,23 +147,24 @@ public final class Scanner {
      */
     @java.lang.Override
     public ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder() {
-      return getDocument();
+      return document_ == null ? ssn.annotator.v1.Annotator.Document.getDefaultInstance() : document_;
     }
 
     public static final int FEATURES_FIELD_NUMBER = 2;
-    private java.util.List<cv.scanner.v1.Scanner.Feature> features_;
+    @SuppressWarnings("serial")
+    private java.util.List<cv.scanner.v1.ScannerOuterClass.Feature> features_;
     /**
      * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
      */
     @java.lang.Override
-    public java.util.List<cv.scanner.v1.Scanner.Feature> getFeaturesList() {
+    public java.util.List<cv.scanner.v1.ScannerOuterClass.Feature> getFeaturesList() {
       return features_;
     }
     /**
      * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
      */
     @java.lang.Override
-    public java.util.List<? extends cv.scanner.v1.Scanner.FeatureOrBuilder> 
+    public java.util.List<? extends cv.scanner.v1.ScannerOuterClass.FeatureOrBuilder> 
         getFeaturesOrBuilderList() {
       return features_;
     }
@@ -178,19 +179,20 @@ public final class Scanner {
      * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
      */
     @java.lang.Override
-    public cv.scanner.v1.Scanner.Feature getFeatures(int index) {
+    public cv.scanner.v1.ScannerOuterClass.Feature getFeatures(int index) {
       return features_.get(index);
     }
     /**
      * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
      */
     @java.lang.Override
-    public cv.scanner.v1.Scanner.FeatureOrBuilder getFeaturesOrBuilder(
+    public cv.scanner.v1.ScannerOuterClass.FeatureOrBuilder getFeaturesOrBuilder(
         int index) {
       return features_.get(index);
     }
 
     public static final int TAGS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
@@ -283,10 +285,10 @@ public final class Scanner {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof cv.scanner.v1.Scanner.ScanCVRequest)) {
+      if (!(obj instanceof cv.scanner.v1.ScannerOuterClass.ScanCVRequest)) {
         return super.equals(obj);
       }
-      cv.scanner.v1.Scanner.ScanCVRequest other = (cv.scanner.v1.Scanner.ScanCVRequest) obj;
+      cv.scanner.v1.ScannerOuterClass.ScanCVRequest other = (cv.scanner.v1.ScannerOuterClass.ScanCVRequest) obj;
 
       if (hasDocument() != other.hasDocument()) return false;
       if (hasDocument()) {
@@ -325,69 +327,69 @@ public final class Scanner {
       return hash;
     }
 
-    public static cv.scanner.v1.Scanner.ScanCVRequest parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVRequest parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cv.scanner.v1.Scanner.ScanCVRequest parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVRequest parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.ScanCVRequest parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVRequest parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cv.scanner.v1.Scanner.ScanCVRequest parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVRequest parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.ScanCVRequest parseFrom(byte[] data)
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVRequest parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cv.scanner.v1.Scanner.ScanCVRequest parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVRequest parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.ScanCVRequest parseFrom(java.io.InputStream input)
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVRequest parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cv.scanner.v1.Scanner.ScanCVRequest parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVRequest parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.ScanCVRequest parseDelimitedFrom(java.io.InputStream input)
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVRequest parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static cv.scanner.v1.Scanner.ScanCVRequest parseDelimitedFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVRequest parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.ScanCVRequest parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVRequest parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cv.scanner.v1.Scanner.ScanCVRequest parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVRequest parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -400,7 +402,7 @@ public final class Scanner {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(cv.scanner.v1.Scanner.ScanCVRequest prototype) {
+    public static Builder newBuilder(cv.scanner.v1.ScannerOuterClass.ScanCVRequest prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -421,21 +423,21 @@ public final class Scanner {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:cv.scanner.v1.ScanCVRequest)
-        cv.scanner.v1.Scanner.ScanCVRequestOrBuilder {
+        cv.scanner.v1.ScannerOuterClass.ScanCVRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_ScanCVRequest_descriptor;
+        return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_ScanCVRequest_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_ScanCVRequest_fieldAccessorTable
+        return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_ScanCVRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                cv.scanner.v1.Scanner.ScanCVRequest.class, cv.scanner.v1.Scanner.ScanCVRequest.Builder.class);
+                cv.scanner.v1.ScannerOuterClass.ScanCVRequest.class, cv.scanner.v1.ScannerOuterClass.ScanCVRequest.Builder.class);
       }
 
-      // Construct using cv.scanner.v1.Scanner.ScanCVRequest.newBuilder()
+      // Construct using cv.scanner.v1.ScannerOuterClass.ScanCVRequest.newBuilder()
       private Builder() {
 
       }
@@ -448,10 +450,10 @@ public final class Scanner {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (documentBuilder_ == null) {
-          document_ = null;
-        } else {
-          document_ = null;
+        bitField0_ = 0;
+        document_ = null;
+        if (documentBuilder_ != null) {
+          documentBuilder_.dispose();
           documentBuilder_ = null;
         }
         if (featuresBuilder_ == null) {
@@ -460,26 +462,26 @@ public final class Scanner {
           features_ = null;
           featuresBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_ScanCVRequest_descriptor;
+        return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_ScanCVRequest_descriptor;
       }
 
       @java.lang.Override
-      public cv.scanner.v1.Scanner.ScanCVRequest getDefaultInstanceForType() {
-        return cv.scanner.v1.Scanner.ScanCVRequest.getDefaultInstance();
+      public cv.scanner.v1.ScannerOuterClass.ScanCVRequest getDefaultInstanceForType() {
+        return cv.scanner.v1.ScannerOuterClass.ScanCVRequest.getDefaultInstance();
       }
 
       @java.lang.Override
-      public cv.scanner.v1.Scanner.ScanCVRequest build() {
-        cv.scanner.v1.Scanner.ScanCVRequest result = buildPartial();
+      public cv.scanner.v1.ScannerOuterClass.ScanCVRequest build() {
+        cv.scanner.v1.ScannerOuterClass.ScanCVRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -487,30 +489,38 @@ public final class Scanner {
       }
 
       @java.lang.Override
-      public cv.scanner.v1.Scanner.ScanCVRequest buildPartial() {
-        cv.scanner.v1.Scanner.ScanCVRequest result = new cv.scanner.v1.Scanner.ScanCVRequest(this);
-        int from_bitField0_ = bitField0_;
-        if (documentBuilder_ == null) {
-          result.document_ = document_;
-        } else {
-          result.document_ = documentBuilder_.build();
-        }
+      public cv.scanner.v1.ScannerOuterClass.ScanCVRequest buildPartial() {
+        cv.scanner.v1.ScannerOuterClass.ScanCVRequest result = new cv.scanner.v1.ScannerOuterClass.ScanCVRequest(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(cv.scanner.v1.ScannerOuterClass.ScanCVRequest result) {
         if (featuresBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             features_ = java.util.Collections.unmodifiableList(features_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.features_ = features_;
         } else {
           result.features_ = featuresBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.tags_ = tags_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(cv.scanner.v1.ScannerOuterClass.ScanCVRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.document_ = documentBuilder_ == null
+              ? document_
+              : documentBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -547,16 +557,16 @@ public final class Scanner {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cv.scanner.v1.Scanner.ScanCVRequest) {
-          return mergeFrom((cv.scanner.v1.Scanner.ScanCVRequest)other);
+        if (other instanceof cv.scanner.v1.ScannerOuterClass.ScanCVRequest) {
+          return mergeFrom((cv.scanner.v1.ScannerOuterClass.ScanCVRequest)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(cv.scanner.v1.Scanner.ScanCVRequest other) {
-        if (other == cv.scanner.v1.Scanner.ScanCVRequest.getDefaultInstance()) return this;
+      public Builder mergeFrom(cv.scanner.v1.ScannerOuterClass.ScanCVRequest other) {
+        if (other == cv.scanner.v1.ScannerOuterClass.ScanCVRequest.getDefaultInstance()) return this;
         if (other.hasDocument()) {
           mergeDocument(other.getDocument());
         }
@@ -564,7 +574,7 @@ public final class Scanner {
           if (!other.features_.isEmpty()) {
             if (features_.isEmpty()) {
               features_ = other.features_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureFeaturesIsMutable();
               features_.addAll(other.features_);
@@ -577,7 +587,7 @@ public final class Scanner {
               featuresBuilder_.dispose();
               featuresBuilder_ = null;
               features_ = other.features_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               featuresBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFeaturesFieldBuilder() : null;
@@ -589,7 +599,7 @@ public final class Scanner {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -626,13 +636,13 @@ public final class Scanner {
                 input.readMessage(
                     getDocumentFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
-                cv.scanner.v1.Scanner.Feature m =
+                cv.scanner.v1.ScannerOuterClass.Feature m =
                     input.readMessage(
-                        cv.scanner.v1.Scanner.Feature.parser(),
+                        cv.scanner.v1.ScannerOuterClass.Feature.parser(),
                         extensionRegistry);
                 if (featuresBuilder_ == null) {
                   ensureFeaturesIsMutable();
@@ -673,7 +683,7 @@ public final class Scanner {
        * @return Whether the document field is set.
        */
       public boolean hasDocument() {
-        return documentBuilder_ != null || document_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -695,11 +705,11 @@ public final class Scanner {
             throw new NullPointerException();
           }
           document_ = value;
-          onChanged();
         } else {
           documentBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -709,11 +719,11 @@ public final class Scanner {
           ssn.annotator.v1.Annotator.Document.Builder builderForValue) {
         if (documentBuilder_ == null) {
           document_ = builderForValue.build();
-          onChanged();
         } else {
           documentBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -721,38 +731,38 @@ public final class Scanner {
        */
       public Builder mergeDocument(ssn.annotator.v1.Annotator.Document value) {
         if (documentBuilder_ == null) {
-          if (document_ != null) {
-            document_ =
-              ssn.annotator.v1.Annotator.Document.newBuilder(document_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            document_ != null &&
+            document_ != ssn.annotator.v1.Annotator.Document.getDefaultInstance()) {
+            getDocumentBuilder().mergeFrom(value);
           } else {
             document_ = value;
           }
-          onChanged();
         } else {
           documentBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       public Builder clearDocument() {
-        if (documentBuilder_ == null) {
-          document_ = null;
-          onChanged();
-        } else {
-          document_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        document_ = null;
+        if (documentBuilder_ != null) {
+          documentBuilder_.dispose();
           documentBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       public ssn.annotator.v1.Annotator.Document.Builder getDocumentBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDocumentFieldBuilder().getBuilder();
       }
@@ -784,22 +794,22 @@ public final class Scanner {
         return documentBuilder_;
       }
 
-      private java.util.List<cv.scanner.v1.Scanner.Feature> features_ =
+      private java.util.List<cv.scanner.v1.ScannerOuterClass.Feature> features_ =
         java.util.Collections.emptyList();
       private void ensureFeaturesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
-          features_ = new java.util.ArrayList<cv.scanner.v1.Scanner.Feature>(features_);
-          bitField0_ |= 0x00000001;
+        if (!((bitField0_ & 0x00000002) != 0)) {
+          features_ = new java.util.ArrayList<cv.scanner.v1.ScannerOuterClass.Feature>(features_);
+          bitField0_ |= 0x00000002;
          }
       }
 
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          cv.scanner.v1.Scanner.Feature, cv.scanner.v1.Scanner.Feature.Builder, cv.scanner.v1.Scanner.FeatureOrBuilder> featuresBuilder_;
+          cv.scanner.v1.ScannerOuterClass.Feature, cv.scanner.v1.ScannerOuterClass.Feature.Builder, cv.scanner.v1.ScannerOuterClass.FeatureOrBuilder> featuresBuilder_;
 
       /**
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
-      public java.util.List<cv.scanner.v1.Scanner.Feature> getFeaturesList() {
+      public java.util.List<cv.scanner.v1.ScannerOuterClass.Feature> getFeaturesList() {
         if (featuresBuilder_ == null) {
           return java.util.Collections.unmodifiableList(features_);
         } else {
@@ -819,7 +829,7 @@ public final class Scanner {
       /**
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
-      public cv.scanner.v1.Scanner.Feature getFeatures(int index) {
+      public cv.scanner.v1.ScannerOuterClass.Feature getFeatures(int index) {
         if (featuresBuilder_ == null) {
           return features_.get(index);
         } else {
@@ -830,7 +840,7 @@ public final class Scanner {
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder setFeatures(
-          int index, cv.scanner.v1.Scanner.Feature value) {
+          int index, cv.scanner.v1.ScannerOuterClass.Feature value) {
         if (featuresBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -847,7 +857,7 @@ public final class Scanner {
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder setFeatures(
-          int index, cv.scanner.v1.Scanner.Feature.Builder builderForValue) {
+          int index, cv.scanner.v1.ScannerOuterClass.Feature.Builder builderForValue) {
         if (featuresBuilder_ == null) {
           ensureFeaturesIsMutable();
           features_.set(index, builderForValue.build());
@@ -860,7 +870,7 @@ public final class Scanner {
       /**
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
-      public Builder addFeatures(cv.scanner.v1.Scanner.Feature value) {
+      public Builder addFeatures(cv.scanner.v1.ScannerOuterClass.Feature value) {
         if (featuresBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -877,7 +887,7 @@ public final class Scanner {
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder addFeatures(
-          int index, cv.scanner.v1.Scanner.Feature value) {
+          int index, cv.scanner.v1.ScannerOuterClass.Feature value) {
         if (featuresBuilder_ == null) {
           if (value == null) {
             throw new NullPointerException();
@@ -894,7 +904,7 @@ public final class Scanner {
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder addFeatures(
-          cv.scanner.v1.Scanner.Feature.Builder builderForValue) {
+          cv.scanner.v1.ScannerOuterClass.Feature.Builder builderForValue) {
         if (featuresBuilder_ == null) {
           ensureFeaturesIsMutable();
           features_.add(builderForValue.build());
@@ -908,7 +918,7 @@ public final class Scanner {
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder addFeatures(
-          int index, cv.scanner.v1.Scanner.Feature.Builder builderForValue) {
+          int index, cv.scanner.v1.ScannerOuterClass.Feature.Builder builderForValue) {
         if (featuresBuilder_ == null) {
           ensureFeaturesIsMutable();
           features_.add(index, builderForValue.build());
@@ -922,7 +932,7 @@ public final class Scanner {
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
       public Builder addAllFeatures(
-          java.lang.Iterable<? extends cv.scanner.v1.Scanner.Feature> values) {
+          java.lang.Iterable<? extends cv.scanner.v1.ScannerOuterClass.Feature> values) {
         if (featuresBuilder_ == null) {
           ensureFeaturesIsMutable();
           com.google.protobuf.AbstractMessageLite.Builder.addAll(
@@ -939,7 +949,7 @@ public final class Scanner {
       public Builder clearFeatures() {
         if (featuresBuilder_ == null) {
           features_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           featuresBuilder_.clear();
@@ -962,14 +972,14 @@ public final class Scanner {
       /**
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
-      public cv.scanner.v1.Scanner.Feature.Builder getFeaturesBuilder(
+      public cv.scanner.v1.ScannerOuterClass.Feature.Builder getFeaturesBuilder(
           int index) {
         return getFeaturesFieldBuilder().getBuilder(index);
       }
       /**
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
-      public cv.scanner.v1.Scanner.FeatureOrBuilder getFeaturesOrBuilder(
+      public cv.scanner.v1.ScannerOuterClass.FeatureOrBuilder getFeaturesOrBuilder(
           int index) {
         if (featuresBuilder_ == null) {
           return features_.get(index);  } else {
@@ -979,7 +989,7 @@ public final class Scanner {
       /**
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
-      public java.util.List<? extends cv.scanner.v1.Scanner.FeatureOrBuilder> 
+      public java.util.List<? extends cv.scanner.v1.ScannerOuterClass.FeatureOrBuilder> 
            getFeaturesOrBuilderList() {
         if (featuresBuilder_ != null) {
           return featuresBuilder_.getMessageOrBuilderList();
@@ -990,33 +1000,33 @@ public final class Scanner {
       /**
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
-      public cv.scanner.v1.Scanner.Feature.Builder addFeaturesBuilder() {
+      public cv.scanner.v1.ScannerOuterClass.Feature.Builder addFeaturesBuilder() {
         return getFeaturesFieldBuilder().addBuilder(
-            cv.scanner.v1.Scanner.Feature.getDefaultInstance());
+            cv.scanner.v1.ScannerOuterClass.Feature.getDefaultInstance());
       }
       /**
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
-      public cv.scanner.v1.Scanner.Feature.Builder addFeaturesBuilder(
+      public cv.scanner.v1.ScannerOuterClass.Feature.Builder addFeaturesBuilder(
           int index) {
         return getFeaturesFieldBuilder().addBuilder(
-            index, cv.scanner.v1.Scanner.Feature.getDefaultInstance());
+            index, cv.scanner.v1.ScannerOuterClass.Feature.getDefaultInstance());
       }
       /**
        * <code>repeated .cv.scanner.v1.Feature features = 2 [json_name = "features"];</code>
        */
-      public java.util.List<cv.scanner.v1.Scanner.Feature.Builder> 
+      public java.util.List<cv.scanner.v1.ScannerOuterClass.Feature.Builder> 
            getFeaturesBuilderList() {
         return getFeaturesFieldBuilder().getBuilderList();
       }
       private com.google.protobuf.RepeatedFieldBuilderV3<
-          cv.scanner.v1.Scanner.Feature, cv.scanner.v1.Scanner.Feature.Builder, cv.scanner.v1.Scanner.FeatureOrBuilder> 
+          cv.scanner.v1.ScannerOuterClass.Feature, cv.scanner.v1.ScannerOuterClass.Feature.Builder, cv.scanner.v1.ScannerOuterClass.FeatureOrBuilder> 
           getFeaturesFieldBuilder() {
         if (featuresBuilder_ == null) {
           featuresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-              cv.scanner.v1.Scanner.Feature, cv.scanner.v1.Scanner.Feature.Builder, cv.scanner.v1.Scanner.FeatureOrBuilder>(
+              cv.scanner.v1.ScannerOuterClass.Feature, cv.scanner.v1.ScannerOuterClass.Feature.Builder, cv.scanner.v1.ScannerOuterClass.FeatureOrBuilder>(
                   features_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           features_ = null;
@@ -1026,9 +1036,9 @@ public final class Scanner {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -1071,10 +1081,8 @@ public final class Scanner {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.set(index, value);
         onChanged();
         return this;
@@ -1086,10 +1094,8 @@ public final class Scanner {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
         return this;
@@ -1113,7 +1119,7 @@ public final class Scanner {
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1124,10 +1130,8 @@ public final class Scanner {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
@@ -1150,12 +1154,12 @@ public final class Scanner {
     }
 
     // @@protoc_insertion_point(class_scope:cv.scanner.v1.ScanCVRequest)
-    private static final cv.scanner.v1.Scanner.ScanCVRequest DEFAULT_INSTANCE;
+    private static final cv.scanner.v1.ScannerOuterClass.ScanCVRequest DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new cv.scanner.v1.Scanner.ScanCVRequest();
+      DEFAULT_INSTANCE = new cv.scanner.v1.ScannerOuterClass.ScanCVRequest();
     }
 
-    public static cv.scanner.v1.Scanner.ScanCVRequest getDefaultInstance() {
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVRequest getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1191,7 +1195,7 @@ public final class Scanner {
     }
 
     @java.lang.Override
-    public cv.scanner.v1.Scanner.ScanCVRequest getDefaultInstanceForType() {
+    public cv.scanner.v1.ScannerOuterClass.ScanCVRequest getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -1780,18 +1784,19 @@ public final class Scanner {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_ScanCVResponse_descriptor;
+      return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_ScanCVResponse_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_ScanCVResponse_fieldAccessorTable
+      return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_ScanCVResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              cv.scanner.v1.Scanner.ScanCVResponse.class, cv.scanner.v1.Scanner.ScanCVResponse.Builder.class);
+              cv.scanner.v1.ScannerOuterClass.ScanCVResponse.class, cv.scanner.v1.ScannerOuterClass.ScanCVResponse.Builder.class);
     }
 
     public static final int FIRST_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> firstName_;
     /**
      * <code>repeated .ssn.type.Candidate first_name = 1 [json_name = "firstName"];</code>
@@ -1832,6 +1837,7 @@ public final class Scanner {
     }
 
     public static final int LAST_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> lastName_;
     /**
      * <code>repeated .ssn.type.Candidate last_name = 2 [json_name = "lastName"];</code>
@@ -1872,6 +1878,7 @@ public final class Scanner {
     }
 
     public static final int DATE_OF_BIRTH_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> dateOfBirth_;
     /**
      * <code>repeated .ssn.type.Candidate date_of_birth = 3 [json_name = "dateOfBirth"];</code>
@@ -1912,6 +1919,7 @@ public final class Scanner {
     }
 
     public static final int PHONE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> phone_;
     /**
      * <code>repeated .ssn.type.Candidate phone = 4 [json_name = "phone"];</code>
@@ -1952,6 +1960,7 @@ public final class Scanner {
     }
 
     public static final int EMAIL_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> email_;
     /**
      * <code>repeated .ssn.type.Candidate email = 5 [json_name = "email"];</code>
@@ -1992,6 +2001,7 @@ public final class Scanner {
     }
 
     public static final int COUNTRY_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> country_;
     /**
      * <code>repeated .ssn.type.Candidate country = 6 [json_name = "country"];</code>
@@ -2032,6 +2042,7 @@ public final class Scanner {
     }
 
     public static final int NATIONALITY_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> nationality_;
     /**
      * <code>repeated .ssn.type.Candidate nationality = 7 [json_name = "nationality"];</code>
@@ -2072,6 +2083,7 @@ public final class Scanner {
     }
 
     public static final int POSTAL_CODE_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> postalCode_;
     /**
      * <code>repeated .ssn.type.Candidate postal_code = 8 [json_name = "postalCode"];</code>
@@ -2112,6 +2124,7 @@ public final class Scanner {
     }
 
     public static final int POSTAL_AREA_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> postalArea_;
     /**
      * <code>repeated .ssn.type.Candidate postal_area = 9 [json_name = "postalArea"];</code>
@@ -2152,6 +2165,7 @@ public final class Scanner {
     }
 
     public static final int MUNICIPALITY_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> municipality_;
     /**
      * <code>repeated .ssn.type.Candidate municipality = 10 [json_name = "municipality"];</code>
@@ -2192,6 +2206,7 @@ public final class Scanner {
     }
 
     public static final int COUNTY_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> county_;
     /**
      * <code>repeated .ssn.type.Candidate county = 11 [json_name = "county"];</code>
@@ -2232,6 +2247,7 @@ public final class Scanner {
     }
 
     public static final int ADDRESS_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> address_;
     /**
      * <code>repeated .ssn.type.Candidate address = 12 [json_name = "address"];</code>
@@ -2272,6 +2288,7 @@ public final class Scanner {
     }
 
     public static final int EMPLOYER_NAME_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> employerName_;
     /**
      * <code>repeated .ssn.type.Candidate employer_name = 13 [json_name = "employerName"];</code>
@@ -2312,6 +2329,7 @@ public final class Scanner {
     }
 
     public static final int POSITION_TITLE_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> positionTitle_;
     /**
      * <code>repeated .ssn.type.Candidate position_title = 14 [json_name = "positionTitle"];</code>
@@ -2352,6 +2370,7 @@ public final class Scanner {
     }
 
     public static final int DATE_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> date_;
     /**
      * <code>repeated .ssn.type.Candidate date = 15 [json_name = "date"];</code>
@@ -2392,6 +2411,7 @@ public final class Scanner {
     }
 
     public static final int INSTITUTION_NAME_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> institutionName_;
     /**
      * <code>repeated .ssn.type.Candidate institution_name = 16 [json_name = "institutionName"];</code>
@@ -2432,6 +2452,7 @@ public final class Scanner {
     }
 
     public static final int INSTITUTION_TYPE_FIELD_NUMBER = 17;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> institutionType_;
     /**
      * <code>repeated .ssn.type.Candidate institution_type = 17 [json_name = "institutionType"];</code>
@@ -2472,6 +2493,7 @@ public final class Scanner {
     }
 
     public static final int AREA_OF_EDUCATION_FIELD_NUMBER = 18;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> areaOfEducation_;
     /**
      * <code>repeated .ssn.type.Candidate area_of_education = 18 [json_name = "areaOfEducation"];</code>
@@ -2512,6 +2534,7 @@ public final class Scanner {
     }
 
     public static final int DEGREE_FIELD_NUMBER = 19;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> degree_;
     /**
      * <code>repeated .ssn.type.Candidate degree = 19 [json_name = "degree"];</code>
@@ -2552,6 +2575,7 @@ public final class Scanner {
     }
 
     public static final int AVERAGE_GRADE_FIELD_NUMBER = 20;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> averageGrade_;
     /**
      * <code>repeated .ssn.type.Candidate average_grade = 20 [json_name = "averageGrade"];</code>
@@ -2592,6 +2616,7 @@ public final class Scanner {
     }
 
     public static final int NAME_FIELD_NUMBER = 21;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> name_;
     /**
      * <code>repeated .ssn.type.Candidate name = 21 [json_name = "name"];</code>
@@ -2632,6 +2657,7 @@ public final class Scanner {
     }
 
     public static final int LEVEL_FIELD_NUMBER = 22;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> level_;
     /**
      * <code>repeated .ssn.type.Candidate level = 22 [json_name = "level"];</code>
@@ -2858,10 +2884,10 @@ public final class Scanner {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof cv.scanner.v1.Scanner.ScanCVResponse)) {
+      if (!(obj instanceof cv.scanner.v1.ScannerOuterClass.ScanCVResponse)) {
         return super.equals(obj);
       }
-      cv.scanner.v1.Scanner.ScanCVResponse other = (cv.scanner.v1.Scanner.ScanCVResponse) obj;
+      cv.scanner.v1.ScannerOuterClass.ScanCVResponse other = (cv.scanner.v1.ScannerOuterClass.ScanCVResponse) obj;
 
       if (!getFirstNameList()
           .equals(other.getFirstNameList())) return false;
@@ -3011,69 +3037,69 @@ public final class Scanner {
       return hash;
     }
 
-    public static cv.scanner.v1.Scanner.ScanCVResponse parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVResponse parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cv.scanner.v1.Scanner.ScanCVResponse parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVResponse parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.ScanCVResponse parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVResponse parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cv.scanner.v1.Scanner.ScanCVResponse parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVResponse parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.ScanCVResponse parseFrom(byte[] data)
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVResponse parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cv.scanner.v1.Scanner.ScanCVResponse parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVResponse parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.ScanCVResponse parseFrom(java.io.InputStream input)
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVResponse parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cv.scanner.v1.Scanner.ScanCVResponse parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVResponse parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.ScanCVResponse parseDelimitedFrom(java.io.InputStream input)
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVResponse parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static cv.scanner.v1.Scanner.ScanCVResponse parseDelimitedFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVResponse parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.ScanCVResponse parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVResponse parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cv.scanner.v1.Scanner.ScanCVResponse parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVResponse parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -3086,7 +3112,7 @@ public final class Scanner {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(cv.scanner.v1.Scanner.ScanCVResponse prototype) {
+    public static Builder newBuilder(cv.scanner.v1.ScannerOuterClass.ScanCVResponse prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -3107,21 +3133,21 @@ public final class Scanner {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:cv.scanner.v1.ScanCVResponse)
-        cv.scanner.v1.Scanner.ScanCVResponseOrBuilder {
+        cv.scanner.v1.ScannerOuterClass.ScanCVResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_ScanCVResponse_descriptor;
+        return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_ScanCVResponse_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_ScanCVResponse_fieldAccessorTable
+        return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_ScanCVResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                cv.scanner.v1.Scanner.ScanCVResponse.class, cv.scanner.v1.Scanner.ScanCVResponse.Builder.class);
+                cv.scanner.v1.ScannerOuterClass.ScanCVResponse.class, cv.scanner.v1.ScannerOuterClass.ScanCVResponse.Builder.class);
       }
 
-      // Construct using cv.scanner.v1.Scanner.ScanCVResponse.newBuilder()
+      // Construct using cv.scanner.v1.ScannerOuterClass.ScanCVResponse.newBuilder()
       private Builder() {
 
       }
@@ -3134,6 +3160,7 @@ public final class Scanner {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (firstNameBuilder_ == null) {
           firstName_ = java.util.Collections.emptyList();
         } else {
@@ -3294,17 +3321,17 @@ public final class Scanner {
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_ScanCVResponse_descriptor;
+        return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_ScanCVResponse_descriptor;
       }
 
       @java.lang.Override
-      public cv.scanner.v1.Scanner.ScanCVResponse getDefaultInstanceForType() {
-        return cv.scanner.v1.Scanner.ScanCVResponse.getDefaultInstance();
+      public cv.scanner.v1.ScannerOuterClass.ScanCVResponse getDefaultInstanceForType() {
+        return cv.scanner.v1.ScannerOuterClass.ScanCVResponse.getDefaultInstance();
       }
 
       @java.lang.Override
-      public cv.scanner.v1.Scanner.ScanCVResponse build() {
-        cv.scanner.v1.Scanner.ScanCVResponse result = buildPartial();
+      public cv.scanner.v1.ScannerOuterClass.ScanCVResponse build() {
+        cv.scanner.v1.ScannerOuterClass.ScanCVResponse result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -3312,9 +3339,15 @@ public final class Scanner {
       }
 
       @java.lang.Override
-      public cv.scanner.v1.Scanner.ScanCVResponse buildPartial() {
-        cv.scanner.v1.Scanner.ScanCVResponse result = new cv.scanner.v1.Scanner.ScanCVResponse(this);
-        int from_bitField0_ = bitField0_;
+      public cv.scanner.v1.ScannerOuterClass.ScanCVResponse buildPartial() {
+        cv.scanner.v1.ScannerOuterClass.ScanCVResponse result = new cv.scanner.v1.ScannerOuterClass.ScanCVResponse(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(cv.scanner.v1.ScannerOuterClass.ScanCVResponse result) {
         if (firstNameBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             firstName_ = java.util.Collections.unmodifiableList(firstName_);
@@ -3513,8 +3546,10 @@ public final class Scanner {
         } else {
           result.level_ = levelBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(cv.scanner.v1.ScannerOuterClass.ScanCVResponse result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -3551,16 +3586,16 @@ public final class Scanner {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cv.scanner.v1.Scanner.ScanCVResponse) {
-          return mergeFrom((cv.scanner.v1.Scanner.ScanCVResponse)other);
+        if (other instanceof cv.scanner.v1.ScannerOuterClass.ScanCVResponse) {
+          return mergeFrom((cv.scanner.v1.ScannerOuterClass.ScanCVResponse)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(cv.scanner.v1.Scanner.ScanCVResponse other) {
-        if (other == cv.scanner.v1.Scanner.ScanCVResponse.getDefaultInstance()) return this;
+      public Builder mergeFrom(cv.scanner.v1.ScannerOuterClass.ScanCVResponse other) {
+        if (other == cv.scanner.v1.ScannerOuterClass.ScanCVResponse.getDefaultInstance()) return this;
         if (firstNameBuilder_ == null) {
           if (!other.firstName_.isEmpty()) {
             if (firstName_.isEmpty()) {
@@ -9758,12 +9793,12 @@ public final class Scanner {
     }
 
     // @@protoc_insertion_point(class_scope:cv.scanner.v1.ScanCVResponse)
-    private static final cv.scanner.v1.Scanner.ScanCVResponse DEFAULT_INSTANCE;
+    private static final cv.scanner.v1.ScannerOuterClass.ScanCVResponse DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new cv.scanner.v1.Scanner.ScanCVResponse();
+      DEFAULT_INSTANCE = new cv.scanner.v1.ScannerOuterClass.ScanCVResponse();
     }
 
-    public static cv.scanner.v1.Scanner.ScanCVResponse getDefaultInstance() {
+    public static cv.scanner.v1.ScannerOuterClass.ScanCVResponse getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9799,7 +9834,7 @@ public final class Scanner {
     }
 
     @java.lang.Override
-    public cv.scanner.v1.Scanner.ScanCVResponse getDefaultInstanceForType() {
+    public cv.scanner.v1.ScannerOuterClass.ScanCVResponse getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -9826,14 +9861,9 @@ public final class Scanner {
      * <code>.cv.scanner.v1.Feature.Type type = 1 [json_name = "type"];</code>
      * @return The type.
      */
-    cv.scanner.v1.Scanner.Feature.Type getType();
+    cv.scanner.v1.ScannerOuterClass.Feature.Type getType();
 
     /**
-     * <pre>
-     * Maximum number of results of this type. Does not apply to
-     * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
-     * </pre>
-     *
      * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
      * @return The maxResults.
      */
@@ -9869,15 +9899,15 @@ public final class Scanner {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_Feature_descriptor;
+      return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_Feature_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_Feature_fieldAccessorTable
+      return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_Feature_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              cv.scanner.v1.Scanner.Feature.class, cv.scanner.v1.Scanner.Feature.Builder.class);
+              cv.scanner.v1.ScannerOuterClass.Feature.class, cv.scanner.v1.ScannerOuterClass.Feature.Builder.class);
     }
 
     /**
@@ -10142,7 +10172,7 @@ public final class Scanner {
       }
       public static final com.google.protobuf.Descriptors.EnumDescriptor
           getDescriptor() {
-        return cv.scanner.v1.Scanner.Feature.getDescriptor().getEnumTypes().get(0);
+        return cv.scanner.v1.ScannerOuterClass.Feature.getDescriptor().getEnumTypes().get(0);
       }
 
       private static final Type[] VALUES = values();
@@ -10169,7 +10199,7 @@ public final class Scanner {
     }
 
     public static final int TYPE_FIELD_NUMBER = 1;
-    private int type_;
+    private int type_ = 0;
     /**
      * <pre>
      * The feature type.
@@ -10189,20 +10219,14 @@ public final class Scanner {
      * <code>.cv.scanner.v1.Feature.Type type = 1 [json_name = "type"];</code>
      * @return The type.
      */
-    @java.lang.Override public cv.scanner.v1.Scanner.Feature.Type getType() {
-      @SuppressWarnings("deprecation")
-      cv.scanner.v1.Scanner.Feature.Type result = cv.scanner.v1.Scanner.Feature.Type.valueOf(type_);
-      return result == null ? cv.scanner.v1.Scanner.Feature.Type.UNRECOGNIZED : result;
+    @java.lang.Override public cv.scanner.v1.ScannerOuterClass.Feature.Type getType() {
+      cv.scanner.v1.ScannerOuterClass.Feature.Type result = cv.scanner.v1.ScannerOuterClass.Feature.Type.forNumber(type_);
+      return result == null ? cv.scanner.v1.ScannerOuterClass.Feature.Type.UNRECOGNIZED : result;
     }
 
     public static final int MAX_RESULTS_FIELD_NUMBER = 2;
-    private int maxResults_;
+    private int maxResults_ = 0;
     /**
-     * <pre>
-     * Maximum number of results of this type. Does not apply to
-     * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
-     * </pre>
-     *
      * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
      * @return The maxResults.
      */
@@ -10225,7 +10249,7 @@ public final class Scanner {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (type_ != cv.scanner.v1.Scanner.Feature.Type.FIRST_NAME.getNumber()) {
+      if (type_ != cv.scanner.v1.ScannerOuterClass.Feature.Type.FIRST_NAME.getNumber()) {
         output.writeEnum(1, type_);
       }
       if (maxResults_ != 0) {
@@ -10240,7 +10264,7 @@ public final class Scanner {
       if (size != -1) return size;
 
       size = 0;
-      if (type_ != cv.scanner.v1.Scanner.Feature.Type.FIRST_NAME.getNumber()) {
+      if (type_ != cv.scanner.v1.ScannerOuterClass.Feature.Type.FIRST_NAME.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(1, type_);
       }
@@ -10258,10 +10282,10 @@ public final class Scanner {
       if (obj == this) {
        return true;
       }
-      if (!(obj instanceof cv.scanner.v1.Scanner.Feature)) {
+      if (!(obj instanceof cv.scanner.v1.ScannerOuterClass.Feature)) {
         return super.equals(obj);
       }
-      cv.scanner.v1.Scanner.Feature other = (cv.scanner.v1.Scanner.Feature) obj;
+      cv.scanner.v1.ScannerOuterClass.Feature other = (cv.scanner.v1.ScannerOuterClass.Feature) obj;
 
       if (type_ != other.type_) return false;
       if (getMaxResults()
@@ -10286,69 +10310,69 @@ public final class Scanner {
       return hash;
     }
 
-    public static cv.scanner.v1.Scanner.Feature parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.Feature parseFrom(
         java.nio.ByteBuffer data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cv.scanner.v1.Scanner.Feature parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.Feature parseFrom(
         java.nio.ByteBuffer data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.Feature parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.Feature parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cv.scanner.v1.Scanner.Feature parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.Feature parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.Feature parseFrom(byte[] data)
+    public static cv.scanner.v1.ScannerOuterClass.Feature parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static cv.scanner.v1.Scanner.Feature parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.Feature parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.Feature parseFrom(java.io.InputStream input)
+    public static cv.scanner.v1.ScannerOuterClass.Feature parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cv.scanner.v1.Scanner.Feature parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.Feature parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.Feature parseDelimitedFrom(java.io.InputStream input)
+    public static cv.scanner.v1.ScannerOuterClass.Feature parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
-    public static cv.scanner.v1.Scanner.Feature parseDelimitedFrom(
+    public static cv.scanner.v1.ScannerOuterClass.Feature parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
     }
-    public static cv.scanner.v1.Scanner.Feature parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.Feature parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input);
     }
-    public static cv.scanner.v1.Scanner.Feature parseFrom(
+    public static cv.scanner.v1.ScannerOuterClass.Feature parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -10361,7 +10385,7 @@ public final class Scanner {
     public static Builder newBuilder() {
       return DEFAULT_INSTANCE.toBuilder();
     }
-    public static Builder newBuilder(cv.scanner.v1.Scanner.Feature prototype) {
+    public static Builder newBuilder(cv.scanner.v1.ScannerOuterClass.Feature prototype) {
       return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
     }
     @java.lang.Override
@@ -10382,21 +10406,21 @@ public final class Scanner {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:cv.scanner.v1.Feature)
-        cv.scanner.v1.Scanner.FeatureOrBuilder {
+        cv.scanner.v1.ScannerOuterClass.FeatureOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_Feature_descriptor;
+        return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_Feature_descriptor;
       }
 
       @java.lang.Override
       protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_Feature_fieldAccessorTable
+        return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_Feature_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                cv.scanner.v1.Scanner.Feature.class, cv.scanner.v1.Scanner.Feature.Builder.class);
+                cv.scanner.v1.ScannerOuterClass.Feature.class, cv.scanner.v1.ScannerOuterClass.Feature.Builder.class);
       }
 
-      // Construct using cv.scanner.v1.Scanner.Feature.newBuilder()
+      // Construct using cv.scanner.v1.ScannerOuterClass.Feature.newBuilder()
       private Builder() {
 
       }
@@ -10409,27 +10433,26 @@ public final class Scanner {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         type_ = 0;
-
         maxResults_ = 0;
-
         return this;
       }
 
       @java.lang.Override
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return cv.scanner.v1.Scanner.internal_static_cv_scanner_v1_Feature_descriptor;
+        return cv.scanner.v1.ScannerOuterClass.internal_static_cv_scanner_v1_Feature_descriptor;
       }
 
       @java.lang.Override
-      public cv.scanner.v1.Scanner.Feature getDefaultInstanceForType() {
-        return cv.scanner.v1.Scanner.Feature.getDefaultInstance();
+      public cv.scanner.v1.ScannerOuterClass.Feature getDefaultInstanceForType() {
+        return cv.scanner.v1.ScannerOuterClass.Feature.getDefaultInstance();
       }
 
       @java.lang.Override
-      public cv.scanner.v1.Scanner.Feature build() {
-        cv.scanner.v1.Scanner.Feature result = buildPartial();
+      public cv.scanner.v1.ScannerOuterClass.Feature build() {
+        cv.scanner.v1.ScannerOuterClass.Feature result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
@@ -10437,12 +10460,21 @@ public final class Scanner {
       }
 
       @java.lang.Override
-      public cv.scanner.v1.Scanner.Feature buildPartial() {
-        cv.scanner.v1.Scanner.Feature result = new cv.scanner.v1.Scanner.Feature(this);
-        result.type_ = type_;
-        result.maxResults_ = maxResults_;
+      public cv.scanner.v1.ScannerOuterClass.Feature buildPartial() {
+        cv.scanner.v1.ScannerOuterClass.Feature result = new cv.scanner.v1.ScannerOuterClass.Feature(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(cv.scanner.v1.ScannerOuterClass.Feature result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.maxResults_ = maxResults_;
+        }
       }
 
       @java.lang.Override
@@ -10479,16 +10511,16 @@ public final class Scanner {
       }
       @java.lang.Override
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof cv.scanner.v1.Scanner.Feature) {
-          return mergeFrom((cv.scanner.v1.Scanner.Feature)other);
+        if (other instanceof cv.scanner.v1.ScannerOuterClass.Feature) {
+          return mergeFrom((cv.scanner.v1.ScannerOuterClass.Feature)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(cv.scanner.v1.Scanner.Feature other) {
-        if (other == cv.scanner.v1.Scanner.Feature.getDefaultInstance()) return this;
+      public Builder mergeFrom(cv.scanner.v1.ScannerOuterClass.Feature other) {
+        if (other == cv.scanner.v1.ScannerOuterClass.Feature.getDefaultInstance()) return this;
         if (other.type_ != 0) {
           setTypeValue(other.getTypeValue());
         }
@@ -10523,12 +10555,12 @@ public final class Scanner {
                 break;
               case 8: {
                 type_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 maxResults_ = input.readInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -10546,6 +10578,7 @@ public final class Scanner {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int type_ = 0;
       /**
@@ -10569,8 +10602,8 @@ public final class Scanner {
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
-        
         type_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -10583,10 +10616,9 @@ public final class Scanner {
        * @return The type.
        */
       @java.lang.Override
-      public cv.scanner.v1.Scanner.Feature.Type getType() {
-        @SuppressWarnings("deprecation")
-        cv.scanner.v1.Scanner.Feature.Type result = cv.scanner.v1.Scanner.Feature.Type.valueOf(type_);
-        return result == null ? cv.scanner.v1.Scanner.Feature.Type.UNRECOGNIZED : result;
+      public cv.scanner.v1.ScannerOuterClass.Feature.Type getType() {
+        cv.scanner.v1.ScannerOuterClass.Feature.Type result = cv.scanner.v1.ScannerOuterClass.Feature.Type.forNumber(type_);
+        return result == null ? cv.scanner.v1.ScannerOuterClass.Feature.Type.UNRECOGNIZED : result;
       }
       /**
        * <pre>
@@ -10597,11 +10629,11 @@ public final class Scanner {
        * @param value The type to set.
        * @return This builder for chaining.
        */
-      public Builder setType(cv.scanner.v1.Scanner.Feature.Type value) {
+      public Builder setType(cv.scanner.v1.ScannerOuterClass.Feature.Type value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         type_ = value.getNumber();
         onChanged();
         return this;
@@ -10615,7 +10647,7 @@ public final class Scanner {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         type_ = 0;
         onChanged();
         return this;
@@ -10623,11 +10655,6 @@ public final class Scanner {
 
       private int maxResults_ ;
       /**
-       * <pre>
-       * Maximum number of results of this type. Does not apply to
-       * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
-       * </pre>
-       *
        * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
        * @return The maxResults.
        */
@@ -10636,11 +10663,6 @@ public final class Scanner {
         return maxResults_;
       }
       /**
-       * <pre>
-       * Maximum number of results of this type. Does not apply to
-       * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
-       * </pre>
-       *
        * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
        * @param value The maxResults to set.
        * @return This builder for chaining.
@@ -10648,20 +10670,16 @@ public final class Scanner {
       public Builder setMaxResults(int value) {
         
         maxResults_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
       /**
-       * <pre>
-       * Maximum number of results of this type. Does not apply to
-       * `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
-       * </pre>
-       *
        * <code>int32 max_results = 2 [json_name = "maxResults"];</code>
        * @return This builder for chaining.
        */
       public Builder clearMaxResults() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         maxResults_ = 0;
         onChanged();
         return this;
@@ -10683,12 +10701,12 @@ public final class Scanner {
     }
 
     // @@protoc_insertion_point(class_scope:cv.scanner.v1.Feature)
-    private static final cv.scanner.v1.Scanner.Feature DEFAULT_INSTANCE;
+    private static final cv.scanner.v1.ScannerOuterClass.Feature DEFAULT_INSTANCE;
     static {
-      DEFAULT_INSTANCE = new cv.scanner.v1.Scanner.Feature();
+      DEFAULT_INSTANCE = new cv.scanner.v1.ScannerOuterClass.Feature();
     }
 
-    public static cv.scanner.v1.Scanner.Feature getDefaultInstance() {
+    public static cv.scanner.v1.ScannerOuterClass.Feature getDefaultInstance() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10724,7 +10742,7 @@ public final class Scanner {
     }
 
     @java.lang.Override
-    public cv.scanner.v1.Scanner.Feature getDefaultInstanceForType() {
+    public cv.scanner.v1.ScannerOuterClass.Feature getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -10801,12 +10819,12 @@ public final class Scanner {
       "NAME\020\014\022\022\n\016POSITION_TITLE\020\r\022\010\n\004DATE\020\016\022\022\n\016" +
       "INSTITUTE_NAME\020\017\022\022\n\016INSTITUTE_TYPE\020\020\022\025\n\021" +
       "AREA_OF_EDUCATION\020\021\022\n\n\006DEGREE\020\022\022\021\n\rAVERA" +
-      "GE_GRADE\020\023\022\010\n\004NAME\020\024\022\t\n\005LEVEL\020\0252p\n\tCvSca" +
-      "nner\022c\n\006ScanCV\022\034.cv.scanner.v1.ScanCVReq" +
-      "uest\032\035.cv.scanner.v1.ScanCVResponse\"\034\202\323\344" +
-      "\223\002\026:\001*\"\021/v1/document:scanB1Z/github.com/" +
-      "e-conomic/vmlapis/gen/go/cv/cv/v1;cvb\006pr" +
-      "oto3"
+      "GE_GRADE\020\023\022\010\n\004NAME\020\024\022\t\n\005LEVEL\020\0252n\n\007Scann" +
+      "er\022c\n\006ScanCV\022\034.cv.scanner.v1.ScanCVReque" +
+      "st\032\035.cv.scanner.v1.ScanCVResponse\"\034\202\323\344\223\002" +
+      "\026:\001*\"\021/v1/document:scanB6Z4github.com/e-" +
+      "conomic/vmlapis/gen/go/cv/scanner/v1;cvb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

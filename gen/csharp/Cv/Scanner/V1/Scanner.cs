@@ -66,11 +66,11 @@ namespace Cv.Scanner.V1 {
             "T1lFUl9OQU1FEAwSEgoOUE9TSVRJT05fVElUTEUQDRIICgREQVRFEA4SEgoO",
             "SU5TVElUVVRFX05BTUUQDxISCg5JTlNUSVRVVEVfVFlQRRAQEhUKEUFSRUFf",
             "T0ZfRURVQ0FUSU9OEBESCgoGREVHUkVFEBISEQoNQVZFUkFHRV9HUkFERRAT",
-            "EggKBE5BTUUQFBIJCgVMRVZFTBAVMnAKCUN2U2Nhbm5lchJjCgZTY2FuQ1YS",
-            "HC5jdi5zY2FubmVyLnYxLlNjYW5DVlJlcXVlc3QaHS5jdi5zY2FubmVyLnYx",
-            "LlNjYW5DVlJlc3BvbnNlIhyC0+STAhY6ASoiES92MS9kb2N1bWVudDpzY2Fu",
-            "QjFaL2dpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2N2L2N2",
-            "L3YxO2N2YgZwcm90bzM="));
+            "EggKBE5BTUUQFBIJCgVMRVZFTBAVMm4KB1NjYW5uZXISYwoGU2NhbkNWEhwu",
+            "Y3Yuc2Nhbm5lci52MS5TY2FuQ1ZSZXF1ZXN0Gh0uY3Yuc2Nhbm5lci52MS5T",
+            "Y2FuQ1ZSZXNwb25zZSIcgtPkkwIWOgEqIhEvdjEvZG9jdW1lbnQ6c2NhbkI2",
+            "WjRnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9jdi9zY2Fu",
+            "bmVyL3YxO2N2YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.HttpReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1120,10 +1120,6 @@ namespace Cv.Scanner.V1 {
     /// <summary>Field number for the "max_results" field.</summary>
     public const int MaxResultsFieldNumber = 2;
     private int maxResults_;
-    /// <summary>
-    /// Maximum number of results of this type. Does not apply to
-    /// `TEXT_ANNOTATION` or `DOCUMENT_TYPE`.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxResults {

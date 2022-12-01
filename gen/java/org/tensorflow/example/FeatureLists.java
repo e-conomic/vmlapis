@@ -67,6 +67,7 @@ private static final long serialVersionUID = 0L;
                 com.google.protobuf.WireFormat.FieldType.MESSAGE,
                 org.tensorflow.example.FeatureList.getDefaultInstance());
   }
+  @SuppressWarnings("serial")
   private com.google.protobuf.MapField<
       java.lang.String, org.tensorflow.example.FeatureList> featureList_;
   private com.google.protobuf.MapField<java.lang.String, org.tensorflow.example.FeatureList>
@@ -77,7 +78,6 @@ private static final long serialVersionUID = 0L;
     }
     return featureList_;
   }
-
   public int getFeatureListCount() {
     return internalGetFeatureList().getMap().size();
   }
@@ -88,7 +88,6 @@ private static final long serialVersionUID = 0L;
    *
    * <code>map&lt;string, .tensorflow.FeatureList&gt; feature_list = 1 [json_name = "featureList"];</code>
    */
-
   @java.lang.Override
   public boolean containsFeatureList(
       java.lang.String key) {
@@ -111,7 +110,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .tensorflow.FeatureList&gt; feature_list = 1 [json_name = "featureList"];</code>
    */
   @java.lang.Override
-
   public java.util.Map<java.lang.String, org.tensorflow.example.FeatureList> getFeatureListMap() {
     return internalGetFeatureList().getMap();
   }
@@ -123,10 +121,11 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .tensorflow.FeatureList&gt; feature_list = 1 [json_name = "featureList"];</code>
    */
   @java.lang.Override
-
-  public org.tensorflow.example.FeatureList getFeatureListOrDefault(
+  public /* nullable */
+org.tensorflow.example.FeatureList getFeatureListOrDefault(
       java.lang.String key,
-      org.tensorflow.example.FeatureList defaultValue) {
+      /* nullable */
+org.tensorflow.example.FeatureList defaultValue) {
     if (key == null) { throw new NullPointerException("map key"); }
     java.util.Map<java.lang.String, org.tensorflow.example.FeatureList> map =
         internalGetFeatureList().getMap();
@@ -140,7 +139,6 @@ private static final long serialVersionUID = 0L;
    * <code>map&lt;string, .tensorflow.FeatureList&gt; feature_list = 1 [json_name = "featureList"];</code>
    */
   @java.lang.Override
-
   public org.tensorflow.example.FeatureList getFeatureListOrThrow(
       java.lang.String key) {
     if (key == null) { throw new NullPointerException("map key"); }
@@ -373,6 +371,7 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       internalGetMutableFeatureList().clear();
       return this;
     }
@@ -400,11 +399,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.tensorflow.example.FeatureLists buildPartial() {
       org.tensorflow.example.FeatureLists result = new org.tensorflow.example.FeatureLists(this);
-      int from_bitField0_ = bitField0_;
-      result.featureList_ = internalGetFeatureList();
-      result.featureList_.makeImmutable();
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(org.tensorflow.example.FeatureLists result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.featureList_ = internalGetFeatureList();
+        result.featureList_.makeImmutable();
+      }
     }
 
     @java.lang.Override
@@ -453,6 +458,7 @@ private static final long serialVersionUID = 0L;
       if (other == org.tensorflow.example.FeatureLists.getDefaultInstance()) return this;
       internalGetMutableFeatureList().mergeFrom(
           other.internalGetFeatureList());
+      bitField0_ |= 0x00000001;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -485,6 +491,7 @@ private static final long serialVersionUID = 0L;
                   FeatureListDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
               internalGetMutableFeatureList().getMutableMap().put(
                   featureList__.getKey(), featureList__.getValue());
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -507,7 +514,7 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.MapField<
         java.lang.String, org.tensorflow.example.FeatureList> featureList_;
     private com.google.protobuf.MapField<java.lang.String, org.tensorflow.example.FeatureList>
-    internalGetFeatureList() {
+        internalGetFeatureList() {
       if (featureList_ == null) {
         return com.google.protobuf.MapField.emptyMapField(
             FeatureListDefaultEntryHolder.defaultEntry);
@@ -515,8 +522,7 @@ private static final long serialVersionUID = 0L;
       return featureList_;
     }
     private com.google.protobuf.MapField<java.lang.String, org.tensorflow.example.FeatureList>
-    internalGetMutableFeatureList() {
-      onChanged();;
+        internalGetMutableFeatureList() {
       if (featureList_ == null) {
         featureList_ = com.google.protobuf.MapField.newMapField(
             FeatureListDefaultEntryHolder.defaultEntry);
@@ -524,9 +530,10 @@ private static final long serialVersionUID = 0L;
       if (!featureList_.isMutable()) {
         featureList_ = featureList_.copy();
       }
+      bitField0_ |= 0x00000001;
+      onChanged();
       return featureList_;
     }
-
     public int getFeatureListCount() {
       return internalGetFeatureList().getMap().size();
     }
@@ -537,7 +544,6 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .tensorflow.FeatureList&gt; feature_list = 1 [json_name = "featureList"];</code>
      */
-
     @java.lang.Override
     public boolean containsFeatureList(
         java.lang.String key) {
@@ -560,7 +566,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .tensorflow.FeatureList&gt; feature_list = 1 [json_name = "featureList"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, org.tensorflow.example.FeatureList> getFeatureListMap() {
       return internalGetFeatureList().getMap();
     }
@@ -572,10 +577,11 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .tensorflow.FeatureList&gt; feature_list = 1 [json_name = "featureList"];</code>
      */
     @java.lang.Override
-
-    public org.tensorflow.example.FeatureList getFeatureListOrDefault(
+    public /* nullable */
+org.tensorflow.example.FeatureList getFeatureListOrDefault(
         java.lang.String key,
-        org.tensorflow.example.FeatureList defaultValue) {
+        /* nullable */
+org.tensorflow.example.FeatureList defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, org.tensorflow.example.FeatureList> map =
           internalGetFeatureList().getMap();
@@ -589,7 +595,6 @@ private static final long serialVersionUID = 0L;
      * <code>map&lt;string, .tensorflow.FeatureList&gt; feature_list = 1 [json_name = "featureList"];</code>
      */
     @java.lang.Override
-
     public org.tensorflow.example.FeatureList getFeatureListOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -600,8 +605,8 @@ private static final long serialVersionUID = 0L;
       }
       return map.get(key);
     }
-
     public Builder clearFeatureList() {
+      bitField0_ = (bitField0_ & ~0x00000001);
       internalGetMutableFeatureList().getMutableMap()
           .clear();
       return this;
@@ -613,7 +618,6 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .tensorflow.FeatureList&gt; feature_list = 1 [json_name = "featureList"];</code>
      */
-
     public Builder removeFeatureList(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -626,7 +630,8 @@ private static final long serialVersionUID = 0L;
      */
     @java.lang.Deprecated
     public java.util.Map<java.lang.String, org.tensorflow.example.FeatureList>
-    getMutableFeatureList() {
+        getMutableFeatureList() {
+      bitField0_ |= 0x00000001;
       return internalGetMutableFeatureList().getMutableMap();
     }
     /**
@@ -640,12 +645,10 @@ private static final long serialVersionUID = 0L;
         java.lang.String key,
         org.tensorflow.example.FeatureList value) {
       if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+      if (value == null) { throw new NullPointerException("map value"); }
       internalGetMutableFeatureList().getMutableMap()
           .put(key, value);
+      bitField0_ |= 0x00000001;
       return this;
     }
     /**
@@ -655,11 +658,11 @@ private static final long serialVersionUID = 0L;
      *
      * <code>map&lt;string, .tensorflow.FeatureList&gt; feature_list = 1 [json_name = "featureList"];</code>
      */
-
     public Builder putAllFeatureList(
         java.util.Map<java.lang.String, org.tensorflow.example.FeatureList> values) {
       internalGetMutableFeatureList().getMutableMap()
           .putAll(values);
+      bitField0_ |= 0x00000001;
       return this;
     }
     @java.lang.Override

@@ -45,6 +45,7 @@ private static final long serialVersionUID = 0L;
   }
 
   public static final int VALUE_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
   private com.google.protobuf.Internal.LongList value_;
   /**
    * <code>repeated int64 value = 1 [json_name = "value", packed = true];</code>
@@ -277,8 +278,8 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
+      bitField0_ = 0;
       value_ = emptyLongList();
-      bitField0_ = (bitField0_ & ~0x00000001);
       return this;
     }
 
@@ -305,14 +306,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.tensorflow.example.Int64List buildPartial() {
       org.tensorflow.example.Int64List result = new org.tensorflow.example.Int64List(this);
-      int from_bitField0_ = bitField0_;
+      buildPartialRepeatedFields(result);
+      if (bitField0_ != 0) { buildPartial0(result); }
+      onBuilt();
+      return result;
+    }
+
+    private void buildPartialRepeatedFields(org.tensorflow.example.Int64List result) {
       if (((bitField0_ & 0x00000001) != 0)) {
         value_.makeImmutable();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
       result.value_ = value_;
-      onBuilt();
-      return result;
+    }
+
+    private void buildPartial0(org.tensorflow.example.Int64List result) {
+      int from_bitField0_ = bitField0_;
     }
 
     @java.lang.Override
@@ -433,7 +442,7 @@ private static final long serialVersionUID = 0L;
       if (!((bitField0_ & 0x00000001) != 0)) {
         value_ = mutableCopy(value_);
         bitField0_ |= 0x00000001;
-       }
+      }
     }
     /**
      * <code>repeated int64 value = 1 [json_name = "value", packed = true];</code>
@@ -467,6 +476,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setValue(
         int index, long value) {
+      
       ensureValueIsMutable();
       value_.setLong(index, value);
       onChanged();
@@ -478,6 +488,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addValue(long value) {
+      
       ensureValueIsMutable();
       value_.addLong(value);
       onChanged();

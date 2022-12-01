@@ -94,7 +94,8 @@ public final class AccessOuterClass {
     }
 
     public static final int SUB_FIELD_NUMBER = 1;
-    private volatile java.lang.Object sub_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object sub_ = "";
     /**
      * <pre>
      * Principal / Data Subject, ie. user id
@@ -142,7 +143,7 @@ public final class AccessOuterClass {
     }
 
     public static final int EXP_FIELD_NUMBER = 2;
-    private long exp_;
+    private long exp_ = 0L;
     /**
      * <pre>
      * Timestamp for when this key expires
@@ -357,10 +358,9 @@ public final class AccessOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         sub_ = "";
-
         exp_ = 0L;
-
         return this;
       }
 
@@ -387,10 +387,19 @@ public final class AccessOuterClass {
       @java.lang.Override
       public ssn.access.v1.AccessOuterClass.ValetKeyRequest buildPartial() {
         ssn.access.v1.AccessOuterClass.ValetKeyRequest result = new ssn.access.v1.AccessOuterClass.ValetKeyRequest(this);
-        result.sub_ = sub_;
-        result.exp_ = exp_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.access.v1.AccessOuterClass.ValetKeyRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.sub_ = sub_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.exp_ = exp_;
+        }
       }
 
       @java.lang.Override
@@ -439,6 +448,7 @@ public final class AccessOuterClass {
         if (other == ssn.access.v1.AccessOuterClass.ValetKeyRequest.getDefaultInstance()) return this;
         if (!other.getSub().isEmpty()) {
           sub_ = other.sub_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getExp() != 0L) {
@@ -472,12 +482,12 @@ public final class AccessOuterClass {
                 break;
               case 10: {
                 sub_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 exp_ = input.readInt64();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -495,6 +505,7 @@ public final class AccessOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object sub_ = "";
       /**
@@ -552,11 +563,9 @@ public final class AccessOuterClass {
        */
       public Builder setSub(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         sub_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -570,8 +579,8 @@ public final class AccessOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSub() {
-        
         sub_ = getDefaultInstance().getSub();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -587,12 +596,10 @@ public final class AccessOuterClass {
        */
       public Builder setSubBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         sub_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -626,6 +633,7 @@ public final class AccessOuterClass {
       public Builder setExp(long value) {
         
         exp_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -640,7 +648,7 @@ public final class AccessOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearExp() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         exp_ = 0L;
         onChanged();
         return this;
@@ -796,7 +804,8 @@ public final class AccessOuterClass {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      * Key for this key
@@ -842,7 +851,8 @@ public final class AccessOuterClass {
     }
 
     public static final int TOKEN_FIELD_NUMBER = 2;
-    private volatile java.lang.Object token_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object token_ = "";
     /**
      * <pre>
      * A JWT Token
@@ -1084,10 +1094,9 @@ public final class AccessOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         token_ = "";
-
         return this;
       }
 
@@ -1114,10 +1123,19 @@ public final class AccessOuterClass {
       @java.lang.Override
       public ssn.access.v1.AccessOuterClass.ValetKeyResponse buildPartial() {
         ssn.access.v1.AccessOuterClass.ValetKeyResponse result = new ssn.access.v1.AccessOuterClass.ValetKeyResponse(this);
-        result.id_ = id_;
-        result.token_ = token_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.access.v1.AccessOuterClass.ValetKeyResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.token_ = token_;
+        }
       }
 
       @java.lang.Override
@@ -1166,10 +1184,12 @@ public final class AccessOuterClass {
         if (other == ssn.access.v1.AccessOuterClass.ValetKeyResponse.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getToken().isEmpty()) {
           token_ = other.token_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1200,12 +1220,12 @@ public final class AccessOuterClass {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 token_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -1223,6 +1243,7 @@ public final class AccessOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -1277,11 +1298,9 @@ public final class AccessOuterClass {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1294,8 +1313,8 @@ public final class AccessOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1310,12 +1329,10 @@ public final class AccessOuterClass {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1373,11 +1390,9 @@ public final class AccessOuterClass {
        */
       public Builder setToken(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         token_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1390,8 +1405,8 @@ public final class AccessOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearToken() {
-        
         token_ = getDefaultInstance().getToken();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1406,12 +1421,10 @@ public final class AccessOuterClass {
        */
       public Builder setTokenBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         token_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }

@@ -94,7 +94,8 @@ public final class BqTable {
     }
 
     public static final int TABLE_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object tableName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tableName_ = "";
     /**
      * <pre>
      * Specifies a name of table in BigQuery for the message.
@@ -142,7 +143,7 @@ public final class BqTable {
     }
 
     public static final int USE_JSON_NAMES_FIELD_NUMBER = 2;
-    private boolean useJsonNames_;
+    private boolean useJsonNames_ = false;
     /**
      * <pre>
      * If true, BigQuery field names will default to a field's JSON name,
@@ -356,10 +357,9 @@ public final class BqTable {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         tableName_ = "";
-
         useJsonNames_ = false;
-
         return this;
       }
 
@@ -386,10 +386,19 @@ public final class BqTable {
       @java.lang.Override
       public gen_bq_schema.BqTable.BigQueryMessageOptions buildPartial() {
         gen_bq_schema.BqTable.BigQueryMessageOptions result = new gen_bq_schema.BqTable.BigQueryMessageOptions(this);
-        result.tableName_ = tableName_;
-        result.useJsonNames_ = useJsonNames_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(gen_bq_schema.BqTable.BigQueryMessageOptions result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tableName_ = tableName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.useJsonNames_ = useJsonNames_;
+        }
       }
 
       @java.lang.Override
@@ -438,6 +447,7 @@ public final class BqTable {
         if (other == gen_bq_schema.BqTable.BigQueryMessageOptions.getDefaultInstance()) return this;
         if (!other.getTableName().isEmpty()) {
           tableName_ = other.tableName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getUseJsonNames() != false) {
@@ -471,12 +481,12 @@ public final class BqTable {
                 break;
               case 10: {
                 tableName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 useJsonNames_ = input.readBool();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -494,6 +504,7 @@ public final class BqTable {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object tableName_ = "";
       /**
@@ -551,11 +562,9 @@ public final class BqTable {
        */
       public Builder setTableName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         tableName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -569,8 +578,8 @@ public final class BqTable {
        * @return This builder for chaining.
        */
       public Builder clearTableName() {
-        
         tableName_ = getDefaultInstance().getTableName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -586,12 +595,10 @@ public final class BqTable {
        */
       public Builder setTableNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         tableName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -623,6 +630,7 @@ public final class BqTable {
       public Builder setUseJsonNames(boolean value) {
         
         useJsonNames_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -636,7 +644,7 @@ public final class BqTable {
        * @return This builder for chaining.
        */
       public Builder clearUseJsonNames() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         useJsonNames_ = false;
         onChanged();
         return this;

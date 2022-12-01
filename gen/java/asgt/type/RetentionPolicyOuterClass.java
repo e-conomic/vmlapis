@@ -65,7 +65,7 @@ public final class RetentionPolicyOuterClass {
     }
 
     public static final int MAX_DAYS_FIELD_NUMBER = 1;
-    private long maxDays_;
+    private long maxDays_ = 0L;
     /**
      * <code>int64 max_days = 1 [json_name = "maxDays"];</code>
      * @return The maxDays.
@@ -264,8 +264,8 @@ public final class RetentionPolicyOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         maxDays_ = 0L;
-
         return this;
       }
 
@@ -292,9 +292,16 @@ public final class RetentionPolicyOuterClass {
       @java.lang.Override
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy buildPartial() {
         asgt.type.RetentionPolicyOuterClass.RetentionPolicy result = new asgt.type.RetentionPolicyOuterClass.RetentionPolicy(this);
-        result.maxDays_ = maxDays_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.RetentionPolicyOuterClass.RetentionPolicy result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.maxDays_ = maxDays_;
+        }
       }
 
       @java.lang.Override
@@ -372,7 +379,7 @@ public final class RetentionPolicyOuterClass {
                 break;
               case 8: {
                 maxDays_ = input.readInt64();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               default: {
@@ -390,6 +397,7 @@ public final class RetentionPolicyOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private long maxDays_ ;
       /**
@@ -408,6 +416,7 @@ public final class RetentionPolicyOuterClass {
       public Builder setMaxDays(long value) {
         
         maxDays_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -416,7 +425,7 @@ public final class RetentionPolicyOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMaxDays() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         maxDays_ = 0L;
         onChanged();
         return this;

@@ -66,7 +66,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public org.tensorflow.example.FeaturesOrBuilder getFeaturesOrBuilder() {
-    return getFeatures();
+    return features_ == null ? org.tensorflow.example.Features.getDefaultInstance() : features_;
   }
 
   private byte memoizedIsInitialized = -1;
@@ -262,10 +262,10 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public Builder clear() {
       super.clear();
-      if (featuresBuilder_ == null) {
-        features_ = null;
-      } else {
-        features_ = null;
+      bitField0_ = 0;
+      features_ = null;
+      if (featuresBuilder_ != null) {
+        featuresBuilder_.dispose();
         featuresBuilder_ = null;
       }
       return this;
@@ -294,13 +294,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public org.tensorflow.example.Example buildPartial() {
       org.tensorflow.example.Example result = new org.tensorflow.example.Example(this);
-      if (featuresBuilder_ == null) {
-        result.features_ = features_;
-      } else {
-        result.features_ = featuresBuilder_.build();
-      }
+      if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartial0(org.tensorflow.example.Example result) {
+      int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.features_ = featuresBuilder_ == null
+            ? features_
+            : featuresBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -380,7 +385,7 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   getFeaturesFieldBuilder().getBuilder(),
                   extensionRegistry);
-
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -398,6 +403,7 @@ private static final long serialVersionUID = 0L;
       } // finally
       return this;
     }
+    private int bitField0_;
 
     private org.tensorflow.example.Features features_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -407,7 +413,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the features field is set.
      */
     public boolean hasFeatures() {
-      return featuresBuilder_ != null || features_ != null;
+      return ((bitField0_ & 0x00000001) != 0);
     }
     /**
      * <code>.tensorflow.Features features = 1 [json_name = "features"];</code>
@@ -429,11 +435,11 @@ private static final long serialVersionUID = 0L;
           throw new NullPointerException();
         }
         features_ = value;
-        onChanged();
       } else {
         featuresBuilder_.setMessage(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -443,11 +449,11 @@ private static final long serialVersionUID = 0L;
         org.tensorflow.example.Features.Builder builderForValue) {
       if (featuresBuilder_ == null) {
         features_ = builderForValue.build();
-        onChanged();
       } else {
         featuresBuilder_.setMessage(builderForValue.build());
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
@@ -455,38 +461,38 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeFeatures(org.tensorflow.example.Features value) {
       if (featuresBuilder_ == null) {
-        if (features_ != null) {
-          features_ =
-            org.tensorflow.example.Features.newBuilder(features_).mergeFrom(value).buildPartial();
+        if (((bitField0_ & 0x00000001) != 0) &&
+          features_ != null &&
+          features_ != org.tensorflow.example.Features.getDefaultInstance()) {
+          getFeaturesBuilder().mergeFrom(value);
         } else {
           features_ = value;
         }
-        onChanged();
       } else {
         featuresBuilder_.mergeFrom(value);
       }
-
+      bitField0_ |= 0x00000001;
+      onChanged();
       return this;
     }
     /**
      * <code>.tensorflow.Features features = 1 [json_name = "features"];</code>
      */
     public Builder clearFeatures() {
-      if (featuresBuilder_ == null) {
-        features_ = null;
-        onChanged();
-      } else {
-        features_ = null;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      features_ = null;
+      if (featuresBuilder_ != null) {
+        featuresBuilder_.dispose();
         featuresBuilder_ = null;
       }
-
+      onChanged();
       return this;
     }
     /**
      * <code>.tensorflow.Features features = 1 [json_name = "features"];</code>
      */
     public org.tensorflow.example.Features.Builder getFeaturesBuilder() {
-      
+      bitField0_ |= 0x00000001;
       onChanged();
       return getFeaturesFieldBuilder().getBuilder();
     }

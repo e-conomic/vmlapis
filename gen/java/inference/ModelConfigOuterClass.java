@@ -622,7 +622,8 @@ public final class ModelConfigOuterClass {
       }
 
       public static final int NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object name_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object name_ = "";
       /**
        * <pre>
        *&#64;&#64;  .. cpp:var:: string name
@@ -674,7 +675,7 @@ public final class ModelConfigOuterClass {
       }
 
       public static final int GLOBAL_FIELD_NUMBER = 2;
-      private boolean global_;
+      private boolean global_ = false;
       /**
        * <pre>
        *&#64;&#64;  .. cpp:var:: bool global
@@ -695,7 +696,7 @@ public final class ModelConfigOuterClass {
       }
 
       public static final int COUNT_FIELD_NUMBER = 3;
-      private int count_;
+      private int count_ = 0;
       /**
        * <pre>
        *&#64;&#64;  .. cpp:var:: uint32 count
@@ -930,12 +931,10 @@ public final class ModelConfigOuterClass {
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           name_ = "";
-
           global_ = false;
-
           count_ = 0;
-
           return this;
         }
 
@@ -962,11 +961,22 @@ public final class ModelConfigOuterClass {
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelRateLimiter.Resource buildPartial() {
           inference.ModelConfigOuterClass.ModelRateLimiter.Resource result = new inference.ModelConfigOuterClass.ModelRateLimiter.Resource(this);
-          result.name_ = name_;
-          result.global_ = global_;
-          result.count_ = count_;
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelRateLimiter.Resource result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.name_ = name_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.global_ = global_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.count_ = count_;
+          }
         }
 
         @java.lang.Override
@@ -1015,6 +1025,7 @@ public final class ModelConfigOuterClass {
           if (other == inference.ModelConfigOuterClass.ModelRateLimiter.Resource.getDefaultInstance()) return this;
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (other.getGlobal() != false) {
@@ -1051,17 +1062,17 @@ public final class ModelConfigOuterClass {
                   break;
                 case 10: {
                   name_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 16: {
                   global_ = input.readBool();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 16
                 case 24: {
                   count_ = input.readUInt32();
-
+                  bitField0_ |= 0x00000004;
                   break;
                 } // case 24
                 default: {
@@ -1079,6 +1090,7 @@ public final class ModelConfigOuterClass {
           } // finally
           return this;
         }
+        private int bitField0_;
 
         private java.lang.Object name_ = "";
         /**
@@ -1142,11 +1154,9 @@ public final class ModelConfigOuterClass {
          */
         public Builder setName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -1162,8 +1172,8 @@ public final class ModelConfigOuterClass {
          * @return This builder for chaining.
          */
         public Builder clearName() {
-          
           name_ = getDefaultInstance().getName();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -1181,12 +1191,10 @@ public final class ModelConfigOuterClass {
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -1228,6 +1236,7 @@ public final class ModelConfigOuterClass {
         public Builder setGlobal(boolean value) {
           
           global_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -1246,7 +1255,7 @@ public final class ModelConfigOuterClass {
          * @return This builder for chaining.
          */
         public Builder clearGlobal() {
-          
+          bitField0_ = (bitField0_ & ~0x00000002);
           global_ = false;
           onChanged();
           return this;
@@ -1285,6 +1294,7 @@ public final class ModelConfigOuterClass {
         public Builder setCount(int value) {
           
           count_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -1301,7 +1311,7 @@ public final class ModelConfigOuterClass {
          * @return This builder for chaining.
          */
         public Builder clearCount() {
-          
+          bitField0_ = (bitField0_ & ~0x00000004);
           count_ = 0;
           onChanged();
           return this;
@@ -1371,6 +1381,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int RESOURCES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<inference.ModelConfigOuterClass.ModelRateLimiter.Resource> resources_;
     /**
      * <pre>
@@ -1461,7 +1472,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int PRIORITY_FIELD_NUMBER = 2;
-    private int priority_;
+    private int priority_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint32 priority
@@ -1693,6 +1704,7 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (resourcesBuilder_ == null) {
           resources_ = java.util.Collections.emptyList();
         } else {
@@ -1701,7 +1713,6 @@ public final class ModelConfigOuterClass {
         }
         bitField0_ = (bitField0_ & ~0x00000001);
         priority_ = 0;
-
         return this;
       }
 
@@ -1728,7 +1739,13 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelRateLimiter buildPartial() {
         inference.ModelConfigOuterClass.ModelRateLimiter result = new inference.ModelConfigOuterClass.ModelRateLimiter(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelRateLimiter result) {
         if (resourcesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             resources_ = java.util.Collections.unmodifiableList(resources_);
@@ -1738,9 +1755,13 @@ public final class ModelConfigOuterClass {
         } else {
           result.resources_ = resourcesBuilder_.build();
         }
-        result.priority_ = priority_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelRateLimiter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.priority_ = priority_;
+        }
       }
 
       @java.lang.Override
@@ -1857,7 +1878,7 @@ public final class ModelConfigOuterClass {
               } // case 10
               case 16: {
                 priority_ = input.readUInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -2336,6 +2357,7 @@ public final class ModelConfigOuterClass {
       public Builder setPriority(int value) {
         
         priority_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2355,7 +2377,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPriority() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         priority_ = 0;
         onChanged();
         return this;
@@ -3262,7 +3284,7 @@ public final class ModelConfigOuterClass {
       }
 
       public static final int KIND_FIELD_NUMBER = 1;
-      private int kind_;
+      private int kind_ = 0;
       /**
        * <pre>
        *&#64;&#64;  .. cpp:var:: SecondaryDeviceKind kind
@@ -3289,13 +3311,12 @@ public final class ModelConfigOuterClass {
        * @return The kind.
        */
       @java.lang.Override public inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice.SecondaryDeviceKind getKind() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice.SecondaryDeviceKind result = inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice.SecondaryDeviceKind.valueOf(kind_);
+        inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice.SecondaryDeviceKind result = inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice.SecondaryDeviceKind.forNumber(kind_);
         return result == null ? inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice.SecondaryDeviceKind.UNRECOGNIZED : result;
       }
 
       public static final int DEVICE_ID_FIELD_NUMBER = 2;
-      private long deviceId_;
+      private long deviceId_ = 0L;
       /**
        * <pre>
        *&#64;&#64;  .. cpp:var:: int64 device_id
@@ -3519,10 +3540,9 @@ public final class ModelConfigOuterClass {
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           kind_ = 0;
-
           deviceId_ = 0L;
-
           return this;
         }
 
@@ -3549,10 +3569,19 @@ public final class ModelConfigOuterClass {
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice buildPartial() {
           inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice result = new inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice(this);
-          result.kind_ = kind_;
-          result.deviceId_ = deviceId_;
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.kind_ = kind_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.deviceId_ = deviceId_;
+          }
         }
 
         @java.lang.Override
@@ -3633,12 +3662,12 @@ public final class ModelConfigOuterClass {
                   break;
                 case 8: {
                   kind_ = input.readEnum();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 8
                 case 16: {
                   deviceId_ = input.readInt64();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 16
                 default: {
@@ -3656,6 +3685,7 @@ public final class ModelConfigOuterClass {
           } // finally
           return this;
         }
+        private int bitField0_;
 
         private int kind_ = 0;
         /**
@@ -3685,8 +3715,8 @@ public final class ModelConfigOuterClass {
          * @return This builder for chaining.
          */
         public Builder setKindValue(int value) {
-          
           kind_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -3703,8 +3733,7 @@ public final class ModelConfigOuterClass {
          */
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice.SecondaryDeviceKind getKind() {
-          @SuppressWarnings("deprecation")
-          inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice.SecondaryDeviceKind result = inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice.SecondaryDeviceKind.valueOf(kind_);
+          inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice.SecondaryDeviceKind result = inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice.SecondaryDeviceKind.forNumber(kind_);
           return result == null ? inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice.SecondaryDeviceKind.UNRECOGNIZED : result;
         }
         /**
@@ -3723,7 +3752,7 @@ public final class ModelConfigOuterClass {
           if (value == null) {
             throw new NullPointerException();
           }
-          
+          bitField0_ |= 0x00000001;
           kind_ = value.getNumber();
           onChanged();
           return this;
@@ -3740,7 +3769,7 @@ public final class ModelConfigOuterClass {
          * @return This builder for chaining.
          */
         public Builder clearKind() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           kind_ = 0;
           onChanged();
           return this;
@@ -3777,6 +3806,7 @@ public final class ModelConfigOuterClass {
         public Builder setDeviceId(long value) {
           
           deviceId_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -3792,7 +3822,7 @@ public final class ModelConfigOuterClass {
          * @return This builder for chaining.
          */
         public Builder clearDeviceId() {
-          
+          bitField0_ = (bitField0_ & ~0x00000002);
           deviceId_ = 0L;
           onChanged();
           return this;
@@ -3862,7 +3892,8 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string name
@@ -3920,7 +3951,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int KIND_FIELD_NUMBER = 4;
-    private int kind_;
+    private int kind_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: Kind kind
@@ -3953,13 +3984,12 @@ public final class ModelConfigOuterClass {
      * @return The kind.
      */
     @java.lang.Override public inference.ModelConfigOuterClass.ModelInstanceGroup.Kind getKind() {
-      @SuppressWarnings("deprecation")
-      inference.ModelConfigOuterClass.ModelInstanceGroup.Kind result = inference.ModelConfigOuterClass.ModelInstanceGroup.Kind.valueOf(kind_);
+      inference.ModelConfigOuterClass.ModelInstanceGroup.Kind result = inference.ModelConfigOuterClass.ModelInstanceGroup.Kind.forNumber(kind_);
       return result == null ? inference.ModelConfigOuterClass.ModelInstanceGroup.Kind.UNRECOGNIZED : result;
     }
 
     public static final int COUNT_FIELD_NUMBER = 2;
-    private int count_;
+    private int count_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: int32 count
@@ -4027,10 +4057,11 @@ public final class ModelConfigOuterClass {
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelRateLimiterOrBuilder getRateLimiterOrBuilder() {
-      return getRateLimiter();
+      return rateLimiter_ == null ? inference.ModelConfigOuterClass.ModelRateLimiter.getDefaultInstance() : rateLimiter_;
     }
 
     public static final int GPUS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList gpus_;
     /**
      * <pre>
@@ -4089,6 +4120,7 @@ public final class ModelConfigOuterClass {
     private int gpusMemoizedSerializedSize = -1;
 
     public static final int SECONDARY_DEVICES_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
     private java.util.List<inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice> secondaryDevices_;
     /**
      * <pre>
@@ -4169,6 +4201,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int PROFILE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList profile_;
     /**
      * <pre>
@@ -4260,7 +4293,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int PASSIVE_FIELD_NUMBER = 7;
-    private boolean passive_;
+    private boolean passive_ = false;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: bool passive
@@ -4280,7 +4313,8 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int HOST_POLICY_FIELD_NUMBER = 9;
-    private volatile java.lang.Object hostPolicy_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object hostPolicy_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string host_policy
@@ -4650,33 +4684,27 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         kind_ = 0;
-
         count_ = 0;
-
-        if (rateLimiterBuilder_ == null) {
-          rateLimiter_ = null;
-        } else {
-          rateLimiter_ = null;
+        rateLimiter_ = null;
+        if (rateLimiterBuilder_ != null) {
+          rateLimiterBuilder_.dispose();
           rateLimiterBuilder_ = null;
         }
         gpus_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
         if (secondaryDevicesBuilder_ == null) {
           secondaryDevices_ = java.util.Collections.emptyList();
         } else {
           secondaryDevices_ = null;
           secondaryDevicesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000020);
         profile_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000040);
         passive_ = false;
-
         hostPolicy_ = "";
-
         return this;
       }
 
@@ -4703,38 +4731,56 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelInstanceGroup buildPartial() {
         inference.ModelConfigOuterClass.ModelInstanceGroup result = new inference.ModelConfigOuterClass.ModelInstanceGroup(this);
-        int from_bitField0_ = bitField0_;
-        result.name_ = name_;
-        result.kind_ = kind_;
-        result.count_ = count_;
-        if (rateLimiterBuilder_ == null) {
-          result.rateLimiter_ = rateLimiter_;
-        } else {
-          result.rateLimiter_ = rateLimiterBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000001) != 0)) {
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelInstanceGroup result) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           gpus_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.gpus_ = gpus_;
         if (secondaryDevicesBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             secondaryDevices_ = java.util.Collections.unmodifiableList(secondaryDevices_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.secondaryDevices_ = secondaryDevices_;
         } else {
           result.secondaryDevices_ = secondaryDevicesBuilder_.build();
         }
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000040) != 0)) {
           profile_ = profile_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000040);
         }
         result.profile_ = profile_;
-        result.passive_ = passive_;
-        result.hostPolicy_ = hostPolicy_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelInstanceGroup result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.kind_ = kind_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.count_ = count_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.rateLimiter_ = rateLimiterBuilder_ == null
+              ? rateLimiter_
+              : rateLimiterBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.passive_ = passive_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.hostPolicy_ = hostPolicy_;
+        }
       }
 
       @java.lang.Override
@@ -4783,6 +4829,7 @@ public final class ModelConfigOuterClass {
         if (other == inference.ModelConfigOuterClass.ModelInstanceGroup.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.kind_ != 0) {
@@ -4797,7 +4844,7 @@ public final class ModelConfigOuterClass {
         if (!other.gpus_.isEmpty()) {
           if (gpus_.isEmpty()) {
             gpus_ = other.gpus_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureGpusIsMutable();
             gpus_.addAll(other.gpus_);
@@ -4808,7 +4855,7 @@ public final class ModelConfigOuterClass {
           if (!other.secondaryDevices_.isEmpty()) {
             if (secondaryDevices_.isEmpty()) {
               secondaryDevices_ = other.secondaryDevices_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureSecondaryDevicesIsMutable();
               secondaryDevices_.addAll(other.secondaryDevices_);
@@ -4821,7 +4868,7 @@ public final class ModelConfigOuterClass {
               secondaryDevicesBuilder_.dispose();
               secondaryDevicesBuilder_ = null;
               secondaryDevices_ = other.secondaryDevices_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000020);
               secondaryDevicesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSecondaryDevicesFieldBuilder() : null;
@@ -4833,7 +4880,7 @@ public final class ModelConfigOuterClass {
         if (!other.profile_.isEmpty()) {
           if (profile_.isEmpty()) {
             profile_ = other.profile_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000040);
           } else {
             ensureProfileIsMutable();
             profile_.addAll(other.profile_);
@@ -4845,6 +4892,7 @@ public final class ModelConfigOuterClass {
         }
         if (!other.getHostPolicy().isEmpty()) {
           hostPolicy_ = other.hostPolicy_;
+          bitField0_ |= 0x00000100;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -4875,12 +4923,12 @@ public final class ModelConfigOuterClass {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 count_ = input.readInt32();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 16
               case 24: {
@@ -4901,7 +4949,7 @@ public final class ModelConfigOuterClass {
               } // case 26
               case 32: {
                 kind_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 32
               case 42: {
@@ -4914,12 +4962,12 @@ public final class ModelConfigOuterClass {
                 input.readMessage(
                     getRateLimiterFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 50
               case 56: {
                 passive_ = input.readBool();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 56
               case 66: {
@@ -4937,7 +4985,7 @@ public final class ModelConfigOuterClass {
               } // case 66
               case 74: {
                 hostPolicy_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               default: {
@@ -5028,11 +5076,9 @@ public final class ModelConfigOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5051,8 +5097,8 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -5073,12 +5119,10 @@ public final class ModelConfigOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5117,8 +5161,8 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder setKindValue(int value) {
-        
         kind_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5138,8 +5182,7 @@ public final class ModelConfigOuterClass {
        */
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelInstanceGroup.Kind getKind() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.ModelInstanceGroup.Kind result = inference.ModelConfigOuterClass.ModelInstanceGroup.Kind.valueOf(kind_);
+        inference.ModelConfigOuterClass.ModelInstanceGroup.Kind result = inference.ModelConfigOuterClass.ModelInstanceGroup.Kind.forNumber(kind_);
         return result == null ? inference.ModelConfigOuterClass.ModelInstanceGroup.Kind.UNRECOGNIZED : result;
       }
       /**
@@ -5161,7 +5204,7 @@ public final class ModelConfigOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         kind_ = value.getNumber();
         onChanged();
         return this;
@@ -5181,7 +5224,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKind() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         kind_ = 0;
         onChanged();
         return this;
@@ -5220,6 +5263,7 @@ public final class ModelConfigOuterClass {
       public Builder setCount(int value) {
         
         count_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -5236,7 +5280,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         count_ = 0;
         onChanged();
         return this;
@@ -5259,7 +5303,7 @@ public final class ModelConfigOuterClass {
        * @return Whether the rateLimiter field is set.
        */
       public boolean hasRateLimiter() {
-        return rateLimiterBuilder_ != null || rateLimiter_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -5299,11 +5343,11 @@ public final class ModelConfigOuterClass {
             throw new NullPointerException();
           }
           rateLimiter_ = value;
-          onChanged();
         } else {
           rateLimiterBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -5322,11 +5366,11 @@ public final class ModelConfigOuterClass {
           inference.ModelConfigOuterClass.ModelRateLimiter.Builder builderForValue) {
         if (rateLimiterBuilder_ == null) {
           rateLimiter_ = builderForValue.build();
-          onChanged();
         } else {
           rateLimiterBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -5343,17 +5387,18 @@ public final class ModelConfigOuterClass {
        */
       public Builder mergeRateLimiter(inference.ModelConfigOuterClass.ModelRateLimiter value) {
         if (rateLimiterBuilder_ == null) {
-          if (rateLimiter_ != null) {
-            rateLimiter_ =
-              inference.ModelConfigOuterClass.ModelRateLimiter.newBuilder(rateLimiter_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            rateLimiter_ != null &&
+            rateLimiter_ != inference.ModelConfigOuterClass.ModelRateLimiter.getDefaultInstance()) {
+            getRateLimiterBuilder().mergeFrom(value);
           } else {
             rateLimiter_ = value;
           }
-          onChanged();
         } else {
           rateLimiterBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -5369,14 +5414,13 @@ public final class ModelConfigOuterClass {
        * <code>.inference.ModelRateLimiter rate_limiter = 6 [json_name = "rateLimiter"];</code>
        */
       public Builder clearRateLimiter() {
-        if (rateLimiterBuilder_ == null) {
-          rateLimiter_ = null;
-          onChanged();
-        } else {
-          rateLimiter_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        rateLimiter_ = null;
+        if (rateLimiterBuilder_ != null) {
+          rateLimiterBuilder_.dispose();
           rateLimiterBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -5392,7 +5436,7 @@ public final class ModelConfigOuterClass {
        * <code>.inference.ModelRateLimiter rate_limiter = 6 [json_name = "rateLimiter"];</code>
        */
       public inference.ModelConfigOuterClass.ModelRateLimiter.Builder getRateLimiterBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getRateLimiterFieldBuilder().getBuilder();
       }
@@ -5444,10 +5488,10 @@ public final class ModelConfigOuterClass {
 
       private com.google.protobuf.Internal.IntList gpus_ = emptyIntList();
       private void ensureGpusIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           gpus_ = mutableCopy(gpus_);
-          bitField0_ |= 0x00000001;
-         }
+          bitField0_ |= 0x00000010;
+        }
       }
       /**
        * <pre>
@@ -5465,7 +5509,7 @@ public final class ModelConfigOuterClass {
        */
       public java.util.List<java.lang.Integer>
           getGpusList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
+        return ((bitField0_ & 0x00000010) != 0) ?
                  java.util.Collections.unmodifiableList(gpus_) : gpus_;
       }
       /**
@@ -5521,6 +5565,7 @@ public final class ModelConfigOuterClass {
        */
       public Builder setGpus(
           int index, int value) {
+        
         ensureGpusIsMutable();
         gpus_.setInt(index, value);
         onChanged();
@@ -5542,6 +5587,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder addGpus(int value) {
+        
         ensureGpusIsMutable();
         gpus_.addInt(value);
         onChanged();
@@ -5586,7 +5632,7 @@ public final class ModelConfigOuterClass {
        */
       public Builder clearGpus() {
         gpus_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -5594,9 +5640,9 @@ public final class ModelConfigOuterClass {
       private java.util.List<inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice> secondaryDevices_ =
         java.util.Collections.emptyList();
       private void ensureSecondaryDevicesIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           secondaryDevices_ = new java.util.ArrayList<inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice>(secondaryDevices_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -5834,7 +5880,7 @@ public final class ModelConfigOuterClass {
       public Builder clearSecondaryDevices() {
         if (secondaryDevicesBuilder_ == null) {
           secondaryDevices_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           secondaryDevicesBuilder_.clear();
@@ -5967,7 +6013,7 @@ public final class ModelConfigOuterClass {
           secondaryDevicesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice, inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDevice.Builder, inference.ModelConfigOuterClass.ModelInstanceGroup.SecondaryDeviceOrBuilder>(
                   secondaryDevices_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           secondaryDevices_ = null;
@@ -5977,9 +6023,9 @@ public final class ModelConfigOuterClass {
 
       private com.google.protobuf.LazyStringList profile_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureProfileIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           profile_ = new com.google.protobuf.LazyStringArrayList(profile_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000040;
          }
       }
       /**
@@ -6092,10 +6138,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder setProfile(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureProfileIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureProfileIsMutable();
         profile_.set(index, value);
         onChanged();
         return this;
@@ -6121,10 +6165,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder addProfile(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureProfileIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureProfileIsMutable();
         profile_.add(value);
         onChanged();
         return this;
@@ -6176,7 +6218,7 @@ public final class ModelConfigOuterClass {
        */
       public Builder clearProfile() {
         profile_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000040);
         onChanged();
         return this;
       }
@@ -6201,10 +6243,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder addProfileBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureProfileIsMutable();
         profile_.add(value);
         onChanged();
@@ -6246,6 +6286,7 @@ public final class ModelConfigOuterClass {
       public Builder setPassive(boolean value) {
         
         passive_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -6263,7 +6304,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPassive() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         passive_ = false;
         onChanged();
         return this;
@@ -6340,11 +6381,9 @@ public final class ModelConfigOuterClass {
        */
       public Builder setHostPolicy(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         hostPolicy_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -6363,8 +6402,8 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearHostPolicy() {
-        
         hostPolicy_ = getDefaultInstance().getHostPolicy();
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -6385,12 +6424,10 @@ public final class ModelConfigOuterClass {
        */
       public Builder setHostPolicyBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         hostPolicy_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -6550,6 +6587,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int SHAPE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.LongList shape_;
     /**
      * <pre>
@@ -6811,8 +6849,8 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         shape_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000001);
         return this;
       }
 
@@ -6839,14 +6877,22 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelTensorReshape buildPartial() {
         inference.ModelConfigOuterClass.ModelTensorReshape result = new inference.ModelConfigOuterClass.ModelTensorReshape(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelTensorReshape result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           shape_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.shape_ = shape_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelTensorReshape result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -6967,7 +7013,7 @@ public final class ModelConfigOuterClass {
         if (!((bitField0_ & 0x00000001) != 0)) {
           shape_ = mutableCopy(shape_);
           bitField0_ |= 0x00000001;
-         }
+        }
       }
       /**
        * <pre>
@@ -7029,6 +7075,7 @@ public final class ModelConfigOuterClass {
        */
       public Builder setShape(
           int index, long value) {
+        
         ensureShapeIsMutable();
         shape_.setLong(index, value);
         onChanged();
@@ -7047,6 +7094,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder addShape(long value) {
+        
         ensureShapeIsMutable();
         shape_.addLong(value);
         onChanged();
@@ -7603,7 +7651,8 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string name
@@ -7655,7 +7704,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int DATA_TYPE_FIELD_NUMBER = 2;
-    private int dataType_;
+    private int dataType_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: DataType data_type
@@ -7682,13 +7731,12 @@ public final class ModelConfigOuterClass {
      * @return The dataType.
      */
     @java.lang.Override public inference.ModelConfigOuterClass.DataType getDataType() {
-      @SuppressWarnings("deprecation")
-      inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+      inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
       return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
     }
 
     public static final int FORMAT_FIELD_NUMBER = 3;
-    private int format_;
+    private int format_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: Format format
@@ -7715,12 +7763,12 @@ public final class ModelConfigOuterClass {
      * @return The format.
      */
     @java.lang.Override public inference.ModelConfigOuterClass.ModelInput.Format getFormat() {
-      @SuppressWarnings("deprecation")
-      inference.ModelConfigOuterClass.ModelInput.Format result = inference.ModelConfigOuterClass.ModelInput.Format.valueOf(format_);
+      inference.ModelConfigOuterClass.ModelInput.Format result = inference.ModelConfigOuterClass.ModelInput.Format.forNumber(format_);
       return result == null ? inference.ModelConfigOuterClass.ModelInput.Format.UNRECOGNIZED : result;
     }
 
     public static final int DIMS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.LongList dims_;
     /**
      * <pre>
@@ -7825,11 +7873,11 @@ public final class ModelConfigOuterClass {
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelTensorReshapeOrBuilder getReshapeOrBuilder() {
-      return getReshape();
+      return reshape_ == null ? inference.ModelConfigOuterClass.ModelTensorReshape.getDefaultInstance() : reshape_;
     }
 
     public static final int IS_SHAPE_TENSOR_FIELD_NUMBER = 6;
-    private boolean isShapeTensor_;
+    private boolean isShapeTensor_ = false;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: bool is_shape_tensor
@@ -7850,7 +7898,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int ALLOW_RAGGED_BATCH_FIELD_NUMBER = 7;
-    private boolean allowRaggedBatch_;
+    private boolean allowRaggedBatch_ = false;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: bool allow_ragged_batch
@@ -7872,7 +7920,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int OPTIONAL_FIELD_NUMBER = 8;
-    private boolean optional_;
+    private boolean optional_ = false;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: bool optional
@@ -8186,26 +8234,19 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         dataType_ = 0;
-
         format_ = 0;
-
         dims_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (reshapeBuilder_ == null) {
-          reshape_ = null;
-        } else {
-          reshape_ = null;
+        reshape_ = null;
+        if (reshapeBuilder_ != null) {
+          reshapeBuilder_.dispose();
           reshapeBuilder_ = null;
         }
         isShapeTensor_ = false;
-
         allowRaggedBatch_ = false;
-
         optional_ = false;
-
         return this;
       }
 
@@ -8232,25 +8273,45 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelInput buildPartial() {
         inference.ModelConfigOuterClass.ModelInput result = new inference.ModelConfigOuterClass.ModelInput(this);
-        int from_bitField0_ = bitField0_;
-        result.name_ = name_;
-        result.dataType_ = dataType_;
-        result.format_ = format_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          dims_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.dims_ = dims_;
-        if (reshapeBuilder_ == null) {
-          result.reshape_ = reshape_;
-        } else {
-          result.reshape_ = reshapeBuilder_.build();
-        }
-        result.isShapeTensor_ = isShapeTensor_;
-        result.allowRaggedBatch_ = allowRaggedBatch_;
-        result.optional_ = optional_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelInput result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          dims_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.dims_ = dims_;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelInput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.dataType_ = dataType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.format_ = format_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.reshape_ = reshapeBuilder_ == null
+              ? reshape_
+              : reshapeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.isShapeTensor_ = isShapeTensor_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.allowRaggedBatch_ = allowRaggedBatch_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.optional_ = optional_;
+        }
       }
 
       @java.lang.Override
@@ -8299,6 +8360,7 @@ public final class ModelConfigOuterClass {
         if (other == inference.ModelConfigOuterClass.ModelInput.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.dataType_ != 0) {
@@ -8310,7 +8372,7 @@ public final class ModelConfigOuterClass {
         if (!other.dims_.isEmpty()) {
           if (dims_.isEmpty()) {
             dims_ = other.dims_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureDimsIsMutable();
             dims_.addAll(other.dims_);
@@ -8357,17 +8419,17 @@ public final class ModelConfigOuterClass {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 dataType_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
                 format_ = input.readEnum();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 32: {
@@ -8390,22 +8452,22 @@ public final class ModelConfigOuterClass {
                 input.readMessage(
                     getReshapeFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 48: {
                 isShapeTensor_ = input.readBool();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 48
               case 56: {
                 allowRaggedBatch_ = input.readBool();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 56
               case 64: {
                 optional_ = input.readBool();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 64
               default: {
@@ -8487,11 +8549,9 @@ public final class ModelConfigOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8507,8 +8567,8 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -8526,12 +8586,10 @@ public final class ModelConfigOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -8564,8 +8622,8 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder setDataTypeValue(int value) {
-        
         dataType_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -8582,8 +8640,7 @@ public final class ModelConfigOuterClass {
        */
       @java.lang.Override
       public inference.ModelConfigOuterClass.DataType getDataType() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
         return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
       }
       /**
@@ -8602,7 +8659,7 @@ public final class ModelConfigOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         dataType_ = value.getNumber();
         onChanged();
         return this;
@@ -8619,7 +8676,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDataType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         dataType_ = 0;
         onChanged();
         return this;
@@ -8653,8 +8710,8 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder setFormatValue(int value) {
-        
         format_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -8671,8 +8728,7 @@ public final class ModelConfigOuterClass {
        */
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelInput.Format getFormat() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.ModelInput.Format result = inference.ModelConfigOuterClass.ModelInput.Format.valueOf(format_);
+        inference.ModelConfigOuterClass.ModelInput.Format result = inference.ModelConfigOuterClass.ModelInput.Format.forNumber(format_);
         return result == null ? inference.ModelConfigOuterClass.ModelInput.Format.UNRECOGNIZED : result;
       }
       /**
@@ -8691,7 +8747,7 @@ public final class ModelConfigOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000004;
         format_ = value.getNumber();
         onChanged();
         return this;
@@ -8708,7 +8764,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearFormat() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         format_ = 0;
         onChanged();
         return this;
@@ -8716,10 +8772,10 @@ public final class ModelConfigOuterClass {
 
       private com.google.protobuf.Internal.LongList dims_ = emptyLongList();
       private void ensureDimsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           dims_ = mutableCopy(dims_);
-          bitField0_ |= 0x00000001;
-         }
+          bitField0_ |= 0x00000008;
+        }
       }
       /**
        * <pre>
@@ -8735,7 +8791,7 @@ public final class ModelConfigOuterClass {
        */
       public java.util.List<java.lang.Long>
           getDimsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
+        return ((bitField0_ & 0x00000008) != 0) ?
                  java.util.Collections.unmodifiableList(dims_) : dims_;
       }
       /**
@@ -8785,6 +8841,7 @@ public final class ModelConfigOuterClass {
        */
       public Builder setDims(
           int index, long value) {
+        
         ensureDimsIsMutable();
         dims_.setLong(index, value);
         onChanged();
@@ -8804,6 +8861,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder addDims(long value) {
+        
         ensureDimsIsMutable();
         dims_.addLong(value);
         onChanged();
@@ -8844,7 +8902,7 @@ public final class ModelConfigOuterClass {
        */
       public Builder clearDims() {
         dims_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -8867,7 +8925,7 @@ public final class ModelConfigOuterClass {
        * @return Whether the reshape field is set.
        */
       public boolean hasReshape() {
-        return reshapeBuilder_ != null || reshape_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -8909,11 +8967,11 @@ public final class ModelConfigOuterClass {
             throw new NullPointerException();
           }
           reshape_ = value;
-          onChanged();
         } else {
           reshapeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -8933,11 +8991,11 @@ public final class ModelConfigOuterClass {
           inference.ModelConfigOuterClass.ModelTensorReshape.Builder builderForValue) {
         if (reshapeBuilder_ == null) {
           reshape_ = builderForValue.build();
-          onChanged();
         } else {
           reshapeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -8955,17 +9013,18 @@ public final class ModelConfigOuterClass {
        */
       public Builder mergeReshape(inference.ModelConfigOuterClass.ModelTensorReshape value) {
         if (reshapeBuilder_ == null) {
-          if (reshape_ != null) {
-            reshape_ =
-              inference.ModelConfigOuterClass.ModelTensorReshape.newBuilder(reshape_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            reshape_ != null &&
+            reshape_ != inference.ModelConfigOuterClass.ModelTensorReshape.getDefaultInstance()) {
+            getReshapeBuilder().mergeFrom(value);
           } else {
             reshape_ = value;
           }
-          onChanged();
         } else {
           reshapeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -8982,14 +9041,13 @@ public final class ModelConfigOuterClass {
        * <code>.inference.ModelTensorReshape reshape = 5 [json_name = "reshape"];</code>
        */
       public Builder clearReshape() {
-        if (reshapeBuilder_ == null) {
-          reshape_ = null;
-          onChanged();
-        } else {
-          reshape_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        reshape_ = null;
+        if (reshapeBuilder_ != null) {
+          reshapeBuilder_.dispose();
           reshapeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -9006,7 +9064,7 @@ public final class ModelConfigOuterClass {
        * <code>.inference.ModelTensorReshape reshape = 5 [json_name = "reshape"];</code>
        */
       public inference.ModelConfigOuterClass.ModelTensorReshape.Builder getReshapeBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getReshapeFieldBuilder().getBuilder();
       }
@@ -9095,6 +9153,7 @@ public final class ModelConfigOuterClass {
       public Builder setIsShapeTensor(boolean value) {
         
         isShapeTensor_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -9113,7 +9172,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsShapeTensor() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         isShapeTensor_ = false;
         onChanged();
         return this;
@@ -9158,6 +9217,7 @@ public final class ModelConfigOuterClass {
       public Builder setAllowRaggedBatch(boolean value) {
         
         allowRaggedBatch_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -9177,7 +9237,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAllowRaggedBatch() {
-        
+        bitField0_ = (bitField0_ & ~0x00000040);
         allowRaggedBatch_ = false;
         onChanged();
         return this;
@@ -9218,6 +9278,7 @@ public final class ModelConfigOuterClass {
       public Builder setOptional(boolean value) {
         
         optional_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -9235,7 +9296,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearOptional() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         optional_ = false;
         onChanged();
         return this;
@@ -9539,7 +9600,8 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string name
@@ -9591,7 +9653,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int DATA_TYPE_FIELD_NUMBER = 2;
-    private int dataType_;
+    private int dataType_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: DataType data_type
@@ -9618,12 +9680,12 @@ public final class ModelConfigOuterClass {
      * @return The dataType.
      */
     @java.lang.Override public inference.ModelConfigOuterClass.DataType getDataType() {
-      @SuppressWarnings("deprecation")
-      inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+      inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
       return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
     }
 
     public static final int DIMS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.LongList dims_;
     /**
      * <pre>
@@ -9725,11 +9787,12 @@ public final class ModelConfigOuterClass {
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelTensorReshapeOrBuilder getReshapeOrBuilder() {
-      return getReshape();
+      return reshape_ == null ? inference.ModelConfigOuterClass.ModelTensorReshape.getDefaultInstance() : reshape_;
     }
 
     public static final int LABEL_FILENAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object labelFilename_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object labelFilename_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string label_filename
@@ -9783,7 +9846,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int IS_SHAPE_TENSOR_FIELD_NUMBER = 6;
-    private boolean isShapeTensor_;
+    private boolean isShapeTensor_ = false;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: bool is_shape_tensor
@@ -10074,22 +10137,17 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         dataType_ = 0;
-
         dims_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (reshapeBuilder_ == null) {
-          reshape_ = null;
-        } else {
-          reshape_ = null;
+        reshape_ = null;
+        if (reshapeBuilder_ != null) {
+          reshapeBuilder_.dispose();
           reshapeBuilder_ = null;
         }
         labelFilename_ = "";
-
         isShapeTensor_ = false;
-
         return this;
       }
 
@@ -10116,23 +10174,39 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelOutput buildPartial() {
         inference.ModelConfigOuterClass.ModelOutput result = new inference.ModelConfigOuterClass.ModelOutput(this);
-        int from_bitField0_ = bitField0_;
-        result.name_ = name_;
-        result.dataType_ = dataType_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          dims_.makeImmutable();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.dims_ = dims_;
-        if (reshapeBuilder_ == null) {
-          result.reshape_ = reshape_;
-        } else {
-          result.reshape_ = reshapeBuilder_.build();
-        }
-        result.labelFilename_ = labelFilename_;
-        result.isShapeTensor_ = isShapeTensor_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelOutput result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          dims_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.dims_ = dims_;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelOutput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.dataType_ = dataType_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.reshape_ = reshapeBuilder_ == null
+              ? reshape_
+              : reshapeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.labelFilename_ = labelFilename_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.isShapeTensor_ = isShapeTensor_;
+        }
       }
 
       @java.lang.Override
@@ -10181,6 +10255,7 @@ public final class ModelConfigOuterClass {
         if (other == inference.ModelConfigOuterClass.ModelOutput.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.dataType_ != 0) {
@@ -10189,7 +10264,7 @@ public final class ModelConfigOuterClass {
         if (!other.dims_.isEmpty()) {
           if (dims_.isEmpty()) {
             dims_ = other.dims_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureDimsIsMutable();
             dims_.addAll(other.dims_);
@@ -10201,6 +10276,7 @@ public final class ModelConfigOuterClass {
         }
         if (!other.getLabelFilename().isEmpty()) {
           labelFilename_ = other.labelFilename_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (other.getIsShapeTensor() != false) {
@@ -10234,12 +10310,12 @@ public final class ModelConfigOuterClass {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 dataType_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
@@ -10260,19 +10336,19 @@ public final class ModelConfigOuterClass {
               } // case 26
               case 34: {
                 labelFilename_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 34
               case 42: {
                 input.readMessage(
                     getReshapeFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 42
               case 48: {
                 isShapeTensor_ = input.readBool();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 48
               default: {
@@ -10354,11 +10430,9 @@ public final class ModelConfigOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -10374,8 +10448,8 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -10393,12 +10467,10 @@ public final class ModelConfigOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -10431,8 +10503,8 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder setDataTypeValue(int value) {
-        
         dataType_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -10449,8 +10521,7 @@ public final class ModelConfigOuterClass {
        */
       @java.lang.Override
       public inference.ModelConfigOuterClass.DataType getDataType() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
         return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
       }
       /**
@@ -10469,7 +10540,7 @@ public final class ModelConfigOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         dataType_ = value.getNumber();
         onChanged();
         return this;
@@ -10486,7 +10557,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDataType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         dataType_ = 0;
         onChanged();
         return this;
@@ -10494,10 +10565,10 @@ public final class ModelConfigOuterClass {
 
       private com.google.protobuf.Internal.LongList dims_ = emptyLongList();
       private void ensureDimsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           dims_ = mutableCopy(dims_);
-          bitField0_ |= 0x00000001;
-         }
+          bitField0_ |= 0x00000004;
+        }
       }
       /**
        * <pre>
@@ -10512,7 +10583,7 @@ public final class ModelConfigOuterClass {
        */
       public java.util.List<java.lang.Long>
           getDimsList() {
-        return ((bitField0_ & 0x00000001) != 0) ?
+        return ((bitField0_ & 0x00000004) != 0) ?
                  java.util.Collections.unmodifiableList(dims_) : dims_;
       }
       /**
@@ -10559,6 +10630,7 @@ public final class ModelConfigOuterClass {
        */
       public Builder setDims(
           int index, long value) {
+        
         ensureDimsIsMutable();
         dims_.setLong(index, value);
         onChanged();
@@ -10577,6 +10649,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder addDims(long value) {
+        
         ensureDimsIsMutable();
         dims_.addLong(value);
         onChanged();
@@ -10615,7 +10688,7 @@ public final class ModelConfigOuterClass {
        */
       public Builder clearDims() {
         dims_ = emptyLongList();
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -10638,7 +10711,7 @@ public final class ModelConfigOuterClass {
        * @return Whether the reshape field is set.
        */
       public boolean hasReshape() {
-        return reshapeBuilder_ != null || reshape_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -10680,11 +10753,11 @@ public final class ModelConfigOuterClass {
             throw new NullPointerException();
           }
           reshape_ = value;
-          onChanged();
         } else {
           reshapeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -10704,11 +10777,11 @@ public final class ModelConfigOuterClass {
           inference.ModelConfigOuterClass.ModelTensorReshape.Builder builderForValue) {
         if (reshapeBuilder_ == null) {
           reshape_ = builderForValue.build();
-          onChanged();
         } else {
           reshapeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -10726,17 +10799,18 @@ public final class ModelConfigOuterClass {
        */
       public Builder mergeReshape(inference.ModelConfigOuterClass.ModelTensorReshape value) {
         if (reshapeBuilder_ == null) {
-          if (reshape_ != null) {
-            reshape_ =
-              inference.ModelConfigOuterClass.ModelTensorReshape.newBuilder(reshape_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            reshape_ != null &&
+            reshape_ != inference.ModelConfigOuterClass.ModelTensorReshape.getDefaultInstance()) {
+            getReshapeBuilder().mergeFrom(value);
           } else {
             reshape_ = value;
           }
-          onChanged();
         } else {
           reshapeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -10753,14 +10827,13 @@ public final class ModelConfigOuterClass {
        * <code>.inference.ModelTensorReshape reshape = 5 [json_name = "reshape"];</code>
        */
       public Builder clearReshape() {
-        if (reshapeBuilder_ == null) {
-          reshape_ = null;
-          onChanged();
-        } else {
-          reshape_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        reshape_ = null;
+        if (reshapeBuilder_ != null) {
+          reshapeBuilder_.dispose();
           reshapeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -10777,7 +10850,7 @@ public final class ModelConfigOuterClass {
        * <code>.inference.ModelTensorReshape reshape = 5 [json_name = "reshape"];</code>
        */
       public inference.ModelConfigOuterClass.ModelTensorReshape.Builder getReshapeBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getReshapeFieldBuilder().getBuilder();
       }
@@ -10894,11 +10967,9 @@ public final class ModelConfigOuterClass {
        */
       public Builder setLabelFilename(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         labelFilename_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -10915,8 +10986,8 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLabelFilename() {
-        
         labelFilename_ = getDefaultInstance().getLabelFilename();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -10935,12 +11006,10 @@ public final class ModelConfigOuterClass {
        */
       public Builder setLabelFilenameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         labelFilename_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -10982,6 +11051,7 @@ public final class ModelConfigOuterClass {
       public Builder setIsShapeTensor(boolean value) {
         
         isShapeTensor_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -11000,7 +11070,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearIsShapeTensor() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         isShapeTensor_ = false;
         onChanged();
         return this;
@@ -11578,7 +11648,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int KIND_FIELD_NUMBER = 1;
-    private int kind_;
+    private int kind_ = 0;
     /**
      * <pre>
      *&#64;&#64;    .. cpp:var:: Kind kind
@@ -11605,12 +11675,12 @@ public final class ModelConfigOuterClass {
      * @return The kind.
      */
     @java.lang.Override public inference.ModelConfigOuterClass.BatchInput.Kind getKind() {
-      @SuppressWarnings("deprecation")
-      inference.ModelConfigOuterClass.BatchInput.Kind result = inference.ModelConfigOuterClass.BatchInput.Kind.valueOf(kind_);
+      inference.ModelConfigOuterClass.BatchInput.Kind result = inference.ModelConfigOuterClass.BatchInput.Kind.forNumber(kind_);
       return result == null ? inference.ModelConfigOuterClass.BatchInput.Kind.UNRECOGNIZED : result;
     }
 
     public static final int TARGET_NAME_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList targetName_;
     /**
      * <pre>
@@ -11678,7 +11748,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int DATA_TYPE_FIELD_NUMBER = 3;
-    private int dataType_;
+    private int dataType_ = 0;
     /**
      * <pre>
      *&#64;&#64;    .. cpp:var:: DataType data_type
@@ -11707,12 +11777,12 @@ public final class ModelConfigOuterClass {
      * @return The dataType.
      */
     @java.lang.Override public inference.ModelConfigOuterClass.DataType getDataType() {
-      @SuppressWarnings("deprecation")
-      inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+      inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
       return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
     }
 
     public static final int SOURCE_INPUT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList sourceInput_;
     /**
      * <pre>
@@ -12022,14 +12092,13 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         kind_ = 0;
-
         targetName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        dataType_ = 0;
-
-        sourceInput_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
+        dataType_ = 0;
+        sourceInput_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -12056,21 +12125,33 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public inference.ModelConfigOuterClass.BatchInput buildPartial() {
         inference.ModelConfigOuterClass.BatchInput result = new inference.ModelConfigOuterClass.BatchInput(this);
-        int from_bitField0_ = bitField0_;
-        result.kind_ = kind_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          targetName_ = targetName_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.targetName_ = targetName_;
-        result.dataType_ = dataType_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          sourceInput_ = sourceInput_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.sourceInput_ = sourceInput_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.BatchInput result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          targetName_ = targetName_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.targetName_ = targetName_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          sourceInput_ = sourceInput_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.sourceInput_ = sourceInput_;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.BatchInput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.kind_ = kind_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.dataType_ = dataType_;
+        }
       }
 
       @java.lang.Override
@@ -12123,7 +12204,7 @@ public final class ModelConfigOuterClass {
         if (!other.targetName_.isEmpty()) {
           if (targetName_.isEmpty()) {
             targetName_ = other.targetName_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureTargetNameIsMutable();
             targetName_.addAll(other.targetName_);
@@ -12136,7 +12217,7 @@ public final class ModelConfigOuterClass {
         if (!other.sourceInput_.isEmpty()) {
           if (sourceInput_.isEmpty()) {
             sourceInput_ = other.sourceInput_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureSourceInputIsMutable();
             sourceInput_.addAll(other.sourceInput_);
@@ -12171,7 +12252,7 @@ public final class ModelConfigOuterClass {
                 break;
               case 8: {
                 kind_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
@@ -12182,7 +12263,7 @@ public final class ModelConfigOuterClass {
               } // case 18
               case 24: {
                 dataType_ = input.readEnum();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 34: {
@@ -12236,8 +12317,8 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder setKindValue(int value) {
-        
         kind_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -12254,8 +12335,7 @@ public final class ModelConfigOuterClass {
        */
       @java.lang.Override
       public inference.ModelConfigOuterClass.BatchInput.Kind getKind() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.BatchInput.Kind result = inference.ModelConfigOuterClass.BatchInput.Kind.valueOf(kind_);
+        inference.ModelConfigOuterClass.BatchInput.Kind result = inference.ModelConfigOuterClass.BatchInput.Kind.forNumber(kind_);
         return result == null ? inference.ModelConfigOuterClass.BatchInput.Kind.UNRECOGNIZED : result;
       }
       /**
@@ -12274,7 +12354,7 @@ public final class ModelConfigOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         kind_ = value.getNumber();
         onChanged();
         return this;
@@ -12291,7 +12371,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKind() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         kind_ = 0;
         onChanged();
         return this;
@@ -12299,9 +12379,9 @@ public final class ModelConfigOuterClass {
 
       private com.google.protobuf.LazyStringList targetName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTargetNameIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           targetName_ = new com.google.protobuf.LazyStringArrayList(targetName_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -12384,10 +12464,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder setTargetName(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetNameIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTargetNameIsMutable();
         targetName_.set(index, value);
         onChanged();
         return this;
@@ -12407,10 +12485,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder addTargetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetNameIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTargetNameIsMutable();
         targetName_.add(value);
         onChanged();
         return this;
@@ -12450,7 +12526,7 @@ public final class ModelConfigOuterClass {
        */
       public Builder clearTargetName() {
         targetName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -12469,10 +12545,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder addTargetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTargetNameIsMutable();
         targetName_.add(value);
         onChanged();
@@ -12509,8 +12583,8 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder setDataTypeValue(int value) {
-        
         dataType_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -12528,8 +12602,7 @@ public final class ModelConfigOuterClass {
        */
       @java.lang.Override
       public inference.ModelConfigOuterClass.DataType getDataType() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
         return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
       }
       /**
@@ -12549,7 +12622,7 @@ public final class ModelConfigOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000004;
         dataType_ = value.getNumber();
         onChanged();
         return this;
@@ -12567,7 +12640,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDataType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         dataType_ = 0;
         onChanged();
         return this;
@@ -12575,9 +12648,9 @@ public final class ModelConfigOuterClass {
 
       private com.google.protobuf.LazyStringList sourceInput_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSourceInputIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           sourceInput_ = new com.google.protobuf.LazyStringArrayList(sourceInput_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000008;
          }
       }
       /**
@@ -12665,10 +12738,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder setSourceInput(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSourceInputIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureSourceInputIsMutable();
         sourceInput_.set(index, value);
         onChanged();
         return this;
@@ -12689,10 +12760,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder addSourceInput(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSourceInputIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureSourceInputIsMutable();
         sourceInput_.add(value);
         onChanged();
         return this;
@@ -12734,7 +12803,7 @@ public final class ModelConfigOuterClass {
        */
       public Builder clearSourceInput() {
         sourceInput_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -12754,10 +12823,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder addSourceInputBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureSourceInputIsMutable();
         sourceInput_.add(value);
         onChanged();
@@ -13147,6 +13214,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int TARGET_NAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList targetName_;
     /**
      * <pre>
@@ -13214,7 +13282,7 @@ public final class ModelConfigOuterClass {
     }
 
     public static final int KIND_FIELD_NUMBER = 2;
-    private int kind_;
+    private int kind_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: Kind kind
@@ -13241,12 +13309,12 @@ public final class ModelConfigOuterClass {
      * @return The kind.
      */
     @java.lang.Override public inference.ModelConfigOuterClass.BatchOutput.Kind getKind() {
-      @SuppressWarnings("deprecation")
-      inference.ModelConfigOuterClass.BatchOutput.Kind result = inference.ModelConfigOuterClass.BatchOutput.Kind.valueOf(kind_);
+      inference.ModelConfigOuterClass.BatchOutput.Kind result = inference.ModelConfigOuterClass.BatchOutput.Kind.forNumber(kind_);
       return result == null ? inference.ModelConfigOuterClass.BatchOutput.Kind.UNRECOGNIZED : result;
     }
 
     public static final int SOURCE_INPUT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList sourceInput_;
     /**
      * <pre>
@@ -13542,12 +13610,12 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         targetName_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         kind_ = 0;
-
         sourceInput_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -13574,20 +13642,30 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public inference.ModelConfigOuterClass.BatchOutput buildPartial() {
         inference.ModelConfigOuterClass.BatchOutput result = new inference.ModelConfigOuterClass.BatchOutput(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.BatchOutput result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           targetName_ = targetName_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.targetName_ = targetName_;
-        result.kind_ = kind_;
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           sourceInput_ = sourceInput_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.sourceInput_ = sourceInput_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.BatchOutput result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.kind_ = kind_;
+        }
       }
 
       @java.lang.Override
@@ -13650,7 +13728,7 @@ public final class ModelConfigOuterClass {
         if (!other.sourceInput_.isEmpty()) {
           if (sourceInput_.isEmpty()) {
             sourceInput_ = other.sourceInput_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureSourceInputIsMutable();
             sourceInput_.addAll(other.sourceInput_);
@@ -13691,7 +13769,7 @@ public final class ModelConfigOuterClass {
               } // case 10
               case 16: {
                 kind_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 26: {
@@ -13804,10 +13882,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder setTargetName(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetNameIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTargetNameIsMutable();
         targetName_.set(index, value);
         onChanged();
         return this;
@@ -13827,10 +13903,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder addTargetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetNameIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTargetNameIsMutable();
         targetName_.add(value);
         onChanged();
         return this;
@@ -13889,10 +13963,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder addTargetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTargetNameIsMutable();
         targetName_.add(value);
         onChanged();
@@ -13927,8 +13999,8 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder setKindValue(int value) {
-        
         kind_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -13945,8 +14017,7 @@ public final class ModelConfigOuterClass {
        */
       @java.lang.Override
       public inference.ModelConfigOuterClass.BatchOutput.Kind getKind() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.BatchOutput.Kind result = inference.ModelConfigOuterClass.BatchOutput.Kind.valueOf(kind_);
+        inference.ModelConfigOuterClass.BatchOutput.Kind result = inference.ModelConfigOuterClass.BatchOutput.Kind.forNumber(kind_);
         return result == null ? inference.ModelConfigOuterClass.BatchOutput.Kind.UNRECOGNIZED : result;
       }
       /**
@@ -13965,7 +14036,7 @@ public final class ModelConfigOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         kind_ = value.getNumber();
         onChanged();
         return this;
@@ -13982,7 +14053,7 @@ public final class ModelConfigOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearKind() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         kind_ = 0;
         onChanged();
         return this;
@@ -13990,9 +14061,9 @@ public final class ModelConfigOuterClass {
 
       private com.google.protobuf.LazyStringList sourceInput_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSourceInputIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           sourceInput_ = new com.google.protobuf.LazyStringArrayList(sourceInput_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -14075,10 +14146,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder setSourceInput(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSourceInputIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureSourceInputIsMutable();
         sourceInput_.set(index, value);
         onChanged();
         return this;
@@ -14098,10 +14167,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder addSourceInput(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSourceInputIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureSourceInputIsMutable();
         sourceInput_.add(value);
         onChanged();
         return this;
@@ -14141,7 +14208,7 @@ public final class ModelConfigOuterClass {
        */
       public Builder clearSourceInput() {
         sourceInput_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -14160,10 +14227,8 @@ public final class ModelConfigOuterClass {
        */
       public Builder addSourceInputBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureSourceInputIsMutable();
         sourceInput_.add(value);
         onChanged();
@@ -14465,7 +14530,7 @@ public final class ModelConfigOuterClass {
       }
 
       public static final int NUM_VERSIONS_FIELD_NUMBER = 1;
-      private int numVersions_;
+      private int numVersions_ = 0;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: uint32 num_versions
@@ -14681,8 +14746,8 @@ public final class ModelConfigOuterClass {
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           numVersions_ = 0;
-
           return this;
         }
 
@@ -14709,9 +14774,16 @@ public final class ModelConfigOuterClass {
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelVersionPolicy.Latest buildPartial() {
           inference.ModelConfigOuterClass.ModelVersionPolicy.Latest result = new inference.ModelConfigOuterClass.ModelVersionPolicy.Latest(this);
-          result.numVersions_ = numVersions_;
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelVersionPolicy.Latest result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.numVersions_ = numVersions_;
+          }
         }
 
         @java.lang.Override
@@ -14789,7 +14861,7 @@ public final class ModelConfigOuterClass {
                   break;
                 case 8: {
                   numVersions_ = input.readUInt32();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 8
                 default: {
@@ -14807,6 +14879,7 @@ public final class ModelConfigOuterClass {
           } // finally
           return this;
         }
+        private int bitField0_;
 
         private int numVersions_ ;
         /**
@@ -14845,6 +14918,7 @@ public final class ModelConfigOuterClass {
         public Builder setNumVersions(int value) {
           
           numVersions_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -14863,7 +14937,7 @@ public final class ModelConfigOuterClass {
          * @return This builder for chaining.
          */
         public Builder clearNumVersions() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           numVersions_ = 0;
           onChanged();
           return this;
@@ -15437,6 +15511,7 @@ public final class ModelConfigOuterClass {
       }
 
       public static final int VERSIONS_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
       private com.google.protobuf.Internal.LongList versions_;
       /**
        * <pre>
@@ -15697,8 +15772,8 @@ public final class ModelConfigOuterClass {
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           versions_ = emptyLongList();
-          bitField0_ = (bitField0_ & ~0x00000001);
           return this;
         }
 
@@ -15725,14 +15800,22 @@ public final class ModelConfigOuterClass {
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelVersionPolicy.Specific buildPartial() {
           inference.ModelConfigOuterClass.ModelVersionPolicy.Specific result = new inference.ModelConfigOuterClass.ModelVersionPolicy.Specific(this);
-          int from_bitField0_ = bitField0_;
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelVersionPolicy.Specific result) {
           if (((bitField0_ & 0x00000001) != 0)) {
             versions_.makeImmutable();
             bitField0_ = (bitField0_ & ~0x00000001);
           }
           result.versions_ = versions_;
-          onBuilt();
-          return result;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelVersionPolicy.Specific result) {
+          int from_bitField0_ = bitField0_;
         }
 
         @java.lang.Override
@@ -15853,7 +15936,7 @@ public final class ModelConfigOuterClass {
           if (!((bitField0_ & 0x00000001) != 0)) {
             versions_ = mutableCopy(versions_);
             bitField0_ |= 0x00000001;
-           }
+          }
         }
         /**
          * <pre>
@@ -15915,6 +15998,7 @@ public final class ModelConfigOuterClass {
          */
         public Builder setVersions(
             int index, long value) {
+          
           ensureVersionsIsMutable();
           versions_.setLong(index, value);
           onChanged();
@@ -15933,6 +16017,7 @@ public final class ModelConfigOuterClass {
          * @return This builder for chaining.
          */
         public Builder addVersions(long value) {
+          
           ensureVersionsIsMutable();
           versions_.addLong(value);
           onChanged();
@@ -16478,6 +16563,7 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (latestBuilder_ != null) {
           latestBuilder_.clear();
         }
@@ -16515,30 +16601,31 @@ public final class ModelConfigOuterClass {
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelVersionPolicy buildPartial() {
         inference.ModelConfigOuterClass.ModelVersionPolicy result = new inference.ModelConfigOuterClass.ModelVersionPolicy(this);
-        if (policyChoiceCase_ == 1) {
-          if (latestBuilder_ == null) {
-            result.policyChoice_ = policyChoice_;
-          } else {
-            result.policyChoice_ = latestBuilder_.build();
-          }
-        }
-        if (policyChoiceCase_ == 2) {
-          if (allBuilder_ == null) {
-            result.policyChoice_ = policyChoice_;
-          } else {
-            result.policyChoice_ = allBuilder_.build();
-          }
-        }
-        if (policyChoiceCase_ == 3) {
-          if (specificBuilder_ == null) {
-            result.policyChoice_ = policyChoice_;
-          } else {
-            result.policyChoice_ = specificBuilder_.build();
-          }
-        }
-        result.policyChoiceCase_ = policyChoiceCase_;
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelVersionPolicy result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartialOneofs(inference.ModelConfigOuterClass.ModelVersionPolicy result) {
+        result.policyChoiceCase_ = policyChoiceCase_;
+        result.policyChoice_ = this.policyChoice_;
+        if (policyChoiceCase_ == 1 &&
+            latestBuilder_ != null) {
+          result.policyChoice_ = latestBuilder_.build();
+        }
+        if (policyChoiceCase_ == 2 &&
+            allBuilder_ != null) {
+          result.policyChoice_ = allBuilder_.build();
+        }
+        if (policyChoiceCase_ == 3 &&
+            specificBuilder_ != null) {
+          result.policyChoice_ = specificBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -16679,6 +16766,7 @@ public final class ModelConfigOuterClass {
         return this;
       }
 
+      private int bitField0_;
 
       private com.google.protobuf.SingleFieldBuilderV3<
           inference.ModelConfigOuterClass.ModelVersionPolicy.Latest, inference.ModelConfigOuterClass.ModelVersionPolicy.Latest.Builder, inference.ModelConfigOuterClass.ModelVersionPolicy.LatestOrBuilder> latestBuilder_;
@@ -16881,7 +16969,7 @@ public final class ModelConfigOuterClass {
           policyChoice_ = null;
         }
         policyChoiceCase_ = 1;
-        onChanged();;
+        onChanged();
         return latestBuilder_;
       }
 
@@ -17086,7 +17174,7 @@ public final class ModelConfigOuterClass {
           policyChoice_ = null;
         }
         policyChoiceCase_ = 2;
-        onChanged();;
+        onChanged();
         return allBuilder_;
       }
 
@@ -17291,7 +17379,7 @@ public final class ModelConfigOuterClass {
           policyChoice_ = null;
         }
         policyChoiceCase_ = 3;
-        onChanged();;
+        onChanged();
         return specificBuilder_;
       }
       @java.lang.Override
@@ -17912,7 +18000,7 @@ public final class ModelConfigOuterClass {
       }
 
       public static final int LEVEL_FIELD_NUMBER = 1;
-      private int level_;
+      private int level_ = 0;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: int32 level
@@ -18135,8 +18223,8 @@ public final class ModelConfigOuterClass {
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           level_ = 0;
-
           return this;
         }
 
@@ -18163,9 +18251,16 @@ public final class ModelConfigOuterClass {
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Graph buildPartial() {
           inference.ModelConfigOuterClass.ModelOptimizationPolicy.Graph result = new inference.ModelConfigOuterClass.ModelOptimizationPolicy.Graph(this);
-          result.level_ = level_;
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelOptimizationPolicy.Graph result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.level_ = level_;
+          }
         }
 
         @java.lang.Override
@@ -18243,7 +18338,7 @@ public final class ModelConfigOuterClass {
                   break;
                 case 8: {
                   level_ = input.readInt32();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 8
                 default: {
@@ -18261,6 +18356,7 @@ public final class ModelConfigOuterClass {
           } // finally
           return this;
         }
+        private int bitField0_;
 
         private int level_ ;
         /**
@@ -18303,6 +18399,7 @@ public final class ModelConfigOuterClass {
         public Builder setLevel(int value) {
           
           level_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -18323,7 +18420,7 @@ public final class ModelConfigOuterClass {
          * @return This builder for chaining.
          */
         public Builder clearLevel() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           level_ = 0;
           onChanged();
           return this;
@@ -18642,7 +18739,6 @@ public final class ModelConfigOuterClass {
          *
          * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
          */
-
         /* nullable */
 inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrDefault(
             java.lang.String key,
@@ -18659,7 +18755,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
          *
          * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
          */
-
         inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrThrow(
             java.lang.String key);
 
@@ -18876,6 +18971,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
           }
 
           public static final int DIM_FIELD_NUMBER = 1;
+          @SuppressWarnings("serial")
           private com.google.protobuf.Internal.LongList dim_;
           /**
            * <pre>
@@ -19136,8 +19232,8 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
             @java.lang.Override
             public Builder clear() {
               super.clear();
+              bitField0_ = 0;
               dim_ = emptyLongList();
-              bitField0_ = (bitField0_ & ~0x00000001);
               return this;
             }
 
@@ -19164,14 +19260,22 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
             @java.lang.Override
             public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape buildPartial() {
               inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape result = new inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape(this);
-              int from_bitField0_ = bitField0_;
+              buildPartialRepeatedFields(result);
+              if (bitField0_ != 0) { buildPartial0(result); }
+              onBuilt();
+              return result;
+            }
+
+            private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape result) {
               if (((bitField0_ & 0x00000001) != 0)) {
                 dim_.makeImmutable();
                 bitField0_ = (bitField0_ & ~0x00000001);
               }
               result.dim_ = dim_;
-              onBuilt();
-              return result;
+            }
+
+            private void buildPartial0(inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape result) {
+              int from_bitField0_ = bitField0_;
             }
 
             @java.lang.Override
@@ -19292,7 +19396,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
               if (!((bitField0_ & 0x00000001) != 0)) {
                 dim_ = mutableCopy(dim_);
                 bitField0_ |= 0x00000001;
-               }
+              }
             }
             /**
              * <pre>
@@ -19354,6 +19458,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
              */
             public Builder setDim(
                 int index, long value) {
+              
               ensureDimIsMutable();
               dim_.setLong(index, value);
               onChanged();
@@ -19372,6 +19477,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
              * @return This builder for chaining.
              */
             public Builder addDim(long value) {
+              
               ensureDimIsMutable();
               dim_.addLong(value);
               onChanged();
@@ -19552,7 +19658,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            *
            * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
            */
-
           /* nullable */
 inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrDefault(
               java.lang.String key,
@@ -19569,7 +19674,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            *
            * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
            */
-
           inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrThrow(
               java.lang.String key);
         }
@@ -19626,7 +19730,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
           }
 
           public static final int BATCH_SIZE_FIELD_NUMBER = 1;
-          private int batchSize_;
+          private int batchSize_ = 0;
           /**
            * <pre>
            *&#64;&#64;      .. cpp:var:: int32 batch_size
@@ -19657,6 +19761,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
                         com.google.protobuf.WireFormat.FieldType.MESSAGE,
                         inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape.getDefaultInstance());
           }
+          @SuppressWarnings("serial")
           private com.google.protobuf.MapField<
               java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> input_;
           private com.google.protobuf.MapField<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape>
@@ -19667,7 +19772,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
             }
             return input_;
           }
-
           public int getInputCount() {
             return internalGetInput().getMap().size();
           }
@@ -19682,7 +19786,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            *
            * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
            */
-
           @java.lang.Override
           public boolean containsInput(
               java.lang.String key) {
@@ -19709,7 +19812,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
            */
           @java.lang.Override
-
           public java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> getInputMap() {
             return internalGetInput().getMap();
           }
@@ -19725,10 +19827,11 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
            */
           @java.lang.Override
-
-          public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrDefault(
+          public /* nullable */
+inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrDefault(
               java.lang.String key,
-              inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape defaultValue) {
+              /* nullable */
+inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape defaultValue) {
             if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> map =
                 internalGetInput().getMap();
@@ -19746,7 +19849,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
            */
           @java.lang.Override
-
           public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrThrow(
               java.lang.String key) {
             if (key == null) { throw new NullPointerException("map key"); }
@@ -19990,8 +20092,8 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
             @java.lang.Override
             public Builder clear() {
               super.clear();
+              bitField0_ = 0;
               batchSize_ = 0;
-
               internalGetMutableInput().clear();
               return this;
             }
@@ -20019,12 +20121,20 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
             @java.lang.Override
             public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.LowerBound buildPartial() {
               inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.LowerBound result = new inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.LowerBound(this);
-              int from_bitField0_ = bitField0_;
-              result.batchSize_ = batchSize_;
-              result.input_ = internalGetInput();
-              result.input_.makeImmutable();
+              if (bitField0_ != 0) { buildPartial0(result); }
               onBuilt();
               return result;
+            }
+
+            private void buildPartial0(inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.LowerBound result) {
+              int from_bitField0_ = bitField0_;
+              if (((from_bitField0_ & 0x00000001) != 0)) {
+                result.batchSize_ = batchSize_;
+              }
+              if (((from_bitField0_ & 0x00000002) != 0)) {
+                result.input_ = internalGetInput();
+                result.input_.makeImmutable();
+              }
             }
 
             @java.lang.Override
@@ -20076,6 +20186,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
               }
               internalGetMutableInput().mergeFrom(
                   other.internalGetInput());
+              bitField0_ |= 0x00000002;
               this.mergeUnknownFields(other.getUnknownFields());
               onChanged();
               return this;
@@ -20104,7 +20215,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
                       break;
                     case 8: {
                       batchSize_ = input.readInt32();
-
+                      bitField0_ |= 0x00000001;
                       break;
                     } // case 8
                     case 18: {
@@ -20113,6 +20224,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
                           InputDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                       internalGetMutableInput().getMutableMap().put(
                           input__.getKey(), input__.getValue());
+                      bitField0_ |= 0x00000002;
                       break;
                     } // case 18
                     default: {
@@ -20167,6 +20279,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
             public Builder setBatchSize(int value) {
               
               batchSize_ = value;
+              bitField0_ |= 0x00000001;
               onChanged();
               return this;
             }
@@ -20184,7 +20297,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
              * @return This builder for chaining.
              */
             public Builder clearBatchSize() {
-              
+              bitField0_ = (bitField0_ & ~0x00000001);
               batchSize_ = 0;
               onChanged();
               return this;
@@ -20193,7 +20306,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
             private com.google.protobuf.MapField<
                 java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> input_;
             private com.google.protobuf.MapField<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape>
-            internalGetInput() {
+                internalGetInput() {
               if (input_ == null) {
                 return com.google.protobuf.MapField.emptyMapField(
                     InputDefaultEntryHolder.defaultEntry);
@@ -20201,8 +20314,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
               return input_;
             }
             private com.google.protobuf.MapField<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape>
-            internalGetMutableInput() {
-              onChanged();;
+                internalGetMutableInput() {
               if (input_ == null) {
                 input_ = com.google.protobuf.MapField.newMapField(
                     InputDefaultEntryHolder.defaultEntry);
@@ -20210,9 +20322,10 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
               if (!input_.isMutable()) {
                 input_ = input_.copy();
               }
+              bitField0_ |= 0x00000002;
+              onChanged();
               return input_;
             }
-
             public int getInputCount() {
               return internalGetInput().getMap().size();
             }
@@ -20227,7 +20340,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
              *
              * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
              */
-
             @java.lang.Override
             public boolean containsInput(
                 java.lang.String key) {
@@ -20254,7 +20366,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
              * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
              */
             @java.lang.Override
-
             public java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> getInputMap() {
               return internalGetInput().getMap();
             }
@@ -20270,10 +20381,11 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
              * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
              */
             @java.lang.Override
-
-            public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrDefault(
+            public /* nullable */
+inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrDefault(
                 java.lang.String key,
-                inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape defaultValue) {
+                /* nullable */
+inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape defaultValue) {
               if (key == null) { throw new NullPointerException("map key"); }
               java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> map =
                   internalGetInput().getMap();
@@ -20291,7 +20403,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
              * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
              */
             @java.lang.Override
-
             public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrThrow(
                 java.lang.String key) {
               if (key == null) { throw new NullPointerException("map key"); }
@@ -20302,8 +20413,8 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
               }
               return map.get(key);
             }
-
             public Builder clearInput() {
+              bitField0_ = (bitField0_ & ~0x00000002);
               internalGetMutableInput().getMutableMap()
                   .clear();
               return this;
@@ -20319,7 +20430,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
              *
              * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
              */
-
             public Builder removeInput(
                 java.lang.String key) {
               if (key == null) { throw new NullPointerException("map key"); }
@@ -20332,7 +20442,8 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
              */
             @java.lang.Deprecated
             public java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape>
-            getMutableInput() {
+                getMutableInput() {
+              bitField0_ |= 0x00000002;
               return internalGetMutableInput().getMutableMap();
             }
             /**
@@ -20350,12 +20461,10 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
                 java.lang.String key,
                 inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape value) {
               if (key == null) { throw new NullPointerException("map key"); }
-              if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+              if (value == null) { throw new NullPointerException("map value"); }
               internalGetMutableInput().getMutableMap()
                   .put(key, value);
+              bitField0_ |= 0x00000002;
               return this;
             }
             /**
@@ -20369,11 +20478,11 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
              *
              * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
              */
-
             public Builder putAllInput(
                 java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> values) {
               internalGetMutableInput().getMutableMap()
                   .putAll(values);
+              bitField0_ |= 0x00000002;
               return this;
             }
             @java.lang.Override
@@ -20441,7 +20550,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
         }
 
         public static final int BATCH_SIZE_FIELD_NUMBER = 1;
-        private int batchSize_;
+        private int batchSize_ = 0;
         /**
          * <pre>
          *&#64;&#64;      .. cpp:var:: int32 batch_size
@@ -20472,6 +20581,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
                       com.google.protobuf.WireFormat.FieldType.MESSAGE,
                       inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape.getDefaultInstance());
         }
+        @SuppressWarnings("serial")
         private com.google.protobuf.MapField<
             java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> input_;
         private com.google.protobuf.MapField<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape>
@@ -20482,7 +20592,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
           }
           return input_;
         }
-
         public int getInputCount() {
           return internalGetInput().getMap().size();
         }
@@ -20497,7 +20606,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
          *
          * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
          */
-
         @java.lang.Override
         public boolean containsInput(
             java.lang.String key) {
@@ -20524,7 +20632,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
          * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
          */
         @java.lang.Override
-
         public java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> getInputMap() {
           return internalGetInput().getMap();
         }
@@ -20540,10 +20647,11 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
          * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
          */
         @java.lang.Override
-
-        public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrDefault(
+        public /* nullable */
+inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrDefault(
             java.lang.String key,
-            inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape defaultValue) {
+            /* nullable */
+inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape defaultValue) {
           if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> map =
               internalGetInput().getMap();
@@ -20561,7 +20669,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
          * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
          */
         @java.lang.Override
-
         public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrThrow(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -20644,7 +20751,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
          */
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.LowerBoundOrBuilder getGraphLowerBoundOrBuilder() {
-          return getGraphLowerBound();
+          return graphLowerBound_ == null ? inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.LowerBound.getDefaultInstance() : graphLowerBound_;
         }
 
         private byte memoizedIsInitialized = -1;
@@ -20902,13 +21009,12 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
           @java.lang.Override
           public Builder clear() {
             super.clear();
+            bitField0_ = 0;
             batchSize_ = 0;
-
             internalGetMutableInput().clear();
-            if (graphLowerBoundBuilder_ == null) {
-              graphLowerBound_ = null;
-            } else {
-              graphLowerBound_ = null;
+            graphLowerBound_ = null;
+            if (graphLowerBoundBuilder_ != null) {
+              graphLowerBoundBuilder_.dispose();
               graphLowerBoundBuilder_ = null;
             }
             return this;
@@ -20937,17 +21043,25 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
           @java.lang.Override
           public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec buildPartial() {
             inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec result = new inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec(this);
-            int from_bitField0_ = bitField0_;
-            result.batchSize_ = batchSize_;
-            result.input_ = internalGetInput();
-            result.input_.makeImmutable();
-            if (graphLowerBoundBuilder_ == null) {
-              result.graphLowerBound_ = graphLowerBound_;
-            } else {
-              result.graphLowerBound_ = graphLowerBoundBuilder_.build();
-            }
+            if (bitField0_ != 0) { buildPartial0(result); }
             onBuilt();
             return result;
+          }
+
+          private void buildPartial0(inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec result) {
+            int from_bitField0_ = bitField0_;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.batchSize_ = batchSize_;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.input_ = internalGetInput();
+              result.input_.makeImmutable();
+            }
+            if (((from_bitField0_ & 0x00000004) != 0)) {
+              result.graphLowerBound_ = graphLowerBoundBuilder_ == null
+                  ? graphLowerBound_
+                  : graphLowerBoundBuilder_.build();
+            }
           }
 
           @java.lang.Override
@@ -20999,6 +21113,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
             }
             internalGetMutableInput().mergeFrom(
                 other.internalGetInput());
+            bitField0_ |= 0x00000002;
             if (other.hasGraphLowerBound()) {
               mergeGraphLowerBound(other.getGraphLowerBound());
             }
@@ -21030,7 +21145,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
                     break;
                   case 8: {
                     batchSize_ = input.readInt32();
-
+                    bitField0_ |= 0x00000001;
                     break;
                   } // case 8
                   case 18: {
@@ -21039,13 +21154,14 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
                         InputDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                     internalGetMutableInput().getMutableMap().put(
                         input__.getKey(), input__.getValue());
+                    bitField0_ |= 0x00000002;
                     break;
                   } // case 18
                   case 26: {
                     input.readMessage(
                         getGraphLowerBoundFieldBuilder().getBuilder(),
                         extensionRegistry);
-
+                    bitField0_ |= 0x00000004;
                     break;
                   } // case 26
                   default: {
@@ -21100,6 +21216,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
           public Builder setBatchSize(int value) {
             
             batchSize_ = value;
+            bitField0_ |= 0x00000001;
             onChanged();
             return this;
           }
@@ -21117,7 +21234,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            * @return This builder for chaining.
            */
           public Builder clearBatchSize() {
-            
+            bitField0_ = (bitField0_ & ~0x00000001);
             batchSize_ = 0;
             onChanged();
             return this;
@@ -21126,7 +21243,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
           private com.google.protobuf.MapField<
               java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> input_;
           private com.google.protobuf.MapField<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape>
-          internalGetInput() {
+              internalGetInput() {
             if (input_ == null) {
               return com.google.protobuf.MapField.emptyMapField(
                   InputDefaultEntryHolder.defaultEntry);
@@ -21134,8 +21251,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
             return input_;
           }
           private com.google.protobuf.MapField<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape>
-          internalGetMutableInput() {
-            onChanged();;
+              internalGetMutableInput() {
             if (input_ == null) {
               input_ = com.google.protobuf.MapField.newMapField(
                   InputDefaultEntryHolder.defaultEntry);
@@ -21143,9 +21259,10 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
             if (!input_.isMutable()) {
               input_ = input_.copy();
             }
+            bitField0_ |= 0x00000002;
+            onChanged();
             return input_;
           }
-
           public int getInputCount() {
             return internalGetInput().getMap().size();
           }
@@ -21160,7 +21277,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            *
            * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
            */
-
           @java.lang.Override
           public boolean containsInput(
               java.lang.String key) {
@@ -21187,7 +21303,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
            */
           @java.lang.Override
-
           public java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> getInputMap() {
             return internalGetInput().getMap();
           }
@@ -21203,10 +21318,11 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
            */
           @java.lang.Override
-
-          public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrDefault(
+          public /* nullable */
+inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrDefault(
               java.lang.String key,
-              inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape defaultValue) {
+              /* nullable */
+inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape defaultValue) {
             if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> map =
                 internalGetInput().getMap();
@@ -21224,7 +21340,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
            */
           @java.lang.Override
-
           public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape getInputOrThrow(
               java.lang.String key) {
             if (key == null) { throw new NullPointerException("map key"); }
@@ -21235,8 +21350,8 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
             }
             return map.get(key);
           }
-
           public Builder clearInput() {
+            bitField0_ = (bitField0_ & ~0x00000002);
             internalGetMutableInput().getMutableMap()
                 .clear();
             return this;
@@ -21252,7 +21367,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            *
            * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
            */
-
           public Builder removeInput(
               java.lang.String key) {
             if (key == null) { throw new NullPointerException("map key"); }
@@ -21265,7 +21379,8 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            */
           @java.lang.Deprecated
           public java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape>
-          getMutableInput() {
+              getMutableInput() {
+            bitField0_ |= 0x00000002;
             return internalGetMutableInput().getMutableMap();
           }
           /**
@@ -21283,12 +21398,10 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
               java.lang.String key,
               inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape value) {
             if (key == null) { throw new NullPointerException("map key"); }
-            if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+            if (value == null) { throw new NullPointerException("map value"); }
             internalGetMutableInput().getMutableMap()
                 .put(key, value);
+            bitField0_ |= 0x00000002;
             return this;
           }
           /**
@@ -21302,11 +21415,11 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            *
            * <code>map&lt;string, .inference.ModelOptimizationPolicy.Cuda.GraphSpec.Shape&gt; input = 2 [json_name = "input"];</code>
            */
-
           public Builder putAllInput(
               java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape> values) {
             internalGetMutableInput().getMutableMap()
                 .putAll(values);
+            bitField0_ |= 0x00000002;
             return this;
           }
 
@@ -21334,7 +21447,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            * @return Whether the graphLowerBound field is set.
            */
           public boolean hasGraphLowerBound() {
-            return graphLowerBoundBuilder_ != null || graphLowerBound_ != null;
+            return ((bitField0_ & 0x00000004) != 0);
           }
           /**
            * <pre>
@@ -21388,11 +21501,11 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
                 throw new NullPointerException();
               }
               graphLowerBound_ = value;
-              onChanged();
             } else {
               graphLowerBoundBuilder_.setMessage(value);
             }
-
+            bitField0_ |= 0x00000004;
+            onChanged();
             return this;
           }
           /**
@@ -21418,11 +21531,11 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
               inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.LowerBound.Builder builderForValue) {
             if (graphLowerBoundBuilder_ == null) {
               graphLowerBound_ = builderForValue.build();
-              onChanged();
             } else {
               graphLowerBoundBuilder_.setMessage(builderForValue.build());
             }
-
+            bitField0_ |= 0x00000004;
+            onChanged();
             return this;
           }
           /**
@@ -21446,17 +21559,18 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            */
           public Builder mergeGraphLowerBound(inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.LowerBound value) {
             if (graphLowerBoundBuilder_ == null) {
-              if (graphLowerBound_ != null) {
-                graphLowerBound_ =
-                  inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.LowerBound.newBuilder(graphLowerBound_).mergeFrom(value).buildPartial();
+              if (((bitField0_ & 0x00000004) != 0) &&
+                graphLowerBound_ != null &&
+                graphLowerBound_ != inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.LowerBound.getDefaultInstance()) {
+                getGraphLowerBoundBuilder().mergeFrom(value);
               } else {
                 graphLowerBound_ = value;
               }
-              onChanged();
             } else {
               graphLowerBoundBuilder_.mergeFrom(value);
             }
-
+            bitField0_ |= 0x00000004;
+            onChanged();
             return this;
           }
           /**
@@ -21479,14 +21593,13 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            * <code>.inference.ModelOptimizationPolicy.Cuda.GraphSpec.LowerBound graph_lower_bound = 3 [json_name = "graphLowerBound"];</code>
            */
           public Builder clearGraphLowerBound() {
-            if (graphLowerBoundBuilder_ == null) {
-              graphLowerBound_ = null;
-              onChanged();
-            } else {
-              graphLowerBound_ = null;
+            bitField0_ = (bitField0_ & ~0x00000004);
+            graphLowerBound_ = null;
+            if (graphLowerBoundBuilder_ != null) {
+              graphLowerBoundBuilder_.dispose();
               graphLowerBoundBuilder_ = null;
             }
-
+            onChanged();
             return this;
           }
           /**
@@ -21509,7 +21622,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
            * <code>.inference.ModelOptimizationPolicy.Cuda.GraphSpec.LowerBound graph_lower_bound = 3 [json_name = "graphLowerBound"];</code>
            */
           public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.LowerBound.Builder getGraphLowerBoundBuilder() {
-            
+            bitField0_ |= 0x00000004;
             onChanged();
             return getGraphLowerBoundFieldBuilder().getBuilder();
           }
@@ -21637,7 +21750,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
       }
 
       public static final int GRAPHS_FIELD_NUMBER = 1;
-      private boolean graphs_;
+      private boolean graphs_ = false;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: bool graphs
@@ -21657,7 +21770,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
       }
 
       public static final int BUSY_WAIT_EVENTS_FIELD_NUMBER = 2;
-      private boolean busyWaitEvents_;
+      private boolean busyWaitEvents_ = false;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: bool busy_wait_events
@@ -21678,6 +21791,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
       }
 
       public static final int GRAPH_SPEC_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
       private java.util.List<inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec> graphSpec_;
       /**
        * <pre>
@@ -21768,7 +21882,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
       }
 
       public static final int OUTPUT_COPY_STREAM_FIELD_NUMBER = 4;
-      private boolean outputCopyStream_;
+      private boolean outputCopyStream_ = false;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: bool output_copy_stream
@@ -22024,19 +22138,17 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           graphs_ = false;
-
           busyWaitEvents_ = false;
-
           if (graphSpecBuilder_ == null) {
             graphSpec_ = java.util.Collections.emptyList();
           } else {
             graphSpec_ = null;
             graphSpecBuilder_.clear();
           }
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           outputCopyStream_ = false;
-
           return this;
         }
 
@@ -22063,21 +22175,35 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda buildPartial() {
           inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda result = new inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda(this);
-          int from_bitField0_ = bitField0_;
-          result.graphs_ = graphs_;
-          result.busyWaitEvents_ = busyWaitEvents_;
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda result) {
           if (graphSpecBuilder_ == null) {
-            if (((bitField0_ & 0x00000001) != 0)) {
+            if (((bitField0_ & 0x00000004) != 0)) {
               graphSpec_ = java.util.Collections.unmodifiableList(graphSpec_);
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             }
             result.graphSpec_ = graphSpec_;
           } else {
             result.graphSpec_ = graphSpecBuilder_.build();
           }
-          result.outputCopyStream_ = outputCopyStream_;
-          onBuilt();
-          return result;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.graphs_ = graphs_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.busyWaitEvents_ = busyWaitEvents_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.outputCopyStream_ = outputCopyStream_;
+          }
         }
 
         @java.lang.Override
@@ -22134,7 +22260,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
             if (!other.graphSpec_.isEmpty()) {
               if (graphSpec_.isEmpty()) {
                 graphSpec_ = other.graphSpec_;
-                bitField0_ = (bitField0_ & ~0x00000001);
+                bitField0_ = (bitField0_ & ~0x00000004);
               } else {
                 ensureGraphSpecIsMutable();
                 graphSpec_.addAll(other.graphSpec_);
@@ -22147,7 +22273,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
                 graphSpecBuilder_.dispose();
                 graphSpecBuilder_ = null;
                 graphSpec_ = other.graphSpec_;
-                bitField0_ = (bitField0_ & ~0x00000001);
+                bitField0_ = (bitField0_ & ~0x00000004);
                 graphSpecBuilder_ = 
                   com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                      getGraphSpecFieldBuilder() : null;
@@ -22187,12 +22313,12 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
                   break;
                 case 8: {
                   graphs_ = input.readBool();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 8
                 case 16: {
                   busyWaitEvents_ = input.readBool();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 16
                 case 26: {
@@ -22210,7 +22336,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
                 } // case 26
                 case 32: {
                   outputCopyStream_ = input.readBool();
-
+                  bitField0_ |= 0x00000008;
                   break;
                 } // case 32
                 default: {
@@ -22265,6 +22391,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
         public Builder setGraphs(boolean value) {
           
           graphs_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -22282,7 +22409,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
          * @return This builder for chaining.
          */
         public Builder clearGraphs() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           graphs_ = false;
           onChanged();
           return this;
@@ -22325,6 +22452,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
         public Builder setBusyWaitEvents(boolean value) {
           
           busyWaitEvents_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -22343,7 +22471,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
          * @return This builder for chaining.
          */
         public Builder clearBusyWaitEvents() {
-          
+          bitField0_ = (bitField0_ & ~0x00000002);
           busyWaitEvents_ = false;
           onChanged();
           return this;
@@ -22352,9 +22480,9 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
         private java.util.List<inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec> graphSpec_ =
           java.util.Collections.emptyList();
         private void ensureGraphSpecIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
+          if (!((bitField0_ & 0x00000004) != 0)) {
             graphSpec_ = new java.util.ArrayList<inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec>(graphSpec_);
-            bitField0_ |= 0x00000001;
+            bitField0_ |= 0x00000004;
            }
         }
 
@@ -22614,7 +22742,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
         public Builder clearGraphSpec() {
           if (graphSpecBuilder_ == null) {
             graphSpec_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
             onChanged();
           } else {
             graphSpecBuilder_.clear();
@@ -22761,7 +22889,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
             graphSpecBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                 inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Builder, inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpecOrBuilder>(
                     graphSpec_,
-                    ((bitField0_ & 0x00000001) != 0),
+                    ((bitField0_ & 0x00000004) != 0),
                     getParentForChildren(),
                     isClean());
             graphSpec_ = null;
@@ -22810,6 +22938,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
         public Builder setOutputCopyStream(boolean value) {
           
           outputCopyStream_ = value;
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -22830,7 +22959,7 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
          * @return This builder for chaining.
          */
         public Builder clearOutputCopyStream() {
-          
+          bitField0_ = (bitField0_ & ~0x00000008);
           outputCopyStream_ = false;
           onChanged();
           return this;
@@ -23353,7 +23482,6 @@ inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.GraphSpec.Shape def
          *
          * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
          */
-
         /* nullable */
 java.lang.String getParametersOrDefault(
             java.lang.String key,
@@ -23369,7 +23497,6 @@ java.lang.String defaultValue);
          *
          * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
          */
-
         java.lang.String getParametersOrThrow(
             java.lang.String key);
       }
@@ -23437,7 +23564,8 @@ java.lang.String defaultValue);
         }
 
         public static final int NAME_FIELD_NUMBER = 1;
-        private volatile java.lang.Object name_;
+        @SuppressWarnings("serial")
+        private volatile java.lang.Object name_ = "";
         /**
          * <pre>
          *&#64;&#64;    .. cpp:var:: string name
@@ -23500,6 +23628,7 @@ java.lang.String defaultValue);
                       com.google.protobuf.WireFormat.FieldType.STRING,
                       "");
         }
+        @SuppressWarnings("serial")
         private com.google.protobuf.MapField<
             java.lang.String, java.lang.String> parameters_;
         private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -23510,7 +23639,6 @@ java.lang.String defaultValue);
           }
           return parameters_;
         }
-
         public int getParametersCount() {
           return internalGetParameters().getMap().size();
         }
@@ -23524,7 +23652,6 @@ java.lang.String defaultValue);
          *
          * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
          */
-
         @java.lang.Override
         public boolean containsParameters(
             java.lang.String key) {
@@ -23550,7 +23677,6 @@ java.lang.String defaultValue);
          * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
         public java.util.Map<java.lang.String, java.lang.String> getParametersMap() {
           return internalGetParameters().getMap();
         }
@@ -23565,10 +23691,11 @@ java.lang.String defaultValue);
          * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
-        public java.lang.String getParametersOrDefault(
+        public /* nullable */
+java.lang.String getParametersOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue) {
+            /* nullable */
+java.lang.String defaultValue) {
           if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetParameters().getMap();
@@ -23585,7 +23712,6 @@ java.lang.String defaultValue);
          * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
         public java.lang.String getParametersOrThrow(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -23838,8 +23964,8 @@ java.lang.String defaultValue);
           @java.lang.Override
           public Builder clear() {
             super.clear();
+            bitField0_ = 0;
             name_ = "";
-
             internalGetMutableParameters().clear();
             return this;
           }
@@ -23867,12 +23993,20 @@ java.lang.String defaultValue);
           @java.lang.Override
           public inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators.Accelerator buildPartial() {
             inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators.Accelerator result = new inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators.Accelerator(this);
-            int from_bitField0_ = bitField0_;
-            result.name_ = name_;
-            result.parameters_ = internalGetParameters();
-            result.parameters_.makeImmutable();
+            if (bitField0_ != 0) { buildPartial0(result); }
             onBuilt();
             return result;
+          }
+
+          private void buildPartial0(inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators.Accelerator result) {
+            int from_bitField0_ = bitField0_;
+            if (((from_bitField0_ & 0x00000001) != 0)) {
+              result.name_ = name_;
+            }
+            if (((from_bitField0_ & 0x00000002) != 0)) {
+              result.parameters_ = internalGetParameters();
+              result.parameters_.makeImmutable();
+            }
           }
 
           @java.lang.Override
@@ -23921,10 +24055,12 @@ java.lang.String defaultValue);
             if (other == inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators.Accelerator.getDefaultInstance()) return this;
             if (!other.getName().isEmpty()) {
               name_ = other.name_;
+              bitField0_ |= 0x00000001;
               onChanged();
             }
             internalGetMutableParameters().mergeFrom(
                 other.internalGetParameters());
+            bitField0_ |= 0x00000002;
             this.mergeUnknownFields(other.getUnknownFields());
             onChanged();
             return this;
@@ -23953,7 +24089,7 @@ java.lang.String defaultValue);
                     break;
                   case 10: {
                     name_ = input.readStringRequireUtf8();
-
+                    bitField0_ |= 0x00000001;
                     break;
                   } // case 10
                   case 18: {
@@ -23962,6 +24098,7 @@ java.lang.String defaultValue);
                         ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                     internalGetMutableParameters().getMutableMap().put(
                         parameters__.getKey(), parameters__.getValue());
+                    bitField0_ |= 0x00000002;
                     break;
                   } // case 18
                   default: {
@@ -24043,11 +24180,9 @@ java.lang.String defaultValue);
            */
           public Builder setName(
               java.lang.String value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  
+            if (value == null) { throw new NullPointerException(); }
             name_ = value;
+            bitField0_ |= 0x00000001;
             onChanged();
             return this;
           }
@@ -24063,8 +24198,8 @@ java.lang.String defaultValue);
            * @return This builder for chaining.
            */
           public Builder clearName() {
-            
             name_ = getDefaultInstance().getName();
+            bitField0_ = (bitField0_ & ~0x00000001);
             onChanged();
             return this;
           }
@@ -24082,12 +24217,10 @@ java.lang.String defaultValue);
            */
           public Builder setNameBytes(
               com.google.protobuf.ByteString value) {
-            if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-            
+            if (value == null) { throw new NullPointerException(); }
+            checkByteStringIsUtf8(value);
             name_ = value;
+            bitField0_ |= 0x00000001;
             onChanged();
             return this;
           }
@@ -24095,7 +24228,7 @@ java.lang.String defaultValue);
           private com.google.protobuf.MapField<
               java.lang.String, java.lang.String> parameters_;
           private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-          internalGetParameters() {
+              internalGetParameters() {
             if (parameters_ == null) {
               return com.google.protobuf.MapField.emptyMapField(
                   ParametersDefaultEntryHolder.defaultEntry);
@@ -24103,8 +24236,7 @@ java.lang.String defaultValue);
             return parameters_;
           }
           private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-          internalGetMutableParameters() {
-            onChanged();;
+              internalGetMutableParameters() {
             if (parameters_ == null) {
               parameters_ = com.google.protobuf.MapField.newMapField(
                   ParametersDefaultEntryHolder.defaultEntry);
@@ -24112,9 +24244,10 @@ java.lang.String defaultValue);
             if (!parameters_.isMutable()) {
               parameters_ = parameters_.copy();
             }
+            bitField0_ |= 0x00000002;
+            onChanged();
             return parameters_;
           }
-
           public int getParametersCount() {
             return internalGetParameters().getMap().size();
           }
@@ -24128,7 +24261,6 @@ java.lang.String defaultValue);
            *
            * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
            */
-
           @java.lang.Override
           public boolean containsParameters(
               java.lang.String key) {
@@ -24154,7 +24286,6 @@ java.lang.String defaultValue);
            * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
            */
           @java.lang.Override
-
           public java.util.Map<java.lang.String, java.lang.String> getParametersMap() {
             return internalGetParameters().getMap();
           }
@@ -24169,10 +24300,11 @@ java.lang.String defaultValue);
            * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
            */
           @java.lang.Override
-
-          public java.lang.String getParametersOrDefault(
+          public /* nullable */
+java.lang.String getParametersOrDefault(
               java.lang.String key,
-              java.lang.String defaultValue) {
+              /* nullable */
+java.lang.String defaultValue) {
             if (key == null) { throw new NullPointerException("map key"); }
             java.util.Map<java.lang.String, java.lang.String> map =
                 internalGetParameters().getMap();
@@ -24189,7 +24321,6 @@ java.lang.String defaultValue);
            * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
            */
           @java.lang.Override
-
           public java.lang.String getParametersOrThrow(
               java.lang.String key) {
             if (key == null) { throw new NullPointerException("map key"); }
@@ -24200,8 +24331,8 @@ java.lang.String defaultValue);
             }
             return map.get(key);
           }
-
           public Builder clearParameters() {
+            bitField0_ = (bitField0_ & ~0x00000002);
             internalGetMutableParameters().getMutableMap()
                 .clear();
             return this;
@@ -24216,7 +24347,6 @@ java.lang.String defaultValue);
            *
            * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
            */
-
           public Builder removeParameters(
               java.lang.String key) {
             if (key == null) { throw new NullPointerException("map key"); }
@@ -24229,7 +24359,8 @@ java.lang.String defaultValue);
            */
           @java.lang.Deprecated
           public java.util.Map<java.lang.String, java.lang.String>
-          getMutableParameters() {
+              getMutableParameters() {
+            bitField0_ |= 0x00000002;
             return internalGetMutableParameters().getMutableMap();
           }
           /**
@@ -24246,12 +24377,10 @@ java.lang.String defaultValue);
               java.lang.String key,
               java.lang.String value) {
             if (key == null) { throw new NullPointerException("map key"); }
-            if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+            if (value == null) { throw new NullPointerException("map value"); }
             internalGetMutableParameters().getMutableMap()
                 .put(key, value);
+            bitField0_ |= 0x00000002;
             return this;
           }
           /**
@@ -24264,11 +24393,11 @@ java.lang.String defaultValue);
            *
            * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
            */
-
           public Builder putAllParameters(
               java.util.Map<java.lang.String, java.lang.String> values) {
             internalGetMutableParameters().getMutableMap()
                 .putAll(values);
+            bitField0_ |= 0x00000002;
             return this;
           }
           @java.lang.Override
@@ -24336,6 +24465,7 @@ java.lang.String defaultValue);
       }
 
       public static final int GPU_EXECUTION_ACCELERATOR_FIELD_NUMBER = 1;
+      @SuppressWarnings("serial")
       private java.util.List<inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators.Accelerator> gpuExecutionAccelerator_;
       /**
        * <pre>
@@ -24581,6 +24711,7 @@ java.lang.String defaultValue);
       }
 
       public static final int CPU_EXECUTION_ACCELERATOR_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
       private java.util.List<inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators.Accelerator> cpuExecutionAccelerator_;
       /**
        * <pre>
@@ -24897,6 +25028,7 @@ java.lang.String defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           if (gpuExecutionAcceleratorBuilder_ == null) {
             gpuExecutionAccelerator_ = java.util.Collections.emptyList();
           } else {
@@ -24937,7 +25069,13 @@ java.lang.String defaultValue);
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators buildPartial() {
           inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators result = new inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators(this);
-          int from_bitField0_ = bitField0_;
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators result) {
           if (gpuExecutionAcceleratorBuilder_ == null) {
             if (((bitField0_ & 0x00000001) != 0)) {
               gpuExecutionAccelerator_ = java.util.Collections.unmodifiableList(gpuExecutionAccelerator_);
@@ -24956,8 +25094,10 @@ java.lang.String defaultValue);
           } else {
             result.cpuExecutionAccelerator_ = cpuExecutionAcceleratorBuilder_.build();
           }
-          onBuilt();
-          return result;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators result) {
+          int from_bitField0_ = bitField0_;
         }
 
         @java.lang.Override
@@ -26678,7 +26818,7 @@ java.lang.String defaultValue);
       }
 
       public static final int ENABLE_FIELD_NUMBER = 1;
-      private boolean enable_;
+      private boolean enable_ = false;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: bool enable
@@ -26900,8 +27040,8 @@ java.lang.String defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           enable_ = false;
-
           return this;
         }
 
@@ -26928,9 +27068,16 @@ java.lang.String defaultValue);
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer buildPartial() {
           inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer result = new inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer(this);
-          result.enable_ = enable_;
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.enable_ = enable_;
+          }
         }
 
         @java.lang.Override
@@ -27008,7 +27155,7 @@ java.lang.String defaultValue);
                   break;
                 case 8: {
                   enable_ = input.readBool();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 8
                 default: {
@@ -27026,6 +27173,7 @@ java.lang.String defaultValue);
           } // finally
           return this;
         }
+        private int bitField0_;
 
         private boolean enable_ ;
         /**
@@ -27058,6 +27206,7 @@ java.lang.String defaultValue);
         public Builder setEnable(boolean value) {
           
           enable_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -27073,7 +27222,7 @@ java.lang.String defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearEnable() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           enable_ = false;
           onChanged();
           return this;
@@ -27186,11 +27335,11 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelOptimizationPolicy.GraphOrBuilder getGraphOrBuilder() {
-      return getGraph();
+      return graph_ == null ? inference.ModelConfigOuterClass.ModelOptimizationPolicy.Graph.getDefaultInstance() : graph_;
     }
 
     public static final int PRIORITY_FIELD_NUMBER = 2;
-    private int priority_;
+    private int priority_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: ModelPriority priority
@@ -27217,8 +27366,7 @@ java.lang.String defaultValue);
      * @return The priority.
      */
     @java.lang.Override public inference.ModelConfigOuterClass.ModelOptimizationPolicy.ModelPriority getPriority() {
-      @SuppressWarnings("deprecation")
-      inference.ModelConfigOuterClass.ModelOptimizationPolicy.ModelPriority result = inference.ModelConfigOuterClass.ModelOptimizationPolicy.ModelPriority.valueOf(priority_);
+      inference.ModelConfigOuterClass.ModelOptimizationPolicy.ModelPriority result = inference.ModelConfigOuterClass.ModelOptimizationPolicy.ModelPriority.forNumber(priority_);
       return result == null ? inference.ModelConfigOuterClass.ModelOptimizationPolicy.ModelPriority.UNRECOGNIZED : result;
     }
 
@@ -27266,7 +27414,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelOptimizationPolicy.CudaOrBuilder getCudaOrBuilder() {
-      return getCuda();
+      return cuda_ == null ? inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.getDefaultInstance() : cuda_;
     }
 
     public static final int EXECUTION_ACCELERATORS_FIELD_NUMBER = 4;
@@ -27313,7 +27461,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAcceleratorsOrBuilder getExecutionAcceleratorsOrBuilder() {
-      return getExecutionAccelerators();
+      return executionAccelerators_ == null ? inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators.getDefaultInstance() : executionAccelerators_;
     }
 
     public static final int INPUT_PINNED_MEMORY_FIELD_NUMBER = 5;
@@ -27366,7 +27514,7 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBufferOrBuilder getInputPinnedMemoryOrBuilder() {
-      return getInputPinnedMemory();
+      return inputPinnedMemory_ == null ? inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer.getDefaultInstance() : inputPinnedMemory_;
     }
 
     public static final int OUTPUT_PINNED_MEMORY_FIELD_NUMBER = 6;
@@ -27419,11 +27567,11 @@ java.lang.String defaultValue);
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBufferOrBuilder getOutputPinnedMemoryOrBuilder() {
-      return getOutputPinnedMemory();
+      return outputPinnedMemory_ == null ? inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer.getDefaultInstance() : outputPinnedMemory_;
     }
 
     public static final int GATHER_KERNEL_BUFFER_THRESHOLD_FIELD_NUMBER = 7;
-    private int gatherKernelBufferThreshold_;
+    private int gatherKernelBufferThreshold_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint32 gather_kernel_buffer_threshold
@@ -27447,7 +27595,7 @@ java.lang.String defaultValue);
     }
 
     public static final int EAGER_BATCHING_FIELD_NUMBER = 8;
-    private boolean eagerBatching_;
+    private boolean eagerBatching_ = false;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: bool eager_batching
@@ -27769,42 +27917,35 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (graphBuilder_ == null) {
-          graph_ = null;
-        } else {
-          graph_ = null;
+        bitField0_ = 0;
+        graph_ = null;
+        if (graphBuilder_ != null) {
+          graphBuilder_.dispose();
           graphBuilder_ = null;
         }
         priority_ = 0;
-
-        if (cudaBuilder_ == null) {
-          cuda_ = null;
-        } else {
-          cuda_ = null;
+        cuda_ = null;
+        if (cudaBuilder_ != null) {
+          cudaBuilder_.dispose();
           cudaBuilder_ = null;
         }
-        if (executionAcceleratorsBuilder_ == null) {
-          executionAccelerators_ = null;
-        } else {
-          executionAccelerators_ = null;
+        executionAccelerators_ = null;
+        if (executionAcceleratorsBuilder_ != null) {
+          executionAcceleratorsBuilder_.dispose();
           executionAcceleratorsBuilder_ = null;
         }
-        if (inputPinnedMemoryBuilder_ == null) {
-          inputPinnedMemory_ = null;
-        } else {
-          inputPinnedMemory_ = null;
+        inputPinnedMemory_ = null;
+        if (inputPinnedMemoryBuilder_ != null) {
+          inputPinnedMemoryBuilder_.dispose();
           inputPinnedMemoryBuilder_ = null;
         }
-        if (outputPinnedMemoryBuilder_ == null) {
-          outputPinnedMemory_ = null;
-        } else {
-          outputPinnedMemory_ = null;
+        outputPinnedMemory_ = null;
+        if (outputPinnedMemoryBuilder_ != null) {
+          outputPinnedMemoryBuilder_.dispose();
           outputPinnedMemoryBuilder_ = null;
         }
         gatherKernelBufferThreshold_ = 0;
-
         eagerBatching_ = false;
-
         return this;
       }
 
@@ -27831,36 +27972,47 @@ java.lang.String defaultValue);
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelOptimizationPolicy buildPartial() {
         inference.ModelConfigOuterClass.ModelOptimizationPolicy result = new inference.ModelConfigOuterClass.ModelOptimizationPolicy(this);
-        if (graphBuilder_ == null) {
-          result.graph_ = graph_;
-        } else {
-          result.graph_ = graphBuilder_.build();
-        }
-        result.priority_ = priority_;
-        if (cudaBuilder_ == null) {
-          result.cuda_ = cuda_;
-        } else {
-          result.cuda_ = cudaBuilder_.build();
-        }
-        if (executionAcceleratorsBuilder_ == null) {
-          result.executionAccelerators_ = executionAccelerators_;
-        } else {
-          result.executionAccelerators_ = executionAcceleratorsBuilder_.build();
-        }
-        if (inputPinnedMemoryBuilder_ == null) {
-          result.inputPinnedMemory_ = inputPinnedMemory_;
-        } else {
-          result.inputPinnedMemory_ = inputPinnedMemoryBuilder_.build();
-        }
-        if (outputPinnedMemoryBuilder_ == null) {
-          result.outputPinnedMemory_ = outputPinnedMemory_;
-        } else {
-          result.outputPinnedMemory_ = outputPinnedMemoryBuilder_.build();
-        }
-        result.gatherKernelBufferThreshold_ = gatherKernelBufferThreshold_;
-        result.eagerBatching_ = eagerBatching_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelOptimizationPolicy result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.graph_ = graphBuilder_ == null
+              ? graph_
+              : graphBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.priority_ = priority_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.cuda_ = cudaBuilder_ == null
+              ? cuda_
+              : cudaBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.executionAccelerators_ = executionAcceleratorsBuilder_ == null
+              ? executionAccelerators_
+              : executionAcceleratorsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.inputPinnedMemory_ = inputPinnedMemoryBuilder_ == null
+              ? inputPinnedMemory_
+              : inputPinnedMemoryBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.outputPinnedMemory_ = outputPinnedMemoryBuilder_ == null
+              ? outputPinnedMemory_
+              : outputPinnedMemoryBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.gatherKernelBufferThreshold_ = gatherKernelBufferThreshold_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.eagerBatching_ = eagerBatching_;
+        }
       }
 
       @java.lang.Override
@@ -27961,50 +28113,50 @@ java.lang.String defaultValue);
                 input.readMessage(
                     getGraphFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 priority_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 26: {
                 input.readMessage(
                     getCudaFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getExecutionAcceleratorsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 input.readMessage(
                     getInputPinnedMemoryFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 input.readMessage(
                     getOutputPinnedMemoryFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 56: {
                 gatherKernelBufferThreshold_ = input.readUInt32();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 56
               case 64: {
                 eagerBatching_ = input.readBool();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 64
               default: {
@@ -28022,6 +28174,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private inference.ModelConfigOuterClass.ModelOptimizationPolicy.Graph graph_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -28038,7 +28191,7 @@ java.lang.String defaultValue);
        * @return Whether the graph field is set.
        */
       public boolean hasGraph() {
-        return graphBuilder_ != null || graph_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -28074,11 +28227,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           graph_ = value;
-          onChanged();
         } else {
           graphBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -28095,11 +28248,11 @@ java.lang.String defaultValue);
           inference.ModelConfigOuterClass.ModelOptimizationPolicy.Graph.Builder builderForValue) {
         if (graphBuilder_ == null) {
           graph_ = builderForValue.build();
-          onChanged();
         } else {
           graphBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -28114,17 +28267,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeGraph(inference.ModelConfigOuterClass.ModelOptimizationPolicy.Graph value) {
         if (graphBuilder_ == null) {
-          if (graph_ != null) {
-            graph_ =
-              inference.ModelConfigOuterClass.ModelOptimizationPolicy.Graph.newBuilder(graph_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            graph_ != null &&
+            graph_ != inference.ModelConfigOuterClass.ModelOptimizationPolicy.Graph.getDefaultInstance()) {
+            getGraphBuilder().mergeFrom(value);
           } else {
             graph_ = value;
           }
-          onChanged();
         } else {
           graphBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -28138,14 +28292,13 @@ java.lang.String defaultValue);
        * <code>.inference.ModelOptimizationPolicy.Graph graph = 1 [json_name = "graph"];</code>
        */
       public Builder clearGraph() {
-        if (graphBuilder_ == null) {
-          graph_ = null;
-          onChanged();
-        } else {
-          graph_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        graph_ = null;
+        if (graphBuilder_ != null) {
+          graphBuilder_.dispose();
           graphBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -28159,7 +28312,7 @@ java.lang.String defaultValue);
        * <code>.inference.ModelOptimizationPolicy.Graph graph = 1 [json_name = "graph"];</code>
        */
       public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Graph.Builder getGraphBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getGraphFieldBuilder().getBuilder();
       }
@@ -28233,8 +28386,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setPriorityValue(int value) {
-        
         priority_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -28251,8 +28404,7 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelOptimizationPolicy.ModelPriority getPriority() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.ModelOptimizationPolicy.ModelPriority result = inference.ModelConfigOuterClass.ModelOptimizationPolicy.ModelPriority.valueOf(priority_);
+        inference.ModelConfigOuterClass.ModelOptimizationPolicy.ModelPriority result = inference.ModelConfigOuterClass.ModelOptimizationPolicy.ModelPriority.forNumber(priority_);
         return result == null ? inference.ModelConfigOuterClass.ModelOptimizationPolicy.ModelPriority.UNRECOGNIZED : result;
       }
       /**
@@ -28271,7 +28423,7 @@ java.lang.String defaultValue);
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         priority_ = value.getNumber();
         onChanged();
         return this;
@@ -28288,7 +28440,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearPriority() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         priority_ = 0;
         onChanged();
         return this;
@@ -28309,7 +28461,7 @@ java.lang.String defaultValue);
        * @return Whether the cuda field is set.
        */
       public boolean hasCuda() {
-        return cudaBuilder_ != null || cuda_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -28345,11 +28497,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           cuda_ = value;
-          onChanged();
         } else {
           cudaBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -28366,11 +28518,11 @@ java.lang.String defaultValue);
           inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.Builder builderForValue) {
         if (cudaBuilder_ == null) {
           cuda_ = builderForValue.build();
-          onChanged();
         } else {
           cudaBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -28385,17 +28537,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeCuda(inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda value) {
         if (cudaBuilder_ == null) {
-          if (cuda_ != null) {
-            cuda_ =
-              inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.newBuilder(cuda_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            cuda_ != null &&
+            cuda_ != inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.getDefaultInstance()) {
+            getCudaBuilder().mergeFrom(value);
           } else {
             cuda_ = value;
           }
-          onChanged();
         } else {
           cudaBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -28409,14 +28562,13 @@ java.lang.String defaultValue);
        * <code>.inference.ModelOptimizationPolicy.Cuda cuda = 3 [json_name = "cuda"];</code>
        */
       public Builder clearCuda() {
-        if (cudaBuilder_ == null) {
-          cuda_ = null;
-          onChanged();
-        } else {
-          cuda_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        cuda_ = null;
+        if (cudaBuilder_ != null) {
+          cudaBuilder_.dispose();
           cudaBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -28430,7 +28582,7 @@ java.lang.String defaultValue);
        * <code>.inference.ModelOptimizationPolicy.Cuda cuda = 3 [json_name = "cuda"];</code>
        */
       public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Cuda.Builder getCudaBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getCudaFieldBuilder().getBuilder();
       }
@@ -28491,7 +28643,7 @@ java.lang.String defaultValue);
        * @return Whether the executionAccelerators field is set.
        */
       public boolean hasExecutionAccelerators() {
-        return executionAcceleratorsBuilder_ != null || executionAccelerators_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -28527,11 +28679,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           executionAccelerators_ = value;
-          onChanged();
         } else {
           executionAcceleratorsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -28548,11 +28700,11 @@ java.lang.String defaultValue);
           inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators.Builder builderForValue) {
         if (executionAcceleratorsBuilder_ == null) {
           executionAccelerators_ = builderForValue.build();
-          onChanged();
         } else {
           executionAcceleratorsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -28567,17 +28719,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeExecutionAccelerators(inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators value) {
         if (executionAcceleratorsBuilder_ == null) {
-          if (executionAccelerators_ != null) {
-            executionAccelerators_ =
-              inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators.newBuilder(executionAccelerators_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            executionAccelerators_ != null &&
+            executionAccelerators_ != inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators.getDefaultInstance()) {
+            getExecutionAcceleratorsBuilder().mergeFrom(value);
           } else {
             executionAccelerators_ = value;
           }
-          onChanged();
         } else {
           executionAcceleratorsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -28591,14 +28744,13 @@ java.lang.String defaultValue);
        * <code>.inference.ModelOptimizationPolicy.ExecutionAccelerators execution_accelerators = 4 [json_name = "executionAccelerators"];</code>
        */
       public Builder clearExecutionAccelerators() {
-        if (executionAcceleratorsBuilder_ == null) {
-          executionAccelerators_ = null;
-          onChanged();
-        } else {
-          executionAccelerators_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        executionAccelerators_ = null;
+        if (executionAcceleratorsBuilder_ != null) {
+          executionAcceleratorsBuilder_.dispose();
           executionAcceleratorsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -28612,7 +28764,7 @@ java.lang.String defaultValue);
        * <code>.inference.ModelOptimizationPolicy.ExecutionAccelerators execution_accelerators = 4 [json_name = "executionAccelerators"];</code>
        */
       public inference.ModelConfigOuterClass.ModelOptimizationPolicy.ExecutionAccelerators.Builder getExecutionAcceleratorsBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getExecutionAcceleratorsFieldBuilder().getBuilder();
       }
@@ -28675,7 +28827,7 @@ java.lang.String defaultValue);
        * @return Whether the inputPinnedMemory field is set.
        */
       public boolean hasInputPinnedMemory() {
-        return inputPinnedMemoryBuilder_ != null || inputPinnedMemory_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <pre>
@@ -28715,11 +28867,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           inputPinnedMemory_ = value;
-          onChanged();
         } else {
           inputPinnedMemoryBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -28738,11 +28890,11 @@ java.lang.String defaultValue);
           inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer.Builder builderForValue) {
         if (inputPinnedMemoryBuilder_ == null) {
           inputPinnedMemory_ = builderForValue.build();
-          onChanged();
         } else {
           inputPinnedMemoryBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -28759,17 +28911,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeInputPinnedMemory(inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer value) {
         if (inputPinnedMemoryBuilder_ == null) {
-          if (inputPinnedMemory_ != null) {
-            inputPinnedMemory_ =
-              inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer.newBuilder(inputPinnedMemory_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            inputPinnedMemory_ != null &&
+            inputPinnedMemory_ != inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer.getDefaultInstance()) {
+            getInputPinnedMemoryBuilder().mergeFrom(value);
           } else {
             inputPinnedMemory_ = value;
           }
-          onChanged();
         } else {
           inputPinnedMemoryBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -28785,14 +28938,13 @@ java.lang.String defaultValue);
        * <code>.inference.ModelOptimizationPolicy.PinnedMemoryBuffer input_pinned_memory = 5 [json_name = "inputPinnedMemory"];</code>
        */
       public Builder clearInputPinnedMemory() {
-        if (inputPinnedMemoryBuilder_ == null) {
-          inputPinnedMemory_ = null;
-          onChanged();
-        } else {
-          inputPinnedMemory_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        inputPinnedMemory_ = null;
+        if (inputPinnedMemoryBuilder_ != null) {
+          inputPinnedMemoryBuilder_.dispose();
           inputPinnedMemoryBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -28808,7 +28960,7 @@ java.lang.String defaultValue);
        * <code>.inference.ModelOptimizationPolicy.PinnedMemoryBuffer input_pinned_memory = 5 [json_name = "inputPinnedMemory"];</code>
        */
       public inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer.Builder getInputPinnedMemoryBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getInputPinnedMemoryFieldBuilder().getBuilder();
       }
@@ -28875,7 +29027,7 @@ java.lang.String defaultValue);
        * @return Whether the outputPinnedMemory field is set.
        */
       public boolean hasOutputPinnedMemory() {
-        return outputPinnedMemoryBuilder_ != null || outputPinnedMemory_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -28915,11 +29067,11 @@ java.lang.String defaultValue);
             throw new NullPointerException();
           }
           outputPinnedMemory_ = value;
-          onChanged();
         } else {
           outputPinnedMemoryBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -28938,11 +29090,11 @@ java.lang.String defaultValue);
           inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer.Builder builderForValue) {
         if (outputPinnedMemoryBuilder_ == null) {
           outputPinnedMemory_ = builderForValue.build();
-          onChanged();
         } else {
           outputPinnedMemoryBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -28959,17 +29111,18 @@ java.lang.String defaultValue);
        */
       public Builder mergeOutputPinnedMemory(inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer value) {
         if (outputPinnedMemoryBuilder_ == null) {
-          if (outputPinnedMemory_ != null) {
-            outputPinnedMemory_ =
-              inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer.newBuilder(outputPinnedMemory_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            outputPinnedMemory_ != null &&
+            outputPinnedMemory_ != inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer.getDefaultInstance()) {
+            getOutputPinnedMemoryBuilder().mergeFrom(value);
           } else {
             outputPinnedMemory_ = value;
           }
-          onChanged();
         } else {
           outputPinnedMemoryBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -28985,14 +29138,13 @@ java.lang.String defaultValue);
        * <code>.inference.ModelOptimizationPolicy.PinnedMemoryBuffer output_pinned_memory = 6 [json_name = "outputPinnedMemory"];</code>
        */
       public Builder clearOutputPinnedMemory() {
-        if (outputPinnedMemoryBuilder_ == null) {
-          outputPinnedMemory_ = null;
-          onChanged();
-        } else {
-          outputPinnedMemory_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        outputPinnedMemory_ = null;
+        if (outputPinnedMemoryBuilder_ != null) {
+          outputPinnedMemoryBuilder_.dispose();
           outputPinnedMemoryBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -29008,7 +29160,7 @@ java.lang.String defaultValue);
        * <code>.inference.ModelOptimizationPolicy.PinnedMemoryBuffer output_pinned_memory = 6 [json_name = "outputPinnedMemory"];</code>
        */
       public inference.ModelConfigOuterClass.ModelOptimizationPolicy.PinnedMemoryBuffer.Builder getOutputPinnedMemoryBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getOutputPinnedMemoryFieldBuilder().getBuilder();
       }
@@ -29101,6 +29253,7 @@ java.lang.String defaultValue);
       public Builder setGatherKernelBufferThreshold(int value) {
         
         gatherKernelBufferThreshold_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -29122,7 +29275,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearGatherKernelBufferThreshold() {
-        
+        bitField0_ = (bitField0_ & ~0x00000040);
         gatherKernelBufferThreshold_ = 0;
         onChanged();
         return this;
@@ -29169,6 +29322,7 @@ java.lang.String defaultValue);
       public Builder setEagerBatching(boolean value) {
         
         eagerBatching_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -29189,7 +29343,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearEagerBatching() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         eagerBatching_ = false;
         onChanged();
         return this;
@@ -29540,7 +29694,7 @@ java.lang.String defaultValue);
     }
 
     public static final int TIMEOUT_ACTION_FIELD_NUMBER = 1;
-    private int timeoutAction_;
+    private int timeoutAction_ = 0;
     /**
      * <pre>
      *&#64;&#64;
@@ -29571,13 +29725,12 @@ java.lang.String defaultValue);
      * @return The timeoutAction.
      */
     @java.lang.Override public inference.ModelConfigOuterClass.ModelQueuePolicy.TimeoutAction getTimeoutAction() {
-      @SuppressWarnings("deprecation")
-      inference.ModelConfigOuterClass.ModelQueuePolicy.TimeoutAction result = inference.ModelConfigOuterClass.ModelQueuePolicy.TimeoutAction.valueOf(timeoutAction_);
+      inference.ModelConfigOuterClass.ModelQueuePolicy.TimeoutAction result = inference.ModelConfigOuterClass.ModelQueuePolicy.TimeoutAction.forNumber(timeoutAction_);
       return result == null ? inference.ModelConfigOuterClass.ModelQueuePolicy.TimeoutAction.UNRECOGNIZED : result;
     }
 
     public static final int DEFAULT_TIMEOUT_MICROSECONDS_FIELD_NUMBER = 2;
-    private long defaultTimeoutMicroseconds_;
+    private long defaultTimeoutMicroseconds_ = 0L;
     /**
      * <pre>
      *&#64;&#64;
@@ -29597,7 +29750,7 @@ java.lang.String defaultValue);
     }
 
     public static final int ALLOW_TIMEOUT_OVERRIDE_FIELD_NUMBER = 3;
-    private boolean allowTimeoutOverride_;
+    private boolean allowTimeoutOverride_ = false;
     /**
      * <pre>
      *&#64;&#64;
@@ -29619,7 +29772,7 @@ java.lang.String defaultValue);
     }
 
     public static final int MAX_QUEUE_SIZE_FIELD_NUMBER = 4;
-    private int maxQueueSize_;
+    private int maxQueueSize_ = 0;
     /**
      * <pre>
      *&#64;&#64;
@@ -29870,14 +30023,11 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         timeoutAction_ = 0;
-
         defaultTimeoutMicroseconds_ = 0L;
-
         allowTimeoutOverride_ = false;
-
         maxQueueSize_ = 0;
-
         return this;
       }
 
@@ -29904,12 +30054,25 @@ java.lang.String defaultValue);
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelQueuePolicy buildPartial() {
         inference.ModelConfigOuterClass.ModelQueuePolicy result = new inference.ModelConfigOuterClass.ModelQueuePolicy(this);
-        result.timeoutAction_ = timeoutAction_;
-        result.defaultTimeoutMicroseconds_ = defaultTimeoutMicroseconds_;
-        result.allowTimeoutOverride_ = allowTimeoutOverride_;
-        result.maxQueueSize_ = maxQueueSize_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelQueuePolicy result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.timeoutAction_ = timeoutAction_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.defaultTimeoutMicroseconds_ = defaultTimeoutMicroseconds_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.allowTimeoutOverride_ = allowTimeoutOverride_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.maxQueueSize_ = maxQueueSize_;
+        }
       }
 
       @java.lang.Override
@@ -29996,22 +30159,22 @@ java.lang.String defaultValue);
                 break;
               case 8: {
                 timeoutAction_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 defaultTimeoutMicroseconds_ = input.readUInt64();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
                 allowTimeoutOverride_ = input.readBool();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 32: {
                 maxQueueSize_ = input.readUInt32();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               default: {
@@ -30029,6 +30192,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int timeoutAction_ = 0;
       /**
@@ -30062,8 +30226,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder setTimeoutActionValue(int value) {
-        
         timeoutAction_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -30082,8 +30246,7 @@ java.lang.String defaultValue);
        */
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelQueuePolicy.TimeoutAction getTimeoutAction() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.ModelQueuePolicy.TimeoutAction result = inference.ModelConfigOuterClass.ModelQueuePolicy.TimeoutAction.valueOf(timeoutAction_);
+        inference.ModelConfigOuterClass.ModelQueuePolicy.TimeoutAction result = inference.ModelConfigOuterClass.ModelQueuePolicy.TimeoutAction.forNumber(timeoutAction_);
         return result == null ? inference.ModelConfigOuterClass.ModelQueuePolicy.TimeoutAction.UNRECOGNIZED : result;
       }
       /**
@@ -30104,7 +30267,7 @@ java.lang.String defaultValue);
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         timeoutAction_ = value.getNumber();
         onChanged();
         return this;
@@ -30123,7 +30286,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearTimeoutAction() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         timeoutAction_ = 0;
         onChanged();
         return this;
@@ -30164,6 +30327,7 @@ java.lang.String defaultValue);
       public Builder setDefaultTimeoutMicroseconds(long value) {
         
         defaultTimeoutMicroseconds_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -30181,7 +30345,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearDefaultTimeoutMicroseconds() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         defaultTimeoutMicroseconds_ = 0L;
         onChanged();
         return this;
@@ -30226,6 +30390,7 @@ java.lang.String defaultValue);
       public Builder setAllowTimeoutOverride(boolean value) {
         
         allowTimeoutOverride_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -30245,7 +30410,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearAllowTimeoutOverride() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         allowTimeoutOverride_ = false;
         onChanged();
         return this;
@@ -30290,6 +30455,7 @@ java.lang.String defaultValue);
       public Builder setMaxQueueSize(int value) {
         
         maxQueueSize_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -30309,7 +30475,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearMaxQueueSize() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         maxQueueSize_ = 0;
         onChanged();
         return this;
@@ -30601,7 +30767,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;uint32, .inference.ModelQueuePolicy&gt; priority_queue_policy = 7 [json_name = "priorityQueuePolicy"];</code>
      */
-
     /* nullable */
 inference.ModelConfigOuterClass.ModelQueuePolicy getPriorityQueuePolicyOrDefault(
         int key,
@@ -30619,7 +30784,6 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
      *
      * <code>map&lt;uint32, .inference.ModelQueuePolicy&gt; priority_queue_policy = 7 [json_name = "priorityQueuePolicy"];</code>
      */
-
     inference.ModelConfigOuterClass.ModelQueuePolicy getPriorityQueuePolicyOrThrow(
         int key);
   }
@@ -30686,6 +30850,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
     }
 
     public static final int PREFERRED_BATCH_SIZE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private com.google.protobuf.Internal.IntList preferredBatchSize_;
     /**
      * <pre>
@@ -30744,7 +30909,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
     private int preferredBatchSizeMemoizedSerializedSize = -1;
 
     public static final int MAX_QUEUE_DELAY_MICROSECONDS_FIELD_NUMBER = 2;
-    private long maxQueueDelayMicroseconds_;
+    private long maxQueueDelayMicroseconds_ = 0L;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint64 max_queue_delay_microseconds
@@ -30764,7 +30929,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
     }
 
     public static final int PRESERVE_ORDERING_FIELD_NUMBER = 3;
-    private boolean preserveOrdering_;
+    private boolean preserveOrdering_ = false;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: bool preserve_ordering
@@ -30790,7 +30955,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
     }
 
     public static final int PRIORITY_LEVELS_FIELD_NUMBER = 4;
-    private int priorityLevels_;
+    private int priorityLevels_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint32 priority_levels
@@ -30813,7 +30978,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
     }
 
     public static final int DEFAULT_PRIORITY_LEVEL_FIELD_NUMBER = 5;
-    private int defaultPriorityLevel_;
+    private int defaultPriorityLevel_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint32 default_priority_level
@@ -30884,7 +31049,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelQueuePolicyOrBuilder getDefaultQueuePolicyOrBuilder() {
-      return getDefaultQueuePolicy();
+      return defaultQueuePolicy_ == null ? inference.ModelConfigOuterClass.ModelQueuePolicy.getDefaultInstance() : defaultQueuePolicy_;
     }
 
     public static final int PRIORITY_QUEUE_POLICY_FIELD_NUMBER = 7;
@@ -30899,6 +31064,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   inference.ModelConfigOuterClass.ModelQueuePolicy.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.Integer, inference.ModelConfigOuterClass.ModelQueuePolicy> priorityQueuePolicy_;
     private com.google.protobuf.MapField<java.lang.Integer, inference.ModelConfigOuterClass.ModelQueuePolicy>
@@ -30909,7 +31075,6 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       }
       return priorityQueuePolicy_;
     }
-
     public int getPriorityQueuePolicyCount() {
       return internalGetPriorityQueuePolicy().getMap().size();
     }
@@ -30925,7 +31090,6 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
      *
      * <code>map&lt;uint32, .inference.ModelQueuePolicy&gt; priority_queue_policy = 7 [json_name = "priorityQueuePolicy"];</code>
      */
-
     @java.lang.Override
     public boolean containsPriorityQueuePolicy(
         int key) {
@@ -30953,7 +31117,6 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
      * <code>map&lt;uint32, .inference.ModelQueuePolicy&gt; priority_queue_policy = 7 [json_name = "priorityQueuePolicy"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.Integer, inference.ModelConfigOuterClass.ModelQueuePolicy> getPriorityQueuePolicyMap() {
       return internalGetPriorityQueuePolicy().getMap();
     }
@@ -30970,10 +31133,11 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
      * <code>map&lt;uint32, .inference.ModelQueuePolicy&gt; priority_queue_policy = 7 [json_name = "priorityQueuePolicy"];</code>
      */
     @java.lang.Override
-
-    public inference.ModelConfigOuterClass.ModelQueuePolicy getPriorityQueuePolicyOrDefault(
+    public /* nullable */
+inference.ModelConfigOuterClass.ModelQueuePolicy getPriorityQueuePolicyOrDefault(
         int key,
-        inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue) {
+        /* nullable */
+inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue) {
       
       java.util.Map<java.lang.Integer, inference.ModelConfigOuterClass.ModelQueuePolicy> map =
           internalGetPriorityQueuePolicy().getMap();
@@ -30992,7 +31156,6 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
      * <code>map&lt;uint32, .inference.ModelQueuePolicy&gt; priority_queue_policy = 7 [json_name = "priorityQueuePolicy"];</code>
      */
     @java.lang.Override
-
     public inference.ModelConfigOuterClass.ModelQueuePolicy getPriorityQueuePolicyOrThrow(
         int key) {
       
@@ -31324,20 +31487,15 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         preferredBatchSize_ = emptyIntList();
-        bitField0_ = (bitField0_ & ~0x00000001);
         maxQueueDelayMicroseconds_ = 0L;
-
         preserveOrdering_ = false;
-
         priorityLevels_ = 0;
-
         defaultPriorityLevel_ = 0;
-
-        if (defaultQueuePolicyBuilder_ == null) {
-          defaultQueuePolicy_ = null;
-        } else {
-          defaultQueuePolicy_ = null;
+        defaultQueuePolicy_ = null;
+        if (defaultQueuePolicyBuilder_ != null) {
+          defaultQueuePolicyBuilder_.dispose();
           defaultQueuePolicyBuilder_ = null;
         }
         internalGetMutablePriorityQueuePolicy().clear();
@@ -31367,25 +31525,43 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelDynamicBatching buildPartial() {
         inference.ModelConfigOuterClass.ModelDynamicBatching result = new inference.ModelConfigOuterClass.ModelDynamicBatching(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelDynamicBatching result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           preferredBatchSize_.makeImmutable();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.preferredBatchSize_ = preferredBatchSize_;
-        result.maxQueueDelayMicroseconds_ = maxQueueDelayMicroseconds_;
-        result.preserveOrdering_ = preserveOrdering_;
-        result.priorityLevels_ = priorityLevels_;
-        result.defaultPriorityLevel_ = defaultPriorityLevel_;
-        if (defaultQueuePolicyBuilder_ == null) {
-          result.defaultQueuePolicy_ = defaultQueuePolicy_;
-        } else {
-          result.defaultQueuePolicy_ = defaultQueuePolicyBuilder_.build();
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelDynamicBatching result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.maxQueueDelayMicroseconds_ = maxQueueDelayMicroseconds_;
         }
-        result.priorityQueuePolicy_ = internalGetPriorityQueuePolicy();
-        result.priorityQueuePolicy_.makeImmutable();
-        onBuilt();
-        return result;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.preserveOrdering_ = preserveOrdering_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.priorityLevels_ = priorityLevels_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.defaultPriorityLevel_ = defaultPriorityLevel_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.defaultQueuePolicy_ = defaultQueuePolicyBuilder_ == null
+              ? defaultQueuePolicy_
+              : defaultQueuePolicyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.priorityQueuePolicy_ = internalGetPriorityQueuePolicy();
+          result.priorityQueuePolicy_.makeImmutable();
+        }
       }
 
       @java.lang.Override
@@ -31459,6 +31635,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         }
         internalGetMutablePriorityQueuePolicy().mergeFrom(
             other.internalGetPriorityQueuePolicy());
+        bitField0_ |= 0x00000040;
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -31503,29 +31680,29 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
               } // case 10
               case 16: {
                 maxQueueDelayMicroseconds_ = input.readUInt64();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
                 preserveOrdering_ = input.readBool();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 32: {
                 priorityLevels_ = input.readUInt32();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 40: {
                 defaultPriorityLevel_ = input.readUInt32();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 40
               case 50: {
                 input.readMessage(
                     getDefaultQueuePolicyFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
@@ -31534,6 +31711,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                     PriorityQueuePolicyDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutablePriorityQueuePolicy().getMutableMap().put(
                     priorityQueuePolicy__.getKey(), priorityQueuePolicy__.getValue());
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               default: {
@@ -31558,7 +31736,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         if (!((bitField0_ & 0x00000001) != 0)) {
           preferredBatchSize_ = mutableCopy(preferredBatchSize_);
           bitField0_ |= 0x00000001;
-         }
+        }
       }
       /**
        * <pre>
@@ -31632,6 +31810,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        */
       public Builder setPreferredBatchSize(
           int index, int value) {
+        
         ensurePreferredBatchSizeIsMutable();
         preferredBatchSize_.setInt(index, value);
         onChanged();
@@ -31653,6 +31832,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * @return This builder for chaining.
        */
       public Builder addPreferredBatchSize(int value) {
+        
         ensurePreferredBatchSizeIsMutable();
         preferredBatchSize_.addInt(value);
         onChanged();
@@ -31737,6 +31917,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       public Builder setMaxQueueDelayMicroseconds(long value) {
         
         maxQueueDelayMicroseconds_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -31754,7 +31935,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearMaxQueueDelayMicroseconds() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         maxQueueDelayMicroseconds_ = 0L;
         onChanged();
         return this;
@@ -31807,6 +31988,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       public Builder setPreserveOrdering(boolean value) {
         
         preserveOrdering_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -31830,7 +32012,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearPreserveOrdering() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         preserveOrdering_ = false;
         onChanged();
         return this;
@@ -31877,6 +32059,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       public Builder setPriorityLevels(int value) {
         
         priorityLevels_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -31897,7 +32080,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearPriorityLevels() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         priorityLevels_ = 0;
         onChanged();
         return this;
@@ -31936,6 +32119,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       public Builder setDefaultPriorityLevel(int value) {
         
         defaultPriorityLevel_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -31952,7 +32136,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearDefaultPriorityLevel() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         defaultPriorityLevel_ = 0;
         onChanged();
         return this;
@@ -31976,7 +32160,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * @return Whether the defaultQueuePolicy field is set.
        */
       public boolean hasDefaultQueuePolicy() {
-        return defaultQueuePolicyBuilder_ != null || defaultQueuePolicy_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <pre>
@@ -32018,11 +32202,11 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
             throw new NullPointerException();
           }
           defaultQueuePolicy_ = value;
-          onChanged();
         } else {
           defaultQueuePolicyBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -32042,11 +32226,11 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           inference.ModelConfigOuterClass.ModelQueuePolicy.Builder builderForValue) {
         if (defaultQueuePolicyBuilder_ == null) {
           defaultQueuePolicy_ = builderForValue.build();
-          onChanged();
         } else {
           defaultQueuePolicyBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -32064,17 +32248,18 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        */
       public Builder mergeDefaultQueuePolicy(inference.ModelConfigOuterClass.ModelQueuePolicy value) {
         if (defaultQueuePolicyBuilder_ == null) {
-          if (defaultQueuePolicy_ != null) {
-            defaultQueuePolicy_ =
-              inference.ModelConfigOuterClass.ModelQueuePolicy.newBuilder(defaultQueuePolicy_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            defaultQueuePolicy_ != null &&
+            defaultQueuePolicy_ != inference.ModelConfigOuterClass.ModelQueuePolicy.getDefaultInstance()) {
+            getDefaultQueuePolicyBuilder().mergeFrom(value);
           } else {
             defaultQueuePolicy_ = value;
           }
-          onChanged();
         } else {
           defaultQueuePolicyBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -32091,14 +32276,13 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * <code>.inference.ModelQueuePolicy default_queue_policy = 6 [json_name = "defaultQueuePolicy"];</code>
        */
       public Builder clearDefaultQueuePolicy() {
-        if (defaultQueuePolicyBuilder_ == null) {
-          defaultQueuePolicy_ = null;
-          onChanged();
-        } else {
-          defaultQueuePolicy_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        defaultQueuePolicy_ = null;
+        if (defaultQueuePolicyBuilder_ != null) {
+          defaultQueuePolicyBuilder_.dispose();
           defaultQueuePolicyBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -32115,7 +32299,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * <code>.inference.ModelQueuePolicy default_queue_policy = 6 [json_name = "defaultQueuePolicy"];</code>
        */
       public inference.ModelConfigOuterClass.ModelQueuePolicy.Builder getDefaultQueuePolicyBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getDefaultQueuePolicyFieldBuilder().getBuilder();
       }
@@ -32170,7 +32354,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       private com.google.protobuf.MapField<
           java.lang.Integer, inference.ModelConfigOuterClass.ModelQueuePolicy> priorityQueuePolicy_;
       private com.google.protobuf.MapField<java.lang.Integer, inference.ModelConfigOuterClass.ModelQueuePolicy>
-      internalGetPriorityQueuePolicy() {
+          internalGetPriorityQueuePolicy() {
         if (priorityQueuePolicy_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               PriorityQueuePolicyDefaultEntryHolder.defaultEntry);
@@ -32178,8 +32362,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         return priorityQueuePolicy_;
       }
       private com.google.protobuf.MapField<java.lang.Integer, inference.ModelConfigOuterClass.ModelQueuePolicy>
-      internalGetMutablePriorityQueuePolicy() {
-        onChanged();;
+          internalGetMutablePriorityQueuePolicy() {
         if (priorityQueuePolicy_ == null) {
           priorityQueuePolicy_ = com.google.protobuf.MapField.newMapField(
               PriorityQueuePolicyDefaultEntryHolder.defaultEntry);
@@ -32187,9 +32370,10 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         if (!priorityQueuePolicy_.isMutable()) {
           priorityQueuePolicy_ = priorityQueuePolicy_.copy();
         }
+        bitField0_ |= 0x00000040;
+        onChanged();
         return priorityQueuePolicy_;
       }
-
       public int getPriorityQueuePolicyCount() {
         return internalGetPriorityQueuePolicy().getMap().size();
       }
@@ -32205,7 +32389,6 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        *
        * <code>map&lt;uint32, .inference.ModelQueuePolicy&gt; priority_queue_policy = 7 [json_name = "priorityQueuePolicy"];</code>
        */
-
       @java.lang.Override
       public boolean containsPriorityQueuePolicy(
           int key) {
@@ -32233,7 +32416,6 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * <code>map&lt;uint32, .inference.ModelQueuePolicy&gt; priority_queue_policy = 7 [json_name = "priorityQueuePolicy"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.Integer, inference.ModelConfigOuterClass.ModelQueuePolicy> getPriorityQueuePolicyMap() {
         return internalGetPriorityQueuePolicy().getMap();
       }
@@ -32250,10 +32432,11 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * <code>map&lt;uint32, .inference.ModelQueuePolicy&gt; priority_queue_policy = 7 [json_name = "priorityQueuePolicy"];</code>
        */
       @java.lang.Override
-
-      public inference.ModelConfigOuterClass.ModelQueuePolicy getPriorityQueuePolicyOrDefault(
+      public /* nullable */
+inference.ModelConfigOuterClass.ModelQueuePolicy getPriorityQueuePolicyOrDefault(
           int key,
-          inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue) {
+          /* nullable */
+inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue) {
         
         java.util.Map<java.lang.Integer, inference.ModelConfigOuterClass.ModelQueuePolicy> map =
             internalGetPriorityQueuePolicy().getMap();
@@ -32272,7 +32455,6 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * <code>map&lt;uint32, .inference.ModelQueuePolicy&gt; priority_queue_policy = 7 [json_name = "priorityQueuePolicy"];</code>
        */
       @java.lang.Override
-
       public inference.ModelConfigOuterClass.ModelQueuePolicy getPriorityQueuePolicyOrThrow(
           int key) {
         
@@ -32283,8 +32465,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearPriorityQueuePolicy() {
+        bitField0_ = (bitField0_ & ~0x00000040);
         internalGetMutablePriorityQueuePolicy().getMutableMap()
             .clear();
         return this;
@@ -32301,7 +32483,6 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        *
        * <code>map&lt;uint32, .inference.ModelQueuePolicy&gt; priority_queue_policy = 7 [json_name = "priorityQueuePolicy"];</code>
        */
-
       public Builder removePriorityQueuePolicy(
           int key) {
         
@@ -32314,7 +32495,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.Integer, inference.ModelConfigOuterClass.ModelQueuePolicy>
-      getMutablePriorityQueuePolicy() {
+          getMutablePriorityQueuePolicy() {
+        bitField0_ |= 0x00000040;
         return internalGetMutablePriorityQueuePolicy().getMutableMap();
       }
       /**
@@ -32333,12 +32515,10 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           int key,
           inference.ModelConfigOuterClass.ModelQueuePolicy value) {
         
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutablePriorityQueuePolicy().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000040;
         return this;
       }
       /**
@@ -32353,11 +32533,11 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        *
        * <code>map&lt;uint32, .inference.ModelQueuePolicy&gt; priority_queue_policy = 7 [json_name = "priorityQueuePolicy"];</code>
        */
-
       public Builder putAllPriorityQueuePolicy(
           java.util.Map<java.lang.Integer, inference.ModelConfigOuterClass.ModelQueuePolicy> values) {
         internalGetMutablePriorityQueuePolicy().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000040;
         return this;
       }
       @java.lang.Override
@@ -33212,7 +33392,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       }
 
       public static final int KIND_FIELD_NUMBER = 1;
-      private int kind_;
+      private int kind_ = 0;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: Kind kind
@@ -33239,12 +33419,12 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * @return The kind.
        */
       @java.lang.Override public inference.ModelConfigOuterClass.ModelSequenceBatching.Control.Kind getKind() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.ModelSequenceBatching.Control.Kind result = inference.ModelConfigOuterClass.ModelSequenceBatching.Control.Kind.valueOf(kind_);
+        inference.ModelConfigOuterClass.ModelSequenceBatching.Control.Kind result = inference.ModelConfigOuterClass.ModelSequenceBatching.Control.Kind.forNumber(kind_);
         return result == null ? inference.ModelConfigOuterClass.ModelSequenceBatching.Control.Kind.UNRECOGNIZED : result;
       }
 
       public static final int INT32_FALSE_TRUE_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
       private com.google.protobuf.Internal.IntList int32FalseTrue_;
       /**
        * <pre>
@@ -33306,6 +33486,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       private int int32FalseTrueMemoizedSerializedSize = -1;
 
       public static final int FP32_FALSE_TRUE_FIELD_NUMBER = 3;
+      @SuppressWarnings("serial")
       private com.google.protobuf.Internal.FloatList fp32FalseTrue_;
       /**
        * <pre>
@@ -33367,6 +33548,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       private int fp32FalseTrueMemoizedSerializedSize = -1;
 
       public static final int BOOL_FALSE_TRUE_FIELD_NUMBER = 5;
+      @SuppressWarnings("serial")
       private com.google.protobuf.Internal.BooleanList boolFalseTrue_;
       /**
        * <pre>
@@ -33428,7 +33610,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       private int boolFalseTrueMemoizedSerializedSize = -1;
 
       public static final int DATA_TYPE_FIELD_NUMBER = 4;
-      private int dataType_;
+      private int dataType_ = 0;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: DataType data_type
@@ -33455,8 +33637,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * @return The dataType.
        */
       @java.lang.Override public inference.ModelConfigOuterClass.DataType getDataType() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
         return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
       }
 
@@ -33741,16 +33922,12 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           kind_ = 0;
-
           int32FalseTrue_ = emptyIntList();
-          bitField0_ = (bitField0_ & ~0x00000001);
           fp32FalseTrue_ = emptyFloatList();
-          bitField0_ = (bitField0_ & ~0x00000002);
           boolFalseTrue_ = emptyBooleanList();
-          bitField0_ = (bitField0_ & ~0x00000004);
           dataType_ = 0;
-
           return this;
         }
 
@@ -33777,26 +33954,38 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelSequenceBatching.Control buildPartial() {
           inference.ModelConfigOuterClass.ModelSequenceBatching.Control result = new inference.ModelConfigOuterClass.ModelSequenceBatching.Control(this);
-          int from_bitField0_ = bitField0_;
-          result.kind_ = kind_;
-          if (((bitField0_ & 0x00000001) != 0)) {
-            int32FalseTrue_.makeImmutable();
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.int32FalseTrue_ = int32FalseTrue_;
-          if (((bitField0_ & 0x00000002) != 0)) {
-            fp32FalseTrue_.makeImmutable();
-            bitField0_ = (bitField0_ & ~0x00000002);
-          }
-          result.fp32FalseTrue_ = fp32FalseTrue_;
-          if (((bitField0_ & 0x00000004) != 0)) {
-            boolFalseTrue_.makeImmutable();
-            bitField0_ = (bitField0_ & ~0x00000004);
-          }
-          result.boolFalseTrue_ = boolFalseTrue_;
-          result.dataType_ = dataType_;
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelSequenceBatching.Control result) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            int32FalseTrue_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.int32FalseTrue_ = int32FalseTrue_;
+          if (((bitField0_ & 0x00000004) != 0)) {
+            fp32FalseTrue_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000004);
+          }
+          result.fp32FalseTrue_ = fp32FalseTrue_;
+          if (((bitField0_ & 0x00000008) != 0)) {
+            boolFalseTrue_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000008);
+          }
+          result.boolFalseTrue_ = boolFalseTrue_;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelSequenceBatching.Control result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.kind_ = kind_;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.dataType_ = dataType_;
+          }
         }
 
         @java.lang.Override
@@ -33849,7 +34038,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (!other.int32FalseTrue_.isEmpty()) {
             if (int32FalseTrue_.isEmpty()) {
               int32FalseTrue_ = other.int32FalseTrue_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureInt32FalseTrueIsMutable();
               int32FalseTrue_.addAll(other.int32FalseTrue_);
@@ -33859,7 +34048,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (!other.fp32FalseTrue_.isEmpty()) {
             if (fp32FalseTrue_.isEmpty()) {
               fp32FalseTrue_ = other.fp32FalseTrue_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureFp32FalseTrueIsMutable();
               fp32FalseTrue_.addAll(other.fp32FalseTrue_);
@@ -33869,7 +34058,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (!other.boolFalseTrue_.isEmpty()) {
             if (boolFalseTrue_.isEmpty()) {
               boolFalseTrue_ = other.boolFalseTrue_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureBoolFalseTrueIsMutable();
               boolFalseTrue_.addAll(other.boolFalseTrue_);
@@ -33907,7 +34096,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                   break;
                 case 8: {
                   kind_ = input.readEnum();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 8
                 case 16: {
@@ -33944,7 +34133,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                 } // case 26
                 case 32: {
                   dataType_ = input.readEnum();
-
+                  bitField0_ |= 0x00000010;
                   break;
                 } // case 32
                 case 40: {
@@ -34008,8 +34197,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder setKindValue(int value) {
-          
           kind_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -34026,8 +34215,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelSequenceBatching.Control.Kind getKind() {
-          @SuppressWarnings("deprecation")
-          inference.ModelConfigOuterClass.ModelSequenceBatching.Control.Kind result = inference.ModelConfigOuterClass.ModelSequenceBatching.Control.Kind.valueOf(kind_);
+          inference.ModelConfigOuterClass.ModelSequenceBatching.Control.Kind result = inference.ModelConfigOuterClass.ModelSequenceBatching.Control.Kind.forNumber(kind_);
           return result == null ? inference.ModelConfigOuterClass.ModelSequenceBatching.Control.Kind.UNRECOGNIZED : result;
         }
         /**
@@ -34046,7 +34234,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (value == null) {
             throw new NullPointerException();
           }
-          
+          bitField0_ |= 0x00000001;
           kind_ = value.getNumber();
           onChanged();
           return this;
@@ -34063,7 +34251,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearKind() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           kind_ = 0;
           onChanged();
           return this;
@@ -34071,10 +34259,10 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
 
         private com.google.protobuf.Internal.IntList int32FalseTrue_ = emptyIntList();
         private void ensureInt32FalseTrueIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
+          if (!((bitField0_ & 0x00000002) != 0)) {
             int32FalseTrue_ = mutableCopy(int32FalseTrue_);
-            bitField0_ |= 0x00000001;
-           }
+            bitField0_ |= 0x00000002;
+          }
         }
         /**
          * <pre>
@@ -34093,7 +34281,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public java.util.List<java.lang.Integer>
             getInt32FalseTrueList() {
-          return ((bitField0_ & 0x00000001) != 0) ?
+          return ((bitField0_ & 0x00000002) != 0) ?
                    java.util.Collections.unmodifiableList(int32FalseTrue_) : int32FalseTrue_;
         }
         /**
@@ -34152,6 +34340,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setInt32FalseTrue(
             int index, int value) {
+          
           ensureInt32FalseTrueIsMutable();
           int32FalseTrue_.setInt(index, value);
           onChanged();
@@ -34174,6 +34363,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder addInt32FalseTrue(int value) {
+          
           ensureInt32FalseTrueIsMutable();
           int32FalseTrue_.addInt(value);
           onChanged();
@@ -34220,17 +34410,17 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder clearInt32FalseTrue() {
           int32FalseTrue_ = emptyIntList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
 
         private com.google.protobuf.Internal.FloatList fp32FalseTrue_ = emptyFloatList();
         private void ensureFp32FalseTrueIsMutable() {
-          if (!((bitField0_ & 0x00000002) != 0)) {
+          if (!((bitField0_ & 0x00000004) != 0)) {
             fp32FalseTrue_ = mutableCopy(fp32FalseTrue_);
-            bitField0_ |= 0x00000002;
-           }
+            bitField0_ |= 0x00000004;
+          }
         }
         /**
          * <pre>
@@ -34249,7 +34439,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public java.util.List<java.lang.Float>
             getFp32FalseTrueList() {
-          return ((bitField0_ & 0x00000002) != 0) ?
+          return ((bitField0_ & 0x00000004) != 0) ?
                    java.util.Collections.unmodifiableList(fp32FalseTrue_) : fp32FalseTrue_;
         }
         /**
@@ -34308,6 +34498,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setFp32FalseTrue(
             int index, float value) {
+          
           ensureFp32FalseTrueIsMutable();
           fp32FalseTrue_.setFloat(index, value);
           onChanged();
@@ -34330,6 +34521,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder addFp32FalseTrue(float value) {
+          
           ensureFp32FalseTrueIsMutable();
           fp32FalseTrue_.addFloat(value);
           onChanged();
@@ -34376,17 +34568,17 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder clearFp32FalseTrue() {
           fp32FalseTrue_ = emptyFloatList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
           return this;
         }
 
         private com.google.protobuf.Internal.BooleanList boolFalseTrue_ = emptyBooleanList();
         private void ensureBoolFalseTrueIsMutable() {
-          if (!((bitField0_ & 0x00000004) != 0)) {
+          if (!((bitField0_ & 0x00000008) != 0)) {
             boolFalseTrue_ = mutableCopy(boolFalseTrue_);
-            bitField0_ |= 0x00000004;
-           }
+            bitField0_ |= 0x00000008;
+          }
         }
         /**
          * <pre>
@@ -34405,7 +34597,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public java.util.List<java.lang.Boolean>
             getBoolFalseTrueList() {
-          return ((bitField0_ & 0x00000004) != 0) ?
+          return ((bitField0_ & 0x00000008) != 0) ?
                    java.util.Collections.unmodifiableList(boolFalseTrue_) : boolFalseTrue_;
         }
         /**
@@ -34464,6 +34656,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setBoolFalseTrue(
             int index, boolean value) {
+          
           ensureBoolFalseTrueIsMutable();
           boolFalseTrue_.setBoolean(index, value);
           onChanged();
@@ -34486,6 +34679,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder addBoolFalseTrue(boolean value) {
+          
           ensureBoolFalseTrueIsMutable();
           boolFalseTrue_.addBoolean(value);
           onChanged();
@@ -34532,7 +34726,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder clearBoolFalseTrue() {
           boolFalseTrue_ = emptyBooleanList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
           return this;
         }
@@ -34565,8 +34759,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder setDataTypeValue(int value) {
-          
           dataType_ = value;
+          bitField0_ |= 0x00000010;
           onChanged();
           return this;
         }
@@ -34583,8 +34777,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         @java.lang.Override
         public inference.ModelConfigOuterClass.DataType getDataType() {
-          @SuppressWarnings("deprecation")
-          inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+          inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
           return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
         }
         /**
@@ -34603,7 +34796,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (value == null) {
             throw new NullPointerException();
           }
-          
+          bitField0_ |= 0x00000010;
           dataType_ = value.getNumber();
           onChanged();
           return this;
@@ -34620,7 +34813,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearDataType() {
-          
+          bitField0_ = (bitField0_ & ~0x00000010);
           dataType_ = 0;
           onChanged();
           return this;
@@ -34833,7 +35026,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       }
 
       public static final int NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object name_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object name_ = "";
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: string name
@@ -34885,6 +35079,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       }
 
       public static final int CONTROL_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
       private java.util.List<inference.ModelConfigOuterClass.ModelSequenceBatching.Control> control_;
       /**
        * <pre>
@@ -35171,15 +35366,15 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           name_ = "";
-
           if (controlBuilder_ == null) {
             control_ = java.util.Collections.emptyList();
           } else {
             control_ = null;
             controlBuilder_.clear();
           }
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           return this;
         }
 
@@ -35206,19 +35401,29 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelSequenceBatching.ControlInput buildPartial() {
           inference.ModelConfigOuterClass.ModelSequenceBatching.ControlInput result = new inference.ModelConfigOuterClass.ModelSequenceBatching.ControlInput(this);
-          int from_bitField0_ = bitField0_;
-          result.name_ = name_;
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelSequenceBatching.ControlInput result) {
           if (controlBuilder_ == null) {
-            if (((bitField0_ & 0x00000001) != 0)) {
+            if (((bitField0_ & 0x00000002) != 0)) {
               control_ = java.util.Collections.unmodifiableList(control_);
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             }
             result.control_ = control_;
           } else {
             result.control_ = controlBuilder_.build();
           }
-          onBuilt();
-          return result;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelSequenceBatching.ControlInput result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.name_ = name_;
+          }
         }
 
         @java.lang.Override
@@ -35267,13 +35472,14 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (other == inference.ModelConfigOuterClass.ModelSequenceBatching.ControlInput.getDefaultInstance()) return this;
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (controlBuilder_ == null) {
             if (!other.control_.isEmpty()) {
               if (control_.isEmpty()) {
                 control_ = other.control_;
-                bitField0_ = (bitField0_ & ~0x00000001);
+                bitField0_ = (bitField0_ & ~0x00000002);
               } else {
                 ensureControlIsMutable();
                 control_.addAll(other.control_);
@@ -35286,7 +35492,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                 controlBuilder_.dispose();
                 controlBuilder_ = null;
                 control_ = other.control_;
-                bitField0_ = (bitField0_ & ~0x00000001);
+                bitField0_ = (bitField0_ & ~0x00000002);
                 controlBuilder_ = 
                   com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                      getControlFieldBuilder() : null;
@@ -35323,7 +35529,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                   break;
                 case 10: {
                   name_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 18: {
@@ -35418,11 +35624,9 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -35438,8 +35642,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearName() {
-          
           name_ = getDefaultInstance().getName();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -35457,12 +35661,10 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -35470,9 +35672,9 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         private java.util.List<inference.ModelConfigOuterClass.ModelSequenceBatching.Control> control_ =
           java.util.Collections.emptyList();
         private void ensureControlIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
+          if (!((bitField0_ & 0x00000002) != 0)) {
             control_ = new java.util.ArrayList<inference.ModelConfigOuterClass.ModelSequenceBatching.Control>(control_);
-            bitField0_ |= 0x00000001;
+            bitField0_ |= 0x00000002;
            }
         }
 
@@ -35710,7 +35912,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         public Builder clearControl() {
           if (controlBuilder_ == null) {
             control_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
             onChanged();
           } else {
             controlBuilder_.clear();
@@ -35843,7 +36045,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
             controlBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                 inference.ModelConfigOuterClass.ModelSequenceBatching.Control, inference.ModelConfigOuterClass.ModelSequenceBatching.Control.Builder, inference.ModelConfigOuterClass.ModelSequenceBatching.ControlOrBuilder>(
                     control_,
-                    ((bitField0_ & 0x00000001) != 0),
+                    ((bitField0_ & 0x00000002) != 0),
                     getParentForChildren(),
                     isClean());
             control_ = null;
@@ -36177,7 +36379,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       }
 
       public static final int DATA_TYPE_FIELD_NUMBER = 1;
-      private int dataType_;
+      private int dataType_ = 0;
       /**
        * <pre>
        *&#64;&#64;      .. cpp:var:: DataType data_type
@@ -36204,12 +36406,12 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * @return The dataType.
        */
       @java.lang.Override public inference.ModelConfigOuterClass.DataType getDataType() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
         return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
       }
 
       public static final int DIMS_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
       private com.google.protobuf.Internal.LongList dims_;
       /**
        * <pre>
@@ -36379,7 +36581,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       }
 
       public static final int NAME_FIELD_NUMBER = 5;
-      private volatile java.lang.Object name_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object name_ = "";
       /**
        * <pre>
        *&#64;&#64;  .. cpp:var:: string name
@@ -36704,12 +36907,10 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           dataType_ = 0;
-
           dims_ = emptyLongList();
-          bitField0_ = (bitField0_ & ~0x00000001);
           name_ = "";
-
           stateDataCase_ = 0;
           stateData_ = null;
           return this;
@@ -36738,23 +36939,34 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelSequenceBatching.InitialState buildPartial() {
           inference.ModelConfigOuterClass.ModelSequenceBatching.InitialState result = new inference.ModelConfigOuterClass.ModelSequenceBatching.InitialState(this);
-          int from_bitField0_ = bitField0_;
-          result.dataType_ = dataType_;
-          if (((bitField0_ & 0x00000001) != 0)) {
-            dims_.makeImmutable();
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.dims_ = dims_;
-          if (stateDataCase_ == 3) {
-            result.stateData_ = stateData_;
-          }
-          if (stateDataCase_ == 4) {
-            result.stateData_ = stateData_;
-          }
-          result.name_ = name_;
-          result.stateDataCase_ = stateDataCase_;
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          buildPartialOneofs(result);
           onBuilt();
           return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelSequenceBatching.InitialState result) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            dims_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.dims_ = dims_;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelSequenceBatching.InitialState result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.dataType_ = dataType_;
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.name_ = name_;
+          }
+        }
+
+        private void buildPartialOneofs(inference.ModelConfigOuterClass.ModelSequenceBatching.InitialState result) {
+          result.stateDataCase_ = stateDataCase_;
+          result.stateData_ = this.stateData_;
         }
 
         @java.lang.Override
@@ -36807,7 +37019,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (!other.dims_.isEmpty()) {
             if (dims_.isEmpty()) {
               dims_ = other.dims_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureDimsIsMutable();
               dims_.addAll(other.dims_);
@@ -36816,6 +37028,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           }
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
+            bitField0_ |= 0x00000010;
             onChanged();
           }
           switch (other.getStateDataCase()) {
@@ -36861,7 +37074,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                   break;
                 case 8: {
                   dataType_ = input.readEnum();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 8
                 case 16: {
@@ -36893,7 +37106,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                 } // case 34
                 case 42: {
                   name_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000010;
                   break;
                 } // case 42
                 default: {
@@ -36956,8 +37169,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder setDataTypeValue(int value) {
-          
           dataType_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -36974,8 +37187,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         @java.lang.Override
         public inference.ModelConfigOuterClass.DataType getDataType() {
-          @SuppressWarnings("deprecation")
-          inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+          inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
           return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
         }
         /**
@@ -36994,7 +37206,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (value == null) {
             throw new NullPointerException();
           }
-          
+          bitField0_ |= 0x00000001;
           dataType_ = value.getNumber();
           onChanged();
           return this;
@@ -37011,7 +37223,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearDataType() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           dataType_ = 0;
           onChanged();
           return this;
@@ -37019,10 +37231,10 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
 
         private com.google.protobuf.Internal.LongList dims_ = emptyLongList();
         private void ensureDimsIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
+          if (!((bitField0_ & 0x00000002) != 0)) {
             dims_ = mutableCopy(dims_);
-            bitField0_ |= 0x00000001;
-           }
+            bitField0_ |= 0x00000002;
+          }
         }
         /**
          * <pre>
@@ -37037,7 +37249,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public java.util.List<java.lang.Long>
             getDimsList() {
-          return ((bitField0_ & 0x00000001) != 0) ?
+          return ((bitField0_ & 0x00000002) != 0) ?
                    java.util.Collections.unmodifiableList(dims_) : dims_;
         }
         /**
@@ -37084,6 +37296,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setDims(
             int index, long value) {
+          
           ensureDimsIsMutable();
           dims_.setLong(index, value);
           onChanged();
@@ -37102,6 +37315,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder addDims(long value) {
+          
           ensureDimsIsMutable();
           dims_.addLong(value);
           onChanged();
@@ -37140,7 +37354,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder clearDims() {
           dims_ = emptyLongList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
@@ -37198,6 +37412,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder setZeroData(boolean value) {
+          
           stateDataCase_ = 3;
           stateData_ = value;
           onChanged();
@@ -37322,10 +37537,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setDataFile(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  stateDataCase_ = 4;
+          if (value == null) { throw new NullPointerException(); }
+          stateDataCase_ = 4;
           stateData_ = value;
           onChanged();
           return this;
@@ -37367,10 +37580,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setDataFileBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           stateDataCase_ = 4;
           stateData_ = value;
           onChanged();
@@ -37439,11 +37650,9 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000010;
           onChanged();
           return this;
         }
@@ -37459,8 +37668,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearName() {
-          
           name_ = getDefaultInstance().getName();
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
           return this;
         }
@@ -37478,12 +37687,10 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           name_ = value;
+          bitField0_ |= 0x00000010;
           onChanged();
           return this;
         }
@@ -37782,7 +37989,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       }
 
       public static final int INPUT_NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object inputName_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object inputName_ = "";
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: string input_name
@@ -37834,7 +38042,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       }
 
       public static final int OUTPUT_NAME_FIELD_NUMBER = 2;
-      private volatile java.lang.Object outputName_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object outputName_ = "";
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: string output_name
@@ -37886,7 +38095,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       }
 
       public static final int DATA_TYPE_FIELD_NUMBER = 3;
-      private int dataType_;
+      private int dataType_ = 0;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: DataType data_type
@@ -37913,12 +38122,12 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * @return The dataType.
        */
       @java.lang.Override public inference.ModelConfigOuterClass.DataType getDataType() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
         return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
       }
 
       public static final int DIMS_FIELD_NUMBER = 4;
+      @SuppressWarnings("serial")
       private com.google.protobuf.Internal.LongList dims_;
       /**
        * <pre>
@@ -37968,6 +38177,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       private int dimsMemoizedSerializedSize = -1;
 
       public static final int INITIAL_STATE_FIELD_NUMBER = 5;
+      @SuppressWarnings("serial")
       private java.util.List<inference.ModelConfigOuterClass.ModelSequenceBatching.InitialState> initialState_;
       /**
        * <pre>
@@ -38297,21 +38507,18 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           inputName_ = "";
-
           outputName_ = "";
-
           dataType_ = 0;
-
           dims_ = emptyLongList();
-          bitField0_ = (bitField0_ & ~0x00000001);
           if (initialStateBuilder_ == null) {
             initialState_ = java.util.Collections.emptyList();
           } else {
             initialState_ = null;
             initialStateBuilder_.clear();
           }
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000010);
           return this;
         }
 
@@ -38338,26 +38545,40 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelSequenceBatching.State buildPartial() {
           inference.ModelConfigOuterClass.ModelSequenceBatching.State result = new inference.ModelConfigOuterClass.ModelSequenceBatching.State(this);
-          int from_bitField0_ = bitField0_;
-          result.inputName_ = inputName_;
-          result.outputName_ = outputName_;
-          result.dataType_ = dataType_;
-          if (((bitField0_ & 0x00000001) != 0)) {
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          onBuilt();
+          return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelSequenceBatching.State result) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             dims_.makeImmutable();
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.dims_ = dims_;
           if (initialStateBuilder_ == null) {
-            if (((bitField0_ & 0x00000002) != 0)) {
+            if (((bitField0_ & 0x00000010) != 0)) {
               initialState_ = java.util.Collections.unmodifiableList(initialState_);
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000010);
             }
             result.initialState_ = initialState_;
           } else {
             result.initialState_ = initialStateBuilder_.build();
           }
-          onBuilt();
-          return result;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelSequenceBatching.State result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.inputName_ = inputName_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.outputName_ = outputName_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.dataType_ = dataType_;
+          }
         }
 
         @java.lang.Override
@@ -38406,10 +38627,12 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (other == inference.ModelConfigOuterClass.ModelSequenceBatching.State.getDefaultInstance()) return this;
           if (!other.getInputName().isEmpty()) {
             inputName_ = other.inputName_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (!other.getOutputName().isEmpty()) {
             outputName_ = other.outputName_;
+            bitField0_ |= 0x00000002;
             onChanged();
           }
           if (other.dataType_ != 0) {
@@ -38418,7 +38641,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (!other.dims_.isEmpty()) {
             if (dims_.isEmpty()) {
               dims_ = other.dims_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureDimsIsMutable();
               dims_.addAll(other.dims_);
@@ -38429,7 +38652,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
             if (!other.initialState_.isEmpty()) {
               if (initialState_.isEmpty()) {
                 initialState_ = other.initialState_;
-                bitField0_ = (bitField0_ & ~0x00000002);
+                bitField0_ = (bitField0_ & ~0x00000010);
               } else {
                 ensureInitialStateIsMutable();
                 initialState_.addAll(other.initialState_);
@@ -38442,7 +38665,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                 initialStateBuilder_.dispose();
                 initialStateBuilder_ = null;
                 initialState_ = other.initialState_;
-                bitField0_ = (bitField0_ & ~0x00000002);
+                bitField0_ = (bitField0_ & ~0x00000010);
                 initialStateBuilder_ = 
                   com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                      getInitialStateFieldBuilder() : null;
@@ -38479,17 +38702,17 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                   break;
                 case 10: {
                   inputName_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 18: {
                   outputName_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 18
                 case 24: {
                   dataType_ = input.readEnum();
-
+                  bitField0_ |= 0x00000004;
                   break;
                 } // case 24
                 case 32: {
@@ -38600,11 +38823,9 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setInputName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           inputName_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -38620,8 +38841,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearInputName() {
-          
           inputName_ = getDefaultInstance().getInputName();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -38639,12 +38860,10 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setInputNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           inputName_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -38711,11 +38930,9 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setOutputName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           outputName_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -38731,8 +38948,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearOutputName() {
-          
           outputName_ = getDefaultInstance().getOutputName();
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
@@ -38750,12 +38967,10 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setOutputNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           outputName_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -38788,8 +39003,8 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder setDataTypeValue(int value) {
-          
           dataType_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -38806,8 +39021,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         @java.lang.Override
         public inference.ModelConfigOuterClass.DataType getDataType() {
-          @SuppressWarnings("deprecation")
-          inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+          inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
           return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
         }
         /**
@@ -38826,7 +39040,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (value == null) {
             throw new NullPointerException();
           }
-          
+          bitField0_ |= 0x00000004;
           dataType_ = value.getNumber();
           onChanged();
           return this;
@@ -38843,7 +39057,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearDataType() {
-          
+          bitField0_ = (bitField0_ & ~0x00000004);
           dataType_ = 0;
           onChanged();
           return this;
@@ -38851,10 +39065,10 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
 
         private com.google.protobuf.Internal.LongList dims_ = emptyLongList();
         private void ensureDimsIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
+          if (!((bitField0_ & 0x00000008) != 0)) {
             dims_ = mutableCopy(dims_);
-            bitField0_ |= 0x00000001;
-           }
+            bitField0_ |= 0x00000008;
+          }
         }
         /**
          * <pre>
@@ -38869,7 +39083,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public java.util.List<java.lang.Long>
             getDimsList() {
-          return ((bitField0_ & 0x00000001) != 0) ?
+          return ((bitField0_ & 0x00000008) != 0) ?
                    java.util.Collections.unmodifiableList(dims_) : dims_;
         }
         /**
@@ -38916,6 +39130,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setDims(
             int index, long value) {
+          
           ensureDimsIsMutable();
           dims_.setLong(index, value);
           onChanged();
@@ -38934,6 +39149,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder addDims(long value) {
+          
           ensureDimsIsMutable();
           dims_.addLong(value);
           onChanged();
@@ -38972,7 +39188,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder clearDims() {
           dims_ = emptyLongList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
           return this;
         }
@@ -38980,9 +39196,9 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         private java.util.List<inference.ModelConfigOuterClass.ModelSequenceBatching.InitialState> initialState_ =
           java.util.Collections.emptyList();
         private void ensureInitialStateIsMutable() {
-          if (!((bitField0_ & 0x00000002) != 0)) {
+          if (!((bitField0_ & 0x00000010) != 0)) {
             initialState_ = new java.util.ArrayList<inference.ModelConfigOuterClass.ModelSequenceBatching.InitialState>(initialState_);
-            bitField0_ |= 0x00000002;
+            bitField0_ |= 0x00000010;
            }
         }
 
@@ -39209,7 +39425,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         public Builder clearInitialState() {
           if (initialStateBuilder_ == null) {
             initialState_ = java.util.Collections.emptyList();
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
             onChanged();
           } else {
             initialStateBuilder_.clear();
@@ -39335,7 +39551,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
             initialStateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
                 inference.ModelConfigOuterClass.ModelSequenceBatching.InitialState, inference.ModelConfigOuterClass.ModelSequenceBatching.InitialState.Builder, inference.ModelConfigOuterClass.ModelSequenceBatching.InitialStateOrBuilder>(
                     initialState_,
-                    ((bitField0_ & 0x00000002) != 0),
+                    ((bitField0_ & 0x00000010) != 0),
                     getParentForChildren(),
                     isClean());
             initialState_ = null;
@@ -39499,7 +39715,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       }
 
       public static final int MAX_QUEUE_DELAY_MICROSECONDS_FIELD_NUMBER = 1;
-      private long maxQueueDelayMicroseconds_;
+      private long maxQueueDelayMicroseconds_ = 0L;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: uint64 max_queue_delay_microseconds
@@ -39519,7 +39735,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       }
 
       public static final int MINIMUM_SLOT_UTILIZATION_FIELD_NUMBER = 2;
-      private float minimumSlotUtilization_;
+      private float minimumSlotUtilization_ = 0F;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: float minimum_slot_utilization
@@ -39758,10 +39974,9 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           maxQueueDelayMicroseconds_ = 0L;
-
           minimumSlotUtilization_ = 0F;
-
           return this;
         }
 
@@ -39788,10 +40003,19 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelSequenceBatching.StrategyDirect buildPartial() {
           inference.ModelConfigOuterClass.ModelSequenceBatching.StrategyDirect result = new inference.ModelConfigOuterClass.ModelSequenceBatching.StrategyDirect(this);
-          result.maxQueueDelayMicroseconds_ = maxQueueDelayMicroseconds_;
-          result.minimumSlotUtilization_ = minimumSlotUtilization_;
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelSequenceBatching.StrategyDirect result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.maxQueueDelayMicroseconds_ = maxQueueDelayMicroseconds_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.minimumSlotUtilization_ = minimumSlotUtilization_;
+          }
         }
 
         @java.lang.Override
@@ -39872,12 +40096,12 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                   break;
                 case 8: {
                   maxQueueDelayMicroseconds_ = input.readUInt64();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 8
                 case 21: {
                   minimumSlotUtilization_ = input.readFloat();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 21
                 default: {
@@ -39895,6 +40119,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           } // finally
           return this;
         }
+        private int bitField0_;
 
         private long maxQueueDelayMicroseconds_ ;
         /**
@@ -39931,6 +40156,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         public Builder setMaxQueueDelayMicroseconds(long value) {
           
           maxQueueDelayMicroseconds_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -39948,7 +40174,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearMaxQueueDelayMicroseconds() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           maxQueueDelayMicroseconds_ = 0L;
           onChanged();
           return this;
@@ -40003,6 +40229,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         public Builder setMinimumSlotUtilization(float value) {
           
           minimumSlotUtilization_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -40027,7 +40254,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearMinimumSlotUtilization() {
-          
+          bitField0_ = (bitField0_ & ~0x00000002);
           minimumSlotUtilization_ = 0F;
           onChanged();
           return this;
@@ -40237,7 +40464,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       }
 
       public static final int MAX_CANDIDATE_SEQUENCES_FIELD_NUMBER = 1;
-      private int maxCandidateSequences_;
+      private int maxCandidateSequences_ = 0;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: int32 max_candidate_sequences
@@ -40258,6 +40485,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       }
 
       public static final int PREFERRED_BATCH_SIZE_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
       private com.google.protobuf.Internal.IntList preferredBatchSize_;
       /**
        * <pre>
@@ -40319,7 +40547,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       private int preferredBatchSizeMemoizedSerializedSize = -1;
 
       public static final int MAX_QUEUE_DELAY_MICROSECONDS_FIELD_NUMBER = 3;
-      private long maxQueueDelayMicroseconds_;
+      private long maxQueueDelayMicroseconds_ = 0L;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: uint64 max_queue_delay_microseconds
@@ -40580,12 +40808,10 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           maxCandidateSequences_ = 0;
-
           preferredBatchSize_ = emptyIntList();
-          bitField0_ = (bitField0_ & ~0x00000001);
           maxQueueDelayMicroseconds_ = 0L;
-
           return this;
         }
 
@@ -40612,16 +40838,28 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelSequenceBatching.StrategyOldest buildPartial() {
           inference.ModelConfigOuterClass.ModelSequenceBatching.StrategyOldest result = new inference.ModelConfigOuterClass.ModelSequenceBatching.StrategyOldest(this);
-          int from_bitField0_ = bitField0_;
-          result.maxCandidateSequences_ = maxCandidateSequences_;
-          if (((bitField0_ & 0x00000001) != 0)) {
-            preferredBatchSize_.makeImmutable();
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.preferredBatchSize_ = preferredBatchSize_;
-          result.maxQueueDelayMicroseconds_ = maxQueueDelayMicroseconds_;
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelSequenceBatching.StrategyOldest result) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            preferredBatchSize_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.preferredBatchSize_ = preferredBatchSize_;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelSequenceBatching.StrategyOldest result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.maxCandidateSequences_ = maxCandidateSequences_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.maxQueueDelayMicroseconds_ = maxQueueDelayMicroseconds_;
+          }
         }
 
         @java.lang.Override
@@ -40674,7 +40912,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (!other.preferredBatchSize_.isEmpty()) {
             if (preferredBatchSize_.isEmpty()) {
               preferredBatchSize_ = other.preferredBatchSize_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensurePreferredBatchSizeIsMutable();
               preferredBatchSize_.addAll(other.preferredBatchSize_);
@@ -40712,7 +40950,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                   break;
                 case 8: {
                   maxCandidateSequences_ = input.readInt32();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 8
                 case 16: {
@@ -40733,7 +40971,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                 } // case 18
                 case 24: {
                   maxQueueDelayMicroseconds_ = input.readUInt64();
-
+                  bitField0_ |= 0x00000004;
                   break;
                 } // case 24
                 default: {
@@ -40790,6 +41028,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         public Builder setMaxCandidateSequences(int value) {
           
           maxCandidateSequences_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -40808,7 +41047,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearMaxCandidateSequences() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           maxCandidateSequences_ = 0;
           onChanged();
           return this;
@@ -40816,10 +41055,10 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
 
         private com.google.protobuf.Internal.IntList preferredBatchSize_ = emptyIntList();
         private void ensurePreferredBatchSizeIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
+          if (!((bitField0_ & 0x00000002) != 0)) {
             preferredBatchSize_ = mutableCopy(preferredBatchSize_);
-            bitField0_ |= 0x00000001;
-           }
+            bitField0_ |= 0x00000002;
+          }
         }
         /**
          * <pre>
@@ -40838,7 +41077,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public java.util.List<java.lang.Integer>
             getPreferredBatchSizeList() {
-          return ((bitField0_ & 0x00000001) != 0) ?
+          return ((bitField0_ & 0x00000002) != 0) ?
                    java.util.Collections.unmodifiableList(preferredBatchSize_) : preferredBatchSize_;
         }
         /**
@@ -40897,6 +41136,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder setPreferredBatchSize(
             int index, int value) {
+          
           ensurePreferredBatchSizeIsMutable();
           preferredBatchSize_.setInt(index, value);
           onChanged();
@@ -40919,6 +41159,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder addPreferredBatchSize(int value) {
+          
           ensurePreferredBatchSizeIsMutable();
           preferredBatchSize_.addInt(value);
           onChanged();
@@ -40965,7 +41206,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          */
         public Builder clearPreferredBatchSize() {
           preferredBatchSize_ = emptyIntList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
@@ -41005,6 +41246,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
         public Builder setMaxQueueDelayMicroseconds(long value) {
           
           maxQueueDelayMicroseconds_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -41022,7 +41264,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearMaxQueueDelayMicroseconds() {
-          
+          bitField0_ = (bitField0_ & ~0x00000004);
           maxQueueDelayMicroseconds_ = 0L;
           onChanged();
           return this;
@@ -41237,7 +41479,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
     }
 
     public static final int MAX_SEQUENCE_IDLE_MICROSECONDS_FIELD_NUMBER = 1;
-    private long maxSequenceIdleMicroseconds_;
+    private long maxSequenceIdleMicroseconds_ = 0L;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint64 max_sequence_idle_microseconds
@@ -41261,6 +41503,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
     }
 
     public static final int CONTROL_INPUT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<inference.ModelConfigOuterClass.ModelSequenceBatching.ControlInput> controlInput_;
     /**
      * <pre>
@@ -41346,6 +41589,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
     }
 
     public static final int STATE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<inference.ModelConfigOuterClass.ModelSequenceBatching.State> state_;
     /**
      * <pre>
@@ -41713,6 +41957,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (directBuilder_ != null) {
           directBuilder_.clear();
         }
@@ -41720,21 +41965,20 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           oldestBuilder_.clear();
         }
         maxSequenceIdleMicroseconds_ = 0L;
-
         if (controlInputBuilder_ == null) {
           controlInput_ = java.util.Collections.emptyList();
         } else {
           controlInput_ = null;
           controlInputBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (stateBuilder_ == null) {
           state_ = java.util.Collections.emptyList();
         } else {
           state_ = null;
           stateBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         strategyChoiceCase_ = 0;
         strategyChoice_ = null;
         return this;
@@ -41763,43 +42007,52 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelSequenceBatching buildPartial() {
         inference.ModelConfigOuterClass.ModelSequenceBatching result = new inference.ModelConfigOuterClass.ModelSequenceBatching(this);
-        int from_bitField0_ = bitField0_;
-        if (strategyChoiceCase_ == 3) {
-          if (directBuilder_ == null) {
-            result.strategyChoice_ = strategyChoice_;
-          } else {
-            result.strategyChoice_ = directBuilder_.build();
-          }
-        }
-        if (strategyChoiceCase_ == 4) {
-          if (oldestBuilder_ == null) {
-            result.strategyChoice_ = strategyChoice_;
-          } else {
-            result.strategyChoice_ = oldestBuilder_.build();
-          }
-        }
-        result.maxSequenceIdleMicroseconds_ = maxSequenceIdleMicroseconds_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelSequenceBatching result) {
         if (controlInputBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             controlInput_ = java.util.Collections.unmodifiableList(controlInput_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.controlInput_ = controlInput_;
         } else {
           result.controlInput_ = controlInputBuilder_.build();
         }
         if (stateBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             state_ = java.util.Collections.unmodifiableList(state_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.state_ = state_;
         } else {
           result.state_ = stateBuilder_.build();
         }
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelSequenceBatching result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.maxSequenceIdleMicroseconds_ = maxSequenceIdleMicroseconds_;
+        }
+      }
+
+      private void buildPartialOneofs(inference.ModelConfigOuterClass.ModelSequenceBatching result) {
         result.strategyChoiceCase_ = strategyChoiceCase_;
-        onBuilt();
-        return result;
+        result.strategyChoice_ = this.strategyChoice_;
+        if (strategyChoiceCase_ == 3 &&
+            directBuilder_ != null) {
+          result.strategyChoice_ = directBuilder_.build();
+        }
+        if (strategyChoiceCase_ == 4 &&
+            oldestBuilder_ != null) {
+          result.strategyChoice_ = oldestBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -41853,7 +42106,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (!other.controlInput_.isEmpty()) {
             if (controlInput_.isEmpty()) {
               controlInput_ = other.controlInput_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureControlInputIsMutable();
               controlInput_.addAll(other.controlInput_);
@@ -41866,7 +42119,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
               controlInputBuilder_.dispose();
               controlInputBuilder_ = null;
               controlInput_ = other.controlInput_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000008);
               controlInputBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getControlInputFieldBuilder() : null;
@@ -41879,7 +42132,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           if (!other.state_.isEmpty()) {
             if (state_.isEmpty()) {
               state_ = other.state_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureStateIsMutable();
               state_.addAll(other.state_);
@@ -41892,7 +42145,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
               stateBuilder_.dispose();
               stateBuilder_ = null;
               state_ = other.state_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000010);
               stateBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getStateFieldBuilder() : null;
@@ -41942,7 +42195,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
                 break;
               case 8: {
                 maxSequenceIdleMicroseconds_ = input.readUInt64();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 8
               case 18: {
@@ -42218,7 +42471,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           strategyChoice_ = null;
         }
         strategyChoiceCase_ = 3;
-        onChanged();;
+        onChanged();
         return directBuilder_;
       }
 
@@ -42423,7 +42676,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           strategyChoice_ = null;
         }
         strategyChoiceCase_ = 4;
-        onChanged();;
+        onChanged();
         return oldestBuilder_;
       }
 
@@ -42470,6 +42723,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       public Builder setMaxSequenceIdleMicroseconds(long value) {
         
         maxSequenceIdleMicroseconds_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -42491,7 +42745,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearMaxSequenceIdleMicroseconds() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         maxSequenceIdleMicroseconds_ = 0L;
         onChanged();
         return this;
@@ -42500,9 +42754,9 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       private java.util.List<inference.ModelConfigOuterClass.ModelSequenceBatching.ControlInput> controlInput_ =
         java.util.Collections.emptyList();
       private void ensureControlInputIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           controlInput_ = new java.util.ArrayList<inference.ModelConfigOuterClass.ModelSequenceBatching.ControlInput>(controlInput_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -42751,7 +43005,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       public Builder clearControlInput() {
         if (controlInputBuilder_ == null) {
           controlInput_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           controlInputBuilder_.clear();
@@ -42891,7 +43145,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           controlInputBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.ModelConfigOuterClass.ModelSequenceBatching.ControlInput, inference.ModelConfigOuterClass.ModelSequenceBatching.ControlInput.Builder, inference.ModelConfigOuterClass.ModelSequenceBatching.ControlInputOrBuilder>(
                   controlInput_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           controlInput_ = null;
@@ -42902,9 +43156,9 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       private java.util.List<inference.ModelConfigOuterClass.ModelSequenceBatching.State> state_ =
         java.util.Collections.emptyList();
       private void ensureStateIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           state_ = new java.util.ArrayList<inference.ModelConfigOuterClass.ModelSequenceBatching.State>(state_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -43197,7 +43451,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
       public Builder clearState() {
         if (stateBuilder_ == null) {
           state_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           stateBuilder_.clear();
@@ -43365,7 +43619,7 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
           stateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.ModelConfigOuterClass.ModelSequenceBatching.State, inference.ModelConfigOuterClass.ModelSequenceBatching.State.Builder, inference.ModelConfigOuterClass.ModelSequenceBatching.StateOrBuilder>(
                   state_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           state_ = null;
@@ -43660,7 +43914,6 @@ inference.ModelConfigOuterClass.ModelQueuePolicy defaultValue);
        *
        * <code>map&lt;string, string&gt; input_map = 3 [json_name = "inputMap"];</code>
        */
-
       /* nullable */
 java.lang.String getInputMapOrDefault(
           java.lang.String key,
@@ -43680,7 +43933,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; input_map = 3 [json_name = "inputMap"];</code>
        */
-
       java.lang.String getInputMapOrThrow(
           java.lang.String key);
 
@@ -43751,7 +44003,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; output_map = 4 [json_name = "outputMap"];</code>
        */
-
       /* nullable */
 java.lang.String getOutputMapOrDefault(
           java.lang.String key,
@@ -43771,7 +44022,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; output_map = 4 [json_name = "outputMap"];</code>
        */
-
       java.lang.String getOutputMapOrThrow(
           java.lang.String key);
     }
@@ -43840,7 +44090,8 @@ java.lang.String defaultValue);
       }
 
       public static final int MODEL_NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object modelName_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object modelName_ = "";
       /**
        * <pre>
        *&#64;&#64;  .. cpp:var:: string model_name
@@ -43892,7 +44143,7 @@ java.lang.String defaultValue);
       }
 
       public static final int MODEL_VERSION_FIELD_NUMBER = 2;
-      private long modelVersion_;
+      private long modelVersion_ = 0L;
       /**
        * <pre>
        *&#64;&#64;  .. cpp:var:: int64 model_version
@@ -43922,6 +44173,7 @@ java.lang.String defaultValue);
                     com.google.protobuf.WireFormat.FieldType.STRING,
                     "");
       }
+      @SuppressWarnings("serial")
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> inputMap_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -43932,7 +44184,6 @@ java.lang.String defaultValue);
         }
         return inputMap_;
       }
-
       public int getInputMapCount() {
         return internalGetInputMap().getMap().size();
       }
@@ -43950,7 +44201,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; input_map = 3 [json_name = "inputMap"];</code>
        */
-
       @java.lang.Override
       public boolean containsInputMap(
           java.lang.String key) {
@@ -43980,7 +44230,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; input_map = 3 [json_name = "inputMap"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getInputMapMap() {
         return internalGetInputMap().getMap();
       }
@@ -43999,10 +44248,11 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; input_map = 3 [json_name = "inputMap"];</code>
        */
       @java.lang.Override
-
-      public java.lang.String getInputMapOrDefault(
+      public /* nullable */
+java.lang.String getInputMapOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          /* nullable */
+java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetInputMap().getMap();
@@ -44023,7 +44273,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; input_map = 3 [json_name = "inputMap"];</code>
        */
       @java.lang.Override
-
       public java.lang.String getInputMapOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -44047,6 +44296,7 @@ java.lang.String defaultValue);
                     com.google.protobuf.WireFormat.FieldType.STRING,
                     "");
       }
+      @SuppressWarnings("serial")
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> outputMap_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -44057,7 +44307,6 @@ java.lang.String defaultValue);
         }
         return outputMap_;
       }
-
       public int getOutputMapCount() {
         return internalGetOutputMap().getMap().size();
       }
@@ -44075,7 +44324,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; output_map = 4 [json_name = "outputMap"];</code>
        */
-
       @java.lang.Override
       public boolean containsOutputMap(
           java.lang.String key) {
@@ -44105,7 +44353,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; output_map = 4 [json_name = "outputMap"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getOutputMapMap() {
         return internalGetOutputMap().getMap();
       }
@@ -44124,10 +44371,11 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; output_map = 4 [json_name = "outputMap"];</code>
        */
       @java.lang.Override
-
-      public java.lang.String getOutputMapOrDefault(
+      public /* nullable */
+java.lang.String getOutputMapOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          /* nullable */
+java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetOutputMap().getMap();
@@ -44148,7 +44396,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; output_map = 4 [json_name = "outputMap"];</code>
        */
       @java.lang.Override
-
       public java.lang.String getOutputMapOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -44438,10 +44685,9 @@ java.lang.String defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           modelName_ = "";
-
           modelVersion_ = 0L;
-
           internalGetMutableInputMap().clear();
           internalGetMutableOutputMap().clear();
           return this;
@@ -44470,15 +44716,27 @@ java.lang.String defaultValue);
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelEnsembling.Step buildPartial() {
           inference.ModelConfigOuterClass.ModelEnsembling.Step result = new inference.ModelConfigOuterClass.ModelEnsembling.Step(this);
-          int from_bitField0_ = bitField0_;
-          result.modelName_ = modelName_;
-          result.modelVersion_ = modelVersion_;
-          result.inputMap_ = internalGetInputMap();
-          result.inputMap_.makeImmutable();
-          result.outputMap_ = internalGetOutputMap();
-          result.outputMap_.makeImmutable();
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelEnsembling.Step result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.modelName_ = modelName_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.modelVersion_ = modelVersion_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.inputMap_ = internalGetInputMap();
+            result.inputMap_.makeImmutable();
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.outputMap_ = internalGetOutputMap();
+            result.outputMap_.makeImmutable();
+          }
         }
 
         @java.lang.Override
@@ -44527,6 +44785,7 @@ java.lang.String defaultValue);
           if (other == inference.ModelConfigOuterClass.ModelEnsembling.Step.getDefaultInstance()) return this;
           if (!other.getModelName().isEmpty()) {
             modelName_ = other.modelName_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (other.getModelVersion() != 0L) {
@@ -44534,8 +44793,10 @@ java.lang.String defaultValue);
           }
           internalGetMutableInputMap().mergeFrom(
               other.internalGetInputMap());
+          bitField0_ |= 0x00000004;
           internalGetMutableOutputMap().mergeFrom(
               other.internalGetOutputMap());
+          bitField0_ |= 0x00000008;
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -44564,12 +44825,12 @@ java.lang.String defaultValue);
                   break;
                 case 10: {
                   modelName_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 16: {
                   modelVersion_ = input.readInt64();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 16
                 case 26: {
@@ -44578,6 +44839,7 @@ java.lang.String defaultValue);
                       InputMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                   internalGetMutableInputMap().getMutableMap().put(
                       inputMap__.getKey(), inputMap__.getValue());
+                  bitField0_ |= 0x00000004;
                   break;
                 } // case 26
                 case 34: {
@@ -44586,6 +44848,7 @@ java.lang.String defaultValue);
                       OutputMapDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                   internalGetMutableOutputMap().getMutableMap().put(
                       outputMap__.getKey(), outputMap__.getValue());
+                  bitField0_ |= 0x00000008;
                   break;
                 } // case 34
                 default: {
@@ -44667,11 +44930,9 @@ java.lang.String defaultValue);
          */
         public Builder setModelName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           modelName_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -44687,8 +44948,8 @@ java.lang.String defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearModelName() {
-          
           modelName_ = getDefaultInstance().getModelName();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -44706,12 +44967,10 @@ java.lang.String defaultValue);
          */
         public Builder setModelNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           modelName_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -44749,6 +45008,7 @@ java.lang.String defaultValue);
         public Builder setModelVersion(long value) {
           
           modelVersion_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -44765,7 +45025,7 @@ java.lang.String defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearModelVersion() {
-          
+          bitField0_ = (bitField0_ & ~0x00000002);
           modelVersion_ = 0L;
           onChanged();
           return this;
@@ -44774,7 +45034,7 @@ java.lang.String defaultValue);
         private com.google.protobuf.MapField<
             java.lang.String, java.lang.String> inputMap_;
         private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetInputMap() {
+            internalGetInputMap() {
           if (inputMap_ == null) {
             return com.google.protobuf.MapField.emptyMapField(
                 InputMapDefaultEntryHolder.defaultEntry);
@@ -44782,8 +45042,7 @@ java.lang.String defaultValue);
           return inputMap_;
         }
         private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableInputMap() {
-          onChanged();;
+            internalGetMutableInputMap() {
           if (inputMap_ == null) {
             inputMap_ = com.google.protobuf.MapField.newMapField(
                 InputMapDefaultEntryHolder.defaultEntry);
@@ -44791,9 +45050,10 @@ java.lang.String defaultValue);
           if (!inputMap_.isMutable()) {
             inputMap_ = inputMap_.copy();
           }
+          bitField0_ |= 0x00000004;
+          onChanged();
           return inputMap_;
         }
-
         public int getInputMapCount() {
           return internalGetInputMap().getMap().size();
         }
@@ -44811,7 +45071,6 @@ java.lang.String defaultValue);
          *
          * <code>map&lt;string, string&gt; input_map = 3 [json_name = "inputMap"];</code>
          */
-
         @java.lang.Override
         public boolean containsInputMap(
             java.lang.String key) {
@@ -44841,7 +45100,6 @@ java.lang.String defaultValue);
          * <code>map&lt;string, string&gt; input_map = 3 [json_name = "inputMap"];</code>
          */
         @java.lang.Override
-
         public java.util.Map<java.lang.String, java.lang.String> getInputMapMap() {
           return internalGetInputMap().getMap();
         }
@@ -44860,10 +45118,11 @@ java.lang.String defaultValue);
          * <code>map&lt;string, string&gt; input_map = 3 [json_name = "inputMap"];</code>
          */
         @java.lang.Override
-
-        public java.lang.String getInputMapOrDefault(
+        public /* nullable */
+java.lang.String getInputMapOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue) {
+            /* nullable */
+java.lang.String defaultValue) {
           if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetInputMap().getMap();
@@ -44884,7 +45143,6 @@ java.lang.String defaultValue);
          * <code>map&lt;string, string&gt; input_map = 3 [json_name = "inputMap"];</code>
          */
         @java.lang.Override
-
         public java.lang.String getInputMapOrThrow(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -44895,8 +45153,8 @@ java.lang.String defaultValue);
           }
           return map.get(key);
         }
-
         public Builder clearInputMap() {
+          bitField0_ = (bitField0_ & ~0x00000004);
           internalGetMutableInputMap().getMutableMap()
               .clear();
           return this;
@@ -44915,7 +45173,6 @@ java.lang.String defaultValue);
          *
          * <code>map&lt;string, string&gt; input_map = 3 [json_name = "inputMap"];</code>
          */
-
         public Builder removeInputMap(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -44928,7 +45185,8 @@ java.lang.String defaultValue);
          */
         @java.lang.Deprecated
         public java.util.Map<java.lang.String, java.lang.String>
-        getMutableInputMap() {
+            getMutableInputMap() {
+          bitField0_ |= 0x00000004;
           return internalGetMutableInputMap().getMutableMap();
         }
         /**
@@ -44949,12 +45207,10 @@ java.lang.String defaultValue);
             java.lang.String key,
             java.lang.String value) {
           if (key == null) { throw new NullPointerException("map key"); }
-          if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+          if (value == null) { throw new NullPointerException("map value"); }
           internalGetMutableInputMap().getMutableMap()
               .put(key, value);
+          bitField0_ |= 0x00000004;
           return this;
         }
         /**
@@ -44971,18 +45227,18 @@ java.lang.String defaultValue);
          *
          * <code>map&lt;string, string&gt; input_map = 3 [json_name = "inputMap"];</code>
          */
-
         public Builder putAllInputMap(
             java.util.Map<java.lang.String, java.lang.String> values) {
           internalGetMutableInputMap().getMutableMap()
               .putAll(values);
+          bitField0_ |= 0x00000004;
           return this;
         }
 
         private com.google.protobuf.MapField<
             java.lang.String, java.lang.String> outputMap_;
         private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetOutputMap() {
+            internalGetOutputMap() {
           if (outputMap_ == null) {
             return com.google.protobuf.MapField.emptyMapField(
                 OutputMapDefaultEntryHolder.defaultEntry);
@@ -44990,8 +45246,7 @@ java.lang.String defaultValue);
           return outputMap_;
         }
         private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableOutputMap() {
-          onChanged();;
+            internalGetMutableOutputMap() {
           if (outputMap_ == null) {
             outputMap_ = com.google.protobuf.MapField.newMapField(
                 OutputMapDefaultEntryHolder.defaultEntry);
@@ -44999,9 +45254,10 @@ java.lang.String defaultValue);
           if (!outputMap_.isMutable()) {
             outputMap_ = outputMap_.copy();
           }
+          bitField0_ |= 0x00000008;
+          onChanged();
           return outputMap_;
         }
-
         public int getOutputMapCount() {
           return internalGetOutputMap().getMap().size();
         }
@@ -45019,7 +45275,6 @@ java.lang.String defaultValue);
          *
          * <code>map&lt;string, string&gt; output_map = 4 [json_name = "outputMap"];</code>
          */
-
         @java.lang.Override
         public boolean containsOutputMap(
             java.lang.String key) {
@@ -45049,7 +45304,6 @@ java.lang.String defaultValue);
          * <code>map&lt;string, string&gt; output_map = 4 [json_name = "outputMap"];</code>
          */
         @java.lang.Override
-
         public java.util.Map<java.lang.String, java.lang.String> getOutputMapMap() {
           return internalGetOutputMap().getMap();
         }
@@ -45068,10 +45322,11 @@ java.lang.String defaultValue);
          * <code>map&lt;string, string&gt; output_map = 4 [json_name = "outputMap"];</code>
          */
         @java.lang.Override
-
-        public java.lang.String getOutputMapOrDefault(
+        public /* nullable */
+java.lang.String getOutputMapOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue) {
+            /* nullable */
+java.lang.String defaultValue) {
           if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetOutputMap().getMap();
@@ -45092,7 +45347,6 @@ java.lang.String defaultValue);
          * <code>map&lt;string, string&gt; output_map = 4 [json_name = "outputMap"];</code>
          */
         @java.lang.Override
-
         public java.lang.String getOutputMapOrThrow(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -45103,8 +45357,8 @@ java.lang.String defaultValue);
           }
           return map.get(key);
         }
-
         public Builder clearOutputMap() {
+          bitField0_ = (bitField0_ & ~0x00000008);
           internalGetMutableOutputMap().getMutableMap()
               .clear();
           return this;
@@ -45123,7 +45377,6 @@ java.lang.String defaultValue);
          *
          * <code>map&lt;string, string&gt; output_map = 4 [json_name = "outputMap"];</code>
          */
-
         public Builder removeOutputMap(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -45136,7 +45389,8 @@ java.lang.String defaultValue);
          */
         @java.lang.Deprecated
         public java.util.Map<java.lang.String, java.lang.String>
-        getMutableOutputMap() {
+            getMutableOutputMap() {
+          bitField0_ |= 0x00000008;
           return internalGetMutableOutputMap().getMutableMap();
         }
         /**
@@ -45157,12 +45411,10 @@ java.lang.String defaultValue);
             java.lang.String key,
             java.lang.String value) {
           if (key == null) { throw new NullPointerException("map key"); }
-          if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+          if (value == null) { throw new NullPointerException("map value"); }
           internalGetMutableOutputMap().getMutableMap()
               .put(key, value);
+          bitField0_ |= 0x00000008;
           return this;
         }
         /**
@@ -45179,11 +45431,11 @@ java.lang.String defaultValue);
          *
          * <code>map&lt;string, string&gt; output_map = 4 [json_name = "outputMap"];</code>
          */
-
         public Builder putAllOutputMap(
             java.util.Map<java.lang.String, java.lang.String> values) {
           internalGetMutableOutputMap().getMutableMap()
               .putAll(values);
+          bitField0_ |= 0x00000008;
           return this;
         }
         @java.lang.Override
@@ -45251,6 +45503,7 @@ java.lang.String defaultValue);
     }
 
     public static final int STEP_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<inference.ModelConfigOuterClass.ModelEnsembling.Step> step_;
     /**
      * <pre>
@@ -45524,6 +45777,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (stepBuilder_ == null) {
           step_ = java.util.Collections.emptyList();
         } else {
@@ -45557,7 +45811,13 @@ java.lang.String defaultValue);
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelEnsembling buildPartial() {
         inference.ModelConfigOuterClass.ModelEnsembling result = new inference.ModelConfigOuterClass.ModelEnsembling(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelEnsembling result) {
         if (stepBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             step_ = java.util.Collections.unmodifiableList(step_);
@@ -45567,8 +45827,10 @@ java.lang.String defaultValue);
         } else {
           result.step_ = stepBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelEnsembling result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -46206,7 +46468,8 @@ java.lang.String defaultValue);
     }
 
     public static final int STRING_VALUE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object stringValue_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object stringValue_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string string_value
@@ -46452,8 +46715,8 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         stringValue_ = "";
-
         return this;
       }
 
@@ -46480,9 +46743,16 @@ java.lang.String defaultValue);
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelParameter buildPartial() {
         inference.ModelConfigOuterClass.ModelParameter result = new inference.ModelConfigOuterClass.ModelParameter(this);
-        result.stringValue_ = stringValue_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelParameter result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.stringValue_ = stringValue_;
+        }
       }
 
       @java.lang.Override
@@ -46531,6 +46801,7 @@ java.lang.String defaultValue);
         if (other == inference.ModelConfigOuterClass.ModelParameter.getDefaultInstance()) return this;
         if (!other.getStringValue().isEmpty()) {
           stringValue_ = other.stringValue_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -46561,7 +46832,7 @@ java.lang.String defaultValue);
                 break;
               case 10: {
                 stringValue_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -46579,6 +46850,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object stringValue_ = "";
       /**
@@ -46642,11 +46914,9 @@ java.lang.String defaultValue);
        */
       public Builder setStringValue(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         stringValue_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -46662,8 +46932,8 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearStringValue() {
-        
         stringValue_ = getDefaultInstance().getStringValue();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -46681,12 +46951,10 @@ java.lang.String defaultValue);
        */
       public Builder setStringValueBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         stringValue_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -46855,7 +47123,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, .inference.ModelWarmup.Input&gt; inputs = 3 [json_name = "inputs"];</code>
      */
-
     /* nullable */
 inference.ModelConfigOuterClass.ModelWarmup.Input getInputsOrDefault(
         java.lang.String key,
@@ -46872,7 +47139,6 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
      *
      * <code>map&lt;string, .inference.ModelWarmup.Input&gt; inputs = 3 [json_name = "inputs"];</code>
      */
-
     inference.ModelConfigOuterClass.ModelWarmup.Input getInputsOrThrow(
         java.lang.String key);
 
@@ -47236,7 +47502,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
       }
 
       public static final int DATA_TYPE_FIELD_NUMBER = 1;
-      private int dataType_;
+      private int dataType_ = 0;
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: DataType data_type
@@ -47263,12 +47529,12 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        * @return The dataType.
        */
       @java.lang.Override public inference.ModelConfigOuterClass.DataType getDataType() {
-        @SuppressWarnings("deprecation")
-        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+        inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
         return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
       }
 
       public static final int DIMS_FIELD_NUMBER = 2;
+      @SuppressWarnings("serial")
       private com.google.protobuf.Internal.LongList dims_;
       /**
        * <pre>
@@ -47769,10 +48035,9 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           dataType_ = 0;
-
           dims_ = emptyLongList();
-          bitField0_ = (bitField0_ & ~0x00000001);
           inputDataTypeCase_ = 0;
           inputDataType_ = null;
           return this;
@@ -47801,25 +48066,31 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelWarmup.Input buildPartial() {
           inference.ModelConfigOuterClass.ModelWarmup.Input result = new inference.ModelConfigOuterClass.ModelWarmup.Input(this);
-          int from_bitField0_ = bitField0_;
-          result.dataType_ = dataType_;
-          if (((bitField0_ & 0x00000001) != 0)) {
-            dims_.makeImmutable();
-            bitField0_ = (bitField0_ & ~0x00000001);
-          }
-          result.dims_ = dims_;
-          if (inputDataTypeCase_ == 3) {
-            result.inputDataType_ = inputDataType_;
-          }
-          if (inputDataTypeCase_ == 4) {
-            result.inputDataType_ = inputDataType_;
-          }
-          if (inputDataTypeCase_ == 5) {
-            result.inputDataType_ = inputDataType_;
-          }
-          result.inputDataTypeCase_ = inputDataTypeCase_;
+          buildPartialRepeatedFields(result);
+          if (bitField0_ != 0) { buildPartial0(result); }
+          buildPartialOneofs(result);
           onBuilt();
           return result;
+        }
+
+        private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelWarmup.Input result) {
+          if (((bitField0_ & 0x00000002) != 0)) {
+            dims_.makeImmutable();
+            bitField0_ = (bitField0_ & ~0x00000002);
+          }
+          result.dims_ = dims_;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelWarmup.Input result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.dataType_ = dataType_;
+          }
+        }
+
+        private void buildPartialOneofs(inference.ModelConfigOuterClass.ModelWarmup.Input result) {
+          result.inputDataTypeCase_ = inputDataTypeCase_;
+          result.inputDataType_ = this.inputDataType_;
         }
 
         @java.lang.Override
@@ -47872,7 +48143,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
           if (!other.dims_.isEmpty()) {
             if (dims_.isEmpty()) {
               dims_ = other.dims_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureDimsIsMutable();
               dims_.addAll(other.dims_);
@@ -47926,7 +48197,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
                   break;
                 case 8: {
                   dataType_ = input.readEnum();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 8
                 case 16: {
@@ -48021,8 +48292,8 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
          * @return This builder for chaining.
          */
         public Builder setDataTypeValue(int value) {
-          
           dataType_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -48039,8 +48310,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
          */
         @java.lang.Override
         public inference.ModelConfigOuterClass.DataType getDataType() {
-          @SuppressWarnings("deprecation")
-          inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.valueOf(dataType_);
+          inference.ModelConfigOuterClass.DataType result = inference.ModelConfigOuterClass.DataType.forNumber(dataType_);
           return result == null ? inference.ModelConfigOuterClass.DataType.UNRECOGNIZED : result;
         }
         /**
@@ -48059,7 +48329,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
           if (value == null) {
             throw new NullPointerException();
           }
-          
+          bitField0_ |= 0x00000001;
           dataType_ = value.getNumber();
           onChanged();
           return this;
@@ -48076,7 +48346,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearDataType() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           dataType_ = 0;
           onChanged();
           return this;
@@ -48084,10 +48354,10 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
 
         private com.google.protobuf.Internal.LongList dims_ = emptyLongList();
         private void ensureDimsIsMutable() {
-          if (!((bitField0_ & 0x00000001) != 0)) {
+          if (!((bitField0_ & 0x00000002) != 0)) {
             dims_ = mutableCopy(dims_);
-            bitField0_ |= 0x00000001;
-           }
+            bitField0_ |= 0x00000002;
+          }
         }
         /**
          * <pre>
@@ -48102,7 +48372,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
          */
         public java.util.List<java.lang.Long>
             getDimsList() {
-          return ((bitField0_ & 0x00000001) != 0) ?
+          return ((bitField0_ & 0x00000002) != 0) ?
                    java.util.Collections.unmodifiableList(dims_) : dims_;
         }
         /**
@@ -48149,6 +48419,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
          */
         public Builder setDims(
             int index, long value) {
+          
           ensureDimsIsMutable();
           dims_.setLong(index, value);
           onChanged();
@@ -48167,6 +48438,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
          * @return This builder for chaining.
          */
         public Builder addDims(long value) {
+          
           ensureDimsIsMutable();
           dims_.addLong(value);
           onChanged();
@@ -48205,7 +48477,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
          */
         public Builder clearDims() {
           dims_ = emptyLongList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
           return this;
         }
@@ -48263,6 +48535,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
          * @return This builder for chaining.
          */
         public Builder setZeroData(boolean value) {
+          
           inputDataTypeCase_ = 3;
           inputDataType_ = value;
           onChanged();
@@ -48344,6 +48617,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
          * @return This builder for chaining.
          */
         public Builder setRandomData(boolean value) {
+          
           inputDataTypeCase_ = 4;
           inputDataType_ = value;
           onChanged();
@@ -48480,10 +48754,8 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
          */
         public Builder setInputDataFile(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  inputDataTypeCase_ = 5;
+          if (value == null) { throw new NullPointerException(); }
+          inputDataTypeCase_ = 5;
           inputDataType_ = value;
           onChanged();
           return this;
@@ -48531,10 +48803,8 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
          */
         public Builder setInputDataFileBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           inputDataTypeCase_ = 5;
           inputDataType_ = value;
           onChanged();
@@ -48605,7 +48875,8 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string name
@@ -48657,7 +48928,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
     }
 
     public static final int BATCH_SIZE_FIELD_NUMBER = 2;
-    private int batchSize_;
+    private int batchSize_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint32 batch_size
@@ -48689,6 +48960,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   inference.ModelConfigOuterClass.ModelWarmup.Input.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, inference.ModelConfigOuterClass.ModelWarmup.Input> inputs_;
     private com.google.protobuf.MapField<java.lang.String, inference.ModelConfigOuterClass.ModelWarmup.Input>
@@ -48699,7 +48971,6 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
       }
       return inputs_;
     }
-
     public int getInputsCount() {
       return internalGetInputs().getMap().size();
     }
@@ -48714,7 +48985,6 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
      *
      * <code>map&lt;string, .inference.ModelWarmup.Input&gt; inputs = 3 [json_name = "inputs"];</code>
      */
-
     @java.lang.Override
     public boolean containsInputs(
         java.lang.String key) {
@@ -48741,7 +49011,6 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
      * <code>map&lt;string, .inference.ModelWarmup.Input&gt; inputs = 3 [json_name = "inputs"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelWarmup.Input> getInputsMap() {
       return internalGetInputs().getMap();
     }
@@ -48757,10 +49026,11 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
      * <code>map&lt;string, .inference.ModelWarmup.Input&gt; inputs = 3 [json_name = "inputs"];</code>
      */
     @java.lang.Override
-
-    public inference.ModelConfigOuterClass.ModelWarmup.Input getInputsOrDefault(
+    public /* nullable */
+inference.ModelConfigOuterClass.ModelWarmup.Input getInputsOrDefault(
         java.lang.String key,
-        inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue) {
+        /* nullable */
+inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelWarmup.Input> map =
           internalGetInputs().getMap();
@@ -48778,7 +49048,6 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
      * <code>map&lt;string, .inference.ModelWarmup.Input&gt; inputs = 3 [json_name = "inputs"];</code>
      */
     @java.lang.Override
-
     public inference.ModelConfigOuterClass.ModelWarmup.Input getInputsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -48791,7 +49060,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
     }
 
     public static final int COUNT_FIELD_NUMBER = 4;
-    private int count_;
+    private int count_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: uint32 count
@@ -49077,13 +49346,11 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         batchSize_ = 0;
-
         internalGetMutableInputs().clear();
         count_ = 0;
-
         return this;
       }
 
@@ -49110,14 +49377,26 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelWarmup buildPartial() {
         inference.ModelConfigOuterClass.ModelWarmup result = new inference.ModelConfigOuterClass.ModelWarmup(this);
-        int from_bitField0_ = bitField0_;
-        result.name_ = name_;
-        result.batchSize_ = batchSize_;
-        result.inputs_ = internalGetInputs();
-        result.inputs_.makeImmutable();
-        result.count_ = count_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelWarmup result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.batchSize_ = batchSize_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.inputs_ = internalGetInputs();
+          result.inputs_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.count_ = count_;
+        }
       }
 
       @java.lang.Override
@@ -49166,6 +49445,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
         if (other == inference.ModelConfigOuterClass.ModelWarmup.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getBatchSize() != 0) {
@@ -49173,6 +49453,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
         }
         internalGetMutableInputs().mergeFrom(
             other.internalGetInputs());
+        bitField0_ |= 0x00000004;
         if (other.getCount() != 0) {
           setCount(other.getCount());
         }
@@ -49204,12 +49485,12 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 batchSize_ = input.readUInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 26: {
@@ -49218,11 +49499,12 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
                     InputsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableInputs().getMutableMap().put(
                     inputs__.getKey(), inputs__.getValue());
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 32: {
                 count_ = input.readUInt32();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               default: {
@@ -49304,11 +49586,9 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -49324,8 +49604,8 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -49343,12 +49623,10 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -49390,6 +49668,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
       public Builder setBatchSize(int value) {
         
         batchSize_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -49408,7 +49687,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearBatchSize() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         batchSize_ = 0;
         onChanged();
         return this;
@@ -49417,7 +49696,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, inference.ModelConfigOuterClass.ModelWarmup.Input> inputs_;
       private com.google.protobuf.MapField<java.lang.String, inference.ModelConfigOuterClass.ModelWarmup.Input>
-      internalGetInputs() {
+          internalGetInputs() {
         if (inputs_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               InputsDefaultEntryHolder.defaultEntry);
@@ -49425,8 +49704,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
         return inputs_;
       }
       private com.google.protobuf.MapField<java.lang.String, inference.ModelConfigOuterClass.ModelWarmup.Input>
-      internalGetMutableInputs() {
-        onChanged();;
+          internalGetMutableInputs() {
         if (inputs_ == null) {
           inputs_ = com.google.protobuf.MapField.newMapField(
               InputsDefaultEntryHolder.defaultEntry);
@@ -49434,9 +49712,10 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
         if (!inputs_.isMutable()) {
           inputs_ = inputs_.copy();
         }
+        bitField0_ |= 0x00000004;
+        onChanged();
         return inputs_;
       }
-
       public int getInputsCount() {
         return internalGetInputs().getMap().size();
       }
@@ -49451,7 +49730,6 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        *
        * <code>map&lt;string, .inference.ModelWarmup.Input&gt; inputs = 3 [json_name = "inputs"];</code>
        */
-
       @java.lang.Override
       public boolean containsInputs(
           java.lang.String key) {
@@ -49478,7 +49756,6 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        * <code>map&lt;string, .inference.ModelWarmup.Input&gt; inputs = 3 [json_name = "inputs"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelWarmup.Input> getInputsMap() {
         return internalGetInputs().getMap();
       }
@@ -49494,10 +49771,11 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        * <code>map&lt;string, .inference.ModelWarmup.Input&gt; inputs = 3 [json_name = "inputs"];</code>
        */
       @java.lang.Override
-
-      public inference.ModelConfigOuterClass.ModelWarmup.Input getInputsOrDefault(
+      public /* nullable */
+inference.ModelConfigOuterClass.ModelWarmup.Input getInputsOrDefault(
           java.lang.String key,
-          inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue) {
+          /* nullable */
+inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelWarmup.Input> map =
             internalGetInputs().getMap();
@@ -49515,7 +49793,6 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        * <code>map&lt;string, .inference.ModelWarmup.Input&gt; inputs = 3 [json_name = "inputs"];</code>
        */
       @java.lang.Override
-
       public inference.ModelConfigOuterClass.ModelWarmup.Input getInputsOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -49526,8 +49803,8 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearInputs() {
+        bitField0_ = (bitField0_ & ~0x00000004);
         internalGetMutableInputs().getMutableMap()
             .clear();
         return this;
@@ -49543,7 +49820,6 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        *
        * <code>map&lt;string, .inference.ModelWarmup.Input&gt; inputs = 3 [json_name = "inputs"];</code>
        */
-
       public Builder removeInputs(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -49556,7 +49832,8 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelWarmup.Input>
-      getMutableInputs() {
+          getMutableInputs() {
+        bitField0_ |= 0x00000004;
         return internalGetMutableInputs().getMutableMap();
       }
       /**
@@ -49574,12 +49851,10 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
           java.lang.String key,
           inference.ModelConfigOuterClass.ModelWarmup.Input value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableInputs().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000004;
         return this;
       }
       /**
@@ -49593,11 +49868,11 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        *
        * <code>map&lt;string, .inference.ModelWarmup.Input&gt; inputs = 3 [json_name = "inputs"];</code>
        */
-
       public Builder putAllInputs(
           java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelWarmup.Input> values) {
         internalGetMutableInputs().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000004;
         return this;
       }
 
@@ -49648,6 +49923,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
       public Builder setCount(int value) {
         
         count_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -49671,7 +49947,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearCount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         count_ = 0;
         onChanged();
         return this;
@@ -49851,6 +50127,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
     }
 
     public static final int OP_LIBRARY_FILENAME_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList opLibraryFilename_;
     /**
      * <pre>
@@ -50119,6 +50396,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         opLibraryFilename_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
@@ -50147,14 +50425,22 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelOperations buildPartial() {
         inference.ModelConfigOuterClass.ModelOperations result = new inference.ModelConfigOuterClass.ModelOperations(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelOperations result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           opLibraryFilename_ = opLibraryFilename_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.opLibraryFilename_ = opLibraryFilename_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelOperations result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -50347,10 +50633,8 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        */
       public Builder setOpLibraryFilename(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureOpLibraryFilenameIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureOpLibraryFilenameIsMutable();
         opLibraryFilename_.set(index, value);
         onChanged();
         return this;
@@ -50370,10 +50654,8 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        */
       public Builder addOpLibraryFilename(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureOpLibraryFilenameIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureOpLibraryFilenameIsMutable();
         opLibraryFilename_.add(value);
         onChanged();
         return this;
@@ -50432,10 +50714,8 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        */
       public Builder addOpLibraryFilenameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureOpLibraryFilenameIsMutable();
         opLibraryFilename_.add(value);
         onChanged();
@@ -50577,7 +50857,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
     }
 
     public static final int DECOUPLED_FIELD_NUMBER = 1;
-    private boolean decoupled_;
+    private boolean decoupled_ = false;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: bool decoupled
@@ -50797,8 +51077,8 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         decoupled_ = false;
-
         return this;
       }
 
@@ -50825,9 +51105,16 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelTransactionPolicy buildPartial() {
         inference.ModelConfigOuterClass.ModelTransactionPolicy result = new inference.ModelConfigOuterClass.ModelTransactionPolicy(this);
-        result.decoupled_ = decoupled_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelTransactionPolicy result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.decoupled_ = decoupled_;
+        }
       }
 
       @java.lang.Override
@@ -50905,7 +51192,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
                 break;
               case 8: {
                 decoupled_ = input.readBool();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               default: {
@@ -50923,6 +51210,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private boolean decoupled_ ;
       /**
@@ -50965,6 +51253,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
       public Builder setDecoupled(boolean value) {
         
         decoupled_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -50985,7 +51274,7 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearDecoupled() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         decoupled_ = false;
         onChanged();
         return this;
@@ -51262,7 +51551,6 @@ inference.ModelConfigOuterClass.ModelWarmup.Input defaultValue);
        *
        * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
        */
-
       /* nullable */
 java.lang.String getParametersOrDefault(
           java.lang.String key,
@@ -51278,7 +51566,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
        */
-
       java.lang.String getParametersOrThrow(
           java.lang.String key);
     }
@@ -51345,7 +51632,8 @@ java.lang.String defaultValue);
       }
 
       public static final int NAME_FIELD_NUMBER = 1;
-      private volatile java.lang.Object name_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object name_ = "";
       /**
        * <pre>
        *&#64;&#64;    .. cpp:var:: string name
@@ -51408,6 +51696,7 @@ java.lang.String defaultValue);
                     com.google.protobuf.WireFormat.FieldType.STRING,
                     "");
       }
+      @SuppressWarnings("serial")
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> parameters_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -51418,7 +51707,6 @@ java.lang.String defaultValue);
         }
         return parameters_;
       }
-
       public int getParametersCount() {
         return internalGetParameters().getMap().size();
       }
@@ -51432,7 +51720,6 @@ java.lang.String defaultValue);
        *
        * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
        */
-
       @java.lang.Override
       public boolean containsParameters(
           java.lang.String key) {
@@ -51458,7 +51745,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getParametersMap() {
         return internalGetParameters().getMap();
       }
@@ -51473,10 +51759,11 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
-      public java.lang.String getParametersOrDefault(
+      public /* nullable */
+java.lang.String getParametersOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          /* nullable */
+java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetParameters().getMap();
@@ -51493,7 +51780,6 @@ java.lang.String defaultValue);
        * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public java.lang.String getParametersOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -51745,8 +52031,8 @@ java.lang.String defaultValue);
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           name_ = "";
-
           internalGetMutableParameters().clear();
           return this;
         }
@@ -51774,12 +52060,20 @@ java.lang.String defaultValue);
         @java.lang.Override
         public inference.ModelConfigOuterClass.ModelRepositoryAgents.Agent buildPartial() {
           inference.ModelConfigOuterClass.ModelRepositoryAgents.Agent result = new inference.ModelConfigOuterClass.ModelRepositoryAgents.Agent(this);
-          int from_bitField0_ = bitField0_;
-          result.name_ = name_;
-          result.parameters_ = internalGetParameters();
-          result.parameters_.makeImmutable();
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(inference.ModelConfigOuterClass.ModelRepositoryAgents.Agent result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.name_ = name_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.parameters_ = internalGetParameters();
+            result.parameters_.makeImmutable();
+          }
         }
 
         @java.lang.Override
@@ -51828,10 +52122,12 @@ java.lang.String defaultValue);
           if (other == inference.ModelConfigOuterClass.ModelRepositoryAgents.Agent.getDefaultInstance()) return this;
           if (!other.getName().isEmpty()) {
             name_ = other.name_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           internalGetMutableParameters().mergeFrom(
               other.internalGetParameters());
+          bitField0_ |= 0x00000002;
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -51860,7 +52156,7 @@ java.lang.String defaultValue);
                   break;
                 case 10: {
                   name_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 18: {
@@ -51869,6 +52165,7 @@ java.lang.String defaultValue);
                       ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                   internalGetMutableParameters().getMutableMap().put(
                       parameters__.getKey(), parameters__.getValue());
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 18
                 default: {
@@ -51950,11 +52247,9 @@ java.lang.String defaultValue);
          */
         public Builder setName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -51970,8 +52265,8 @@ java.lang.String defaultValue);
          * @return This builder for chaining.
          */
         public Builder clearName() {
-          
           name_ = getDefaultInstance().getName();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -51989,12 +52284,10 @@ java.lang.String defaultValue);
          */
         public Builder setNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           name_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -52002,7 +52295,7 @@ java.lang.String defaultValue);
         private com.google.protobuf.MapField<
             java.lang.String, java.lang.String> parameters_;
         private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetParameters() {
+            internalGetParameters() {
           if (parameters_ == null) {
             return com.google.protobuf.MapField.emptyMapField(
                 ParametersDefaultEntryHolder.defaultEntry);
@@ -52010,8 +52303,7 @@ java.lang.String defaultValue);
           return parameters_;
         }
         private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableParameters() {
-          onChanged();;
+            internalGetMutableParameters() {
           if (parameters_ == null) {
             parameters_ = com.google.protobuf.MapField.newMapField(
                 ParametersDefaultEntryHolder.defaultEntry);
@@ -52019,9 +52311,10 @@ java.lang.String defaultValue);
           if (!parameters_.isMutable()) {
             parameters_ = parameters_.copy();
           }
+          bitField0_ |= 0x00000002;
+          onChanged();
           return parameters_;
         }
-
         public int getParametersCount() {
           return internalGetParameters().getMap().size();
         }
@@ -52035,7 +52328,6 @@ java.lang.String defaultValue);
          *
          * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
          */
-
         @java.lang.Override
         public boolean containsParameters(
             java.lang.String key) {
@@ -52061,7 +52353,6 @@ java.lang.String defaultValue);
          * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
         public java.util.Map<java.lang.String, java.lang.String> getParametersMap() {
           return internalGetParameters().getMap();
         }
@@ -52076,10 +52367,11 @@ java.lang.String defaultValue);
          * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
-        public java.lang.String getParametersOrDefault(
+        public /* nullable */
+java.lang.String getParametersOrDefault(
             java.lang.String key,
-            java.lang.String defaultValue) {
+            /* nullable */
+java.lang.String defaultValue) {
           if (key == null) { throw new NullPointerException("map key"); }
           java.util.Map<java.lang.String, java.lang.String> map =
               internalGetParameters().getMap();
@@ -52096,7 +52388,6 @@ java.lang.String defaultValue);
          * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
          */
         @java.lang.Override
-
         public java.lang.String getParametersOrThrow(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -52107,8 +52398,8 @@ java.lang.String defaultValue);
           }
           return map.get(key);
         }
-
         public Builder clearParameters() {
+          bitField0_ = (bitField0_ & ~0x00000002);
           internalGetMutableParameters().getMutableMap()
               .clear();
           return this;
@@ -52123,7 +52414,6 @@ java.lang.String defaultValue);
          *
          * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
          */
-
         public Builder removeParameters(
             java.lang.String key) {
           if (key == null) { throw new NullPointerException("map key"); }
@@ -52136,7 +52426,8 @@ java.lang.String defaultValue);
          */
         @java.lang.Deprecated
         public java.util.Map<java.lang.String, java.lang.String>
-        getMutableParameters() {
+            getMutableParameters() {
+          bitField0_ |= 0x00000002;
           return internalGetMutableParameters().getMutableMap();
         }
         /**
@@ -52153,12 +52444,10 @@ java.lang.String defaultValue);
             java.lang.String key,
             java.lang.String value) {
           if (key == null) { throw new NullPointerException("map key"); }
-          if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+          if (value == null) { throw new NullPointerException("map value"); }
           internalGetMutableParameters().getMutableMap()
               .put(key, value);
+          bitField0_ |= 0x00000002;
           return this;
         }
         /**
@@ -52171,11 +52460,11 @@ java.lang.String defaultValue);
          *
          * <code>map&lt;string, string&gt; parameters = 2 [json_name = "parameters"];</code>
          */
-
         public Builder putAllParameters(
             java.util.Map<java.lang.String, java.lang.String> values) {
           internalGetMutableParameters().getMutableMap()
               .putAll(values);
+          bitField0_ |= 0x00000002;
           return this;
         }
         @java.lang.Override
@@ -52243,6 +52532,7 @@ java.lang.String defaultValue);
     }
 
     public static final int AGENTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<inference.ModelConfigOuterClass.ModelRepositoryAgents.Agent> agents_;
     /**
      * <pre>
@@ -52530,6 +52820,7 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (agentsBuilder_ == null) {
           agents_ = java.util.Collections.emptyList();
         } else {
@@ -52563,7 +52854,13 @@ java.lang.String defaultValue);
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelRepositoryAgents buildPartial() {
         inference.ModelConfigOuterClass.ModelRepositoryAgents result = new inference.ModelConfigOuterClass.ModelRepositoryAgents(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelRepositoryAgents result) {
         if (agentsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             agents_ = java.util.Collections.unmodifiableList(agents_);
@@ -52573,8 +52870,10 @@ java.lang.String defaultValue);
         } else {
           result.agents_ = agentsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelRepositoryAgents result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -53257,7 +53556,7 @@ java.lang.String defaultValue);
     }
 
     public static final int ENABLE_FIELD_NUMBER = 1;
-    private boolean enable_;
+    private boolean enable_ = false;
     /**
      * <pre>
      *&#64;&#64;
@@ -53476,8 +53775,8 @@ java.lang.String defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         enable_ = false;
-
         return this;
       }
 
@@ -53504,9 +53803,16 @@ java.lang.String defaultValue);
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelResponseCache buildPartial() {
         inference.ModelConfigOuterClass.ModelResponseCache result = new inference.ModelConfigOuterClass.ModelResponseCache(this);
-        result.enable_ = enable_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelResponseCache result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.enable_ = enable_;
+        }
       }
 
       @java.lang.Override
@@ -53584,7 +53890,7 @@ java.lang.String defaultValue);
                 break;
               case 8: {
                 enable_ = input.readBool();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               default: {
@@ -53602,6 +53908,7 @@ java.lang.String defaultValue);
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private boolean enable_ ;
       /**
@@ -53644,6 +53951,7 @@ java.lang.String defaultValue);
       public Builder setEnable(boolean value) {
         
         enable_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -53664,7 +53972,7 @@ java.lang.String defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearEnable() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         enable_ = false;
         onChanged();
         return this;
@@ -54472,7 +54780,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; cc_model_filenames = 9 [json_name = "ccModelFilenames"];</code>
      */
-
     /* nullable */
 java.lang.String getCcModelFilenamesOrDefault(
         java.lang.String key,
@@ -54490,7 +54797,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; cc_model_filenames = 9 [json_name = "ccModelFilenames"];</code>
      */
-
     java.lang.String getCcModelFilenamesOrThrow(
         java.lang.String key);
 
@@ -54553,7 +54859,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metric_tags = 10 [json_name = "metricTags"];</code>
      */
-
     /* nullable */
 java.lang.String getMetricTagsOrDefault(
         java.lang.String key,
@@ -54571,7 +54876,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, string&gt; metric_tags = 10 [json_name = "metricTags"];</code>
      */
-
     java.lang.String getMetricTagsOrThrow(
         java.lang.String key);
 
@@ -54626,7 +54930,6 @@ java.lang.String defaultValue);
      *
      * <code>map&lt;string, .inference.ModelParameter&gt; parameters = 14 [json_name = "parameters"];</code>
      */
-
     /* nullable */
 inference.ModelConfigOuterClass.ModelParameter getParametersOrDefault(
         java.lang.String key,
@@ -54642,7 +54945,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      *
      * <code>map&lt;string, .inference.ModelParameter&gt; parameters = 14 [json_name = "parameters"];</code>
      */
-
     inference.ModelConfigOuterClass.ModelParameter getParametersOrThrow(
         java.lang.String key);
 
@@ -55001,7 +55303,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string name
@@ -55053,7 +55356,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
     }
 
     public static final int PLATFORM_FIELD_NUMBER = 2;
-    private volatile java.lang.Object platform_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object platform_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string platform
@@ -55111,7 +55415,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
     }
 
     public static final int BACKEND_FIELD_NUMBER = 17;
-    private volatile java.lang.Object backend_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object backend_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string backend
@@ -55206,11 +55511,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelVersionPolicyOrBuilder getVersionPolicyOrBuilder() {
-      return getVersionPolicy();
+      return versionPolicy_ == null ? inference.ModelConfigOuterClass.ModelVersionPolicy.getDefaultInstance() : versionPolicy_;
     }
 
     public static final int MAX_BATCH_SIZE_FIELD_NUMBER = 4;
-    private int maxBatchSize_;
+    private int maxBatchSize_ = 0;
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: int32 max_batch_size
@@ -55241,6 +55546,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
     }
 
     public static final int INPUT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<inference.ModelConfigOuterClass.ModelInput> input_;
     /**
      * <pre>
@@ -55316,6 +55622,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
     }
 
     public static final int OUTPUT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<inference.ModelConfigOuterClass.ModelOutput> output_;
     /**
      * <pre>
@@ -55391,6 +55698,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
     }
 
     public static final int BATCH_INPUT_FIELD_NUMBER = 20;
+    @SuppressWarnings("serial")
     private java.util.List<inference.ModelConfigOuterClass.BatchInput> batchInput_;
     /**
      * <pre>
@@ -55471,6 +55779,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
     }
 
     public static final int BATCH_OUTPUT_FIELD_NUMBER = 21;
+    @SuppressWarnings("serial")
     private java.util.List<inference.ModelConfigOuterClass.BatchOutput> batchOutput_;
     /**
      * <pre>
@@ -55597,7 +55906,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelOptimizationPolicyOrBuilder getOptimizationOrBuilder() {
-      return getOptimization();
+      return optimization_ == null ? inference.ModelConfigOuterClass.ModelOptimizationPolicy.getDefaultInstance() : optimization_;
     }
 
     public static final int DYNAMIC_BATCHING_FIELD_NUMBER = 11;
@@ -55796,6 +56105,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
     }
 
     public static final int INSTANCE_GROUP_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<inference.ModelConfigOuterClass.ModelInstanceGroup> instanceGroup_;
     /**
      * <pre>
@@ -55876,7 +56186,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
     }
 
     public static final int DEFAULT_MODEL_FILENAME_FIELD_NUMBER = 8;
-    private volatile java.lang.Object defaultModelFilename_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object defaultModelFilename_ = "";
     /**
      * <pre>
      *&#64;&#64;  .. cpp:var:: string default_model_filename
@@ -55947,6 +56258,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "");
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> ccModelFilenames_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -55957,7 +56269,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       }
       return ccModelFilenames_;
     }
-
     public int getCcModelFilenamesCount() {
       return internalGetCcModelFilenames().getMap().size();
     }
@@ -55973,7 +56284,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      *
      * <code>map&lt;string, string&gt; cc_model_filenames = 9 [json_name = "ccModelFilenames"];</code>
      */
-
     @java.lang.Override
     public boolean containsCcModelFilenames(
         java.lang.String key) {
@@ -56001,7 +56311,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      * <code>map&lt;string, string&gt; cc_model_filenames = 9 [json_name = "ccModelFilenames"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getCcModelFilenamesMap() {
       return internalGetCcModelFilenames().getMap();
     }
@@ -56018,10 +56327,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      * <code>map&lt;string, string&gt; cc_model_filenames = 9 [json_name = "ccModelFilenames"];</code>
      */
     @java.lang.Override
-
-    public java.lang.String getCcModelFilenamesOrDefault(
+    public /* nullable */
+java.lang.String getCcModelFilenamesOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
+        /* nullable */
+java.lang.String defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetCcModelFilenames().getMap();
@@ -56040,7 +56350,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      * <code>map&lt;string, string&gt; cc_model_filenames = 9 [json_name = "ccModelFilenames"];</code>
      */
     @java.lang.Override
-
     public java.lang.String getCcModelFilenamesOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -56064,6 +56373,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
                   com.google.protobuf.WireFormat.FieldType.STRING,
                   "");
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.String> metricTags_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.String>
@@ -56074,7 +56384,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       }
       return metricTags_;
     }
-
     public int getMetricTagsCount() {
       return internalGetMetricTags().getMap().size();
     }
@@ -56090,7 +56399,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      *
      * <code>map&lt;string, string&gt; metric_tags = 10 [json_name = "metricTags"];</code>
      */
-
     @java.lang.Override
     public boolean containsMetricTags(
         java.lang.String key) {
@@ -56118,7 +56426,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      * <code>map&lt;string, string&gt; metric_tags = 10 [json_name = "metricTags"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.String> getMetricTagsMap() {
       return internalGetMetricTags().getMap();
     }
@@ -56135,10 +56442,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      * <code>map&lt;string, string&gt; metric_tags = 10 [json_name = "metricTags"];</code>
      */
     @java.lang.Override
-
-    public java.lang.String getMetricTagsOrDefault(
+    public /* nullable */
+java.lang.String getMetricTagsOrDefault(
         java.lang.String key,
-        java.lang.String defaultValue) {
+        /* nullable */
+java.lang.String defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, java.lang.String> map =
           internalGetMetricTags().getMap();
@@ -56157,7 +56465,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      * <code>map&lt;string, string&gt; metric_tags = 10 [json_name = "metricTags"];</code>
      */
     @java.lang.Override
-
     public java.lang.String getMetricTagsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -56181,6 +56488,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
                   com.google.protobuf.WireFormat.FieldType.MESSAGE,
                   inference.ModelConfigOuterClass.ModelParameter.getDefaultInstance());
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, inference.ModelConfigOuterClass.ModelParameter> parameters_;
     private com.google.protobuf.MapField<java.lang.String, inference.ModelConfigOuterClass.ModelParameter>
@@ -56191,7 +56499,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       }
       return parameters_;
     }
-
     public int getParametersCount() {
       return internalGetParameters().getMap().size();
     }
@@ -56205,7 +56512,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      *
      * <code>map&lt;string, .inference.ModelParameter&gt; parameters = 14 [json_name = "parameters"];</code>
      */
-
     @java.lang.Override
     public boolean containsParameters(
         java.lang.String key) {
@@ -56231,7 +56537,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      * <code>map&lt;string, .inference.ModelParameter&gt; parameters = 14 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelParameter> getParametersMap() {
       return internalGetParameters().getMap();
     }
@@ -56246,10 +56551,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      * <code>map&lt;string, .inference.ModelParameter&gt; parameters = 14 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
-    public inference.ModelConfigOuterClass.ModelParameter getParametersOrDefault(
+    public /* nullable */
+inference.ModelConfigOuterClass.ModelParameter getParametersOrDefault(
         java.lang.String key,
-        inference.ModelConfigOuterClass.ModelParameter defaultValue) {
+        /* nullable */
+inference.ModelConfigOuterClass.ModelParameter defaultValue) {
       if (key == null) { throw new NullPointerException("map key"); }
       java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelParameter> map =
           internalGetParameters().getMap();
@@ -56266,7 +56572,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      * <code>map&lt;string, .inference.ModelParameter&gt; parameters = 14 [json_name = "parameters"];</code>
      */
     @java.lang.Override
-
     public inference.ModelConfigOuterClass.ModelParameter getParametersOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -56279,6 +56584,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
     }
 
     public static final int MODEL_WARMUP_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
     private java.util.List<inference.ModelConfigOuterClass.ModelWarmup> modelWarmup_;
     /**
      * <pre>
@@ -56420,7 +56726,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelOperationsOrBuilder getModelOperationsOrBuilder() {
-      return getModelOperations();
+      return modelOperations_ == null ? inference.ModelConfigOuterClass.ModelOperations.getDefaultInstance() : modelOperations_;
     }
 
     public static final int MODEL_TRANSACTION_POLICY_FIELD_NUMBER = 19;
@@ -56470,7 +56776,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelTransactionPolicyOrBuilder getModelTransactionPolicyOrBuilder() {
-      return getModelTransactionPolicy();
+      return modelTransactionPolicy_ == null ? inference.ModelConfigOuterClass.ModelTransactionPolicy.getDefaultInstance() : modelTransactionPolicy_;
     }
 
     public static final int MODEL_REPOSITORY_AGENTS_FIELD_NUMBER = 23;
@@ -56520,7 +56826,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelRepositoryAgentsOrBuilder getModelRepositoryAgentsOrBuilder() {
-      return getModelRepositoryAgents();
+      return modelRepositoryAgents_ == null ? inference.ModelConfigOuterClass.ModelRepositoryAgents.getDefaultInstance() : modelRepositoryAgents_;
     }
 
     public static final int RESPONSE_CACHE_FIELD_NUMBER = 24;
@@ -56570,7 +56876,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
      */
     @java.lang.Override
     public inference.ModelConfigOuterClass.ModelResponseCacheOrBuilder getResponseCacheOrBuilder() {
-      return getResponseCache();
+      return responseCache_ == null ? inference.ModelConfigOuterClass.ModelResponseCache.getDefaultInstance() : responseCache_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -57133,52 +57439,47 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         platform_ = "";
-
         backend_ = "";
-
-        if (versionPolicyBuilder_ == null) {
-          versionPolicy_ = null;
-        } else {
-          versionPolicy_ = null;
+        versionPolicy_ = null;
+        if (versionPolicyBuilder_ != null) {
+          versionPolicyBuilder_.dispose();
           versionPolicyBuilder_ = null;
         }
         maxBatchSize_ = 0;
-
         if (inputBuilder_ == null) {
           input_ = java.util.Collections.emptyList();
         } else {
           input_ = null;
           inputBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000020);
         if (outputBuilder_ == null) {
           output_ = java.util.Collections.emptyList();
         } else {
           output_ = null;
           outputBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000040);
         if (batchInputBuilder_ == null) {
           batchInput_ = java.util.Collections.emptyList();
         } else {
           batchInput_ = null;
           batchInputBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000080);
         if (batchOutputBuilder_ == null) {
           batchOutput_ = java.util.Collections.emptyList();
         } else {
           batchOutput_ = null;
           batchOutputBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000008);
-        if (optimizationBuilder_ == null) {
-          optimization_ = null;
-        } else {
-          optimization_ = null;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        optimization_ = null;
+        if (optimizationBuilder_ != null) {
+          optimizationBuilder_.dispose();
           optimizationBuilder_ = null;
         }
         if (dynamicBatchingBuilder_ != null) {
@@ -57196,9 +57497,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           instanceGroup_ = null;
           instanceGroupBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000010);
+        bitField0_ = (bitField0_ & ~0x00002000);
         defaultModelFilename_ = "";
-
         internalGetMutableCcModelFilenames().clear();
         internalGetMutableMetricTags().clear();
         internalGetMutableParameters().clear();
@@ -57208,29 +57508,25 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           modelWarmup_ = null;
           modelWarmupBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000100);
-        if (modelOperationsBuilder_ == null) {
-          modelOperations_ = null;
-        } else {
-          modelOperations_ = null;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        modelOperations_ = null;
+        if (modelOperationsBuilder_ != null) {
+          modelOperationsBuilder_.dispose();
           modelOperationsBuilder_ = null;
         }
-        if (modelTransactionPolicyBuilder_ == null) {
-          modelTransactionPolicy_ = null;
-        } else {
-          modelTransactionPolicy_ = null;
+        modelTransactionPolicy_ = null;
+        if (modelTransactionPolicyBuilder_ != null) {
+          modelTransactionPolicyBuilder_.dispose();
           modelTransactionPolicyBuilder_ = null;
         }
-        if (modelRepositoryAgentsBuilder_ == null) {
-          modelRepositoryAgents_ = null;
-        } else {
-          modelRepositoryAgents_ = null;
+        modelRepositoryAgents_ = null;
+        if (modelRepositoryAgentsBuilder_ != null) {
+          modelRepositoryAgentsBuilder_.dispose();
           modelRepositoryAgentsBuilder_ = null;
         }
-        if (responseCacheBuilder_ == null) {
-          responseCache_ = null;
-        } else {
-          responseCache_ = null;
+        responseCache_ = null;
+        if (responseCacheBuilder_ != null) {
+          responseCacheBuilder_.dispose();
           responseCacheBuilder_ = null;
         }
         schedulingChoiceCase_ = 0;
@@ -57261,126 +57557,146 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       @java.lang.Override
       public inference.ModelConfigOuterClass.ModelConfig buildPartial() {
         inference.ModelConfigOuterClass.ModelConfig result = new inference.ModelConfigOuterClass.ModelConfig(this);
-        int from_bitField0_ = bitField0_;
-        result.name_ = name_;
-        result.platform_ = platform_;
-        result.backend_ = backend_;
-        if (versionPolicyBuilder_ == null) {
-          result.versionPolicy_ = versionPolicy_;
-        } else {
-          result.versionPolicy_ = versionPolicyBuilder_.build();
-        }
-        result.maxBatchSize_ = maxBatchSize_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(inference.ModelConfigOuterClass.ModelConfig result) {
         if (inputBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000020) != 0)) {
             input_ = java.util.Collections.unmodifiableList(input_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000020);
           }
           result.input_ = input_;
         } else {
           result.input_ = inputBuilder_.build();
         }
         if (outputBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000040) != 0)) {
             output_ = java.util.Collections.unmodifiableList(output_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000040);
           }
           result.output_ = output_;
         } else {
           result.output_ = outputBuilder_.build();
         }
         if (batchInputBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000080) != 0)) {
             batchInput_ = java.util.Collections.unmodifiableList(batchInput_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000080);
           }
           result.batchInput_ = batchInput_;
         } else {
           result.batchInput_ = batchInputBuilder_.build();
         }
         if (batchOutputBuilder_ == null) {
-          if (((bitField0_ & 0x00000008) != 0)) {
+          if (((bitField0_ & 0x00000100) != 0)) {
             batchOutput_ = java.util.Collections.unmodifiableList(batchOutput_);
-            bitField0_ = (bitField0_ & ~0x00000008);
+            bitField0_ = (bitField0_ & ~0x00000100);
           }
           result.batchOutput_ = batchOutput_;
         } else {
           result.batchOutput_ = batchOutputBuilder_.build();
         }
-        if (optimizationBuilder_ == null) {
-          result.optimization_ = optimization_;
-        } else {
-          result.optimization_ = optimizationBuilder_.build();
-        }
-        if (schedulingChoiceCase_ == 11) {
-          if (dynamicBatchingBuilder_ == null) {
-            result.schedulingChoice_ = schedulingChoice_;
-          } else {
-            result.schedulingChoice_ = dynamicBatchingBuilder_.build();
-          }
-        }
-        if (schedulingChoiceCase_ == 13) {
-          if (sequenceBatchingBuilder_ == null) {
-            result.schedulingChoice_ = schedulingChoice_;
-          } else {
-            result.schedulingChoice_ = sequenceBatchingBuilder_.build();
-          }
-        }
-        if (schedulingChoiceCase_ == 15) {
-          if (ensembleSchedulingBuilder_ == null) {
-            result.schedulingChoice_ = schedulingChoice_;
-          } else {
-            result.schedulingChoice_ = ensembleSchedulingBuilder_.build();
-          }
-        }
         if (instanceGroupBuilder_ == null) {
-          if (((bitField0_ & 0x00000010) != 0)) {
+          if (((bitField0_ & 0x00002000) != 0)) {
             instanceGroup_ = java.util.Collections.unmodifiableList(instanceGroup_);
-            bitField0_ = (bitField0_ & ~0x00000010);
+            bitField0_ = (bitField0_ & ~0x00002000);
           }
           result.instanceGroup_ = instanceGroup_;
         } else {
           result.instanceGroup_ = instanceGroupBuilder_.build();
         }
-        result.defaultModelFilename_ = defaultModelFilename_;
-        result.ccModelFilenames_ = internalGetCcModelFilenames();
-        result.ccModelFilenames_.makeImmutable();
-        result.metricTags_ = internalGetMetricTags();
-        result.metricTags_.makeImmutable();
-        result.parameters_ = internalGetParameters();
-        result.parameters_.makeImmutable();
         if (modelWarmupBuilder_ == null) {
-          if (((bitField0_ & 0x00000100) != 0)) {
+          if (((bitField0_ & 0x00040000) != 0)) {
             modelWarmup_ = java.util.Collections.unmodifiableList(modelWarmup_);
-            bitField0_ = (bitField0_ & ~0x00000100);
+            bitField0_ = (bitField0_ & ~0x00040000);
           }
           result.modelWarmup_ = modelWarmup_;
         } else {
           result.modelWarmup_ = modelWarmupBuilder_.build();
         }
-        if (modelOperationsBuilder_ == null) {
-          result.modelOperations_ = modelOperations_;
-        } else {
-          result.modelOperations_ = modelOperationsBuilder_.build();
+      }
+
+      private void buildPartial0(inference.ModelConfigOuterClass.ModelConfig result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
         }
-        if (modelTransactionPolicyBuilder_ == null) {
-          result.modelTransactionPolicy_ = modelTransactionPolicy_;
-        } else {
-          result.modelTransactionPolicy_ = modelTransactionPolicyBuilder_.build();
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.platform_ = platform_;
         }
-        if (modelRepositoryAgentsBuilder_ == null) {
-          result.modelRepositoryAgents_ = modelRepositoryAgents_;
-        } else {
-          result.modelRepositoryAgents_ = modelRepositoryAgentsBuilder_.build();
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.backend_ = backend_;
         }
-        if (responseCacheBuilder_ == null) {
-          result.responseCache_ = responseCache_;
-        } else {
-          result.responseCache_ = responseCacheBuilder_.build();
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.versionPolicy_ = versionPolicyBuilder_ == null
+              ? versionPolicy_
+              : versionPolicyBuilder_.build();
         }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.maxBatchSize_ = maxBatchSize_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.optimization_ = optimizationBuilder_ == null
+              ? optimization_
+              : optimizationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.defaultModelFilename_ = defaultModelFilename_;
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.ccModelFilenames_ = internalGetCcModelFilenames();
+          result.ccModelFilenames_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.metricTags_ = internalGetMetricTags();
+          result.metricTags_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.parameters_ = internalGetParameters();
+          result.parameters_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.modelOperations_ = modelOperationsBuilder_ == null
+              ? modelOperations_
+              : modelOperationsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.modelTransactionPolicy_ = modelTransactionPolicyBuilder_ == null
+              ? modelTransactionPolicy_
+              : modelTransactionPolicyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.modelRepositoryAgents_ = modelRepositoryAgentsBuilder_ == null
+              ? modelRepositoryAgents_
+              : modelRepositoryAgentsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.responseCache_ = responseCacheBuilder_ == null
+              ? responseCache_
+              : responseCacheBuilder_.build();
+        }
+      }
+
+      private void buildPartialOneofs(inference.ModelConfigOuterClass.ModelConfig result) {
         result.schedulingChoiceCase_ = schedulingChoiceCase_;
-        onBuilt();
-        return result;
+        result.schedulingChoice_ = this.schedulingChoice_;
+        if (schedulingChoiceCase_ == 11 &&
+            dynamicBatchingBuilder_ != null) {
+          result.schedulingChoice_ = dynamicBatchingBuilder_.build();
+        }
+        if (schedulingChoiceCase_ == 13 &&
+            sequenceBatchingBuilder_ != null) {
+          result.schedulingChoice_ = sequenceBatchingBuilder_.build();
+        }
+        if (schedulingChoiceCase_ == 15 &&
+            ensembleSchedulingBuilder_ != null) {
+          result.schedulingChoice_ = ensembleSchedulingBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -57429,14 +57745,17 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
         if (other == inference.ModelConfigOuterClass.ModelConfig.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getPlatform().isEmpty()) {
           platform_ = other.platform_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getBackend().isEmpty()) {
           backend_ = other.backend_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (other.hasVersionPolicy()) {
@@ -57449,7 +57768,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           if (!other.input_.isEmpty()) {
             if (input_.isEmpty()) {
               input_ = other.input_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000020);
             } else {
               ensureInputIsMutable();
               input_.addAll(other.input_);
@@ -57462,7 +57781,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
               inputBuilder_.dispose();
               inputBuilder_ = null;
               input_ = other.input_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000020);
               inputBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getInputFieldBuilder() : null;
@@ -57475,7 +57794,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           if (!other.output_.isEmpty()) {
             if (output_.isEmpty()) {
               output_ = other.output_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000040);
             } else {
               ensureOutputIsMutable();
               output_.addAll(other.output_);
@@ -57488,7 +57807,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
               outputBuilder_.dispose();
               outputBuilder_ = null;
               output_ = other.output_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000040);
               outputBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOutputFieldBuilder() : null;
@@ -57501,7 +57820,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           if (!other.batchInput_.isEmpty()) {
             if (batchInput_.isEmpty()) {
               batchInput_ = other.batchInput_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000080);
             } else {
               ensureBatchInputIsMutable();
               batchInput_.addAll(other.batchInput_);
@@ -57514,7 +57833,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
               batchInputBuilder_.dispose();
               batchInputBuilder_ = null;
               batchInput_ = other.batchInput_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000080);
               batchInputBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBatchInputFieldBuilder() : null;
@@ -57527,7 +57846,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           if (!other.batchOutput_.isEmpty()) {
             if (batchOutput_.isEmpty()) {
               batchOutput_ = other.batchOutput_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000100);
             } else {
               ensureBatchOutputIsMutable();
               batchOutput_.addAll(other.batchOutput_);
@@ -57540,7 +57859,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
               batchOutputBuilder_.dispose();
               batchOutputBuilder_ = null;
               batchOutput_ = other.batchOutput_;
-              bitField0_ = (bitField0_ & ~0x00000008);
+              bitField0_ = (bitField0_ & ~0x00000100);
               batchOutputBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBatchOutputFieldBuilder() : null;
@@ -57556,7 +57875,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           if (!other.instanceGroup_.isEmpty()) {
             if (instanceGroup_.isEmpty()) {
               instanceGroup_ = other.instanceGroup_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00002000);
             } else {
               ensureInstanceGroupIsMutable();
               instanceGroup_.addAll(other.instanceGroup_);
@@ -57569,7 +57888,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
               instanceGroupBuilder_.dispose();
               instanceGroupBuilder_ = null;
               instanceGroup_ = other.instanceGroup_;
-              bitField0_ = (bitField0_ & ~0x00000010);
+              bitField0_ = (bitField0_ & ~0x00002000);
               instanceGroupBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getInstanceGroupFieldBuilder() : null;
@@ -57580,19 +57899,23 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
         }
         if (!other.getDefaultModelFilename().isEmpty()) {
           defaultModelFilename_ = other.defaultModelFilename_;
+          bitField0_ |= 0x00004000;
           onChanged();
         }
         internalGetMutableCcModelFilenames().mergeFrom(
             other.internalGetCcModelFilenames());
+        bitField0_ |= 0x00008000;
         internalGetMutableMetricTags().mergeFrom(
             other.internalGetMetricTags());
+        bitField0_ |= 0x00010000;
         internalGetMutableParameters().mergeFrom(
             other.internalGetParameters());
+        bitField0_ |= 0x00020000;
         if (modelWarmupBuilder_ == null) {
           if (!other.modelWarmup_.isEmpty()) {
             if (modelWarmup_.isEmpty()) {
               modelWarmup_ = other.modelWarmup_;
-              bitField0_ = (bitField0_ & ~0x00000100);
+              bitField0_ = (bitField0_ & ~0x00040000);
             } else {
               ensureModelWarmupIsMutable();
               modelWarmup_.addAll(other.modelWarmup_);
@@ -57605,7 +57928,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
               modelWarmupBuilder_.dispose();
               modelWarmupBuilder_ = null;
               modelWarmup_ = other.modelWarmup_;
-              bitField0_ = (bitField0_ & ~0x00000100);
+              bitField0_ = (bitField0_ & ~0x00040000);
               modelWarmupBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getModelWarmupFieldBuilder() : null;
@@ -57671,24 +57994,24 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 platform_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getVersionPolicyFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 26
               case 32: {
                 maxBatchSize_ = input.readInt32();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 32
               case 42: {
@@ -57732,7 +58055,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
               } // case 58
               case 66: {
                 defaultModelFilename_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00004000;
                 break;
               } // case 66
               case 74: {
@@ -57741,6 +58064,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
                     CcModelFilenamesDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableCcModelFilenames().getMutableMap().put(
                     ccModelFilenames__.getKey(), ccModelFilenames__.getValue());
+                bitField0_ |= 0x00008000;
                 break;
               } // case 74
               case 82: {
@@ -57749,6 +58073,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
                     MetricTagsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableMetricTags().getMutableMap().put(
                     metricTags__.getKey(), metricTags__.getValue());
+                bitField0_ |= 0x00010000;
                 break;
               } // case 82
               case 90: {
@@ -57762,7 +58087,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
                 input.readMessage(
                     getOptimizationFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 98
               case 106: {
@@ -57778,6 +58103,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
                     ParametersDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableParameters().getMutableMap().put(
                     parameters__.getKey(), parameters__.getValue());
+                bitField0_ |= 0x00020000;
                 break;
               } // case 114
               case 122: {
@@ -57802,21 +58128,21 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
               } // case 130
               case 138: {
                 backend_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 138
               case 146: {
                 input.readMessage(
                     getModelOperationsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00080000;
                 break;
               } // case 146
               case 154: {
                 input.readMessage(
                     getModelTransactionPolicyFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00100000;
                 break;
               } // case 154
               case 162: {
@@ -57849,14 +58175,14 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
                 input.readMessage(
                     getModelRepositoryAgentsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00200000;
                 break;
               } // case 186
               case 194: {
                 input.readMessage(
                     getResponseCacheFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00400000;
                 break;
               } // case 194
               default: {
@@ -57953,11 +58279,9 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -57973,8 +58297,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -57992,12 +58316,10 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -58073,11 +58395,9 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder setPlatform(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         platform_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -58096,8 +58416,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearPlatform() {
-        
         platform_ = getDefaultInstance().getPlatform();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -58118,12 +58438,10 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder setPlatformBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         platform_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -58190,11 +58508,9 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder setBackend(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         backend_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -58210,8 +58526,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearBackend() {
-        
         backend_ = getDefaultInstance().getBackend();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -58229,12 +58545,10 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder setBackendBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         backend_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -58254,7 +58568,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * @return Whether the versionPolicy field is set.
        */
       public boolean hasVersionPolicy() {
-        return versionPolicyBuilder_ != null || versionPolicy_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <pre>
@@ -58290,11 +58604,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
             throw new NullPointerException();
           }
           versionPolicy_ = value;
-          onChanged();
         } else {
           versionPolicyBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -58311,11 +58625,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           inference.ModelConfigOuterClass.ModelVersionPolicy.Builder builderForValue) {
         if (versionPolicyBuilder_ == null) {
           versionPolicy_ = builderForValue.build();
-          onChanged();
         } else {
           versionPolicyBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -58330,17 +58644,18 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder mergeVersionPolicy(inference.ModelConfigOuterClass.ModelVersionPolicy value) {
         if (versionPolicyBuilder_ == null) {
-          if (versionPolicy_ != null) {
-            versionPolicy_ =
-              inference.ModelConfigOuterClass.ModelVersionPolicy.newBuilder(versionPolicy_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            versionPolicy_ != null &&
+            versionPolicy_ != inference.ModelConfigOuterClass.ModelVersionPolicy.getDefaultInstance()) {
+            getVersionPolicyBuilder().mergeFrom(value);
           } else {
             versionPolicy_ = value;
           }
-          onChanged();
         } else {
           versionPolicyBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -58354,14 +58669,13 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>.inference.ModelVersionPolicy version_policy = 3 [json_name = "versionPolicy"];</code>
        */
       public Builder clearVersionPolicy() {
-        if (versionPolicyBuilder_ == null) {
-          versionPolicy_ = null;
-          onChanged();
-        } else {
-          versionPolicy_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        versionPolicy_ = null;
+        if (versionPolicyBuilder_ != null) {
+          versionPolicyBuilder_.dispose();
           versionPolicyBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -58375,7 +58689,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>.inference.ModelVersionPolicy version_policy = 3 [json_name = "versionPolicy"];</code>
        */
       public inference.ModelConfigOuterClass.ModelVersionPolicy.Builder getVersionPolicyBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getVersionPolicyFieldBuilder().getBuilder();
       }
@@ -58478,6 +58792,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       public Builder setMaxBatchSize(int value) {
         
         maxBatchSize_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -58506,7 +58821,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearMaxBatchSize() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         maxBatchSize_ = 0;
         onChanged();
         return this;
@@ -58515,9 +58830,9 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       private java.util.List<inference.ModelConfigOuterClass.ModelInput> input_ =
         java.util.Collections.emptyList();
       private void ensureInputIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000020) != 0)) {
           input_ = new java.util.ArrayList<inference.ModelConfigOuterClass.ModelInput>(input_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000020;
          }
       }
 
@@ -58744,7 +59059,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       public Builder clearInput() {
         if (inputBuilder_ == null) {
           input_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
         } else {
           inputBuilder_.clear();
@@ -58870,7 +59185,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           inputBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.ModelConfigOuterClass.ModelInput, inference.ModelConfigOuterClass.ModelInput.Builder, inference.ModelConfigOuterClass.ModelInputOrBuilder>(
                   input_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000020) != 0),
                   getParentForChildren(),
                   isClean());
           input_ = null;
@@ -58881,9 +59196,9 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       private java.util.List<inference.ModelConfigOuterClass.ModelOutput> output_ =
         java.util.Collections.emptyList();
       private void ensureOutputIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000040) != 0)) {
           output_ = new java.util.ArrayList<inference.ModelConfigOuterClass.ModelOutput>(output_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000040;
          }
       }
 
@@ -59110,7 +59425,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       public Builder clearOutput() {
         if (outputBuilder_ == null) {
           output_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
         } else {
           outputBuilder_.clear();
@@ -59236,7 +59551,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           outputBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.ModelConfigOuterClass.ModelOutput, inference.ModelConfigOuterClass.ModelOutput.Builder, inference.ModelConfigOuterClass.ModelOutputOrBuilder>(
                   output_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000040) != 0),
                   getParentForChildren(),
                   isClean());
           output_ = null;
@@ -59247,9 +59562,9 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       private java.util.List<inference.ModelConfigOuterClass.BatchInput> batchInput_ =
         java.util.Collections.emptyList();
       private void ensureBatchInputIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000080) != 0)) {
           batchInput_ = new java.util.ArrayList<inference.ModelConfigOuterClass.BatchInput>(batchInput_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000080;
          }
       }
 
@@ -59487,7 +59802,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       public Builder clearBatchInput() {
         if (batchInputBuilder_ == null) {
           batchInput_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
         } else {
           batchInputBuilder_.clear();
@@ -59620,7 +59935,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           batchInputBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.ModelConfigOuterClass.BatchInput, inference.ModelConfigOuterClass.BatchInput.Builder, inference.ModelConfigOuterClass.BatchInputOrBuilder>(
                   batchInput_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000080) != 0),
                   getParentForChildren(),
                   isClean());
           batchInput_ = null;
@@ -59631,9 +59946,9 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       private java.util.List<inference.ModelConfigOuterClass.BatchOutput> batchOutput_ =
         java.util.Collections.emptyList();
       private void ensureBatchOutputIsMutable() {
-        if (!((bitField0_ & 0x00000008) != 0)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           batchOutput_ = new java.util.ArrayList<inference.ModelConfigOuterClass.BatchOutput>(batchOutput_);
-          bitField0_ |= 0x00000008;
+          bitField0_ |= 0x00000100;
          }
       }
 
@@ -59871,7 +60186,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       public Builder clearBatchOutput() {
         if (batchOutputBuilder_ == null) {
           batchOutput_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000100);
           onChanged();
         } else {
           batchOutputBuilder_.clear();
@@ -60004,7 +60319,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           batchOutputBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.ModelConfigOuterClass.BatchOutput, inference.ModelConfigOuterClass.BatchOutput.Builder, inference.ModelConfigOuterClass.BatchOutputOrBuilder>(
                   batchOutput_,
-                  ((bitField0_ & 0x00000008) != 0),
+                  ((bitField0_ & 0x00000100) != 0),
                   getParentForChildren(),
                   isClean());
           batchOutput_ = null;
@@ -60028,7 +60343,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * @return Whether the optimization field is set.
        */
       public boolean hasOptimization() {
-        return optimizationBuilder_ != null || optimization_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <pre>
@@ -60066,11 +60381,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
             throw new NullPointerException();
           }
           optimization_ = value;
-          onChanged();
         } else {
           optimizationBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -60088,11 +60403,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           inference.ModelConfigOuterClass.ModelOptimizationPolicy.Builder builderForValue) {
         if (optimizationBuilder_ == null) {
           optimization_ = builderForValue.build();
-          onChanged();
         } else {
           optimizationBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -60108,17 +60423,18 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder mergeOptimization(inference.ModelConfigOuterClass.ModelOptimizationPolicy value) {
         if (optimizationBuilder_ == null) {
-          if (optimization_ != null) {
-            optimization_ =
-              inference.ModelConfigOuterClass.ModelOptimizationPolicy.newBuilder(optimization_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            optimization_ != null &&
+            optimization_ != inference.ModelConfigOuterClass.ModelOptimizationPolicy.getDefaultInstance()) {
+            getOptimizationBuilder().mergeFrom(value);
           } else {
             optimization_ = value;
           }
-          onChanged();
         } else {
           optimizationBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -60133,14 +60449,13 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>.inference.ModelOptimizationPolicy optimization = 12 [json_name = "optimization"];</code>
        */
       public Builder clearOptimization() {
-        if (optimizationBuilder_ == null) {
-          optimization_ = null;
-          onChanged();
-        } else {
-          optimization_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        optimization_ = null;
+        if (optimizationBuilder_ != null) {
+          optimizationBuilder_.dispose();
           optimizationBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -60155,7 +60470,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>.inference.ModelOptimizationPolicy optimization = 12 [json_name = "optimization"];</code>
        */
       public inference.ModelConfigOuterClass.ModelOptimizationPolicy.Builder getOptimizationBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getOptimizationFieldBuilder().getBuilder();
       }
@@ -60431,7 +60746,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           schedulingChoice_ = null;
         }
         schedulingChoiceCase_ = 11;
-        onChanged();;
+        onChanged();
         return dynamicBatchingBuilder_;
       }
 
@@ -60681,7 +60996,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           schedulingChoice_ = null;
         }
         schedulingChoiceCase_ = 13;
-        onChanged();;
+        onChanged();
         return sequenceBatchingBuilder_;
       }
 
@@ -60931,16 +61246,16 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           schedulingChoice_ = null;
         }
         schedulingChoiceCase_ = 15;
-        onChanged();;
+        onChanged();
         return ensembleSchedulingBuilder_;
       }
 
       private java.util.List<inference.ModelConfigOuterClass.ModelInstanceGroup> instanceGroup_ =
         java.util.Collections.emptyList();
       private void ensureInstanceGroupIsMutable() {
-        if (!((bitField0_ & 0x00000010) != 0)) {
+        if (!((bitField0_ & 0x00002000) != 0)) {
           instanceGroup_ = new java.util.ArrayList<inference.ModelConfigOuterClass.ModelInstanceGroup>(instanceGroup_);
-          bitField0_ |= 0x00000010;
+          bitField0_ |= 0x00002000;
          }
       }
 
@@ -61178,7 +61493,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       public Builder clearInstanceGroup() {
         if (instanceGroupBuilder_ == null) {
           instanceGroup_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ = (bitField0_ & ~0x00002000);
           onChanged();
         } else {
           instanceGroupBuilder_.clear();
@@ -61311,7 +61626,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           instanceGroupBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.ModelConfigOuterClass.ModelInstanceGroup, inference.ModelConfigOuterClass.ModelInstanceGroup.Builder, inference.ModelConfigOuterClass.ModelInstanceGroupOrBuilder>(
                   instanceGroup_,
-                  ((bitField0_ & 0x00000010) != 0),
+                  ((bitField0_ & 0x00002000) != 0),
                   getParentForChildren(),
                   isClean());
           instanceGroup_ = null;
@@ -61393,11 +61708,9 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder setDefaultModelFilename(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         defaultModelFilename_ = value;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -61417,8 +61730,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * @return This builder for chaining.
        */
       public Builder clearDefaultModelFilename() {
-        
         defaultModelFilename_ = getDefaultInstance().getDefaultModelFilename();
+        bitField0_ = (bitField0_ & ~0x00004000);
         onChanged();
         return this;
       }
@@ -61440,12 +61753,10 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder setDefaultModelFilenameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         defaultModelFilename_ = value;
+        bitField0_ |= 0x00004000;
         onChanged();
         return this;
       }
@@ -61453,7 +61764,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> ccModelFilenames_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetCcModelFilenames() {
+          internalGetCcModelFilenames() {
         if (ccModelFilenames_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               CcModelFilenamesDefaultEntryHolder.defaultEntry);
@@ -61461,8 +61772,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
         return ccModelFilenames_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableCcModelFilenames() {
-        onChanged();;
+          internalGetMutableCcModelFilenames() {
         if (ccModelFilenames_ == null) {
           ccModelFilenames_ = com.google.protobuf.MapField.newMapField(
               CcModelFilenamesDefaultEntryHolder.defaultEntry);
@@ -61470,9 +61780,10 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
         if (!ccModelFilenames_.isMutable()) {
           ccModelFilenames_ = ccModelFilenames_.copy();
         }
+        bitField0_ |= 0x00008000;
+        onChanged();
         return ccModelFilenames_;
       }
-
       public int getCcModelFilenamesCount() {
         return internalGetCcModelFilenames().getMap().size();
       }
@@ -61488,7 +61799,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        *
        * <code>map&lt;string, string&gt; cc_model_filenames = 9 [json_name = "ccModelFilenames"];</code>
        */
-
       @java.lang.Override
       public boolean containsCcModelFilenames(
           java.lang.String key) {
@@ -61516,7 +61826,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>map&lt;string, string&gt; cc_model_filenames = 9 [json_name = "ccModelFilenames"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getCcModelFilenamesMap() {
         return internalGetCcModelFilenames().getMap();
       }
@@ -61533,10 +61842,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>map&lt;string, string&gt; cc_model_filenames = 9 [json_name = "ccModelFilenames"];</code>
        */
       @java.lang.Override
-
-      public java.lang.String getCcModelFilenamesOrDefault(
+      public /* nullable */
+java.lang.String getCcModelFilenamesOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          /* nullable */
+java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetCcModelFilenames().getMap();
@@ -61555,7 +61865,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>map&lt;string, string&gt; cc_model_filenames = 9 [json_name = "ccModelFilenames"];</code>
        */
       @java.lang.Override
-
       public java.lang.String getCcModelFilenamesOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -61566,8 +61875,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearCcModelFilenames() {
+        bitField0_ = (bitField0_ & ~0x00008000);
         internalGetMutableCcModelFilenames().getMutableMap()
             .clear();
         return this;
@@ -61584,7 +61893,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        *
        * <code>map&lt;string, string&gt; cc_model_filenames = 9 [json_name = "ccModelFilenames"];</code>
        */
-
       public Builder removeCcModelFilenames(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -61597,7 +61905,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
-      getMutableCcModelFilenames() {
+          getMutableCcModelFilenames() {
+        bitField0_ |= 0x00008000;
         return internalGetMutableCcModelFilenames().getMutableMap();
       }
       /**
@@ -61616,12 +61925,10 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           java.lang.String key,
           java.lang.String value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableCcModelFilenames().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00008000;
         return this;
       }
       /**
@@ -61636,18 +61943,18 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        *
        * <code>map&lt;string, string&gt; cc_model_filenames = 9 [json_name = "ccModelFilenames"];</code>
        */
-
       public Builder putAllCcModelFilenames(
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableCcModelFilenames().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00008000;
         return this;
       }
 
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.String> metricTags_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMetricTags() {
+          internalGetMetricTags() {
         if (metricTags_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               MetricTagsDefaultEntryHolder.defaultEntry);
@@ -61655,8 +61962,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
         return metricTags_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-      internalGetMutableMetricTags() {
-        onChanged();;
+          internalGetMutableMetricTags() {
         if (metricTags_ == null) {
           metricTags_ = com.google.protobuf.MapField.newMapField(
               MetricTagsDefaultEntryHolder.defaultEntry);
@@ -61664,9 +61970,10 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
         if (!metricTags_.isMutable()) {
           metricTags_ = metricTags_.copy();
         }
+        bitField0_ |= 0x00010000;
+        onChanged();
         return metricTags_;
       }
-
       public int getMetricTagsCount() {
         return internalGetMetricTags().getMap().size();
       }
@@ -61682,7 +61989,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        *
        * <code>map&lt;string, string&gt; metric_tags = 10 [json_name = "metricTags"];</code>
        */
-
       @java.lang.Override
       public boolean containsMetricTags(
           java.lang.String key) {
@@ -61710,7 +62016,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>map&lt;string, string&gt; metric_tags = 10 [json_name = "metricTags"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.String> getMetricTagsMap() {
         return internalGetMetricTags().getMap();
       }
@@ -61727,10 +62032,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>map&lt;string, string&gt; metric_tags = 10 [json_name = "metricTags"];</code>
        */
       @java.lang.Override
-
-      public java.lang.String getMetricTagsOrDefault(
+      public /* nullable */
+java.lang.String getMetricTagsOrDefault(
           java.lang.String key,
-          java.lang.String defaultValue) {
+          /* nullable */
+java.lang.String defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, java.lang.String> map =
             internalGetMetricTags().getMap();
@@ -61749,7 +62055,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>map&lt;string, string&gt; metric_tags = 10 [json_name = "metricTags"];</code>
        */
       @java.lang.Override
-
       public java.lang.String getMetricTagsOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -61760,8 +62065,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearMetricTags() {
+        bitField0_ = (bitField0_ & ~0x00010000);
         internalGetMutableMetricTags().getMutableMap()
             .clear();
         return this;
@@ -61778,7 +62083,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        *
        * <code>map&lt;string, string&gt; metric_tags = 10 [json_name = "metricTags"];</code>
        */
-
       public Builder removeMetricTags(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -61791,7 +62095,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.String>
-      getMutableMetricTags() {
+          getMutableMetricTags() {
+        bitField0_ |= 0x00010000;
         return internalGetMutableMetricTags().getMutableMap();
       }
       /**
@@ -61810,12 +62115,10 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           java.lang.String key,
           java.lang.String value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableMetricTags().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00010000;
         return this;
       }
       /**
@@ -61830,18 +62133,18 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        *
        * <code>map&lt;string, string&gt; metric_tags = 10 [json_name = "metricTags"];</code>
        */
-
       public Builder putAllMetricTags(
           java.util.Map<java.lang.String, java.lang.String> values) {
         internalGetMutableMetricTags().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00010000;
         return this;
       }
 
       private com.google.protobuf.MapField<
           java.lang.String, inference.ModelConfigOuterClass.ModelParameter> parameters_;
       private com.google.protobuf.MapField<java.lang.String, inference.ModelConfigOuterClass.ModelParameter>
-      internalGetParameters() {
+          internalGetParameters() {
         if (parameters_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               ParametersDefaultEntryHolder.defaultEntry);
@@ -61849,8 +62152,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
         return parameters_;
       }
       private com.google.protobuf.MapField<java.lang.String, inference.ModelConfigOuterClass.ModelParameter>
-      internalGetMutableParameters() {
-        onChanged();;
+          internalGetMutableParameters() {
         if (parameters_ == null) {
           parameters_ = com.google.protobuf.MapField.newMapField(
               ParametersDefaultEntryHolder.defaultEntry);
@@ -61858,9 +62160,10 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
         if (!parameters_.isMutable()) {
           parameters_ = parameters_.copy();
         }
+        bitField0_ |= 0x00020000;
+        onChanged();
         return parameters_;
       }
-
       public int getParametersCount() {
         return internalGetParameters().getMap().size();
       }
@@ -61874,7 +62177,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        *
        * <code>map&lt;string, .inference.ModelParameter&gt; parameters = 14 [json_name = "parameters"];</code>
        */
-
       @java.lang.Override
       public boolean containsParameters(
           java.lang.String key) {
@@ -61900,7 +62202,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>map&lt;string, .inference.ModelParameter&gt; parameters = 14 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelParameter> getParametersMap() {
         return internalGetParameters().getMap();
       }
@@ -61915,10 +62216,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>map&lt;string, .inference.ModelParameter&gt; parameters = 14 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
-      public inference.ModelConfigOuterClass.ModelParameter getParametersOrDefault(
+      public /* nullable */
+inference.ModelConfigOuterClass.ModelParameter getParametersOrDefault(
           java.lang.String key,
-          inference.ModelConfigOuterClass.ModelParameter defaultValue) {
+          /* nullable */
+inference.ModelConfigOuterClass.ModelParameter defaultValue) {
         if (key == null) { throw new NullPointerException("map key"); }
         java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelParameter> map =
             internalGetParameters().getMap();
@@ -61935,7 +62237,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>map&lt;string, .inference.ModelParameter&gt; parameters = 14 [json_name = "parameters"];</code>
        */
       @java.lang.Override
-
       public inference.ModelConfigOuterClass.ModelParameter getParametersOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -61946,8 +62247,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
         }
         return map.get(key);
       }
-
       public Builder clearParameters() {
+        bitField0_ = (bitField0_ & ~0x00020000);
         internalGetMutableParameters().getMutableMap()
             .clear();
         return this;
@@ -61962,7 +62263,6 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        *
        * <code>map&lt;string, .inference.ModelParameter&gt; parameters = 14 [json_name = "parameters"];</code>
        */
-
       public Builder removeParameters(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -61975,7 +62275,8 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelParameter>
-      getMutableParameters() {
+          getMutableParameters() {
+        bitField0_ |= 0x00020000;
         return internalGetMutableParameters().getMutableMap();
       }
       /**
@@ -61992,12 +62293,10 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           java.lang.String key,
           inference.ModelConfigOuterClass.ModelParameter value) {
         if (key == null) { throw new NullPointerException("map key"); }
-        if (value == null) {
-  throw new NullPointerException("map value");
-}
-
+        if (value == null) { throw new NullPointerException("map value"); }
         internalGetMutableParameters().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00020000;
         return this;
       }
       /**
@@ -62010,20 +62309,20 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        *
        * <code>map&lt;string, .inference.ModelParameter&gt; parameters = 14 [json_name = "parameters"];</code>
        */
-
       public Builder putAllParameters(
           java.util.Map<java.lang.String, inference.ModelConfigOuterClass.ModelParameter> values) {
         internalGetMutableParameters().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00020000;
         return this;
       }
 
       private java.util.List<inference.ModelConfigOuterClass.ModelWarmup> modelWarmup_ =
         java.util.Collections.emptyList();
       private void ensureModelWarmupIsMutable() {
-        if (!((bitField0_ & 0x00000100) != 0)) {
+        if (!((bitField0_ & 0x00040000) != 0)) {
           modelWarmup_ = new java.util.ArrayList<inference.ModelConfigOuterClass.ModelWarmup>(modelWarmup_);
-          bitField0_ |= 0x00000100;
+          bitField0_ |= 0x00040000;
          }
       }
 
@@ -62294,7 +62593,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
       public Builder clearModelWarmup() {
         if (modelWarmupBuilder_ == null) {
           modelWarmup_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000100);
+          bitField0_ = (bitField0_ & ~0x00040000);
           onChanged();
         } else {
           modelWarmupBuilder_.clear();
@@ -62448,7 +62747,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           modelWarmupBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               inference.ModelConfigOuterClass.ModelWarmup, inference.ModelConfigOuterClass.ModelWarmup.Builder, inference.ModelConfigOuterClass.ModelWarmupOrBuilder>(
                   modelWarmup_,
-                  ((bitField0_ & 0x00000100) != 0),
+                  ((bitField0_ & 0x00040000) != 0),
                   getParentForChildren(),
                   isClean());
           modelWarmup_ = null;
@@ -62472,7 +62771,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * @return Whether the modelOperations field is set.
        */
       public boolean hasModelOperations() {
-        return modelOperationsBuilder_ != null || modelOperations_ != null;
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <pre>
@@ -62510,11 +62809,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
             throw new NullPointerException();
           }
           modelOperations_ = value;
-          onChanged();
         } else {
           modelOperationsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -62532,11 +62831,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           inference.ModelConfigOuterClass.ModelOperations.Builder builderForValue) {
         if (modelOperationsBuilder_ == null) {
           modelOperations_ = builderForValue.build();
-          onChanged();
         } else {
           modelOperationsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -62552,17 +62851,18 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder mergeModelOperations(inference.ModelConfigOuterClass.ModelOperations value) {
         if (modelOperationsBuilder_ == null) {
-          if (modelOperations_ != null) {
-            modelOperations_ =
-              inference.ModelConfigOuterClass.ModelOperations.newBuilder(modelOperations_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00080000) != 0) &&
+            modelOperations_ != null &&
+            modelOperations_ != inference.ModelConfigOuterClass.ModelOperations.getDefaultInstance()) {
+            getModelOperationsBuilder().mergeFrom(value);
           } else {
             modelOperations_ = value;
           }
-          onChanged();
         } else {
           modelOperationsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -62577,14 +62877,13 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>.inference.ModelOperations model_operations = 18 [json_name = "modelOperations"];</code>
        */
       public Builder clearModelOperations() {
-        if (modelOperationsBuilder_ == null) {
-          modelOperations_ = null;
-          onChanged();
-        } else {
-          modelOperations_ = null;
+        bitField0_ = (bitField0_ & ~0x00080000);
+        modelOperations_ = null;
+        if (modelOperationsBuilder_ != null) {
+          modelOperationsBuilder_.dispose();
           modelOperationsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -62599,7 +62898,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>.inference.ModelOperations model_operations = 18 [json_name = "modelOperations"];</code>
        */
       public inference.ModelConfigOuterClass.ModelOperations.Builder getModelOperationsBuilder() {
-        
+        bitField0_ |= 0x00080000;
         onChanged();
         return getModelOperationsFieldBuilder().getBuilder();
       }
@@ -62663,7 +62962,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * @return Whether the modelTransactionPolicy field is set.
        */
       public boolean hasModelTransactionPolicy() {
-        return modelTransactionPolicyBuilder_ != null || modelTransactionPolicy_ != null;
+        return ((bitField0_ & 0x00100000) != 0);
       }
       /**
        * <pre>
@@ -62701,11 +63000,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
             throw new NullPointerException();
           }
           modelTransactionPolicy_ = value;
-          onChanged();
         } else {
           modelTransactionPolicyBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00100000;
+        onChanged();
         return this;
       }
       /**
@@ -62723,11 +63022,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           inference.ModelConfigOuterClass.ModelTransactionPolicy.Builder builderForValue) {
         if (modelTransactionPolicyBuilder_ == null) {
           modelTransactionPolicy_ = builderForValue.build();
-          onChanged();
         } else {
           modelTransactionPolicyBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00100000;
+        onChanged();
         return this;
       }
       /**
@@ -62743,17 +63042,18 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder mergeModelTransactionPolicy(inference.ModelConfigOuterClass.ModelTransactionPolicy value) {
         if (modelTransactionPolicyBuilder_ == null) {
-          if (modelTransactionPolicy_ != null) {
-            modelTransactionPolicy_ =
-              inference.ModelConfigOuterClass.ModelTransactionPolicy.newBuilder(modelTransactionPolicy_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00100000) != 0) &&
+            modelTransactionPolicy_ != null &&
+            modelTransactionPolicy_ != inference.ModelConfigOuterClass.ModelTransactionPolicy.getDefaultInstance()) {
+            getModelTransactionPolicyBuilder().mergeFrom(value);
           } else {
             modelTransactionPolicy_ = value;
           }
-          onChanged();
         } else {
           modelTransactionPolicyBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00100000;
+        onChanged();
         return this;
       }
       /**
@@ -62768,14 +63068,13 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>.inference.ModelTransactionPolicy model_transaction_policy = 19 [json_name = "modelTransactionPolicy"];</code>
        */
       public Builder clearModelTransactionPolicy() {
-        if (modelTransactionPolicyBuilder_ == null) {
-          modelTransactionPolicy_ = null;
-          onChanged();
-        } else {
-          modelTransactionPolicy_ = null;
+        bitField0_ = (bitField0_ & ~0x00100000);
+        modelTransactionPolicy_ = null;
+        if (modelTransactionPolicyBuilder_ != null) {
+          modelTransactionPolicyBuilder_.dispose();
           modelTransactionPolicyBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -62790,7 +63089,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>.inference.ModelTransactionPolicy model_transaction_policy = 19 [json_name = "modelTransactionPolicy"];</code>
        */
       public inference.ModelConfigOuterClass.ModelTransactionPolicy.Builder getModelTransactionPolicyBuilder() {
-        
+        bitField0_ |= 0x00100000;
         onChanged();
         return getModelTransactionPolicyFieldBuilder().getBuilder();
       }
@@ -62854,7 +63153,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * @return Whether the modelRepositoryAgents field is set.
        */
       public boolean hasModelRepositoryAgents() {
-        return modelRepositoryAgentsBuilder_ != null || modelRepositoryAgents_ != null;
+        return ((bitField0_ & 0x00200000) != 0);
       }
       /**
        * <pre>
@@ -62892,11 +63191,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
             throw new NullPointerException();
           }
           modelRepositoryAgents_ = value;
-          onChanged();
         } else {
           modelRepositoryAgentsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00200000;
+        onChanged();
         return this;
       }
       /**
@@ -62914,11 +63213,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           inference.ModelConfigOuterClass.ModelRepositoryAgents.Builder builderForValue) {
         if (modelRepositoryAgentsBuilder_ == null) {
           modelRepositoryAgents_ = builderForValue.build();
-          onChanged();
         } else {
           modelRepositoryAgentsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00200000;
+        onChanged();
         return this;
       }
       /**
@@ -62934,17 +63233,18 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder mergeModelRepositoryAgents(inference.ModelConfigOuterClass.ModelRepositoryAgents value) {
         if (modelRepositoryAgentsBuilder_ == null) {
-          if (modelRepositoryAgents_ != null) {
-            modelRepositoryAgents_ =
-              inference.ModelConfigOuterClass.ModelRepositoryAgents.newBuilder(modelRepositoryAgents_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00200000) != 0) &&
+            modelRepositoryAgents_ != null &&
+            modelRepositoryAgents_ != inference.ModelConfigOuterClass.ModelRepositoryAgents.getDefaultInstance()) {
+            getModelRepositoryAgentsBuilder().mergeFrom(value);
           } else {
             modelRepositoryAgents_ = value;
           }
-          onChanged();
         } else {
           modelRepositoryAgentsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00200000;
+        onChanged();
         return this;
       }
       /**
@@ -62959,14 +63259,13 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>.inference.ModelRepositoryAgents model_repository_agents = 23 [json_name = "modelRepositoryAgents"];</code>
        */
       public Builder clearModelRepositoryAgents() {
-        if (modelRepositoryAgentsBuilder_ == null) {
-          modelRepositoryAgents_ = null;
-          onChanged();
-        } else {
-          modelRepositoryAgents_ = null;
+        bitField0_ = (bitField0_ & ~0x00200000);
+        modelRepositoryAgents_ = null;
+        if (modelRepositoryAgentsBuilder_ != null) {
+          modelRepositoryAgentsBuilder_.dispose();
           modelRepositoryAgentsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -62981,7 +63280,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>.inference.ModelRepositoryAgents model_repository_agents = 23 [json_name = "modelRepositoryAgents"];</code>
        */
       public inference.ModelConfigOuterClass.ModelRepositoryAgents.Builder getModelRepositoryAgentsBuilder() {
-        
+        bitField0_ |= 0x00200000;
         onChanged();
         return getModelRepositoryAgentsFieldBuilder().getBuilder();
       }
@@ -63045,7 +63344,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * @return Whether the responseCache field is set.
        */
       public boolean hasResponseCache() {
-        return responseCacheBuilder_ != null || responseCache_ != null;
+        return ((bitField0_ & 0x00400000) != 0);
       }
       /**
        * <pre>
@@ -63083,11 +63382,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
             throw new NullPointerException();
           }
           responseCache_ = value;
-          onChanged();
         } else {
           responseCacheBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00400000;
+        onChanged();
         return this;
       }
       /**
@@ -63105,11 +63404,11 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
           inference.ModelConfigOuterClass.ModelResponseCache.Builder builderForValue) {
         if (responseCacheBuilder_ == null) {
           responseCache_ = builderForValue.build();
-          onChanged();
         } else {
           responseCacheBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00400000;
+        onChanged();
         return this;
       }
       /**
@@ -63125,17 +63424,18 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        */
       public Builder mergeResponseCache(inference.ModelConfigOuterClass.ModelResponseCache value) {
         if (responseCacheBuilder_ == null) {
-          if (responseCache_ != null) {
-            responseCache_ =
-              inference.ModelConfigOuterClass.ModelResponseCache.newBuilder(responseCache_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00400000) != 0) &&
+            responseCache_ != null &&
+            responseCache_ != inference.ModelConfigOuterClass.ModelResponseCache.getDefaultInstance()) {
+            getResponseCacheBuilder().mergeFrom(value);
           } else {
             responseCache_ = value;
           }
-          onChanged();
         } else {
           responseCacheBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00400000;
+        onChanged();
         return this;
       }
       /**
@@ -63150,14 +63450,13 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>.inference.ModelResponseCache response_cache = 24 [json_name = "responseCache"];</code>
        */
       public Builder clearResponseCache() {
-        if (responseCacheBuilder_ == null) {
-          responseCache_ = null;
-          onChanged();
-        } else {
-          responseCache_ = null;
+        bitField0_ = (bitField0_ & ~0x00400000);
+        responseCache_ = null;
+        if (responseCacheBuilder_ != null) {
+          responseCacheBuilder_.dispose();
           responseCacheBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -63172,7 +63471,7 @@ inference.ModelConfigOuterClass.ModelParameter defaultValue);
        * <code>.inference.ModelResponseCache response_cache = 24 [json_name = "responseCache"];</code>
        */
       public inference.ModelConfigOuterClass.ModelResponseCache.Builder getResponseCacheBuilder() {
-        
+        bitField0_ |= 0x00400000;
         onChanged();
         return getResponseCacheFieldBuilder().getBuilder();
       }
