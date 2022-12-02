@@ -831,7 +831,7 @@ public final class Annotator {
     }
 
     public static final int TYPE_FIELD_NUMBER = 1;
-    private int type_;
+    private int type_ = 0;
     /**
      * <pre>
      * The feature type.
@@ -852,13 +852,12 @@ public final class Annotator {
      * @return The type.
      */
     @java.lang.Override public ssn.annotator.v1.Annotator.Feature.Type getType() {
-      @SuppressWarnings("deprecation")
-      ssn.annotator.v1.Annotator.Feature.Type result = ssn.annotator.v1.Annotator.Feature.Type.valueOf(type_);
+      ssn.annotator.v1.Annotator.Feature.Type result = ssn.annotator.v1.Annotator.Feature.Type.forNumber(type_);
       return result == null ? ssn.annotator.v1.Annotator.Feature.Type.UNRECOGNIZED : result;
     }
 
     public static final int MAX_RESULTS_FIELD_NUMBER = 2;
-    private int maxResults_;
+    private int maxResults_ = 0;
     /**
      * <pre>
      * Maximum number of results of this type. Does not apply to
@@ -874,7 +873,7 @@ public final class Annotator {
     }
 
     public static final int MIN_CONFIDENCE_FIELD_NUMBER = 3;
-    private int minConfidence_;
+    private int minConfidence_ = 0;
     /**
      * <pre>
      * The minimum confidence for predictions that the caller wants returned
@@ -895,8 +894,7 @@ public final class Annotator {
      * @return The minConfidence.
      */
     @java.lang.Override public ssn.type.CandidateOuterClass.Confidence.Level getMinConfidence() {
-      @SuppressWarnings("deprecation")
-      ssn.type.CandidateOuterClass.Confidence.Level result = ssn.type.CandidateOuterClass.Confidence.Level.valueOf(minConfidence_);
+      ssn.type.CandidateOuterClass.Confidence.Level result = ssn.type.CandidateOuterClass.Confidence.Level.forNumber(minConfidence_);
       return result == null ? ssn.type.CandidateOuterClass.Confidence.Level.UNRECOGNIZED : result;
     }
 
@@ -1108,12 +1106,10 @@ public final class Annotator {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         type_ = 0;
-
         maxResults_ = 0;
-
         minConfidence_ = 0;
-
         return this;
       }
 
@@ -1140,11 +1136,22 @@ public final class Annotator {
       @java.lang.Override
       public ssn.annotator.v1.Annotator.Feature buildPartial() {
         ssn.annotator.v1.Annotator.Feature result = new ssn.annotator.v1.Annotator.Feature(this);
-        result.type_ = type_;
-        result.maxResults_ = maxResults_;
-        result.minConfidence_ = minConfidence_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.annotator.v1.Annotator.Feature result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.maxResults_ = maxResults_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.minConfidence_ = minConfidence_;
+        }
       }
 
       @java.lang.Override
@@ -1228,17 +1235,17 @@ public final class Annotator {
                 break;
               case 8: {
                 type_ = input.readEnum();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 maxResults_ = input.readInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
                 minConfidence_ = input.readEnum();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               default: {
@@ -1256,6 +1263,7 @@ public final class Annotator {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int type_ = 0;
       /**
@@ -1279,8 +1287,8 @@ public final class Annotator {
        * @return This builder for chaining.
        */
       public Builder setTypeValue(int value) {
-        
         type_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1294,8 +1302,7 @@ public final class Annotator {
        */
       @java.lang.Override
       public ssn.annotator.v1.Annotator.Feature.Type getType() {
-        @SuppressWarnings("deprecation")
-        ssn.annotator.v1.Annotator.Feature.Type result = ssn.annotator.v1.Annotator.Feature.Type.valueOf(type_);
+        ssn.annotator.v1.Annotator.Feature.Type result = ssn.annotator.v1.Annotator.Feature.Type.forNumber(type_);
         return result == null ? ssn.annotator.v1.Annotator.Feature.Type.UNRECOGNIZED : result;
       }
       /**
@@ -1311,7 +1318,7 @@ public final class Annotator {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000001;
         type_ = value.getNumber();
         onChanged();
         return this;
@@ -1325,7 +1332,7 @@ public final class Annotator {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         type_ = 0;
         onChanged();
         return this;
@@ -1358,6 +1365,7 @@ public final class Annotator {
       public Builder setMaxResults(int value) {
         
         maxResults_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1371,7 +1379,7 @@ public final class Annotator {
        * @return This builder for chaining.
        */
       public Builder clearMaxResults() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         maxResults_ = 0;
         onChanged();
         return this;
@@ -1399,8 +1407,8 @@ public final class Annotator {
        * @return This builder for chaining.
        */
       public Builder setMinConfidenceValue(int value) {
-        
         minConfidence_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1414,8 +1422,7 @@ public final class Annotator {
        */
       @java.lang.Override
       public ssn.type.CandidateOuterClass.Confidence.Level getMinConfidence() {
-        @SuppressWarnings("deprecation")
-        ssn.type.CandidateOuterClass.Confidence.Level result = ssn.type.CandidateOuterClass.Confidence.Level.valueOf(minConfidence_);
+        ssn.type.CandidateOuterClass.Confidence.Level result = ssn.type.CandidateOuterClass.Confidence.Level.forNumber(minConfidence_);
         return result == null ? ssn.type.CandidateOuterClass.Confidence.Level.UNRECOGNIZED : result;
       }
       /**
@@ -1431,7 +1438,7 @@ public final class Annotator {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000004;
         minConfidence_ = value.getNumber();
         onChanged();
         return this;
@@ -1445,7 +1452,7 @@ public final class Annotator {
        * @return This builder for chaining.
        */
       public Builder clearMinConfidence() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         minConfidence_ = 0;
         onChanged();
         return this;
@@ -1685,10 +1692,11 @@ public final class Annotator {
      */
     @java.lang.Override
     public ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder() {
-      return getDocument();
+      return document_ == null ? ssn.annotator.v1.Annotator.Document.getDefaultInstance() : document_;
     }
 
     public static final int FEATURES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.annotator.v1.Annotator.Feature> features_;
     /**
      * <code>repeated .ssn.annotator.v1.Feature features = 2 [json_name = "features"];</code>
@@ -1729,6 +1737,7 @@ public final class Annotator {
     }
 
     public static final int TAGS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
@@ -1764,7 +1773,7 @@ public final class Annotator {
     }
 
     public static final int TIER_FIELD_NUMBER = 4;
-    private int tier_;
+    private int tier_ = 0;
     /**
      * <code>.ssn.type.Tier tier = 4 [json_name = "tier"];</code>
      * @return The enum numeric value on the wire for tier.
@@ -1777,12 +1786,12 @@ public final class Annotator {
      * @return The tier.
      */
     @java.lang.Override public ssn.type.TierOuterClass.Tier getTier() {
-      @SuppressWarnings("deprecation")
-      ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
+      ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.forNumber(tier_);
       return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
     }
 
     public static final int SEGMENTS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList segments_;
     /**
      * <code>repeated string segments = 5 [json_name = "segments"];</code>
@@ -2067,10 +2076,10 @@ public final class Annotator {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (documentBuilder_ == null) {
-          document_ = null;
-        } else {
-          document_ = null;
+        bitField0_ = 0;
+        document_ = null;
+        if (documentBuilder_ != null) {
+          documentBuilder_.dispose();
           documentBuilder_ = null;
         }
         if (featuresBuilder_ == null) {
@@ -2079,13 +2088,12 @@ public final class Annotator {
           features_ = null;
           featuresBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
-        tier_ = 0;
-
-        segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
+        tier_ = 0;
+        segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -2112,34 +2120,44 @@ public final class Annotator {
       @java.lang.Override
       public ssn.annotator.v1.Annotator.DocumentAnnotatorRequest buildPartial() {
         ssn.annotator.v1.Annotator.DocumentAnnotatorRequest result = new ssn.annotator.v1.Annotator.DocumentAnnotatorRequest(this);
-        int from_bitField0_ = bitField0_;
-        if (documentBuilder_ == null) {
-          result.document_ = document_;
-        } else {
-          result.document_ = documentBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.annotator.v1.Annotator.DocumentAnnotatorRequest result) {
         if (featuresBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             features_ = java.util.Collections.unmodifiableList(features_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.features_ = features_;
         } else {
           result.features_ = featuresBuilder_.build();
         }
-        if (((bitField0_ & 0x00000002) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.tags_ = tags_;
-        result.tier_ = tier_;
         if (((bitField0_ & 0x00000004) != 0)) {
-          segments_ = segments_.getUnmodifiableView();
+          tags_ = tags_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000004);
         }
+        result.tags_ = tags_;
+        if (((bitField0_ & 0x00000010) != 0)) {
+          segments_ = segments_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
         result.segments_ = segments_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(ssn.annotator.v1.Annotator.DocumentAnnotatorRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.document_ = documentBuilder_ == null
+              ? document_
+              : documentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.tier_ = tier_;
+        }
       }
 
       @java.lang.Override
@@ -2193,7 +2211,7 @@ public final class Annotator {
           if (!other.features_.isEmpty()) {
             if (features_.isEmpty()) {
               features_ = other.features_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureFeaturesIsMutable();
               features_.addAll(other.features_);
@@ -2206,7 +2224,7 @@ public final class Annotator {
               featuresBuilder_.dispose();
               featuresBuilder_ = null;
               features_ = other.features_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               featuresBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFeaturesFieldBuilder() : null;
@@ -2218,7 +2236,7 @@ public final class Annotator {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -2231,7 +2249,7 @@ public final class Annotator {
         if (!other.segments_.isEmpty()) {
           if (segments_.isEmpty()) {
             segments_ = other.segments_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureSegmentsIsMutable();
             segments_.addAll(other.segments_);
@@ -2268,7 +2286,7 @@ public final class Annotator {
                 input.readMessage(
                     getDocumentFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
@@ -2292,7 +2310,7 @@ public final class Annotator {
               } // case 26
               case 32: {
                 tier_ = input.readEnum();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 42: {
@@ -2326,7 +2344,7 @@ public final class Annotator {
        * @return Whether the document field is set.
        */
       public boolean hasDocument() {
-        return documentBuilder_ != null || document_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
@@ -2348,11 +2366,11 @@ public final class Annotator {
             throw new NullPointerException();
           }
           document_ = value;
-          onChanged();
         } else {
           documentBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2362,11 +2380,11 @@ public final class Annotator {
           ssn.annotator.v1.Annotator.Document.Builder builderForValue) {
         if (documentBuilder_ == null) {
           document_ = builderForValue.build();
-          onChanged();
         } else {
           documentBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2374,38 +2392,38 @@ public final class Annotator {
        */
       public Builder mergeDocument(ssn.annotator.v1.Annotator.Document value) {
         if (documentBuilder_ == null) {
-          if (document_ != null) {
-            document_ =
-              ssn.annotator.v1.Annotator.Document.newBuilder(document_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            document_ != null &&
+            document_ != ssn.annotator.v1.Annotator.Document.getDefaultInstance()) {
+            getDocumentBuilder().mergeFrom(value);
           } else {
             document_ = value;
           }
-          onChanged();
         } else {
           documentBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       public Builder clearDocument() {
-        if (documentBuilder_ == null) {
-          document_ = null;
-          onChanged();
-        } else {
-          document_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        document_ = null;
+        if (documentBuilder_ != null) {
+          documentBuilder_.dispose();
           documentBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
        */
       public ssn.annotator.v1.Annotator.Document.Builder getDocumentBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDocumentFieldBuilder().getBuilder();
       }
@@ -2440,9 +2458,9 @@ public final class Annotator {
       private java.util.List<ssn.annotator.v1.Annotator.Feature> features_ =
         java.util.Collections.emptyList();
       private void ensureFeaturesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           features_ = new java.util.ArrayList<ssn.annotator.v1.Annotator.Feature>(features_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -2592,7 +2610,7 @@ public final class Annotator {
       public Builder clearFeatures() {
         if (featuresBuilder_ == null) {
           features_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           featuresBuilder_.clear();
@@ -2669,7 +2687,7 @@ public final class Annotator {
           featuresBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.annotator.v1.Annotator.Feature, ssn.annotator.v1.Annotator.Feature.Builder, ssn.annotator.v1.Annotator.FeatureOrBuilder>(
                   features_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           features_ = null;
@@ -2679,9 +2697,9 @@ public final class Annotator {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -2724,10 +2742,8 @@ public final class Annotator {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.set(index, value);
         onChanged();
         return this;
@@ -2739,10 +2755,8 @@ public final class Annotator {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
         return this;
@@ -2766,7 +2780,7 @@ public final class Annotator {
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -2777,10 +2791,8 @@ public final class Annotator {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
@@ -2801,8 +2813,8 @@ public final class Annotator {
        * @return This builder for chaining.
        */
       public Builder setTierValue(int value) {
-        
         tier_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -2812,8 +2824,7 @@ public final class Annotator {
        */
       @java.lang.Override
       public ssn.type.TierOuterClass.Tier getTier() {
-        @SuppressWarnings("deprecation")
-        ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
+        ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.forNumber(tier_);
         return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
       }
       /**
@@ -2825,7 +2836,7 @@ public final class Annotator {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000008;
         tier_ = value.getNumber();
         onChanged();
         return this;
@@ -2835,7 +2846,7 @@ public final class Annotator {
        * @return This builder for chaining.
        */
       public Builder clearTier() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         tier_ = 0;
         onChanged();
         return this;
@@ -2843,9 +2854,9 @@ public final class Annotator {
 
       private com.google.protobuf.LazyStringList segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSegmentsIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           segments_ = new com.google.protobuf.LazyStringArrayList(segments_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000010;
          }
       }
       /**
@@ -2888,10 +2899,8 @@ public final class Annotator {
        */
       public Builder setSegments(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSegmentsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureSegmentsIsMutable();
         segments_.set(index, value);
         onChanged();
         return this;
@@ -2903,10 +2912,8 @@ public final class Annotator {
        */
       public Builder addSegments(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSegmentsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureSegmentsIsMutable();
         segments_.add(value);
         onChanged();
         return this;
@@ -2930,7 +2937,7 @@ public final class Annotator {
        */
       public Builder clearSegments() {
         segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -2941,10 +2948,8 @@ public final class Annotator {
        */
       public Builder addSegmentsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureSegmentsIsMutable();
         segments_.add(value);
         onChanged();
@@ -4816,6 +4821,7 @@ public final class Annotator {
     }
 
     public static final int ORDER_DATE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> orderDate_;
     /**
      * <pre>
@@ -4886,6 +4892,7 @@ public final class Annotator {
     }
 
     public static final int PAYMENT_DUE_DATE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> paymentDueDate_;
     /**
      * <pre>
@@ -4956,6 +4963,7 @@ public final class Annotator {
     }
 
     public static final int CURRENCY_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> currency_;
     /**
      * <pre>
@@ -5026,6 +5034,7 @@ public final class Annotator {
     }
 
     public static final int TOTAL_VAT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalVat_;
     /**
      * <pre>
@@ -5096,6 +5105,7 @@ public final class Annotator {
     }
 
     public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalInclVat_;
     /**
      * <pre>
@@ -5166,6 +5176,7 @@ public final class Annotator {
     }
 
     public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalExclVat_;
     /**
      * <pre>
@@ -5236,6 +5247,7 @@ public final class Annotator {
     }
 
     public static final int SUPPLIER_CORPORATE_ID_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierCorporateId_;
     /**
      * <pre>
@@ -5336,6 +5348,7 @@ public final class Annotator {
     }
 
     public static final int SUPPLIER_COUNTRY_CODE_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierCountryCode_;
     /**
      * <pre>
@@ -5406,6 +5419,7 @@ public final class Annotator {
     }
 
     public static final int DOCUMENT_TYPE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentType_;
     /**
      * <pre>
@@ -5471,6 +5485,7 @@ public final class Annotator {
     }
 
     public static final int PAYMENT_METHOD_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> paymentMethod_;
     /**
      * <pre>
@@ -5536,6 +5551,7 @@ public final class Annotator {
     }
 
     public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> creditCardLastFour_;
     /**
      * <pre>
@@ -5606,6 +5622,7 @@ public final class Annotator {
     }
 
     public static final int INVOICE_NUMBER_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> invoiceNumber_;
     /**
      * <pre>
@@ -5720,10 +5737,11 @@ public final class Annotator {
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
-      return getTextAnnotation();
+      return textAnnotation_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : textAnnotation_;
     }
 
     public static final int OCR_LINE_DK_TYPE_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkType_;
     /**
      * <pre>
@@ -5784,6 +5802,7 @@ public final class Annotator {
     }
 
     public static final int OCR_LINE_DK_PAYMENT_ID_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkPaymentId_;
     /**
      * <pre>
@@ -5844,6 +5863,7 @@ public final class Annotator {
     }
 
     public static final int OCR_LINE_DK_CREDITOR_ID_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkCreditorId_;
     /**
      * <pre>
@@ -5904,6 +5924,7 @@ public final class Annotator {
     }
 
     public static final int OCR_LINE_SE_PAYMENT_ID_FIELD_NUMBER = 17;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSePaymentId_;
     /**
      * <pre>
@@ -5964,6 +5985,7 @@ public final class Annotator {
     }
 
     public static final int OCR_LINE_SE_BANKGIRO_CREDITOR_ID_FIELD_NUMBER = 18;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSeBankgiroCreditorId_;
     /**
      * <pre>
@@ -6024,6 +6046,7 @@ public final class Annotator {
     }
 
     public static final int OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_FIELD_NUMBER = 19;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSePlusgiroCreditorId_;
     /**
      * <pre>
@@ -6084,6 +6107,7 @@ public final class Annotator {
     }
 
     public static final int OCR_LINE_NO_PAYMENT_ID_FIELD_NUMBER = 20;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineNoPaymentId_;
     /**
      * <pre>
@@ -6144,6 +6168,7 @@ public final class Annotator {
     }
 
     public static final int OCR_LINE_FI_PAYMENT_ID_FIELD_NUMBER = 21;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineFiPaymentId_;
     /**
      * <pre>
@@ -6204,6 +6229,7 @@ public final class Annotator {
     }
 
     public static final int OCR_LINE_NL_PAYMENT_ID_FIELD_NUMBER = 22;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineNlPaymentId_;
     /**
      * <pre>
@@ -6264,7 +6290,8 @@ public final class Annotator {
     }
 
     public static final int TEXT_FIELD_NUMBER = 23;
-    private volatile java.lang.Object text_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object text_ = "";
     /**
      * <pre>
      * Return a string containing the text from the document
@@ -6310,7 +6337,8 @@ public final class Annotator {
     }
 
     public static final int FEEDBACK_ID_FIELD_NUMBER = 24;
-    private volatile java.lang.Object feedbackId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object feedbackId_ = "";
     /**
      * <pre>
      * Feedback ID is used to correct made predictions through the
@@ -6358,6 +6386,7 @@ public final class Annotator {
     }
 
     public static final int IBAN_FIELD_NUMBER = 25;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> iban_;
     /**
      * <pre>
@@ -6428,6 +6457,7 @@ public final class Annotator {
     }
 
     public static final int LINES_FIELD_NUMBER = 26;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.LineCandidate> lines_;
     /**
      * <pre>
@@ -6493,7 +6523,8 @@ public final class Annotator {
     }
 
     public static final int PREVIEW_FIELD_NUMBER = 27;
-    private volatile java.lang.Object preview_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object preview_ = "";
     /**
      * <pre>
      * Base64 encoded PNG image  of the first page of PDF document sent in request
@@ -6539,6 +6570,7 @@ public final class Annotator {
     }
 
     public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 28;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> bankAccountNumber_;
     /**
      * <pre>
@@ -6599,6 +6631,7 @@ public final class Annotator {
     }
 
     public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 29;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> bankRegistrationNumber_;
     /**
      * <pre>
@@ -6659,6 +6692,7 @@ public final class Annotator {
     }
 
     public static final int BIC_FIELD_NUMBER = 30;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> bic_;
     /**
      * <pre>
@@ -6719,6 +6753,7 @@ public final class Annotator {
     }
 
     public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 31;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentNumber_;
     /**
      * <pre>
@@ -6779,6 +6814,7 @@ public final class Annotator {
     }
 
     public static final int DOCUMENT_DATE_FIELD_NUMBER = 32;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentDate_;
     /**
      * <pre>
@@ -6839,6 +6875,7 @@ public final class Annotator {
     }
 
     public static final int ORDER_NUMBER_FIELD_NUMBER = 33;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> orderNumber_;
     /**
      * <pre>
@@ -6899,6 +6936,7 @@ public final class Annotator {
     }
 
     public static final int SUPPLIER_NAME_FIELD_NUMBER = 34;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierName_;
     /**
      * <pre>
@@ -6959,6 +6997,7 @@ public final class Annotator {
     }
 
     public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 35;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierVatNumber_;
     /**
      * <pre>
@@ -7024,6 +7063,7 @@ public final class Annotator {
     }
 
     public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 36;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierOrganisationNumber_;
     /**
      * <pre>
@@ -7089,6 +7129,7 @@ public final class Annotator {
     }
 
     public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 37;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierAddress_;
     /**
      * <pre>
@@ -7805,6 +7846,8 @@ public final class Annotator {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        bitField1_ = 0;
         if (orderDateBuilder_ == null) {
           orderDate_ = java.util.Collections.emptyList();
         } else {
@@ -7889,10 +7932,9 @@ public final class Annotator {
           invoiceNumberBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000800);
-        if (textAnnotationBuilder_ == null) {
-          textAnnotation_ = null;
-        } else {
-          textAnnotation_ = null;
+        textAnnotation_ = null;
+        if (textAnnotationBuilder_ != null) {
+          textAnnotationBuilder_.dispose();
           textAnnotationBuilder_ = null;
         }
         if (ocrLineDkTypeBuilder_ == null) {
@@ -7901,153 +7943,150 @@ public final class Annotator {
           ocrLineDkType_ = null;
           ocrLineDkTypeBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00001000);
+        bitField0_ = (bitField0_ & ~0x00002000);
         if (ocrLineDkPaymentIdBuilder_ == null) {
           ocrLineDkPaymentId_ = java.util.Collections.emptyList();
         } else {
           ocrLineDkPaymentId_ = null;
           ocrLineDkPaymentIdBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00002000);
+        bitField0_ = (bitField0_ & ~0x00004000);
         if (ocrLineDkCreditorIdBuilder_ == null) {
           ocrLineDkCreditorId_ = java.util.Collections.emptyList();
         } else {
           ocrLineDkCreditorId_ = null;
           ocrLineDkCreditorIdBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00004000);
+        bitField0_ = (bitField0_ & ~0x00008000);
         if (ocrLineSePaymentIdBuilder_ == null) {
           ocrLineSePaymentId_ = java.util.Collections.emptyList();
         } else {
           ocrLineSePaymentId_ = null;
           ocrLineSePaymentIdBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00008000);
+        bitField0_ = (bitField0_ & ~0x00010000);
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           ocrLineSeBankgiroCreditorId_ = java.util.Collections.emptyList();
         } else {
           ocrLineSeBankgiroCreditorId_ = null;
           ocrLineSeBankgiroCreditorIdBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00010000);
+        bitField0_ = (bitField0_ & ~0x00020000);
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           ocrLineSePlusgiroCreditorId_ = java.util.Collections.emptyList();
         } else {
           ocrLineSePlusgiroCreditorId_ = null;
           ocrLineSePlusgiroCreditorIdBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00020000);
+        bitField0_ = (bitField0_ & ~0x00040000);
         if (ocrLineNoPaymentIdBuilder_ == null) {
           ocrLineNoPaymentId_ = java.util.Collections.emptyList();
         } else {
           ocrLineNoPaymentId_ = null;
           ocrLineNoPaymentIdBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00040000);
+        bitField0_ = (bitField0_ & ~0x00080000);
         if (ocrLineFiPaymentIdBuilder_ == null) {
           ocrLineFiPaymentId_ = java.util.Collections.emptyList();
         } else {
           ocrLineFiPaymentId_ = null;
           ocrLineFiPaymentIdBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00080000);
+        bitField0_ = (bitField0_ & ~0x00100000);
         if (ocrLineNlPaymentIdBuilder_ == null) {
           ocrLineNlPaymentId_ = java.util.Collections.emptyList();
         } else {
           ocrLineNlPaymentId_ = null;
           ocrLineNlPaymentIdBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00100000);
+        bitField0_ = (bitField0_ & ~0x00200000);
         text_ = "";
-
         feedbackId_ = "";
-
         if (ibanBuilder_ == null) {
           iban_ = java.util.Collections.emptyList();
         } else {
           iban_ = null;
           ibanBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00200000);
+        bitField0_ = (bitField0_ & ~0x01000000);
         if (linesBuilder_ == null) {
           lines_ = java.util.Collections.emptyList();
         } else {
           lines_ = null;
           linesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00400000);
+        bitField0_ = (bitField0_ & ~0x02000000);
         preview_ = "";
-
         if (bankAccountNumberBuilder_ == null) {
           bankAccountNumber_ = java.util.Collections.emptyList();
         } else {
           bankAccountNumber_ = null;
           bankAccountNumberBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00800000);
+        bitField0_ = (bitField0_ & ~0x08000000);
         if (bankRegistrationNumberBuilder_ == null) {
           bankRegistrationNumber_ = java.util.Collections.emptyList();
         } else {
           bankRegistrationNumber_ = null;
           bankRegistrationNumberBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x01000000);
+        bitField0_ = (bitField0_ & ~0x10000000);
         if (bicBuilder_ == null) {
           bic_ = java.util.Collections.emptyList();
         } else {
           bic_ = null;
           bicBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x02000000);
+        bitField0_ = (bitField0_ & ~0x20000000);
         if (documentNumberBuilder_ == null) {
           documentNumber_ = java.util.Collections.emptyList();
         } else {
           documentNumber_ = null;
           documentNumberBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x04000000);
+        bitField0_ = (bitField0_ & ~0x40000000);
         if (documentDateBuilder_ == null) {
           documentDate_ = java.util.Collections.emptyList();
         } else {
           documentDate_ = null;
           documentDateBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x08000000);
+        bitField0_ = (bitField0_ & ~0x80000000);
         if (orderNumberBuilder_ == null) {
           orderNumber_ = java.util.Collections.emptyList();
         } else {
           orderNumber_ = null;
           orderNumberBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x10000000);
+        bitField1_ = (bitField1_ & ~0x00000001);
         if (supplierNameBuilder_ == null) {
           supplierName_ = java.util.Collections.emptyList();
         } else {
           supplierName_ = null;
           supplierNameBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x20000000);
+        bitField1_ = (bitField1_ & ~0x00000002);
         if (supplierVatNumberBuilder_ == null) {
           supplierVatNumber_ = java.util.Collections.emptyList();
         } else {
           supplierVatNumber_ = null;
           supplierVatNumberBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x40000000);
+        bitField1_ = (bitField1_ & ~0x00000004);
         if (supplierOrganisationNumberBuilder_ == null) {
           supplierOrganisationNumber_ = java.util.Collections.emptyList();
         } else {
           supplierOrganisationNumber_ = null;
           supplierOrganisationNumberBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x80000000);
+        bitField1_ = (bitField1_ & ~0x00000008);
         if (supplierAddressBuilder_ == null) {
           supplierAddress_ = java.util.Collections.emptyList();
         } else {
           supplierAddress_ = null;
           supplierAddressBuilder_.clear();
         }
-        bitField1_ = (bitField1_ & ~0x00000001);
+        bitField1_ = (bitField1_ & ~0x00000010);
         return this;
       }
 
@@ -8074,8 +8113,14 @@ public final class Annotator {
       @java.lang.Override
       public ssn.annotator.v1.Annotator.DocumentAnnotatorResponse buildPartial() {
         ssn.annotator.v1.Annotator.DocumentAnnotatorResponse result = new ssn.annotator.v1.Annotator.DocumentAnnotatorResponse(this);
-        int from_bitField0_ = bitField0_;
-        int from_bitField1_ = bitField1_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        if (bitField1_ != 0) { buildPartial1(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.annotator.v1.Annotator.DocumentAnnotatorResponse result) {
         if (orderDateBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
@@ -8184,205 +8229,217 @@ public final class Annotator {
         } else {
           result.invoiceNumber_ = invoiceNumberBuilder_.build();
         }
-        if (textAnnotationBuilder_ == null) {
-          result.textAnnotation_ = textAnnotation_;
-        } else {
-          result.textAnnotation_ = textAnnotationBuilder_.build();
-        }
         if (ocrLineDkTypeBuilder_ == null) {
-          if (((bitField0_ & 0x00001000) != 0)) {
+          if (((bitField0_ & 0x00002000) != 0)) {
             ocrLineDkType_ = java.util.Collections.unmodifiableList(ocrLineDkType_);
-            bitField0_ = (bitField0_ & ~0x00001000);
+            bitField0_ = (bitField0_ & ~0x00002000);
           }
           result.ocrLineDkType_ = ocrLineDkType_;
         } else {
           result.ocrLineDkType_ = ocrLineDkTypeBuilder_.build();
         }
         if (ocrLineDkPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00002000) != 0)) {
+          if (((bitField0_ & 0x00004000) != 0)) {
             ocrLineDkPaymentId_ = java.util.Collections.unmodifiableList(ocrLineDkPaymentId_);
-            bitField0_ = (bitField0_ & ~0x00002000);
+            bitField0_ = (bitField0_ & ~0x00004000);
           }
           result.ocrLineDkPaymentId_ = ocrLineDkPaymentId_;
         } else {
           result.ocrLineDkPaymentId_ = ocrLineDkPaymentIdBuilder_.build();
         }
         if (ocrLineDkCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00004000) != 0)) {
+          if (((bitField0_ & 0x00008000) != 0)) {
             ocrLineDkCreditorId_ = java.util.Collections.unmodifiableList(ocrLineDkCreditorId_);
-            bitField0_ = (bitField0_ & ~0x00004000);
+            bitField0_ = (bitField0_ & ~0x00008000);
           }
           result.ocrLineDkCreditorId_ = ocrLineDkCreditorId_;
         } else {
           result.ocrLineDkCreditorId_ = ocrLineDkCreditorIdBuilder_.build();
         }
         if (ocrLineSePaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00008000) != 0)) {
+          if (((bitField0_ & 0x00010000) != 0)) {
             ocrLineSePaymentId_ = java.util.Collections.unmodifiableList(ocrLineSePaymentId_);
-            bitField0_ = (bitField0_ & ~0x00008000);
+            bitField0_ = (bitField0_ & ~0x00010000);
           }
           result.ocrLineSePaymentId_ = ocrLineSePaymentId_;
         } else {
           result.ocrLineSePaymentId_ = ocrLineSePaymentIdBuilder_.build();
         }
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00010000) != 0)) {
+          if (((bitField0_ & 0x00020000) != 0)) {
             ocrLineSeBankgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSeBankgiroCreditorId_);
-            bitField0_ = (bitField0_ & ~0x00010000);
+            bitField0_ = (bitField0_ & ~0x00020000);
           }
           result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorId_;
         } else {
           result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorIdBuilder_.build();
         }
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
-          if (((bitField0_ & 0x00020000) != 0)) {
+          if (((bitField0_ & 0x00040000) != 0)) {
             ocrLineSePlusgiroCreditorId_ = java.util.Collections.unmodifiableList(ocrLineSePlusgiroCreditorId_);
-            bitField0_ = (bitField0_ & ~0x00020000);
+            bitField0_ = (bitField0_ & ~0x00040000);
           }
           result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorId_;
         } else {
           result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorIdBuilder_.build();
         }
         if (ocrLineNoPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00040000) != 0)) {
+          if (((bitField0_ & 0x00080000) != 0)) {
             ocrLineNoPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNoPaymentId_);
-            bitField0_ = (bitField0_ & ~0x00040000);
+            bitField0_ = (bitField0_ & ~0x00080000);
           }
           result.ocrLineNoPaymentId_ = ocrLineNoPaymentId_;
         } else {
           result.ocrLineNoPaymentId_ = ocrLineNoPaymentIdBuilder_.build();
         }
         if (ocrLineFiPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00080000) != 0)) {
+          if (((bitField0_ & 0x00100000) != 0)) {
             ocrLineFiPaymentId_ = java.util.Collections.unmodifiableList(ocrLineFiPaymentId_);
-            bitField0_ = (bitField0_ & ~0x00080000);
+            bitField0_ = (bitField0_ & ~0x00100000);
           }
           result.ocrLineFiPaymentId_ = ocrLineFiPaymentId_;
         } else {
           result.ocrLineFiPaymentId_ = ocrLineFiPaymentIdBuilder_.build();
         }
         if (ocrLineNlPaymentIdBuilder_ == null) {
-          if (((bitField0_ & 0x00100000) != 0)) {
+          if (((bitField0_ & 0x00200000) != 0)) {
             ocrLineNlPaymentId_ = java.util.Collections.unmodifiableList(ocrLineNlPaymentId_);
-            bitField0_ = (bitField0_ & ~0x00100000);
+            bitField0_ = (bitField0_ & ~0x00200000);
           }
           result.ocrLineNlPaymentId_ = ocrLineNlPaymentId_;
         } else {
           result.ocrLineNlPaymentId_ = ocrLineNlPaymentIdBuilder_.build();
         }
-        result.text_ = text_;
-        result.feedbackId_ = feedbackId_;
         if (ibanBuilder_ == null) {
-          if (((bitField0_ & 0x00200000) != 0)) {
+          if (((bitField0_ & 0x01000000) != 0)) {
             iban_ = java.util.Collections.unmodifiableList(iban_);
-            bitField0_ = (bitField0_ & ~0x00200000);
+            bitField0_ = (bitField0_ & ~0x01000000);
           }
           result.iban_ = iban_;
         } else {
           result.iban_ = ibanBuilder_.build();
         }
         if (linesBuilder_ == null) {
-          if (((bitField0_ & 0x00400000) != 0)) {
+          if (((bitField0_ & 0x02000000) != 0)) {
             lines_ = java.util.Collections.unmodifiableList(lines_);
-            bitField0_ = (bitField0_ & ~0x00400000);
+            bitField0_ = (bitField0_ & ~0x02000000);
           }
           result.lines_ = lines_;
         } else {
           result.lines_ = linesBuilder_.build();
         }
-        result.preview_ = preview_;
         if (bankAccountNumberBuilder_ == null) {
-          if (((bitField0_ & 0x00800000) != 0)) {
+          if (((bitField0_ & 0x08000000) != 0)) {
             bankAccountNumber_ = java.util.Collections.unmodifiableList(bankAccountNumber_);
-            bitField0_ = (bitField0_ & ~0x00800000);
+            bitField0_ = (bitField0_ & ~0x08000000);
           }
           result.bankAccountNumber_ = bankAccountNumber_;
         } else {
           result.bankAccountNumber_ = bankAccountNumberBuilder_.build();
         }
         if (bankRegistrationNumberBuilder_ == null) {
-          if (((bitField0_ & 0x01000000) != 0)) {
+          if (((bitField0_ & 0x10000000) != 0)) {
             bankRegistrationNumber_ = java.util.Collections.unmodifiableList(bankRegistrationNumber_);
-            bitField0_ = (bitField0_ & ~0x01000000);
+            bitField0_ = (bitField0_ & ~0x10000000);
           }
           result.bankRegistrationNumber_ = bankRegistrationNumber_;
         } else {
           result.bankRegistrationNumber_ = bankRegistrationNumberBuilder_.build();
         }
         if (bicBuilder_ == null) {
-          if (((bitField0_ & 0x02000000) != 0)) {
+          if (((bitField0_ & 0x20000000) != 0)) {
             bic_ = java.util.Collections.unmodifiableList(bic_);
-            bitField0_ = (bitField0_ & ~0x02000000);
+            bitField0_ = (bitField0_ & ~0x20000000);
           }
           result.bic_ = bic_;
         } else {
           result.bic_ = bicBuilder_.build();
         }
         if (documentNumberBuilder_ == null) {
-          if (((bitField0_ & 0x04000000) != 0)) {
+          if (((bitField0_ & 0x40000000) != 0)) {
             documentNumber_ = java.util.Collections.unmodifiableList(documentNumber_);
-            bitField0_ = (bitField0_ & ~0x04000000);
+            bitField0_ = (bitField0_ & ~0x40000000);
           }
           result.documentNumber_ = documentNumber_;
         } else {
           result.documentNumber_ = documentNumberBuilder_.build();
         }
         if (documentDateBuilder_ == null) {
-          if (((bitField0_ & 0x08000000) != 0)) {
+          if (((bitField0_ & 0x80000000) != 0)) {
             documentDate_ = java.util.Collections.unmodifiableList(documentDate_);
-            bitField0_ = (bitField0_ & ~0x08000000);
+            bitField0_ = (bitField0_ & ~0x80000000);
           }
           result.documentDate_ = documentDate_;
         } else {
           result.documentDate_ = documentDateBuilder_.build();
         }
         if (orderNumberBuilder_ == null) {
-          if (((bitField0_ & 0x10000000) != 0)) {
+          if (((bitField1_ & 0x00000001) != 0)) {
             orderNumber_ = java.util.Collections.unmodifiableList(orderNumber_);
-            bitField0_ = (bitField0_ & ~0x10000000);
+            bitField1_ = (bitField1_ & ~0x00000001);
           }
           result.orderNumber_ = orderNumber_;
         } else {
           result.orderNumber_ = orderNumberBuilder_.build();
         }
         if (supplierNameBuilder_ == null) {
-          if (((bitField0_ & 0x20000000) != 0)) {
+          if (((bitField1_ & 0x00000002) != 0)) {
             supplierName_ = java.util.Collections.unmodifiableList(supplierName_);
-            bitField0_ = (bitField0_ & ~0x20000000);
+            bitField1_ = (bitField1_ & ~0x00000002);
           }
           result.supplierName_ = supplierName_;
         } else {
           result.supplierName_ = supplierNameBuilder_.build();
         }
         if (supplierVatNumberBuilder_ == null) {
-          if (((bitField0_ & 0x40000000) != 0)) {
+          if (((bitField1_ & 0x00000004) != 0)) {
             supplierVatNumber_ = java.util.Collections.unmodifiableList(supplierVatNumber_);
-            bitField0_ = (bitField0_ & ~0x40000000);
+            bitField1_ = (bitField1_ & ~0x00000004);
           }
           result.supplierVatNumber_ = supplierVatNumber_;
         } else {
           result.supplierVatNumber_ = supplierVatNumberBuilder_.build();
         }
         if (supplierOrganisationNumberBuilder_ == null) {
-          if (((bitField0_ & 0x80000000) != 0)) {
+          if (((bitField1_ & 0x00000008) != 0)) {
             supplierOrganisationNumber_ = java.util.Collections.unmodifiableList(supplierOrganisationNumber_);
-            bitField0_ = (bitField0_ & ~0x80000000);
+            bitField1_ = (bitField1_ & ~0x00000008);
           }
           result.supplierOrganisationNumber_ = supplierOrganisationNumber_;
         } else {
           result.supplierOrganisationNumber_ = supplierOrganisationNumberBuilder_.build();
         }
         if (supplierAddressBuilder_ == null) {
-          if (((bitField1_ & 0x00000001) != 0)) {
+          if (((bitField1_ & 0x00000010) != 0)) {
             supplierAddress_ = java.util.Collections.unmodifiableList(supplierAddress_);
-            bitField1_ = (bitField1_ & ~0x00000001);
+            bitField1_ = (bitField1_ & ~0x00000010);
           }
           result.supplierAddress_ = supplierAddress_;
         } else {
           result.supplierAddress_ = supplierAddressBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(ssn.annotator.v1.Annotator.DocumentAnnotatorResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.textAnnotation_ = textAnnotationBuilder_ == null
+              ? textAnnotation_
+              : textAnnotationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.text_ = text_;
+        }
+        if (((from_bitField0_ & 0x00800000) != 0)) {
+          result.feedbackId_ = feedbackId_;
+        }
+        if (((from_bitField0_ & 0x04000000) != 0)) {
+          result.preview_ = preview_;
+        }
+      }
+
+      private void buildPartial1(ssn.annotator.v1.Annotator.DocumentAnnotatorResponse result) {
+        int from_bitField1_ = bitField1_;
       }
 
       @java.lang.Override
@@ -8748,7 +8805,7 @@ public final class Annotator {
           if (!other.ocrLineDkType_.isEmpty()) {
             if (ocrLineDkType_.isEmpty()) {
               ocrLineDkType_ = other.ocrLineDkType_;
-              bitField0_ = (bitField0_ & ~0x00001000);
+              bitField0_ = (bitField0_ & ~0x00002000);
             } else {
               ensureOcrLineDkTypeIsMutable();
               ocrLineDkType_.addAll(other.ocrLineDkType_);
@@ -8761,7 +8818,7 @@ public final class Annotator {
               ocrLineDkTypeBuilder_.dispose();
               ocrLineDkTypeBuilder_ = null;
               ocrLineDkType_ = other.ocrLineDkType_;
-              bitField0_ = (bitField0_ & ~0x00001000);
+              bitField0_ = (bitField0_ & ~0x00002000);
               ocrLineDkTypeBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineDkTypeFieldBuilder() : null;
@@ -8774,7 +8831,7 @@ public final class Annotator {
           if (!other.ocrLineDkPaymentId_.isEmpty()) {
             if (ocrLineDkPaymentId_.isEmpty()) {
               ocrLineDkPaymentId_ = other.ocrLineDkPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00002000);
+              bitField0_ = (bitField0_ & ~0x00004000);
             } else {
               ensureOcrLineDkPaymentIdIsMutable();
               ocrLineDkPaymentId_.addAll(other.ocrLineDkPaymentId_);
@@ -8787,7 +8844,7 @@ public final class Annotator {
               ocrLineDkPaymentIdBuilder_.dispose();
               ocrLineDkPaymentIdBuilder_ = null;
               ocrLineDkPaymentId_ = other.ocrLineDkPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00002000);
+              bitField0_ = (bitField0_ & ~0x00004000);
               ocrLineDkPaymentIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineDkPaymentIdFieldBuilder() : null;
@@ -8800,7 +8857,7 @@ public final class Annotator {
           if (!other.ocrLineDkCreditorId_.isEmpty()) {
             if (ocrLineDkCreditorId_.isEmpty()) {
               ocrLineDkCreditorId_ = other.ocrLineDkCreditorId_;
-              bitField0_ = (bitField0_ & ~0x00004000);
+              bitField0_ = (bitField0_ & ~0x00008000);
             } else {
               ensureOcrLineDkCreditorIdIsMutable();
               ocrLineDkCreditorId_.addAll(other.ocrLineDkCreditorId_);
@@ -8813,7 +8870,7 @@ public final class Annotator {
               ocrLineDkCreditorIdBuilder_.dispose();
               ocrLineDkCreditorIdBuilder_ = null;
               ocrLineDkCreditorId_ = other.ocrLineDkCreditorId_;
-              bitField0_ = (bitField0_ & ~0x00004000);
+              bitField0_ = (bitField0_ & ~0x00008000);
               ocrLineDkCreditorIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineDkCreditorIdFieldBuilder() : null;
@@ -8826,7 +8883,7 @@ public final class Annotator {
           if (!other.ocrLineSePaymentId_.isEmpty()) {
             if (ocrLineSePaymentId_.isEmpty()) {
               ocrLineSePaymentId_ = other.ocrLineSePaymentId_;
-              bitField0_ = (bitField0_ & ~0x00008000);
+              bitField0_ = (bitField0_ & ~0x00010000);
             } else {
               ensureOcrLineSePaymentIdIsMutable();
               ocrLineSePaymentId_.addAll(other.ocrLineSePaymentId_);
@@ -8839,7 +8896,7 @@ public final class Annotator {
               ocrLineSePaymentIdBuilder_.dispose();
               ocrLineSePaymentIdBuilder_ = null;
               ocrLineSePaymentId_ = other.ocrLineSePaymentId_;
-              bitField0_ = (bitField0_ & ~0x00008000);
+              bitField0_ = (bitField0_ & ~0x00010000);
               ocrLineSePaymentIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineSePaymentIdFieldBuilder() : null;
@@ -8852,7 +8909,7 @@ public final class Annotator {
           if (!other.ocrLineSeBankgiroCreditorId_.isEmpty()) {
             if (ocrLineSeBankgiroCreditorId_.isEmpty()) {
               ocrLineSeBankgiroCreditorId_ = other.ocrLineSeBankgiroCreditorId_;
-              bitField0_ = (bitField0_ & ~0x00010000);
+              bitField0_ = (bitField0_ & ~0x00020000);
             } else {
               ensureOcrLineSeBankgiroCreditorIdIsMutable();
               ocrLineSeBankgiroCreditorId_.addAll(other.ocrLineSeBankgiroCreditorId_);
@@ -8865,7 +8922,7 @@ public final class Annotator {
               ocrLineSeBankgiroCreditorIdBuilder_.dispose();
               ocrLineSeBankgiroCreditorIdBuilder_ = null;
               ocrLineSeBankgiroCreditorId_ = other.ocrLineSeBankgiroCreditorId_;
-              bitField0_ = (bitField0_ & ~0x00010000);
+              bitField0_ = (bitField0_ & ~0x00020000);
               ocrLineSeBankgiroCreditorIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineSeBankgiroCreditorIdFieldBuilder() : null;
@@ -8878,7 +8935,7 @@ public final class Annotator {
           if (!other.ocrLineSePlusgiroCreditorId_.isEmpty()) {
             if (ocrLineSePlusgiroCreditorId_.isEmpty()) {
               ocrLineSePlusgiroCreditorId_ = other.ocrLineSePlusgiroCreditorId_;
-              bitField0_ = (bitField0_ & ~0x00020000);
+              bitField0_ = (bitField0_ & ~0x00040000);
             } else {
               ensureOcrLineSePlusgiroCreditorIdIsMutable();
               ocrLineSePlusgiroCreditorId_.addAll(other.ocrLineSePlusgiroCreditorId_);
@@ -8891,7 +8948,7 @@ public final class Annotator {
               ocrLineSePlusgiroCreditorIdBuilder_.dispose();
               ocrLineSePlusgiroCreditorIdBuilder_ = null;
               ocrLineSePlusgiroCreditorId_ = other.ocrLineSePlusgiroCreditorId_;
-              bitField0_ = (bitField0_ & ~0x00020000);
+              bitField0_ = (bitField0_ & ~0x00040000);
               ocrLineSePlusgiroCreditorIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineSePlusgiroCreditorIdFieldBuilder() : null;
@@ -8904,7 +8961,7 @@ public final class Annotator {
           if (!other.ocrLineNoPaymentId_.isEmpty()) {
             if (ocrLineNoPaymentId_.isEmpty()) {
               ocrLineNoPaymentId_ = other.ocrLineNoPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00040000);
+              bitField0_ = (bitField0_ & ~0x00080000);
             } else {
               ensureOcrLineNoPaymentIdIsMutable();
               ocrLineNoPaymentId_.addAll(other.ocrLineNoPaymentId_);
@@ -8917,7 +8974,7 @@ public final class Annotator {
               ocrLineNoPaymentIdBuilder_.dispose();
               ocrLineNoPaymentIdBuilder_ = null;
               ocrLineNoPaymentId_ = other.ocrLineNoPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00040000);
+              bitField0_ = (bitField0_ & ~0x00080000);
               ocrLineNoPaymentIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineNoPaymentIdFieldBuilder() : null;
@@ -8930,7 +8987,7 @@ public final class Annotator {
           if (!other.ocrLineFiPaymentId_.isEmpty()) {
             if (ocrLineFiPaymentId_.isEmpty()) {
               ocrLineFiPaymentId_ = other.ocrLineFiPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00080000);
+              bitField0_ = (bitField0_ & ~0x00100000);
             } else {
               ensureOcrLineFiPaymentIdIsMutable();
               ocrLineFiPaymentId_.addAll(other.ocrLineFiPaymentId_);
@@ -8943,7 +9000,7 @@ public final class Annotator {
               ocrLineFiPaymentIdBuilder_.dispose();
               ocrLineFiPaymentIdBuilder_ = null;
               ocrLineFiPaymentId_ = other.ocrLineFiPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00080000);
+              bitField0_ = (bitField0_ & ~0x00100000);
               ocrLineFiPaymentIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineFiPaymentIdFieldBuilder() : null;
@@ -8956,7 +9013,7 @@ public final class Annotator {
           if (!other.ocrLineNlPaymentId_.isEmpty()) {
             if (ocrLineNlPaymentId_.isEmpty()) {
               ocrLineNlPaymentId_ = other.ocrLineNlPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00100000);
+              bitField0_ = (bitField0_ & ~0x00200000);
             } else {
               ensureOcrLineNlPaymentIdIsMutable();
               ocrLineNlPaymentId_.addAll(other.ocrLineNlPaymentId_);
@@ -8969,7 +9026,7 @@ public final class Annotator {
               ocrLineNlPaymentIdBuilder_.dispose();
               ocrLineNlPaymentIdBuilder_ = null;
               ocrLineNlPaymentId_ = other.ocrLineNlPaymentId_;
-              bitField0_ = (bitField0_ & ~0x00100000);
+              bitField0_ = (bitField0_ & ~0x00200000);
               ocrLineNlPaymentIdBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOcrLineNlPaymentIdFieldBuilder() : null;
@@ -8980,17 +9037,19 @@ public final class Annotator {
         }
         if (!other.getText().isEmpty()) {
           text_ = other.text_;
+          bitField0_ |= 0x00400000;
           onChanged();
         }
         if (!other.getFeedbackId().isEmpty()) {
           feedbackId_ = other.feedbackId_;
+          bitField0_ |= 0x00800000;
           onChanged();
         }
         if (ibanBuilder_ == null) {
           if (!other.iban_.isEmpty()) {
             if (iban_.isEmpty()) {
               iban_ = other.iban_;
-              bitField0_ = (bitField0_ & ~0x00200000);
+              bitField0_ = (bitField0_ & ~0x01000000);
             } else {
               ensureIbanIsMutable();
               iban_.addAll(other.iban_);
@@ -9003,7 +9062,7 @@ public final class Annotator {
               ibanBuilder_.dispose();
               ibanBuilder_ = null;
               iban_ = other.iban_;
-              bitField0_ = (bitField0_ & ~0x00200000);
+              bitField0_ = (bitField0_ & ~0x01000000);
               ibanBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getIbanFieldBuilder() : null;
@@ -9016,7 +9075,7 @@ public final class Annotator {
           if (!other.lines_.isEmpty()) {
             if (lines_.isEmpty()) {
               lines_ = other.lines_;
-              bitField0_ = (bitField0_ & ~0x00400000);
+              bitField0_ = (bitField0_ & ~0x02000000);
             } else {
               ensureLinesIsMutable();
               lines_.addAll(other.lines_);
@@ -9029,7 +9088,7 @@ public final class Annotator {
               linesBuilder_.dispose();
               linesBuilder_ = null;
               lines_ = other.lines_;
-              bitField0_ = (bitField0_ & ~0x00400000);
+              bitField0_ = (bitField0_ & ~0x02000000);
               linesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getLinesFieldBuilder() : null;
@@ -9040,13 +9099,14 @@ public final class Annotator {
         }
         if (!other.getPreview().isEmpty()) {
           preview_ = other.preview_;
+          bitField0_ |= 0x04000000;
           onChanged();
         }
         if (bankAccountNumberBuilder_ == null) {
           if (!other.bankAccountNumber_.isEmpty()) {
             if (bankAccountNumber_.isEmpty()) {
               bankAccountNumber_ = other.bankAccountNumber_;
-              bitField0_ = (bitField0_ & ~0x00800000);
+              bitField0_ = (bitField0_ & ~0x08000000);
             } else {
               ensureBankAccountNumberIsMutable();
               bankAccountNumber_.addAll(other.bankAccountNumber_);
@@ -9059,7 +9119,7 @@ public final class Annotator {
               bankAccountNumberBuilder_.dispose();
               bankAccountNumberBuilder_ = null;
               bankAccountNumber_ = other.bankAccountNumber_;
-              bitField0_ = (bitField0_ & ~0x00800000);
+              bitField0_ = (bitField0_ & ~0x08000000);
               bankAccountNumberBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBankAccountNumberFieldBuilder() : null;
@@ -9072,7 +9132,7 @@ public final class Annotator {
           if (!other.bankRegistrationNumber_.isEmpty()) {
             if (bankRegistrationNumber_.isEmpty()) {
               bankRegistrationNumber_ = other.bankRegistrationNumber_;
-              bitField0_ = (bitField0_ & ~0x01000000);
+              bitField0_ = (bitField0_ & ~0x10000000);
             } else {
               ensureBankRegistrationNumberIsMutable();
               bankRegistrationNumber_.addAll(other.bankRegistrationNumber_);
@@ -9085,7 +9145,7 @@ public final class Annotator {
               bankRegistrationNumberBuilder_.dispose();
               bankRegistrationNumberBuilder_ = null;
               bankRegistrationNumber_ = other.bankRegistrationNumber_;
-              bitField0_ = (bitField0_ & ~0x01000000);
+              bitField0_ = (bitField0_ & ~0x10000000);
               bankRegistrationNumberBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBankRegistrationNumberFieldBuilder() : null;
@@ -9098,7 +9158,7 @@ public final class Annotator {
           if (!other.bic_.isEmpty()) {
             if (bic_.isEmpty()) {
               bic_ = other.bic_;
-              bitField0_ = (bitField0_ & ~0x02000000);
+              bitField0_ = (bitField0_ & ~0x20000000);
             } else {
               ensureBicIsMutable();
               bic_.addAll(other.bic_);
@@ -9111,7 +9171,7 @@ public final class Annotator {
               bicBuilder_.dispose();
               bicBuilder_ = null;
               bic_ = other.bic_;
-              bitField0_ = (bitField0_ & ~0x02000000);
+              bitField0_ = (bitField0_ & ~0x20000000);
               bicBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getBicFieldBuilder() : null;
@@ -9124,7 +9184,7 @@ public final class Annotator {
           if (!other.documentNumber_.isEmpty()) {
             if (documentNumber_.isEmpty()) {
               documentNumber_ = other.documentNumber_;
-              bitField0_ = (bitField0_ & ~0x04000000);
+              bitField0_ = (bitField0_ & ~0x40000000);
             } else {
               ensureDocumentNumberIsMutable();
               documentNumber_.addAll(other.documentNumber_);
@@ -9137,7 +9197,7 @@ public final class Annotator {
               documentNumberBuilder_.dispose();
               documentNumberBuilder_ = null;
               documentNumber_ = other.documentNumber_;
-              bitField0_ = (bitField0_ & ~0x04000000);
+              bitField0_ = (bitField0_ & ~0x40000000);
               documentNumberBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDocumentNumberFieldBuilder() : null;
@@ -9150,7 +9210,7 @@ public final class Annotator {
           if (!other.documentDate_.isEmpty()) {
             if (documentDate_.isEmpty()) {
               documentDate_ = other.documentDate_;
-              bitField0_ = (bitField0_ & ~0x08000000);
+              bitField0_ = (bitField0_ & ~0x80000000);
             } else {
               ensureDocumentDateIsMutable();
               documentDate_.addAll(other.documentDate_);
@@ -9163,7 +9223,7 @@ public final class Annotator {
               documentDateBuilder_.dispose();
               documentDateBuilder_ = null;
               documentDate_ = other.documentDate_;
-              bitField0_ = (bitField0_ & ~0x08000000);
+              bitField0_ = (bitField0_ & ~0x80000000);
               documentDateBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getDocumentDateFieldBuilder() : null;
@@ -9176,7 +9236,7 @@ public final class Annotator {
           if (!other.orderNumber_.isEmpty()) {
             if (orderNumber_.isEmpty()) {
               orderNumber_ = other.orderNumber_;
-              bitField0_ = (bitField0_ & ~0x10000000);
+              bitField1_ = (bitField1_ & ~0x00000001);
             } else {
               ensureOrderNumberIsMutable();
               orderNumber_.addAll(other.orderNumber_);
@@ -9189,7 +9249,7 @@ public final class Annotator {
               orderNumberBuilder_.dispose();
               orderNumberBuilder_ = null;
               orderNumber_ = other.orderNumber_;
-              bitField0_ = (bitField0_ & ~0x10000000);
+              bitField1_ = (bitField1_ & ~0x00000001);
               orderNumberBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getOrderNumberFieldBuilder() : null;
@@ -9202,7 +9262,7 @@ public final class Annotator {
           if (!other.supplierName_.isEmpty()) {
             if (supplierName_.isEmpty()) {
               supplierName_ = other.supplierName_;
-              bitField0_ = (bitField0_ & ~0x20000000);
+              bitField1_ = (bitField1_ & ~0x00000002);
             } else {
               ensureSupplierNameIsMutable();
               supplierName_.addAll(other.supplierName_);
@@ -9215,7 +9275,7 @@ public final class Annotator {
               supplierNameBuilder_.dispose();
               supplierNameBuilder_ = null;
               supplierName_ = other.supplierName_;
-              bitField0_ = (bitField0_ & ~0x20000000);
+              bitField1_ = (bitField1_ & ~0x00000002);
               supplierNameBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSupplierNameFieldBuilder() : null;
@@ -9228,7 +9288,7 @@ public final class Annotator {
           if (!other.supplierVatNumber_.isEmpty()) {
             if (supplierVatNumber_.isEmpty()) {
               supplierVatNumber_ = other.supplierVatNumber_;
-              bitField0_ = (bitField0_ & ~0x40000000);
+              bitField1_ = (bitField1_ & ~0x00000004);
             } else {
               ensureSupplierVatNumberIsMutable();
               supplierVatNumber_.addAll(other.supplierVatNumber_);
@@ -9241,7 +9301,7 @@ public final class Annotator {
               supplierVatNumberBuilder_.dispose();
               supplierVatNumberBuilder_ = null;
               supplierVatNumber_ = other.supplierVatNumber_;
-              bitField0_ = (bitField0_ & ~0x40000000);
+              bitField1_ = (bitField1_ & ~0x00000004);
               supplierVatNumberBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSupplierVatNumberFieldBuilder() : null;
@@ -9254,7 +9314,7 @@ public final class Annotator {
           if (!other.supplierOrganisationNumber_.isEmpty()) {
             if (supplierOrganisationNumber_.isEmpty()) {
               supplierOrganisationNumber_ = other.supplierOrganisationNumber_;
-              bitField0_ = (bitField0_ & ~0x80000000);
+              bitField1_ = (bitField1_ & ~0x00000008);
             } else {
               ensureSupplierOrganisationNumberIsMutable();
               supplierOrganisationNumber_.addAll(other.supplierOrganisationNumber_);
@@ -9267,7 +9327,7 @@ public final class Annotator {
               supplierOrganisationNumberBuilder_.dispose();
               supplierOrganisationNumberBuilder_ = null;
               supplierOrganisationNumber_ = other.supplierOrganisationNumber_;
-              bitField0_ = (bitField0_ & ~0x80000000);
+              bitField1_ = (bitField1_ & ~0x00000008);
               supplierOrganisationNumberBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSupplierOrganisationNumberFieldBuilder() : null;
@@ -9280,7 +9340,7 @@ public final class Annotator {
           if (!other.supplierAddress_.isEmpty()) {
             if (supplierAddress_.isEmpty()) {
               supplierAddress_ = other.supplierAddress_;
-              bitField1_ = (bitField1_ & ~0x00000001);
+              bitField1_ = (bitField1_ & ~0x00000010);
             } else {
               ensureSupplierAddressIsMutable();
               supplierAddress_.addAll(other.supplierAddress_);
@@ -9293,7 +9353,7 @@ public final class Annotator {
               supplierAddressBuilder_.dispose();
               supplierAddressBuilder_ = null;
               supplierAddress_ = other.supplierAddress_;
-              bitField1_ = (bitField1_ & ~0x00000001);
+              bitField1_ = (bitField1_ & ~0x00000010);
               supplierAddressBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSupplierAddressFieldBuilder() : null;
@@ -9488,7 +9548,7 @@ public final class Annotator {
                 input.readMessage(
                     getTextAnnotationFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00001000;
                 break;
               } // case 106
               case 114: {
@@ -9610,12 +9670,12 @@ public final class Annotator {
               } // case 178
               case 186: {
                 text_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00400000;
                 break;
               } // case 186
               case 194: {
                 feedbackId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00800000;
                 break;
               } // case 194
               case 202: {
@@ -9646,7 +9706,7 @@ public final class Annotator {
               } // case 210
               case 218: {
                 preview_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x04000000;
                 break;
               } // case 218
               case 226: {
@@ -14093,7 +14153,7 @@ public final class Annotator {
        * @return Whether the textAnnotation field is set.
        */
       public boolean hasTextAnnotation() {
-        return textAnnotationBuilder_ != null || textAnnotation_ != null;
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <pre>
@@ -14123,11 +14183,11 @@ public final class Annotator {
             throw new NullPointerException();
           }
           textAnnotation_ = value;
-          onChanged();
         } else {
           textAnnotationBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -14141,11 +14201,11 @@ public final class Annotator {
           ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder builderForValue) {
         if (textAnnotationBuilder_ == null) {
           textAnnotation_ = builderForValue.build();
-          onChanged();
         } else {
           textAnnotationBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -14157,17 +14217,18 @@ public final class Annotator {
        */
       public Builder mergeTextAnnotation(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (textAnnotationBuilder_ == null) {
-          if (textAnnotation_ != null) {
-            textAnnotation_ =
-              ssn.type.TextAnnotationOuterClass.TextAnnotation.newBuilder(textAnnotation_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00001000) != 0) &&
+            textAnnotation_ != null &&
+            textAnnotation_ != ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance()) {
+            getTextAnnotationBuilder().mergeFrom(value);
           } else {
             textAnnotation_ = value;
           }
-          onChanged();
         } else {
           textAnnotationBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -14178,14 +14239,13 @@ public final class Annotator {
        * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
        */
       public Builder clearTextAnnotation() {
-        if (textAnnotationBuilder_ == null) {
-          textAnnotation_ = null;
-          onChanged();
-        } else {
-          textAnnotation_ = null;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        textAnnotation_ = null;
+        if (textAnnotationBuilder_ != null) {
+          textAnnotationBuilder_.dispose();
           textAnnotationBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -14196,7 +14256,7 @@ public final class Annotator {
        * <code>.ssn.type.TextAnnotation text_annotation = 13 [json_name = "textAnnotation"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder getTextAnnotationBuilder() {
-        
+        bitField0_ |= 0x00001000;
         onChanged();
         return getTextAnnotationFieldBuilder().getBuilder();
       }
@@ -14239,9 +14299,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkType_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkTypeIsMutable() {
-        if (!((bitField0_ & 0x00001000) != 0)) {
+        if (!((bitField0_ & 0x00002000) != 0)) {
           ocrLineDkType_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineDkType_);
-          bitField0_ |= 0x00001000;
+          bitField0_ |= 0x00002000;
          }
       }
 
@@ -14435,7 +14495,7 @@ public final class Annotator {
       public Builder clearOcrLineDkType() {
         if (ocrLineDkTypeBuilder_ == null) {
           ocrLineDkType_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00001000);
+          bitField0_ = (bitField0_ & ~0x00002000);
           onChanged();
         } else {
           ocrLineDkTypeBuilder_.clear();
@@ -14540,7 +14600,7 @@ public final class Annotator {
           ocrLineDkTypeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineDkType_,
-                  ((bitField0_ & 0x00001000) != 0),
+                  ((bitField0_ & 0x00002000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkType_ = null;
@@ -14551,9 +14611,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00002000) != 0)) {
+        if (!((bitField0_ & 0x00004000) != 0)) {
           ocrLineDkPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineDkPaymentId_);
-          bitField0_ |= 0x00002000;
+          bitField0_ |= 0x00004000;
          }
       }
 
@@ -14747,7 +14807,7 @@ public final class Annotator {
       public Builder clearOcrLineDkPaymentId() {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           ocrLineDkPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00002000);
+          bitField0_ = (bitField0_ & ~0x00004000);
           onChanged();
         } else {
           ocrLineDkPaymentIdBuilder_.clear();
@@ -14852,7 +14912,7 @@ public final class Annotator {
           ocrLineDkPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineDkPaymentId_,
-                  ((bitField0_ & 0x00002000) != 0),
+                  ((bitField0_ & 0x00004000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkPaymentId_ = null;
@@ -14863,9 +14923,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineDkCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00004000) != 0)) {
+        if (!((bitField0_ & 0x00008000) != 0)) {
           ocrLineDkCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineDkCreditorId_);
-          bitField0_ |= 0x00004000;
+          bitField0_ |= 0x00008000;
          }
       }
 
@@ -15059,7 +15119,7 @@ public final class Annotator {
       public Builder clearOcrLineDkCreditorId() {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           ocrLineDkCreditorId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00004000);
+          bitField0_ = (bitField0_ & ~0x00008000);
           onChanged();
         } else {
           ocrLineDkCreditorIdBuilder_.clear();
@@ -15164,7 +15224,7 @@ public final class Annotator {
           ocrLineDkCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineDkCreditorId_,
-                  ((bitField0_ & 0x00004000) != 0),
+                  ((bitField0_ & 0x00008000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineDkCreditorId_ = null;
@@ -15175,9 +15235,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSePaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00008000) != 0)) {
+        if (!((bitField0_ & 0x00010000) != 0)) {
           ocrLineSePaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineSePaymentId_);
-          bitField0_ |= 0x00008000;
+          bitField0_ |= 0x00010000;
          }
       }
 
@@ -15371,7 +15431,7 @@ public final class Annotator {
       public Builder clearOcrLineSePaymentId() {
         if (ocrLineSePaymentIdBuilder_ == null) {
           ocrLineSePaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00008000);
+          bitField0_ = (bitField0_ & ~0x00010000);
           onChanged();
         } else {
           ocrLineSePaymentIdBuilder_.clear();
@@ -15476,7 +15536,7 @@ public final class Annotator {
           ocrLineSePaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineSePaymentId_,
-                  ((bitField0_ & 0x00008000) != 0),
+                  ((bitField0_ & 0x00010000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSePaymentId_ = null;
@@ -15487,9 +15547,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSeBankgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSeBankgiroCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00010000) != 0)) {
+        if (!((bitField0_ & 0x00020000) != 0)) {
           ocrLineSeBankgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineSeBankgiroCreditorId_);
-          bitField0_ |= 0x00010000;
+          bitField0_ |= 0x00020000;
          }
       }
 
@@ -15683,7 +15743,7 @@ public final class Annotator {
       public Builder clearOcrLineSeBankgiroCreditorId() {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           ocrLineSeBankgiroCreditorId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00010000);
+          bitField0_ = (bitField0_ & ~0x00020000);
           onChanged();
         } else {
           ocrLineSeBankgiroCreditorIdBuilder_.clear();
@@ -15788,7 +15848,7 @@ public final class Annotator {
           ocrLineSeBankgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineSeBankgiroCreditorId_,
-                  ((bitField0_ & 0x00010000) != 0),
+                  ((bitField0_ & 0x00020000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSeBankgiroCreditorId_ = null;
@@ -15799,9 +15859,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSePlusgiroCreditorId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineSePlusgiroCreditorIdIsMutable() {
-        if (!((bitField0_ & 0x00020000) != 0)) {
+        if (!((bitField0_ & 0x00040000) != 0)) {
           ocrLineSePlusgiroCreditorId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineSePlusgiroCreditorId_);
-          bitField0_ |= 0x00020000;
+          bitField0_ |= 0x00040000;
          }
       }
 
@@ -15995,7 +16055,7 @@ public final class Annotator {
       public Builder clearOcrLineSePlusgiroCreditorId() {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           ocrLineSePlusgiroCreditorId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00020000);
+          bitField0_ = (bitField0_ & ~0x00040000);
           onChanged();
         } else {
           ocrLineSePlusgiroCreditorIdBuilder_.clear();
@@ -16100,7 +16160,7 @@ public final class Annotator {
           ocrLineSePlusgiroCreditorIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineSePlusgiroCreditorId_,
-                  ((bitField0_ & 0x00020000) != 0),
+                  ((bitField0_ & 0x00040000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineSePlusgiroCreditorId_ = null;
@@ -16111,9 +16171,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineNoPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNoPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00040000) != 0)) {
+        if (!((bitField0_ & 0x00080000) != 0)) {
           ocrLineNoPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineNoPaymentId_);
-          bitField0_ |= 0x00040000;
+          bitField0_ |= 0x00080000;
          }
       }
 
@@ -16307,7 +16367,7 @@ public final class Annotator {
       public Builder clearOcrLineNoPaymentId() {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           ocrLineNoPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00040000);
+          bitField0_ = (bitField0_ & ~0x00080000);
           onChanged();
         } else {
           ocrLineNoPaymentIdBuilder_.clear();
@@ -16412,7 +16472,7 @@ public final class Annotator {
           ocrLineNoPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineNoPaymentId_,
-                  ((bitField0_ & 0x00040000) != 0),
+                  ((bitField0_ & 0x00080000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineNoPaymentId_ = null;
@@ -16423,9 +16483,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineFiPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineFiPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00080000) != 0)) {
+        if (!((bitField0_ & 0x00100000) != 0)) {
           ocrLineFiPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineFiPaymentId_);
-          bitField0_ |= 0x00080000;
+          bitField0_ |= 0x00100000;
          }
       }
 
@@ -16619,7 +16679,7 @@ public final class Annotator {
       public Builder clearOcrLineFiPaymentId() {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           ocrLineFiPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00080000);
+          bitField0_ = (bitField0_ & ~0x00100000);
           onChanged();
         } else {
           ocrLineFiPaymentIdBuilder_.clear();
@@ -16724,7 +16784,7 @@ public final class Annotator {
           ocrLineFiPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineFiPaymentId_,
-                  ((bitField0_ & 0x00080000) != 0),
+                  ((bitField0_ & 0x00100000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineFiPaymentId_ = null;
@@ -16735,9 +16795,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineNlPaymentId_ =
         java.util.Collections.emptyList();
       private void ensureOcrLineNlPaymentIdIsMutable() {
-        if (!((bitField0_ & 0x00100000) != 0)) {
+        if (!((bitField0_ & 0x00200000) != 0)) {
           ocrLineNlPaymentId_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(ocrLineNlPaymentId_);
-          bitField0_ |= 0x00100000;
+          bitField0_ |= 0x00200000;
          }
       }
 
@@ -16931,7 +16991,7 @@ public final class Annotator {
       public Builder clearOcrLineNlPaymentId() {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           ocrLineNlPaymentId_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00100000);
+          bitField0_ = (bitField0_ & ~0x00200000);
           onChanged();
         } else {
           ocrLineNlPaymentIdBuilder_.clear();
@@ -17036,7 +17096,7 @@ public final class Annotator {
           ocrLineNlPaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   ocrLineNlPaymentId_,
-                  ((bitField0_ & 0x00100000) != 0),
+                  ((bitField0_ & 0x00200000) != 0),
                   getParentForChildren(),
                   isClean());
           ocrLineNlPaymentId_ = null;
@@ -17097,11 +17157,9 @@ public final class Annotator {
        */
       public Builder setText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         text_ = value;
+        bitField0_ |= 0x00400000;
         onChanged();
         return this;
       }
@@ -17114,8 +17172,8 @@ public final class Annotator {
        * @return This builder for chaining.
        */
       public Builder clearText() {
-        
         text_ = getDefaultInstance().getText();
+        bitField0_ = (bitField0_ & ~0x00400000);
         onChanged();
         return this;
       }
@@ -17130,12 +17188,10 @@ public final class Annotator {
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         text_ = value;
+        bitField0_ |= 0x00400000;
         onChanged();
         return this;
       }
@@ -17196,11 +17252,9 @@ public final class Annotator {
        */
       public Builder setFeedbackId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         feedbackId_ = value;
+        bitField0_ |= 0x00800000;
         onChanged();
         return this;
       }
@@ -17214,8 +17268,8 @@ public final class Annotator {
        * @return This builder for chaining.
        */
       public Builder clearFeedbackId() {
-        
         feedbackId_ = getDefaultInstance().getFeedbackId();
+        bitField0_ = (bitField0_ & ~0x00800000);
         onChanged();
         return this;
       }
@@ -17231,12 +17285,10 @@ public final class Annotator {
        */
       public Builder setFeedbackIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         feedbackId_ = value;
+        bitField0_ |= 0x00800000;
         onChanged();
         return this;
       }
@@ -17244,9 +17296,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> iban_ =
         java.util.Collections.emptyList();
       private void ensureIbanIsMutable() {
-        if (!((bitField0_ & 0x00200000) != 0)) {
+        if (!((bitField0_ & 0x01000000) != 0)) {
           iban_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(iban_);
-          bitField0_ |= 0x00200000;
+          bitField0_ |= 0x01000000;
          }
       }
 
@@ -17462,7 +17514,7 @@ public final class Annotator {
       public Builder clearIban() {
         if (ibanBuilder_ == null) {
           iban_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00200000);
+          bitField0_ = (bitField0_ & ~0x01000000);
           onChanged();
         } else {
           ibanBuilder_.clear();
@@ -17581,7 +17633,7 @@ public final class Annotator {
           ibanBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   iban_,
-                  ((bitField0_ & 0x00200000) != 0),
+                  ((bitField0_ & 0x01000000) != 0),
                   getParentForChildren(),
                   isClean());
           iban_ = null;
@@ -17592,9 +17644,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.LineCandidate> lines_ =
         java.util.Collections.emptyList();
       private void ensureLinesIsMutable() {
-        if (!((bitField0_ & 0x00400000) != 0)) {
+        if (!((bitField0_ & 0x02000000) != 0)) {
           lines_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.LineCandidate>(lines_);
-          bitField0_ |= 0x00400000;
+          bitField0_ |= 0x02000000;
          }
       }
 
@@ -17799,7 +17851,7 @@ public final class Annotator {
       public Builder clearLines() {
         if (linesBuilder_ == null) {
           lines_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00400000);
+          bitField0_ = (bitField0_ & ~0x02000000);
           onChanged();
         } else {
           linesBuilder_.clear();
@@ -17911,7 +17963,7 @@ public final class Annotator {
           linesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.LineCandidate, ssn.type.CandidateOuterClass.LineCandidate.Builder, ssn.type.CandidateOuterClass.LineCandidateOrBuilder>(
                   lines_,
-                  ((bitField0_ & 0x00400000) != 0),
+                  ((bitField0_ & 0x02000000) != 0),
                   getParentForChildren(),
                   isClean());
           lines_ = null;
@@ -17972,11 +18024,9 @@ public final class Annotator {
        */
       public Builder setPreview(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         preview_ = value;
+        bitField0_ |= 0x04000000;
         onChanged();
         return this;
       }
@@ -17989,8 +18039,8 @@ public final class Annotator {
        * @return This builder for chaining.
        */
       public Builder clearPreview() {
-        
         preview_ = getDefaultInstance().getPreview();
+        bitField0_ = (bitField0_ & ~0x04000000);
         onChanged();
         return this;
       }
@@ -18005,12 +18055,10 @@ public final class Annotator {
        */
       public Builder setPreviewBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         preview_ = value;
+        bitField0_ |= 0x04000000;
         onChanged();
         return this;
       }
@@ -18018,9 +18066,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> bankAccountNumber_ =
         java.util.Collections.emptyList();
       private void ensureBankAccountNumberIsMutable() {
-        if (!((bitField0_ & 0x00800000) != 0)) {
+        if (!((bitField0_ & 0x08000000) != 0)) {
           bankAccountNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(bankAccountNumber_);
-          bitField0_ |= 0x00800000;
+          bitField0_ |= 0x08000000;
          }
       }
 
@@ -18214,7 +18262,7 @@ public final class Annotator {
       public Builder clearBankAccountNumber() {
         if (bankAccountNumberBuilder_ == null) {
           bankAccountNumber_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00800000);
+          bitField0_ = (bitField0_ & ~0x08000000);
           onChanged();
         } else {
           bankAccountNumberBuilder_.clear();
@@ -18319,7 +18367,7 @@ public final class Annotator {
           bankAccountNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   bankAccountNumber_,
-                  ((bitField0_ & 0x00800000) != 0),
+                  ((bitField0_ & 0x08000000) != 0),
                   getParentForChildren(),
                   isClean());
           bankAccountNumber_ = null;
@@ -18330,9 +18378,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> bankRegistrationNumber_ =
         java.util.Collections.emptyList();
       private void ensureBankRegistrationNumberIsMutable() {
-        if (!((bitField0_ & 0x01000000) != 0)) {
+        if (!((bitField0_ & 0x10000000) != 0)) {
           bankRegistrationNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(bankRegistrationNumber_);
-          bitField0_ |= 0x01000000;
+          bitField0_ |= 0x10000000;
          }
       }
 
@@ -18526,7 +18574,7 @@ public final class Annotator {
       public Builder clearBankRegistrationNumber() {
         if (bankRegistrationNumberBuilder_ == null) {
           bankRegistrationNumber_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x01000000);
+          bitField0_ = (bitField0_ & ~0x10000000);
           onChanged();
         } else {
           bankRegistrationNumberBuilder_.clear();
@@ -18631,7 +18679,7 @@ public final class Annotator {
           bankRegistrationNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   bankRegistrationNumber_,
-                  ((bitField0_ & 0x01000000) != 0),
+                  ((bitField0_ & 0x10000000) != 0),
                   getParentForChildren(),
                   isClean());
           bankRegistrationNumber_ = null;
@@ -18642,9 +18690,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> bic_ =
         java.util.Collections.emptyList();
       private void ensureBicIsMutable() {
-        if (!((bitField0_ & 0x02000000) != 0)) {
+        if (!((bitField0_ & 0x20000000) != 0)) {
           bic_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(bic_);
-          bitField0_ |= 0x02000000;
+          bitField0_ |= 0x20000000;
          }
       }
 
@@ -18838,7 +18886,7 @@ public final class Annotator {
       public Builder clearBic() {
         if (bicBuilder_ == null) {
           bic_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x02000000);
+          bitField0_ = (bitField0_ & ~0x20000000);
           onChanged();
         } else {
           bicBuilder_.clear();
@@ -18943,7 +18991,7 @@ public final class Annotator {
           bicBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   bic_,
-                  ((bitField0_ & 0x02000000) != 0),
+                  ((bitField0_ & 0x20000000) != 0),
                   getParentForChildren(),
                   isClean());
           bic_ = null;
@@ -18954,9 +19002,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentNumber_ =
         java.util.Collections.emptyList();
       private void ensureDocumentNumberIsMutable() {
-        if (!((bitField0_ & 0x04000000) != 0)) {
+        if (!((bitField0_ & 0x40000000) != 0)) {
           documentNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(documentNumber_);
-          bitField0_ |= 0x04000000;
+          bitField0_ |= 0x40000000;
          }
       }
 
@@ -19150,7 +19198,7 @@ public final class Annotator {
       public Builder clearDocumentNumber() {
         if (documentNumberBuilder_ == null) {
           documentNumber_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x04000000);
+          bitField0_ = (bitField0_ & ~0x40000000);
           onChanged();
         } else {
           documentNumberBuilder_.clear();
@@ -19255,7 +19303,7 @@ public final class Annotator {
           documentNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   documentNumber_,
-                  ((bitField0_ & 0x04000000) != 0),
+                  ((bitField0_ & 0x40000000) != 0),
                   getParentForChildren(),
                   isClean());
           documentNumber_ = null;
@@ -19266,9 +19314,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentDate_ =
         java.util.Collections.emptyList();
       private void ensureDocumentDateIsMutable() {
-        if (!((bitField0_ & 0x08000000) != 0)) {
+        if (!((bitField0_ & 0x80000000) != 0)) {
           documentDate_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(documentDate_);
-          bitField0_ |= 0x08000000;
+          bitField0_ |= 0x80000000;
          }
       }
 
@@ -19462,7 +19510,7 @@ public final class Annotator {
       public Builder clearDocumentDate() {
         if (documentDateBuilder_ == null) {
           documentDate_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x08000000);
+          bitField0_ = (bitField0_ & ~0x80000000);
           onChanged();
         } else {
           documentDateBuilder_.clear();
@@ -19567,7 +19615,7 @@ public final class Annotator {
           documentDateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   documentDate_,
-                  ((bitField0_ & 0x08000000) != 0),
+                  ((bitField0_ & 0x80000000) != 0),
                   getParentForChildren(),
                   isClean());
           documentDate_ = null;
@@ -19578,9 +19626,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> orderNumber_ =
         java.util.Collections.emptyList();
       private void ensureOrderNumberIsMutable() {
-        if (!((bitField0_ & 0x10000000) != 0)) {
+        if (!((bitField1_ & 0x00000001) != 0)) {
           orderNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(orderNumber_);
-          bitField0_ |= 0x10000000;
+          bitField1_ |= 0x00000001;
          }
       }
 
@@ -19774,7 +19822,7 @@ public final class Annotator {
       public Builder clearOrderNumber() {
         if (orderNumberBuilder_ == null) {
           orderNumber_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x10000000);
+          bitField1_ = (bitField1_ & ~0x00000001);
           onChanged();
         } else {
           orderNumberBuilder_.clear();
@@ -19879,7 +19927,7 @@ public final class Annotator {
           orderNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   orderNumber_,
-                  ((bitField0_ & 0x10000000) != 0),
+                  ((bitField1_ & 0x00000001) != 0),
                   getParentForChildren(),
                   isClean());
           orderNumber_ = null;
@@ -19890,9 +19938,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierName_ =
         java.util.Collections.emptyList();
       private void ensureSupplierNameIsMutable() {
-        if (!((bitField0_ & 0x20000000) != 0)) {
+        if (!((bitField1_ & 0x00000002) != 0)) {
           supplierName_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(supplierName_);
-          bitField0_ |= 0x20000000;
+          bitField1_ |= 0x00000002;
          }
       }
 
@@ -20086,7 +20134,7 @@ public final class Annotator {
       public Builder clearSupplierName() {
         if (supplierNameBuilder_ == null) {
           supplierName_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x20000000);
+          bitField1_ = (bitField1_ & ~0x00000002);
           onChanged();
         } else {
           supplierNameBuilder_.clear();
@@ -20191,7 +20239,7 @@ public final class Annotator {
           supplierNameBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   supplierName_,
-                  ((bitField0_ & 0x20000000) != 0),
+                  ((bitField1_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           supplierName_ = null;
@@ -20202,9 +20250,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierVatNumber_ =
         java.util.Collections.emptyList();
       private void ensureSupplierVatNumberIsMutable() {
-        if (!((bitField0_ & 0x40000000) != 0)) {
+        if (!((bitField1_ & 0x00000004) != 0)) {
           supplierVatNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(supplierVatNumber_);
-          bitField0_ |= 0x40000000;
+          bitField1_ |= 0x00000004;
          }
       }
 
@@ -20409,7 +20457,7 @@ public final class Annotator {
       public Builder clearSupplierVatNumber() {
         if (supplierVatNumberBuilder_ == null) {
           supplierVatNumber_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x40000000);
+          bitField1_ = (bitField1_ & ~0x00000004);
           onChanged();
         } else {
           supplierVatNumberBuilder_.clear();
@@ -20521,7 +20569,7 @@ public final class Annotator {
           supplierVatNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   supplierVatNumber_,
-                  ((bitField0_ & 0x40000000) != 0),
+                  ((bitField1_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           supplierVatNumber_ = null;
@@ -20532,9 +20580,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierOrganisationNumber_ =
         java.util.Collections.emptyList();
       private void ensureSupplierOrganisationNumberIsMutable() {
-        if (!((bitField0_ & 0x80000000) != 0)) {
+        if (!((bitField1_ & 0x00000008) != 0)) {
           supplierOrganisationNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(supplierOrganisationNumber_);
-          bitField0_ |= 0x80000000;
+          bitField1_ |= 0x00000008;
          }
       }
 
@@ -20739,7 +20787,7 @@ public final class Annotator {
       public Builder clearSupplierOrganisationNumber() {
         if (supplierOrganisationNumberBuilder_ == null) {
           supplierOrganisationNumber_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x80000000);
+          bitField1_ = (bitField1_ & ~0x00000008);
           onChanged();
         } else {
           supplierOrganisationNumberBuilder_.clear();
@@ -20851,7 +20899,7 @@ public final class Annotator {
           supplierOrganisationNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   supplierOrganisationNumber_,
-                  ((bitField0_ & 0x80000000) != 0),
+                  ((bitField1_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           supplierOrganisationNumber_ = null;
@@ -20862,9 +20910,9 @@ public final class Annotator {
       private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierAddress_ =
         java.util.Collections.emptyList();
       private void ensureSupplierAddressIsMutable() {
-        if (!((bitField1_ & 0x00000001) != 0)) {
+        if (!((bitField1_ & 0x00000010) != 0)) {
           supplierAddress_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(supplierAddress_);
-          bitField1_ |= 0x00000001;
+          bitField1_ |= 0x00000010;
          }
       }
 
@@ -21069,7 +21117,7 @@ public final class Annotator {
       public Builder clearSupplierAddress() {
         if (supplierAddressBuilder_ == null) {
           supplierAddress_ = java.util.Collections.emptyList();
-          bitField1_ = (bitField1_ & ~0x00000001);
+          bitField1_ = (bitField1_ & ~0x00000010);
           onChanged();
         } else {
           supplierAddressBuilder_.clear();
@@ -21181,7 +21229,7 @@ public final class Annotator {
           supplierAddressBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
                   supplierAddress_,
-                  ((bitField1_ & 0x00000001) != 0),
+                  ((bitField1_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           supplierAddress_ = null;
@@ -21343,7 +21391,7 @@ public final class Annotator {
     }
 
     public static final int CONTENT_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString content_;
+    private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <pre>
      * Document content, represented as a stream of bytes.
@@ -21400,7 +21448,7 @@ public final class Annotator {
      */
     @java.lang.Override
     public ssn.annotator.v1.Annotator.DocumentSourceOrBuilder getSourceOrBuilder() {
-      return getSource();
+      return source_ == null ? ssn.annotator.v1.Annotator.DocumentSource.getDefaultInstance() : source_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -21607,12 +21655,11 @@ public final class Annotator {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         content_ = com.google.protobuf.ByteString.EMPTY;
-
-        if (sourceBuilder_ == null) {
-          source_ = null;
-        } else {
-          source_ = null;
+        source_ = null;
+        if (sourceBuilder_ != null) {
+          sourceBuilder_.dispose();
           sourceBuilder_ = null;
         }
         return this;
@@ -21641,14 +21688,21 @@ public final class Annotator {
       @java.lang.Override
       public ssn.annotator.v1.Annotator.Document buildPartial() {
         ssn.annotator.v1.Annotator.Document result = new ssn.annotator.v1.Annotator.Document(this);
-        result.content_ = content_;
-        if (sourceBuilder_ == null) {
-          result.source_ = source_;
-        } else {
-          result.source_ = sourceBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.annotator.v1.Annotator.Document result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.content_ = content_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.source_ = sourceBuilder_ == null
+              ? source_
+              : sourceBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -21729,14 +21783,14 @@ public final class Annotator {
                 break;
               case 10: {
                 content_ = input.readBytes();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getSourceFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -21754,6 +21808,7 @@ public final class Annotator {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.protobuf.ByteString content_ = com.google.protobuf.ByteString.EMPTY;
       /**
@@ -21782,11 +21837,9 @@ public final class Annotator {
        * @return This builder for chaining.
        */
       public Builder setContent(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         content_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -21801,7 +21854,7 @@ public final class Annotator {
        * @return This builder for chaining.
        */
       public Builder clearContent() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         content_ = getDefaultInstance().getContent();
         onChanged();
         return this;
@@ -21821,7 +21874,7 @@ public final class Annotator {
        * @return Whether the source field is set.
        */
       public boolean hasSource() {
-        return sourceBuilder_ != null || source_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -21855,11 +21908,11 @@ public final class Annotator {
             throw new NullPointerException();
           }
           source_ = value;
-          onChanged();
         } else {
           sourceBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -21875,11 +21928,11 @@ public final class Annotator {
           ssn.annotator.v1.Annotator.DocumentSource.Builder builderForValue) {
         if (sourceBuilder_ == null) {
           source_ = builderForValue.build();
-          onChanged();
         } else {
           sourceBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -21893,17 +21946,18 @@ public final class Annotator {
        */
       public Builder mergeSource(ssn.annotator.v1.Annotator.DocumentSource value) {
         if (sourceBuilder_ == null) {
-          if (source_ != null) {
-            source_ =
-              ssn.annotator.v1.Annotator.DocumentSource.newBuilder(source_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            source_ != null &&
+            source_ != ssn.annotator.v1.Annotator.DocumentSource.getDefaultInstance()) {
+            getSourceBuilder().mergeFrom(value);
           } else {
             source_ = value;
           }
-          onChanged();
         } else {
           sourceBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -21916,14 +21970,13 @@ public final class Annotator {
        * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
        */
       public Builder clearSource() {
-        if (sourceBuilder_ == null) {
-          source_ = null;
-          onChanged();
-        } else {
-          source_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        source_ = null;
+        if (sourceBuilder_ != null) {
+          sourceBuilder_.dispose();
           sourceBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -21936,7 +21989,7 @@ public final class Annotator {
        * <code>.ssn.annotator.v1.DocumentSource source = 2 [json_name = "source"];</code>
        */
       public ssn.annotator.v1.Annotator.DocumentSource.Builder getSourceBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getSourceFieldBuilder().getBuilder();
       }
@@ -22117,7 +22170,8 @@ public final class Annotator {
     }
 
     public static final int HTTP_URI_FIELD_NUMBER = 1;
-    private volatile java.lang.Object httpUri_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object httpUri_ = "";
     /**
      * <pre>
      * The URI of the source document. Can be either:
@@ -22357,8 +22411,8 @@ public final class Annotator {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         httpUri_ = "";
-
         return this;
       }
 
@@ -22385,9 +22439,16 @@ public final class Annotator {
       @java.lang.Override
       public ssn.annotator.v1.Annotator.DocumentSource buildPartial() {
         ssn.annotator.v1.Annotator.DocumentSource result = new ssn.annotator.v1.Annotator.DocumentSource(this);
-        result.httpUri_ = httpUri_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.annotator.v1.Annotator.DocumentSource result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.httpUri_ = httpUri_;
+        }
       }
 
       @java.lang.Override
@@ -22436,6 +22497,7 @@ public final class Annotator {
         if (other == ssn.annotator.v1.Annotator.DocumentSource.getDefaultInstance()) return this;
         if (!other.getHttpUri().isEmpty()) {
           httpUri_ = other.httpUri_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -22466,7 +22528,7 @@ public final class Annotator {
                 break;
               case 10: {
                 httpUri_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -22484,6 +22546,7 @@ public final class Annotator {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object httpUri_ = "";
       /**
@@ -22550,11 +22613,9 @@ public final class Annotator {
        */
       public Builder setHttpUri(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         httpUri_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -22571,8 +22632,8 @@ public final class Annotator {
        * @return This builder for chaining.
        */
       public Builder clearHttpUri() {
-        
         httpUri_ = getDefaultInstance().getHttpUri();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -22591,12 +22652,10 @@ public final class Annotator {
        */
       public Builder setHttpUriBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         httpUri_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

@@ -4,7 +4,7 @@ syntax = "proto3";
 
 package tensorflow;
 
-import "ssn/mlservice/v2/feature.proto";
+import "ssn/type/tensorflow/feature.proto";
 
 option cc_enable_arenas = true;
 option go_package = "github.com/e-conomic/tensorflow/tensorflow/go/core/example";

@@ -1,0 +1,81 @@
+syntax = "proto3";
+
+package cv.scanner.v1;
+
+import "google/api/annotations.proto";
+import "google/api/http.proto";
+import "ssn/annotator/v1/annotator.proto";
+import "ssn/type/candidate.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/cv/scanner/v1;cv";
+
+service Scanner {
+  rpc ScanCV(ScanCVRequest) returns (ScanCVResponse) {
+    option (google.api.http) = {
+      post: "/v1/document:scan"
+      body: "*"
+    };
+  }
+}
+
+message ScanCVRequest {
+  ssn.annotator.v1.Document document = 1;
+  repeated Feature features = 2;
+  repeated string tags = 3;
+}
+
+message ScanCVResponse {
+  repeated ssn.type.Candidate first_name = 1;
+  repeated ssn.type.Candidate last_name = 2;
+  repeated ssn.type.Candidate date_of_birth = 3;
+  repeated ssn.type.Candidate phone = 4;
+  repeated ssn.type.Candidate email = 5;
+  repeated ssn.type.Candidate country = 6;
+  repeated ssn.type.Candidate nationality = 7;
+  repeated ssn.type.Candidate postal_code = 8;
+  repeated ssn.type.Candidate postal_area = 9;
+  repeated ssn.type.Candidate municipality = 10;
+  repeated ssn.type.Candidate county = 11;
+  repeated ssn.type.Candidate address = 12;
+  repeated ssn.type.Candidate employer_name = 13;
+  repeated ssn.type.Candidate position_title = 14;
+  repeated ssn.type.Candidate date = 15;
+  repeated ssn.type.Candidate institution_name = 16;
+  repeated ssn.type.Candidate institution_type = 17;
+  repeated ssn.type.Candidate area_of_education = 18;
+  repeated ssn.type.Candidate degree = 19;
+  repeated ssn.type.Candidate average_grade = 20;
+  repeated ssn.type.Candidate name = 21;
+  repeated ssn.type.Candidate level = 22;
+}
+
+message Feature {
+  enum Type {
+    FIRST_NAME = 0;
+    LAST_NAME = 1;
+    DATE_OF_BIRTH = 2;
+    PHONE = 3;
+    EMAIL = 4;
+    COUNTRY = 5;
+    NATIONALITY = 6;
+    POSTAL_CODE = 7;
+    POSTAL_AREA = 8;
+    MUNICIPALITY = 9;
+    COUNTY = 10;
+    ADDRESS = 11;
+    EMPLOYER_NAME = 12;
+    POSITION_TITLE = 13;
+    DATE = 14;
+    INSTITUTE_NAME = 15;
+    INSTITUTE_TYPE = 16;
+    AREA_OF_EDUCATION = 17;
+    DEGREE = 18;
+    AVERAGE_GRADE = 19;
+    NAME = 20;
+    LEVEL = 21;
+  }
+  // The feature type.
+  Type type = 1;
+
+  int32 max_results = 2;
+}

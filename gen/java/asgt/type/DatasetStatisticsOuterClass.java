@@ -149,7 +149,7 @@ public final class DatasetStatisticsOuterClass {
     }
 
     public static final int LEXICAL_DIVERSITY_SPLIT_ON_SPACE_FIELD_NUMBER = 2;
-    private float lexicalDiversitySplitOnSpace_;
+    private float lexicalDiversitySplitOnSpace_ = 0F;
     /**
      * <pre>
      * lexical diversity of the dataset split on space
@@ -164,7 +164,7 @@ public final class DatasetStatisticsOuterClass {
     }
 
     public static final int LEXICAL_DIVERSITY_SPLIT_ON_SPECIAL_FIELD_NUMBER = 3;
-    private float lexicalDiversitySplitOnSpecial_;
+    private float lexicalDiversitySplitOnSpecial_ = 0F;
     /**
      * <pre>
      * lexical diversity of the dataset split on special characters
@@ -179,7 +179,7 @@ public final class DatasetStatisticsOuterClass {
     }
 
     public static final int PERCENT_EMPTY_STRINGS_FIELD_NUMBER = 4;
-    private float percentEmptyStrings_;
+    private float percentEmptyStrings_ = 0F;
     /**
      * <pre>
      * percentage of empty strings in the dataset
@@ -194,7 +194,7 @@ public final class DatasetStatisticsOuterClass {
     }
 
     public static final int PERCENT_PURE_NUMBERS_REMOVE_SPACES_FIELD_NUMBER = 5;
-    private float percentPureNumbersRemoveSpaces_;
+    private float percentPureNumbersRemoveSpaces_ = 0F;
     /**
      * <pre>
      * percentage of pure numbers in the dataset after removing spaces
@@ -209,7 +209,7 @@ public final class DatasetStatisticsOuterClass {
     }
 
     public static final int PERCENT_PURE_NUMBERS_REMOVE_SPECIAL_FIELD_NUMBER = 6;
-    private float percentPureNumbersRemoveSpecial_;
+    private float percentPureNumbersRemoveSpecial_ = 0F;
     /**
      * <pre>
      * percentage of pure numbers in the dataset after removing spaces and special characters
@@ -224,7 +224,7 @@ public final class DatasetStatisticsOuterClass {
     }
 
     public static final int PERCENT_SPECIAL_CHARACTERS_FIELD_NUMBER = 7;
-    private float percentSpecialCharacters_;
+    private float percentSpecialCharacters_ = 0F;
     /**
      * <pre>
      * percentage of special characters in the dataset
@@ -239,7 +239,7 @@ public final class DatasetStatisticsOuterClass {
     }
 
     public static final int PERCENT_DIGITS_FIELD_NUMBER = 8;
-    private float percentDigits_;
+    private float percentDigits_ = 0F;
     /**
      * <pre>
      * percentage of digits in the dataset
@@ -254,7 +254,7 @@ public final class DatasetStatisticsOuterClass {
     }
 
     public static final int PERCENT_LETTERS_FIELD_NUMBER = 9;
-    private float percentLetters_;
+    private float percentLetters_ = 0F;
     /**
      * <pre>
      * percentage of letters in the dataset
@@ -269,7 +269,7 @@ public final class DatasetStatisticsOuterClass {
     }
 
     public static final int PERCENT_DUPLICATES_IN_DATASET_FIELD_NUMBER = 10;
-    private float percentDuplicatesInDataset_;
+    private float percentDuplicatesInDataset_ = 0F;
     /**
      * <pre>
      * percentage of duplicates in the dataset
@@ -577,24 +577,16 @@ public final class DatasetStatisticsOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         lexicalDiversitySplitOnSpace_ = 0F;
-
         lexicalDiversitySplitOnSpecial_ = 0F;
-
         percentEmptyStrings_ = 0F;
-
         percentPureNumbersRemoveSpaces_ = 0F;
-
         percentPureNumbersRemoveSpecial_ = 0F;
-
         percentSpecialCharacters_ = 0F;
-
         percentDigits_ = 0F;
-
         percentLetters_ = 0F;
-
         percentDuplicatesInDataset_ = 0F;
-
         return this;
       }
 
@@ -621,17 +613,40 @@ public final class DatasetStatisticsOuterClass {
       @java.lang.Override
       public asgt.type.DatasetStatisticsOuterClass.DatasetStatistics buildPartial() {
         asgt.type.DatasetStatisticsOuterClass.DatasetStatistics result = new asgt.type.DatasetStatisticsOuterClass.DatasetStatistics(this);
-        result.lexicalDiversitySplitOnSpace_ = lexicalDiversitySplitOnSpace_;
-        result.lexicalDiversitySplitOnSpecial_ = lexicalDiversitySplitOnSpecial_;
-        result.percentEmptyStrings_ = percentEmptyStrings_;
-        result.percentPureNumbersRemoveSpaces_ = percentPureNumbersRemoveSpaces_;
-        result.percentPureNumbersRemoveSpecial_ = percentPureNumbersRemoveSpecial_;
-        result.percentSpecialCharacters_ = percentSpecialCharacters_;
-        result.percentDigits_ = percentDigits_;
-        result.percentLetters_ = percentLetters_;
-        result.percentDuplicatesInDataset_ = percentDuplicatesInDataset_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.DatasetStatisticsOuterClass.DatasetStatistics result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.lexicalDiversitySplitOnSpace_ = lexicalDiversitySplitOnSpace_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.lexicalDiversitySplitOnSpecial_ = lexicalDiversitySplitOnSpecial_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.percentEmptyStrings_ = percentEmptyStrings_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.percentPureNumbersRemoveSpaces_ = percentPureNumbersRemoveSpaces_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.percentPureNumbersRemoveSpecial_ = percentPureNumbersRemoveSpecial_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.percentSpecialCharacters_ = percentSpecialCharacters_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.percentDigits_ = percentDigits_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.percentLetters_ = percentLetters_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.percentDuplicatesInDataset_ = percentDuplicatesInDataset_;
+        }
       }
 
       @java.lang.Override
@@ -733,47 +748,47 @@ public final class DatasetStatisticsOuterClass {
                 break;
               case 21: {
                 lexicalDiversitySplitOnSpace_ = input.readFloat();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 21
               case 29: {
                 lexicalDiversitySplitOnSpecial_ = input.readFloat();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 29
               case 37: {
                 percentEmptyStrings_ = input.readFloat();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 37
               case 45: {
                 percentPureNumbersRemoveSpaces_ = input.readFloat();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 45
               case 53: {
                 percentPureNumbersRemoveSpecial_ = input.readFloat();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 53
               case 61: {
                 percentSpecialCharacters_ = input.readFloat();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 61
               case 69: {
                 percentDigits_ = input.readFloat();
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 69
               case 77: {
                 percentLetters_ = input.readFloat();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 77
               case 85: {
                 percentDuplicatesInDataset_ = input.readFloat();
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 85
               default: {
@@ -791,6 +806,7 @@ public final class DatasetStatisticsOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private float lexicalDiversitySplitOnSpace_ ;
       /**
@@ -817,6 +833,7 @@ public final class DatasetStatisticsOuterClass {
       public Builder setLexicalDiversitySplitOnSpace(float value) {
         
         lexicalDiversitySplitOnSpace_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -829,7 +846,7 @@ public final class DatasetStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLexicalDiversitySplitOnSpace() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         lexicalDiversitySplitOnSpace_ = 0F;
         onChanged();
         return this;
@@ -860,6 +877,7 @@ public final class DatasetStatisticsOuterClass {
       public Builder setLexicalDiversitySplitOnSpecial(float value) {
         
         lexicalDiversitySplitOnSpecial_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -872,7 +890,7 @@ public final class DatasetStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLexicalDiversitySplitOnSpecial() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         lexicalDiversitySplitOnSpecial_ = 0F;
         onChanged();
         return this;
@@ -903,6 +921,7 @@ public final class DatasetStatisticsOuterClass {
       public Builder setPercentEmptyStrings(float value) {
         
         percentEmptyStrings_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -915,7 +934,7 @@ public final class DatasetStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPercentEmptyStrings() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         percentEmptyStrings_ = 0F;
         onChanged();
         return this;
@@ -946,6 +965,7 @@ public final class DatasetStatisticsOuterClass {
       public Builder setPercentPureNumbersRemoveSpaces(float value) {
         
         percentPureNumbersRemoveSpaces_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -958,7 +978,7 @@ public final class DatasetStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPercentPureNumbersRemoveSpaces() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         percentPureNumbersRemoveSpaces_ = 0F;
         onChanged();
         return this;
@@ -989,6 +1009,7 @@ public final class DatasetStatisticsOuterClass {
       public Builder setPercentPureNumbersRemoveSpecial(float value) {
         
         percentPureNumbersRemoveSpecial_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1001,7 +1022,7 @@ public final class DatasetStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPercentPureNumbersRemoveSpecial() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         percentPureNumbersRemoveSpecial_ = 0F;
         onChanged();
         return this;
@@ -1032,6 +1053,7 @@ public final class DatasetStatisticsOuterClass {
       public Builder setPercentSpecialCharacters(float value) {
         
         percentSpecialCharacters_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1044,7 +1066,7 @@ public final class DatasetStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPercentSpecialCharacters() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         percentSpecialCharacters_ = 0F;
         onChanged();
         return this;
@@ -1075,6 +1097,7 @@ public final class DatasetStatisticsOuterClass {
       public Builder setPercentDigits(float value) {
         
         percentDigits_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -1087,7 +1110,7 @@ public final class DatasetStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPercentDigits() {
-        
+        bitField0_ = (bitField0_ & ~0x00000040);
         percentDigits_ = 0F;
         onChanged();
         return this;
@@ -1118,6 +1141,7 @@ public final class DatasetStatisticsOuterClass {
       public Builder setPercentLetters(float value) {
         
         percentLetters_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -1130,7 +1154,7 @@ public final class DatasetStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPercentLetters() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         percentLetters_ = 0F;
         onChanged();
         return this;
@@ -1161,6 +1185,7 @@ public final class DatasetStatisticsOuterClass {
       public Builder setPercentDuplicatesInDataset(float value) {
         
         percentDuplicatesInDataset_ = value;
+        bitField0_ |= 0x00000100;
         onChanged();
         return this;
       }
@@ -1173,7 +1198,7 @@ public final class DatasetStatisticsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearPercentDuplicatesInDataset() {
-        
+        bitField0_ = (bitField0_ & ~0x00000100);
         percentDuplicatesInDataset_ = 0F;
         onChanged();
         return this;

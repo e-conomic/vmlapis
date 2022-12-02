@@ -159,7 +159,7 @@ public final class TargetMetricsOuterClass {
       }
 
       public static final int PRECISION_FIELD_NUMBER = 1;
-      private float precision_;
+      private float precision_ = 0F;
       /**
        * <code>float precision = 1 [json_name = "precision"];</code>
        * @return The precision.
@@ -170,7 +170,7 @@ public final class TargetMetricsOuterClass {
       }
 
       public static final int CONFIDENCE_FIELD_NUMBER = 2;
-      private float confidence_;
+      private float confidence_ = 0F;
       /**
        * <code>float confidence = 2 [json_name = "confidence"];</code>
        * @return The confidence.
@@ -181,7 +181,7 @@ public final class TargetMetricsOuterClass {
       }
 
       public static final int ANSWER_RATE_FIELD_NUMBER = 3;
-      private float answerRate_;
+      private float answerRate_ = 0F;
       /**
        * <code>float answer_rate = 3 [json_name = "answerRate"];</code>
        * @return The answerRate.
@@ -407,12 +407,10 @@ public final class TargetMetricsOuterClass {
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           precision_ = 0F;
-
           confidence_ = 0F;
-
           answerRate_ = 0F;
-
           return this;
         }
 
@@ -439,11 +437,22 @@ public final class TargetMetricsOuterClass {
         @java.lang.Override
         public asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric buildPartial() {
           asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric result = new asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric(this);
-          result.precision_ = precision_;
-          result.confidence_ = confidence_;
-          result.answerRate_ = answerRate_;
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.precision_ = precision_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.confidence_ = confidence_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.answerRate_ = answerRate_;
+          }
         }
 
         @java.lang.Override
@@ -527,17 +536,17 @@ public final class TargetMetricsOuterClass {
                   break;
                 case 13: {
                   precision_ = input.readFloat();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 13
                 case 21: {
                   confidence_ = input.readFloat();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 21
                 case 29: {
                   answerRate_ = input.readFloat();
-
+                  bitField0_ |= 0x00000004;
                   break;
                 } // case 29
                 default: {
@@ -555,6 +564,7 @@ public final class TargetMetricsOuterClass {
           } // finally
           return this;
         }
+        private int bitField0_;
 
         private float precision_ ;
         /**
@@ -573,6 +583,7 @@ public final class TargetMetricsOuterClass {
         public Builder setPrecision(float value) {
           
           precision_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -581,7 +592,7 @@ public final class TargetMetricsOuterClass {
          * @return This builder for chaining.
          */
         public Builder clearPrecision() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           precision_ = 0F;
           onChanged();
           return this;
@@ -604,6 +615,7 @@ public final class TargetMetricsOuterClass {
         public Builder setConfidence(float value) {
           
           confidence_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -612,7 +624,7 @@ public final class TargetMetricsOuterClass {
          * @return This builder for chaining.
          */
         public Builder clearConfidence() {
-          
+          bitField0_ = (bitField0_ & ~0x00000002);
           confidence_ = 0F;
           onChanged();
           return this;
@@ -635,6 +647,7 @@ public final class TargetMetricsOuterClass {
         public Builder setAnswerRate(float value) {
           
           answerRate_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -643,7 +656,7 @@ public final class TargetMetricsOuterClass {
          * @return This builder for chaining.
          */
         public Builder clearAnswerRate() {
-          
+          bitField0_ = (bitField0_ & ~0x00000004);
           answerRate_ = 0F;
           onChanged();
           return this;
@@ -713,7 +726,8 @@ public final class TargetMetricsOuterClass {
     }
 
     public static final int TARGET_FIELD_NUMBER = 1;
-    private volatile java.lang.Object target_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object target_ = "";
     /**
      * <code>string target = 1 [json_name = "target"];</code>
      * @return The target.
@@ -751,6 +765,7 @@ public final class TargetMetricsOuterClass {
     }
 
     public static final int METRICS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric> metrics_;
     /**
      * <code>repeated .asgt.type.TargetMetrics.Metric metrics = 2 [json_name = "metrics"];</code>
@@ -990,15 +1005,15 @@ public final class TargetMetricsOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         target_ = "";
-
         if (metricsBuilder_ == null) {
           metrics_ = java.util.Collections.emptyList();
         } else {
           metrics_ = null;
           metricsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -1025,19 +1040,29 @@ public final class TargetMetricsOuterClass {
       @java.lang.Override
       public asgt.type.TargetMetricsOuterClass.TargetMetrics buildPartial() {
         asgt.type.TargetMetricsOuterClass.TargetMetrics result = new asgt.type.TargetMetricsOuterClass.TargetMetrics(this);
-        int from_bitField0_ = bitField0_;
-        result.target_ = target_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.type.TargetMetricsOuterClass.TargetMetrics result) {
         if (metricsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             metrics_ = java.util.Collections.unmodifiableList(metrics_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.metrics_ = metrics_;
         } else {
           result.metrics_ = metricsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(asgt.type.TargetMetricsOuterClass.TargetMetrics result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.target_ = target_;
+        }
       }
 
       @java.lang.Override
@@ -1086,13 +1111,14 @@ public final class TargetMetricsOuterClass {
         if (other == asgt.type.TargetMetricsOuterClass.TargetMetrics.getDefaultInstance()) return this;
         if (!other.getTarget().isEmpty()) {
           target_ = other.target_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (metricsBuilder_ == null) {
           if (!other.metrics_.isEmpty()) {
             if (metrics_.isEmpty()) {
               metrics_ = other.metrics_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureMetricsIsMutable();
               metrics_.addAll(other.metrics_);
@@ -1105,7 +1131,7 @@ public final class TargetMetricsOuterClass {
               metricsBuilder_.dispose();
               metricsBuilder_ = null;
               metrics_ = other.metrics_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               metricsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getMetricsFieldBuilder() : null;
@@ -1142,7 +1168,7 @@ public final class TargetMetricsOuterClass {
                 break;
               case 10: {
                 target_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
@@ -1216,11 +1242,9 @@ public final class TargetMetricsOuterClass {
        */
       public Builder setTarget(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         target_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1229,8 +1253,8 @@ public final class TargetMetricsOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTarget() {
-        
         target_ = getDefaultInstance().getTarget();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1241,12 +1265,10 @@ public final class TargetMetricsOuterClass {
        */
       public Builder setTargetBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         target_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1254,9 +1276,9 @@ public final class TargetMetricsOuterClass {
       private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric> metrics_ =
         java.util.Collections.emptyList();
       private void ensureMetricsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           metrics_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric>(metrics_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -1406,7 +1428,7 @@ public final class TargetMetricsOuterClass {
       public Builder clearMetrics() {
         if (metricsBuilder_ == null) {
           metrics_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           metricsBuilder_.clear();
@@ -1483,7 +1505,7 @@ public final class TargetMetricsOuterClass {
           metricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric, asgt.type.TargetMetricsOuterClass.TargetMetrics.Metric.Builder, asgt.type.TargetMetricsOuterClass.TargetMetrics.MetricOrBuilder>(
                   metrics_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           metrics_ = null;

@@ -77,14 +77,12 @@ public final class ModelRegistryOuterClass {
     /**
      * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
-
     int getMetricsOrDefault(
         java.lang.String key,
         int defaultValue);
     /**
      * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
-
     int getMetricsOrThrow(
         java.lang.String key);
 
@@ -230,7 +228,7 @@ public final class ModelRegistryOuterClass {
      */
     @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
-      return getDataset();
+      return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
 
     public static final int REVISION_FIELD_NUMBER = 2;
@@ -256,11 +254,11 @@ public final class ModelRegistryOuterClass {
      */
     @java.lang.Override
     public asgt.type.RevisionOuterClass.RevisionOrBuilder getRevisionOrBuilder() {
-      return getRevision();
+      return revision_ == null ? asgt.type.RevisionOuterClass.Revision.getDefaultInstance() : revision_;
     }
 
     public static final int MODEL_VERSION_FIELD_NUMBER = 3;
-    private long modelVersion_;
+    private long modelVersion_ = 0L;
     /**
      * <code>int64 model_version = 3 [json_name = "modelVersion"];</code>
      * @return The modelVersion.
@@ -282,6 +280,7 @@ public final class ModelRegistryOuterClass {
                   com.google.protobuf.WireFormat.FieldType.INT32,
                   0);
     }
+    @SuppressWarnings("serial")
     private com.google.protobuf.MapField<
         java.lang.String, java.lang.Integer> metrics_;
     private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
@@ -292,14 +291,12 @@ public final class ModelRegistryOuterClass {
       }
       return metrics_;
     }
-
     public int getMetricsCount() {
       return internalGetMetrics().getMap().size();
     }
     /**
      * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
-
     @java.lang.Override
     public boolean containsMetrics(
         java.lang.String key) {
@@ -318,7 +315,6 @@ public final class ModelRegistryOuterClass {
      * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
     @java.lang.Override
-
     public java.util.Map<java.lang.String, java.lang.Integer> getMetricsMap() {
       return internalGetMetrics().getMap();
     }
@@ -326,7 +322,6 @@ public final class ModelRegistryOuterClass {
      * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
     @java.lang.Override
-
     public int getMetricsOrDefault(
         java.lang.String key,
         int defaultValue) {
@@ -339,7 +334,6 @@ public final class ModelRegistryOuterClass {
      * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
      */
     @java.lang.Override
-
     public int getMetricsOrThrow(
         java.lang.String key) {
       if (key == null) { throw new NullPointerException("map key"); }
@@ -352,6 +346,7 @@ public final class ModelRegistryOuterClass {
     }
 
     public static final int TARGET_METRICS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> targetMetrics_;
     /**
      * <code>repeated .asgt.type.TargetMetrics target_metrics = 5 [json_name = "targetMetrics"];</code>
@@ -392,7 +387,7 @@ public final class ModelRegistryOuterClass {
     }
 
     public static final int INPUT_TYPE_FIELD_NUMBER = 6;
-    private int inputType_;
+    private int inputType_ = 0;
     /**
      * <code>.asgt.type.Model.InputType input_type = 6 [json_name = "inputType"];</code>
      * @return The enum numeric value on the wire for inputType.
@@ -405,8 +400,7 @@ public final class ModelRegistryOuterClass {
      * @return The inputType.
      */
     @java.lang.Override public asgt.type.ModelOuterClass.Model.InputType getInputType() {
-      @SuppressWarnings("deprecation")
-      asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.valueOf(inputType_);
+      asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.forNumber(inputType_);
       return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
     }
 
@@ -433,7 +427,7 @@ public final class ModelRegistryOuterClass {
      */
     @java.lang.Override
     public asgt.type.TrainStatisticsOuterClass.TrainStatisticsOrBuilder getTrainStatisticsOrBuilder() {
-      return getTrainStatistics();
+      return trainStatistics_ == null ? asgt.type.TrainStatisticsOuterClass.TrainStatistics.getDefaultInstance() : trainStatistics_;
     }
 
     public static final int DATASET_STATISTICS_FIELD_NUMBER = 8;
@@ -459,7 +453,7 @@ public final class ModelRegistryOuterClass {
      */
     @java.lang.Override
     public asgt.type.DatasetStatisticsOuterClass.DatasetStatisticsOrBuilder getDatasetStatisticsOrBuilder() {
-      return getDatasetStatistics();
+      return datasetStatistics_ == null ? asgt.type.DatasetStatisticsOuterClass.DatasetStatistics.getDefaultInstance() : datasetStatistics_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -782,20 +776,18 @@ public final class ModelRegistryOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (datasetBuilder_ == null) {
-          dataset_ = null;
-        } else {
-          dataset_ = null;
+        bitField0_ = 0;
+        dataset_ = null;
+        if (datasetBuilder_ != null) {
+          datasetBuilder_.dispose();
           datasetBuilder_ = null;
         }
-        if (revisionBuilder_ == null) {
-          revision_ = null;
-        } else {
-          revision_ = null;
+        revision_ = null;
+        if (revisionBuilder_ != null) {
+          revisionBuilder_.dispose();
           revisionBuilder_ = null;
         }
         modelVersion_ = 0L;
-
         internalGetMutableMetrics().clear();
         if (targetMetricsBuilder_ == null) {
           targetMetrics_ = java.util.Collections.emptyList();
@@ -803,19 +795,16 @@ public final class ModelRegistryOuterClass {
           targetMetrics_ = null;
           targetMetricsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         inputType_ = 0;
-
-        if (trainStatisticsBuilder_ == null) {
-          trainStatistics_ = null;
-        } else {
-          trainStatistics_ = null;
+        trainStatistics_ = null;
+        if (trainStatisticsBuilder_ != null) {
+          trainStatisticsBuilder_.dispose();
           trainStatisticsBuilder_ = null;
         }
-        if (datasetStatisticsBuilder_ == null) {
-          datasetStatistics_ = null;
-        } else {
-          datasetStatistics_ = null;
+        datasetStatistics_ = null;
+        if (datasetStatisticsBuilder_ != null) {
+          datasetStatisticsBuilder_.dispose();
           datasetStatisticsBuilder_ = null;
         }
         return this;
@@ -844,42 +833,56 @@ public final class ModelRegistryOuterClass {
       @java.lang.Override
       public asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest buildPartial() {
         asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest result = new asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest(this);
-        int from_bitField0_ = bitField0_;
-        if (datasetBuilder_ == null) {
-          result.dataset_ = dataset_;
-        } else {
-          result.dataset_ = datasetBuilder_.build();
-        }
-        if (revisionBuilder_ == null) {
-          result.revision_ = revision_;
-        } else {
-          result.revision_ = revisionBuilder_.build();
-        }
-        result.modelVersion_ = modelVersion_;
-        result.metrics_ = internalGetMetrics();
-        result.metrics_.makeImmutable();
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest result) {
         if (targetMetricsBuilder_ == null) {
-          if (((bitField0_ & 0x00000002) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             targetMetrics_ = java.util.Collections.unmodifiableList(targetMetrics_);
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.targetMetrics_ = targetMetrics_;
         } else {
           result.targetMetrics_ = targetMetricsBuilder_.build();
         }
-        result.inputType_ = inputType_;
-        if (trainStatisticsBuilder_ == null) {
-          result.trainStatistics_ = trainStatistics_;
-        } else {
-          result.trainStatistics_ = trainStatisticsBuilder_.build();
+      }
+
+      private void buildPartial0(asgt.modelregistry.v1.ModelRegistryOuterClass.RegisterModelRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dataset_ = datasetBuilder_ == null
+              ? dataset_
+              : datasetBuilder_.build();
         }
-        if (datasetStatisticsBuilder_ == null) {
-          result.datasetStatistics_ = datasetStatistics_;
-        } else {
-          result.datasetStatistics_ = datasetStatisticsBuilder_.build();
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.revision_ = revisionBuilder_ == null
+              ? revision_
+              : revisionBuilder_.build();
         }
-        onBuilt();
-        return result;
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.modelVersion_ = modelVersion_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.metrics_ = internalGetMetrics();
+          result.metrics_.makeImmutable();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.inputType_ = inputType_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.trainStatistics_ = trainStatisticsBuilder_ == null
+              ? trainStatistics_
+              : trainStatisticsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.datasetStatistics_ = datasetStatisticsBuilder_ == null
+              ? datasetStatistics_
+              : datasetStatisticsBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -937,11 +940,12 @@ public final class ModelRegistryOuterClass {
         }
         internalGetMutableMetrics().mergeFrom(
             other.internalGetMetrics());
+        bitField0_ |= 0x00000008;
         if (targetMetricsBuilder_ == null) {
           if (!other.targetMetrics_.isEmpty()) {
             if (targetMetrics_.isEmpty()) {
               targetMetrics_ = other.targetMetrics_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureTargetMetricsIsMutable();
               targetMetrics_.addAll(other.targetMetrics_);
@@ -954,7 +958,7 @@ public final class ModelRegistryOuterClass {
               targetMetricsBuilder_.dispose();
               targetMetricsBuilder_ = null;
               targetMetrics_ = other.targetMetrics_;
-              bitField0_ = (bitField0_ & ~0x00000002);
+              bitField0_ = (bitField0_ & ~0x00000010);
               targetMetricsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getTargetMetricsFieldBuilder() : null;
@@ -1002,19 +1006,19 @@ public final class ModelRegistryOuterClass {
                 input.readMessage(
                     getDatasetFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getRevisionFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 24: {
                 modelVersion_ = input.readInt64();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 34: {
@@ -1023,6 +1027,7 @@ public final class ModelRegistryOuterClass {
                     MetricsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
                 internalGetMutableMetrics().getMutableMap().put(
                     metrics__.getKey(), metrics__.getValue());
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
@@ -1040,21 +1045,21 @@ public final class ModelRegistryOuterClass {
               } // case 42
               case 48: {
                 inputType_ = input.readEnum();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 48
               case 58: {
                 input.readMessage(
                     getTrainStatisticsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
                     getDatasetStatisticsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               default: {
@@ -1082,7 +1087,7 @@ public final class ModelRegistryOuterClass {
        * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
-        return datasetBuilder_ != null || dataset_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
@@ -1104,11 +1109,11 @@ public final class ModelRegistryOuterClass {
             throw new NullPointerException();
           }
           dataset_ = value;
-          onChanged();
         } else {
           datasetBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1118,11 +1123,11 @@ public final class ModelRegistryOuterClass {
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
         if (datasetBuilder_ == null) {
           dataset_ = builderForValue.build();
-          onChanged();
         } else {
           datasetBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1130,38 +1135,38 @@ public final class ModelRegistryOuterClass {
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
-          if (dataset_ != null) {
-            dataset_ =
-              asgt.type.DatasetOuterClass.Dataset.newBuilder(dataset_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            dataset_ != null &&
+            dataset_ != asgt.type.DatasetOuterClass.Dataset.getDefaultInstance()) {
+            getDatasetBuilder().mergeFrom(value);
           } else {
             dataset_ = value;
           }
-          onChanged();
         } else {
           datasetBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder clearDataset() {
-        if (datasetBuilder_ == null) {
-          dataset_ = null;
-          onChanged();
-        } else {
-          dataset_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dataset_ = null;
+        if (datasetBuilder_ != null) {
+          datasetBuilder_.dispose();
           datasetBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDatasetFieldBuilder().getBuilder();
       }
@@ -1201,7 +1206,7 @@ public final class ModelRegistryOuterClass {
        * @return Whether the revision field is set.
        */
       public boolean hasRevision() {
-        return revisionBuilder_ != null || revision_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
@@ -1223,11 +1228,11 @@ public final class ModelRegistryOuterClass {
             throw new NullPointerException();
           }
           revision_ = value;
-          onChanged();
         } else {
           revisionBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1237,11 +1242,11 @@ public final class ModelRegistryOuterClass {
           asgt.type.RevisionOuterClass.Revision.Builder builderForValue) {
         if (revisionBuilder_ == null) {
           revision_ = builderForValue.build();
-          onChanged();
         } else {
           revisionBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1249,38 +1254,38 @@ public final class ModelRegistryOuterClass {
        */
       public Builder mergeRevision(asgt.type.RevisionOuterClass.Revision value) {
         if (revisionBuilder_ == null) {
-          if (revision_ != null) {
-            revision_ =
-              asgt.type.RevisionOuterClass.Revision.newBuilder(revision_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            revision_ != null &&
+            revision_ != asgt.type.RevisionOuterClass.Revision.getDefaultInstance()) {
+            getRevisionBuilder().mergeFrom(value);
           } else {
             revision_ = value;
           }
-          onChanged();
         } else {
           revisionBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public Builder clearRevision() {
-        if (revisionBuilder_ == null) {
-          revision_ = null;
-          onChanged();
-        } else {
-          revision_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        revision_ = null;
+        if (revisionBuilder_ != null) {
+          revisionBuilder_.dispose();
           revisionBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Revision revision = 2 [json_name = "revision"];</code>
        */
       public asgt.type.RevisionOuterClass.Revision.Builder getRevisionBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getRevisionFieldBuilder().getBuilder();
       }
@@ -1329,6 +1334,7 @@ public final class ModelRegistryOuterClass {
       public Builder setModelVersion(long value) {
         
         modelVersion_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1337,7 +1343,7 @@ public final class ModelRegistryOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearModelVersion() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         modelVersion_ = 0L;
         onChanged();
         return this;
@@ -1346,7 +1352,7 @@ public final class ModelRegistryOuterClass {
       private com.google.protobuf.MapField<
           java.lang.String, java.lang.Integer> metrics_;
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetMetrics() {
+          internalGetMetrics() {
         if (metrics_ == null) {
           return com.google.protobuf.MapField.emptyMapField(
               MetricsDefaultEntryHolder.defaultEntry);
@@ -1354,8 +1360,7 @@ public final class ModelRegistryOuterClass {
         return metrics_;
       }
       private com.google.protobuf.MapField<java.lang.String, java.lang.Integer>
-      internalGetMutableMetrics() {
-        onChanged();;
+          internalGetMutableMetrics() {
         if (metrics_ == null) {
           metrics_ = com.google.protobuf.MapField.newMapField(
               MetricsDefaultEntryHolder.defaultEntry);
@@ -1363,16 +1368,16 @@ public final class ModelRegistryOuterClass {
         if (!metrics_.isMutable()) {
           metrics_ = metrics_.copy();
         }
+        bitField0_ |= 0x00000008;
+        onChanged();
         return metrics_;
       }
-
       public int getMetricsCount() {
         return internalGetMetrics().getMap().size();
       }
       /**
        * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
        */
-
       @java.lang.Override
       public boolean containsMetrics(
           java.lang.String key) {
@@ -1391,7 +1396,6 @@ public final class ModelRegistryOuterClass {
        * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
        */
       @java.lang.Override
-
       public java.util.Map<java.lang.String, java.lang.Integer> getMetricsMap() {
         return internalGetMetrics().getMap();
       }
@@ -1399,7 +1403,6 @@ public final class ModelRegistryOuterClass {
        * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
        */
       @java.lang.Override
-
       public int getMetricsOrDefault(
           java.lang.String key,
           int defaultValue) {
@@ -1412,7 +1415,6 @@ public final class ModelRegistryOuterClass {
        * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
        */
       @java.lang.Override
-
       public int getMetricsOrThrow(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -1423,8 +1425,8 @@ public final class ModelRegistryOuterClass {
         }
         return map.get(key);
       }
-
       public Builder clearMetrics() {
+        bitField0_ = (bitField0_ & ~0x00000008);
         internalGetMutableMetrics().getMutableMap()
             .clear();
         return this;
@@ -1432,7 +1434,6 @@ public final class ModelRegistryOuterClass {
       /**
        * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
        */
-
       public Builder removeMetrics(
           java.lang.String key) {
         if (key == null) { throw new NullPointerException("map key"); }
@@ -1445,7 +1446,8 @@ public final class ModelRegistryOuterClass {
        */
       @java.lang.Deprecated
       public java.util.Map<java.lang.String, java.lang.Integer>
-      getMutableMetrics() {
+          getMutableMetrics() {
+        bitField0_ |= 0x00000008;
         return internalGetMutableMetrics().getMutableMap();
       }
       /**
@@ -1458,25 +1460,26 @@ public final class ModelRegistryOuterClass {
         
         internalGetMutableMetrics().getMutableMap()
             .put(key, value);
+        bitField0_ |= 0x00000008;
         return this;
       }
       /**
        * <code>map&lt;string, int32&gt; metrics = 4 [json_name = "metrics"];</code>
        */
-
       public Builder putAllMetrics(
           java.util.Map<java.lang.String, java.lang.Integer> values) {
         internalGetMutableMetrics().getMutableMap()
             .putAll(values);
+        bitField0_ |= 0x00000008;
         return this;
       }
 
       private java.util.List<asgt.type.TargetMetricsOuterClass.TargetMetrics> targetMetrics_ =
         java.util.Collections.emptyList();
       private void ensureTargetMetricsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           targetMetrics_ = new java.util.ArrayList<asgt.type.TargetMetricsOuterClass.TargetMetrics>(targetMetrics_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -1626,7 +1629,7 @@ public final class ModelRegistryOuterClass {
       public Builder clearTargetMetrics() {
         if (targetMetricsBuilder_ == null) {
           targetMetrics_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           targetMetricsBuilder_.clear();
@@ -1703,7 +1706,7 @@ public final class ModelRegistryOuterClass {
           targetMetricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.TargetMetricsOuterClass.TargetMetrics, asgt.type.TargetMetricsOuterClass.TargetMetrics.Builder, asgt.type.TargetMetricsOuterClass.TargetMetricsOrBuilder>(
                   targetMetrics_,
-                  ((bitField0_ & 0x00000002) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           targetMetrics_ = null;
@@ -1725,8 +1728,8 @@ public final class ModelRegistryOuterClass {
        * @return This builder for chaining.
        */
       public Builder setInputTypeValue(int value) {
-        
         inputType_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1736,8 +1739,7 @@ public final class ModelRegistryOuterClass {
        */
       @java.lang.Override
       public asgt.type.ModelOuterClass.Model.InputType getInputType() {
-        @SuppressWarnings("deprecation")
-        asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.valueOf(inputType_);
+        asgt.type.ModelOuterClass.Model.InputType result = asgt.type.ModelOuterClass.Model.InputType.forNumber(inputType_);
         return result == null ? asgt.type.ModelOuterClass.Model.InputType.UNRECOGNIZED : result;
       }
       /**
@@ -1749,7 +1751,7 @@ public final class ModelRegistryOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000020;
         inputType_ = value.getNumber();
         onChanged();
         return this;
@@ -1759,7 +1761,7 @@ public final class ModelRegistryOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearInputType() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         inputType_ = 0;
         onChanged();
         return this;
@@ -1773,7 +1775,7 @@ public final class ModelRegistryOuterClass {
        * @return Whether the trainStatistics field is set.
        */
       public boolean hasTrainStatistics() {
-        return trainStatisticsBuilder_ != null || trainStatistics_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
@@ -1795,11 +1797,11 @@ public final class ModelRegistryOuterClass {
             throw new NullPointerException();
           }
           trainStatistics_ = value;
-          onChanged();
         } else {
           trainStatisticsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1809,11 +1811,11 @@ public final class ModelRegistryOuterClass {
           asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder builderForValue) {
         if (trainStatisticsBuilder_ == null) {
           trainStatistics_ = builderForValue.build();
-          onChanged();
         } else {
           trainStatisticsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1821,38 +1823,38 @@ public final class ModelRegistryOuterClass {
        */
       public Builder mergeTrainStatistics(asgt.type.TrainStatisticsOuterClass.TrainStatistics value) {
         if (trainStatisticsBuilder_ == null) {
-          if (trainStatistics_ != null) {
-            trainStatistics_ =
-              asgt.type.TrainStatisticsOuterClass.TrainStatistics.newBuilder(trainStatistics_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            trainStatistics_ != null &&
+            trainStatistics_ != asgt.type.TrainStatisticsOuterClass.TrainStatistics.getDefaultInstance()) {
+            getTrainStatisticsBuilder().mergeFrom(value);
           } else {
             trainStatistics_ = value;
           }
-          onChanged();
         } else {
           trainStatisticsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
        */
       public Builder clearTrainStatistics() {
-        if (trainStatisticsBuilder_ == null) {
-          trainStatistics_ = null;
-          onChanged();
-        } else {
-          trainStatistics_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        trainStatistics_ = null;
+        if (trainStatisticsBuilder_ != null) {
+          trainStatisticsBuilder_.dispose();
           trainStatisticsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.TrainStatistics train_statistics = 7 [json_name = "trainStatistics"];</code>
        */
       public asgt.type.TrainStatisticsOuterClass.TrainStatistics.Builder getTrainStatisticsBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getTrainStatisticsFieldBuilder().getBuilder();
       }
@@ -1892,7 +1894,7 @@ public final class ModelRegistryOuterClass {
        * @return Whether the datasetStatistics field is set.
        */
       public boolean hasDatasetStatistics() {
-        return datasetStatisticsBuilder_ != null || datasetStatistics_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <code>.asgt.type.DatasetStatistics dataset_statistics = 8 [json_name = "datasetStatistics"];</code>
@@ -1914,11 +1916,11 @@ public final class ModelRegistryOuterClass {
             throw new NullPointerException();
           }
           datasetStatistics_ = value;
-          onChanged();
         } else {
           datasetStatisticsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -1928,11 +1930,11 @@ public final class ModelRegistryOuterClass {
           asgt.type.DatasetStatisticsOuterClass.DatasetStatistics.Builder builderForValue) {
         if (datasetStatisticsBuilder_ == null) {
           datasetStatistics_ = builderForValue.build();
-          onChanged();
         } else {
           datasetStatisticsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -1940,38 +1942,38 @@ public final class ModelRegistryOuterClass {
        */
       public Builder mergeDatasetStatistics(asgt.type.DatasetStatisticsOuterClass.DatasetStatistics value) {
         if (datasetStatisticsBuilder_ == null) {
-          if (datasetStatistics_ != null) {
-            datasetStatistics_ =
-              asgt.type.DatasetStatisticsOuterClass.DatasetStatistics.newBuilder(datasetStatistics_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            datasetStatistics_ != null &&
+            datasetStatistics_ != asgt.type.DatasetStatisticsOuterClass.DatasetStatistics.getDefaultInstance()) {
+            getDatasetStatisticsBuilder().mergeFrom(value);
           } else {
             datasetStatistics_ = value;
           }
-          onChanged();
         } else {
           datasetStatisticsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.DatasetStatistics dataset_statistics = 8 [json_name = "datasetStatistics"];</code>
        */
       public Builder clearDatasetStatistics() {
-        if (datasetStatisticsBuilder_ == null) {
-          datasetStatistics_ = null;
-          onChanged();
-        } else {
-          datasetStatistics_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        datasetStatistics_ = null;
+        if (datasetStatisticsBuilder_ != null) {
+          datasetStatisticsBuilder_.dispose();
           datasetStatisticsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.DatasetStatistics dataset_statistics = 8 [json_name = "datasetStatistics"];</code>
        */
       public asgt.type.DatasetStatisticsOuterClass.DatasetStatistics.Builder getDatasetStatisticsBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getDatasetStatisticsFieldBuilder().getBuilder();
       }
@@ -2148,7 +2150,7 @@ public final class ModelRegistryOuterClass {
      */
     @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
-      return getDataset();
+      return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2344,10 +2346,10 @@ public final class ModelRegistryOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (datasetBuilder_ == null) {
-          dataset_ = null;
-        } else {
-          dataset_ = null;
+        bitField0_ = 0;
+        dataset_ = null;
+        if (datasetBuilder_ != null) {
+          datasetBuilder_.dispose();
           datasetBuilder_ = null;
         }
         return this;
@@ -2376,13 +2378,18 @@ public final class ModelRegistryOuterClass {
       @java.lang.Override
       public asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelRequest buildPartial() {
         asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelRequest result = new asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelRequest(this);
-        if (datasetBuilder_ == null) {
-          result.dataset_ = dataset_;
-        } else {
-          result.dataset_ = datasetBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dataset_ = datasetBuilder_ == null
+              ? dataset_
+              : datasetBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -2462,7 +2469,7 @@ public final class ModelRegistryOuterClass {
                 input.readMessage(
                     getDatasetFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -2480,6 +2487,7 @@ public final class ModelRegistryOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private asgt.type.DatasetOuterClass.Dataset dataset_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -2489,7 +2497,7 @@ public final class ModelRegistryOuterClass {
        * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
-        return datasetBuilder_ != null || dataset_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
@@ -2511,11 +2519,11 @@ public final class ModelRegistryOuterClass {
             throw new NullPointerException();
           }
           dataset_ = value;
-          onChanged();
         } else {
           datasetBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2525,11 +2533,11 @@ public final class ModelRegistryOuterClass {
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
         if (datasetBuilder_ == null) {
           dataset_ = builderForValue.build();
-          onChanged();
         } else {
           datasetBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -2537,38 +2545,38 @@ public final class ModelRegistryOuterClass {
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
-          if (dataset_ != null) {
-            dataset_ =
-              asgt.type.DatasetOuterClass.Dataset.newBuilder(dataset_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            dataset_ != null &&
+            dataset_ != asgt.type.DatasetOuterClass.Dataset.getDefaultInstance()) {
+            getDatasetBuilder().mergeFrom(value);
           } else {
             dataset_ = value;
           }
-          onChanged();
         } else {
           datasetBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder clearDataset() {
-        if (datasetBuilder_ == null) {
-          dataset_ = null;
-          onChanged();
-        } else {
-          dataset_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dataset_ = null;
+        if (datasetBuilder_ != null) {
+          datasetBuilder_.dispose();
           datasetBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDatasetFieldBuilder().getBuilder();
       }
@@ -2745,7 +2753,7 @@ public final class ModelRegistryOuterClass {
      */
     @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
-      return getModel();
+      return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -2941,10 +2949,10 @@ public final class ModelRegistryOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (modelBuilder_ == null) {
-          model_ = null;
-        } else {
-          model_ = null;
+        bitField0_ = 0;
+        model_ = null;
+        if (modelBuilder_ != null) {
+          modelBuilder_.dispose();
           modelBuilder_ = null;
         }
         return this;
@@ -2973,13 +2981,18 @@ public final class ModelRegistryOuterClass {
       @java.lang.Override
       public asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelResponse buildPartial() {
         asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelResponse result = new asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelResponse(this);
-        if (modelBuilder_ == null) {
-          result.model_ = model_;
-        } else {
-          result.model_ = modelBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.modelregistry.v1.ModelRegistryOuterClass.GetCurrentModelResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.model_ = modelBuilder_ == null
+              ? model_
+              : modelBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -3059,7 +3072,7 @@ public final class ModelRegistryOuterClass {
                 input.readMessage(
                     getModelFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -3077,6 +3090,7 @@ public final class ModelRegistryOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private asgt.type.ModelOuterClass.Model model_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -3086,7 +3100,7 @@ public final class ModelRegistryOuterClass {
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
-        return modelBuilder_ != null || model_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
@@ -3108,11 +3122,11 @@ public final class ModelRegistryOuterClass {
             throw new NullPointerException();
           }
           model_ = value;
-          onChanged();
         } else {
           modelBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3122,11 +3136,11 @@ public final class ModelRegistryOuterClass {
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
         if (modelBuilder_ == null) {
           model_ = builderForValue.build();
-          onChanged();
         } else {
           modelBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -3134,38 +3148,38 @@ public final class ModelRegistryOuterClass {
        */
       public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
-          if (model_ != null) {
-            model_ =
-              asgt.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            model_ != null &&
+            model_ != asgt.type.ModelOuterClass.Model.getDefaultInstance()) {
+            getModelBuilder().mergeFrom(value);
           } else {
             model_ = value;
           }
-          onChanged();
         } else {
           modelBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
        */
       public Builder clearModel() {
-        if (modelBuilder_ == null) {
-          model_ = null;
-          onChanged();
-        } else {
-          model_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        model_ = null;
+        if (modelBuilder_ != null) {
+          modelBuilder_.dispose();
           modelBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Model model = 1 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getModelFieldBuilder().getBuilder();
       }

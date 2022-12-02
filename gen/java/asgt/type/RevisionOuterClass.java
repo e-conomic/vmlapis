@@ -90,7 +90,7 @@ public final class RevisionOuterClass {
     }
 
     public static final int NUMBER_FIELD_NUMBER = 1;
-    private long number_;
+    private long number_ = 0L;
     /**
      * <code>int64 number = 1 [json_name = "number"];</code>
      * @return The number.
@@ -123,11 +123,11 @@ public final class RevisionOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
-      return getCreatedAt();
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
     }
 
     public static final int SIZE_FIELD_NUMBER = 3;
-    private long size_;
+    private long size_ = 0L;
     /**
      * <pre>
      * Number of samples added to the dataset in this revision
@@ -358,16 +358,14 @@ public final class RevisionOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         number_ = 0L;
-
-        if (createdAtBuilder_ == null) {
-          createdAt_ = null;
-        } else {
-          createdAt_ = null;
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
           createdAtBuilder_ = null;
         }
         size_ = 0L;
-
         return this;
       }
 
@@ -394,15 +392,24 @@ public final class RevisionOuterClass {
       @java.lang.Override
       public asgt.type.RevisionOuterClass.Revision buildPartial() {
         asgt.type.RevisionOuterClass.Revision result = new asgt.type.RevisionOuterClass.Revision(this);
-        result.number_ = number_;
-        if (createdAtBuilder_ == null) {
-          result.createdAt_ = createdAt_;
-        } else {
-          result.createdAt_ = createdAtBuilder_.build();
-        }
-        result.size_ = size_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.RevisionOuterClass.Revision result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.number_ = number_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.createdAt_ = createdAtBuilder_ == null
+              ? createdAt_
+              : createdAtBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.size_ = size_;
+        }
       }
 
       @java.lang.Override
@@ -486,19 +493,19 @@ public final class RevisionOuterClass {
                 break;
               case 8: {
                 number_ = input.readInt64();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 input.readMessage(
                     getCreatedAtFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 24: {
                 size_ = input.readInt64();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               default: {
@@ -516,6 +523,7 @@ public final class RevisionOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private long number_ ;
       /**
@@ -534,6 +542,7 @@ public final class RevisionOuterClass {
       public Builder setNumber(long value) {
         
         number_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -542,7 +551,7 @@ public final class RevisionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearNumber() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         number_ = 0L;
         onChanged();
         return this;
@@ -556,7 +565,7 @@ public final class RevisionOuterClass {
        * @return Whether the createdAt field is set.
        */
       public boolean hasCreatedAt() {
-        return createdAtBuilder_ != null || createdAt_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
@@ -578,11 +587,11 @@ public final class RevisionOuterClass {
             throw new NullPointerException();
           }
           createdAt_ = value;
-          onChanged();
         } else {
           createdAtBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -592,11 +601,11 @@ public final class RevisionOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (createdAtBuilder_ == null) {
           createdAt_ = builderForValue.build();
-          onChanged();
         } else {
           createdAtBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -604,38 +613,38 @@ public final class RevisionOuterClass {
        */
       public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
         if (createdAtBuilder_ == null) {
-          if (createdAt_ != null) {
-            createdAt_ =
-              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            createdAt_ != null &&
+            createdAt_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getCreatedAtBuilder().mergeFrom(value);
           } else {
             createdAt_ = value;
           }
-          onChanged();
         } else {
           createdAtBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
        */
       public Builder clearCreatedAt() {
-        if (createdAtBuilder_ == null) {
-          createdAt_ = null;
-          onChanged();
-        } else {
-          createdAt_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        createdAt_ = null;
+        if (createdAtBuilder_ != null) {
+          createdAtBuilder_.dispose();
           createdAtBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp created_at = 2 [json_name = "createdAt"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getCreatedAtFieldBuilder().getBuilder();
       }
@@ -692,6 +701,7 @@ public final class RevisionOuterClass {
       public Builder setSize(long value) {
         
         size_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -704,7 +714,7 @@ public final class RevisionOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSize() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         size_ = 0L;
         onChanged();
         return this;

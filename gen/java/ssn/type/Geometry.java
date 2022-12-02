@@ -84,7 +84,7 @@ public final class Geometry {
     }
 
     public static final int X_FIELD_NUMBER = 1;
-    private int x_;
+    private int x_ = 0;
     /**
      * <pre>
      * X coordinate.
@@ -99,7 +99,7 @@ public final class Geometry {
     }
 
     public static final int Y_FIELD_NUMBER = 2;
-    private int y_;
+    private int y_ = 0;
     /**
      * <pre>
      * Y coordinate.
@@ -317,10 +317,9 @@ public final class Geometry {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         x_ = 0;
-
         y_ = 0;
-
         return this;
       }
 
@@ -347,10 +346,19 @@ public final class Geometry {
       @java.lang.Override
       public ssn.type.Geometry.Vertex buildPartial() {
         ssn.type.Geometry.Vertex result = new ssn.type.Geometry.Vertex(this);
-        result.x_ = x_;
-        result.y_ = y_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.type.Geometry.Vertex result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.x_ = x_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.y_ = y_;
+        }
       }
 
       @java.lang.Override
@@ -431,12 +439,12 @@ public final class Geometry {
                 break;
               case 8: {
                 x_ = input.readInt32();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 y_ = input.readInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -454,6 +462,7 @@ public final class Geometry {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int x_ ;
       /**
@@ -480,6 +489,7 @@ public final class Geometry {
       public Builder setX(int value) {
         
         x_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -492,7 +502,7 @@ public final class Geometry {
        * @return This builder for chaining.
        */
       public Builder clearX() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         x_ = 0;
         onChanged();
         return this;
@@ -523,6 +533,7 @@ public final class Geometry {
       public Builder setY(int value) {
         
         y_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -535,7 +546,7 @@ public final class Geometry {
        * @return This builder for chaining.
        */
       public Builder clearY() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         y_ = 0;
         onChanged();
         return this;
@@ -675,7 +686,7 @@ public final class Geometry {
     }
 
     public static final int X_FIELD_NUMBER = 1;
-    private float x_;
+    private float x_ = 0F;
     /**
      * <pre>
      * X coordinate.
@@ -690,7 +701,7 @@ public final class Geometry {
     }
 
     public static final int Y_FIELD_NUMBER = 2;
-    private float y_;
+    private float y_ = 0F;
     /**
      * <pre>
      * Y coordinate.
@@ -913,10 +924,9 @@ public final class Geometry {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         x_ = 0F;
-
         y_ = 0F;
-
         return this;
       }
 
@@ -943,10 +953,19 @@ public final class Geometry {
       @java.lang.Override
       public ssn.type.Geometry.NormalizedVertex buildPartial() {
         ssn.type.Geometry.NormalizedVertex result = new ssn.type.Geometry.NormalizedVertex(this);
-        result.x_ = x_;
-        result.y_ = y_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.type.Geometry.NormalizedVertex result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.x_ = x_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.y_ = y_;
+        }
       }
 
       @java.lang.Override
@@ -1027,12 +1046,12 @@ public final class Geometry {
                 break;
               case 13: {
                 x_ = input.readFloat();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 13
               case 21: {
                 y_ = input.readFloat();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 21
               default: {
@@ -1050,6 +1069,7 @@ public final class Geometry {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private float x_ ;
       /**
@@ -1076,6 +1096,7 @@ public final class Geometry {
       public Builder setX(float value) {
         
         x_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1088,7 +1109,7 @@ public final class Geometry {
        * @return This builder for chaining.
        */
       public Builder clearX() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         x_ = 0F;
         onChanged();
         return this;
@@ -1119,6 +1140,7 @@ public final class Geometry {
       public Builder setY(float value) {
         
         y_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1131,7 +1153,7 @@ public final class Geometry {
        * @return This builder for chaining.
        */
       public Builder clearY() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         y_ = 0F;
         onChanged();
         return this;
@@ -1339,6 +1361,7 @@ public final class Geometry {
     }
 
     public static final int VERTICES_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.Geometry.Vertex> vertices_;
     /**
      * <pre>
@@ -1399,6 +1422,7 @@ public final class Geometry {
     }
 
     public static final int NORMALIZED_VERTICES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.Geometry.NormalizedVertex> normalizedVertices_;
     /**
      * <pre>
@@ -1665,6 +1689,7 @@ public final class Geometry {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (verticesBuilder_ == null) {
           vertices_ = java.util.Collections.emptyList();
         } else {
@@ -1705,7 +1730,13 @@ public final class Geometry {
       @java.lang.Override
       public ssn.type.Geometry.BoundingPoly buildPartial() {
         ssn.type.Geometry.BoundingPoly result = new ssn.type.Geometry.BoundingPoly(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.type.Geometry.BoundingPoly result) {
         if (verticesBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             vertices_ = java.util.Collections.unmodifiableList(vertices_);
@@ -1724,8 +1755,10 @@ public final class Geometry {
         } else {
           result.normalizedVertices_ = normalizedVerticesBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(ssn.type.Geometry.BoundingPoly result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override

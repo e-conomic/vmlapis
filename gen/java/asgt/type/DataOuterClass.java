@@ -196,7 +196,7 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getIssueDateOrBuilder() {
-      return getIssueDate();
+      return issueDate_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : issueDate_;
     }
 
     public static final int SUPPLIER_FIELD_NUMBER = 2;
@@ -234,11 +234,12 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.SupplierOrBuilder getSupplierOrBuilder() {
-      return getSupplier();
+      return supplier_ == null ? asgt.type.DataOuterClass.Supplier.getDefaultInstance() : supplier_;
     }
 
     public static final int CUSTOMER_REF_FIELD_NUMBER = 3;
-    private volatile java.lang.Object customerRef_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object customerRef_ = "";
     /**
      * <pre>
      * reference to the customer. Used in electronic-invoice-line requests.
@@ -284,7 +285,8 @@ public final class DataOuterClass {
     }
 
     public static final int TEXT_FIELD_NUMBER = 4;
-    private volatile java.lang.Object text_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object text_ = "";
     /**
      * <pre>
      * invoice text from the SmartScan product. Used in scanned-invoice requests.
@@ -330,7 +332,8 @@ public final class DataOuterClass {
     }
 
     public static final int CURRENCY_FIELD_NUMBER = 6;
-    private volatile java.lang.Object currency_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object currency_ = "";
     /**
      * <pre>
      * name of the currency as a string. Used in electronic-invoice-line requests.
@@ -376,7 +379,7 @@ public final class DataOuterClass {
     }
 
     public static final int TOTAL_FIELD_NUMBER = 7;
-    private float total_;
+    private float total_ = 0F;
     /**
      * <pre>
      * total of the invoice. Used in electronic-invoice-line requests.
@@ -642,26 +645,21 @@ public final class DataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (issueDateBuilder_ == null) {
-          issueDate_ = null;
-        } else {
-          issueDate_ = null;
+        bitField0_ = 0;
+        issueDate_ = null;
+        if (issueDateBuilder_ != null) {
+          issueDateBuilder_.dispose();
           issueDateBuilder_ = null;
         }
-        if (supplierBuilder_ == null) {
-          supplier_ = null;
-        } else {
-          supplier_ = null;
+        supplier_ = null;
+        if (supplierBuilder_ != null) {
+          supplierBuilder_.dispose();
           supplierBuilder_ = null;
         }
         customerRef_ = "";
-
         text_ = "";
-
         currency_ = "";
-
         total_ = 0F;
-
         return this;
       }
 
@@ -688,22 +686,35 @@ public final class DataOuterClass {
       @java.lang.Override
       public asgt.type.DataOuterClass.Invoice buildPartial() {
         asgt.type.DataOuterClass.Invoice result = new asgt.type.DataOuterClass.Invoice(this);
-        if (issueDateBuilder_ == null) {
-          result.issueDate_ = issueDate_;
-        } else {
-          result.issueDate_ = issueDateBuilder_.build();
-        }
-        if (supplierBuilder_ == null) {
-          result.supplier_ = supplier_;
-        } else {
-          result.supplier_ = supplierBuilder_.build();
-        }
-        result.customerRef_ = customerRef_;
-        result.text_ = text_;
-        result.currency_ = currency_;
-        result.total_ = total_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.DataOuterClass.Invoice result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.issueDate_ = issueDateBuilder_ == null
+              ? issueDate_
+              : issueDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.supplier_ = supplierBuilder_ == null
+              ? supplier_
+              : supplierBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.customerRef_ = customerRef_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.text_ = text_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.currency_ = currency_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.total_ = total_;
+        }
       }
 
       @java.lang.Override
@@ -758,14 +769,17 @@ public final class DataOuterClass {
         }
         if (!other.getCustomerRef().isEmpty()) {
           customerRef_ = other.customerRef_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getText().isEmpty()) {
           text_ = other.text_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.getCurrency().isEmpty()) {
           currency_ = other.currency_;
+          bitField0_ |= 0x00000010;
           onChanged();
         }
         if (other.getTotal() != 0F) {
@@ -801,34 +815,34 @@ public final class DataOuterClass {
                 input.readMessage(
                     getIssueDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getSupplierFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 customerRef_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 text_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 50: {
                 currency_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 50
               case 61: {
                 total_ = input.readFloat();
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 61
               default: {
@@ -846,6 +860,7 @@ public final class DataOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.protobuf.Timestamp issueDate_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -855,7 +870,7 @@ public final class DataOuterClass {
        * @return Whether the issueDate field is set.
        */
       public boolean hasIssueDate() {
-        return issueDateBuilder_ != null || issueDate_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
@@ -877,11 +892,11 @@ public final class DataOuterClass {
             throw new NullPointerException();
           }
           issueDate_ = value;
-          onChanged();
         } else {
           issueDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -891,11 +906,11 @@ public final class DataOuterClass {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (issueDateBuilder_ == null) {
           issueDate_ = builderForValue.build();
-          onChanged();
         } else {
           issueDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -903,38 +918,38 @@ public final class DataOuterClass {
        */
       public Builder mergeIssueDate(com.google.protobuf.Timestamp value) {
         if (issueDateBuilder_ == null) {
-          if (issueDate_ != null) {
-            issueDate_ =
-              com.google.protobuf.Timestamp.newBuilder(issueDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            issueDate_ != null &&
+            issueDate_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getIssueDateBuilder().mergeFrom(value);
           } else {
             issueDate_ = value;
           }
-          onChanged();
         } else {
           issueDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
        */
       public Builder clearIssueDate() {
-        if (issueDateBuilder_ == null) {
-          issueDate_ = null;
-          onChanged();
-        } else {
-          issueDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        issueDate_ = null;
+        if (issueDateBuilder_ != null) {
+          issueDateBuilder_.dispose();
           issueDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp issue_date = 1 [json_name = "issueDate"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getIssueDateBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getIssueDateFieldBuilder().getBuilder();
       }
@@ -978,7 +993,7 @@ public final class DataOuterClass {
        * @return Whether the supplier field is set.
        */
       public boolean hasSupplier() {
-        return supplierBuilder_ != null || supplier_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -1008,11 +1023,11 @@ public final class DataOuterClass {
             throw new NullPointerException();
           }
           supplier_ = value;
-          onChanged();
         } else {
           supplierBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1026,11 +1041,11 @@ public final class DataOuterClass {
           asgt.type.DataOuterClass.Supplier.Builder builderForValue) {
         if (supplierBuilder_ == null) {
           supplier_ = builderForValue.build();
-          onChanged();
         } else {
           supplierBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1042,17 +1057,18 @@ public final class DataOuterClass {
        */
       public Builder mergeSupplier(asgt.type.DataOuterClass.Supplier value) {
         if (supplierBuilder_ == null) {
-          if (supplier_ != null) {
-            supplier_ =
-              asgt.type.DataOuterClass.Supplier.newBuilder(supplier_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            supplier_ != null &&
+            supplier_ != asgt.type.DataOuterClass.Supplier.getDefaultInstance()) {
+            getSupplierBuilder().mergeFrom(value);
           } else {
             supplier_ = value;
           }
-          onChanged();
         } else {
           supplierBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1063,14 +1079,13 @@ public final class DataOuterClass {
        * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
        */
       public Builder clearSupplier() {
-        if (supplierBuilder_ == null) {
-          supplier_ = null;
-          onChanged();
-        } else {
-          supplier_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        supplier_ = null;
+        if (supplierBuilder_ != null) {
+          supplierBuilder_.dispose();
           supplierBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -1081,7 +1096,7 @@ public final class DataOuterClass {
        * <code>.asgt.type.Supplier supplier = 2 [json_name = "supplier"];</code>
        */
       public asgt.type.DataOuterClass.Supplier.Builder getSupplierBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getSupplierFieldBuilder().getBuilder();
       }
@@ -1174,11 +1189,9 @@ public final class DataOuterClass {
        */
       public Builder setCustomerRef(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         customerRef_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1191,8 +1204,8 @@ public final class DataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCustomerRef() {
-        
         customerRef_ = getDefaultInstance().getCustomerRef();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1207,12 +1220,10 @@ public final class DataOuterClass {
        */
       public Builder setCustomerRefBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         customerRef_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1270,11 +1281,9 @@ public final class DataOuterClass {
        */
       public Builder setText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         text_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1287,8 +1296,8 @@ public final class DataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearText() {
-        
         text_ = getDefaultInstance().getText();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1303,12 +1312,10 @@ public final class DataOuterClass {
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         text_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1366,11 +1373,9 @@ public final class DataOuterClass {
        */
       public Builder setCurrency(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         currency_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1383,8 +1388,8 @@ public final class DataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearCurrency() {
-        
         currency_ = getDefaultInstance().getCurrency();
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -1399,12 +1404,10 @@ public final class DataOuterClass {
        */
       public Builder setCurrencyBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         currency_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1434,6 +1437,7 @@ public final class DataOuterClass {
       public Builder setTotal(float value) {
         
         total_ = value;
+        bitField0_ |= 0x00000020;
         onChanged();
         return this;
       }
@@ -1446,7 +1450,7 @@ public final class DataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTotal() {
-        
+        bitField0_ = (bitField0_ & ~0x00000020);
         total_ = 0F;
         onChanged();
         return this;
@@ -1602,7 +1606,8 @@ public final class DataOuterClass {
     }
 
     public static final int TEXT_FIELD_NUMBER = 8;
-    private volatile java.lang.Object text_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object text_ = "";
     /**
      * <pre>
      * text of the invoice line. Used in electronic-invoice-line requests.
@@ -1648,7 +1653,8 @@ public final class DataOuterClass {
     }
 
     public static final int ITEM_ID_FIELD_NUMBER = 9;
-    private volatile java.lang.Object itemId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object itemId_ = "";
     /**
      * <pre>
      * id of the product (item). Used in electronic-invoice-line requests.
@@ -1890,10 +1896,9 @@ public final class DataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         text_ = "";
-
         itemId_ = "";
-
         return this;
       }
 
@@ -1920,10 +1925,19 @@ public final class DataOuterClass {
       @java.lang.Override
       public asgt.type.DataOuterClass.InvoiceLine buildPartial() {
         asgt.type.DataOuterClass.InvoiceLine result = new asgt.type.DataOuterClass.InvoiceLine(this);
-        result.text_ = text_;
-        result.itemId_ = itemId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.DataOuterClass.InvoiceLine result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.text_ = text_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.itemId_ = itemId_;
+        }
       }
 
       @java.lang.Override
@@ -1972,10 +1986,12 @@ public final class DataOuterClass {
         if (other == asgt.type.DataOuterClass.InvoiceLine.getDefaultInstance()) return this;
         if (!other.getText().isEmpty()) {
           text_ = other.text_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getItemId().isEmpty()) {
           itemId_ = other.itemId_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2006,12 +2022,12 @@ public final class DataOuterClass {
                 break;
               case 66: {
                 text_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 66
               case 74: {
                 itemId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 74
               default: {
@@ -2029,6 +2045,7 @@ public final class DataOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object text_ = "";
       /**
@@ -2083,11 +2100,9 @@ public final class DataOuterClass {
        */
       public Builder setText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         text_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2100,8 +2115,8 @@ public final class DataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearText() {
-        
         text_ = getDefaultInstance().getText();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2116,12 +2131,10 @@ public final class DataOuterClass {
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         text_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2179,11 +2192,9 @@ public final class DataOuterClass {
        */
       public Builder setItemId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         itemId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2196,8 +2207,8 @@ public final class DataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearItemId() {
-        
         itemId_ = getDefaultInstance().getItemId();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2212,12 +2223,10 @@ public final class DataOuterClass {
        */
       public Builder setItemIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         itemId_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2393,7 +2402,8 @@ public final class DataOuterClass {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <pre>
      *  id of the supplier; not nullable
@@ -2439,7 +2449,8 @@ public final class DataOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 4;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <pre>
      * name of the supplier
@@ -2485,7 +2496,8 @@ public final class DataOuterClass {
     }
 
     public static final int GLOBAL_ID_FIELD_NUMBER = 5;
-    private volatile java.lang.Object globalId_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object globalId_ = "";
     /**
      * <pre>
      * global id of the supplier
@@ -2737,12 +2749,10 @@ public final class DataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         name_ = "";
-
         globalId_ = "";
-
         return this;
       }
 
@@ -2769,11 +2779,22 @@ public final class DataOuterClass {
       @java.lang.Override
       public asgt.type.DataOuterClass.Supplier buildPartial() {
         asgt.type.DataOuterClass.Supplier result = new asgt.type.DataOuterClass.Supplier(this);
-        result.id_ = id_;
-        result.name_ = name_;
-        result.globalId_ = globalId_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.DataOuterClass.Supplier result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.globalId_ = globalId_;
+        }
       }
 
       @java.lang.Override
@@ -2822,14 +2843,17 @@ public final class DataOuterClass {
         if (other == asgt.type.DataOuterClass.Supplier.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.getGlobalId().isEmpty()) {
           globalId_ = other.globalId_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2860,17 +2884,17 @@ public final class DataOuterClass {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 34: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 34
               case 42: {
                 globalId_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 42
               default: {
@@ -2888,6 +2912,7 @@ public final class DataOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -2942,11 +2967,9 @@ public final class DataOuterClass {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2959,8 +2982,8 @@ public final class DataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2975,12 +2998,10 @@ public final class DataOuterClass {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3038,11 +3059,9 @@ public final class DataOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3055,8 +3074,8 @@ public final class DataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -3071,12 +3090,10 @@ public final class DataOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3134,11 +3151,9 @@ public final class DataOuterClass {
        */
       public Builder setGlobalId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         globalId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -3151,8 +3166,8 @@ public final class DataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearGlobalId() {
-        
         globalId_ = getDefaultInstance().getGlobalId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -3167,12 +3182,10 @@ public final class DataOuterClass {
        */
       public Builder setGlobalIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         globalId_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -3316,7 +3329,8 @@ public final class DataOuterClass {
     }
 
     public static final int TEXT_FIELD_NUMBER = 1;
-    private volatile java.lang.Object text_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object text_ = "";
     /**
      * <pre>
      * text of the bank transaction. Used in bank requests.
@@ -3362,7 +3376,7 @@ public final class DataOuterClass {
     }
 
     public static final int AMOUNT_FIELD_NUMBER = 2;
-    private float amount_;
+    private float amount_ = 0F;
     /**
      * <pre>
      * amount of the transaction. Used in bank requests.
@@ -3576,10 +3590,9 @@ public final class DataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         text_ = "";
-
         amount_ = 0F;
-
         return this;
       }
 
@@ -3606,10 +3619,19 @@ public final class DataOuterClass {
       @java.lang.Override
       public asgt.type.DataOuterClass.Transaction buildPartial() {
         asgt.type.DataOuterClass.Transaction result = new asgt.type.DataOuterClass.Transaction(this);
-        result.text_ = text_;
-        result.amount_ = amount_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.DataOuterClass.Transaction result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.text_ = text_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.amount_ = amount_;
+        }
       }
 
       @java.lang.Override
@@ -3658,6 +3680,7 @@ public final class DataOuterClass {
         if (other == asgt.type.DataOuterClass.Transaction.getDefaultInstance()) return this;
         if (!other.getText().isEmpty()) {
           text_ = other.text_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getAmount() != 0F) {
@@ -3691,12 +3714,12 @@ public final class DataOuterClass {
                 break;
               case 10: {
                 text_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 21: {
                 amount_ = input.readFloat();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 21
               default: {
@@ -3714,6 +3737,7 @@ public final class DataOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object text_ = "";
       /**
@@ -3768,11 +3792,9 @@ public final class DataOuterClass {
        */
       public Builder setText(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         text_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3785,8 +3807,8 @@ public final class DataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearText() {
-        
         text_ = getDefaultInstance().getText();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3801,12 +3823,10 @@ public final class DataOuterClass {
        */
       public Builder setTextBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         text_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3836,6 +3856,7 @@ public final class DataOuterClass {
       public Builder setAmount(float value) {
         
         amount_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3848,7 +3869,7 @@ public final class DataOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearAmount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         amount_ = 0F;
         onChanged();
         return this;
@@ -4077,7 +4098,7 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.TransactionOrBuilder getTransactionOrBuilder() {
-      return getTransaction();
+      return transaction_ == null ? asgt.type.DataOuterClass.Transaction.getDefaultInstance() : transaction_;
     }
 
     public static final int INVOICE_FIELD_NUMBER = 2;
@@ -4115,7 +4136,7 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.InvoiceOrBuilder getInvoiceOrBuilder() {
-      return getInvoice();
+      return invoice_ == null ? asgt.type.DataOuterClass.Invoice.getDefaultInstance() : invoice_;
     }
 
     public static final int INVOICE_LINE_FIELD_NUMBER = 3;
@@ -4153,7 +4174,7 @@ public final class DataOuterClass {
      */
     @java.lang.Override
     public asgt.type.DataOuterClass.InvoiceLineOrBuilder getInvoiceLineOrBuilder() {
-      return getInvoiceLine();
+      return invoiceLine_ == null ? asgt.type.DataOuterClass.InvoiceLine.getDefaultInstance() : invoiceLine_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4381,22 +4402,20 @@ public final class DataOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (transactionBuilder_ == null) {
-          transaction_ = null;
-        } else {
-          transaction_ = null;
+        bitField0_ = 0;
+        transaction_ = null;
+        if (transactionBuilder_ != null) {
+          transactionBuilder_.dispose();
           transactionBuilder_ = null;
         }
-        if (invoiceBuilder_ == null) {
-          invoice_ = null;
-        } else {
-          invoice_ = null;
+        invoice_ = null;
+        if (invoiceBuilder_ != null) {
+          invoiceBuilder_.dispose();
           invoiceBuilder_ = null;
         }
-        if (invoiceLineBuilder_ == null) {
-          invoiceLine_ = null;
-        } else {
-          invoiceLine_ = null;
+        invoiceLine_ = null;
+        if (invoiceLineBuilder_ != null) {
+          invoiceLineBuilder_.dispose();
           invoiceLineBuilder_ = null;
         }
         return this;
@@ -4425,23 +4444,28 @@ public final class DataOuterClass {
       @java.lang.Override
       public asgt.type.DataOuterClass.Data buildPartial() {
         asgt.type.DataOuterClass.Data result = new asgt.type.DataOuterClass.Data(this);
-        if (transactionBuilder_ == null) {
-          result.transaction_ = transaction_;
-        } else {
-          result.transaction_ = transactionBuilder_.build();
-        }
-        if (invoiceBuilder_ == null) {
-          result.invoice_ = invoice_;
-        } else {
-          result.invoice_ = invoiceBuilder_.build();
-        }
-        if (invoiceLineBuilder_ == null) {
-          result.invoiceLine_ = invoiceLine_;
-        } else {
-          result.invoiceLine_ = invoiceLineBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.type.DataOuterClass.Data result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.transaction_ = transactionBuilder_ == null
+              ? transaction_
+              : transactionBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.invoice_ = invoiceBuilder_ == null
+              ? invoice_
+              : invoiceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.invoiceLine_ = invoiceLineBuilder_ == null
+              ? invoiceLine_
+              : invoiceLineBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -4527,21 +4551,21 @@ public final class DataOuterClass {
                 input.readMessage(
                     getTransactionFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getInvoiceFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getInvoiceLineFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -4559,6 +4583,7 @@ public final class DataOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private asgt.type.DataOuterClass.Transaction transaction_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4572,7 +4597,7 @@ public final class DataOuterClass {
        * @return Whether the transaction field is set.
        */
       public boolean hasTransaction() {
-        return transactionBuilder_ != null || transaction_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <pre>
@@ -4602,11 +4627,11 @@ public final class DataOuterClass {
             throw new NullPointerException();
           }
           transaction_ = value;
-          onChanged();
         } else {
           transactionBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4620,11 +4645,11 @@ public final class DataOuterClass {
           asgt.type.DataOuterClass.Transaction.Builder builderForValue) {
         if (transactionBuilder_ == null) {
           transaction_ = builderForValue.build();
-          onChanged();
         } else {
           transactionBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4636,17 +4661,18 @@ public final class DataOuterClass {
        */
       public Builder mergeTransaction(asgt.type.DataOuterClass.Transaction value) {
         if (transactionBuilder_ == null) {
-          if (transaction_ != null) {
-            transaction_ =
-              asgt.type.DataOuterClass.Transaction.newBuilder(transaction_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            transaction_ != null &&
+            transaction_ != asgt.type.DataOuterClass.Transaction.getDefaultInstance()) {
+            getTransactionBuilder().mergeFrom(value);
           } else {
             transaction_ = value;
           }
-          onChanged();
         } else {
           transactionBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -4657,14 +4683,13 @@ public final class DataOuterClass {
        * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       public Builder clearTransaction() {
-        if (transactionBuilder_ == null) {
-          transaction_ = null;
-          onChanged();
-        } else {
-          transaction_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        transaction_ = null;
+        if (transactionBuilder_ != null) {
+          transactionBuilder_.dispose();
           transactionBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4675,7 +4700,7 @@ public final class DataOuterClass {
        * <code>.asgt.type.Transaction transaction = 1 [json_name = "transaction"];</code>
        */
       public asgt.type.DataOuterClass.Transaction.Builder getTransactionBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getTransactionFieldBuilder().getBuilder();
       }
@@ -4727,7 +4752,7 @@ public final class DataOuterClass {
        * @return Whether the invoice field is set.
        */
       public boolean hasInvoice() {
-        return invoiceBuilder_ != null || invoice_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -4757,11 +4782,11 @@ public final class DataOuterClass {
             throw new NullPointerException();
           }
           invoice_ = value;
-          onChanged();
         } else {
           invoiceBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4775,11 +4800,11 @@ public final class DataOuterClass {
           asgt.type.DataOuterClass.Invoice.Builder builderForValue) {
         if (invoiceBuilder_ == null) {
           invoice_ = builderForValue.build();
-          onChanged();
         } else {
           invoiceBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4791,17 +4816,18 @@ public final class DataOuterClass {
        */
       public Builder mergeInvoice(asgt.type.DataOuterClass.Invoice value) {
         if (invoiceBuilder_ == null) {
-          if (invoice_ != null) {
-            invoice_ =
-              asgt.type.DataOuterClass.Invoice.newBuilder(invoice_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            invoice_ != null &&
+            invoice_ != asgt.type.DataOuterClass.Invoice.getDefaultInstance()) {
+            getInvoiceBuilder().mergeFrom(value);
           } else {
             invoice_ = value;
           }
-          onChanged();
         } else {
           invoiceBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4812,14 +4838,13 @@ public final class DataOuterClass {
        * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       public Builder clearInvoice() {
-        if (invoiceBuilder_ == null) {
-          invoice_ = null;
-          onChanged();
-        } else {
-          invoice_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        invoice_ = null;
+        if (invoiceBuilder_ != null) {
+          invoiceBuilder_.dispose();
           invoiceBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4830,7 +4855,7 @@ public final class DataOuterClass {
        * <code>.asgt.type.Invoice invoice = 2 [json_name = "invoice"];</code>
        */
       public asgt.type.DataOuterClass.Invoice.Builder getInvoiceBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getInvoiceFieldBuilder().getBuilder();
       }
@@ -4882,7 +4907,7 @@ public final class DataOuterClass {
        * @return Whether the invoiceLine field is set.
        */
       public boolean hasInvoiceLine() {
-        return invoiceLineBuilder_ != null || invoiceLine_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <pre>
@@ -4912,11 +4937,11 @@ public final class DataOuterClass {
             throw new NullPointerException();
           }
           invoiceLine_ = value;
-          onChanged();
         } else {
           invoiceLineBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4930,11 +4955,11 @@ public final class DataOuterClass {
           asgt.type.DataOuterClass.InvoiceLine.Builder builderForValue) {
         if (invoiceLineBuilder_ == null) {
           invoiceLine_ = builderForValue.build();
-          onChanged();
         } else {
           invoiceLineBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4946,17 +4971,18 @@ public final class DataOuterClass {
        */
       public Builder mergeInvoiceLine(asgt.type.DataOuterClass.InvoiceLine value) {
         if (invoiceLineBuilder_ == null) {
-          if (invoiceLine_ != null) {
-            invoiceLine_ =
-              asgt.type.DataOuterClass.InvoiceLine.newBuilder(invoiceLine_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            invoiceLine_ != null &&
+            invoiceLine_ != asgt.type.DataOuterClass.InvoiceLine.getDefaultInstance()) {
+            getInvoiceLineBuilder().mergeFrom(value);
           } else {
             invoiceLine_ = value;
           }
-          onChanged();
         } else {
           invoiceLineBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -4967,14 +4993,13 @@ public final class DataOuterClass {
        * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       public Builder clearInvoiceLine() {
-        if (invoiceLineBuilder_ == null) {
-          invoiceLine_ = null;
-          onChanged();
-        } else {
-          invoiceLine_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        invoiceLine_ = null;
+        if (invoiceLineBuilder_ != null) {
+          invoiceLineBuilder_.dispose();
           invoiceLineBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -4985,7 +5010,7 @@ public final class DataOuterClass {
        * <code>.asgt.type.InvoiceLine invoice_line = 3 [json_name = "invoiceLine"];</code>
        */
       public asgt.type.DataOuterClass.InvoiceLine.Builder getInvoiceLineBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getInvoiceLineFieldBuilder().getBuilder();
       }

@@ -459,7 +459,7 @@ public final class PdfServiceProto {
     }
 
     public static final int DATA_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString data_;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>bytes data = 1 [json_name = "data"];</code>
      * @return The data.
@@ -470,7 +470,7 @@ public final class PdfServiceProto {
     }
 
     public static final int DPI_FIELD_NUMBER = 2;
-    private int dpi_;
+    private int dpi_ = 0;
     /**
      * <code>uint32 dpi = 2 [json_name = "dpi"];</code>
      * @return The dpi.
@@ -481,7 +481,7 @@ public final class PdfServiceProto {
     }
 
     public static final int FORMAT_FIELD_NUMBER = 3;
-    private int format_;
+    private int format_ = 0;
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.Format format = 3 [json_name = "format"];</code>
      * @return The enum numeric value on the wire for format.
@@ -494,13 +494,12 @@ public final class PdfServiceProto {
      * @return The format.
      */
     @java.lang.Override public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format getFormat() {
-      @SuppressWarnings("deprecation")
-      ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format.valueOf(format_);
+      ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format.forNumber(format_);
       return result == null ? ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format.UNRECOGNIZED : result;
     }
 
     public static final int COLOR_FIELD_NUMBER = 4;
-    private int color_;
+    private int color_ = 0;
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.ColorSpace color = 4 [json_name = "color"];</code>
      * @return The enum numeric value on the wire for color.
@@ -513,13 +512,12 @@ public final class PdfServiceProto {
      * @return The color.
      */
     @java.lang.Override public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace getColor() {
-      @SuppressWarnings("deprecation")
-      ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace.valueOf(color_);
+      ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace.forNumber(color_);
       return result == null ? ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace.UNRECOGNIZED : result;
     }
 
     public static final int PAGES_FIELD_NUMBER = 5;
-    private int pages_;
+    private int pages_ = 0;
     /**
      * <code>.ssn.pdfservice.v1.RasterizePdfRequest.PageOption pages = 5 [json_name = "pages"];</code>
      * @return The enum numeric value on the wire for pages.
@@ -532,8 +530,7 @@ public final class PdfServiceProto {
      * @return The pages.
      */
     @java.lang.Override public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption getPages() {
-      @SuppressWarnings("deprecation")
-      ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption.valueOf(pages_);
+      ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption.forNumber(pages_);
       return result == null ? ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption.UNRECOGNIZED : result;
     }
 
@@ -766,16 +763,12 @@ public final class PdfServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         data_ = com.google.protobuf.ByteString.EMPTY;
-
         dpi_ = 0;
-
         format_ = 0;
-
         color_ = 0;
-
         pages_ = 0;
-
         return this;
       }
 
@@ -802,13 +795,28 @@ public final class PdfServiceProto {
       @java.lang.Override
       public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest buildPartial() {
         ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest result = new ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest(this);
-        result.data_ = data_;
-        result.dpi_ = dpi_;
-        result.format_ = format_;
-        result.color_ = color_;
-        result.pages_ = pages_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.data_ = data_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.dpi_ = dpi_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.format_ = format_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.color_ = color_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.pages_ = pages_;
+        }
       }
 
       @java.lang.Override
@@ -898,27 +906,27 @@ public final class PdfServiceProto {
                 break;
               case 10: {
                 data_ = input.readBytes();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 dpi_ = input.readUInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 24: {
                 format_ = input.readEnum();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 32: {
                 color_ = input.readEnum();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 40: {
                 pages_ = input.readEnum();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 40
               default: {
@@ -936,6 +944,7 @@ public final class PdfServiceProto {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
@@ -952,11 +961,9 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         data_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -965,7 +972,7 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         data_ = getDefaultInstance().getData();
         onChanged();
         return this;
@@ -988,6 +995,7 @@ public final class PdfServiceProto {
       public Builder setDpi(int value) {
         
         dpi_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -996,7 +1004,7 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearDpi() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         dpi_ = 0;
         onChanged();
         return this;
@@ -1016,8 +1024,8 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder setFormatValue(int value) {
-        
         format_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1027,8 +1035,7 @@ public final class PdfServiceProto {
        */
       @java.lang.Override
       public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format getFormat() {
-        @SuppressWarnings("deprecation")
-        ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format.valueOf(format_);
+        ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format.forNumber(format_);
         return result == null ? ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.Format.UNRECOGNIZED : result;
       }
       /**
@@ -1040,7 +1047,7 @@ public final class PdfServiceProto {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000004;
         format_ = value.getNumber();
         onChanged();
         return this;
@@ -1050,7 +1057,7 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearFormat() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         format_ = 0;
         onChanged();
         return this;
@@ -1070,8 +1077,8 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder setColorValue(int value) {
-        
         color_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1081,8 +1088,7 @@ public final class PdfServiceProto {
        */
       @java.lang.Override
       public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace getColor() {
-        @SuppressWarnings("deprecation")
-        ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace.valueOf(color_);
+        ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace.forNumber(color_);
         return result == null ? ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.ColorSpace.UNRECOGNIZED : result;
       }
       /**
@@ -1094,7 +1100,7 @@ public final class PdfServiceProto {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000008;
         color_ = value.getNumber();
         onChanged();
         return this;
@@ -1104,7 +1110,7 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearColor() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         color_ = 0;
         onChanged();
         return this;
@@ -1124,8 +1130,8 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder setPagesValue(int value) {
-        
         pages_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1135,8 +1141,7 @@ public final class PdfServiceProto {
        */
       @java.lang.Override
       public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption getPages() {
-        @SuppressWarnings("deprecation")
-        ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption.valueOf(pages_);
+        ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption result = ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption.forNumber(pages_);
         return result == null ? ssn.pdfservice.v1.PdfServiceProto.RasterizePdfRequest.PageOption.UNRECOGNIZED : result;
       }
       /**
@@ -1148,7 +1153,7 @@ public final class PdfServiceProto {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000010;
         pages_ = value.getNumber();
         onChanged();
         return this;
@@ -1158,7 +1163,7 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearPages() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         pages_ = 0;
         onChanged();
         return this;
@@ -1307,7 +1312,7 @@ public final class PdfServiceProto {
     }
 
     public static final int INDEX_FIELD_NUMBER = 1;
-    private int index_;
+    private int index_ = 0;
     /**
      * <code>uint32 index = 1 [json_name = "index"];</code>
      * @return The index.
@@ -1318,7 +1323,7 @@ public final class PdfServiceProto {
     }
 
     public static final int DATA_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString data_;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>bytes data = 2 [json_name = "data"];</code>
      * @return The data.
@@ -1329,7 +1334,7 @@ public final class PdfServiceProto {
     }
 
     public static final int WIDTH_FIELD_NUMBER = 3;
-    private int width_;
+    private int width_ = 0;
     /**
      * <code>uint32 width = 3 [json_name = "width"];</code>
      * @return The width.
@@ -1340,7 +1345,7 @@ public final class PdfServiceProto {
     }
 
     public static final int HEIGHT_FIELD_NUMBER = 4;
-    private int height_;
+    private int height_ = 0;
     /**
      * <code>uint32 height = 4 [json_name = "height"];</code>
      * @return The height.
@@ -1351,7 +1356,7 @@ public final class PdfServiceProto {
     }
 
     public static final int SCALE_FIELD_NUMBER = 5;
-    private double scale_;
+    private double scale_ = 0D;
     /**
      * <pre>
      * Compared to a 72 dpi page
@@ -1599,16 +1604,12 @@ public final class PdfServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         index_ = 0;
-
         data_ = com.google.protobuf.ByteString.EMPTY;
-
         width_ = 0;
-
         height_ = 0;
-
         scale_ = 0D;
-
         return this;
       }
 
@@ -1635,13 +1636,28 @@ public final class PdfServiceProto {
       @java.lang.Override
       public ssn.pdfservice.v1.PdfServiceProto.RasterizePdfResponse buildPartial() {
         ssn.pdfservice.v1.PdfServiceProto.RasterizePdfResponse result = new ssn.pdfservice.v1.PdfServiceProto.RasterizePdfResponse(this);
-        result.index_ = index_;
-        result.data_ = data_;
-        result.width_ = width_;
-        result.height_ = height_;
-        result.scale_ = scale_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.pdfservice.v1.PdfServiceProto.RasterizePdfResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.index_ = index_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.data_ = data_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.width_ = width_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.height_ = height_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.scale_ = scale_;
+        }
       }
 
       @java.lang.Override
@@ -1731,27 +1747,27 @@ public final class PdfServiceProto {
                 break;
               case 8: {
                 index_ = input.readUInt32();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 data_ = input.readBytes();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 24: {
                 width_ = input.readUInt32();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 32: {
                 height_ = input.readUInt32();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 32
               case 41: {
                 scale_ = input.readDouble();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 41
               default: {
@@ -1769,6 +1785,7 @@ public final class PdfServiceProto {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int index_ ;
       /**
@@ -1787,6 +1804,7 @@ public final class PdfServiceProto {
       public Builder setIndex(int value) {
         
         index_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1795,7 +1813,7 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearIndex() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         index_ = 0;
         onChanged();
         return this;
@@ -1816,11 +1834,9 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         data_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1829,7 +1845,7 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         data_ = getDefaultInstance().getData();
         onChanged();
         return this;
@@ -1852,6 +1868,7 @@ public final class PdfServiceProto {
       public Builder setWidth(int value) {
         
         width_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1860,7 +1877,7 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearWidth() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         width_ = 0;
         onChanged();
         return this;
@@ -1883,6 +1900,7 @@ public final class PdfServiceProto {
       public Builder setHeight(int value) {
         
         height_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1891,7 +1909,7 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearHeight() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         height_ = 0;
         onChanged();
         return this;
@@ -1922,6 +1940,7 @@ public final class PdfServiceProto {
       public Builder setScale(double value) {
         
         scale_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -1934,7 +1953,7 @@ public final class PdfServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearScale() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         scale_ = 0D;
         onChanged();
         return this;

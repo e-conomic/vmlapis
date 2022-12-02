@@ -102,11 +102,11 @@ public final class OcrServiceProto {
      */
     @java.lang.Override
     public ssn.annotator.v1.Annotator.DocumentOrBuilder getDocumentOrBuilder() {
-      return getDocument();
+      return document_ == null ? ssn.annotator.v1.Annotator.Document.getDefaultInstance() : document_;
     }
 
     public static final int PREVIEW_FIELD_NUMBER = 3;
-    private boolean preview_;
+    private boolean preview_ = false;
     /**
      * <code>bool preview = 3 [json_name = "preview"];</code>
      * @return The preview.
@@ -321,14 +321,13 @@ public final class OcrServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (documentBuilder_ == null) {
-          document_ = null;
-        } else {
-          document_ = null;
+        bitField0_ = 0;
+        document_ = null;
+        if (documentBuilder_ != null) {
+          documentBuilder_.dispose();
           documentBuilder_ = null;
         }
         preview_ = false;
-
         return this;
       }
 
@@ -355,14 +354,21 @@ public final class OcrServiceProto {
       @java.lang.Override
       public ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest buildPartial() {
         ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest result = new ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest(this);
-        if (documentBuilder_ == null) {
-          result.document_ = document_;
-        } else {
-          result.document_ = documentBuilder_.build();
-        }
-        result.preview_ = preview_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.document_ = documentBuilder_ == null
+              ? document_
+              : documentBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.preview_ = preview_;
+        }
       }
 
       @java.lang.Override
@@ -445,12 +451,12 @@ public final class OcrServiceProto {
                 input.readMessage(
                     getDocumentFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 18
               case 24: {
                 preview_ = input.readBool();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 24
               default: {
@@ -468,6 +474,7 @@ public final class OcrServiceProto {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private ssn.annotator.v1.Annotator.Document document_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -477,7 +484,7 @@ public final class OcrServiceProto {
        * @return Whether the document field is set.
        */
       public boolean hasDocument() {
-        return documentBuilder_ != null || document_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
@@ -499,11 +506,11 @@ public final class OcrServiceProto {
             throw new NullPointerException();
           }
           document_ = value;
-          onChanged();
         } else {
           documentBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -513,11 +520,11 @@ public final class OcrServiceProto {
           ssn.annotator.v1.Annotator.Document.Builder builderForValue) {
         if (documentBuilder_ == null) {
           document_ = builderForValue.build();
-          onChanged();
         } else {
           documentBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -525,38 +532,38 @@ public final class OcrServiceProto {
        */
       public Builder mergeDocument(ssn.annotator.v1.Annotator.Document value) {
         if (documentBuilder_ == null) {
-          if (document_ != null) {
-            document_ =
-              ssn.annotator.v1.Annotator.Document.newBuilder(document_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            document_ != null &&
+            document_ != ssn.annotator.v1.Annotator.Document.getDefaultInstance()) {
+            getDocumentBuilder().mergeFrom(value);
           } else {
             document_ = value;
           }
-          onChanged();
         } else {
           documentBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
        */
       public Builder clearDocument() {
-        if (documentBuilder_ == null) {
-          document_ = null;
-          onChanged();
-        } else {
-          document_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        document_ = null;
+        if (documentBuilder_ != null) {
+          documentBuilder_.dispose();
           documentBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.annotator.v1.Document document = 2 [json_name = "document"];</code>
        */
       public ssn.annotator.v1.Annotator.Document.Builder getDocumentBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDocumentFieldBuilder().getBuilder();
       }
@@ -605,6 +612,7 @@ public final class OcrServiceProto {
       public Builder setPreview(boolean value) {
         
         preview_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -613,7 +621,7 @@ public final class OcrServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearPreview() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         preview_ = false;
         onChanged();
         return this;
@@ -779,7 +787,7 @@ public final class OcrServiceProto {
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
-      return getTextAnnotation();
+      return textAnnotation_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : textAnnotation_;
     }
 
     public static final int IMAGE_FIELD_NUMBER = 3;
@@ -805,7 +813,7 @@ public final class OcrServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.BytesValueOrBuilder getImageOrBuilder() {
-      return getImage();
+      return image_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : image_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -1017,16 +1025,15 @@ public final class OcrServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (textAnnotationBuilder_ == null) {
-          textAnnotation_ = null;
-        } else {
-          textAnnotation_ = null;
+        bitField0_ = 0;
+        textAnnotation_ = null;
+        if (textAnnotationBuilder_ != null) {
+          textAnnotationBuilder_.dispose();
           textAnnotationBuilder_ = null;
         }
-        if (imageBuilder_ == null) {
-          image_ = null;
-        } else {
-          image_ = null;
+        image_ = null;
+        if (imageBuilder_ != null) {
+          imageBuilder_.dispose();
           imageBuilder_ = null;
         }
         return this;
@@ -1055,18 +1062,23 @@ public final class OcrServiceProto {
       @java.lang.Override
       public ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse buildPartial() {
         ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse result = new ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse(this);
-        if (textAnnotationBuilder_ == null) {
-          result.textAnnotation_ = textAnnotation_;
-        } else {
-          result.textAnnotation_ = textAnnotationBuilder_.build();
-        }
-        if (imageBuilder_ == null) {
-          result.image_ = image_;
-        } else {
-          result.image_ = imageBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.ocrservice.v1.OcrServiceProto.GetTextAnnotationResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.textAnnotation_ = textAnnotationBuilder_ == null
+              ? textAnnotation_
+              : textAnnotationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.image_ = imageBuilder_ == null
+              ? image_
+              : imageBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -1149,14 +1161,14 @@ public final class OcrServiceProto {
                 input.readMessage(
                     getTextAnnotationFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getImageFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 26
               default: {
@@ -1174,6 +1186,7 @@ public final class OcrServiceProto {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private ssn.type.TextAnnotationOuterClass.TextAnnotation textAnnotation_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -1183,7 +1196,7 @@ public final class OcrServiceProto {
        * @return Whether the textAnnotation field is set.
        */
       public boolean hasTextAnnotation() {
-        return textAnnotationBuilder_ != null || textAnnotation_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
@@ -1205,11 +1218,11 @@ public final class OcrServiceProto {
             throw new NullPointerException();
           }
           textAnnotation_ = value;
-          onChanged();
         } else {
           textAnnotationBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1219,11 +1232,11 @@ public final class OcrServiceProto {
           ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder builderForValue) {
         if (textAnnotationBuilder_ == null) {
           textAnnotation_ = builderForValue.build();
-          onChanged();
         } else {
           textAnnotationBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1231,38 +1244,38 @@ public final class OcrServiceProto {
        */
       public Builder mergeTextAnnotation(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (textAnnotationBuilder_ == null) {
-          if (textAnnotation_ != null) {
-            textAnnotation_ =
-              ssn.type.TextAnnotationOuterClass.TextAnnotation.newBuilder(textAnnotation_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            textAnnotation_ != null &&
+            textAnnotation_ != ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance()) {
+            getTextAnnotationBuilder().mergeFrom(value);
           } else {
             textAnnotation_ = value;
           }
-          onChanged();
         } else {
           textAnnotationBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public Builder clearTextAnnotation() {
-        if (textAnnotationBuilder_ == null) {
-          textAnnotation_ = null;
-          onChanged();
-        } else {
-          textAnnotation_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        textAnnotation_ = null;
+        if (textAnnotationBuilder_ != null) {
+          textAnnotationBuilder_.dispose();
           textAnnotationBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder getTextAnnotationBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getTextAnnotationFieldBuilder().getBuilder();
       }
@@ -1302,7 +1315,7 @@ public final class OcrServiceProto {
        * @return Whether the image field is set.
        */
       public boolean hasImage() {
-        return imageBuilder_ != null || image_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
@@ -1324,11 +1337,11 @@ public final class OcrServiceProto {
             throw new NullPointerException();
           }
           image_ = value;
-          onChanged();
         } else {
           imageBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1338,11 +1351,11 @@ public final class OcrServiceProto {
           com.google.protobuf.BytesValue.Builder builderForValue) {
         if (imageBuilder_ == null) {
           image_ = builderForValue.build();
-          onChanged();
         } else {
           imageBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -1350,38 +1363,38 @@ public final class OcrServiceProto {
        */
       public Builder mergeImage(com.google.protobuf.BytesValue value) {
         if (imageBuilder_ == null) {
-          if (image_ != null) {
-            image_ =
-              com.google.protobuf.BytesValue.newBuilder(image_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            image_ != null &&
+            image_ != com.google.protobuf.BytesValue.getDefaultInstance()) {
+            getImageBuilder().mergeFrom(value);
           } else {
             image_ = value;
           }
-          onChanged();
         } else {
           imageBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
        */
       public Builder clearImage() {
-        if (imageBuilder_ == null) {
-          image_ = null;
-          onChanged();
-        } else {
-          image_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        image_ = null;
+        if (imageBuilder_ != null) {
+          imageBuilder_.dispose();
           imageBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
        */
       public com.google.protobuf.BytesValue.Builder getImageBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getImageFieldBuilder().getBuilder();
       }
@@ -1528,7 +1541,7 @@ public final class OcrServiceProto {
     }
 
     public static final int DATA_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString data_;
+    private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>bytes data = 1 [json_name = "data"];</code>
      * @return The data.
@@ -1726,8 +1739,8 @@ public final class OcrServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         data_ = com.google.protobuf.ByteString.EMPTY;
-
         return this;
       }
 
@@ -1754,9 +1767,16 @@ public final class OcrServiceProto {
       @java.lang.Override
       public ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest buildPartial() {
         ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest result = new ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest(this);
-        result.data_ = data_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.ocrservice.v1.OcrServiceProto.OcrScanImageRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.data_ = data_;
+        }
       }
 
       @java.lang.Override
@@ -1834,7 +1854,7 @@ public final class OcrServiceProto {
                 break;
               case 10: {
                 data_ = input.readBytes();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -1852,6 +1872,7 @@ public final class OcrServiceProto {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private com.google.protobuf.ByteString data_ = com.google.protobuf.ByteString.EMPTY;
       /**
@@ -1868,11 +1889,9 @@ public final class OcrServiceProto {
        * @return This builder for chaining.
        */
       public Builder setData(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         data_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1881,7 +1900,7 @@ public final class OcrServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearData() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         data_ = getDefaultInstance().getData();
         onChanged();
         return this;
@@ -2008,7 +2027,8 @@ public final class OcrServiceProto {
     }
 
     public static final int TESS_HOCR_FIELD_NUMBER = 1;
-    private volatile java.lang.Object tessHocr_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tessHocr_ = "";
     /**
      * <code>string tess_hocr = 1 [json_name = "tessHocr"];</code>
      * @return The tessHocr.
@@ -2232,8 +2252,8 @@ public final class OcrServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         tessHocr_ = "";
-
         return this;
       }
 
@@ -2260,9 +2280,16 @@ public final class OcrServiceProto {
       @java.lang.Override
       public ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse buildPartial() {
         ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse result = new ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse(this);
-        result.tessHocr_ = tessHocr_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tessHocr_ = tessHocr_;
+        }
       }
 
       @java.lang.Override
@@ -2311,6 +2338,7 @@ public final class OcrServiceProto {
         if (other == ssn.ocrservice.v1.OcrServiceProto.OcrScanImageResponse.getDefaultInstance()) return this;
         if (!other.getTessHocr().isEmpty()) {
           tessHocr_ = other.tessHocr_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2341,7 +2369,7 @@ public final class OcrServiceProto {
                 break;
               case 10: {
                 tessHocr_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -2359,6 +2387,7 @@ public final class OcrServiceProto {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object tessHocr_ = "";
       /**
@@ -2401,11 +2430,9 @@ public final class OcrServiceProto {
        */
       public Builder setTessHocr(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         tessHocr_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2414,8 +2441,8 @@ public final class OcrServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearTessHocr() {
-        
         tessHocr_ = getDefaultInstance().getTessHocr();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2426,12 +2453,10 @@ public final class OcrServiceProto {
        */
       public Builder setTessHocrBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         tessHocr_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }

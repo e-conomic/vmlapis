@@ -43,10 +43,8 @@ message TrainStatistics {
   map<string, TargetStats> target_stats_by_target = 1;
   // target statistics for each target (classification task)
 
-
   map<string, FeatureStats> feature_stats_by_target = 2;
   // feature statistics for each target (classification task)
-
 
   float similarity_index = 3;
   // measure of train/test similarity

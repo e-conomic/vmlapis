@@ -568,7 +568,7 @@ public final class MlServiceProtos {
       }
 
       public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
-      private double totalInclVat_;
+      private double totalInclVat_ = 0D;
       /**
        * <code>double total_incl_vat = 1 [json_name = "totalInclVat"];</code>
        * @return The totalInclVat.
@@ -579,7 +579,7 @@ public final class MlServiceProtos {
       }
 
       public static final int TOTAL_VAT_FIELD_NUMBER = 2;
-      private double totalVat_;
+      private double totalVat_ = 0D;
       /**
        * <code>double total_vat = 2 [json_name = "totalVat"];</code>
        * @return The totalVat.
@@ -590,7 +590,7 @@ public final class MlServiceProtos {
       }
 
       public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 3;
-      private double totalExclVat_;
+      private double totalExclVat_ = 0D;
       /**
        * <code>double total_excl_vat = 3 [json_name = "totalExclVat"];</code>
        * @return The totalExclVat.
@@ -623,7 +623,7 @@ public final class MlServiceProtos {
        */
       @java.lang.Override
       public com.google.type.DateOrBuilder getOrderDateOrBuilder() {
-        return getOrderDate();
+        return orderDate_ == null ? com.google.type.Date.getDefaultInstance() : orderDate_;
       }
 
       public static final int PAYMENT_DUE_DATE_FIELD_NUMBER = 5;
@@ -649,11 +649,12 @@ public final class MlServiceProtos {
        */
       @java.lang.Override
       public com.google.type.DateOrBuilder getPaymentDueDateOrBuilder() {
-        return getPaymentDueDate();
+        return paymentDueDate_ == null ? com.google.type.Date.getDefaultInstance() : paymentDueDate_;
       }
 
       public static final int DOCUMENT_TYPE_FIELD_NUMBER = 6;
-      private volatile java.lang.Object documentType_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object documentType_ = "";
       /**
        * <code>string document_type = 6 [json_name = "documentType"];</code>
        * @return The documentType.
@@ -691,7 +692,8 @@ public final class MlServiceProtos {
       }
 
       public static final int CURRENCY_FIELD_NUMBER = 7;
-      private volatile java.lang.Object currency_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object currency_ = "";
       /**
        * <code>string currency = 7 [json_name = "currency"];</code>
        * @return The currency.
@@ -729,7 +731,8 @@ public final class MlServiceProtos {
       }
 
       public static final int CREDIT_CARD_NUMBER_FIELD_NUMBER = 8;
-      private volatile java.lang.Object creditCardNumber_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object creditCardNumber_ = "";
       /**
        * <pre>
        * NOTE(mde): Should be removed because it is renamed to credit_card_last_four
@@ -775,7 +778,8 @@ public final class MlServiceProtos {
       }
 
       public static final int PAYMENT_METHOD_FIELD_NUMBER = 9;
-      private volatile java.lang.Object paymentMethod_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object paymentMethod_ = "";
       /**
        * <code>string payment_method = 9 [json_name = "paymentMethod"];</code>
        * @return The paymentMethod.
@@ -813,7 +817,8 @@ public final class MlServiceProtos {
       }
 
       public static final int OCR_LINE_DK_TYPE_FIELD_NUMBER = 10;
-      private volatile java.lang.Object ocrLineDkType_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object ocrLineDkType_ = "";
       /**
        * <code>string ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
        * @return The ocrLineDkType.
@@ -851,7 +856,8 @@ public final class MlServiceProtos {
       }
 
       public static final int OCR_LINE_DK_PAYMENT_ID_FIELD_NUMBER = 11;
-      private volatile java.lang.Object ocrLineDkPaymentId_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object ocrLineDkPaymentId_ = "";
       /**
        * <code>string ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
        * @return The ocrLineDkPaymentId.
@@ -889,7 +895,8 @@ public final class MlServiceProtos {
       }
 
       public static final int OCR_LINE_DK_CREDITOR_ID_FIELD_NUMBER = 12;
-      private volatile java.lang.Object ocrLineDkCreditorId_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object ocrLineDkCreditorId_ = "";
       /**
        * <code>string ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
        * @return The ocrLineDkCreditorId.
@@ -927,7 +934,8 @@ public final class MlServiceProtos {
       }
 
       public static final int OCR_LINE_SE_PAYMENT_ID_FIELD_NUMBER = 13;
-      private volatile java.lang.Object ocrLineSePaymentId_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object ocrLineSePaymentId_ = "";
       /**
        * <code>string ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
        * @return The ocrLineSePaymentId.
@@ -965,7 +973,8 @@ public final class MlServiceProtos {
       }
 
       public static final int OCR_LINE_SE_BANKGIRO_CREDITOR_ID_FIELD_NUMBER = 14;
-      private volatile java.lang.Object ocrLineSeBankgiroCreditorId_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object ocrLineSeBankgiroCreditorId_ = "";
       /**
        * <code>string ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        * @return The ocrLineSeBankgiroCreditorId.
@@ -1003,7 +1012,8 @@ public final class MlServiceProtos {
       }
 
       public static final int OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_FIELD_NUMBER = 15;
-      private volatile java.lang.Object ocrLineSePlusgiroCreditorId_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object ocrLineSePlusgiroCreditorId_ = "";
       /**
        * <code>string ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        * @return The ocrLineSePlusgiroCreditorId.
@@ -1041,7 +1051,8 @@ public final class MlServiceProtos {
       }
 
       public static final int OCR_LINE_NO_PAYMENT_ID_FIELD_NUMBER = 16;
-      private volatile java.lang.Object ocrLineNoPaymentId_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object ocrLineNoPaymentId_ = "";
       /**
        * <code>string ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
        * @return The ocrLineNoPaymentId.
@@ -1079,7 +1090,8 @@ public final class MlServiceProtos {
       }
 
       public static final int OCR_LINE_FI_PAYMENT_ID_FIELD_NUMBER = 17;
-      private volatile java.lang.Object ocrLineFiPaymentId_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object ocrLineFiPaymentId_ = "";
       /**
        * <code>string ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
        * @return The ocrLineFiPaymentId.
@@ -1117,7 +1129,8 @@ public final class MlServiceProtos {
       }
 
       public static final int OCR_LINE_NL_PAYMENT_ID_FIELD_NUMBER = 18;
-      private volatile java.lang.Object ocrLineNlPaymentId_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object ocrLineNlPaymentId_ = "";
       /**
        * <code>string ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
        * @return The ocrLineNlPaymentId.
@@ -1155,7 +1168,8 @@ public final class MlServiceProtos {
       }
 
       public static final int SUPPLIER_CORPORATE_ID_FIELD_NUMBER = 19;
-      private volatile java.lang.Object supplierCorporateId_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object supplierCorporateId_ = "";
       /**
        * <code>string supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
        * @return The supplierCorporateId.
@@ -1193,7 +1207,8 @@ public final class MlServiceProtos {
       }
 
       public static final int SUPPLIER_COUNTRY_CODE_FIELD_NUMBER = 20;
-      private volatile java.lang.Object supplierCountryCode_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object supplierCountryCode_ = "";
       /**
        * <code>string supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
        * @return The supplierCountryCode.
@@ -1231,7 +1246,8 @@ public final class MlServiceProtos {
       }
 
       public static final int INVOICE_NUMBER_FIELD_NUMBER = 21;
-      private volatile java.lang.Object invoiceNumber_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object invoiceNumber_ = "";
       /**
        * <code>string invoice_number = 21 [json_name = "invoiceNumber"];</code>
        * @return The invoiceNumber.
@@ -1269,7 +1285,8 @@ public final class MlServiceProtos {
       }
 
       public static final int IBAN_FIELD_NUMBER = 22;
-      private volatile java.lang.Object iban_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object iban_ = "";
       /**
        * <code>string iban = 22 [json_name = "iban"];</code>
        * @return The iban.
@@ -1307,7 +1324,8 @@ public final class MlServiceProtos {
       }
 
       public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 23;
-      private volatile java.lang.Object bankAccountNumber_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object bankAccountNumber_ = "";
       /**
        * <code>string bank_account_number = 23 [json_name = "bankAccountNumber"];</code>
        * @return The bankAccountNumber.
@@ -1345,7 +1363,8 @@ public final class MlServiceProtos {
       }
 
       public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 24;
-      private volatile java.lang.Object bankRegistrationNumber_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object bankRegistrationNumber_ = "";
       /**
        * <code>string bank_registration_number = 24 [json_name = "bankRegistrationNumber"];</code>
        * @return The bankRegistrationNumber.
@@ -1383,7 +1402,8 @@ public final class MlServiceProtos {
       }
 
       public static final int SUPPLIER_NAME_FIELD_NUMBER = 25;
-      private volatile java.lang.Object supplierName_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object supplierName_ = "";
       /**
        * <code>string supplier_name = 25 [json_name = "supplierName"];</code>
        * @return The supplierName.
@@ -1421,7 +1441,8 @@ public final class MlServiceProtos {
       }
 
       public static final int BIC_FIELD_NUMBER = 26;
-      private volatile java.lang.Object bic_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object bic_ = "";
       /**
        * <code>string bic = 26 [json_name = "bic"];</code>
        * @return The bic.
@@ -1459,7 +1480,8 @@ public final class MlServiceProtos {
       }
 
       public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 27;
-      private volatile java.lang.Object documentNumber_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object documentNumber_ = "";
       /**
        * <code>string document_number = 27 [json_name = "documentNumber"];</code>
        * @return The documentNumber.
@@ -1519,11 +1541,12 @@ public final class MlServiceProtos {
        */
       @java.lang.Override
       public com.google.type.DateOrBuilder getDocumentDateOrBuilder() {
-        return getDocumentDate();
+        return documentDate_ == null ? com.google.type.Date.getDefaultInstance() : documentDate_;
       }
 
       public static final int ORDER_NUMBER_FIELD_NUMBER = 29;
-      private volatile java.lang.Object orderNumber_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object orderNumber_ = "";
       /**
        * <code>string order_number = 29 [json_name = "orderNumber"];</code>
        * @return The orderNumber.
@@ -1561,7 +1584,8 @@ public final class MlServiceProtos {
       }
 
       public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 30;
-      private volatile java.lang.Object supplierVatNumber_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object supplierVatNumber_ = "";
       /**
        * <code>string supplier_vat_number = 30 [json_name = "supplierVatNumber"];</code>
        * @return The supplierVatNumber.
@@ -1599,7 +1623,8 @@ public final class MlServiceProtos {
       }
 
       public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 31;
-      private volatile java.lang.Object supplierOrganisationNumber_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object supplierOrganisationNumber_ = "";
       /**
        * <code>string supplier_organisation_number = 31 [json_name = "supplierOrganisationNumber"];</code>
        * @return The supplierOrganisationNumber.
@@ -1637,7 +1662,8 @@ public final class MlServiceProtos {
       }
 
       public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 32;
-      private volatile java.lang.Object supplierAddress_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object supplierAddress_ = "";
       /**
        * <code>string supplier_address = 32 [json_name = "supplierAddress"];</code>
        * @return The supplierAddress.
@@ -1675,7 +1701,8 @@ public final class MlServiceProtos {
       }
 
       public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 33;
-      private volatile java.lang.Object creditCardLastFour_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object creditCardLastFour_ = "";
       /**
        * <code>string credit_card_last_four = 33 [json_name = "creditCardLastFour"];</code>
        * @return The creditCardLastFour.
@@ -2246,84 +2273,53 @@ public final class MlServiceProtos {
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
+          bitField1_ = 0;
           totalInclVat_ = 0D;
-
           totalVat_ = 0D;
-
           totalExclVat_ = 0D;
-
-          if (orderDateBuilder_ == null) {
-            orderDate_ = null;
-          } else {
-            orderDate_ = null;
+          orderDate_ = null;
+          if (orderDateBuilder_ != null) {
+            orderDateBuilder_.dispose();
             orderDateBuilder_ = null;
           }
-          if (paymentDueDateBuilder_ == null) {
-            paymentDueDate_ = null;
-          } else {
-            paymentDueDate_ = null;
+          paymentDueDate_ = null;
+          if (paymentDueDateBuilder_ != null) {
+            paymentDueDateBuilder_.dispose();
             paymentDueDateBuilder_ = null;
           }
           documentType_ = "";
-
           currency_ = "";
-
           creditCardNumber_ = "";
-
           paymentMethod_ = "";
-
           ocrLineDkType_ = "";
-
           ocrLineDkPaymentId_ = "";
-
           ocrLineDkCreditorId_ = "";
-
           ocrLineSePaymentId_ = "";
-
           ocrLineSeBankgiroCreditorId_ = "";
-
           ocrLineSePlusgiroCreditorId_ = "";
-
           ocrLineNoPaymentId_ = "";
-
           ocrLineFiPaymentId_ = "";
-
           ocrLineNlPaymentId_ = "";
-
           supplierCorporateId_ = "";
-
           supplierCountryCode_ = "";
-
           invoiceNumber_ = "";
-
           iban_ = "";
-
           bankAccountNumber_ = "";
-
           bankRegistrationNumber_ = "";
-
           supplierName_ = "";
-
           bic_ = "";
-
           documentNumber_ = "";
-
-          if (documentDateBuilder_ == null) {
-            documentDate_ = null;
-          } else {
-            documentDate_ = null;
+          documentDate_ = null;
+          if (documentDateBuilder_ != null) {
+            documentDateBuilder_.dispose();
             documentDateBuilder_ = null;
           }
           orderNumber_ = "";
-
           supplierVatNumber_ = "";
-
           supplierOrganisationNumber_ = "";
-
           supplierAddress_ = "";
-
           creditCardLastFour_ = "";
-
           return this;
         }
 
@@ -2350,53 +2346,123 @@ public final class MlServiceProtos {
         @java.lang.Override
         public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels buildPartial() {
           ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels result = new ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels(this);
-          result.totalInclVat_ = totalInclVat_;
-          result.totalVat_ = totalVat_;
-          result.totalExclVat_ = totalExclVat_;
-          if (orderDateBuilder_ == null) {
-            result.orderDate_ = orderDate_;
-          } else {
-            result.orderDate_ = orderDateBuilder_.build();
-          }
-          if (paymentDueDateBuilder_ == null) {
-            result.paymentDueDate_ = paymentDueDate_;
-          } else {
-            result.paymentDueDate_ = paymentDueDateBuilder_.build();
-          }
-          result.documentType_ = documentType_;
-          result.currency_ = currency_;
-          result.creditCardNumber_ = creditCardNumber_;
-          result.paymentMethod_ = paymentMethod_;
-          result.ocrLineDkType_ = ocrLineDkType_;
-          result.ocrLineDkPaymentId_ = ocrLineDkPaymentId_;
-          result.ocrLineDkCreditorId_ = ocrLineDkCreditorId_;
-          result.ocrLineSePaymentId_ = ocrLineSePaymentId_;
-          result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorId_;
-          result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorId_;
-          result.ocrLineNoPaymentId_ = ocrLineNoPaymentId_;
-          result.ocrLineFiPaymentId_ = ocrLineFiPaymentId_;
-          result.ocrLineNlPaymentId_ = ocrLineNlPaymentId_;
-          result.supplierCorporateId_ = supplierCorporateId_;
-          result.supplierCountryCode_ = supplierCountryCode_;
-          result.invoiceNumber_ = invoiceNumber_;
-          result.iban_ = iban_;
-          result.bankAccountNumber_ = bankAccountNumber_;
-          result.bankRegistrationNumber_ = bankRegistrationNumber_;
-          result.supplierName_ = supplierName_;
-          result.bic_ = bic_;
-          result.documentNumber_ = documentNumber_;
-          if (documentDateBuilder_ == null) {
-            result.documentDate_ = documentDate_;
-          } else {
-            result.documentDate_ = documentDateBuilder_.build();
-          }
-          result.orderNumber_ = orderNumber_;
-          result.supplierVatNumber_ = supplierVatNumber_;
-          result.supplierOrganisationNumber_ = supplierOrganisationNumber_;
-          result.supplierAddress_ = supplierAddress_;
-          result.creditCardLastFour_ = creditCardLastFour_;
+          if (bitField0_ != 0) { buildPartial0(result); }
+          if (bitField1_ != 0) { buildPartial1(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.totalInclVat_ = totalInclVat_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.totalVat_ = totalVat_;
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.totalExclVat_ = totalExclVat_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.orderDate_ = orderDateBuilder_ == null
+                ? orderDate_
+                : orderDateBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000010) != 0)) {
+            result.paymentDueDate_ = paymentDueDateBuilder_ == null
+                ? paymentDueDate_
+                : paymentDueDateBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000020) != 0)) {
+            result.documentType_ = documentType_;
+          }
+          if (((from_bitField0_ & 0x00000040) != 0)) {
+            result.currency_ = currency_;
+          }
+          if (((from_bitField0_ & 0x00000080) != 0)) {
+            result.creditCardNumber_ = creditCardNumber_;
+          }
+          if (((from_bitField0_ & 0x00000100) != 0)) {
+            result.paymentMethod_ = paymentMethod_;
+          }
+          if (((from_bitField0_ & 0x00000200) != 0)) {
+            result.ocrLineDkType_ = ocrLineDkType_;
+          }
+          if (((from_bitField0_ & 0x00000400) != 0)) {
+            result.ocrLineDkPaymentId_ = ocrLineDkPaymentId_;
+          }
+          if (((from_bitField0_ & 0x00000800) != 0)) {
+            result.ocrLineDkCreditorId_ = ocrLineDkCreditorId_;
+          }
+          if (((from_bitField0_ & 0x00001000) != 0)) {
+            result.ocrLineSePaymentId_ = ocrLineSePaymentId_;
+          }
+          if (((from_bitField0_ & 0x00002000) != 0)) {
+            result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorId_;
+          }
+          if (((from_bitField0_ & 0x00004000) != 0)) {
+            result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorId_;
+          }
+          if (((from_bitField0_ & 0x00008000) != 0)) {
+            result.ocrLineNoPaymentId_ = ocrLineNoPaymentId_;
+          }
+          if (((from_bitField0_ & 0x00010000) != 0)) {
+            result.ocrLineFiPaymentId_ = ocrLineFiPaymentId_;
+          }
+          if (((from_bitField0_ & 0x00020000) != 0)) {
+            result.ocrLineNlPaymentId_ = ocrLineNlPaymentId_;
+          }
+          if (((from_bitField0_ & 0x00040000) != 0)) {
+            result.supplierCorporateId_ = supplierCorporateId_;
+          }
+          if (((from_bitField0_ & 0x00080000) != 0)) {
+            result.supplierCountryCode_ = supplierCountryCode_;
+          }
+          if (((from_bitField0_ & 0x00100000) != 0)) {
+            result.invoiceNumber_ = invoiceNumber_;
+          }
+          if (((from_bitField0_ & 0x00200000) != 0)) {
+            result.iban_ = iban_;
+          }
+          if (((from_bitField0_ & 0x00400000) != 0)) {
+            result.bankAccountNumber_ = bankAccountNumber_;
+          }
+          if (((from_bitField0_ & 0x00800000) != 0)) {
+            result.bankRegistrationNumber_ = bankRegistrationNumber_;
+          }
+          if (((from_bitField0_ & 0x01000000) != 0)) {
+            result.supplierName_ = supplierName_;
+          }
+          if (((from_bitField0_ & 0x02000000) != 0)) {
+            result.bic_ = bic_;
+          }
+          if (((from_bitField0_ & 0x04000000) != 0)) {
+            result.documentNumber_ = documentNumber_;
+          }
+          if (((from_bitField0_ & 0x08000000) != 0)) {
+            result.documentDate_ = documentDateBuilder_ == null
+                ? documentDate_
+                : documentDateBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x10000000) != 0)) {
+            result.orderNumber_ = orderNumber_;
+          }
+          if (((from_bitField0_ & 0x20000000) != 0)) {
+            result.supplierVatNumber_ = supplierVatNumber_;
+          }
+          if (((from_bitField0_ & 0x40000000) != 0)) {
+            result.supplierOrganisationNumber_ = supplierOrganisationNumber_;
+          }
+          if (((from_bitField0_ & 0x80000000) != 0)) {
+            result.supplierAddress_ = supplierAddress_;
+          }
+        }
+
+        private void buildPartial1(ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels result) {
+          int from_bitField1_ = bitField1_;
+          if (((from_bitField1_ & 0x00000001) != 0)) {
+            result.creditCardLastFour_ = creditCardLastFour_;
+          }
         }
 
         @java.lang.Override
@@ -2460,90 +2526,112 @@ public final class MlServiceProtos {
           }
           if (!other.getDocumentType().isEmpty()) {
             documentType_ = other.documentType_;
+            bitField0_ |= 0x00000020;
             onChanged();
           }
           if (!other.getCurrency().isEmpty()) {
             currency_ = other.currency_;
+            bitField0_ |= 0x00000040;
             onChanged();
           }
           if (!other.getCreditCardNumber().isEmpty()) {
             creditCardNumber_ = other.creditCardNumber_;
+            bitField0_ |= 0x00000080;
             onChanged();
           }
           if (!other.getPaymentMethod().isEmpty()) {
             paymentMethod_ = other.paymentMethod_;
+            bitField0_ |= 0x00000100;
             onChanged();
           }
           if (!other.getOcrLineDkType().isEmpty()) {
             ocrLineDkType_ = other.ocrLineDkType_;
+            bitField0_ |= 0x00000200;
             onChanged();
           }
           if (!other.getOcrLineDkPaymentId().isEmpty()) {
             ocrLineDkPaymentId_ = other.ocrLineDkPaymentId_;
+            bitField0_ |= 0x00000400;
             onChanged();
           }
           if (!other.getOcrLineDkCreditorId().isEmpty()) {
             ocrLineDkCreditorId_ = other.ocrLineDkCreditorId_;
+            bitField0_ |= 0x00000800;
             onChanged();
           }
           if (!other.getOcrLineSePaymentId().isEmpty()) {
             ocrLineSePaymentId_ = other.ocrLineSePaymentId_;
+            bitField0_ |= 0x00001000;
             onChanged();
           }
           if (!other.getOcrLineSeBankgiroCreditorId().isEmpty()) {
             ocrLineSeBankgiroCreditorId_ = other.ocrLineSeBankgiroCreditorId_;
+            bitField0_ |= 0x00002000;
             onChanged();
           }
           if (!other.getOcrLineSePlusgiroCreditorId().isEmpty()) {
             ocrLineSePlusgiroCreditorId_ = other.ocrLineSePlusgiroCreditorId_;
+            bitField0_ |= 0x00004000;
             onChanged();
           }
           if (!other.getOcrLineNoPaymentId().isEmpty()) {
             ocrLineNoPaymentId_ = other.ocrLineNoPaymentId_;
+            bitField0_ |= 0x00008000;
             onChanged();
           }
           if (!other.getOcrLineFiPaymentId().isEmpty()) {
             ocrLineFiPaymentId_ = other.ocrLineFiPaymentId_;
+            bitField0_ |= 0x00010000;
             onChanged();
           }
           if (!other.getOcrLineNlPaymentId().isEmpty()) {
             ocrLineNlPaymentId_ = other.ocrLineNlPaymentId_;
+            bitField0_ |= 0x00020000;
             onChanged();
           }
           if (!other.getSupplierCorporateId().isEmpty()) {
             supplierCorporateId_ = other.supplierCorporateId_;
+            bitField0_ |= 0x00040000;
             onChanged();
           }
           if (!other.getSupplierCountryCode().isEmpty()) {
             supplierCountryCode_ = other.supplierCountryCode_;
+            bitField0_ |= 0x00080000;
             onChanged();
           }
           if (!other.getInvoiceNumber().isEmpty()) {
             invoiceNumber_ = other.invoiceNumber_;
+            bitField0_ |= 0x00100000;
             onChanged();
           }
           if (!other.getIban().isEmpty()) {
             iban_ = other.iban_;
+            bitField0_ |= 0x00200000;
             onChanged();
           }
           if (!other.getBankAccountNumber().isEmpty()) {
             bankAccountNumber_ = other.bankAccountNumber_;
+            bitField0_ |= 0x00400000;
             onChanged();
           }
           if (!other.getBankRegistrationNumber().isEmpty()) {
             bankRegistrationNumber_ = other.bankRegistrationNumber_;
+            bitField0_ |= 0x00800000;
             onChanged();
           }
           if (!other.getSupplierName().isEmpty()) {
             supplierName_ = other.supplierName_;
+            bitField0_ |= 0x01000000;
             onChanged();
           }
           if (!other.getBic().isEmpty()) {
             bic_ = other.bic_;
+            bitField0_ |= 0x02000000;
             onChanged();
           }
           if (!other.getDocumentNumber().isEmpty()) {
             documentNumber_ = other.documentNumber_;
+            bitField0_ |= 0x04000000;
             onChanged();
           }
           if (other.hasDocumentDate()) {
@@ -2551,22 +2639,27 @@ public final class MlServiceProtos {
           }
           if (!other.getOrderNumber().isEmpty()) {
             orderNumber_ = other.orderNumber_;
+            bitField0_ |= 0x10000000;
             onChanged();
           }
           if (!other.getSupplierVatNumber().isEmpty()) {
             supplierVatNumber_ = other.supplierVatNumber_;
+            bitField0_ |= 0x20000000;
             onChanged();
           }
           if (!other.getSupplierOrganisationNumber().isEmpty()) {
             supplierOrganisationNumber_ = other.supplierOrganisationNumber_;
+            bitField0_ |= 0x40000000;
             onChanged();
           }
           if (!other.getSupplierAddress().isEmpty()) {
             supplierAddress_ = other.supplierAddress_;
+            bitField0_ |= 0x80000000;
             onChanged();
           }
           if (!other.getCreditCardLastFour().isEmpty()) {
             creditCardLastFour_ = other.creditCardLastFour_;
+            bitField1_ |= 0x00000001;
             onChanged();
           }
           this.mergeUnknownFields(other.getUnknownFields());
@@ -2597,173 +2690,173 @@ public final class MlServiceProtos {
                   break;
                 case 9: {
                   totalInclVat_ = input.readDouble();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 9
                 case 17: {
                   totalVat_ = input.readDouble();
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 17
                 case 25: {
                   totalExclVat_ = input.readDouble();
-
+                  bitField0_ |= 0x00000004;
                   break;
                 } // case 25
                 case 34: {
                   input.readMessage(
                       getOrderDateFieldBuilder().getBuilder(),
                       extensionRegistry);
-
+                  bitField0_ |= 0x00000008;
                   break;
                 } // case 34
                 case 42: {
                   input.readMessage(
                       getPaymentDueDateFieldBuilder().getBuilder(),
                       extensionRegistry);
-
+                  bitField0_ |= 0x00000010;
                   break;
                 } // case 42
                 case 50: {
                   documentType_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000020;
                   break;
                 } // case 50
                 case 58: {
                   currency_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000040;
                   break;
                 } // case 58
                 case 66: {
                   creditCardNumber_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000080;
                   break;
                 } // case 66
                 case 74: {
                   paymentMethod_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000100;
                   break;
                 } // case 74
                 case 82: {
                   ocrLineDkType_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000200;
                   break;
                 } // case 82
                 case 90: {
                   ocrLineDkPaymentId_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000400;
                   break;
                 } // case 90
                 case 98: {
                   ocrLineDkCreditorId_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000800;
                   break;
                 } // case 98
                 case 106: {
                   ocrLineSePaymentId_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00001000;
                   break;
                 } // case 106
                 case 114: {
                   ocrLineSeBankgiroCreditorId_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00002000;
                   break;
                 } // case 114
                 case 122: {
                   ocrLineSePlusgiroCreditorId_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00004000;
                   break;
                 } // case 122
                 case 130: {
                   ocrLineNoPaymentId_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00008000;
                   break;
                 } // case 130
                 case 138: {
                   ocrLineFiPaymentId_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00010000;
                   break;
                 } // case 138
                 case 146: {
                   ocrLineNlPaymentId_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00020000;
                   break;
                 } // case 146
                 case 154: {
                   supplierCorporateId_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00040000;
                   break;
                 } // case 154
                 case 162: {
                   supplierCountryCode_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00080000;
                   break;
                 } // case 162
                 case 170: {
                   invoiceNumber_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00100000;
                   break;
                 } // case 170
                 case 178: {
                   iban_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00200000;
                   break;
                 } // case 178
                 case 186: {
                   bankAccountNumber_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00400000;
                   break;
                 } // case 186
                 case 194: {
                   bankRegistrationNumber_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00800000;
                   break;
                 } // case 194
                 case 202: {
                   supplierName_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x01000000;
                   break;
                 } // case 202
                 case 210: {
                   bic_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x02000000;
                   break;
                 } // case 210
                 case 218: {
                   documentNumber_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x04000000;
                   break;
                 } // case 218
                 case 226: {
                   input.readMessage(
                       getDocumentDateFieldBuilder().getBuilder(),
                       extensionRegistry);
-
+                  bitField0_ |= 0x08000000;
                   break;
                 } // case 226
                 case 234: {
                   orderNumber_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x10000000;
                   break;
                 } // case 234
                 case 242: {
                   supplierVatNumber_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x20000000;
                   break;
                 } // case 242
                 case 250: {
                   supplierOrganisationNumber_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x40000000;
                   break;
                 } // case 250
                 case 258: {
                   supplierAddress_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x80000000;
                   break;
                 } // case 258
                 case 266: {
                   creditCardLastFour_ = input.readStringRequireUtf8();
-
+                  bitField1_ |= 0x00000001;
                   break;
                 } // case 266
                 default: {
@@ -2781,6 +2874,8 @@ public final class MlServiceProtos {
           } // finally
           return this;
         }
+        private int bitField0_;
+        private int bitField1_;
 
         private double totalInclVat_ ;
         /**
@@ -2799,6 +2894,7 @@ public final class MlServiceProtos {
         public Builder setTotalInclVat(double value) {
           
           totalInclVat_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -2807,7 +2903,7 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearTotalInclVat() {
-          
+          bitField0_ = (bitField0_ & ~0x00000001);
           totalInclVat_ = 0D;
           onChanged();
           return this;
@@ -2830,6 +2926,7 @@ public final class MlServiceProtos {
         public Builder setTotalVat(double value) {
           
           totalVat_ = value;
+          bitField0_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -2838,7 +2935,7 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearTotalVat() {
-          
+          bitField0_ = (bitField0_ & ~0x00000002);
           totalVat_ = 0D;
           onChanged();
           return this;
@@ -2861,6 +2958,7 @@ public final class MlServiceProtos {
         public Builder setTotalExclVat(double value) {
           
           totalExclVat_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -2869,7 +2967,7 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearTotalExclVat() {
-          
+          bitField0_ = (bitField0_ & ~0x00000004);
           totalExclVat_ = 0D;
           onChanged();
           return this;
@@ -2883,7 +2981,7 @@ public final class MlServiceProtos {
          * @return Whether the orderDate field is set.
          */
         public boolean hasOrderDate() {
-          return orderDateBuilder_ != null || orderDate_ != null;
+          return ((bitField0_ & 0x00000008) != 0);
         }
         /**
          * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
@@ -2905,11 +3003,11 @@ public final class MlServiceProtos {
               throw new NullPointerException();
             }
             orderDate_ = value;
-            onChanged();
           } else {
             orderDateBuilder_.setMessage(value);
           }
-
+          bitField0_ |= 0x00000008;
+          onChanged();
           return this;
         }
         /**
@@ -2919,11 +3017,11 @@ public final class MlServiceProtos {
             com.google.type.Date.Builder builderForValue) {
           if (orderDateBuilder_ == null) {
             orderDate_ = builderForValue.build();
-            onChanged();
           } else {
             orderDateBuilder_.setMessage(builderForValue.build());
           }
-
+          bitField0_ |= 0x00000008;
+          onChanged();
           return this;
         }
         /**
@@ -2931,38 +3029,38 @@ public final class MlServiceProtos {
          */
         public Builder mergeOrderDate(com.google.type.Date value) {
           if (orderDateBuilder_ == null) {
-            if (orderDate_ != null) {
-              orderDate_ =
-                com.google.type.Date.newBuilder(orderDate_).mergeFrom(value).buildPartial();
+            if (((bitField0_ & 0x00000008) != 0) &&
+              orderDate_ != null &&
+              orderDate_ != com.google.type.Date.getDefaultInstance()) {
+              getOrderDateBuilder().mergeFrom(value);
             } else {
               orderDate_ = value;
             }
-            onChanged();
           } else {
             orderDateBuilder_.mergeFrom(value);
           }
-
+          bitField0_ |= 0x00000008;
+          onChanged();
           return this;
         }
         /**
          * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
          */
         public Builder clearOrderDate() {
-          if (orderDateBuilder_ == null) {
-            orderDate_ = null;
-            onChanged();
-          } else {
-            orderDate_ = null;
+          bitField0_ = (bitField0_ & ~0x00000008);
+          orderDate_ = null;
+          if (orderDateBuilder_ != null) {
+            orderDateBuilder_.dispose();
             orderDateBuilder_ = null;
           }
-
+          onChanged();
           return this;
         }
         /**
          * <code>.google.type.Date order_date = 4 [json_name = "orderDate"];</code>
          */
         public com.google.type.Date.Builder getOrderDateBuilder() {
-          
+          bitField0_ |= 0x00000008;
           onChanged();
           return getOrderDateFieldBuilder().getBuilder();
         }
@@ -3002,7 +3100,7 @@ public final class MlServiceProtos {
          * @return Whether the paymentDueDate field is set.
          */
         public boolean hasPaymentDueDate() {
-          return paymentDueDateBuilder_ != null || paymentDueDate_ != null;
+          return ((bitField0_ & 0x00000010) != 0);
         }
         /**
          * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
@@ -3024,11 +3122,11 @@ public final class MlServiceProtos {
               throw new NullPointerException();
             }
             paymentDueDate_ = value;
-            onChanged();
           } else {
             paymentDueDateBuilder_.setMessage(value);
           }
-
+          bitField0_ |= 0x00000010;
+          onChanged();
           return this;
         }
         /**
@@ -3038,11 +3136,11 @@ public final class MlServiceProtos {
             com.google.type.Date.Builder builderForValue) {
           if (paymentDueDateBuilder_ == null) {
             paymentDueDate_ = builderForValue.build();
-            onChanged();
           } else {
             paymentDueDateBuilder_.setMessage(builderForValue.build());
           }
-
+          bitField0_ |= 0x00000010;
+          onChanged();
           return this;
         }
         /**
@@ -3050,38 +3148,38 @@ public final class MlServiceProtos {
          */
         public Builder mergePaymentDueDate(com.google.type.Date value) {
           if (paymentDueDateBuilder_ == null) {
-            if (paymentDueDate_ != null) {
-              paymentDueDate_ =
-                com.google.type.Date.newBuilder(paymentDueDate_).mergeFrom(value).buildPartial();
+            if (((bitField0_ & 0x00000010) != 0) &&
+              paymentDueDate_ != null &&
+              paymentDueDate_ != com.google.type.Date.getDefaultInstance()) {
+              getPaymentDueDateBuilder().mergeFrom(value);
             } else {
               paymentDueDate_ = value;
             }
-            onChanged();
           } else {
             paymentDueDateBuilder_.mergeFrom(value);
           }
-
+          bitField0_ |= 0x00000010;
+          onChanged();
           return this;
         }
         /**
          * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
          */
         public Builder clearPaymentDueDate() {
-          if (paymentDueDateBuilder_ == null) {
-            paymentDueDate_ = null;
-            onChanged();
-          } else {
-            paymentDueDate_ = null;
+          bitField0_ = (bitField0_ & ~0x00000010);
+          paymentDueDate_ = null;
+          if (paymentDueDateBuilder_ != null) {
+            paymentDueDateBuilder_.dispose();
             paymentDueDateBuilder_ = null;
           }
-
+          onChanged();
           return this;
         }
         /**
          * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate"];</code>
          */
         public com.google.type.Date.Builder getPaymentDueDateBuilder() {
-          
+          bitField0_ |= 0x00000010;
           onChanged();
           return getPaymentDueDateFieldBuilder().getBuilder();
         }
@@ -3154,11 +3252,9 @@ public final class MlServiceProtos {
          */
         public Builder setDocumentType(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           documentType_ = value;
+          bitField0_ |= 0x00000020;
           onChanged();
           return this;
         }
@@ -3167,8 +3263,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearDocumentType() {
-          
           documentType_ = getDefaultInstance().getDocumentType();
+          bitField0_ = (bitField0_ & ~0x00000020);
           onChanged();
           return this;
         }
@@ -3179,12 +3275,10 @@ public final class MlServiceProtos {
          */
         public Builder setDocumentTypeBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           documentType_ = value;
+          bitField0_ |= 0x00000020;
           onChanged();
           return this;
         }
@@ -3230,11 +3324,9 @@ public final class MlServiceProtos {
          */
         public Builder setCurrency(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           currency_ = value;
+          bitField0_ |= 0x00000040;
           onChanged();
           return this;
         }
@@ -3243,8 +3335,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearCurrency() {
-          
           currency_ = getDefaultInstance().getCurrency();
+          bitField0_ = (bitField0_ & ~0x00000040);
           onChanged();
           return this;
         }
@@ -3255,12 +3347,10 @@ public final class MlServiceProtos {
          */
         public Builder setCurrencyBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           currency_ = value;
+          bitField0_ |= 0x00000040;
           onChanged();
           return this;
         }
@@ -3318,11 +3408,9 @@ public final class MlServiceProtos {
          */
         public Builder setCreditCardNumber(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           creditCardNumber_ = value;
+          bitField0_ |= 0x00000080;
           onChanged();
           return this;
         }
@@ -3335,8 +3423,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearCreditCardNumber() {
-          
           creditCardNumber_ = getDefaultInstance().getCreditCardNumber();
+          bitField0_ = (bitField0_ & ~0x00000080);
           onChanged();
           return this;
         }
@@ -3351,12 +3439,10 @@ public final class MlServiceProtos {
          */
         public Builder setCreditCardNumberBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           creditCardNumber_ = value;
+          bitField0_ |= 0x00000080;
           onChanged();
           return this;
         }
@@ -3402,11 +3488,9 @@ public final class MlServiceProtos {
          */
         public Builder setPaymentMethod(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           paymentMethod_ = value;
+          bitField0_ |= 0x00000100;
           onChanged();
           return this;
         }
@@ -3415,8 +3499,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearPaymentMethod() {
-          
           paymentMethod_ = getDefaultInstance().getPaymentMethod();
+          bitField0_ = (bitField0_ & ~0x00000100);
           onChanged();
           return this;
         }
@@ -3427,12 +3511,10 @@ public final class MlServiceProtos {
          */
         public Builder setPaymentMethodBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           paymentMethod_ = value;
+          bitField0_ |= 0x00000100;
           onChanged();
           return this;
         }
@@ -3478,11 +3560,9 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineDkType(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           ocrLineDkType_ = value;
+          bitField0_ |= 0x00000200;
           onChanged();
           return this;
         }
@@ -3491,8 +3571,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearOcrLineDkType() {
-          
           ocrLineDkType_ = getDefaultInstance().getOcrLineDkType();
+          bitField0_ = (bitField0_ & ~0x00000200);
           onChanged();
           return this;
         }
@@ -3503,12 +3583,10 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineDkTypeBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           ocrLineDkType_ = value;
+          bitField0_ |= 0x00000200;
           onChanged();
           return this;
         }
@@ -3554,11 +3632,9 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineDkPaymentId(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           ocrLineDkPaymentId_ = value;
+          bitField0_ |= 0x00000400;
           onChanged();
           return this;
         }
@@ -3567,8 +3643,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearOcrLineDkPaymentId() {
-          
           ocrLineDkPaymentId_ = getDefaultInstance().getOcrLineDkPaymentId();
+          bitField0_ = (bitField0_ & ~0x00000400);
           onChanged();
           return this;
         }
@@ -3579,12 +3655,10 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineDkPaymentIdBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           ocrLineDkPaymentId_ = value;
+          bitField0_ |= 0x00000400;
           onChanged();
           return this;
         }
@@ -3630,11 +3704,9 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineDkCreditorId(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           ocrLineDkCreditorId_ = value;
+          bitField0_ |= 0x00000800;
           onChanged();
           return this;
         }
@@ -3643,8 +3715,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearOcrLineDkCreditorId() {
-          
           ocrLineDkCreditorId_ = getDefaultInstance().getOcrLineDkCreditorId();
+          bitField0_ = (bitField0_ & ~0x00000800);
           onChanged();
           return this;
         }
@@ -3655,12 +3727,10 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineDkCreditorIdBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           ocrLineDkCreditorId_ = value;
+          bitField0_ |= 0x00000800;
           onChanged();
           return this;
         }
@@ -3706,11 +3776,9 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineSePaymentId(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           ocrLineSePaymentId_ = value;
+          bitField0_ |= 0x00001000;
           onChanged();
           return this;
         }
@@ -3719,8 +3787,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearOcrLineSePaymentId() {
-          
           ocrLineSePaymentId_ = getDefaultInstance().getOcrLineSePaymentId();
+          bitField0_ = (bitField0_ & ~0x00001000);
           onChanged();
           return this;
         }
@@ -3731,12 +3799,10 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineSePaymentIdBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           ocrLineSePaymentId_ = value;
+          bitField0_ |= 0x00001000;
           onChanged();
           return this;
         }
@@ -3782,11 +3848,9 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineSeBankgiroCreditorId(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           ocrLineSeBankgiroCreditorId_ = value;
+          bitField0_ |= 0x00002000;
           onChanged();
           return this;
         }
@@ -3795,8 +3859,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearOcrLineSeBankgiroCreditorId() {
-          
           ocrLineSeBankgiroCreditorId_ = getDefaultInstance().getOcrLineSeBankgiroCreditorId();
+          bitField0_ = (bitField0_ & ~0x00002000);
           onChanged();
           return this;
         }
@@ -3807,12 +3871,10 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineSeBankgiroCreditorIdBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           ocrLineSeBankgiroCreditorId_ = value;
+          bitField0_ |= 0x00002000;
           onChanged();
           return this;
         }
@@ -3858,11 +3920,9 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineSePlusgiroCreditorId(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           ocrLineSePlusgiroCreditorId_ = value;
+          bitField0_ |= 0x00004000;
           onChanged();
           return this;
         }
@@ -3871,8 +3931,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearOcrLineSePlusgiroCreditorId() {
-          
           ocrLineSePlusgiroCreditorId_ = getDefaultInstance().getOcrLineSePlusgiroCreditorId();
+          bitField0_ = (bitField0_ & ~0x00004000);
           onChanged();
           return this;
         }
@@ -3883,12 +3943,10 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineSePlusgiroCreditorIdBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           ocrLineSePlusgiroCreditorId_ = value;
+          bitField0_ |= 0x00004000;
           onChanged();
           return this;
         }
@@ -3934,11 +3992,9 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineNoPaymentId(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           ocrLineNoPaymentId_ = value;
+          bitField0_ |= 0x00008000;
           onChanged();
           return this;
         }
@@ -3947,8 +4003,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearOcrLineNoPaymentId() {
-          
           ocrLineNoPaymentId_ = getDefaultInstance().getOcrLineNoPaymentId();
+          bitField0_ = (bitField0_ & ~0x00008000);
           onChanged();
           return this;
         }
@@ -3959,12 +4015,10 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineNoPaymentIdBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           ocrLineNoPaymentId_ = value;
+          bitField0_ |= 0x00008000;
           onChanged();
           return this;
         }
@@ -4010,11 +4064,9 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineFiPaymentId(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           ocrLineFiPaymentId_ = value;
+          bitField0_ |= 0x00010000;
           onChanged();
           return this;
         }
@@ -4023,8 +4075,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearOcrLineFiPaymentId() {
-          
           ocrLineFiPaymentId_ = getDefaultInstance().getOcrLineFiPaymentId();
+          bitField0_ = (bitField0_ & ~0x00010000);
           onChanged();
           return this;
         }
@@ -4035,12 +4087,10 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineFiPaymentIdBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           ocrLineFiPaymentId_ = value;
+          bitField0_ |= 0x00010000;
           onChanged();
           return this;
         }
@@ -4086,11 +4136,9 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineNlPaymentId(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           ocrLineNlPaymentId_ = value;
+          bitField0_ |= 0x00020000;
           onChanged();
           return this;
         }
@@ -4099,8 +4147,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearOcrLineNlPaymentId() {
-          
           ocrLineNlPaymentId_ = getDefaultInstance().getOcrLineNlPaymentId();
+          bitField0_ = (bitField0_ & ~0x00020000);
           onChanged();
           return this;
         }
@@ -4111,12 +4159,10 @@ public final class MlServiceProtos {
          */
         public Builder setOcrLineNlPaymentIdBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           ocrLineNlPaymentId_ = value;
+          bitField0_ |= 0x00020000;
           onChanged();
           return this;
         }
@@ -4162,11 +4208,9 @@ public final class MlServiceProtos {
          */
         public Builder setSupplierCorporateId(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           supplierCorporateId_ = value;
+          bitField0_ |= 0x00040000;
           onChanged();
           return this;
         }
@@ -4175,8 +4219,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearSupplierCorporateId() {
-          
           supplierCorporateId_ = getDefaultInstance().getSupplierCorporateId();
+          bitField0_ = (bitField0_ & ~0x00040000);
           onChanged();
           return this;
         }
@@ -4187,12 +4231,10 @@ public final class MlServiceProtos {
          */
         public Builder setSupplierCorporateIdBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           supplierCorporateId_ = value;
+          bitField0_ |= 0x00040000;
           onChanged();
           return this;
         }
@@ -4238,11 +4280,9 @@ public final class MlServiceProtos {
          */
         public Builder setSupplierCountryCode(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           supplierCountryCode_ = value;
+          bitField0_ |= 0x00080000;
           onChanged();
           return this;
         }
@@ -4251,8 +4291,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearSupplierCountryCode() {
-          
           supplierCountryCode_ = getDefaultInstance().getSupplierCountryCode();
+          bitField0_ = (bitField0_ & ~0x00080000);
           onChanged();
           return this;
         }
@@ -4263,12 +4303,10 @@ public final class MlServiceProtos {
          */
         public Builder setSupplierCountryCodeBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           supplierCountryCode_ = value;
+          bitField0_ |= 0x00080000;
           onChanged();
           return this;
         }
@@ -4314,11 +4352,9 @@ public final class MlServiceProtos {
          */
         public Builder setInvoiceNumber(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           invoiceNumber_ = value;
+          bitField0_ |= 0x00100000;
           onChanged();
           return this;
         }
@@ -4327,8 +4363,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearInvoiceNumber() {
-          
           invoiceNumber_ = getDefaultInstance().getInvoiceNumber();
+          bitField0_ = (bitField0_ & ~0x00100000);
           onChanged();
           return this;
         }
@@ -4339,12 +4375,10 @@ public final class MlServiceProtos {
          */
         public Builder setInvoiceNumberBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           invoiceNumber_ = value;
+          bitField0_ |= 0x00100000;
           onChanged();
           return this;
         }
@@ -4390,11 +4424,9 @@ public final class MlServiceProtos {
          */
         public Builder setIban(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           iban_ = value;
+          bitField0_ |= 0x00200000;
           onChanged();
           return this;
         }
@@ -4403,8 +4435,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearIban() {
-          
           iban_ = getDefaultInstance().getIban();
+          bitField0_ = (bitField0_ & ~0x00200000);
           onChanged();
           return this;
         }
@@ -4415,12 +4447,10 @@ public final class MlServiceProtos {
          */
         public Builder setIbanBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           iban_ = value;
+          bitField0_ |= 0x00200000;
           onChanged();
           return this;
         }
@@ -4466,11 +4496,9 @@ public final class MlServiceProtos {
          */
         public Builder setBankAccountNumber(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           bankAccountNumber_ = value;
+          bitField0_ |= 0x00400000;
           onChanged();
           return this;
         }
@@ -4479,8 +4507,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearBankAccountNumber() {
-          
           bankAccountNumber_ = getDefaultInstance().getBankAccountNumber();
+          bitField0_ = (bitField0_ & ~0x00400000);
           onChanged();
           return this;
         }
@@ -4491,12 +4519,10 @@ public final class MlServiceProtos {
          */
         public Builder setBankAccountNumberBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           bankAccountNumber_ = value;
+          bitField0_ |= 0x00400000;
           onChanged();
           return this;
         }
@@ -4542,11 +4568,9 @@ public final class MlServiceProtos {
          */
         public Builder setBankRegistrationNumber(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           bankRegistrationNumber_ = value;
+          bitField0_ |= 0x00800000;
           onChanged();
           return this;
         }
@@ -4555,8 +4579,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearBankRegistrationNumber() {
-          
           bankRegistrationNumber_ = getDefaultInstance().getBankRegistrationNumber();
+          bitField0_ = (bitField0_ & ~0x00800000);
           onChanged();
           return this;
         }
@@ -4567,12 +4591,10 @@ public final class MlServiceProtos {
          */
         public Builder setBankRegistrationNumberBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           bankRegistrationNumber_ = value;
+          bitField0_ |= 0x00800000;
           onChanged();
           return this;
         }
@@ -4618,11 +4640,9 @@ public final class MlServiceProtos {
          */
         public Builder setSupplierName(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           supplierName_ = value;
+          bitField0_ |= 0x01000000;
           onChanged();
           return this;
         }
@@ -4631,8 +4651,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearSupplierName() {
-          
           supplierName_ = getDefaultInstance().getSupplierName();
+          bitField0_ = (bitField0_ & ~0x01000000);
           onChanged();
           return this;
         }
@@ -4643,12 +4663,10 @@ public final class MlServiceProtos {
          */
         public Builder setSupplierNameBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           supplierName_ = value;
+          bitField0_ |= 0x01000000;
           onChanged();
           return this;
         }
@@ -4694,11 +4712,9 @@ public final class MlServiceProtos {
          */
         public Builder setBic(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           bic_ = value;
+          bitField0_ |= 0x02000000;
           onChanged();
           return this;
         }
@@ -4707,8 +4723,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearBic() {
-          
           bic_ = getDefaultInstance().getBic();
+          bitField0_ = (bitField0_ & ~0x02000000);
           onChanged();
           return this;
         }
@@ -4719,12 +4735,10 @@ public final class MlServiceProtos {
          */
         public Builder setBicBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           bic_ = value;
+          bitField0_ |= 0x02000000;
           onChanged();
           return this;
         }
@@ -4770,11 +4784,9 @@ public final class MlServiceProtos {
          */
         public Builder setDocumentNumber(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           documentNumber_ = value;
+          bitField0_ |= 0x04000000;
           onChanged();
           return this;
         }
@@ -4783,8 +4795,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearDocumentNumber() {
-          
           documentNumber_ = getDefaultInstance().getDocumentNumber();
+          bitField0_ = (bitField0_ & ~0x04000000);
           onChanged();
           return this;
         }
@@ -4795,12 +4807,10 @@ public final class MlServiceProtos {
          */
         public Builder setDocumentNumberBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           documentNumber_ = value;
+          bitField0_ |= 0x04000000;
           onChanged();
           return this;
         }
@@ -4813,7 +4823,7 @@ public final class MlServiceProtos {
          * @return Whether the documentDate field is set.
          */
         public boolean hasDocumentDate() {
-          return documentDateBuilder_ != null || documentDate_ != null;
+          return ((bitField0_ & 0x08000000) != 0);
         }
         /**
          * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
@@ -4835,11 +4845,11 @@ public final class MlServiceProtos {
               throw new NullPointerException();
             }
             documentDate_ = value;
-            onChanged();
           } else {
             documentDateBuilder_.setMessage(value);
           }
-
+          bitField0_ |= 0x08000000;
+          onChanged();
           return this;
         }
         /**
@@ -4849,11 +4859,11 @@ public final class MlServiceProtos {
             com.google.type.Date.Builder builderForValue) {
           if (documentDateBuilder_ == null) {
             documentDate_ = builderForValue.build();
-            onChanged();
           } else {
             documentDateBuilder_.setMessage(builderForValue.build());
           }
-
+          bitField0_ |= 0x08000000;
+          onChanged();
           return this;
         }
         /**
@@ -4861,38 +4871,38 @@ public final class MlServiceProtos {
          */
         public Builder mergeDocumentDate(com.google.type.Date value) {
           if (documentDateBuilder_ == null) {
-            if (documentDate_ != null) {
-              documentDate_ =
-                com.google.type.Date.newBuilder(documentDate_).mergeFrom(value).buildPartial();
+            if (((bitField0_ & 0x08000000) != 0) &&
+              documentDate_ != null &&
+              documentDate_ != com.google.type.Date.getDefaultInstance()) {
+              getDocumentDateBuilder().mergeFrom(value);
             } else {
               documentDate_ = value;
             }
-            onChanged();
           } else {
             documentDateBuilder_.mergeFrom(value);
           }
-
+          bitField0_ |= 0x08000000;
+          onChanged();
           return this;
         }
         /**
          * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
          */
         public Builder clearDocumentDate() {
-          if (documentDateBuilder_ == null) {
-            documentDate_ = null;
-            onChanged();
-          } else {
-            documentDate_ = null;
+          bitField0_ = (bitField0_ & ~0x08000000);
+          documentDate_ = null;
+          if (documentDateBuilder_ != null) {
+            documentDateBuilder_.dispose();
             documentDateBuilder_ = null;
           }
-
+          onChanged();
           return this;
         }
         /**
          * <code>.google.type.Date document_date = 28 [json_name = "documentDate"];</code>
          */
         public com.google.type.Date.Builder getDocumentDateBuilder() {
-          
+          bitField0_ |= 0x08000000;
           onChanged();
           return getDocumentDateFieldBuilder().getBuilder();
         }
@@ -4965,11 +4975,9 @@ public final class MlServiceProtos {
          */
         public Builder setOrderNumber(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           orderNumber_ = value;
+          bitField0_ |= 0x10000000;
           onChanged();
           return this;
         }
@@ -4978,8 +4986,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearOrderNumber() {
-          
           orderNumber_ = getDefaultInstance().getOrderNumber();
+          bitField0_ = (bitField0_ & ~0x10000000);
           onChanged();
           return this;
         }
@@ -4990,12 +4998,10 @@ public final class MlServiceProtos {
          */
         public Builder setOrderNumberBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           orderNumber_ = value;
+          bitField0_ |= 0x10000000;
           onChanged();
           return this;
         }
@@ -5041,11 +5047,9 @@ public final class MlServiceProtos {
          */
         public Builder setSupplierVatNumber(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           supplierVatNumber_ = value;
+          bitField0_ |= 0x20000000;
           onChanged();
           return this;
         }
@@ -5054,8 +5058,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearSupplierVatNumber() {
-          
           supplierVatNumber_ = getDefaultInstance().getSupplierVatNumber();
+          bitField0_ = (bitField0_ & ~0x20000000);
           onChanged();
           return this;
         }
@@ -5066,12 +5070,10 @@ public final class MlServiceProtos {
          */
         public Builder setSupplierVatNumberBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           supplierVatNumber_ = value;
+          bitField0_ |= 0x20000000;
           onChanged();
           return this;
         }
@@ -5117,11 +5119,9 @@ public final class MlServiceProtos {
          */
         public Builder setSupplierOrganisationNumber(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           supplierOrganisationNumber_ = value;
+          bitField0_ |= 0x40000000;
           onChanged();
           return this;
         }
@@ -5130,8 +5130,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearSupplierOrganisationNumber() {
-          
           supplierOrganisationNumber_ = getDefaultInstance().getSupplierOrganisationNumber();
+          bitField0_ = (bitField0_ & ~0x40000000);
           onChanged();
           return this;
         }
@@ -5142,12 +5142,10 @@ public final class MlServiceProtos {
          */
         public Builder setSupplierOrganisationNumberBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           supplierOrganisationNumber_ = value;
+          bitField0_ |= 0x40000000;
           onChanged();
           return this;
         }
@@ -5193,11 +5191,9 @@ public final class MlServiceProtos {
          */
         public Builder setSupplierAddress(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           supplierAddress_ = value;
+          bitField0_ |= 0x80000000;
           onChanged();
           return this;
         }
@@ -5206,8 +5202,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearSupplierAddress() {
-          
           supplierAddress_ = getDefaultInstance().getSupplierAddress();
+          bitField0_ = (bitField0_ & ~0x80000000);
           onChanged();
           return this;
         }
@@ -5218,12 +5214,10 @@ public final class MlServiceProtos {
          */
         public Builder setSupplierAddressBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           supplierAddress_ = value;
+          bitField0_ |= 0x80000000;
           onChanged();
           return this;
         }
@@ -5269,11 +5263,9 @@ public final class MlServiceProtos {
          */
         public Builder setCreditCardLastFour(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           creditCardLastFour_ = value;
+          bitField1_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -5282,8 +5274,8 @@ public final class MlServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearCreditCardLastFour() {
-          
           creditCardLastFour_ = getDefaultInstance().getCreditCardLastFour();
+          bitField1_ = (bitField1_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -5294,12 +5286,10 @@ public final class MlServiceProtos {
          */
         public Builder setCreditCardLastFourBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           creditCardLastFour_ = value;
+          bitField1_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -5390,7 +5380,7 @@ public final class MlServiceProtos {
      */
     @java.lang.Override
     public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabelsOrBuilder getTruthLabelsOrBuilder() {
-      return getTruthLabels();
+      return truthLabels_ == null ? ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels.getDefaultInstance() : truthLabels_;
     }
 
     public static final int TEXT_ANNOTATION_FIELD_NUMBER = 2;
@@ -5416,11 +5406,12 @@ public final class MlServiceProtos {
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
-      return getTextAnnotation();
+      return textAnnotation_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : textAnnotation_;
     }
 
     public static final int ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <code>string id = 3 [json_name = "id"];</code>
      * @return The id.
@@ -5676,20 +5667,18 @@ public final class MlServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (truthLabelsBuilder_ == null) {
-          truthLabels_ = null;
-        } else {
-          truthLabels_ = null;
+        bitField0_ = 0;
+        truthLabels_ = null;
+        if (truthLabelsBuilder_ != null) {
+          truthLabelsBuilder_.dispose();
           truthLabelsBuilder_ = null;
         }
-        if (textAnnotationBuilder_ == null) {
-          textAnnotation_ = null;
-        } else {
-          textAnnotation_ = null;
+        textAnnotation_ = null;
+        if (textAnnotationBuilder_ != null) {
+          textAnnotationBuilder_.dispose();
           textAnnotationBuilder_ = null;
         }
         id_ = "";
-
         return this;
       }
 
@@ -5716,19 +5705,26 @@ public final class MlServiceProtos {
       @java.lang.Override
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest buildPartial() {
         ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest result = new ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest(this);
-        if (truthLabelsBuilder_ == null) {
-          result.truthLabels_ = truthLabels_;
-        } else {
-          result.truthLabels_ = truthLabelsBuilder_.build();
-        }
-        if (textAnnotationBuilder_ == null) {
-          result.textAnnotation_ = textAnnotation_;
-        } else {
-          result.textAnnotation_ = textAnnotationBuilder_.build();
-        }
-        result.id_ = id_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.truthLabels_ = truthLabelsBuilder_ == null
+              ? truthLabels_
+              : truthLabelsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.textAnnotation_ = textAnnotationBuilder_ == null
+              ? textAnnotation_
+              : textAnnotationBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.id_ = id_;
+        }
       }
 
       @java.lang.Override
@@ -5783,6 +5779,7 @@ public final class MlServiceProtos {
         }
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -5815,19 +5812,19 @@ public final class MlServiceProtos {
                 input.readMessage(
                     getTruthLabelsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getTextAnnotationFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -5845,6 +5842,7 @@ public final class MlServiceProtos {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels truthLabels_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -5854,7 +5852,7 @@ public final class MlServiceProtos {
        * @return Whether the truthLabels field is set.
        */
       public boolean hasTruthLabels() {
-        return truthLabelsBuilder_ != null || truthLabels_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
@@ -5876,11 +5874,11 @@ public final class MlServiceProtos {
             throw new NullPointerException();
           }
           truthLabels_ = value;
-          onChanged();
         } else {
           truthLabelsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5890,11 +5888,11 @@ public final class MlServiceProtos {
           ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels.Builder builderForValue) {
         if (truthLabelsBuilder_ == null) {
           truthLabels_ = builderForValue.build();
-          onChanged();
         } else {
           truthLabelsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5902,38 +5900,38 @@ public final class MlServiceProtos {
        */
       public Builder mergeTruthLabels(ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels value) {
         if (truthLabelsBuilder_ == null) {
-          if (truthLabels_ != null) {
-            truthLabels_ =
-              ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels.newBuilder(truthLabels_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            truthLabels_ != null &&
+            truthLabels_ != ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels.getDefaultInstance()) {
+            getTruthLabelsBuilder().mergeFrom(value);
           } else {
             truthLabels_ = value;
           }
-          onChanged();
         } else {
           truthLabelsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
        */
       public Builder clearTruthLabels() {
-        if (truthLabelsBuilder_ == null) {
-          truthLabels_ = null;
-          onChanged();
-        } else {
-          truthLabels_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        truthLabels_ = null;
+        if (truthLabelsBuilder_ != null) {
+          truthLabelsBuilder_.dispose();
           truthLabelsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.mlservice.v2.FeatureGenRequest.TruthLabels truth_labels = 1 [json_name = "truthLabels"];</code>
        */
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.TruthLabels.Builder getTruthLabelsBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getTruthLabelsFieldBuilder().getBuilder();
       }
@@ -5973,7 +5971,7 @@ public final class MlServiceProtos {
        * @return Whether the textAnnotation field is set.
        */
       public boolean hasTextAnnotation() {
-        return textAnnotationBuilder_ != null || textAnnotation_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
@@ -5995,11 +5993,11 @@ public final class MlServiceProtos {
             throw new NullPointerException();
           }
           textAnnotation_ = value;
-          onChanged();
         } else {
           textAnnotationBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6009,11 +6007,11 @@ public final class MlServiceProtos {
           ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder builderForValue) {
         if (textAnnotationBuilder_ == null) {
           textAnnotation_ = builderForValue.build();
-          onChanged();
         } else {
           textAnnotationBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -6021,38 +6019,38 @@ public final class MlServiceProtos {
        */
       public Builder mergeTextAnnotation(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (textAnnotationBuilder_ == null) {
-          if (textAnnotation_ != null) {
-            textAnnotation_ =
-              ssn.type.TextAnnotationOuterClass.TextAnnotation.newBuilder(textAnnotation_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            textAnnotation_ != null &&
+            textAnnotation_ != ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance()) {
+            getTextAnnotationBuilder().mergeFrom(value);
           } else {
             textAnnotation_ = value;
           }
-          onChanged();
         } else {
           textAnnotationBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public Builder clearTextAnnotation() {
-        if (textAnnotationBuilder_ == null) {
-          textAnnotation_ = null;
-          onChanged();
-        } else {
-          textAnnotation_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        textAnnotation_ = null;
+        if (textAnnotationBuilder_ != null) {
+          textAnnotationBuilder_.dispose();
           textAnnotationBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.type.TextAnnotation text_annotation = 2 [json_name = "textAnnotation"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder getTextAnnotationBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getTextAnnotationFieldBuilder().getBuilder();
       }
@@ -6125,11 +6123,9 @@ public final class MlServiceProtos {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -6138,8 +6134,8 @@ public final class MlServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -6150,12 +6146,10 @@ public final class MlServiceProtos {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -6305,7 +6299,7 @@ public final class MlServiceProtos {
      */
     @java.lang.Override
     public org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder() {
-      return getExample();
+      return example_ == null ? org.tensorflow.example.Example.getDefaultInstance() : example_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -6501,10 +6495,10 @@ public final class MlServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (exampleBuilder_ == null) {
-          example_ = null;
-        } else {
-          example_ = null;
+        bitField0_ = 0;
+        example_ = null;
+        if (exampleBuilder_ != null) {
+          exampleBuilder_.dispose();
           exampleBuilder_ = null;
         }
         return this;
@@ -6533,13 +6527,18 @@ public final class MlServiceProtos {
       @java.lang.Override
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse buildPartial() {
         ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse result = new ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse(this);
-        if (exampleBuilder_ == null) {
-          result.example_ = example_;
-        } else {
-          result.example_ = exampleBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.example_ = exampleBuilder_ == null
+              ? example_
+              : exampleBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -6619,7 +6618,7 @@ public final class MlServiceProtos {
                 input.readMessage(
                     getExampleFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -6637,6 +6636,7 @@ public final class MlServiceProtos {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private org.tensorflow.example.Example example_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -6646,7 +6646,7 @@ public final class MlServiceProtos {
        * @return Whether the example field is set.
        */
       public boolean hasExample() {
-        return exampleBuilder_ != null || example_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
@@ -6668,11 +6668,11 @@ public final class MlServiceProtos {
             throw new NullPointerException();
           }
           example_ = value;
-          onChanged();
         } else {
           exampleBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6682,11 +6682,11 @@ public final class MlServiceProtos {
           org.tensorflow.example.Example.Builder builderForValue) {
         if (exampleBuilder_ == null) {
           example_ = builderForValue.build();
-          onChanged();
         } else {
           exampleBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -6694,38 +6694,38 @@ public final class MlServiceProtos {
        */
       public Builder mergeExample(org.tensorflow.example.Example value) {
         if (exampleBuilder_ == null) {
-          if (example_ != null) {
-            example_ =
-              org.tensorflow.example.Example.newBuilder(example_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            example_ != null &&
+            example_ != org.tensorflow.example.Example.getDefaultInstance()) {
+            getExampleBuilder().mergeFrom(value);
           } else {
             example_ = value;
           }
-          onChanged();
         } else {
           exampleBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public Builder clearExample() {
-        if (exampleBuilder_ == null) {
-          example_ = null;
-          onChanged();
-        } else {
-          example_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        example_ = null;
+        if (exampleBuilder_ != null) {
+          exampleBuilder_.dispose();
           exampleBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public org.tensorflow.example.Example.Builder getExampleBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getExampleFieldBuilder().getBuilder();
       }
@@ -6908,11 +6908,11 @@ public final class MlServiceProtos {
      */
     @java.lang.Override
     public org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder() {
-      return getExample();
+      return example_ == null ? org.tensorflow.example.Example.getDefaultInstance() : example_;
     }
 
     public static final int TOP_N_MOST_CONFIDENT_FIELD_NUMBER = 2;
-    private int topNMostConfident_;
+    private int topNMostConfident_ = 0;
     /**
      * <code>uint32 top_n_most_confident = 2 [json_name = "topNMostConfident"];</code>
      * @return The topNMostConfident.
@@ -7126,14 +7126,13 @@ public final class MlServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (exampleBuilder_ == null) {
-          example_ = null;
-        } else {
-          example_ = null;
+        bitField0_ = 0;
+        example_ = null;
+        if (exampleBuilder_ != null) {
+          exampleBuilder_.dispose();
           exampleBuilder_ = null;
         }
         topNMostConfident_ = 0;
-
         return this;
       }
 
@@ -7160,14 +7159,21 @@ public final class MlServiceProtos {
       @java.lang.Override
       public ssn.mlservice.v2.MlServiceProtos.PredictRequest buildPartial() {
         ssn.mlservice.v2.MlServiceProtos.PredictRequest result = new ssn.mlservice.v2.MlServiceProtos.PredictRequest(this);
-        if (exampleBuilder_ == null) {
-          result.example_ = example_;
-        } else {
-          result.example_ = exampleBuilder_.build();
-        }
-        result.topNMostConfident_ = topNMostConfident_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.mlservice.v2.MlServiceProtos.PredictRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.example_ = exampleBuilder_ == null
+              ? example_
+              : exampleBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.topNMostConfident_ = topNMostConfident_;
+        }
       }
 
       @java.lang.Override
@@ -7250,12 +7256,12 @@ public final class MlServiceProtos {
                 input.readMessage(
                     getExampleFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 16: {
                 topNMostConfident_ = input.readUInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -7273,6 +7279,7 @@ public final class MlServiceProtos {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private org.tensorflow.example.Example example_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -7282,7 +7289,7 @@ public final class MlServiceProtos {
        * @return Whether the example field is set.
        */
       public boolean hasExample() {
-        return exampleBuilder_ != null || example_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
@@ -7304,11 +7311,11 @@ public final class MlServiceProtos {
             throw new NullPointerException();
           }
           example_ = value;
-          onChanged();
         } else {
           exampleBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7318,11 +7325,11 @@ public final class MlServiceProtos {
           org.tensorflow.example.Example.Builder builderForValue) {
         if (exampleBuilder_ == null) {
           example_ = builderForValue.build();
-          onChanged();
         } else {
           exampleBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -7330,38 +7337,38 @@ public final class MlServiceProtos {
        */
       public Builder mergeExample(org.tensorflow.example.Example value) {
         if (exampleBuilder_ == null) {
-          if (example_ != null) {
-            example_ =
-              org.tensorflow.example.Example.newBuilder(example_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            example_ != null &&
+            example_ != org.tensorflow.example.Example.getDefaultInstance()) {
+            getExampleBuilder().mergeFrom(value);
           } else {
             example_ = value;
           }
-          onChanged();
         } else {
           exampleBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public Builder clearExample() {
-        if (exampleBuilder_ == null) {
-          example_ = null;
-          onChanged();
-        } else {
-          example_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        example_ = null;
+        if (exampleBuilder_ != null) {
+          exampleBuilder_.dispose();
           exampleBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
        */
       public org.tensorflow.example.Example.Builder getExampleBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getExampleFieldBuilder().getBuilder();
       }
@@ -7410,6 +7417,7 @@ public final class MlServiceProtos {
       public Builder setTopNMostConfident(int value) {
         
         topNMostConfident_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7418,7 +7426,7 @@ public final class MlServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearTopNMostConfident() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         topNMostConfident_ = 0;
         onChanged();
         return this;
@@ -8406,6 +8414,7 @@ public final class MlServiceProtos {
     }
 
     public static final int ORDER_DATE_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> orderDate_;
     /**
      * <code>repeated .ssn.type.Candidate order_date = 1 [json_name = "orderDate"];</code>
@@ -8446,6 +8455,7 @@ public final class MlServiceProtos {
     }
 
     public static final int PAYMENT_DUE_DATE_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> paymentDueDate_;
     /**
      * <code>repeated .ssn.type.Candidate payment_due_date = 2 [json_name = "paymentDueDate"];</code>
@@ -8486,6 +8496,7 @@ public final class MlServiceProtos {
     }
 
     public static final int CURRENCY_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> currency_;
     /**
      * <code>repeated .ssn.type.Candidate currency = 3 [json_name = "currency"];</code>
@@ -8526,6 +8537,7 @@ public final class MlServiceProtos {
     }
 
     public static final int TOTAL_VAT_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalVat_;
     /**
      * <code>repeated .ssn.type.Candidate total_vat = 4 [json_name = "totalVat"];</code>
@@ -8566,6 +8578,7 @@ public final class MlServiceProtos {
     }
 
     public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalInclVat_;
     /**
      * <code>repeated .ssn.type.Candidate total_incl_vat = 5 [json_name = "totalInclVat"];</code>
@@ -8606,6 +8619,7 @@ public final class MlServiceProtos {
     }
 
     public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> totalExclVat_;
     /**
      * <code>repeated .ssn.type.Candidate total_excl_vat = 6 [json_name = "totalExclVat"];</code>
@@ -8646,6 +8660,7 @@ public final class MlServiceProtos {
     }
 
     public static final int SUPPLIER_CORPORATE_ID_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierCorporateId_;
     /**
      * <code>repeated .ssn.type.Candidate supplier_corporate_id = 7 [json_name = "supplierCorporateId"];</code>
@@ -8686,6 +8701,7 @@ public final class MlServiceProtos {
     }
 
     public static final int SUPPLIER_COUNTRY_CODE_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierCountryCode_;
     /**
      * <code>repeated .ssn.type.Candidate supplier_country_code = 8 [json_name = "supplierCountryCode"];</code>
@@ -8726,6 +8742,7 @@ public final class MlServiceProtos {
     }
 
     public static final int DOCUMENT_TYPE_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentType_;
     /**
      * <code>repeated .ssn.type.Candidate document_type = 9 [json_name = "documentType"];</code>
@@ -8766,6 +8783,7 @@ public final class MlServiceProtos {
     }
 
     public static final int PAYMENT_METHOD_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> paymentMethod_;
     /**
      * <code>repeated .ssn.type.Candidate payment_method = 10 [json_name = "paymentMethod"];</code>
@@ -8806,6 +8824,7 @@ public final class MlServiceProtos {
     }
 
     public static final int CREDIT_CARD_NUMBER_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> creditCardNumber_;
     /**
      * <pre>
@@ -8866,6 +8885,7 @@ public final class MlServiceProtos {
     }
 
     public static final int INVOICE_NUMBER_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> invoiceNumber_;
     /**
      * <code>repeated .ssn.type.Candidate invoice_number = 12 [json_name = "invoiceNumber"];</code>
@@ -8906,6 +8926,7 @@ public final class MlServiceProtos {
     }
 
     public static final int OCR_LINE_DK_TYPE_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkType_;
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_type = 13 [json_name = "ocrLineDkType"];</code>
@@ -8946,6 +8967,7 @@ public final class MlServiceProtos {
     }
 
     public static final int OCR_LINE_DK_PAYMENT_ID_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkPaymentId_;
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_payment_id = 14 [json_name = "ocrLineDkPaymentId"];</code>
@@ -8986,6 +9008,7 @@ public final class MlServiceProtos {
     }
 
     public static final int OCR_LINE_DK_CREDITOR_ID_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineDkCreditorId_;
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_dk_creditor_id = 15 [json_name = "ocrLineDkCreditorId"];</code>
@@ -9026,6 +9049,7 @@ public final class MlServiceProtos {
     }
 
     public static final int OCR_LINE_SE_PAYMENT_ID_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSePaymentId_;
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_payment_id = 16 [json_name = "ocrLineSePaymentId"];</code>
@@ -9066,6 +9090,7 @@ public final class MlServiceProtos {
     }
 
     public static final int OCR_LINE_SE_BANKGIRO_CREDITOR_ID_FIELD_NUMBER = 17;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSeBankgiroCreditorId_;
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_bankgiro_creditor_id = 17 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -9106,6 +9131,7 @@ public final class MlServiceProtos {
     }
 
     public static final int OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_FIELD_NUMBER = 18;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineSePlusgiroCreditorId_;
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_se_plusgiro_creditor_id = 18 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -9146,6 +9172,7 @@ public final class MlServiceProtos {
     }
 
     public static final int OCR_LINE_NO_PAYMENT_ID_FIELD_NUMBER = 19;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineNoPaymentId_;
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_no_payment_id = 19 [json_name = "ocrLineNoPaymentId"];</code>
@@ -9186,6 +9213,7 @@ public final class MlServiceProtos {
     }
 
     public static final int OCR_LINE_FI_PAYMENT_ID_FIELD_NUMBER = 20;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineFiPaymentId_;
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_fi_payment_id = 20 [json_name = "ocrLineFiPaymentId"];</code>
@@ -9226,6 +9254,7 @@ public final class MlServiceProtos {
     }
 
     public static final int OCR_LINE_NL_PAYMENT_ID_FIELD_NUMBER = 21;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> ocrLineNlPaymentId_;
     /**
      * <code>repeated .ssn.type.Candidate ocr_line_nl_payment_id = 21 [json_name = "ocrLineNlPaymentId"];</code>
@@ -9266,6 +9295,7 @@ public final class MlServiceProtos {
     }
 
     public static final int IBAN_FIELD_NUMBER = 22;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> iban_;
     /**
      * <code>repeated .ssn.type.Candidate iban = 22 [json_name = "iban"];</code>
@@ -9306,6 +9336,7 @@ public final class MlServiceProtos {
     }
 
     public static final int LINES_FIELD_NUMBER = 23;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.LineCandidate> lines_;
     /**
      * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
@@ -9346,6 +9377,7 @@ public final class MlServiceProtos {
     }
 
     public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 24;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> bankAccountNumber_;
     /**
      * <code>repeated .ssn.type.Candidate bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
@@ -9386,6 +9418,7 @@ public final class MlServiceProtos {
     }
 
     public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 25;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> bankRegistrationNumber_;
     /**
      * <code>repeated .ssn.type.Candidate bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
@@ -9426,6 +9459,7 @@ public final class MlServiceProtos {
     }
 
     public static final int BIC_FIELD_NUMBER = 26;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> bic_;
     /**
      * <code>repeated .ssn.type.Candidate bic = 26 [json_name = "bic"];</code>
@@ -9466,6 +9500,7 @@ public final class MlServiceProtos {
     }
 
     public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 27;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentNumber_;
     /**
      * <code>repeated .ssn.type.Candidate document_number = 27 [json_name = "documentNumber"];</code>
@@ -9506,6 +9541,7 @@ public final class MlServiceProtos {
     }
 
     public static final int DOCUMENT_DATE_FIELD_NUMBER = 28;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> documentDate_;
     /**
      * <code>repeated .ssn.type.Candidate document_date = 28 [json_name = "documentDate"];</code>
@@ -9546,6 +9582,7 @@ public final class MlServiceProtos {
     }
 
     public static final int ORDER_NUMBER_FIELD_NUMBER = 29;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> orderNumber_;
     /**
      * <code>repeated .ssn.type.Candidate order_number = 29 [json_name = "orderNumber"];</code>
@@ -9586,6 +9623,7 @@ public final class MlServiceProtos {
     }
 
     public static final int SUPPLIER_NAME_FIELD_NUMBER = 30;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierName_;
     /**
      * <code>repeated .ssn.type.Candidate supplier_name = 30 [json_name = "supplierName"];</code>
@@ -9626,6 +9664,7 @@ public final class MlServiceProtos {
     }
 
     public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 31;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierVatNumber_;
     /**
      * <code>repeated .ssn.type.Candidate supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
@@ -9666,6 +9705,7 @@ public final class MlServiceProtos {
     }
 
     public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 32;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierOrganisationNumber_;
     /**
      * <code>repeated .ssn.type.Candidate supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
@@ -9706,6 +9746,7 @@ public final class MlServiceProtos {
     }
 
     public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 33;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> supplierAddress_;
     /**
      * <code>repeated .ssn.type.Candidate supplier_address = 33 [json_name = "supplierAddress"];</code>
@@ -9746,6 +9787,7 @@ public final class MlServiceProtos {
     }
 
     public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 34;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.Candidate> creditCardLastFour_;
     /**
      * <code>repeated .ssn.type.Candidate credit_card_last_four = 34 [json_name = "creditCardLastFour"];</code>
@@ -10408,6 +10450,8 @@ public final class MlServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        bitField1_ = 0;
         if (orderDateBuilder_ == null) {
           orderDate_ = java.util.Collections.emptyList();
         } else {
@@ -10672,8 +10716,14 @@ public final class MlServiceProtos {
       @java.lang.Override
       public ssn.mlservice.v2.MlServiceProtos.PredictResponse buildPartial() {
         ssn.mlservice.v2.MlServiceProtos.PredictResponse result = new ssn.mlservice.v2.MlServiceProtos.PredictResponse(this);
-        int from_bitField0_ = bitField0_;
-        int from_bitField1_ = bitField1_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        if (bitField1_ != 0) { buildPartial1(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.mlservice.v2.MlServiceProtos.PredictResponse result) {
         if (orderDateBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             orderDate_ = java.util.Collections.unmodifiableList(orderDate_);
@@ -10980,8 +11030,14 @@ public final class MlServiceProtos {
         } else {
           result.creditCardLastFour_ = creditCardLastFourBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(ssn.mlservice.v2.MlServiceProtos.PredictResponse result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartial1(ssn.mlservice.v2.MlServiceProtos.PredictResponse result) {
+        int from_bitField1_ = bitField1_;
       }
 
       @java.lang.Override
@@ -20790,7 +20846,7 @@ public final class MlServiceProtos {
      */
     @java.lang.Override
     public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequestOrBuilder getFeatureGenRequestOrBuilder() {
-      return getFeatureGenRequest();
+      return featureGenRequest_ == null ? ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.getDefaultInstance() : featureGenRequest_;
     }
 
     public static final int PREDICT_REQUEST_FIELD_NUMBER = 2;
@@ -20816,7 +20872,7 @@ public final class MlServiceProtos {
      */
     @java.lang.Override
     public ssn.mlservice.v2.MlServiceProtos.PredictRequestOrBuilder getPredictRequestOrBuilder() {
-      return getPredictRequest();
+      return predictRequest_ == null ? ssn.mlservice.v2.MlServiceProtos.PredictRequest.getDefaultInstance() : predictRequest_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -21028,16 +21084,15 @@ public final class MlServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (featureGenRequestBuilder_ == null) {
-          featureGenRequest_ = null;
-        } else {
-          featureGenRequest_ = null;
+        bitField0_ = 0;
+        featureGenRequest_ = null;
+        if (featureGenRequestBuilder_ != null) {
+          featureGenRequestBuilder_.dispose();
           featureGenRequestBuilder_ = null;
         }
-        if (predictRequestBuilder_ == null) {
-          predictRequest_ = null;
-        } else {
-          predictRequest_ = null;
+        predictRequest_ = null;
+        if (predictRequestBuilder_ != null) {
+          predictRequestBuilder_.dispose();
           predictRequestBuilder_ = null;
         }
         return this;
@@ -21066,18 +21121,23 @@ public final class MlServiceProtos {
       @java.lang.Override
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenPredictRequest buildPartial() {
         ssn.mlservice.v2.MlServiceProtos.FeatureGenPredictRequest result = new ssn.mlservice.v2.MlServiceProtos.FeatureGenPredictRequest(this);
-        if (featureGenRequestBuilder_ == null) {
-          result.featureGenRequest_ = featureGenRequest_;
-        } else {
-          result.featureGenRequest_ = featureGenRequestBuilder_.build();
-        }
-        if (predictRequestBuilder_ == null) {
-          result.predictRequest_ = predictRequest_;
-        } else {
-          result.predictRequest_ = predictRequestBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.mlservice.v2.MlServiceProtos.FeatureGenPredictRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.featureGenRequest_ = featureGenRequestBuilder_ == null
+              ? featureGenRequest_
+              : featureGenRequestBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.predictRequest_ = predictRequestBuilder_ == null
+              ? predictRequest_
+              : predictRequestBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -21160,14 +21220,14 @@ public final class MlServiceProtos {
                 input.readMessage(
                     getFeatureGenRequestFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getPredictRequestFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -21185,6 +21245,7 @@ public final class MlServiceProtos {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest featureGenRequest_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -21194,7 +21255,7 @@ public final class MlServiceProtos {
        * @return Whether the featureGenRequest field is set.
        */
       public boolean hasFeatureGenRequest() {
-        return featureGenRequestBuilder_ != null || featureGenRequest_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
@@ -21216,11 +21277,11 @@ public final class MlServiceProtos {
             throw new NullPointerException();
           }
           featureGenRequest_ = value;
-          onChanged();
         } else {
           featureGenRequestBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -21230,11 +21291,11 @@ public final class MlServiceProtos {
           ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.Builder builderForValue) {
         if (featureGenRequestBuilder_ == null) {
           featureGenRequest_ = builderForValue.build();
-          onChanged();
         } else {
           featureGenRequestBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -21242,38 +21303,38 @@ public final class MlServiceProtos {
        */
       public Builder mergeFeatureGenRequest(ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest value) {
         if (featureGenRequestBuilder_ == null) {
-          if (featureGenRequest_ != null) {
-            featureGenRequest_ =
-              ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.newBuilder(featureGenRequest_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            featureGenRequest_ != null &&
+            featureGenRequest_ != ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.getDefaultInstance()) {
+            getFeatureGenRequestBuilder().mergeFrom(value);
           } else {
             featureGenRequest_ = value;
           }
-          onChanged();
         } else {
           featureGenRequestBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
        */
       public Builder clearFeatureGenRequest() {
-        if (featureGenRequestBuilder_ == null) {
-          featureGenRequest_ = null;
-          onChanged();
-        } else {
-          featureGenRequest_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        featureGenRequest_ = null;
+        if (featureGenRequestBuilder_ != null) {
+          featureGenRequestBuilder_.dispose();
           featureGenRequestBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.mlservice.v2.FeatureGenRequest feature_gen_request = 1 [json_name = "featureGenRequest"];</code>
        */
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenRequest.Builder getFeatureGenRequestBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getFeatureGenRequestFieldBuilder().getBuilder();
       }
@@ -21313,7 +21374,7 @@ public final class MlServiceProtos {
        * @return Whether the predictRequest field is set.
        */
       public boolean hasPredictRequest() {
-        return predictRequestBuilder_ != null || predictRequest_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
@@ -21335,11 +21396,11 @@ public final class MlServiceProtos {
             throw new NullPointerException();
           }
           predictRequest_ = value;
-          onChanged();
         } else {
           predictRequestBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -21349,11 +21410,11 @@ public final class MlServiceProtos {
           ssn.mlservice.v2.MlServiceProtos.PredictRequest.Builder builderForValue) {
         if (predictRequestBuilder_ == null) {
           predictRequest_ = builderForValue.build();
-          onChanged();
         } else {
           predictRequestBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -21361,38 +21422,38 @@ public final class MlServiceProtos {
        */
       public Builder mergePredictRequest(ssn.mlservice.v2.MlServiceProtos.PredictRequest value) {
         if (predictRequestBuilder_ == null) {
-          if (predictRequest_ != null) {
-            predictRequest_ =
-              ssn.mlservice.v2.MlServiceProtos.PredictRequest.newBuilder(predictRequest_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            predictRequest_ != null &&
+            predictRequest_ != ssn.mlservice.v2.MlServiceProtos.PredictRequest.getDefaultInstance()) {
+            getPredictRequestBuilder().mergeFrom(value);
           } else {
             predictRequest_ = value;
           }
-          onChanged();
         } else {
           predictRequestBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
        */
       public Builder clearPredictRequest() {
-        if (predictRequestBuilder_ == null) {
-          predictRequest_ = null;
-          onChanged();
-        } else {
-          predictRequest_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        predictRequest_ = null;
+        if (predictRequestBuilder_ != null) {
+          predictRequestBuilder_.dispose();
           predictRequestBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.mlservice.v2.PredictRequest predict_request = 2 [json_name = "predictRequest"];</code>
        */
       public ssn.mlservice.v2.MlServiceProtos.PredictRequest.Builder getPredictRequestBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getPredictRequestFieldBuilder().getBuilder();
       }
@@ -21527,134 +21588,134 @@ public final class MlServiceProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n ssn/mlservice/v2/mlservice.proto\022\020ssn." +
-      "mlservice.v2\032\026google/type/date.proto\032\036ss" +
-      "n/mlservice/v2/example.proto\032\030ssn/type/c" +
-      "andidate.proto\032\036ssn/type/text_annotation" +
-      ".proto\"\301\r\n\021FeatureGenRequest\022R\n\014truth_la" +
-      "bels\030\001 \001(\0132/.ssn.mlservice.v2.FeatureGen" +
-      "Request.TruthLabelsR\013truthLabels\022A\n\017text" +
-      "_annotation\030\002 \001(\0132\030.ssn.type.TextAnnotat" +
-      "ionR\016textAnnotation\022\016\n\002id\030\003 \001(\tR\002id\032\204\014\n\013" +
-      "TruthLabels\022$\n\016total_incl_vat\030\001 \001(\001R\014tot" +
-      "alInclVat\022\033\n\ttotal_vat\030\002 \001(\001R\010totalVat\022$" +
-      "\n\016total_excl_vat\030\003 \001(\001R\014totalExclVat\0220\n\n" +
-      "order_date\030\004 \001(\0132\021.google.type.DateR\tord" +
-      "erDate\022;\n\020payment_due_date\030\005 \001(\0132\021.googl" +
-      "e.type.DateR\016paymentDueDate\022#\n\rdocument_" +
-      "type\030\006 \001(\tR\014documentType\022\032\n\010currency\030\007 \001" +
-      "(\tR\010currency\022,\n\022credit_card_number\030\010 \001(\t" +
-      "R\020creditCardNumber\022%\n\016payment_method\030\t \001" +
-      "(\tR\rpaymentMethod\022\'\n\020ocr_line_dk_type\030\n " +
-      "\001(\tR\rocrLineDkType\0222\n\026ocr_line_dk_paymen" +
-      "t_id\030\013 \001(\tR\022ocrLineDkPaymentId\0224\n\027ocr_li" +
-      "ne_dk_creditor_id\030\014 \001(\tR\023ocrLineDkCredit" +
-      "orId\0222\n\026ocr_line_se_payment_id\030\r \001(\tR\022oc" +
-      "rLineSePaymentId\022E\n ocr_line_se_bankgiro" +
-      "_creditor_id\030\016 \001(\tR\033ocrLineSeBankgiroCre" +
-      "ditorId\022E\n ocr_line_se_plusgiro_creditor" +
-      "_id\030\017 \001(\tR\033ocrLineSePlusgiroCreditorId\0222" +
-      "\n\026ocr_line_no_payment_id\030\020 \001(\tR\022ocrLineN" +
-      "oPaymentId\0222\n\026ocr_line_fi_payment_id\030\021 \001" +
-      "(\tR\022ocrLineFiPaymentId\0222\n\026ocr_line_nl_pa" +
-      "yment_id\030\022 \001(\tR\022ocrLineNlPaymentId\0222\n\025su" +
-      "pplier_corporate_id\030\023 \001(\tR\023supplierCorpo" +
-      "rateId\0222\n\025supplier_country_code\030\024 \001(\tR\023s" +
-      "upplierCountryCode\022%\n\016invoice_number\030\025 \001" +
-      "(\tR\rinvoiceNumber\022\022\n\004iban\030\026 \001(\tR\004iban\022.\n" +
-      "\023bank_account_number\030\027 \001(\tR\021bankAccountN" +
-      "umber\0228\n\030bank_registration_number\030\030 \001(\tR" +
-      "\026bankRegistrationNumber\022#\n\rsupplier_name" +
-      "\030\031 \001(\tR\014supplierName\022\020\n\003bic\030\032 \001(\tR\003bic\022\'" +
-      "\n\017document_number\030\033 \001(\tR\016documentNumber\022" +
-      "6\n\rdocument_date\030\034 \001(\0132\021.google.type.Dat" +
-      "eR\014documentDate\022!\n\014order_number\030\035 \001(\tR\013o" +
-      "rderNumber\022.\n\023supplier_vat_number\030\036 \001(\tR" +
-      "\021supplierVatNumber\022@\n\034supplier_organisat" +
-      "ion_number\030\037 \001(\tR\032supplierOrganisationNu" +
-      "mber\022)\n\020supplier_address\030  \001(\tR\017supplier" +
-      "Address\0221\n\025credit_card_last_four\030! \001(\tR\022" +
-      "creditCardLastFour\"C\n\022FeatureGenResponse" +
-      "\022-\n\007example\030\001 \001(\0132\023.tensorflow.ExampleR\007" +
-      "example\"p\n\016PredictRequest\022-\n\007example\030\001 \001" +
-      "(\0132\023.tensorflow.ExampleR\007example\022/\n\024top_" +
-      "n_most_confident\030\002 \001(\rR\021topNMostConfiden" +
-      "t\"\263\021\n\017PredictResponse\0222\n\norder_date\030\001 \003(" +
-      "\0132\023.ssn.type.CandidateR\torderDate\022=\n\020pay" +
-      "ment_due_date\030\002 \003(\0132\023.ssn.type.Candidate" +
-      "R\016paymentDueDate\022/\n\010currency\030\003 \003(\0132\023.ssn" +
-      ".type.CandidateR\010currency\0220\n\ttotal_vat\030\004" +
-      " \003(\0132\023.ssn.type.CandidateR\010totalVat\0229\n\016t" +
-      "otal_incl_vat\030\005 \003(\0132\023.ssn.type.Candidate" +
-      "R\014totalInclVat\0229\n\016total_excl_vat\030\006 \003(\0132\023" +
-      ".ssn.type.CandidateR\014totalExclVat\022G\n\025sup" +
-      "plier_corporate_id\030\007 \003(\0132\023.ssn.type.Cand" +
-      "idateR\023supplierCorporateId\022G\n\025supplier_c" +
-      "ountry_code\030\010 \003(\0132\023.ssn.type.CandidateR\023" +
-      "supplierCountryCode\0228\n\rdocument_type\030\t \003" +
-      "(\0132\023.ssn.type.CandidateR\014documentType\022:\n" +
-      "\016payment_method\030\n \003(\0132\023.ssn.type.Candida" +
-      "teR\rpaymentMethod\022A\n\022credit_card_number\030" +
-      "\013 \003(\0132\023.ssn.type.CandidateR\020creditCardNu" +
-      "mber\022:\n\016invoice_number\030\014 \003(\0132\023.ssn.type." +
-      "CandidateR\rinvoiceNumber\022<\n\020ocr_line_dk_" +
-      "type\030\r \003(\0132\023.ssn.type.CandidateR\rocrLine" +
-      "DkType\022G\n\026ocr_line_dk_payment_id\030\016 \003(\0132\023" +
-      ".ssn.type.CandidateR\022ocrLineDkPaymentId\022" +
-      "I\n\027ocr_line_dk_creditor_id\030\017 \003(\0132\023.ssn.t" +
-      "ype.CandidateR\023ocrLineDkCreditorId\022G\n\026oc" +
-      "r_line_se_payment_id\030\020 \003(\0132\023.ssn.type.Ca" +
-      "ndidateR\022ocrLineSePaymentId\022Z\n ocr_line_" +
-      "se_bankgiro_creditor_id\030\021 \003(\0132\023.ssn.type" +
-      ".CandidateR\033ocrLineSeBankgiroCreditorId\022" +
-      "Z\n ocr_line_se_plusgiro_creditor_id\030\022 \003(" +
-      "\0132\023.ssn.type.CandidateR\033ocrLineSePlusgir" +
-      "oCreditorId\022G\n\026ocr_line_no_payment_id\030\023 " +
-      "\003(\0132\023.ssn.type.CandidateR\022ocrLineNoPayme" +
-      "ntId\022G\n\026ocr_line_fi_payment_id\030\024 \003(\0132\023.s" +
-      "sn.type.CandidateR\022ocrLineFiPaymentId\022G\n" +
-      "\026ocr_line_nl_payment_id\030\025 \003(\0132\023.ssn.type" +
-      ".CandidateR\022ocrLineNlPaymentId\022\'\n\004iban\030\026" +
-      " \003(\0132\023.ssn.type.CandidateR\004iban\022-\n\005lines" +
-      "\030\027 \003(\0132\027.ssn.type.LineCandidateR\005lines\022C" +
-      "\n\023bank_account_number\030\030 \003(\0132\023.ssn.type.C" +
-      "andidateR\021bankAccountNumber\022M\n\030bank_regi" +
-      "stration_number\030\031 \003(\0132\023.ssn.type.Candida" +
-      "teR\026bankRegistrationNumber\022%\n\003bic\030\032 \003(\0132" +
-      "\023.ssn.type.CandidateR\003bic\022<\n\017document_nu" +
-      "mber\030\033 \003(\0132\023.ssn.type.CandidateR\016documen" +
-      "tNumber\0228\n\rdocument_date\030\034 \003(\0132\023.ssn.typ" +
-      "e.CandidateR\014documentDate\0226\n\014order_numbe" +
-      "r\030\035 \003(\0132\023.ssn.type.CandidateR\013orderNumbe" +
-      "r\0228\n\rsupplier_name\030\036 \003(\0132\023.ssn.type.Cand" +
-      "idateR\014supplierName\022C\n\023supplier_vat_numb" +
-      "er\030\037 \003(\0132\023.ssn.type.CandidateR\021supplierV" +
-      "atNumber\022U\n\034supplier_organisation_number" +
-      "\030  \003(\0132\023.ssn.type.CandidateR\032supplierOrg" +
-      "anisationNumber\022>\n\020supplier_address\030! \003(" +
-      "\0132\023.ssn.type.CandidateR\017supplierAddress\022" +
-      "F\n\025credit_card_last_four\030\" \003(\0132\023.ssn.typ" +
-      "e.CandidateR\022creditCardLastFour\"\272\001\n\030Feat" +
-      "ureGenPredictRequest\022S\n\023feature_gen_requ" +
-      "est\030\001 \001(\0132#.ssn.mlservice.v2.FeatureGenR" +
-      "equestR\021featureGenRequest\022I\n\017predict_req" +
-      "uest\030\002 \001(\0132 .ssn.mlservice.v2.PredictReq" +
-      "uestR\016predictRequest2\230\002\n\tMlService\022W\n\nFe" +
-      "atureGen\022#.ssn.mlservice.v2.FeatureGenRe" +
-      "quest\032$.ssn.mlservice.v2.FeatureGenRespo" +
-      "nse\022N\n\007Predict\022 .ssn.mlservice.v2.Predic" +
-      "tRequest\032!.ssn.mlservice.v2.PredictRespo" +
-      "nse\022b\n\021FeatureGenPredict\022*.ssn.mlservice" +
-      ".v2.FeatureGenPredictRequest\032!.ssn.mlser" +
-      "vice.v2.PredictResponseBQB\017MlServiceProt" +
-      "osZ>github.com/e-conomic/vmlapis/gen/go/" +
-      "ssn/mlservice/v2;mlserviceb\006proto3"
+      "mlservice.v2\032\026google/type/date.proto\032\030ss" +
+      "n/type/candidate.proto\032!ssn/type/tensorf" +
+      "low/example.proto\032\036ssn/type/text_annotat" +
+      "ion.proto\"\301\r\n\021FeatureGenRequest\022R\n\014truth" +
+      "_labels\030\001 \001(\0132/.ssn.mlservice.v2.Feature" +
+      "GenRequest.TruthLabelsR\013truthLabels\022A\n\017t" +
+      "ext_annotation\030\002 \001(\0132\030.ssn.type.TextAnno" +
+      "tationR\016textAnnotation\022\016\n\002id\030\003 \001(\tR\002id\032\204" +
+      "\014\n\013TruthLabels\022$\n\016total_incl_vat\030\001 \001(\001R\014" +
+      "totalInclVat\022\033\n\ttotal_vat\030\002 \001(\001R\010totalVa" +
+      "t\022$\n\016total_excl_vat\030\003 \001(\001R\014totalExclVat\022" +
+      "0\n\norder_date\030\004 \001(\0132\021.google.type.DateR\t" +
+      "orderDate\022;\n\020payment_due_date\030\005 \001(\0132\021.go" +
+      "ogle.type.DateR\016paymentDueDate\022#\n\rdocume" +
+      "nt_type\030\006 \001(\tR\014documentType\022\032\n\010currency\030" +
+      "\007 \001(\tR\010currency\022,\n\022credit_card_number\030\010 " +
+      "\001(\tR\020creditCardNumber\022%\n\016payment_method\030" +
+      "\t \001(\tR\rpaymentMethod\022\'\n\020ocr_line_dk_type" +
+      "\030\n \001(\tR\rocrLineDkType\0222\n\026ocr_line_dk_pay" +
+      "ment_id\030\013 \001(\tR\022ocrLineDkPaymentId\0224\n\027ocr" +
+      "_line_dk_creditor_id\030\014 \001(\tR\023ocrLineDkCre" +
+      "ditorId\0222\n\026ocr_line_se_payment_id\030\r \001(\tR" +
+      "\022ocrLineSePaymentId\022E\n ocr_line_se_bankg" +
+      "iro_creditor_id\030\016 \001(\tR\033ocrLineSeBankgiro" +
+      "CreditorId\022E\n ocr_line_se_plusgiro_credi" +
+      "tor_id\030\017 \001(\tR\033ocrLineSePlusgiroCreditorI" +
+      "d\0222\n\026ocr_line_no_payment_id\030\020 \001(\tR\022ocrLi" +
+      "neNoPaymentId\0222\n\026ocr_line_fi_payment_id\030" +
+      "\021 \001(\tR\022ocrLineFiPaymentId\0222\n\026ocr_line_nl" +
+      "_payment_id\030\022 \001(\tR\022ocrLineNlPaymentId\0222\n" +
+      "\025supplier_corporate_id\030\023 \001(\tR\023supplierCo" +
+      "rporateId\0222\n\025supplier_country_code\030\024 \001(\t" +
+      "R\023supplierCountryCode\022%\n\016invoice_number\030" +
+      "\025 \001(\tR\rinvoiceNumber\022\022\n\004iban\030\026 \001(\tR\004iban" +
+      "\022.\n\023bank_account_number\030\027 \001(\tR\021bankAccou" +
+      "ntNumber\0228\n\030bank_registration_number\030\030 \001" +
+      "(\tR\026bankRegistrationNumber\022#\n\rsupplier_n" +
+      "ame\030\031 \001(\tR\014supplierName\022\020\n\003bic\030\032 \001(\tR\003bi" +
+      "c\022\'\n\017document_number\030\033 \001(\tR\016documentNumb" +
+      "er\0226\n\rdocument_date\030\034 \001(\0132\021.google.type." +
+      "DateR\014documentDate\022!\n\014order_number\030\035 \001(\t" +
+      "R\013orderNumber\022.\n\023supplier_vat_number\030\036 \001" +
+      "(\tR\021supplierVatNumber\022@\n\034supplier_organi" +
+      "sation_number\030\037 \001(\tR\032supplierOrganisatio" +
+      "nNumber\022)\n\020supplier_address\030  \001(\tR\017suppl" +
+      "ierAddress\0221\n\025credit_card_last_four\030! \001(" +
+      "\tR\022creditCardLastFour\"C\n\022FeatureGenRespo" +
+      "nse\022-\n\007example\030\001 \001(\0132\023.tensorflow.Exampl" +
+      "eR\007example\"p\n\016PredictRequest\022-\n\007example\030" +
+      "\001 \001(\0132\023.tensorflow.ExampleR\007example\022/\n\024t" +
+      "op_n_most_confident\030\002 \001(\rR\021topNMostConfi" +
+      "dent\"\263\021\n\017PredictResponse\0222\n\norder_date\030\001" +
+      " \003(\0132\023.ssn.type.CandidateR\torderDate\022=\n\020" +
+      "payment_due_date\030\002 \003(\0132\023.ssn.type.Candid" +
+      "ateR\016paymentDueDate\022/\n\010currency\030\003 \003(\0132\023." +
+      "ssn.type.CandidateR\010currency\0220\n\ttotal_va" +
+      "t\030\004 \003(\0132\023.ssn.type.CandidateR\010totalVat\0229" +
+      "\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type.Candid" +
+      "ateR\014totalInclVat\0229\n\016total_excl_vat\030\006 \003(" +
+      "\0132\023.ssn.type.CandidateR\014totalExclVat\022G\n\025" +
+      "supplier_corporate_id\030\007 \003(\0132\023.ssn.type.C" +
+      "andidateR\023supplierCorporateId\022G\n\025supplie" +
+      "r_country_code\030\010 \003(\0132\023.ssn.type.Candidat" +
+      "eR\023supplierCountryCode\0228\n\rdocument_type\030" +
+      "\t \003(\0132\023.ssn.type.CandidateR\014documentType" +
+      "\022:\n\016payment_method\030\n \003(\0132\023.ssn.type.Cand" +
+      "idateR\rpaymentMethod\022A\n\022credit_card_numb" +
+      "er\030\013 \003(\0132\023.ssn.type.CandidateR\020creditCar" +
+      "dNumber\022:\n\016invoice_number\030\014 \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\rinvoiceNumber\022<\n\020ocr_line_" +
+      "dk_type\030\r \003(\0132\023.ssn.type.CandidateR\rocrL" +
+      "ineDkType\022G\n\026ocr_line_dk_payment_id\030\016 \003(" +
+      "\0132\023.ssn.type.CandidateR\022ocrLineDkPayment" +
+      "Id\022I\n\027ocr_line_dk_creditor_id\030\017 \003(\0132\023.ss" +
+      "n.type.CandidateR\023ocrLineDkCreditorId\022G\n" +
+      "\026ocr_line_se_payment_id\030\020 \003(\0132\023.ssn.type" +
+      ".CandidateR\022ocrLineSePaymentId\022Z\n ocr_li" +
+      "ne_se_bankgiro_creditor_id\030\021 \003(\0132\023.ssn.t" +
+      "ype.CandidateR\033ocrLineSeBankgiroCreditor" +
+      "Id\022Z\n ocr_line_se_plusgiro_creditor_id\030\022" +
+      " \003(\0132\023.ssn.type.CandidateR\033ocrLineSePlus" +
+      "giroCreditorId\022G\n\026ocr_line_no_payment_id" +
+      "\030\023 \003(\0132\023.ssn.type.CandidateR\022ocrLineNoPa" +
+      "ymentId\022G\n\026ocr_line_fi_payment_id\030\024 \003(\0132" +
+      "\023.ssn.type.CandidateR\022ocrLineFiPaymentId" +
+      "\022G\n\026ocr_line_nl_payment_id\030\025 \003(\0132\023.ssn.t" +
+      "ype.CandidateR\022ocrLineNlPaymentId\022\'\n\004iba" +
+      "n\030\026 \003(\0132\023.ssn.type.CandidateR\004iban\022-\n\005li" +
+      "nes\030\027 \003(\0132\027.ssn.type.LineCandidateR\005line" +
+      "s\022C\n\023bank_account_number\030\030 \003(\0132\023.ssn.typ" +
+      "e.CandidateR\021bankAccountNumber\022M\n\030bank_r" +
+      "egistration_number\030\031 \003(\0132\023.ssn.type.Cand" +
+      "idateR\026bankRegistrationNumber\022%\n\003bic\030\032 \003" +
+      "(\0132\023.ssn.type.CandidateR\003bic\022<\n\017document" +
+      "_number\030\033 \003(\0132\023.ssn.type.CandidateR\016docu" +
+      "mentNumber\0228\n\rdocument_date\030\034 \003(\0132\023.ssn." +
+      "type.CandidateR\014documentDate\0226\n\014order_nu" +
+      "mber\030\035 \003(\0132\023.ssn.type.CandidateR\013orderNu" +
+      "mber\0228\n\rsupplier_name\030\036 \003(\0132\023.ssn.type.C" +
+      "andidateR\014supplierName\022C\n\023supplier_vat_n" +
+      "umber\030\037 \003(\0132\023.ssn.type.CandidateR\021suppli" +
+      "erVatNumber\022U\n\034supplier_organisation_num" +
+      "ber\030  \003(\0132\023.ssn.type.CandidateR\032supplier" +
+      "OrganisationNumber\022>\n\020supplier_address\030!" +
+      " \003(\0132\023.ssn.type.CandidateR\017supplierAddre" +
+      "ss\022F\n\025credit_card_last_four\030\" \003(\0132\023.ssn." +
+      "type.CandidateR\022creditCardLastFour\"\272\001\n\030F" +
+      "eatureGenPredictRequest\022S\n\023feature_gen_r" +
+      "equest\030\001 \001(\0132#.ssn.mlservice.v2.FeatureG" +
+      "enRequestR\021featureGenRequest\022I\n\017predict_" +
+      "request\030\002 \001(\0132 .ssn.mlservice.v2.Predict" +
+      "RequestR\016predictRequest2\230\002\n\tMlService\022W\n" +
+      "\nFeatureGen\022#.ssn.mlservice.v2.FeatureGe" +
+      "nRequest\032$.ssn.mlservice.v2.FeatureGenRe" +
+      "sponse\022N\n\007Predict\022 .ssn.mlservice.v2.Pre" +
+      "dictRequest\032!.ssn.mlservice.v2.PredictRe" +
+      "sponse\022b\n\021FeatureGenPredict\022*.ssn.mlserv" +
+      "ice.v2.FeatureGenPredictRequest\032!.ssn.ml" +
+      "service.v2.PredictResponseBQB\017MlServiceP" +
+      "rotosZ>github.com/e-conomic/vmlapis/gen/" +
+      "go/ssn/mlservice/v2;mlserviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.type.DateProto.getDescriptor(),
-          org.tensorflow.example.ExampleProtos.getDescriptor(),
           ssn.type.CandidateOuterClass.getDescriptor(),
+          org.tensorflow.example.ExampleProtos.getDescriptor(),
           ssn.type.TextAnnotationOuterClass.getDescriptor(),
         });
     internal_static_ssn_mlservice_v2_FeatureGenRequest_descriptor =
@@ -21694,8 +21755,8 @@ public final class MlServiceProtos {
         internal_static_ssn_mlservice_v2_FeatureGenPredictRequest_descriptor,
         new java.lang.String[] { "FeatureGenRequest", "PredictRequest", });
     com.google.type.DateProto.getDescriptor();
-    org.tensorflow.example.ExampleProtos.getDescriptor();
     ssn.type.CandidateOuterClass.getDescriptor();
+    org.tensorflow.example.ExampleProtos.getDescriptor();
     ssn.type.TextAnnotationOuterClass.getDescriptor();
   }
 

@@ -103,6 +103,7 @@ public final class JesterOuterClass {
     }
 
     public static final int PREDICTIONS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.type.PredictionOuterClass.Prediction> predictions_;
     /**
      * <code>repeated .asgt.type.Prediction predictions = 1 [json_name = "predictions"];</code>
@@ -165,7 +166,7 @@ public final class JesterOuterClass {
      */
     @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
-      return getModel();
+      return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -378,6 +379,7 @@ public final class JesterOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (predictionsBuilder_ == null) {
           predictions_ = java.util.Collections.emptyList();
         } else {
@@ -385,10 +387,9 @@ public final class JesterOuterClass {
           predictionsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000001);
-        if (modelBuilder_ == null) {
-          model_ = null;
-        } else {
-          model_ = null;
+        model_ = null;
+        if (modelBuilder_ != null) {
+          modelBuilder_.dispose();
           modelBuilder_ = null;
         }
         return this;
@@ -417,7 +418,13 @@ public final class JesterOuterClass {
       @java.lang.Override
       public asgt.jester.v1.JesterOuterClass.SuggestionResponse buildPartial() {
         asgt.jester.v1.JesterOuterClass.SuggestionResponse result = new asgt.jester.v1.JesterOuterClass.SuggestionResponse(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.jester.v1.JesterOuterClass.SuggestionResponse result) {
         if (predictionsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             predictions_ = java.util.Collections.unmodifiableList(predictions_);
@@ -427,13 +434,15 @@ public final class JesterOuterClass {
         } else {
           result.predictions_ = predictionsBuilder_.build();
         }
-        if (modelBuilder_ == null) {
-          result.model_ = model_;
-        } else {
-          result.model_ = modelBuilder_.build();
+      }
+
+      private void buildPartial0(asgt.jester.v1.JesterOuterClass.SuggestionResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.model_ = modelBuilder_ == null
+              ? model_
+              : modelBuilder_.build();
         }
-        onBuilt();
-        return result;
       }
 
       @java.lang.Override
@@ -552,7 +561,7 @@ public final class JesterOuterClass {
                 input.readMessage(
                     getModelFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -820,7 +829,7 @@ public final class JesterOuterClass {
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
-        return modelBuilder_ != null || model_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
@@ -842,11 +851,11 @@ public final class JesterOuterClass {
             throw new NullPointerException();
           }
           model_ = value;
-          onChanged();
         } else {
           modelBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -856,11 +865,11 @@ public final class JesterOuterClass {
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
         if (modelBuilder_ == null) {
           model_ = builderForValue.build();
-          onChanged();
         } else {
           modelBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -868,38 +877,38 @@ public final class JesterOuterClass {
        */
       public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
-          if (model_ != null) {
-            model_ =
-              asgt.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            model_ != null &&
+            model_ != asgt.type.ModelOuterClass.Model.getDefaultInstance()) {
+            getModelBuilder().mergeFrom(value);
           } else {
             model_ = value;
           }
-          onChanged();
         } else {
           modelBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder clearModel() {
-        if (modelBuilder_ == null) {
-          model_ = null;
-          onChanged();
-        } else {
-          model_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        model_ = null;
+        if (modelBuilder_ != null) {
+          modelBuilder_.dispose();
           modelBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getModelFieldBuilder().getBuilder();
       }
@@ -1057,7 +1066,7 @@ public final class JesterOuterClass {
     }
 
     public static final int SUGGESTION_LIMIT_FIELD_NUMBER = 1;
-    private int suggestionLimit_;
+    private int suggestionLimit_ = 0;
     /**
      * <code>int32 suggestion_limit = 1 [json_name = "suggestionLimit"];</code>
      * @return The suggestionLimit.
@@ -1068,7 +1077,7 @@ public final class JesterOuterClass {
     }
 
     public static final int MIN_CONFIDENCE_FIELD_NUMBER = 2;
-    private int minConfidence_;
+    private int minConfidence_ = 0;
     /**
      * <code>.asgt.type.Confidence.Level min_confidence = 2 [json_name = "minConfidence"];</code>
      * @return The enum numeric value on the wire for minConfidence.
@@ -1081,8 +1090,7 @@ public final class JesterOuterClass {
      * @return The minConfidence.
      */
     @java.lang.Override public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
-      @SuppressWarnings("deprecation")
-      asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
+      asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.forNumber(minConfidence_);
       return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
     }
 
@@ -1284,10 +1292,9 @@ public final class JesterOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         suggestionLimit_ = 0;
-
         minConfidence_ = 0;
-
         return this;
       }
 
@@ -1314,10 +1321,19 @@ public final class JesterOuterClass {
       @java.lang.Override
       public asgt.jester.v1.JesterOuterClass.SuggestionOptions buildPartial() {
         asgt.jester.v1.JesterOuterClass.SuggestionOptions result = new asgt.jester.v1.JesterOuterClass.SuggestionOptions(this);
-        result.suggestionLimit_ = suggestionLimit_;
-        result.minConfidence_ = minConfidence_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.jester.v1.JesterOuterClass.SuggestionOptions result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.suggestionLimit_ = suggestionLimit_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.minConfidence_ = minConfidence_;
+        }
       }
 
       @java.lang.Override
@@ -1398,12 +1414,12 @@ public final class JesterOuterClass {
                 break;
               case 8: {
                 suggestionLimit_ = input.readInt32();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 minConfidence_ = input.readEnum();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               default: {
@@ -1421,6 +1437,7 @@ public final class JesterOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private int suggestionLimit_ ;
       /**
@@ -1439,6 +1456,7 @@ public final class JesterOuterClass {
       public Builder setSuggestionLimit(int value) {
         
         suggestionLimit_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1447,7 +1465,7 @@ public final class JesterOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearSuggestionLimit() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         suggestionLimit_ = 0;
         onChanged();
         return this;
@@ -1467,8 +1485,8 @@ public final class JesterOuterClass {
        * @return This builder for chaining.
        */
       public Builder setMinConfidenceValue(int value) {
-        
         minConfidence_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1478,8 +1496,7 @@ public final class JesterOuterClass {
        */
       @java.lang.Override
       public asgt.type.PredictionOuterClass.Confidence.Level getMinConfidence() {
-        @SuppressWarnings("deprecation")
-        asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.valueOf(minConfidence_);
+        asgt.type.PredictionOuterClass.Confidence.Level result = asgt.type.PredictionOuterClass.Confidence.Level.forNumber(minConfidence_);
         return result == null ? asgt.type.PredictionOuterClass.Confidence.Level.UNRECOGNIZED : result;
       }
       /**
@@ -1491,7 +1508,7 @@ public final class JesterOuterClass {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000002;
         minConfidence_ = value.getNumber();
         onChanged();
         return this;
@@ -1501,7 +1518,7 @@ public final class JesterOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearMinConfidence() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         minConfidence_ = 0;
         onChanged();
         return this;
@@ -1707,7 +1724,8 @@ public final class JesterOuterClass {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
@@ -1745,7 +1763,8 @@ public final class JesterOuterClass {
     }
 
     public static final int TYPE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object type_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
     /**
      * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
@@ -1783,6 +1802,7 @@ public final class JesterOuterClass {
     }
 
     public static final int INPUTS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.type.DataOuterClass.Data> inputs_;
     /**
      * <code>repeated .asgt.type.Data inputs = 3 [json_name = "inputs"];</code>
@@ -1845,10 +1865,11 @@ public final class JesterOuterClass {
      */
     @java.lang.Override
     public asgt.jester.v1.JesterOuterClass.SuggestionOptionsOrBuilder getOptionsOrBuilder() {
-      return getOptions();
+      return options_ == null ? asgt.jester.v1.JesterOuterClass.SuggestionOptions.getDefaultInstance() : options_;
     }
 
     public static final int TAGS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 5 [json_name = "tags"];</code>
@@ -2126,25 +2147,23 @@ public final class JesterOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         type_ = "";
-
         if (inputsBuilder_ == null) {
           inputs_ = java.util.Collections.emptyList();
         } else {
           inputs_ = null;
           inputsBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (optionsBuilder_ == null) {
-          options_ = null;
-        } else {
-          options_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        options_ = null;
+        if (optionsBuilder_ != null) {
+          optionsBuilder_.dispose();
           optionsBuilder_ = null;
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         return this;
       }
 
@@ -2171,30 +2190,42 @@ public final class JesterOuterClass {
       @java.lang.Override
       public asgt.jester.v1.JesterOuterClass.SuggestionRequest buildPartial() {
         asgt.jester.v1.JesterOuterClass.SuggestionRequest result = new asgt.jester.v1.JesterOuterClass.SuggestionRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.name_ = name_;
-        result.type_ = type_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.jester.v1.JesterOuterClass.SuggestionRequest result) {
         if (inputsBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             inputs_ = java.util.Collections.unmodifiableList(inputs_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.inputs_ = inputs_;
         } else {
           result.inputs_ = inputsBuilder_.build();
         }
-        if (optionsBuilder_ == null) {
-          result.options_ = options_;
-        } else {
-          result.options_ = optionsBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.tags_ = tags_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(asgt.jester.v1.JesterOuterClass.SuggestionRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.options_ = optionsBuilder_ == null
+              ? options_
+              : optionsBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -2243,17 +2274,19 @@ public final class JesterOuterClass {
         if (other == asgt.jester.v1.JesterOuterClass.SuggestionRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (inputsBuilder_ == null) {
           if (!other.inputs_.isEmpty()) {
             if (inputs_.isEmpty()) {
               inputs_ = other.inputs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureInputsIsMutable();
               inputs_.addAll(other.inputs_);
@@ -2266,7 +2299,7 @@ public final class JesterOuterClass {
               inputsBuilder_.dispose();
               inputsBuilder_ = null;
               inputs_ = other.inputs_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               inputsBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getInputsFieldBuilder() : null;
@@ -2281,7 +2314,7 @@ public final class JesterOuterClass {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -2316,12 +2349,12 @@ public final class JesterOuterClass {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 type_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
@@ -2341,7 +2374,7 @@ public final class JesterOuterClass {
                 input.readMessage(
                     getOptionsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
@@ -2408,11 +2441,9 @@ public final class JesterOuterClass {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2421,8 +2452,8 @@ public final class JesterOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2433,12 +2464,10 @@ public final class JesterOuterClass {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2484,11 +2513,9 @@ public final class JesterOuterClass {
        */
       public Builder setType(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         type_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2497,8 +2524,8 @@ public final class JesterOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        
         type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -2509,12 +2536,10 @@ public final class JesterOuterClass {
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         type_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -2522,9 +2547,9 @@ public final class JesterOuterClass {
       private java.util.List<asgt.type.DataOuterClass.Data> inputs_ =
         java.util.Collections.emptyList();
       private void ensureInputsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           inputs_ = new java.util.ArrayList<asgt.type.DataOuterClass.Data>(inputs_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -2674,7 +2699,7 @@ public final class JesterOuterClass {
       public Builder clearInputs() {
         if (inputsBuilder_ == null) {
           inputs_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           inputsBuilder_.clear();
@@ -2751,7 +2776,7 @@ public final class JesterOuterClass {
           inputsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.DataOuterClass.Data, asgt.type.DataOuterClass.Data.Builder, asgt.type.DataOuterClass.DataOrBuilder>(
                   inputs_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           inputs_ = null;
@@ -2767,7 +2792,7 @@ public final class JesterOuterClass {
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
-        return optionsBuilder_ != null || options_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
@@ -2789,11 +2814,11 @@ public final class JesterOuterClass {
             throw new NullPointerException();
           }
           options_ = value;
-          onChanged();
         } else {
           optionsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2803,11 +2828,11 @@ public final class JesterOuterClass {
           asgt.jester.v1.JesterOuterClass.SuggestionOptions.Builder builderForValue) {
         if (optionsBuilder_ == null) {
           options_ = builderForValue.build();
-          onChanged();
         } else {
           optionsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -2815,38 +2840,38 @@ public final class JesterOuterClass {
        */
       public Builder mergeOptions(asgt.jester.v1.JesterOuterClass.SuggestionOptions value) {
         if (optionsBuilder_ == null) {
-          if (options_ != null) {
-            options_ =
-              asgt.jester.v1.JesterOuterClass.SuggestionOptions.newBuilder(options_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            options_ != null &&
+            options_ != asgt.jester.v1.JesterOuterClass.SuggestionOptions.getDefaultInstance()) {
+            getOptionsBuilder().mergeFrom(value);
           } else {
             options_ = value;
           }
-          onChanged();
         } else {
           optionsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
-        if (optionsBuilder_ == null) {
-          options_ = null;
-          onChanged();
-        } else {
-          options_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        options_ = null;
+        if (optionsBuilder_ != null) {
+          optionsBuilder_.dispose();
           optionsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.jester.v1.SuggestionOptions options = 4 [json_name = "options"];</code>
        */
       public asgt.jester.v1.JesterOuterClass.SuggestionOptions.Builder getOptionsBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getOptionsFieldBuilder().getBuilder();
       }
@@ -2880,9 +2905,9 @@ public final class JesterOuterClass {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000010;
          }
       }
       /**
@@ -2925,10 +2950,8 @@ public final class JesterOuterClass {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.set(index, value);
         onChanged();
         return this;
@@ -2940,10 +2963,8 @@ public final class JesterOuterClass {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
         return this;
@@ -2967,7 +2988,7 @@ public final class JesterOuterClass {
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -2978,10 +2999,8 @@ public final class JesterOuterClass {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
         onChanged();

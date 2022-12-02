@@ -221,11 +221,11 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTaOrBuilder() {
-      return getTa();
+      return ta_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : ta_;
     }
 
     public static final int BYTES_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString bytes_;
+    private com.google.protobuf.ByteString bytes_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>bytes bytes = 2 [json_name = "bytes", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The bytes.
@@ -236,7 +236,8 @@ public final class DataServiceProto {
     }
 
     public static final int ID_FIELD_NUMBER = 3;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <code>string id = 3 [json_name = "id", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The id.
@@ -274,7 +275,8 @@ public final class DataServiceProto {
     }
 
     public static final int CONSUMER_FIELD_NUMBER = 4;
-    private volatile java.lang.Object consumer_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object consumer_ = "";
     /**
      * <code>string consumer = 4 [json_name = "consumer", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The consumer.
@@ -312,6 +314,7 @@ public final class DataServiceProto {
     }
 
     public static final int TAGS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 5 [json_name = "tags", (.gen_bq_schema.bigquery) = { ... }</code>
@@ -369,7 +372,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.TrueValuesOrBuilder getTrueValuesOrBuilder() {
-      return getTrueValues();
+      return trueValues_ == null ? ssn.dataservice.v1.DataServiceProto.TrueValues.getDefaultInstance() : trueValues_;
     }
 
     public static final int PREDICTION_VALUES_FIELD_NUMBER = 7;
@@ -395,11 +398,11 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionValuesOrBuilder getPredictionValuesOrBuilder() {
-      return getPredictionValues();
+      return predictionValues_ == null ? ssn.dataservice.v1.DataServiceProto.PredictionValues.getDefaultInstance() : predictionValues_;
     }
 
     public static final int FEEDBACK_TIME_FIELD_NUMBER = 8;
-    private long feedbackTime_;
+    private long feedbackTime_ = 0L;
     /**
      * <code>uint64 feedback_time = 8 [json_name = "feedbackTime", (.gen_bq_schema.bigquery) = { ... }</code>
      * @return The feedbackTime.
@@ -432,7 +435,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionConfidencesOrBuilder getPredictionConfidencesOrBuilder() {
-      return getPredictionConfidences();
+      return predictionConfidences_ == null ? ssn.dataservice.v1.DataServiceProto.PredictionConfidences.getDefaultInstance() : predictionConfidences_;
     }
 
     public static final int PREDICTION_METADATA_FIELD_NUMBER = 10;
@@ -458,7 +461,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionMetadataOrBuilder getPredictionMetadataOrBuilder() {
-      return getPredictionMetadata();
+      return predictionMetadata_ == null ? ssn.dataservice.v1.DataServiceProto.PredictionMetadata.getDefaultInstance() : predictionMetadata_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -778,44 +781,36 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (taBuilder_ == null) {
-          ta_ = null;
-        } else {
-          ta_ = null;
+        bitField0_ = 0;
+        ta_ = null;
+        if (taBuilder_ != null) {
+          taBuilder_.dispose();
           taBuilder_ = null;
         }
         bytes_ = com.google.protobuf.ByteString.EMPTY;
-
         id_ = "";
-
         consumer_ = "";
-
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (trueValuesBuilder_ == null) {
-          trueValues_ = null;
-        } else {
-          trueValues_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        trueValues_ = null;
+        if (trueValuesBuilder_ != null) {
+          trueValuesBuilder_.dispose();
           trueValuesBuilder_ = null;
         }
-        if (predictionValuesBuilder_ == null) {
-          predictionValues_ = null;
-        } else {
-          predictionValues_ = null;
+        predictionValues_ = null;
+        if (predictionValuesBuilder_ != null) {
+          predictionValuesBuilder_.dispose();
           predictionValuesBuilder_ = null;
         }
         feedbackTime_ = 0L;
-
-        if (predictionConfidencesBuilder_ == null) {
-          predictionConfidences_ = null;
-        } else {
-          predictionConfidences_ = null;
+        predictionConfidences_ = null;
+        if (predictionConfidencesBuilder_ != null) {
+          predictionConfidencesBuilder_.dispose();
           predictionConfidencesBuilder_ = null;
         }
-        if (predictionMetadataBuilder_ == null) {
-          predictionMetadata_ = null;
-        } else {
-          predictionMetadata_ = null;
+        predictionMetadata_ = null;
+        if (predictionMetadataBuilder_ != null) {
+          predictionMetadataBuilder_.dispose();
           predictionMetadataBuilder_ = null;
         }
         return this;
@@ -844,43 +839,59 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.Document buildPartial() {
         ssn.dataservice.v1.DataServiceProto.Document result = new ssn.dataservice.v1.DataServiceProto.Document(this);
-        int from_bitField0_ = bitField0_;
-        if (taBuilder_ == null) {
-          result.ta_ = ta_;
-        } else {
-          result.ta_ = taBuilder_.build();
-        }
-        result.bytes_ = bytes_;
-        result.id_ = id_;
-        result.consumer_ = consumer_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.tags_ = tags_;
-        if (trueValuesBuilder_ == null) {
-          result.trueValues_ = trueValues_;
-        } else {
-          result.trueValues_ = trueValuesBuilder_.build();
-        }
-        if (predictionValuesBuilder_ == null) {
-          result.predictionValues_ = predictionValues_;
-        } else {
-          result.predictionValues_ = predictionValuesBuilder_.build();
-        }
-        result.feedbackTime_ = feedbackTime_;
-        if (predictionConfidencesBuilder_ == null) {
-          result.predictionConfidences_ = predictionConfidences_;
-        } else {
-          result.predictionConfidences_ = predictionConfidencesBuilder_.build();
-        }
-        if (predictionMetadataBuilder_ == null) {
-          result.predictionMetadata_ = predictionMetadata_;
-        } else {
-          result.predictionMetadata_ = predictionMetadataBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.dataservice.v1.DataServiceProto.Document result) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.tags_ = tags_;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.Document result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.ta_ = taBuilder_ == null
+              ? ta_
+              : taBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.bytes_ = bytes_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.consumer_ = consumer_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.trueValues_ = trueValuesBuilder_ == null
+              ? trueValues_
+              : trueValuesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.predictionValues_ = predictionValuesBuilder_ == null
+              ? predictionValues_
+              : predictionValuesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.feedbackTime_ = feedbackTime_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.predictionConfidences_ = predictionConfidencesBuilder_ == null
+              ? predictionConfidences_
+              : predictionConfidencesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.predictionMetadata_ = predictionMetadataBuilder_ == null
+              ? predictionMetadata_
+              : predictionMetadataBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -935,16 +946,18 @@ public final class DataServiceProto {
         }
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000004;
           onChanged();
         }
         if (!other.getConsumer().isEmpty()) {
           consumer_ = other.consumer_;
+          bitField0_ |= 0x00000008;
           onChanged();
         }
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -996,22 +1009,22 @@ public final class DataServiceProto {
                 input.readMessage(
                     getTaFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 bytes_ = input.readBytes();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 consumer_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
@@ -1024,33 +1037,33 @@ public final class DataServiceProto {
                 input.readMessage(
                     getTrueValuesFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 input.readMessage(
                     getPredictionValuesFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 64: {
                 feedbackTime_ = input.readUInt64();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 64
               case 74: {
                 input.readMessage(
                     getPredictionConfidencesFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 input.readMessage(
                     getPredictionMetadataFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               default: {
@@ -1078,7 +1091,7 @@ public final class DataServiceProto {
        * @return Whether the ta field is set.
        */
       public boolean hasTa() {
-        return taBuilder_ != null || ta_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.ssn.type.TextAnnotation ta = 1 [json_name = "ta", (.gen_bq_schema.bigquery) = { ... }</code>
@@ -1100,11 +1113,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           ta_ = value;
-          onChanged();
         } else {
           taBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1114,11 +1127,11 @@ public final class DataServiceProto {
           ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder builderForValue) {
         if (taBuilder_ == null) {
           ta_ = builderForValue.build();
-          onChanged();
         } else {
           taBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -1126,38 +1139,38 @@ public final class DataServiceProto {
        */
       public Builder mergeTa(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (taBuilder_ == null) {
-          if (ta_ != null) {
-            ta_ =
-              ssn.type.TextAnnotationOuterClass.TextAnnotation.newBuilder(ta_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            ta_ != null &&
+            ta_ != ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance()) {
+            getTaBuilder().mergeFrom(value);
           } else {
             ta_ = value;
           }
-          onChanged();
         } else {
           taBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.type.TextAnnotation ta = 1 [json_name = "ta", (.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearTa() {
-        if (taBuilder_ == null) {
-          ta_ = null;
-          onChanged();
-        } else {
-          ta_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        ta_ = null;
+        if (taBuilder_ != null) {
+          taBuilder_.dispose();
           taBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.type.TextAnnotation ta = 1 [json_name = "ta", (.gen_bq_schema.bigquery) = { ... }</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder getTaBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getTaFieldBuilder().getBuilder();
       }
@@ -1204,11 +1217,9 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder setBytes(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         bytes_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -1217,7 +1228,7 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearBytes() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         bytes_ = getDefaultInstance().getBytes();
         onChanged();
         return this;
@@ -1264,11 +1275,9 @@ public final class DataServiceProto {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1277,8 +1286,8 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -1289,12 +1298,10 @@ public final class DataServiceProto {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -1340,11 +1347,9 @@ public final class DataServiceProto {
        */
       public Builder setConsumer(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         consumer_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -1353,8 +1358,8 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearConsumer() {
-        
         consumer_ = getDefaultInstance().getConsumer();
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -1365,21 +1370,19 @@ public final class DataServiceProto {
        */
       public Builder setConsumerBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         consumer_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000010;
          }
       }
       /**
@@ -1422,10 +1425,8 @@ public final class DataServiceProto {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.set(index, value);
         onChanged();
         return this;
@@ -1437,10 +1438,8 @@ public final class DataServiceProto {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
         return this;
@@ -1464,7 +1463,7 @@ public final class DataServiceProto {
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -1475,10 +1474,8 @@ public final class DataServiceProto {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
@@ -1493,7 +1490,7 @@ public final class DataServiceProto {
        * @return Whether the trueValues field is set.
        */
       public boolean hasTrueValues() {
-        return trueValuesBuilder_ != null || trueValues_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>.ssn.dataservice.v1.TrueValues true_values = 6 [json_name = "trueValues"];</code>
@@ -1515,11 +1512,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           trueValues_ = value;
-          onChanged();
         } else {
           trueValuesBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1529,11 +1526,11 @@ public final class DataServiceProto {
           ssn.dataservice.v1.DataServiceProto.TrueValues.Builder builderForValue) {
         if (trueValuesBuilder_ == null) {
           trueValues_ = builderForValue.build();
-          onChanged();
         } else {
           trueValuesBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -1541,38 +1538,38 @@ public final class DataServiceProto {
        */
       public Builder mergeTrueValues(ssn.dataservice.v1.DataServiceProto.TrueValues value) {
         if (trueValuesBuilder_ == null) {
-          if (trueValues_ != null) {
-            trueValues_ =
-              ssn.dataservice.v1.DataServiceProto.TrueValues.newBuilder(trueValues_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            trueValues_ != null &&
+            trueValues_ != ssn.dataservice.v1.DataServiceProto.TrueValues.getDefaultInstance()) {
+            getTrueValuesBuilder().mergeFrom(value);
           } else {
             trueValues_ = value;
           }
-          onChanged();
         } else {
           trueValuesBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.TrueValues true_values = 6 [json_name = "trueValues"];</code>
        */
       public Builder clearTrueValues() {
-        if (trueValuesBuilder_ == null) {
-          trueValues_ = null;
-          onChanged();
-        } else {
-          trueValues_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        trueValues_ = null;
+        if (trueValuesBuilder_ != null) {
+          trueValuesBuilder_.dispose();
           trueValuesBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.TrueValues true_values = 6 [json_name = "trueValues"];</code>
        */
       public ssn.dataservice.v1.DataServiceProto.TrueValues.Builder getTrueValuesBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getTrueValuesFieldBuilder().getBuilder();
       }
@@ -1612,7 +1609,7 @@ public final class DataServiceProto {
        * @return Whether the predictionValues field is set.
        */
       public boolean hasPredictionValues() {
-        return predictionValuesBuilder_ != null || predictionValues_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionValues prediction_values = 7 [json_name = "predictionValues"];</code>
@@ -1634,11 +1631,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           predictionValues_ = value;
-          onChanged();
         } else {
           predictionValuesBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1648,11 +1645,11 @@ public final class DataServiceProto {
           ssn.dataservice.v1.DataServiceProto.PredictionValues.Builder builderForValue) {
         if (predictionValuesBuilder_ == null) {
           predictionValues_ = builderForValue.build();
-          onChanged();
         } else {
           predictionValuesBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -1660,38 +1657,38 @@ public final class DataServiceProto {
        */
       public Builder mergePredictionValues(ssn.dataservice.v1.DataServiceProto.PredictionValues value) {
         if (predictionValuesBuilder_ == null) {
-          if (predictionValues_ != null) {
-            predictionValues_ =
-              ssn.dataservice.v1.DataServiceProto.PredictionValues.newBuilder(predictionValues_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            predictionValues_ != null &&
+            predictionValues_ != ssn.dataservice.v1.DataServiceProto.PredictionValues.getDefaultInstance()) {
+            getPredictionValuesBuilder().mergeFrom(value);
           } else {
             predictionValues_ = value;
           }
-          onChanged();
         } else {
           predictionValuesBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionValues prediction_values = 7 [json_name = "predictionValues"];</code>
        */
       public Builder clearPredictionValues() {
-        if (predictionValuesBuilder_ == null) {
-          predictionValues_ = null;
-          onChanged();
-        } else {
-          predictionValues_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        predictionValues_ = null;
+        if (predictionValuesBuilder_ != null) {
+          predictionValuesBuilder_.dispose();
           predictionValuesBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionValues prediction_values = 7 [json_name = "predictionValues"];</code>
        */
       public ssn.dataservice.v1.DataServiceProto.PredictionValues.Builder getPredictionValuesBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getPredictionValuesFieldBuilder().getBuilder();
       }
@@ -1740,6 +1737,7 @@ public final class DataServiceProto {
       public Builder setFeedbackTime(long value) {
         
         feedbackTime_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -1748,7 +1746,7 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearFeedbackTime() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         feedbackTime_ = 0L;
         onChanged();
         return this;
@@ -1762,7 +1760,7 @@ public final class DataServiceProto {
        * @return Whether the predictionConfidences field is set.
        */
       public boolean hasPredictionConfidences() {
-        return predictionConfidencesBuilder_ != null || predictionConfidences_ != null;
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionConfidences prediction_confidences = 9 [json_name = "predictionConfidences"];</code>
@@ -1784,11 +1782,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           predictionConfidences_ = value;
-          onChanged();
         } else {
           predictionConfidencesBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -1798,11 +1796,11 @@ public final class DataServiceProto {
           ssn.dataservice.v1.DataServiceProto.PredictionConfidences.Builder builderForValue) {
         if (predictionConfidencesBuilder_ == null) {
           predictionConfidences_ = builderForValue.build();
-          onChanged();
         } else {
           predictionConfidencesBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -1810,38 +1808,38 @@ public final class DataServiceProto {
        */
       public Builder mergePredictionConfidences(ssn.dataservice.v1.DataServiceProto.PredictionConfidences value) {
         if (predictionConfidencesBuilder_ == null) {
-          if (predictionConfidences_ != null) {
-            predictionConfidences_ =
-              ssn.dataservice.v1.DataServiceProto.PredictionConfidences.newBuilder(predictionConfidences_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000100) != 0) &&
+            predictionConfidences_ != null &&
+            predictionConfidences_ != ssn.dataservice.v1.DataServiceProto.PredictionConfidences.getDefaultInstance()) {
+            getPredictionConfidencesBuilder().mergeFrom(value);
           } else {
             predictionConfidences_ = value;
           }
-          onChanged();
         } else {
           predictionConfidencesBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionConfidences prediction_confidences = 9 [json_name = "predictionConfidences"];</code>
        */
       public Builder clearPredictionConfidences() {
-        if (predictionConfidencesBuilder_ == null) {
-          predictionConfidences_ = null;
-          onChanged();
-        } else {
-          predictionConfidences_ = null;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        predictionConfidences_ = null;
+        if (predictionConfidencesBuilder_ != null) {
+          predictionConfidencesBuilder_.dispose();
           predictionConfidencesBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionConfidences prediction_confidences = 9 [json_name = "predictionConfidences"];</code>
        */
       public ssn.dataservice.v1.DataServiceProto.PredictionConfidences.Builder getPredictionConfidencesBuilder() {
-        
+        bitField0_ |= 0x00000100;
         onChanged();
         return getPredictionConfidencesFieldBuilder().getBuilder();
       }
@@ -1881,7 +1879,7 @@ public final class DataServiceProto {
        * @return Whether the predictionMetadata field is set.
        */
       public boolean hasPredictionMetadata() {
-        return predictionMetadataBuilder_ != null || predictionMetadata_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 10 [json_name = "predictionMetadata"];</code>
@@ -1903,11 +1901,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           predictionMetadata_ = value;
-          onChanged();
         } else {
           predictionMetadataBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -1917,11 +1915,11 @@ public final class DataServiceProto {
           ssn.dataservice.v1.DataServiceProto.PredictionMetadata.Builder builderForValue) {
         if (predictionMetadataBuilder_ == null) {
           predictionMetadata_ = builderForValue.build();
-          onChanged();
         } else {
           predictionMetadataBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -1929,38 +1927,38 @@ public final class DataServiceProto {
        */
       public Builder mergePredictionMetadata(ssn.dataservice.v1.DataServiceProto.PredictionMetadata value) {
         if (predictionMetadataBuilder_ == null) {
-          if (predictionMetadata_ != null) {
-            predictionMetadata_ =
-              ssn.dataservice.v1.DataServiceProto.PredictionMetadata.newBuilder(predictionMetadata_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            predictionMetadata_ != null &&
+            predictionMetadata_ != ssn.dataservice.v1.DataServiceProto.PredictionMetadata.getDefaultInstance()) {
+            getPredictionMetadataBuilder().mergeFrom(value);
           } else {
             predictionMetadata_ = value;
           }
-          onChanged();
         } else {
           predictionMetadataBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 10 [json_name = "predictionMetadata"];</code>
        */
       public Builder clearPredictionMetadata() {
-        if (predictionMetadataBuilder_ == null) {
-          predictionMetadata_ = null;
-          onChanged();
-        } else {
-          predictionMetadata_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        predictionMetadata_ = null;
+        if (predictionMetadataBuilder_ != null) {
+          predictionMetadataBuilder_.dispose();
           predictionMetadataBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 10 [json_name = "predictionMetadata"];</code>
        */
       public ssn.dataservice.v1.DataServiceProto.PredictionMetadata.Builder getPredictionMetadataBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getPredictionMetadataFieldBuilder().getBuilder();
       }
@@ -2617,7 +2615,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getTotalInclVatOrBuilder() {
-      return getTotalInclVat();
+      return totalInclVat_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : totalInclVat_;
     }
 
     public static final int TOTAL_VAT_FIELD_NUMBER = 2;
@@ -2643,7 +2641,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getTotalVatOrBuilder() {
-      return getTotalVat();
+      return totalVat_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : totalVat_;
     }
 
     public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 3;
@@ -2669,7 +2667,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.DoubleValueOrBuilder getTotalExclVatOrBuilder() {
-      return getTotalExclVat();
+      return totalExclVat_ == null ? com.google.protobuf.DoubleValue.getDefaultInstance() : totalExclVat_;
     }
 
     public static final int ORDER_DATE_FIELD_NUMBER = 4;
@@ -2695,7 +2693,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.type.DateOrBuilder getOrderDateOrBuilder() {
-      return getOrderDate();
+      return orderDate_ == null ? com.google.type.Date.getDefaultInstance() : orderDate_;
     }
 
     public static final int PAYMENT_DUE_DATE_FIELD_NUMBER = 5;
@@ -2721,7 +2719,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.type.DateOrBuilder getPaymentDueDateOrBuilder() {
-      return getPaymentDueDate();
+      return paymentDueDate_ == null ? com.google.type.Date.getDefaultInstance() : paymentDueDate_;
     }
 
     public static final int DOCUMENT_TYPE_FIELD_NUMBER = 6;
@@ -2747,7 +2745,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getDocumentTypeOrBuilder() {
-      return getDocumentType();
+      return documentType_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : documentType_;
     }
 
     public static final int CURRENCY_FIELD_NUMBER = 7;
@@ -2773,7 +2771,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCurrencyOrBuilder() {
-      return getCurrency();
+      return currency_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : currency_;
     }
 
     public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 8;
@@ -2799,7 +2797,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getCreditCardLastFourOrBuilder() {
-      return getCreditCardLastFour();
+      return creditCardLastFour_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : creditCardLastFour_;
     }
 
     public static final int PAYMENT_METHOD_FIELD_NUMBER = 9;
@@ -2825,7 +2823,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getPaymentMethodOrBuilder() {
-      return getPaymentMethod();
+      return paymentMethod_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : paymentMethod_;
     }
 
     public static final int OCR_LINE_DK_TYPE_FIELD_NUMBER = 10;
@@ -2851,7 +2849,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineDkTypeOrBuilder() {
-      return getOcrLineDkType();
+      return ocrLineDkType_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineDkType_;
     }
 
     public static final int OCR_LINE_DK_PAYMENT_ID_FIELD_NUMBER = 11;
@@ -2877,7 +2875,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineDkPaymentIdOrBuilder() {
-      return getOcrLineDkPaymentId();
+      return ocrLineDkPaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineDkPaymentId_;
     }
 
     public static final int OCR_LINE_DK_CREDITOR_ID_FIELD_NUMBER = 12;
@@ -2903,7 +2901,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineDkCreditorIdOrBuilder() {
-      return getOcrLineDkCreditorId();
+      return ocrLineDkCreditorId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineDkCreditorId_;
     }
 
     public static final int OCR_LINE_SE_PAYMENT_ID_FIELD_NUMBER = 13;
@@ -2929,7 +2927,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineSePaymentIdOrBuilder() {
-      return getOcrLineSePaymentId();
+      return ocrLineSePaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineSePaymentId_;
     }
 
     public static final int OCR_LINE_SE_BANKGIRO_CREDITOR_ID_FIELD_NUMBER = 14;
@@ -2955,7 +2953,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineSeBankgiroCreditorIdOrBuilder() {
-      return getOcrLineSeBankgiroCreditorId();
+      return ocrLineSeBankgiroCreditorId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineSeBankgiroCreditorId_;
     }
 
     public static final int OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_FIELD_NUMBER = 15;
@@ -2981,7 +2979,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineSePlusgiroCreditorIdOrBuilder() {
-      return getOcrLineSePlusgiroCreditorId();
+      return ocrLineSePlusgiroCreditorId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineSePlusgiroCreditorId_;
     }
 
     public static final int OCR_LINE_NO_PAYMENT_ID_FIELD_NUMBER = 16;
@@ -3007,7 +3005,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineNoPaymentIdOrBuilder() {
-      return getOcrLineNoPaymentId();
+      return ocrLineNoPaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineNoPaymentId_;
     }
 
     public static final int OCR_LINE_FI_PAYMENT_ID_FIELD_NUMBER = 17;
@@ -3033,7 +3031,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineFiPaymentIdOrBuilder() {
-      return getOcrLineFiPaymentId();
+      return ocrLineFiPaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineFiPaymentId_;
     }
 
     public static final int OCR_LINE_NL_PAYMENT_ID_FIELD_NUMBER = 18;
@@ -3059,7 +3057,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOcrLineNlPaymentIdOrBuilder() {
-      return getOcrLineNlPaymentId();
+      return ocrLineNlPaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineNlPaymentId_;
     }
 
     public static final int SUPPLIER_CORPORATE_ID_FIELD_NUMBER = 19;
@@ -3085,7 +3083,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getSupplierCorporateIdOrBuilder() {
-      return getSupplierCorporateId();
+      return supplierCorporateId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierCorporateId_;
     }
 
     public static final int SUPPLIER_COUNTRY_CODE_FIELD_NUMBER = 20;
@@ -3111,7 +3109,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getSupplierCountryCodeOrBuilder() {
-      return getSupplierCountryCode();
+      return supplierCountryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierCountryCode_;
     }
 
     public static final int INVOICE_NUMBER_FIELD_NUMBER = 21;
@@ -3137,7 +3135,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getInvoiceNumberOrBuilder() {
-      return getInvoiceNumber();
+      return invoiceNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : invoiceNumber_;
     }
 
     public static final int IBAN_FIELD_NUMBER = 22;
@@ -3163,7 +3161,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getIbanOrBuilder() {
-      return getIban();
+      return iban_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : iban_;
     }
 
     public static final int ORDER_REFERENCE_FIELD_NUMBER = 23;
@@ -3189,7 +3187,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOrderReferenceOrBuilder() {
-      return getOrderReference();
+      return orderReference_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : orderReference_;
     }
 
     public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 24;
@@ -3215,7 +3213,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getBankAccountNumberOrBuilder() {
-      return getBankAccountNumber();
+      return bankAccountNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : bankAccountNumber_;
     }
 
     public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 25;
@@ -3241,7 +3239,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getBankRegistrationNumberOrBuilder() {
-      return getBankRegistrationNumber();
+      return bankRegistrationNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : bankRegistrationNumber_;
     }
 
     public static final int SUPPLIER_NAME_FIELD_NUMBER = 26;
@@ -3267,7 +3265,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getSupplierNameOrBuilder() {
-      return getSupplierName();
+      return supplierName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierName_;
     }
 
     public static final int BIC_FIELD_NUMBER = 27;
@@ -3293,7 +3291,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getBicOrBuilder() {
-      return getBic();
+      return bic_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : bic_;
     }
 
     public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 28;
@@ -3319,7 +3317,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getDocumentNumberOrBuilder() {
-      return getDocumentNumber();
+      return documentNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : documentNumber_;
     }
 
     public static final int DOCUMENT_DATE_FIELD_NUMBER = 29;
@@ -3345,7 +3343,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.type.DateOrBuilder getDocumentDateOrBuilder() {
-      return getDocumentDate();
+      return documentDate_ == null ? com.google.type.Date.getDefaultInstance() : documentDate_;
     }
 
     public static final int ORDER_NUMBER_FIELD_NUMBER = 30;
@@ -3371,7 +3369,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getOrderNumberOrBuilder() {
-      return getOrderNumber();
+      return orderNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : orderNumber_;
     }
 
     public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 31;
@@ -3397,7 +3395,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getSupplierVatNumberOrBuilder() {
-      return getSupplierVatNumber();
+      return supplierVatNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierVatNumber_;
     }
 
     public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 32;
@@ -3423,7 +3421,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getSupplierOrganisationNumberOrBuilder() {
-      return getSupplierOrganisationNumber();
+      return supplierOrganisationNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierOrganisationNumber_;
     }
 
     public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 33;
@@ -3449,7 +3447,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public com.google.protobuf.StringValueOrBuilder getSupplierAddressOrBuilder() {
-      return getSupplierAddress();
+      return supplierAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierAddress_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4157,202 +4155,171 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (totalInclVatBuilder_ == null) {
-          totalInclVat_ = null;
-        } else {
-          totalInclVat_ = null;
+        bitField0_ = 0;
+        bitField1_ = 0;
+        totalInclVat_ = null;
+        if (totalInclVatBuilder_ != null) {
+          totalInclVatBuilder_.dispose();
           totalInclVatBuilder_ = null;
         }
-        if (totalVatBuilder_ == null) {
-          totalVat_ = null;
-        } else {
-          totalVat_ = null;
+        totalVat_ = null;
+        if (totalVatBuilder_ != null) {
+          totalVatBuilder_.dispose();
           totalVatBuilder_ = null;
         }
-        if (totalExclVatBuilder_ == null) {
-          totalExclVat_ = null;
-        } else {
-          totalExclVat_ = null;
+        totalExclVat_ = null;
+        if (totalExclVatBuilder_ != null) {
+          totalExclVatBuilder_.dispose();
           totalExclVatBuilder_ = null;
         }
-        if (orderDateBuilder_ == null) {
-          orderDate_ = null;
-        } else {
-          orderDate_ = null;
+        orderDate_ = null;
+        if (orderDateBuilder_ != null) {
+          orderDateBuilder_.dispose();
           orderDateBuilder_ = null;
         }
-        if (paymentDueDateBuilder_ == null) {
-          paymentDueDate_ = null;
-        } else {
-          paymentDueDate_ = null;
+        paymentDueDate_ = null;
+        if (paymentDueDateBuilder_ != null) {
+          paymentDueDateBuilder_.dispose();
           paymentDueDateBuilder_ = null;
         }
-        if (documentTypeBuilder_ == null) {
-          documentType_ = null;
-        } else {
-          documentType_ = null;
+        documentType_ = null;
+        if (documentTypeBuilder_ != null) {
+          documentTypeBuilder_.dispose();
           documentTypeBuilder_ = null;
         }
-        if (currencyBuilder_ == null) {
-          currency_ = null;
-        } else {
-          currency_ = null;
+        currency_ = null;
+        if (currencyBuilder_ != null) {
+          currencyBuilder_.dispose();
           currencyBuilder_ = null;
         }
-        if (creditCardLastFourBuilder_ == null) {
-          creditCardLastFour_ = null;
-        } else {
-          creditCardLastFour_ = null;
+        creditCardLastFour_ = null;
+        if (creditCardLastFourBuilder_ != null) {
+          creditCardLastFourBuilder_.dispose();
           creditCardLastFourBuilder_ = null;
         }
-        if (paymentMethodBuilder_ == null) {
-          paymentMethod_ = null;
-        } else {
-          paymentMethod_ = null;
+        paymentMethod_ = null;
+        if (paymentMethodBuilder_ != null) {
+          paymentMethodBuilder_.dispose();
           paymentMethodBuilder_ = null;
         }
-        if (ocrLineDkTypeBuilder_ == null) {
-          ocrLineDkType_ = null;
-        } else {
-          ocrLineDkType_ = null;
+        ocrLineDkType_ = null;
+        if (ocrLineDkTypeBuilder_ != null) {
+          ocrLineDkTypeBuilder_.dispose();
           ocrLineDkTypeBuilder_ = null;
         }
-        if (ocrLineDkPaymentIdBuilder_ == null) {
-          ocrLineDkPaymentId_ = null;
-        } else {
-          ocrLineDkPaymentId_ = null;
+        ocrLineDkPaymentId_ = null;
+        if (ocrLineDkPaymentIdBuilder_ != null) {
+          ocrLineDkPaymentIdBuilder_.dispose();
           ocrLineDkPaymentIdBuilder_ = null;
         }
-        if (ocrLineDkCreditorIdBuilder_ == null) {
-          ocrLineDkCreditorId_ = null;
-        } else {
-          ocrLineDkCreditorId_ = null;
+        ocrLineDkCreditorId_ = null;
+        if (ocrLineDkCreditorIdBuilder_ != null) {
+          ocrLineDkCreditorIdBuilder_.dispose();
           ocrLineDkCreditorIdBuilder_ = null;
         }
-        if (ocrLineSePaymentIdBuilder_ == null) {
-          ocrLineSePaymentId_ = null;
-        } else {
-          ocrLineSePaymentId_ = null;
+        ocrLineSePaymentId_ = null;
+        if (ocrLineSePaymentIdBuilder_ != null) {
+          ocrLineSePaymentIdBuilder_.dispose();
           ocrLineSePaymentIdBuilder_ = null;
         }
-        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
-          ocrLineSeBankgiroCreditorId_ = null;
-        } else {
-          ocrLineSeBankgiroCreditorId_ = null;
+        ocrLineSeBankgiroCreditorId_ = null;
+        if (ocrLineSeBankgiroCreditorIdBuilder_ != null) {
+          ocrLineSeBankgiroCreditorIdBuilder_.dispose();
           ocrLineSeBankgiroCreditorIdBuilder_ = null;
         }
-        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
-          ocrLineSePlusgiroCreditorId_ = null;
-        } else {
-          ocrLineSePlusgiroCreditorId_ = null;
+        ocrLineSePlusgiroCreditorId_ = null;
+        if (ocrLineSePlusgiroCreditorIdBuilder_ != null) {
+          ocrLineSePlusgiroCreditorIdBuilder_.dispose();
           ocrLineSePlusgiroCreditorIdBuilder_ = null;
         }
-        if (ocrLineNoPaymentIdBuilder_ == null) {
-          ocrLineNoPaymentId_ = null;
-        } else {
-          ocrLineNoPaymentId_ = null;
+        ocrLineNoPaymentId_ = null;
+        if (ocrLineNoPaymentIdBuilder_ != null) {
+          ocrLineNoPaymentIdBuilder_.dispose();
           ocrLineNoPaymentIdBuilder_ = null;
         }
-        if (ocrLineFiPaymentIdBuilder_ == null) {
-          ocrLineFiPaymentId_ = null;
-        } else {
-          ocrLineFiPaymentId_ = null;
+        ocrLineFiPaymentId_ = null;
+        if (ocrLineFiPaymentIdBuilder_ != null) {
+          ocrLineFiPaymentIdBuilder_.dispose();
           ocrLineFiPaymentIdBuilder_ = null;
         }
-        if (ocrLineNlPaymentIdBuilder_ == null) {
-          ocrLineNlPaymentId_ = null;
-        } else {
-          ocrLineNlPaymentId_ = null;
+        ocrLineNlPaymentId_ = null;
+        if (ocrLineNlPaymentIdBuilder_ != null) {
+          ocrLineNlPaymentIdBuilder_.dispose();
           ocrLineNlPaymentIdBuilder_ = null;
         }
-        if (supplierCorporateIdBuilder_ == null) {
-          supplierCorporateId_ = null;
-        } else {
-          supplierCorporateId_ = null;
+        supplierCorporateId_ = null;
+        if (supplierCorporateIdBuilder_ != null) {
+          supplierCorporateIdBuilder_.dispose();
           supplierCorporateIdBuilder_ = null;
         }
-        if (supplierCountryCodeBuilder_ == null) {
-          supplierCountryCode_ = null;
-        } else {
-          supplierCountryCode_ = null;
+        supplierCountryCode_ = null;
+        if (supplierCountryCodeBuilder_ != null) {
+          supplierCountryCodeBuilder_.dispose();
           supplierCountryCodeBuilder_ = null;
         }
-        if (invoiceNumberBuilder_ == null) {
-          invoiceNumber_ = null;
-        } else {
-          invoiceNumber_ = null;
+        invoiceNumber_ = null;
+        if (invoiceNumberBuilder_ != null) {
+          invoiceNumberBuilder_.dispose();
           invoiceNumberBuilder_ = null;
         }
-        if (ibanBuilder_ == null) {
-          iban_ = null;
-        } else {
-          iban_ = null;
+        iban_ = null;
+        if (ibanBuilder_ != null) {
+          ibanBuilder_.dispose();
           ibanBuilder_ = null;
         }
-        if (orderReferenceBuilder_ == null) {
-          orderReference_ = null;
-        } else {
-          orderReference_ = null;
+        orderReference_ = null;
+        if (orderReferenceBuilder_ != null) {
+          orderReferenceBuilder_.dispose();
           orderReferenceBuilder_ = null;
         }
-        if (bankAccountNumberBuilder_ == null) {
-          bankAccountNumber_ = null;
-        } else {
-          bankAccountNumber_ = null;
+        bankAccountNumber_ = null;
+        if (bankAccountNumberBuilder_ != null) {
+          bankAccountNumberBuilder_.dispose();
           bankAccountNumberBuilder_ = null;
         }
-        if (bankRegistrationNumberBuilder_ == null) {
-          bankRegistrationNumber_ = null;
-        } else {
-          bankRegistrationNumber_ = null;
+        bankRegistrationNumber_ = null;
+        if (bankRegistrationNumberBuilder_ != null) {
+          bankRegistrationNumberBuilder_.dispose();
           bankRegistrationNumberBuilder_ = null;
         }
-        if (supplierNameBuilder_ == null) {
-          supplierName_ = null;
-        } else {
-          supplierName_ = null;
+        supplierName_ = null;
+        if (supplierNameBuilder_ != null) {
+          supplierNameBuilder_.dispose();
           supplierNameBuilder_ = null;
         }
-        if (bicBuilder_ == null) {
-          bic_ = null;
-        } else {
-          bic_ = null;
+        bic_ = null;
+        if (bicBuilder_ != null) {
+          bicBuilder_.dispose();
           bicBuilder_ = null;
         }
-        if (documentNumberBuilder_ == null) {
-          documentNumber_ = null;
-        } else {
-          documentNumber_ = null;
+        documentNumber_ = null;
+        if (documentNumberBuilder_ != null) {
+          documentNumberBuilder_.dispose();
           documentNumberBuilder_ = null;
         }
-        if (documentDateBuilder_ == null) {
-          documentDate_ = null;
-        } else {
-          documentDate_ = null;
+        documentDate_ = null;
+        if (documentDateBuilder_ != null) {
+          documentDateBuilder_.dispose();
           documentDateBuilder_ = null;
         }
-        if (orderNumberBuilder_ == null) {
-          orderNumber_ = null;
-        } else {
-          orderNumber_ = null;
+        orderNumber_ = null;
+        if (orderNumberBuilder_ != null) {
+          orderNumberBuilder_.dispose();
           orderNumberBuilder_ = null;
         }
-        if (supplierVatNumberBuilder_ == null) {
-          supplierVatNumber_ = null;
-        } else {
-          supplierVatNumber_ = null;
+        supplierVatNumber_ = null;
+        if (supplierVatNumberBuilder_ != null) {
+          supplierVatNumberBuilder_.dispose();
           supplierVatNumberBuilder_ = null;
         }
-        if (supplierOrganisationNumberBuilder_ == null) {
-          supplierOrganisationNumber_ = null;
-        } else {
-          supplierOrganisationNumber_ = null;
+        supplierOrganisationNumber_ = null;
+        if (supplierOrganisationNumberBuilder_ != null) {
+          supplierOrganisationNumberBuilder_.dispose();
           supplierOrganisationNumberBuilder_ = null;
         }
-        if (supplierAddressBuilder_ == null) {
-          supplierAddress_ = null;
-        } else {
-          supplierAddress_ = null;
+        supplierAddress_ = null;
+        if (supplierAddressBuilder_ != null) {
+          supplierAddressBuilder_.dispose();
           supplierAddressBuilder_ = null;
         }
         return this;
@@ -4381,173 +4348,183 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.TrueValues buildPartial() {
         ssn.dataservice.v1.DataServiceProto.TrueValues result = new ssn.dataservice.v1.DataServiceProto.TrueValues(this);
-        if (totalInclVatBuilder_ == null) {
-          result.totalInclVat_ = totalInclVat_;
-        } else {
-          result.totalInclVat_ = totalInclVatBuilder_.build();
-        }
-        if (totalVatBuilder_ == null) {
-          result.totalVat_ = totalVat_;
-        } else {
-          result.totalVat_ = totalVatBuilder_.build();
-        }
-        if (totalExclVatBuilder_ == null) {
-          result.totalExclVat_ = totalExclVat_;
-        } else {
-          result.totalExclVat_ = totalExclVatBuilder_.build();
-        }
-        if (orderDateBuilder_ == null) {
-          result.orderDate_ = orderDate_;
-        } else {
-          result.orderDate_ = orderDateBuilder_.build();
-        }
-        if (paymentDueDateBuilder_ == null) {
-          result.paymentDueDate_ = paymentDueDate_;
-        } else {
-          result.paymentDueDate_ = paymentDueDateBuilder_.build();
-        }
-        if (documentTypeBuilder_ == null) {
-          result.documentType_ = documentType_;
-        } else {
-          result.documentType_ = documentTypeBuilder_.build();
-        }
-        if (currencyBuilder_ == null) {
-          result.currency_ = currency_;
-        } else {
-          result.currency_ = currencyBuilder_.build();
-        }
-        if (creditCardLastFourBuilder_ == null) {
-          result.creditCardLastFour_ = creditCardLastFour_;
-        } else {
-          result.creditCardLastFour_ = creditCardLastFourBuilder_.build();
-        }
-        if (paymentMethodBuilder_ == null) {
-          result.paymentMethod_ = paymentMethod_;
-        } else {
-          result.paymentMethod_ = paymentMethodBuilder_.build();
-        }
-        if (ocrLineDkTypeBuilder_ == null) {
-          result.ocrLineDkType_ = ocrLineDkType_;
-        } else {
-          result.ocrLineDkType_ = ocrLineDkTypeBuilder_.build();
-        }
-        if (ocrLineDkPaymentIdBuilder_ == null) {
-          result.ocrLineDkPaymentId_ = ocrLineDkPaymentId_;
-        } else {
-          result.ocrLineDkPaymentId_ = ocrLineDkPaymentIdBuilder_.build();
-        }
-        if (ocrLineDkCreditorIdBuilder_ == null) {
-          result.ocrLineDkCreditorId_ = ocrLineDkCreditorId_;
-        } else {
-          result.ocrLineDkCreditorId_ = ocrLineDkCreditorIdBuilder_.build();
-        }
-        if (ocrLineSePaymentIdBuilder_ == null) {
-          result.ocrLineSePaymentId_ = ocrLineSePaymentId_;
-        } else {
-          result.ocrLineSePaymentId_ = ocrLineSePaymentIdBuilder_.build();
-        }
-        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
-          result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorId_;
-        } else {
-          result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorIdBuilder_.build();
-        }
-        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
-          result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorId_;
-        } else {
-          result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorIdBuilder_.build();
-        }
-        if (ocrLineNoPaymentIdBuilder_ == null) {
-          result.ocrLineNoPaymentId_ = ocrLineNoPaymentId_;
-        } else {
-          result.ocrLineNoPaymentId_ = ocrLineNoPaymentIdBuilder_.build();
-        }
-        if (ocrLineFiPaymentIdBuilder_ == null) {
-          result.ocrLineFiPaymentId_ = ocrLineFiPaymentId_;
-        } else {
-          result.ocrLineFiPaymentId_ = ocrLineFiPaymentIdBuilder_.build();
-        }
-        if (ocrLineNlPaymentIdBuilder_ == null) {
-          result.ocrLineNlPaymentId_ = ocrLineNlPaymentId_;
-        } else {
-          result.ocrLineNlPaymentId_ = ocrLineNlPaymentIdBuilder_.build();
-        }
-        if (supplierCorporateIdBuilder_ == null) {
-          result.supplierCorporateId_ = supplierCorporateId_;
-        } else {
-          result.supplierCorporateId_ = supplierCorporateIdBuilder_.build();
-        }
-        if (supplierCountryCodeBuilder_ == null) {
-          result.supplierCountryCode_ = supplierCountryCode_;
-        } else {
-          result.supplierCountryCode_ = supplierCountryCodeBuilder_.build();
-        }
-        if (invoiceNumberBuilder_ == null) {
-          result.invoiceNumber_ = invoiceNumber_;
-        } else {
-          result.invoiceNumber_ = invoiceNumberBuilder_.build();
-        }
-        if (ibanBuilder_ == null) {
-          result.iban_ = iban_;
-        } else {
-          result.iban_ = ibanBuilder_.build();
-        }
-        if (orderReferenceBuilder_ == null) {
-          result.orderReference_ = orderReference_;
-        } else {
-          result.orderReference_ = orderReferenceBuilder_.build();
-        }
-        if (bankAccountNumberBuilder_ == null) {
-          result.bankAccountNumber_ = bankAccountNumber_;
-        } else {
-          result.bankAccountNumber_ = bankAccountNumberBuilder_.build();
-        }
-        if (bankRegistrationNumberBuilder_ == null) {
-          result.bankRegistrationNumber_ = bankRegistrationNumber_;
-        } else {
-          result.bankRegistrationNumber_ = bankRegistrationNumberBuilder_.build();
-        }
-        if (supplierNameBuilder_ == null) {
-          result.supplierName_ = supplierName_;
-        } else {
-          result.supplierName_ = supplierNameBuilder_.build();
-        }
-        if (bicBuilder_ == null) {
-          result.bic_ = bic_;
-        } else {
-          result.bic_ = bicBuilder_.build();
-        }
-        if (documentNumberBuilder_ == null) {
-          result.documentNumber_ = documentNumber_;
-        } else {
-          result.documentNumber_ = documentNumberBuilder_.build();
-        }
-        if (documentDateBuilder_ == null) {
-          result.documentDate_ = documentDate_;
-        } else {
-          result.documentDate_ = documentDateBuilder_.build();
-        }
-        if (orderNumberBuilder_ == null) {
-          result.orderNumber_ = orderNumber_;
-        } else {
-          result.orderNumber_ = orderNumberBuilder_.build();
-        }
-        if (supplierVatNumberBuilder_ == null) {
-          result.supplierVatNumber_ = supplierVatNumber_;
-        } else {
-          result.supplierVatNumber_ = supplierVatNumberBuilder_.build();
-        }
-        if (supplierOrganisationNumberBuilder_ == null) {
-          result.supplierOrganisationNumber_ = supplierOrganisationNumber_;
-        } else {
-          result.supplierOrganisationNumber_ = supplierOrganisationNumberBuilder_.build();
-        }
-        if (supplierAddressBuilder_ == null) {
-          result.supplierAddress_ = supplierAddress_;
-        } else {
-          result.supplierAddress_ = supplierAddressBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
+        if (bitField1_ != 0) { buildPartial1(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.TrueValues result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.totalInclVat_ = totalInclVatBuilder_ == null
+              ? totalInclVat_
+              : totalInclVatBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.totalVat_ = totalVatBuilder_ == null
+              ? totalVat_
+              : totalVatBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.totalExclVat_ = totalExclVatBuilder_ == null
+              ? totalExclVat_
+              : totalExclVatBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.orderDate_ = orderDateBuilder_ == null
+              ? orderDate_
+              : orderDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.paymentDueDate_ = paymentDueDateBuilder_ == null
+              ? paymentDueDate_
+              : paymentDueDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.documentType_ = documentTypeBuilder_ == null
+              ? documentType_
+              : documentTypeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.currency_ = currencyBuilder_ == null
+              ? currency_
+              : currencyBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.creditCardLastFour_ = creditCardLastFourBuilder_ == null
+              ? creditCardLastFour_
+              : creditCardLastFourBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.paymentMethod_ = paymentMethodBuilder_ == null
+              ? paymentMethod_
+              : paymentMethodBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.ocrLineDkType_ = ocrLineDkTypeBuilder_ == null
+              ? ocrLineDkType_
+              : ocrLineDkTypeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000400) != 0)) {
+          result.ocrLineDkPaymentId_ = ocrLineDkPaymentIdBuilder_ == null
+              ? ocrLineDkPaymentId_
+              : ocrLineDkPaymentIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000800) != 0)) {
+          result.ocrLineDkCreditorId_ = ocrLineDkCreditorIdBuilder_ == null
+              ? ocrLineDkCreditorId_
+              : ocrLineDkCreditorIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00001000) != 0)) {
+          result.ocrLineSePaymentId_ = ocrLineSePaymentIdBuilder_ == null
+              ? ocrLineSePaymentId_
+              : ocrLineSePaymentIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00002000) != 0)) {
+          result.ocrLineSeBankgiroCreditorId_ = ocrLineSeBankgiroCreditorIdBuilder_ == null
+              ? ocrLineSeBankgiroCreditorId_
+              : ocrLineSeBankgiroCreditorIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00004000) != 0)) {
+          result.ocrLineSePlusgiroCreditorId_ = ocrLineSePlusgiroCreditorIdBuilder_ == null
+              ? ocrLineSePlusgiroCreditorId_
+              : ocrLineSePlusgiroCreditorIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00008000) != 0)) {
+          result.ocrLineNoPaymentId_ = ocrLineNoPaymentIdBuilder_ == null
+              ? ocrLineNoPaymentId_
+              : ocrLineNoPaymentIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00010000) != 0)) {
+          result.ocrLineFiPaymentId_ = ocrLineFiPaymentIdBuilder_ == null
+              ? ocrLineFiPaymentId_
+              : ocrLineFiPaymentIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00020000) != 0)) {
+          result.ocrLineNlPaymentId_ = ocrLineNlPaymentIdBuilder_ == null
+              ? ocrLineNlPaymentId_
+              : ocrLineNlPaymentIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00040000) != 0)) {
+          result.supplierCorporateId_ = supplierCorporateIdBuilder_ == null
+              ? supplierCorporateId_
+              : supplierCorporateIdBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00080000) != 0)) {
+          result.supplierCountryCode_ = supplierCountryCodeBuilder_ == null
+              ? supplierCountryCode_
+              : supplierCountryCodeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00100000) != 0)) {
+          result.invoiceNumber_ = invoiceNumberBuilder_ == null
+              ? invoiceNumber_
+              : invoiceNumberBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00200000) != 0)) {
+          result.iban_ = ibanBuilder_ == null
+              ? iban_
+              : ibanBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00400000) != 0)) {
+          result.orderReference_ = orderReferenceBuilder_ == null
+              ? orderReference_
+              : orderReferenceBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00800000) != 0)) {
+          result.bankAccountNumber_ = bankAccountNumberBuilder_ == null
+              ? bankAccountNumber_
+              : bankAccountNumberBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x01000000) != 0)) {
+          result.bankRegistrationNumber_ = bankRegistrationNumberBuilder_ == null
+              ? bankRegistrationNumber_
+              : bankRegistrationNumberBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x02000000) != 0)) {
+          result.supplierName_ = supplierNameBuilder_ == null
+              ? supplierName_
+              : supplierNameBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x04000000) != 0)) {
+          result.bic_ = bicBuilder_ == null
+              ? bic_
+              : bicBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x08000000) != 0)) {
+          result.documentNumber_ = documentNumberBuilder_ == null
+              ? documentNumber_
+              : documentNumberBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x10000000) != 0)) {
+          result.documentDate_ = documentDateBuilder_ == null
+              ? documentDate_
+              : documentDateBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x20000000) != 0)) {
+          result.orderNumber_ = orderNumberBuilder_ == null
+              ? orderNumber_
+              : orderNumberBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x40000000) != 0)) {
+          result.supplierVatNumber_ = supplierVatNumberBuilder_ == null
+              ? supplierVatNumber_
+              : supplierVatNumberBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x80000000) != 0)) {
+          result.supplierOrganisationNumber_ = supplierOrganisationNumberBuilder_ == null
+              ? supplierOrganisationNumber_
+              : supplierOrganisationNumberBuilder_.build();
+        }
+      }
+
+      private void buildPartial1(ssn.dataservice.v1.DataServiceProto.TrueValues result) {
+        int from_bitField1_ = bitField1_;
+        if (((from_bitField1_ & 0x00000001) != 0)) {
+          result.supplierAddress_ = supplierAddressBuilder_ == null
+              ? supplierAddress_
+              : supplierAddressBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -4723,231 +4700,231 @@ public final class DataServiceProto {
                 input.readMessage(
                     getTotalInclVatFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getTotalVatFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getTotalExclVatFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getOrderDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
                 input.readMessage(
                     getPaymentDueDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 42
               case 50: {
                 input.readMessage(
                     getDocumentTypeFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 input.readMessage(
                     getCurrencyFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 66: {
                 input.readMessage(
                     getCreditCardLastFourFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 66
               case 74: {
                 input.readMessage(
                     getPaymentMethodFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000100;
                 break;
               } // case 74
               case 82: {
                 input.readMessage(
                     getOcrLineDkTypeFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000200;
                 break;
               } // case 82
               case 90: {
                 input.readMessage(
                     getOcrLineDkPaymentIdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000400;
                 break;
               } // case 90
               case 98: {
                 input.readMessage(
                     getOcrLineDkCreditorIdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000800;
                 break;
               } // case 98
               case 106: {
                 input.readMessage(
                     getOcrLineSePaymentIdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00001000;
                 break;
               } // case 106
               case 114: {
                 input.readMessage(
                     getOcrLineSeBankgiroCreditorIdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00002000;
                 break;
               } // case 114
               case 122: {
                 input.readMessage(
                     getOcrLineSePlusgiroCreditorIdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00004000;
                 break;
               } // case 122
               case 130: {
                 input.readMessage(
                     getOcrLineNoPaymentIdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00008000;
                 break;
               } // case 130
               case 138: {
                 input.readMessage(
                     getOcrLineFiPaymentIdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00010000;
                 break;
               } // case 138
               case 146: {
                 input.readMessage(
                     getOcrLineNlPaymentIdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00020000;
                 break;
               } // case 146
               case 154: {
                 input.readMessage(
                     getSupplierCorporateIdFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00040000;
                 break;
               } // case 154
               case 162: {
                 input.readMessage(
                     getSupplierCountryCodeFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00080000;
                 break;
               } // case 162
               case 170: {
                 input.readMessage(
                     getInvoiceNumberFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00100000;
                 break;
               } // case 170
               case 178: {
                 input.readMessage(
                     getIbanFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00200000;
                 break;
               } // case 178
               case 186: {
                 input.readMessage(
                     getOrderReferenceFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00400000;
                 break;
               } // case 186
               case 194: {
                 input.readMessage(
                     getBankAccountNumberFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00800000;
                 break;
               } // case 194
               case 202: {
                 input.readMessage(
                     getBankRegistrationNumberFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x01000000;
                 break;
               } // case 202
               case 210: {
                 input.readMessage(
                     getSupplierNameFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x02000000;
                 break;
               } // case 210
               case 218: {
                 input.readMessage(
                     getBicFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x04000000;
                 break;
               } // case 218
               case 226: {
                 input.readMessage(
                     getDocumentNumberFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x08000000;
                 break;
               } // case 226
               case 234: {
                 input.readMessage(
                     getDocumentDateFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x10000000;
                 break;
               } // case 234
               case 242: {
                 input.readMessage(
                     getOrderNumberFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x20000000;
                 break;
               } // case 242
               case 250: {
                 input.readMessage(
                     getSupplierVatNumberFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x40000000;
                 break;
               } // case 250
               case 258: {
                 input.readMessage(
                     getSupplierOrganisationNumberFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x80000000;
                 break;
               } // case 258
               case 266: {
                 input.readMessage(
                     getSupplierAddressFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField1_ |= 0x00000001;
                 break;
               } // case 266
               default: {
@@ -4965,6 +4942,8 @@ public final class DataServiceProto {
         } // finally
         return this;
       }
+      private int bitField0_;
+      private int bitField1_;
 
       private com.google.protobuf.DoubleValue totalInclVat_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -4974,7 +4953,7 @@ public final class DataServiceProto {
        * @return Whether the totalInclVat field is set.
        */
       public boolean hasTotalInclVat() {
-        return totalInclVatBuilder_ != null || totalInclVat_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
@@ -4996,11 +4975,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           totalInclVat_ = value;
-          onChanged();
         } else {
           totalInclVatBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5010,11 +4989,11 @@ public final class DataServiceProto {
           com.google.protobuf.DoubleValue.Builder builderForValue) {
         if (totalInclVatBuilder_ == null) {
           totalInclVat_ = builderForValue.build();
-          onChanged();
         } else {
           totalInclVatBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -5022,38 +5001,38 @@ public final class DataServiceProto {
        */
       public Builder mergeTotalInclVat(com.google.protobuf.DoubleValue value) {
         if (totalInclVatBuilder_ == null) {
-          if (totalInclVat_ != null) {
-            totalInclVat_ =
-              com.google.protobuf.DoubleValue.newBuilder(totalInclVat_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            totalInclVat_ != null &&
+            totalInclVat_ != com.google.protobuf.DoubleValue.getDefaultInstance()) {
+            getTotalInclVatBuilder().mergeFrom(value);
           } else {
             totalInclVat_ = value;
           }
-          onChanged();
         } else {
           totalInclVatBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
        */
       public Builder clearTotalInclVat() {
-        if (totalInclVatBuilder_ == null) {
-          totalInclVat_ = null;
-          onChanged();
-        } else {
-          totalInclVat_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        totalInclVat_ = null;
+        if (totalInclVatBuilder_ != null) {
+          totalInclVatBuilder_.dispose();
           totalInclVatBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
        */
       public com.google.protobuf.DoubleValue.Builder getTotalInclVatBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getTotalInclVatFieldBuilder().getBuilder();
       }
@@ -5093,7 +5072,7 @@ public final class DataServiceProto {
        * @return Whether the totalVat field is set.
        */
       public boolean hasTotalVat() {
-        return totalVatBuilder_ != null || totalVat_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
@@ -5115,11 +5094,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           totalVat_ = value;
-          onChanged();
         } else {
           totalVatBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -5129,11 +5108,11 @@ public final class DataServiceProto {
           com.google.protobuf.DoubleValue.Builder builderForValue) {
         if (totalVatBuilder_ == null) {
           totalVat_ = builderForValue.build();
-          onChanged();
         } else {
           totalVatBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -5141,38 +5120,38 @@ public final class DataServiceProto {
        */
       public Builder mergeTotalVat(com.google.protobuf.DoubleValue value) {
         if (totalVatBuilder_ == null) {
-          if (totalVat_ != null) {
-            totalVat_ =
-              com.google.protobuf.DoubleValue.newBuilder(totalVat_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            totalVat_ != null &&
+            totalVat_ != com.google.protobuf.DoubleValue.getDefaultInstance()) {
+            getTotalVatBuilder().mergeFrom(value);
           } else {
             totalVat_ = value;
           }
-          onChanged();
         } else {
           totalVatBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
        */
       public Builder clearTotalVat() {
-        if (totalVatBuilder_ == null) {
-          totalVat_ = null;
-          onChanged();
-        } else {
-          totalVat_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        totalVat_ = null;
+        if (totalVatBuilder_ != null) {
+          totalVatBuilder_.dispose();
           totalVatBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
        */
       public com.google.protobuf.DoubleValue.Builder getTotalVatBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getTotalVatFieldBuilder().getBuilder();
       }
@@ -5212,7 +5191,7 @@ public final class DataServiceProto {
        * @return Whether the totalExclVat field is set.
        */
       public boolean hasTotalExclVat() {
-        return totalExclVatBuilder_ != null || totalExclVat_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
@@ -5234,11 +5213,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           totalExclVat_ = value;
-          onChanged();
         } else {
           totalExclVatBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5248,11 +5227,11 @@ public final class DataServiceProto {
           com.google.protobuf.DoubleValue.Builder builderForValue) {
         if (totalExclVatBuilder_ == null) {
           totalExclVat_ = builderForValue.build();
-          onChanged();
         } else {
           totalExclVatBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -5260,38 +5239,38 @@ public final class DataServiceProto {
        */
       public Builder mergeTotalExclVat(com.google.protobuf.DoubleValue value) {
         if (totalExclVatBuilder_ == null) {
-          if (totalExclVat_ != null) {
-            totalExclVat_ =
-              com.google.protobuf.DoubleValue.newBuilder(totalExclVat_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            totalExclVat_ != null &&
+            totalExclVat_ != com.google.protobuf.DoubleValue.getDefaultInstance()) {
+            getTotalExclVatBuilder().mergeFrom(value);
           } else {
             totalExclVat_ = value;
           }
-          onChanged();
         } else {
           totalExclVatBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
        */
       public Builder clearTotalExclVat() {
-        if (totalExclVatBuilder_ == null) {
-          totalExclVat_ = null;
-          onChanged();
-        } else {
-          totalExclVat_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        totalExclVat_ = null;
+        if (totalExclVatBuilder_ != null) {
+          totalExclVatBuilder_.dispose();
           totalExclVatBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
        */
       public com.google.protobuf.DoubleValue.Builder getTotalExclVatBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getTotalExclVatFieldBuilder().getBuilder();
       }
@@ -5331,7 +5310,7 @@ public final class DataServiceProto {
        * @return Whether the orderDate field is set.
        */
       public boolean hasOrderDate() {
-        return orderDateBuilder_ != null || orderDate_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
@@ -5353,11 +5332,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           orderDate_ = value;
-          onChanged();
         } else {
           orderDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -5367,11 +5346,11 @@ public final class DataServiceProto {
           com.google.type.Date.Builder builderForValue) {
         if (orderDateBuilder_ == null) {
           orderDate_ = builderForValue.build();
-          onChanged();
         } else {
           orderDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -5379,38 +5358,38 @@ public final class DataServiceProto {
        */
       public Builder mergeOrderDate(com.google.type.Date value) {
         if (orderDateBuilder_ == null) {
-          if (orderDate_ != null) {
-            orderDate_ =
-              com.google.type.Date.newBuilder(orderDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            orderDate_ != null &&
+            orderDate_ != com.google.type.Date.getDefaultInstance()) {
+            getOrderDateBuilder().mergeFrom(value);
           } else {
             orderDate_ = value;
           }
-          onChanged();
         } else {
           orderDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearOrderDate() {
-        if (orderDateBuilder_ == null) {
-          orderDate_ = null;
-          onChanged();
-        } else {
-          orderDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        orderDate_ = null;
+        if (orderDateBuilder_ != null) {
+          orderDateBuilder_.dispose();
           orderDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.type.Date.Builder getOrderDateBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getOrderDateFieldBuilder().getBuilder();
       }
@@ -5450,7 +5429,7 @@ public final class DataServiceProto {
        * @return Whether the paymentDueDate field is set.
        */
       public boolean hasPaymentDueDate() {
-        return paymentDueDateBuilder_ != null || paymentDueDate_ != null;
+        return ((bitField0_ & 0x00000010) != 0);
       }
       /**
        * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
@@ -5472,11 +5451,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           paymentDueDate_ = value;
-          onChanged();
         } else {
           paymentDueDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -5486,11 +5465,11 @@ public final class DataServiceProto {
           com.google.type.Date.Builder builderForValue) {
         if (paymentDueDateBuilder_ == null) {
           paymentDueDate_ = builderForValue.build();
-          onChanged();
         } else {
           paymentDueDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
@@ -5498,38 +5477,38 @@ public final class DataServiceProto {
        */
       public Builder mergePaymentDueDate(com.google.type.Date value) {
         if (paymentDueDateBuilder_ == null) {
-          if (paymentDueDate_ != null) {
-            paymentDueDate_ =
-              com.google.type.Date.newBuilder(paymentDueDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000010) != 0) &&
+            paymentDueDate_ != null &&
+            paymentDueDate_ != com.google.type.Date.getDefaultInstance()) {
+            getPaymentDueDateBuilder().mergeFrom(value);
           } else {
             paymentDueDate_ = value;
           }
-          onChanged();
         } else {
           paymentDueDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000010;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearPaymentDueDate() {
-        if (paymentDueDateBuilder_ == null) {
-          paymentDueDate_ = null;
-          onChanged();
-        } else {
-          paymentDueDate_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        paymentDueDate_ = null;
+        if (paymentDueDateBuilder_ != null) {
+          paymentDueDateBuilder_.dispose();
           paymentDueDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.type.Date.Builder getPaymentDueDateBuilder() {
-        
+        bitField0_ |= 0x00000010;
         onChanged();
         return getPaymentDueDateFieldBuilder().getBuilder();
       }
@@ -5569,7 +5548,7 @@ public final class DataServiceProto {
        * @return Whether the documentType field is set.
        */
       public boolean hasDocumentType() {
-        return documentTypeBuilder_ != null || documentType_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
@@ -5591,11 +5570,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           documentType_ = value;
-          onChanged();
         } else {
           documentTypeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -5605,11 +5584,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (documentTypeBuilder_ == null) {
           documentType_ = builderForValue.build();
-          onChanged();
         } else {
           documentTypeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -5617,38 +5596,38 @@ public final class DataServiceProto {
        */
       public Builder mergeDocumentType(com.google.protobuf.StringValue value) {
         if (documentTypeBuilder_ == null) {
-          if (documentType_ != null) {
-            documentType_ =
-              com.google.protobuf.StringValue.newBuilder(documentType_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            documentType_ != null &&
+            documentType_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getDocumentTypeBuilder().mergeFrom(value);
           } else {
             documentType_ = value;
           }
-          onChanged();
         } else {
           documentTypeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
        */
       public Builder clearDocumentType() {
-        if (documentTypeBuilder_ == null) {
-          documentType_ = null;
-          onChanged();
-        } else {
-          documentType_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        documentType_ = null;
+        if (documentTypeBuilder_ != null) {
+          documentTypeBuilder_.dispose();
           documentTypeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
        */
       public com.google.protobuf.StringValue.Builder getDocumentTypeBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getDocumentTypeFieldBuilder().getBuilder();
       }
@@ -5688,7 +5667,7 @@ public final class DataServiceProto {
        * @return Whether the currency field is set.
        */
       public boolean hasCurrency() {
-        return currencyBuilder_ != null || currency_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
@@ -5710,11 +5689,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           currency_ = value;
-          onChanged();
         } else {
           currencyBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -5724,11 +5703,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (currencyBuilder_ == null) {
           currency_ = builderForValue.build();
-          onChanged();
         } else {
           currencyBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -5736,38 +5715,38 @@ public final class DataServiceProto {
        */
       public Builder mergeCurrency(com.google.protobuf.StringValue value) {
         if (currencyBuilder_ == null) {
-          if (currency_ != null) {
-            currency_ =
-              com.google.protobuf.StringValue.newBuilder(currency_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            currency_ != null &&
+            currency_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getCurrencyBuilder().mergeFrom(value);
           } else {
             currency_ = value;
           }
-          onChanged();
         } else {
           currencyBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
        */
       public Builder clearCurrency() {
-        if (currencyBuilder_ == null) {
-          currency_ = null;
-          onChanged();
-        } else {
-          currency_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        currency_ = null;
+        if (currencyBuilder_ != null) {
+          currencyBuilder_.dispose();
           currencyBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
        */
       public com.google.protobuf.StringValue.Builder getCurrencyBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getCurrencyFieldBuilder().getBuilder();
       }
@@ -5807,7 +5786,7 @@ public final class DataServiceProto {
        * @return Whether the creditCardLastFour field is set.
        */
       public boolean hasCreditCardLastFour() {
-        return creditCardLastFourBuilder_ != null || creditCardLastFour_ != null;
+        return ((bitField0_ & 0x00000080) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
@@ -5829,11 +5808,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           creditCardLastFour_ = value;
-          onChanged();
         } else {
           creditCardLastFourBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -5843,11 +5822,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (creditCardLastFourBuilder_ == null) {
           creditCardLastFour_ = builderForValue.build();
-          onChanged();
         } else {
           creditCardLastFourBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
@@ -5855,38 +5834,38 @@ public final class DataServiceProto {
        */
       public Builder mergeCreditCardLastFour(com.google.protobuf.StringValue value) {
         if (creditCardLastFourBuilder_ == null) {
-          if (creditCardLastFour_ != null) {
-            creditCardLastFour_ =
-              com.google.protobuf.StringValue.newBuilder(creditCardLastFour_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000080) != 0) &&
+            creditCardLastFour_ != null &&
+            creditCardLastFour_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getCreditCardLastFourBuilder().mergeFrom(value);
           } else {
             creditCardLastFour_ = value;
           }
-          onChanged();
         } else {
           creditCardLastFourBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000080;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
        */
       public Builder clearCreditCardLastFour() {
-        if (creditCardLastFourBuilder_ == null) {
-          creditCardLastFour_ = null;
-          onChanged();
-        } else {
-          creditCardLastFour_ = null;
+        bitField0_ = (bitField0_ & ~0x00000080);
+        creditCardLastFour_ = null;
+        if (creditCardLastFourBuilder_ != null) {
+          creditCardLastFourBuilder_.dispose();
           creditCardLastFourBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
        */
       public com.google.protobuf.StringValue.Builder getCreditCardLastFourBuilder() {
-        
+        bitField0_ |= 0x00000080;
         onChanged();
         return getCreditCardLastFourFieldBuilder().getBuilder();
       }
@@ -5926,7 +5905,7 @@ public final class DataServiceProto {
        * @return Whether the paymentMethod field is set.
        */
       public boolean hasPaymentMethod() {
-        return paymentMethodBuilder_ != null || paymentMethod_ != null;
+        return ((bitField0_ & 0x00000100) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
@@ -5948,11 +5927,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           paymentMethod_ = value;
-          onChanged();
         } else {
           paymentMethodBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -5962,11 +5941,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (paymentMethodBuilder_ == null) {
           paymentMethod_ = builderForValue.build();
-          onChanged();
         } else {
           paymentMethodBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
@@ -5974,38 +5953,38 @@ public final class DataServiceProto {
        */
       public Builder mergePaymentMethod(com.google.protobuf.StringValue value) {
         if (paymentMethodBuilder_ == null) {
-          if (paymentMethod_ != null) {
-            paymentMethod_ =
-              com.google.protobuf.StringValue.newBuilder(paymentMethod_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000100) != 0) &&
+            paymentMethod_ != null &&
+            paymentMethod_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getPaymentMethodBuilder().mergeFrom(value);
           } else {
             paymentMethod_ = value;
           }
-          onChanged();
         } else {
           paymentMethodBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000100;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
        */
       public Builder clearPaymentMethod() {
-        if (paymentMethodBuilder_ == null) {
-          paymentMethod_ = null;
-          onChanged();
-        } else {
-          paymentMethod_ = null;
+        bitField0_ = (bitField0_ & ~0x00000100);
+        paymentMethod_ = null;
+        if (paymentMethodBuilder_ != null) {
+          paymentMethodBuilder_.dispose();
           paymentMethodBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
        */
       public com.google.protobuf.StringValue.Builder getPaymentMethodBuilder() {
-        
+        bitField0_ |= 0x00000100;
         onChanged();
         return getPaymentMethodFieldBuilder().getBuilder();
       }
@@ -6045,7 +6024,7 @@ public final class DataServiceProto {
        * @return Whether the ocrLineDkType field is set.
        */
       public boolean hasOcrLineDkType() {
-        return ocrLineDkTypeBuilder_ != null || ocrLineDkType_ != null;
+        return ((bitField0_ & 0x00000200) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
@@ -6067,11 +6046,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           ocrLineDkType_ = value;
-          onChanged();
         } else {
           ocrLineDkTypeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -6081,11 +6060,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (ocrLineDkTypeBuilder_ == null) {
           ocrLineDkType_ = builderForValue.build();
-          onChanged();
         } else {
           ocrLineDkTypeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
@@ -6093,38 +6072,38 @@ public final class DataServiceProto {
        */
       public Builder mergeOcrLineDkType(com.google.protobuf.StringValue value) {
         if (ocrLineDkTypeBuilder_ == null) {
-          if (ocrLineDkType_ != null) {
-            ocrLineDkType_ =
-              com.google.protobuf.StringValue.newBuilder(ocrLineDkType_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000200) != 0) &&
+            ocrLineDkType_ != null &&
+            ocrLineDkType_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getOcrLineDkTypeBuilder().mergeFrom(value);
           } else {
             ocrLineDkType_ = value;
           }
-          onChanged();
         } else {
           ocrLineDkTypeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000200;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
        */
       public Builder clearOcrLineDkType() {
-        if (ocrLineDkTypeBuilder_ == null) {
-          ocrLineDkType_ = null;
-          onChanged();
-        } else {
-          ocrLineDkType_ = null;
+        bitField0_ = (bitField0_ & ~0x00000200);
+        ocrLineDkType_ = null;
+        if (ocrLineDkTypeBuilder_ != null) {
+          ocrLineDkTypeBuilder_.dispose();
           ocrLineDkTypeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
        */
       public com.google.protobuf.StringValue.Builder getOcrLineDkTypeBuilder() {
-        
+        bitField0_ |= 0x00000200;
         onChanged();
         return getOcrLineDkTypeFieldBuilder().getBuilder();
       }
@@ -6164,7 +6143,7 @@ public final class DataServiceProto {
        * @return Whether the ocrLineDkPaymentId field is set.
        */
       public boolean hasOcrLineDkPaymentId() {
-        return ocrLineDkPaymentIdBuilder_ != null || ocrLineDkPaymentId_ != null;
+        return ((bitField0_ & 0x00000400) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
@@ -6186,11 +6165,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           ocrLineDkPaymentId_ = value;
-          onChanged();
         } else {
           ocrLineDkPaymentIdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -6200,11 +6179,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
           ocrLineDkPaymentId_ = builderForValue.build();
-          onChanged();
         } else {
           ocrLineDkPaymentIdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
@@ -6212,38 +6191,38 @@ public final class DataServiceProto {
        */
       public Builder mergeOcrLineDkPaymentId(com.google.protobuf.StringValue value) {
         if (ocrLineDkPaymentIdBuilder_ == null) {
-          if (ocrLineDkPaymentId_ != null) {
-            ocrLineDkPaymentId_ =
-              com.google.protobuf.StringValue.newBuilder(ocrLineDkPaymentId_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000400) != 0) &&
+            ocrLineDkPaymentId_ != null &&
+            ocrLineDkPaymentId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getOcrLineDkPaymentIdBuilder().mergeFrom(value);
           } else {
             ocrLineDkPaymentId_ = value;
           }
-          onChanged();
         } else {
           ocrLineDkPaymentIdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000400;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public Builder clearOcrLineDkPaymentId() {
-        if (ocrLineDkPaymentIdBuilder_ == null) {
-          ocrLineDkPaymentId_ = null;
-          onChanged();
-        } else {
-          ocrLineDkPaymentId_ = null;
+        bitField0_ = (bitField0_ & ~0x00000400);
+        ocrLineDkPaymentId_ = null;
+        if (ocrLineDkPaymentIdBuilder_ != null) {
+          ocrLineDkPaymentIdBuilder_.dispose();
           ocrLineDkPaymentIdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
        */
       public com.google.protobuf.StringValue.Builder getOcrLineDkPaymentIdBuilder() {
-        
+        bitField0_ |= 0x00000400;
         onChanged();
         return getOcrLineDkPaymentIdFieldBuilder().getBuilder();
       }
@@ -6283,7 +6262,7 @@ public final class DataServiceProto {
        * @return Whether the ocrLineDkCreditorId field is set.
        */
       public boolean hasOcrLineDkCreditorId() {
-        return ocrLineDkCreditorIdBuilder_ != null || ocrLineDkCreditorId_ != null;
+        return ((bitField0_ & 0x00000800) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
@@ -6305,11 +6284,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           ocrLineDkCreditorId_ = value;
-          onChanged();
         } else {
           ocrLineDkCreditorIdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -6319,11 +6298,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
           ocrLineDkCreditorId_ = builderForValue.build();
-          onChanged();
         } else {
           ocrLineDkCreditorIdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
@@ -6331,38 +6310,38 @@ public final class DataServiceProto {
        */
       public Builder mergeOcrLineDkCreditorId(com.google.protobuf.StringValue value) {
         if (ocrLineDkCreditorIdBuilder_ == null) {
-          if (ocrLineDkCreditorId_ != null) {
-            ocrLineDkCreditorId_ =
-              com.google.protobuf.StringValue.newBuilder(ocrLineDkCreditorId_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000800) != 0) &&
+            ocrLineDkCreditorId_ != null &&
+            ocrLineDkCreditorId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getOcrLineDkCreditorIdBuilder().mergeFrom(value);
           } else {
             ocrLineDkCreditorId_ = value;
           }
-          onChanged();
         } else {
           ocrLineDkCreditorIdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000800;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public Builder clearOcrLineDkCreditorId() {
-        if (ocrLineDkCreditorIdBuilder_ == null) {
-          ocrLineDkCreditorId_ = null;
-          onChanged();
-        } else {
-          ocrLineDkCreditorId_ = null;
+        bitField0_ = (bitField0_ & ~0x00000800);
+        ocrLineDkCreditorId_ = null;
+        if (ocrLineDkCreditorIdBuilder_ != null) {
+          ocrLineDkCreditorIdBuilder_.dispose();
           ocrLineDkCreditorIdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
        */
       public com.google.protobuf.StringValue.Builder getOcrLineDkCreditorIdBuilder() {
-        
+        bitField0_ |= 0x00000800;
         onChanged();
         return getOcrLineDkCreditorIdFieldBuilder().getBuilder();
       }
@@ -6402,7 +6381,7 @@ public final class DataServiceProto {
        * @return Whether the ocrLineSePaymentId field is set.
        */
       public boolean hasOcrLineSePaymentId() {
-        return ocrLineSePaymentIdBuilder_ != null || ocrLineSePaymentId_ != null;
+        return ((bitField0_ & 0x00001000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
@@ -6424,11 +6403,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           ocrLineSePaymentId_ = value;
-          onChanged();
         } else {
           ocrLineSePaymentIdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -6438,11 +6417,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (ocrLineSePaymentIdBuilder_ == null) {
           ocrLineSePaymentId_ = builderForValue.build();
-          onChanged();
         } else {
           ocrLineSePaymentIdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
@@ -6450,38 +6429,38 @@ public final class DataServiceProto {
        */
       public Builder mergeOcrLineSePaymentId(com.google.protobuf.StringValue value) {
         if (ocrLineSePaymentIdBuilder_ == null) {
-          if (ocrLineSePaymentId_ != null) {
-            ocrLineSePaymentId_ =
-              com.google.protobuf.StringValue.newBuilder(ocrLineSePaymentId_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00001000) != 0) &&
+            ocrLineSePaymentId_ != null &&
+            ocrLineSePaymentId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getOcrLineSePaymentIdBuilder().mergeFrom(value);
           } else {
             ocrLineSePaymentId_ = value;
           }
-          onChanged();
         } else {
           ocrLineSePaymentIdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00001000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
        */
       public Builder clearOcrLineSePaymentId() {
-        if (ocrLineSePaymentIdBuilder_ == null) {
-          ocrLineSePaymentId_ = null;
-          onChanged();
-        } else {
-          ocrLineSePaymentId_ = null;
+        bitField0_ = (bitField0_ & ~0x00001000);
+        ocrLineSePaymentId_ = null;
+        if (ocrLineSePaymentIdBuilder_ != null) {
+          ocrLineSePaymentIdBuilder_.dispose();
           ocrLineSePaymentIdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
        */
       public com.google.protobuf.StringValue.Builder getOcrLineSePaymentIdBuilder() {
-        
+        bitField0_ |= 0x00001000;
         onChanged();
         return getOcrLineSePaymentIdFieldBuilder().getBuilder();
       }
@@ -6521,7 +6500,7 @@ public final class DataServiceProto {
        * @return Whether the ocrLineSeBankgiroCreditorId field is set.
        */
       public boolean hasOcrLineSeBankgiroCreditorId() {
-        return ocrLineSeBankgiroCreditorIdBuilder_ != null || ocrLineSeBankgiroCreditorId_ != null;
+        return ((bitField0_ & 0x00002000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -6543,11 +6522,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           ocrLineSeBankgiroCreditorId_ = value;
-          onChanged();
         } else {
           ocrLineSeBankgiroCreditorIdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -6557,11 +6536,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
           ocrLineSeBankgiroCreditorId_ = builderForValue.build();
-          onChanged();
         } else {
           ocrLineSeBankgiroCreditorIdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
@@ -6569,38 +6548,38 @@ public final class DataServiceProto {
        */
       public Builder mergeOcrLineSeBankgiroCreditorId(com.google.protobuf.StringValue value) {
         if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
-          if (ocrLineSeBankgiroCreditorId_ != null) {
-            ocrLineSeBankgiroCreditorId_ =
-              com.google.protobuf.StringValue.newBuilder(ocrLineSeBankgiroCreditorId_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00002000) != 0) &&
+            ocrLineSeBankgiroCreditorId_ != null &&
+            ocrLineSeBankgiroCreditorId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getOcrLineSeBankgiroCreditorIdBuilder().mergeFrom(value);
           } else {
             ocrLineSeBankgiroCreditorId_ = value;
           }
-          onChanged();
         } else {
           ocrLineSeBankgiroCreditorIdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00002000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public Builder clearOcrLineSeBankgiroCreditorId() {
-        if (ocrLineSeBankgiroCreditorIdBuilder_ == null) {
-          ocrLineSeBankgiroCreditorId_ = null;
-          onChanged();
-        } else {
-          ocrLineSeBankgiroCreditorId_ = null;
+        bitField0_ = (bitField0_ & ~0x00002000);
+        ocrLineSeBankgiroCreditorId_ = null;
+        if (ocrLineSeBankgiroCreditorIdBuilder_ != null) {
+          ocrLineSeBankgiroCreditorIdBuilder_.dispose();
           ocrLineSeBankgiroCreditorIdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
        */
       public com.google.protobuf.StringValue.Builder getOcrLineSeBankgiroCreditorIdBuilder() {
-        
+        bitField0_ |= 0x00002000;
         onChanged();
         return getOcrLineSeBankgiroCreditorIdFieldBuilder().getBuilder();
       }
@@ -6640,7 +6619,7 @@ public final class DataServiceProto {
        * @return Whether the ocrLineSePlusgiroCreditorId field is set.
        */
       public boolean hasOcrLineSePlusgiroCreditorId() {
-        return ocrLineSePlusgiroCreditorIdBuilder_ != null || ocrLineSePlusgiroCreditorId_ != null;
+        return ((bitField0_ & 0x00004000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -6662,11 +6641,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           ocrLineSePlusgiroCreditorId_ = value;
-          onChanged();
         } else {
           ocrLineSePlusgiroCreditorIdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -6676,11 +6655,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
           ocrLineSePlusgiroCreditorId_ = builderForValue.build();
-          onChanged();
         } else {
           ocrLineSePlusgiroCreditorIdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
@@ -6688,38 +6667,38 @@ public final class DataServiceProto {
        */
       public Builder mergeOcrLineSePlusgiroCreditorId(com.google.protobuf.StringValue value) {
         if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
-          if (ocrLineSePlusgiroCreditorId_ != null) {
-            ocrLineSePlusgiroCreditorId_ =
-              com.google.protobuf.StringValue.newBuilder(ocrLineSePlusgiroCreditorId_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00004000) != 0) &&
+            ocrLineSePlusgiroCreditorId_ != null &&
+            ocrLineSePlusgiroCreditorId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getOcrLineSePlusgiroCreditorIdBuilder().mergeFrom(value);
           } else {
             ocrLineSePlusgiroCreditorId_ = value;
           }
-          onChanged();
         } else {
           ocrLineSePlusgiroCreditorIdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00004000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public Builder clearOcrLineSePlusgiroCreditorId() {
-        if (ocrLineSePlusgiroCreditorIdBuilder_ == null) {
-          ocrLineSePlusgiroCreditorId_ = null;
-          onChanged();
-        } else {
-          ocrLineSePlusgiroCreditorId_ = null;
+        bitField0_ = (bitField0_ & ~0x00004000);
+        ocrLineSePlusgiroCreditorId_ = null;
+        if (ocrLineSePlusgiroCreditorIdBuilder_ != null) {
+          ocrLineSePlusgiroCreditorIdBuilder_.dispose();
           ocrLineSePlusgiroCreditorIdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
        */
       public com.google.protobuf.StringValue.Builder getOcrLineSePlusgiroCreditorIdBuilder() {
-        
+        bitField0_ |= 0x00004000;
         onChanged();
         return getOcrLineSePlusgiroCreditorIdFieldBuilder().getBuilder();
       }
@@ -6759,7 +6738,7 @@ public final class DataServiceProto {
        * @return Whether the ocrLineNoPaymentId field is set.
        */
       public boolean hasOcrLineNoPaymentId() {
-        return ocrLineNoPaymentIdBuilder_ != null || ocrLineNoPaymentId_ != null;
+        return ((bitField0_ & 0x00008000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
@@ -6781,11 +6760,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           ocrLineNoPaymentId_ = value;
-          onChanged();
         } else {
           ocrLineNoPaymentIdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00008000;
+        onChanged();
         return this;
       }
       /**
@@ -6795,11 +6774,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
           ocrLineNoPaymentId_ = builderForValue.build();
-          onChanged();
         } else {
           ocrLineNoPaymentIdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00008000;
+        onChanged();
         return this;
       }
       /**
@@ -6807,38 +6786,38 @@ public final class DataServiceProto {
        */
       public Builder mergeOcrLineNoPaymentId(com.google.protobuf.StringValue value) {
         if (ocrLineNoPaymentIdBuilder_ == null) {
-          if (ocrLineNoPaymentId_ != null) {
-            ocrLineNoPaymentId_ =
-              com.google.protobuf.StringValue.newBuilder(ocrLineNoPaymentId_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00008000) != 0) &&
+            ocrLineNoPaymentId_ != null &&
+            ocrLineNoPaymentId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getOcrLineNoPaymentIdBuilder().mergeFrom(value);
           } else {
             ocrLineNoPaymentId_ = value;
           }
-          onChanged();
         } else {
           ocrLineNoPaymentIdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00008000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public Builder clearOcrLineNoPaymentId() {
-        if (ocrLineNoPaymentIdBuilder_ == null) {
-          ocrLineNoPaymentId_ = null;
-          onChanged();
-        } else {
-          ocrLineNoPaymentId_ = null;
+        bitField0_ = (bitField0_ & ~0x00008000);
+        ocrLineNoPaymentId_ = null;
+        if (ocrLineNoPaymentIdBuilder_ != null) {
+          ocrLineNoPaymentIdBuilder_.dispose();
           ocrLineNoPaymentIdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
        */
       public com.google.protobuf.StringValue.Builder getOcrLineNoPaymentIdBuilder() {
-        
+        bitField0_ |= 0x00008000;
         onChanged();
         return getOcrLineNoPaymentIdFieldBuilder().getBuilder();
       }
@@ -6878,7 +6857,7 @@ public final class DataServiceProto {
        * @return Whether the ocrLineFiPaymentId field is set.
        */
       public boolean hasOcrLineFiPaymentId() {
-        return ocrLineFiPaymentIdBuilder_ != null || ocrLineFiPaymentId_ != null;
+        return ((bitField0_ & 0x00010000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
@@ -6900,11 +6879,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           ocrLineFiPaymentId_ = value;
-          onChanged();
         } else {
           ocrLineFiPaymentIdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -6914,11 +6893,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
           ocrLineFiPaymentId_ = builderForValue.build();
-          onChanged();
         } else {
           ocrLineFiPaymentIdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
@@ -6926,38 +6905,38 @@ public final class DataServiceProto {
        */
       public Builder mergeOcrLineFiPaymentId(com.google.protobuf.StringValue value) {
         if (ocrLineFiPaymentIdBuilder_ == null) {
-          if (ocrLineFiPaymentId_ != null) {
-            ocrLineFiPaymentId_ =
-              com.google.protobuf.StringValue.newBuilder(ocrLineFiPaymentId_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00010000) != 0) &&
+            ocrLineFiPaymentId_ != null &&
+            ocrLineFiPaymentId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getOcrLineFiPaymentIdBuilder().mergeFrom(value);
           } else {
             ocrLineFiPaymentId_ = value;
           }
-          onChanged();
         } else {
           ocrLineFiPaymentIdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00010000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public Builder clearOcrLineFiPaymentId() {
-        if (ocrLineFiPaymentIdBuilder_ == null) {
-          ocrLineFiPaymentId_ = null;
-          onChanged();
-        } else {
-          ocrLineFiPaymentId_ = null;
+        bitField0_ = (bitField0_ & ~0x00010000);
+        ocrLineFiPaymentId_ = null;
+        if (ocrLineFiPaymentIdBuilder_ != null) {
+          ocrLineFiPaymentIdBuilder_.dispose();
           ocrLineFiPaymentIdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
        */
       public com.google.protobuf.StringValue.Builder getOcrLineFiPaymentIdBuilder() {
-        
+        bitField0_ |= 0x00010000;
         onChanged();
         return getOcrLineFiPaymentIdFieldBuilder().getBuilder();
       }
@@ -6997,7 +6976,7 @@ public final class DataServiceProto {
        * @return Whether the ocrLineNlPaymentId field is set.
        */
       public boolean hasOcrLineNlPaymentId() {
-        return ocrLineNlPaymentIdBuilder_ != null || ocrLineNlPaymentId_ != null;
+        return ((bitField0_ & 0x00020000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
@@ -7019,11 +6998,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           ocrLineNlPaymentId_ = value;
-          onChanged();
         } else {
           ocrLineNlPaymentIdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**
@@ -7033,11 +7012,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
           ocrLineNlPaymentId_ = builderForValue.build();
-          onChanged();
         } else {
           ocrLineNlPaymentIdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**
@@ -7045,38 +7024,38 @@ public final class DataServiceProto {
        */
       public Builder mergeOcrLineNlPaymentId(com.google.protobuf.StringValue value) {
         if (ocrLineNlPaymentIdBuilder_ == null) {
-          if (ocrLineNlPaymentId_ != null) {
-            ocrLineNlPaymentId_ =
-              com.google.protobuf.StringValue.newBuilder(ocrLineNlPaymentId_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00020000) != 0) &&
+            ocrLineNlPaymentId_ != null &&
+            ocrLineNlPaymentId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getOcrLineNlPaymentIdBuilder().mergeFrom(value);
           } else {
             ocrLineNlPaymentId_ = value;
           }
-          onChanged();
         } else {
           ocrLineNlPaymentIdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00020000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public Builder clearOcrLineNlPaymentId() {
-        if (ocrLineNlPaymentIdBuilder_ == null) {
-          ocrLineNlPaymentId_ = null;
-          onChanged();
-        } else {
-          ocrLineNlPaymentId_ = null;
+        bitField0_ = (bitField0_ & ~0x00020000);
+        ocrLineNlPaymentId_ = null;
+        if (ocrLineNlPaymentIdBuilder_ != null) {
+          ocrLineNlPaymentIdBuilder_.dispose();
           ocrLineNlPaymentIdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
        */
       public com.google.protobuf.StringValue.Builder getOcrLineNlPaymentIdBuilder() {
-        
+        bitField0_ |= 0x00020000;
         onChanged();
         return getOcrLineNlPaymentIdFieldBuilder().getBuilder();
       }
@@ -7116,7 +7095,7 @@ public final class DataServiceProto {
        * @return Whether the supplierCorporateId field is set.
        */
       public boolean hasSupplierCorporateId() {
-        return supplierCorporateIdBuilder_ != null || supplierCorporateId_ != null;
+        return ((bitField0_ & 0x00040000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
@@ -7138,11 +7117,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           supplierCorporateId_ = value;
-          onChanged();
         } else {
           supplierCorporateIdBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -7152,11 +7131,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (supplierCorporateIdBuilder_ == null) {
           supplierCorporateId_ = builderForValue.build();
-          onChanged();
         } else {
           supplierCorporateIdBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
@@ -7164,38 +7143,38 @@ public final class DataServiceProto {
        */
       public Builder mergeSupplierCorporateId(com.google.protobuf.StringValue value) {
         if (supplierCorporateIdBuilder_ == null) {
-          if (supplierCorporateId_ != null) {
-            supplierCorporateId_ =
-              com.google.protobuf.StringValue.newBuilder(supplierCorporateId_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00040000) != 0) &&
+            supplierCorporateId_ != null &&
+            supplierCorporateId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getSupplierCorporateIdBuilder().mergeFrom(value);
           } else {
             supplierCorporateId_ = value;
           }
-          onChanged();
         } else {
           supplierCorporateIdBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00040000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
        */
       public Builder clearSupplierCorporateId() {
-        if (supplierCorporateIdBuilder_ == null) {
-          supplierCorporateId_ = null;
-          onChanged();
-        } else {
-          supplierCorporateId_ = null;
+        bitField0_ = (bitField0_ & ~0x00040000);
+        supplierCorporateId_ = null;
+        if (supplierCorporateIdBuilder_ != null) {
+          supplierCorporateIdBuilder_.dispose();
           supplierCorporateIdBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
        */
       public com.google.protobuf.StringValue.Builder getSupplierCorporateIdBuilder() {
-        
+        bitField0_ |= 0x00040000;
         onChanged();
         return getSupplierCorporateIdFieldBuilder().getBuilder();
       }
@@ -7235,7 +7214,7 @@ public final class DataServiceProto {
        * @return Whether the supplierCountryCode field is set.
        */
       public boolean hasSupplierCountryCode() {
-        return supplierCountryCodeBuilder_ != null || supplierCountryCode_ != null;
+        return ((bitField0_ & 0x00080000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
@@ -7257,11 +7236,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           supplierCountryCode_ = value;
-          onChanged();
         } else {
           supplierCountryCodeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -7271,11 +7250,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (supplierCountryCodeBuilder_ == null) {
           supplierCountryCode_ = builderForValue.build();
-          onChanged();
         } else {
           supplierCountryCodeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
@@ -7283,38 +7262,38 @@ public final class DataServiceProto {
        */
       public Builder mergeSupplierCountryCode(com.google.protobuf.StringValue value) {
         if (supplierCountryCodeBuilder_ == null) {
-          if (supplierCountryCode_ != null) {
-            supplierCountryCode_ =
-              com.google.protobuf.StringValue.newBuilder(supplierCountryCode_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00080000) != 0) &&
+            supplierCountryCode_ != null &&
+            supplierCountryCode_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getSupplierCountryCodeBuilder().mergeFrom(value);
           } else {
             supplierCountryCode_ = value;
           }
-          onChanged();
         } else {
           supplierCountryCodeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00080000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
        */
       public Builder clearSupplierCountryCode() {
-        if (supplierCountryCodeBuilder_ == null) {
-          supplierCountryCode_ = null;
-          onChanged();
-        } else {
-          supplierCountryCode_ = null;
+        bitField0_ = (bitField0_ & ~0x00080000);
+        supplierCountryCode_ = null;
+        if (supplierCountryCodeBuilder_ != null) {
+          supplierCountryCodeBuilder_.dispose();
           supplierCountryCodeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
        */
       public com.google.protobuf.StringValue.Builder getSupplierCountryCodeBuilder() {
-        
+        bitField0_ |= 0x00080000;
         onChanged();
         return getSupplierCountryCodeFieldBuilder().getBuilder();
       }
@@ -7354,7 +7333,7 @@ public final class DataServiceProto {
        * @return Whether the invoiceNumber field is set.
        */
       public boolean hasInvoiceNumber() {
-        return invoiceNumberBuilder_ != null || invoiceNumber_ != null;
+        return ((bitField0_ & 0x00100000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
@@ -7376,11 +7355,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           invoiceNumber_ = value;
-          onChanged();
         } else {
           invoiceNumberBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00100000;
+        onChanged();
         return this;
       }
       /**
@@ -7390,11 +7369,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (invoiceNumberBuilder_ == null) {
           invoiceNumber_ = builderForValue.build();
-          onChanged();
         } else {
           invoiceNumberBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00100000;
+        onChanged();
         return this;
       }
       /**
@@ -7402,38 +7381,38 @@ public final class DataServiceProto {
        */
       public Builder mergeInvoiceNumber(com.google.protobuf.StringValue value) {
         if (invoiceNumberBuilder_ == null) {
-          if (invoiceNumber_ != null) {
-            invoiceNumber_ =
-              com.google.protobuf.StringValue.newBuilder(invoiceNumber_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00100000) != 0) &&
+            invoiceNumber_ != null &&
+            invoiceNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getInvoiceNumberBuilder().mergeFrom(value);
           } else {
             invoiceNumber_ = value;
           }
-          onChanged();
         } else {
           invoiceNumberBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00100000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
        */
       public Builder clearInvoiceNumber() {
-        if (invoiceNumberBuilder_ == null) {
-          invoiceNumber_ = null;
-          onChanged();
-        } else {
-          invoiceNumber_ = null;
+        bitField0_ = (bitField0_ & ~0x00100000);
+        invoiceNumber_ = null;
+        if (invoiceNumberBuilder_ != null) {
+          invoiceNumberBuilder_.dispose();
           invoiceNumberBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
        */
       public com.google.protobuf.StringValue.Builder getInvoiceNumberBuilder() {
-        
+        bitField0_ |= 0x00100000;
         onChanged();
         return getInvoiceNumberFieldBuilder().getBuilder();
       }
@@ -7473,7 +7452,7 @@ public final class DataServiceProto {
        * @return Whether the iban field is set.
        */
       public boolean hasIban() {
-        return ibanBuilder_ != null || iban_ != null;
+        return ((bitField0_ & 0x00200000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
@@ -7495,11 +7474,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           iban_ = value;
-          onChanged();
         } else {
           ibanBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00200000;
+        onChanged();
         return this;
       }
       /**
@@ -7509,11 +7488,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (ibanBuilder_ == null) {
           iban_ = builderForValue.build();
-          onChanged();
         } else {
           ibanBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00200000;
+        onChanged();
         return this;
       }
       /**
@@ -7521,38 +7500,38 @@ public final class DataServiceProto {
        */
       public Builder mergeIban(com.google.protobuf.StringValue value) {
         if (ibanBuilder_ == null) {
-          if (iban_ != null) {
-            iban_ =
-              com.google.protobuf.StringValue.newBuilder(iban_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00200000) != 0) &&
+            iban_ != null &&
+            iban_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getIbanBuilder().mergeFrom(value);
           } else {
             iban_ = value;
           }
-          onChanged();
         } else {
           ibanBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00200000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
        */
       public Builder clearIban() {
-        if (ibanBuilder_ == null) {
-          iban_ = null;
-          onChanged();
-        } else {
-          iban_ = null;
+        bitField0_ = (bitField0_ & ~0x00200000);
+        iban_ = null;
+        if (ibanBuilder_ != null) {
+          ibanBuilder_.dispose();
           ibanBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
        */
       public com.google.protobuf.StringValue.Builder getIbanBuilder() {
-        
+        bitField0_ |= 0x00200000;
         onChanged();
         return getIbanFieldBuilder().getBuilder();
       }
@@ -7592,7 +7571,7 @@ public final class DataServiceProto {
        * @return Whether the orderReference field is set.
        */
       public boolean hasOrderReference() {
-        return orderReferenceBuilder_ != null || orderReference_ != null;
+        return ((bitField0_ & 0x00400000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
@@ -7614,11 +7593,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           orderReference_ = value;
-          onChanged();
         } else {
           orderReferenceBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00400000;
+        onChanged();
         return this;
       }
       /**
@@ -7628,11 +7607,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (orderReferenceBuilder_ == null) {
           orderReference_ = builderForValue.build();
-          onChanged();
         } else {
           orderReferenceBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00400000;
+        onChanged();
         return this;
       }
       /**
@@ -7640,38 +7619,38 @@ public final class DataServiceProto {
        */
       public Builder mergeOrderReference(com.google.protobuf.StringValue value) {
         if (orderReferenceBuilder_ == null) {
-          if (orderReference_ != null) {
-            orderReference_ =
-              com.google.protobuf.StringValue.newBuilder(orderReference_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00400000) != 0) &&
+            orderReference_ != null &&
+            orderReference_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getOrderReferenceBuilder().mergeFrom(value);
           } else {
             orderReference_ = value;
           }
-          onChanged();
         } else {
           orderReferenceBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00400000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
        */
       public Builder clearOrderReference() {
-        if (orderReferenceBuilder_ == null) {
-          orderReference_ = null;
-          onChanged();
-        } else {
-          orderReference_ = null;
+        bitField0_ = (bitField0_ & ~0x00400000);
+        orderReference_ = null;
+        if (orderReferenceBuilder_ != null) {
+          orderReferenceBuilder_.dispose();
           orderReferenceBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
        */
       public com.google.protobuf.StringValue.Builder getOrderReferenceBuilder() {
-        
+        bitField0_ |= 0x00400000;
         onChanged();
         return getOrderReferenceFieldBuilder().getBuilder();
       }
@@ -7711,7 +7690,7 @@ public final class DataServiceProto {
        * @return Whether the bankAccountNumber field is set.
        */
       public boolean hasBankAccountNumber() {
-        return bankAccountNumberBuilder_ != null || bankAccountNumber_ != null;
+        return ((bitField0_ & 0x00800000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
@@ -7733,11 +7712,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           bankAccountNumber_ = value;
-          onChanged();
         } else {
           bankAccountNumberBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00800000;
+        onChanged();
         return this;
       }
       /**
@@ -7747,11 +7726,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (bankAccountNumberBuilder_ == null) {
           bankAccountNumber_ = builderForValue.build();
-          onChanged();
         } else {
           bankAccountNumberBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00800000;
+        onChanged();
         return this;
       }
       /**
@@ -7759,38 +7738,38 @@ public final class DataServiceProto {
        */
       public Builder mergeBankAccountNumber(com.google.protobuf.StringValue value) {
         if (bankAccountNumberBuilder_ == null) {
-          if (bankAccountNumber_ != null) {
-            bankAccountNumber_ =
-              com.google.protobuf.StringValue.newBuilder(bankAccountNumber_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00800000) != 0) &&
+            bankAccountNumber_ != null &&
+            bankAccountNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getBankAccountNumberBuilder().mergeFrom(value);
           } else {
             bankAccountNumber_ = value;
           }
-          onChanged();
         } else {
           bankAccountNumberBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00800000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public Builder clearBankAccountNumber() {
-        if (bankAccountNumberBuilder_ == null) {
-          bankAccountNumber_ = null;
-          onChanged();
-        } else {
-          bankAccountNumber_ = null;
+        bitField0_ = (bitField0_ & ~0x00800000);
+        bankAccountNumber_ = null;
+        if (bankAccountNumberBuilder_ != null) {
+          bankAccountNumberBuilder_.dispose();
           bankAccountNumberBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
        */
       public com.google.protobuf.StringValue.Builder getBankAccountNumberBuilder() {
-        
+        bitField0_ |= 0x00800000;
         onChanged();
         return getBankAccountNumberFieldBuilder().getBuilder();
       }
@@ -7830,7 +7809,7 @@ public final class DataServiceProto {
        * @return Whether the bankRegistrationNumber field is set.
        */
       public boolean hasBankRegistrationNumber() {
-        return bankRegistrationNumberBuilder_ != null || bankRegistrationNumber_ != null;
+        return ((bitField0_ & 0x01000000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
@@ -7852,11 +7831,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           bankRegistrationNumber_ = value;
-          onChanged();
         } else {
           bankRegistrationNumberBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x01000000;
+        onChanged();
         return this;
       }
       /**
@@ -7866,11 +7845,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (bankRegistrationNumberBuilder_ == null) {
           bankRegistrationNumber_ = builderForValue.build();
-          onChanged();
         } else {
           bankRegistrationNumberBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x01000000;
+        onChanged();
         return this;
       }
       /**
@@ -7878,38 +7857,38 @@ public final class DataServiceProto {
        */
       public Builder mergeBankRegistrationNumber(com.google.protobuf.StringValue value) {
         if (bankRegistrationNumberBuilder_ == null) {
-          if (bankRegistrationNumber_ != null) {
-            bankRegistrationNumber_ =
-              com.google.protobuf.StringValue.newBuilder(bankRegistrationNumber_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x01000000) != 0) &&
+            bankRegistrationNumber_ != null &&
+            bankRegistrationNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getBankRegistrationNumberBuilder().mergeFrom(value);
           } else {
             bankRegistrationNumber_ = value;
           }
-          onChanged();
         } else {
           bankRegistrationNumberBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x01000000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public Builder clearBankRegistrationNumber() {
-        if (bankRegistrationNumberBuilder_ == null) {
-          bankRegistrationNumber_ = null;
-          onChanged();
-        } else {
-          bankRegistrationNumber_ = null;
+        bitField0_ = (bitField0_ & ~0x01000000);
+        bankRegistrationNumber_ = null;
+        if (bankRegistrationNumberBuilder_ != null) {
+          bankRegistrationNumberBuilder_.dispose();
           bankRegistrationNumberBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
        */
       public com.google.protobuf.StringValue.Builder getBankRegistrationNumberBuilder() {
-        
+        bitField0_ |= 0x01000000;
         onChanged();
         return getBankRegistrationNumberFieldBuilder().getBuilder();
       }
@@ -7949,7 +7928,7 @@ public final class DataServiceProto {
        * @return Whether the supplierName field is set.
        */
       public boolean hasSupplierName() {
-        return supplierNameBuilder_ != null || supplierName_ != null;
+        return ((bitField0_ & 0x02000000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
@@ -7971,11 +7950,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           supplierName_ = value;
-          onChanged();
         } else {
           supplierNameBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x02000000;
+        onChanged();
         return this;
       }
       /**
@@ -7985,11 +7964,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (supplierNameBuilder_ == null) {
           supplierName_ = builderForValue.build();
-          onChanged();
         } else {
           supplierNameBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x02000000;
+        onChanged();
         return this;
       }
       /**
@@ -7997,38 +7976,38 @@ public final class DataServiceProto {
        */
       public Builder mergeSupplierName(com.google.protobuf.StringValue value) {
         if (supplierNameBuilder_ == null) {
-          if (supplierName_ != null) {
-            supplierName_ =
-              com.google.protobuf.StringValue.newBuilder(supplierName_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x02000000) != 0) &&
+            supplierName_ != null &&
+            supplierName_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getSupplierNameBuilder().mergeFrom(value);
           } else {
             supplierName_ = value;
           }
-          onChanged();
         } else {
           supplierNameBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x02000000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
        */
       public Builder clearSupplierName() {
-        if (supplierNameBuilder_ == null) {
-          supplierName_ = null;
-          onChanged();
-        } else {
-          supplierName_ = null;
+        bitField0_ = (bitField0_ & ~0x02000000);
+        supplierName_ = null;
+        if (supplierNameBuilder_ != null) {
+          supplierNameBuilder_.dispose();
           supplierNameBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
        */
       public com.google.protobuf.StringValue.Builder getSupplierNameBuilder() {
-        
+        bitField0_ |= 0x02000000;
         onChanged();
         return getSupplierNameFieldBuilder().getBuilder();
       }
@@ -8068,7 +8047,7 @@ public final class DataServiceProto {
        * @return Whether the bic field is set.
        */
       public boolean hasBic() {
-        return bicBuilder_ != null || bic_ != null;
+        return ((bitField0_ & 0x04000000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
@@ -8090,11 +8069,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           bic_ = value;
-          onChanged();
         } else {
           bicBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x04000000;
+        onChanged();
         return this;
       }
       /**
@@ -8104,11 +8083,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (bicBuilder_ == null) {
           bic_ = builderForValue.build();
-          onChanged();
         } else {
           bicBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x04000000;
+        onChanged();
         return this;
       }
       /**
@@ -8116,38 +8095,38 @@ public final class DataServiceProto {
        */
       public Builder mergeBic(com.google.protobuf.StringValue value) {
         if (bicBuilder_ == null) {
-          if (bic_ != null) {
-            bic_ =
-              com.google.protobuf.StringValue.newBuilder(bic_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x04000000) != 0) &&
+            bic_ != null &&
+            bic_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getBicBuilder().mergeFrom(value);
           } else {
             bic_ = value;
           }
-          onChanged();
         } else {
           bicBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x04000000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
        */
       public Builder clearBic() {
-        if (bicBuilder_ == null) {
-          bic_ = null;
-          onChanged();
-        } else {
-          bic_ = null;
+        bitField0_ = (bitField0_ & ~0x04000000);
+        bic_ = null;
+        if (bicBuilder_ != null) {
+          bicBuilder_.dispose();
           bicBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
        */
       public com.google.protobuf.StringValue.Builder getBicBuilder() {
-        
+        bitField0_ |= 0x04000000;
         onChanged();
         return getBicFieldBuilder().getBuilder();
       }
@@ -8187,7 +8166,7 @@ public final class DataServiceProto {
        * @return Whether the documentNumber field is set.
        */
       public boolean hasDocumentNumber() {
-        return documentNumberBuilder_ != null || documentNumber_ != null;
+        return ((bitField0_ & 0x08000000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
@@ -8209,11 +8188,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           documentNumber_ = value;
-          onChanged();
         } else {
           documentNumberBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x08000000;
+        onChanged();
         return this;
       }
       /**
@@ -8223,11 +8202,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (documentNumberBuilder_ == null) {
           documentNumber_ = builderForValue.build();
-          onChanged();
         } else {
           documentNumberBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x08000000;
+        onChanged();
         return this;
       }
       /**
@@ -8235,38 +8214,38 @@ public final class DataServiceProto {
        */
       public Builder mergeDocumentNumber(com.google.protobuf.StringValue value) {
         if (documentNumberBuilder_ == null) {
-          if (documentNumber_ != null) {
-            documentNumber_ =
-              com.google.protobuf.StringValue.newBuilder(documentNumber_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x08000000) != 0) &&
+            documentNumber_ != null &&
+            documentNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getDocumentNumberBuilder().mergeFrom(value);
           } else {
             documentNumber_ = value;
           }
-          onChanged();
         } else {
           documentNumberBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x08000000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
        */
       public Builder clearDocumentNumber() {
-        if (documentNumberBuilder_ == null) {
-          documentNumber_ = null;
-          onChanged();
-        } else {
-          documentNumber_ = null;
+        bitField0_ = (bitField0_ & ~0x08000000);
+        documentNumber_ = null;
+        if (documentNumberBuilder_ != null) {
+          documentNumberBuilder_.dispose();
           documentNumberBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
        */
       public com.google.protobuf.StringValue.Builder getDocumentNumberBuilder() {
-        
+        bitField0_ |= 0x08000000;
         onChanged();
         return getDocumentNumberFieldBuilder().getBuilder();
       }
@@ -8306,7 +8285,7 @@ public final class DataServiceProto {
        * @return Whether the documentDate field is set.
        */
       public boolean hasDocumentDate() {
-        return documentDateBuilder_ != null || documentDate_ != null;
+        return ((bitField0_ & 0x10000000) != 0);
       }
       /**
        * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
@@ -8328,11 +8307,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           documentDate_ = value;
-          onChanged();
         } else {
           documentDateBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x10000000;
+        onChanged();
         return this;
       }
       /**
@@ -8342,11 +8321,11 @@ public final class DataServiceProto {
           com.google.type.Date.Builder builderForValue) {
         if (documentDateBuilder_ == null) {
           documentDate_ = builderForValue.build();
-          onChanged();
         } else {
           documentDateBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x10000000;
+        onChanged();
         return this;
       }
       /**
@@ -8354,38 +8333,38 @@ public final class DataServiceProto {
        */
       public Builder mergeDocumentDate(com.google.type.Date value) {
         if (documentDateBuilder_ == null) {
-          if (documentDate_ != null) {
-            documentDate_ =
-              com.google.type.Date.newBuilder(documentDate_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x10000000) != 0) &&
+            documentDate_ != null &&
+            documentDate_ != com.google.type.Date.getDefaultInstance()) {
+            getDocumentDateBuilder().mergeFrom(value);
           } else {
             documentDate_ = value;
           }
-          onChanged();
         } else {
           documentDateBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x10000000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
        */
       public Builder clearDocumentDate() {
-        if (documentDateBuilder_ == null) {
-          documentDate_ = null;
-          onChanged();
-        } else {
-          documentDate_ = null;
+        bitField0_ = (bitField0_ & ~0x10000000);
+        documentDate_ = null;
+        if (documentDateBuilder_ != null) {
+          documentDateBuilder_.dispose();
           documentDateBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
        */
       public com.google.type.Date.Builder getDocumentDateBuilder() {
-        
+        bitField0_ |= 0x10000000;
         onChanged();
         return getDocumentDateFieldBuilder().getBuilder();
       }
@@ -8425,7 +8404,7 @@ public final class DataServiceProto {
        * @return Whether the orderNumber field is set.
        */
       public boolean hasOrderNumber() {
-        return orderNumberBuilder_ != null || orderNumber_ != null;
+        return ((bitField0_ & 0x20000000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
@@ -8447,11 +8426,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           orderNumber_ = value;
-          onChanged();
         } else {
           orderNumberBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x20000000;
+        onChanged();
         return this;
       }
       /**
@@ -8461,11 +8440,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (orderNumberBuilder_ == null) {
           orderNumber_ = builderForValue.build();
-          onChanged();
         } else {
           orderNumberBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x20000000;
+        onChanged();
         return this;
       }
       /**
@@ -8473,38 +8452,38 @@ public final class DataServiceProto {
        */
       public Builder mergeOrderNumber(com.google.protobuf.StringValue value) {
         if (orderNumberBuilder_ == null) {
-          if (orderNumber_ != null) {
-            orderNumber_ =
-              com.google.protobuf.StringValue.newBuilder(orderNumber_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x20000000) != 0) &&
+            orderNumber_ != null &&
+            orderNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getOrderNumberBuilder().mergeFrom(value);
           } else {
             orderNumber_ = value;
           }
-          onChanged();
         } else {
           orderNumberBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x20000000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
        */
       public Builder clearOrderNumber() {
-        if (orderNumberBuilder_ == null) {
-          orderNumber_ = null;
-          onChanged();
-        } else {
-          orderNumber_ = null;
+        bitField0_ = (bitField0_ & ~0x20000000);
+        orderNumber_ = null;
+        if (orderNumberBuilder_ != null) {
+          orderNumberBuilder_.dispose();
           orderNumberBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
        */
       public com.google.protobuf.StringValue.Builder getOrderNumberBuilder() {
-        
+        bitField0_ |= 0x20000000;
         onChanged();
         return getOrderNumberFieldBuilder().getBuilder();
       }
@@ -8544,7 +8523,7 @@ public final class DataServiceProto {
        * @return Whether the supplierVatNumber field is set.
        */
       public boolean hasSupplierVatNumber() {
-        return supplierVatNumberBuilder_ != null || supplierVatNumber_ != null;
+        return ((bitField0_ & 0x40000000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
@@ -8566,11 +8545,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           supplierVatNumber_ = value;
-          onChanged();
         } else {
           supplierVatNumberBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x40000000;
+        onChanged();
         return this;
       }
       /**
@@ -8580,11 +8559,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (supplierVatNumberBuilder_ == null) {
           supplierVatNumber_ = builderForValue.build();
-          onChanged();
         } else {
           supplierVatNumberBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x40000000;
+        onChanged();
         return this;
       }
       /**
@@ -8592,38 +8571,38 @@ public final class DataServiceProto {
        */
       public Builder mergeSupplierVatNumber(com.google.protobuf.StringValue value) {
         if (supplierVatNumberBuilder_ == null) {
-          if (supplierVatNumber_ != null) {
-            supplierVatNumber_ =
-              com.google.protobuf.StringValue.newBuilder(supplierVatNumber_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x40000000) != 0) &&
+            supplierVatNumber_ != null &&
+            supplierVatNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getSupplierVatNumberBuilder().mergeFrom(value);
           } else {
             supplierVatNumber_ = value;
           }
-          onChanged();
         } else {
           supplierVatNumberBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x40000000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public Builder clearSupplierVatNumber() {
-        if (supplierVatNumberBuilder_ == null) {
-          supplierVatNumber_ = null;
-          onChanged();
-        } else {
-          supplierVatNumber_ = null;
+        bitField0_ = (bitField0_ & ~0x40000000);
+        supplierVatNumber_ = null;
+        if (supplierVatNumberBuilder_ != null) {
+          supplierVatNumberBuilder_.dispose();
           supplierVatNumberBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
        */
       public com.google.protobuf.StringValue.Builder getSupplierVatNumberBuilder() {
-        
+        bitField0_ |= 0x40000000;
         onChanged();
         return getSupplierVatNumberFieldBuilder().getBuilder();
       }
@@ -8663,7 +8642,7 @@ public final class DataServiceProto {
        * @return Whether the supplierOrganisationNumber field is set.
        */
       public boolean hasSupplierOrganisationNumber() {
-        return supplierOrganisationNumberBuilder_ != null || supplierOrganisationNumber_ != null;
+        return ((bitField0_ & 0x80000000) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
@@ -8685,11 +8664,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           supplierOrganisationNumber_ = value;
-          onChanged();
         } else {
           supplierOrganisationNumberBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x80000000;
+        onChanged();
         return this;
       }
       /**
@@ -8699,11 +8678,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (supplierOrganisationNumberBuilder_ == null) {
           supplierOrganisationNumber_ = builderForValue.build();
-          onChanged();
         } else {
           supplierOrganisationNumberBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x80000000;
+        onChanged();
         return this;
       }
       /**
@@ -8711,38 +8690,38 @@ public final class DataServiceProto {
        */
       public Builder mergeSupplierOrganisationNumber(com.google.protobuf.StringValue value) {
         if (supplierOrganisationNumberBuilder_ == null) {
-          if (supplierOrganisationNumber_ != null) {
-            supplierOrganisationNumber_ =
-              com.google.protobuf.StringValue.newBuilder(supplierOrganisationNumber_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x80000000) != 0) &&
+            supplierOrganisationNumber_ != null &&
+            supplierOrganisationNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getSupplierOrganisationNumberBuilder().mergeFrom(value);
           } else {
             supplierOrganisationNumber_ = value;
           }
-          onChanged();
         } else {
           supplierOrganisationNumberBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x80000000;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public Builder clearSupplierOrganisationNumber() {
-        if (supplierOrganisationNumberBuilder_ == null) {
-          supplierOrganisationNumber_ = null;
-          onChanged();
-        } else {
-          supplierOrganisationNumber_ = null;
+        bitField0_ = (bitField0_ & ~0x80000000);
+        supplierOrganisationNumber_ = null;
+        if (supplierOrganisationNumberBuilder_ != null) {
+          supplierOrganisationNumberBuilder_.dispose();
           supplierOrganisationNumberBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
        */
       public com.google.protobuf.StringValue.Builder getSupplierOrganisationNumberBuilder() {
-        
+        bitField0_ |= 0x80000000;
         onChanged();
         return getSupplierOrganisationNumberFieldBuilder().getBuilder();
       }
@@ -8782,7 +8761,7 @@ public final class DataServiceProto {
        * @return Whether the supplierAddress field is set.
        */
       public boolean hasSupplierAddress() {
-        return supplierAddressBuilder_ != null || supplierAddress_ != null;
+        return ((bitField1_ & 0x00000001) != 0);
       }
       /**
        * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
@@ -8804,11 +8783,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           supplierAddress_ = value;
-          onChanged();
         } else {
           supplierAddressBuilder_.setMessage(value);
         }
-
+        bitField1_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8818,11 +8797,11 @@ public final class DataServiceProto {
           com.google.protobuf.StringValue.Builder builderForValue) {
         if (supplierAddressBuilder_ == null) {
           supplierAddress_ = builderForValue.build();
-          onChanged();
         } else {
           supplierAddressBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField1_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8830,38 +8809,38 @@ public final class DataServiceProto {
        */
       public Builder mergeSupplierAddress(com.google.protobuf.StringValue value) {
         if (supplierAddressBuilder_ == null) {
-          if (supplierAddress_ != null) {
-            supplierAddress_ =
-              com.google.protobuf.StringValue.newBuilder(supplierAddress_).mergeFrom(value).buildPartial();
+          if (((bitField1_ & 0x00000001) != 0) &&
+            supplierAddress_ != null &&
+            supplierAddress_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getSupplierAddressBuilder().mergeFrom(value);
           } else {
             supplierAddress_ = value;
           }
-          onChanged();
         } else {
           supplierAddressBuilder_.mergeFrom(value);
         }
-
+        bitField1_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public Builder clearSupplierAddress() {
-        if (supplierAddressBuilder_ == null) {
-          supplierAddress_ = null;
-          onChanged();
-        } else {
-          supplierAddress_ = null;
+        bitField1_ = (bitField1_ & ~0x00000001);
+        supplierAddress_ = null;
+        if (supplierAddressBuilder_ != null) {
+          supplierAddressBuilder_.dispose();
           supplierAddressBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
        */
       public com.google.protobuf.StringValue.Builder getSupplierAddressBuilder() {
-        
+        bitField1_ |= 0x00000001;
         onChanged();
         return getSupplierAddressFieldBuilder().getBuilder();
       }
@@ -9826,6 +9805,7 @@ public final class DataServiceProto {
     }
 
     public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.DoubleValue> totalInclVat_;
     /**
      * <code>repeated .google.protobuf.DoubleValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
@@ -9866,6 +9846,7 @@ public final class DataServiceProto {
     }
 
     public static final int TOTAL_VAT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.DoubleValue> totalVat_;
     /**
      * <code>repeated .google.protobuf.DoubleValue total_vat = 2 [json_name = "totalVat"];</code>
@@ -9906,6 +9887,7 @@ public final class DataServiceProto {
     }
 
     public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.DoubleValue> totalExclVat_;
     /**
      * <code>repeated .google.protobuf.DoubleValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
@@ -9946,6 +9928,7 @@ public final class DataServiceProto {
     }
 
     public static final int ORDER_DATE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.type.Date> orderDate_;
     /**
      * <code>repeated .google.type.Date order_date = 4 [json_name = "orderDate", (.gen_bq_schema.bigquery) = { ... }</code>
@@ -9986,6 +9969,7 @@ public final class DataServiceProto {
     }
 
     public static final int PAYMENT_DUE_DATE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.type.Date> paymentDueDate_;
     /**
      * <code>repeated .google.type.Date payment_due_date = 5 [json_name = "paymentDueDate", (.gen_bq_schema.bigquery) = { ... }</code>
@@ -10026,6 +10010,7 @@ public final class DataServiceProto {
     }
 
     public static final int DOCUMENT_TYPE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> documentType_;
     /**
      * <code>repeated .google.protobuf.StringValue document_type = 6 [json_name = "documentType"];</code>
@@ -10066,6 +10051,7 @@ public final class DataServiceProto {
     }
 
     public static final int CURRENCY_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> currency_;
     /**
      * <code>repeated .google.protobuf.StringValue currency = 7 [json_name = "currency"];</code>
@@ -10106,6 +10092,7 @@ public final class DataServiceProto {
     }
 
     public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> creditCardLastFour_;
     /**
      * <code>repeated .google.protobuf.StringValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
@@ -10146,6 +10133,7 @@ public final class DataServiceProto {
     }
 
     public static final int PAYMENT_METHOD_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> paymentMethod_;
     /**
      * <code>repeated .google.protobuf.StringValue payment_method = 9 [json_name = "paymentMethod"];</code>
@@ -10186,6 +10174,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_DK_TYPE_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> ocrLineDkType_;
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
@@ -10226,6 +10215,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_DK_PAYMENT_ID_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> ocrLineDkPaymentId_;
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
@@ -10266,6 +10256,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_DK_CREDITOR_ID_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> ocrLineDkCreditorId_;
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
@@ -10306,6 +10297,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_SE_PAYMENT_ID_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> ocrLineSePaymentId_;
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
@@ -10346,6 +10338,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_SE_BANKGIRO_CREDITOR_ID_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> ocrLineSeBankgiroCreditorId_;
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -10386,6 +10379,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> ocrLineSePlusgiroCreditorId_;
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -10426,6 +10420,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_NO_PAYMENT_ID_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> ocrLineNoPaymentId_;
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
@@ -10466,6 +10461,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_FI_PAYMENT_ID_FIELD_NUMBER = 17;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> ocrLineFiPaymentId_;
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
@@ -10506,6 +10502,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_NL_PAYMENT_ID_FIELD_NUMBER = 18;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> ocrLineNlPaymentId_;
     /**
      * <code>repeated .google.protobuf.StringValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
@@ -10546,6 +10543,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_CORPORATE_ID_FIELD_NUMBER = 19;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> supplierCorporateId_;
     /**
      * <code>repeated .google.protobuf.StringValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
@@ -10586,6 +10584,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_COUNTRY_CODE_FIELD_NUMBER = 20;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> supplierCountryCode_;
     /**
      * <code>repeated .google.protobuf.StringValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
@@ -10626,6 +10625,7 @@ public final class DataServiceProto {
     }
 
     public static final int INVOICE_NUMBER_FIELD_NUMBER = 21;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> invoiceNumber_;
     /**
      * <code>repeated .google.protobuf.StringValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
@@ -10666,6 +10666,7 @@ public final class DataServiceProto {
     }
 
     public static final int IBAN_FIELD_NUMBER = 22;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> iban_;
     /**
      * <code>repeated .google.protobuf.StringValue iban = 22 [json_name = "iban"];</code>
@@ -10706,6 +10707,7 @@ public final class DataServiceProto {
     }
 
     public static final int ORDER_REFERENCE_FIELD_NUMBER = 23;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> orderReference_;
     /**
      * <code>repeated .google.protobuf.StringValue order_reference = 23 [json_name = "orderReference"];</code>
@@ -10746,6 +10748,7 @@ public final class DataServiceProto {
     }
 
     public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 24;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> bankAccountNumber_;
     /**
      * <code>repeated .google.protobuf.StringValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
@@ -10786,6 +10789,7 @@ public final class DataServiceProto {
     }
 
     public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 25;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> bankRegistrationNumber_;
     /**
      * <code>repeated .google.protobuf.StringValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
@@ -10826,6 +10830,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_NAME_FIELD_NUMBER = 26;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> supplierName_;
     /**
      * <code>repeated .google.protobuf.StringValue supplier_name = 26 [json_name = "supplierName"];</code>
@@ -10866,6 +10871,7 @@ public final class DataServiceProto {
     }
 
     public static final int BIC_FIELD_NUMBER = 27;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> bic_;
     /**
      * <code>repeated .google.protobuf.StringValue bic = 27 [json_name = "bic"];</code>
@@ -10906,6 +10912,7 @@ public final class DataServiceProto {
     }
 
     public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 28;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> documentNumber_;
     /**
      * <code>repeated .google.protobuf.StringValue document_number = 28 [json_name = "documentNumber"];</code>
@@ -10946,6 +10953,7 @@ public final class DataServiceProto {
     }
 
     public static final int DOCUMENT_DATE_FIELD_NUMBER = 29;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.type.Date> documentDate_;
     /**
      * <code>repeated .google.type.Date document_date = 29 [json_name = "documentDate", (.gen_bq_schema.bigquery) = { ... }</code>
@@ -10986,6 +10994,7 @@ public final class DataServiceProto {
     }
 
     public static final int ORDER_NUMBER_FIELD_NUMBER = 30;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> orderNumber_;
     /**
      * <code>repeated .google.protobuf.StringValue order_number = 30 [json_name = "orderNumber"];</code>
@@ -11026,6 +11035,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 31;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> supplierVatNumber_;
     /**
      * <code>repeated .google.protobuf.StringValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
@@ -11066,6 +11076,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 32;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> supplierOrganisationNumber_;
     /**
      * <code>repeated .google.protobuf.StringValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
@@ -11106,6 +11117,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 33;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.StringValue> supplierAddress_;
     /**
      * <code>repeated .google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
@@ -11751,6 +11763,8 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        bitField1_ = 0;
         if (totalInclVatBuilder_ == null) {
           totalInclVat_ = java.util.Collections.emptyList();
         } else {
@@ -12008,8 +12022,14 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.PredictionValues buildPartial() {
         ssn.dataservice.v1.DataServiceProto.PredictionValues result = new ssn.dataservice.v1.DataServiceProto.PredictionValues(this);
-        int from_bitField0_ = bitField0_;
-        int from_bitField1_ = bitField1_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        if (bitField1_ != 0) { buildPartial1(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.dataservice.v1.DataServiceProto.PredictionValues result) {
         if (totalInclVatBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
@@ -12307,8 +12327,14 @@ public final class DataServiceProto {
         } else {
           result.supplierAddress_ = supplierAddressBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.PredictionValues result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartial1(ssn.dataservice.v1.DataServiceProto.PredictionValues result) {
+        int from_bitField1_ = bitField1_;
       }
 
       @java.lang.Override
@@ -22539,6 +22565,7 @@ public final class DataServiceProto {
     }
 
     public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> totalInclVat_;
     /**
      * <code>repeated .google.protobuf.FloatValue total_incl_vat = 1 [json_name = "totalInclVat"];</code>
@@ -22579,6 +22606,7 @@ public final class DataServiceProto {
     }
 
     public static final int TOTAL_VAT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> totalVat_;
     /**
      * <code>repeated .google.protobuf.FloatValue total_vat = 2 [json_name = "totalVat"];</code>
@@ -22619,6 +22647,7 @@ public final class DataServiceProto {
     }
 
     public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> totalExclVat_;
     /**
      * <code>repeated .google.protobuf.FloatValue total_excl_vat = 3 [json_name = "totalExclVat"];</code>
@@ -22659,6 +22688,7 @@ public final class DataServiceProto {
     }
 
     public static final int ORDER_DATE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> orderDate_;
     /**
      * <code>repeated .google.protobuf.FloatValue order_date = 4 [json_name = "orderDate"];</code>
@@ -22699,6 +22729,7 @@ public final class DataServiceProto {
     }
 
     public static final int PAYMENT_DUE_DATE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> paymentDueDate_;
     /**
      * <code>repeated .google.protobuf.FloatValue payment_due_date = 5 [json_name = "paymentDueDate"];</code>
@@ -22739,6 +22770,7 @@ public final class DataServiceProto {
     }
 
     public static final int DOCUMENT_TYPE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> documentType_;
     /**
      * <code>repeated .google.protobuf.FloatValue document_type = 6 [json_name = "documentType"];</code>
@@ -22779,6 +22811,7 @@ public final class DataServiceProto {
     }
 
     public static final int CURRENCY_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> currency_;
     /**
      * <code>repeated .google.protobuf.FloatValue currency = 7 [json_name = "currency"];</code>
@@ -22819,6 +22852,7 @@ public final class DataServiceProto {
     }
 
     public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> creditCardLastFour_;
     /**
      * <code>repeated .google.protobuf.FloatValue credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
@@ -22859,6 +22893,7 @@ public final class DataServiceProto {
     }
 
     public static final int PAYMENT_METHOD_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> paymentMethod_;
     /**
      * <code>repeated .google.protobuf.FloatValue payment_method = 9 [json_name = "paymentMethod"];</code>
@@ -22899,6 +22934,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_DK_TYPE_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> ocrLineDkType_;
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
@@ -22939,6 +22975,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_DK_PAYMENT_ID_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> ocrLineDkPaymentId_;
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
@@ -22979,6 +23016,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_DK_CREDITOR_ID_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> ocrLineDkCreditorId_;
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
@@ -23019,6 +23057,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_SE_PAYMENT_ID_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> ocrLineSePaymentId_;
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
@@ -23059,6 +23098,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_SE_BANKGIRO_CREDITOR_ID_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> ocrLineSeBankgiroCreditorId_;
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -23099,6 +23139,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> ocrLineSePlusgiroCreditorId_;
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -23139,6 +23180,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_NO_PAYMENT_ID_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> ocrLineNoPaymentId_;
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
@@ -23179,6 +23221,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_FI_PAYMENT_ID_FIELD_NUMBER = 17;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> ocrLineFiPaymentId_;
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
@@ -23219,6 +23262,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_NL_PAYMENT_ID_FIELD_NUMBER = 18;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> ocrLineNlPaymentId_;
     /**
      * <code>repeated .google.protobuf.FloatValue ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
@@ -23259,6 +23303,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_CORPORATE_ID_FIELD_NUMBER = 19;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> supplierCorporateId_;
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
@@ -23299,6 +23344,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_COUNTRY_CODE_FIELD_NUMBER = 20;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> supplierCountryCode_;
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
@@ -23339,6 +23385,7 @@ public final class DataServiceProto {
     }
 
     public static final int INVOICE_NUMBER_FIELD_NUMBER = 21;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> invoiceNumber_;
     /**
      * <code>repeated .google.protobuf.FloatValue invoice_number = 21 [json_name = "invoiceNumber"];</code>
@@ -23379,6 +23426,7 @@ public final class DataServiceProto {
     }
 
     public static final int IBAN_FIELD_NUMBER = 22;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> iban_;
     /**
      * <code>repeated .google.protobuf.FloatValue iban = 22 [json_name = "iban"];</code>
@@ -23419,6 +23467,7 @@ public final class DataServiceProto {
     }
 
     public static final int ORDER_REFERENCE_FIELD_NUMBER = 23;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> orderReference_;
     /**
      * <code>repeated .google.protobuf.FloatValue order_reference = 23 [json_name = "orderReference"];</code>
@@ -23459,6 +23508,7 @@ public final class DataServiceProto {
     }
 
     public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 24;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> bankAccountNumber_;
     /**
      * <code>repeated .google.protobuf.FloatValue bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
@@ -23499,6 +23549,7 @@ public final class DataServiceProto {
     }
 
     public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 25;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> bankRegistrationNumber_;
     /**
      * <code>repeated .google.protobuf.FloatValue bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
@@ -23539,6 +23590,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_NAME_FIELD_NUMBER = 26;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> supplierName_;
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_name = 26 [json_name = "supplierName"];</code>
@@ -23579,6 +23631,7 @@ public final class DataServiceProto {
     }
 
     public static final int BIC_FIELD_NUMBER = 27;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> bic_;
     /**
      * <code>repeated .google.protobuf.FloatValue bic = 27 [json_name = "bic"];</code>
@@ -23619,6 +23672,7 @@ public final class DataServiceProto {
     }
 
     public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 28;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> documentNumber_;
     /**
      * <code>repeated .google.protobuf.FloatValue document_number = 28 [json_name = "documentNumber"];</code>
@@ -23659,6 +23713,7 @@ public final class DataServiceProto {
     }
 
     public static final int DOCUMENT_DATE_FIELD_NUMBER = 29;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> documentDate_;
     /**
      * <code>repeated .google.protobuf.FloatValue document_date = 29 [json_name = "documentDate"];</code>
@@ -23699,6 +23754,7 @@ public final class DataServiceProto {
     }
 
     public static final int ORDER_NUMBER_FIELD_NUMBER = 30;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> orderNumber_;
     /**
      * <code>repeated .google.protobuf.FloatValue order_number = 30 [json_name = "orderNumber"];</code>
@@ -23739,6 +23795,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 31;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> supplierVatNumber_;
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
@@ -23779,6 +23836,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 32;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> supplierOrganisationNumber_;
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
@@ -23819,6 +23877,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 33;
+    @SuppressWarnings("serial")
     private java.util.List<com.google.protobuf.FloatValue> supplierAddress_;
     /**
      * <code>repeated .google.protobuf.FloatValue supplier_address = 33 [json_name = "supplierAddress"];</code>
@@ -24464,6 +24523,8 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        bitField1_ = 0;
         if (totalInclVatBuilder_ == null) {
           totalInclVat_ = java.util.Collections.emptyList();
         } else {
@@ -24721,8 +24782,14 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.PredictionConfidences buildPartial() {
         ssn.dataservice.v1.DataServiceProto.PredictionConfidences result = new ssn.dataservice.v1.DataServiceProto.PredictionConfidences(this);
-        int from_bitField0_ = bitField0_;
-        int from_bitField1_ = bitField1_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        if (bitField1_ != 0) { buildPartial1(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.dataservice.v1.DataServiceProto.PredictionConfidences result) {
         if (totalInclVatBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
@@ -25020,8 +25087,14 @@ public final class DataServiceProto {
         } else {
           result.supplierAddress_ = supplierAddressBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.PredictionConfidences result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartial1(ssn.dataservice.v1.DataServiceProto.PredictionConfidences result) {
+        int from_bitField1_ = bitField1_;
       }
 
       @java.lang.Override
@@ -35252,6 +35325,7 @@ public final class DataServiceProto {
     }
 
     public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> totalInclVat_;
     /**
      * <code>repeated .ssn.type.ModelSpec total_incl_vat = 1 [json_name = "totalInclVat"];</code>
@@ -35292,6 +35366,7 @@ public final class DataServiceProto {
     }
 
     public static final int TOTAL_VAT_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> totalVat_;
     /**
      * <code>repeated .ssn.type.ModelSpec total_vat = 2 [json_name = "totalVat"];</code>
@@ -35332,6 +35407,7 @@ public final class DataServiceProto {
     }
 
     public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> totalExclVat_;
     /**
      * <code>repeated .ssn.type.ModelSpec total_excl_vat = 3 [json_name = "totalExclVat"];</code>
@@ -35372,6 +35448,7 @@ public final class DataServiceProto {
     }
 
     public static final int ORDER_DATE_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> orderDate_;
     /**
      * <code>repeated .ssn.type.ModelSpec order_date = 4 [json_name = "orderDate"];</code>
@@ -35412,6 +35489,7 @@ public final class DataServiceProto {
     }
 
     public static final int PAYMENT_DUE_DATE_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> paymentDueDate_;
     /**
      * <code>repeated .ssn.type.ModelSpec payment_due_date = 5 [json_name = "paymentDueDate"];</code>
@@ -35452,6 +35530,7 @@ public final class DataServiceProto {
     }
 
     public static final int DOCUMENT_TYPE_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> documentType_;
     /**
      * <code>repeated .ssn.type.ModelSpec document_type = 6 [json_name = "documentType"];</code>
@@ -35492,6 +35571,7 @@ public final class DataServiceProto {
     }
 
     public static final int CURRENCY_FIELD_NUMBER = 7;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> currency_;
     /**
      * <code>repeated .ssn.type.ModelSpec currency = 7 [json_name = "currency"];</code>
@@ -35532,6 +35612,7 @@ public final class DataServiceProto {
     }
 
     public static final int CREDIT_CARD_LAST_FOUR_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> creditCardLastFour_;
     /**
      * <code>repeated .ssn.type.ModelSpec credit_card_last_four = 8 [json_name = "creditCardLastFour"];</code>
@@ -35572,6 +35653,7 @@ public final class DataServiceProto {
     }
 
     public static final int PAYMENT_METHOD_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> paymentMethod_;
     /**
      * <code>repeated .ssn.type.ModelSpec payment_method = 9 [json_name = "paymentMethod"];</code>
@@ -35612,6 +35694,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_DK_TYPE_FIELD_NUMBER = 10;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineDkType_;
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_type = 10 [json_name = "ocrLineDkType"];</code>
@@ -35652,6 +35735,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_DK_PAYMENT_ID_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineDkPaymentId_;
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_payment_id = 11 [json_name = "ocrLineDkPaymentId"];</code>
@@ -35692,6 +35776,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_DK_CREDITOR_ID_FIELD_NUMBER = 12;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineDkCreditorId_;
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_dk_creditor_id = 12 [json_name = "ocrLineDkCreditorId"];</code>
@@ -35732,6 +35817,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_SE_PAYMENT_ID_FIELD_NUMBER = 13;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineSePaymentId_;
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_payment_id = 13 [json_name = "ocrLineSePaymentId"];</code>
@@ -35772,6 +35858,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_SE_BANKGIRO_CREDITOR_ID_FIELD_NUMBER = 14;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineSeBankgiroCreditorId_;
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_bankgiro_creditor_id = 14 [json_name = "ocrLineSeBankgiroCreditorId"];</code>
@@ -35812,6 +35899,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_SE_PLUSGIRO_CREDITOR_ID_FIELD_NUMBER = 15;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineSePlusgiroCreditorId_;
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_se_plusgiro_creditor_id = 15 [json_name = "ocrLineSePlusgiroCreditorId"];</code>
@@ -35852,6 +35940,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_NO_PAYMENT_ID_FIELD_NUMBER = 16;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineNoPaymentId_;
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_no_payment_id = 16 [json_name = "ocrLineNoPaymentId"];</code>
@@ -35892,6 +35981,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_FI_PAYMENT_ID_FIELD_NUMBER = 17;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineFiPaymentId_;
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_fi_payment_id = 17 [json_name = "ocrLineFiPaymentId"];</code>
@@ -35932,6 +36022,7 @@ public final class DataServiceProto {
     }
 
     public static final int OCR_LINE_NL_PAYMENT_ID_FIELD_NUMBER = 18;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> ocrLineNlPaymentId_;
     /**
      * <code>repeated .ssn.type.ModelSpec ocr_line_nl_payment_id = 18 [json_name = "ocrLineNlPaymentId"];</code>
@@ -35972,6 +36063,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_CORPORATE_ID_FIELD_NUMBER = 19;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierCorporateId_;
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_corporate_id = 19 [json_name = "supplierCorporateId"];</code>
@@ -36012,6 +36104,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_COUNTRY_CODE_FIELD_NUMBER = 20;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierCountryCode_;
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_country_code = 20 [json_name = "supplierCountryCode"];</code>
@@ -36052,6 +36145,7 @@ public final class DataServiceProto {
     }
 
     public static final int INVOICE_NUMBER_FIELD_NUMBER = 21;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> invoiceNumber_;
     /**
      * <code>repeated .ssn.type.ModelSpec invoice_number = 21 [json_name = "invoiceNumber"];</code>
@@ -36092,6 +36186,7 @@ public final class DataServiceProto {
     }
 
     public static final int IBAN_FIELD_NUMBER = 22;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> iban_;
     /**
      * <code>repeated .ssn.type.ModelSpec iban = 22 [json_name = "iban"];</code>
@@ -36132,6 +36227,7 @@ public final class DataServiceProto {
     }
 
     public static final int ORDER_REFERENCE_FIELD_NUMBER = 23;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> orderReference_;
     /**
      * <code>repeated .ssn.type.ModelSpec order_reference = 23 [json_name = "orderReference"];</code>
@@ -36172,6 +36268,7 @@ public final class DataServiceProto {
     }
 
     public static final int BANK_ACCOUNT_NUMBER_FIELD_NUMBER = 24;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> bankAccountNumber_;
     /**
      * <code>repeated .ssn.type.ModelSpec bank_account_number = 24 [json_name = "bankAccountNumber"];</code>
@@ -36212,6 +36309,7 @@ public final class DataServiceProto {
     }
 
     public static final int BANK_REGISTRATION_NUMBER_FIELD_NUMBER = 25;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> bankRegistrationNumber_;
     /**
      * <code>repeated .ssn.type.ModelSpec bank_registration_number = 25 [json_name = "bankRegistrationNumber"];</code>
@@ -36252,6 +36350,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_NAME_FIELD_NUMBER = 26;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierName_;
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_name = 26 [json_name = "supplierName"];</code>
@@ -36292,6 +36391,7 @@ public final class DataServiceProto {
     }
 
     public static final int BIC_FIELD_NUMBER = 27;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> bic_;
     /**
      * <code>repeated .ssn.type.ModelSpec bic = 27 [json_name = "bic"];</code>
@@ -36332,6 +36432,7 @@ public final class DataServiceProto {
     }
 
     public static final int DOCUMENT_NUMBER_FIELD_NUMBER = 28;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> documentNumber_;
     /**
      * <code>repeated .ssn.type.ModelSpec document_number = 28 [json_name = "documentNumber"];</code>
@@ -36372,6 +36473,7 @@ public final class DataServiceProto {
     }
 
     public static final int DOCUMENT_DATE_FIELD_NUMBER = 29;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> documentDate_;
     /**
      * <code>repeated .ssn.type.ModelSpec document_date = 29 [json_name = "documentDate"];</code>
@@ -36412,6 +36514,7 @@ public final class DataServiceProto {
     }
 
     public static final int ORDER_NUMBER_FIELD_NUMBER = 30;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> orderNumber_;
     /**
      * <code>repeated .ssn.type.ModelSpec order_number = 30 [json_name = "orderNumber"];</code>
@@ -36452,6 +36555,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_VAT_NUMBER_FIELD_NUMBER = 31;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierVatNumber_;
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_vat_number = 31 [json_name = "supplierVatNumber"];</code>
@@ -36492,6 +36596,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_ORGANISATION_NUMBER_FIELD_NUMBER = 32;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierOrganisationNumber_;
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_organisation_number = 32 [json_name = "supplierOrganisationNumber"];</code>
@@ -36532,6 +36637,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPLIER_ADDRESS_FIELD_NUMBER = 33;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> supplierAddress_;
     /**
      * <code>repeated .ssn.type.ModelSpec supplier_address = 33 [json_name = "supplierAddress"];</code>
@@ -37177,6 +37283,8 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
+        bitField1_ = 0;
         if (totalInclVatBuilder_ == null) {
           totalInclVat_ = java.util.Collections.emptyList();
         } else {
@@ -37434,8 +37542,14 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.PredictionMetadata buildPartial() {
         ssn.dataservice.v1.DataServiceProto.PredictionMetadata result = new ssn.dataservice.v1.DataServiceProto.PredictionMetadata(this);
-        int from_bitField0_ = bitField0_;
-        int from_bitField1_ = bitField1_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        if (bitField1_ != 0) { buildPartial1(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.dataservice.v1.DataServiceProto.PredictionMetadata result) {
         if (totalInclVatBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             totalInclVat_ = java.util.Collections.unmodifiableList(totalInclVat_);
@@ -37733,8 +37847,14 @@ public final class DataServiceProto {
         } else {
           result.supplierAddress_ = supplierAddressBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.PredictionMetadata result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      private void buildPartial1(ssn.dataservice.v1.DataServiceProto.PredictionMetadata result) {
+        int from_bitField1_ = bitField1_;
       }
 
       @java.lang.Override
@@ -47177,7 +47297,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.DocumentOrBuilder getDocumentOrBuilder() {
-      return getDocument();
+      return document_ == null ? ssn.dataservice.v1.DataServiceProto.Document.getDefaultInstance() : document_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -47373,10 +47493,10 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (documentBuilder_ == null) {
-          document_ = null;
-        } else {
-          document_ = null;
+        bitField0_ = 0;
+        document_ = null;
+        if (documentBuilder_ != null) {
+          documentBuilder_.dispose();
           documentBuilder_ = null;
         }
         return this;
@@ -47405,13 +47525,18 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.CreateDocumentRequest buildPartial() {
         ssn.dataservice.v1.DataServiceProto.CreateDocumentRequest result = new ssn.dataservice.v1.DataServiceProto.CreateDocumentRequest(this);
-        if (documentBuilder_ == null) {
-          result.document_ = document_;
-        } else {
-          result.document_ = documentBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.CreateDocumentRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.document_ = documentBuilder_ == null
+              ? document_
+              : documentBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -47491,7 +47616,7 @@ public final class DataServiceProto {
                 input.readMessage(
                     getDocumentFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -47509,6 +47634,7 @@ public final class DataServiceProto {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private ssn.dataservice.v1.DataServiceProto.Document document_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -47518,7 +47644,7 @@ public final class DataServiceProto {
        * @return Whether the document field is set.
        */
       public boolean hasDocument() {
-        return documentBuilder_ != null || document_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.ssn.dataservice.v1.Document document = 1 [json_name = "document"];</code>
@@ -47540,11 +47666,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           document_ = value;
-          onChanged();
         } else {
           documentBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -47554,11 +47680,11 @@ public final class DataServiceProto {
           ssn.dataservice.v1.DataServiceProto.Document.Builder builderForValue) {
         if (documentBuilder_ == null) {
           document_ = builderForValue.build();
-          onChanged();
         } else {
           documentBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -47566,38 +47692,38 @@ public final class DataServiceProto {
        */
       public Builder mergeDocument(ssn.dataservice.v1.DataServiceProto.Document value) {
         if (documentBuilder_ == null) {
-          if (document_ != null) {
-            document_ =
-              ssn.dataservice.v1.DataServiceProto.Document.newBuilder(document_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            document_ != null &&
+            document_ != ssn.dataservice.v1.DataServiceProto.Document.getDefaultInstance()) {
+            getDocumentBuilder().mergeFrom(value);
           } else {
             document_ = value;
           }
-          onChanged();
         } else {
           documentBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.Document document = 1 [json_name = "document"];</code>
        */
       public Builder clearDocument() {
-        if (documentBuilder_ == null) {
-          document_ = null;
-          onChanged();
-        } else {
-          document_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        document_ = null;
+        if (documentBuilder_ != null) {
+          documentBuilder_.dispose();
           documentBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.Document document = 1 [json_name = "document"];</code>
        */
       public ssn.dataservice.v1.DataServiceProto.Document.Builder getDocumentBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDocumentFieldBuilder().getBuilder();
       }
@@ -47750,7 +47876,8 @@ public final class DataServiceProto {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
@@ -47974,8 +48101,8 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         return this;
       }
 
@@ -48002,9 +48129,16 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.CreateDocumentResponse buildPartial() {
         ssn.dataservice.v1.DataServiceProto.CreateDocumentResponse result = new ssn.dataservice.v1.DataServiceProto.CreateDocumentResponse(this);
-        result.id_ = id_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.CreateDocumentResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
       }
 
       @java.lang.Override
@@ -48053,6 +48187,7 @@ public final class DataServiceProto {
         if (other == ssn.dataservice.v1.DataServiceProto.CreateDocumentResponse.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -48083,7 +48218,7 @@ public final class DataServiceProto {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -48101,6 +48236,7 @@ public final class DataServiceProto {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -48143,11 +48279,9 @@ public final class DataServiceProto {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -48156,8 +48290,8 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -48168,12 +48302,10 @@ public final class DataServiceProto {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -48299,7 +48431,8 @@ public final class DataServiceProto {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
@@ -48523,8 +48656,8 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
         return this;
       }
 
@@ -48551,9 +48684,16 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.ReadDocumentRequest buildPartial() {
         ssn.dataservice.v1.DataServiceProto.ReadDocumentRequest result = new ssn.dataservice.v1.DataServiceProto.ReadDocumentRequest(this);
-        result.id_ = id_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.ReadDocumentRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
       }
 
       @java.lang.Override
@@ -48602,6 +48742,7 @@ public final class DataServiceProto {
         if (other == ssn.dataservice.v1.DataServiceProto.ReadDocumentRequest.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -48632,7 +48773,7 @@ public final class DataServiceProto {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -48650,6 +48791,7 @@ public final class DataServiceProto {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object id_ = "";
       /**
@@ -48692,11 +48834,9 @@ public final class DataServiceProto {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -48705,8 +48845,8 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -48717,12 +48857,10 @@ public final class DataServiceProto {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -48872,7 +49010,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.DocumentOrBuilder getDocumentOrBuilder() {
-      return getDocument();
+      return document_ == null ? ssn.dataservice.v1.DataServiceProto.Document.getDefaultInstance() : document_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -49068,10 +49206,10 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (documentBuilder_ == null) {
-          document_ = null;
-        } else {
-          document_ = null;
+        bitField0_ = 0;
+        document_ = null;
+        if (documentBuilder_ != null) {
+          documentBuilder_.dispose();
           documentBuilder_ = null;
         }
         return this;
@@ -49100,13 +49238,18 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.ReadDocumentResponse buildPartial() {
         ssn.dataservice.v1.DataServiceProto.ReadDocumentResponse result = new ssn.dataservice.v1.DataServiceProto.ReadDocumentResponse(this);
-        if (documentBuilder_ == null) {
-          result.document_ = document_;
-        } else {
-          result.document_ = documentBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.ReadDocumentResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.document_ = documentBuilder_ == null
+              ? document_
+              : documentBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -49186,7 +49329,7 @@ public final class DataServiceProto {
                 input.readMessage(
                     getDocumentFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -49204,6 +49347,7 @@ public final class DataServiceProto {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private ssn.dataservice.v1.DataServiceProto.Document document_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -49213,7 +49357,7 @@ public final class DataServiceProto {
        * @return Whether the document field is set.
        */
       public boolean hasDocument() {
-        return documentBuilder_ != null || document_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.ssn.dataservice.v1.Document document = 1 [json_name = "document"];</code>
@@ -49235,11 +49379,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           document_ = value;
-          onChanged();
         } else {
           documentBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -49249,11 +49393,11 @@ public final class DataServiceProto {
           ssn.dataservice.v1.DataServiceProto.Document.Builder builderForValue) {
         if (documentBuilder_ == null) {
           document_ = builderForValue.build();
-          onChanged();
         } else {
           documentBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -49261,38 +49405,38 @@ public final class DataServiceProto {
        */
       public Builder mergeDocument(ssn.dataservice.v1.DataServiceProto.Document value) {
         if (documentBuilder_ == null) {
-          if (document_ != null) {
-            document_ =
-              ssn.dataservice.v1.DataServiceProto.Document.newBuilder(document_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            document_ != null &&
+            document_ != ssn.dataservice.v1.DataServiceProto.Document.getDefaultInstance()) {
+            getDocumentBuilder().mergeFrom(value);
           } else {
             document_ = value;
           }
-          onChanged();
         } else {
           documentBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.Document document = 1 [json_name = "document"];</code>
        */
       public Builder clearDocument() {
-        if (documentBuilder_ == null) {
-          document_ = null;
-          onChanged();
-        } else {
-          document_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        document_ = null;
+        if (documentBuilder_ != null) {
+          documentBuilder_.dispose();
           documentBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.Document document = 1 [json_name = "document"];</code>
        */
       public ssn.dataservice.v1.DataServiceProto.Document.Builder getDocumentBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDocumentFieldBuilder().getBuilder();
       }
@@ -49576,7 +49720,8 @@ public final class DataServiceProto {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
@@ -49636,11 +49781,11 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public ssn.type.TextAnnotationOuterClass.TextAnnotationOrBuilder getTaOrBuilder() {
-      return getTa();
+      return ta_ == null ? ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance() : ta_;
     }
 
     public static final int DOCUMENT_BYTES_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString documentBytes_;
+    private com.google.protobuf.ByteString documentBytes_ = com.google.protobuf.ByteString.EMPTY;
     /**
      * <code>bytes document_bytes = 3 [json_name = "documentBytes"];</code>
      * @return The documentBytes.
@@ -49673,10 +49818,11 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionValuesOrBuilder getPredictionsOrBuilder() {
-      return getPredictions();
+      return predictions_ == null ? ssn.dataservice.v1.DataServiceProto.PredictionValues.getDefaultInstance() : predictions_;
     }
 
     public static final int TAGS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 5 [json_name = "tags"];</code>
@@ -49734,7 +49880,7 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionConfidencesOrBuilder getConfidencesOrBuilder() {
-      return getConfidences();
+      return confidences_ == null ? ssn.dataservice.v1.DataServiceProto.PredictionConfidences.getDefaultInstance() : confidences_;
     }
 
     public static final int PREDICTION_METADATA_FIELD_NUMBER = 7;
@@ -49760,11 +49906,11 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.PredictionMetadataOrBuilder getPredictionMetadataOrBuilder() {
-      return getPredictionMetadata();
+      return predictionMetadata_ == null ? ssn.dataservice.v1.DataServiceProto.PredictionMetadata.getDefaultInstance() : predictionMetadata_;
     }
 
     public static final int TIER_FIELD_NUMBER = 8;
-    private int tier_;
+    private int tier_ = 0;
     /**
      * <code>.ssn.type.Tier tier = 8 [json_name = "tier"];</code>
      * @return The enum numeric value on the wire for tier.
@@ -49777,12 +49923,12 @@ public final class DataServiceProto {
      * @return The tier.
      */
     @java.lang.Override public ssn.type.TierOuterClass.Tier getTier() {
-      @SuppressWarnings("deprecation")
-      ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
+      ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.forNumber(tier_);
       return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
     }
 
     public static final int SEGMENTS_FIELD_NUMBER = 9;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList segments_;
     /**
      * <code>repeated string segments = 9 [json_name = "segments"];</code>
@@ -50123,40 +50269,34 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
-        if (taBuilder_ == null) {
-          ta_ = null;
-        } else {
-          ta_ = null;
+        ta_ = null;
+        if (taBuilder_ != null) {
+          taBuilder_.dispose();
           taBuilder_ = null;
         }
         documentBytes_ = com.google.protobuf.ByteString.EMPTY;
-
-        if (predictionsBuilder_ == null) {
-          predictions_ = null;
-        } else {
-          predictions_ = null;
+        predictions_ = null;
+        if (predictionsBuilder_ != null) {
+          predictionsBuilder_.dispose();
           predictionsBuilder_ = null;
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
-        if (confidencesBuilder_ == null) {
-          confidences_ = null;
-        } else {
-          confidences_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        confidences_ = null;
+        if (confidencesBuilder_ != null) {
+          confidencesBuilder_.dispose();
           confidencesBuilder_ = null;
         }
-        if (predictionMetadataBuilder_ == null) {
-          predictionMetadata_ = null;
-        } else {
-          predictionMetadata_ = null;
+        predictionMetadata_ = null;
+        if (predictionMetadataBuilder_ != null) {
+          predictionMetadataBuilder_.dispose();
           predictionMetadataBuilder_ = null;
         }
         tier_ = 0;
-
         segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000100);
         return this;
       }
 
@@ -50183,42 +50323,56 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.PrepareFeedbackRequest buildPartial() {
         ssn.dataservice.v1.DataServiceProto.PrepareFeedbackRequest result = new ssn.dataservice.v1.DataServiceProto.PrepareFeedbackRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        if (taBuilder_ == null) {
-          result.ta_ = ta_;
-        } else {
-          result.ta_ = taBuilder_.build();
-        }
-        result.documentBytes_ = documentBytes_;
-        if (predictionsBuilder_ == null) {
-          result.predictions_ = predictions_;
-        } else {
-          result.predictions_ = predictionsBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.tags_ = tags_;
-        if (confidencesBuilder_ == null) {
-          result.confidences_ = confidences_;
-        } else {
-          result.confidences_ = confidencesBuilder_.build();
-        }
-        if (predictionMetadataBuilder_ == null) {
-          result.predictionMetadata_ = predictionMetadata_;
-        } else {
-          result.predictionMetadata_ = predictionMetadataBuilder_.build();
-        }
-        result.tier_ = tier_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          segments_ = segments_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.segments_ = segments_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.dataservice.v1.DataServiceProto.PrepareFeedbackRequest result) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.tags_ = tags_;
+        if (((bitField0_ & 0x00000100) != 0)) {
+          segments_ = segments_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000100);
+        }
+        result.segments_ = segments_;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.PrepareFeedbackRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.ta_ = taBuilder_ == null
+              ? ta_
+              : taBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.documentBytes_ = documentBytes_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.predictions_ = predictionsBuilder_ == null
+              ? predictions_
+              : predictionsBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.confidences_ = confidencesBuilder_ == null
+              ? confidences_
+              : confidencesBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.predictionMetadata_ = predictionMetadataBuilder_ == null
+              ? predictionMetadata_
+              : predictionMetadataBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.tier_ = tier_;
+        }
       }
 
       @java.lang.Override
@@ -50267,6 +50421,7 @@ public final class DataServiceProto {
         if (other == ssn.dataservice.v1.DataServiceProto.PrepareFeedbackRequest.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasTa()) {
@@ -50281,7 +50436,7 @@ public final class DataServiceProto {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -50300,7 +50455,7 @@ public final class DataServiceProto {
         if (!other.segments_.isEmpty()) {
           if (segments_.isEmpty()) {
             segments_ = other.segments_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000100);
           } else {
             ensureSegmentsIsMutable();
             segments_.addAll(other.segments_);
@@ -50335,26 +50490,26 @@ public final class DataServiceProto {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getTaFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 documentBytes_ = input.readBytes();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
                 input.readMessage(
                     getPredictionsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 34
               case 42: {
@@ -50367,19 +50522,19 @@ public final class DataServiceProto {
                 input.readMessage(
                     getConfidencesFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 50
               case 58: {
                 input.readMessage(
                     getPredictionMetadataFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000040;
                 break;
               } // case 58
               case 64: {
                 tier_ = input.readEnum();
-
+                bitField0_ |= 0x00000080;
                 break;
               } // case 64
               case 74: {
@@ -50446,11 +50601,9 @@ public final class DataServiceProto {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -50459,8 +50612,8 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -50471,12 +50624,10 @@ public final class DataServiceProto {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -50489,7 +50640,7 @@ public final class DataServiceProto {
        * @return Whether the ta field is set.
        */
       public boolean hasTa() {
-        return taBuilder_ != null || ta_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.ssn.type.TextAnnotation ta = 2 [json_name = "ta"];</code>
@@ -50511,11 +50662,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           ta_ = value;
-          onChanged();
         } else {
           taBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -50525,11 +50676,11 @@ public final class DataServiceProto {
           ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder builderForValue) {
         if (taBuilder_ == null) {
           ta_ = builderForValue.build();
-          onChanged();
         } else {
           taBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -50537,38 +50688,38 @@ public final class DataServiceProto {
        */
       public Builder mergeTa(ssn.type.TextAnnotationOuterClass.TextAnnotation value) {
         if (taBuilder_ == null) {
-          if (ta_ != null) {
-            ta_ =
-              ssn.type.TextAnnotationOuterClass.TextAnnotation.newBuilder(ta_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            ta_ != null &&
+            ta_ != ssn.type.TextAnnotationOuterClass.TextAnnotation.getDefaultInstance()) {
+            getTaBuilder().mergeFrom(value);
           } else {
             ta_ = value;
           }
-          onChanged();
         } else {
           taBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.type.TextAnnotation ta = 2 [json_name = "ta"];</code>
        */
       public Builder clearTa() {
-        if (taBuilder_ == null) {
-          ta_ = null;
-          onChanged();
-        } else {
-          ta_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        ta_ = null;
+        if (taBuilder_ != null) {
+          taBuilder_.dispose();
           taBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.type.TextAnnotation ta = 2 [json_name = "ta"];</code>
        */
       public ssn.type.TextAnnotationOuterClass.TextAnnotation.Builder getTaBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getTaFieldBuilder().getBuilder();
       }
@@ -50615,11 +50766,9 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder setDocumentBytes(com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         documentBytes_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -50628,7 +50777,7 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearDocumentBytes() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         documentBytes_ = getDefaultInstance().getDocumentBytes();
         onChanged();
         return this;
@@ -50642,7 +50791,7 @@ public final class DataServiceProto {
        * @return Whether the predictions field is set.
        */
       public boolean hasPredictions() {
-        return predictionsBuilder_ != null || predictions_ != null;
+        return ((bitField0_ & 0x00000008) != 0);
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionValues predictions = 4 [json_name = "predictions"];</code>
@@ -50664,11 +50813,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           predictions_ = value;
-          onChanged();
         } else {
           predictionsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -50678,11 +50827,11 @@ public final class DataServiceProto {
           ssn.dataservice.v1.DataServiceProto.PredictionValues.Builder builderForValue) {
         if (predictionsBuilder_ == null) {
           predictions_ = builderForValue.build();
-          onChanged();
         } else {
           predictionsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
@@ -50690,38 +50839,38 @@ public final class DataServiceProto {
        */
       public Builder mergePredictions(ssn.dataservice.v1.DataServiceProto.PredictionValues value) {
         if (predictionsBuilder_ == null) {
-          if (predictions_ != null) {
-            predictions_ =
-              ssn.dataservice.v1.DataServiceProto.PredictionValues.newBuilder(predictions_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000008) != 0) &&
+            predictions_ != null &&
+            predictions_ != ssn.dataservice.v1.DataServiceProto.PredictionValues.getDefaultInstance()) {
+            getPredictionsBuilder().mergeFrom(value);
           } else {
             predictions_ = value;
           }
-          onChanged();
         } else {
           predictionsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000008;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionValues predictions = 4 [json_name = "predictions"];</code>
        */
       public Builder clearPredictions() {
-        if (predictionsBuilder_ == null) {
-          predictions_ = null;
-          onChanged();
-        } else {
-          predictions_ = null;
+        bitField0_ = (bitField0_ & ~0x00000008);
+        predictions_ = null;
+        if (predictionsBuilder_ != null) {
+          predictionsBuilder_.dispose();
           predictionsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionValues predictions = 4 [json_name = "predictions"];</code>
        */
       public ssn.dataservice.v1.DataServiceProto.PredictionValues.Builder getPredictionsBuilder() {
-        
+        bitField0_ |= 0x00000008;
         onChanged();
         return getPredictionsFieldBuilder().getBuilder();
       }
@@ -50755,9 +50904,9 @@ public final class DataServiceProto {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000010;
          }
       }
       /**
@@ -50800,10 +50949,8 @@ public final class DataServiceProto {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.set(index, value);
         onChanged();
         return this;
@@ -50815,10 +50962,8 @@ public final class DataServiceProto {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
         return this;
@@ -50842,7 +50987,7 @@ public final class DataServiceProto {
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
         return this;
       }
@@ -50853,10 +50998,8 @@ public final class DataServiceProto {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
@@ -50871,7 +51014,7 @@ public final class DataServiceProto {
        * @return Whether the confidences field is set.
        */
       public boolean hasConfidences() {
-        return confidencesBuilder_ != null || confidences_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6 [json_name = "confidences"];</code>
@@ -50893,11 +51036,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           confidences_ = value;
-          onChanged();
         } else {
           confidencesBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -50907,11 +51050,11 @@ public final class DataServiceProto {
           ssn.dataservice.v1.DataServiceProto.PredictionConfidences.Builder builderForValue) {
         if (confidencesBuilder_ == null) {
           confidences_ = builderForValue.build();
-          onChanged();
         } else {
           confidencesBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -50919,38 +51062,38 @@ public final class DataServiceProto {
        */
       public Builder mergeConfidences(ssn.dataservice.v1.DataServiceProto.PredictionConfidences value) {
         if (confidencesBuilder_ == null) {
-          if (confidences_ != null) {
-            confidences_ =
-              ssn.dataservice.v1.DataServiceProto.PredictionConfidences.newBuilder(confidences_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            confidences_ != null &&
+            confidences_ != ssn.dataservice.v1.DataServiceProto.PredictionConfidences.getDefaultInstance()) {
+            getConfidencesBuilder().mergeFrom(value);
           } else {
             confidences_ = value;
           }
-          onChanged();
         } else {
           confidencesBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6 [json_name = "confidences"];</code>
        */
       public Builder clearConfidences() {
-        if (confidencesBuilder_ == null) {
-          confidences_ = null;
-          onChanged();
-        } else {
-          confidences_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        confidences_ = null;
+        if (confidencesBuilder_ != null) {
+          confidencesBuilder_.dispose();
           confidencesBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionConfidences confidences = 6 [json_name = "confidences"];</code>
        */
       public ssn.dataservice.v1.DataServiceProto.PredictionConfidences.Builder getConfidencesBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getConfidencesFieldBuilder().getBuilder();
       }
@@ -50990,7 +51133,7 @@ public final class DataServiceProto {
        * @return Whether the predictionMetadata field is set.
        */
       public boolean hasPredictionMetadata() {
-        return predictionMetadataBuilder_ != null || predictionMetadata_ != null;
+        return ((bitField0_ & 0x00000040) != 0);
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7 [json_name = "predictionMetadata"];</code>
@@ -51012,11 +51155,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           predictionMetadata_ = value;
-          onChanged();
         } else {
           predictionMetadataBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -51026,11 +51169,11 @@ public final class DataServiceProto {
           ssn.dataservice.v1.DataServiceProto.PredictionMetadata.Builder builderForValue) {
         if (predictionMetadataBuilder_ == null) {
           predictionMetadata_ = builderForValue.build();
-          onChanged();
         } else {
           predictionMetadataBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
@@ -51038,38 +51181,38 @@ public final class DataServiceProto {
        */
       public Builder mergePredictionMetadata(ssn.dataservice.v1.DataServiceProto.PredictionMetadata value) {
         if (predictionMetadataBuilder_ == null) {
-          if (predictionMetadata_ != null) {
-            predictionMetadata_ =
-              ssn.dataservice.v1.DataServiceProto.PredictionMetadata.newBuilder(predictionMetadata_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000040) != 0) &&
+            predictionMetadata_ != null &&
+            predictionMetadata_ != ssn.dataservice.v1.DataServiceProto.PredictionMetadata.getDefaultInstance()) {
+            getPredictionMetadataBuilder().mergeFrom(value);
           } else {
             predictionMetadata_ = value;
           }
-          onChanged();
         } else {
           predictionMetadataBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000040;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7 [json_name = "predictionMetadata"];</code>
        */
       public Builder clearPredictionMetadata() {
-        if (predictionMetadataBuilder_ == null) {
-          predictionMetadata_ = null;
-          onChanged();
-        } else {
-          predictionMetadata_ = null;
+        bitField0_ = (bitField0_ & ~0x00000040);
+        predictionMetadata_ = null;
+        if (predictionMetadataBuilder_ != null) {
+          predictionMetadataBuilder_.dispose();
           predictionMetadataBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.PredictionMetadata prediction_metadata = 7 [json_name = "predictionMetadata"];</code>
        */
       public ssn.dataservice.v1.DataServiceProto.PredictionMetadata.Builder getPredictionMetadataBuilder() {
-        
+        bitField0_ |= 0x00000040;
         onChanged();
         return getPredictionMetadataFieldBuilder().getBuilder();
       }
@@ -51115,8 +51258,8 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder setTierValue(int value) {
-        
         tier_ = value;
+        bitField0_ |= 0x00000080;
         onChanged();
         return this;
       }
@@ -51126,8 +51269,7 @@ public final class DataServiceProto {
        */
       @java.lang.Override
       public ssn.type.TierOuterClass.Tier getTier() {
-        @SuppressWarnings("deprecation")
-        ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.valueOf(tier_);
+        ssn.type.TierOuterClass.Tier result = ssn.type.TierOuterClass.Tier.forNumber(tier_);
         return result == null ? ssn.type.TierOuterClass.Tier.UNRECOGNIZED : result;
       }
       /**
@@ -51139,7 +51281,7 @@ public final class DataServiceProto {
         if (value == null) {
           throw new NullPointerException();
         }
-        
+        bitField0_ |= 0x00000080;
         tier_ = value.getNumber();
         onChanged();
         return this;
@@ -51149,7 +51291,7 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearTier() {
-        
+        bitField0_ = (bitField0_ & ~0x00000080);
         tier_ = 0;
         onChanged();
         return this;
@@ -51157,9 +51299,9 @@ public final class DataServiceProto {
 
       private com.google.protobuf.LazyStringList segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureSegmentsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000100) != 0)) {
           segments_ = new com.google.protobuf.LazyStringArrayList(segments_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000100;
          }
       }
       /**
@@ -51202,10 +51344,8 @@ public final class DataServiceProto {
        */
       public Builder setSegments(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSegmentsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureSegmentsIsMutable();
         segments_.set(index, value);
         onChanged();
         return this;
@@ -51217,10 +51357,8 @@ public final class DataServiceProto {
        */
       public Builder addSegments(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureSegmentsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureSegmentsIsMutable();
         segments_.add(value);
         onChanged();
         return this;
@@ -51244,7 +51382,7 @@ public final class DataServiceProto {
        */
       public Builder clearSegments() {
         segments_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000100);
         onChanged();
         return this;
       }
@@ -51255,10 +51393,8 @@ public final class DataServiceProto {
        */
       public Builder addSegmentsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureSegmentsIsMutable();
         segments_.add(value);
         onChanged();
@@ -51427,7 +51563,8 @@ public final class DataServiceProto {
     }
 
     public static final int ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object id_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object id_ = "";
     /**
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
@@ -51487,10 +51624,11 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.TrueValuesOrBuilder getTrueValuesOrBuilder() {
-      return getTrueValues();
+      return trueValues_ == null ? ssn.dataservice.v1.DataServiceProto.TrueValues.getDefaultInstance() : trueValues_;
     }
 
     public static final int TAGS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
@@ -51745,16 +51883,15 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         id_ = "";
-
-        if (trueValuesBuilder_ == null) {
-          trueValues_ = null;
-        } else {
-          trueValues_ = null;
+        trueValues_ = null;
+        if (trueValuesBuilder_ != null) {
+          trueValuesBuilder_.dispose();
           trueValuesBuilder_ = null;
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -51781,20 +51918,30 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.FeedbackRequest buildPartial() {
         ssn.dataservice.v1.DataServiceProto.FeedbackRequest result = new ssn.dataservice.v1.DataServiceProto.FeedbackRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.id_ = id_;
-        if (trueValuesBuilder_ == null) {
-          result.trueValues_ = trueValues_;
-        } else {
-          result.trueValues_ = trueValuesBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.tags_ = tags_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.dataservice.v1.DataServiceProto.FeedbackRequest result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.tags_ = tags_;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.FeedbackRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.id_ = id_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.trueValues_ = trueValuesBuilder_ == null
+              ? trueValues_
+              : trueValuesBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -51843,6 +51990,7 @@ public final class DataServiceProto {
         if (other == ssn.dataservice.v1.DataServiceProto.FeedbackRequest.getDefaultInstance()) return this;
         if (!other.getId().isEmpty()) {
           id_ = other.id_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasTrueValues()) {
@@ -51851,7 +51999,7 @@ public final class DataServiceProto {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -51886,14 +52034,14 @@ public final class DataServiceProto {
                 break;
               case 10: {
                 id_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getTrueValuesFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
@@ -51960,11 +52108,9 @@ public final class DataServiceProto {
        */
       public Builder setId(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -51973,8 +52119,8 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearId() {
-        
         id_ = getDefaultInstance().getId();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -51985,12 +52131,10 @@ public final class DataServiceProto {
        */
       public Builder setIdBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         id_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -52003,7 +52147,7 @@ public final class DataServiceProto {
        * @return Whether the trueValues field is set.
        */
       public boolean hasTrueValues() {
-        return trueValuesBuilder_ != null || trueValues_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.ssn.dataservice.v1.TrueValues true_values = 2 [json_name = "trueValues"];</code>
@@ -52025,11 +52169,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           trueValues_ = value;
-          onChanged();
         } else {
           trueValuesBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -52039,11 +52183,11 @@ public final class DataServiceProto {
           ssn.dataservice.v1.DataServiceProto.TrueValues.Builder builderForValue) {
         if (trueValuesBuilder_ == null) {
           trueValues_ = builderForValue.build();
-          onChanged();
         } else {
           trueValuesBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -52051,38 +52195,38 @@ public final class DataServiceProto {
        */
       public Builder mergeTrueValues(ssn.dataservice.v1.DataServiceProto.TrueValues value) {
         if (trueValuesBuilder_ == null) {
-          if (trueValues_ != null) {
-            trueValues_ =
-              ssn.dataservice.v1.DataServiceProto.TrueValues.newBuilder(trueValues_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            trueValues_ != null &&
+            trueValues_ != ssn.dataservice.v1.DataServiceProto.TrueValues.getDefaultInstance()) {
+            getTrueValuesBuilder().mergeFrom(value);
           } else {
             trueValues_ = value;
           }
-          onChanged();
         } else {
           trueValuesBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.TrueValues true_values = 2 [json_name = "trueValues"];</code>
        */
       public Builder clearTrueValues() {
-        if (trueValuesBuilder_ == null) {
-          trueValues_ = null;
-          onChanged();
-        } else {
-          trueValues_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        trueValues_ = null;
+        if (trueValuesBuilder_ != null) {
+          trueValuesBuilder_.dispose();
           trueValuesBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.TrueValues true_values = 2 [json_name = "trueValues"];</code>
        */
       public ssn.dataservice.v1.DataServiceProto.TrueValues.Builder getTrueValuesBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getTrueValuesFieldBuilder().getBuilder();
       }
@@ -52116,9 +52260,9 @@ public final class DataServiceProto {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -52161,10 +52305,8 @@ public final class DataServiceProto {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.set(index, value);
         onChanged();
         return this;
@@ -52176,10 +52318,8 @@ public final class DataServiceProto {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
         return this;
@@ -52203,7 +52343,7 @@ public final class DataServiceProto {
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -52214,10 +52354,8 @@ public final class DataServiceProto {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
@@ -52396,7 +52534,7 @@ public final class DataServiceProto {
     }
 
     public static final int START_TIME_FIELD_NUMBER = 2;
-    private long startTime_;
+    private long startTime_ = 0L;
     /**
      * <code>int64 start_time = 2 [json_name = "startTime"];</code>
      * @return The startTime.
@@ -52407,7 +52545,7 @@ public final class DataServiceProto {
     }
 
     public static final int END_TIME_FIELD_NUMBER = 3;
-    private long endTime_;
+    private long endTime_ = 0L;
     /**
      * <code>int64 end_time = 3 [json_name = "endTime"];</code>
      * @return The endTime.
@@ -52418,6 +52556,7 @@ public final class DataServiceProto {
     }
 
     public static final int FIELDS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList fields_;
     /**
      * <code>repeated string fields = 4 [json_name = "fields"];</code>
@@ -52453,6 +52592,7 @@ public final class DataServiceProto {
     }
 
     public static final int TAGS_FIELD_NUMBER = 5;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 5 [json_name = "tags"];</code>
@@ -52722,14 +52862,13 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         startTime_ = 0L;
-
         endTime_ = 0L;
-
         fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -52756,21 +52895,33 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.MetricsRequest buildPartial() {
         ssn.dataservice.v1.DataServiceProto.MetricsRequest result = new ssn.dataservice.v1.DataServiceProto.MetricsRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.startTime_ = startTime_;
-        result.endTime_ = endTime_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          fields_ = fields_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.fields_ = fields_;
-        if (((bitField0_ & 0x00000002) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
-        }
-        result.tags_ = tags_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.dataservice.v1.DataServiceProto.MetricsRequest result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          fields_ = fields_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.fields_ = fields_;
+        if (((bitField0_ & 0x00000008) != 0)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.tags_ = tags_;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.MetricsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.startTime_ = startTime_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.endTime_ = endTime_;
+        }
       }
 
       @java.lang.Override
@@ -52826,7 +52977,7 @@ public final class DataServiceProto {
         if (!other.fields_.isEmpty()) {
           if (fields_.isEmpty()) {
             fields_ = other.fields_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureFieldsIsMutable();
             fields_.addAll(other.fields_);
@@ -52836,7 +52987,7 @@ public final class DataServiceProto {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -52871,12 +53022,12 @@ public final class DataServiceProto {
                 break;
               case 16: {
                 startTime_ = input.readInt64();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 16
               case 24: {
                 endTime_ = input.readInt64();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 24
               case 34: {
@@ -52925,6 +53076,7 @@ public final class DataServiceProto {
       public Builder setStartTime(long value) {
         
         startTime_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -52933,7 +53085,7 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearStartTime() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         startTime_ = 0L;
         onChanged();
         return this;
@@ -52956,6 +53108,7 @@ public final class DataServiceProto {
       public Builder setEndTime(long value) {
         
         endTime_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -52964,7 +53117,7 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearEndTime() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         endTime_ = 0L;
         onChanged();
         return this;
@@ -52972,9 +53125,9 @@ public final class DataServiceProto {
 
       private com.google.protobuf.LazyStringList fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureFieldsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           fields_ = new com.google.protobuf.LazyStringArrayList(fields_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -53017,10 +53170,8 @@ public final class DataServiceProto {
        */
       public Builder setFields(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFieldsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFieldsIsMutable();
         fields_.set(index, value);
         onChanged();
         return this;
@@ -53032,10 +53183,8 @@ public final class DataServiceProto {
        */
       public Builder addFields(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureFieldsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureFieldsIsMutable();
         fields_.add(value);
         onChanged();
         return this;
@@ -53059,7 +53208,7 @@ public final class DataServiceProto {
        */
       public Builder clearFields() {
         fields_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -53070,10 +53219,8 @@ public final class DataServiceProto {
        */
       public Builder addFieldsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureFieldsIsMutable();
         fields_.add(value);
         onChanged();
@@ -53082,9 +53229,9 @@ public final class DataServiceProto {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000008;
          }
       }
       /**
@@ -53127,10 +53274,8 @@ public final class DataServiceProto {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.set(index, value);
         onChanged();
         return this;
@@ -53142,10 +53287,8 @@ public final class DataServiceProto {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
         return this;
@@ -53169,7 +53312,7 @@ public final class DataServiceProto {
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -53180,10 +53323,8 @@ public final class DataServiceProto {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
@@ -53350,7 +53491,7 @@ public final class DataServiceProto {
     }
 
     public static final int DOCUMENT_COUNT_FIELD_NUMBER = 1;
-    private int documentCount_;
+    private int documentCount_ = 0;
     /**
      * <code>int32 document_count = 1 [json_name = "documentCount"];</code>
      * @return The documentCount.
@@ -53361,7 +53502,7 @@ public final class DataServiceProto {
     }
 
     public static final int FEEDBACK_COUNT_FIELD_NUMBER = 2;
-    private int feedbackCount_;
+    private int feedbackCount_ = 0;
     /**
      * <code>int32 feedback_count = 2 [json_name = "feedbackCount"];</code>
      * @return The feedbackCount.
@@ -53394,10 +53535,11 @@ public final class DataServiceProto {
      */
     @java.lang.Override
     public ssn.dataservice.v1.DataServiceProto.CorrectnessOrBuilder getOverallCorrectnessOrBuilder() {
-      return getOverallCorrectness();
+      return overallCorrectness_ == null ? ssn.dataservice.v1.DataServiceProto.Correctness.getDefaultInstance() : overallCorrectness_;
     }
 
     public static final int FIELD_CORRECTNESS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.dataservice.v1.DataServiceProto.Correctness> fieldCorrectness_;
     /**
      * <code>repeated .ssn.dataservice.v1.Correctness field_correctness = 4 [json_name = "fieldCorrectness"];</code>
@@ -53665,14 +53807,12 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         documentCount_ = 0;
-
         feedbackCount_ = 0;
-
-        if (overallCorrectnessBuilder_ == null) {
-          overallCorrectness_ = null;
-        } else {
-          overallCorrectness_ = null;
+        overallCorrectness_ = null;
+        if (overallCorrectnessBuilder_ != null) {
+          overallCorrectnessBuilder_.dispose();
           overallCorrectnessBuilder_ = null;
         }
         if (fieldCorrectnessBuilder_ == null) {
@@ -53681,7 +53821,7 @@ public final class DataServiceProto {
           fieldCorrectness_ = null;
           fieldCorrectnessBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -53708,25 +53848,37 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.FeedbackMetrics buildPartial() {
         ssn.dataservice.v1.DataServiceProto.FeedbackMetrics result = new ssn.dataservice.v1.DataServiceProto.FeedbackMetrics(this);
-        int from_bitField0_ = bitField0_;
-        result.documentCount_ = documentCount_;
-        result.feedbackCount_ = feedbackCount_;
-        if (overallCorrectnessBuilder_ == null) {
-          result.overallCorrectness_ = overallCorrectness_;
-        } else {
-          result.overallCorrectness_ = overallCorrectnessBuilder_.build();
-        }
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.dataservice.v1.DataServiceProto.FeedbackMetrics result) {
         if (fieldCorrectnessBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000008) != 0)) {
             fieldCorrectness_ = java.util.Collections.unmodifiableList(fieldCorrectness_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           }
           result.fieldCorrectness_ = fieldCorrectness_;
         } else {
           result.fieldCorrectness_ = fieldCorrectnessBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.FeedbackMetrics result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.documentCount_ = documentCount_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.feedbackCount_ = feedbackCount_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.overallCorrectness_ = overallCorrectnessBuilder_ == null
+              ? overallCorrectness_
+              : overallCorrectnessBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -53786,7 +53938,7 @@ public final class DataServiceProto {
           if (!other.fieldCorrectness_.isEmpty()) {
             if (fieldCorrectness_.isEmpty()) {
               fieldCorrectness_ = other.fieldCorrectness_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000008);
             } else {
               ensureFieldCorrectnessIsMutable();
               fieldCorrectness_.addAll(other.fieldCorrectness_);
@@ -53799,7 +53951,7 @@ public final class DataServiceProto {
               fieldCorrectnessBuilder_.dispose();
               fieldCorrectnessBuilder_ = null;
               fieldCorrectness_ = other.fieldCorrectness_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000008);
               fieldCorrectnessBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getFieldCorrectnessFieldBuilder() : null;
@@ -53836,19 +53988,19 @@ public final class DataServiceProto {
                 break;
               case 8: {
                 documentCount_ = input.readInt32();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 16: {
                 feedbackCount_ = input.readInt32();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 16
               case 26: {
                 input.readMessage(
                     getOverallCorrectnessFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               case 34: {
@@ -53898,6 +54050,7 @@ public final class DataServiceProto {
       public Builder setDocumentCount(int value) {
         
         documentCount_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -53906,7 +54059,7 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearDocumentCount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         documentCount_ = 0;
         onChanged();
         return this;
@@ -53929,6 +54082,7 @@ public final class DataServiceProto {
       public Builder setFeedbackCount(int value) {
         
         feedbackCount_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -53937,7 +54091,7 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearFeedbackCount() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         feedbackCount_ = 0;
         onChanged();
         return this;
@@ -53951,7 +54105,7 @@ public final class DataServiceProto {
        * @return Whether the overallCorrectness field is set.
        */
       public boolean hasOverallCorrectness() {
-        return overallCorrectnessBuilder_ != null || overallCorrectness_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>.ssn.dataservice.v1.Correctness overall_correctness = 3 [json_name = "overallCorrectness"];</code>
@@ -53973,11 +54127,11 @@ public final class DataServiceProto {
             throw new NullPointerException();
           }
           overallCorrectness_ = value;
-          onChanged();
         } else {
           overallCorrectnessBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -53987,11 +54141,11 @@ public final class DataServiceProto {
           ssn.dataservice.v1.DataServiceProto.Correctness.Builder builderForValue) {
         if (overallCorrectnessBuilder_ == null) {
           overallCorrectness_ = builderForValue.build();
-          onChanged();
         } else {
           overallCorrectnessBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -53999,38 +54153,38 @@ public final class DataServiceProto {
        */
       public Builder mergeOverallCorrectness(ssn.dataservice.v1.DataServiceProto.Correctness value) {
         if (overallCorrectnessBuilder_ == null) {
-          if (overallCorrectness_ != null) {
-            overallCorrectness_ =
-              ssn.dataservice.v1.DataServiceProto.Correctness.newBuilder(overallCorrectness_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            overallCorrectness_ != null &&
+            overallCorrectness_ != ssn.dataservice.v1.DataServiceProto.Correctness.getDefaultInstance()) {
+            getOverallCorrectnessBuilder().mergeFrom(value);
           } else {
             overallCorrectness_ = value;
           }
-          onChanged();
         } else {
           overallCorrectnessBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.Correctness overall_correctness = 3 [json_name = "overallCorrectness"];</code>
        */
       public Builder clearOverallCorrectness() {
-        if (overallCorrectnessBuilder_ == null) {
-          overallCorrectness_ = null;
-          onChanged();
-        } else {
-          overallCorrectness_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        overallCorrectness_ = null;
+        if (overallCorrectnessBuilder_ != null) {
+          overallCorrectnessBuilder_.dispose();
           overallCorrectnessBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.ssn.dataservice.v1.Correctness overall_correctness = 3 [json_name = "overallCorrectness"];</code>
        */
       public ssn.dataservice.v1.DataServiceProto.Correctness.Builder getOverallCorrectnessBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getOverallCorrectnessFieldBuilder().getBuilder();
       }
@@ -54065,9 +54219,9 @@ public final class DataServiceProto {
       private java.util.List<ssn.dataservice.v1.DataServiceProto.Correctness> fieldCorrectness_ =
         java.util.Collections.emptyList();
       private void ensureFieldCorrectnessIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           fieldCorrectness_ = new java.util.ArrayList<ssn.dataservice.v1.DataServiceProto.Correctness>(fieldCorrectness_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000008;
          }
       }
 
@@ -54217,7 +54371,7 @@ public final class DataServiceProto {
       public Builder clearFieldCorrectness() {
         if (fieldCorrectnessBuilder_ == null) {
           fieldCorrectness_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000008);
           onChanged();
         } else {
           fieldCorrectnessBuilder_.clear();
@@ -54294,7 +54448,7 @@ public final class DataServiceProto {
           fieldCorrectnessBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               ssn.dataservice.v1.DataServiceProto.Correctness, ssn.dataservice.v1.DataServiceProto.Correctness.Builder, ssn.dataservice.v1.DataServiceProto.CorrectnessOrBuilder>(
                   fieldCorrectness_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000008) != 0),
                   getParentForChildren(),
                   isClean());
           fieldCorrectness_ = null;
@@ -54447,7 +54601,8 @@ public final class DataServiceProto {
     }
 
     public static final int FIELD_FIELD_NUMBER = 1;
-    private volatile java.lang.Object field_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object field_ = "";
     /**
      * <code>string field = 1 [json_name = "field"];</code>
      * @return The field.
@@ -54485,7 +54640,7 @@ public final class DataServiceProto {
     }
 
     public static final int CORRECT_PERCENTAGE_FIELD_NUMBER = 2;
-    private float correctPercentage_;
+    private float correctPercentage_ = 0F;
     /**
      * <code>float correct_percentage = 2 [json_name = "correctPercentage"];</code>
      * @return The correctPercentage.
@@ -54496,7 +54651,7 @@ public final class DataServiceProto {
     }
 
     public static final int INCOMPLETE_PERCENTAGE_FIELD_NUMBER = 3;
-    private float incompletePercentage_;
+    private float incompletePercentage_ = 0F;
     /**
      * <code>float incomplete_percentage = 3 [json_name = "incompletePercentage"];</code>
      * @return The incompletePercentage.
@@ -54507,7 +54662,7 @@ public final class DataServiceProto {
     }
 
     public static final int ERROR_PERCENTAGE_FIELD_NUMBER = 4;
-    private float errorPercentage_;
+    private float errorPercentage_ = 0F;
     /**
      * <code>float error_percentage = 4 [json_name = "errorPercentage"];</code>
      * @return The errorPercentage.
@@ -54518,7 +54673,7 @@ public final class DataServiceProto {
     }
 
     public static final int SUPPORT_FIELD_NUMBER = 5;
-    private int support_;
+    private int support_ = 0;
     /**
      * <code>int32 support = 5 [json_name = "support"];</code>
      * @return The support.
@@ -54765,16 +54920,12 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         field_ = "";
-
         correctPercentage_ = 0F;
-
         incompletePercentage_ = 0F;
-
         errorPercentage_ = 0F;
-
         support_ = 0;
-
         return this;
       }
 
@@ -54801,13 +54952,28 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.Correctness buildPartial() {
         ssn.dataservice.v1.DataServiceProto.Correctness result = new ssn.dataservice.v1.DataServiceProto.Correctness(this);
-        result.field_ = field_;
-        result.correctPercentage_ = correctPercentage_;
-        result.incompletePercentage_ = incompletePercentage_;
-        result.errorPercentage_ = errorPercentage_;
-        result.support_ = support_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.Correctness result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.field_ = field_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.correctPercentage_ = correctPercentage_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.incompletePercentage_ = incompletePercentage_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.errorPercentage_ = errorPercentage_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.support_ = support_;
+        }
       }
 
       @java.lang.Override
@@ -54856,6 +55022,7 @@ public final class DataServiceProto {
         if (other == ssn.dataservice.v1.DataServiceProto.Correctness.getDefaultInstance()) return this;
         if (!other.getField().isEmpty()) {
           field_ = other.field_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.getCorrectPercentage() != 0F) {
@@ -54898,27 +55065,27 @@ public final class DataServiceProto {
                 break;
               case 10: {
                 field_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 21: {
                 correctPercentage_ = input.readFloat();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 21
               case 29: {
                 incompletePercentage_ = input.readFloat();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 29
               case 37: {
                 errorPercentage_ = input.readFloat();
-
+                bitField0_ |= 0x00000008;
                 break;
               } // case 37
               case 40: {
                 support_ = input.readInt32();
-
+                bitField0_ |= 0x00000010;
                 break;
               } // case 40
               default: {
@@ -54936,6 +55103,7 @@ public final class DataServiceProto {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object field_ = "";
       /**
@@ -54978,11 +55146,9 @@ public final class DataServiceProto {
        */
       public Builder setField(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         field_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -54991,8 +55157,8 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearField() {
-        
         field_ = getDefaultInstance().getField();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -55003,12 +55169,10 @@ public final class DataServiceProto {
        */
       public Builder setFieldBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         field_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -55030,6 +55194,7 @@ public final class DataServiceProto {
       public Builder setCorrectPercentage(float value) {
         
         correctPercentage_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -55038,7 +55203,7 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearCorrectPercentage() {
-        
+        bitField0_ = (bitField0_ & ~0x00000002);
         correctPercentage_ = 0F;
         onChanged();
         return this;
@@ -55061,6 +55226,7 @@ public final class DataServiceProto {
       public Builder setIncompletePercentage(float value) {
         
         incompletePercentage_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -55069,7 +55235,7 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearIncompletePercentage() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         incompletePercentage_ = 0F;
         onChanged();
         return this;
@@ -55092,6 +55258,7 @@ public final class DataServiceProto {
       public Builder setErrorPercentage(float value) {
         
         errorPercentage_ = value;
+        bitField0_ |= 0x00000008;
         onChanged();
         return this;
       }
@@ -55100,7 +55267,7 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearErrorPercentage() {
-        
+        bitField0_ = (bitField0_ & ~0x00000008);
         errorPercentage_ = 0F;
         onChanged();
         return this;
@@ -55123,6 +55290,7 @@ public final class DataServiceProto {
       public Builder setSupport(int value) {
         
         support_ = value;
+        bitField0_ |= 0x00000010;
         onChanged();
         return this;
       }
@@ -55131,7 +55299,7 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearSupport() {
-        
+        bitField0_ = (bitField0_ & ~0x00000010);
         support_ = 0;
         onChanged();
         return this;
@@ -55271,6 +55439,7 @@ public final class DataServiceProto {
     }
 
     public static final int TAGS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 1 [json_name = "tags"];</code>
@@ -55499,6 +55668,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         return this;
@@ -55527,14 +55697,22 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.DeleteRequest buildPartial() {
         ssn.dataservice.v1.DataServiceProto.DeleteRequest result = new ssn.dataservice.v1.DataServiceProto.DeleteRequest(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.dataservice.v1.DataServiceProto.DeleteRequest result) {
         if (((bitField0_ & 0x00000001) != 0)) {
           tags_ = tags_.getUnmodifiableView();
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.tags_ = tags_;
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.DeleteRequest result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -55687,10 +55865,8 @@ public final class DataServiceProto {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.set(index, value);
         onChanged();
         return this;
@@ -55702,10 +55878,8 @@ public final class DataServiceProto {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
         return this;
@@ -55740,10 +55914,8 @@ public final class DataServiceProto {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
@@ -55877,7 +56049,7 @@ public final class DataServiceProto {
     }
 
     public static final int CALLS_FIELD_NUMBER = 1;
-    private long calls_;
+    private long calls_ = 0L;
     /**
      * <code>int64 calls = 1 [json_name = "calls"];</code>
      * @return The calls.
@@ -55888,7 +56060,8 @@ public final class DataServiceProto {
     }
 
     public static final int MONTH_NAME_FIELD_NUMBER = 2;
-    private volatile java.lang.Object monthName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object monthName_ = "";
     /**
      * <code>string month_name = 2 [json_name = "monthName"];</code>
      * @return The monthName.
@@ -56124,10 +56297,9 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         calls_ = 0L;
-
         monthName_ = "";
-
         return this;
       }
 
@@ -56154,10 +56326,19 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.CallsPerMonth buildPartial() {
         ssn.dataservice.v1.DataServiceProto.CallsPerMonth result = new ssn.dataservice.v1.DataServiceProto.CallsPerMonth(this);
-        result.calls_ = calls_;
-        result.monthName_ = monthName_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.CallsPerMonth result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.calls_ = calls_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.monthName_ = monthName_;
+        }
       }
 
       @java.lang.Override
@@ -56209,6 +56390,7 @@ public final class DataServiceProto {
         }
         if (!other.getMonthName().isEmpty()) {
           monthName_ = other.monthName_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -56239,12 +56421,12 @@ public final class DataServiceProto {
                 break;
               case 8: {
                 calls_ = input.readInt64();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               case 18: {
                 monthName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -56262,6 +56444,7 @@ public final class DataServiceProto {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private long calls_ ;
       /**
@@ -56280,6 +56463,7 @@ public final class DataServiceProto {
       public Builder setCalls(long value) {
         
         calls_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -56288,7 +56472,7 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearCalls() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         calls_ = 0L;
         onChanged();
         return this;
@@ -56335,11 +56519,9 @@ public final class DataServiceProto {
        */
       public Builder setMonthName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         monthName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -56348,8 +56530,8 @@ public final class DataServiceProto {
        * @return This builder for chaining.
        */
       public Builder clearMonthName() {
-        
         monthName_ = getDefaultInstance().getMonthName();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -56360,12 +56542,10 @@ public final class DataServiceProto {
        */
       public Builder setMonthNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         monthName_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -56503,6 +56683,7 @@ public final class DataServiceProto {
     }
 
     public static final int CALLS_PER_MONTH_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<ssn.dataservice.v1.DataServiceProto.CallsPerMonth> callsPerMonth_;
     /**
      * <code>repeated .ssn.dataservice.v1.CallsPerMonth calls_per_month = 1 [json_name = "callsPerMonth"];</code>
@@ -56732,6 +56913,7 @@ public final class DataServiceProto {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (callsPerMonthBuilder_ == null) {
           callsPerMonth_ = java.util.Collections.emptyList();
         } else {
@@ -56765,7 +56947,13 @@ public final class DataServiceProto {
       @java.lang.Override
       public ssn.dataservice.v1.DataServiceProto.CallsPerMonthResponse buildPartial() {
         ssn.dataservice.v1.DataServiceProto.CallsPerMonthResponse result = new ssn.dataservice.v1.DataServiceProto.CallsPerMonthResponse(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ssn.dataservice.v1.DataServiceProto.CallsPerMonthResponse result) {
         if (callsPerMonthBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             callsPerMonth_ = java.util.Collections.unmodifiableList(callsPerMonth_);
@@ -56775,8 +56963,10 @@ public final class DataServiceProto {
         } else {
           result.callsPerMonth_ = callsPerMonthBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(ssn.dataservice.v1.DataServiceProto.CallsPerMonthResponse result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override

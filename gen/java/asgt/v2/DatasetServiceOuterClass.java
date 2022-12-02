@@ -80,7 +80,8 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object datasetName_ = "";
     /**
      * <pre>
      * text-no-spaces
@@ -312,8 +313,8 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         datasetName_ = "";
-
         return this;
       }
 
@@ -340,9 +341,16 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.GetDatasetRequest buildPartial() {
         asgt.v2.DatasetServiceOuterClass.GetDatasetRequest result = new asgt.v2.DatasetServiceOuterClass.GetDatasetRequest(this);
-        result.datasetName_ = datasetName_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.DatasetServiceOuterClass.GetDatasetRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.datasetName_ = datasetName_;
+        }
       }
 
       @java.lang.Override
@@ -391,6 +399,7 @@ public final class DatasetServiceOuterClass {
         if (other == asgt.v2.DatasetServiceOuterClass.GetDatasetRequest.getDefaultInstance()) return this;
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -421,7 +430,7 @@ public final class DatasetServiceOuterClass {
                 break;
               case 10: {
                 datasetName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -439,6 +448,7 @@ public final class DatasetServiceOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object datasetName_ = "";
       /**
@@ -493,11 +503,9 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -510,8 +518,8 @@ public final class DatasetServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
-        
         datasetName_ = getDefaultInstance().getDatasetName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -526,12 +534,10 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -707,7 +713,8 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object datasetName_ = "";
     /**
      * <pre>
      * text-no-spaces
@@ -753,6 +760,7 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int TAGS_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <pre>
@@ -1007,10 +1015,10 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         datasetName_ = "";
-
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -1037,15 +1045,25 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.CreateDatasetRequest buildPartial() {
         asgt.v2.DatasetServiceOuterClass.CreateDatasetRequest result = new asgt.v2.DatasetServiceOuterClass.CreateDatasetRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.datasetName_ = datasetName_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.tags_ = tags_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.v2.DatasetServiceOuterClass.CreateDatasetRequest result) {
+        if (((bitField0_ & 0x00000002) != 0)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000002);
+        }
+        result.tags_ = tags_;
+      }
+
+      private void buildPartial0(asgt.v2.DatasetServiceOuterClass.CreateDatasetRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.datasetName_ = datasetName_;
+        }
       }
 
       @java.lang.Override
@@ -1094,12 +1112,13 @@ public final class DatasetServiceOuterClass {
         if (other == asgt.v2.DatasetServiceOuterClass.CreateDatasetRequest.getDefaultInstance()) return this;
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -1134,7 +1153,7 @@ public final class DatasetServiceOuterClass {
                 break;
               case 10: {
                 datasetName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
@@ -1213,11 +1232,9 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1230,8 +1247,8 @@ public final class DatasetServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
-        
         datasetName_ = getDefaultInstance().getDatasetName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1246,21 +1263,19 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
       /**
@@ -1323,10 +1338,8 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.set(index, value);
         onChanged();
         return this;
@@ -1342,10 +1355,8 @@ public final class DatasetServiceOuterClass {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
         return this;
@@ -1377,7 +1388,7 @@ public final class DatasetServiceOuterClass {
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -1392,10 +1403,8 @@ public final class DatasetServiceOuterClass {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
@@ -1531,7 +1540,8 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object datasetName_ = "";
     /**
      * <pre>
      * text-no-spaces
@@ -1763,8 +1773,8 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         datasetName_ = "";
-
         return this;
       }
 
@@ -1791,9 +1801,16 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.CreateOrUpdateDatasetRequest buildPartial() {
         asgt.v2.DatasetServiceOuterClass.CreateOrUpdateDatasetRequest result = new asgt.v2.DatasetServiceOuterClass.CreateOrUpdateDatasetRequest(this);
-        result.datasetName_ = datasetName_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.DatasetServiceOuterClass.CreateOrUpdateDatasetRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.datasetName_ = datasetName_;
+        }
       }
 
       @java.lang.Override
@@ -1842,6 +1859,7 @@ public final class DatasetServiceOuterClass {
         if (other == asgt.v2.DatasetServiceOuterClass.CreateOrUpdateDatasetRequest.getDefaultInstance()) return this;
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -1872,7 +1890,7 @@ public final class DatasetServiceOuterClass {
                 break;
               case 10: {
                 datasetName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -1890,6 +1908,7 @@ public final class DatasetServiceOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object datasetName_ = "";
       /**
@@ -1944,11 +1963,9 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -1961,8 +1978,8 @@ public final class DatasetServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
-        
         datasetName_ = getDefaultInstance().getDatasetName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -1977,12 +1994,10 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2116,7 +2131,8 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object datasetName_ = "";
     /**
      * <pre>
      * text-no-spaces
@@ -2348,8 +2364,8 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         datasetName_ = "";
-
         return this;
       }
 
@@ -2376,9 +2392,16 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.DeleteDatasetRequest buildPartial() {
         asgt.v2.DatasetServiceOuterClass.DeleteDatasetRequest result = new asgt.v2.DatasetServiceOuterClass.DeleteDatasetRequest(this);
-        result.datasetName_ = datasetName_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.DatasetServiceOuterClass.DeleteDatasetRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.datasetName_ = datasetName_;
+        }
       }
 
       @java.lang.Override
@@ -2427,6 +2450,7 @@ public final class DatasetServiceOuterClass {
         if (other == asgt.v2.DatasetServiceOuterClass.DeleteDatasetRequest.getDefaultInstance()) return this;
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -2457,7 +2481,7 @@ public final class DatasetServiceOuterClass {
                 break;
               case 10: {
                 datasetName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -2475,6 +2499,7 @@ public final class DatasetServiceOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object datasetName_ = "";
       /**
@@ -2529,11 +2554,9 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2546,8 +2569,8 @@ public final class DatasetServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
-        
         datasetName_ = getDefaultInstance().getDatasetName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -2562,12 +2585,10 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -2701,7 +2722,8 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int TAG_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object tagName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object tagName_ = "";
     /**
      * <pre>
      * text-no-spaces
@@ -2933,8 +2955,8 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         tagName_ = "";
-
         return this;
       }
 
@@ -2961,9 +2983,16 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.DeleteTagRequest buildPartial() {
         asgt.v2.DatasetServiceOuterClass.DeleteTagRequest result = new asgt.v2.DatasetServiceOuterClass.DeleteTagRequest(this);
-        result.tagName_ = tagName_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.DatasetServiceOuterClass.DeleteTagRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.tagName_ = tagName_;
+        }
       }
 
       @java.lang.Override
@@ -3012,6 +3041,7 @@ public final class DatasetServiceOuterClass {
         if (other == asgt.v2.DatasetServiceOuterClass.DeleteTagRequest.getDefaultInstance()) return this;
         if (!other.getTagName().isEmpty()) {
           tagName_ = other.tagName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -3042,7 +3072,7 @@ public final class DatasetServiceOuterClass {
                 break;
               case 10: {
                 tagName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -3060,6 +3090,7 @@ public final class DatasetServiceOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object tagName_ = "";
       /**
@@ -3114,11 +3145,9 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setTagName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         tagName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3131,8 +3160,8 @@ public final class DatasetServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearTagName() {
-        
         tagName_ = getDefaultInstance().getTagName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3147,12 +3176,10 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setTagNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         tagName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3301,7 +3328,8 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object datasetName_ = "";
     /**
      * <pre>
      * text-no-spaces
@@ -3369,7 +3397,7 @@ public final class DatasetServiceOuterClass {
      */
     @java.lang.Override
     public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
-      return getExample();
+      return example_ == null ? asgt.v2.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3575,12 +3603,11 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         datasetName_ = "";
-
-        if (exampleBuilder_ == null) {
-          example_ = null;
-        } else {
-          example_ = null;
+        example_ = null;
+        if (exampleBuilder_ != null) {
+          exampleBuilder_.dispose();
           exampleBuilder_ = null;
         }
         return this;
@@ -3609,14 +3636,21 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.CreateExampleRequest buildPartial() {
         asgt.v2.DatasetServiceOuterClass.CreateExampleRequest result = new asgt.v2.DatasetServiceOuterClass.CreateExampleRequest(this);
-        result.datasetName_ = datasetName_;
-        if (exampleBuilder_ == null) {
-          result.example_ = example_;
-        } else {
-          result.example_ = exampleBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.DatasetServiceOuterClass.CreateExampleRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.datasetName_ = datasetName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.example_ = exampleBuilder_ == null
+              ? example_
+              : exampleBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -3665,6 +3699,7 @@ public final class DatasetServiceOuterClass {
         if (other == asgt.v2.DatasetServiceOuterClass.CreateExampleRequest.getDefaultInstance()) return this;
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasExample()) {
@@ -3698,14 +3733,14 @@ public final class DatasetServiceOuterClass {
                 break;
               case 10: {
                 datasetName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getExampleFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -3723,6 +3758,7 @@ public final class DatasetServiceOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object datasetName_ = "";
       /**
@@ -3777,11 +3813,9 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3794,8 +3828,8 @@ public final class DatasetServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
-        
         datasetName_ = getDefaultInstance().getDatasetName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3810,12 +3844,10 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3828,7 +3860,7 @@ public final class DatasetServiceOuterClass {
        * @return Whether the example field is set.
        */
       public boolean hasExample() {
-        return exampleBuilder_ != null || example_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
@@ -3850,11 +3882,11 @@ public final class DatasetServiceOuterClass {
             throw new NullPointerException();
           }
           example_ = value;
-          onChanged();
         } else {
           exampleBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3864,11 +3896,11 @@ public final class DatasetServiceOuterClass {
           asgt.v2.type.ExampleOuterClass.Example.Builder builderForValue) {
         if (exampleBuilder_ == null) {
           example_ = builderForValue.build();
-          onChanged();
         } else {
           exampleBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -3876,38 +3908,38 @@ public final class DatasetServiceOuterClass {
        */
       public Builder mergeExample(asgt.v2.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
-          if (example_ != null) {
-            example_ =
-              asgt.v2.type.ExampleOuterClass.Example.newBuilder(example_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            example_ != null &&
+            example_ != asgt.v2.type.ExampleOuterClass.Example.getDefaultInstance()) {
+            getExampleBuilder().mergeFrom(value);
           } else {
             example_ = value;
           }
-          onChanged();
         } else {
           exampleBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder clearExample() {
-        if (exampleBuilder_ == null) {
-          example_ = null;
-          onChanged();
-        } else {
-          example_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        example_ = null;
+        if (exampleBuilder_ != null) {
+          exampleBuilder_.dispose();
           exampleBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example.Builder getExampleBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getExampleFieldBuilder().getBuilder();
       }
@@ -4083,7 +4115,8 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object datasetName_ = "";
     /**
      * <pre>
      * text-no-spaces
@@ -4151,7 +4184,7 @@ public final class DatasetServiceOuterClass {
      */
     @java.lang.Override
     public asgt.v2.type.ExampleOuterClass.ExampleOrBuilder getExampleOrBuilder() {
-      return getExample();
+      return example_ == null ? asgt.v2.type.ExampleOuterClass.Example.getDefaultInstance() : example_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -4357,12 +4390,11 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         datasetName_ = "";
-
-        if (exampleBuilder_ == null) {
-          example_ = null;
-        } else {
-          example_ = null;
+        example_ = null;
+        if (exampleBuilder_ != null) {
+          exampleBuilder_.dispose();
           exampleBuilder_ = null;
         }
         return this;
@@ -4391,14 +4423,21 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.CreateOrUpdateExampleRequest buildPartial() {
         asgt.v2.DatasetServiceOuterClass.CreateOrUpdateExampleRequest result = new asgt.v2.DatasetServiceOuterClass.CreateOrUpdateExampleRequest(this);
-        result.datasetName_ = datasetName_;
-        if (exampleBuilder_ == null) {
-          result.example_ = example_;
-        } else {
-          result.example_ = exampleBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.DatasetServiceOuterClass.CreateOrUpdateExampleRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.datasetName_ = datasetName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.example_ = exampleBuilder_ == null
+              ? example_
+              : exampleBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -4447,6 +4486,7 @@ public final class DatasetServiceOuterClass {
         if (other == asgt.v2.DatasetServiceOuterClass.CreateOrUpdateExampleRequest.getDefaultInstance()) return this;
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasExample()) {
@@ -4480,14 +4520,14 @@ public final class DatasetServiceOuterClass {
                 break;
               case 10: {
                 datasetName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getExampleFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -4505,6 +4545,7 @@ public final class DatasetServiceOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object datasetName_ = "";
       /**
@@ -4559,11 +4600,9 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4576,8 +4615,8 @@ public final class DatasetServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
-        
         datasetName_ = getDefaultInstance().getDatasetName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -4592,12 +4631,10 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -4610,7 +4647,7 @@ public final class DatasetServiceOuterClass {
        * @return Whether the example field is set.
        */
       public boolean hasExample() {
-        return exampleBuilder_ != null || example_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
@@ -4632,11 +4669,11 @@ public final class DatasetServiceOuterClass {
             throw new NullPointerException();
           }
           example_ = value;
-          onChanged();
         } else {
           exampleBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4646,11 +4683,11 @@ public final class DatasetServiceOuterClass {
           asgt.v2.type.ExampleOuterClass.Example.Builder builderForValue) {
         if (exampleBuilder_ == null) {
           example_ = builderForValue.build();
-          onChanged();
         } else {
           exampleBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -4658,38 +4695,38 @@ public final class DatasetServiceOuterClass {
        */
       public Builder mergeExample(asgt.v2.type.ExampleOuterClass.Example value) {
         if (exampleBuilder_ == null) {
-          if (example_ != null) {
-            example_ =
-              asgt.v2.type.ExampleOuterClass.Example.newBuilder(example_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            example_ != null &&
+            example_ != asgt.v2.type.ExampleOuterClass.Example.getDefaultInstance()) {
+            getExampleBuilder().mergeFrom(value);
           } else {
             example_ = value;
           }
-          onChanged();
         } else {
           exampleBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public Builder clearExample() {
-        if (exampleBuilder_ == null) {
-          example_ = null;
-          onChanged();
-        } else {
-          example_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        example_ = null;
+        if (exampleBuilder_ != null) {
+          exampleBuilder_.dispose();
           exampleBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.v2.type.Example example = 2 [json_name = "example"];</code>
        */
       public asgt.v2.type.ExampleOuterClass.Example.Builder getExampleBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getExampleFieldBuilder().getBuilder();
       }
@@ -4875,7 +4912,8 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object datasetName_ = "";
     /**
      * <pre>
      * text-no-spaces
@@ -4921,6 +4959,7 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int EXAMPLES_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.v2.type.ExampleOuterClass.Example> examples_;
     /**
      * <code>repeated .asgt.v2.type.Example examples = 2 [json_name = "examples"];</code>
@@ -5160,15 +5199,15 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         datasetName_ = "";
-
         if (examplesBuilder_ == null) {
           examples_ = java.util.Collections.emptyList();
         } else {
           examples_ = null;
           examplesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000002);
         return this;
       }
 
@@ -5195,19 +5234,29 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.BatchCreateExampleRequest buildPartial() {
         asgt.v2.DatasetServiceOuterClass.BatchCreateExampleRequest result = new asgt.v2.DatasetServiceOuterClass.BatchCreateExampleRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.datasetName_ = datasetName_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.v2.DatasetServiceOuterClass.BatchCreateExampleRequest result) {
         if (examplesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000002) != 0)) {
             examples_ = java.util.Collections.unmodifiableList(examples_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000002);
           }
           result.examples_ = examples_;
         } else {
           result.examples_ = examplesBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(asgt.v2.DatasetServiceOuterClass.BatchCreateExampleRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.datasetName_ = datasetName_;
+        }
       }
 
       @java.lang.Override
@@ -5256,13 +5305,14 @@ public final class DatasetServiceOuterClass {
         if (other == asgt.v2.DatasetServiceOuterClass.BatchCreateExampleRequest.getDefaultInstance()) return this;
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (examplesBuilder_ == null) {
           if (!other.examples_.isEmpty()) {
             if (examples_.isEmpty()) {
               examples_ = other.examples_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
             } else {
               ensureExamplesIsMutable();
               examples_.addAll(other.examples_);
@@ -5275,7 +5325,7 @@ public final class DatasetServiceOuterClass {
               examplesBuilder_.dispose();
               examplesBuilder_ = null;
               examples_ = other.examples_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000002);
               examplesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getExamplesFieldBuilder() : null;
@@ -5312,7 +5362,7 @@ public final class DatasetServiceOuterClass {
                 break;
               case 10: {
                 datasetName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
@@ -5398,11 +5448,9 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5415,8 +5463,8 @@ public final class DatasetServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
-        
         datasetName_ = getDefaultInstance().getDatasetName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -5431,12 +5479,10 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5444,9 +5490,9 @@ public final class DatasetServiceOuterClass {
       private java.util.List<asgt.v2.type.ExampleOuterClass.Example> examples_ =
         java.util.Collections.emptyList();
       private void ensureExamplesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000002) != 0)) {
           examples_ = new java.util.ArrayList<asgt.v2.type.ExampleOuterClass.Example>(examples_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000002;
          }
       }
 
@@ -5596,7 +5642,7 @@ public final class DatasetServiceOuterClass {
       public Builder clearExamples() {
         if (examplesBuilder_ == null) {
           examples_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
           onChanged();
         } else {
           examplesBuilder_.clear();
@@ -5673,7 +5719,7 @@ public final class DatasetServiceOuterClass {
           examplesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.v2.type.ExampleOuterClass.Example, asgt.v2.type.ExampleOuterClass.Example.Builder, asgt.v2.type.ExampleOuterClass.ExampleOrBuilder>(
                   examples_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000002) != 0),
                   getParentForChildren(),
                   isClean());
           examples_ = null;
@@ -5810,7 +5856,8 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object datasetName_ = "";
     /**
      * <pre>
      * text-no-spaces
@@ -6042,8 +6089,8 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         datasetName_ = "";
-
         return this;
       }
 
@@ -6070,9 +6117,16 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.TruncateDatasetRequest buildPartial() {
         asgt.v2.DatasetServiceOuterClass.TruncateDatasetRequest result = new asgt.v2.DatasetServiceOuterClass.TruncateDatasetRequest(this);
-        result.datasetName_ = datasetName_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.DatasetServiceOuterClass.TruncateDatasetRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.datasetName_ = datasetName_;
+        }
       }
 
       @java.lang.Override
@@ -6121,6 +6175,7 @@ public final class DatasetServiceOuterClass {
         if (other == asgt.v2.DatasetServiceOuterClass.TruncateDatasetRequest.getDefaultInstance()) return this;
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -6151,7 +6206,7 @@ public final class DatasetServiceOuterClass {
                 break;
               case 10: {
                 datasetName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -6169,6 +6224,7 @@ public final class DatasetServiceOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object datasetName_ = "";
       /**
@@ -6223,11 +6279,9 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6240,8 +6294,8 @@ public final class DatasetServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
-        
         datasetName_ = getDefaultInstance().getDatasetName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -6256,12 +6310,10 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6384,7 +6436,7 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int LIMIT_FIELD_NUMBER = 1;
-    private long limit_;
+    private long limit_ = 0L;
     /**
      * <pre>
      * The number of trainings to return. Ranges from 1 to 100.
@@ -6587,8 +6639,8 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         limit_ = 0L;
-
         return this;
       }
 
@@ -6615,9 +6667,16 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions buildPartial() {
         asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions result = new asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions(this);
-        result.limit_ = limit_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.limit_ = limit_;
+        }
       }
 
       @java.lang.Override
@@ -6695,7 +6754,7 @@ public final class DatasetServiceOuterClass {
                 break;
               case 8: {
                 limit_ = input.readInt64();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 8
               default: {
@@ -6713,6 +6772,7 @@ public final class DatasetServiceOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private long limit_ ;
       /**
@@ -6739,6 +6799,7 @@ public final class DatasetServiceOuterClass {
       public Builder setLimit(long value) {
         
         limit_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6751,7 +6812,7 @@ public final class DatasetServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearLimit() {
-        
+        bitField0_ = (bitField0_ & ~0x00000001);
         limit_ = 0L;
         onChanged();
         return this;
@@ -6901,7 +6962,8 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int DATASET_NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object datasetName_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object datasetName_ = "";
     /**
      * <pre>
      * text-no-spaces
@@ -6969,7 +7031,7 @@ public final class DatasetServiceOuterClass {
      */
     @java.lang.Override
     public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
-      return getOptions();
+      return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7175,12 +7237,11 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         datasetName_ = "";
-
-        if (optionsBuilder_ == null) {
-          options_ = null;
-        } else {
-          options_ = null;
+        options_ = null;
+        if (optionsBuilder_ != null) {
+          optionsBuilder_.dispose();
           optionsBuilder_ = null;
         }
         return this;
@@ -7209,14 +7270,21 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest buildPartial() {
         asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest result = new asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest(this);
-        result.datasetName_ = datasetName_;
-        if (optionsBuilder_ == null) {
-          result.options_ = options_;
-        } else {
-          result.options_ = optionsBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.datasetName_ = datasetName_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.options_ = optionsBuilder_ == null
+              ? options_
+              : optionsBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -7265,6 +7333,7 @@ public final class DatasetServiceOuterClass {
         if (other == asgt.v2.DatasetServiceOuterClass.GetDatasetTrainingsRequest.getDefaultInstance()) return this;
         if (!other.getDatasetName().isEmpty()) {
           datasetName_ = other.datasetName_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (other.hasOptions()) {
@@ -7298,14 +7367,14 @@ public final class DatasetServiceOuterClass {
                 break;
               case 10: {
                 datasetName_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getOptionsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -7323,6 +7392,7 @@ public final class DatasetServiceOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object datasetName_ = "";
       /**
@@ -7377,11 +7447,9 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7394,8 +7462,8 @@ public final class DatasetServiceOuterClass {
        * @return This builder for chaining.
        */
       public Builder clearDatasetName() {
-        
         datasetName_ = getDefaultInstance().getDatasetName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -7410,12 +7478,10 @@ public final class DatasetServiceOuterClass {
        */
       public Builder setDatasetNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         datasetName_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7428,7 +7494,7 @@ public final class DatasetServiceOuterClass {
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
-        return optionsBuilder_ != null || options_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
@@ -7450,11 +7516,11 @@ public final class DatasetServiceOuterClass {
             throw new NullPointerException();
           }
           options_ = value;
-          onChanged();
         } else {
           optionsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7464,11 +7530,11 @@ public final class DatasetServiceOuterClass {
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder builderForValue) {
         if (optionsBuilder_ == null) {
           options_ = builderForValue.build();
-          onChanged();
         } else {
           optionsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -7476,38 +7542,38 @@ public final class DatasetServiceOuterClass {
        */
       public Builder mergeOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
         if (optionsBuilder_ == null) {
-          if (options_ != null) {
-            options_ =
-              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.newBuilder(options_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            options_ != null &&
+            options_ != asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance()) {
+            getOptionsBuilder().mergeFrom(value);
           } else {
             options_ = value;
           }
-          onChanged();
         } else {
           optionsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
-        if (optionsBuilder_ == null) {
-          options_ = null;
-          onChanged();
-        } else {
-          options_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        options_ = null;
+        if (optionsBuilder_ != null) {
+          optionsBuilder_.dispose();
           optionsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.v2.TrainingRequestOptions options = 2 [json_name = "options"];</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder getOptionsBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getOptionsFieldBuilder().getBuilder();
       }
@@ -7684,7 +7750,7 @@ public final class DatasetServiceOuterClass {
      */
     @java.lang.Override
     public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptionsOrBuilder getOptionsOrBuilder() {
-      return getOptions();
+      return options_ == null ? asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance() : options_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7880,10 +7946,10 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (optionsBuilder_ == null) {
-          options_ = null;
-        } else {
-          options_ = null;
+        bitField0_ = 0;
+        options_ = null;
+        if (optionsBuilder_ != null) {
+          optionsBuilder_.dispose();
           optionsBuilder_ = null;
         }
         return this;
@@ -7912,13 +7978,18 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest buildPartial() {
         asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest result = new asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest(this);
-        if (optionsBuilder_ == null) {
-          result.options_ = options_;
-        } else {
-          result.options_ = optionsBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.v2.DatasetServiceOuterClass.GetTrainingsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.options_ = optionsBuilder_ == null
+              ? options_
+              : optionsBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -7998,7 +8069,7 @@ public final class DatasetServiceOuterClass {
                 input.readMessage(
                     getOptionsFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               default: {
@@ -8016,6 +8087,7 @@ public final class DatasetServiceOuterClass {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions options_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8025,7 +8097,7 @@ public final class DatasetServiceOuterClass {
        * @return Whether the options field is set.
        */
       public boolean hasOptions() {
-        return optionsBuilder_ != null || options_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
@@ -8047,11 +8119,11 @@ public final class DatasetServiceOuterClass {
             throw new NullPointerException();
           }
           options_ = value;
-          onChanged();
         } else {
           optionsBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8061,11 +8133,11 @@ public final class DatasetServiceOuterClass {
           asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder builderForValue) {
         if (optionsBuilder_ == null) {
           options_ = builderForValue.build();
-          onChanged();
         } else {
           optionsBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8073,38 +8145,38 @@ public final class DatasetServiceOuterClass {
        */
       public Builder mergeOptions(asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions value) {
         if (optionsBuilder_ == null) {
-          if (options_ != null) {
-            options_ =
-              asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.newBuilder(options_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            options_ != null &&
+            options_ != asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.getDefaultInstance()) {
+            getOptionsBuilder().mergeFrom(value);
           } else {
             options_ = value;
           }
-          onChanged();
         } else {
           optionsBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public Builder clearOptions() {
-        if (optionsBuilder_ == null) {
-          options_ = null;
-          onChanged();
-        } else {
-          options_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        options_ = null;
+        if (optionsBuilder_ != null) {
+          optionsBuilder_.dispose();
           optionsBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.v2.TrainingRequestOptions options = 1 [json_name = "options"];</code>
        */
       public asgt.v2.DatasetServiceOuterClass.TrainingRequestOptions.Builder getOptionsBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getOptionsFieldBuilder().getBuilder();
       }
@@ -8269,6 +8341,7 @@ public final class DatasetServiceOuterClass {
     }
 
     public static final int TRAININGS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.v2.type.TrainingOuterClass.Training> trainings_;
     /**
      * <code>repeated .asgt.v2.type.Training trainings = 1 [json_name = "trainings"];</code>
@@ -8498,6 +8571,7 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (trainingsBuilder_ == null) {
           trainings_ = java.util.Collections.emptyList();
         } else {
@@ -8531,7 +8605,13 @@ public final class DatasetServiceOuterClass {
       @java.lang.Override
       public asgt.v2.DatasetServiceOuterClass.TrainingsResponse buildPartial() {
         asgt.v2.DatasetServiceOuterClass.TrainingsResponse result = new asgt.v2.DatasetServiceOuterClass.TrainingsResponse(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.v2.DatasetServiceOuterClass.TrainingsResponse result) {
         if (trainingsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             trainings_ = java.util.Collections.unmodifiableList(trainings_);
@@ -8541,8 +8621,10 @@ public final class DatasetServiceOuterClass {
         } else {
           result.trainings_ = trainingsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(asgt.v2.DatasetServiceOuterClass.TrainingsResponse result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override

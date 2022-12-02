@@ -22,9 +22,9 @@ grpc.web = require('grpc-web');
 
 var google_type_date_pb = require('../../../google/type/date_pb.js')
 
-var ssn_mlservice_v2_example_pb = require('../../../ssn/mlservice/v2/example_pb.js')
-
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
+
+var ssn_type_tensorflow_example_pb = require('../../../ssn/type/tensorflow/example_pb.js')
 
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')
 const proto = {};

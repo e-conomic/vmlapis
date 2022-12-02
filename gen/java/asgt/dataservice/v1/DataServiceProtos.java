@@ -137,7 +137,7 @@ public final class DataServiceProtos {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getStartTimeOrBuilder() {
-      return getStartTime();
+      return startTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : startTime_;
     }
 
     public static final int END_TIME_FIELD_NUMBER = 2;
@@ -163,10 +163,11 @@ public final class DataServiceProtos {
      */
     @java.lang.Override
     public com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder() {
-      return getEndTime();
+      return endTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : endTime_;
     }
 
     public static final int TAGS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
@@ -427,20 +428,19 @@ public final class DataServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (startTimeBuilder_ == null) {
-          startTime_ = null;
-        } else {
-          startTime_ = null;
+        bitField0_ = 0;
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
           startTimeBuilder_ = null;
         }
-        if (endTimeBuilder_ == null) {
-          endTime_ = null;
-        } else {
-          endTime_ = null;
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
           endTimeBuilder_ = null;
         }
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -467,24 +467,32 @@ public final class DataServiceProtos {
       @java.lang.Override
       public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest buildPartial() {
         asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest result = new asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest(this);
-        int from_bitField0_ = bitField0_;
-        if (startTimeBuilder_ == null) {
-          result.startTime_ = startTime_;
-        } else {
-          result.startTime_ = startTimeBuilder_.build();
-        }
-        if (endTimeBuilder_ == null) {
-          result.endTime_ = endTime_;
-        } else {
-          result.endTime_ = endTimeBuilder_.build();
-        }
-        if (((bitField0_ & 0x00000001) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.tags_ = tags_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000004);
+        }
+        result.tags_ = tags_;
+      }
+
+      private void buildPartial0(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.startTime_ = startTimeBuilder_ == null
+              ? startTime_
+              : startTimeBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.endTime_ = endTimeBuilder_ == null
+              ? endTime_
+              : endTimeBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -540,7 +548,7 @@ public final class DataServiceProtos {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -577,14 +585,14 @@ public final class DataServiceProtos {
                 input.readMessage(
                     getStartTimeFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getEndTimeFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
@@ -618,7 +626,7 @@ public final class DataServiceProtos {
        * @return Whether the startTime field is set.
        */
       public boolean hasStartTime() {
-        return startTimeBuilder_ != null || startTime_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
@@ -640,11 +648,11 @@ public final class DataServiceProtos {
             throw new NullPointerException();
           }
           startTime_ = value;
-          onChanged();
         } else {
           startTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -654,11 +662,11 @@ public final class DataServiceProtos {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (startTimeBuilder_ == null) {
           startTime_ = builderForValue.build();
-          onChanged();
         } else {
           startTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -666,38 +674,38 @@ public final class DataServiceProtos {
        */
       public Builder mergeStartTime(com.google.protobuf.Timestamp value) {
         if (startTimeBuilder_ == null) {
-          if (startTime_ != null) {
-            startTime_ =
-              com.google.protobuf.Timestamp.newBuilder(startTime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            startTime_ != null &&
+            startTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getStartTimeBuilder().mergeFrom(value);
           } else {
             startTime_ = value;
           }
-          onChanged();
         } else {
           startTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        */
       public Builder clearStartTime() {
-        if (startTimeBuilder_ == null) {
-          startTime_ = null;
-          onChanged();
-        } else {
-          startTime_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        startTime_ = null;
+        if (startTimeBuilder_ != null) {
+          startTimeBuilder_.dispose();
           startTimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp start_time = 1 [json_name = "startTime"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getStartTimeBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getStartTimeFieldBuilder().getBuilder();
       }
@@ -737,7 +745,7 @@ public final class DataServiceProtos {
        * @return Whether the endTime field is set.
        */
       public boolean hasEndTime() {
-        return endTimeBuilder_ != null || endTime_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
@@ -759,11 +767,11 @@ public final class DataServiceProtos {
             throw new NullPointerException();
           }
           endTime_ = value;
-          onChanged();
         } else {
           endTimeBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -773,11 +781,11 @@ public final class DataServiceProtos {
           com.google.protobuf.Timestamp.Builder builderForValue) {
         if (endTimeBuilder_ == null) {
           endTime_ = builderForValue.build();
-          onChanged();
         } else {
           endTimeBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -785,38 +793,38 @@ public final class DataServiceProtos {
        */
       public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
         if (endTimeBuilder_ == null) {
-          if (endTime_ != null) {
-            endTime_ =
-              com.google.protobuf.Timestamp.newBuilder(endTime_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            endTime_ != null &&
+            endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+            getEndTimeBuilder().mergeFrom(value);
           } else {
             endTime_ = value;
           }
-          onChanged();
         } else {
           endTimeBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        */
       public Builder clearEndTime() {
-        if (endTimeBuilder_ == null) {
-          endTime_ = null;
-          onChanged();
-        } else {
-          endTime_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        endTime_ = null;
+        if (endTimeBuilder_ != null) {
+          endTimeBuilder_.dispose();
           endTimeBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime"];</code>
        */
       public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getEndTimeFieldBuilder().getBuilder();
       }
@@ -850,9 +858,9 @@ public final class DataServiceProtos {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -895,10 +903,8 @@ public final class DataServiceProtos {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.set(index, value);
         onChanged();
         return this;
@@ -910,10 +916,8 @@ public final class DataServiceProtos {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
         return this;
@@ -937,7 +941,7 @@ public final class DataServiceProtos {
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -948,10 +952,8 @@ public final class DataServiceProtos {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
@@ -1175,7 +1177,8 @@ public final class DataServiceProtos {
       }
 
       public static final int TARGET_FIELD_NUMBER = 1;
-      private volatile java.lang.Object target_;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object target_ = "";
       /**
        * <code>string target = 1 [json_name = "target"];</code>
        * @return The target.
@@ -1235,11 +1238,11 @@ public final class DataServiceProtos {
        */
       @java.lang.Override
       public com.google.protobuf.FloatValueOrBuilder getConfidenceOrBuilder() {
-        return getConfidence();
+        return confidence_ == null ? com.google.protobuf.FloatValue.getDefaultInstance() : confidence_;
       }
 
       public static final int CORRECT_FIELD_NUMBER = 3;
-      private int correct_;
+      private int correct_ = 0;
       /**
        * <code>int32 correct = 3 [json_name = "correct"];</code>
        * @return The correct.
@@ -1250,7 +1253,7 @@ public final class DataServiceProtos {
       }
 
       public static final int INCORRECT_FIELD_NUMBER = 4;
-      private int incorrect_;
+      private int incorrect_ = 0;
       /**
        * <code>int32 incorrect = 4 [json_name = "incorrect"];</code>
        * @return The incorrect.
@@ -1485,18 +1488,15 @@ public final class DataServiceProtos {
         @java.lang.Override
         public Builder clear() {
           super.clear();
+          bitField0_ = 0;
           target_ = "";
-
-          if (confidenceBuilder_ == null) {
-            confidence_ = null;
-          } else {
-            confidence_ = null;
+          confidence_ = null;
+          if (confidenceBuilder_ != null) {
+            confidenceBuilder_.dispose();
             confidenceBuilder_ = null;
           }
           correct_ = 0;
-
           incorrect_ = 0;
-
           return this;
         }
 
@@ -1523,16 +1523,27 @@ public final class DataServiceProtos {
         @java.lang.Override
         public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow buildPartial() {
           asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow result = new asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow(this);
-          result.target_ = target_;
-          if (confidenceBuilder_ == null) {
-            result.confidence_ = confidence_;
-          } else {
-            result.confidence_ = confidenceBuilder_.build();
-          }
-          result.correct_ = correct_;
-          result.incorrect_ = incorrect_;
+          if (bitField0_ != 0) { buildPartial0(result); }
           onBuilt();
           return result;
+        }
+
+        private void buildPartial0(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow result) {
+          int from_bitField0_ = bitField0_;
+          if (((from_bitField0_ & 0x00000001) != 0)) {
+            result.target_ = target_;
+          }
+          if (((from_bitField0_ & 0x00000002) != 0)) {
+            result.confidence_ = confidenceBuilder_ == null
+                ? confidence_
+                : confidenceBuilder_.build();
+          }
+          if (((from_bitField0_ & 0x00000004) != 0)) {
+            result.correct_ = correct_;
+          }
+          if (((from_bitField0_ & 0x00000008) != 0)) {
+            result.incorrect_ = incorrect_;
+          }
         }
 
         @java.lang.Override
@@ -1581,6 +1592,7 @@ public final class DataServiceProtos {
           if (other == asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow.getDefaultInstance()) return this;
           if (!other.getTarget().isEmpty()) {
             target_ = other.target_;
+            bitField0_ |= 0x00000001;
             onChanged();
           }
           if (other.hasConfidence()) {
@@ -1620,24 +1632,24 @@ public final class DataServiceProtos {
                   break;
                 case 10: {
                   target_ = input.readStringRequireUtf8();
-
+                  bitField0_ |= 0x00000001;
                   break;
                 } // case 10
                 case 18: {
                   input.readMessage(
                       getConfidenceFieldBuilder().getBuilder(),
                       extensionRegistry);
-
+                  bitField0_ |= 0x00000002;
                   break;
                 } // case 18
                 case 24: {
                   correct_ = input.readInt32();
-
+                  bitField0_ |= 0x00000004;
                   break;
                 } // case 24
                 case 32: {
                   incorrect_ = input.readInt32();
-
+                  bitField0_ |= 0x00000008;
                   break;
                 } // case 32
                 default: {
@@ -1655,6 +1667,7 @@ public final class DataServiceProtos {
           } // finally
           return this;
         }
+        private int bitField0_;
 
         private java.lang.Object target_ = "";
         /**
@@ -1697,11 +1710,9 @@ public final class DataServiceProtos {
          */
         public Builder setTarget(
             java.lang.String value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  
+          if (value == null) { throw new NullPointerException(); }
           target_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -1710,8 +1721,8 @@ public final class DataServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearTarget() {
-          
           target_ = getDefaultInstance().getTarget();
+          bitField0_ = (bitField0_ & ~0x00000001);
           onChanged();
           return this;
         }
@@ -1722,12 +1733,10 @@ public final class DataServiceProtos {
          */
         public Builder setTargetBytes(
             com.google.protobuf.ByteString value) {
-          if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-          
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
           target_ = value;
+          bitField0_ |= 0x00000001;
           onChanged();
           return this;
         }
@@ -1740,7 +1749,7 @@ public final class DataServiceProtos {
          * @return Whether the confidence field is set.
          */
         public boolean hasConfidence() {
-          return confidenceBuilder_ != null || confidence_ != null;
+          return ((bitField0_ & 0x00000002) != 0);
         }
         /**
          * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
@@ -1762,11 +1771,11 @@ public final class DataServiceProtos {
               throw new NullPointerException();
             }
             confidence_ = value;
-            onChanged();
           } else {
             confidenceBuilder_.setMessage(value);
           }
-
+          bitField0_ |= 0x00000002;
+          onChanged();
           return this;
         }
         /**
@@ -1776,11 +1785,11 @@ public final class DataServiceProtos {
             com.google.protobuf.FloatValue.Builder builderForValue) {
           if (confidenceBuilder_ == null) {
             confidence_ = builderForValue.build();
-            onChanged();
           } else {
             confidenceBuilder_.setMessage(builderForValue.build());
           }
-
+          bitField0_ |= 0x00000002;
+          onChanged();
           return this;
         }
         /**
@@ -1788,38 +1797,38 @@ public final class DataServiceProtos {
          */
         public Builder mergeConfidence(com.google.protobuf.FloatValue value) {
           if (confidenceBuilder_ == null) {
-            if (confidence_ != null) {
-              confidence_ =
-                com.google.protobuf.FloatValue.newBuilder(confidence_).mergeFrom(value).buildPartial();
+            if (((bitField0_ & 0x00000002) != 0) &&
+              confidence_ != null &&
+              confidence_ != com.google.protobuf.FloatValue.getDefaultInstance()) {
+              getConfidenceBuilder().mergeFrom(value);
             } else {
               confidence_ = value;
             }
-            onChanged();
           } else {
             confidenceBuilder_.mergeFrom(value);
           }
-
+          bitField0_ |= 0x00000002;
+          onChanged();
           return this;
         }
         /**
          * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
          */
         public Builder clearConfidence() {
-          if (confidenceBuilder_ == null) {
-            confidence_ = null;
-            onChanged();
-          } else {
-            confidence_ = null;
+          bitField0_ = (bitField0_ & ~0x00000002);
+          confidence_ = null;
+          if (confidenceBuilder_ != null) {
+            confidenceBuilder_.dispose();
             confidenceBuilder_ = null;
           }
-
+          onChanged();
           return this;
         }
         /**
          * <code>.google.protobuf.FloatValue confidence = 2 [json_name = "confidence"];</code>
          */
         public com.google.protobuf.FloatValue.Builder getConfidenceBuilder() {
-          
+          bitField0_ |= 0x00000002;
           onChanged();
           return getConfidenceFieldBuilder().getBuilder();
         }
@@ -1868,6 +1877,7 @@ public final class DataServiceProtos {
         public Builder setCorrect(int value) {
           
           correct_ = value;
+          bitField0_ |= 0x00000004;
           onChanged();
           return this;
         }
@@ -1876,7 +1886,7 @@ public final class DataServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearCorrect() {
-          
+          bitField0_ = (bitField0_ & ~0x00000004);
           correct_ = 0;
           onChanged();
           return this;
@@ -1899,6 +1909,7 @@ public final class DataServiceProtos {
         public Builder setIncorrect(int value) {
           
           incorrect_ = value;
+          bitField0_ |= 0x00000008;
           onChanged();
           return this;
         }
@@ -1907,7 +1918,7 @@ public final class DataServiceProtos {
          * @return This builder for chaining.
          */
         public Builder clearIncorrect() {
-          
+          bitField0_ = (bitField0_ & ~0x00000008);
           incorrect_ = 0;
           onChanged();
           return this;
@@ -1977,6 +1988,7 @@ public final class DataServiceProtos {
     }
 
     public static final int METRICS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse.MetricRow> metrics_;
     /**
      * <code>repeated .asgt.dataservice.v1.CalculateMetricsResponse.MetricRow metrics = 1 [json_name = "metrics"];</code>
@@ -2206,6 +2218,7 @@ public final class DataServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         if (metricsBuilder_ == null) {
           metrics_ = java.util.Collections.emptyList();
         } else {
@@ -2239,7 +2252,13 @@ public final class DataServiceProtos {
       @java.lang.Override
       public asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse buildPartial() {
         asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse result = new asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse(this);
-        int from_bitField0_ = bitField0_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse result) {
         if (metricsBuilder_ == null) {
           if (((bitField0_ & 0x00000001) != 0)) {
             metrics_ = java.util.Collections.unmodifiableList(metrics_);
@@ -2249,8 +2268,10 @@ public final class DataServiceProtos {
         } else {
           result.metrics_ = metricsBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(asgt.dataservice.v1.DataServiceProtos.CalculateMetricsResponse result) {
+        int from_bitField0_ = bitField0_;
       }
 
       @java.lang.Override
@@ -2845,7 +2866,8 @@ public final class DataServiceProtos {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
@@ -2883,7 +2905,8 @@ public final class DataServiceProtos {
     }
 
     public static final int TYPE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object type_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
     /**
      * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
@@ -2921,6 +2944,7 @@ public final class DataServiceProtos {
     }
 
     public static final int TAGS_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 3 [json_name = "tags"];</code>
@@ -2956,6 +2980,7 @@ public final class DataServiceProtos {
     }
 
     public static final int TARGETS_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList targets_;
     /**
      * <code>repeated string targets = 6 [json_name = "targets"];</code>
@@ -2991,6 +3016,7 @@ public final class DataServiceProtos {
     }
 
     public static final int SAMPLES_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.type.SampleOuterClass.Sample> samples_;
     /**
      * <code>repeated .asgt.type.Sample samples = 4 [json_name = "samples"];</code>
@@ -3053,7 +3079,7 @@ public final class DataServiceProtos {
      */
     @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
-      return getRetentionPolicy();
+      return retentionPolicy_ == null ? asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -3316,25 +3342,23 @@ public final class DataServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         type_ = "";
-
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         if (samplesBuilder_ == null) {
           samples_ = java.util.Collections.emptyList();
         } else {
           samples_ = null;
           samplesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000004);
-        if (retentionPolicyBuilder_ == null) {
-          retentionPolicy_ = null;
-        } else {
-          retentionPolicy_ = null;
+        bitField0_ = (bitField0_ & ~0x00000010);
+        retentionPolicy_ = null;
+        if (retentionPolicyBuilder_ != null) {
+          retentionPolicyBuilder_.dispose();
           retentionPolicyBuilder_ = null;
         }
         return this;
@@ -3363,35 +3387,47 @@ public final class DataServiceProtos {
       @java.lang.Override
       public asgt.dataservice.v1.DataServiceProtos.CreateRequest buildPartial() {
         asgt.dataservice.v1.DataServiceProtos.CreateRequest result = new asgt.dataservice.v1.DataServiceProtos.CreateRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.name_ = name_;
-        result.type_ = type_;
-        if (((bitField0_ & 0x00000001) != 0)) {
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.dataservice.v1.DataServiceProtos.CreateRequest result) {
+        if (((bitField0_ & 0x00000004) != 0)) {
           tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
         }
         result.tags_ = tags_;
-        if (((bitField0_ & 0x00000002) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           targets_ = targets_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.targets_ = targets_;
         if (samplesBuilder_ == null) {
-          if (((bitField0_ & 0x00000004) != 0)) {
+          if (((bitField0_ & 0x00000010) != 0)) {
             samples_ = java.util.Collections.unmodifiableList(samples_);
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000010);
           }
           result.samples_ = samples_;
         } else {
           result.samples_ = samplesBuilder_.build();
         }
-        if (retentionPolicyBuilder_ == null) {
-          result.retentionPolicy_ = retentionPolicy_;
-        } else {
-          result.retentionPolicy_ = retentionPolicyBuilder_.build();
+      }
+
+      private void buildPartial0(asgt.dataservice.v1.DataServiceProtos.CreateRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
         }
-        onBuilt();
-        return result;
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.retentionPolicy_ = retentionPolicyBuilder_ == null
+              ? retentionPolicy_
+              : retentionPolicyBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -3440,16 +3476,18 @@ public final class DataServiceProtos {
         if (other == asgt.dataservice.v1.DataServiceProtos.CreateRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -3459,7 +3497,7 @@ public final class DataServiceProtos {
         if (!other.targets_.isEmpty()) {
           if (targets_.isEmpty()) {
             targets_ = other.targets_;
-            bitField0_ = (bitField0_ & ~0x00000002);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureTargetsIsMutable();
             targets_.addAll(other.targets_);
@@ -3470,7 +3508,7 @@ public final class DataServiceProtos {
           if (!other.samples_.isEmpty()) {
             if (samples_.isEmpty()) {
               samples_ = other.samples_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000010);
             } else {
               ensureSamplesIsMutable();
               samples_.addAll(other.samples_);
@@ -3483,7 +3521,7 @@ public final class DataServiceProtos {
               samplesBuilder_.dispose();
               samplesBuilder_ = null;
               samples_ = other.samples_;
-              bitField0_ = (bitField0_ & ~0x00000004);
+              bitField0_ = (bitField0_ & ~0x00000010);
               samplesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSamplesFieldBuilder() : null;
@@ -3523,12 +3561,12 @@ public final class DataServiceProtos {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 type_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
@@ -3554,7 +3592,7 @@ public final class DataServiceProtos {
                 input.readMessage(
                     getRetentionPolicyFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000020;
                 break;
               } // case 42
               case 50: {
@@ -3621,11 +3659,9 @@ public final class DataServiceProtos {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3634,8 +3670,8 @@ public final class DataServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -3646,12 +3682,10 @@ public final class DataServiceProtos {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -3697,11 +3731,9 @@ public final class DataServiceProtos {
        */
       public Builder setType(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         type_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -3710,8 +3742,8 @@ public final class DataServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        
         type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -3722,21 +3754,19 @@ public final class DataServiceProtos {
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         type_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
       /**
@@ -3779,10 +3809,8 @@ public final class DataServiceProtos {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.set(index, value);
         onChanged();
         return this;
@@ -3794,10 +3822,8 @@ public final class DataServiceProtos {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
         return this;
@@ -3821,7 +3847,7 @@ public final class DataServiceProtos {
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
         return this;
       }
@@ -3832,10 +3858,8 @@ public final class DataServiceProtos {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
@@ -3844,9 +3868,9 @@ public final class DataServiceProtos {
 
       private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTargetsIsMutable() {
-        if (!((bitField0_ & 0x00000002) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
-          bitField0_ |= 0x00000002;
+          bitField0_ |= 0x00000008;
          }
       }
       /**
@@ -3889,10 +3913,8 @@ public final class DataServiceProtos {
        */
       public Builder setTargets(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTargetsIsMutable();
         targets_.set(index, value);
         onChanged();
         return this;
@@ -3904,10 +3926,8 @@ public final class DataServiceProtos {
        */
       public Builder addTargets(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTargetsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTargetsIsMutable();
         targets_.add(value);
         onChanged();
         return this;
@@ -3931,7 +3951,7 @@ public final class DataServiceProtos {
        */
       public Builder clearTargets() {
         targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -3942,10 +3962,8 @@ public final class DataServiceProtos {
        */
       public Builder addTargetsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTargetsIsMutable();
         targets_.add(value);
         onChanged();
@@ -3955,9 +3973,9 @@ public final class DataServiceProtos {
       private java.util.List<asgt.type.SampleOuterClass.Sample> samples_ =
         java.util.Collections.emptyList();
       private void ensureSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000004) != 0)) {
+        if (!((bitField0_ & 0x00000010) != 0)) {
           samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>(samples_);
-          bitField0_ |= 0x00000004;
+          bitField0_ |= 0x00000010;
          }
       }
 
@@ -4107,7 +4125,7 @@ public final class DataServiceProtos {
       public Builder clearSamples() {
         if (samplesBuilder_ == null) {
           samples_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000010);
           onChanged();
         } else {
           samplesBuilder_.clear();
@@ -4184,7 +4202,7 @@ public final class DataServiceProtos {
           samplesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder>(
                   samples_,
-                  ((bitField0_ & 0x00000004) != 0),
+                  ((bitField0_ & 0x00000010) != 0),
                   getParentForChildren(),
                   isClean());
           samples_ = null;
@@ -4200,7 +4218,7 @@ public final class DataServiceProtos {
        * @return Whether the retentionPolicy field is set.
        */
       public boolean hasRetentionPolicy() {
-        return retentionPolicyBuilder_ != null || retentionPolicy_ != null;
+        return ((bitField0_ & 0x00000020) != 0);
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
@@ -4222,11 +4240,11 @@ public final class DataServiceProtos {
             throw new NullPointerException();
           }
           retentionPolicy_ = value;
-          onChanged();
         } else {
           retentionPolicyBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -4236,11 +4254,11 @@ public final class DataServiceProtos {
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder builderForValue) {
         if (retentionPolicyBuilder_ == null) {
           retentionPolicy_ = builderForValue.build();
-          onChanged();
         } else {
           retentionPolicyBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
@@ -4248,38 +4266,38 @@ public final class DataServiceProtos {
        */
       public Builder mergeRetentionPolicy(asgt.type.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
-          if (retentionPolicy_ != null) {
-            retentionPolicy_ =
-              asgt.type.RetentionPolicyOuterClass.RetentionPolicy.newBuilder(retentionPolicy_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000020) != 0) &&
+            retentionPolicy_ != null &&
+            retentionPolicy_ != asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance()) {
+            getRetentionPolicyBuilder().mergeFrom(value);
           } else {
             retentionPolicy_ = value;
           }
-          onChanged();
         } else {
           retentionPolicyBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000020;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
        */
       public Builder clearRetentionPolicy() {
-        if (retentionPolicyBuilder_ == null) {
-          retentionPolicy_ = null;
-          onChanged();
-        } else {
-          retentionPolicy_ = null;
+        bitField0_ = (bitField0_ & ~0x00000020);
+        retentionPolicy_ = null;
+        if (retentionPolicyBuilder_ != null) {
+          retentionPolicyBuilder_.dispose();
           retentionPolicyBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder getRetentionPolicyBuilder() {
-        
+        bitField0_ |= 0x00000020;
         onChanged();
         return getRetentionPolicyFieldBuilder().getBuilder();
       }
@@ -4470,7 +4488,8 @@ public final class DataServiceProtos {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
@@ -4508,7 +4527,8 @@ public final class DataServiceProtos {
     }
 
     public static final int TYPE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object type_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
     /**
      * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
@@ -4546,6 +4566,7 @@ public final class DataServiceProtos {
     }
 
     public static final int SAMPLES_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
     private java.util.List<asgt.type.SampleOuterClass.Sample> samples_;
     /**
      * <code>repeated .asgt.type.Sample samples = 3 [json_name = "samples"];</code>
@@ -4795,17 +4816,16 @@ public final class DataServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         type_ = "";
-
         if (samplesBuilder_ == null) {
           samples_ = java.util.Collections.emptyList();
         } else {
           samples_ = null;
           samplesBuilder_.clear();
         }
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
 
@@ -4832,20 +4852,32 @@ public final class DataServiceProtos {
       @java.lang.Override
       public asgt.dataservice.v1.DataServiceProtos.AppendDataRequest buildPartial() {
         asgt.dataservice.v1.DataServiceProtos.AppendDataRequest result = new asgt.dataservice.v1.DataServiceProtos.AppendDataRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.name_ = name_;
-        result.type_ = type_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.dataservice.v1.DataServiceProtos.AppendDataRequest result) {
         if (samplesBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0)) {
+          if (((bitField0_ & 0x00000004) != 0)) {
             samples_ = java.util.Collections.unmodifiableList(samples_);
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000004);
           }
           result.samples_ = samples_;
         } else {
           result.samples_ = samplesBuilder_.build();
         }
-        onBuilt();
-        return result;
+      }
+
+      private void buildPartial0(asgt.dataservice.v1.DataServiceProtos.AppendDataRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.type_ = type_;
+        }
       }
 
       @java.lang.Override
@@ -4894,17 +4926,19 @@ public final class DataServiceProtos {
         if (other == asgt.dataservice.v1.DataServiceProtos.AppendDataRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (samplesBuilder_ == null) {
           if (!other.samples_.isEmpty()) {
             if (samples_.isEmpty()) {
               samples_ = other.samples_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
             } else {
               ensureSamplesIsMutable();
               samples_.addAll(other.samples_);
@@ -4917,7 +4951,7 @@ public final class DataServiceProtos {
               samplesBuilder_.dispose();
               samplesBuilder_ = null;
               samples_ = other.samples_;
-              bitField0_ = (bitField0_ & ~0x00000001);
+              bitField0_ = (bitField0_ & ~0x00000004);
               samplesBuilder_ = 
                 com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
                    getSamplesFieldBuilder() : null;
@@ -4954,12 +4988,12 @@ public final class DataServiceProtos {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 type_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
@@ -5033,11 +5067,9 @@ public final class DataServiceProtos {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5046,8 +5078,8 @@ public final class DataServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -5058,12 +5090,10 @@ public final class DataServiceProtos {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -5109,11 +5139,9 @@ public final class DataServiceProtos {
        */
       public Builder setType(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         type_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5122,8 +5150,8 @@ public final class DataServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        
         type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -5134,12 +5162,10 @@ public final class DataServiceProtos {
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         type_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -5147,9 +5173,9 @@ public final class DataServiceProtos {
       private java.util.List<asgt.type.SampleOuterClass.Sample> samples_ =
         java.util.Collections.emptyList();
       private void ensureSamplesIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000004) != 0)) {
           samples_ = new java.util.ArrayList<asgt.type.SampleOuterClass.Sample>(samples_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000004;
          }
       }
 
@@ -5299,7 +5325,7 @@ public final class DataServiceProtos {
       public Builder clearSamples() {
         if (samplesBuilder_ == null) {
           samples_ = java.util.Collections.emptyList();
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000004);
           onChanged();
         } else {
           samplesBuilder_.clear();
@@ -5376,7 +5402,7 @@ public final class DataServiceProtos {
           samplesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
               asgt.type.SampleOuterClass.Sample, asgt.type.SampleOuterClass.Sample.Builder, asgt.type.SampleOuterClass.SampleOrBuilder>(
                   samples_,
-                  ((bitField0_ & 0x00000001) != 0),
+                  ((bitField0_ & 0x00000004) != 0),
                   getParentForChildren(),
                   isClean());
           samples_ = null;
@@ -5582,7 +5608,8 @@ public final class DataServiceProtos {
     }
 
     public static final int TYPE_FIELD_NUMBER = 1;
-    private volatile java.lang.Object type_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
     /**
      * <code>string type = 1 [json_name = "type"];</code>
      * @return The type.
@@ -5947,8 +5974,8 @@ public final class DataServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         type_ = "";
-
         matchCase_ = 0;
         match_ = null;
         return this;
@@ -5977,16 +6004,22 @@ public final class DataServiceProtos {
       @java.lang.Override
       public asgt.dataservice.v1.DataServiceProtos.DeleteRequest buildPartial() {
         asgt.dataservice.v1.DataServiceProtos.DeleteRequest result = new asgt.dataservice.v1.DataServiceProtos.DeleteRequest(this);
-        result.type_ = type_;
-        if (matchCase_ == 2) {
-          result.match_ = match_;
-        }
-        if (matchCase_ == 3) {
-          result.match_ = match_;
-        }
-        result.matchCase_ = matchCase_;
+        if (bitField0_ != 0) { buildPartial0(result); }
+        buildPartialOneofs(result);
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.dataservice.v1.DataServiceProtos.DeleteRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.type_ = type_;
+        }
+      }
+
+      private void buildPartialOneofs(asgt.dataservice.v1.DataServiceProtos.DeleteRequest result) {
+        result.matchCase_ = matchCase_;
+        result.match_ = this.match_;
       }
 
       @java.lang.Override
@@ -6035,6 +6068,7 @@ public final class DataServiceProtos {
         if (other == asgt.dataservice.v1.DataServiceProtos.DeleteRequest.getDefaultInstance()) return this;
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         switch (other.getMatchCase()) {
@@ -6082,7 +6116,7 @@ public final class DataServiceProtos {
                 break;
               case 10: {
                 type_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
@@ -6127,6 +6161,7 @@ public final class DataServiceProtos {
         return this;
       }
 
+      private int bitField0_;
 
       private java.lang.Object type_ = "";
       /**
@@ -6169,11 +6204,9 @@ public final class DataServiceProtos {
        */
       public Builder setType(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         type_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6182,8 +6215,8 @@ public final class DataServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        
         type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -6194,12 +6227,10 @@ public final class DataServiceProtos {
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         type_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6264,10 +6295,8 @@ public final class DataServiceProtos {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  matchCase_ = 2;
+        if (value == null) { throw new NullPointerException(); }
+        matchCase_ = 2;
         match_ = value;
         onChanged();
         return this;
@@ -6291,10 +6320,8 @@ public final class DataServiceProtos {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         matchCase_ = 2;
         match_ = value;
         onChanged();
@@ -6361,10 +6388,8 @@ public final class DataServiceProtos {
        */
       public Builder setTag(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  matchCase_ = 3;
+        if (value == null) { throw new NullPointerException(); }
+        matchCase_ = 3;
         match_ = value;
         onChanged();
         return this;
@@ -6388,10 +6413,8 @@ public final class DataServiceProtos {
        */
       public Builder setTagBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         matchCase_ = 3;
         match_ = value;
         onChanged();
@@ -6532,7 +6555,8 @@ public final class DataServiceProtos {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
@@ -6570,7 +6594,8 @@ public final class DataServiceProtos {
     }
 
     public static final int TYPE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object type_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
     /**
      * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
@@ -6804,10 +6829,9 @@ public final class DataServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         type_ = "";
-
         return this;
       }
 
@@ -6834,10 +6858,19 @@ public final class DataServiceProtos {
       @java.lang.Override
       public asgt.dataservice.v1.DataServiceProtos.GetInfoRequest buildPartial() {
         asgt.dataservice.v1.DataServiceProtos.GetInfoRequest result = new asgt.dataservice.v1.DataServiceProtos.GetInfoRequest(this);
-        result.name_ = name_;
-        result.type_ = type_;
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.dataservice.v1.DataServiceProtos.GetInfoRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.type_ = type_;
+        }
       }
 
       @java.lang.Override
@@ -6886,10 +6919,12 @@ public final class DataServiceProtos {
         if (other == asgt.dataservice.v1.DataServiceProtos.GetInfoRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -6920,12 +6955,12 @@ public final class DataServiceProtos {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 type_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -6943,6 +6978,7 @@ public final class DataServiceProtos {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -6985,11 +7021,9 @@ public final class DataServiceProtos {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -6998,8 +7032,8 @@ public final class DataServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -7010,12 +7044,10 @@ public final class DataServiceProtos {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7061,11 +7093,9 @@ public final class DataServiceProtos {
        */
       public Builder setType(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         type_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7074,8 +7104,8 @@ public final class DataServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        
         type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -7086,12 +7116,10 @@ public final class DataServiceProtos {
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         type_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7245,7 +7273,8 @@ public final class DataServiceProtos {
     }
 
     public static final int NAME_FIELD_NUMBER = 1;
-    private volatile java.lang.Object name_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object name_ = "";
     /**
      * <code>string name = 1 [json_name = "name"];</code>
      * @return The name.
@@ -7283,7 +7312,8 @@ public final class DataServiceProtos {
     }
 
     public static final int TYPE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object type_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object type_ = "";
     /**
      * <code>string type = 2 [json_name = "type"];</code>
      * @return The type.
@@ -7343,7 +7373,7 @@ public final class DataServiceProtos {
      */
     @java.lang.Override
     public asgt.type.RetentionPolicyOuterClass.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
-      return getRetentionPolicy();
+      return retentionPolicy_ == null ? asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -7559,14 +7589,12 @@ public final class DataServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         name_ = "";
-
         type_ = "";
-
-        if (retentionPolicyBuilder_ == null) {
-          retentionPolicy_ = null;
-        } else {
-          retentionPolicy_ = null;
+        retentionPolicy_ = null;
+        if (retentionPolicyBuilder_ != null) {
+          retentionPolicyBuilder_.dispose();
           retentionPolicyBuilder_ = null;
         }
         return this;
@@ -7595,15 +7623,24 @@ public final class DataServiceProtos {
       @java.lang.Override
       public asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest buildPartial() {
         asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest result = new asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest(this);
-        result.name_ = name_;
-        result.type_ = type_;
-        if (retentionPolicyBuilder_ == null) {
-          result.retentionPolicy_ = retentionPolicy_;
-        } else {
-          result.retentionPolicy_ = retentionPolicyBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.name_ = name_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.type_ = type_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.retentionPolicy_ = retentionPolicyBuilder_ == null
+              ? retentionPolicy_
+              : retentionPolicyBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -7652,10 +7689,12 @@ public final class DataServiceProtos {
         if (other == asgt.dataservice.v1.DataServiceProtos.UpdateDatasetRequest.getDefaultInstance()) return this;
         if (!other.getName().isEmpty()) {
           name_ = other.name_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getType().isEmpty()) {
           type_ = other.type_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.hasRetentionPolicy()) {
@@ -7689,19 +7728,19 @@ public final class DataServiceProtos {
                 break;
               case 10: {
                 name_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 type_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 26: {
                 input.readMessage(
                     getRetentionPolicyFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 26
               default: {
@@ -7719,6 +7758,7 @@ public final class DataServiceProtos {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private java.lang.Object name_ = "";
       /**
@@ -7761,11 +7801,9 @@ public final class DataServiceProtos {
        */
       public Builder setName(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7774,8 +7812,8 @@ public final class DataServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearName() {
-        
         name_ = getDefaultInstance().getName();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -7786,12 +7824,10 @@ public final class DataServiceProtos {
        */
       public Builder setNameBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         name_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7837,11 +7873,9 @@ public final class DataServiceProtos {
        */
       public Builder setType(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         type_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7850,8 +7884,8 @@ public final class DataServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearType() {
-        
         type_ = getDefaultInstance().getType();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -7862,12 +7896,10 @@ public final class DataServiceProtos {
        */
       public Builder setTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         type_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -7880,7 +7912,7 @@ public final class DataServiceProtos {
        * @return Whether the retentionPolicy field is set.
        */
       public boolean hasRetentionPolicy() {
-        return retentionPolicyBuilder_ != null || retentionPolicy_ != null;
+        return ((bitField0_ & 0x00000004) != 0);
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
@@ -7902,11 +7934,11 @@ public final class DataServiceProtos {
             throw new NullPointerException();
           }
           retentionPolicy_ = value;
-          onChanged();
         } else {
           retentionPolicyBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -7916,11 +7948,11 @@ public final class DataServiceProtos {
           asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder builderForValue) {
         if (retentionPolicyBuilder_ == null) {
           retentionPolicy_ = builderForValue.build();
-          onChanged();
         } else {
           retentionPolicyBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
@@ -7928,38 +7960,38 @@ public final class DataServiceProtos {
        */
       public Builder mergeRetentionPolicy(asgt.type.RetentionPolicyOuterClass.RetentionPolicy value) {
         if (retentionPolicyBuilder_ == null) {
-          if (retentionPolicy_ != null) {
-            retentionPolicy_ =
-              asgt.type.RetentionPolicyOuterClass.RetentionPolicy.newBuilder(retentionPolicy_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000004) != 0) &&
+            retentionPolicy_ != null &&
+            retentionPolicy_ != asgt.type.RetentionPolicyOuterClass.RetentionPolicy.getDefaultInstance()) {
+            getRetentionPolicyBuilder().mergeFrom(value);
           } else {
             retentionPolicy_ = value;
           }
-          onChanged();
         } else {
           retentionPolicyBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000004;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
        */
       public Builder clearRetentionPolicy() {
-        if (retentionPolicyBuilder_ == null) {
-          retentionPolicy_ = null;
-          onChanged();
-        } else {
-          retentionPolicy_ = null;
+        bitField0_ = (bitField0_ & ~0x00000004);
+        retentionPolicy_ = null;
+        if (retentionPolicyBuilder_ != null) {
+          retentionPolicyBuilder_.dispose();
           retentionPolicyBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
        */
       public asgt.type.RetentionPolicyOuterClass.RetentionPolicy.Builder getRetentionPolicyBuilder() {
-        
+        bitField0_ |= 0x00000004;
         onChanged();
         return getRetentionPolicyFieldBuilder().getBuilder();
       }
@@ -8163,7 +8195,7 @@ public final class DataServiceProtos {
      */
     @java.lang.Override
     public asgt.type.DatasetOuterClass.DatasetOrBuilder getDatasetOrBuilder() {
-      return getDataset();
+      return dataset_ == null ? asgt.type.DatasetOuterClass.Dataset.getDefaultInstance() : dataset_;
     }
 
     public static final int MODEL_FIELD_NUMBER = 2;
@@ -8201,7 +8233,7 @@ public final class DataServiceProtos {
      */
     @java.lang.Override
     public asgt.type.ModelOuterClass.ModelOrBuilder getModelOrBuilder() {
-      return getModel();
+      return model_ == null ? asgt.type.ModelOuterClass.Model.getDefaultInstance() : model_;
     }
 
     private byte memoizedIsInitialized = -1;
@@ -8413,16 +8445,15 @@ public final class DataServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        if (datasetBuilder_ == null) {
-          dataset_ = null;
-        } else {
-          dataset_ = null;
+        bitField0_ = 0;
+        dataset_ = null;
+        if (datasetBuilder_ != null) {
+          datasetBuilder_.dispose();
           datasetBuilder_ = null;
         }
-        if (modelBuilder_ == null) {
-          model_ = null;
-        } else {
-          model_ = null;
+        model_ = null;
+        if (modelBuilder_ != null) {
+          modelBuilder_.dispose();
           modelBuilder_ = null;
         }
         return this;
@@ -8451,18 +8482,23 @@ public final class DataServiceProtos {
       @java.lang.Override
       public asgt.dataservice.v1.DataServiceProtos.GetInfoResponse buildPartial() {
         asgt.dataservice.v1.DataServiceProtos.GetInfoResponse result = new asgt.dataservice.v1.DataServiceProtos.GetInfoResponse(this);
-        if (datasetBuilder_ == null) {
-          result.dataset_ = dataset_;
-        } else {
-          result.dataset_ = datasetBuilder_.build();
-        }
-        if (modelBuilder_ == null) {
-          result.model_ = model_;
-        } else {
-          result.model_ = modelBuilder_.build();
-        }
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartial0(asgt.dataservice.v1.DataServiceProtos.GetInfoResponse result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dataset_ = datasetBuilder_ == null
+              ? dataset_
+              : datasetBuilder_.build();
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.model_ = modelBuilder_ == null
+              ? model_
+              : modelBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -8545,14 +8581,14 @@ public final class DataServiceProtos {
                 input.readMessage(
                     getDatasetFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 input.readMessage(
                     getModelFieldBuilder().getBuilder(),
                     extensionRegistry);
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               default: {
@@ -8570,6 +8606,7 @@ public final class DataServiceProtos {
         } // finally
         return this;
       }
+      private int bitField0_;
 
       private asgt.type.DatasetOuterClass.Dataset dataset_;
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -8579,7 +8616,7 @@ public final class DataServiceProtos {
        * @return Whether the dataset field is set.
        */
       public boolean hasDataset() {
-        return datasetBuilder_ != null || dataset_ != null;
+        return ((bitField0_ & 0x00000001) != 0);
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
@@ -8601,11 +8638,11 @@ public final class DataServiceProtos {
             throw new NullPointerException();
           }
           dataset_ = value;
-          onChanged();
         } else {
           datasetBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8615,11 +8652,11 @@ public final class DataServiceProtos {
           asgt.type.DatasetOuterClass.Dataset.Builder builderForValue) {
         if (datasetBuilder_ == null) {
           dataset_ = builderForValue.build();
-          onChanged();
         } else {
           datasetBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
@@ -8627,38 +8664,38 @@ public final class DataServiceProtos {
        */
       public Builder mergeDataset(asgt.type.DatasetOuterClass.Dataset value) {
         if (datasetBuilder_ == null) {
-          if (dataset_ != null) {
-            dataset_ =
-              asgt.type.DatasetOuterClass.Dataset.newBuilder(dataset_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000001) != 0) &&
+            dataset_ != null &&
+            dataset_ != asgt.type.DatasetOuterClass.Dataset.getDefaultInstance()) {
+            getDatasetBuilder().mergeFrom(value);
           } else {
             dataset_ = value;
           }
-          onChanged();
         } else {
           datasetBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000001;
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public Builder clearDataset() {
-        if (datasetBuilder_ == null) {
-          dataset_ = null;
-          onChanged();
-        } else {
-          dataset_ = null;
+        bitField0_ = (bitField0_ & ~0x00000001);
+        dataset_ = null;
+        if (datasetBuilder_ != null) {
+          datasetBuilder_.dispose();
           datasetBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
        * <code>.asgt.type.Dataset dataset = 1 [json_name = "dataset"];</code>
        */
       public asgt.type.DatasetOuterClass.Dataset.Builder getDatasetBuilder() {
-        
+        bitField0_ |= 0x00000001;
         onChanged();
         return getDatasetFieldBuilder().getBuilder();
       }
@@ -8702,7 +8739,7 @@ public final class DataServiceProtos {
        * @return Whether the model field is set.
        */
       public boolean hasModel() {
-        return modelBuilder_ != null || model_ != null;
+        return ((bitField0_ & 0x00000002) != 0);
       }
       /**
        * <pre>
@@ -8732,11 +8769,11 @@ public final class DataServiceProtos {
             throw new NullPointerException();
           }
           model_ = value;
-          onChanged();
         } else {
           modelBuilder_.setMessage(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8750,11 +8787,11 @@ public final class DataServiceProtos {
           asgt.type.ModelOuterClass.Model.Builder builderForValue) {
         if (modelBuilder_ == null) {
           model_ = builderForValue.build();
-          onChanged();
         } else {
           modelBuilder_.setMessage(builderForValue.build());
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8766,17 +8803,18 @@ public final class DataServiceProtos {
        */
       public Builder mergeModel(asgt.type.ModelOuterClass.Model value) {
         if (modelBuilder_ == null) {
-          if (model_ != null) {
-            model_ =
-              asgt.type.ModelOuterClass.Model.newBuilder(model_).mergeFrom(value).buildPartial();
+          if (((bitField0_ & 0x00000002) != 0) &&
+            model_ != null &&
+            model_ != asgt.type.ModelOuterClass.Model.getDefaultInstance()) {
+            getModelBuilder().mergeFrom(value);
           } else {
             model_ = value;
           }
-          onChanged();
         } else {
           modelBuilder_.mergeFrom(value);
         }
-
+        bitField0_ |= 0x00000002;
+        onChanged();
         return this;
       }
       /**
@@ -8787,14 +8825,13 @@ public final class DataServiceProtos {
        * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public Builder clearModel() {
-        if (modelBuilder_ == null) {
-          model_ = null;
-          onChanged();
-        } else {
-          model_ = null;
+        bitField0_ = (bitField0_ & ~0x00000002);
+        model_ = null;
+        if (modelBuilder_ != null) {
+          modelBuilder_.dispose();
           modelBuilder_ = null;
         }
-
+        onChanged();
         return this;
       }
       /**
@@ -8805,7 +8842,7 @@ public final class DataServiceProtos {
        * <code>.asgt.type.Model model = 2 [json_name = "model"];</code>
        */
       public asgt.type.ModelOuterClass.Model.Builder getModelBuilder() {
-        
+        bitField0_ |= 0x00000002;
         onChanged();
         return getModelFieldBuilder().getBuilder();
       }
@@ -9011,7 +9048,8 @@ public final class DataServiceProtos {
     }
 
     public static final int DATASET_FIELD_NUMBER = 1;
-    private volatile java.lang.Object dataset_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object dataset_ = "";
     /**
      * <code>string dataset = 1 [json_name = "dataset"];</code>
      * @return The dataset.
@@ -9049,7 +9087,8 @@ public final class DataServiceProtos {
     }
 
     public static final int MODEL_TYPE_FIELD_NUMBER = 2;
-    private volatile java.lang.Object modelType_;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object modelType_ = "";
     /**
      * <code>string model_type = 2 [json_name = "modelType"];</code>
      * @return The modelType.
@@ -9087,7 +9126,7 @@ public final class DataServiceProtos {
     }
 
     public static final int BATCH_SIZE_FIELD_NUMBER = 3;
-    private int batchSize_;
+    private int batchSize_ = 0;
     /**
      * <code>int32 batch_size = 3 [json_name = "batchSize"];</code>
      * @return The batchSize.
@@ -9098,6 +9137,7 @@ public final class DataServiceProtos {
     }
 
     public static final int TAGS_FIELD_NUMBER = 4;
+    @SuppressWarnings("serial")
     private com.google.protobuf.LazyStringList tags_;
     /**
      * <code>repeated string tags = 4 [json_name = "tags"];</code>
@@ -9357,14 +9397,12 @@ public final class DataServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
+        bitField0_ = 0;
         dataset_ = "";
-
         modelType_ = "";
-
         batchSize_ = 0;
-
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
 
@@ -9391,17 +9429,31 @@ public final class DataServiceProtos {
       @java.lang.Override
       public asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest buildPartial() {
         asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest result = new asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest(this);
-        int from_bitField0_ = bitField0_;
-        result.dataset_ = dataset_;
-        result.modelType_ = modelType_;
-        result.batchSize_ = batchSize_;
-        if (((bitField0_ & 0x00000001) != 0)) {
-          tags_ = tags_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.tags_ = tags_;
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest result) {
+        if (((bitField0_ & 0x00000008) != 0)) {
+          tags_ = tags_.getUnmodifiableView();
+          bitField0_ = (bitField0_ & ~0x00000008);
+        }
+        result.tags_ = tags_;
+      }
+
+      private void buildPartial0(asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.dataset_ = dataset_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.modelType_ = modelType_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.batchSize_ = batchSize_;
+        }
       }
 
       @java.lang.Override
@@ -9450,10 +9502,12 @@ public final class DataServiceProtos {
         if (other == asgt.dataservice.v1.DataServiceProtos.RegisterQueryStatsRequest.getDefaultInstance()) return this;
         if (!other.getDataset().isEmpty()) {
           dataset_ = other.dataset_;
+          bitField0_ |= 0x00000001;
           onChanged();
         }
         if (!other.getModelType().isEmpty()) {
           modelType_ = other.modelType_;
+          bitField0_ |= 0x00000002;
           onChanged();
         }
         if (other.getBatchSize() != 0) {
@@ -9462,7 +9516,7 @@ public final class DataServiceProtos {
         if (!other.tags_.isEmpty()) {
           if (tags_.isEmpty()) {
             tags_ = other.tags_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureTagsIsMutable();
             tags_.addAll(other.tags_);
@@ -9497,17 +9551,17 @@ public final class DataServiceProtos {
                 break;
               case 10: {
                 dataset_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000001;
                 break;
               } // case 10
               case 18: {
                 modelType_ = input.readStringRequireUtf8();
-
+                bitField0_ |= 0x00000002;
                 break;
               } // case 18
               case 24: {
                 batchSize_ = input.readInt32();
-
+                bitField0_ |= 0x00000004;
                 break;
               } // case 24
               case 34: {
@@ -9574,11 +9628,9 @@ public final class DataServiceProtos {
        */
       public Builder setDataset(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         dataset_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9587,8 +9639,8 @@ public final class DataServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearDataset() {
-        
         dataset_ = getDefaultInstance().getDataset();
+        bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
         return this;
       }
@@ -9599,12 +9651,10 @@ public final class DataServiceProtos {
        */
       public Builder setDatasetBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         dataset_ = value;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -9650,11 +9700,9 @@ public final class DataServiceProtos {
        */
       public Builder setModelType(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
+        if (value == null) { throw new NullPointerException(); }
         modelType_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9663,8 +9711,8 @@ public final class DataServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearModelType() {
-        
         modelType_ = getDefaultInstance().getModelType();
+        bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
         return this;
       }
@@ -9675,12 +9723,10 @@ public final class DataServiceProtos {
        */
       public Builder setModelTypeBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         modelType_ = value;
+        bitField0_ |= 0x00000002;
         onChanged();
         return this;
       }
@@ -9702,6 +9748,7 @@ public final class DataServiceProtos {
       public Builder setBatchSize(int value) {
         
         batchSize_ = value;
+        bitField0_ |= 0x00000004;
         onChanged();
         return this;
       }
@@ -9710,7 +9757,7 @@ public final class DataServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearBatchSize() {
-        
+        bitField0_ = (bitField0_ & ~0x00000004);
         batchSize_ = 0;
         onChanged();
         return this;
@@ -9718,9 +9765,9 @@ public final class DataServiceProtos {
 
       private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       private void ensureTagsIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!((bitField0_ & 0x00000008) != 0)) {
           tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-          bitField0_ |= 0x00000001;
+          bitField0_ |= 0x00000008;
          }
       }
       /**
@@ -9763,10 +9810,8 @@ public final class DataServiceProtos {
        */
       public Builder setTags(
           int index, java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.set(index, value);
         onChanged();
         return this;
@@ -9778,10 +9823,8 @@ public final class DataServiceProtos {
        */
       public Builder addTags(
           java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  ensureTagsIsMutable();
+        if (value == null) { throw new NullPointerException(); }
+        ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
         return this;
@@ -9805,7 +9848,7 @@ public final class DataServiceProtos {
        */
       public Builder clearTags() {
         tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
@@ -9816,10 +9859,8 @@ public final class DataServiceProtos {
        */
       public Builder addTagsBytes(
           com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
         ensureTagsIsMutable();
         tags_.add(value);
         onChanged();
