@@ -12,7 +12,7 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/cv/scanner/v1;cv";
 service Scanner {
   rpc ScanCV(ScanCVRequest) returns (ScanCVResponse) {
     option (google.api.http) = {
-      post: "/v1/document:scan"
+      post: "/v1/scanner:scancv"
       body: "*"
     };
   }

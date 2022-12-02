@@ -10819,12 +10819,12 @@ public final class ScannerOuterClass {
       "NAME\020\014\022\022\n\016POSITION_TITLE\020\r\022\010\n\004DATE\020\016\022\022\n\016" +
       "INSTITUTE_NAME\020\017\022\022\n\016INSTITUTE_TYPE\020\020\022\025\n\021" +
       "AREA_OF_EDUCATION\020\021\022\n\n\006DEGREE\020\022\022\021\n\rAVERA" +
-      "GE_GRADE\020\023\022\010\n\004NAME\020\024\022\t\n\005LEVEL\020\0252n\n\007Scann" +
-      "er\022c\n\006ScanCV\022\034.cv.scanner.v1.ScanCVReque" +
-      "st\032\035.cv.scanner.v1.ScanCVResponse\"\034\202\323\344\223\002" +
-      "\026:\001*\"\021/v1/document:scanB6Z4github.com/e-" +
-      "conomic/vmlapis/gen/go/cv/scanner/v1;cvb" +
-      "\006proto3"
+      "GE_GRADE\020\023\022\010\n\004NAME\020\024\022\t\n\005LEVEL\020\0252o\n\007Scann" +
+      "er\022d\n\006ScanCV\022\034.cv.scanner.v1.ScanCVReque" +
+      "st\032\035.cv.scanner.v1.ScanCVResponse\"\035\202\323\344\223\002" +
+      "\027:\001*\"\022/v1/scanner:scancvB6Z4github.com/e" +
+      "-conomic/vmlapis/gen/go/cv/scanner/v1;cv" +
+      "b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
