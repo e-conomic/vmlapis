@@ -37,7 +37,9 @@ all:
 		--path proto/asgt/jester/v1/jester.proto \
 		--path proto/asgt/data/v1/data_service.proto \
 		--path proto/asgt/v2/dataset_service.proto \
-		--path proto/asgt/v2/suggester_service.proto
+		--path proto/asgt/v2/suggester_service.proto \
+		--path proto/cv/scanner/v1/scanner.proto \
+
 
 #	extra generation of dependencies for js since it can only use local .proto files (for now)
 	buf generate deps --template buf.gen.deps.js.yaml

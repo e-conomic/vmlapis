@@ -66,11 +66,11 @@ namespace Cv.Scanner.V1 {
             "T1lFUl9OQU1FEAwSEgoOUE9TSVRJT05fVElUTEUQDRIICgREQVRFEA4SEgoO",
             "SU5TVElUVVRFX05BTUUQDxISCg5JTlNUSVRVVEVfVFlQRRAQEhUKEUFSRUFf",
             "T0ZfRURVQ0FUSU9OEBESCgoGREVHUkVFEBISEQoNQVZFUkFHRV9HUkFERRAT",
-            "EggKBE5BTUUQFBIJCgVMRVZFTBAVMm4KB1NjYW5uZXISYwoGU2NhbkNWEhwu",
+            "EggKBE5BTUUQFBIJCgVMRVZFTBAVMm8KB1NjYW5uZXISZAoGU2NhbkNWEhwu",
             "Y3Yuc2Nhbm5lci52MS5TY2FuQ1ZSZXF1ZXN0Gh0uY3Yuc2Nhbm5lci52MS5T",
-            "Y2FuQ1ZSZXNwb25zZSIcgtPkkwIWOgEqIhEvdjEvZG9jdW1lbnQ6c2NhbkI2",
-            "WjRnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9jdi9zY2Fu",
-            "bmVyL3YxO2N2YgZwcm90bzM="));
+            "Y2FuQ1ZSZXNwb25zZSIdgtPkkwIXOgEqIhIvdjEvc2Nhbm5lcjpzY2FuY3ZC",
+            "Nlo0Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vY3Yvc2Nh",
+            "bm5lci92MTtjdmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.HttpReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
