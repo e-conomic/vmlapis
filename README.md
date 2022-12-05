@@ -17,6 +17,13 @@ Generation is done with a dockerfile (docker command is included in the makefile
 ```bash
 make
 ```
+### Descriptor deployment
+
+If you added new file with service to the proto-definitions. Add it to the Makefile.
+Search:
+```bash
+	buf build proto -o gen/descriptor.bin \
+```
 
 ### Linting and breaking changes
 
