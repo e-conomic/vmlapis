@@ -12,6 +12,7 @@ import "google/protobuf/timestamp.proto";
 import "google/protobuf/wrappers.proto";
 import "ssn/dataservice/v1/dataservice.proto";
 
+option csharp_namespace = "Asgt.Dataservice.V1";
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/data/v1;data";
 option java_outer_classname = "DataServiceProtos";
 

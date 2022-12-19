@@ -6,23 +6,23 @@ import "asgt/type/model.proto";
 import "asgt/type/prediction.proto";
 import "asgt/v2/type/data.proto";
 import "google/api/annotations.proto";
-import "protoc-gen-openapiv2/options/annotations.proto";
+//import "protoc-gen-openapiv2/options/annotations.proto";
 import "validate/validate.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2";
-option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
-  info: {
-    title: "AutoSuggest";
-    version: "v2";
-    description: "";
-  };
-  schemes: HTTPS;
-  consumes: "application/json";
-  produces: "application/json";
-};
+//option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+//  info: {
+//    title: "AutoSuggest";
+//    version: "v2";
+//    description: "";
+//  };
+//  schemes: HTTPS;
+//  consumes: "application/json";
+//  produces: "application/json";
+//};
 
 service SuggesterService {
-  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Make predictions against a dataset."};
+  //  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Make predictions against a dataset."};
 
   // Suggest target values for some input using a dataset, returning an empty result if no model exists.
   rpc Suggest(SuggestRequest) returns (SuggestResponse) {
@@ -51,7 +51,7 @@ service SuggesterService {
 }
 
 message SuggestOptions {
-  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {example: "{\"suggest_limit\": 3}"};
+  //  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {example: "{\"suggest_limit\": 3}"};
 
   // Maximum number of suggestions to return per target
   int32 suggest_limit = 1;

@@ -3,22 +3,22 @@ syntax = "proto3";
 package ssn.annotator.v1;
 
 import "google/api/annotations.proto";
-import "protoc-gen-openapiv2/options/annotations.proto";
+//import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
 import "ssn/type/tier.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1;annotator";
-option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
-  info: {
-    title: "SmartScan";
-    version: "v1";
-    description: "";
-  };
-  schemes: HTTPS;
-  consumes: "application/json";
-  produces: "application/json";
-};
+//option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+//  info: {
+//    title: "SmartScan";
+//    version: "v1";
+//    description: "";
+//  };
+//  schemes: HTTPS;
+//  consumes: "application/json";
+//  produces: "application/json";
+//};
 
 service DocumentAnnotator {
   rpc AnnotateDocument(DocumentAnnotatorRequest) returns (DocumentAnnotatorResponse) {

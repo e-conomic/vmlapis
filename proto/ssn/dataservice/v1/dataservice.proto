@@ -12,6 +12,7 @@ import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
 import "ssn/type/tier.proto";
 
+option csharp_namespace = "SsnDataservice";
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/dataservice/v1;dataservice";
 option java_outer_classname = "DataServiceProto";
 

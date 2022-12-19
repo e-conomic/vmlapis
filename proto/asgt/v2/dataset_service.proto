@@ -7,13 +7,13 @@ import "asgt/v2/type/example.proto";
 import "asgt/v2/type/training.proto";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
-import "protoc-gen-openapiv2/options/annotations.proto";
+//import "protoc-gen-openapiv2/options/annotations.proto";
 import "validate/validate.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2";
 
 service DatasetService {
-  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Manage datasets and examples used for training AutoSuggest models."};
+  //  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Manage datasets and examples used for training AutoSuggest models."};
 
   // Get the basic information about a dataset.
   rpc GetDataset(GetDatasetRequest) returns (asgt.type.Dataset) {
