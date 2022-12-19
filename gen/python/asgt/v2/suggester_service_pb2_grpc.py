@@ -6,7 +6,8 @@ from vml_proto.asgt.v2 import suggester_service_pb2 as asgt_dot_v2_dot_suggester
 
 
 class SuggesterServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Make predictions against a dataset."};
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -32,7 +33,8 @@ class SuggesterServiceStub(object):
 
 
 class SuggesterServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Make predictions against a dataset."};
+    """
 
     def Suggest(self, request, context):
         """Suggest target values for some input using a dataset, returning an empty result if no model exists.
@@ -82,7 +84,8 @@ def add_SuggesterServiceServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class SuggesterService(object):
-    """Missing associated documentation comment in .proto file."""
+    """option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Make predictions against a dataset."};
+    """
 
     @staticmethod
     def Suggest(request,

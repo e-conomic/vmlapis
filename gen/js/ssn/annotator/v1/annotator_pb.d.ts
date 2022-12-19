@@ -1,7 +1,6 @@
 import * as jspb from 'google-protobuf'
 
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb';
-import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb';
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb';
 import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb';
 import * as ssn_type_tier_pb from '../../../ssn/type/tier_pb';

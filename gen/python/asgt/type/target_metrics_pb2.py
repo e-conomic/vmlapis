@@ -13,14 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x61sgt/type/target_metrics.proto\x12\tasgt.type\"\xcb\x01\n\rTargetMetrics\x12\x16\n\x06target\x18\x01 \x01(\tR\x06target\x12\x39\n\x07metrics\x18\x02 \x03(\x0b\x32\x1f.asgt.type.TargetMetrics.MetricR\x07metrics\x1ag\n\x06Metric\x12\x1c\n\tprecision\x18\x01 \x01(\x02R\tprecision\x12\x1e\n\nconfidence\x18\x02 \x01(\x02R\nconfidence\x12\x1f\n\x0b\x61nswer_rate\x18\x03 \x01(\x02R\nanswerRateB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x61sgt/type/target_metrics.proto\x12\tasgt.type\"\xcb\x01\n\rTargetMetrics\x12\x16\n\x06target\x18\x01 \x01(\tR\x06target\x12\x39\n\x07metrics\x18\x02 \x03(\x0b\x32\x1f.asgt.type.TargetMetrics.MetricR\x07metrics\x1ag\n\x06Metric\x12\x1c\n\tprecision\x18\x01 \x01(\x02R\tprecision\x12\x1e\n\nconfidence\x18\x02 \x01(\x02R\nconfidence\x12\x1f\n\x0b\x61nswer_rate\x18\x03 \x01(\x02R\nanswerRateB\xa5\x01\n\x12\x61i.visma.asgt.typeB\x12TargetMetricsProtoP\x01Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype\xa2\x02\x03\x41TX\xaa\x02\tAsgt.Type\xca\x02\tAsgt\\Type\xe2\x02\x15\x41sgt\\Type\\GPBMetadata\xea\x02\nAsgt::Typeb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'asgt.type.target_metrics_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'
+  DESCRIPTOR._serialized_options = b'\n\022ai.visma.asgt.typeB\022TargetMetricsProtoP\001Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype\242\002\003ATX\252\002\tAsgt.Type\312\002\tAsgt\\Type\342\002\025Asgt\\Type\\GPBMetadata\352\002\nAsgt::Type'
   _TARGETMETRICS._serialized_start=46
   _TARGETMETRICS._serialized_end=249
   _TARGETMETRICS_METRIC._serialized_start=146

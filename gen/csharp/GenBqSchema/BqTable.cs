@@ -30,8 +30,11 @@ namespace GenBqSchema {
             "ZRIkCg51c2VfanNvbl9uYW1lcxgCIAEoCFIMdXNlSnNvbk5hbWVzOmwKDWJp",
             "Z3F1ZXJ5X29wdHMSHy5nb29nbGUucHJvdG9idWYuTWVzc2FnZU9wdGlvbnMY",
             "/QcgASgLMiUuZ2VuX2JxX3NjaGVtYS5CaWdRdWVyeU1lc3NhZ2VPcHRpb25z",
-            "UgxiaWdxdWVyeU9wdHNCQVo/Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
-            "cy9nZW4vZ28vZ2VuX2JxX3NjaGVtYTtnZW5fYnFfc2NoZW1hYgZwcm90bzM="));
+            "UgxiaWdxdWVyeU9wdHNCswEKFmFpLnZpc21hLmdlbl9icV9zY2hlbWFCDEJx",
+            "VGFibGVQcm90b1ABWj9naXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dl",
+            "bi9nby9nZW5fYnFfc2NoZW1hO2dlbl9icV9zY2hlbWGiAgNHWFiqAgtHZW5C",
+            "cVNjaGVtYcoCC0dlbkJxU2NoZW1h4gIXR2VuQnFTY2hlbWFcR1BCTWV0YWRh",
+            "dGHqAgtHZW5CcVNjaGVtYWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, new pb::Extension[] { BqTableExtensions.BigqueryOpts }, new pbr::GeneratedClrTypeInfo[] {

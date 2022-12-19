@@ -1,0 +1,12 @@
+/app/gen/csharp/bin/Debug/net6.0/vmlapis.deps.json
+/app/gen/csharp/bin/Debug/net6.0/vmlapis.dll
+/app/gen/csharp/bin/Debug/net6.0/vmlapis.pdb
+/app/gen/csharp/obj/Debug/net6.0/vmlapis.csproj.AssemblyReference.cache
+/app/gen/csharp/obj/Debug/net6.0/vmlapis.GeneratedMSBuildEditorConfig.editorconfig
+/app/gen/csharp/obj/Debug/net6.0/vmlapis.AssemblyInfoInputs.cache
+/app/gen/csharp/obj/Debug/net6.0/vmlapis.AssemblyInfo.cs
+/app/gen/csharp/obj/Debug/net6.0/vmlapis.csproj.CoreCompileInputs.cache
+/app/gen/csharp/obj/Debug/net6.0/vmlapis.dll
+/app/gen/csharp/obj/Debug/net6.0/refint/vmlapis.dll
+/app/gen/csharp/obj/Debug/net6.0/vmlapis.pdb
+/app/gen/csharp/obj/Debug/net6.0/ref/vmlapis.dll

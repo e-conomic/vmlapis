@@ -14,14 +14,14 @@ _sym_db = _symbol_database.Default()
 from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1assn/access/v1/access.proto\x12\rssn.access.v1\x1a\x1cgoogle/api/annotations.proto\"5\n\x0fValetKeyRequest\x12\x10\n\x03sub\x18\x01 \x01(\tR\x03sub\x12\x10\n\x03\x65xp\x18\x02 \x01(\x03R\x03\x65xp\"8\n\x10ValetKeyResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x14\n\x05token\x18\x02 \x01(\tR\x05token2}\n\x06\x41\x63\x63\x65ss\x12s\n\x10GenerateValetKey\x12\x1e.ssn.access.v1.ValetKeyRequest\x1a\x1f.ssn.access.v1.ValetKeyResponse\"\x1e\x82\xd3\xe4\x93\x02\x18:\x01*\"\x13/v1/access/valetkeyB:Z8github.com/e-conomic/vmlapis/gen/go/ssn/access/v1;accessb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1assn/access/v1/access.proto\x12\rssn.access.v1\x1a\x1cgoogle/api/annotations.proto\"5\n\x0fValetKeyRequest\x12\x10\n\x03sub\x18\x01 \x01(\tR\x03sub\x12\x10\n\x03\x65xp\x18\x02 \x01(\x03R\x03\x65xp\"8\n\x10ValetKeyResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x14\n\x05token\x18\x02 \x01(\tR\x05token2}\n\x06\x41\x63\x63\x65ss\x12s\n\x10GenerateValetKey\x12\x1e.ssn.access.v1.ValetKeyRequest\x1a\x1f.ssn.access.v1.ValetKeyResponse\"\x1e\x82\xd3\xe4\x93\x02\x18:\x01*\"\x13/v1/access/valetkeyB\xb5\x01\n\x16\x61i.visma.ssn.access.v1B\x0b\x41\x63\x63\x65ssProtoP\x01Z8github.com/e-conomic/vmlapis/gen/go/ssn/access/v1;access\xa2\x02\x03SAX\xaa\x02\rSsn.Access.V1\xca\x02\rSsn\\Access\\V1\xe2\x02\x19Ssn\\Access\\V1\\GPBMetadata\xea\x02\x0fSsn::Access::V1b\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ssn.access.v1.access_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'Z8github.com/e-conomic/vmlapis/gen/go/ssn/access/v1;access'
+  DESCRIPTOR._serialized_options = b'\n\026ai.visma.ssn.access.v1B\013AccessProtoP\001Z8github.com/e-conomic/vmlapis/gen/go/ssn/access/v1;access\242\002\003SAX\252\002\rSsn.Access.V1\312\002\rSsn\\Access\\V1\342\002\031Ssn\\Access\\V1\\GPBMetadata\352\002\017Ssn::Access::V1'
   _ACCESS.methods_by_name['GenerateValetKey']._options = None
   _ACCESS.methods_by_name['GenerateValetKey']._serialized_options = b'\202\323\344\223\002\030:\001*\"\023/v1/access/valetkey'
   _VALETKEYREQUEST._serialized_start=75

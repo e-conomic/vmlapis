@@ -1,21 +1,16 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "AutoSuggest",
-    "version": "v2"
+    "title": "asgt/v2/dataset_service.proto",
+    "version": "version not set"
   },
   "tags": [
     {
-      "name": "SuggesterService",
-      "description": "Make predictions against a dataset."
+      "name": "DatasetService"
     },
     {
-      "name": "DatasetService",
-      "description": "Manage datasets and examples used for training AutoSuggest models."
+      "name": "SuggesterService"
     }
-  ],
-  "schemes": [
-    "https"
   ],
   "consumes": [
     "application/json"
@@ -1009,9 +1004,6 @@
     },
     "v2SuggestOptions": {
       "type": "object",
-      "example": {
-        "suggest_limit": 3
-      },
       "properties": {
         "suggestLimit": {
           "type": "integer",
@@ -1022,7 +1014,8 @@
           "$ref": "#/definitions/ConfidenceLevel",
           "description": "Not implemented yet."
         }
-      }
+      },
+      "title": "option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {example: \"{\\\"suggest_limit\\\": 3}\"};"
     },
     "v2SuggestResponse": {
       "type": "object",

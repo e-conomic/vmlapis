@@ -22,8 +22,6 @@ grpc.web = require('grpc-web');
 
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
-var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-openapiv2/options/annotations_pb.js')
-
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
 
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js')

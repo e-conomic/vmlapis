@@ -64,8 +64,10 @@ namespace Ssn.Type {
             "dGF0aW9uLlRleHRQcm9wZXJ0eVIIcHJvcGVydHkSOQoMYm91bmRpbmdfYm94",
             "GAIgASgLMhYuc3NuLnR5cGUuQm91bmRpbmdQb2x5Ugtib3VuZGluZ0JveBIS",
             "CgR0ZXh0GAMgASgJUgR0ZXh0Eh4KCmNvbmZpZGVuY2UYBCABKAJSCmNvbmZp",
-            "ZGVuY2VCNlo0Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28v",
-            "c3NuL3R5cGU7c3NudHlwZWIGcHJvdG8z"));
+            "ZGVuY2VCnwEKEWFpLnZpc21hLnNzbi50eXBlQhNUZXh0QW5ub3RhdGlvblBy",
+            "b3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nz",
+            "bi90eXBlO3NzbnR5cGWiAgNTVFiqAghTc24uVHlwZcoCCFNzblxUeXBl4gIU",
+            "U3NuXFR5cGVcR1BCTWV0YWRhdGHqAglTc246OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

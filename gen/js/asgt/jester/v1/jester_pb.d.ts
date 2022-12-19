@@ -4,7 +4,6 @@ import * as asgt_type_data_pb from '../../../asgt/type/data_pb';
 import * as asgt_type_model_pb from '../../../asgt/type/model_pb';
 import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb';
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb';
-import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb';
 
 
 export class SuggestionResponse extends jspb.Message {

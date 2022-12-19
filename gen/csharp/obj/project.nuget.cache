@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "cbyRB4O18owIPT/aaTsGri2MvCFT0QbUlWDONGV3THS5WxAzT8tYUgAC77T6iD6SH5RlMFYT7ACzDn6Sek43NA==",
+  "success": true,
+  "projectFilePath": "/app/gen/csharp/vmlapis.csproj",
+  "expectedPackageFiles": [
+    "/root/.nuget/packages/google.protobuf/3.21.11/google.protobuf.3.21.11.nupkg.sha512",
+    "/root/.nuget/packages/grpc.core/2.46.5/grpc.core.2.46.5.nupkg.sha512",
+    "/root/.nuget/packages/grpc.core.api/2.46.5/grpc.core.api.2.46.5.nupkg.sha512",
+    "/root/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512"
+  ],
+  "logs": []
+}

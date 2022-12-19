@@ -8,7 +8,8 @@ from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
 
 
 class DatasetServiceStub(object):
-    """Missing associated documentation comment in .proto file."""
+    """option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Manage datasets and examples used for training AutoSuggest models."};
+    """
 
     def __init__(self, channel):
         """Constructor.
@@ -74,7 +75,8 @@ class DatasetServiceStub(object):
 
 
 class DatasetServiceServicer(object):
-    """Missing associated documentation comment in .proto file."""
+    """option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Manage datasets and examples used for training AutoSuggest models."};
+    """
 
     def GetDataset(self, request, context):
         """Get the basic information about a dataset.
@@ -229,7 +231,8 @@ def add_DatasetServiceServicer_to_server(servicer, server):
 
  # This class is part of an EXPERIMENTAL API.
 class DatasetService(object):
-    """Missing associated documentation comment in .proto file."""
+    """option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Manage datasets and examples used for training AutoSuggest models."};
+    """
 
     @staticmethod
     def GetDataset(request,

@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "SmartScan",
-    "version": "v1"
+    "title": "ssn/annotator/v1/annotator.proto",
+    "version": "version not set"
   },
   "tags": [
     {
@@ -11,9 +11,6 @@
     {
       "name": "DataService"
     }
-  ],
-  "schemes": [
-    "https"
   ],
   "consumes": [
     "application/json"

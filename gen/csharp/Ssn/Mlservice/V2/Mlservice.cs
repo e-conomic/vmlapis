@@ -130,9 +130,12 @@ namespace Ssn.Mlservice.V2 {
             "Mi5QcmVkaWN0UmVxdWVzdBohLnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJl",
             "c3BvbnNlEmIKEUZlYXR1cmVHZW5QcmVkaWN0Eiouc3NuLm1sc2VydmljZS52",
             "Mi5GZWF0dXJlR2VuUHJlZGljdFJlcXVlc3QaIS5zc24ubWxzZXJ2aWNlLnYy",
-            "LlByZWRpY3RSZXNwb25zZUJRQg9NbFNlcnZpY2VQcm90b3NaPmdpdGh1Yi5j",
-            "b20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi9tbHNlcnZpY2UvdjI7",
-            "bWxzZXJ2aWNlYgZwcm90bzM="));
+            "LlByZWRpY3RSZXNwb25zZULNAQoZYWkudmlzbWEuc3NuLm1sc2VydmljZS52",
+            "MkIOTWxzZXJ2aWNlUHJvdG9QAVo+Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1s",
+            "YXBpcy9nZW4vZ28vc3NuL21sc2VydmljZS92MjttbHNlcnZpY2WiAgNTTViq",
+            "AhBTc24uTWxzZXJ2aWNlLlYyygIQU3NuXE1sc2VydmljZVxWMuICHFNzblxN",
+            "bHNlcnZpY2VcVjJcR1BCTWV0YWRhdGHqAhJTc246Ok1sc2VydmljZTo6VjJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Tensorflow.ExampleReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

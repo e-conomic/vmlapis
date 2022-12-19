@@ -310,9 +310,12 @@ namespace Ssn.Dataservice.V1 {
             "b29nbGUucHJvdG9idWYuRW1wdHkiHoLT5JMCGDoBKiITL3YxL2ZlZWRiYWNr",
             "OmRlbGV0ZRJYChNDYWxsc1Blck1vbnRoTWV0cmljEhYuZ29vZ2xlLnByb3Rv",
             "YnVmLkVtcHR5Gikuc3NuLmRhdGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGhS",
-            "ZXNwb25zZUJWQhBEYXRhU2VydmljZVByb3RvWkJnaXRodWIuY29tL2UtY29u",
-            "b21pYy92bWxhcGlzL2dlbi9nby9zc24vZGF0YXNlcnZpY2UvdjE7ZGF0YXNl",
-            "cnZpY2ViBnByb3RvMw=="));
+            "ZXNwb25zZULdAQobYWkudmlzbWEuc3NuLmRhdGFzZXJ2aWNlLnYxQhBEYXRh",
+            "c2VydmljZVByb3RvUAFaQmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMv",
+            "Z2VuL2dvL3Nzbi9kYXRhc2VydmljZS92MTtkYXRhc2VydmljZaICA1NEWKoC",
+            "ElNzbi5EYXRhc2VydmljZS5WMcoCElNzblxEYXRhc2VydmljZVxWMeICHlNz",
+            "blxEYXRhc2VydmljZVxWMVxHUEJNZXRhZGF0YeoCFFNzbjo6RGF0YXNlcnZp",
+            "Y2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

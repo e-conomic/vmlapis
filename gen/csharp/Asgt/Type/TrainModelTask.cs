@@ -29,8 +29,11 @@ namespace Asgt.Type {
             "LnByb3RvIpQBCg5UcmFpbk1vZGVsVGFzaxIsCgdkYXRhc2V0GAEgASgLMhIu",
             "YXNndC50eXBlLkRhdGFzZXRSB2RhdGFzZXQSLwoIcmV2aXNpb24YAiABKAsy",
             "Ey5hc2d0LnR5cGUuUmV2aXNpb25SCHJldmlzaW9uEiMKDW1vZGVsX3ZlcnNp",
-            "b24YBCABKANSDG1vZGVsVmVyc2lvbkI4WjZnaXRodWIuY29tL2UtY29ub21p",
-            "Yy92bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
+            "b24YBCABKANSDG1vZGVsVmVyc2lvbkKmAQoSYWkudmlzbWEuYXNndC50eXBl",
+            "QhNUcmFpbk1vZGVsVGFza1Byb3RvUAFaNmdpdGh1Yi5jb20vZS1jb25vbWlj",
+            "L3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdHlwZTthc2d0dHlwZaICA0FUWKoCCUFz",
+            "Z3QuVHlwZcoCCUFzZ3RcVHlwZeICFUFzZ3RcVHlwZVxHUEJNZXRhZGF0YeoC",
+            "CkFzZ3Q6OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

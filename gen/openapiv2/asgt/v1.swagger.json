@@ -1,19 +1,16 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "AutoSuggest",
-    "version": "v1"
+    "title": "asgt/data/v1/bq_entries.proto",
+    "version": "version not set"
   },
   "tags": [
     {
-      "name": "Jester"
+      "name": "DataService"
     },
     {
-      "name": "DataService"
+      "name": "Jester"
     }
-  ],
-  "schemes": [
-    "https"
   ],
   "consumes": [
     "application/json"
