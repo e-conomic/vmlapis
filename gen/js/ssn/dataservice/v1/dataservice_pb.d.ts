@@ -245,6 +245,11 @@ export class TrueValues extends jspb.Message {
   hasSupplierAddress(): boolean;
   clearSupplierAddress(): TrueValues;
 
+  getCustomerNumber(): google_protobuf_wrappers_pb.StringValue | undefined;
+  setCustomerNumber(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
+  hasCustomerNumber(): boolean;
+  clearCustomerNumber(): TrueValues;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TrueValues.AsObject;
   static toObject(includeInstance: boolean, msg: TrueValues): TrueValues.AsObject;
@@ -288,6 +293,7 @@ export namespace TrueValues {
     supplierVatNumber?: google_protobuf_wrappers_pb.StringValue.AsObject,
     supplierOrganisationNumber?: google_protobuf_wrappers_pb.StringValue.AsObject,
     supplierAddress?: google_protobuf_wrappers_pb.StringValue.AsObject,
+    customerNumber?: google_protobuf_wrappers_pb.StringValue.AsObject,
   }
 }
 
@@ -457,6 +463,11 @@ export class PredictionValues extends jspb.Message {
   clearSupplierAddressList(): PredictionValues;
   addSupplierAddress(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
 
+  getCustomerNumberList(): Array<google_protobuf_wrappers_pb.StringValue>;
+  setCustomerNumberList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
+  clearCustomerNumberList(): PredictionValues;
+  addCustomerNumber(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionValues.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionValues): PredictionValues.AsObject;
@@ -500,6 +511,7 @@ export namespace PredictionValues {
     supplierVatNumberList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
     supplierOrganisationNumberList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
     supplierAddressList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
+    customerNumberList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
   }
 }
 
@@ -669,6 +681,11 @@ export class PredictionConfidences extends jspb.Message {
   clearSupplierAddressList(): PredictionConfidences;
   addSupplierAddress(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
 
+  getCustomerNumberList(): Array<google_protobuf_wrappers_pb.FloatValue>;
+  setCustomerNumberList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
+  clearCustomerNumberList(): PredictionConfidences;
+  addCustomerNumber(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionConfidences.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionConfidences): PredictionConfidences.AsObject;
@@ -712,6 +729,7 @@ export namespace PredictionConfidences {
     supplierVatNumberList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
     supplierOrganisationNumberList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
     supplierAddressList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
+    customerNumberList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
   }
 }
 
@@ -881,6 +899,11 @@ export class PredictionMetadata extends jspb.Message {
   clearSupplierAddressList(): PredictionMetadata;
   addSupplierAddress(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
 
+  getCustomerNumberList(): Array<ssn_type_candidate_pb.ModelSpec>;
+  setCustomerNumberList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
+  clearCustomerNumberList(): PredictionMetadata;
+  addCustomerNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionMetadata.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionMetadata): PredictionMetadata.AsObject;
@@ -924,6 +947,7 @@ export namespace PredictionMetadata {
     supplierVatNumberList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     supplierOrganisationNumberList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     supplierAddressList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
+    customerNumberList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
   }
 }
 

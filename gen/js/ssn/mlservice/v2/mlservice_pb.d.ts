@@ -141,6 +141,9 @@ export namespace FeatureGenRequest {
     getCreditCardLastFour(): string;
     setCreditCardLastFour(value: string): TruthLabels;
 
+    getCustomerNumber(): string;
+    setCustomerNumber(value: string): TruthLabels;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TruthLabels.AsObject;
     static toObject(includeInstance: boolean, msg: TruthLabels): TruthLabels.AsObject;
@@ -184,6 +187,7 @@ export namespace FeatureGenRequest {
       supplierOrganisationNumber: string,
       supplierAddress: string,
       creditCardLastFour: string,
+      customerNumber: string,
     }
   }
 
@@ -404,6 +408,11 @@ export class PredictResponse extends jspb.Message {
   clearCreditCardLastFourList(): PredictResponse;
   addCreditCardLastFour(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
+  getCustomerNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setCustomerNumberList(value: Array<ssn_type_candidate_pb.Candidate>): PredictResponse;
+  clearCustomerNumberList(): PredictResponse;
+  addCustomerNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictResponse.AsObject;
   static toObject(includeInstance: boolean, msg: PredictResponse): PredictResponse.AsObject;
@@ -448,6 +457,7 @@ export namespace PredictResponse {
     supplierOrganisationNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     supplierAddressList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     creditCardLastFourList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    customerNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
   }
 }
 

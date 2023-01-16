@@ -499,6 +499,18 @@ public final class MlServiceProtos {
        */
       com.google.protobuf.ByteString
           getCreditCardLastFourBytes();
+
+      /**
+       * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+       * @return The customerNumber.
+       */
+      java.lang.String getCustomerNumber();
+      /**
+       * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+       * @return The bytes for customerNumber.
+       */
+      com.google.protobuf.ByteString
+          getCustomerNumberBytes();
     }
     /**
      * Protobuf type {@code ssn.mlservice.v2.FeatureGenRequest.TruthLabels}
@@ -540,6 +552,7 @@ public final class MlServiceProtos {
         supplierOrganisationNumber_ = "";
         supplierAddress_ = "";
         creditCardLastFour_ = "";
+        customerNumber_ = "";
       }
 
       @java.lang.Override
@@ -1739,6 +1752,45 @@ public final class MlServiceProtos {
         }
       }
 
+      public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 34;
+      @SuppressWarnings("serial")
+      private volatile java.lang.Object customerNumber_ = "";
+      /**
+       * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+       * @return The customerNumber.
+       */
+      @java.lang.Override
+      public java.lang.String getCustomerNumber() {
+        java.lang.Object ref = customerNumber_;
+        if (ref instanceof java.lang.String) {
+          return (java.lang.String) ref;
+        } else {
+          com.google.protobuf.ByteString bs = 
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          customerNumber_ = s;
+          return s;
+        }
+      }
+      /**
+       * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+       * @return The bytes for customerNumber.
+       */
+      @java.lang.Override
+      public com.google.protobuf.ByteString
+          getCustomerNumberBytes() {
+        java.lang.Object ref = customerNumber_;
+        if (ref instanceof java.lang.String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          customerNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+
       private byte memoizedIsInitialized = -1;
       @java.lang.Override
       public final boolean isInitialized() {
@@ -1851,6 +1903,9 @@ public final class MlServiceProtos {
         }
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creditCardLastFour_)) {
           com.google.protobuf.GeneratedMessageV3.writeString(output, 33, creditCardLastFour_);
+        }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerNumber_)) {
+          com.google.protobuf.GeneratedMessageV3.writeString(output, 34, customerNumber_);
         }
         getUnknownFields().writeTo(output);
       }
@@ -1966,6 +2021,9 @@ public final class MlServiceProtos {
         if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creditCardLastFour_)) {
           size += com.google.protobuf.GeneratedMessageV3.computeStringSize(33, creditCardLastFour_);
         }
+        if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerNumber_)) {
+          size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, customerNumber_);
+        }
         size += getUnknownFields().getSerializedSize();
         memoizedSize = size;
         return size;
@@ -2059,6 +2117,8 @@ public final class MlServiceProtos {
             .equals(other.getSupplierAddress())) return false;
         if (!getCreditCardLastFour()
             .equals(other.getCreditCardLastFour())) return false;
+        if (!getCustomerNumber()
+            .equals(other.getCustomerNumber())) return false;
         if (!getUnknownFields().equals(other.getUnknownFields())) return false;
         return true;
       }
@@ -2145,6 +2205,8 @@ public final class MlServiceProtos {
         hash = (53 * hash) + getSupplierAddress().hashCode();
         hash = (37 * hash) + CREDIT_CARD_LAST_FOUR_FIELD_NUMBER;
         hash = (53 * hash) + getCreditCardLastFour().hashCode();
+        hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerNumber().hashCode();
         hash = (29 * hash) + getUnknownFields().hashCode();
         memoizedHashCode = hash;
         return hash;
@@ -2320,6 +2382,7 @@ public final class MlServiceProtos {
           supplierOrganisationNumber_ = "";
           supplierAddress_ = "";
           creditCardLastFour_ = "";
+          customerNumber_ = "";
           return this;
         }
 
@@ -2462,6 +2525,9 @@ public final class MlServiceProtos {
           int from_bitField1_ = bitField1_;
           if (((from_bitField1_ & 0x00000001) != 0)) {
             result.creditCardLastFour_ = creditCardLastFour_;
+          }
+          if (((from_bitField1_ & 0x00000002) != 0)) {
+            result.customerNumber_ = customerNumber_;
           }
         }
 
@@ -2662,6 +2728,11 @@ public final class MlServiceProtos {
             bitField1_ |= 0x00000001;
             onChanged();
           }
+          if (!other.getCustomerNumber().isEmpty()) {
+            customerNumber_ = other.customerNumber_;
+            bitField1_ |= 0x00000002;
+            onChanged();
+          }
           this.mergeUnknownFields(other.getUnknownFields());
           onChanged();
           return this;
@@ -2859,6 +2930,11 @@ public final class MlServiceProtos {
                   bitField1_ |= 0x00000001;
                   break;
                 } // case 266
+                case 274: {
+                  customerNumber_ = input.readStringRequireUtf8();
+                  bitField1_ |= 0x00000002;
+                  break;
+                } // case 274
                 default: {
                   if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                     done = true; // was an endgroup tag
@@ -5290,6 +5366,78 @@ public final class MlServiceProtos {
           checkByteStringIsUtf8(value);
           creditCardLastFour_ = value;
           bitField1_ |= 0x00000001;
+          onChanged();
+          return this;
+        }
+
+        private java.lang.Object customerNumber_ = "";
+        /**
+         * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+         * @return The customerNumber.
+         */
+        public java.lang.String getCustomerNumber() {
+          java.lang.Object ref = customerNumber_;
+          if (!(ref instanceof java.lang.String)) {
+            com.google.protobuf.ByteString bs =
+                (com.google.protobuf.ByteString) ref;
+            java.lang.String s = bs.toStringUtf8();
+            customerNumber_ = s;
+            return s;
+          } else {
+            return (java.lang.String) ref;
+          }
+        }
+        /**
+         * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+         * @return The bytes for customerNumber.
+         */
+        public com.google.protobuf.ByteString
+            getCustomerNumberBytes() {
+          java.lang.Object ref = customerNumber_;
+          if (ref instanceof String) {
+            com.google.protobuf.ByteString b = 
+                com.google.protobuf.ByteString.copyFromUtf8(
+                    (java.lang.String) ref);
+            customerNumber_ = b;
+            return b;
+          } else {
+            return (com.google.protobuf.ByteString) ref;
+          }
+        }
+        /**
+         * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+         * @param value The customerNumber to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCustomerNumber(
+            java.lang.String value) {
+          if (value == null) { throw new NullPointerException(); }
+          customerNumber_ = value;
+          bitField1_ |= 0x00000002;
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+         * @return This builder for chaining.
+         */
+        public Builder clearCustomerNumber() {
+          customerNumber_ = getDefaultInstance().getCustomerNumber();
+          bitField1_ = (bitField1_ & ~0x00000002);
+          onChanged();
+          return this;
+        }
+        /**
+         * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+         * @param value The bytes for customerNumber to set.
+         * @return This builder for chaining.
+         */
+        public Builder setCustomerNumberBytes(
+            com.google.protobuf.ByteString value) {
+          if (value == null) { throw new NullPointerException(); }
+          checkByteStringIsUtf8(value);
+          customerNumber_ = value;
+          bitField1_ |= 0x00000002;
           onChanged();
           return this;
         }
@@ -8334,6 +8482,30 @@ public final class MlServiceProtos {
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getCreditCardLastFourOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getCustomerNumberList();
+    /**
+     * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getCustomerNumber(int index);
+    /**
+     * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+     */
+    int getCustomerNumberCount();
+    /**
+     * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getCustomerNumberOrBuilderList();
+    /**
+     * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getCustomerNumberOrBuilder(
+        int index);
   }
   /**
    * <pre>
@@ -8386,6 +8558,7 @@ public final class MlServiceProtos {
       supplierOrganisationNumber_ = java.util.Collections.emptyList();
       supplierAddress_ = java.util.Collections.emptyList();
       creditCardLastFour_ = java.util.Collections.emptyList();
+      customerNumber_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -9827,6 +10000,47 @@ public final class MlServiceProtos {
       return creditCardLastFour_.get(index);
     }
 
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 35;
+    @SuppressWarnings("serial")
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> customerNumber_;
+    /**
+     * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCustomerNumberList() {
+      return customerNumber_;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getCustomerNumberOrBuilderList() {
+      return customerNumber_;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public int getCustomerNumberCount() {
+      return customerNumber_.size();
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getCustomerNumber(int index) {
+      return customerNumber_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getCustomerNumberOrBuilder(
+        int index) {
+      return customerNumber_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9942,6 +10156,9 @@ public final class MlServiceProtos {
       }
       for (int i = 0; i < creditCardLastFour_.size(); i++) {
         output.writeMessage(34, creditCardLastFour_.get(i));
+      }
+      for (int i = 0; i < customerNumber_.size(); i++) {
+        output.writeMessage(35, customerNumber_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -10088,6 +10305,10 @@ public final class MlServiceProtos {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(34, creditCardLastFour_.get(i));
       }
+      for (int i = 0; i < customerNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(35, customerNumber_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -10171,6 +10392,8 @@ public final class MlServiceProtos {
           .equals(other.getSupplierAddressList())) return false;
       if (!getCreditCardLastFourList()
           .equals(other.getCreditCardLastFourList())) return false;
+      if (!getCustomerNumberList()
+          .equals(other.getCustomerNumberList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -10317,6 +10540,10 @@ public final class MlServiceProtos {
       if (getCreditCardLastFourCount() > 0) {
         hash = (37 * hash) + CREDIT_CARD_LAST_FOUR_FIELD_NUMBER;
         hash = (53 * hash) + getCreditCardLastFourList().hashCode();
+      }
+      if (getCustomerNumberCount() > 0) {
+        hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerNumberList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -10690,6 +10917,13 @@ public final class MlServiceProtos {
           creditCardLastFourBuilder_.clear();
         }
         bitField1_ = (bitField1_ & ~0x00000002);
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = java.util.Collections.emptyList();
+        } else {
+          customerNumber_ = null;
+          customerNumberBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000004);
         return this;
       }
 
@@ -11029,6 +11263,15 @@ public final class MlServiceProtos {
           result.creditCardLastFour_ = creditCardLastFour_;
         } else {
           result.creditCardLastFour_ = creditCardLastFourBuilder_.build();
+        }
+        if (customerNumberBuilder_ == null) {
+          if (((bitField1_ & 0x00000004) != 0)) {
+            customerNumber_ = java.util.Collections.unmodifiableList(customerNumber_);
+            bitField1_ = (bitField1_ & ~0x00000004);
+          }
+          result.customerNumber_ = customerNumber_;
+        } else {
+          result.customerNumber_ = customerNumberBuilder_.build();
         }
       }
 
@@ -11968,6 +12211,32 @@ public final class MlServiceProtos {
             }
           }
         }
+        if (customerNumberBuilder_ == null) {
+          if (!other.customerNumber_.isEmpty()) {
+            if (customerNumber_.isEmpty()) {
+              customerNumber_ = other.customerNumber_;
+              bitField1_ = (bitField1_ & ~0x00000004);
+            } else {
+              ensureCustomerNumberIsMutable();
+              customerNumber_.addAll(other.customerNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.customerNumber_.isEmpty()) {
+            if (customerNumberBuilder_.isEmpty()) {
+              customerNumberBuilder_.dispose();
+              customerNumberBuilder_ = null;
+              customerNumber_ = other.customerNumber_;
+              bitField1_ = (bitField1_ & ~0x00000004);
+              customerNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCustomerNumberFieldBuilder() : null;
+            } else {
+              customerNumberBuilder_.addAllMessages(other.customerNumber_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -12436,6 +12705,19 @@ public final class MlServiceProtos {
                 }
                 break;
               } // case 274
+              case 282: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (customerNumberBuilder_ == null) {
+                  ensureCustomerNumberIsMutable();
+                  customerNumber_.add(m);
+                } else {
+                  customerNumberBuilder_.addMessage(m);
+                }
+                break;
+              } // case 282
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -20685,6 +20967,246 @@ public final class MlServiceProtos {
         }
         return creditCardLastFourBuilder_;
       }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> customerNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureCustomerNumberIsMutable() {
+        if (!((bitField1_ & 0x00000004) != 0)) {
+          customerNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(customerNumber_);
+          bitField1_ |= 0x00000004;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> customerNumberBuilder_;
+
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCustomerNumberList() {
+        if (customerNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(customerNumber_);
+        } else {
+          return customerNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public int getCustomerNumberCount() {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.size();
+        } else {
+          return customerNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getCustomerNumber(int index) {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.get(index);
+        } else {
+          return customerNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public Builder setCustomerNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.set(index, value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public Builder setCustomerNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(ssn.type.CandidateOuterClass.Candidate value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(index, value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public Builder addAllCustomerNumber(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, customerNumber_);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public Builder clearCustomerNumber() {
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000004);
+          onChanged();
+        } else {
+          customerNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public Builder removeCustomerNumber(int index) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.remove(index);
+          onChanged();
+        } else {
+          customerNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getCustomerNumberBuilder(
+          int index) {
+        return getCustomerNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getCustomerNumberOrBuilder(
+          int index) {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.get(index);  } else {
+          return customerNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getCustomerNumberOrBuilderList() {
+        if (customerNumberBuilder_ != null) {
+          return customerNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(customerNumber_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addCustomerNumberBuilder() {
+        return getCustomerNumberFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addCustomerNumberBuilder(
+          int index) {
+        return getCustomerNumberFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getCustomerNumberBuilderList() {
+        return getCustomerNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getCustomerNumberFieldBuilder() {
+        if (customerNumberBuilder_ == null) {
+          customerNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  customerNumber_,
+                  ((bitField1_ & 0x00000004) != 0),
+                  getParentForChildren(),
+                  isClean());
+          customerNumber_ = null;
+        }
+        return customerNumberBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -21591,11 +22113,11 @@ public final class MlServiceProtos {
       "mlservice.v2\032\026google/type/date.proto\032\030ss" +
       "n/type/candidate.proto\032!ssn/type/tensorf" +
       "low/example.proto\032\036ssn/type/text_annotat" +
-      "ion.proto\"\301\r\n\021FeatureGenRequest\022R\n\014truth" +
+      "ion.proto\"\352\r\n\021FeatureGenRequest\022R\n\014truth" +
       "_labels\030\001 \001(\0132/.ssn.mlservice.v2.Feature" +
       "GenRequest.TruthLabelsR\013truthLabels\022A\n\017t" +
       "ext_annotation\030\002 \001(\0132\030.ssn.type.TextAnno" +
-      "tationR\016textAnnotation\022\016\n\002id\030\003 \001(\tR\002id\032\204" +
+      "tationR\016textAnnotation\022\016\n\002id\030\003 \001(\tR\002id\032\255" +
       "\014\n\013TruthLabels\022$\n\016total_incl_vat\030\001 \001(\001R\014" +
       "totalInclVat\022\033\n\ttotal_vat\030\002 \001(\001R\010totalVa" +
       "t\022$\n\016total_excl_vat\030\003 \001(\001R\014totalExclVat\022" +
@@ -21634,81 +22156,84 @@ public final class MlServiceProtos {
       "sation_number\030\037 \001(\tR\032supplierOrganisatio" +
       "nNumber\022)\n\020supplier_address\030  \001(\tR\017suppl" +
       "ierAddress\0221\n\025credit_card_last_four\030! \001(" +
-      "\tR\022creditCardLastFour\"C\n\022FeatureGenRespo" +
-      "nse\022-\n\007example\030\001 \001(\0132\023.tensorflow.Exampl" +
-      "eR\007example\"p\n\016PredictRequest\022-\n\007example\030" +
-      "\001 \001(\0132\023.tensorflow.ExampleR\007example\022/\n\024t" +
-      "op_n_most_confident\030\002 \001(\rR\021topNMostConfi" +
-      "dent\"\263\021\n\017PredictResponse\0222\n\norder_date\030\001" +
-      " \003(\0132\023.ssn.type.CandidateR\torderDate\022=\n\020" +
-      "payment_due_date\030\002 \003(\0132\023.ssn.type.Candid" +
-      "ateR\016paymentDueDate\022/\n\010currency\030\003 \003(\0132\023." +
-      "ssn.type.CandidateR\010currency\0220\n\ttotal_va" +
-      "t\030\004 \003(\0132\023.ssn.type.CandidateR\010totalVat\0229" +
-      "\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type.Candid" +
-      "ateR\014totalInclVat\0229\n\016total_excl_vat\030\006 \003(" +
-      "\0132\023.ssn.type.CandidateR\014totalExclVat\022G\n\025" +
-      "supplier_corporate_id\030\007 \003(\0132\023.ssn.type.C" +
-      "andidateR\023supplierCorporateId\022G\n\025supplie" +
-      "r_country_code\030\010 \003(\0132\023.ssn.type.Candidat" +
-      "eR\023supplierCountryCode\0228\n\rdocument_type\030" +
-      "\t \003(\0132\023.ssn.type.CandidateR\014documentType" +
-      "\022:\n\016payment_method\030\n \003(\0132\023.ssn.type.Cand" +
-      "idateR\rpaymentMethod\022A\n\022credit_card_numb" +
-      "er\030\013 \003(\0132\023.ssn.type.CandidateR\020creditCar" +
-      "dNumber\022:\n\016invoice_number\030\014 \003(\0132\023.ssn.ty" +
-      "pe.CandidateR\rinvoiceNumber\022<\n\020ocr_line_" +
-      "dk_type\030\r \003(\0132\023.ssn.type.CandidateR\rocrL" +
-      "ineDkType\022G\n\026ocr_line_dk_payment_id\030\016 \003(" +
-      "\0132\023.ssn.type.CandidateR\022ocrLineDkPayment" +
-      "Id\022I\n\027ocr_line_dk_creditor_id\030\017 \003(\0132\023.ss" +
-      "n.type.CandidateR\023ocrLineDkCreditorId\022G\n" +
-      "\026ocr_line_se_payment_id\030\020 \003(\0132\023.ssn.type" +
-      ".CandidateR\022ocrLineSePaymentId\022Z\n ocr_li" +
-      "ne_se_bankgiro_creditor_id\030\021 \003(\0132\023.ssn.t" +
-      "ype.CandidateR\033ocrLineSeBankgiroCreditor" +
-      "Id\022Z\n ocr_line_se_plusgiro_creditor_id\030\022" +
-      " \003(\0132\023.ssn.type.CandidateR\033ocrLineSePlus" +
-      "giroCreditorId\022G\n\026ocr_line_no_payment_id" +
-      "\030\023 \003(\0132\023.ssn.type.CandidateR\022ocrLineNoPa" +
-      "ymentId\022G\n\026ocr_line_fi_payment_id\030\024 \003(\0132" +
-      "\023.ssn.type.CandidateR\022ocrLineFiPaymentId" +
-      "\022G\n\026ocr_line_nl_payment_id\030\025 \003(\0132\023.ssn.t" +
-      "ype.CandidateR\022ocrLineNlPaymentId\022\'\n\004iba" +
-      "n\030\026 \003(\0132\023.ssn.type.CandidateR\004iban\022-\n\005li" +
-      "nes\030\027 \003(\0132\027.ssn.type.LineCandidateR\005line" +
-      "s\022C\n\023bank_account_number\030\030 \003(\0132\023.ssn.typ" +
-      "e.CandidateR\021bankAccountNumber\022M\n\030bank_r" +
-      "egistration_number\030\031 \003(\0132\023.ssn.type.Cand" +
-      "idateR\026bankRegistrationNumber\022%\n\003bic\030\032 \003" +
-      "(\0132\023.ssn.type.CandidateR\003bic\022<\n\017document" +
-      "_number\030\033 \003(\0132\023.ssn.type.CandidateR\016docu" +
-      "mentNumber\0228\n\rdocument_date\030\034 \003(\0132\023.ssn." +
-      "type.CandidateR\014documentDate\0226\n\014order_nu" +
-      "mber\030\035 \003(\0132\023.ssn.type.CandidateR\013orderNu" +
-      "mber\0228\n\rsupplier_name\030\036 \003(\0132\023.ssn.type.C" +
-      "andidateR\014supplierName\022C\n\023supplier_vat_n" +
-      "umber\030\037 \003(\0132\023.ssn.type.CandidateR\021suppli" +
-      "erVatNumber\022U\n\034supplier_organisation_num" +
-      "ber\030  \003(\0132\023.ssn.type.CandidateR\032supplier" +
-      "OrganisationNumber\022>\n\020supplier_address\030!" +
-      " \003(\0132\023.ssn.type.CandidateR\017supplierAddre" +
-      "ss\022F\n\025credit_card_last_four\030\" \003(\0132\023.ssn." +
-      "type.CandidateR\022creditCardLastFour\"\272\001\n\030F" +
-      "eatureGenPredictRequest\022S\n\023feature_gen_r" +
-      "equest\030\001 \001(\0132#.ssn.mlservice.v2.FeatureG" +
-      "enRequestR\021featureGenRequest\022I\n\017predict_" +
-      "request\030\002 \001(\0132 .ssn.mlservice.v2.Predict" +
-      "RequestR\016predictRequest2\230\002\n\tMlService\022W\n" +
-      "\nFeatureGen\022#.ssn.mlservice.v2.FeatureGe" +
-      "nRequest\032$.ssn.mlservice.v2.FeatureGenRe" +
-      "sponse\022N\n\007Predict\022 .ssn.mlservice.v2.Pre" +
-      "dictRequest\032!.ssn.mlservice.v2.PredictRe" +
-      "sponse\022b\n\021FeatureGenPredict\022*.ssn.mlserv" +
-      "ice.v2.FeatureGenPredictRequest\032!.ssn.ml" +
-      "service.v2.PredictResponseBQB\017MlServiceP" +
-      "rotosZ>github.com/e-conomic/vmlapis/gen/" +
-      "go/ssn/mlservice/v2;mlserviceb\006proto3"
+      "\tR\022creditCardLastFour\022\'\n\017customer_number" +
+      "\030\" \001(\tR\016customerNumber\"C\n\022FeatureGenResp" +
+      "onse\022-\n\007example\030\001 \001(\0132\023.tensorflow.Examp" +
+      "leR\007example\"p\n\016PredictRequest\022-\n\007example" +
+      "\030\001 \001(\0132\023.tensorflow.ExampleR\007example\022/\n\024" +
+      "top_n_most_confident\030\002 \001(\rR\021topNMostConf" +
+      "ident\"\361\021\n\017PredictResponse\0222\n\norder_date\030" +
+      "\001 \003(\0132\023.ssn.type.CandidateR\torderDate\022=\n" +
+      "\020payment_due_date\030\002 \003(\0132\023.ssn.type.Candi" +
+      "dateR\016paymentDueDate\022/\n\010currency\030\003 \003(\0132\023" +
+      ".ssn.type.CandidateR\010currency\0220\n\ttotal_v" +
+      "at\030\004 \003(\0132\023.ssn.type.CandidateR\010totalVat\022" +
+      "9\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type.Candi" +
+      "dateR\014totalInclVat\0229\n\016total_excl_vat\030\006 \003" +
+      "(\0132\023.ssn.type.CandidateR\014totalExclVat\022G\n" +
+      "\025supplier_corporate_id\030\007 \003(\0132\023.ssn.type." +
+      "CandidateR\023supplierCorporateId\022G\n\025suppli" +
+      "er_country_code\030\010 \003(\0132\023.ssn.type.Candida" +
+      "teR\023supplierCountryCode\0228\n\rdocument_type" +
+      "\030\t \003(\0132\023.ssn.type.CandidateR\014documentTyp" +
+      "e\022:\n\016payment_method\030\n \003(\0132\023.ssn.type.Can" +
+      "didateR\rpaymentMethod\022A\n\022credit_card_num" +
+      "ber\030\013 \003(\0132\023.ssn.type.CandidateR\020creditCa" +
+      "rdNumber\022:\n\016invoice_number\030\014 \003(\0132\023.ssn.t" +
+      "ype.CandidateR\rinvoiceNumber\022<\n\020ocr_line" +
+      "_dk_type\030\r \003(\0132\023.ssn.type.CandidateR\rocr" +
+      "LineDkType\022G\n\026ocr_line_dk_payment_id\030\016 \003" +
+      "(\0132\023.ssn.type.CandidateR\022ocrLineDkPaymen" +
+      "tId\022I\n\027ocr_line_dk_creditor_id\030\017 \003(\0132\023.s" +
+      "sn.type.CandidateR\023ocrLineDkCreditorId\022G" +
+      "\n\026ocr_line_se_payment_id\030\020 \003(\0132\023.ssn.typ" +
+      "e.CandidateR\022ocrLineSePaymentId\022Z\n ocr_l" +
+      "ine_se_bankgiro_creditor_id\030\021 \003(\0132\023.ssn." +
+      "type.CandidateR\033ocrLineSeBankgiroCredito" +
+      "rId\022Z\n ocr_line_se_plusgiro_creditor_id\030" +
+      "\022 \003(\0132\023.ssn.type.CandidateR\033ocrLineSePlu" +
+      "sgiroCreditorId\022G\n\026ocr_line_no_payment_i" +
+      "d\030\023 \003(\0132\023.ssn.type.CandidateR\022ocrLineNoP" +
+      "aymentId\022G\n\026ocr_line_fi_payment_id\030\024 \003(\013" +
+      "2\023.ssn.type.CandidateR\022ocrLineFiPaymentI" +
+      "d\022G\n\026ocr_line_nl_payment_id\030\025 \003(\0132\023.ssn." +
+      "type.CandidateR\022ocrLineNlPaymentId\022\'\n\004ib" +
+      "an\030\026 \003(\0132\023.ssn.type.CandidateR\004iban\022-\n\005l" +
+      "ines\030\027 \003(\0132\027.ssn.type.LineCandidateR\005lin" +
+      "es\022C\n\023bank_account_number\030\030 \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\021bankAccountNumber\022M\n\030bank_" +
+      "registration_number\030\031 \003(\0132\023.ssn.type.Can" +
+      "didateR\026bankRegistrationNumber\022%\n\003bic\030\032 " +
+      "\003(\0132\023.ssn.type.CandidateR\003bic\022<\n\017documen" +
+      "t_number\030\033 \003(\0132\023.ssn.type.CandidateR\016doc" +
+      "umentNumber\0228\n\rdocument_date\030\034 \003(\0132\023.ssn" +
+      ".type.CandidateR\014documentDate\0226\n\014order_n" +
+      "umber\030\035 \003(\0132\023.ssn.type.CandidateR\013orderN" +
+      "umber\0228\n\rsupplier_name\030\036 \003(\0132\023.ssn.type." +
+      "CandidateR\014supplierName\022C\n\023supplier_vat_" +
+      "number\030\037 \003(\0132\023.ssn.type.CandidateR\021suppl" +
+      "ierVatNumber\022U\n\034supplier_organisation_nu" +
+      "mber\030  \003(\0132\023.ssn.type.CandidateR\032supplie" +
+      "rOrganisationNumber\022>\n\020supplier_address\030" +
+      "! \003(\0132\023.ssn.type.CandidateR\017supplierAddr" +
+      "ess\022F\n\025credit_card_last_four\030\" \003(\0132\023.ssn" +
+      ".type.CandidateR\022creditCardLastFour\022<\n\017c" +
+      "ustomer_number\030# \003(\0132\023.ssn.type.Candidat" +
+      "eR\016customerNumber\"\272\001\n\030FeatureGenPredictR" +
+      "equest\022S\n\023feature_gen_request\030\001 \001(\0132#.ss" +
+      "n.mlservice.v2.FeatureGenRequestR\021featur" +
+      "eGenRequest\022I\n\017predict_request\030\002 \001(\0132 .s" +
+      "sn.mlservice.v2.PredictRequestR\016predictR" +
+      "equest2\230\002\n\tMlService\022W\n\nFeatureGen\022#.ssn" +
+      ".mlservice.v2.FeatureGenRequest\032$.ssn.ml" +
+      "service.v2.FeatureGenResponse\022N\n\007Predict" +
+      "\022 .ssn.mlservice.v2.PredictRequest\032!.ssn" +
+      ".mlservice.v2.PredictResponse\022b\n\021Feature" +
+      "GenPredict\022*.ssn.mlservice.v2.FeatureGen" +
+      "PredictRequest\032!.ssn.mlservice.v2.Predic" +
+      "tResponseBQB\017MlServiceProtosZ>github.com" +
+      "/e-conomic/vmlapis/gen/go/ssn/mlservice/" +
+      "v2;mlserviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -21729,7 +22254,7 @@ public final class MlServiceProtos {
     internal_static_ssn_mlservice_v2_FeatureGenRequest_TruthLabels_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_FeatureGenRequest_TruthLabels_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour", "CustomerNumber", });
     internal_static_ssn_mlservice_v2_FeatureGenResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ssn_mlservice_v2_FeatureGenResponse_fieldAccessorTable = new
@@ -21747,7 +22272,7 @@ public final class MlServiceProtos {
     internal_static_ssn_mlservice_v2_PredictResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_PredictResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour", "CustomerNumber", });
     internal_static_ssn_mlservice_v2_FeatureGenPredictRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_ssn_mlservice_v2_FeatureGenPredictRequest_fieldAccessorTable = new

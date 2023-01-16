@@ -2551,6 +2551,21 @@ public final class DataServiceProto {
      * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
      */
     com.google.protobuf.StringValueOrBuilder getSupplierAddressOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     * @return Whether the customerNumber field is set.
+     */
+    boolean hasCustomerNumber();
+    /**
+     * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     * @return The customerNumber.
+     */
+    com.google.protobuf.StringValue getCustomerNumber();
+    /**
+     * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder();
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.TrueValues}
@@ -3450,6 +3465,32 @@ public final class DataServiceProto {
       return supplierAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : supplierAddress_;
     }
 
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 34;
+    private com.google.protobuf.StringValue customerNumber_;
+    /**
+     * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     * @return Whether the customerNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomerNumber() {
+      return customerNumber_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     * @return The customerNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getCustomerNumber() {
+      return customerNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerNumber_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder() {
+      return customerNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerNumber_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3562,6 +3603,9 @@ public final class DataServiceProto {
       }
       if (supplierAddress_ != null) {
         output.writeMessage(33, getSupplierAddress());
+      }
+      if (customerNumber_ != null) {
+        output.writeMessage(34, getCustomerNumber());
       }
       getUnknownFields().writeTo(output);
     }
@@ -3703,6 +3747,10 @@ public final class DataServiceProto {
       if (supplierAddress_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(33, getSupplierAddress());
+      }
+      if (customerNumber_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(34, getCustomerNumber());
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -3884,6 +3932,11 @@ public final class DataServiceProto {
         if (!getSupplierAddress()
             .equals(other.getSupplierAddress())) return false;
       }
+      if (hasCustomerNumber() != other.hasCustomerNumber()) return false;
+      if (hasCustomerNumber()) {
+        if (!getCustomerNumber()
+            .equals(other.getCustomerNumber())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -4026,6 +4079,10 @@ public final class DataServiceProto {
       if (hasSupplierAddress()) {
         hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getSupplierAddress().hashCode();
+      }
+      if (hasCustomerNumber()) {
+        hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerNumber().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -4322,6 +4379,11 @@ public final class DataServiceProto {
           supplierAddressBuilder_.dispose();
           supplierAddressBuilder_ = null;
         }
+        customerNumber_ = null;
+        if (customerNumberBuilder_ != null) {
+          customerNumberBuilder_.dispose();
+          customerNumberBuilder_ = null;
+        }
         return this;
       }
 
@@ -4525,6 +4587,11 @@ public final class DataServiceProto {
               ? supplierAddress_
               : supplierAddressBuilder_.build();
         }
+        if (((from_bitField1_ & 0x00000002) != 0)) {
+          result.customerNumber_ = customerNumberBuilder_ == null
+              ? customerNumber_
+              : customerNumberBuilder_.build();
+        }
       }
 
       @java.lang.Override
@@ -4669,6 +4736,9 @@ public final class DataServiceProto {
         }
         if (other.hasSupplierAddress()) {
           mergeSupplierAddress(other.getSupplierAddress());
+        }
+        if (other.hasCustomerNumber()) {
+          mergeCustomerNumber(other.getCustomerNumber());
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -4927,6 +4997,13 @@ public final class DataServiceProto {
                 bitField1_ |= 0x00000001;
                 break;
               } // case 266
+              case 274: {
+                input.readMessage(
+                    getCustomerNumberFieldBuilder().getBuilder(),
+                    extensionRegistry);
+                bitField1_ |= 0x00000002;
+                break;
+              } // case 274
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -8871,6 +8948,125 @@ public final class DataServiceProto {
         }
         return supplierAddressBuilder_;
       }
+
+      private com.google.protobuf.StringValue customerNumber_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> customerNumberBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       * @return Whether the customerNumber field is set.
+       */
+      public boolean hasCustomerNumber() {
+        return ((bitField1_ & 0x00000002) != 0);
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       * @return The customerNumber.
+       */
+      public com.google.protobuf.StringValue getCustomerNumber() {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerNumber_;
+        } else {
+          return customerNumberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder setCustomerNumber(com.google.protobuf.StringValue value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          customerNumber_ = value;
+        } else {
+          customerNumberBuilder_.setMessage(value);
+        }
+        bitField1_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder setCustomerNumber(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = builderForValue.build();
+        } else {
+          customerNumberBuilder_.setMessage(builderForValue.build());
+        }
+        bitField1_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder mergeCustomerNumber(com.google.protobuf.StringValue value) {
+        if (customerNumberBuilder_ == null) {
+          if (((bitField1_ & 0x00000002) != 0) &&
+            customerNumber_ != null &&
+            customerNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+            getCustomerNumberBuilder().mergeFrom(value);
+          } else {
+            customerNumber_ = value;
+          }
+        } else {
+          customerNumberBuilder_.mergeFrom(value);
+        }
+        bitField1_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder clearCustomerNumber() {
+        bitField1_ = (bitField1_ & ~0x00000002);
+        customerNumber_ = null;
+        if (customerNumberBuilder_ != null) {
+          customerNumberBuilder_.dispose();
+          customerNumberBuilder_ = null;
+        }
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public com.google.protobuf.StringValue.Builder getCustomerNumberBuilder() {
+        bitField1_ |= 0x00000002;
+        onChanged();
+        return getCustomerNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder() {
+        if (customerNumberBuilder_ != null) {
+          return customerNumberBuilder_.getMessageOrBuilder();
+        } else {
+          return customerNumber_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : customerNumber_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getCustomerNumberFieldBuilder() {
+        if (customerNumberBuilder_ == null) {
+          customerNumberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getCustomerNumber(),
+                  getParentForChildren(),
+                  isClean());
+          customerNumber_ = null;
+        }
+        return customerNumberBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -9730,6 +9926,30 @@ public final class DataServiceProto {
      */
     com.google.protobuf.StringValueOrBuilder getSupplierAddressOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    java.util.List<com.google.protobuf.StringValue> 
+        getCustomerNumberList();
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    com.google.protobuf.StringValue getCustomerNumber(int index);
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    int getCustomerNumberCount();
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getCustomerNumberOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.PredictionValues}
@@ -9777,6 +9997,7 @@ public final class DataServiceProto {
       supplierVatNumber_ = java.util.Collections.emptyList();
       supplierOrganisationNumber_ = java.util.Collections.emptyList();
       supplierAddress_ = java.util.Collections.emptyList();
+      customerNumber_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -11157,6 +11378,47 @@ public final class DataServiceProto {
       return supplierAddress_.get(index);
     }
 
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 34;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.protobuf.StringValue> customerNumber_;
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.StringValue> getCustomerNumberList() {
+      return customerNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+        getCustomerNumberOrBuilderList() {
+      return customerNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public int getCustomerNumberCount() {
+      return customerNumber_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getCustomerNumber(int index) {
+      return customerNumber_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder(
+        int index) {
+      return customerNumber_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -11269,6 +11531,9 @@ public final class DataServiceProto {
       }
       for (int i = 0; i < supplierAddress_.size(); i++) {
         output.writeMessage(33, supplierAddress_.get(i));
+      }
+      for (int i = 0; i < customerNumber_.size(); i++) {
+        output.writeMessage(34, customerNumber_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -11411,6 +11676,10 @@ public final class DataServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(33, supplierAddress_.get(i));
       }
+      for (int i = 0; i < customerNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(34, customerNumber_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -11492,6 +11761,8 @@ public final class DataServiceProto {
           .equals(other.getSupplierOrganisationNumberList())) return false;
       if (!getSupplierAddressList()
           .equals(other.getSupplierAddressList())) return false;
+      if (!getCustomerNumberList()
+          .equals(other.getCustomerNumberList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -11634,6 +11905,10 @@ public final class DataServiceProto {
       if (getSupplierAddressCount() > 0) {
         hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getSupplierAddressList().hashCode();
+      }
+      if (getCustomerNumberCount() > 0) {
+        hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerNumberList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -11996,6 +12271,13 @@ public final class DataServiceProto {
           supplierAddressBuilder_.clear();
         }
         bitField1_ = (bitField1_ & ~0x00000001);
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = java.util.Collections.emptyList();
+        } else {
+          customerNumber_ = null;
+          customerNumberBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000002);
         return this;
       }
 
@@ -12326,6 +12608,15 @@ public final class DataServiceProto {
           result.supplierAddress_ = supplierAddress_;
         } else {
           result.supplierAddress_ = supplierAddressBuilder_.build();
+        }
+        if (customerNumberBuilder_ == null) {
+          if (((bitField1_ & 0x00000002) != 0)) {
+            customerNumber_ = java.util.Collections.unmodifiableList(customerNumber_);
+            bitField1_ = (bitField1_ & ~0x00000002);
+          }
+          result.customerNumber_ = customerNumber_;
+        } else {
+          result.customerNumber_ = customerNumberBuilder_.build();
         }
       }
 
@@ -13239,6 +13530,32 @@ public final class DataServiceProto {
             }
           }
         }
+        if (customerNumberBuilder_ == null) {
+          if (!other.customerNumber_.isEmpty()) {
+            if (customerNumber_.isEmpty()) {
+              customerNumber_ = other.customerNumber_;
+              bitField1_ = (bitField1_ & ~0x00000002);
+            } else {
+              ensureCustomerNumberIsMutable();
+              customerNumber_.addAll(other.customerNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.customerNumber_.isEmpty()) {
+            if (customerNumberBuilder_.isEmpty()) {
+              customerNumberBuilder_.dispose();
+              customerNumberBuilder_ = null;
+              customerNumber_ = other.customerNumber_;
+              bitField1_ = (bitField1_ & ~0x00000002);
+              customerNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCustomerNumberFieldBuilder() : null;
+            } else {
+              customerNumberBuilder_.addAllMessages(other.customerNumber_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -13694,6 +14011,19 @@ public final class DataServiceProto {
                 }
                 break;
               } // case 266
+              case 274: {
+                com.google.protobuf.StringValue m =
+                    input.readMessage(
+                        com.google.protobuf.StringValue.parser(),
+                        extensionRegistry);
+                if (customerNumberBuilder_ == null) {
+                  ensureCustomerNumberIsMutable();
+                  customerNumber_.add(m);
+                } else {
+                  customerNumberBuilder_.addMessage(m);
+                }
+                break;
+              } // case 274
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -21631,6 +21961,246 @@ public final class DataServiceProto {
         }
         return supplierAddressBuilder_;
       }
+
+      private java.util.List<com.google.protobuf.StringValue> customerNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureCustomerNumberIsMutable() {
+        if (!((bitField1_ & 0x00000002) != 0)) {
+          customerNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>(customerNumber_);
+          bitField1_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> customerNumberBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue> getCustomerNumberList() {
+        if (customerNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(customerNumber_);
+        } else {
+          return customerNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public int getCustomerNumberCount() {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.size();
+        } else {
+          return customerNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public com.google.protobuf.StringValue getCustomerNumber(int index) {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.get(index);
+        } else {
+          return customerNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder setCustomerNumber(
+          int index, com.google.protobuf.StringValue value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.set(index, value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder setCustomerNumber(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(com.google.protobuf.StringValue value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          int index, com.google.protobuf.StringValue value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(index, value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          int index, com.google.protobuf.StringValue.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addAllCustomerNumber(
+          java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, customerNumber_);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder clearCustomerNumber() {
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000002);
+          onChanged();
+        } else {
+          customerNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder removeCustomerNumber(int index) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.remove(index);
+          onChanged();
+        } else {
+          customerNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public com.google.protobuf.StringValue.Builder getCustomerNumberBuilder(
+          int index) {
+        return getCustomerNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder(
+          int index) {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.get(index);  } else {
+          return customerNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+           getCustomerNumberOrBuilderList() {
+        if (customerNumberBuilder_ != null) {
+          return customerNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(customerNumber_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public com.google.protobuf.StringValue.Builder addCustomerNumberBuilder() {
+        return getCustomerNumberFieldBuilder().addBuilder(
+            com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public com.google.protobuf.StringValue.Builder addCustomerNumberBuilder(
+          int index) {
+        return getCustomerNumberFieldBuilder().addBuilder(
+            index, com.google.protobuf.StringValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<com.google.protobuf.StringValue.Builder> 
+           getCustomerNumberBuilderList() {
+        return getCustomerNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getCustomerNumberFieldBuilder() {
+        if (customerNumberBuilder_ == null) {
+          customerNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  customerNumber_,
+                  ((bitField1_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          customerNumber_ = null;
+        }
+        return customerNumberBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -22490,6 +23060,30 @@ public final class DataServiceProto {
      */
     com.google.protobuf.FloatValueOrBuilder getSupplierAddressOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    java.util.List<com.google.protobuf.FloatValue> 
+        getCustomerNumberList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    com.google.protobuf.FloatValue getCustomerNumber(int index);
+    /**
+     * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    int getCustomerNumberCount();
+    /**
+     * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getCustomerNumberOrBuilderList();
+    /**
+     * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    com.google.protobuf.FloatValueOrBuilder getCustomerNumberOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.PredictionConfidences}
@@ -22537,6 +23131,7 @@ public final class DataServiceProto {
       supplierVatNumber_ = java.util.Collections.emptyList();
       supplierOrganisationNumber_ = java.util.Collections.emptyList();
       supplierAddress_ = java.util.Collections.emptyList();
+      customerNumber_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -23917,6 +24512,47 @@ public final class DataServiceProto {
       return supplierAddress_.get(index);
     }
 
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 34;
+    @SuppressWarnings("serial")
+    private java.util.List<com.google.protobuf.FloatValue> customerNumber_;
+    /**
+     * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<com.google.protobuf.FloatValue> getCustomerNumberList() {
+      return customerNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+        getCustomerNumberOrBuilderList() {
+      return customerNumber_;
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public int getCustomerNumberCount() {
+      return customerNumber_.size();
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValue getCustomerNumber(int index) {
+      return customerNumber_.get(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.FloatValueOrBuilder getCustomerNumberOrBuilder(
+        int index) {
+      return customerNumber_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -24029,6 +24665,9 @@ public final class DataServiceProto {
       }
       for (int i = 0; i < supplierAddress_.size(); i++) {
         output.writeMessage(33, supplierAddress_.get(i));
+      }
+      for (int i = 0; i < customerNumber_.size(); i++) {
+        output.writeMessage(34, customerNumber_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -24171,6 +24810,10 @@ public final class DataServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(33, supplierAddress_.get(i));
       }
+      for (int i = 0; i < customerNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(34, customerNumber_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -24252,6 +24895,8 @@ public final class DataServiceProto {
           .equals(other.getSupplierOrganisationNumberList())) return false;
       if (!getSupplierAddressList()
           .equals(other.getSupplierAddressList())) return false;
+      if (!getCustomerNumberList()
+          .equals(other.getCustomerNumberList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -24394,6 +25039,10 @@ public final class DataServiceProto {
       if (getSupplierAddressCount() > 0) {
         hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getSupplierAddressList().hashCode();
+      }
+      if (getCustomerNumberCount() > 0) {
+        hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerNumberList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -24756,6 +25405,13 @@ public final class DataServiceProto {
           supplierAddressBuilder_.clear();
         }
         bitField1_ = (bitField1_ & ~0x00000001);
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = java.util.Collections.emptyList();
+        } else {
+          customerNumber_ = null;
+          customerNumberBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000002);
         return this;
       }
 
@@ -25086,6 +25742,15 @@ public final class DataServiceProto {
           result.supplierAddress_ = supplierAddress_;
         } else {
           result.supplierAddress_ = supplierAddressBuilder_.build();
+        }
+        if (customerNumberBuilder_ == null) {
+          if (((bitField1_ & 0x00000002) != 0)) {
+            customerNumber_ = java.util.Collections.unmodifiableList(customerNumber_);
+            bitField1_ = (bitField1_ & ~0x00000002);
+          }
+          result.customerNumber_ = customerNumber_;
+        } else {
+          result.customerNumber_ = customerNumberBuilder_.build();
         }
       }
 
@@ -25999,6 +26664,32 @@ public final class DataServiceProto {
             }
           }
         }
+        if (customerNumberBuilder_ == null) {
+          if (!other.customerNumber_.isEmpty()) {
+            if (customerNumber_.isEmpty()) {
+              customerNumber_ = other.customerNumber_;
+              bitField1_ = (bitField1_ & ~0x00000002);
+            } else {
+              ensureCustomerNumberIsMutable();
+              customerNumber_.addAll(other.customerNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.customerNumber_.isEmpty()) {
+            if (customerNumberBuilder_.isEmpty()) {
+              customerNumberBuilder_.dispose();
+              customerNumberBuilder_ = null;
+              customerNumber_ = other.customerNumber_;
+              bitField1_ = (bitField1_ & ~0x00000002);
+              customerNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCustomerNumberFieldBuilder() : null;
+            } else {
+              customerNumberBuilder_.addAllMessages(other.customerNumber_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -26454,6 +27145,19 @@ public final class DataServiceProto {
                 }
                 break;
               } // case 266
+              case 274: {
+                com.google.protobuf.FloatValue m =
+                    input.readMessage(
+                        com.google.protobuf.FloatValue.parser(),
+                        extensionRegistry);
+                if (customerNumberBuilder_ == null) {
+                  ensureCustomerNumberIsMutable();
+                  customerNumber_.add(m);
+                } else {
+                  customerNumberBuilder_.addMessage(m);
+                }
+                break;
+              } // case 274
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -34391,6 +35095,246 @@ public final class DataServiceProto {
         }
         return supplierAddressBuilder_;
       }
+
+      private java.util.List<com.google.protobuf.FloatValue> customerNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureCustomerNumberIsMutable() {
+        if (!((bitField1_ & 0x00000002) != 0)) {
+          customerNumber_ = new java.util.ArrayList<com.google.protobuf.FloatValue>(customerNumber_);
+          bitField1_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> customerNumberBuilder_;
+
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue> getCustomerNumberList() {
+        if (customerNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(customerNumber_);
+        } else {
+          return customerNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public int getCustomerNumberCount() {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.size();
+        } else {
+          return customerNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public com.google.protobuf.FloatValue getCustomerNumber(int index) {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.get(index);
+        } else {
+          return customerNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder setCustomerNumber(
+          int index, com.google.protobuf.FloatValue value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.set(index, value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder setCustomerNumber(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(com.google.protobuf.FloatValue value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          int index, com.google.protobuf.FloatValue value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(index, value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          int index, com.google.protobuf.FloatValue.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addAllCustomerNumber(
+          java.lang.Iterable<? extends com.google.protobuf.FloatValue> values) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, customerNumber_);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder clearCustomerNumber() {
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000002);
+          onChanged();
+        } else {
+          customerNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder removeCustomerNumber(int index) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.remove(index);
+          onChanged();
+        } else {
+          customerNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public com.google.protobuf.FloatValue.Builder getCustomerNumberBuilder(
+          int index) {
+        return getCustomerNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public com.google.protobuf.FloatValueOrBuilder getCustomerNumberOrBuilder(
+          int index) {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.get(index);  } else {
+          return customerNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+           getCustomerNumberOrBuilderList() {
+        if (customerNumberBuilder_ != null) {
+          return customerNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(customerNumber_);
+        }
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addCustomerNumberBuilder() {
+        return getCustomerNumberFieldBuilder().addBuilder(
+            com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public com.google.protobuf.FloatValue.Builder addCustomerNumberBuilder(
+          int index) {
+        return getCustomerNumberFieldBuilder().addBuilder(
+            index, com.google.protobuf.FloatValue.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<com.google.protobuf.FloatValue.Builder> 
+           getCustomerNumberBuilderList() {
+        return getCustomerNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder> 
+          getCustomerNumberFieldBuilder() {
+        if (customerNumberBuilder_ == null) {
+          customerNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              com.google.protobuf.FloatValue, com.google.protobuf.FloatValue.Builder, com.google.protobuf.FloatValueOrBuilder>(
+                  customerNumber_,
+                  ((bitField1_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          customerNumber_ = null;
+        }
+        return customerNumberBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -35250,6 +36194,30 @@ public final class DataServiceProto {
      */
     ssn.type.CandidateOuterClass.ModelSpecOrBuilder getSupplierAddressOrBuilder(
         int index);
+
+    /**
+     * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.ModelSpec> 
+        getCustomerNumberList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpec getCustomerNumber(int index);
+    /**
+     * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    int getCustomerNumberCount();
+    /**
+     * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getCustomerNumberOrBuilderList();
+    /**
+     * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    ssn.type.CandidateOuterClass.ModelSpecOrBuilder getCustomerNumberOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code ssn.dataservice.v1.PredictionMetadata}
@@ -35297,6 +36265,7 @@ public final class DataServiceProto {
       supplierVatNumber_ = java.util.Collections.emptyList();
       supplierOrganisationNumber_ = java.util.Collections.emptyList();
       supplierAddress_ = java.util.Collections.emptyList();
+      customerNumber_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -36677,6 +37646,47 @@ public final class DataServiceProto {
       return supplierAddress_.get(index);
     }
 
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 34;
+    @SuppressWarnings("serial")
+    private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> customerNumber_;
+    /**
+     * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getCustomerNumberList() {
+      return customerNumber_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+        getCustomerNumberOrBuilderList() {
+      return customerNumber_;
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public int getCustomerNumberCount() {
+      return customerNumber_.size();
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpec getCustomerNumber(int index) {
+      return customerNumber_.get(index);
+    }
+    /**
+     * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getCustomerNumberOrBuilder(
+        int index) {
+      return customerNumber_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -36789,6 +37799,9 @@ public final class DataServiceProto {
       }
       for (int i = 0; i < supplierAddress_.size(); i++) {
         output.writeMessage(33, supplierAddress_.get(i));
+      }
+      for (int i = 0; i < customerNumber_.size(); i++) {
+        output.writeMessage(34, customerNumber_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -36931,6 +37944,10 @@ public final class DataServiceProto {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(33, supplierAddress_.get(i));
       }
+      for (int i = 0; i < customerNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(34, customerNumber_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -37012,6 +38029,8 @@ public final class DataServiceProto {
           .equals(other.getSupplierOrganisationNumberList())) return false;
       if (!getSupplierAddressList()
           .equals(other.getSupplierAddressList())) return false;
+      if (!getCustomerNumberList()
+          .equals(other.getCustomerNumberList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -37154,6 +38173,10 @@ public final class DataServiceProto {
       if (getSupplierAddressCount() > 0) {
         hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getSupplierAddressList().hashCode();
+      }
+      if (getCustomerNumberCount() > 0) {
+        hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerNumberList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -37516,6 +38539,13 @@ public final class DataServiceProto {
           supplierAddressBuilder_.clear();
         }
         bitField1_ = (bitField1_ & ~0x00000001);
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = java.util.Collections.emptyList();
+        } else {
+          customerNumber_ = null;
+          customerNumberBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000002);
         return this;
       }
 
@@ -37846,6 +38876,15 @@ public final class DataServiceProto {
           result.supplierAddress_ = supplierAddress_;
         } else {
           result.supplierAddress_ = supplierAddressBuilder_.build();
+        }
+        if (customerNumberBuilder_ == null) {
+          if (((bitField1_ & 0x00000002) != 0)) {
+            customerNumber_ = java.util.Collections.unmodifiableList(customerNumber_);
+            bitField1_ = (bitField1_ & ~0x00000002);
+          }
+          result.customerNumber_ = customerNumber_;
+        } else {
+          result.customerNumber_ = customerNumberBuilder_.build();
         }
       }
 
@@ -38759,6 +39798,32 @@ public final class DataServiceProto {
             }
           }
         }
+        if (customerNumberBuilder_ == null) {
+          if (!other.customerNumber_.isEmpty()) {
+            if (customerNumber_.isEmpty()) {
+              customerNumber_ = other.customerNumber_;
+              bitField1_ = (bitField1_ & ~0x00000002);
+            } else {
+              ensureCustomerNumberIsMutable();
+              customerNumber_.addAll(other.customerNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.customerNumber_.isEmpty()) {
+            if (customerNumberBuilder_.isEmpty()) {
+              customerNumberBuilder_.dispose();
+              customerNumberBuilder_ = null;
+              customerNumber_ = other.customerNumber_;
+              bitField1_ = (bitField1_ & ~0x00000002);
+              customerNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCustomerNumberFieldBuilder() : null;
+            } else {
+              customerNumberBuilder_.addAllMessages(other.customerNumber_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -39214,6 +40279,19 @@ public final class DataServiceProto {
                 }
                 break;
               } // case 266
+              case 274: {
+                ssn.type.CandidateOuterClass.ModelSpec m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.ModelSpec.parser(),
+                        extensionRegistry);
+                if (customerNumberBuilder_ == null) {
+                  ensureCustomerNumberIsMutable();
+                  customerNumber_.add(m);
+                } else {
+                  customerNumberBuilder_.addMessage(m);
+                }
+                break;
+              } // case 274
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -47150,6 +48228,246 @@ public final class DataServiceProto {
           supplierAddress_ = null;
         }
         return supplierAddressBuilder_;
+      }
+
+      private java.util.List<ssn.type.CandidateOuterClass.ModelSpec> customerNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureCustomerNumberIsMutable() {
+        if (!((bitField1_ & 0x00000002) != 0)) {
+          customerNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.ModelSpec>(customerNumber_);
+          bitField1_ |= 0x00000002;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> customerNumberBuilder_;
+
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec> getCustomerNumberList() {
+        if (customerNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(customerNumber_);
+        } else {
+          return customerNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public int getCustomerNumberCount() {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.size();
+        } else {
+          return customerNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec getCustomerNumber(int index) {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.get(index);
+        } else {
+          return customerNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder setCustomerNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.set(index, value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder setCustomerNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(index, value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          int index, ssn.type.CandidateOuterClass.ModelSpec.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder addAllCustomerNumber(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.ModelSpec> values) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, customerNumber_);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder clearCustomerNumber() {
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000002);
+          onChanged();
+        } else {
+          customerNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public Builder removeCustomerNumber(int index) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.remove(index);
+          onChanged();
+        } else {
+          customerNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder getCustomerNumberBuilder(
+          int index) {
+        return getCustomerNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpecOrBuilder getCustomerNumberOrBuilder(
+          int index) {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.get(index);  } else {
+          return customerNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+           getCustomerNumberOrBuilderList() {
+        if (customerNumberBuilder_ != null) {
+          return customerNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(customerNumber_);
+        }
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addCustomerNumberBuilder() {
+        return getCustomerNumberFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.ModelSpec.Builder addCustomerNumberBuilder(
+          int index) {
+        return getCustomerNumberFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.ModelSpec.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.ModelSpec.Builder> 
+           getCustomerNumberBuilderList() {
+        return getCustomerNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder> 
+          getCustomerNumberFieldBuilder() {
+        if (customerNumberBuilder_ == null) {
+          customerNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.ModelSpec, ssn.type.CandidateOuterClass.ModelSpec.Builder, ssn.type.CandidateOuterClass.ModelSpecOrBuilder>(
+                  customerNumber_,
+                  ((bitField1_ & 0x00000002) != 0),
+                  getParentForChildren(),
+                  isClean());
+          customerNumber_ = null;
+        }
+        return customerNumberBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -57517,7 +58835,7 @@ public final class DataServiceProto {
       "onConfidences\022W\n\023prediction_metadata\030\n \001" +
       "(\0132&.ssn.dataservice.v1.PredictionMetada" +
       "taR\022predictionMetadata:\022\352?\017\n\rtraining_da" +
-      "ta\"\243\023\n\nTrueValues\022B\n\016total_incl_vat\030\001 \001(" +
+      "ta\"\352\023\n\nTrueValues\022B\n\016total_incl_vat\030\001 \001(" +
       "\0132\034.google.protobuf.DoubleValueR\014totalIn" +
       "clVat\0229\n\ttotal_vat\030\002 \001(\0132\034.google.protob" +
       "uf.DoubleValueR\010totalVat\022B\n\016total_excl_v" +
@@ -57578,245 +58896,252 @@ public final class DataServiceProto {
       "nisation_number\030  \001(\0132\034.google.protobuf." +
       "StringValueR\032supplierOrganisationNumber\022" +
       "G\n\020supplier_address\030! \001(\0132\034.google.proto" +
-      "buf.StringValueR\017supplierAddress\"\251\023\n\020Pre" +
-      "dictionValues\022B\n\016total_incl_vat\030\001 \003(\0132\034." +
-      "google.protobuf.DoubleValueR\014totalInclVa" +
-      "t\0229\n\ttotal_vat\030\002 \003(\0132\034.google.protobuf.D" +
-      "oubleValueR\010totalVat\022B\n\016total_excl_vat\030\003" +
-      " \003(\0132\034.google.protobuf.DoubleValueR\014tota" +
-      "lExclVat\022;\n\norder_date\030\004 \003(\0132\021.google.ty" +
-      "pe.DateB\t\352?\006\022\004DATER\torderDate\022F\n\020payment" +
-      "_due_date\030\005 \003(\0132\021.google.type.DateB\t\352?\006\022" +
-      "\004DATER\016paymentDueDate\022A\n\rdocument_type\030\006" +
-      " \003(\0132\034.google.protobuf.StringValueR\014docu" +
-      "mentType\0228\n\010currency\030\007 \003(\0132\034.google.prot" +
-      "obuf.StringValueR\010currency\022O\n\025credit_car" +
-      "d_last_four\030\010 \003(\0132\034.google.protobuf.Stri" +
-      "ngValueR\022creditCardLastFour\022C\n\016payment_m" +
-      "ethod\030\t \003(\0132\034.google.protobuf.StringValu" +
-      "eR\rpaymentMethod\022E\n\020ocr_line_dk_type\030\n \003" +
-      "(\0132\034.google.protobuf.StringValueR\rocrLin" +
-      "eDkType\022P\n\026ocr_line_dk_payment_id\030\013 \003(\0132" +
-      "\034.google.protobuf.StringValueR\022ocrLineDk" +
-      "PaymentId\022R\n\027ocr_line_dk_creditor_id\030\014 \003" +
-      "(\0132\034.google.protobuf.StringValueR\023ocrLin" +
-      "eDkCreditorId\022P\n\026ocr_line_se_payment_id\030" +
-      "\r \003(\0132\034.google.protobuf.StringValueR\022ocr" +
-      "LineSePaymentId\022c\n ocr_line_se_bankgiro_" +
-      "creditor_id\030\016 \003(\0132\034.google.protobuf.Stri" +
-      "ngValueR\033ocrLineSeBankgiroCreditorId\022c\n " +
-      "ocr_line_se_plusgiro_creditor_id\030\017 \003(\0132\034" +
-      ".google.protobuf.StringValueR\033ocrLineSeP" +
-      "lusgiroCreditorId\022P\n\026ocr_line_no_payment" +
-      "_id\030\020 \003(\0132\034.google.protobuf.StringValueR" +
-      "\022ocrLineNoPaymentId\022P\n\026ocr_line_fi_payme" +
-      "nt_id\030\021 \003(\0132\034.google.protobuf.StringValu" +
-      "eR\022ocrLineFiPaymentId\022P\n\026ocr_line_nl_pay" +
-      "ment_id\030\022 \003(\0132\034.google.protobuf.StringVa" +
-      "lueR\022ocrLineNlPaymentId\022P\n\025supplier_corp" +
-      "orate_id\030\023 \003(\0132\034.google.protobuf.StringV" +
-      "alueR\023supplierCorporateId\022P\n\025supplier_co" +
-      "untry_code\030\024 \003(\0132\034.google.protobuf.Strin" +
-      "gValueR\023supplierCountryCode\022C\n\016invoice_n" +
-      "umber\030\025 \003(\0132\034.google.protobuf.StringValu" +
-      "eR\rinvoiceNumber\0220\n\004iban\030\026 \003(\0132\034.google." +
-      "protobuf.StringValueR\004iban\022E\n\017order_refe" +
-      "rence\030\027 \003(\0132\034.google.protobuf.StringValu" +
-      "eR\016orderReference\022L\n\023bank_account_number" +
-      "\030\030 \003(\0132\034.google.protobuf.StringValueR\021ba" +
-      "nkAccountNumber\022V\n\030bank_registration_num" +
-      "ber\030\031 \003(\0132\034.google.protobuf.StringValueR" +
-      "\026bankRegistrationNumber\022A\n\rsupplier_name" +
-      "\030\032 \003(\0132\034.google.protobuf.StringValueR\014su" +
-      "pplierName\022.\n\003bic\030\033 \003(\0132\034.google.protobu" +
-      "f.StringValueR\003bic\022E\n\017document_number\030\034 " +
-      "\003(\0132\034.google.protobuf.StringValueR\016docum" +
-      "entNumber\022A\n\rdocument_date\030\035 \003(\0132\021.googl" +
-      "e.type.DateB\t\352?\006\022\004DATER\014documentDate\022?\n\014" +
-      "order_number\030\036 \003(\0132\034.google.protobuf.Str" +
-      "ingValueR\013orderNumber\022L\n\023supplier_vat_nu" +
-      "mber\030\037 \003(\0132\034.google.protobuf.StringValue" +
-      "R\021supplierVatNumber\022^\n\034supplier_organisa" +
-      "tion_number\030  \003(\0132\034.google.protobuf.Stri" +
-      "ngValueR\032supplierOrganisationNumber\022G\n\020s" +
-      "upplier_address\030! \003(\0132\034.google.protobuf." +
-      "StringValueR\017supplierAddress\"\215\023\n\025Predict" +
-      "ionConfidences\022A\n\016total_incl_vat\030\001 \003(\0132\033" +
-      ".google.protobuf.FloatValueR\014totalInclVa" +
-      "t\0228\n\ttotal_vat\030\002 \003(\0132\033.google.protobuf.F" +
-      "loatValueR\010totalVat\022A\n\016total_excl_vat\030\003 " +
-      "\003(\0132\033.google.protobuf.FloatValueR\014totalE" +
-      "xclVat\022:\n\norder_date\030\004 \003(\0132\033.google.prot" +
-      "obuf.FloatValueR\torderDate\022E\n\020payment_du" +
-      "e_date\030\005 \003(\0132\033.google.protobuf.FloatValu" +
-      "eR\016paymentDueDate\022@\n\rdocument_type\030\006 \003(\013" +
-      "2\033.google.protobuf.FloatValueR\014documentT" +
-      "ype\0227\n\010currency\030\007 \003(\0132\033.google.protobuf." +
-      "FloatValueR\010currency\022N\n\025credit_card_last" +
-      "_four\030\010 \003(\0132\033.google.protobuf.FloatValue" +
-      "R\022creditCardLastFour\022B\n\016payment_method\030\t" +
-      " \003(\0132\033.google.protobuf.FloatValueR\rpayme" +
-      "ntMethod\022D\n\020ocr_line_dk_type\030\n \003(\0132\033.goo" +
-      "gle.protobuf.FloatValueR\rocrLineDkType\022O" +
-      "\n\026ocr_line_dk_payment_id\030\013 \003(\0132\033.google." +
-      "protobuf.FloatValueR\022ocrLineDkPaymentId\022" +
-      "Q\n\027ocr_line_dk_creditor_id\030\014 \003(\0132\033.googl" +
-      "e.protobuf.FloatValueR\023ocrLineDkCreditor" +
-      "Id\022O\n\026ocr_line_se_payment_id\030\r \003(\0132\033.goo" +
-      "gle.protobuf.FloatValueR\022ocrLineSePaymen" +
-      "tId\022b\n ocr_line_se_bankgiro_creditor_id\030" +
-      "\016 \003(\0132\033.google.protobuf.FloatValueR\033ocrL" +
-      "ineSeBankgiroCreditorId\022b\n ocr_line_se_p" +
-      "lusgiro_creditor_id\030\017 \003(\0132\033.google.proto" +
-      "buf.FloatValueR\033ocrLineSePlusgiroCredito" +
-      "rId\022O\n\026ocr_line_no_payment_id\030\020 \003(\0132\033.go" +
-      "ogle.protobuf.FloatValueR\022ocrLineNoPayme" +
-      "ntId\022O\n\026ocr_line_fi_payment_id\030\021 \003(\0132\033.g" +
-      "oogle.protobuf.FloatValueR\022ocrLineFiPaym" +
-      "entId\022O\n\026ocr_line_nl_payment_id\030\022 \003(\0132\033." +
-      "google.protobuf.FloatValueR\022ocrLineNlPay" +
-      "mentId\022O\n\025supplier_corporate_id\030\023 \003(\0132\033." +
-      "google.protobuf.FloatValueR\023supplierCorp" +
-      "orateId\022O\n\025supplier_country_code\030\024 \003(\0132\033" +
-      ".google.protobuf.FloatValueR\023supplierCou" +
-      "ntryCode\022B\n\016invoice_number\030\025 \003(\0132\033.googl" +
-      "e.protobuf.FloatValueR\rinvoiceNumber\022/\n\004" +
-      "iban\030\026 \003(\0132\033.google.protobuf.FloatValueR" +
-      "\004iban\022D\n\017order_reference\030\027 \003(\0132\033.google." +
-      "protobuf.FloatValueR\016orderReference\022K\n\023b" +
-      "ank_account_number\030\030 \003(\0132\033.google.protob" +
-      "uf.FloatValueR\021bankAccountNumber\022U\n\030bank" +
-      "_registration_number\030\031 \003(\0132\033.google.prot" +
-      "obuf.FloatValueR\026bankRegistrationNumber\022" +
-      "@\n\rsupplier_name\030\032 \003(\0132\033.google.protobuf" +
-      ".FloatValueR\014supplierName\022-\n\003bic\030\033 \003(\0132\033" +
-      ".google.protobuf.FloatValueR\003bic\022D\n\017docu" +
-      "ment_number\030\034 \003(\0132\033.google.protobuf.Floa" +
-      "tValueR\016documentNumber\022@\n\rdocument_date\030" +
-      "\035 \003(\0132\033.google.protobuf.FloatValueR\014docu" +
-      "mentDate\022>\n\014order_number\030\036 \003(\0132\033.google." +
-      "protobuf.FloatValueR\013orderNumber\022K\n\023supp" +
-      "lier_vat_number\030\037 \003(\0132\033.google.protobuf." +
-      "FloatValueR\021supplierVatNumber\022]\n\034supplie" +
-      "r_organisation_number\030  \003(\0132\033.google.pro" +
-      "tobuf.FloatValueR\032supplierOrganisationNu" +
-      "mber\022F\n\020supplier_address\030! \003(\0132\033.google." +
-      "protobuf.FloatValueR\017supplierAddress\"\202\021\n" +
-      "\022PredictionMetadata\0229\n\016total_incl_vat\030\001 " +
-      "\003(\0132\023.ssn.type.ModelSpecR\014totalInclVat\0220" +
-      "\n\ttotal_vat\030\002 \003(\0132\023.ssn.type.ModelSpecR\010" +
-      "totalVat\0229\n\016total_excl_vat\030\003 \003(\0132\023.ssn.t" +
-      "ype.ModelSpecR\014totalExclVat\0222\n\norder_dat" +
-      "e\030\004 \003(\0132\023.ssn.type.ModelSpecR\torderDate\022" +
-      "=\n\020payment_due_date\030\005 \003(\0132\023.ssn.type.Mod" +
-      "elSpecR\016paymentDueDate\0228\n\rdocument_type\030" +
-      "\006 \003(\0132\023.ssn.type.ModelSpecR\014documentType" +
-      "\022/\n\010currency\030\007 \003(\0132\023.ssn.type.ModelSpecR" +
-      "\010currency\022F\n\025credit_card_last_four\030\010 \003(\013" +
-      "2\023.ssn.type.ModelSpecR\022creditCardLastFou" +
-      "r\022:\n\016payment_method\030\t \003(\0132\023.ssn.type.Mod" +
-      "elSpecR\rpaymentMethod\022<\n\020ocr_line_dk_typ" +
-      "e\030\n \003(\0132\023.ssn.type.ModelSpecR\rocrLineDkT" +
-      "ype\022G\n\026ocr_line_dk_payment_id\030\013 \003(\0132\023.ss" +
-      "n.type.ModelSpecR\022ocrLineDkPaymentId\022I\n\027" +
-      "ocr_line_dk_creditor_id\030\014 \003(\0132\023.ssn.type" +
-      ".ModelSpecR\023ocrLineDkCreditorId\022G\n\026ocr_l" +
-      "ine_se_payment_id\030\r \003(\0132\023.ssn.type.Model" +
-      "SpecR\022ocrLineSePaymentId\022Z\n ocr_line_se_" +
-      "bankgiro_creditor_id\030\016 \003(\0132\023.ssn.type.Mo" +
-      "delSpecR\033ocrLineSeBankgiroCreditorId\022Z\n " +
-      "ocr_line_se_plusgiro_creditor_id\030\017 \003(\0132\023" +
-      ".ssn.type.ModelSpecR\033ocrLineSePlusgiroCr" +
-      "editorId\022G\n\026ocr_line_no_payment_id\030\020 \003(\013" +
-      "2\023.ssn.type.ModelSpecR\022ocrLineNoPaymentI" +
-      "d\022G\n\026ocr_line_fi_payment_id\030\021 \003(\0132\023.ssn." +
-      "type.ModelSpecR\022ocrLineFiPaymentId\022G\n\026oc" +
-      "r_line_nl_payment_id\030\022 \003(\0132\023.ssn.type.Mo" +
-      "delSpecR\022ocrLineNlPaymentId\022G\n\025supplier_" +
-      "corporate_id\030\023 \003(\0132\023.ssn.type.ModelSpecR" +
-      "\023supplierCorporateId\022G\n\025supplier_country" +
-      "_code\030\024 \003(\0132\023.ssn.type.ModelSpecR\023suppli" +
-      "erCountryCode\022:\n\016invoice_number\030\025 \003(\0132\023." +
-      "ssn.type.ModelSpecR\rinvoiceNumber\022\'\n\004iba" +
-      "n\030\026 \003(\0132\023.ssn.type.ModelSpecR\004iban\022<\n\017or" +
-      "der_reference\030\027 \003(\0132\023.ssn.type.ModelSpec" +
-      "R\016orderReference\022C\n\023bank_account_number\030" +
-      "\030 \003(\0132\023.ssn.type.ModelSpecR\021bankAccountN" +
-      "umber\022M\n\030bank_registration_number\030\031 \003(\0132" +
-      "\023.ssn.type.ModelSpecR\026bankRegistrationNu" +
-      "mber\0228\n\rsupplier_name\030\032 \003(\0132\023.ssn.type.M" +
-      "odelSpecR\014supplierName\022%\n\003bic\030\033 \003(\0132\023.ss" +
-      "n.type.ModelSpecR\003bic\022<\n\017document_number" +
-      "\030\034 \003(\0132\023.ssn.type.ModelSpecR\016documentNum" +
-      "ber\0228\n\rdocument_date\030\035 \003(\0132\023.ssn.type.Mo" +
-      "delSpecR\014documentDate\0226\n\014order_number\030\036 " +
-      "\003(\0132\023.ssn.type.ModelSpecR\013orderNumber\022C\n" +
-      "\023supplier_vat_number\030\037 \003(\0132\023.ssn.type.Mo" +
-      "delSpecR\021supplierVatNumber\022U\n\034supplier_o" +
-      "rganisation_number\030  \003(\0132\023.ssn.type.Mode" +
-      "lSpecR\032supplierOrganisationNumber\022>\n\020sup" +
-      "plier_address\030! \003(\0132\023.ssn.type.ModelSpec" +
-      "R\017supplierAddress\"Q\n\025CreateDocumentReque" +
-      "st\0228\n\010document\030\001 \001(\0132\034.ssn.dataservice.v" +
-      "1.DocumentR\010document\"(\n\026CreateDocumentRe" +
-      "sponse\022\016\n\002id\030\001 \001(\tR\002id\"%\n\023ReadDocumentRe" +
-      "quest\022\016\n\002id\030\001 \001(\tR\002id\"P\n\024ReadDocumentRes" +
-      "ponse\0228\n\010document\030\001 \001(\0132\034.ssn.dataservic" +
-      "e.v1.DocumentR\010document\"\273\003\n\026PrepareFeedb" +
-      "ackRequest\022\016\n\002id\030\001 \001(\tR\002id\022(\n\002ta\030\002 \001(\0132\030" +
-      ".ssn.type.TextAnnotationR\002ta\022%\n\016document" +
-      "_bytes\030\003 \001(\014R\rdocumentBytes\022F\n\013predictio" +
-      "ns\030\004 \001(\0132$.ssn.dataservice.v1.Prediction" +
-      "ValuesR\013predictions\022\022\n\004tags\030\005 \003(\tR\004tags\022" +
-      "K\n\013confidences\030\006 \001(\0132).ssn.dataservice.v" +
-      "1.PredictionConfidencesR\013confidences\022W\n\023" +
-      "prediction_metadata\030\007 \001(\0132&.ssn.dataserv" +
-      "ice.v1.PredictionMetadataR\022predictionMet" +
-      "adata\022\"\n\004tier\030\010 \001(\0162\016.ssn.type.TierR\004tie" +
-      "r\022\032\n\010segments\030\t \003(\tR\010segments\"v\n\017Feedbac" +
-      "kRequest\022\016\n\002id\030\001 \001(\tR\002id\022?\n\013true_values\030" +
-      "\002 \001(\0132\036.ssn.dataservice.v1.TrueValuesR\nt" +
-      "rueValues\022\022\n\004tags\030\003 \003(\tR\004tags\"v\n\016Metrics" +
-      "Request\022\035\n\nstart_time\030\002 \001(\003R\tstartTime\022\031" +
-      "\n\010end_time\030\003 \001(\003R\007endTime\022\026\n\006fields\030\004 \003(" +
-      "\tR\006fields\022\022\n\004tags\030\005 \003(\tR\004tags\"\377\001\n\017Feedba" +
-      "ckMetrics\022%\n\016document_count\030\001 \001(\005R\rdocum" +
-      "entCount\022%\n\016feedback_count\030\002 \001(\005R\rfeedba" +
-      "ckCount\022P\n\023overall_correctness\030\003 \001(\0132\037.s" +
-      "sn.dataservice.v1.CorrectnessR\022overallCo" +
-      "rrectness\022L\n\021field_correctness\030\004 \003(\0132\037.s" +
-      "sn.dataservice.v1.CorrectnessR\020fieldCorr" +
-      "ectness\"\314\001\n\013Correctness\022\024\n\005field\030\001 \001(\tR\005" +
-      "field\022-\n\022correct_percentage\030\002 \001(\002R\021corre" +
-      "ctPercentage\0223\n\025incomplete_percentage\030\003 " +
-      "\001(\002R\024incompletePercentage\022)\n\020error_perce" +
-      "ntage\030\004 \001(\002R\017errorPercentage\022\030\n\007support\030" +
-      "\005 \001(\005R\007support\"#\n\rDeleteRequest\022\022\n\004tags\030" +
-      "\001 \003(\tR\004tags\"D\n\rCallsPerMonth\022\024\n\005calls\030\001 " +
-      "\001(\003R\005calls\022\035\n\nmonth_name\030\002 \001(\tR\tmonthNam" +
-      "e\"b\n\025CallsPerMonthResponse\022I\n\017calls_per_" +
-      "month\030\001 \003(\0132!.ssn.dataservice.v1.CallsPe" +
-      "rMonthR\rcallsPerMonth2\265\005\n\013DataService\022g\n" +
-      "\016CreateDocument\022).ssn.dataservice.v1.Cre" +
-      "ateDocumentRequest\032*.ssn.dataservice.v1." +
-      "CreateDocumentResponse\022a\n\014ReadDocument\022\'" +
-      ".ssn.dataservice.v1.ReadDocumentRequest\032" +
-      "(.ssn.dataservice.v1.ReadDocumentRespons" +
-      "e\022U\n\017PrepareFeedback\022*.ssn.dataservice.v" +
-      "1.PrepareFeedbackRequest\032\026.google.protob" +
-      "uf.Empty\022g\n\010Feedback\022#.ssn.dataservice.v" +
-      "1.FeedbackRequest\032\026.google.protobuf.Empt" +
-      "y\"\036\202\323\344\223\002\030:\001*\"\023/v1/feedback:create\022[\n\020Cal" +
-      "culateMetrics\022\".ssn.dataservice.v1.Metri" +
-      "csRequest\032#.ssn.dataservice.v1.FeedbackM" +
-      "etrics\022c\n\006Delete\022!.ssn.dataservice.v1.De" +
-      "leteRequest\032\026.google.protobuf.Empty\"\036\202\323\344" +
-      "\223\002\030:\001*\"\023/v1/feedback:delete\022X\n\023CallsPerM" +
-      "onthMetric\022\026.google.protobuf.Empty\032).ssn" +
-      ".dataservice.v1.CallsPerMonthResponseBVB" +
-      "\020DataServiceProtoZBgithub.com/e-conomic/" +
-      "vmlapis/gen/go/ssn/dataservice/v1;datase" +
-      "rviceb\006proto3"
+      "buf.StringValueR\017supplierAddress\022E\n\017cust" +
+      "omer_number\030\" \001(\0132\034.google.protobuf.Stri" +
+      "ngValueR\016customerNumber\"\360\023\n\020PredictionVa" +
+      "lues\022B\n\016total_incl_vat\030\001 \003(\0132\034.google.pr" +
+      "otobuf.DoubleValueR\014totalInclVat\0229\n\ttota" +
+      "l_vat\030\002 \003(\0132\034.google.protobuf.DoubleValu" +
+      "eR\010totalVat\022B\n\016total_excl_vat\030\003 \003(\0132\034.go" +
+      "ogle.protobuf.DoubleValueR\014totalExclVat\022" +
+      ";\n\norder_date\030\004 \003(\0132\021.google.type.DateB\t" +
+      "\352?\006\022\004DATER\torderDate\022F\n\020payment_due_date" +
+      "\030\005 \003(\0132\021.google.type.DateB\t\352?\006\022\004DATER\016pa" +
+      "ymentDueDate\022A\n\rdocument_type\030\006 \003(\0132\034.go" +
+      "ogle.protobuf.StringValueR\014documentType\022" +
+      "8\n\010currency\030\007 \003(\0132\034.google.protobuf.Stri" +
+      "ngValueR\010currency\022O\n\025credit_card_last_fo" +
+      "ur\030\010 \003(\0132\034.google.protobuf.StringValueR\022" +
+      "creditCardLastFour\022C\n\016payment_method\030\t \003" +
+      "(\0132\034.google.protobuf.StringValueR\rpaymen" +
+      "tMethod\022E\n\020ocr_line_dk_type\030\n \003(\0132\034.goog" +
+      "le.protobuf.StringValueR\rocrLineDkType\022P" +
+      "\n\026ocr_line_dk_payment_id\030\013 \003(\0132\034.google." +
+      "protobuf.StringValueR\022ocrLineDkPaymentId" +
+      "\022R\n\027ocr_line_dk_creditor_id\030\014 \003(\0132\034.goog" +
+      "le.protobuf.StringValueR\023ocrLineDkCredit" +
+      "orId\022P\n\026ocr_line_se_payment_id\030\r \003(\0132\034.g" +
+      "oogle.protobuf.StringValueR\022ocrLineSePay" +
+      "mentId\022c\n ocr_line_se_bankgiro_creditor_" +
+      "id\030\016 \003(\0132\034.google.protobuf.StringValueR\033" +
+      "ocrLineSeBankgiroCreditorId\022c\n ocr_line_" +
+      "se_plusgiro_creditor_id\030\017 \003(\0132\034.google.p" +
+      "rotobuf.StringValueR\033ocrLineSePlusgiroCr" +
+      "editorId\022P\n\026ocr_line_no_payment_id\030\020 \003(\013" +
+      "2\034.google.protobuf.StringValueR\022ocrLineN" +
+      "oPaymentId\022P\n\026ocr_line_fi_payment_id\030\021 \003" +
+      "(\0132\034.google.protobuf.StringValueR\022ocrLin" +
+      "eFiPaymentId\022P\n\026ocr_line_nl_payment_id\030\022" +
+      " \003(\0132\034.google.protobuf.StringValueR\022ocrL" +
+      "ineNlPaymentId\022P\n\025supplier_corporate_id\030" +
+      "\023 \003(\0132\034.google.protobuf.StringValueR\023sup" +
+      "plierCorporateId\022P\n\025supplier_country_cod" +
+      "e\030\024 \003(\0132\034.google.protobuf.StringValueR\023s" +
+      "upplierCountryCode\022C\n\016invoice_number\030\025 \003" +
+      "(\0132\034.google.protobuf.StringValueR\rinvoic" +
+      "eNumber\0220\n\004iban\030\026 \003(\0132\034.google.protobuf." +
+      "StringValueR\004iban\022E\n\017order_reference\030\027 \003" +
+      "(\0132\034.google.protobuf.StringValueR\016orderR" +
+      "eference\022L\n\023bank_account_number\030\030 \003(\0132\034." +
+      "google.protobuf.StringValueR\021bankAccount" +
+      "Number\022V\n\030bank_registration_number\030\031 \003(\013" +
+      "2\034.google.protobuf.StringValueR\026bankRegi" +
+      "strationNumber\022A\n\rsupplier_name\030\032 \003(\0132\034." +
+      "google.protobuf.StringValueR\014supplierNam" +
+      "e\022.\n\003bic\030\033 \003(\0132\034.google.protobuf.StringV" +
+      "alueR\003bic\022E\n\017document_number\030\034 \003(\0132\034.goo" +
+      "gle.protobuf.StringValueR\016documentNumber" +
+      "\022A\n\rdocument_date\030\035 \003(\0132\021.google.type.Da" +
+      "teB\t\352?\006\022\004DATER\014documentDate\022?\n\014order_num" +
+      "ber\030\036 \003(\0132\034.google.protobuf.StringValueR" +
+      "\013orderNumber\022L\n\023supplier_vat_number\030\037 \003(" +
+      "\0132\034.google.protobuf.StringValueR\021supplie" +
+      "rVatNumber\022^\n\034supplier_organisation_numb" +
+      "er\030  \003(\0132\034.google.protobuf.StringValueR\032" +
+      "supplierOrganisationNumber\022G\n\020supplier_a" +
+      "ddress\030! \003(\0132\034.google.protobuf.StringVal" +
+      "ueR\017supplierAddress\022E\n\017customer_number\030\"" +
+      " \003(\0132\034.google.protobuf.StringValueR\016cust" +
+      "omerNumber\"\323\023\n\025PredictionConfidences\022A\n\016" +
+      "total_incl_vat\030\001 \003(\0132\033.google.protobuf.F" +
+      "loatValueR\014totalInclVat\0228\n\ttotal_vat\030\002 \003" +
+      "(\0132\033.google.protobuf.FloatValueR\010totalVa" +
+      "t\022A\n\016total_excl_vat\030\003 \003(\0132\033.google.proto" +
+      "buf.FloatValueR\014totalExclVat\022:\n\norder_da" +
+      "te\030\004 \003(\0132\033.google.protobuf.FloatValueR\to" +
+      "rderDate\022E\n\020payment_due_date\030\005 \003(\0132\033.goo" +
+      "gle.protobuf.FloatValueR\016paymentDueDate\022" +
+      "@\n\rdocument_type\030\006 \003(\0132\033.google.protobuf" +
+      ".FloatValueR\014documentType\0227\n\010currency\030\007 " +
+      "\003(\0132\033.google.protobuf.FloatValueR\010curren" +
+      "cy\022N\n\025credit_card_last_four\030\010 \003(\0132\033.goog" +
+      "le.protobuf.FloatValueR\022creditCardLastFo" +
+      "ur\022B\n\016payment_method\030\t \003(\0132\033.google.prot" +
+      "obuf.FloatValueR\rpaymentMethod\022D\n\020ocr_li" +
+      "ne_dk_type\030\n \003(\0132\033.google.protobuf.Float" +
+      "ValueR\rocrLineDkType\022O\n\026ocr_line_dk_paym" +
+      "ent_id\030\013 \003(\0132\033.google.protobuf.FloatValu" +
+      "eR\022ocrLineDkPaymentId\022Q\n\027ocr_line_dk_cre" +
+      "ditor_id\030\014 \003(\0132\033.google.protobuf.FloatVa" +
+      "lueR\023ocrLineDkCreditorId\022O\n\026ocr_line_se_" +
+      "payment_id\030\r \003(\0132\033.google.protobuf.Float" +
+      "ValueR\022ocrLineSePaymentId\022b\n ocr_line_se" +
+      "_bankgiro_creditor_id\030\016 \003(\0132\033.google.pro" +
+      "tobuf.FloatValueR\033ocrLineSeBankgiroCredi" +
+      "torId\022b\n ocr_line_se_plusgiro_creditor_i" +
+      "d\030\017 \003(\0132\033.google.protobuf.FloatValueR\033oc" +
+      "rLineSePlusgiroCreditorId\022O\n\026ocr_line_no" +
+      "_payment_id\030\020 \003(\0132\033.google.protobuf.Floa" +
+      "tValueR\022ocrLineNoPaymentId\022O\n\026ocr_line_f" +
+      "i_payment_id\030\021 \003(\0132\033.google.protobuf.Flo" +
+      "atValueR\022ocrLineFiPaymentId\022O\n\026ocr_line_" +
+      "nl_payment_id\030\022 \003(\0132\033.google.protobuf.Fl" +
+      "oatValueR\022ocrLineNlPaymentId\022O\n\025supplier" +
+      "_corporate_id\030\023 \003(\0132\033.google.protobuf.Fl" +
+      "oatValueR\023supplierCorporateId\022O\n\025supplie" +
+      "r_country_code\030\024 \003(\0132\033.google.protobuf.F" +
+      "loatValueR\023supplierCountryCode\022B\n\016invoic" +
+      "e_number\030\025 \003(\0132\033.google.protobuf.FloatVa" +
+      "lueR\rinvoiceNumber\022/\n\004iban\030\026 \003(\0132\033.googl" +
+      "e.protobuf.FloatValueR\004iban\022D\n\017order_ref" +
+      "erence\030\027 \003(\0132\033.google.protobuf.FloatValu" +
+      "eR\016orderReference\022K\n\023bank_account_number" +
+      "\030\030 \003(\0132\033.google.protobuf.FloatValueR\021ban" +
+      "kAccountNumber\022U\n\030bank_registration_numb" +
+      "er\030\031 \003(\0132\033.google.protobuf.FloatValueR\026b" +
+      "ankRegistrationNumber\022@\n\rsupplier_name\030\032" +
+      " \003(\0132\033.google.protobuf.FloatValueR\014suppl" +
+      "ierName\022-\n\003bic\030\033 \003(\0132\033.google.protobuf.F" +
+      "loatValueR\003bic\022D\n\017document_number\030\034 \003(\0132" +
+      "\033.google.protobuf.FloatValueR\016documentNu" +
+      "mber\022@\n\rdocument_date\030\035 \003(\0132\033.google.pro" +
+      "tobuf.FloatValueR\014documentDate\022>\n\014order_" +
+      "number\030\036 \003(\0132\033.google.protobuf.FloatValu" +
+      "eR\013orderNumber\022K\n\023supplier_vat_number\030\037 " +
+      "\003(\0132\033.google.protobuf.FloatValueR\021suppli" +
+      "erVatNumber\022]\n\034supplier_organisation_num" +
+      "ber\030  \003(\0132\033.google.protobuf.FloatValueR\032" +
+      "supplierOrganisationNumber\022F\n\020supplier_a" +
+      "ddress\030! \003(\0132\033.google.protobuf.FloatValu" +
+      "eR\017supplierAddress\022D\n\017customer_number\030\" " +
+      "\003(\0132\033.google.protobuf.FloatValueR\016custom" +
+      "erNumber\"\300\021\n\022PredictionMetadata\0229\n\016total" +
+      "_incl_vat\030\001 \003(\0132\023.ssn.type.ModelSpecR\014to" +
+      "talInclVat\0220\n\ttotal_vat\030\002 \003(\0132\023.ssn.type" +
+      ".ModelSpecR\010totalVat\0229\n\016total_excl_vat\030\003" +
+      " \003(\0132\023.ssn.type.ModelSpecR\014totalExclVat\022" +
+      "2\n\norder_date\030\004 \003(\0132\023.ssn.type.ModelSpec" +
+      "R\torderDate\022=\n\020payment_due_date\030\005 \003(\0132\023." +
+      "ssn.type.ModelSpecR\016paymentDueDate\0228\n\rdo" +
+      "cument_type\030\006 \003(\0132\023.ssn.type.ModelSpecR\014" +
+      "documentType\022/\n\010currency\030\007 \003(\0132\023.ssn.typ" +
+      "e.ModelSpecR\010currency\022F\n\025credit_card_las" +
+      "t_four\030\010 \003(\0132\023.ssn.type.ModelSpecR\022credi" +
+      "tCardLastFour\022:\n\016payment_method\030\t \003(\0132\023." +
+      "ssn.type.ModelSpecR\rpaymentMethod\022<\n\020ocr" +
+      "_line_dk_type\030\n \003(\0132\023.ssn.type.ModelSpec" +
+      "R\rocrLineDkType\022G\n\026ocr_line_dk_payment_i" +
+      "d\030\013 \003(\0132\023.ssn.type.ModelSpecR\022ocrLineDkP" +
+      "aymentId\022I\n\027ocr_line_dk_creditor_id\030\014 \003(" +
+      "\0132\023.ssn.type.ModelSpecR\023ocrLineDkCredito" +
+      "rId\022G\n\026ocr_line_se_payment_id\030\r \003(\0132\023.ss" +
+      "n.type.ModelSpecR\022ocrLineSePaymentId\022Z\n " +
+      "ocr_line_se_bankgiro_creditor_id\030\016 \003(\0132\023" +
+      ".ssn.type.ModelSpecR\033ocrLineSeBankgiroCr" +
+      "editorId\022Z\n ocr_line_se_plusgiro_credito" +
+      "r_id\030\017 \003(\0132\023.ssn.type.ModelSpecR\033ocrLine" +
+      "SePlusgiroCreditorId\022G\n\026ocr_line_no_paym" +
+      "ent_id\030\020 \003(\0132\023.ssn.type.ModelSpecR\022ocrLi" +
+      "neNoPaymentId\022G\n\026ocr_line_fi_payment_id\030" +
+      "\021 \003(\0132\023.ssn.type.ModelSpecR\022ocrLineFiPay" +
+      "mentId\022G\n\026ocr_line_nl_payment_id\030\022 \003(\0132\023" +
+      ".ssn.type.ModelSpecR\022ocrLineNlPaymentId\022" +
+      "G\n\025supplier_corporate_id\030\023 \003(\0132\023.ssn.typ" +
+      "e.ModelSpecR\023supplierCorporateId\022G\n\025supp" +
+      "lier_country_code\030\024 \003(\0132\023.ssn.type.Model" +
+      "SpecR\023supplierCountryCode\022:\n\016invoice_num" +
+      "ber\030\025 \003(\0132\023.ssn.type.ModelSpecR\rinvoiceN" +
+      "umber\022\'\n\004iban\030\026 \003(\0132\023.ssn.type.ModelSpec" +
+      "R\004iban\022<\n\017order_reference\030\027 \003(\0132\023.ssn.ty" +
+      "pe.ModelSpecR\016orderReference\022C\n\023bank_acc" +
+      "ount_number\030\030 \003(\0132\023.ssn.type.ModelSpecR\021" +
+      "bankAccountNumber\022M\n\030bank_registration_n" +
+      "umber\030\031 \003(\0132\023.ssn.type.ModelSpecR\026bankRe" +
+      "gistrationNumber\0228\n\rsupplier_name\030\032 \003(\0132" +
+      "\023.ssn.type.ModelSpecR\014supplierName\022%\n\003bi" +
+      "c\030\033 \003(\0132\023.ssn.type.ModelSpecR\003bic\022<\n\017doc" +
+      "ument_number\030\034 \003(\0132\023.ssn.type.ModelSpecR" +
+      "\016documentNumber\0228\n\rdocument_date\030\035 \003(\0132\023" +
+      ".ssn.type.ModelSpecR\014documentDate\0226\n\014ord" +
+      "er_number\030\036 \003(\0132\023.ssn.type.ModelSpecR\013or" +
+      "derNumber\022C\n\023supplier_vat_number\030\037 \003(\0132\023" +
+      ".ssn.type.ModelSpecR\021supplierVatNumber\022U" +
+      "\n\034supplier_organisation_number\030  \003(\0132\023.s" +
+      "sn.type.ModelSpecR\032supplierOrganisationN" +
+      "umber\022>\n\020supplier_address\030! \003(\0132\023.ssn.ty" +
+      "pe.ModelSpecR\017supplierAddress\022<\n\017custome" +
+      "r_number\030\" \003(\0132\023.ssn.type.ModelSpecR\016cus" +
+      "tomerNumber\"Q\n\025CreateDocumentRequest\0228\n\010" +
+      "document\030\001 \001(\0132\034.ssn.dataservice.v1.Docu" +
+      "mentR\010document\"(\n\026CreateDocumentResponse" +
+      "\022\016\n\002id\030\001 \001(\tR\002id\"%\n\023ReadDocumentRequest\022" +
+      "\016\n\002id\030\001 \001(\tR\002id\"P\n\024ReadDocumentResponse\022" +
+      "8\n\010document\030\001 \001(\0132\034.ssn.dataservice.v1.D" +
+      "ocumentR\010document\"\273\003\n\026PrepareFeedbackReq" +
+      "uest\022\016\n\002id\030\001 \001(\tR\002id\022(\n\002ta\030\002 \001(\0132\030.ssn.t" +
+      "ype.TextAnnotationR\002ta\022%\n\016document_bytes" +
+      "\030\003 \001(\014R\rdocumentBytes\022F\n\013predictions\030\004 \001" +
+      "(\0132$.ssn.dataservice.v1.PredictionValues" +
+      "R\013predictions\022\022\n\004tags\030\005 \003(\tR\004tags\022K\n\013con" +
+      "fidences\030\006 \001(\0132).ssn.dataservice.v1.Pred" +
+      "ictionConfidencesR\013confidences\022W\n\023predic" +
+      "tion_metadata\030\007 \001(\0132&.ssn.dataservice.v1" +
+      ".PredictionMetadataR\022predictionMetadata\022" +
+      "\"\n\004tier\030\010 \001(\0162\016.ssn.type.TierR\004tier\022\032\n\010s" +
+      "egments\030\t \003(\tR\010segments\"v\n\017FeedbackReque" +
+      "st\022\016\n\002id\030\001 \001(\tR\002id\022?\n\013true_values\030\002 \001(\0132" +
+      "\036.ssn.dataservice.v1.TrueValuesR\ntrueVal" +
+      "ues\022\022\n\004tags\030\003 \003(\tR\004tags\"v\n\016MetricsReques" +
+      "t\022\035\n\nstart_time\030\002 \001(\003R\tstartTime\022\031\n\010end_" +
+      "time\030\003 \001(\003R\007endTime\022\026\n\006fields\030\004 \003(\tR\006fie" +
+      "lds\022\022\n\004tags\030\005 \003(\tR\004tags\"\377\001\n\017FeedbackMetr" +
+      "ics\022%\n\016document_count\030\001 \001(\005R\rdocumentCou" +
+      "nt\022%\n\016feedback_count\030\002 \001(\005R\rfeedbackCoun" +
+      "t\022P\n\023overall_correctness\030\003 \001(\0132\037.ssn.dat" +
+      "aservice.v1.CorrectnessR\022overallCorrectn" +
+      "ess\022L\n\021field_correctness\030\004 \003(\0132\037.ssn.dat" +
+      "aservice.v1.CorrectnessR\020fieldCorrectnes" +
+      "s\"\314\001\n\013Correctness\022\024\n\005field\030\001 \001(\tR\005field\022" +
+      "-\n\022correct_percentage\030\002 \001(\002R\021correctPerc" +
+      "entage\0223\n\025incomplete_percentage\030\003 \001(\002R\024i" +
+      "ncompletePercentage\022)\n\020error_percentage\030" +
+      "\004 \001(\002R\017errorPercentage\022\030\n\007support\030\005 \001(\005R" +
+      "\007support\"#\n\rDeleteRequest\022\022\n\004tags\030\001 \003(\tR" +
+      "\004tags\"D\n\rCallsPerMonth\022\024\n\005calls\030\001 \001(\003R\005c" +
+      "alls\022\035\n\nmonth_name\030\002 \001(\tR\tmonthName\"b\n\025C" +
+      "allsPerMonthResponse\022I\n\017calls_per_month\030" +
+      "\001 \003(\0132!.ssn.dataservice.v1.CallsPerMonth" +
+      "R\rcallsPerMonth2\265\005\n\013DataService\022g\n\016Creat" +
+      "eDocument\022).ssn.dataservice.v1.CreateDoc" +
+      "umentRequest\032*.ssn.dataservice.v1.Create" +
+      "DocumentResponse\022a\n\014ReadDocument\022\'.ssn.d" +
+      "ataservice.v1.ReadDocumentRequest\032(.ssn." +
+      "dataservice.v1.ReadDocumentResponse\022U\n\017P" +
+      "repareFeedback\022*.ssn.dataservice.v1.Prep" +
+      "areFeedbackRequest\032\026.google.protobuf.Emp" +
+      "ty\022g\n\010Feedback\022#.ssn.dataservice.v1.Feed" +
+      "backRequest\032\026.google.protobuf.Empty\"\036\202\323\344" +
+      "\223\002\030:\001*\"\023/v1/feedback:create\022[\n\020Calculate" +
+      "Metrics\022\".ssn.dataservice.v1.MetricsRequ" +
+      "est\032#.ssn.dataservice.v1.FeedbackMetrics" +
+      "\022c\n\006Delete\022!.ssn.dataservice.v1.DeleteRe" +
+      "quest\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030:\001*" +
+      "\"\023/v1/feedback:delete\022X\n\023CallsPerMonthMe" +
+      "tric\022\026.google.protobuf.Empty\032).ssn.datas" +
+      "ervice.v1.CallsPerMonthResponseBVB\020DataS" +
+      "erviceProtoZBgithub.com/e-conomic/vmlapi" +
+      "s/gen/go/ssn/dataservice/v1;dataserviceb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -57842,25 +59167,25 @@ public final class DataServiceProto {
     internal_static_ssn_dataservice_v1_TrueValues_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_TrueValues_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", });
     internal_static_ssn_dataservice_v1_PredictionValues_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ssn_dataservice_v1_PredictionValues_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_PredictionValues_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", });
     internal_static_ssn_dataservice_v1_PredictionConfidences_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_dataservice_v1_PredictionConfidences_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_PredictionConfidences_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", });
     internal_static_ssn_dataservice_v1_PredictionMetadata_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_ssn_dataservice_v1_PredictionMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_dataservice_v1_PredictionMetadata_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardLastFour", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "OrderReference", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", });
     internal_static_ssn_dataservice_v1_CreateDocumentRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_ssn_dataservice_v1_CreateDocumentRequest_fieldAccessorTable = new

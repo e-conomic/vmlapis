@@ -411,6 +411,14 @@ public final class Annotator {
        * <code>SUPPLIER_ADDRESS = 36;</code>
        */
       SUPPLIER_ADDRESS(36),
+      /**
+       * <pre>
+       * [EXPERIMENTAL] Run customer identifier detection
+       * </pre>
+       *
+       * <code>CUSTOMER_NUMBER = 37;</code>
+       */
+      CUSTOMER_NUMBER(37),
       UNRECOGNIZED(-1),
       ;
 
@@ -711,6 +719,14 @@ public final class Annotator {
        * <code>SUPPLIER_ADDRESS = 36;</code>
        */
       public static final int SUPPLIER_ADDRESS_VALUE = 36;
+      /**
+       * <pre>
+       * [EXPERIMENTAL] Run customer identifier detection
+       * </pre>
+       *
+       * <code>CUSTOMER_NUMBER = 37;</code>
+       */
+      public static final int CUSTOMER_NUMBER_VALUE = 37;
 
 
       public final int getNumber() {
@@ -774,6 +790,7 @@ public final class Annotator {
           case 34: return SUPPLIER_VAT_NUMBER;
           case 35: return SUPPLIER_ORGANISATION_NUMBER;
           case 36: return SUPPLIER_ADDRESS;
+          case 37: return CUSTOMER_NUMBER;
           default: return null;
         }
       }
@@ -4743,6 +4760,55 @@ public final class Annotator {
      */
     ssn.type.CandidateOuterClass.CandidateOrBuilder getSupplierAddressOrBuilder(
         int index);
+
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    java.util.List<ssn.type.CandidateOuterClass.Candidate> 
+        getCustomerNumberList();
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    ssn.type.CandidateOuterClass.Candidate getCustomerNumber(int index);
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    int getCustomerNumberCount();
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getCustomerNumberOrBuilderList();
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    ssn.type.CandidateOuterClass.CandidateOrBuilder getCustomerNumberOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code ssn.annotator.v1.DocumentAnnotatorResponse}
@@ -4793,6 +4859,7 @@ public final class Annotator {
       supplierVatNumber_ = java.util.Collections.emptyList();
       supplierOrganisationNumber_ = java.util.Collections.emptyList();
       supplierAddress_ = java.util.Collections.emptyList();
+      customerNumber_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -7194,6 +7261,72 @@ public final class Annotator {
       return supplierAddress_.get(index);
     }
 
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 38;
+    @SuppressWarnings("serial")
+    private java.util.List<ssn.type.CandidateOuterClass.Candidate> customerNumber_;
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCustomerNumberList() {
+      return customerNumber_;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+        getCustomerNumberOrBuilderList() {
+      return customerNumber_;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public int getCustomerNumberCount() {
+      return customerNumber_.size();
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.Candidate getCustomerNumber(int index) {
+      return customerNumber_.get(index);
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    @java.lang.Override
+    public ssn.type.CandidateOuterClass.CandidateOrBuilder getCustomerNumberOrBuilder(
+        int index) {
+      return customerNumber_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -7318,6 +7451,9 @@ public final class Annotator {
       }
       for (int i = 0; i < supplierAddress_.size(); i++) {
         output.writeMessage(37, supplierAddress_.get(i));
+      }
+      for (int i = 0; i < customerNumber_.size(); i++) {
+        output.writeMessage(38, customerNumber_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -7473,6 +7609,10 @@ public final class Annotator {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(37, supplierAddress_.get(i));
       }
+      for (int i = 0; i < customerNumber_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(38, customerNumber_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -7565,6 +7705,8 @@ public final class Annotator {
           .equals(other.getSupplierOrganisationNumberList())) return false;
       if (!getSupplierAddressList()
           .equals(other.getSupplierAddressList())) return false;
+      if (!getCustomerNumberList()
+          .equals(other.getCustomerNumberList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -7717,6 +7859,10 @@ public final class Annotator {
       if (getSupplierAddressCount() > 0) {
         hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
         hash = (53 * hash) + getSupplierAddressList().hashCode();
+      }
+      if (getCustomerNumberCount() > 0) {
+        hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerNumberList().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -8087,6 +8233,13 @@ public final class Annotator {
           supplierAddressBuilder_.clear();
         }
         bitField1_ = (bitField1_ & ~0x00000010);
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = java.util.Collections.emptyList();
+        } else {
+          customerNumber_ = null;
+          customerNumberBuilder_.clear();
+        }
+        bitField1_ = (bitField1_ & ~0x00000020);
         return this;
       }
 
@@ -8417,6 +8570,15 @@ public final class Annotator {
           result.supplierAddress_ = supplierAddress_;
         } else {
           result.supplierAddress_ = supplierAddressBuilder_.build();
+        }
+        if (customerNumberBuilder_ == null) {
+          if (((bitField1_ & 0x00000020) != 0)) {
+            customerNumber_ = java.util.Collections.unmodifiableList(customerNumber_);
+            bitField1_ = (bitField1_ & ~0x00000020);
+          }
+          result.customerNumber_ = customerNumber_;
+        } else {
+          result.customerNumber_ = customerNumberBuilder_.build();
         }
       }
 
@@ -9362,6 +9524,32 @@ public final class Annotator {
             }
           }
         }
+        if (customerNumberBuilder_ == null) {
+          if (!other.customerNumber_.isEmpty()) {
+            if (customerNumber_.isEmpty()) {
+              customerNumber_ = other.customerNumber_;
+              bitField1_ = (bitField1_ & ~0x00000020);
+            } else {
+              ensureCustomerNumberIsMutable();
+              customerNumber_.addAll(other.customerNumber_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.customerNumber_.isEmpty()) {
+            if (customerNumberBuilder_.isEmpty()) {
+              customerNumberBuilder_.dispose();
+              customerNumberBuilder_ = null;
+              customerNumber_ = other.customerNumber_;
+              bitField1_ = (bitField1_ & ~0x00000020);
+              customerNumberBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getCustomerNumberFieldBuilder() : null;
+            } else {
+              customerNumberBuilder_.addAllMessages(other.customerNumber_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -9839,6 +10027,19 @@ public final class Annotator {
                 }
                 break;
               } // case 298
+              case 306: {
+                ssn.type.CandidateOuterClass.Candidate m =
+                    input.readMessage(
+                        ssn.type.CandidateOuterClass.Candidate.parser(),
+                        extensionRegistry);
+                if (customerNumberBuilder_ == null) {
+                  ensureCustomerNumberIsMutable();
+                  customerNumber_.add(m);
+                } else {
+                  customerNumberBuilder_.addMessage(m);
+                }
+                break;
+              } // case 306
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -21236,6 +21437,336 @@ public final class Annotator {
         }
         return supplierAddressBuilder_;
       }
+
+      private java.util.List<ssn.type.CandidateOuterClass.Candidate> customerNumber_ =
+        java.util.Collections.emptyList();
+      private void ensureCustomerNumberIsMutable() {
+        if (!((bitField1_ & 0x00000020) != 0)) {
+          customerNumber_ = new java.util.ArrayList<ssn.type.CandidateOuterClass.Candidate>(customerNumber_);
+          bitField1_ |= 0x00000020;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> customerNumberBuilder_;
+
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate> getCustomerNumberList() {
+        if (customerNumberBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(customerNumber_);
+        } else {
+          return customerNumberBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public int getCustomerNumberCount() {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.size();
+        } else {
+          return customerNumberBuilder_.getCount();
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate getCustomerNumber(int index) {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.get(index);
+        } else {
+          return customerNumberBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public Builder setCustomerNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.set(index, value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public Builder setCustomerNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(ssn.type.CandidateOuterClass.Candidate value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(index, value);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public Builder addCustomerNumber(
+          int index, ssn.type.CandidateOuterClass.Candidate.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          customerNumberBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public Builder addAllCustomerNumber(
+          java.lang.Iterable<? extends ssn.type.CandidateOuterClass.Candidate> values) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, customerNumber_);
+          onChanged();
+        } else {
+          customerNumberBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public Builder clearCustomerNumber() {
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = java.util.Collections.emptyList();
+          bitField1_ = (bitField1_ & ~0x00000020);
+          onChanged();
+        } else {
+          customerNumberBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public Builder removeCustomerNumber(int index) {
+        if (customerNumberBuilder_ == null) {
+          ensureCustomerNumberIsMutable();
+          customerNumber_.remove(index);
+          onChanged();
+        } else {
+          customerNumberBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder getCustomerNumberBuilder(
+          int index) {
+        return getCustomerNumberFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.CandidateOrBuilder getCustomerNumberOrBuilder(
+          int index) {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_.get(index);  } else {
+          return customerNumberBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<? extends ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+           getCustomerNumberOrBuilderList() {
+        if (customerNumberBuilder_ != null) {
+          return customerNumberBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(customerNumber_);
+        }
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addCustomerNumberBuilder() {
+        return getCustomerNumberFieldBuilder().addBuilder(
+            ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public ssn.type.CandidateOuterClass.Candidate.Builder addCustomerNumberBuilder(
+          int index) {
+        return getCustomerNumberFieldBuilder().addBuilder(
+            index, ssn.type.CandidateOuterClass.Candidate.getDefaultInstance());
+      }
+      /**
+       * <pre>
+       * [EXPERIMENTAL]
+       * Returns customer identifier/number
+       * </pre>
+       *
+       * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+       */
+      public java.util.List<ssn.type.CandidateOuterClass.Candidate.Builder> 
+           getCustomerNumberBuilderList() {
+        return getCustomerNumberFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder> 
+          getCustomerNumberFieldBuilder() {
+        if (customerNumberBuilder_ == null) {
+          customerNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ssn.type.CandidateOuterClass.Candidate, ssn.type.CandidateOuterClass.Candidate.Builder, ssn.type.CandidateOuterClass.CandidateOrBuilder>(
+                  customerNumber_,
+                  ((bitField1_ & 0x00000020) != 0),
+                  getParentForChildren(),
+                  isClean());
+          customerNumber_ = null;
+        }
+        return customerNumberBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -22762,11 +23293,11 @@ public final class Annotator {
       "to\032.protoc-gen-openapiv2/options/annotat" +
       "ions.proto\032\030ssn/type/candidate.proto\032\036ss" +
       "n/type/text_annotation.proto\032\023ssn/type/t" +
-      "ier.proto\"\330\007\n\007Feature\0222\n\004type\030\001 \001(\0162\036.ss" +
+      "ier.proto\"\355\007\n\007Feature\0222\n\004type\030\001 \001(\0162\036.ss" +
       "n.annotator.v1.Feature.TypeR\004type\022\037\n\013max" +
       "_results\030\002 \001(\005R\nmaxResults\022A\n\016min_confid" +
       "ence\030\003 \001(\0162\032.ssn.type.Confidence.LevelR\r" +
-      "minConfidence\"\264\006\n\004Type\022\013\n\007DEFAULT\020\000\022\023\n\017T" +
+      "minConfidence\"\311\006\n\004Type\022\013\n\007DEFAULT\020\000\022\023\n\017T" +
       "EXT_ANNOTATION\020\001\022\016\n\nORDER_DATE\020\002\022\024\n\020PAYM" +
       "ENT_DUE_DATE\020\003\022\014\n\010CURRENCY\020\004\022\r\n\tTOTAL_VA" +
       "T\020\005\022\022\n\016TOTAL_INCL_VAT\020\006\022\022\n\016TOTAL_EXCL_VA" +
@@ -22786,82 +23317,84 @@ public final class Annotator {
       "\n\017DOCUMENT_NUMBER\020\036\022\021\n\rDOCUMENT_DATE\020\037\022\020" +
       "\n\014ORDER_NUMBER\020 \022\021\n\rSUPPLIER_NAME\020!\022\027\n\023S" +
       "UPPLIER_VAT_NUMBER\020\"\022 \n\034SUPPLIER_ORGANIS" +
-      "ATION_NUMBER\020#\022\024\n\020SUPPLIER_ADDRESS\020$\"\335\001\n" +
-      "\030DocumentAnnotatorRequest\0226\n\010document\030\001 " +
-      "\001(\0132\032.ssn.annotator.v1.DocumentR\010documen" +
-      "t\0225\n\010features\030\002 \003(\0132\031.ssn.annotator.v1.F" +
-      "eatureR\010features\022\022\n\004tags\030\003 \003(\tR\004tags\022\"\n\004" +
-      "tier\030\004 \001(\0162\016.ssn.type.TierR\004tier\022\032\n\010segm" +
-      "ents\030\005 \003(\tR\010segments\"\214\022\n\031DocumentAnnotat" +
-      "orResponse\0222\n\norder_date\030\001 \003(\0132\023.ssn.typ" +
-      "e.CandidateR\torderDate\022=\n\020payment_due_da" +
-      "te\030\002 \003(\0132\023.ssn.type.CandidateR\016paymentDu" +
-      "eDate\022/\n\010currency\030\003 \003(\0132\023.ssn.type.Candi" +
-      "dateR\010currency\0220\n\ttotal_vat\030\004 \003(\0132\023.ssn." +
-      "type.CandidateR\010totalVat\0229\n\016total_incl_v" +
-      "at\030\005 \003(\0132\023.ssn.type.CandidateR\014totalIncl" +
-      "Vat\0229\n\016total_excl_vat\030\006 \003(\0132\023.ssn.type.C" +
-      "andidateR\014totalExclVat\022G\n\025supplier_corpo" +
-      "rate_id\030\007 \003(\0132\023.ssn.type.CandidateR\023supp" +
-      "lierCorporateId\022G\n\025supplier_country_code" +
-      "\030\010 \003(\0132\023.ssn.type.CandidateR\023supplierCou" +
-      "ntryCode\0228\n\rdocument_type\030\t \003(\0132\023.ssn.ty" +
-      "pe.CandidateR\014documentType\022:\n\016payment_me" +
-      "thod\030\n \003(\0132\023.ssn.type.CandidateR\rpayment" +
-      "Method\022F\n\025credit_card_last_four\030\013 \003(\0132\023." +
-      "ssn.type.CandidateR\022creditCardLastFour\022:" +
-      "\n\016invoice_number\030\014 \003(\0132\023.ssn.type.Candid" +
-      "ateR\rinvoiceNumber\022A\n\017text_annotation\030\r " +
-      "\001(\0132\030.ssn.type.TextAnnotationR\016textAnnot" +
-      "ation\022<\n\020ocr_line_dk_type\030\016 \003(\0132\023.ssn.ty" +
-      "pe.CandidateR\rocrLineDkType\022G\n\026ocr_line_" +
-      "dk_payment_id\030\017 \003(\0132\023.ssn.type.Candidate" +
-      "R\022ocrLineDkPaymentId\022I\n\027ocr_line_dk_cred" +
-      "itor_id\030\020 \003(\0132\023.ssn.type.CandidateR\023ocrL" +
-      "ineDkCreditorId\022G\n\026ocr_line_se_payment_i" +
-      "d\030\021 \003(\0132\023.ssn.type.CandidateR\022ocrLineSeP" +
-      "aymentId\022Z\n ocr_line_se_bankgiro_credito" +
-      "r_id\030\022 \003(\0132\023.ssn.type.CandidateR\033ocrLine" +
-      "SeBankgiroCreditorId\022Z\n ocr_line_se_plus" +
-      "giro_creditor_id\030\023 \003(\0132\023.ssn.type.Candid" +
-      "ateR\033ocrLineSePlusgiroCreditorId\022G\n\026ocr_" +
-      "line_no_payment_id\030\024 \003(\0132\023.ssn.type.Cand" +
-      "idateR\022ocrLineNoPaymentId\022G\n\026ocr_line_fi" +
-      "_payment_id\030\025 \003(\0132\023.ssn.type.CandidateR\022" +
-      "ocrLineFiPaymentId\022G\n\026ocr_line_nl_paymen" +
-      "t_id\030\026 \003(\0132\023.ssn.type.CandidateR\022ocrLine" +
-      "NlPaymentId\022\022\n\004text\030\027 \001(\tR\004text\022\037\n\013feedb" +
-      "ack_id\030\030 \001(\tR\nfeedbackId\022\'\n\004iban\030\031 \003(\0132\023" +
-      ".ssn.type.CandidateR\004iban\022-\n\005lines\030\032 \003(\013" +
-      "2\027.ssn.type.LineCandidateR\005lines\022\030\n\007prev" +
-      "iew\030\033 \001(\tR\007preview\022C\n\023bank_account_numbe" +
-      "r\030\034 \003(\0132\023.ssn.type.CandidateR\021bankAccoun" +
-      "tNumber\022M\n\030bank_registration_number\030\035 \003(" +
-      "\0132\023.ssn.type.CandidateR\026bankRegistration" +
-      "Number\022%\n\003bic\030\036 \003(\0132\023.ssn.type.Candidate" +
-      "R\003bic\022<\n\017document_number\030\037 \003(\0132\023.ssn.typ" +
-      "e.CandidateR\016documentNumber\0228\n\rdocument_" +
-      "date\030  \003(\0132\023.ssn.type.CandidateR\014documen" +
-      "tDate\0226\n\014order_number\030! \003(\0132\023.ssn.type.C" +
-      "andidateR\013orderNumber\0228\n\rsupplier_name\030\"" +
-      " \003(\0132\023.ssn.type.CandidateR\014supplierName\022" +
-      "C\n\023supplier_vat_number\030# \003(\0132\023.ssn.type." +
-      "CandidateR\021supplierVatNumber\022U\n\034supplier" +
-      "_organisation_number\030$ \003(\0132\023.ssn.type.Ca" +
-      "ndidateR\032supplierOrganisationNumber\022>\n\020s" +
-      "upplier_address\030% \003(\0132\023.ssn.type.Candida" +
-      "teR\017supplierAddress\"^\n\010Document\022\030\n\007conte" +
-      "nt\030\001 \001(\014R\007content\0228\n\006source\030\002 \001(\0132 .ssn." +
-      "annotator.v1.DocumentSourceR\006source\"+\n\016D" +
-      "ocumentSource\022\031\n\010http_uri\030\001 \001(\tR\007httpUri" +
-      "2\243\001\n\021DocumentAnnotator\022\215\001\n\020AnnotateDocum" +
-      "ent\022*.ssn.annotator.v1.DocumentAnnotator" +
-      "Request\032+.ssn.annotator.v1.DocumentAnnot" +
-      "atorResponse\" \202\323\344\223\002\032:\001*\"\025/v1/document:an" +
-      "notateB{Z>github.com/e-conomic/vmlapis/g" +
-      "en/go/ssn/annotator/v1;annotator\222A8\022\017\n\tS" +
-      "martScan2\002v1*\001\0022\020application/json:\020appli" +
-      "cation/jsonb\006proto3"
+      "ATION_NUMBER\020#\022\024\n\020SUPPLIER_ADDRESS\020$\022\023\n\017" +
+      "CUSTOMER_NUMBER\020%\"\335\001\n\030DocumentAnnotatorR" +
+      "equest\0226\n\010document\030\001 \001(\0132\032.ssn.annotator" +
+      ".v1.DocumentR\010document\0225\n\010features\030\002 \003(\013" +
+      "2\031.ssn.annotator.v1.FeatureR\010features\022\022\n" +
+      "\004tags\030\003 \003(\tR\004tags\022\"\n\004tier\030\004 \001(\0162\016.ssn.ty" +
+      "pe.TierR\004tier\022\032\n\010segments\030\005 \003(\tR\010segment" +
+      "s\"\312\022\n\031DocumentAnnotatorResponse\0222\n\norder" +
+      "_date\030\001 \003(\0132\023.ssn.type.CandidateR\torderD" +
+      "ate\022=\n\020payment_due_date\030\002 \003(\0132\023.ssn.type" +
+      ".CandidateR\016paymentDueDate\022/\n\010currency\030\003" +
+      " \003(\0132\023.ssn.type.CandidateR\010currency\0220\n\tt" +
+      "otal_vat\030\004 \003(\0132\023.ssn.type.CandidateR\010tot" +
+      "alVat\0229\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type" +
+      ".CandidateR\014totalInclVat\0229\n\016total_excl_v" +
+      "at\030\006 \003(\0132\023.ssn.type.CandidateR\014totalExcl" +
+      "Vat\022G\n\025supplier_corporate_id\030\007 \003(\0132\023.ssn" +
+      ".type.CandidateR\023supplierCorporateId\022G\n\025" +
+      "supplier_country_code\030\010 \003(\0132\023.ssn.type.C" +
+      "andidateR\023supplierCountryCode\0228\n\rdocumen" +
+      "t_type\030\t \003(\0132\023.ssn.type.CandidateR\014docum" +
+      "entType\022:\n\016payment_method\030\n \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\rpaymentMethod\022F\n\025credit_ca" +
+      "rd_last_four\030\013 \003(\0132\023.ssn.type.CandidateR" +
+      "\022creditCardLastFour\022:\n\016invoice_number\030\014 " +
+      "\003(\0132\023.ssn.type.CandidateR\rinvoiceNumber\022" +
+      "A\n\017text_annotation\030\r \001(\0132\030.ssn.type.Text" +
+      "AnnotationR\016textAnnotation\022<\n\020ocr_line_d" +
+      "k_type\030\016 \003(\0132\023.ssn.type.CandidateR\rocrLi" +
+      "neDkType\022G\n\026ocr_line_dk_payment_id\030\017 \003(\013" +
+      "2\023.ssn.type.CandidateR\022ocrLineDkPaymentI" +
+      "d\022I\n\027ocr_line_dk_creditor_id\030\020 \003(\0132\023.ssn" +
+      ".type.CandidateR\023ocrLineDkCreditorId\022G\n\026" +
+      "ocr_line_se_payment_id\030\021 \003(\0132\023.ssn.type." +
+      "CandidateR\022ocrLineSePaymentId\022Z\n ocr_lin" +
+      "e_se_bankgiro_creditor_id\030\022 \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\033ocrLineSeBankgiroCreditorI" +
+      "d\022Z\n ocr_line_se_plusgiro_creditor_id\030\023 " +
+      "\003(\0132\023.ssn.type.CandidateR\033ocrLineSePlusg" +
+      "iroCreditorId\022G\n\026ocr_line_no_payment_id\030" +
+      "\024 \003(\0132\023.ssn.type.CandidateR\022ocrLineNoPay" +
+      "mentId\022G\n\026ocr_line_fi_payment_id\030\025 \003(\0132\023" +
+      ".ssn.type.CandidateR\022ocrLineFiPaymentId\022" +
+      "G\n\026ocr_line_nl_payment_id\030\026 \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\022ocrLineNlPaymentId\022\022\n\004text" +
+      "\030\027 \001(\tR\004text\022\037\n\013feedback_id\030\030 \001(\tR\nfeedb" +
+      "ackId\022\'\n\004iban\030\031 \003(\0132\023.ssn.type.Candidate" +
+      "R\004iban\022-\n\005lines\030\032 \003(\0132\027.ssn.type.LineCan" +
+      "didateR\005lines\022\030\n\007preview\030\033 \001(\tR\007preview\022" +
+      "C\n\023bank_account_number\030\034 \003(\0132\023.ssn.type." +
+      "CandidateR\021bankAccountNumber\022M\n\030bank_reg" +
+      "istration_number\030\035 \003(\0132\023.ssn.type.Candid" +
+      "ateR\026bankRegistrationNumber\022%\n\003bic\030\036 \003(\013" +
+      "2\023.ssn.type.CandidateR\003bic\022<\n\017document_n" +
+      "umber\030\037 \003(\0132\023.ssn.type.CandidateR\016docume" +
+      "ntNumber\0228\n\rdocument_date\030  \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\014documentDate\0226\n\014order_numb" +
+      "er\030! \003(\0132\023.ssn.type.CandidateR\013orderNumb" +
+      "er\0228\n\rsupplier_name\030\" \003(\0132\023.ssn.type.Can" +
+      "didateR\014supplierName\022C\n\023supplier_vat_num" +
+      "ber\030# \003(\0132\023.ssn.type.CandidateR\021supplier" +
+      "VatNumber\022U\n\034supplier_organisation_numbe" +
+      "r\030$ \003(\0132\023.ssn.type.CandidateR\032supplierOr" +
+      "ganisationNumber\022>\n\020supplier_address\030% \003" +
+      "(\0132\023.ssn.type.CandidateR\017supplierAddress" +
+      "\022<\n\017customer_number\030& \003(\0132\023.ssn.type.Can" +
+      "didateR\016customerNumber\"^\n\010Document\022\030\n\007co" +
+      "ntent\030\001 \001(\014R\007content\0228\n\006source\030\002 \001(\0132 .s" +
+      "sn.annotator.v1.DocumentSourceR\006source\"+" +
+      "\n\016DocumentSource\022\031\n\010http_uri\030\001 \001(\tR\007http" +
+      "Uri2\243\001\n\021DocumentAnnotator\022\215\001\n\020AnnotateDo" +
+      "cument\022*.ssn.annotator.v1.DocumentAnnota" +
+      "torRequest\032+.ssn.annotator.v1.DocumentAn" +
+      "notatorResponse\" \202\323\344\223\002\032:\001*\"\025/v1/document" +
+      ":annotateB{Z>github.com/e-conomic/vmlapi" +
+      "s/gen/go/ssn/annotator/v1;annotator\222A8\022\017" +
+      "\n\tSmartScan2\002v1*\001\0022\020application/json:\020ap" +
+      "plication/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -22889,7 +23422,7 @@ public final class Annotator {
     internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", });
     internal_static_ssn_annotator_v1_Document_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_annotator_v1_Document_fieldAccessorTable = new
