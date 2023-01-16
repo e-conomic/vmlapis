@@ -6368,21 +6368,6 @@ public final class MlServiceProtos {
   public interface FeatureGenResponseOrBuilder extends
       // @@protoc_insertion_point(interface_extends:ssn.mlservice.v2.FeatureGenResponse)
       com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     * @return Whether the example field is set.
-     */
-    boolean hasExample();
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     * @return The example.
-     */
-    org.tensorflow.example.Example getExample();
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     */
-    org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder();
   }
   /**
    * Protobuf type {@code ssn.mlservice.v2.FeatureGenResponse}
@@ -6424,32 +6409,6 @@ public final class MlServiceProtos {
               ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse.class, ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse.Builder.class);
     }
 
-    public static final int EXAMPLE_FIELD_NUMBER = 1;
-    private org.tensorflow.example.Example example_;
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     * @return Whether the example field is set.
-     */
-    @java.lang.Override
-    public boolean hasExample() {
-      return example_ != null;
-    }
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     * @return The example.
-     */
-    @java.lang.Override
-    public org.tensorflow.example.Example getExample() {
-      return example_ == null ? org.tensorflow.example.Example.getDefaultInstance() : example_;
-    }
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     */
-    @java.lang.Override
-    public org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder() {
-      return example_ == null ? org.tensorflow.example.Example.getDefaultInstance() : example_;
-    }
-
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -6464,9 +6423,6 @@ public final class MlServiceProtos {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (example_ != null) {
-        output.writeMessage(1, getExample());
-      }
       getUnknownFields().writeTo(output);
     }
 
@@ -6476,10 +6432,6 @@ public final class MlServiceProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (example_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getExample());
-      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -6495,11 +6447,6 @@ public final class MlServiceProtos {
       }
       ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse other = (ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse) obj;
 
-      if (hasExample() != other.hasExample()) return false;
-      if (hasExample()) {
-        if (!getExample()
-            .equals(other.getExample())) return false;
-      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -6511,10 +6458,6 @@ public final class MlServiceProtos {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasExample()) {
-        hash = (37 * hash) + EXAMPLE_FIELD_NUMBER;
-        hash = (53 * hash) + getExample().hashCode();
-      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -6643,12 +6586,6 @@ public final class MlServiceProtos {
       @java.lang.Override
       public Builder clear() {
         super.clear();
-        bitField0_ = 0;
-        example_ = null;
-        if (exampleBuilder_ != null) {
-          exampleBuilder_.dispose();
-          exampleBuilder_ = null;
-        }
         return this;
       }
 
@@ -6675,18 +6612,8 @@ public final class MlServiceProtos {
       @java.lang.Override
       public ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse buildPartial() {
         ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse result = new ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse(this);
-        if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
-      }
-
-      private void buildPartial0(ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse result) {
-        int from_bitField0_ = bitField0_;
-        if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.example_ = exampleBuilder_ == null
-              ? example_
-              : exampleBuilder_.build();
-        }
       }
 
       @java.lang.Override
@@ -6733,9 +6660,6 @@ public final class MlServiceProtos {
 
       public Builder mergeFrom(ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse other) {
         if (other == ssn.mlservice.v2.MlServiceProtos.FeatureGenResponse.getDefaultInstance()) return this;
-        if (other.hasExample()) {
-          mergeExample(other.getExample());
-        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -6762,13 +6686,6 @@ public final class MlServiceProtos {
               case 0:
                 done = true;
                 break;
-              case 10: {
-                input.readMessage(
-                    getExampleFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -6783,126 +6700,6 @@ public final class MlServiceProtos {
           onChanged();
         } // finally
         return this;
-      }
-      private int bitField0_;
-
-      private org.tensorflow.example.Example example_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.tensorflow.example.Example, org.tensorflow.example.Example.Builder, org.tensorflow.example.ExampleOrBuilder> exampleBuilder_;
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       * @return Whether the example field is set.
-       */
-      public boolean hasExample() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       * @return The example.
-       */
-      public org.tensorflow.example.Example getExample() {
-        if (exampleBuilder_ == null) {
-          return example_ == null ? org.tensorflow.example.Example.getDefaultInstance() : example_;
-        } else {
-          return exampleBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      public Builder setExample(org.tensorflow.example.Example value) {
-        if (exampleBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          example_ = value;
-        } else {
-          exampleBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      public Builder setExample(
-          org.tensorflow.example.Example.Builder builderForValue) {
-        if (exampleBuilder_ == null) {
-          example_ = builderForValue.build();
-        } else {
-          exampleBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      public Builder mergeExample(org.tensorflow.example.Example value) {
-        if (exampleBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            example_ != null &&
-            example_ != org.tensorflow.example.Example.getDefaultInstance()) {
-            getExampleBuilder().mergeFrom(value);
-          } else {
-            example_ = value;
-          }
-        } else {
-          exampleBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      public Builder clearExample() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        example_ = null;
-        if (exampleBuilder_ != null) {
-          exampleBuilder_.dispose();
-          exampleBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      public org.tensorflow.example.Example.Builder getExampleBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getExampleFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      public org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder() {
-        if (exampleBuilder_ != null) {
-          return exampleBuilder_.getMessageOrBuilder();
-        } else {
-          return example_ == null ?
-              org.tensorflow.example.Example.getDefaultInstance() : example_;
-        }
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.tensorflow.example.Example, org.tensorflow.example.Example.Builder, org.tensorflow.example.ExampleOrBuilder> 
-          getExampleFieldBuilder() {
-        if (exampleBuilder_ == null) {
-          exampleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.tensorflow.example.Example, org.tensorflow.example.Example.Builder, org.tensorflow.example.ExampleOrBuilder>(
-                  getExample(),
-                  getParentForChildren(),
-                  isClean());
-          example_ = null;
-        }
-        return exampleBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -6973,21 +6770,6 @@ public final class MlServiceProtos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     * @return Whether the example field is set.
-     */
-    boolean hasExample();
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     * @return The example.
-     */
-    org.tensorflow.example.Example getExample();
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     */
-    org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder();
-
-    /**
      * <code>uint32 top_n_most_confident = 2 [json_name = "topNMostConfident"];</code>
      * @return The topNMostConfident.
      */
@@ -7033,32 +6815,6 @@ public final class MlServiceProtos {
               ssn.mlservice.v2.MlServiceProtos.PredictRequest.class, ssn.mlservice.v2.MlServiceProtos.PredictRequest.Builder.class);
     }
 
-    public static final int EXAMPLE_FIELD_NUMBER = 1;
-    private org.tensorflow.example.Example example_;
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     * @return Whether the example field is set.
-     */
-    @java.lang.Override
-    public boolean hasExample() {
-      return example_ != null;
-    }
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     * @return The example.
-     */
-    @java.lang.Override
-    public org.tensorflow.example.Example getExample() {
-      return example_ == null ? org.tensorflow.example.Example.getDefaultInstance() : example_;
-    }
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     */
-    @java.lang.Override
-    public org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder() {
-      return example_ == null ? org.tensorflow.example.Example.getDefaultInstance() : example_;
-    }
-
     public static final int TOP_N_MOST_CONFIDENT_FIELD_NUMBER = 2;
     private int topNMostConfident_ = 0;
     /**
@@ -7084,9 +6840,6 @@ public final class MlServiceProtos {
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output)
                         throws java.io.IOException {
-      if (example_ != null) {
-        output.writeMessage(1, getExample());
-      }
       if (topNMostConfident_ != 0) {
         output.writeUInt32(2, topNMostConfident_);
       }
@@ -7099,10 +6852,6 @@ public final class MlServiceProtos {
       if (size != -1) return size;
 
       size = 0;
-      if (example_ != null) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(1, getExample());
-      }
       if (topNMostConfident_ != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeUInt32Size(2, topNMostConfident_);
@@ -7122,11 +6871,6 @@ public final class MlServiceProtos {
       }
       ssn.mlservice.v2.MlServiceProtos.PredictRequest other = (ssn.mlservice.v2.MlServiceProtos.PredictRequest) obj;
 
-      if (hasExample() != other.hasExample()) return false;
-      if (hasExample()) {
-        if (!getExample()
-            .equals(other.getExample())) return false;
-      }
       if (getTopNMostConfident()
           != other.getTopNMostConfident()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -7140,10 +6884,6 @@ public final class MlServiceProtos {
       }
       int hash = 41;
       hash = (19 * hash) + getDescriptor().hashCode();
-      if (hasExample()) {
-        hash = (37 * hash) + EXAMPLE_FIELD_NUMBER;
-        hash = (53 * hash) + getExample().hashCode();
-      }
       hash = (37 * hash) + TOP_N_MOST_CONFIDENT_FIELD_NUMBER;
       hash = (53 * hash) + getTopNMostConfident();
       hash = (29 * hash) + getUnknownFields().hashCode();
@@ -7275,11 +7015,6 @@ public final class MlServiceProtos {
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        example_ = null;
-        if (exampleBuilder_ != null) {
-          exampleBuilder_.dispose();
-          exampleBuilder_ = null;
-        }
         topNMostConfident_ = 0;
         return this;
       }
@@ -7315,11 +7050,6 @@ public final class MlServiceProtos {
       private void buildPartial0(ssn.mlservice.v2.MlServiceProtos.PredictRequest result) {
         int from_bitField0_ = bitField0_;
         if (((from_bitField0_ & 0x00000001) != 0)) {
-          result.example_ = exampleBuilder_ == null
-              ? example_
-              : exampleBuilder_.build();
-        }
-        if (((from_bitField0_ & 0x00000002) != 0)) {
           result.topNMostConfident_ = topNMostConfident_;
         }
       }
@@ -7368,9 +7098,6 @@ public final class MlServiceProtos {
 
       public Builder mergeFrom(ssn.mlservice.v2.MlServiceProtos.PredictRequest other) {
         if (other == ssn.mlservice.v2.MlServiceProtos.PredictRequest.getDefaultInstance()) return this;
-        if (other.hasExample()) {
-          mergeExample(other.getExample());
-        }
         if (other.getTopNMostConfident() != 0) {
           setTopNMostConfident(other.getTopNMostConfident());
         }
@@ -7400,16 +7127,9 @@ public final class MlServiceProtos {
               case 0:
                 done = true;
                 break;
-              case 10: {
-                input.readMessage(
-                    getExampleFieldBuilder().getBuilder(),
-                    extensionRegistry);
-                bitField0_ |= 0x00000001;
-                break;
-              } // case 10
               case 16: {
                 topNMostConfident_ = input.readUInt32();
-                bitField0_ |= 0x00000002;
+                bitField0_ |= 0x00000001;
                 break;
               } // case 16
               default: {
@@ -7429,125 +7149,6 @@ public final class MlServiceProtos {
       }
       private int bitField0_;
 
-      private org.tensorflow.example.Example example_;
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.tensorflow.example.Example, org.tensorflow.example.Example.Builder, org.tensorflow.example.ExampleOrBuilder> exampleBuilder_;
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       * @return Whether the example field is set.
-       */
-      public boolean hasExample() {
-        return ((bitField0_ & 0x00000001) != 0);
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       * @return The example.
-       */
-      public org.tensorflow.example.Example getExample() {
-        if (exampleBuilder_ == null) {
-          return example_ == null ? org.tensorflow.example.Example.getDefaultInstance() : example_;
-        } else {
-          return exampleBuilder_.getMessage();
-        }
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      public Builder setExample(org.tensorflow.example.Example value) {
-        if (exampleBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          example_ = value;
-        } else {
-          exampleBuilder_.setMessage(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      public Builder setExample(
-          org.tensorflow.example.Example.Builder builderForValue) {
-        if (exampleBuilder_ == null) {
-          example_ = builderForValue.build();
-        } else {
-          exampleBuilder_.setMessage(builderForValue.build());
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      public Builder mergeExample(org.tensorflow.example.Example value) {
-        if (exampleBuilder_ == null) {
-          if (((bitField0_ & 0x00000001) != 0) &&
-            example_ != null &&
-            example_ != org.tensorflow.example.Example.getDefaultInstance()) {
-            getExampleBuilder().mergeFrom(value);
-          } else {
-            example_ = value;
-          }
-        } else {
-          exampleBuilder_.mergeFrom(value);
-        }
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      public Builder clearExample() {
-        bitField0_ = (bitField0_ & ~0x00000001);
-        example_ = null;
-        if (exampleBuilder_ != null) {
-          exampleBuilder_.dispose();
-          exampleBuilder_ = null;
-        }
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      public org.tensorflow.example.Example.Builder getExampleBuilder() {
-        bitField0_ |= 0x00000001;
-        onChanged();
-        return getExampleFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      public org.tensorflow.example.ExampleOrBuilder getExampleOrBuilder() {
-        if (exampleBuilder_ != null) {
-          return exampleBuilder_.getMessageOrBuilder();
-        } else {
-          return example_ == null ?
-              org.tensorflow.example.Example.getDefaultInstance() : example_;
-        }
-      }
-      /**
-       * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          org.tensorflow.example.Example, org.tensorflow.example.Example.Builder, org.tensorflow.example.ExampleOrBuilder> 
-          getExampleFieldBuilder() {
-        if (exampleBuilder_ == null) {
-          exampleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              org.tensorflow.example.Example, org.tensorflow.example.Example.Builder, org.tensorflow.example.ExampleOrBuilder>(
-                  getExample(),
-                  getParentForChildren(),
-                  isClean());
-          example_ = null;
-        }
-        return exampleBuilder_;
-      }
-
       private int topNMostConfident_ ;
       /**
        * <code>uint32 top_n_most_confident = 2 [json_name = "topNMostConfident"];</code>
@@ -7565,7 +7166,7 @@ public final class MlServiceProtos {
       public Builder setTopNMostConfident(int value) {
         
         topNMostConfident_ = value;
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -7574,7 +7175,7 @@ public final class MlServiceProtos {
        * @return This builder for chaining.
        */
       public Builder clearTopNMostConfident() {
-        bitField0_ = (bitField0_ & ~0x00000002);
+        bitField0_ = (bitField0_ & ~0x00000001);
         topNMostConfident_ = 0;
         onChanged();
         return this;
@@ -22111,136 +21712,132 @@ public final class MlServiceProtos {
     java.lang.String[] descriptorData = {
       "\n ssn/mlservice/v2/mlservice.proto\022\020ssn." +
       "mlservice.v2\032\026google/type/date.proto\032\030ss" +
-      "n/type/candidate.proto\032!ssn/type/tensorf" +
-      "low/example.proto\032\036ssn/type/text_annotat" +
-      "ion.proto\"\352\r\n\021FeatureGenRequest\022R\n\014truth" +
-      "_labels\030\001 \001(\0132/.ssn.mlservice.v2.Feature" +
-      "GenRequest.TruthLabelsR\013truthLabels\022A\n\017t" +
-      "ext_annotation\030\002 \001(\0132\030.ssn.type.TextAnno" +
-      "tationR\016textAnnotation\022\016\n\002id\030\003 \001(\tR\002id\032\255" +
-      "\014\n\013TruthLabels\022$\n\016total_incl_vat\030\001 \001(\001R\014" +
-      "totalInclVat\022\033\n\ttotal_vat\030\002 \001(\001R\010totalVa" +
-      "t\022$\n\016total_excl_vat\030\003 \001(\001R\014totalExclVat\022" +
-      "0\n\norder_date\030\004 \001(\0132\021.google.type.DateR\t" +
-      "orderDate\022;\n\020payment_due_date\030\005 \001(\0132\021.go" +
-      "ogle.type.DateR\016paymentDueDate\022#\n\rdocume" +
-      "nt_type\030\006 \001(\tR\014documentType\022\032\n\010currency\030" +
-      "\007 \001(\tR\010currency\022,\n\022credit_card_number\030\010 " +
-      "\001(\tR\020creditCardNumber\022%\n\016payment_method\030" +
-      "\t \001(\tR\rpaymentMethod\022\'\n\020ocr_line_dk_type" +
-      "\030\n \001(\tR\rocrLineDkType\0222\n\026ocr_line_dk_pay" +
-      "ment_id\030\013 \001(\tR\022ocrLineDkPaymentId\0224\n\027ocr" +
-      "_line_dk_creditor_id\030\014 \001(\tR\023ocrLineDkCre" +
-      "ditorId\0222\n\026ocr_line_se_payment_id\030\r \001(\tR" +
-      "\022ocrLineSePaymentId\022E\n ocr_line_se_bankg" +
-      "iro_creditor_id\030\016 \001(\tR\033ocrLineSeBankgiro" +
-      "CreditorId\022E\n ocr_line_se_plusgiro_credi" +
-      "tor_id\030\017 \001(\tR\033ocrLineSePlusgiroCreditorI" +
-      "d\0222\n\026ocr_line_no_payment_id\030\020 \001(\tR\022ocrLi" +
-      "neNoPaymentId\0222\n\026ocr_line_fi_payment_id\030" +
-      "\021 \001(\tR\022ocrLineFiPaymentId\0222\n\026ocr_line_nl" +
-      "_payment_id\030\022 \001(\tR\022ocrLineNlPaymentId\0222\n" +
-      "\025supplier_corporate_id\030\023 \001(\tR\023supplierCo" +
-      "rporateId\0222\n\025supplier_country_code\030\024 \001(\t" +
-      "R\023supplierCountryCode\022%\n\016invoice_number\030" +
-      "\025 \001(\tR\rinvoiceNumber\022\022\n\004iban\030\026 \001(\tR\004iban" +
-      "\022.\n\023bank_account_number\030\027 \001(\tR\021bankAccou" +
-      "ntNumber\0228\n\030bank_registration_number\030\030 \001" +
-      "(\tR\026bankRegistrationNumber\022#\n\rsupplier_n" +
-      "ame\030\031 \001(\tR\014supplierName\022\020\n\003bic\030\032 \001(\tR\003bi" +
-      "c\022\'\n\017document_number\030\033 \001(\tR\016documentNumb" +
-      "er\0226\n\rdocument_date\030\034 \001(\0132\021.google.type." +
-      "DateR\014documentDate\022!\n\014order_number\030\035 \001(\t" +
-      "R\013orderNumber\022.\n\023supplier_vat_number\030\036 \001" +
-      "(\tR\021supplierVatNumber\022@\n\034supplier_organi" +
-      "sation_number\030\037 \001(\tR\032supplierOrganisatio" +
-      "nNumber\022)\n\020supplier_address\030  \001(\tR\017suppl" +
-      "ierAddress\0221\n\025credit_card_last_four\030! \001(" +
-      "\tR\022creditCardLastFour\022\'\n\017customer_number" +
-      "\030\" \001(\tR\016customerNumber\"C\n\022FeatureGenResp" +
-      "onse\022-\n\007example\030\001 \001(\0132\023.tensorflow.Examp" +
-      "leR\007example\"p\n\016PredictRequest\022-\n\007example" +
-      "\030\001 \001(\0132\023.tensorflow.ExampleR\007example\022/\n\024" +
-      "top_n_most_confident\030\002 \001(\rR\021topNMostConf" +
-      "ident\"\361\021\n\017PredictResponse\0222\n\norder_date\030" +
-      "\001 \003(\0132\023.ssn.type.CandidateR\torderDate\022=\n" +
-      "\020payment_due_date\030\002 \003(\0132\023.ssn.type.Candi" +
-      "dateR\016paymentDueDate\022/\n\010currency\030\003 \003(\0132\023" +
-      ".ssn.type.CandidateR\010currency\0220\n\ttotal_v" +
-      "at\030\004 \003(\0132\023.ssn.type.CandidateR\010totalVat\022" +
-      "9\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type.Candi" +
-      "dateR\014totalInclVat\0229\n\016total_excl_vat\030\006 \003" +
-      "(\0132\023.ssn.type.CandidateR\014totalExclVat\022G\n" +
-      "\025supplier_corporate_id\030\007 \003(\0132\023.ssn.type." +
-      "CandidateR\023supplierCorporateId\022G\n\025suppli" +
-      "er_country_code\030\010 \003(\0132\023.ssn.type.Candida" +
-      "teR\023supplierCountryCode\0228\n\rdocument_type" +
-      "\030\t \003(\0132\023.ssn.type.CandidateR\014documentTyp" +
-      "e\022:\n\016payment_method\030\n \003(\0132\023.ssn.type.Can" +
-      "didateR\rpaymentMethod\022A\n\022credit_card_num" +
-      "ber\030\013 \003(\0132\023.ssn.type.CandidateR\020creditCa" +
-      "rdNumber\022:\n\016invoice_number\030\014 \003(\0132\023.ssn.t" +
-      "ype.CandidateR\rinvoiceNumber\022<\n\020ocr_line" +
-      "_dk_type\030\r \003(\0132\023.ssn.type.CandidateR\rocr" +
-      "LineDkType\022G\n\026ocr_line_dk_payment_id\030\016 \003" +
-      "(\0132\023.ssn.type.CandidateR\022ocrLineDkPaymen" +
-      "tId\022I\n\027ocr_line_dk_creditor_id\030\017 \003(\0132\023.s" +
-      "sn.type.CandidateR\023ocrLineDkCreditorId\022G" +
-      "\n\026ocr_line_se_payment_id\030\020 \003(\0132\023.ssn.typ" +
-      "e.CandidateR\022ocrLineSePaymentId\022Z\n ocr_l" +
-      "ine_se_bankgiro_creditor_id\030\021 \003(\0132\023.ssn." +
-      "type.CandidateR\033ocrLineSeBankgiroCredito" +
-      "rId\022Z\n ocr_line_se_plusgiro_creditor_id\030" +
-      "\022 \003(\0132\023.ssn.type.CandidateR\033ocrLineSePlu" +
-      "sgiroCreditorId\022G\n\026ocr_line_no_payment_i" +
-      "d\030\023 \003(\0132\023.ssn.type.CandidateR\022ocrLineNoP" +
-      "aymentId\022G\n\026ocr_line_fi_payment_id\030\024 \003(\013" +
-      "2\023.ssn.type.CandidateR\022ocrLineFiPaymentI" +
-      "d\022G\n\026ocr_line_nl_payment_id\030\025 \003(\0132\023.ssn." +
-      "type.CandidateR\022ocrLineNlPaymentId\022\'\n\004ib" +
-      "an\030\026 \003(\0132\023.ssn.type.CandidateR\004iban\022-\n\005l" +
-      "ines\030\027 \003(\0132\027.ssn.type.LineCandidateR\005lin" +
-      "es\022C\n\023bank_account_number\030\030 \003(\0132\023.ssn.ty" +
-      "pe.CandidateR\021bankAccountNumber\022M\n\030bank_" +
-      "registration_number\030\031 \003(\0132\023.ssn.type.Can" +
-      "didateR\026bankRegistrationNumber\022%\n\003bic\030\032 " +
-      "\003(\0132\023.ssn.type.CandidateR\003bic\022<\n\017documen" +
-      "t_number\030\033 \003(\0132\023.ssn.type.CandidateR\016doc" +
-      "umentNumber\0228\n\rdocument_date\030\034 \003(\0132\023.ssn" +
-      ".type.CandidateR\014documentDate\0226\n\014order_n" +
-      "umber\030\035 \003(\0132\023.ssn.type.CandidateR\013orderN" +
-      "umber\0228\n\rsupplier_name\030\036 \003(\0132\023.ssn.type." +
-      "CandidateR\014supplierName\022C\n\023supplier_vat_" +
-      "number\030\037 \003(\0132\023.ssn.type.CandidateR\021suppl" +
-      "ierVatNumber\022U\n\034supplier_organisation_nu" +
-      "mber\030  \003(\0132\023.ssn.type.CandidateR\032supplie" +
-      "rOrganisationNumber\022>\n\020supplier_address\030" +
-      "! \003(\0132\023.ssn.type.CandidateR\017supplierAddr" +
-      "ess\022F\n\025credit_card_last_four\030\" \003(\0132\023.ssn" +
-      ".type.CandidateR\022creditCardLastFour\022<\n\017c" +
-      "ustomer_number\030# \003(\0132\023.ssn.type.Candidat" +
-      "eR\016customerNumber\"\272\001\n\030FeatureGenPredictR" +
-      "equest\022S\n\023feature_gen_request\030\001 \001(\0132#.ss" +
-      "n.mlservice.v2.FeatureGenRequestR\021featur" +
-      "eGenRequest\022I\n\017predict_request\030\002 \001(\0132 .s" +
-      "sn.mlservice.v2.PredictRequestR\016predictR" +
-      "equest2\230\002\n\tMlService\022W\n\nFeatureGen\022#.ssn" +
-      ".mlservice.v2.FeatureGenRequest\032$.ssn.ml" +
-      "service.v2.FeatureGenResponse\022N\n\007Predict" +
-      "\022 .ssn.mlservice.v2.PredictRequest\032!.ssn" +
-      ".mlservice.v2.PredictResponse\022b\n\021Feature" +
-      "GenPredict\022*.ssn.mlservice.v2.FeatureGen" +
-      "PredictRequest\032!.ssn.mlservice.v2.Predic" +
-      "tResponseBQB\017MlServiceProtosZ>github.com" +
-      "/e-conomic/vmlapis/gen/go/ssn/mlservice/" +
-      "v2;mlserviceb\006proto3"
+      "n/type/candidate.proto\032\036ssn/type/text_an" +
+      "notation.proto\"\352\r\n\021FeatureGenRequest\022R\n\014" +
+      "truth_labels\030\001 \001(\0132/.ssn.mlservice.v2.Fe" +
+      "atureGenRequest.TruthLabelsR\013truthLabels" +
+      "\022A\n\017text_annotation\030\002 \001(\0132\030.ssn.type.Tex" +
+      "tAnnotationR\016textAnnotation\022\016\n\002id\030\003 \001(\tR" +
+      "\002id\032\255\014\n\013TruthLabels\022$\n\016total_incl_vat\030\001 " +
+      "\001(\001R\014totalInclVat\022\033\n\ttotal_vat\030\002 \001(\001R\010to" +
+      "talVat\022$\n\016total_excl_vat\030\003 \001(\001R\014totalExc" +
+      "lVat\0220\n\norder_date\030\004 \001(\0132\021.google.type.D" +
+      "ateR\torderDate\022;\n\020payment_due_date\030\005 \001(\013" +
+      "2\021.google.type.DateR\016paymentDueDate\022#\n\rd" +
+      "ocument_type\030\006 \001(\tR\014documentType\022\032\n\010curr" +
+      "ency\030\007 \001(\tR\010currency\022,\n\022credit_card_numb" +
+      "er\030\010 \001(\tR\020creditCardNumber\022%\n\016payment_me" +
+      "thod\030\t \001(\tR\rpaymentMethod\022\'\n\020ocr_line_dk" +
+      "_type\030\n \001(\tR\rocrLineDkType\0222\n\026ocr_line_d" +
+      "k_payment_id\030\013 \001(\tR\022ocrLineDkPaymentId\0224" +
+      "\n\027ocr_line_dk_creditor_id\030\014 \001(\tR\023ocrLine" +
+      "DkCreditorId\0222\n\026ocr_line_se_payment_id\030\r" +
+      " \001(\tR\022ocrLineSePaymentId\022E\n ocr_line_se_" +
+      "bankgiro_creditor_id\030\016 \001(\tR\033ocrLineSeBan" +
+      "kgiroCreditorId\022E\n ocr_line_se_plusgiro_" +
+      "creditor_id\030\017 \001(\tR\033ocrLineSePlusgiroCred" +
+      "itorId\0222\n\026ocr_line_no_payment_id\030\020 \001(\tR\022" +
+      "ocrLineNoPaymentId\0222\n\026ocr_line_fi_paymen" +
+      "t_id\030\021 \001(\tR\022ocrLineFiPaymentId\0222\n\026ocr_li" +
+      "ne_nl_payment_id\030\022 \001(\tR\022ocrLineNlPayment" +
+      "Id\0222\n\025supplier_corporate_id\030\023 \001(\tR\023suppl" +
+      "ierCorporateId\0222\n\025supplier_country_code\030" +
+      "\024 \001(\tR\023supplierCountryCode\022%\n\016invoice_nu" +
+      "mber\030\025 \001(\tR\rinvoiceNumber\022\022\n\004iban\030\026 \001(\tR" +
+      "\004iban\022.\n\023bank_account_number\030\027 \001(\tR\021bank" +
+      "AccountNumber\0228\n\030bank_registration_numbe" +
+      "r\030\030 \001(\tR\026bankRegistrationNumber\022#\n\rsuppl" +
+      "ier_name\030\031 \001(\tR\014supplierName\022\020\n\003bic\030\032 \001(" +
+      "\tR\003bic\022\'\n\017document_number\030\033 \001(\tR\016documen" +
+      "tNumber\0226\n\rdocument_date\030\034 \001(\0132\021.google." +
+      "type.DateR\014documentDate\022!\n\014order_number\030" +
+      "\035 \001(\tR\013orderNumber\022.\n\023supplier_vat_numbe" +
+      "r\030\036 \001(\tR\021supplierVatNumber\022@\n\034supplier_o" +
+      "rganisation_number\030\037 \001(\tR\032supplierOrgani" +
+      "sationNumber\022)\n\020supplier_address\030  \001(\tR\017" +
+      "supplierAddress\0221\n\025credit_card_last_four" +
+      "\030! \001(\tR\022creditCardLastFour\022\'\n\017customer_n" +
+      "umber\030\" \001(\tR\016customerNumber\"\032\n\022FeatureGe" +
+      "nResponseJ\004\010\001\020\002\"G\n\016PredictRequest\022/\n\024top" +
+      "_n_most_confident\030\002 \001(\rR\021topNMostConfide" +
+      "ntJ\004\010\001\020\002\"\361\021\n\017PredictResponse\0222\n\norder_da" +
+      "te\030\001 \003(\0132\023.ssn.type.CandidateR\torderDate" +
+      "\022=\n\020payment_due_date\030\002 \003(\0132\023.ssn.type.Ca" +
+      "ndidateR\016paymentDueDate\022/\n\010currency\030\003 \003(" +
+      "\0132\023.ssn.type.CandidateR\010currency\0220\n\ttota" +
+      "l_vat\030\004 \003(\0132\023.ssn.type.CandidateR\010totalV" +
+      "at\0229\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type.Ca" +
+      "ndidateR\014totalInclVat\0229\n\016total_excl_vat\030" +
+      "\006 \003(\0132\023.ssn.type.CandidateR\014totalExclVat" +
+      "\022G\n\025supplier_corporate_id\030\007 \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\023supplierCorporateId\022G\n\025sup" +
+      "plier_country_code\030\010 \003(\0132\023.ssn.type.Cand" +
+      "idateR\023supplierCountryCode\0228\n\rdocument_t" +
+      "ype\030\t \003(\0132\023.ssn.type.CandidateR\014document" +
+      "Type\022:\n\016payment_method\030\n \003(\0132\023.ssn.type." +
+      "CandidateR\rpaymentMethod\022A\n\022credit_card_" +
+      "number\030\013 \003(\0132\023.ssn.type.CandidateR\020credi" +
+      "tCardNumber\022:\n\016invoice_number\030\014 \003(\0132\023.ss" +
+      "n.type.CandidateR\rinvoiceNumber\022<\n\020ocr_l" +
+      "ine_dk_type\030\r \003(\0132\023.ssn.type.CandidateR\r" +
+      "ocrLineDkType\022G\n\026ocr_line_dk_payment_id\030" +
+      "\016 \003(\0132\023.ssn.type.CandidateR\022ocrLineDkPay" +
+      "mentId\022I\n\027ocr_line_dk_creditor_id\030\017 \003(\0132" +
+      "\023.ssn.type.CandidateR\023ocrLineDkCreditorI" +
+      "d\022G\n\026ocr_line_se_payment_id\030\020 \003(\0132\023.ssn." +
+      "type.CandidateR\022ocrLineSePaymentId\022Z\n oc" +
+      "r_line_se_bankgiro_creditor_id\030\021 \003(\0132\023.s" +
+      "sn.type.CandidateR\033ocrLineSeBankgiroCred" +
+      "itorId\022Z\n ocr_line_se_plusgiro_creditor_" +
+      "id\030\022 \003(\0132\023.ssn.type.CandidateR\033ocrLineSe" +
+      "PlusgiroCreditorId\022G\n\026ocr_line_no_paymen" +
+      "t_id\030\023 \003(\0132\023.ssn.type.CandidateR\022ocrLine" +
+      "NoPaymentId\022G\n\026ocr_line_fi_payment_id\030\024 " +
+      "\003(\0132\023.ssn.type.CandidateR\022ocrLineFiPayme" +
+      "ntId\022G\n\026ocr_line_nl_payment_id\030\025 \003(\0132\023.s" +
+      "sn.type.CandidateR\022ocrLineNlPaymentId\022\'\n" +
+      "\004iban\030\026 \003(\0132\023.ssn.type.CandidateR\004iban\022-" +
+      "\n\005lines\030\027 \003(\0132\027.ssn.type.LineCandidateR\005" +
+      "lines\022C\n\023bank_account_number\030\030 \003(\0132\023.ssn" +
+      ".type.CandidateR\021bankAccountNumber\022M\n\030ba" +
+      "nk_registration_number\030\031 \003(\0132\023.ssn.type." +
+      "CandidateR\026bankRegistrationNumber\022%\n\003bic" +
+      "\030\032 \003(\0132\023.ssn.type.CandidateR\003bic\022<\n\017docu" +
+      "ment_number\030\033 \003(\0132\023.ssn.type.CandidateR\016" +
+      "documentNumber\0228\n\rdocument_date\030\034 \003(\0132\023." +
+      "ssn.type.CandidateR\014documentDate\0226\n\014orde" +
+      "r_number\030\035 \003(\0132\023.ssn.type.CandidateR\013ord" +
+      "erNumber\0228\n\rsupplier_name\030\036 \003(\0132\023.ssn.ty" +
+      "pe.CandidateR\014supplierName\022C\n\023supplier_v" +
+      "at_number\030\037 \003(\0132\023.ssn.type.CandidateR\021su" +
+      "pplierVatNumber\022U\n\034supplier_organisation" +
+      "_number\030  \003(\0132\023.ssn.type.CandidateR\032supp" +
+      "lierOrganisationNumber\022>\n\020supplier_addre" +
+      "ss\030! \003(\0132\023.ssn.type.CandidateR\017supplierA" +
+      "ddress\022F\n\025credit_card_last_four\030\" \003(\0132\023." +
+      "ssn.type.CandidateR\022creditCardLastFour\022<" +
+      "\n\017customer_number\030# \003(\0132\023.ssn.type.Candi" +
+      "dateR\016customerNumber\"\272\001\n\030FeatureGenPredi" +
+      "ctRequest\022S\n\023feature_gen_request\030\001 \001(\0132#" +
+      ".ssn.mlservice.v2.FeatureGenRequestR\021fea" +
+      "tureGenRequest\022I\n\017predict_request\030\002 \001(\0132" +
+      " .ssn.mlservice.v2.PredictRequestR\016predi" +
+      "ctRequest2\230\002\n\tMlService\022W\n\nFeatureGen\022#." +
+      "ssn.mlservice.v2.FeatureGenRequest\032$.ssn" +
+      ".mlservice.v2.FeatureGenResponse\022N\n\007Pred" +
+      "ict\022 .ssn.mlservice.v2.PredictRequest\032!." +
+      "ssn.mlservice.v2.PredictResponse\022b\n\021Feat" +
+      "ureGenPredict\022*.ssn.mlservice.v2.Feature" +
+      "GenPredictRequest\032!.ssn.mlservice.v2.Pre" +
+      "dictResponseBQB\017MlServiceProtosZ>github." +
+      "com/e-conomic/vmlapis/gen/go/ssn/mlservi" +
+      "ce/v2;mlserviceb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.type.DateProto.getDescriptor(),
           ssn.type.CandidateOuterClass.getDescriptor(),
-          org.tensorflow.example.ExampleProtos.getDescriptor(),
           ssn.type.TextAnnotationOuterClass.getDescriptor(),
         });
     internal_static_ssn_mlservice_v2_FeatureGenRequest_descriptor =
@@ -22260,13 +21857,13 @@ public final class MlServiceProtos {
     internal_static_ssn_mlservice_v2_FeatureGenResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_FeatureGenResponse_descriptor,
-        new java.lang.String[] { "Example", });
+        new java.lang.String[] { });
     internal_static_ssn_mlservice_v2_PredictRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ssn_mlservice_v2_PredictRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_PredictRequest_descriptor,
-        new java.lang.String[] { "Example", "TopNMostConfident", });
+        new java.lang.String[] { "TopNMostConfident", });
     internal_static_ssn_mlservice_v2_PredictResponse_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_mlservice_v2_PredictResponse_fieldAccessorTable = new
@@ -22281,7 +21878,6 @@ public final class MlServiceProtos {
         new java.lang.String[] { "FeatureGenRequest", "PredictRequest", });
     com.google.type.DateProto.getDescriptor();
     ssn.type.CandidateOuterClass.getDescriptor();
-    org.tensorflow.example.ExampleProtos.getDescriptor();
     ssn.type.TextAnnotationOuterClass.getDescriptor();
   }
 
