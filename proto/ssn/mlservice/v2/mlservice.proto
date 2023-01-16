@@ -4,7 +4,6 @@ package ssn.mlservice.v2;
 
 import "google/type/date.proto";
 import "ssn/type/candidate.proto";
-import "ssn/type/tensorflow/example.proto";
 import "ssn/type/text_annotation.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v2;mlservice";
@@ -62,11 +61,11 @@ message FeatureGenRequest {
 }
 
 message FeatureGenResponse {
-  tensorflow.Example example = 1;
+  reserved 1;
 }
 
 message PredictRequest {
-  tensorflow.Example example = 1;
+  reserved 1;
   uint32 top_n_most_confident = 2;
 }
 
