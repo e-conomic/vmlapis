@@ -70,6 +70,7 @@ export namespace Feature {
     SUPPLIER_VAT_NUMBER = 34,
     SUPPLIER_ORGANISATION_NUMBER = 35,
     SUPPLIER_ADDRESS = 36,
+    CUSTOMER_NUMBER = 37,
   }
 }
 
@@ -295,6 +296,11 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearSupplierAddressList(): DocumentAnnotatorResponse;
   addSupplierAddress(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
+  getCustomerNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setCustomerNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearCustomerNumberList(): DocumentAnnotatorResponse;
+  addCustomerNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -342,6 +348,7 @@ export namespace DocumentAnnotatorResponse {
     supplierVatNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     supplierOrganisationNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     supplierAddressList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    customerNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
   }
 }
 

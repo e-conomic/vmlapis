@@ -106,6 +106,8 @@ message Feature {
     SUPPLIER_ORGANISATION_NUMBER = 35;
     // [EXPERIMENTAL] Run supplier address detection
     SUPPLIER_ADDRESS = 36;
+    // [EXPERIMENTAL] Run customer identifier detection
+    CUSTOMER_NUMBER = 37;
   }
   // The feature type.
   Type type = 1;
@@ -236,6 +238,9 @@ message DocumentAnnotatorResponse {
   // [EXPERIMENTAL]
   // Returns supplier address
   repeated ssn.type.Candidate supplier_address = 37;
+  // [EXPERIMENTAL]
+  // Returns customer identifier/number
+  repeated ssn.type.Candidate customer_number = 38;
 }
 
 message Document {

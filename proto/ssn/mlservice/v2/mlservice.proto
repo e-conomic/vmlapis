@@ -54,6 +54,7 @@ message FeatureGenRequest {
     string supplier_organisation_number = 31;
     string supplier_address = 32;
     string credit_card_last_four = 33;
+    string customer_number = 34;
   }
   TruthLabels truth_labels = 1;
   ssn.type.TextAnnotation text_annotation = 2;
@@ -106,6 +107,7 @@ message PredictResponse {
   repeated ssn.type.Candidate supplier_organisation_number = 32;
   repeated ssn.type.Candidate supplier_address = 33;
   repeated ssn.type.Candidate credit_card_last_four = 34;
+  repeated ssn.type.Candidate customer_number = 35;
 }
 
 message FeatureGenPredictRequest {
