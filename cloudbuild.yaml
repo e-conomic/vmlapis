@@ -33,8 +33,8 @@ steps:
     args:
       - "-c"
       - |
-        if [ "$TAG_NAME" ] ; then
-          cp -r gen/java java-package/src/main/java
-          cd java-package
-          mvn deploy
-        fi
+#        if [ "$TAG_NAME" ] ; then
+        cp -r gen/java java-package/src/main/java
+        cd java-package
+        mvn deploy
+#        fi
