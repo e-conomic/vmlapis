@@ -21,12 +21,10 @@ steps:
       - |
         if [ 0 ] ; then
           export TAG_NAME=1.0.3
-          apt-get update -y
-          apt-get install -y nuget
           cp vmlapis.csproj gen/csharp
           cd gen/csharp
           dotnet pack -o . -c Release
-          nuget push vmlapis.$$TAG_NAME.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey $$NUGET_API_KEY
+          dotnet nuget push vmlapis.$$TAG_NAME.nupkg --source https://api.nuget.org/v3/index.json --api-key $$NUGET_API_KEY
         fi
     secretEnv: ['NUGET_API_KEY']
 
