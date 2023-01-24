@@ -1009,6 +1009,9 @@
     },
     "v2SuggestOptions": {
       "type": "object",
+      "example": {
+        "suggest_limit": 3
+      },
       "properties": {
         "suggestLimit": {
           "type": "integer",
@@ -1019,8 +1022,7 @@
           "$ref": "#/definitions/ConfidenceLevel",
           "description": "Not implemented yet."
         }
-      },
-      "title": "option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {example: \"{\\\"suggest_limit\\\": 3}\"};"
+      }
     },
     "v2SuggestResponse": {
       "type": "object",

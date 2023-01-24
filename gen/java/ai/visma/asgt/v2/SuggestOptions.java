@@ -4,10 +4,6 @@
 package ai.visma.asgt.v2;
 
 /**
- * <pre>
- *  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {example: "{&#92;"suggest_limit&#92;": 3}"};
- * </pre>
- *
  * Protobuf type {@code asgt.v2.SuggestOptions}
  */
 public final class SuggestOptions extends
@@ -255,10 +251,6 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * <pre>
-   *  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {example: "{&#92;"suggest_limit&#92;": 3}"};
-   * </pre>
-   *
    * Protobuf type {@code asgt.v2.SuggestOptions}
    */
   public static final class Builder extends
