@@ -17,7 +17,7 @@ all:
 		--verbose
 
 #	grpc plugin generates all files to root folder
-#   this results in ssn/dataservice and asgt/dataservice being generated under the same filename "DataserviceGrpc.cs" which will overwrite whichever gets generated first
+#       this results in ssn/dataservice and asgt/dataservice being generated under the same filename "DataserviceGrpc.cs" which will overwrite whichever gets generated first
 #	this workaround generates asgt/dataservice first, renames the file and then generates the other one (see exclude paths above and below)
 
 	mv gen/csharp/DataServiceGrpc.cs gen/csharp/DataServiceAsgtGrpc.cs
