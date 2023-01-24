@@ -24,7 +24,7 @@ steps:
           apt-get install -y nuget
           cd gen/csharp
           dotnet pack -c Release
-          nuget push *.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey $NUGET_API_KEY
+          nuget push *.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey $$NUGET_API_KEY
         fi
     secretEnv: ['NUGET_API_KEY']
 
