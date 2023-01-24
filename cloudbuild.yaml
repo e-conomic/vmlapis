@@ -22,6 +22,7 @@ steps:
         if [ 0 ] ; then
           apt-get update -y
           apt-get install -y nuget
+          cp vmlapis.csproj gen/csharp
           cd gen/csharp
           dotnet pack -c Release
           nuget push *.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey $$NUGET_API_KEY
