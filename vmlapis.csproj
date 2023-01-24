@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <ReleaseVersion>1.0.5</ReleaseVersion>
+    <ReleaseVersion>$(TAG_NAME)</ReleaseVersion>
     <PackageVersion>$(ReleaseVersion)</PackageVersion>
   </PropertyGroup>
 
