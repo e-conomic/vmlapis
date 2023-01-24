@@ -91,6 +91,7 @@ message TrueValues {
   google.protobuf.StringValue supplier_vat_number = 31;
   google.protobuf.StringValue supplier_organisation_number = 32;
   google.protobuf.StringValue supplier_address = 33;
+  google.protobuf.StringValue customer_number = 34;
 }
 
 message PredictionValues {
@@ -127,6 +128,7 @@ message PredictionValues {
   repeated google.protobuf.StringValue supplier_vat_number = 31;
   repeated google.protobuf.StringValue supplier_organisation_number = 32;
   repeated google.protobuf.StringValue supplier_address = 33;
+  repeated google.protobuf.StringValue customer_number = 34;
 }
 
 message PredictionConfidences {
@@ -163,6 +165,7 @@ message PredictionConfidences {
   repeated google.protobuf.FloatValue supplier_vat_number = 31;
   repeated google.protobuf.FloatValue supplier_organisation_number = 32;
   repeated google.protobuf.FloatValue supplier_address = 33;
+  repeated google.protobuf.FloatValue customer_number = 34;
 }
 
 message PredictionMetadata {
@@ -199,6 +202,7 @@ message PredictionMetadata {
   repeated ssn.type.ModelSpec supplier_vat_number = 31;
   repeated ssn.type.ModelSpec supplier_organisation_number = 32;
   repeated ssn.type.ModelSpec supplier_address = 33;
+  repeated ssn.type.ModelSpec customer_number = 34;
 }
 
 message CreateDocumentRequest {

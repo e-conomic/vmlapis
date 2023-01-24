@@ -49,6 +49,7 @@ private static final long serialVersionUID = 0L;
     supplierVatNumber_ = java.util.Collections.emptyList();
     supplierOrganisationNumber_ = java.util.Collections.emptyList();
     supplierAddress_ = java.util.Collections.emptyList();
+    customerNumber_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -1429,6 +1430,47 @@ private static final long serialVersionUID = 0L;
     return supplierAddress_.get(index);
   }
 
+  public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 34;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.protobuf.StringValue> customerNumber_;
+  /**
+   * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<com.google.protobuf.StringValue> getCustomerNumberList() {
+    return customerNumber_;
+  }
+  /**
+   * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+      getCustomerNumberOrBuilderList() {
+    return customerNumber_;
+  }
+  /**
+   * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  @java.lang.Override
+  public int getCustomerNumberCount() {
+    return customerNumber_.size();
+  }
+  /**
+   * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getCustomerNumber(int index) {
+    return customerNumber_.get(index);
+  }
+  /**
+   * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder(
+      int index) {
+    return customerNumber_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1541,6 +1583,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < supplierAddress_.size(); i++) {
       output.writeMessage(33, supplierAddress_.get(i));
+    }
+    for (int i = 0; i < customerNumber_.size(); i++) {
+      output.writeMessage(34, customerNumber_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -1683,6 +1728,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(33, supplierAddress_.get(i));
     }
+    for (int i = 0; i < customerNumber_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(34, customerNumber_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1764,6 +1813,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSupplierOrganisationNumberList())) return false;
     if (!getSupplierAddressList()
         .equals(other.getSupplierAddressList())) return false;
+    if (!getCustomerNumberList()
+        .equals(other.getCustomerNumberList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1906,6 +1957,10 @@ private static final long serialVersionUID = 0L;
     if (getSupplierAddressCount() > 0) {
       hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getSupplierAddressList().hashCode();
+    }
+    if (getCustomerNumberCount() > 0) {
+      hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerNumberList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -2268,6 +2323,13 @@ private static final long serialVersionUID = 0L;
         supplierAddressBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00000001);
+      if (customerNumberBuilder_ == null) {
+        customerNumber_ = java.util.Collections.emptyList();
+      } else {
+        customerNumber_ = null;
+        customerNumberBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000002);
       return this;
     }
 
@@ -2598,6 +2660,15 @@ private static final long serialVersionUID = 0L;
         result.supplierAddress_ = supplierAddress_;
       } else {
         result.supplierAddress_ = supplierAddressBuilder_.build();
+      }
+      if (customerNumberBuilder_ == null) {
+        if (((bitField1_ & 0x00000002) != 0)) {
+          customerNumber_ = java.util.Collections.unmodifiableList(customerNumber_);
+          bitField1_ = (bitField1_ & ~0x00000002);
+        }
+        result.customerNumber_ = customerNumber_;
+      } else {
+        result.customerNumber_ = customerNumberBuilder_.build();
       }
     }
 
@@ -3511,6 +3582,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (customerNumberBuilder_ == null) {
+        if (!other.customerNumber_.isEmpty()) {
+          if (customerNumber_.isEmpty()) {
+            customerNumber_ = other.customerNumber_;
+            bitField1_ = (bitField1_ & ~0x00000002);
+          } else {
+            ensureCustomerNumberIsMutable();
+            customerNumber_.addAll(other.customerNumber_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.customerNumber_.isEmpty()) {
+          if (customerNumberBuilder_.isEmpty()) {
+            customerNumberBuilder_.dispose();
+            customerNumberBuilder_ = null;
+            customerNumber_ = other.customerNumber_;
+            bitField1_ = (bitField1_ & ~0x00000002);
+            customerNumberBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getCustomerNumberFieldBuilder() : null;
+          } else {
+            customerNumberBuilder_.addAllMessages(other.customerNumber_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -3966,6 +4063,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 266
+            case 274: {
+              com.google.protobuf.StringValue m =
+                  input.readMessage(
+                      com.google.protobuf.StringValue.parser(),
+                      extensionRegistry);
+              if (customerNumberBuilder_ == null) {
+                ensureCustomerNumberIsMutable();
+                customerNumber_.add(m);
+              } else {
+                customerNumberBuilder_.addMessage(m);
+              }
+              break;
+            } // case 274
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -11902,6 +12012,246 @@ private static final long serialVersionUID = 0L;
         supplierAddress_ = null;
       }
       return supplierAddressBuilder_;
+    }
+
+    private java.util.List<com.google.protobuf.StringValue> customerNumber_ =
+      java.util.Collections.emptyList();
+    private void ensureCustomerNumberIsMutable() {
+      if (!((bitField1_ & 0x00000002) != 0)) {
+        customerNumber_ = new java.util.ArrayList<com.google.protobuf.StringValue>(customerNumber_);
+        bitField1_ |= 0x00000002;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> customerNumberBuilder_;
+
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue> getCustomerNumberList() {
+      if (customerNumberBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(customerNumber_);
+      } else {
+        return customerNumberBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public int getCustomerNumberCount() {
+      if (customerNumberBuilder_ == null) {
+        return customerNumber_.size();
+      } else {
+        return customerNumberBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public com.google.protobuf.StringValue getCustomerNumber(int index) {
+      if (customerNumberBuilder_ == null) {
+        return customerNumber_.get(index);
+      } else {
+        return customerNumberBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public Builder setCustomerNumber(
+        int index, com.google.protobuf.StringValue value) {
+      if (customerNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCustomerNumberIsMutable();
+        customerNumber_.set(index, value);
+        onChanged();
+      } else {
+        customerNumberBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public Builder setCustomerNumber(
+        int index, com.google.protobuf.StringValue.Builder builderForValue) {
+      if (customerNumberBuilder_ == null) {
+        ensureCustomerNumberIsMutable();
+        customerNumber_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        customerNumberBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public Builder addCustomerNumber(com.google.protobuf.StringValue value) {
+      if (customerNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCustomerNumberIsMutable();
+        customerNumber_.add(value);
+        onChanged();
+      } else {
+        customerNumberBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public Builder addCustomerNumber(
+        int index, com.google.protobuf.StringValue value) {
+      if (customerNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCustomerNumberIsMutable();
+        customerNumber_.add(index, value);
+        onChanged();
+      } else {
+        customerNumberBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public Builder addCustomerNumber(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (customerNumberBuilder_ == null) {
+        ensureCustomerNumberIsMutable();
+        customerNumber_.add(builderForValue.build());
+        onChanged();
+      } else {
+        customerNumberBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public Builder addCustomerNumber(
+        int index, com.google.protobuf.StringValue.Builder builderForValue) {
+      if (customerNumberBuilder_ == null) {
+        ensureCustomerNumberIsMutable();
+        customerNumber_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        customerNumberBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public Builder addAllCustomerNumber(
+        java.lang.Iterable<? extends com.google.protobuf.StringValue> values) {
+      if (customerNumberBuilder_ == null) {
+        ensureCustomerNumberIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, customerNumber_);
+        onChanged();
+      } else {
+        customerNumberBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public Builder clearCustomerNumber() {
+      if (customerNumberBuilder_ == null) {
+        customerNumber_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000002);
+        onChanged();
+      } else {
+        customerNumberBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public Builder removeCustomerNumber(int index) {
+      if (customerNumberBuilder_ == null) {
+        ensureCustomerNumberIsMutable();
+        customerNumber_.remove(index);
+        onChanged();
+      } else {
+        customerNumberBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getCustomerNumberBuilder(
+        int index) {
+      return getCustomerNumberFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder(
+        int index) {
+      if (customerNumberBuilder_ == null) {
+        return customerNumber_.get(index);  } else {
+        return customerNumberBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+         getCustomerNumberOrBuilderList() {
+      if (customerNumberBuilder_ != null) {
+        return customerNumberBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(customerNumber_);
+      }
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder addCustomerNumberBuilder() {
+      return getCustomerNumberFieldBuilder().addBuilder(
+          com.google.protobuf.StringValue.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder addCustomerNumberBuilder(
+        int index) {
+      return getCustomerNumberFieldBuilder().addBuilder(
+          index, com.google.protobuf.StringValue.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+     */
+    public java.util.List<com.google.protobuf.StringValue.Builder> 
+         getCustomerNumberBuilderList() {
+      return getCustomerNumberFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getCustomerNumberFieldBuilder() {
+      if (customerNumberBuilder_ == null) {
+        customerNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                customerNumber_,
+                ((bitField1_ & 0x00000002) != 0),
+                getParentForChildren(),
+                isClean());
+        customerNumber_ = null;
+      }
+      return customerNumberBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

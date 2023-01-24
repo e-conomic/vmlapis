@@ -798,4 +798,28 @@ public interface PredictionMetadataOrBuilder extends
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getSupplierAddressOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.ModelSpec> 
+      getCustomerNumberList();
+  /**
+   * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  ai.visma.ssn.type.ModelSpec getCustomerNumber(int index);
+  /**
+   * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  int getCustomerNumberCount();
+  /**
+   * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.ModelSpecOrBuilder> 
+      getCustomerNumberOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.ModelSpec customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  ai.visma.ssn.type.ModelSpecOrBuilder getCustomerNumberOrBuilder(
+      int index);
 }

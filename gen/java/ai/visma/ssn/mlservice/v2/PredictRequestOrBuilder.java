@@ -8,21 +8,6 @@ public interface PredictRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-   * @return Whether the example field is set.
-   */
-  boolean hasExample();
-  /**
-   * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-   * @return The example.
-   */
-  ai.visma.tensorflow.Example getExample();
-  /**
-   * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-   */
-  ai.visma.tensorflow.ExampleOrBuilder getExampleOrBuilder();
-
-  /**
    * <code>uint32 top_n_most_confident = 2 [json_name = "topNMostConfident"];</code>
    * @return The topNMostConfident.
    */

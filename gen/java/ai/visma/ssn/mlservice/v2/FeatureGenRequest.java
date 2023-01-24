@@ -442,6 +442,18 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getCreditCardLastFourBytes();
+
+    /**
+     * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+     * @return The customerNumber.
+     */
+    java.lang.String getCustomerNumber();
+    /**
+     * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+     * @return The bytes for customerNumber.
+     */
+    com.google.protobuf.ByteString
+        getCustomerNumberBytes();
   }
   /**
    * Protobuf type {@code ssn.mlservice.v2.FeatureGenRequest.TruthLabels}
@@ -483,6 +495,7 @@ private static final long serialVersionUID = 0L;
       supplierOrganisationNumber_ = "";
       supplierAddress_ = "";
       creditCardLastFour_ = "";
+      customerNumber_ = "";
     }
 
     @java.lang.Override
@@ -1682,6 +1695,45 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 34;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object customerNumber_ = "";
+    /**
+     * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+     * @return The customerNumber.
+     */
+    @java.lang.Override
+    public java.lang.String getCustomerNumber() {
+      java.lang.Object ref = customerNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customerNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+     * @return The bytes for customerNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getCustomerNumberBytes() {
+      java.lang.Object ref = customerNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customerNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1794,6 +1846,9 @@ private static final long serialVersionUID = 0L;
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creditCardLastFour_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 33, creditCardLastFour_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerNumber_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 34, customerNumber_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1909,6 +1964,9 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(creditCardLastFour_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(33, creditCardLastFour_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerNumber_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, customerNumber_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2002,6 +2060,8 @@ private static final long serialVersionUID = 0L;
           .equals(other.getSupplierAddress())) return false;
       if (!getCreditCardLastFour()
           .equals(other.getCreditCardLastFour())) return false;
+      if (!getCustomerNumber()
+          .equals(other.getCustomerNumber())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2088,6 +2148,8 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getSupplierAddress().hashCode();
       hash = (37 * hash) + CREDIT_CARD_LAST_FOUR_FIELD_NUMBER;
       hash = (53 * hash) + getCreditCardLastFour().hashCode();
+      hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerNumber().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2263,6 +2325,7 @@ private static final long serialVersionUID = 0L;
         supplierOrganisationNumber_ = "";
         supplierAddress_ = "";
         creditCardLastFour_ = "";
+        customerNumber_ = "";
         return this;
       }
 
@@ -2405,6 +2468,9 @@ private static final long serialVersionUID = 0L;
         int from_bitField1_ = bitField1_;
         if (((from_bitField1_ & 0x00000001) != 0)) {
           result.creditCardLastFour_ = creditCardLastFour_;
+        }
+        if (((from_bitField1_ & 0x00000002) != 0)) {
+          result.customerNumber_ = customerNumber_;
         }
       }
 
@@ -2605,6 +2671,11 @@ private static final long serialVersionUID = 0L;
           bitField1_ |= 0x00000001;
           onChanged();
         }
+        if (!other.getCustomerNumber().isEmpty()) {
+          customerNumber_ = other.customerNumber_;
+          bitField1_ |= 0x00000002;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2802,6 +2873,11 @@ private static final long serialVersionUID = 0L;
                 bitField1_ |= 0x00000001;
                 break;
               } // case 266
+              case 274: {
+                customerNumber_ = input.readStringRequireUtf8();
+                bitField1_ |= 0x00000002;
+                break;
+              } // case 274
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5233,6 +5309,78 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         creditCardLastFour_ = value;
         bitField1_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object customerNumber_ = "";
+      /**
+       * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+       * @return The customerNumber.
+       */
+      public java.lang.String getCustomerNumber() {
+        java.lang.Object ref = customerNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          customerNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+       * @return The bytes for customerNumber.
+       */
+      public com.google.protobuf.ByteString
+          getCustomerNumberBytes() {
+        java.lang.Object ref = customerNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          customerNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+       * @param value The customerNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerNumber(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        customerNumber_ = value;
+        bitField1_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCustomerNumber() {
+        customerNumber_ = getDefaultInstance().getCustomerNumber();
+        bitField1_ = (bitField1_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string customer_number = 34 [json_name = "customerNumber"];</code>
+       * @param value The bytes for customerNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCustomerNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        customerNumber_ = value;
+        bitField1_ |= 0x00000002;
         onChanged();
         return this;
       }

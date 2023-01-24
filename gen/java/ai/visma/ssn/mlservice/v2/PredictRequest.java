@@ -43,32 +43,6 @@ private static final long serialVersionUID = 0L;
             ai.visma.ssn.mlservice.v2.PredictRequest.class, ai.visma.ssn.mlservice.v2.PredictRequest.Builder.class);
   }
 
-  public static final int EXAMPLE_FIELD_NUMBER = 1;
-  private ai.visma.tensorflow.Example example_;
-  /**
-   * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-   * @return Whether the example field is set.
-   */
-  @java.lang.Override
-  public boolean hasExample() {
-    return example_ != null;
-  }
-  /**
-   * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-   * @return The example.
-   */
-  @java.lang.Override
-  public ai.visma.tensorflow.Example getExample() {
-    return example_ == null ? ai.visma.tensorflow.Example.getDefaultInstance() : example_;
-  }
-  /**
-   * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.tensorflow.ExampleOrBuilder getExampleOrBuilder() {
-    return example_ == null ? ai.visma.tensorflow.Example.getDefaultInstance() : example_;
-  }
-
   public static final int TOP_N_MOST_CONFIDENT_FIELD_NUMBER = 2;
   private int topNMostConfident_ = 0;
   /**
@@ -94,9 +68,6 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (example_ != null) {
-      output.writeMessage(1, getExample());
-    }
     if (topNMostConfident_ != 0) {
       output.writeUInt32(2, topNMostConfident_);
     }
@@ -109,10 +80,6 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (example_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getExample());
-    }
     if (topNMostConfident_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(2, topNMostConfident_);
@@ -132,11 +99,6 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.ssn.mlservice.v2.PredictRequest other = (ai.visma.ssn.mlservice.v2.PredictRequest) obj;
 
-    if (hasExample() != other.hasExample()) return false;
-    if (hasExample()) {
-      if (!getExample()
-          .equals(other.getExample())) return false;
-    }
     if (getTopNMostConfident()
         != other.getTopNMostConfident()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -150,10 +112,6 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasExample()) {
-      hash = (37 * hash) + EXAMPLE_FIELD_NUMBER;
-      hash = (53 * hash) + getExample().hashCode();
-    }
     hash = (37 * hash) + TOP_N_MOST_CONFIDENT_FIELD_NUMBER;
     hash = (53 * hash) + getTopNMostConfident();
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -285,11 +243,6 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      example_ = null;
-      if (exampleBuilder_ != null) {
-        exampleBuilder_.dispose();
-        exampleBuilder_ = null;
-      }
       topNMostConfident_ = 0;
       return this;
     }
@@ -325,11 +278,6 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(ai.visma.ssn.mlservice.v2.PredictRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.example_ = exampleBuilder_ == null
-            ? example_
-            : exampleBuilder_.build();
-      }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
         result.topNMostConfident_ = topNMostConfident_;
       }
     }
@@ -378,9 +326,6 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.ssn.mlservice.v2.PredictRequest other) {
       if (other == ai.visma.ssn.mlservice.v2.PredictRequest.getDefaultInstance()) return this;
-      if (other.hasExample()) {
-        mergeExample(other.getExample());
-      }
       if (other.getTopNMostConfident() != 0) {
         setTopNMostConfident(other.getTopNMostConfident());
       }
@@ -410,16 +355,9 @@ private static final long serialVersionUID = 0L;
             case 0:
               done = true;
               break;
-            case 10: {
-              input.readMessage(
-                  getExampleFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
-              break;
-            } // case 10
             case 16: {
               topNMostConfident_ = input.readUInt32();
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000001;
               break;
             } // case 16
             default: {
@@ -439,125 +377,6 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private ai.visma.tensorflow.Example example_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        ai.visma.tensorflow.Example, ai.visma.tensorflow.Example.Builder, ai.visma.tensorflow.ExampleOrBuilder> exampleBuilder_;
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     * @return Whether the example field is set.
-     */
-    public boolean hasExample() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     * @return The example.
-     */
-    public ai.visma.tensorflow.Example getExample() {
-      if (exampleBuilder_ == null) {
-        return example_ == null ? ai.visma.tensorflow.Example.getDefaultInstance() : example_;
-      } else {
-        return exampleBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     */
-    public Builder setExample(ai.visma.tensorflow.Example value) {
-      if (exampleBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        example_ = value;
-      } else {
-        exampleBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     */
-    public Builder setExample(
-        ai.visma.tensorflow.Example.Builder builderForValue) {
-      if (exampleBuilder_ == null) {
-        example_ = builderForValue.build();
-      } else {
-        exampleBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     */
-    public Builder mergeExample(ai.visma.tensorflow.Example value) {
-      if (exampleBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          example_ != null &&
-          example_ != ai.visma.tensorflow.Example.getDefaultInstance()) {
-          getExampleBuilder().mergeFrom(value);
-        } else {
-          example_ = value;
-        }
-      } else {
-        exampleBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     */
-    public Builder clearExample() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      example_ = null;
-      if (exampleBuilder_ != null) {
-        exampleBuilder_.dispose();
-        exampleBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     */
-    public ai.visma.tensorflow.Example.Builder getExampleBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getExampleFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     */
-    public ai.visma.tensorflow.ExampleOrBuilder getExampleOrBuilder() {
-      if (exampleBuilder_ != null) {
-        return exampleBuilder_.getMessageOrBuilder();
-      } else {
-        return example_ == null ?
-            ai.visma.tensorflow.Example.getDefaultInstance() : example_;
-      }
-    }
-    /**
-     * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        ai.visma.tensorflow.Example, ai.visma.tensorflow.Example.Builder, ai.visma.tensorflow.ExampleOrBuilder> 
-        getExampleFieldBuilder() {
-      if (exampleBuilder_ == null) {
-        exampleBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            ai.visma.tensorflow.Example, ai.visma.tensorflow.Example.Builder, ai.visma.tensorflow.ExampleOrBuilder>(
-                getExample(),
-                getParentForChildren(),
-                isClean());
-        example_ = null;
-      }
-      return exampleBuilder_;
-    }
-
     private int topNMostConfident_ ;
     /**
      * <code>uint32 top_n_most_confident = 2 [json_name = "topNMostConfident"];</code>
@@ -575,7 +394,7 @@ private static final long serialVersionUID = 0L;
     public Builder setTopNMostConfident(int value) {
       
       topNMostConfident_ = value;
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -584,7 +403,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTopNMostConfident() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000001);
       topNMostConfident_ = 0;
       onChanged();
       return this;

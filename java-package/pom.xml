@@ -6,7 +6,7 @@
 
     <groupId>ai.visma</groupId>
     <artifactId>vml-apis</artifactId>
-    <version>1.0.5</version>
+    <version>${env.TAG_NAME}</version>
 
     <name>vml-apis</name>
     <url>vml.visma.ai</url>
@@ -16,14 +16,42 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>artifact-registry</id>
+            <url>artifactregistry://europe-west4-maven.pkg.dev/dev-vml-cm/vml-apis-java</url>
+        </repository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>artifact-registry</id>
+            <url>artifactregistry://europe-west4-maven.pkg.dev/dev-vml-cm/vml-apis-java</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <build>
+        <extensions>
+            <extension>
+                <groupId>com.google.cloud.artifactregistry</groupId>
+                <artifactId>artifactregistry-maven-wagon</artifactId>
+                <version>2.1.0</version>
+            </extension>
+        </extensions>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.3.1</version>
                 <configuration>
-                    <outputDirectory>/app/gen/java</outputDirectory>
+<!--                    <outputDirectory>/app/gen/java</outputDirectory>-->
                 </configuration>
             </plugin>
         </plugins>

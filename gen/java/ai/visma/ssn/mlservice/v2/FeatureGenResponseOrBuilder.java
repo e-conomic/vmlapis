@@ -6,19 +6,4 @@ package ai.visma.ssn.mlservice.v2;
 public interface FeatureGenResponseOrBuilder extends
     // @@protoc_insertion_point(interface_extends:ssn.mlservice.v2.FeatureGenResponse)
     com.google.protobuf.MessageOrBuilder {
-
-  /**
-   * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-   * @return Whether the example field is set.
-   */
-  boolean hasExample();
-  /**
-   * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-   * @return The example.
-   */
-  ai.visma.tensorflow.Example getExample();
-  /**
-   * <code>.tensorflow.Example example = 1 [json_name = "example"];</code>
-   */
-  ai.visma.tensorflow.ExampleOrBuilder getExampleOrBuilder();
 }

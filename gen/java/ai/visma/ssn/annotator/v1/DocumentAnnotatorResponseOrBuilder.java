@@ -1727,4 +1727,53 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    */
   ai.visma.ssn.type.CandidateOrBuilder getSupplierAddressOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * [EXPERIMENTAL]
+   * Returns customer identifier/number
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getCustomerNumberList();
+  /**
+   * <pre>
+   * [EXPERIMENTAL]
+   * Returns customer identifier/number
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+   */
+  ai.visma.ssn.type.Candidate getCustomerNumber(int index);
+  /**
+   * <pre>
+   * [EXPERIMENTAL]
+   * Returns customer identifier/number
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+   */
+  int getCustomerNumberCount();
+  /**
+   * <pre>
+   * [EXPERIMENTAL]
+   * Returns customer identifier/number
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getCustomerNumberOrBuilderList();
+  /**
+   * <pre>
+   * [EXPERIMENTAL]
+   * Returns customer identifier/number
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getCustomerNumberOrBuilder(
+      int index);
 }

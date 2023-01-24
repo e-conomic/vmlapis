@@ -1026,7 +1026,8 @@ proto.ssn.dataservice.v1.TrueValues.toObject = function(includeInstance, msg) {
     orderNumber: (f = msg.getOrderNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     supplierVatNumber: (f = msg.getSupplierVatNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     supplierOrganisationNumber: (f = msg.getSupplierOrganisationNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
-    supplierAddress: (f = msg.getSupplierAddress()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
+    supplierAddress: (f = msg.getSupplierAddress()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    customerNumber: (f = msg.getCustomerNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1227,6 +1228,11 @@ proto.ssn.dataservice.v1.TrueValues.deserializeBinaryFromReader = function(msg, 
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setSupplierAddress(value);
+      break;
+    case 34:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setCustomerNumber(value);
       break;
     default:
       reader.skipField();
@@ -1517,6 +1523,14 @@ proto.ssn.dataservice.v1.TrueValues.serializeBinaryToWriter = function(message, 
   if (f != null) {
     writer.writeMessage(
       33,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getCustomerNumber();
+  if (f != null) {
+    writer.writeMessage(
+      34,
       f,
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
@@ -2745,13 +2759,50 @@ proto.ssn.dataservice.v1.TrueValues.prototype.hasSupplierAddress = function() {
 };
 
 
+/**
+ * optional google.protobuf.StringValue customer_number = 34;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getCustomerNumber = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 34));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.StringValue|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setCustomerNumber = function(value) {
+  return jspb.Message.setWrapperField(this, 34, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearCustomerNumber = function() {
+  return this.setCustomerNumber(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasCustomerNumber = function() {
+  return jspb.Message.getField(this, 34) != null;
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionValues.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33];
+proto.ssn.dataservice.v1.PredictionValues.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34];
 
 
 
@@ -2849,6 +2900,8 @@ proto.ssn.dataservice.v1.PredictionValues.toObject = function(includeInstance, m
     supplierOrganisationNumberList: jspb.Message.toObjectList(msg.getSupplierOrganisationNumberList(),
     google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
     supplierAddressList: jspb.Message.toObjectList(msg.getSupplierAddressList(),
+    google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
+    customerNumberList: jspb.Message.toObjectList(msg.getCustomerNumberList(),
     google_protobuf_wrappers_pb.StringValue.toObject, includeInstance)
   };
 
@@ -3050,6 +3103,11 @@ proto.ssn.dataservice.v1.PredictionValues.deserializeBinaryFromReader = function
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.addSupplierAddress(value);
+      break;
+    case 34:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.addCustomerNumber(value);
       break;
     default:
       reader.skipField();
@@ -3340,6 +3398,14 @@ proto.ssn.dataservice.v1.PredictionValues.serializeBinaryToWriter = function(mes
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       33,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getCustomerNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      34,
       f,
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
@@ -4601,13 +4667,51 @@ proto.ssn.dataservice.v1.PredictionValues.prototype.clearSupplierAddressList = f
 };
 
 
+/**
+ * repeated google.protobuf.StringValue customer_number = 34;
+ * @return {!Array<!proto.google.protobuf.StringValue>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getCustomerNumberList = function() {
+  return /** @type{!Array<!proto.google.protobuf.StringValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.StringValue, 34));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.StringValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setCustomerNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 34, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.StringValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addCustomerNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 34, opt_value, proto.google.protobuf.StringValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearCustomerNumberList = function() {
+  return this.setCustomerNumberList([]);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionConfidences.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33];
+proto.ssn.dataservice.v1.PredictionConfidences.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34];
 
 
 
@@ -4705,6 +4809,8 @@ proto.ssn.dataservice.v1.PredictionConfidences.toObject = function(includeInstan
     supplierOrganisationNumberList: jspb.Message.toObjectList(msg.getSupplierOrganisationNumberList(),
     google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
     supplierAddressList: jspb.Message.toObjectList(msg.getSupplierAddressList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    customerNumberList: jspb.Message.toObjectList(msg.getCustomerNumberList(),
     google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance)
   };
 
@@ -4906,6 +5012,11 @@ proto.ssn.dataservice.v1.PredictionConfidences.deserializeBinaryFromReader = fun
       var value = new google_protobuf_wrappers_pb.FloatValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
       msg.addSupplierAddress(value);
+      break;
+    case 34:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addCustomerNumber(value);
       break;
     default:
       reader.skipField();
@@ -5196,6 +5307,14 @@ proto.ssn.dataservice.v1.PredictionConfidences.serializeBinaryToWriter = functio
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       33,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getCustomerNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      34,
       f,
       google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
     );
@@ -6457,13 +6576,51 @@ proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearSupplierAddressLis
 };
 
 
+/**
+ * repeated google.protobuf.FloatValue customer_number = 34;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getCustomerNumberList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 34));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.FloatValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+*/
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setCustomerNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 34, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addCustomerNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 34, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearCustomerNumberList = function() {
+  return this.setCustomerNumberList([]);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33];
+proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34];
 
 
 
@@ -6561,6 +6718,8 @@ proto.ssn.dataservice.v1.PredictionMetadata.toObject = function(includeInstance,
     supplierOrganisationNumberList: jspb.Message.toObjectList(msg.getSupplierOrganisationNumberList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
     supplierAddressList: jspb.Message.toObjectList(msg.getSupplierAddressList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    customerNumberList: jspb.Message.toObjectList(msg.getCustomerNumberList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance)
   };
 
@@ -6762,6 +6921,11 @@ proto.ssn.dataservice.v1.PredictionMetadata.deserializeBinaryFromReader = functi
       var value = new ssn_type_candidate_pb.ModelSpec;
       reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
       msg.addSupplierAddress(value);
+      break;
+    case 34:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addCustomerNumber(value);
       break;
     default:
       reader.skipField();
@@ -7052,6 +7216,14 @@ proto.ssn.dataservice.v1.PredictionMetadata.serializeBinaryToWriter = function(m
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       33,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getCustomerNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      34,
       f,
       ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
     );
@@ -8310,6 +8482,44 @@ proto.ssn.dataservice.v1.PredictionMetadata.prototype.addSupplierAddress = funct
  */
 proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearSupplierAddressList = function() {
   return this.setSupplierAddressList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec customer_number = 34;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getCustomerNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 34));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.ModelSpec>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setCustomerNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 34, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addCustomerNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 34, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearCustomerNumberList = function() {
+  return this.setCustomerNumberList([]);
 };
 
 

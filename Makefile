@@ -12,6 +12,7 @@ all:
 		--exclude-path proto/asgt/v2/type \
 		--exclude-path proto/ssn/type \
 		--exclude-path proto/gen_bq_schema \
+		--include-imports \
 		--verbose
 
 #	server-side validation, only targeting go code and only for asgt v2 api

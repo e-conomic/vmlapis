@@ -3,9 +3,6 @@ package ai.visma.asgt.v2;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
- * <pre>
- *  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Manage datasets and examples used for training AutoSuggest models."};
- * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.51.0)",
@@ -404,9 +401,6 @@ public final class DatasetServiceGrpc {
   }
 
   /**
-   * <pre>
-   *  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Manage datasets and examples used for training AutoSuggest models."};
-   * </pre>
    */
   public static abstract class DatasetServiceImplBase implements io.grpc.BindableService {
 
@@ -614,9 +608,6 @@ public final class DatasetServiceGrpc {
   }
 
   /**
-   * <pre>
-   *  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Manage datasets and examples used for training AutoSuggest models."};
-   * </pre>
    */
   public static final class DatasetServiceStub extends io.grpc.stub.AbstractAsyncStub<DatasetServiceStub> {
     private DatasetServiceStub(
@@ -763,9 +754,6 @@ public final class DatasetServiceGrpc {
   }
 
   /**
-   * <pre>
-   *  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Manage datasets and examples used for training AutoSuggest models."};
-   * </pre>
    */
   public static final class DatasetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DatasetServiceBlockingStub> {
     private DatasetServiceBlockingStub(
@@ -901,9 +889,6 @@ public final class DatasetServiceGrpc {
   }
 
   /**
-   * <pre>
-   *  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Manage datasets and examples used for training AutoSuggest models."};
-   * </pre>
    */
   public static final class DatasetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DatasetServiceFutureStub> {
     private DatasetServiceFutureStub(

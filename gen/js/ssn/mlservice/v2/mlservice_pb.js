@@ -19,8 +19,6 @@ var google_type_date_pb = require('../../../google/type/date_pb.js');
 goog.object.extend(proto, google_type_date_pb);
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
-var ssn_type_tensorflow_example_pb = require('../../../ssn/type/tensorflow/example_pb.js');
-goog.object.extend(proto, ssn_type_tensorflow_example_pb);
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
 goog.object.extend(proto, ssn_type_text_annotation_pb);
 goog.exportSymbol('proto.ssn.mlservice.v2.FeatureGenPredictRequest', null, global);
@@ -359,7 +357,8 @@ proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.toObject = function(include
     supplierVatNumber: jspb.Message.getFieldWithDefault(msg, 30, ""),
     supplierOrganisationNumber: jspb.Message.getFieldWithDefault(msg, 31, ""),
     supplierAddress: jspb.Message.getFieldWithDefault(msg, 32, ""),
-    creditCardLastFour: jspb.Message.getFieldWithDefault(msg, 33, "")
+    creditCardLastFour: jspb.Message.getFieldWithDefault(msg, 33, ""),
+    customerNumber: jspb.Message.getFieldWithDefault(msg, 34, "")
   };
 
   if (includeInstance) {
@@ -530,6 +529,10 @@ proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.deserializeBinaryFromReader
     case 33:
       var value = /** @type {string} */ (reader.readString());
       msg.setCreditCardLastFour(value);
+      break;
+    case 34:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setCustomerNumber(value);
       break;
     default:
       reader.skipField();
@@ -791,6 +794,13 @@ proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.serializeBinaryToWriter = f
   if (f.length > 0) {
     writer.writeString(
       33,
+      f
+    );
+  }
+  f = message.getCustomerNumber();
+  if (f.length > 0) {
+    writer.writeString(
+      34,
       f
     );
   }
@@ -1449,6 +1459,24 @@ proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setCreditCardLast
 
 
 /**
+ * optional string customer_number = 34;
+ * @return {string}
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.getCustomerNumber = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 34, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels} returns this
+ */
+proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels.prototype.setCustomerNumber = function(value) {
+  return jspb.Message.setProto3StringField(this, 34, value);
+};
+
+
+/**
  * optional TruthLabels truth_labels = 1;
  * @return {?proto.ssn.mlservice.v2.FeatureGenRequest.TruthLabels}
  */
@@ -1572,7 +1600,7 @@ proto.ssn.mlservice.v2.FeatureGenResponse.prototype.toObject = function(opt_incl
  */
 proto.ssn.mlservice.v2.FeatureGenResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    example: (f = msg.getExample()) && ssn_type_tensorflow_example_pb.Example.toObject(includeInstance, f)
+
   };
 
   if (includeInstance) {
@@ -1609,11 +1637,6 @@ proto.ssn.mlservice.v2.FeatureGenResponse.deserializeBinaryFromReader = function
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new ssn_type_tensorflow_example_pb.Example;
-      reader.readMessage(value,ssn_type_tensorflow_example_pb.Example.deserializeBinaryFromReader);
-      msg.setExample(value);
-      break;
     default:
       reader.skipField();
       break;
@@ -1643,51 +1666,6 @@ proto.ssn.mlservice.v2.FeatureGenResponse.prototype.serializeBinary = function()
  */
 proto.ssn.mlservice.v2.FeatureGenResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getExample();
-  if (f != null) {
-    writer.writeMessage(
-      1,
-      f,
-      ssn_type_tensorflow_example_pb.Example.serializeBinaryToWriter
-    );
-  }
-};
-
-
-/**
- * optional tensorflow.Example example = 1;
- * @return {?proto.tensorflow.Example}
- */
-proto.ssn.mlservice.v2.FeatureGenResponse.prototype.getExample = function() {
-  return /** @type{?proto.tensorflow.Example} */ (
-    jspb.Message.getWrapperField(this, ssn_type_tensorflow_example_pb.Example, 1));
-};
-
-
-/**
- * @param {?proto.tensorflow.Example|undefined} value
- * @return {!proto.ssn.mlservice.v2.FeatureGenResponse} returns this
-*/
-proto.ssn.mlservice.v2.FeatureGenResponse.prototype.setExample = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.ssn.mlservice.v2.FeatureGenResponse} returns this
- */
-proto.ssn.mlservice.v2.FeatureGenResponse.prototype.clearExample = function() {
-  return this.setExample(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.ssn.mlservice.v2.FeatureGenResponse.prototype.hasExample = function() {
-  return jspb.Message.getField(this, 1) != null;
 };
 
 
@@ -1723,7 +1701,6 @@ proto.ssn.mlservice.v2.PredictRequest.prototype.toObject = function(opt_includeI
  */
 proto.ssn.mlservice.v2.PredictRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    example: (f = msg.getExample()) && ssn_type_tensorflow_example_pb.Example.toObject(includeInstance, f),
     topNMostConfident: jspb.Message.getFieldWithDefault(msg, 2, 0)
   };
 
@@ -1761,11 +1738,6 @@ proto.ssn.mlservice.v2.PredictRequest.deserializeBinaryFromReader = function(msg
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new ssn_type_tensorflow_example_pb.Example;
-      reader.readMessage(value,ssn_type_tensorflow_example_pb.Example.deserializeBinaryFromReader);
-      msg.setExample(value);
-      break;
     case 2:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setTopNMostConfident(value);
@@ -1799,14 +1771,6 @@ proto.ssn.mlservice.v2.PredictRequest.prototype.serializeBinary = function() {
  */
 proto.ssn.mlservice.v2.PredictRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getExample();
-  if (f != null) {
-    writer.writeMessage(
-      1,
-      f,
-      ssn_type_tensorflow_example_pb.Example.serializeBinaryToWriter
-    );
-  }
   f = message.getTopNMostConfident();
   if (f !== 0) {
     writer.writeUint32(
@@ -1814,43 +1778,6 @@ proto.ssn.mlservice.v2.PredictRequest.serializeBinaryToWriter = function(message
       f
     );
   }
-};
-
-
-/**
- * optional tensorflow.Example example = 1;
- * @return {?proto.tensorflow.Example}
- */
-proto.ssn.mlservice.v2.PredictRequest.prototype.getExample = function() {
-  return /** @type{?proto.tensorflow.Example} */ (
-    jspb.Message.getWrapperField(this, ssn_type_tensorflow_example_pb.Example, 1));
-};
-
-
-/**
- * @param {?proto.tensorflow.Example|undefined} value
- * @return {!proto.ssn.mlservice.v2.PredictRequest} returns this
-*/
-proto.ssn.mlservice.v2.PredictRequest.prototype.setExample = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
-};
-
-
-/**
- * Clears the message field making it undefined.
- * @return {!proto.ssn.mlservice.v2.PredictRequest} returns this
- */
-proto.ssn.mlservice.v2.PredictRequest.prototype.clearExample = function() {
-  return this.setExample(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.ssn.mlservice.v2.PredictRequest.prototype.hasExample = function() {
-  return jspb.Message.getField(this, 1) != null;
 };
 
 
@@ -1878,7 +1805,7 @@ proto.ssn.mlservice.v2.PredictRequest.prototype.setTopNMostConfident = function(
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.mlservice.v2.PredictResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34];
+proto.ssn.mlservice.v2.PredictResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35];
 
 
 
@@ -1978,6 +1905,8 @@ proto.ssn.mlservice.v2.PredictResponse.toObject = function(includeInstance, msg)
     supplierAddressList: jspb.Message.toObjectList(msg.getSupplierAddressList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     creditCardLastFourList: jspb.Message.toObjectList(msg.getCreditCardLastFourList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    customerNumberList: jspb.Message.toObjectList(msg.getCustomerNumberList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance)
   };
 
@@ -2184,6 +2113,11 @@ proto.ssn.mlservice.v2.PredictResponse.deserializeBinaryFromReader = function(ms
       var value = new ssn_type_candidate_pb.Candidate;
       reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addCreditCardLastFour(value);
+      break;
+    case 35:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addCustomerNumber(value);
       break;
     default:
       reader.skipField();
@@ -2482,6 +2416,14 @@ proto.ssn.mlservice.v2.PredictResponse.serializeBinaryToWriter = function(messag
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       34,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getCustomerNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      35,
       f,
       ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
@@ -3778,6 +3720,44 @@ proto.ssn.mlservice.v2.PredictResponse.prototype.addCreditCardLastFour = functio
  */
 proto.ssn.mlservice.v2.PredictResponse.prototype.clearCreditCardLastFourList = function() {
   return this.setCreditCardLastFourList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate customer_number = 35;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.getCustomerNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 35));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+*/
+proto.ssn.mlservice.v2.PredictResponse.prototype.setCustomerNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 35, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.addCustomerNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 35, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.PredictResponse} returns this
+ */
+proto.ssn.mlservice.v2.PredictResponse.prototype.clearCustomerNumberList = function() {
+  return this.setCustomerNumberList([]);
 };
 
 

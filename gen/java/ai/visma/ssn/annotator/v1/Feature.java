@@ -347,6 +347,14 @@ private static final long serialVersionUID = 0L;
      * <code>SUPPLIER_ADDRESS = 36;</code>
      */
     SUPPLIER_ADDRESS(36),
+    /**
+     * <pre>
+     * [EXPERIMENTAL] Run customer identifier detection
+     * </pre>
+     *
+     * <code>CUSTOMER_NUMBER = 37;</code>
+     */
+    CUSTOMER_NUMBER(37),
     UNRECOGNIZED(-1),
     ;
 
@@ -647,6 +655,14 @@ private static final long serialVersionUID = 0L;
      * <code>SUPPLIER_ADDRESS = 36;</code>
      */
     public static final int SUPPLIER_ADDRESS_VALUE = 36;
+    /**
+     * <pre>
+     * [EXPERIMENTAL] Run customer identifier detection
+     * </pre>
+     *
+     * <code>CUSTOMER_NUMBER = 37;</code>
+     */
+    public static final int CUSTOMER_NUMBER_VALUE = 37;
 
 
     public final int getNumber() {
@@ -710,6 +726,7 @@ private static final long serialVersionUID = 0L;
         case 34: return SUPPLIER_VAT_NUMBER;
         case 35: return SUPPLIER_ORGANISATION_NUMBER;
         case 36: return SUPPLIER_ADDRESS;
+        case 37: return CUSTOMER_NUMBER;
         default: return null;
       }
     }

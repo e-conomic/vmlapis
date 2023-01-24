@@ -798,4 +798,28 @@ public interface PredictionValuesOrBuilder extends
    */
   com.google.protobuf.StringValueOrBuilder getSupplierAddressOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  java.util.List<com.google.protobuf.StringValue> 
+      getCustomerNumberList();
+  /**
+   * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  com.google.protobuf.StringValue getCustomerNumber(int index);
+  /**
+   * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  int getCustomerNumberCount();
+  /**
+   * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+      getCustomerNumberOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder(
+      int index);
 }

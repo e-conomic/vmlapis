@@ -17,6 +17,8 @@ var global = (function() { return this || window || global || self || Function('
 
 var google_api_annotations_pb = require('../../../google/api/annotations_pb.js');
 goog.object.extend(proto, google_api_annotations_pb);
+var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-openapiv2/options/annotations_pb.js');
+goog.object.extend(proto, protoc$gen$openapiv2_options_annotations_pb);
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
 var ssn_type_text_annotation_pb = require('../../../ssn/type/text_annotation_pb.js');
@@ -310,7 +312,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   SUPPLIER_NAME: 33,
   SUPPLIER_VAT_NUMBER: 34,
   SUPPLIER_ORGANISATION_NUMBER: 35,
-  SUPPLIER_ADDRESS: 36
+  SUPPLIER_ADDRESS: 36,
+  CUSTOMER_NUMBER: 37
 };
 
 /**
@@ -712,7 +715,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearSegmentsList = fu
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,25,26,28,29,30,31,32,33,34,35,36,37];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,25,26,28,29,30,31,32,33,34,35,36,37,38];
 
 
 
@@ -814,6 +817,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     supplierOrganisationNumberList: jspb.Message.toObjectList(msg.getSupplierOrganisationNumberList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     supplierAddressList: jspb.Message.toObjectList(msg.getSupplierAddressList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    customerNumberList: jspb.Message.toObjectList(msg.getCustomerNumberList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance)
   };
 
@@ -1032,6 +1037,11 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_candidate_pb.Candidate;
       reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addSupplierAddress(value);
+      break;
+    case 38:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addCustomerNumber(value);
       break;
     default:
       reader.skipField();
@@ -1351,6 +1361,14 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       37,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getCustomerNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      38,
       f,
       ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
@@ -2700,6 +2718,44 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addSupplierAddress = 
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearSupplierAddressList = function() {
   return this.setSupplierAddressList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate customer_number = 38;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getCustomerNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 38));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setCustomerNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 38, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addCustomerNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 38, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearCustomerNumberList = function() {
+  return this.setCustomerNumberList([]);
 };
 
 

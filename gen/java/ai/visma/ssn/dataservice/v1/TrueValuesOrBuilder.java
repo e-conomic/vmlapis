@@ -501,4 +501,19 @@ public interface TrueValuesOrBuilder extends
    * <code>.google.protobuf.StringValue supplier_address = 33 [json_name = "supplierAddress"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getSupplierAddressOrBuilder();
+
+  /**
+   * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+   * @return Whether the customerNumber field is set.
+   */
+  boolean hasCustomerNumber();
+  /**
+   * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+   * @return The customerNumber.
+   */
+  com.google.protobuf.StringValue getCustomerNumber();
+  /**
+   * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder();
 }

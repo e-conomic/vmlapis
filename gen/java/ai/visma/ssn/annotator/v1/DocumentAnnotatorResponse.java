@@ -52,6 +52,7 @@ private static final long serialVersionUID = 0L;
     supplierVatNumber_ = java.util.Collections.emptyList();
     supplierOrganisationNumber_ = java.util.Collections.emptyList();
     supplierAddress_ = java.util.Collections.emptyList();
+    customerNumber_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -2453,6 +2454,72 @@ private static final long serialVersionUID = 0L;
     return supplierAddress_.get(index);
   }
 
+  public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 38;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> customerNumber_;
+  /**
+   * <pre>
+   * [EXPERIMENTAL]
+   * Returns customer identifier/number
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getCustomerNumberList() {
+    return customerNumber_;
+  }
+  /**
+   * <pre>
+   * [EXPERIMENTAL]
+   * Returns customer identifier/number
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getCustomerNumberOrBuilderList() {
+    return customerNumber_;
+  }
+  /**
+   * <pre>
+   * [EXPERIMENTAL]
+   * Returns customer identifier/number
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+   */
+  @java.lang.Override
+  public int getCustomerNumberCount() {
+    return customerNumber_.size();
+  }
+  /**
+   * <pre>
+   * [EXPERIMENTAL]
+   * Returns customer identifier/number
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getCustomerNumber(int index) {
+    return customerNumber_.get(index);
+  }
+  /**
+   * <pre>
+   * [EXPERIMENTAL]
+   * Returns customer identifier/number
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getCustomerNumberOrBuilder(
+      int index) {
+    return customerNumber_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -2577,6 +2644,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < supplierAddress_.size(); i++) {
       output.writeMessage(37, supplierAddress_.get(i));
+    }
+    for (int i = 0; i < customerNumber_.size(); i++) {
+      output.writeMessage(38, customerNumber_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -2732,6 +2802,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(37, supplierAddress_.get(i));
     }
+    for (int i = 0; i < customerNumber_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(38, customerNumber_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -2824,6 +2898,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSupplierOrganisationNumberList())) return false;
     if (!getSupplierAddressList()
         .equals(other.getSupplierAddressList())) return false;
+    if (!getCustomerNumberList()
+        .equals(other.getCustomerNumberList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2976,6 +3052,10 @@ private static final long serialVersionUID = 0L;
     if (getSupplierAddressCount() > 0) {
       hash = (37 * hash) + SUPPLIER_ADDRESS_FIELD_NUMBER;
       hash = (53 * hash) + getSupplierAddressList().hashCode();
+    }
+    if (getCustomerNumberCount() > 0) {
+      hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getCustomerNumberList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -3346,6 +3426,13 @@ private static final long serialVersionUID = 0L;
         supplierAddressBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00000010);
+      if (customerNumberBuilder_ == null) {
+        customerNumber_ = java.util.Collections.emptyList();
+      } else {
+        customerNumber_ = null;
+        customerNumberBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000020);
       return this;
     }
 
@@ -3676,6 +3763,15 @@ private static final long serialVersionUID = 0L;
         result.supplierAddress_ = supplierAddress_;
       } else {
         result.supplierAddress_ = supplierAddressBuilder_.build();
+      }
+      if (customerNumberBuilder_ == null) {
+        if (((bitField1_ & 0x00000020) != 0)) {
+          customerNumber_ = java.util.Collections.unmodifiableList(customerNumber_);
+          bitField1_ = (bitField1_ & ~0x00000020);
+        }
+        result.customerNumber_ = customerNumber_;
+      } else {
+        result.customerNumber_ = customerNumberBuilder_.build();
       }
     }
 
@@ -4621,6 +4717,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (customerNumberBuilder_ == null) {
+        if (!other.customerNumber_.isEmpty()) {
+          if (customerNumber_.isEmpty()) {
+            customerNumber_ = other.customerNumber_;
+            bitField1_ = (bitField1_ & ~0x00000020);
+          } else {
+            ensureCustomerNumberIsMutable();
+            customerNumber_.addAll(other.customerNumber_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.customerNumber_.isEmpty()) {
+          if (customerNumberBuilder_.isEmpty()) {
+            customerNumberBuilder_.dispose();
+            customerNumberBuilder_ = null;
+            customerNumber_ = other.customerNumber_;
+            bitField1_ = (bitField1_ & ~0x00000020);
+            customerNumberBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getCustomerNumberFieldBuilder() : null;
+          } else {
+            customerNumberBuilder_.addAllMessages(other.customerNumber_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -5098,6 +5220,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 298
+            case 306: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (customerNumberBuilder_ == null) {
+                ensureCustomerNumberIsMutable();
+                customerNumber_.add(m);
+              } else {
+                customerNumberBuilder_.addMessage(m);
+              }
+              break;
+            } // case 306
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -16494,6 +16629,336 @@ private static final long serialVersionUID = 0L;
         supplierAddress_ = null;
       }
       return supplierAddressBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> customerNumber_ =
+      java.util.Collections.emptyList();
+    private void ensureCustomerNumberIsMutable() {
+      if (!((bitField1_ & 0x00000020) != 0)) {
+        customerNumber_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(customerNumber_);
+        bitField1_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> customerNumberBuilder_;
+
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getCustomerNumberList() {
+      if (customerNumberBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(customerNumber_);
+      } else {
+        return customerNumberBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public int getCustomerNumberCount() {
+      if (customerNumberBuilder_ == null) {
+        return customerNumber_.size();
+      } else {
+        return customerNumberBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate getCustomerNumber(int index) {
+      if (customerNumberBuilder_ == null) {
+        return customerNumber_.get(index);
+      } else {
+        return customerNumberBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public Builder setCustomerNumber(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (customerNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCustomerNumberIsMutable();
+        customerNumber_.set(index, value);
+        onChanged();
+      } else {
+        customerNumberBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public Builder setCustomerNumber(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (customerNumberBuilder_ == null) {
+        ensureCustomerNumberIsMutable();
+        customerNumber_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        customerNumberBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public Builder addCustomerNumber(ai.visma.ssn.type.Candidate value) {
+      if (customerNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCustomerNumberIsMutable();
+        customerNumber_.add(value);
+        onChanged();
+      } else {
+        customerNumberBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public Builder addCustomerNumber(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (customerNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureCustomerNumberIsMutable();
+        customerNumber_.add(index, value);
+        onChanged();
+      } else {
+        customerNumberBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public Builder addCustomerNumber(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (customerNumberBuilder_ == null) {
+        ensureCustomerNumberIsMutable();
+        customerNumber_.add(builderForValue.build());
+        onChanged();
+      } else {
+        customerNumberBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public Builder addCustomerNumber(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (customerNumberBuilder_ == null) {
+        ensureCustomerNumberIsMutable();
+        customerNumber_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        customerNumberBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public Builder addAllCustomerNumber(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (customerNumberBuilder_ == null) {
+        ensureCustomerNumberIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, customerNumber_);
+        onChanged();
+      } else {
+        customerNumberBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public Builder clearCustomerNumber() {
+      if (customerNumberBuilder_ == null) {
+        customerNumber_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000020);
+        onChanged();
+      } else {
+        customerNumberBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public Builder removeCustomerNumber(int index) {
+      if (customerNumberBuilder_ == null) {
+        ensureCustomerNumberIsMutable();
+        customerNumber_.remove(index);
+        onChanged();
+      } else {
+        customerNumberBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getCustomerNumberBuilder(
+        int index) {
+      return getCustomerNumberFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getCustomerNumberOrBuilder(
+        int index) {
+      if (customerNumberBuilder_ == null) {
+        return customerNumber_.get(index);  } else {
+        return customerNumberBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getCustomerNumberOrBuilderList() {
+      if (customerNumberBuilder_ != null) {
+        return customerNumberBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(customerNumber_);
+      }
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addCustomerNumberBuilder() {
+      return getCustomerNumberFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addCustomerNumberBuilder(
+        int index) {
+      return getCustomerNumberFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * [EXPERIMENTAL]
+     * Returns customer identifier/number
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getCustomerNumberBuilderList() {
+      return getCustomerNumberFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getCustomerNumberFieldBuilder() {
+      if (customerNumberBuilder_ == null) {
+        customerNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                customerNumber_,
+                ((bitField1_ & 0x00000020) != 0),
+                getParentForChildren(),
+                isClean());
+        customerNumber_ = null;
+      }
+      return customerNumberBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

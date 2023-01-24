@@ -842,4 +842,28 @@ public interface PredictResponseOrBuilder extends
    */
   ai.visma.ssn.type.CandidateOrBuilder getCreditCardLastFourOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getCustomerNumberList();
+  /**
+   * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+   */
+  ai.visma.ssn.type.Candidate getCustomerNumber(int index);
+  /**
+   * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+   */
+  int getCustomerNumberCount();
+  /**
+   * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getCustomerNumberOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.Candidate customer_number = 35 [json_name = "customerNumber"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getCustomerNumberOrBuilder(
+      int index);
 }

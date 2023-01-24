@@ -1,16 +1,21 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "asgt/v2/dataset_service.proto",
-    "version": "version not set"
+    "title": "AutoSuggest",
+    "version": "v2"
   },
   "tags": [
     {
-      "name": "DatasetService"
+      "name": "SuggesterService",
+      "description": "Make predictions against a dataset."
     },
     {
-      "name": "SuggesterService"
+      "name": "DatasetService",
+      "description": "Manage datasets and examples used for training AutoSuggest models."
     }
+  ],
+  "schemes": [
+    "https"
   ],
   "consumes": [
     "application/json"

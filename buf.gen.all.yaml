@@ -6,7 +6,6 @@ managed:
     default: ai.visma
     except:
       - buf.build/googleapis/googleapis
-      - buf.build/grpc-ecosystem/grpc-gateway
 plugins:
   - remote: buf.build/protocolbuffers/plugins/go
     out: gen/go

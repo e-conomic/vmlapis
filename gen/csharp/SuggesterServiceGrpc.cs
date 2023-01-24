@@ -8,9 +8,6 @@
 using grpc = global::Grpc.Core;
 
 namespace Asgt.V2 {
-  /// <summary>
-  ///  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Make predictions against a dataset."};
-  /// </summary>
   public static partial class SuggesterService
   {
     static readonly string __ServiceName = "asgt.v2.SuggesterService";

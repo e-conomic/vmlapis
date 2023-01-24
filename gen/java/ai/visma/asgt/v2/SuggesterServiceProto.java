@@ -51,41 +51,44 @@ public final class SuggesterServiceProto {
       "\n\037asgt/v2/suggester_service.proto\022\007asgt." +
       "v2\032\025asgt/type/model.proto\032\032asgt/type/pre" +
       "diction.proto\032\027asgt/v2/type/data.proto\032\034" +
-      "google/api/annotations.proto\032\027validate/v" +
-      "alidate.proto\"\203\001\n\016SuggestOptions\022#\n\rsugg" +
-      "est_limit\030\001 \001(\005R\014suggestLimit\022L\n\016min_con" +
-      "fidence\030\002 \001(\0162\033.asgt.type.Confidence.Lev" +
-      "elB\010\372B\005\202\001\002\020\001R\rminConfidence\"\272\001\n\016SuggestR" +
-      "equest\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036" +
-      "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013datasetN" +
-      "ame\022(\n\005input\030\002 \001(\0132\022.asgt.v2.type.DataR\005" +
-      "input\0221\n\007options\030\003 \001(\0132\027.asgt.v2.Suggest" +
-      "OptionsR\007options\"p\n\017SuggestResponse\0225\n\np" +
-      "rediction\030\001 \001(\0132\025.asgt.type.PredictionR\n" +
-      "prediction\022&\n\005model\030\002 \001(\0132\020.asgt.type.Mo" +
-      "delR\005model\"\301\001\n\023BatchSuggestRequest\022K\n\014da" +
-      "taset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9." +
-      "][A-Za-z0-9_.>-]*$R\013datasetName\022*\n\006input" +
-      "s\030\002 \003(\0132\022.asgt.v2.type.DataR\006inputs\0221\n\007o" +
-      "ptions\030\003 \001(\0132\027.asgt.v2.SuggestOptionsR\007o" +
-      "ptions\"w\n\024BatchSuggestResponse\0227\n\013predic" +
-      "tions\030\001 \003(\0132\025.asgt.type.PredictionR\013pred" +
-      "ictions\022&\n\005model\030\002 \001(\0132\020.asgt.type.Model" +
-      "R\005model2\221\003\n\020SuggesterService\022l\n\007Suggest\022" +
-      "\027.asgt.v2.SuggestRequest\032\030.asgt.v2.Sugge" +
-      "stResponse\".\202\323\344\223\002(:\001*\"#/v2/datasets/{dat" +
-      "aset_name}:suggest\022\200\001\n\014BatchSuggest\022\034.as" +
-      "gt.v2.BatchSuggestRequest\032\035.asgt.v2.Batc" +
-      "hSuggestResponse\"3\202\323\344\223\002-:\001*\"(/v2/dataset" +
-      "s/{dataset_name}:batchSuggest\022\213\001\n\021ModelB" +
-      "atchSuggest\022\034.asgt.v2.BatchSuggestReques" +
-      "t\032\035.asgt.v2.BatchSuggestResponse\"9\202\323\344\223\0023" +
-      ":\001*\"./v2/datasets/{dataset_name}/model:b" +
-      "atchSuggestB\223\001\n\020ai.visma.asgt.v2B\025Sugges" +
-      "terServiceProtoP\001Z+github.com/e-conomic/" +
-      "vmlapis/gen/go/asgt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002" +
-      "\007Asgt\\V2\342\002\023Asgt\\V2\\GPBMetadata\352\002\010Asgt::V" +
-      "2b\006proto3"
+      "google/api/annotations.proto\032.protoc-gen" +
+      "-openapiv2/options/annotations.proto\032\027va" +
+      "lidate/validate.proto\"\203\001\n\016SuggestOptions" +
+      "\022#\n\rsuggest_limit\030\001 \001(\005R\014suggestLimit\022L\n" +
+      "\016min_confidence\030\002 \001(\0162\033.asgt.type.Confid" +
+      "ence.LevelB\010\372B\005\202\001\002\020\001R\rminConfidence\"\272\001\n\016" +
+      "SuggestRequest\022K\n\014dataset_name\030\001 \001(\tB(\372B" +
+      "%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013" +
+      "datasetName\022(\n\005input\030\002 \001(\0132\022.asgt.v2.typ" +
+      "e.DataR\005input\0221\n\007options\030\003 \001(\0132\027.asgt.v2" +
+      ".SuggestOptionsR\007options\"p\n\017SuggestRespo" +
+      "nse\0225\n\nprediction\030\001 \001(\0132\025.asgt.type.Pred" +
+      "ictionR\nprediction\022&\n\005model\030\002 \001(\0132\020.asgt" +
+      ".type.ModelR\005model\"\301\001\n\023BatchSuggestReque" +
+      "st\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-" +
+      "Za-z0-9.][A-Za-z0-9_.>-]*$R\013datasetName\022" +
+      "*\n\006inputs\030\002 \003(\0132\022.asgt.v2.type.DataR\006inp" +
+      "uts\0221\n\007options\030\003 \001(\0132\027.asgt.v2.SuggestOp" +
+      "tionsR\007options\"w\n\024BatchSuggestResponse\0227" +
+      "\n\013predictions\030\001 \003(\0132\025.asgt.type.Predicti" +
+      "onR\013predictions\022&\n\005model\030\002 \001(\0132\020.asgt.ty" +
+      "pe.ModelR\005model2\273\003\n\020SuggesterService\022l\n\007" +
+      "Suggest\022\027.asgt.v2.SuggestRequest\032\030.asgt." +
+      "v2.SuggestResponse\".\202\323\344\223\002(:\001*\"#/v2/datas" +
+      "ets/{dataset_name}:suggest\022\200\001\n\014BatchSugg" +
+      "est\022\034.asgt.v2.BatchSuggestRequest\032\035.asgt" +
+      ".v2.BatchSuggestResponse\"3\202\323\344\223\002-:\001*\"(/v2" +
+      "/datasets/{dataset_name}:batchSuggest\022\213\001" +
+      "\n\021ModelBatchSuggest\022\034.asgt.v2.BatchSugge" +
+      "stRequest\032\035.asgt.v2.BatchSuggestResponse" +
+      "\"9\202\323\344\223\0023:\001*\"./v2/datasets/{dataset_name}" +
+      "/model:batchSuggest\032(\222A%\022#Make predictio" +
+      "ns against a dataset.B\320\001\n\020ai.visma.asgt." +
+      "v2B\025SuggesterServiceProtoP\001Z+github.com/" +
+      "e-conomic/vmlapis/gen/go/asgt/v2\242\002\003AXX\252\002" +
+      "\007Asgt.V2\312\002\007Asgt\\V2\342\002\023Asgt\\V2\\GPBMetadata" +
+      "\352\002\010Asgt::V2\222A:\022\021\n\013AutoSuggest2\002v2*\001\0022\020ap" +
+      "plication/json:\020application/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -94,6 +97,7 @@ public final class SuggesterServiceProto {
           ai.visma.asgt.type.PredictionProto.getDescriptor(),
           ai.visma.asgt.v2.type.DataProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
+          ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
           ai.visma.validate.ValidateProto.getDescriptor(),
         });
     internal_static_asgt_v2_SuggestOptions_descriptor =
@@ -129,6 +133,8 @@ public final class SuggesterServiceProto {
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
+    registry.add(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.openapiv2Swagger);
+    registry.add(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.openapiv2Tag);
     registry.add(ai.visma.validate.ValidateProto.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
@@ -136,6 +142,7 @@ public final class SuggesterServiceProto {
     ai.visma.asgt.type.PredictionProto.getDescriptor();
     ai.visma.asgt.v2.type.DataProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
+    ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
     ai.visma.validate.ValidateProto.getDescriptor();
   }
 

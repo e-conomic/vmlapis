@@ -798,4 +798,28 @@ public interface PredictionConfidencesOrBuilder extends
    */
   com.google.protobuf.FloatValueOrBuilder getSupplierAddressOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  java.util.List<com.google.protobuf.FloatValue> 
+      getCustomerNumberList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  com.google.protobuf.FloatValue getCustomerNumber(int index);
+  /**
+   * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  int getCustomerNumberCount();
+  /**
+   * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+      getCustomerNumberOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue customer_number = 34 [json_name = "customerNumber"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getCustomerNumberOrBuilder(
+      int index);
 }

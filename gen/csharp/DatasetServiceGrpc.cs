@@ -8,9 +8,6 @@
 using grpc = global::Grpc.Core;
 
 namespace Asgt.V2 {
-  /// <summary>
-  ///  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Manage datasets and examples used for training AutoSuggest models."};
-  /// </summary>
   public static partial class DatasetService
   {
     static readonly string __ServiceName = "asgt.v2.DatasetService";

@@ -1,7 +1,7 @@
 FROM buildpack-deps:bullseye-scm
 
 COPY --from=golang:1.18-bullseye /usr/local/go/ /usr/local/go/
-COPY --from=bitnami/dotnet-sdk /opt/bitnami/dotnet-sdk /usr/local/dotnet-sdk
+#COPY --from=bitnami/dotnet-sdk /opt/bitnami/dotnet-sdk /usr/local/dotnet-sdk
 
 ENV PATH=/usr/local/go/bin:${PATH}
 ENV GOPATH=/go
@@ -13,10 +13,10 @@ RUN apt-get update && \
   apt-get install -y --no-install-recommends \
   protobuf-compiler-grpc \
   make \
-  golang-goprotobuf-dev \
-  apt-transport-https \
-  libicu-dev \
-  maven
+  golang-goprotobuf-dev
+#  apt-transport-https \
+#  libicu-dev \
+#  maven
 
 COPY dotnet-install.sh dotnet-install.sh
 RUN chmod +x ./dotnet-install.sh && ./dotnet-install.sh
@@ -43,13 +43,13 @@ COPY scripts scripts
 COPY proto proto
 RUN make all
 
-COPY vmlapis.csproj gen/csharp
-WORKDIR gen/csharp
-RUN dotnet pack --output .
-
-WORKDIR /app
-COPY java-package java-package
-RUN cp -R gen/java java-package/src/main
-WORKDIR java-package
-RUN mvn package -q
-#RUN cp target/vml-apis-1.0.2.jar /app/gen/java
+#COPY vmlapis.csproj gen/csharp
+#WORKDIR gen/csharp
+#RUN dotnet pack --output .
+#
+#WORKDIR /app
+#COPY java-package java-package
+#RUN cp -R gen/java java-package/src/main
+#WORKDIR java-package
+#RUN mvn package -q
+#RUN cp target/vml-apis-1.0.5.jar /app/gen/java

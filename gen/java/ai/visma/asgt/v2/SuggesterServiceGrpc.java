@@ -3,9 +3,6 @@ package ai.visma.asgt.v2;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
- * <pre>
- *  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Make predictions against a dataset."};
- * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.51.0)",
@@ -156,9 +153,6 @@ public final class SuggesterServiceGrpc {
   }
 
   /**
-   * <pre>
-   *  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Make predictions against a dataset."};
-   * </pre>
    */
   public static abstract class SuggesterServiceImplBase implements io.grpc.BindableService {
 
@@ -221,9 +215,6 @@ public final class SuggesterServiceGrpc {
   }
 
   /**
-   * <pre>
-   *  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Make predictions against a dataset."};
-   * </pre>
    */
   public static final class SuggesterServiceStub extends io.grpc.stub.AbstractAsyncStub<SuggesterServiceStub> {
     private SuggesterServiceStub(
@@ -273,9 +264,6 @@ public final class SuggesterServiceGrpc {
   }
 
   /**
-   * <pre>
-   *  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Make predictions against a dataset."};
-   * </pre>
    */
   public static final class SuggesterServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SuggesterServiceBlockingStub> {
     private SuggesterServiceBlockingStub(
@@ -322,9 +310,6 @@ public final class SuggesterServiceGrpc {
   }
 
   /**
-   * <pre>
-   *  option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_tag) = {description: "Make predictions against a dataset."};
-   * </pre>
    */
   public static final class SuggesterServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SuggesterServiceFutureStub> {
     private SuggesterServiceFutureStub(

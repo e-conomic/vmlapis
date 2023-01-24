@@ -2,7 +2,6 @@ import * as jspb from 'google-protobuf'
 
 import * as google_type_date_pb from '../../../google/type/date_pb';
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb';
-import * as ssn_type_tensorflow_example_pb from '../../../ssn/type/tensorflow/example_pb';
 import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb';
 
 
@@ -141,6 +140,9 @@ export namespace FeatureGenRequest {
     getCreditCardLastFour(): string;
     setCreditCardLastFour(value: string): TruthLabels;
 
+    getCustomerNumber(): string;
+    setCustomerNumber(value: string): TruthLabels;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TruthLabels.AsObject;
     static toObject(includeInstance: boolean, msg: TruthLabels): TruthLabels.AsObject;
@@ -184,17 +186,13 @@ export namespace FeatureGenRequest {
       supplierOrganisationNumber: string,
       supplierAddress: string,
       creditCardLastFour: string,
+      customerNumber: string,
     }
   }
 
 }
 
 export class FeatureGenResponse extends jspb.Message {
-  getExample(): ssn_type_tensorflow_example_pb.Example | undefined;
-  setExample(value?: ssn_type_tensorflow_example_pb.Example): FeatureGenResponse;
-  hasExample(): boolean;
-  clearExample(): FeatureGenResponse;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FeatureGenResponse.AsObject;
   static toObject(includeInstance: boolean, msg: FeatureGenResponse): FeatureGenResponse.AsObject;
@@ -205,16 +203,10 @@ export class FeatureGenResponse extends jspb.Message {
 
 export namespace FeatureGenResponse {
   export type AsObject = {
-    example?: ssn_type_tensorflow_example_pb.Example.AsObject,
   }
 }
 
 export class PredictRequest extends jspb.Message {
-  getExample(): ssn_type_tensorflow_example_pb.Example | undefined;
-  setExample(value?: ssn_type_tensorflow_example_pb.Example): PredictRequest;
-  hasExample(): boolean;
-  clearExample(): PredictRequest;
-
   getTopNMostConfident(): number;
   setTopNMostConfident(value: number): PredictRequest;
 
@@ -228,7 +220,6 @@ export class PredictRequest extends jspb.Message {
 
 export namespace PredictRequest {
   export type AsObject = {
-    example?: ssn_type_tensorflow_example_pb.Example.AsObject,
     topNMostConfident: number,
   }
 }
@@ -404,6 +395,11 @@ export class PredictResponse extends jspb.Message {
   clearCreditCardLastFourList(): PredictResponse;
   addCreditCardLastFour(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
+  getCustomerNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setCustomerNumberList(value: Array<ssn_type_candidate_pb.Candidate>): PredictResponse;
+  clearCustomerNumberList(): PredictResponse;
+  addCustomerNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictResponse.AsObject;
   static toObject(includeInstance: boolean, msg: PredictResponse): PredictResponse.AsObject;
@@ -448,6 +444,7 @@ export namespace PredictResponse {
     supplierOrganisationNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     supplierAddressList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     creditCardLastFourList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    customerNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
   }
 }
 
