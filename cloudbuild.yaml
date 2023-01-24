@@ -41,5 +41,5 @@ steps:
 #        fi
 availableSecrets:
   secretManager:
-    - versionName: projects/161107618804/secrets/nuget-api-key/version/1
+    - versionName: projects/161107618804/secrets/nuget-api-key/versions/1
       env: 'NUGET_API_KEY'
