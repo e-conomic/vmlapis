@@ -19,7 +19,7 @@ steps:
     args:
       - "-c"
       - |
-        if [ "$TAG_NAME" ] ; then
+        if [ 0 ] ; then
           apt-get update -y
           apt-get install -y nuget
           cd gen/csharp
