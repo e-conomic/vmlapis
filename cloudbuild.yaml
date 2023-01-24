@@ -33,8 +33,7 @@ steps:
     args:
       - "-c"
       - |
-        if [ 0 ] ; then
-          export TAG_NAME=1.0.3
+        if [ "$TAG_NAME" ] ; then
           cp -R gen/java java-package/src/main/java
           cd java-package
           mvn deploy
