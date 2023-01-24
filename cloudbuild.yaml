@@ -34,7 +34,8 @@ steps:
       - "-c"
       - |
         if [ 0 ] ; then
-          cp -r gen/java java-package/src/main
+          ls
+          cp -r gen/java java-package/src/main/java
           cd java-package
           mvn deploy
         fi
