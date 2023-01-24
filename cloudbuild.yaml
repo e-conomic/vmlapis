@@ -26,6 +26,7 @@ steps:
           dotnet pack -c Release
           nuget push *.nupkg -Source https://api.nuget.org/v3/index.json -ApiKey $NUGET_API_KEY
         fi
+    secretEnv: ['NUGET_API_KEY']
 
 #  - id: deploy-java
 #    name: "maven:3.6.3-jdk-8"
@@ -38,3 +39,7 @@ steps:
 #          cd java-package
 #          mvn deploy
 #        fi
+availableSecrets:
+  secretManager:
+    - versionName: projects/161107618804/secrets/nuget-api-key/version/latest
+      env: 'NUGET_API_KEY'
