@@ -6,8 +6,7 @@
 
     <groupId>ai.visma</groupId>
     <artifactId>vml-apis</artifactId>
-    <version>1.0.4</version>
-<!--    <version>${env.TAG_NAME}</version>-->
+    <version>${env.TAG_NAME}</version>
 
     <name>vml-apis</name>
     <url>vml.visma.ai</url>
