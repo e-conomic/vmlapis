@@ -50,8 +50,6 @@ steps:
           mvn deploy
         else
           echo ${TAG_NAME:1}
-#          export TAG_NAME=0.0.0
-#          mvn package
         fi
     env:
       - TAG_NAME=v1.0.8
