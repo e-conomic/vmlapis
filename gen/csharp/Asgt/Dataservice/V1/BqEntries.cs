@@ -42,8 +42,12 @@ namespace Asgt.Dataservice.V1 {
             "KAsyEC5hc2d0LnR5cGUuTW9kZWxSBW1vZGVsEjwKCnByZWRpY3Rpb24YCiAD",
             "KAsyHC5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXRSCnByZWRpY3Rpb24S",
             "LwoKdGltZV9hZGRlZBgIIAEoBEIQ6j8NCAESCVRJTUVTVEFNUFIJdGltZUFk",
-            "ZGVkOhDqPw0KC3NhbXBsZV9kYXRhQjdaNWdpdGh1Yi5jb20vZS1jb25vbWlj",
-            "L3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvZGF0YS92MTtkYXRhYgZwcm90bzM="));
+            "ZGVkOhDqPw0KC3NhbXBsZV9kYXRhQtMBChxhaS52aXNtYS5hc2d0LmRhdGFz",
+            "ZXJ2aWNlLnYxQg5CcUVudHJpZXNQcm90b1ABWjVnaXRodWIuY29tL2UtY29u",
+            "b21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2RhdGEvdjE7ZGF0YaICA0FEWKoC",
+            "E0FzZ3QuRGF0YXNlcnZpY2UuVjHKAhNBc2d0XERhdGFzZXJ2aWNlXFYx4gIf",
+            "QXNndFxEYXRhc2VydmljZVxWMVxHUEJNZXRhZGF0YeoCFUFzZ3Q6OkRhdGFz",
+            "ZXJ2aWNlOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetValueReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

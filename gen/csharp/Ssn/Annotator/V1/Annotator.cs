@@ -115,10 +115,13 @@ namespace Ssn.Annotator.V1 {
             "VXJpMqMBChFEb2N1bWVudEFubm90YXRvchKNAQoQQW5ub3RhdGVEb2N1bWVu",
             "dBIqLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRBbm5vdGF0b3JSZXF1ZXN0",
             "Gisuc3NuLmFubm90YXRvci52MS5Eb2N1bWVudEFubm90YXRvclJlc3BvbnNl",
-            "IiCC0+STAho6ASoiFS92MS9kb2N1bWVudDphbm5vdGF0ZUJ7Wj5naXRodWIu",
-            "Y29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vYW5ub3RhdG9yL3Yx",
-            "O2Fubm90YXRvcpJBOBIPCglTbWFydFNjYW4yAnYxKgECMhBhcHBsaWNhdGlv",
-            "bi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
+            "IiCC0+STAho6ASoiFS92MS9kb2N1bWVudDphbm5vdGF0ZUKIAgoZYWkudmlz",
+            "bWEuc3NuLmFubm90YXRvci52MUIOQW5ub3RhdG9yUHJvdG9QAVo+Z2l0aHVi",
+            "LmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL2Fubm90YXRvci92",
+            "MTthbm5vdGF0b3KiAgNTQViqAhBTc24uQW5ub3RhdG9yLlYxygIQU3NuXEFu",
+            "bm90YXRvclxWMeICHFNzblxBbm5vdGF0b3JcVjFcR1BCTWV0YWRhdGHqAhJT",
+            "c246OkFubm90YXRvcjo6VjGSQTgSDwoJU21hcnRTY2FuMgJ2MSoBAjIQYXBw",
+            "bGljYXRpb24vanNvbjoQYXBwbGljYXRpb24vanNvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

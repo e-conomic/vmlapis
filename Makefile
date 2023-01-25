@@ -12,6 +12,23 @@ all:
 		--exclude-path proto/asgt/v2/type \
 		--exclude-path proto/ssn/type \
 		--exclude-path proto/gen_bq_schema \
+		--exclude-path proto/ssn/dataservice \
+		--include-imports \
+		--verbose
+
+#	grpc C# plugin generates all files to root folder
+#       this results in ssn/dataservice and asgt/dataservice being generated under the same filename "DataserviceGrpc.cs" which will overwrite whichever gets generated first
+#	this workaround generates asgt/dataservice first, renames the file and then generates the other one (see exclude paths above and below)
+
+	mv gen/csharp/DataServiceGrpc.cs gen/csharp/DataServiceAsgtGrpc.cs
+
+	buf generate proto --template buf.gen.grpc.yaml \
+		--exclude-path proto/asgt/type \
+		--exclude-path proto/asgt/v2/type \
+		--exclude-path proto/ssn/type \
+		--exclude-path proto/gen_bq_schema \
+		--exclude-path proto/asgt/data \
+		--include-imports \
 		--verbose
 
 #	server-side validation, only targeting go code and only for asgt v2 api
@@ -41,8 +58,8 @@ all:
 		--path proto/cv/scanner/v1/scanner.proto \
 
 
-#	extra generation of dependencies for js since it can only use local .proto files (for now)
-	buf generate deps --template buf.gen.deps.js.yaml
+#	extra generation of dependencies for js, java and C# since it can only use local .proto files (for now)
+	buf generate deps --template buf.gen.deps.yaml
 
 #	generate mock methods for the ssn's main services
 	./scripts/gomock.sh

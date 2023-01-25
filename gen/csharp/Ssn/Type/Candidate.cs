@@ -42,8 +42,11 @@ namespace Ssn.Type {
             "bE5hbWUSOAoJbW9kZWxfdmVyGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLklu",
             "dDY0VmFsdWVSCG1vZGVsVmVyIlYKDUxpbmVDYW5kaWRhdGUSEgoEdGV4dBgB",
             "IAEoCVIEdGV4dBIWCgZhbW91bnQYAiABKAFSBmFtb3VudBIZCghwYWdlX3Jl",
-            "ZhgGIAEoDVIHcGFnZVJlZkI2WjRnaXRodWIuY29tL2UtY29ub21pYy92bWxh",
-            "cGlzL2dlbi9nby9zc24vdHlwZTtzc250eXBlYgZwcm90bzM="));
+            "ZhgGIAEoDVIHcGFnZVJlZkKaAQoRYWkudmlzbWEuc3NuLnR5cGVCDkNhbmRp",
+            "ZGF0ZVByb3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2Vu",
+            "L2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNTVFiqAghTc24uVHlwZcoCCFNzblxU",
+            "eXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRhdGHqAglTc246OlR5cGViBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

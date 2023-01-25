@@ -1,0 +1,19 @@
+version: v1
+managed:
+  enabled: true
+  java_multiple_files: true
+  java_package_prefix:
+    default: ai.visma
+    except:
+      - buf.build/googleapis/googleapis
+      - buf.build/grpc-ecosystem/grpc-gateway
+      - buf.build/validate/validate
+plugins:
+  - remote: buf.build/protocolbuffers/plugins/js
+    out: gen/js
+    opt: import_style=commonjs,binary
+  - remote: buf.build/protocolbuffers/plugins/java
+    out: gen/java
+  - remote: buf.build/protocolbuffers/plugins/csharp
+    out: gen/csharp
+    opt: base_namespace=

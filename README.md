@@ -41,3 +41,6 @@ Dependencies are currently updated manually. They should be be updated periodica
 - Local dependencies - You need to copy the new `.proto` files into the `/deps` directory. You'll find the newer files in the respective github repositories or documentation of the dependency provider.
 
 After that, re-generate the code again.
+
+## Publishing
+We're currently publishing packages for Python and Java(Maven) to Artifact Repository and NuGet package to NuGet.org under the `VMLAssets` organization.

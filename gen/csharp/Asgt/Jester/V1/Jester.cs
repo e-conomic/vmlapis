@@ -40,10 +40,13 @@ namespace Asgt.Jester.V1 {
             "LlN1Z2dlc3Rpb25PcHRpb25zUgdvcHRpb25zEhIKBHRhZ3MYBSADKAlSBHRh",
             "Z3MygAEKBkplc3RlchJ2CgdTdWdnZXN0EiEuYXNndC5qZXN0ZXIudjEuU3Vn",
             "Z2VzdGlvblJlcXVlc3QaIi5hc2d0Lmplc3Rlci52MS5TdWdnZXN0aW9uUmVz",
-            "cG9uc2UiJILT5JMCHjoBKiIZL3YxL3t0eXBlfS97bmFtZX06c3VnZ2VzdEJ4",
-            "WjlnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2pl",
-            "c3Rlci92MTtqZXN0ZXKSQToSEQoLQXV0b1N1Z2dlc3QyAnYxKgECMhBhcHBs",
-            "aWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
+            "cG9uc2UiJILT5JMCHjoBKiIZL3YxL3t0eXBlfS97bmFtZX06c3VnZ2VzdEL4",
+            "AQoXYWkudmlzbWEuYXNndC5qZXN0ZXIudjFCC0plc3RlclByb3RvUAFaOWdp",
+            "dGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvamVzdGVy",
+            "L3YxO2plc3RlcqICA0FKWKoCDkFzZ3QuSmVzdGVyLlYxygIOQXNndFxKZXN0",
+            "ZXJcVjHiAhpBc2d0XEplc3RlclxWMVxHUEJNZXRhZGF0YeoCEEFzZ3Q6Okpl",
+            "c3Rlcjo6VjGSQToSEQoLQXV0b1N1Z2dlc3QyAnYxKgECMhBhcHBsaWNhdGlv",
+            "bi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

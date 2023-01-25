@@ -130,9 +130,11 @@ namespace Ssn.Mlservice.V2 {
             "c3QaIS5zc24ubWxzZXJ2aWNlLnYyLlByZWRpY3RSZXNwb25zZRJiChFGZWF0",
             "dXJlR2VuUHJlZGljdBIqLnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdlblBy",
             "ZWRpY3RSZXF1ZXN0GiEuc3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVzcG9u",
-            "c2VCUUIPTWxTZXJ2aWNlUHJvdG9zWj5naXRodWIuY29tL2UtY29ub21pYy92",
-            "bWxhcGlzL2dlbi9nby9zc24vbWxzZXJ2aWNlL3YyO21sc2VydmljZWIGcHJv",
-            "dG8z"));
+            "c2VCzQEKGWFpLnZpc21hLnNzbi5tbHNlcnZpY2UudjJCDk1sc2VydmljZVBy",
+            "b3RvUAFaPmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nz",
+            "bi9tbHNlcnZpY2UvdjI7bWxzZXJ2aWNlogIDU01YqgIQU3NuLk1sc2Vydmlj",
+            "ZS5WMsoCEFNzblxNbHNlcnZpY2VcVjLiAhxTc25cTWxzZXJ2aWNlXFYyXEdQ",
+            "Qk1ldGFkYXRh6gISU3NuOjpNbHNlcnZpY2U6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
