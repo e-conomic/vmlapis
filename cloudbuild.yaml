@@ -14,7 +14,7 @@ steps:
           python setup.py bdist_wheel
         fi
     env:
-      - "TAG_NAME=${TAG_NAME}"
+      - 'TAG_NAME=$TAG_NAME'
 
   - id: deploy-csharp
     name: "bitnami/dotnet-sdk"
@@ -33,7 +33,7 @@ steps:
           dotnet pack -o . -c Release
         fi
     env:
-      - "TAG_NAME=${TAG_NAME}"
+      - 'TAG_NAME=$TAG_NAME'
     waitFor: ['-']
     secretEnv: ['NUGET_API_KEY']
 
@@ -53,7 +53,7 @@ steps:
           mvn package
         fi
     env:
-      - "TAG_NAME=${TAG_NAME}"
+      - 'TAG_NAME=$TAG_NAME'
     waitFor: ['-']
 
 availableSecrets:
