@@ -1,13 +1,13 @@
 steps:
-  - id: deploy
+  - id: deploy-python
     name: "python:3.7-buster"
     entrypoint: "bash"
     args:
       - "-c"
       - |
+        python setup.py bdist_wheel
         if [ "$TAG_NAME" ] ; then
           pip install twine keyrings.google-artifactregistry-auth
-          python setup.py bdist_wheel
           twine upload --repository-url https://europe-west4-python.pkg.dev/dev-vml-cm/vml-apis-python/ dist/*
         fi
     env:
@@ -19,11 +19,14 @@ steps:
     args:
       - "-c"
       - |
+        cp vmlapis.csproj gen/csharp
+        cd gen/csharp
         if [ "$TAG_NAME"  ] ; then
-          cp vmlapis.csproj gen/csharp
-          cd gen/csharp
           dotnet pack -o . -c Release
           dotnet nuget push vmlapis.$TAG_NAME.nupkg --source https://api.nuget.org/v3/index.json --api-key $$NUGET_API_KEY
+        else 
+          export TAG_NAME=0.0.0
+          dotnet pack -o . -c Release
         fi
     secretEnv: ['NUGET_API_KEY']
 
@@ -33,10 +36,13 @@ steps:
     args:
       - "-c"
       - |
+        cp -R gen/java java-package/src/main/java
+        cd java-package
         if [ "$TAG_NAME" ] ; then
-          cp -R gen/java java-package/src/main/java
-          cd java-package
           mvn deploy
+        else
+          export TAG_NAME=0.0.0
+          mvn package
         fi
 
 availableSecrets:
