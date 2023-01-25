@@ -1,39 +1,39 @@
 steps:
-#  - id: deploy-python
-#    name: "python:3.7-buster"
-#    entrypoint: "bash"
-#    args:
-#      - "-c"
-#      - |
-#        if [ "$TAG_NAME" ] ; then
-#          python setup.py bdist_wheel
-#          pip install twine keyrings.google-artifactregistry-auth
-#          twine upload --repository-url https://europe-west4-python.pkg.dev/dev-vml-cm/vml-apis-python/ dist/*
-#        else
-#          TAG_NAME="v0.0.0"
-#          python setup.py bdist_wheel
-#        fi
-#    env:
-#      - "TAG_NAME=${TAG_NAME}"
-#
-#  - id: deploy-csharp
-#    name: "bitnami/dotnet-sdk"
-#    entrypoint: "bash"
-#    args:
-#      - "-c"
-#      - |
-#        cp vmlapis.csproj gen/csharp
-#        cd gen/csharp
-#        if [ "$TAG_NAME"  ] ; then
-#          export TAG_NAME=${TAG_NAME:1}
-#          dotnet pack -o . -c Release
-#          dotnet nuget push vmlapis.$TAG_NAME.nupkg --source https://api.nuget.org/v3/index.json --api-key $$NUGET_API_KEY
-#        else
-#          export TAG_NAME=0.0.0
-#          dotnet pack -o . -c Release
-#        fi
-#    waitFor: ['-']
-#    secretEnv: ['NUGET_API_KEY']
+  - id: deploy-python
+    name: "python:3.7-buster"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        if [ "$TAG_NAME" ] ; then
+          python setup.py bdist_wheel
+          pip install twine keyrings.google-artifactregistry-auth
+          twine upload --repository-url https://europe-west4-python.pkg.dev/dev-vml-cm/vml-apis-python/ dist/*
+        else
+          TAG_NAME="v0.0.0"
+          python setup.py bdist_wheel
+        fi
+    env:
+      - "TAG_NAME=${TAG_NAME}"
+
+  - id: deploy-csharp
+    name: "bitnami/dotnet-sdk"
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        cp vmlapis.csproj gen/csharp
+        cd gen/csharp
+        if [ "$TAG_NAME"  ] ; then
+          export TAG_NAME=${$TAG_NAME:1}
+          dotnet pack -o . -c Release
+          dotnet nuget push vmlapis.$TAG_NAME.nupkg --source https://api.nuget.org/v3/index.json --api-key $$NUGET_API_KEY
+        else
+          export TAG_NAME=0.0.0
+          dotnet pack -o . -c Release
+        fi
+    waitFor: ['-']
+    secretEnv: ['NUGET_API_KEY']
 
   - id: deploy-java
     name: "maven:3.6.3-jdk-8"
@@ -44,17 +44,16 @@ steps:
         cp -R gen/java java-package/src/main/java
         cd java-package
         if [ "$TAG_NAME" ] ; then
-          export TAG_NAME=${TAG_NAME:1}
+          export TAG_NAME=${$TAG_NAME:1}
           mvn deploy
         else
-          export TAG_NAME=v0.0.0
-          export TAG_NAME=${$TAG_NAME:1}
+          export TAG_NAME=0.0.0
           echo TAG_NAME
           mvn package
         fi
     waitFor: ['-']
 
-#availableSecrets:
-#  secretManager:
-#    - versionName: projects/161107618804/secrets/nuget-api-key/versions/latest
-#      env: 'NUGET_API_KEY'
+availableSecrets:
+  secretManager:
+    - versionName: projects/161107618804/secrets/nuget-api-key/versions/latest
+      env: 'NUGET_API_KEY'
