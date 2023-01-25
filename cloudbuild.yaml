@@ -54,7 +54,7 @@ steps:
         fi
     waitFor: ['-']
 
-availableSecrets:
-  secretManager:
-    - versionName: projects/161107618804/secrets/nuget-api-key/versions/latest
-      env: 'NUGET_API_KEY'
+#availableSecrets:
+#  secretManager:
+#    - versionName: projects/161107618804/secrets/nuget-api-key/versions/latest
+#      env: 'NUGET_API_KEY'
