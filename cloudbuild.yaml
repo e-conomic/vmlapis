@@ -48,7 +48,6 @@ steps:
           mvn deploy
         else
           export TAG_NAME=0.0.0
-          echo TAG_NAME
           mvn package
         fi
     waitFor: ['-']
