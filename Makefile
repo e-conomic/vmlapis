@@ -58,8 +58,8 @@ all:
 		--path proto/cv/scanner/v1/scanner.proto \
 
 
-#	extra generation of dependencies for js since it can only use local .proto files (for now)
-	buf generate deps --template buf.gen.deps.js.yaml
+#	extra generation of dependencies for js, java and C# since it can only use local .proto files (for now)
+	buf generate deps --template buf.gen.deps.yaml
 
 #	generate mock methods for the ssn's main services
 	./scripts/gomock.sh
