@@ -9,7 +9,7 @@ steps:
           python setup.py bdist_wheel
           pip install twine keyrings.google-artifactregistry-auth
           twine upload --repository-url https://europe-west4-python.pkg.dev/dev-vml-cm/vml-apis-python/ dist/*
-        else 
+        else
           TAG_NAME="v0.0.0"
           python setup.py bdist_wheel
         fi
@@ -32,6 +32,8 @@ steps:
           export TAG_NAME=0.0.0
           dotnet pack -o . -c Release
         fi
+    env:
+      - "TAG_NAME=${TAG_NAME}"
     waitFor: ['-']
     secretEnv: ['NUGET_API_KEY']
 
@@ -50,6 +52,8 @@ steps:
           export TAG_NAME=0.0.0
           mvn package
         fi
+    env:
+      - "TAG_NAME=${TAG_NAME}"
     waitFor: ['-']
 
 availableSecrets:
