@@ -45,10 +45,10 @@ steps:
         cd java-package
         if [ "$TAG_NAME" ] ; then
           export TAG_NAME=${TAG_NAME:1}
-          mvn deploy -q
+          mvn deploy
         else
           export TAG_NAME=0.0.0
-          mvn package -q
+          mvn package
         fi
     waitFor: ['-']
 
