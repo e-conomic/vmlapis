@@ -25,13 +25,15 @@ steps:
         cp vmlapis.csproj gen/csharp
         cd gen/csharp
         if [ "$TAG_NAME"  ] ; then
-          export TAG_NAME=${$TAG_NAME:1}
+          export TAG_NAME=${TAG_NAME:1}
           dotnet pack -o . -c Release
           dotnet nuget push vmlapis.$TAG_NAME.nupkg --source https://api.nuget.org/v3/index.json --api-key $$NUGET_API_KEY
         else
           export TAG_NAME=0.0.0
           dotnet pack -o . -c Release
         fi
+    env:
+      - "TAG_NAME=$TAG_NAME"
     waitFor: ['-']
     secretEnv: ['NUGET_API_KEY']
 
@@ -44,12 +46,14 @@ steps:
         cp -R gen/java java-package/src/main/java
         cd java-package
         if [ "$TAG_NAME" ] ; then
-          export TAG_NAME=${$TAG_NAME:1}
+          export TAG_NAME=${TAG_NAME:1}
           mvn deploy
         else
           export TAG_NAME=0.0.0
           mvn package
         fi
+    env:
+      - "TAG_NAME=$TAG_NAME"
     waitFor: ['-']
 
 availableSecrets:
