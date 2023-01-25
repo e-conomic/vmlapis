@@ -32,6 +32,7 @@ steps:
           export TAG_NAME=0.0.0
           dotnet pack -o . -c Release
         fi
+    waitFor: ['-']
     secretEnv: ['NUGET_API_KEY']
 
   - id: deploy-java
@@ -44,11 +45,12 @@ steps:
         cd java-package
         if [ "$TAG_NAME" ] ; then
           export TAG_NAME=${TAG_NAME:1}
-          mvn deploy
+          mvn deploy -q
         else
           export TAG_NAME=0.0.0
-          mvn package
+          mvn package -q
         fi
+    waitFor: ['-']
 
 availableSecrets:
   secretManager:
