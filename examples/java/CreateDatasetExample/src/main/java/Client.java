@@ -34,6 +34,7 @@ public class Client {
                 .setRetentionPolicy(RetentionPolicy.newBuilder().setMaxDays(89).build())
                 .build();
 
+        // see the class for more info
         AuthenticationCallCredentials credentials = new AuthenticationCallCredentials(Authorization.TOKEN);
 
         Empty result = stub.withCallCredentials(credentials).createDataset(createRequest);
