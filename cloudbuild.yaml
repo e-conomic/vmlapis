@@ -27,7 +27,7 @@ steps:
         if [ "$TAG_NAME"  ] ; then
           export TAG_NAME=${TAG_NAME:1} 
           dotnet pack -o . -c Release
-          dotnet nuget push vmlapis.$TAG_NAME.nupkg --source https://api.nuget.org/v3/index.json --api-key $$NUGET_API_KEY
+          dotnet nuget push vmlapis.$$TAG_NAME.nupkg --source https://api.nuget.org/v3/index.json --api-key $$NUGET_API_KEY
         else 
           export TAG_NAME=0.0.0
           dotnet pack -o . -c Release
