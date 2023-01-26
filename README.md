@@ -46,5 +46,5 @@ After that, re-generate the code again.
 In the `examples` directory you can find examples of how to use the generated code.
 
 ### Publishing
-We're currently publishing packages for Python and Java(Maven) to Artifact Repository and NuGet package to NuGet.org under the `VMLAssets` organization.
+We're currently publishing packages for Python and Java(Maven) to Artifact Registry and NuGet package to NuGet.org under the `VMLAssets` organization.
 
