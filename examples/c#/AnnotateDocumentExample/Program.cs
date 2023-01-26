@@ -8,10 +8,10 @@ namespace ConsoleApp1;
 
 static class Program {
     public static void Main(string[] args) {
-        annotateDocument("martin_test_006", "bank", "./dummy-data.pb");
+        annotateDocument();
     }
 
-    static void annotateDocument(String datasetName, String datasetType, String datasetFile)
+    static void annotateDocument()
     {
         //channel
         var chnl = GrpcChannel.ForAddress("https://api.snbx.ssn.visma.ai:443");
