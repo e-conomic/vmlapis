@@ -44,3 +44,5 @@ Insert following snippet into your pom.xml to import vmlapis
   </build>
 </project>
 
+You can find in-depth documentation here: 
+http://docs.vml.visma.ai/
