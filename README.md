@@ -43,7 +43,7 @@ Dependencies are currently updated manually. They should be be updated periodica
 After that, re-generate the code again.
 
 ### Examples
-In the `examples` directory you can find examples of how to use the generated code.
+In the `examples` directory you can find examples of how to use the generated code. You can find in-depth documentation [here](http://docs.vml.visma.ai/)
 
 ### Publishing
 We're currently publishing packages for Python and Java(Maven) to Artifact Registry and NuGet package to NuGet.org under the `VMLAssets` organization.
