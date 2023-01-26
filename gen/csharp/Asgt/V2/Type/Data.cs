@@ -40,8 +40,11 @@ namespace Asgt.V2.Type {
             "c2FjdGlvbhIxCgdpbnZvaWNlGAIgASgLMhUuYXNndC52Mi50eXBlLkludm9p",
             "Y2VIAFIHaW52b2ljZRI+CgxpbnZvaWNlX2xpbmUYAyABKAsyGS5hc2d0LnYy",
             "LnR5cGUuSW52b2ljZUxpbmVIAFILaW52b2ljZUxpbmVCEAoOZGF0YV9zdHJ1",
-            "Y3R1cmVCO1o5Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28v",
-            "YXNndC92Mi90eXBlO2FzZ3R0eXBlYgZwcm90bzM="));
+            "Y3R1cmVCrwEKFWFpLnZpc21hLmFzZ3QudjIudHlwZUIJRGF0YVByb3RvUAFa",
+            "OWdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdjIv",
+            "dHlwZTthc2d0dHlwZaICA0FWVKoCDEFzZ3QuVjIuVHlwZcoCDEFzZ3RcVjJc",
+            "VHlwZeICGEFzZ3RcVjJcVHlwZVxHUEJNZXRhZGF0YeoCDkFzZ3Q6OlYyOjpU",
+            "eXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -44,3 +44,7 @@ After that, re-generate the code again.
 
 ### Examples
 In the `examples` directory you can find examples of how to use the generated code. The examples are given for Java and C#, but the generated code is language agnostic.
+
+### Publishing
+We're currently publishing packages for Python and Java(Maven) to Artifact Repository and NuGet package to NuGet.org under the `VMLAssets` organization.
+

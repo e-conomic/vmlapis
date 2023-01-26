@@ -36,9 +36,11 @@ namespace Asgt.Type {
             "bmRpZGF0ZXMYAiADKAsyJi5hc2d0LnR5cGUuUHJlZGljdGlvbi5UYXJnZXQu",
             "Q2FuZGlkYXRlUgpjYW5kaWRhdGVzGl8KCUNhbmRpZGF0ZRIbCgV2YWx1ZRgB",
             "IAEoCUIF6j8CCAFSBXZhbHVlEjUKCmNvbmZpZGVuY2UYAiABKAsyFS5hc2d0",
-            "LnR5cGUuQ29uZmlkZW5jZVIKY29uZmlkZW5jZUI4WjZnaXRodWIuY29tL2Ut",
-            "Y29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7YXNndHR5cGViBnBy",
-            "b3RvMw=="));
+            "LnR5cGUuQ29uZmlkZW5jZVIKY29uZmlkZW5jZUKiAQoSYWkudmlzbWEuYXNn",
+            "dC50eXBlQg9QcmVkaWN0aW9uUHJvdG9QAVo2Z2l0aHViLmNvbS9lLWNvbm9t",
+            "aWMvdm1sYXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlogIDQVRYqgIJ",
+            "QXNndC5UeXBlygIJQXNndFxUeXBl4gIVQXNndFxUeXBlXEdQQk1ldGFkYXRh",
+            "6gIKQXNndDo6VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

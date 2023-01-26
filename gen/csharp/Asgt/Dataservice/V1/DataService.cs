@@ -79,8 +79,12 @@ namespace Asgt.Dataservice.V1 {
             "Y2UudjEuQ2FsbHNQZXJNb250aFJlc3BvbnNlEm8KEENhbGN1bGF0ZU1ldHJp",
             "Y3MSLC5hc2d0LmRhdGFzZXJ2aWNlLnYxLkNhbGN1bGF0ZU1ldHJpY3NSZXF1",
             "ZXN0Gi0uYXNndC5kYXRhc2VydmljZS52MS5DYWxjdWxhdGVNZXRyaWNzUmVz",
-            "cG9uc2VCSkIRRGF0YVNlcnZpY2VQcm90b3NaNWdpdGh1Yi5jb20vZS1jb25v",
-            "bWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvZGF0YS92MTtkYXRhYgZwcm90bzM="));
+            "cG9uc2VC1QEKHGFpLnZpc21hLmFzZ3QuZGF0YXNlcnZpY2UudjFCEERhdGFT",
+            "ZXJ2aWNlUHJvdG9QAVo1Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9n",
+            "ZW4vZ28vYXNndC9kYXRhL3YxO2RhdGGiAgNBRFiqAhNBc2d0LkRhdGFzZXJ2",
+            "aWNlLlYxygITQXNndFxEYXRhc2VydmljZVxWMeICH0FzZ3RcRGF0YXNlcnZp",
+            "Y2VcVjFcR1BCTWV0YWRhdGHqAhVBc2d0OjpEYXRhc2VydmljZTo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.RetentionPolicyReflection.Descriptor, global::Asgt.Type.SampleReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Dataservice.V1.DataserviceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -36,8 +36,10 @@ namespace Asgt.Type {
             "dHlwZRgIIAEoDjIaLmFzZ3QudHlwZS5Nb2RlbC5JbnB1dFR5cGVSCWlucHV0",
             "VHlwZRIhCgxkYXRhc2V0X3R5cGUYCSABKAlSC2RhdGFzZXRUeXBlIjQKCUlu",
             "cHV0VHlwZRITCg9GRUFUVVJFX1RFTlNPUlMQABISCg5FWEFNUExFX1RFTlNP",
-            "UhABSgQIARADQjhaNmdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2Vu",
-            "L2dvL2FzZ3QvdHlwZTthc2d0dHlwZWIGcHJvdG8z"));
+            "UhABSgQIARADQp0BChJhaS52aXNtYS5hc2d0LnR5cGVCCk1vZGVsUHJvdG9Q",
+            "AVo2Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC90",
+            "eXBlO2FzZ3R0eXBlogIDQVRYqgIJQXNndC5UeXBlygIJQXNndFxUeXBl4gIV",
+            "QXNndFxUeXBlXEdQQk1ldGFkYXRh6gIKQXNndDo6VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

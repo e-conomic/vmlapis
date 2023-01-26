@@ -28,8 +28,10 @@ namespace Asgt.Type {
             "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byJxCghSZXZpc2lvbhIWCgZudW1i",
             "ZXIYASABKANSBm51bWJlchI5CgpjcmVhdGVkX2F0GAIgASgLMhouZ29vZ2xl",
             "LnByb3RvYnVmLlRpbWVzdGFtcFIJY3JlYXRlZEF0EhIKBHNpemUYAyABKANS",
-            "BHNpemVCOFo2Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28v",
-            "YXNndC90eXBlO2FzZ3R0eXBlYgZwcm90bzM="));
+            "BHNpemVCoAEKEmFpLnZpc21hLmFzZ3QudHlwZUINUmV2aXNpb25Qcm90b1AB",
+            "WjZnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3R5",
+            "cGU7YXNndHR5cGWiAgNBVFiqAglBc2d0LlR5cGXKAglBc2d0XFR5cGXiAhVB",
+            "c2d0XFR5cGVcR1BCTWV0YWRhdGHqAgpBc2d0OjpUeXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

@@ -27,9 +27,12 @@ namespace Asgt.V2.Type {
             "Ch9hc2d0L3YyL3R5cGUvdGFyZ2V0X3ZhbHVlLnByb3RvEgxhc2d0LnYyLnR5",
             "cGUaF3ZhbGlkYXRlL3ZhbGlkYXRlLnByb3RvImEKC1RhcmdldFZhbHVlEjwK",
             "BG5hbWUYASABKAlCKPpCJXIjKIACMh5eW0EtWmEtejAtOS5dW0EtWmEtejAt",
-            "OV8uPi1dKiRSBG5hbWUSFAoFdmFsdWUYAiABKAlSBXZhbHVlQjtaOWdpdGh1",
-            "Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdjIvdHlwZTth",
-            "c2d0dHlwZWIGcHJvdG8z"));
+            "OV8uPi1dKiRSBG5hbWUSFAoFdmFsdWUYAiABKAlSBXZhbHVlQrYBChVhaS52",
+            "aXNtYS5hc2d0LnYyLnR5cGVCEFRhcmdldFZhbHVlUHJvdG9QAVo5Z2l0aHVi",
+            "LmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC92Mi90eXBlO2Fz",
+            "Z3R0eXBlogIDQVZUqgIMQXNndC5WMi5UeXBlygIMQXNndFxWMlxUeXBl4gIY",
+            "QXNndFxWMlxUeXBlXEdQQk1ldGFkYXRh6gIOQXNndDo6VjI6OlR5cGViBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

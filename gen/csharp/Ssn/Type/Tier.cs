@@ -25,9 +25,11 @@ namespace Ssn.Type {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChNzc24vdHlwZS90aWVyLnByb3RvEghzc24udHlwZSouCgRUaWVyEgsKB0RF",
-            "RkFVTFQQABIMCghTVEFOREFSRBABEgsKB1BSRU1JVU0QAkI2WjRnaXRodWIu",
-            "Y29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vdHlwZTtzc250eXBl",
-            "YgZwcm90bzM="));
+            "RkFVTFQQABIMCghTVEFOREFSRBABEgsKB1BSRU1JVU0QAkKVAQoRYWkudmlz",
+            "bWEuc3NuLnR5cGVCCVRpZXJQcm90b1ABWjRnaXRodWIuY29tL2UtY29ub21p",
+            "Yy92bWxhcGlzL2dlbi9nby9zc24vdHlwZTtzc250eXBlogIDU1RYqgIIU3Nu",
+            "LlR5cGXKAghTc25cVHlwZeICFFNzblxUeXBlXEdQQk1ldGFkYXRh6gIJU3Nu",
+            "OjpUeXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ssn.Type.Tier), }, null, null));

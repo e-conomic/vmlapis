@@ -13,14 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13ssn/type/tier.proto\x12\x08ssn.type*.\n\x04Tier\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x0c\n\x08STANDARD\x10\x01\x12\x0b\n\x07PREMIUM\x10\x02\x42\x36Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntypeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x13ssn/type/tier.proto\x12\x08ssn.type*.\n\x04Tier\x12\x0b\n\x07\x44\x45\x46\x41ULT\x10\x00\x12\x0c\n\x08STANDARD\x10\x01\x12\x0b\n\x07PREMIUM\x10\x02\x42\x95\x01\n\x11\x61i.visma.ssn.typeB\tTierProtoP\x01Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype\xa2\x02\x03STX\xaa\x02\x08Ssn.Type\xca\x02\x08Ssn\\Type\xe2\x02\x14Ssn\\Type\\GPBMetadata\xea\x02\tSsn::Typeb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'ssn.type.tier_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype'
+  DESCRIPTOR._serialized_options = b'\n\021ai.visma.ssn.typeB\tTierProtoP\001Z4github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Type\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Type'
   _TIER._serialized_start=33
   _TIER._serialized_end=79
 # @@protoc_insertion_point(module_scope)

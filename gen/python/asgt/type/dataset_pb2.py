@@ -15,14 +15,14 @@ from vml_proto.asgt.type import retention_policy_pb2 as asgt_dot_type_dot_retent
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17\x61sgt/type/dataset.proto\x12\tasgt.type\x1a asgt/type/retention_policy.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x91\x03\n\x07\x44\x61taset\x12\x1a\n\x08\x63onsumer\x18\x01 \x01(\tR\x08\x63onsumer\x12\x12\n\x04name\x18\x02 \x01(\tR\x04name\x12\x12\n\x04type\x18\x03 \x01(\tR\x04type\x12\x12\n\x04tags\x18\x04 \x03(\tR\x04tags\x12\x18\n\x07targets\x18\x05 \x03(\tR\x07targets\x12\x45\n\x10retention_policy\x18\t \x01(\x0b\x32\x1a.asgt.type.RetentionPolicyR\x0fretentionPolicy\x12\x39\n\ncreated_at\x18\n \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tcreatedAt\x12\x39\n\nupdated_at\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tupdatedAt\x12\x12\n\x04size\x18\x0c \x01(\x03R\x04size\x12=\n\x0ctruncated_at\x18\r \x01(\x0b\x32\x1a.google.protobuf.TimestampR\x0btruncatedAtJ\x04\x08\x06\x10\tB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x17\x61sgt/type/dataset.proto\x12\tasgt.type\x1a asgt/type/retention_policy.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x91\x03\n\x07\x44\x61taset\x12\x1a\n\x08\x63onsumer\x18\x01 \x01(\tR\x08\x63onsumer\x12\x12\n\x04name\x18\x02 \x01(\tR\x04name\x12\x12\n\x04type\x18\x03 \x01(\tR\x04type\x12\x12\n\x04tags\x18\x04 \x03(\tR\x04tags\x12\x18\n\x07targets\x18\x05 \x03(\tR\x07targets\x12\x45\n\x10retention_policy\x18\t \x01(\x0b\x32\x1a.asgt.type.RetentionPolicyR\x0fretentionPolicy\x12\x39\n\ncreated_at\x18\n \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tcreatedAt\x12\x39\n\nupdated_at\x18\x0b \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tupdatedAt\x12\x12\n\x04size\x18\x0c \x01(\x03R\x04size\x12=\n\x0ctruncated_at\x18\r \x01(\x0b\x32\x1a.google.protobuf.TimestampR\x0btruncatedAtJ\x04\x08\x06\x10\tB\x9f\x01\n\x12\x61i.visma.asgt.typeB\x0c\x44\x61tasetProtoP\x01Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype\xa2\x02\x03\x41TX\xaa\x02\tAsgt.Type\xca\x02\tAsgt\\Type\xe2\x02\x15\x41sgt\\Type\\GPBMetadata\xea\x02\nAsgt::Typeb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'asgt.type.dataset_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'
+  DESCRIPTOR._serialized_options = b'\n\022ai.visma.asgt.typeB\014DatasetProtoP\001Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype\242\002\003ATX\252\002\tAsgt.Type\312\002\tAsgt\\Type\342\002\025Asgt\\Type\\GPBMetadata\352\002\nAsgt::Type'
   _DATASET._serialized_start=106
   _DATASET._serialized_end=507
 # @@protoc_insertion_point(module_scope)

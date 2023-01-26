@@ -30,9 +30,12 @@ namespace Ssn.Access.V1 {
             "ZXRLZXlSZXNwb25zZRIOCgJpZBgBIAEoCVICaWQSFAoFdG9rZW4YAiABKAlS",
             "BXRva2VuMn0KBkFjY2VzcxJzChBHZW5lcmF0ZVZhbGV0S2V5Eh4uc3NuLmFj",
             "Y2Vzcy52MS5WYWxldEtleVJlcXVlc3QaHy5zc24uYWNjZXNzLnYxLlZhbGV0",
-            "S2V5UmVzcG9uc2UiHoLT5JMCGDoBKiITL3YxL2FjY2Vzcy92YWxldGtleUI6",
-            "WjhnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vYWNj",
-            "ZXNzL3YxO2FjY2Vzc2IGcHJvdG8z"));
+            "S2V5UmVzcG9uc2UiHoLT5JMCGDoBKiITL3YxL2FjY2Vzcy92YWxldGtleUK1",
+            "AQoWYWkudmlzbWEuc3NuLmFjY2Vzcy52MUILQWNjZXNzUHJvdG9QAVo4Z2l0",
+            "aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL2FjY2Vzcy92",
+            "MTthY2Nlc3OiAgNTQViqAg1Tc24uQWNjZXNzLlYxygINU3NuXEFjY2Vzc1xW",
+            "MeICGVNzblxBY2Nlc3NcVjFcR1BCTWV0YWRhdGHqAg9Tc246OkFjY2Vzczo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

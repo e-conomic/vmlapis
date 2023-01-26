@@ -1,5 +1,0 @@
-version: v1
-plugins:
-  - remote: buf.build/protocolbuffers/plugins/js
-    out: gen/js
-    opt: import_style=commonjs,binary

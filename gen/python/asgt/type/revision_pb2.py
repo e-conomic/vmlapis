@@ -14,14 +14,14 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18\x61sgt/type/revision.proto\x12\tasgt.type\x1a\x1fgoogle/protobuf/timestamp.proto\"q\n\x08Revision\x12\x16\n\x06number\x18\x01 \x01(\x03R\x06number\x12\x39\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tcreatedAt\x12\x12\n\x04size\x18\x03 \x01(\x03R\x04sizeB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18\x61sgt/type/revision.proto\x12\tasgt.type\x1a\x1fgoogle/protobuf/timestamp.proto\"q\n\x08Revision\x12\x16\n\x06number\x18\x01 \x01(\x03R\x06number\x12\x39\n\ncreated_at\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tcreatedAt\x12\x12\n\x04size\x18\x03 \x01(\x03R\x04sizeB\xa0\x01\n\x12\x61i.visma.asgt.typeB\rRevisionProtoP\x01Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype\xa2\x02\x03\x41TX\xaa\x02\tAsgt.Type\xca\x02\tAsgt\\Type\xe2\x02\x15\x41sgt\\Type\\GPBMetadata\xea\x02\nAsgt::Typeb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'asgt.type.revision_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'
+  DESCRIPTOR._serialized_options = b'\n\022ai.visma.asgt.typeB\rRevisionProtoP\001Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype\242\002\003ATX\252\002\tAsgt.Type\312\002\tAsgt\\Type\342\002\025Asgt\\Type\\GPBMetadata\352\002\nAsgt::Type'
   _REVISION._serialized_start=72
   _REVISION._serialized_end=185
 # @@protoc_insertion_point(module_scope)

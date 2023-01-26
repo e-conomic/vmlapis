@@ -26,8 +26,10 @@ namespace Asgt.Type {
           string.Concat(
             "CiBhc2d0L3R5cGUvcmV0ZW50aW9uX3BvbGljeS5wcm90bxIJYXNndC50eXBl",
             "IiwKD1JldGVudGlvblBvbGljeRIZCghtYXhfZGF5cxgBIAEoA1IHbWF4RGF5",
-            "c0I4WjZnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0",
-            "L3R5cGU7YXNndHR5cGViBnByb3RvMw=="));
+            "c0KnAQoSYWkudmlzbWEuYXNndC50eXBlQhRSZXRlbnRpb25Qb2xpY3lQcm90",
+            "b1ABWjZnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0",
+            "L3R5cGU7YXNndHR5cGWiAgNBVFiqAglBc2d0LlR5cGXKAglBc2d0XFR5cGXi",
+            "AhVBc2d0XFR5cGVcR1BCTWV0YWRhdGHqAgpBc2d0OjpUeXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

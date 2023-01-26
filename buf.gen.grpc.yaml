@@ -1,4 +1,13 @@
 version: v1
+managed:
+  enabled: true
+  java_multiple_files: true
+  java_package_prefix:
+    default: ai.visma
+    except:
+      - buf.build/googleapis/googleapis
+      - buf.build/grpc-ecosystem/grpc-gateway
+      - buf.build/validate/validate
 plugins:
   # the go-grpc plugin can also be in the .gen.all file as it ignores .proto files with no grpc endpoints, but it's here to keep it consistent
   - remote: buf.build/grpc/plugins/go
@@ -11,3 +20,7 @@ plugins:
   - remote: buf.build/grpc/plugins/web
     out: gen/js
     opt: import_style=commonjs+dts,mode=grpcwebtext
+  - remote: buf.build/grpc/plugins/java
+    out: gen/java
+  - remote: buf.build/grpc/plugins/csharp
+    out: gen/csharp
