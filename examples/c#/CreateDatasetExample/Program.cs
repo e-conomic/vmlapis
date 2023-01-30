@@ -17,8 +17,7 @@ static class Program {
     static void createDataset(String datasetName, String datasetType, String datasetFile)
     {
         // create a client
-        // todo change address to stag
-        using var channel = GrpcChannel.ForAddress("https://api.snbx.asgt.visma.ai:443");
+        using var channel = GrpcChannel.ForAddress("https://api.stag.asgt.visma.ai:443");
         var client = new DataService.DataServiceClient(channel);
 
         // load the dataset file

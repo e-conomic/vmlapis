@@ -20,8 +20,7 @@ public class Client {
 
     public static void createDataset(String datasetName, String datasetType, String datasetFile) throws IOException {
         // create a client stub for calling asgt
-        // todo change address to stag
-        ManagedChannel channel = ManagedChannelBuilder.forAddress("api.snbx.asgt.visma.ai", 443).build();
+        ManagedChannel channel = ManagedChannelBuilder.forAddress("api.stag.asgt.visma.ai", 443).build();
         DataServiceGrpc.DataServiceBlockingStub stub = DataServiceGrpc.newBlockingStub(channel);
 
         // load the dataset file

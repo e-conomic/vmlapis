@@ -1,4 +1,4 @@
-Insert following snippet into your pom.xml to import vmlapis
+Insert following snippet into your pom.xml to import vmlapis package into your project
 ```
 <project>
   <dependencies>

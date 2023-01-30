@@ -11,8 +11,4 @@
         <PackageReference Include="Grpc.Net.Client" Version="2.50.0" />
         <PackageReference Include="vmlapis" Version="1.0.5" />
     </ItemGroup>
-    
-    <ItemGroup>
-      <Content Include="obj\Debug\encodings.xml" />
-    </ItemGroup>
 </Project>

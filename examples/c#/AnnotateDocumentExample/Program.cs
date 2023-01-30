@@ -15,7 +15,7 @@ static class Program {
     static void annotateDocument()
     {
         //channel
-        var chnl = GrpcChannel.ForAddress("https://api.snbx.ssn.visma.ai:443");
+        var chnl = GrpcChannel.ForAddress("https://api.stag.ssn.visma.ai:443");
         //client
         var clnt = new DocumentAnnotator.DocumentAnnotatorClient(chnl);
         
