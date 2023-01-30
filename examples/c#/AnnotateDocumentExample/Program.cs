@@ -1,4 +1,5 @@
-﻿using Grpc.Core;
+﻿using Google.Protobuf;
+using Grpc.Core;
 using Grpc.Net.Client;
 using Ssn.Annotator.V1;
 using Confidence = Ssn.Type.Confidence;
@@ -17,15 +18,14 @@ static class Program {
         var chnl = GrpcChannel.ForAddress("https://api.snbx.ssn.visma.ai:443");
         //client
         var clnt = new DocumentAnnotator.DocumentAnnotatorClient(chnl);
-        //request https://www.africau.edu/images/default/sample.pdf
+        
+        //file content
+        var content = ByteString.CopyFrom(File.ReadAllBytes("../../../example.png"));
         var rqst = new DocumentAnnotatorRequest
         {
             Document = new Document
             {
-                Source = new DocumentSource
-                {
-                    HttpUri = "https://www.africau.edu/images/default/sample.pdf"
-                }
+                Content = content,
             },
             Features =
             {
@@ -40,12 +40,10 @@ static class Program {
         
         //metadata
         var metadata = new Metadata();
-        metadata.Add("authorization", "Bearer " + Authorization.TOKEN);
+        metadata.Add("authorization", "Bearer demo");
         
-        // call
-        var response = clnt.AnnotateDocument(rqst, metadata);
-        
-        //response
+        // call and response
+        var response = clnt.AnnotateDocument(rqst, metadata); 
         Console.WriteLine(response);
     }
 }

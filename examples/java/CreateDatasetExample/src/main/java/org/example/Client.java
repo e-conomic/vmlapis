@@ -1,3 +1,5 @@
+package org.example;
+
 import ai.visma.asgt.dataservice.v1.AppendDataRequest;
 import ai.visma.asgt.dataservice.v1.CreateRequest;
 import ai.visma.asgt.dataservice.v1.DataServiceGrpc;
@@ -18,6 +20,7 @@ public class Client {
 
     public static void createDataset(String datasetName, String datasetType, String datasetFile) throws IOException {
         // create a client stub for calling asgt
+        // todo change address to stag
         ManagedChannel channel = ManagedChannelBuilder.forAddress("api.snbx.asgt.visma.ai", 443).build();
         DataServiceGrpc.DataServiceBlockingStub stub = DataServiceGrpc.newBlockingStub(channel);
 
@@ -35,7 +38,7 @@ public class Client {
                 .build();
 
         // see the class for more info
-        AuthenticationCallCredentials credentials = new AuthenticationCallCredentials(Authorization.TOKEN);
+        AuthenticationCallCredentials credentials = new AuthenticationCallCredentials("demo");
 
         Empty result = stub.withCallCredentials(credentials).createDataset(createRequest);
 
