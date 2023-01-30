@@ -1,16 +1,12 @@
 package org.example;
 
-import ai.visma.asgt.dataservice.v1.AppendDataRequest;
 import ai.visma.asgt.dataservice.v1.CreateRequest;
 import ai.visma.asgt.dataservice.v1.DataServiceGrpc;
 import ai.visma.asgt.type.*;
-import com.google.common.io.Files;
 import com.google.protobuf.Empty;
-import com.google.protobuf.NullValue;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.LinkedList;
