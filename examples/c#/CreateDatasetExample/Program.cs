@@ -20,6 +20,7 @@ static class Program
         using var channel = GrpcChannel.ForAddress("https://api.stag.asgt.visma.ai:443");
         var client = new DataService.DataServiceClient(channel);
 
+        // build samples according to samples.json
         var samples = createSamples();
 
         // request to create a dataset

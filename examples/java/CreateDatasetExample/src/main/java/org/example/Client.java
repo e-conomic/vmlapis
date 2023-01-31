@@ -22,6 +22,7 @@ public class Client {
         ManagedChannel channel = ManagedChannelBuilder.forAddress("api.stag.asgt.visma.ai", 443).build();
         DataServiceGrpc.DataServiceBlockingStub stub = DataServiceGrpc.newBlockingStub(channel);
 
+        // build samples according to samples.json
         List<Sample> samples = createSamples();
 
         // request to create a dataset
