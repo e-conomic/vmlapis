@@ -71,6 +71,10 @@ Insert following snippet into your pom.xml to import vmlapis package into your p
     </plugins>
   </build>
 </project>
-
+```
 You can find in-depth documentation here: 
 http://docs.vml.visma.ai/
+
+`mvn install` to compile
+
+`java -jar <ARTIFACT_NAME>.jar` to run

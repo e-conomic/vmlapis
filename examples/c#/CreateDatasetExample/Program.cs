@@ -47,34 +47,33 @@ static class Program
         var samples = new List<Sample>();
         samples.Add(new Sample
             {
-                Data =
-                    new Data
+                Data = new Data
+                {
+                    Invoice = new Invoice
                     {
-                        Invoice = new Invoice
+                        Currency = "EUR",
+                        CustomerRef = "custom_reference",
+                        IssueDate = null,
+                        Supplier = new Supplier
                         {
-                            Currency = "EUR",
-                            CustomerRef = "custom_reference",
-                            IssueDate = null,
-                            Supplier = new Supplier
-                            {
-                                GlobalId = "DK30402499",
-                                Id = "0001",
-                                Name = "Acme Inc"
-                            },
-                            Text = "Four have Information Operations",
-                            Total = 2948.3949676931375f
+                            GlobalId = "DK30402499",
+                            Id = "0001",
+                            Name = "Acme Inc"
                         },
-                        InvoiceLine = new InvoiceLine
-                        {
-                            ItemId = "0000001",
-                            Text = "Occupy ecological in 1897 near Blacksburg."
-                        },
-                        Transaction = new Transaction
-                        {
-                            Amount = 2948.3949676931375f,
-                            Text = "Are simply this, along with some larger stones or cobbles, leaving a desert"
-                        }
+                        Text = "Four have Information Operations",
+                        Total = 2948.3949676931375f
                     },
+                    InvoiceLine = new InvoiceLine
+                    {
+                        ItemId = "0000001",
+                        Text = "Occupy ecological in 1897 near Blacksburg."
+                    },
+                    Transaction = new Transaction
+                    {
+                        Amount = 2948.3949676931375f,
+                        Text = "Are simply this, along with some larger stones or cobbles, leaving a desert"
+                    }
+                },
                 TargetValues = { targetValues }
             }
         );
