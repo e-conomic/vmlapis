@@ -5,3 +5,6 @@ dist/
 ssn/**/*.py
 __pycache__/
 .idea
+examples/java/*/target
+examples/c#/*/bin
+examples/c#/*/obj
