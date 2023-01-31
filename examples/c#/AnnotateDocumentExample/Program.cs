@@ -20,6 +20,8 @@ static class Program {
         var clnt = new DocumentAnnotator.DocumentAnnotatorClient(chnl);
         
         //file content
+        //you might need to change the argument of File.ReadAllBytes based on whether you're running `dotnet run` 
+        //from the root directory or running the compiled binary file from the bin directory 
         var content = ByteString.CopyFrom(File.ReadAllBytes("../../../example.png"));
         var rqst = new DocumentAnnotatorRequest
         {
