@@ -1,14 +1,15 @@
 Insert following snippet into your pom.xml to import vmlapis package into your project
+
 ```
 <project>
   <dependencies>
     <dependency>
       <groupId>ai.visma</groupId>
       <artifactId>vml-apis</artifactId>
-      <version>1.0.10</version>
+      <version><!-- current version --></version>
     </dependency>
   </dependencies>
-  
+
   <distributionManagement>
     <snapshotRepository>
       <id>artifact-registry</id>
@@ -43,16 +44,11 @@ Insert following snippet into your pom.xml to import vmlapis package into your p
     </extensions>
     </plugins>
       <plugin>
-        <!-- Build an executable JAR -->
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.1.0</version>
+        <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <archive>
-            <manifest>
-              <mainClass>org.example.Client</mainClass>
-            </manifest>
-          </archive>
+          <source>8</source>
+          <target>8</target>
         </configuration>
       </plugin>
       <plugin>
@@ -65,6 +61,16 @@ Insert following snippet into your pom.xml to import vmlapis package into your p
             <goals>
               <goal>shade</goal>
             </goals>
+            <configuration>
+              <shadedArtifactAttached>true</shadedArtifactAttached>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer">
+                </transformer>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>org.example.Client</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
           </execution>
         </executions>
       </plugin>
@@ -72,9 +78,10 @@ Insert following snippet into your pom.xml to import vmlapis package into your p
   </build>
 </project>
 ```
-You can find in-depth documentation here: 
+
+You can find in-depth documentation here:
 http://docs.vml.visma.ai/
 
 `mvn install` to compile
 
-`java -jar <ARTIFACT_NAME>.jar` to run
+`java -jar target/<ARTIFACT_NAME>-SNAPSHOT-shaded.jar` to run
