@@ -82,6 +82,7 @@ Insert following snippet into your pom.xml to import vmlapis package into your p
 You can find in-depth documentation here:
 http://docs.vml.visma.ai/
 
-`mvn install` to compile
-
-`java -jar target/<ARTIFACT_NAME>-SNAPSHOT-shaded.jar` to run
+Run this command from root folder to compile and run particular example
+```bash
+mvn install && java -jar target/grpc_client-1.0-SNAPSHOT-shaded.jar
+```
