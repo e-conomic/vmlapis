@@ -1,12 +1,17 @@
-Insert following snippet into your pom.xml to import vmlapis package into your project
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>org.example</groupId>
+  <artifactId>grpc_client</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <name>Archetype - grpc_client</name>
+  <url>http://maven.apache.org</url>
 
-```
-<project>
   <dependencies>
     <dependency>
       <groupId>ai.visma</groupId>
       <artifactId>vml-apis</artifactId>
-      <version><!-- current version --></version>
+      <version>1.0.10</version>
     </dependency>
   </dependencies>
 
@@ -42,7 +47,7 @@ Insert following snippet into your pom.xml to import vmlapis package into your p
         <version>2.1.0</version>
       </extension>
     </extensions>
-    </plugins>
+    <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
@@ -77,12 +82,4 @@ Insert following snippet into your pom.xml to import vmlapis package into your p
     </plugins>
   </build>
 </project>
-```
 
-You can find in-depth documentation here:
-http://docs.vml.visma.ai/
-
-Run this command from root folder to compile and run particular example
-```bash
-mvn install && java -jar target/grpc_client-1.0-SNAPSHOT-shaded.jar
-```
