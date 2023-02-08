@@ -13,6 +13,7 @@ setuptools.setup(
     packages=[f'vml_proto.{p}' for p in setuptools.find_namespace_packages(
         where='gen/python')],
     package_dir={'vml_proto': 'gen/python'},
+    package_data={'':['*.pyi']},
     classifiers=[
         "Programming Language :: Python :: 3",
     ],

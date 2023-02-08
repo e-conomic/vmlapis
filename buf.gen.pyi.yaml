@@ -1,0 +1,6 @@
+version: v1
+plugins:
+#  - remote: buf.build/adriansahlman/plugins/mypy-protobuf
+#    out: gen/pyi1
+  - remote: buf.build/jeffsawatzky/plugins/mypy-protobuf
+    out: gen/python

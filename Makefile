@@ -3,7 +3,7 @@ all:
 	@echo "Generate all the things"
 
 #	general code generation for all the supported languages
-	buf generate proto --template buf.gen.all.yaml --verbose
+	buf generate proto --template buf.gen.all.yaml --verbose --include-imports
 
 #	grpc client/server code for all services (customer-facing and internal) - needs separate generation since 
 #	python and js don't ignore .proto files with no grpc endpoints (results in too many empty grpc files generated) 
@@ -30,6 +30,9 @@ all:
 		--exclude-path proto/asgt/data \
 		--include-imports \
 		--verbose
+
+#	generates .pyi files for python intellisense
+	buf generate proto --template buf.gen.pyi.yaml --include-imports
 
 #	server-side validation, only targeting go code and only for asgt v2 api
 	buf generate proto --template buf.gen.validate.go.yaml --path proto/asgt/v2  --verbose
