@@ -13,14 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x61sgt/type/target_value.proto\x12\tasgt.type\"7\n\x0bTargetValue\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x14\n\x05value\x18\x02 \x01(\tR\x05valueB\xa3\x01\n\x12\x61i.visma.asgt.typeB\x10TargetValueProtoP\x01Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype\xa2\x02\x03\x41TX\xaa\x02\tAsgt.Type\xca\x02\tAsgt\\Type\xe2\x02\x15\x41sgt\\Type\\GPBMetadata\xea\x02\nAsgt::Typeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1c\x61sgt/type/target_value.proto\x12\tasgt.type\"7\n\x0bTargetValue\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x14\n\x05value\x18\x02 \x01(\tR\x05valueB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'asgt.type.target_value_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022ai.visma.asgt.typeB\020TargetValueProtoP\001Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype\242\002\003ATX\252\002\tAsgt.Type\312\002\tAsgt\\Type\342\002\025Asgt\\Type\\GPBMetadata\352\002\nAsgt::Type'
+  DESCRIPTOR._serialized_options = b'Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'
   _TARGETVALUE._serialized_start=43
   _TARGETVALUE._serialized_end=98
 # @@protoc_insertion_point(module_scope)

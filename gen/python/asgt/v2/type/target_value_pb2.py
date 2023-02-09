@@ -14,14 +14,14 @@ _sym_db = _symbol_database.Default()
 from validate import validate_pb2 as validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x61sgt/v2/type/target_value.proto\x12\x0c\x61sgt.v2.type\x1a\x17validate/validate.proto\"a\n\x0bTargetValue\x12<\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x04name\x12\x14\n\x05value\x18\x02 \x01(\tR\x05valueB\xb6\x01\n\x15\x61i.visma.asgt.v2.typeB\x10TargetValueProtoP\x01Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype\xa2\x02\x03\x41VT\xaa\x02\x0c\x41sgt.V2.Type\xca\x02\x0c\x41sgt\\V2\\Type\xe2\x02\x18\x41sgt\\V2\\Type\\GPBMetadata\xea\x02\x0e\x41sgt::V2::Typeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1f\x61sgt/v2/type/target_value.proto\x12\x0c\x61sgt.v2.type\x1a\x17validate/validate.proto\"a\n\x0bTargetValue\x12<\n\x04name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x04name\x12\x14\n\x05value\x18\x02 \x01(\tR\x05valueB;Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttypeb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'asgt.v2.type.target_value_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025ai.visma.asgt.v2.typeB\020TargetValueProtoP\001Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype\242\002\003AVT\252\002\014Asgt.V2.Type\312\002\014Asgt\\V2\\Type\342\002\030Asgt\\V2\\Type\\GPBMetadata\352\002\016Asgt::V2::Type'
+  DESCRIPTOR._serialized_options = b'Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype'
   _TARGETVALUE.fields_by_name['name']._options = None
   _TARGETVALUE.fields_by_name['name']._serialized_options = b'\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$'
   _TARGETVALUE._serialized_start=74

@@ -15,14 +15,14 @@ from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x61sgt/v2/type/training.proto\x12\x0c\x61sgt.v2.type\x1a\x17\x61sgt/type/dataset.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xea\x02\n\x08Training\x12\x39\n\ncreated_at\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tcreatedAt\x12\x16\n\x06status\x18\x02 \x01(\tR\x06status\x12\'\n\x0ftraining_status\x18\x03 \x01(\tR\x0etrainingStatus\x12\x36\n\x17training_status_message\x18\x04 \x01(\tR\x15trainingStatusMessage\x12;\n\x0b\x66inish_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\nfinishTime\x12,\n\x07\x64\x61taset\x18\x06 \x01(\x0b\x32\x12.asgt.type.DatasetR\x07\x64\x61taset\x12?\n\rschedule_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\x0cscheduleTimeB\xb3\x01\n\x15\x61i.visma.asgt.v2.typeB\rTrainingProtoP\x01Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype\xa2\x02\x03\x41VT\xaa\x02\x0c\x41sgt.V2.Type\xca\x02\x0c\x41sgt\\V2\\Type\xe2\x02\x18\x41sgt\\V2\\Type\\GPBMetadata\xea\x02\x0e\x41sgt::V2::Typeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x61sgt/v2/type/training.proto\x12\x0c\x61sgt.v2.type\x1a\x17\x61sgt/type/dataset.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xea\x02\n\x08Training\x12\x39\n\ncreated_at\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tcreatedAt\x12\x16\n\x06status\x18\x02 \x01(\tR\x06status\x12\'\n\x0ftraining_status\x18\x03 \x01(\tR\x0etrainingStatus\x12\x36\n\x17training_status_message\x18\x04 \x01(\tR\x15trainingStatusMessage\x12;\n\x0b\x66inish_time\x18\x05 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\nfinishTime\x12,\n\x07\x64\x61taset\x18\x06 \x01(\x0b\x32\x12.asgt.type.DatasetR\x07\x64\x61taset\x12?\n\rschedule_time\x18\x07 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\x0cscheduleTimeB;Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttypeb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'asgt.v2.type.training_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025ai.visma.asgt.v2.typeB\rTrainingProtoP\001Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype\242\002\003AVT\252\002\014Asgt.V2.Type\312\002\014Asgt\\V2\\Type\342\002\030Asgt\\V2\\Type\\GPBMetadata\352\002\016Asgt::V2::Type'
+  DESCRIPTOR._serialized_options = b'Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype'
   _TRAINING._serialized_start=104
   _TRAINING._serialized_end=466
 # @@protoc_insertion_point(module_scope)

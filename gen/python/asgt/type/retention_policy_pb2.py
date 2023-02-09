@@ -13,14 +13,14 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n asgt/type/retention_policy.proto\x12\tasgt.type\",\n\x0fRetentionPolicy\x12\x19\n\x08max_days\x18\x01 \x01(\x03R\x07maxDaysB\xa7\x01\n\x12\x61i.visma.asgt.typeB\x14RetentionPolicyProtoP\x01Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype\xa2\x02\x03\x41TX\xaa\x02\tAsgt.Type\xca\x02\tAsgt\\Type\xe2\x02\x15\x41sgt\\Type\\GPBMetadata\xea\x02\nAsgt::Typeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n asgt/type/retention_policy.proto\x12\tasgt.type\",\n\x0fRetentionPolicy\x12\x19\n\x08max_days\x18\x01 \x01(\x03R\x07maxDaysB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'asgt.type.retention_policy_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022ai.visma.asgt.typeB\024RetentionPolicyProtoP\001Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype\242\002\003ATX\252\002\tAsgt.Type\312\002\tAsgt\\Type\342\002\025Asgt\\Type\\GPBMetadata\352\002\nAsgt::Type'
+  DESCRIPTOR._serialized_options = b'Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'
   _RETENTIONPOLICY._serialized_start=47
   _RETENTIONPOLICY._serialized_end=91
 # @@protoc_insertion_point(module_scope)

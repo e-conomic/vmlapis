@@ -16,14 +16,14 @@ from vml_proto.asgt.v2.type import target_value_pb2 as asgt_dot_v2_dot_type_dot_
 from validate import validate_pb2 as validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x61sgt/v2/type/example.proto\x12\x0c\x61sgt.v2.type\x1a\x17\x61sgt/v2/type/data.proto\x1a\x1f\x61sgt/v2/type/target_value.proto\x1a\x17validate/validate.proto\"\x9a\x01\n\x07\x45xample\x12&\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x12.asgt.v2.type.DataR\x04\x64\x61ta\x12J\n\rtarget_values\x18\x02 \x03(\x0b\x32\x19.asgt.v2.type.TargetValueB\n\xfa\x42\x07\x92\x01\x04\x08\x01(\x00R\x0ctargetValues\x12\x1b\n\x02id\x18\x03 \x01(\tB\x0b\xfa\x42\x08r\x06\xd0\x01\x01\xb0\x01\x01R\x02idB\xb2\x01\n\x15\x61i.visma.asgt.v2.typeB\x0c\x45xampleProtoP\x01Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype\xa2\x02\x03\x41VT\xaa\x02\x0c\x41sgt.V2.Type\xca\x02\x0c\x41sgt\\V2\\Type\xe2\x02\x18\x41sgt\\V2\\Type\\GPBMetadata\xea\x02\x0e\x41sgt::V2::Typeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1a\x61sgt/v2/type/example.proto\x12\x0c\x61sgt.v2.type\x1a\x17\x61sgt/v2/type/data.proto\x1a\x1f\x61sgt/v2/type/target_value.proto\x1a\x17validate/validate.proto\"\x9a\x01\n\x07\x45xample\x12&\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x12.asgt.v2.type.DataR\x04\x64\x61ta\x12J\n\rtarget_values\x18\x02 \x03(\x0b\x32\x19.asgt.v2.type.TargetValueB\n\xfa\x42\x07\x92\x01\x04\x08\x01(\x00R\x0ctargetValues\x12\x1b\n\x02id\x18\x03 \x01(\tB\x0b\xfa\x42\x08r\x06\xd0\x01\x01\xb0\x01\x01R\x02idB;Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttypeb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'asgt.v2.type.example_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\025ai.visma.asgt.v2.typeB\014ExampleProtoP\001Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype\242\002\003AVT\252\002\014Asgt.V2.Type\312\002\014Asgt\\V2\\Type\342\002\030Asgt\\V2\\Type\\GPBMetadata\352\002\016Asgt::V2::Type'
+  DESCRIPTOR._serialized_options = b'Z9github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype'
   _EXAMPLE.fields_by_name['target_values']._options = None
   _EXAMPLE.fields_by_name['target_values']._serialized_options = b'\372B\007\222\001\004\010\001(\000'
   _EXAMPLE.fields_by_name['id']._options = None

@@ -14,7 +14,7 @@ _sym_db = _symbol_database.Default()
 from google.protobuf import descriptor_pb2 as google_dot_protobuf_dot_descriptor__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cgen_bq_schema/bq_table.proto\x12\rgen_bq_schema\x1a google/protobuf/descriptor.proto\"]\n\x16\x42igQueryMessageOptions\x12\x1d\n\ntable_name\x18\x01 \x01(\tR\ttableName\x12$\n\x0euse_json_names\x18\x02 \x01(\x08R\x0cuseJsonNames:l\n\rbigquery_opts\x12\x1f.google.protobuf.MessageOptions\x18\xfd\x07 \x01(\x0b\x32%.gen_bq_schema.BigQueryMessageOptionsR\x0c\x62igqueryOptsB\xb3\x01\n\x16\x61i.visma.gen_bq_schemaB\x0c\x42qTableProtoP\x01Z?github.com/e-conomic/vmlapis/gen/go/gen_bq_schema;gen_bq_schema\xa2\x02\x03GXX\xaa\x02\x0bGenBqSchema\xca\x02\x0bGenBqSchema\xe2\x02\x17GenBqSchema\\GPBMetadata\xea\x02\x0bGenBqSchemab\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1cgen_bq_schema/bq_table.proto\x12\rgen_bq_schema\x1a google/protobuf/descriptor.proto\"]\n\x16\x42igQueryMessageOptions\x12\x1d\n\ntable_name\x18\x01 \x01(\tR\ttableName\x12$\n\x0euse_json_names\x18\x02 \x01(\x08R\x0cuseJsonNames:l\n\rbigquery_opts\x12\x1f.google.protobuf.MessageOptions\x18\xfd\x07 \x01(\x0b\x32%.gen_bq_schema.BigQueryMessageOptionsR\x0c\x62igqueryOptsBAZ?github.com/e-conomic/vmlapis/gen/go/gen_bq_schema;gen_bq_schemab\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'gen_bq_schema.bq_table_pb2', globals())
@@ -22,7 +22,7 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   google_dot_protobuf_dot_descriptor__pb2.MessageOptions.RegisterExtension(bigquery_opts)
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\026ai.visma.gen_bq_schemaB\014BqTableProtoP\001Z?github.com/e-conomic/vmlapis/gen/go/gen_bq_schema;gen_bq_schema\242\002\003GXX\252\002\013GenBqSchema\312\002\013GenBqSchema\342\002\027GenBqSchema\\GPBMetadata\352\002\013GenBqSchema'
+  DESCRIPTOR._serialized_options = b'Z?github.com/e-conomic/vmlapis/gen/go/gen_bq_schema;gen_bq_schema'
   _BIGQUERYMESSAGEOPTIONS._serialized_start=81
   _BIGQUERYMESSAGEOPTIONS._serialized_end=174
 # @@protoc_insertion_point(module_scope)
