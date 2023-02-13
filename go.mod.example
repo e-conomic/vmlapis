@@ -1,0 +1,8 @@
+module example.com/example
+
+go 1.18
+
+require (
+	github.com/e-conomic/vmlapis commit
+	google.golang.org/grpc v1.53.0
+)
