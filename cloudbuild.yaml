@@ -55,6 +55,7 @@ steps:
     env:
       - 'TAG_NAME=$TAG_NAME'
     waitFor: ['-']
+
   - id: test-go
     name: 'golang'
     entrypoint: "bash"
@@ -65,7 +66,7 @@ steps:
         cp -R examples/go/AnnotateDocumentExample gotest/AnnotateDocumentExample
         cp -R examples/go/CreateDatasetExample gotest/CreateDatasetExample
         cp -R examples/go/RasterizePdfExample gotest/RasterizePdfExample
-        sed -i 's/commit/$COMMIT_SHA' go.mod.example
+        sed -i 's/commit/$COMMIT_SHA/' go.mod.example
         cp go.mod.example gotest/AnnotateDocumentExample/go.mod
         cp go.mod.example gotest/CreateDatasetExample/go.mod
         cp go.mod.example gotest/RasterizePdfExample/go.mod
@@ -78,6 +79,7 @@ steps:
         cd ../RasterizePdfExample
         go mod tidy
         go build
+    waitFor: ['-']
 
 availableSecrets:
   secretManager:
