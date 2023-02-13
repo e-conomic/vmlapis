@@ -1,4 +1,4 @@
-module example.com/example
+module github.com/e-conomic/vmlapis/examples/asgt
 
 go 1.19
 

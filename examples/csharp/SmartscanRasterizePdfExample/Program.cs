@@ -12,7 +12,6 @@ static class Program
     static async Task Main(string[] args)
     {
         await rasterizePDF();
-
     }
 
     static async Task rasterizePDF()
@@ -47,6 +46,4 @@ static class Program
             Console.WriteLine(current.ToString());
         }
     }
-    
-
 }

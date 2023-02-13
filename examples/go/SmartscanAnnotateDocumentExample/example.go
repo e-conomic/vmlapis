@@ -12,6 +12,10 @@ import (
 )
 
 func main() {
+	AnnotateDocument()
+}
+
+func AnnotateDocument() {
 	// create connection
 	conn, err := grpc.Dial("api.stag.ssn.visma.ai:443", grpc.WithTransportCredentials(credentials.NewTLS(nil)))
 	if err != nil {

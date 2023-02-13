@@ -11,9 +11,10 @@ import (
 )
 
 func main() {
-	datasetName := "test_001"
-	datasetType := "bank"
+	CreateDataset("test_001", "bank")
+}
 
+func CreateDataset(datasetName, datasetType string) {
 	// create connection
 	conn, err := grpc.Dial("api.stag.asgt.visma.ai:443", grpc.WithTransportCredentials(credentials.NewTLS(nil)))
 	if err != nil {
