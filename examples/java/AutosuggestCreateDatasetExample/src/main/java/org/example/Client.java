@@ -56,5 +56,6 @@ public class Client {
 
         // Returns Empty response if successful, or throws ALREADY_EXISTS exception
         Empty response = stub.withCallCredentials(credentials).createDataset(createRequest);
+        System.out.println(response);
     }
 }

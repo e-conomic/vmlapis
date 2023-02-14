@@ -6,10 +6,6 @@ import com.google.protobuf.ByteString;
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -34,12 +30,12 @@ public class Client {
                 .setDocument(Document.newBuilder()
                         .setContent(content))
                 .addAllFeatures(Arrays.asList(
-                                Feature.newBuilder().setType(Feature.Type.DEFAULT).build(),
-                                Feature.newBuilder()
-                                        .setType(Feature.Type.CURRENCY)
-                                        .setMaxResults(2)
-                                        .setMinConfidenceValue(Confidence.Level.VERY_LOW_VALUE).build(),
-                                Feature.newBuilder().setType(Feature.Type.TEXT).build()))
+                        Feature.newBuilder().setType(Feature.Type.DEFAULT).build(),
+                        Feature.newBuilder()
+                                .setType(Feature.Type.CURRENCY)
+                                .setMaxResults(2)
+                                .setMinConfidenceValue(Confidence.Level.VERY_LOW_VALUE).build(),
+                        Feature.newBuilder().setType(Feature.Type.TEXT).build()))
                 .build();
 
         // see the class for more info
