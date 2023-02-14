@@ -63,20 +63,20 @@ steps:
       - "-c"
       - |
         mkdir gotest
-        cp -R examples/go/AnnotateDocumentExample gotest/AnnotateDocumentExample
-        cp -R examples/go/CreateDatasetExample gotest/CreateDatasetExample
-        cp -R examples/go/RasterizePdfExample gotest/RasterizePdfExample
+        cp -R examples/go/AutosuggestCreateDatasetExample gotest/AutosuggestCreateDatasetExample
+        cp -R examples/go/SmartscanAnnotateDocumentExample gotest/SmartscanAnnotateDocumentExample
+        cp -R examples/go/SmartscanRasterizePdfExample gotest/SmartscanRasterizePdfExample
         sed -i 's/commit/$COMMIT_SHA/' go.mod.example
-        cp go.mod.example gotest/AnnotateDocumentExample/go.mod
-        cp go.mod.example gotest/CreateDatasetExample/go.mod
-        cp go.mod.example gotest/RasterizePdfExample/go.mod
-        cd gotest/AnnotateDocumentExample
+        cp go.mod.example gotest/AutosuggestCreateDatasetExample/go.mod
+        cp go.mod.example gotest/SmartscanAnnotateDocumentExample/go.mod
+        cp go.mod.example gotest/SmartscanRasterizePdfExample/go.mod
+        cd ../AutosuggestCreateDatasetExample
         go mod tidy
         go build
-        cd ../CreateDatasetExample
+        cd gotest/SmartscanAnnotateDocumentExample
         go mod tidy
         go build
-        cd ../RasterizePdfExample
+        cd ../SmartscanRasterizePdfExample
         go mod tidy
         go build
     waitFor: ['-']
