@@ -14,9 +14,9 @@ _sym_db = _symbol_database.Default()
 from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
 from vml_proto.asgt.v2.type import example_pb2 as asgt_dot_v2_dot_type_dot_example__pb2
 from vml_proto.asgt.v2.type import training_pb2 as asgt_dot_v2_dot_type_dot_training__pb2
-from google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
+from vml_proto.google.api import annotations_pb2 as google_dot_api_dot_annotations__pb2
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
-from protoc_gen_openapiv2.options import annotations_pb2 as protoc__gen__openapiv2_dot_options_dot_annotations__pb2
+from vml_proto.protoc_gen_openapiv2.options import annotations_pb2 as protoc__gen__openapiv2_dot_options_dot_annotations__pb2
 from validate import validate_pb2 as validate_dot_validate__pb2
 
 
