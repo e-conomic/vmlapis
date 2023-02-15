@@ -1,2 +1,2 @@
-vml-proto==1.0.10
+vml-proto==1.0.11
 grpcio==1.51.1
