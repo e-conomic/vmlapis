@@ -56,6 +56,31 @@ steps:
       - 'TAG_NAME=$TAG_NAME'
     waitFor: ['-']
 
+  - id: test-go
+    name: 'golang'
+    entrypoint: "bash"
+    args:
+      - "-c"
+      - |
+        mkdir gotest
+        cp -R examples/go/AutosuggestCreateDatasetExample gotest/AutosuggestCreateDatasetExample
+        cp -R examples/go/SmartscanAnnotateDocumentExample gotest/SmartscanAnnotateDocumentExample
+        cp -R examples/go/SmartscanRasterizePdfExample gotest/SmartscanRasterizePdfExample
+        sed -i 's/commit/$COMMIT_SHA/' go.mod.example
+        cp go.mod.example gotest/AutosuggestCreateDatasetExample/go.mod
+        cp go.mod.example gotest/SmartscanAnnotateDocumentExample/go.mod
+        cp go.mod.example gotest/SmartscanRasterizePdfExample/go.mod
+        cd ../AutosuggestCreateDatasetExample
+        go mod tidy
+        go build
+        cd gotest/SmartscanAnnotateDocumentExample
+        go mod tidy
+        go build
+        cd ../SmartscanRasterizePdfExample
+        go mod tidy
+        go build
+    waitFor: ['-']
+
 availableSecrets:
   secretManager:
     - versionName: projects/161107618804/secrets/nuget-api-key/versions/latest

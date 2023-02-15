@@ -6,5 +6,12 @@ ssn/**/*.py
 __pycache__/
 .idea
 examples/java/*/target
+examples/java/*/dependency-reduced-pom.xml
 examples/csharp/*/bin
 examples/csharp/*/obj
+examples/python/*/venv
+examples/python/*/.Python
+examples/go/*/example
+java-package/target
+java-package/src/main/*
+!java-package/src/main/.gitkeep

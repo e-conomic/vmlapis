@@ -31,6 +31,9 @@ all:
 		--include-imports \
 		--verbose
 
+#	generates .pyi files for python intellisense
+	buf generate proto --template buf.gen.python.yaml --include-imports
+
 #	server-side validation, only targeting go code and only for asgt v2 api
 	buf generate proto --template buf.gen.validate.go.yaml --path proto/asgt/v2  --verbose
 

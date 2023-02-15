@@ -14,14 +14,14 @@ _sym_db = _symbol_database.Default()
 from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!asgt/type/train_model_event.proto\x12\tasgt.type\x1a\x17\x61sgt/type/dataset.proto\"\x9a\x02\n\x0fTrainModelEvent\x12,\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.DatasetR\x07\x64\x61taset\x12#\n\rmodel_version\x18\x04 \x01(\x03R\x0cmodelVersion\x12\x16\n\x06status\x18\x05 \x01(\tR\x06status\x12%\n\x0estatus_message\x18\x06 \x01(\tR\rstatusMessage\x12\x41\n\tartifacts\x18\x07 \x03(\x0b\x32#.asgt.type.TrainModelEvent.ArtifactR\tartifacts\x1a\x32\n\x08\x41rtifact\x12\x12\n\x04type\x18\x01 \x01(\tR\x04type\x12\x12\n\x04path\x18\x02 \x01(\tR\x04pathB\xa7\x01\n\x12\x61i.visma.asgt.typeB\x14TrainModelEventProtoP\x01Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype\xa2\x02\x03\x41TX\xaa\x02\tAsgt.Type\xca\x02\tAsgt\\Type\xe2\x02\x15\x41sgt\\Type\\GPBMetadata\xea\x02\nAsgt::Typeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n!asgt/type/train_model_event.proto\x12\tasgt.type\x1a\x17\x61sgt/type/dataset.proto\"\x9a\x02\n\x0fTrainModelEvent\x12,\n\x07\x64\x61taset\x18\x01 \x01(\x0b\x32\x12.asgt.type.DatasetR\x07\x64\x61taset\x12#\n\rmodel_version\x18\x04 \x01(\x03R\x0cmodelVersion\x12\x16\n\x06status\x18\x05 \x01(\tR\x06status\x12%\n\x0estatus_message\x18\x06 \x01(\tR\rstatusMessage\x12\x41\n\tartifacts\x18\x07 \x03(\x0b\x32#.asgt.type.TrainModelEvent.ArtifactR\tartifacts\x1a\x32\n\x08\x41rtifact\x12\x12\n\x04type\x18\x01 \x01(\tR\x04type\x12\x12\n\x04path\x18\x02 \x01(\tR\x04pathB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
 
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, globals())
 _builder.BuildTopDescriptorsAndMessages(DESCRIPTOR, 'asgt.type.train_model_event_pb2', globals())
 if _descriptor._USE_C_DESCRIPTORS == False:
 
   DESCRIPTOR._options = None
-  DESCRIPTOR._serialized_options = b'\n\022ai.visma.asgt.typeB\024TrainModelEventProtoP\001Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype\242\002\003ATX\252\002\tAsgt.Type\312\002\tAsgt\\Type\342\002\025Asgt\\Type\\GPBMetadata\352\002\nAsgt::Type'
+  DESCRIPTOR._serialized_options = b'Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'
   _TRAINMODELEVENT._serialized_start=74
   _TRAINMODELEVENT._serialized_end=356
   _TRAINMODELEVENT_ARTIFACT._serialized_start=306
