@@ -14,7 +14,7 @@ steps:
           python setup.py bdist_wheel
         fi
     env:
-      - 'TAG_NAME=$TAG_NAME'
+      - "TAG_NAME=$TAG_NAME"
 
   - id: deploy-csharp
     name: "bitnami/dotnet-sdk"
@@ -33,9 +33,9 @@ steps:
           dotnet pack -o . -c Release
         fi
     env:
-      - 'TAG_NAME=$TAG_NAME'
-    waitFor: ['-']
-    secretEnv: ['NUGET_API_KEY']
+      - "TAG_NAME=$TAG_NAME"
+    waitFor: ["-"]
+    secretEnv: ["NUGET_API_KEY"]
 
   - id: deploy-java
     name: "maven:3.6.3-jdk-8"
@@ -53,35 +53,37 @@ steps:
           mvn package
         fi
     env:
-      - 'TAG_NAME=$TAG_NAME'
-    waitFor: ['-']
+      - "TAG_NAME=$TAG_NAME"
+    waitFor: ["-"]
 
   - id: test-go
-    name: 'golang'
+    name: "golang"
     entrypoint: "bash"
     args:
       - "-c"
       - |
-        mkdir gotest
-        cp -R examples/go/AutosuggestCreateDatasetExample gotest/AutosuggestCreateDatasetExample
-        cp -R examples/go/SmartscanAnnotateDocumentExample gotest/SmartscanAnnotateDocumentExample
-        cp -R examples/go/SmartscanRasterizePdfExample gotest/SmartscanRasterizePdfExample
-        sed -i 's/commit/$COMMIT_SHA/' go.mod.example
-        cp go.mod.example gotest/AutosuggestCreateDatasetExample/go.mod
-        cp go.mod.example gotest/SmartscanAnnotateDocumentExample/go.mod
-        cp go.mod.example gotest/SmartscanRasterizePdfExample/go.mod
-        cd ../AutosuggestCreateDatasetExample
-        go mod tidy
-        go build
-        cd gotest/SmartscanAnnotateDocumentExample
-        go mod tidy
-        go build
-        cd ../SmartscanRasterizePdfExample
-        go mod tidy
-        go build
-    waitFor: ['-']
+        if ![ "$TAG_NAME" ] ; then
+          mkdir gotest
+          cp -R examples/go/AutosuggestCreateDatasetExample gotest/AutosuggestCreateDatasetExample
+          cp -R examples/go/SmartscanAnnotateDocumentExample gotest/SmartscanAnnotateDocumentExample
+          cp -R examples/go/SmartscanRasterizePdfExample gotest/SmartscanRasterizePdfExample
+          sed -i 's/commit/$COMMIT_SHA/' go.mod.example
+          cp go.mod.example gotest/AutosuggestCreateDatasetExample/go.mod
+          cp go.mod.example gotest/SmartscanAnnotateDocumentExample/go.mod
+          cp go.mod.example gotest/SmartscanRasterizePdfExample/go.mod
+          cd ../AutosuggestCreateDatasetExample
+          go mod tidy
+          go build
+          cd gotest/SmartscanAnnotateDocumentExample
+          go mod tidy
+          go build
+          cd ../SmartscanRasterizePdfExample
+          go mod tidy
+          go build
+        fi
+    waitFor: ["-"]
 
 availableSecrets:
   secretManager:
     - versionName: projects/161107618804/secrets/nuget-api-key/versions/latest
-      env: 'NUGET_API_KEY'
+      env: "NUGET_API_KEY"
