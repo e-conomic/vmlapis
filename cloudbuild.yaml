@@ -71,10 +71,10 @@ steps:
           cp go.mod.example gotest/AutosuggestCreateDatasetExample/go.mod
           cp go.mod.example gotest/SmartscanAnnotateDocumentExample/go.mod
           cp go.mod.example gotest/SmartscanRasterizePdfExample/go.mod
-          cd ../AutosuggestCreateDatasetExample
+          cd gotest/AutosuggestCreateDatasetExample
           go mod tidy
           go build
-          cd gotest/SmartscanAnnotateDocumentExample
+          cd ../SmartscanAnnotateDocumentExample
           go mod tidy
           go build
           cd ../SmartscanRasterizePdfExample
