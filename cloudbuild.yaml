@@ -62,7 +62,7 @@ steps:
     args:
       - "-c"
       - |
-        if ![ "$TAG_NAME" ] ; then
+        if ! [ "$TAG_NAME" ] ; then
           mkdir gotest
           cp -R examples/go/AutosuggestCreateDatasetExample gotest/AutosuggestCreateDatasetExample
           cp -R examples/go/SmartscanAnnotateDocumentExample gotest/SmartscanAnnotateDocumentExample
