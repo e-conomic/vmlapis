@@ -14,14 +14,11 @@ static class Program {
 
     static void annotateDocument()
     {
-        //channel
-        var chnl = GrpcChannel.ForAddress("https://api.stag.ssn.visma.ai:443");
-        //client
-        var clnt = new DocumentAnnotator.DocumentAnnotatorClient(chnl);
+        // 1. client
+        var channel = GrpcChannel.ForAddress("https://api.stag.ssn.visma.ai:443");
+        var client = new DocumentAnnotator.DocumentAnnotatorClient(channel);
         
-        //file content
-        //you might need to change the argument of File.ReadAllBytes based on whether you're running `dotnet run` 
-        //from the root directory or running the compiled binary file from the bin directory 
+        // 2. request
         var content = ByteString.CopyFrom(File.ReadAllBytes("../../../example.png"));
         var rqst = new DocumentAnnotatorRequest
         {
@@ -40,12 +37,11 @@ static class Program {
             }
         };
         
-        //metadata
-        var metadata = new Metadata();
-        metadata.Add("authorization", "Bearer demo");
-        
-        // call and response
-        var response = clnt.AnnotateDocument(rqst, metadata); 
+        // 3. metadata
+        var metadata = new Metadata { { "authorization", "Bearer demo" } };
+        // 4. call
+        DocumentAnnotatorResponse response = client.AnnotateDocument(rqst, metadata); 
+        // 5. response
         Console.WriteLine(response);
     }
 }

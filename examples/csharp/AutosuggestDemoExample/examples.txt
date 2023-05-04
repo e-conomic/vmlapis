@@ -1,0 +1,254 @@
+// few more examples
+                new Example
+                {
+                    Data = new Data
+                    {
+                        InvoiceLine = new InvoiceLine
+                        {
+                            ItemId = "002",
+                            Text = "Tea Bags",
+                            CustomerRef = "Wild Company",
+                            Supplier = new Supplier
+                            {
+                                GlobalId = "DK30402499",
+                                Id = "0001",
+                                Name = "Acme Inc"
+                            },
+                            Amount = 2500f,
+                            IssueDate = Timestamp.FromDateTime(DateTime.UtcNow),
+                        },
+                    },
+                    TargetValues =
+                    {
+                        new TargetValue
+                        {
+                            Name = "Account",
+                            Value = "Catering"
+                        }
+                    }
+                },
+                new Example
+                {
+                    Data = new Data
+                    {
+                        InvoiceLine = new InvoiceLine
+                        {
+                            ItemId = "003",
+                            Text = "Coffee Pods",
+                            CustomerRef = "Wild Company",
+                            Supplier = new Supplier
+                            {
+                                GlobalId = "DK30402499",
+                                Id = "0001",
+                                Name = "Acme Inc"
+                            },
+                            Amount = 504f,
+                            IssueDate = Timestamp.FromDateTime(DateTime.UtcNow),
+                        },
+                    },
+                    TargetValues =
+                    {
+                        new TargetValue
+                        {
+                            Name = "Account",
+                            Value = "Catering"
+                        }
+                    }
+                },
+                // 10 more examples
+                new Example
+                {
+                    Data = new Data
+                    {
+                        InvoiceLine = new InvoiceLine
+                        {
+                            ItemId = "004",
+                            Text = "Hot Chocolate Mix",
+                            CustomerRef = "Wild Company",
+                            Supplier = new Supplier
+                            {
+                                GlobalId = "DK30402499",
+                                Id = "0001",
+                                Name = "Acme Inc"
+                            },
+                            Amount = 72f,
+                            IssueDate = Timestamp.FromDateTime(DateTime.UtcNow),
+                        },
+                    },
+                    TargetValues =
+                    {
+                        new TargetValue
+                        {
+                            Name = "Account",
+                            Value = "Catering"
+                        }
+                    }
+                },
+                new Example
+                {
+                    Data = new Data
+                    {
+                        InvoiceLine = new InvoiceLine
+                        {
+                            ItemId = "005",
+                            Text = "Assorted Chips",
+                            CustomerRef = "Wild Company",
+                            Supplier = new Supplier
+                            {
+                                GlobalId = "DK30402499",
+                                Id = "0001",
+                                Name = "Acme Inc"
+                            },
+                            Amount = 6f,
+                            IssueDate = Timestamp.FromDateTime(DateTime.UtcNow),
+                        },
+                    },
+                    TargetValues =
+                    {
+                        new TargetValue
+                        {
+                            Name = "Account",
+                            Value = "Catering"
+                        }
+                    }
+                },
+                new Example
+                {
+                    Data = new Data
+                    {
+                        InvoiceLine = new InvoiceLine
+                        {
+                            ItemId = "006",
+                            Text = "Mixed Nuts",
+                            CustomerRef = "Wild Company",
+                            Supplier = new Supplier
+                            {
+                                GlobalId = "DK30402499",
+                                Id = "0001",
+                                Name = "Acme Inc"
+                            },
+                            Amount = 8f,
+                            IssueDate = Timestamp.FromDateTime(DateTime.UtcNow),
+                        },
+                    },
+                    TargetValues =
+                    {
+                        new TargetValue
+                        {
+                            Name = "Account",
+                            Value = "Catering"
+                        }
+                    }
+                },
+                new Example
+                {
+                    Data = new Data
+                    {
+                        InvoiceLine = new InvoiceLine
+                        {
+                            ItemId = "007",
+                            Text = "Veggie Platter",
+                            CustomerRef = "Wild Company",
+                            Supplier = new Supplier
+                            {
+                                GlobalId = "DK30402499",
+                                Id = "0001",
+                                Name = "Acme Inc"
+                            },
+                            Amount = 18f,
+                            IssueDate = Timestamp.FromDateTime(DateTime.UtcNow),
+                        },
+                    },
+                    TargetValues =
+                    {
+                        new TargetValue
+                        {
+                            Name = "Account",
+                            Value = "Catering"
+                        }
+                    }
+                },
+                new Example
+                {
+                    Data = new Data
+                    {
+                        InvoiceLine = new InvoiceLine
+                        {
+                            ItemId = "008",
+                            Text = "Alien Bartenders",
+                            CustomerRef = "Wild Company",
+                            Supplier = new Supplier
+                            {
+                                GlobalId = "DK30402499",
+                                Id = "0001",
+                                Name = "Acme Inc"
+                            },
+                            Amount = 300f,
+                            IssueDate = Timestamp.FromDateTime(DateTime.UtcNow),
+                        },
+                    },
+                    TargetValues =
+                    {
+                        new TargetValue
+                        {
+                            Name = "Account",
+                            Value = "Entertainment"
+                        }
+                    }
+                },
+                new Example
+                {
+                    Data = new Data
+                    {
+                        InvoiceLine = new InvoiceLine
+                        {
+                            ItemId = "009",
+                            Text = "Holographic Dance Floor",
+                            CustomerRef = "Wild Company",
+                            Supplier = new Supplier
+                            {
+                                GlobalId = "DK30402499",
+                                Id = "0001",
+                                Name = "Acme Inc"
+                            },
+                            Amount = 500f,
+                            IssueDate = Timestamp.FromDateTime(DateTime.UtcNow),
+                        },
+                    },
+                    TargetValues =
+                    {
+                        new TargetValue
+                        {
+                            Name = "Account",
+                            Value = "Entertainment"
+                        }
+                    }
+                },
+                new Example
+                {
+                    Data = new Data
+                    {
+                        InvoiceLine = new InvoiceLine
+                        {
+                            ItemId = "010",
+                            Text = "Giant Inflatable Space Shuttle",
+                            CustomerRef = "Wild Company",
+                            Supplier = new Supplier
+                            {
+                                GlobalId = "DK30402499",
+                                Id = "0001",
+                                Name = "Acme Inc"
+                            },
+                            Amount = 1000f,
+                            IssueDate = Timestamp.FromDateTime(DateTime.UtcNow),
+                        },
+                    },
+                    TargetValues =
+                    {
+                        new TargetValue
+                        {
+                            Name = "Account",
+                            Value = "Entertainment"
+                        }
+                    }
+                },

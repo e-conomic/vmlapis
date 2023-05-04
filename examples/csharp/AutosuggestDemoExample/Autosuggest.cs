@@ -2,86 +2,73 @@
 using Asgt.V2.Type;
 using Google.Protobuf;
 using Google.Protobuf.WellKnownTypes;
+using Google.Type;
 using Grpc.Core;
 using Grpc.Net.Client;
 using Ssn.Annotator.V1;
 using Ssn.Dataservice.V1;
+using Ssn.Type;
 using AsgtDataservice = Asgt.Dataservice.V1.DataService;
 using Document = Ssn.Annotator.V1.Document;
 
 namespace ConsoleApp1;
 
-internal static class Program
+internal static class Autosuggest
 {
     private static Metadata _metadata;
     private static DatasetService.DatasetServiceClient _datasetServiceClient;
-    private static DocumentAnnotator.DocumentAnnotatorClient _documentAnnotatorClient;
-    private static DataService.DataServiceClient _dataServiceClient;
-    private static string _name;
     private static SuggesterService.SuggesterServiceClient _suggesterServiceClient;
+    private static string _datasetName;
 
     public static void Main(string[] args)
     {
         var asgtChannel = GrpcChannel.ForAddress("https://api.stag.asgt.visma.ai:443");
-        var ssnChannel = GrpcChannel.ForAddress("https://api.stag.ssn.visma.ai:443");
-        _metadata = new Metadata();
-        _metadata.Add("authorization", "Bearer demo");
-        _datasetServiceClient = new DatasetService.DatasetServiceClient(asgtChannel);
-        _documentAnnotatorClient = new DocumentAnnotator.DocumentAnnotatorClient(ssnChannel);
-        _dataServiceClient = new DataService.DataServiceClient(ssnChannel);
+        _datasetServiceClient = new DatasetService.DatasetServiceClient(asgtChannel); //v2 autosuggest client
         _suggesterServiceClient = new SuggesterService.SuggesterServiceClient(asgtChannel);
-        _name = "present_test_001";
+        _metadata = new Metadata { { "authorization", "Bearer demo" } };
 
-        // Asgt CreateDataset and check training status
-
-        // createDataset();
-        // Thread.Sleep(1000);
-        // getDataset();
-        // batchCreateExamples();
-        // Thread.Sleep(1000);
-        // getTrainings();
-
+        _datasetName = "autosuggest-demo-1";
         
-        // Ssn AnnotateDocument and sendFeedback
-        
-        // var feedback = annotateDocument();
-        // Thread.Sleep(1000);
-        // sendFeedback(feedback);
+        createDataset();
 
+        getDataset();
         
-        // Asgt Suggest and DeleteDataset
+        batchCreateExamples();
+        
+        getTrainings();
         
         suggest();
-        // deleteDataset();
+        
+        deleteDataset();
     }
 
     private static void createDataset()
     {
         var request = new CreateDatasetRequest
         {
-            DatasetName = _name
+            DatasetName = _datasetName
         };
 
-        var response = _datasetServiceClient.CreateDataset(request, _metadata);
-        Console.WriteLine(response);
+        _datasetServiceClient.CreateDataset(request, _metadata);
     }
 
     private static void getDataset()
     {
         var request = new GetDatasetRequest
         {
-            DatasetName = _name
+            DatasetName = _datasetName
         };
+
+        var respt =_datasetServiceClient.GetDataset(request, _metadata);
         
-        var response = _datasetServiceClient.GetDataset(request, _metadata);
-        Console.WriteLine(response);
+        Console.WriteLine(respt);
     }
     
     private static void batchCreateExamples()
     {
-        var request = new BatchCreateExampleRequest
+        var requst = new BatchCreateExampleRequest
         {
-            DatasetName = _name,
+            DatasetName = _datasetName,
             Examples =
             {
                 new Example
@@ -90,18 +77,17 @@ internal static class Program
                     {
                         InvoiceLine = new InvoiceLine
                         {
-                            ItemId = "001",
-                            Text = "Bottled Water",
-                            CustomerRef = "Wild Company",
+                            Amount = 240f,
+                            Text = "Bottled water",
                             Supplier = new Supplier
                             {
                                 GlobalId = "DK30402499",
                                 Id = "0001",
                                 Name = "Acme Inc"
                             },
-                            Amount = 240f,
-                            IssueDate = Timestamp.FromDateTime(DateTime.UtcNow),
+                            CustomerRef = "Wild Company",
                         },
+
                     },
                     TargetValues =
                     {
@@ -112,7 +98,6 @@ internal static class Program
                         }
                     }
                 },
-                // few more examples
                 new Example
                 {
                     Data = new Data
@@ -169,7 +154,6 @@ internal static class Program
                         }
                     }
                 },
-                // 10 more examples
                 new Example
                 {
                     Data = new Data
@@ -366,33 +350,35 @@ internal static class Program
                         }
                     }
                 },
-            }
+            },
+
         };
-        _datasetServiceClient.BatchCreateExample(request, _metadata);
+
+        _datasetServiceClient.BatchCreateExample(requst, _metadata);
     }
     
     private static void getTrainings()
     {
         var request = new GetDatasetTrainingsRequest
         {
-            DatasetName = _name,
+            DatasetName = _datasetName
         };
 
-        var response = _datasetServiceClient.GetDatasetTrainings(request, _metadata);
-        Console.WriteLine(FormatJson(response.ToString()));
+        var resp = _datasetServiceClient.GetDatasetTrainings(request, _metadata);
+        Console.WriteLine(PrettyPrint(resp.ToString()));
     }
 
     private static void suggest()
     {
         var request = new SuggestRequest
         {
-            DatasetName = _name,
+            DatasetName = _datasetName,
             Input = new Data
             {
                 InvoiceLine = new InvoiceLine
                 {
-                    ItemId = "003",
-                    Text = "Coffee Pods",
+                    ItemId = "002",
+                    Text = "Tea Bags",
                     CustomerRef = "Wild Company",
                     Supplier = new Supplier
                     {
@@ -400,69 +386,27 @@ internal static class Program
                         Id = "0001",
                         Name = "Acme Inc"
                     },
-                    Amount = 504f,
+                    Amount = 2500f,
                     IssueDate = Timestamp.FromDateTime(DateTime.UtcNow),
                 },
-            },
-        };
-
-        var response = _suggesterServiceClient.Suggest(request, _metadata);
-        Console.WriteLine(FormatJson(response.ToString()));
-    }
-
-    private static void sendFeedback(string feedbackID)
-    {
-        var request = new FeedbackRequest
-        {
-            Id = feedbackID,
-            TrueValues = new TrueValues
-            {
-                DocumentType = "Invoice",
             }
         };
 
-        var response = _dataServiceClient.Feedback(request, _metadata);
-        Console.WriteLine(FormatJson(response.ToString()));
+        var resp = _suggesterServiceClient.Suggest(request, _metadata);
+        Console.WriteLine(PrettyPrint(resp.ToString()));
     }
 
-    private static string annotateDocument()
-    {
-        var request = new DocumentAnnotatorRequest
-        {
-            Document = new Document
-            {
-                Content = ByteString.CopyFrom(File.ReadAllBytes("../../../example_invoice.pdf")),
-            },
-            Features =
-            {
-                new Feature
-                {
-                    Type = Feature.Types.Type.OrderDate
-                },
-                new Feature
-                {
-                    Type = Feature.Types.Type.Default
-                }
-            }
-        };
-
-        DocumentAnnotatorResponse response = _documentAnnotatorClient.AnnotateDocument(request, _metadata);
-        Console.WriteLine(FormatJson(response.ToString()));
-
-        return response.FeedbackId;
-    }
-    
     private static void deleteDataset()
     {
         var request = new DeleteDatasetRequest
         {
-            DatasetName = _name
+            DatasetName = _datasetName
         };
-        var response = _datasetServiceClient.DeleteDataset(request, _metadata);
-        Console.WriteLine(FormatJson(response.ToString()));
+
+        _datasetServiceClient.DeleteDataset(request, _metadata);
     }
     
-    static string FormatJson(string json)
+    static string PrettyPrint(string json)
     {
         const string INDENT_STRING = "    ";
         int indentation = 0;
