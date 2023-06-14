@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package ssn.chargebee.v1;
+
+import "google/api/annotations.proto";
+import "protoc-gen-openapiv2/options/annotations.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/chargebee/v1;chargebee";
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+  info: {
+    title: "Chargebee";
+    version: "v1";
+    description: "";
+  };
+  schemes: HTTPS;
+  consumes: "application/json";
+  produces: "application/json";
+};
+
+service ChargeBeenator { // :D
+  rpc Connect(ChargebeeConnectionRequest) returns (ChargebeeConnectionResponse) {
+    option (google.api.http) = {
+      post: "/v1/chargebee:connect"
+      body: "*"
+    };
+  }
+}
+
+message ChargebeeConnectionRequest {
+  string message = 1;
+}
+
+message ChargebeeConnectionResponse {
+  string message = 1;
+}

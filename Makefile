@@ -59,6 +59,7 @@ all:
 		--path proto/asgt/v2/dataset_service.proto \
 		--path proto/asgt/v2/suggester_service.proto \
 		--path proto/cv/scanner/v1/scanner.proto \
+		--path proto/ssn/chargebee/v1/chargebee.proto \
 
 
 #	extra generation of dependencies for js, java and C# since it can only use local .proto files (for now)
