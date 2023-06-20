@@ -27,6 +27,13 @@ service DocumentAnnotator {
       body: "*"
     };
   }
+
+  rpc Test(DocumentAnnotatorRequest) returns (DocumentAnnotatorResponse) {
+    option (google.api.http) = {
+      post: "/v1/document:annotate"
+      body: "*"
+    };
+  }
 }
 
 message Feature {
