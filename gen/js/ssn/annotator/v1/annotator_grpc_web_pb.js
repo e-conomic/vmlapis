@@ -147,5 +147,66 @@ proto.ssn.annotator.v1.DocumentAnnotatorPromiseClient.prototype.annotateDocument
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.annotator.v1.DocumentAnnotatorRequest,
+ *   !proto.ssn.annotator.v1.DocumentAnnotatorResponse>}
+ */
+const methodDescriptor_DocumentAnnotator_Test = new grpc.web.MethodDescriptor(
+  '/ssn.annotator.v1.DocumentAnnotator/Test',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.annotator.v1.DocumentAnnotatorRequest,
+  proto.ssn.annotator.v1.DocumentAnnotatorResponse,
+  /**
+   * @param {!proto.ssn.annotator.v1.DocumentAnnotatorRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.annotator.v1.DocumentAnnotatorRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.annotator.v1.DocumentAnnotatorResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.annotator.v1.DocumentAnnotatorResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorClient.prototype.test =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.annotator.v1.DocumentAnnotator/Test',
+      request,
+      metadata || {},
+      methodDescriptor_DocumentAnnotator_Test,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.annotator.v1.DocumentAnnotatorRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.annotator.v1.DocumentAnnotatorResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorPromiseClient.prototype.test =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.annotator.v1.DocumentAnnotator/Test',
+      request,
+      metadata || {},
+      methodDescriptor_DocumentAnnotator_Test);
+};
+
+
 module.exports = proto.ssn.annotator.v1;
 

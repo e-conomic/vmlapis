@@ -56,6 +56,26 @@ func (mr *MockDocumentAnnotatorClientMockRecorder) AnnotateDocument(ctx, in inte
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnnotateDocument", reflect.TypeOf((*MockDocumentAnnotatorClient)(nil).AnnotateDocument), varargs...)
 }
 
+// Test mocks base method.
+func (m *MockDocumentAnnotatorClient) Test(ctx context.Context, in *annotator.DocumentAnnotatorRequest, opts ...grpc.CallOption) (*annotator.DocumentAnnotatorResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "Test", varargs...)
+	ret0, _ := ret[0].(*annotator.DocumentAnnotatorResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// Test indicates an expected call of Test.
+func (mr *MockDocumentAnnotatorClientMockRecorder) Test(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Test", reflect.TypeOf((*MockDocumentAnnotatorClient)(nil).Test), varargs...)
+}
+
 // MockDocumentAnnotatorServer is a mock of DocumentAnnotatorServer interface.
 type MockDocumentAnnotatorServer struct {
 	ctrl     *gomock.Controller
@@ -92,6 +112,21 @@ func (m *MockDocumentAnnotatorServer) AnnotateDocument(arg0 context.Context, arg
 func (mr *MockDocumentAnnotatorServerMockRecorder) AnnotateDocument(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AnnotateDocument", reflect.TypeOf((*MockDocumentAnnotatorServer)(nil).AnnotateDocument), arg0, arg1)
+}
+
+// Test mocks base method.
+func (m *MockDocumentAnnotatorServer) Test(arg0 context.Context, arg1 *annotator.DocumentAnnotatorRequest) (*annotator.DocumentAnnotatorResponse, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Test", arg0, arg1)
+	ret0, _ := ret[0].(*annotator.DocumentAnnotatorResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// Test indicates an expected call of Test.
+func (mr *MockDocumentAnnotatorServerMockRecorder) Test(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Test", reflect.TypeOf((*MockDocumentAnnotatorServer)(nil).Test), arg0, arg1)
 }
 
 // MockUnsafeDocumentAnnotatorServer is a mock of UnsafeDocumentAnnotatorServer interface.

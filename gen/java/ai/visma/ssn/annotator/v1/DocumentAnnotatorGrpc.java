@@ -46,6 +46,37 @@ public final class DocumentAnnotatorGrpc {
     return getAnnotateDocumentMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest,
+      ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse> getTestMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "Test",
+      requestType = ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest.class,
+      responseType = ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest,
+      ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse> getTestMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest, ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse> getTestMethod;
+    if ((getTestMethod = DocumentAnnotatorGrpc.getTestMethod) == null) {
+      synchronized (DocumentAnnotatorGrpc.class) {
+        if ((getTestMethod = DocumentAnnotatorGrpc.getTestMethod) == null) {
+          DocumentAnnotatorGrpc.getTestMethod = getTestMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest, ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Test"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DocumentAnnotatorMethodDescriptorSupplier("Test"))
+              .build();
+        }
+      }
+    }
+    return getTestMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -101,6 +132,13 @@ public final class DocumentAnnotatorGrpc {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAnnotateDocumentMethod(), responseObserver);
     }
 
+    /**
+     */
+    public void test(ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTestMethod(), responseObserver);
+    }
+
     @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
@@ -110,6 +148,13 @@ public final class DocumentAnnotatorGrpc {
                 ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest,
                 ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse>(
                   this, METHODID_ANNOTATE_DOCUMENT)))
+          .addMethod(
+            getTestMethod(),
+            io.grpc.stub.ServerCalls.asyncUnaryCall(
+              new MethodHandlers<
+                ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest,
+                ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse>(
+                  this, METHODID_TEST)))
           .build();
     }
   }
@@ -135,6 +180,14 @@ public final class DocumentAnnotatorGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getAnnotateDocumentMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void test(ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTestMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -156,6 +209,13 @@ public final class DocumentAnnotatorGrpc {
     public ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse annotateDocument(ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getAnnotateDocumentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse test(ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTestMethod(), getCallOptions(), request);
     }
   }
 
@@ -180,9 +240,18 @@ public final class DocumentAnnotatorGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getAnnotateDocumentMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse> test(
+        ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTestMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_ANNOTATE_DOCUMENT = 0;
+  private static final int METHODID_TEST = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -203,6 +272,10 @@ public final class DocumentAnnotatorGrpc {
       switch (methodId) {
         case METHODID_ANNOTATE_DOCUMENT:
           serviceImpl.annotateDocument((ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse>) responseObserver);
+          break;
+        case METHODID_TEST:
+          serviceImpl.test((ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse>) responseObserver);
           break;
         default:
@@ -267,6 +340,7 @@ public final class DocumentAnnotatorGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new DocumentAnnotatorFileDescriptorSupplier())
               .addMethod(getAnnotateDocumentMethod())
+              .addMethod(getTestMethod())
               .build();
         }
       }

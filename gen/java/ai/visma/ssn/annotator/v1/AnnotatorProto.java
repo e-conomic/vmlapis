@@ -147,18 +147,21 @@ public final class AnnotatorProto {
       "ntent\030\001 \001(\014R\007content\0228\n\006source\030\002 \001(\0132 .s" +
       "sn.annotator.v1.DocumentSourceR\006source\"+" +
       "\n\016DocumentSource\022\031\n\010http_uri\030\001 \001(\tR\007http" +
-      "Uri2\243\001\n\021DocumentAnnotator\022\215\001\n\020AnnotateDo" +
+      "Uri2\242\002\n\021DocumentAnnotator\022\215\001\n\020AnnotateDo" +
       "cument\022*.ssn.annotator.v1.DocumentAnnota" +
       "torRequest\032+.ssn.annotator.v1.DocumentAn" +
       "notatorResponse\" \202\323\344\223\002\032:\001*\"\025/v1/document" +
-      ":annotateB\210\002\n\031ai.visma.ssn.annotator.v1B" +
-      "\016AnnotatorProtoP\001Z>github.com/e-conomic/" +
-      "vmlapis/gen/go/ssn/annotator/v1;annotato" +
-      "r\242\002\003SAX\252\002\020Ssn.Annotator.V1\312\002\020Ssn\\Annotat" +
-      "or\\V1\342\002\034Ssn\\Annotator\\V1\\GPBMetadata\352\002\022S" +
-      "sn::Annotator::V1\222A8\022\017\n\tSmartScan2\002v1*\001\002" +
-      "2\020application/json:\020application/jsonb\006pr" +
-      "oto3"
+      ":annotate\022}\n\004Test\022*.ssn.annotator.v1.Doc" +
+      "umentAnnotatorRequest\032+.ssn.annotator.v1" +
+      ".DocumentAnnotatorResponse\"\034\202\323\344\223\002\026:\001*\"\021/" +
+      "v1/document:testB\210\002\n\031ai.visma.ssn.annota" +
+      "tor.v1B\016AnnotatorProtoP\001Z>github.com/e-c" +
+      "onomic/vmlapis/gen/go/ssn/annotator/v1;a" +
+      "nnotator\242\002\003SAX\252\002\020Ssn.Annotator.V1\312\002\020Ssn\\" +
+      "Annotator\\V1\342\002\034Ssn\\Annotator\\V1\\GPBMetad" +
+      "ata\352\002\022Ssn::Annotator::V1\222A8\022\017\n\tSmartScan" +
+      "2\002v1*\001\0022\020application/json:\020application/j" +
+      "sonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

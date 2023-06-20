@@ -23,6 +23,7 @@ const _ = grpc.SupportPackageIsVersion7
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type DocumentAnnotatorClient interface {
 	AnnotateDocument(ctx context.Context, in *DocumentAnnotatorRequest, opts ...grpc.CallOption) (*DocumentAnnotatorResponse, error)
+	Test(ctx context.Context, in *DocumentAnnotatorRequest, opts ...grpc.CallOption) (*DocumentAnnotatorResponse, error)
 }
 
 type documentAnnotatorClient struct {
@@ -42,11 +43,21 @@ func (c *documentAnnotatorClient) AnnotateDocument(ctx context.Context, in *Docu
 	return out, nil
 }
 
+func (c *documentAnnotatorClient) Test(ctx context.Context, in *DocumentAnnotatorRequest, opts ...grpc.CallOption) (*DocumentAnnotatorResponse, error) {
+	out := new(DocumentAnnotatorResponse)
+	err := c.cc.Invoke(ctx, "/ssn.annotator.v1.DocumentAnnotator/Test", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DocumentAnnotatorServer is the server API for DocumentAnnotator service.
 // All implementations should embed UnimplementedDocumentAnnotatorServer
 // for forward compatibility
 type DocumentAnnotatorServer interface {
 	AnnotateDocument(context.Context, *DocumentAnnotatorRequest) (*DocumentAnnotatorResponse, error)
+	Test(context.Context, *DocumentAnnotatorRequest) (*DocumentAnnotatorResponse, error)
 }
 
 // UnimplementedDocumentAnnotatorServer should be embedded to have forward compatible implementations.
@@ -55,6 +66,9 @@ type UnimplementedDocumentAnnotatorServer struct {
 
 func (UnimplementedDocumentAnnotatorServer) AnnotateDocument(context.Context, *DocumentAnnotatorRequest) (*DocumentAnnotatorResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method AnnotateDocument not implemented")
+}
+func (UnimplementedDocumentAnnotatorServer) Test(context.Context, *DocumentAnnotatorRequest) (*DocumentAnnotatorResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Test not implemented")
 }
 
 // UnsafeDocumentAnnotatorServer may be embedded to opt out of forward compatibility for this service.
@@ -86,6 +100,24 @@ func _DocumentAnnotator_AnnotateDocument_Handler(srv interface{}, ctx context.Co
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DocumentAnnotator_Test_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DocumentAnnotatorRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DocumentAnnotatorServer).Test(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/ssn.annotator.v1.DocumentAnnotator/Test",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DocumentAnnotatorServer).Test(ctx, req.(*DocumentAnnotatorRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DocumentAnnotator_ServiceDesc is the grpc.ServiceDesc for DocumentAnnotator service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -96,6 +128,10 @@ var DocumentAnnotator_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "AnnotateDocument",
 			Handler:    _DocumentAnnotator_AnnotateDocument_Handler,
+		},
+		{
+			MethodName: "Test",
+			Handler:    _DocumentAnnotator_Test_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

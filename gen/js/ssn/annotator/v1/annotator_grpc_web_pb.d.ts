@@ -15,6 +15,13 @@ export class DocumentAnnotatorClient {
                response: ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse) => void
   ): grpcWeb.ClientReadableStream<ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse>;
 
+  test(
+    request: ssn_annotator_v1_annotator_pb.DocumentAnnotatorRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse) => void
+  ): grpcWeb.ClientReadableStream<ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse>;
+
 }
 
 export class DocumentAnnotatorPromiseClient {
@@ -23,6 +30,11 @@ export class DocumentAnnotatorPromiseClient {
                options?: null | { [index: string]: any; });
 
   annotateDocument(
+    request: ssn_annotator_v1_annotator_pb.DocumentAnnotatorRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse>;
+
+  test(
     request: ssn_annotator_v1_annotator_pb.DocumentAnnotatorRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<ssn_annotator_v1_annotator_pb.DocumentAnnotatorResponse>;

@@ -30,7 +30,7 @@ service DocumentAnnotator {
 
   rpc Test(DocumentAnnotatorRequest) returns (DocumentAnnotatorResponse) {
     option (google.api.http) = {
-      post: "/v1/document:annotate"
+      post: "/v1/document:test"
       body: "*"
     };
   }
