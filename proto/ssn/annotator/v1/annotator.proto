@@ -27,6 +27,12 @@ service DocumentAnnotator {
       body: "*"
     };
   }
+  rpc AnswerDocumentQuestion(DocumentQuestionRequest) returns (DocumentQuestionResponse) {
+    option (google.api.http) = {
+      post: "/v1/document:answerquestion"
+      body: "*"
+    };
+  }
 }
 
 message Feature {
@@ -116,6 +122,13 @@ message Feature {
   int32 max_results = 2;
   // The minimum confidence for predictions that the caller wants returned
   ssn.type.Confidence.Level min_confidence = 3;
+}
+message DocumentQuestionRequest {
+  Document document = 1;
+  repeated string question = 2;
+}
+message DocumentQuestionResponse {
+  repeated ssn.type.Candidate answer = 1;
 }
 
 message DocumentAnnotatorRequest {

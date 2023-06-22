@@ -74,6 +74,52 @@ export namespace Feature {
   }
 }
 
+export class DocumentQuestionRequest extends jspb.Message {
+  getDocument(): Document | undefined;
+  setDocument(value?: Document): DocumentQuestionRequest;
+  hasDocument(): boolean;
+  clearDocument(): DocumentQuestionRequest;
+
+  getQuestionList(): Array<string>;
+  setQuestionList(value: Array<string>): DocumentQuestionRequest;
+  clearQuestionList(): DocumentQuestionRequest;
+  addQuestion(value: string, index?: number): DocumentQuestionRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DocumentQuestionRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: DocumentQuestionRequest): DocumentQuestionRequest.AsObject;
+  static serializeBinaryToWriter(message: DocumentQuestionRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DocumentQuestionRequest;
+  static deserializeBinaryFromReader(message: DocumentQuestionRequest, reader: jspb.BinaryReader): DocumentQuestionRequest;
+}
+
+export namespace DocumentQuestionRequest {
+  export type AsObject = {
+    document?: Document.AsObject,
+    questionList: Array<string>,
+  }
+}
+
+export class DocumentQuestionResponse extends jspb.Message {
+  getAnswerList(): Array<ssn_type_candidate_pb.Candidate>;
+  setAnswerList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentQuestionResponse;
+  clearAnswerList(): DocumentQuestionResponse;
+  addAnswer(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DocumentQuestionResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: DocumentQuestionResponse): DocumentQuestionResponse.AsObject;
+  static serializeBinaryToWriter(message: DocumentQuestionResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DocumentQuestionResponse;
+  static deserializeBinaryFromReader(message: DocumentQuestionResponse, reader: jspb.BinaryReader): DocumentQuestionResponse;
+}
+
+export namespace DocumentQuestionResponse {
+  export type AsObject = {
+    answerList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+  }
+}
+
 export class DocumentAnnotatorRequest extends jspb.Message {
   getDocument(): Document | undefined;
   setDocument(value?: Document): DocumentAnnotatorRequest;

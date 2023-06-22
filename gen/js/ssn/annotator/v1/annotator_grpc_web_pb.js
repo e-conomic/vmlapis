@@ -147,5 +147,66 @@ proto.ssn.annotator.v1.DocumentAnnotatorPromiseClient.prototype.annotateDocument
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.annotator.v1.DocumentQuestionRequest,
+ *   !proto.ssn.annotator.v1.DocumentQuestionResponse>}
+ */
+const methodDescriptor_DocumentAnnotator_AnswerDocumentQuestion = new grpc.web.MethodDescriptor(
+  '/ssn.annotator.v1.DocumentAnnotator/AnswerDocumentQuestion',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.annotator.v1.DocumentQuestionRequest,
+  proto.ssn.annotator.v1.DocumentQuestionResponse,
+  /**
+   * @param {!proto.ssn.annotator.v1.DocumentQuestionRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.annotator.v1.DocumentQuestionResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.annotator.v1.DocumentQuestionRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.annotator.v1.DocumentQuestionResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.annotator.v1.DocumentQuestionResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorClient.prototype.answerDocumentQuestion =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.annotator.v1.DocumentAnnotator/AnswerDocumentQuestion',
+      request,
+      metadata || {},
+      methodDescriptor_DocumentAnnotator_AnswerDocumentQuestion,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.annotator.v1.DocumentQuestionRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.annotator.v1.DocumentQuestionResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorPromiseClient.prototype.answerDocumentQuestion =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.annotator.v1.DocumentAnnotator/AnswerDocumentQuestion',
+      request,
+      metadata || {},
+      methodDescriptor_DocumentAnnotator_AnswerDocumentQuestion);
+};
+
+
 module.exports = proto.ssn.annotator.v1;
 

@@ -54,6 +54,38 @@
         ]
       }
     },
+    "/v1/document:answerquestion": {
+      "post": {
+        "operationId": "DocumentAnnotator_AnswerDocumentQuestion",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1DocumentQuestionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1DocumentQuestionRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DocumentAnnotator"
+        ]
+      }
+    },
     "/v1/feedback:create": {
       "post": {
         "operationId": "DataService_Feedback",
@@ -968,6 +1000,31 @@
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "[EXPERIMENTAL]\nReturns customer identifier/number"
+        }
+      }
+    },
+    "v1DocumentQuestionRequest": {
+      "type": "object",
+      "properties": {
+        "document": {
+          "$ref": "#/definitions/ssnannotatorv1Document"
+        },
+        "question": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "v1DocumentQuestionResponse": {
+      "type": "object",
+      "properties": {
+        "answer": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/typeCandidate"
+          }
         }
       }
     },
