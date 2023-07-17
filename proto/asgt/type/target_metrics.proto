@@ -9,6 +9,7 @@ message TargetMetrics {
     float precision = 1;
     float confidence = 2;
     float answer_rate = 3;
+    int32 support = 4;
   }
 
   string target = 1;
