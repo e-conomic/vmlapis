@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.0)",
+    value = "by gRPC proto compiler (version 1.56.1)",
     comments = "Source: asgt/v2/suggester_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SuggesterServiceGrpc {
@@ -154,14 +154,14 @@ public final class SuggesterServiceGrpc {
 
   /**
    */
-  public static abstract class SuggesterServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * Suggest target values for some input using a dataset, returning an empty result if no model exists.
      * </pre>
      */
-    public void suggest(ai.visma.asgt.v2.SuggestRequest request,
+    default void suggest(ai.visma.asgt.v2.SuggestRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.v2.SuggestResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestMethod(), responseObserver);
     }
@@ -171,7 +171,7 @@ public final class SuggesterServiceGrpc {
      * BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
      * </pre>
      */
-    public void batchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request,
+    default void batchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.v2.BatchSuggestResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchSuggestMethod(), responseObserver);
     }
@@ -182,41 +182,28 @@ public final class SuggesterServiceGrpc {
      * Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
      * </pre>
      */
-    public void modelBatchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request,
+    default void modelBatchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.v2.BatchSuggestResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getModelBatchSuggestMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getSuggestMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.SuggestRequest,
-                ai.visma.asgt.v2.SuggestResponse>(
-                  this, METHODID_SUGGEST)))
-          .addMethod(
-            getBatchSuggestMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.BatchSuggestRequest,
-                ai.visma.asgt.v2.BatchSuggestResponse>(
-                  this, METHODID_BATCH_SUGGEST)))
-          .addMethod(
-            getModelBatchSuggestMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.BatchSuggestRequest,
-                ai.visma.asgt.v2.BatchSuggestResponse>(
-                  this, METHODID_MODEL_BATCH_SUGGEST)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service SuggesterService.
    */
-  public static final class SuggesterServiceStub extends io.grpc.stub.AbstractAsyncStub<SuggesterServiceStub> {
+  public static abstract class SuggesterServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return SuggesterServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service SuggesterService.
+   */
+  public static final class SuggesterServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<SuggesterServiceStub> {
     private SuggesterServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -264,8 +251,10 @@ public final class SuggesterServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service SuggesterService.
    */
-  public static final class SuggesterServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<SuggesterServiceBlockingStub> {
+  public static final class SuggesterServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<SuggesterServiceBlockingStub> {
     private SuggesterServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -310,8 +299,10 @@ public final class SuggesterServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service SuggesterService.
    */
-  public static final class SuggesterServiceFutureStub extends io.grpc.stub.AbstractFutureStub<SuggesterServiceFutureStub> {
+  public static final class SuggesterServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<SuggesterServiceFutureStub> {
     private SuggesterServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -367,10 +358,10 @@ public final class SuggesterServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final SuggesterServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(SuggesterServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -405,6 +396,32 @@ public final class SuggesterServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getSuggestMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.SuggestRequest,
+              ai.visma.asgt.v2.SuggestResponse>(
+                service, METHODID_SUGGEST)))
+        .addMethod(
+          getBatchSuggestMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.BatchSuggestRequest,
+              ai.visma.asgt.v2.BatchSuggestResponse>(
+                service, METHODID_BATCH_SUGGEST)))
+        .addMethod(
+          getModelBatchSuggestMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.BatchSuggestRequest,
+              ai.visma.asgt.v2.BatchSuggestResponse>(
+                service, METHODID_MODEL_BATCH_SUGGEST)))
+        .build();
   }
 
   private static abstract class SuggesterServiceBaseDescriptorSupplier

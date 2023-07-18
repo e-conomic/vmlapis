@@ -19,6 +19,7 @@ public final class BqTableProto {
   /**
    * <pre>
    * BigQuery message schema generation options.
+   *
    * The field number is a globally unique id for this option, assigned by
    * protobuf-global-extension-registry&#64;google.com
    * </pre>

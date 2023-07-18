@@ -115,19 +115,19 @@ public final class DataServiceProto {
       "_size\030\003 \001(\005R\tbatchSize\022\022\n\004tags\030\004 \003(\tR\004ta" +
       "gs2\353\006\n\013DataService\022i\n\rCreateDataset\022\".as" +
       "gt.dataservice.v1.CreateRequest\032\026.google" +
-      ".protobuf.Empty\"\034\202\323\344\223\002\026:\001*\"\021/v1/{type}:c" +
-      "reate\022q\n\nAppendData\022&.asgt.dataservice.v" +
+      ".protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:crea" +
+      "te:\001*\022q\n\nAppendData\022&.asgt.dataservice.v" +
       "1.AppendDataRequest\032\026.google.protobuf.Em" +
-      "pty\"#\202\323\344\223\002\035:\001*\"\030/v1/{type}/{name}:append" +
+      "pty\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}:append:\001*" +
       "\022f\n\nDeleteData\022\".asgt.dataservice.v1.Del" +
       "eteRequest\032\026.google.protobuf.Empty\"\034\202\323\344\223" +
-      "\002\026:\001*\"\021/v1/{type}:delete\022t\n\007GetInfo\022#.as" +
+      "\002\026\"\021/v1/{type}:delete:\001*\022t\n\007GetInfo\022#.as" +
       "gt.dataservice.v1.GetInfoRequest\032$.asgt." +
       "dataservice.v1.GetInfoResponse\"\036\202\323\344\223\002\030\022\026" +
       "/v1/{type}/{name}:info\022w\n\rUpdateDataset\022" +
       ").asgt.dataservice.v1.UpdateDatasetReque" +
-      "st\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035:\001*\032\030/" +
-      "v1/{type}/{name}:update\022\\\n\022RegisterQuery" +
+      "st\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\032\030/v1/" +
+      "{type}/{name}:update:\001*\022\\\n\022RegisterQuery" +
       "Stats\022..asgt.dataservice.v1.RegisterQuer" +
       "yStatsRequest\032\026.google.protobuf.Empty\022X\n" +
       "\023CallsPerMonthMetric\022\026.google.protobuf.E" +

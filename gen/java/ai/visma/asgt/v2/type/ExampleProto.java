@@ -34,7 +34,7 @@ public final class ExampleProto {
       "proto\"\232\001\n\007Example\022&\n\004data\030\001 \001(\0132\022.asgt.v" +
       "2.type.DataR\004data\022J\n\rtarget_values\030\002 \003(\013" +
       "2\031.asgt.v2.type.TargetValueB\n\372B\007\222\001\004\010\001(\000R" +
-      "\014targetValues\022\033\n\002id\030\003 \001(\tB\013\372B\010r\006\320\001\001\260\001\001R\002" +
+      "\014targetValues\022\033\n\002id\030\003 \001(\tB\013\372B\010r\006\260\001\001\320\001\001R\002" +
       "idB\262\001\n\025ai.visma.asgt.v2.typeB\014ExamplePro" +
       "toP\001Z9github.com/e-conomic/vmlapis/gen/g" +
       "o/asgt/v2/type;asgttype\242\002\003AVT\252\002\014Asgt.V2." +

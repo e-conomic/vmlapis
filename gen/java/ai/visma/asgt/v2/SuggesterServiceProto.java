@@ -75,15 +75,15 @@ public final class SuggesterServiceProto {
       "ns\022&\n\005model\030\002 \001(\0132\020.asgt.type.ModelR\005mod" +
       "el2\273\003\n\020SuggesterService\022l\n\007Suggest\022\027.asg" +
       "t.v2.SuggestRequest\032\030.asgt.v2.SuggestRes" +
-      "ponse\".\202\323\344\223\002(:\001*\"#/v2/datasets/{dataset_" +
-      "name}:suggest\022\200\001\n\014BatchSuggest\022\034.asgt.v2" +
+      "ponse\".\202\323\344\223\002(\"#/v2/datasets/{dataset_nam" +
+      "e}:suggest:\001*\022\200\001\n\014BatchSuggest\022\034.asgt.v2" +
       ".BatchSuggestRequest\032\035.asgt.v2.BatchSugg" +
-      "estResponse\"3\202\323\344\223\002-:\001*\"(/v2/datasets/{da" +
-      "taset_name}:batchSuggest\022\213\001\n\021ModelBatchS" +
+      "estResponse\"3\202\323\344\223\002-\"(/v2/datasets/{datas" +
+      "et_name}:batchSuggest:\001*\022\213\001\n\021ModelBatchS" +
       "uggest\022\034.asgt.v2.BatchSuggestRequest\032\035.a" +
-      "sgt.v2.BatchSuggestResponse\"9\202\323\344\223\0023:\001*\"." +
-      "/v2/datasets/{dataset_name}/model:batchS" +
-      "uggest\032(\222A%\022#Make predictions against a " +
+      "sgt.v2.BatchSuggestResponse\"9\202\323\344\223\0023\"./v2" +
+      "/datasets/{dataset_name}/model:batchSugg" +
+      "est:\001*\032(\222A%\022#Make predictions against a " +
       "dataset.B\320\001\n\020ai.visma.asgt.v2B\025Suggester" +
       "ServiceProtoP\001Z+github.com/e-conomic/vml" +
       "apis/gen/go/asgt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002\007As" +

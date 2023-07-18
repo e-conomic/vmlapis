@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.0)",
+    value = "by gRPC proto compiler (version 1.56.1)",
     comments = "Source: asgt/modelregistry/v1/model_registry.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ModelRegistryGrpc {
@@ -123,48 +123,42 @@ public final class ModelRegistryGrpc {
 
   /**
    */
-  public static abstract class ModelRegistryImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      *  rpc DeleteModel (DeleteModelRequest) returns (google.protobuf.Empty);
      * </pre>
      */
-    public void registerModel(ai.visma.asgt.modelregistry.v1.RegisterModelRequest request,
+    default void registerModel(ai.visma.asgt.modelregistry.v1.RegisterModelRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterModelMethod(), responseObserver);
     }
 
     /**
      */
-    public void getCurrentModel(ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest request,
+    default void getCurrentModel(ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCurrentModelMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getRegisterModelMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.modelregistry.v1.RegisterModelRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_REGISTER_MODEL)))
-          .addMethod(
-            getGetCurrentModelMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest,
-                ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse>(
-                  this, METHODID_GET_CURRENT_MODEL)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service ModelRegistry.
    */
-  public static final class ModelRegistryStub extends io.grpc.stub.AbstractAsyncStub<ModelRegistryStub> {
+  public static abstract class ModelRegistryImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ModelRegistryGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service ModelRegistry.
+   */
+  public static final class ModelRegistryStub
+      extends io.grpc.stub.AbstractAsyncStub<ModelRegistryStub> {
     private ModelRegistryStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -197,8 +191,10 @@ public final class ModelRegistryGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service ModelRegistry.
    */
-  public static final class ModelRegistryBlockingStub extends io.grpc.stub.AbstractBlockingStub<ModelRegistryBlockingStub> {
+  public static final class ModelRegistryBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ModelRegistryBlockingStub> {
     private ModelRegistryBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -229,8 +225,10 @@ public final class ModelRegistryGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service ModelRegistry.
    */
-  public static final class ModelRegistryFutureStub extends io.grpc.stub.AbstractFutureStub<ModelRegistryFutureStub> {
+  public static final class ModelRegistryFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ModelRegistryFutureStub> {
     private ModelRegistryFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -270,10 +268,10 @@ public final class ModelRegistryGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ModelRegistryImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ModelRegistryImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -304,6 +302,25 @@ public final class ModelRegistryGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getRegisterModelMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.modelregistry.v1.RegisterModelRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_REGISTER_MODEL)))
+        .addMethod(
+          getGetCurrentModelMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest,
+              ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse>(
+                service, METHODID_GET_CURRENT_MODEL)))
+        .build();
   }
 
   private static abstract class ModelRegistryBaseDescriptorSupplier

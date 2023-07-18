@@ -13,7 +13,13 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
+var global =
+    (typeof globalThis !== 'undefined' && globalThis) ||
+    (typeof window !== 'undefined' && window) ||
+    (typeof global !== 'undefined' && global) ||
+    (typeof self !== 'undefined' && self) ||
+    (function () { return this; }).call(null) ||
+    Function('return this')();
 
 var google_protobuf_struct_pb = require('google-protobuf/google/protobuf/struct_pb.js');
 goog.object.extend(proto, google_protobuf_struct_pb);
@@ -877,7 +883,8 @@ proto.grpc.gateway.protoc_gen_openapiv2.options.Swagger.prototype.getResponsesMa
  */
 proto.grpc.gateway.protoc_gen_openapiv2.options.Swagger.prototype.clearResponsesMap = function() {
   this.getResponsesMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -1011,7 +1018,8 @@ proto.grpc.gateway.protoc_gen_openapiv2.options.Swagger.prototype.getExtensionsM
  */
 proto.grpc.gateway.protoc_gen_openapiv2.options.Swagger.prototype.clearExtensionsMap = function() {
   this.getExtensionsMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -1491,7 +1499,8 @@ proto.grpc.gateway.protoc_gen_openapiv2.options.Operation.prototype.getResponses
  */
 proto.grpc.gateway.protoc_gen_openapiv2.options.Operation.prototype.clearResponsesMap = function() {
   this.getResponsesMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -1606,7 +1615,8 @@ proto.grpc.gateway.protoc_gen_openapiv2.options.Operation.prototype.getExtension
  */
 proto.grpc.gateway.protoc_gen_openapiv2.options.Operation.prototype.clearExtensionsMap = function() {
   this.getExtensionsMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -2092,7 +2102,8 @@ proto.grpc.gateway.protoc_gen_openapiv2.options.Response.prototype.getHeadersMap
  */
 proto.grpc.gateway.protoc_gen_openapiv2.options.Response.prototype.clearHeadersMap = function() {
   this.getHeadersMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -2114,7 +2125,8 @@ proto.grpc.gateway.protoc_gen_openapiv2.options.Response.prototype.getExamplesMa
  */
 proto.grpc.gateway.protoc_gen_openapiv2.options.Response.prototype.clearExamplesMap = function() {
   this.getExamplesMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -2136,7 +2148,8 @@ proto.grpc.gateway.protoc_gen_openapiv2.options.Response.prototype.getExtensions
  */
 proto.grpc.gateway.protoc_gen_openapiv2.options.Response.prototype.clearExtensionsMap = function() {
   this.getExtensionsMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -2491,7 +2504,8 @@ proto.grpc.gateway.protoc_gen_openapiv2.options.Info.prototype.getExtensionsMap 
  */
 proto.grpc.gateway.protoc_gen_openapiv2.options.Info.prototype.clearExtensionsMap = function() {
   this.getExtensionsMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -4426,7 +4440,8 @@ proto.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.prototype.getExtensio
  */
 proto.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.prototype.clearExtensionsMap = function() {
   this.getExtensionsMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -4740,7 +4755,8 @@ proto.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions.prototype.ge
  */
 proto.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions.prototype.clearSecurityMap = function() {
   this.getSecurityMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -5164,7 +5180,8 @@ proto.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.prototype.getExte
  */
 proto.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme.prototype.clearExtensionsMap = function() {
   this.getExtensionsMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -5453,7 +5470,8 @@ proto.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.prototype.ge
  */
 proto.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.prototype.clearSecurityRequirementMap = function() {
   this.getSecurityRequirementMap().clear();
-  return this;};
+  return this;
+};
 
 
 
@@ -5586,7 +5604,8 @@ proto.grpc.gateway.protoc_gen_openapiv2.options.Scopes.prototype.getScopeMap = f
  */
 proto.grpc.gateway.protoc_gen_openapiv2.options.Scopes.prototype.clearScopeMap = function() {
   this.getScopeMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**

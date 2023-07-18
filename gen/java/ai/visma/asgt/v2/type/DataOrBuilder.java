@@ -88,5 +88,5 @@ public interface DataOrBuilder extends
    */
   ai.visma.asgt.v2.type.InvoiceLineOrBuilder getInvoiceLineOrBuilder();
 
-  public ai.visma.asgt.v2.type.Data.DataStructureCase getDataStructureCase();
+  ai.visma.asgt.v2.type.Data.DataStructureCase getDataStructureCase();
 }

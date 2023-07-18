@@ -28,11 +28,6 @@ private static final long serialVersionUID = 0L;
     return new TrainModelEvent();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.asgt.type.TrainModelEventProto.internal_static_asgt_type_TrainModelEvent_descriptor;
@@ -98,11 +93,6 @@ private static final long serialVersionUID = 0L;
       return new Artifact();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ai.visma.asgt.type.TrainModelEventProto.internal_static_asgt_type_TrainModelEvent_Artifact_descriptor;
@@ -312,11 +302,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static ai.visma.asgt.type.TrainModelEvent.Artifact parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static ai.visma.asgt.type.TrainModelEvent.Artifact parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1064,11 +1056,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.asgt.type.TrainModelEvent parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.asgt.type.TrainModelEvent parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1519,7 +1513,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setModelVersion(long value) {
-      
+
       modelVersion_ = value;
       bitField0_ |= 0x00000002;
       onChanged();

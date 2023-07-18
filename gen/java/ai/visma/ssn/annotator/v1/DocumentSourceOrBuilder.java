@@ -10,6 +10,7 @@ public interface DocumentSourceOrBuilder extends
   /**
    * <pre>
    * The URI of the source document. Can be either:
+   *
    * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
    *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
    *    completed. Your request may fail if the specified host denies the
@@ -23,6 +24,7 @@ public interface DocumentSourceOrBuilder extends
   /**
    * <pre>
    * The URI of the source document. Can be either:
+   *
    * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
    *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
    *    completed. Your request may fail if the specified host denies the

@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.0)",
+    value = "by gRPC proto compiler (version 1.56.1)",
     comments = "Source: asgt/jester/v1/jester.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class JesterGrpc {
@@ -92,31 +92,32 @@ public final class JesterGrpc {
 
   /**
    */
-  public static abstract class JesterImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void suggest(ai.visma.asgt.jester.v1.SuggestionRequest request,
+    default void suggest(ai.visma.asgt.jester.v1.SuggestionRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.jester.v1.SuggestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getSuggestMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.jester.v1.SuggestionRequest,
-                ai.visma.asgt.jester.v1.SuggestionResponse>(
-                  this, METHODID_SUGGEST)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Jester.
    */
-  public static final class JesterStub extends io.grpc.stub.AbstractAsyncStub<JesterStub> {
+  public static abstract class JesterImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return JesterGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Jester.
+   */
+  public static final class JesterStub
+      extends io.grpc.stub.AbstractAsyncStub<JesterStub> {
     private JesterStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -138,8 +139,10 @@ public final class JesterGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Jester.
    */
-  public static final class JesterBlockingStub extends io.grpc.stub.AbstractBlockingStub<JesterBlockingStub> {
+  public static final class JesterBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<JesterBlockingStub> {
     private JesterBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -160,8 +163,10 @@ public final class JesterGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Jester.
    */
-  public static final class JesterFutureStub extends io.grpc.stub.AbstractFutureStub<JesterFutureStub> {
+  public static final class JesterFutureStub
+      extends io.grpc.stub.AbstractFutureStub<JesterFutureStub> {
     private JesterFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -189,10 +194,10 @@ public final class JesterGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final JesterImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(JesterImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -219,6 +224,18 @@ public final class JesterGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getSuggestMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.jester.v1.SuggestionRequest,
+              ai.visma.asgt.jester.v1.SuggestionResponse>(
+                service, METHODID_SUGGEST)))
+        .build();
   }
 
   private static abstract class JesterBaseDescriptorSupplier

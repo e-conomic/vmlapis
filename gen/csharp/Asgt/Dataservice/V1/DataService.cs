@@ -1539,10 +1539,24 @@ namespace Asgt.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
-      get { return matchCase_ == MatchOneofCase.Name ? (string) match_ : ""; }
+      get { return HasName ? (string) match_ : ""; }
       set {
         match_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         matchCase_ = MatchOneofCase.Name;
+      }
+    }
+    /// <summary>Gets whether the "name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasName {
+      get { return matchCase_ == MatchOneofCase.Name; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "name" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearName() {
+      if (HasName) {
+        ClearMatch();
       }
     }
 
@@ -1551,10 +1565,24 @@ namespace Asgt.Dataservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Tag {
-      get { return matchCase_ == MatchOneofCase.Tag ? (string) match_ : ""; }
+      get { return HasTag ? (string) match_ : ""; }
       set {
         match_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
         matchCase_ = MatchOneofCase.Tag;
+      }
+    }
+    /// <summary>Gets whether the "tag" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTag {
+      get { return matchCase_ == MatchOneofCase.Tag; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "tag" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTag() {
+      if (HasTag) {
+        ClearMatch();
       }
     }
 
@@ -1606,8 +1634,8 @@ namespace Asgt.Dataservice.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Type.Length != 0) hash ^= Type.GetHashCode();
-      if (matchCase_ == MatchOneofCase.Name) hash ^= Name.GetHashCode();
-      if (matchCase_ == MatchOneofCase.Tag) hash ^= Tag.GetHashCode();
+      if (HasName) hash ^= Name.GetHashCode();
+      if (HasTag) hash ^= Tag.GetHashCode();
       hash ^= (int) matchCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1631,11 +1659,11 @@ namespace Asgt.Dataservice.V1 {
         output.WriteRawTag(10);
         output.WriteString(Type);
       }
-      if (matchCase_ == MatchOneofCase.Name) {
+      if (HasName) {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      if (matchCase_ == MatchOneofCase.Tag) {
+      if (HasTag) {
         output.WriteRawTag(26);
         output.WriteString(Tag);
       }
@@ -1653,11 +1681,11 @@ namespace Asgt.Dataservice.V1 {
         output.WriteRawTag(10);
         output.WriteString(Type);
       }
-      if (matchCase_ == MatchOneofCase.Name) {
+      if (HasName) {
         output.WriteRawTag(18);
         output.WriteString(Name);
       }
-      if (matchCase_ == MatchOneofCase.Tag) {
+      if (HasTag) {
         output.WriteRawTag(26);
         output.WriteString(Tag);
       }
@@ -1674,10 +1702,10 @@ namespace Asgt.Dataservice.V1 {
       if (Type.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
       }
-      if (matchCase_ == MatchOneofCase.Name) {
+      if (HasName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (matchCase_ == MatchOneofCase.Tag) {
+      if (HasTag) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Tag);
       }
       if (_unknownFields != null) {

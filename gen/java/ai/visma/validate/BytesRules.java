@@ -36,11 +36,6 @@ private static final long serialVersionUID = 0L;
     return new BytesRules();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.validate.ValidateProto.internal_static_validate_BytesRules_descriptor;
@@ -56,6 +51,7 @@ private static final long serialVersionUID = 0L;
 
   private int bitField0_;
   private int wellKnownCase_ = 0;
+  @SuppressWarnings("serial")
   private java.lang.Object wellKnown_;
   public enum WellKnownCase
       implements com.google.protobuf.Internal.EnumLite,
@@ -556,7 +552,7 @@ private static final long serialVersionUID = 0L;
    */
   @java.lang.Override
   public boolean hasIgnoreEmpty() {
-    return ((bitField0_ & 0x00000800) != 0);
+    return ((bitField0_ & 0x00000100) != 0);
   }
   /**
    * <pre>
@@ -628,7 +624,7 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeUInt64(13, len_);
     }
-    if (((bitField0_ & 0x00000800) != 0)) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       output.writeBool(14, ignoreEmpty_);
     }
     getUnknownFields().writeTo(output);
@@ -704,7 +700,7 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeUInt64Size(13, len_);
     }
-    if (((bitField0_ & 0x00000800) != 0)) {
+    if (((bitField0_ & 0x00000100) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(14, ignoreEmpty_);
     }
@@ -916,11 +912,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.validate.BytesRules parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.validate.BytesRules parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1096,7 +1094,7 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00002000) != 0)) {
         result.ignoreEmpty_ = ignoreEmpty_;
-        to_bitField0_ |= 0x00000800;
+        to_bitField0_ |= 0x00000100;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -1437,7 +1435,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLen(long value) {
-      
+
       len_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1496,7 +1494,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMinLen(long value) {
-      
+
       minLen_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1556,7 +1554,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMaxLen(long value) {
-      
+
       maxLen_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -2144,7 +2142,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIp(boolean value) {
-      
+
       wellKnownCase_ = 10;
       wellKnown_ = value;
       onChanged();
@@ -2206,7 +2204,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIpv4(boolean value) {
-      
+
       wellKnownCase_ = 11;
       wellKnown_ = value;
       onChanged();
@@ -2268,7 +2266,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIpv6(boolean value) {
-      
+
       wellKnownCase_ = 12;
       wellKnown_ = value;
       onChanged();
@@ -2330,7 +2328,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIgnoreEmpty(boolean value) {
-      
+
       ignoreEmpty_ = value;
       bitField0_ |= 0x00002000;
       onChanged();

@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.0)",
+    value = "by gRPC proto compiler (version 1.56.1)",
     comments = "Source: ssn/pdfservice/v1/pdfservice.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class PdfServiceGrpc {
@@ -123,45 +123,39 @@ public final class PdfServiceGrpc {
 
   /**
    */
-  public static abstract class PdfServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void internalRasterizePdf(ai.visma.ssn.pdfservice.v1.RasterizePdfRequest request,
+    default void internalRasterizePdf(ai.visma.ssn.pdfservice.v1.RasterizePdfRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.pdfservice.v1.RasterizePdfResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInternalRasterizePdfMethod(), responseObserver);
     }
 
     /**
      */
-    public void rasterizePdf(ai.visma.ssn.pdfservice.v1.RasterizePdfRequest request,
+    default void rasterizePdf(ai.visma.ssn.pdfservice.v1.RasterizePdfRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.pdfservice.v1.RasterizePdfResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRasterizePdfMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getInternalRasterizePdfMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                ai.visma.ssn.pdfservice.v1.RasterizePdfRequest,
-                ai.visma.ssn.pdfservice.v1.RasterizePdfResponse>(
-                  this, METHODID_INTERNAL_RASTERIZE_PDF)))
-          .addMethod(
-            getRasterizePdfMethod(),
-            io.grpc.stub.ServerCalls.asyncServerStreamingCall(
-              new MethodHandlers<
-                ai.visma.ssn.pdfservice.v1.RasterizePdfRequest,
-                ai.visma.ssn.pdfservice.v1.RasterizePdfResponse>(
-                  this, METHODID_RASTERIZE_PDF)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service PdfService.
    */
-  public static final class PdfServiceStub extends io.grpc.stub.AbstractAsyncStub<PdfServiceStub> {
+  public static abstract class PdfServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return PdfServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service PdfService.
+   */
+  public static final class PdfServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<PdfServiceStub> {
     private PdfServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -191,8 +185,10 @@ public final class PdfServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service PdfService.
    */
-  public static final class PdfServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<PdfServiceBlockingStub> {
+  public static final class PdfServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<PdfServiceBlockingStub> {
     private PdfServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -222,8 +218,10 @@ public final class PdfServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service PdfService.
    */
-  public static final class PdfServiceFutureStub extends io.grpc.stub.AbstractFutureStub<PdfServiceFutureStub> {
+  public static final class PdfServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<PdfServiceFutureStub> {
     private PdfServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -244,10 +242,10 @@ public final class PdfServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final PdfServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(PdfServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -278,6 +276,25 @@ public final class PdfServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getInternalRasterizePdfMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              ai.visma.ssn.pdfservice.v1.RasterizePdfRequest,
+              ai.visma.ssn.pdfservice.v1.RasterizePdfResponse>(
+                service, METHODID_INTERNAL_RASTERIZE_PDF)))
+        .addMethod(
+          getRasterizePdfMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              ai.visma.ssn.pdfservice.v1.RasterizePdfRequest,
+              ai.visma.ssn.pdfservice.v1.RasterizePdfResponse>(
+                service, METHODID_RASTERIZE_PDF)))
+        .build();
   }
 
   private static abstract class PdfServiceBaseDescriptorSupplier

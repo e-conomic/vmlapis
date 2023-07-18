@@ -373,5 +373,5 @@ public interface FieldRulesOrBuilder extends
    */
   ai.visma.validate.TimestampRulesOrBuilder getTimestampOrBuilder();
 
-  public ai.visma.validate.FieldRules.TypeCase getTypeCase();
+  ai.visma.validate.FieldRules.TypeCase getTypeCase();
 }

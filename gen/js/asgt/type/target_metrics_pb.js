@@ -13,7 +13,13 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
+var global =
+    (typeof globalThis !== 'undefined' && globalThis) ||
+    (typeof window !== 'undefined' && window) ||
+    (typeof global !== 'undefined' && global) ||
+    (typeof self !== 'undefined' && self) ||
+    (function () { return this; }).call(null) ||
+    Function('return this')();
 
 goog.exportSymbol('proto.asgt.type.TargetMetrics', null, global);
 goog.exportSymbol('proto.asgt.type.TargetMetrics.Metric', null, global);
@@ -227,7 +233,11 @@ proto.asgt.type.TargetMetrics.Metric.toObject = function(includeInstance, msg) {
   var f, obj = {
     precision: jspb.Message.getFloatingPointFieldWithDefault(msg, 1, 0.0),
     confidence: jspb.Message.getFloatingPointFieldWithDefault(msg, 2, 0.0),
-    answerRate: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0)
+    answerRate: jspb.Message.getFloatingPointFieldWithDefault(msg, 3, 0.0),
+    truePositive: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    trueNegative: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    falsePositive: jspb.Message.getFieldWithDefault(msg, 6, 0),
+    falseNegative: jspb.Message.getFieldWithDefault(msg, 7, 0)
   };
 
   if (includeInstance) {
@@ -276,6 +286,22 @@ proto.asgt.type.TargetMetrics.Metric.deserializeBinaryFromReader = function(msg,
       var value = /** @type {number} */ (reader.readFloat());
       msg.setAnswerRate(value);
       break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTruePositive(value);
+      break;
+    case 5:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setTrueNegative(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setFalsePositive(value);
+      break;
+    case 7:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setFalseNegative(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -323,6 +349,34 @@ proto.asgt.type.TargetMetrics.Metric.serializeBinaryToWriter = function(message,
   if (f !== 0.0) {
     writer.writeFloat(
       3,
+      f
+    );
+  }
+  f = message.getTruePositive();
+  if (f !== 0) {
+    writer.writeInt32(
+      4,
+      f
+    );
+  }
+  f = message.getTrueNegative();
+  if (f !== 0) {
+    writer.writeInt32(
+      5,
+      f
+    );
+  }
+  f = message.getFalsePositive();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
+      f
+    );
+  }
+  f = message.getFalseNegative();
+  if (f !== 0) {
+    writer.writeInt32(
+      7,
       f
     );
   }
@@ -380,6 +434,78 @@ proto.asgt.type.TargetMetrics.Metric.prototype.getAnswerRate = function() {
  */
 proto.asgt.type.TargetMetrics.Metric.prototype.setAnswerRate = function(value) {
   return jspb.Message.setProto3FloatField(this, 3, value);
+};
+
+
+/**
+ * optional int32 true_positive = 4;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.getTruePositive = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics.Metric} returns this
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.setTruePositive = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional int32 true_negative = 5;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.getTrueNegative = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics.Metric} returns this
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.setTrueNegative = function(value) {
+  return jspb.Message.setProto3IntField(this, 5, value);
+};
+
+
+/**
+ * optional int32 false_positive = 6;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.getFalsePositive = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics.Metric} returns this
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.setFalsePositive = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
+};
+
+
+/**
+ * optional int32 false_negative = 7;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.getFalseNegative = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 7, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics.Metric} returns this
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.setFalseNegative = function(value) {
+  return jspb.Message.setProto3IntField(this, 7, value);
 };
 
 

@@ -40,7 +40,7 @@ public final class AccessProto {
       "R\002id\022\024\n\005token\030\002 \001(\tR\005token2}\n\006Access\022s\n\020" +
       "GenerateValetKey\022\036.ssn.access.v1.ValetKe" +
       "yRequest\032\037.ssn.access.v1.ValetKeyRespons" +
-      "e\"\036\202\323\344\223\002\030:\001*\"\023/v1/access/valetkeyB\265\001\n\026ai" +
+      "e\"\036\202\323\344\223\002\030\"\023/v1/access/valetkey:\001*B\265\001\n\026ai" +
       ".visma.ssn.access.v1B\013AccessProtoP\001Z8git" +
       "hub.com/e-conomic/vmlapis/gen/go/ssn/acc" +
       "ess/v1;access\242\002\003SAX\252\002\rSsn.Access.V1\312\002\rSs" +

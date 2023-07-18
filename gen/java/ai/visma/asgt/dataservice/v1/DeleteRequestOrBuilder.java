@@ -53,5 +53,5 @@ public interface DeleteRequestOrBuilder extends
   com.google.protobuf.ByteString
       getTagBytes();
 
-  public ai.visma.asgt.dataservice.v1.DeleteRequest.MatchCase getMatchCase();
+  ai.visma.asgt.dataservice.v1.DeleteRequest.MatchCase getMatchCase();
 }

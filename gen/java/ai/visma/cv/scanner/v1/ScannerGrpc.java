@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.0)",
+    value = "by gRPC proto compiler (version 1.56.1)",
     comments = "Source: cv/scanner/v1/scanner.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ScannerGrpc {
@@ -92,31 +92,32 @@ public final class ScannerGrpc {
 
   /**
    */
-  public static abstract class ScannerImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void scanCV(ai.visma.cv.scanner.v1.ScanCVRequest request,
+    default void scanCV(ai.visma.cv.scanner.v1.ScanCVRequest request,
         io.grpc.stub.StreamObserver<ai.visma.cv.scanner.v1.ScanCVResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getScanCVMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getScanCVMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.cv.scanner.v1.ScanCVRequest,
-                ai.visma.cv.scanner.v1.ScanCVResponse>(
-                  this, METHODID_SCAN_CV)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Scanner.
    */
-  public static final class ScannerStub extends io.grpc.stub.AbstractAsyncStub<ScannerStub> {
+  public static abstract class ScannerImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return ScannerGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Scanner.
+   */
+  public static final class ScannerStub
+      extends io.grpc.stub.AbstractAsyncStub<ScannerStub> {
     private ScannerStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -138,8 +139,10 @@ public final class ScannerGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Scanner.
    */
-  public static final class ScannerBlockingStub extends io.grpc.stub.AbstractBlockingStub<ScannerBlockingStub> {
+  public static final class ScannerBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<ScannerBlockingStub> {
     private ScannerBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -160,8 +163,10 @@ public final class ScannerGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Scanner.
    */
-  public static final class ScannerFutureStub extends io.grpc.stub.AbstractFutureStub<ScannerFutureStub> {
+  public static final class ScannerFutureStub
+      extends io.grpc.stub.AbstractFutureStub<ScannerFutureStub> {
     private ScannerFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -189,10 +194,10 @@ public final class ScannerGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final ScannerImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(ScannerImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -219,6 +224,18 @@ public final class ScannerGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getScanCVMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.cv.scanner.v1.ScanCVRequest,
+              ai.visma.cv.scanner.v1.ScanCVResponse>(
+                service, METHODID_SCAN_CV)))
+        .build();
   }
 
   private static abstract class ScannerBaseDescriptorSupplier

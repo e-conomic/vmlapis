@@ -32,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new Http();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.google.api.HttpProto.internal_static_google_api_Http_descriptor;
@@ -56,6 +51,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of HTTP configuration rules that apply to individual API methods.
+   *
    * **NOTE:** All service configuration rules follow "last one wins" order.
    * </pre>
    *
@@ -68,6 +64,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of HTTP configuration rules that apply to individual API methods.
+   *
    * **NOTE:** All service configuration rules follow "last one wins" order.
    * </pre>
    *
@@ -81,6 +78,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of HTTP configuration rules that apply to individual API methods.
+   *
    * **NOTE:** All service configuration rules follow "last one wins" order.
    * </pre>
    *
@@ -93,6 +91,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of HTTP configuration rules that apply to individual API methods.
+   *
    * **NOTE:** All service configuration rules follow "last one wins" order.
    * </pre>
    *
@@ -105,6 +104,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * A list of HTTP configuration rules that apply to individual API methods.
+   *
    * **NOTE:** All service configuration rules follow "last one wins" order.
    * </pre>
    *
@@ -123,6 +123,7 @@ private static final long serialVersionUID = 0L;
    * When set to true, URL path parameters will be fully URI-decoded except in
    * cases of single segment matches in reserved expansion, where "%2F" will be
    * left encoded.
+   *
    * The default behavior is to not decode RFC 6570 reserved characters in multi
    * segment matches.
    * </pre>
@@ -258,11 +259,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.google.api.Http parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.google.api.Http parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -552,6 +555,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -567,6 +571,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -582,6 +587,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -597,6 +603,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -619,6 +626,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -638,6 +646,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -659,6 +668,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -681,6 +691,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -700,6 +711,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -719,6 +731,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -739,6 +752,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -757,6 +771,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -775,6 +790,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -787,6 +803,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -802,6 +819,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -818,6 +836,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -830,6 +849,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -843,6 +863,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * A list of HTTP configuration rules that apply to individual API methods.
+     *
      * **NOTE:** All service configuration rules follow "last one wins" order.
      * </pre>
      *
@@ -873,6 +894,7 @@ private static final long serialVersionUID = 0L;
      * When set to true, URL path parameters will be fully URI-decoded except in
      * cases of single segment matches in reserved expansion, where "%2F" will be
      * left encoded.
+     *
      * The default behavior is to not decode RFC 6570 reserved characters in multi
      * segment matches.
      * </pre>
@@ -889,6 +911,7 @@ private static final long serialVersionUID = 0L;
      * When set to true, URL path parameters will be fully URI-decoded except in
      * cases of single segment matches in reserved expansion, where "%2F" will be
      * left encoded.
+     *
      * The default behavior is to not decode RFC 6570 reserved characters in multi
      * segment matches.
      * </pre>
@@ -898,7 +921,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setFullyDecodeReservedExpansion(boolean value) {
-      
+
       fullyDecodeReservedExpansion_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -909,6 +932,7 @@ private static final long serialVersionUID = 0L;
      * When set to true, URL path parameters will be fully URI-decoded except in
      * cases of single segment matches in reserved expansion, where "%2F" will be
      * left encoded.
+     *
      * The default behavior is to not decode RFC 6570 reserved characters in multi
      * segment matches.
      * </pre>

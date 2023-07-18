@@ -84,14 +84,19 @@ public interface CandidateOrBuilder extends
    * is represented as around the top-left corner as defined when the text is
    * read in the 'natural' orientation.
    * For example:
+   *
    * * when the text is horizontal it might look like:
+   *
    *         0----1
    *         |    |
    *         3----2
+   *
    * * when it's rotated 180 degrees around the top-left corner it becomes:
+   *
    *         2----3
    *         |    |
    *         1----0
+   *
    *   and the vertex order will still be (0, 1, 2, 3).
    * </pre>
    *
@@ -107,14 +112,19 @@ public interface CandidateOrBuilder extends
    * is represented as around the top-left corner as defined when the text is
    * read in the 'natural' orientation.
    * For example:
+   *
    * * when the text is horizontal it might look like:
+   *
    *         0----1
    *         |    |
    *         3----2
+   *
    * * when it's rotated 180 degrees around the top-left corner it becomes:
+   *
    *         2----3
    *         |    |
    *         1----0
+   *
    *   and the vertex order will still be (0, 1, 2, 3).
    * </pre>
    *
@@ -130,14 +140,19 @@ public interface CandidateOrBuilder extends
    * is represented as around the top-left corner as defined when the text is
    * read in the 'natural' orientation.
    * For example:
+   *
    * * when the text is horizontal it might look like:
+   *
    *         0----1
    *         |    |
    *         3----2
+   *
    * * when it's rotated 180 degrees around the top-left corner it becomes:
+   *
    *         2----3
    *         |    |
    *         1----0
+   *
    *   and the vertex order will still be (0, 1, 2, 3).
    * </pre>
    *

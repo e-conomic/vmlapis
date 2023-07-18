@@ -10,6 +10,7 @@ public interface HttpRuleOrBuilder extends
   /**
    * <pre>
    * Selects a method to which this rule applies.
+   *
    * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
    * </pre>
    *
@@ -20,6 +21,7 @@ public interface HttpRuleOrBuilder extends
   /**
    * <pre>
    * Selects a method to which this rule applies.
+   *
    * Refer to [selector][google.api.DocumentationRule.selector] for syntax details.
    * </pre>
    *
@@ -218,6 +220,7 @@ public interface HttpRuleOrBuilder extends
    * The name of the request field whose value is mapped to the HTTP request
    * body, or `*` for mapping all request fields not captured by the path
    * pattern to the HTTP body, or omitted for not having any HTTP request body.
+   *
    * NOTE: the referred field must be present at the top-level of the request
    * message type.
    * </pre>
@@ -231,6 +234,7 @@ public interface HttpRuleOrBuilder extends
    * The name of the request field whose value is mapped to the HTTP request
    * body, or `*` for mapping all request fields not captured by the path
    * pattern to the HTTP body, or omitted for not having any HTTP request body.
+   *
    * NOTE: the referred field must be present at the top-level of the request
    * message type.
    * </pre>
@@ -246,6 +250,7 @@ public interface HttpRuleOrBuilder extends
    * Optional. The name of the response field whose value is mapped to the HTTP
    * response body. When omitted, the entire response message will be used
    * as the HTTP response body.
+   *
    * NOTE: The referred field must be present at the top-level of the response
    * message type.
    * </pre>
@@ -259,6 +264,7 @@ public interface HttpRuleOrBuilder extends
    * Optional. The name of the response field whose value is mapped to the HTTP
    * response body. When omitted, the entire response message will be used
    * as the HTTP response body.
+   *
    * NOTE: The referred field must be present at the top-level of the response
    * message type.
    * </pre>
@@ -323,5 +329,5 @@ public interface HttpRuleOrBuilder extends
   ai.visma.google.api.HttpRuleOrBuilder getAdditionalBindingsOrBuilder(
       int index);
 
-  public ai.visma.google.api.HttpRule.PatternCase getPatternCase();
+  ai.visma.google.api.HttpRule.PatternCase getPatternCase();
 }

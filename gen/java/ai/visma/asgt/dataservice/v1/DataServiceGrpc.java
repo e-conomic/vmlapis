@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.0)",
+    value = "by gRPC proto compiler (version 1.56.1)",
     comments = "Source: asgt/data/v1/data_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DataServiceGrpc {
@@ -309,129 +309,81 @@ public final class DataServiceGrpc {
 
   /**
    */
-  public static abstract class DataServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void createDataset(ai.visma.asgt.dataservice.v1.CreateRequest request,
+    default void createDataset(ai.visma.asgt.dataservice.v1.CreateRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateDatasetMethod(), responseObserver);
     }
 
     /**
      */
-    public void appendData(ai.visma.asgt.dataservice.v1.AppendDataRequest request,
+    default void appendData(ai.visma.asgt.dataservice.v1.AppendDataRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAppendDataMethod(), responseObserver);
     }
 
     /**
      */
-    public void deleteData(ai.visma.asgt.dataservice.v1.DeleteRequest request,
+    default void deleteData(ai.visma.asgt.dataservice.v1.DeleteRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDataMethod(), responseObserver);
     }
 
     /**
      */
-    public void getInfo(ai.visma.asgt.dataservice.v1.GetInfoRequest request,
+    default void getInfo(ai.visma.asgt.dataservice.v1.GetInfoRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.dataservice.v1.GetInfoResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetInfoMethod(), responseObserver);
     }
 
     /**
      */
-    public void updateDataset(ai.visma.asgt.dataservice.v1.UpdateDatasetRequest request,
+    default void updateDataset(ai.visma.asgt.dataservice.v1.UpdateDatasetRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getUpdateDatasetMethod(), responseObserver);
     }
 
     /**
      */
-    public void registerQueryStats(ai.visma.asgt.dataservice.v1.RegisterQueryStatsRequest request,
+    default void registerQueryStats(ai.visma.asgt.dataservice.v1.RegisterQueryStatsRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRegisterQueryStatsMethod(), responseObserver);
     }
 
     /**
      */
-    public void callsPerMonthMetric(com.google.protobuf.Empty request,
+    default void callsPerMonthMetric(com.google.protobuf.Empty request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.CallsPerMonthResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCallsPerMonthMetricMethod(), responseObserver);
     }
 
     /**
      */
-    public void calculateMetrics(ai.visma.asgt.dataservice.v1.CalculateMetricsRequest request,
+    default void calculateMetrics(ai.visma.asgt.dataservice.v1.CalculateMetricsRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.dataservice.v1.CalculateMetricsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCalculateMetricsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getCreateDatasetMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.dataservice.v1.CreateRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_CREATE_DATASET)))
-          .addMethod(
-            getAppendDataMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.dataservice.v1.AppendDataRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_APPEND_DATA)))
-          .addMethod(
-            getDeleteDataMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.dataservice.v1.DeleteRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_DELETE_DATA)))
-          .addMethod(
-            getGetInfoMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.dataservice.v1.GetInfoRequest,
-                ai.visma.asgt.dataservice.v1.GetInfoResponse>(
-                  this, METHODID_GET_INFO)))
-          .addMethod(
-            getUpdateDatasetMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.dataservice.v1.UpdateDatasetRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_UPDATE_DATASET)))
-          .addMethod(
-            getRegisterQueryStatsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.dataservice.v1.RegisterQueryStatsRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_REGISTER_QUERY_STATS)))
-          .addMethod(
-            getCallsPerMonthMetricMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                com.google.protobuf.Empty,
-                ai.visma.ssn.dataservice.v1.CallsPerMonthResponse>(
-                  this, METHODID_CALLS_PER_MONTH_METRIC)))
-          .addMethod(
-            getCalculateMetricsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.dataservice.v1.CalculateMetricsRequest,
-                ai.visma.asgt.dataservice.v1.CalculateMetricsResponse>(
-                  this, METHODID_CALCULATE_METRICS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service DataService.
    */
-  public static final class DataServiceStub extends io.grpc.stub.AbstractAsyncStub<DataServiceStub> {
+  public static abstract class DataServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return DataServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service DataService.
+   */
+  public static final class DataServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<DataServiceStub> {
     private DataServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -509,8 +461,10 @@ public final class DataServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service DataService.
    */
-  public static final class DataServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DataServiceBlockingStub> {
+  public static final class DataServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<DataServiceBlockingStub> {
     private DataServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -580,8 +534,10 @@ public final class DataServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service DataService.
    */
-  public static final class DataServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DataServiceFutureStub> {
+  public static final class DataServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<DataServiceFutureStub> {
     private DataServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -672,10 +628,10 @@ public final class DataServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final DataServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(DataServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -730,6 +686,67 @@ public final class DataServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getCreateDatasetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.dataservice.v1.CreateRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_CREATE_DATASET)))
+        .addMethod(
+          getAppendDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.dataservice.v1.AppendDataRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_APPEND_DATA)))
+        .addMethod(
+          getDeleteDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.dataservice.v1.DeleteRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_DELETE_DATA)))
+        .addMethod(
+          getGetInfoMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.dataservice.v1.GetInfoRequest,
+              ai.visma.asgt.dataservice.v1.GetInfoResponse>(
+                service, METHODID_GET_INFO)))
+        .addMethod(
+          getUpdateDatasetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.dataservice.v1.UpdateDatasetRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_UPDATE_DATASET)))
+        .addMethod(
+          getRegisterQueryStatsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.dataservice.v1.RegisterQueryStatsRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_REGISTER_QUERY_STATS)))
+        .addMethod(
+          getCallsPerMonthMetricMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.google.protobuf.Empty,
+              ai.visma.ssn.dataservice.v1.CallsPerMonthResponse>(
+                service, METHODID_CALLS_PER_MONTH_METRIC)))
+        .addMethod(
+          getCalculateMetricsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.dataservice.v1.CalculateMetricsRequest,
+              ai.visma.asgt.dataservice.v1.CalculateMetricsResponse>(
+                service, METHODID_CALCULATE_METRICS)))
+        .build();
   }
 
   private static abstract class DataServiceBaseDescriptorSupplier

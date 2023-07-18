@@ -6,11 +6,11 @@ from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Opti
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Revision(_message.Message):
-    __slots__ = ["created_at", "number", "size"]
-    CREATED_AT_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ["number", "created_at", "size"]
     NUMBER_FIELD_NUMBER: _ClassVar[int]
+    CREATED_AT_FIELD_NUMBER: _ClassVar[int]
     SIZE_FIELD_NUMBER: _ClassVar[int]
-    created_at: _timestamp_pb2.Timestamp
     number: int
+    created_at: _timestamp_pb2.Timestamp
     size: int
     def __init__(self, number: _Optional[int] = ..., created_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., size: _Optional[int] = ...) -> None: ...

@@ -9,11 +9,13 @@ package ai.visma.google.type;
  * day and time zone are either specified elsewhere or are insignificant. The
  * date is relative to the Gregorian Calendar. This can represent one of the
  * following:
+ *
  * * A full date, with non-zero year, month, and day values
  * * A month and day value, with a zero year, such as an anniversary
  * * A year on its own, with zero month and day values
  * * A year and month value, with a zero day, such as a credit card expiration
  * date
+ *
  * Related types are [google.type.TimeOfDay][google.type.TimeOfDay] and
  * `google.protobuf.Timestamp`.
  * </pre>
@@ -39,11 +41,6 @@ private static final long serialVersionUID = 0L;
     return new Date();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.google.type.DateProto.internal_static_google_type_Date_descriptor;
@@ -237,11 +234,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.google.type.Date parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.google.type.Date parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -289,11 +288,13 @@ private static final long serialVersionUID = 0L;
    * day and time zone are either specified elsewhere or are insignificant. The
    * date is relative to the Gregorian Calendar. This can represent one of the
    * following:
+   *
    * * A full date, with non-zero year, month, and day values
    * * A month and day value, with a zero year, such as an anniversary
    * * A year on its own, with zero month and day values
    * * A year and month value, with a zero day, such as a credit card expiration
    * date
+   *
    * Related types are [google.type.TimeOfDay][google.type.TimeOfDay] and
    * `google.protobuf.Timestamp`.
    * </pre>
@@ -514,7 +515,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setYear(int value) {
-      
+
       year_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -561,7 +562,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setMonth(int value) {
-      
+
       month_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -610,7 +611,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setDay(int value) {
-      
+
       day_ = value;
       bitField0_ |= 0x00000004;
       onChanged();

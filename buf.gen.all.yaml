@@ -7,16 +7,16 @@ managed:
     except:
       - buf.build/googleapis/googleapis
 plugins:
-  - remote: buf.build/protocolbuffers/plugins/go
+  - plugin: buf.build/protocolbuffers/go:v1.31.0
     out: gen/go
     opt: paths=source_relative
-  - remote: buf.build/protocolbuffers/plugins/python
+  - plugin: buf.build/protocolbuffers/python:v23.4
     out: gen/python
-  - remote: buf.build/protocolbuffers/plugins/js
+  - plugin: buf.build/protocolbuffers/js:v3.21.2
     out: gen/js
     opt: import_style=commonjs,binary
-  - remote: buf.build/protocolbuffers/plugins/java
+  - plugin: buf.build/protocolbuffers/java:v23.4
     out: gen/java
-  - remote: buf.build/protocolbuffers/plugins/csharp
+  - plugin: buf.build/protocolbuffers/csharp:v23.4
     out: gen/csharp
     opt: base_namespace=

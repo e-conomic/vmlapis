@@ -26,11 +26,6 @@ private static final long serialVersionUID = 0L;
     return new Correctness();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.ssn.dataservice.v1.DataserviceProto.internal_static_ssn_dataservice_v1_Correctness_descriptor;
@@ -285,11 +280,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.ssn.dataservice.v1.Correctness parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.ssn.dataservice.v1.Correctness parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -636,7 +633,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setCorrectPercentage(float value) {
-      
+
       correctPercentage_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -668,7 +665,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIncompletePercentage(float value) {
-      
+
       incompletePercentage_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -700,7 +697,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setErrorPercentage(float value) {
-      
+
       errorPercentage_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -732,7 +729,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSupport(int value) {
-      
+
       support_ = value;
       bitField0_ |= 0x00000010;
       onChanged();

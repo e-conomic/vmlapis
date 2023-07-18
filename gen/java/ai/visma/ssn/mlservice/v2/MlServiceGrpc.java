@@ -8,7 +8,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.0)",
+    value = "by gRPC proto compiler (version 1.56.1)",
     comments = "Source: ssn/mlservice/v2/mlservice.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MlServiceGrpc {
@@ -160,18 +160,18 @@ public final class MlServiceGrpc {
    * Feature Generation Service
    * </pre>
    */
-  public static abstract class MlServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void featureGen(ai.visma.ssn.mlservice.v2.FeatureGenRequest request,
+    default void featureGen(ai.visma.ssn.mlservice.v2.FeatureGenRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.mlservice.v2.FeatureGenResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFeatureGenMethod(), responseObserver);
     }
 
     /**
      */
-    public void predict(ai.visma.ssn.mlservice.v2.PredictRequest request,
+    default void predict(ai.visma.ssn.mlservice.v2.PredictRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.mlservice.v2.PredictResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPredictMethod(), responseObserver);
     }
@@ -181,44 +181,34 @@ public final class MlServiceGrpc {
      * Convinienve method
      * </pre>
      */
-    public void featureGenPredict(ai.visma.ssn.mlservice.v2.FeatureGenPredictRequest request,
+    default void featureGenPredict(ai.visma.ssn.mlservice.v2.FeatureGenPredictRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.mlservice.v2.PredictResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getFeatureGenPredictMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getFeatureGenMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.ssn.mlservice.v2.FeatureGenRequest,
-                ai.visma.ssn.mlservice.v2.FeatureGenResponse>(
-                  this, METHODID_FEATURE_GEN)))
-          .addMethod(
-            getPredictMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.ssn.mlservice.v2.PredictRequest,
-                ai.visma.ssn.mlservice.v2.PredictResponse>(
-                  this, METHODID_PREDICT)))
-          .addMethod(
-            getFeatureGenPredictMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.ssn.mlservice.v2.FeatureGenPredictRequest,
-                ai.visma.ssn.mlservice.v2.PredictResponse>(
-                  this, METHODID_FEATURE_GEN_PREDICT)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service MlService.
    * <pre>
    * Feature Generation Service
    * </pre>
    */
-  public static final class MlServiceStub extends io.grpc.stub.AbstractAsyncStub<MlServiceStub> {
+  public static abstract class MlServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return MlServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service MlService.
+   * <pre>
+   * Feature Generation Service
+   * </pre>
+   */
+  public static final class MlServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<MlServiceStub> {
     private MlServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -259,11 +249,13 @@ public final class MlServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service MlService.
    * <pre>
    * Feature Generation Service
    * </pre>
    */
-  public static final class MlServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<MlServiceBlockingStub> {
+  public static final class MlServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<MlServiceBlockingStub> {
     private MlServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -301,11 +293,13 @@ public final class MlServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service MlService.
    * <pre>
    * Feature Generation Service
    * </pre>
    */
-  public static final class MlServiceFutureStub extends io.grpc.stub.AbstractFutureStub<MlServiceFutureStub> {
+  public static final class MlServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<MlServiceFutureStub> {
     private MlServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -354,10 +348,10 @@ public final class MlServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final MlServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(MlServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -392,6 +386,32 @@ public final class MlServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getFeatureGenMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.mlservice.v2.FeatureGenRequest,
+              ai.visma.ssn.mlservice.v2.FeatureGenResponse>(
+                service, METHODID_FEATURE_GEN)))
+        .addMethod(
+          getPredictMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.mlservice.v2.PredictRequest,
+              ai.visma.ssn.mlservice.v2.PredictResponse>(
+                service, METHODID_PREDICT)))
+        .addMethod(
+          getFeatureGenPredictMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.mlservice.v2.FeatureGenPredictRequest,
+              ai.visma.ssn.mlservice.v2.PredictResponse>(
+                service, METHODID_FEATURE_GEN_PREDICT)))
+        .build();
   }
 
   private static abstract class MlServiceBaseDescriptorSupplier

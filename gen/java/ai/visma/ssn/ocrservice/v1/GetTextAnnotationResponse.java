@@ -25,11 +25,6 @@ private static final long serialVersionUID = 0L;
     return new GetTextAnnotationResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.ssn.ocrservice.v1.OcrserviceProto.internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_descriptor;
@@ -225,11 +220,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

@@ -26,11 +26,6 @@ private static final long serialVersionUID = 0L;
     return new CalculateMetricsResponse();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.asgt.dataservice.v1.DataServiceProto.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_descriptor;
@@ -110,11 +105,6 @@ private static final long serialVersionUID = 0L;
       return new MetricRow();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ai.visma.asgt.dataservice.v1.DataServiceProto.internal_static_asgt_dataservice_v1_CalculateMetricsResponse_MetricRow_descriptor;
@@ -361,11 +351,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static ai.visma.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static ai.visma.asgt.dataservice.v1.CalculateMetricsResponse.MetricRow parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -827,7 +819,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setCorrect(int value) {
-        
+
         correct_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -859,7 +851,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setIncorrect(int value) {
-        
+
         incorrect_ = value;
         bitField0_ |= 0x00000008;
         onChanged();
@@ -1091,11 +1083,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.asgt.dataservice.v1.CalculateMetricsResponse parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.asgt.dataservice.v1.CalculateMetricsResponse parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

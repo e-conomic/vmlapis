@@ -1166,8 +1166,8 @@ namespace Asgt.Type {
       if (other == null) {
         return;
       }
-      targetStatsByTarget_.Add(other.targetStatsByTarget_);
-      featureStatsByTarget_.Add(other.featureStatsByTarget_);
+      targetStatsByTarget_.MergeFrom(other.targetStatsByTarget_);
+      featureStatsByTarget_.MergeFrom(other.featureStatsByTarget_);
       if (other.SimilarityIndex != 0F) {
         SimilarityIndex = other.SimilarityIndex;
       }

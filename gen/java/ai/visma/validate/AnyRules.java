@@ -21,8 +21,10 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AnyRules() {
-    in_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    notIn_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    in_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    notIn_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -32,11 +34,6 @@ private static final long serialVersionUID = 0L;
     return new AnyRules();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.validate.ValidateProto.internal_static_validate_AnyRules_descriptor;
@@ -80,7 +77,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int IN_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList in_;
+  private com.google.protobuf.LazyStringArrayList in_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * In specifies that this field's `type_url` must be equal to one of the
@@ -136,7 +134,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int NOT_IN_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList notIn_;
+  private com.google.protobuf.LazyStringArrayList notIn_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * NotIn specifies that this field's `type_url` must not be equal to any of
@@ -339,11 +338,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.validate.AnyRules parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.validate.AnyRules parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -425,10 +426,10 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       required_ = false;
-      in_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
-      notIn_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      in_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      notIn_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -455,23 +456,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public ai.visma.validate.AnyRules buildPartial() {
       ai.visma.validate.AnyRules result = new ai.visma.validate.AnyRules(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(ai.visma.validate.AnyRules result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
-        in_ = in_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.in_ = in_;
-      if (((bitField0_ & 0x00000004) != 0)) {
-        notIn_ = notIn_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000004);
-      }
-      result.notIn_ = notIn_;
     }
 
     private void buildPartial0(ai.visma.validate.AnyRules result) {
@@ -480,6 +467,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.required_ = required_;
         to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        in_.makeImmutable();
+        result.in_ = in_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        notIn_.makeImmutable();
+        result.notIn_ = notIn_;
       }
       result.bitField0_ |= to_bitField0_;
     }
@@ -534,7 +529,7 @@ private static final long serialVersionUID = 0L;
       if (!other.in_.isEmpty()) {
         if (in_.isEmpty()) {
           in_ = other.in_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ |= 0x00000002;
         } else {
           ensureInIsMutable();
           in_.addAll(other.in_);
@@ -544,7 +539,7 @@ private static final long serialVersionUID = 0L;
       if (!other.notIn_.isEmpty()) {
         if (notIn_.isEmpty()) {
           notIn_ = other.notIn_;
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ |= 0x00000004;
         } else {
           ensureNotInIsMutable();
           notIn_.addAll(other.notIn_);
@@ -646,7 +641,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setRequired(boolean value) {
-      
+
       required_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -667,12 +662,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList in_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList in_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureInIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!in_.isModifiable()) {
         in_ = new com.google.protobuf.LazyStringArrayList(in_);
-        bitField0_ |= 0x00000002;
-       }
+      }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <pre>
@@ -685,7 +681,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getInList() {
-      return in_.getUnmodifiableView();
+      in_.makeImmutable();
+      return in_;
     }
     /**
      * <pre>
@@ -742,6 +739,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureInIsMutable();
       in_.set(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -760,6 +758,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureInIsMutable();
       in_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -778,6 +777,7 @@ private static final long serialVersionUID = 0L;
       ensureInIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, in_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -791,8 +791,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearIn() {
-      in_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      in_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
@@ -811,16 +812,18 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureInIsMutable();
       in_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList notIn_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList notIn_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureNotInIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!notIn_.isModifiable()) {
         notIn_ = new com.google.protobuf.LazyStringArrayList(notIn_);
-        bitField0_ |= 0x00000004;
-       }
+      }
+      bitField0_ |= 0x00000004;
     }
     /**
      * <pre>
@@ -833,7 +836,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getNotInList() {
-      return notIn_.getUnmodifiableView();
+      notIn_.makeImmutable();
+      return notIn_;
     }
     /**
      * <pre>
@@ -890,6 +894,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureNotInIsMutable();
       notIn_.set(index, value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -908,6 +913,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureNotInIsMutable();
       notIn_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -926,6 +932,7 @@ private static final long serialVersionUID = 0L;
       ensureNotInIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, notIn_);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }
@@ -939,8 +946,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearNotIn() {
-      notIn_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000004);
+      notIn_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
       onChanged();
       return this;
     }
@@ -959,6 +967,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureNotInIsMutable();
       notIn_.add(value);
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

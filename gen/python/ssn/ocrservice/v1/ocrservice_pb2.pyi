@@ -16,11 +16,11 @@ class GetTextAnnotationRequest(_message.Message):
     def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., preview: bool = ...) -> None: ...
 
 class GetTextAnnotationResponse(_message.Message):
-    __slots__ = ["image", "text_annotation"]
-    IMAGE_FIELD_NUMBER: _ClassVar[int]
+    __slots__ = ["text_annotation", "image"]
     TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
-    image: _wrappers_pb2.BytesValue
+    IMAGE_FIELD_NUMBER: _ClassVar[int]
     text_annotation: _text_annotation_pb2.TextAnnotation
+    image: _wrappers_pb2.BytesValue
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[_Union[_wrappers_pb2.BytesValue, _Mapping]] = ...) -> None: ...
 
 class OcrScanImageRequest(_message.Message):

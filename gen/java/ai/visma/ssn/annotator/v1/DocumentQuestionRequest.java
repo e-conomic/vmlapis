@@ -16,7 +16,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private DocumentQuestionRequest() {
-    question_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    question_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -26,11 +27,6 @@ private static final long serialVersionUID = 0L;
     return new DocumentQuestionRequest();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.ssn.annotator.v1.AnnotatorProto.internal_static_ssn_annotator_v1_DocumentQuestionRequest_descriptor;
@@ -72,7 +68,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int QUESTION_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList question_;
+  private com.google.protobuf.LazyStringArrayList question_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <code>repeated string question = 2 [json_name = "question"];</code>
    * @return A list containing the question.
@@ -237,11 +234,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.ssn.annotator.v1.DocumentQuestionRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.ssn.annotator.v1.DocumentQuestionRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -322,8 +321,8 @@ private static final long serialVersionUID = 0L;
         documentBuilder_.dispose();
         documentBuilder_ = null;
       }
-      question_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      question_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -350,18 +349,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public ai.visma.ssn.annotator.v1.DocumentQuestionRequest buildPartial() {
       ai.visma.ssn.annotator.v1.DocumentQuestionRequest result = new ai.visma.ssn.annotator.v1.DocumentQuestionRequest(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(ai.visma.ssn.annotator.v1.DocumentQuestionRequest result) {
-      if (((bitField0_ & 0x00000002) != 0)) {
-        question_ = question_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000002);
-      }
-      result.question_ = question_;
     }
 
     private void buildPartial0(ai.visma.ssn.annotator.v1.DocumentQuestionRequest result) {
@@ -370,6 +360,10 @@ private static final long serialVersionUID = 0L;
         result.document_ = documentBuilder_ == null
             ? document_
             : documentBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        question_.makeImmutable();
+        result.question_ = question_;
       }
     }
 
@@ -423,7 +417,7 @@ private static final long serialVersionUID = 0L;
       if (!other.question_.isEmpty()) {
         if (question_.isEmpty()) {
           question_ = other.question_;
-          bitField0_ = (bitField0_ & ~0x00000002);
+          bitField0_ |= 0x00000002;
         } else {
           ensureQuestionIsMutable();
           question_.addAll(other.question_);
@@ -605,12 +599,13 @@ private static final long serialVersionUID = 0L;
       return documentBuilder_;
     }
 
-    private com.google.protobuf.LazyStringList question_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList question_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureQuestionIsMutable() {
-      if (!((bitField0_ & 0x00000002) != 0)) {
+      if (!question_.isModifiable()) {
         question_ = new com.google.protobuf.LazyStringArrayList(question_);
-        bitField0_ |= 0x00000002;
-       }
+      }
+      bitField0_ |= 0x00000002;
     }
     /**
      * <code>repeated string question = 2 [json_name = "question"];</code>
@@ -618,7 +613,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getQuestionList() {
-      return question_.getUnmodifiableView();
+      question_.makeImmutable();
+      return question_;
     }
     /**
      * <code>repeated string question = 2 [json_name = "question"];</code>
@@ -655,6 +651,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureQuestionIsMutable();
       question_.set(index, value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -668,6 +665,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureQuestionIsMutable();
       question_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -681,6 +679,7 @@ private static final long serialVersionUID = 0L;
       ensureQuestionIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, question_);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -689,8 +688,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearQuestion() {
-      question_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000002);
+      question_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
       onChanged();
       return this;
     }
@@ -705,6 +705,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureQuestionIsMutable();
       question_.add(value);
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

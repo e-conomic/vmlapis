@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.0)",
+    value = "by gRPC proto compiler (version 1.56.1)",
     comments = "Source: ssn/access/v1/access.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AccessGrpc {
@@ -92,31 +92,32 @@ public final class AccessGrpc {
 
   /**
    */
-  public static abstract class AccessImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void generateValetKey(ai.visma.ssn.access.v1.ValetKeyRequest request,
+    default void generateValetKey(ai.visma.ssn.access.v1.ValetKeyRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.access.v1.ValetKeyResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGenerateValetKeyMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGenerateValetKeyMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.ssn.access.v1.ValetKeyRequest,
-                ai.visma.ssn.access.v1.ValetKeyResponse>(
-                  this, METHODID_GENERATE_VALET_KEY)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service Access.
    */
-  public static final class AccessStub extends io.grpc.stub.AbstractAsyncStub<AccessStub> {
+  public static abstract class AccessImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return AccessGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service Access.
+   */
+  public static final class AccessStub
+      extends io.grpc.stub.AbstractAsyncStub<AccessStub> {
     private AccessStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -138,8 +139,10 @@ public final class AccessGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service Access.
    */
-  public static final class AccessBlockingStub extends io.grpc.stub.AbstractBlockingStub<AccessBlockingStub> {
+  public static final class AccessBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<AccessBlockingStub> {
     private AccessBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -160,8 +163,10 @@ public final class AccessGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service Access.
    */
-  public static final class AccessFutureStub extends io.grpc.stub.AbstractFutureStub<AccessFutureStub> {
+  public static final class AccessFutureStub
+      extends io.grpc.stub.AbstractFutureStub<AccessFutureStub> {
     private AccessFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -189,10 +194,10 @@ public final class AccessGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final AccessImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(AccessImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -219,6 +224,18 @@ public final class AccessGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGenerateValetKeyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.access.v1.ValetKeyRequest,
+              ai.visma.ssn.access.v1.ValetKeyResponse>(
+                service, METHODID_GENERATE_VALET_KEY)))
+        .build();
   }
 
   private static abstract class AccessBaseDescriptorSupplier

@@ -165,11 +165,11 @@ public final class AnnotatorProto {
       "Annotator\022\215\001\n\020AnnotateDocument\022*.ssn.ann" +
       "otator.v1.DocumentAnnotatorRequest\032+.ssn" +
       ".annotator.v1.DocumentAnnotatorResponse\"" +
-      " \202\323\344\223\002\032:\001*\"\025/v1/document:annotate\022\227\001\n\026An" +
+      " \202\323\344\223\002\032\"\025/v1/document:annotate:\001*\022\227\001\n\026An" +
       "swerDocumentQuestion\022).ssn.annotator.v1." +
       "DocumentQuestionRequest\032*.ssn.annotator." +
-      "v1.DocumentQuestionResponse\"&\202\323\344\223\002 :\001*\"\033" +
-      "/v1/document:answerquestionB\210\002\n\031ai.visma" +
+      "v1.DocumentQuestionResponse\"&\202\323\344\223\002 \"\033/v1" +
+      "/document:answerquestion:\001*B\210\002\n\031ai.visma" +
       ".ssn.annotator.v1B\016AnnotatorProtoP\001Z>git" +
       "hub.com/e-conomic/vmlapis/gen/go/ssn/ann" +
       "otator/v1;annotator\242\002\003SAX\252\002\020Ssn.Annotato" +

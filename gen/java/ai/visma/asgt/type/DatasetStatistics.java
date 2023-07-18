@@ -25,11 +25,6 @@ private static final long serialVersionUID = 0L;
     return new DatasetStatistics();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.asgt.type.DatasetStatisticsProto.internal_static_asgt_type_DatasetStatistics_descriptor;
@@ -393,11 +388,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.asgt.type.DatasetStatistics parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.asgt.type.DatasetStatistics parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -726,7 +723,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLexicalDiversitySplitOnSpace(float value) {
-      
+
       lexicalDiversitySplitOnSpace_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -770,7 +767,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLexicalDiversitySplitOnSpecial(float value) {
-      
+
       lexicalDiversitySplitOnSpecial_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -814,7 +811,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentEmptyStrings(float value) {
-      
+
       percentEmptyStrings_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -858,7 +855,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentPureNumbersRemoveSpaces(float value) {
-      
+
       percentPureNumbersRemoveSpaces_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -902,7 +899,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentPureNumbersRemoveSpecial(float value) {
-      
+
       percentPureNumbersRemoveSpecial_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -946,7 +943,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentSpecialCharacters(float value) {
-      
+
       percentSpecialCharacters_ = value;
       bitField0_ |= 0x00000020;
       onChanged();
@@ -990,7 +987,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentDigits(float value) {
-      
+
       percentDigits_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
@@ -1034,7 +1031,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentLetters(float value) {
-      
+
       percentLetters_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -1078,7 +1075,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPercentDuplicatesInDataset(float value) {
-      
+
       percentDuplicatesInDataset_ = value;
       bitField0_ |= 0x00000100;
       onChanged();

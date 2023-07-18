@@ -25,11 +25,6 @@ private static final long serialVersionUID = 0L;
     return new TrainStatistics();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.asgt.type.TrainStatisticsProto.internal_static_asgt_type_TrainStatistics_descriptor;
@@ -417,11 +412,13 @@ ai.visma.asgt.type.FeatureStats defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.asgt.type.TrainStatistics parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.asgt.type.TrainStatistics parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1024,7 +1021,7 @@ ai.visma.asgt.type.FeatureStats defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setSimilarityIndex(float value) {
-      
+
       similarityIndex_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
