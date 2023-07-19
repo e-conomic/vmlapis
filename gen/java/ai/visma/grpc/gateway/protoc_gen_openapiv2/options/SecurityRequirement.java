@@ -7,10 +7,13 @@ package ai.visma.grpc.gateway.protoc_gen_openapiv2.options;
  * <pre>
  * `SecurityRequirement` is a representation of OpenAPI v2 specification's
  * Security Requirement object.
+ *
  * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#securityRequirementObject
+ *
  * Lists the required security schemes to execute this operation. The object can
  * have multiple security schemes declared in it which are all required (that
  * is, there is a logical AND between the schemes).
+ *
  * The name used for each property MUST correspond to a security scheme
  * declared in the Security Definitions.
  * </pre>
@@ -36,11 +39,6 @@ private static final long serialVersionUID = 0L;
     return new SecurityRequirement();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Openapiv2Proto.internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityRequirement_descriptor;
@@ -114,7 +112,8 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private SecurityRequirementValue() {
-      scope_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      scope_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
     }
 
     @java.lang.Override
@@ -124,11 +123,6 @@ private static final long serialVersionUID = 0L;
       return new SecurityRequirementValue();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Openapiv2Proto.internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityRequirement_SecurityRequirementValue_descriptor;
@@ -144,7 +138,8 @@ private static final long serialVersionUID = 0L;
 
     public static final int SCOPE_FIELD_NUMBER = 1;
     @SuppressWarnings("serial")
-    private com.google.protobuf.LazyStringList scope_;
+    private com.google.protobuf.LazyStringArrayList scope_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     /**
      * <code>repeated string scope = 1 [json_name = "scope"];</code>
      * @return A list containing the scope.
@@ -293,11 +288,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -379,8 +376,8 @@ private static final long serialVersionUID = 0L;
       public Builder clear() {
         super.clear();
         bitField0_ = 0;
-        scope_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        scope_ =
+            com.google.protobuf.LazyStringArrayList.emptyList();
         return this;
       }
 
@@ -407,22 +404,17 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue buildPartial() {
         ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue result = new ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue(this);
-        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
       }
 
-      private void buildPartialRepeatedFields(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue result) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          scope_ = scope_.getUnmodifiableView();
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.scope_ = scope_;
-      }
-
       private void buildPartial0(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityRequirementValue result) {
         int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          scope_.makeImmutable();
+          result.scope_ = scope_;
+        }
       }
 
       @java.lang.Override
@@ -472,7 +464,7 @@ private static final long serialVersionUID = 0L;
         if (!other.scope_.isEmpty()) {
           if (scope_.isEmpty()) {
             scope_ = other.scope_;
-            bitField0_ = (bitField0_ & ~0x00000001);
+            bitField0_ |= 0x00000001;
           } else {
             ensureScopeIsMutable();
             scope_.addAll(other.scope_);
@@ -528,12 +520,13 @@ private static final long serialVersionUID = 0L;
       }
       private int bitField0_;
 
-      private com.google.protobuf.LazyStringList scope_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf.LazyStringArrayList scope_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       private void ensureScopeIsMutable() {
-        if (!((bitField0_ & 0x00000001) != 0)) {
+        if (!scope_.isModifiable()) {
           scope_ = new com.google.protobuf.LazyStringArrayList(scope_);
-          bitField0_ |= 0x00000001;
-         }
+        }
+        bitField0_ |= 0x00000001;
       }
       /**
        * <code>repeated string scope = 1 [json_name = "scope"];</code>
@@ -541,7 +534,8 @@ private static final long serialVersionUID = 0L;
        */
       public com.google.protobuf.ProtocolStringList
           getScopeList() {
-        return scope_.getUnmodifiableView();
+        scope_.makeImmutable();
+        return scope_;
       }
       /**
        * <code>repeated string scope = 1 [json_name = "scope"];</code>
@@ -578,6 +572,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureScopeIsMutable();
         scope_.set(index, value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -591,6 +586,7 @@ private static final long serialVersionUID = 0L;
         if (value == null) { throw new NullPointerException(); }
         ensureScopeIsMutable();
         scope_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -604,6 +600,7 @@ private static final long serialVersionUID = 0L;
         ensureScopeIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
             values, scope_);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -612,8 +609,9 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder clearScope() {
-        scope_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-        bitField0_ = (bitField0_ & ~0x00000001);
+        scope_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);;
         onChanged();
         return this;
       }
@@ -628,6 +626,7 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         ensureScopeIsMutable();
         scope_.add(value);
+        bitField0_ |= 0x00000001;
         onChanged();
         return this;
       }
@@ -922,11 +921,13 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityR
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -972,10 +973,13 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityRequirement.SecurityR
    * <pre>
    * `SecurityRequirement` is a representation of OpenAPI v2 specification's
    * Security Requirement object.
+   *
    * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#securityRequirementObject
+   *
    * Lists the required security schemes to execute this operation. The object can
    * have multiple security schemes declared in it which are all required (that
    * is, there is a logical AND between the schemes).
+   *
    * The name used for each property MUST correspond to a security scheme
    * declared in the Security Definitions.
    * </pre>

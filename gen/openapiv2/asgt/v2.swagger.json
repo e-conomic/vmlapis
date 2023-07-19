@@ -278,6 +278,7 @@
                     "targetValues": {
                       "type": "array",
                       "items": {
+                        "type": "object",
                         "$ref": "#/definitions/typeTargetValue"
                       }
                     }
@@ -330,6 +331,7 @@
                 "examples": {
                   "type": "array",
                   "items": {
+                    "type": "object",
                     "$ref": "#/definitions/typeExample"
                   }
                 }
@@ -378,6 +380,7 @@
                 "inputs": {
                   "type": "array",
                   "items": {
+                    "type": "object",
                     "$ref": "#/definitions/typeData"
                   },
                   "title": "Input data to use for prediction"
@@ -470,6 +473,7 @@
                 "inputs": {
                   "type": "array",
                   "items": {
+                    "type": "object",
                     "$ref": "#/definitions/typeData"
                   },
                   "title": "Input data to use for prediction"
@@ -632,6 +636,7 @@
         "candidates": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/TargetCandidate"
           }
         }
@@ -662,6 +667,22 @@
         "answerRate": {
           "type": "number",
           "format": "float"
+        },
+        "truePositive": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "trueNegative": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "falsePositive": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "falseNegative": {
+          "type": "integer",
+          "format": "int32"
         }
       }
     },
@@ -687,6 +708,7 @@
         "details": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/protobufAny"
           }
         }
@@ -780,6 +802,7 @@
         "targetValues": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeTargetValue"
           }
         },
@@ -853,6 +876,7 @@
         "confidenceScores": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeTargetMetrics"
           }
         },
@@ -870,6 +894,7 @@
         "targets": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/PredictionTarget"
           }
         }
@@ -910,6 +935,7 @@
         "metrics": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/TargetMetricsMetric"
           }
         }
@@ -983,6 +1009,7 @@
         "predictions": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typePrediction"
           }
         },
@@ -1051,6 +1078,7 @@
         "trainings": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeTraining"
           }
         }

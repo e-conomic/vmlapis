@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.0)",
+    value = "by gRPC proto compiler (version 1.56.1)",
     comments = "Source: asgt/v2/dataset_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DatasetServiceGrpc {
@@ -402,14 +402,14 @@ public final class DatasetServiceGrpc {
 
   /**
    */
-  public static abstract class DatasetServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      * <pre>
      * Get the basic information about a dataset.
      * </pre>
      */
-    public void getDataset(ai.visma.asgt.v2.GetDatasetRequest request,
+    default void getDataset(ai.visma.asgt.v2.GetDatasetRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.type.Dataset> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDatasetMethod(), responseObserver);
     }
@@ -420,7 +420,7 @@ public final class DatasetServiceGrpc {
      * until CreateExample or BatchCreateExample is called after the creation of the dataset.
      * </pre>
      */
-    public void createDataset(ai.visma.asgt.v2.CreateDatasetRequest request,
+    default void createDataset(ai.visma.asgt.v2.CreateDatasetRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateDatasetMethod(), responseObserver);
     }
@@ -432,7 +432,7 @@ public final class DatasetServiceGrpc {
      * provided data.
      * </pre>
      */
-    public void createOrUpdateDataset(ai.visma.asgt.v2.CreateOrUpdateDatasetRequest request,
+    default void createOrUpdateDataset(ai.visma.asgt.v2.CreateOrUpdateDatasetRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateOrUpdateDatasetMethod(), responseObserver);
     }
@@ -442,7 +442,7 @@ public final class DatasetServiceGrpc {
      * Delete a dataset with the specified name.
      * </pre>
      */
-    public void deleteDataset(ai.visma.asgt.v2.DeleteDatasetRequest request,
+    default void deleteDataset(ai.visma.asgt.v2.DeleteDatasetRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.type.Dataset> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteDatasetMethod(), responseObserver);
     }
@@ -453,7 +453,7 @@ public final class DatasetServiceGrpc {
      * The datasets' names are not considered in this request - only the tag names is.
      * </pre>
      */
-    public void deleteTag(ai.visma.asgt.v2.DeleteTagRequest request,
+    default void deleteTag(ai.visma.asgt.v2.DeleteTagRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTagMethod(), responseObserver);
     }
@@ -463,7 +463,7 @@ public final class DatasetServiceGrpc {
      * Uploads a new single example.
      * </pre>
      */
-    public void createExample(ai.visma.asgt.v2.CreateExampleRequest request,
+    default void createExample(ai.visma.asgt.v2.CreateExampleRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateExampleMethod(), responseObserver);
     }
@@ -476,7 +476,7 @@ public final class DatasetServiceGrpc {
      * is updated with the provided values according to provided ID.
      * </pre>
      */
-    public void createOrUpdateExample(ai.visma.asgt.v2.CreateOrUpdateExampleRequest request,
+    default void createOrUpdateExample(ai.visma.asgt.v2.CreateOrUpdateExampleRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateOrUpdateExampleMethod(), responseObserver);
     }
@@ -486,7 +486,7 @@ public final class DatasetServiceGrpc {
      * Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
      * </pre>
      */
-    public void batchCreateExample(ai.visma.asgt.v2.BatchCreateExampleRequest request,
+    default void batchCreateExample(ai.visma.asgt.v2.BatchCreateExampleRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchCreateExampleMethod(), responseObserver);
     }
@@ -497,7 +497,7 @@ public final class DatasetServiceGrpc {
      * removing existing models.
      * </pre>
      */
-    public void truncateDataset(ai.visma.asgt.v2.TruncateDatasetRequest request,
+    default void truncateDataset(ai.visma.asgt.v2.TruncateDatasetRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTruncateDatasetMethod(), responseObserver);
     }
@@ -508,7 +508,7 @@ public final class DatasetServiceGrpc {
      * Number of requested trainings has to be larger than 0 but no larger than 100.
      * </pre>
      */
-    public void getDatasetTrainings(ai.visma.asgt.v2.GetDatasetTrainingsRequest request,
+    default void getDatasetTrainings(ai.visma.asgt.v2.GetDatasetTrainingsRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.v2.TrainingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDatasetTrainingsMethod(), responseObserver);
     }
@@ -519,97 +519,28 @@ public final class DatasetServiceGrpc {
      * Number of requested trainings has to be larger than 0 but no larger than 100.
      * </pre>
      */
-    public void getTrainings(ai.visma.asgt.v2.GetTrainingsRequest request,
+    default void getTrainings(ai.visma.asgt.v2.GetTrainingsRequest request,
         io.grpc.stub.StreamObserver<ai.visma.asgt.v2.TrainingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTrainingsMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getGetDatasetMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.GetDatasetRequest,
-                ai.visma.asgt.type.Dataset>(
-                  this, METHODID_GET_DATASET)))
-          .addMethod(
-            getCreateDatasetMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.CreateDatasetRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_CREATE_DATASET)))
-          .addMethod(
-            getCreateOrUpdateDatasetMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.CreateOrUpdateDatasetRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_CREATE_OR_UPDATE_DATASET)))
-          .addMethod(
-            getDeleteDatasetMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.DeleteDatasetRequest,
-                ai.visma.asgt.type.Dataset>(
-                  this, METHODID_DELETE_DATASET)))
-          .addMethod(
-            getDeleteTagMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.DeleteTagRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_DELETE_TAG)))
-          .addMethod(
-            getCreateExampleMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.CreateExampleRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_CREATE_EXAMPLE)))
-          .addMethod(
-            getCreateOrUpdateExampleMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.CreateOrUpdateExampleRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_CREATE_OR_UPDATE_EXAMPLE)))
-          .addMethod(
-            getBatchCreateExampleMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.BatchCreateExampleRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_BATCH_CREATE_EXAMPLE)))
-          .addMethod(
-            getTruncateDatasetMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.TruncateDatasetRequest,
-                com.google.protobuf.Empty>(
-                  this, METHODID_TRUNCATE_DATASET)))
-          .addMethod(
-            getGetDatasetTrainingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.GetDatasetTrainingsRequest,
-                ai.visma.asgt.v2.TrainingsResponse>(
-                  this, METHODID_GET_DATASET_TRAININGS)))
-          .addMethod(
-            getGetTrainingsMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.asgt.v2.GetTrainingsRequest,
-                ai.visma.asgt.v2.TrainingsResponse>(
-                  this, METHODID_GET_TRAININGS)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service DatasetService.
    */
-  public static final class DatasetServiceStub extends io.grpc.stub.AbstractAsyncStub<DatasetServiceStub> {
+  public static abstract class DatasetServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return DatasetServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service DatasetService.
+   */
+  public static final class DatasetServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<DatasetServiceStub> {
     private DatasetServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -754,8 +685,10 @@ public final class DatasetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service DatasetService.
    */
-  public static final class DatasetServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<DatasetServiceBlockingStub> {
+  public static final class DatasetServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<DatasetServiceBlockingStub> {
     private DatasetServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -889,8 +822,10 @@ public final class DatasetServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service DatasetService.
    */
-  public static final class DatasetServiceFutureStub extends io.grpc.stub.AbstractFutureStub<DatasetServiceFutureStub> {
+  public static final class DatasetServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<DatasetServiceFutureStub> {
     private DatasetServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -1051,10 +986,10 @@ public final class DatasetServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final DatasetServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(DatasetServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -1121,6 +1056,88 @@ public final class DatasetServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getGetDatasetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.GetDatasetRequest,
+              ai.visma.asgt.type.Dataset>(
+                service, METHODID_GET_DATASET)))
+        .addMethod(
+          getCreateDatasetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.CreateDatasetRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_CREATE_DATASET)))
+        .addMethod(
+          getCreateOrUpdateDatasetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.CreateOrUpdateDatasetRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_CREATE_OR_UPDATE_DATASET)))
+        .addMethod(
+          getDeleteDatasetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.DeleteDatasetRequest,
+              ai.visma.asgt.type.Dataset>(
+                service, METHODID_DELETE_DATASET)))
+        .addMethod(
+          getDeleteTagMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.DeleteTagRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_DELETE_TAG)))
+        .addMethod(
+          getCreateExampleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.CreateExampleRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_CREATE_EXAMPLE)))
+        .addMethod(
+          getCreateOrUpdateExampleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.CreateOrUpdateExampleRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_CREATE_OR_UPDATE_EXAMPLE)))
+        .addMethod(
+          getBatchCreateExampleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.BatchCreateExampleRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_BATCH_CREATE_EXAMPLE)))
+        .addMethod(
+          getTruncateDatasetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.TruncateDatasetRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_TRUNCATE_DATASET)))
+        .addMethod(
+          getGetDatasetTrainingsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.GetDatasetTrainingsRequest,
+              ai.visma.asgt.v2.TrainingsResponse>(
+                service, METHODID_GET_DATASET_TRAININGS)))
+        .addMethod(
+          getGetTrainingsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.GetTrainingsRequest,
+              ai.visma.asgt.v2.TrainingsResponse>(
+                service, METHODID_GET_TRAININGS)))
+        .build();
   }
 
   private static abstract class DatasetServiceBaseDescriptorSupplier

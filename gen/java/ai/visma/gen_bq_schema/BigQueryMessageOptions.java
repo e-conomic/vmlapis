@@ -26,11 +26,6 @@ private static final long serialVersionUID = 0L;
     return new BigQueryMessageOptions();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.gen_bq_schema.BqTableProto.internal_static_gen_bq_schema_BigQueryMessageOptions_descriptor;
@@ -50,6 +45,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Specifies a name of table in BigQuery for the message.
+   *
    * If not blank, indicates the message is a type of record to be stored into BigQuery.
    * </pre>
    *
@@ -72,6 +68,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * Specifies a name of table in BigQuery for the message.
+   *
    * If not blank, indicates the message is a type of record to be stored into BigQuery.
    * </pre>
    *
@@ -229,11 +226,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.gen_bq_schema.BigQueryMessageOptions parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.gen_bq_schema.BigQueryMessageOptions parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -461,6 +460,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Specifies a name of table in BigQuery for the message.
+     *
      * If not blank, indicates the message is a type of record to be stored into BigQuery.
      * </pre>
      *
@@ -482,6 +482,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Specifies a name of table in BigQuery for the message.
+     *
      * If not blank, indicates the message is a type of record to be stored into BigQuery.
      * </pre>
      *
@@ -504,6 +505,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Specifies a name of table in BigQuery for the message.
+     *
      * If not blank, indicates the message is a type of record to be stored into BigQuery.
      * </pre>
      *
@@ -522,6 +524,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Specifies a name of table in BigQuery for the message.
+     *
      * If not blank, indicates the message is a type of record to be stored into BigQuery.
      * </pre>
      *
@@ -537,6 +540,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * Specifies a name of table in BigQuery for the message.
+     *
      * If not blank, indicates the message is a type of record to be stored into BigQuery.
      * </pre>
      *
@@ -579,7 +583,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setUseJsonNames(boolean value) {
-      
+
       useJsonNames_ = value;
       bitField0_ |= 0x00000002;
       onChanged();

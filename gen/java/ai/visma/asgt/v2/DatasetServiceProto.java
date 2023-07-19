@@ -137,7 +137,7 @@ public final class DatasetServiceProto {
       "ataset\"#\202\323\344\223\002\035\022\033/v2/datasets/{dataset_na" +
       "me}\022_\n\rCreateDataset\022\035.asgt.v2.CreateDat" +
       "asetRequest\032\026.google.protobuf.Empty\"\027\202\323\344" +
-      "\223\002\021:\001*\"\014/v2/datasets\022{\n\025CreateOrUpdateDa" +
+      "\223\002\021\"\014/v2/datasets:\001*\022{\n\025CreateOrUpdateDa" +
       "taset\022%.asgt.v2.CreateOrUpdateDatasetReq" +
       "uest\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\032\033/v" +
       "2/datasets/{dataset_name}\022g\n\rDeleteDatas" +
@@ -147,15 +147,15 @@ public final class DatasetServiceProto {
       "TagRequest\032\026.google.protobuf.Empty\"\033\202\323\344\223" +
       "\002\025*\023/v2/tags/{tag_name}\022w\n\rCreateExample" +
       "\022\035.asgt.v2.CreateExampleRequest\032\026.google" +
-      ".protobuf.Empty\"/\202\323\344\223\002):\001*\"$/v2/datasets" +
-      "/{dataset_name}/examples\022\224\001\n\025CreateOrUpd" +
+      ".protobuf.Empty\"/\202\323\344\223\002)\"$/v2/datasets/{d" +
+      "ataset_name}/examples:\001*\022\224\001\n\025CreateOrUpd" +
       "ateExample\022%.asgt.v2.CreateOrUpdateExamp" +
       "leRequest\032\026.google.protobuf.Empty\"<\202\323\344\223\002" +
-      "6:\001*\0321/v2/datasets/{dataset_name}/exampl" +
-      "es/{example.id}\022\215\001\n\022BatchCreateExample\022\"" +
+      "6\0321/v2/datasets/{dataset_name}/examples/" +
+      "{example.id}:\001*\022\215\001\n\022BatchCreateExample\022\"" +
       ".asgt.v2.BatchCreateExampleRequest\032\026.goo" +
-      "gle.protobuf.Empty\";\202\323\344\223\0025:\001*\"0/v2/datas" +
-      "ets/{dataset_name}/examples:batchCreate\022" +
+      "gle.protobuf.Empty\";\202\323\344\223\0025\"0/v2/datasets" +
+      "/{dataset_name}/examples:batchCreate:\001*\022" +
       "x\n\017TruncateDataset\022\037.asgt.v2.TruncateDat" +
       "asetRequest\032\026.google.protobuf.Empty\",\202\323\344" +
       "\223\002&*$/v2/datasets/{dataset_name}/example" +

@@ -12,14 +12,20 @@ class Confidence(_message.Message):
     __slots__ = ["level", "value"]
     class Level(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
         __slots__ = []
-    HIGH: Confidence.Level
-    LEVEL_FIELD_NUMBER: _ClassVar[int]
+        UNKNOWN: _ClassVar[Confidence.Level]
+        VERY_LOW: _ClassVar[Confidence.Level]
+        LOW: _ClassVar[Confidence.Level]
+        MID: _ClassVar[Confidence.Level]
+        HIGH: _ClassVar[Confidence.Level]
+        VERY_HIGH: _ClassVar[Confidence.Level]
+    UNKNOWN: Confidence.Level
+    VERY_LOW: Confidence.Level
     LOW: Confidence.Level
     MID: Confidence.Level
-    UNKNOWN: Confidence.Level
-    VALUE_FIELD_NUMBER: _ClassVar[int]
+    HIGH: Confidence.Level
     VERY_HIGH: Confidence.Level
-    VERY_LOW: Confidence.Level
+    LEVEL_FIELD_NUMBER: _ClassVar[int]
+    VALUE_FIELD_NUMBER: _ClassVar[int]
     level: Confidence.Level
     value: _wrappers_pb2.FloatValue
     def __init__(self, level: _Optional[_Union[Confidence.Level, str]] = ..., value: _Optional[_Union[_wrappers_pb2.FloatValue, _Mapping]] = ...) -> None: ...
@@ -27,18 +33,18 @@ class Confidence(_message.Message):
 class Prediction(_message.Message):
     __slots__ = ["targets"]
     class Target(_message.Message):
-        __slots__ = ["candidates", "name"]
+        __slots__ = ["name", "candidates"]
         class Candidate(_message.Message):
-            __slots__ = ["confidence", "value"]
-            CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
+            __slots__ = ["value", "confidence"]
             VALUE_FIELD_NUMBER: _ClassVar[int]
-            confidence: Confidence
+            CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
             value: str
+            confidence: Confidence
             def __init__(self, value: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ...) -> None: ...
-        CANDIDATES_FIELD_NUMBER: _ClassVar[int]
         NAME_FIELD_NUMBER: _ClassVar[int]
-        candidates: _containers.RepeatedCompositeFieldContainer[Prediction.Target.Candidate]
+        CANDIDATES_FIELD_NUMBER: _ClassVar[int]
         name: str
+        candidates: _containers.RepeatedCompositeFieldContainer[Prediction.Target.Candidate]
         def __init__(self, name: _Optional[str] = ..., candidates: _Optional[_Iterable[_Union[Prediction.Target.Candidate, _Mapping]]] = ...) -> None: ...
     TARGETS_FIELD_NUMBER: _ClassVar[int]
     targets: _containers.RepeatedCompositeFieldContainer[Prediction.Target]

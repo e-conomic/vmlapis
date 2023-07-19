@@ -27,11 +27,6 @@ private static final long serialVersionUID = 0L;
     return new TargetMetrics();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.asgt.type.TargetMetricsProto.internal_static_asgt_type_TargetMetrics_descriptor;
@@ -66,6 +61,30 @@ private static final long serialVersionUID = 0L;
      * @return The answerRate.
      */
     float getAnswerRate();
+
+    /**
+     * <code>int32 true_positive = 4 [json_name = "truePositive"];</code>
+     * @return The truePositive.
+     */
+    int getTruePositive();
+
+    /**
+     * <code>int32 true_negative = 5 [json_name = "trueNegative"];</code>
+     * @return The trueNegative.
+     */
+    int getTrueNegative();
+
+    /**
+     * <code>int32 false_positive = 6 [json_name = "falsePositive"];</code>
+     * @return The falsePositive.
+     */
+    int getFalsePositive();
+
+    /**
+     * <code>int32 false_negative = 7 [json_name = "falseNegative"];</code>
+     * @return The falseNegative.
+     */
+    int getFalseNegative();
   }
   /**
    * Protobuf type {@code asgt.type.TargetMetrics.Metric}
@@ -89,11 +108,6 @@ private static final long serialVersionUID = 0L;
       return new Metric();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ai.visma.asgt.type.TargetMetricsProto.internal_static_asgt_type_TargetMetrics_Metric_descriptor;
@@ -140,6 +154,50 @@ private static final long serialVersionUID = 0L;
       return answerRate_;
     }
 
+    public static final int TRUE_POSITIVE_FIELD_NUMBER = 4;
+    private int truePositive_ = 0;
+    /**
+     * <code>int32 true_positive = 4 [json_name = "truePositive"];</code>
+     * @return The truePositive.
+     */
+    @java.lang.Override
+    public int getTruePositive() {
+      return truePositive_;
+    }
+
+    public static final int TRUE_NEGATIVE_FIELD_NUMBER = 5;
+    private int trueNegative_ = 0;
+    /**
+     * <code>int32 true_negative = 5 [json_name = "trueNegative"];</code>
+     * @return The trueNegative.
+     */
+    @java.lang.Override
+    public int getTrueNegative() {
+      return trueNegative_;
+    }
+
+    public static final int FALSE_POSITIVE_FIELD_NUMBER = 6;
+    private int falsePositive_ = 0;
+    /**
+     * <code>int32 false_positive = 6 [json_name = "falsePositive"];</code>
+     * @return The falsePositive.
+     */
+    @java.lang.Override
+    public int getFalsePositive() {
+      return falsePositive_;
+    }
+
+    public static final int FALSE_NEGATIVE_FIELD_NUMBER = 7;
+    private int falseNegative_ = 0;
+    /**
+     * <code>int32 false_negative = 7 [json_name = "falseNegative"];</code>
+     * @return The falseNegative.
+     */
+    @java.lang.Override
+    public int getFalseNegative() {
+      return falseNegative_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -163,6 +221,18 @@ private static final long serialVersionUID = 0L;
       if (java.lang.Float.floatToRawIntBits(answerRate_) != 0) {
         output.writeFloat(3, answerRate_);
       }
+      if (truePositive_ != 0) {
+        output.writeInt32(4, truePositive_);
+      }
+      if (trueNegative_ != 0) {
+        output.writeInt32(5, trueNegative_);
+      }
+      if (falsePositive_ != 0) {
+        output.writeInt32(6, falsePositive_);
+      }
+      if (falseNegative_ != 0) {
+        output.writeInt32(7, falseNegative_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -183,6 +253,22 @@ private static final long serialVersionUID = 0L;
       if (java.lang.Float.floatToRawIntBits(answerRate_) != 0) {
         size += com.google.protobuf.CodedOutputStream
           .computeFloatSize(3, answerRate_);
+      }
+      if (truePositive_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(4, truePositive_);
+      }
+      if (trueNegative_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(5, trueNegative_);
+      }
+      if (falsePositive_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(6, falsePositive_);
+      }
+      if (falseNegative_ != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeInt32Size(7, falseNegative_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -208,6 +294,14 @@ private static final long serialVersionUID = 0L;
       if (java.lang.Float.floatToIntBits(getAnswerRate())
           != java.lang.Float.floatToIntBits(
               other.getAnswerRate())) return false;
+      if (getTruePositive()
+          != other.getTruePositive()) return false;
+      if (getTrueNegative()
+          != other.getTrueNegative()) return false;
+      if (getFalsePositive()
+          != other.getFalsePositive()) return false;
+      if (getFalseNegative()
+          != other.getFalseNegative()) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -228,6 +322,14 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + ANSWER_RATE_FIELD_NUMBER;
       hash = (53 * hash) + java.lang.Float.floatToIntBits(
           getAnswerRate());
+      hash = (37 * hash) + TRUE_POSITIVE_FIELD_NUMBER;
+      hash = (53 * hash) + getTruePositive();
+      hash = (37 * hash) + TRUE_NEGATIVE_FIELD_NUMBER;
+      hash = (53 * hash) + getTrueNegative();
+      hash = (37 * hash) + FALSE_POSITIVE_FIELD_NUMBER;
+      hash = (53 * hash) + getFalsePositive();
+      hash = (37 * hash) + FALSE_NEGATIVE_FIELD_NUMBER;
+      hash = (53 * hash) + getFalseNegative();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -277,11 +379,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static ai.visma.asgt.type.TargetMetrics.Metric parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static ai.visma.asgt.type.TargetMetrics.Metric parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -360,6 +464,10 @@ private static final long serialVersionUID = 0L;
         precision_ = 0F;
         confidence_ = 0F;
         answerRate_ = 0F;
+        truePositive_ = 0;
+        trueNegative_ = 0;
+        falsePositive_ = 0;
+        falseNegative_ = 0;
         return this;
       }
 
@@ -401,6 +509,18 @@ private static final long serialVersionUID = 0L;
         }
         if (((from_bitField0_ & 0x00000004) != 0)) {
           result.answerRate_ = answerRate_;
+        }
+        if (((from_bitField0_ & 0x00000008) != 0)) {
+          result.truePositive_ = truePositive_;
+        }
+        if (((from_bitField0_ & 0x00000010) != 0)) {
+          result.trueNegative_ = trueNegative_;
+        }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.falsePositive_ = falsePositive_;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.falseNegative_ = falseNegative_;
         }
       }
 
@@ -457,6 +577,18 @@ private static final long serialVersionUID = 0L;
         if (other.getAnswerRate() != 0F) {
           setAnswerRate(other.getAnswerRate());
         }
+        if (other.getTruePositive() != 0) {
+          setTruePositive(other.getTruePositive());
+        }
+        if (other.getTrueNegative() != 0) {
+          setTrueNegative(other.getTrueNegative());
+        }
+        if (other.getFalsePositive() != 0) {
+          setFalsePositive(other.getFalsePositive());
+        }
+        if (other.getFalseNegative() != 0) {
+          setFalseNegative(other.getFalseNegative());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -498,6 +630,26 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000004;
                 break;
               } // case 29
+              case 32: {
+                truePositive_ = input.readInt32();
+                bitField0_ |= 0x00000008;
+                break;
+              } // case 32
+              case 40: {
+                trueNegative_ = input.readInt32();
+                bitField0_ |= 0x00000010;
+                break;
+              } // case 40
+              case 48: {
+                falsePositive_ = input.readInt32();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 48
+              case 56: {
+                falseNegative_ = input.readInt32();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 56
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -530,7 +682,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setPrecision(float value) {
-        
+
         precision_ = value;
         bitField0_ |= 0x00000001;
         onChanged();
@@ -562,7 +714,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setConfidence(float value) {
-        
+
         confidence_ = value;
         bitField0_ |= 0x00000002;
         onChanged();
@@ -594,7 +746,7 @@ private static final long serialVersionUID = 0L;
        * @return This builder for chaining.
        */
       public Builder setAnswerRate(float value) {
-        
+
         answerRate_ = value;
         bitField0_ |= 0x00000004;
         onChanged();
@@ -607,6 +759,134 @@ private static final long serialVersionUID = 0L;
       public Builder clearAnswerRate() {
         bitField0_ = (bitField0_ & ~0x00000004);
         answerRate_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private int truePositive_ ;
+      /**
+       * <code>int32 true_positive = 4 [json_name = "truePositive"];</code>
+       * @return The truePositive.
+       */
+      @java.lang.Override
+      public int getTruePositive() {
+        return truePositive_;
+      }
+      /**
+       * <code>int32 true_positive = 4 [json_name = "truePositive"];</code>
+       * @param value The truePositive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTruePositive(int value) {
+
+        truePositive_ = value;
+        bitField0_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 true_positive = 4 [json_name = "truePositive"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTruePositive() {
+        bitField0_ = (bitField0_ & ~0x00000008);
+        truePositive_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int trueNegative_ ;
+      /**
+       * <code>int32 true_negative = 5 [json_name = "trueNegative"];</code>
+       * @return The trueNegative.
+       */
+      @java.lang.Override
+      public int getTrueNegative() {
+        return trueNegative_;
+      }
+      /**
+       * <code>int32 true_negative = 5 [json_name = "trueNegative"];</code>
+       * @param value The trueNegative to set.
+       * @return This builder for chaining.
+       */
+      public Builder setTrueNegative(int value) {
+
+        trueNegative_ = value;
+        bitField0_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 true_negative = 5 [json_name = "trueNegative"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearTrueNegative() {
+        bitField0_ = (bitField0_ & ~0x00000010);
+        trueNegative_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int falsePositive_ ;
+      /**
+       * <code>int32 false_positive = 6 [json_name = "falsePositive"];</code>
+       * @return The falsePositive.
+       */
+      @java.lang.Override
+      public int getFalsePositive() {
+        return falsePositive_;
+      }
+      /**
+       * <code>int32 false_positive = 6 [json_name = "falsePositive"];</code>
+       * @param value The falsePositive to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFalsePositive(int value) {
+
+        falsePositive_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 false_positive = 6 [json_name = "falsePositive"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFalsePositive() {
+        bitField0_ = (bitField0_ & ~0x00000020);
+        falsePositive_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private int falseNegative_ ;
+      /**
+       * <code>int32 false_negative = 7 [json_name = "falseNegative"];</code>
+       * @return The falseNegative.
+       */
+      @java.lang.Override
+      public int getFalseNegative() {
+        return falseNegative_;
+      }
+      /**
+       * <code>int32 false_negative = 7 [json_name = "falseNegative"];</code>
+       * @param value The falseNegative to set.
+       * @return This builder for chaining.
+       */
+      public Builder setFalseNegative(int value) {
+
+        falseNegative_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>int32 false_negative = 7 [json_name = "falseNegative"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearFalseNegative() {
+        bitField0_ = (bitField0_ & ~0x00000040);
+        falseNegative_ = 0;
         onChanged();
         return this;
       }
@@ -875,11 +1155,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.asgt.type.TargetMetrics parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.asgt.type.TargetMetrics parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)

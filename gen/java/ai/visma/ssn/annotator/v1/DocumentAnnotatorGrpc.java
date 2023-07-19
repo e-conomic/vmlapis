@@ -5,7 +5,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.0)",
+    value = "by gRPC proto compiler (version 1.56.1)",
     comments = "Source: ssn/annotator/v1/annotator.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DocumentAnnotatorGrpc {
@@ -123,45 +123,39 @@ public final class DocumentAnnotatorGrpc {
 
   /**
    */
-  public static abstract class DocumentAnnotatorImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void annotateDocument(ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest request,
+    default void annotateDocument(ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAnnotateDocumentMethod(), responseObserver);
     }
 
     /**
      */
-    public void answerDocumentQuestion(ai.visma.ssn.annotator.v1.DocumentQuestionRequest request,
+    default void answerDocumentQuestion(ai.visma.ssn.annotator.v1.DocumentQuestionRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.annotator.v1.DocumentQuestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAnswerDocumentQuestionMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getAnnotateDocumentMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest,
-                ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse>(
-                  this, METHODID_ANNOTATE_DOCUMENT)))
-          .addMethod(
-            getAnswerDocumentQuestionMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.ssn.annotator.v1.DocumentQuestionRequest,
-                ai.visma.ssn.annotator.v1.DocumentQuestionResponse>(
-                  this, METHODID_ANSWER_DOCUMENT_QUESTION)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service DocumentAnnotator.
    */
-  public static final class DocumentAnnotatorStub extends io.grpc.stub.AbstractAsyncStub<DocumentAnnotatorStub> {
+  public static abstract class DocumentAnnotatorImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return DocumentAnnotatorGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service DocumentAnnotator.
+   */
+  public static final class DocumentAnnotatorStub
+      extends io.grpc.stub.AbstractAsyncStub<DocumentAnnotatorStub> {
     private DocumentAnnotatorStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -191,8 +185,10 @@ public final class DocumentAnnotatorGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service DocumentAnnotator.
    */
-  public static final class DocumentAnnotatorBlockingStub extends io.grpc.stub.AbstractBlockingStub<DocumentAnnotatorBlockingStub> {
+  public static final class DocumentAnnotatorBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<DocumentAnnotatorBlockingStub> {
     private DocumentAnnotatorBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -220,8 +216,10 @@ public final class DocumentAnnotatorGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service DocumentAnnotator.
    */
-  public static final class DocumentAnnotatorFutureStub extends io.grpc.stub.AbstractFutureStub<DocumentAnnotatorFutureStub> {
+  public static final class DocumentAnnotatorFutureStub
+      extends io.grpc.stub.AbstractFutureStub<DocumentAnnotatorFutureStub> {
     private DocumentAnnotatorFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -258,10 +256,10 @@ public final class DocumentAnnotatorGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final DocumentAnnotatorImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(DocumentAnnotatorImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -292,6 +290,25 @@ public final class DocumentAnnotatorGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getAnnotateDocumentMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest,
+              ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse>(
+                service, METHODID_ANNOTATE_DOCUMENT)))
+        .addMethod(
+          getAnswerDocumentQuestionMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.annotator.v1.DocumentQuestionRequest,
+              ai.visma.ssn.annotator.v1.DocumentQuestionResponse>(
+                service, METHODID_ANSWER_DOCUMENT_QUESTION)))
+        .build();
   }
 
   private static abstract class DocumentAnnotatorBaseDescriptorSupplier

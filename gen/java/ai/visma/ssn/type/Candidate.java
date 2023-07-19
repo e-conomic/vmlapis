@@ -28,11 +28,6 @@ private static final long serialVersionUID = 0L;
     return new Candidate();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.ssn.type.CandidateProto.internal_static_ssn_type_Candidate_descriptor;
@@ -307,14 +302,19 @@ private static final long serialVersionUID = 0L;
    * is represented as around the top-left corner as defined when the text is
    * read in the 'natural' orientation.
    * For example:
+   *
    * * when the text is horizontal it might look like:
+   *
    *         0----1
    *         |    |
    *         3----2
+   *
    * * when it's rotated 180 degrees around the top-left corner it becomes:
+   *
    *         2----3
    *         |    |
    *         1----0
+   *
    *   and the vertex order will still be (0, 1, 2, 3).
    * </pre>
    *
@@ -333,14 +333,19 @@ private static final long serialVersionUID = 0L;
    * is represented as around the top-left corner as defined when the text is
    * read in the 'natural' orientation.
    * For example:
+   *
    * * when the text is horizontal it might look like:
+   *
    *         0----1
    *         |    |
    *         3----2
+   *
    * * when it's rotated 180 degrees around the top-left corner it becomes:
+   *
    *         2----3
    *         |    |
    *         1----0
+   *
    *   and the vertex order will still be (0, 1, 2, 3).
    * </pre>
    *
@@ -359,14 +364,19 @@ private static final long serialVersionUID = 0L;
    * is represented as around the top-left corner as defined when the text is
    * read in the 'natural' orientation.
    * For example:
+   *
    * * when the text is horizontal it might look like:
+   *
    *         0----1
    *         |    |
    *         3----2
+   *
    * * when it's rotated 180 degrees around the top-left corner it becomes:
+   *
    *         2----3
    *         |    |
    *         1----0
+   *
    *   and the vertex order will still be (0, 1, 2, 3).
    * </pre>
    *
@@ -644,11 +654,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.ssn.type.Candidate parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.ssn.type.Candidate parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1313,14 +1325,19 @@ private static final long serialVersionUID = 0L;
      * is represented as around the top-left corner as defined when the text is
      * read in the 'natural' orientation.
      * For example:
+     *
      * * when the text is horizontal it might look like:
+     *
      *         0----1
      *         |    |
      *         3----2
+     *
      * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *
      *         2----3
      *         |    |
      *         1----0
+     *
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
@@ -1338,14 +1355,19 @@ private static final long serialVersionUID = 0L;
      * is represented as around the top-left corner as defined when the text is
      * read in the 'natural' orientation.
      * For example:
+     *
      * * when the text is horizontal it might look like:
+     *
      *         0----1
      *         |    |
      *         3----2
+     *
      * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *
      *         2----3
      *         |    |
      *         1----0
+     *
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
@@ -1367,14 +1389,19 @@ private static final long serialVersionUID = 0L;
      * is represented as around the top-left corner as defined when the text is
      * read in the 'natural' orientation.
      * For example:
+     *
      * * when the text is horizontal it might look like:
+     *
      *         0----1
      *         |    |
      *         3----2
+     *
      * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *
      *         2----3
      *         |    |
      *         1----0
+     *
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
@@ -1401,14 +1428,19 @@ private static final long serialVersionUID = 0L;
      * is represented as around the top-left corner as defined when the text is
      * read in the 'natural' orientation.
      * For example:
+     *
      * * when the text is horizontal it might look like:
+     *
      *         0----1
      *         |    |
      *         3----2
+     *
      * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *
      *         2----3
      *         |    |
      *         1----0
+     *
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
@@ -1433,14 +1465,19 @@ private static final long serialVersionUID = 0L;
      * is represented as around the top-left corner as defined when the text is
      * read in the 'natural' orientation.
      * For example:
+     *
      * * when the text is horizontal it might look like:
+     *
      *         0----1
      *         |    |
      *         3----2
+     *
      * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *
      *         2----3
      *         |    |
      *         1----0
+     *
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
@@ -1470,14 +1507,19 @@ private static final long serialVersionUID = 0L;
      * is represented as around the top-left corner as defined when the text is
      * read in the 'natural' orientation.
      * For example:
+     *
      * * when the text is horizontal it might look like:
+     *
      *         0----1
      *         |    |
      *         3----2
+     *
      * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *
      *         2----3
      *         |    |
      *         1----0
+     *
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
@@ -1501,14 +1543,19 @@ private static final long serialVersionUID = 0L;
      * is represented as around the top-left corner as defined when the text is
      * read in the 'natural' orientation.
      * For example:
+     *
      * * when the text is horizontal it might look like:
+     *
      *         0----1
      *         |    |
      *         3----2
+     *
      * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *
      *         2----3
      *         |    |
      *         1----0
+     *
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
@@ -1527,14 +1574,19 @@ private static final long serialVersionUID = 0L;
      * is represented as around the top-left corner as defined when the text is
      * read in the 'natural' orientation.
      * For example:
+     *
      * * when the text is horizontal it might look like:
+     *
      *         0----1
      *         |    |
      *         3----2
+     *
      * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *
      *         2----3
      *         |    |
      *         1----0
+     *
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
@@ -1556,14 +1608,19 @@ private static final long serialVersionUID = 0L;
      * is represented as around the top-left corner as defined when the text is
      * read in the 'natural' orientation.
      * For example:
+     *
      * * when the text is horizontal it might look like:
+     *
      *         0----1
      *         |    |
      *         3----2
+     *
      * * when it's rotated 180 degrees around the top-left corner it becomes:
+     *
      *         2----3
      *         |    |
      *         1----0
+     *
      *   and the vertex order will still be (0, 1, 2, 3).
      * </pre>
      *
@@ -1681,7 +1738,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setPageRef(int value) {
-      
+
       pageRef_ = value;
       bitField0_ |= 0x00000020;
       onChanged();

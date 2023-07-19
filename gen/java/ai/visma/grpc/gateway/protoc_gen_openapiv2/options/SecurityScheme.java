@@ -7,7 +7,9 @@ package ai.visma.grpc.gateway.protoc_gen_openapiv2.options;
  * <pre>
  * `SecurityScheme` is a representation of OpenAPI v2 specification's
  * Security Scheme object.
+ *
  * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#securitySchemeObject
+ *
  * Allows the definition of a security scheme that can be used by the
  * operations. Supported schemes are basic authentication, an API key (either as
  * a header or as a query parameter) and OAuth2's common flows (implicit,
@@ -42,11 +44,6 @@ private static final long serialVersionUID = 0L;
     return new SecurityScheme();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Openapiv2Proto.internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityScheme_descriptor;
@@ -1076,11 +1073,13 @@ com.google.protobuf.Value defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1126,7 +1125,9 @@ com.google.protobuf.Value defaultValue) {
    * <pre>
    * `SecurityScheme` is a representation of OpenAPI v2 specification's
    * Security Scheme object.
+   *
    * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#securitySchemeObject
+   *
    * Allows the definition of a security scheme that can be used by the
    * operations. Supported schemes are basic authentication, an API key (either as
    * a header or as a query parameter) and OAuth2's common flows (implicit,

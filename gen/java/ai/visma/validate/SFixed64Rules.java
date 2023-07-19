@@ -31,11 +31,6 @@ private static final long serialVersionUID = 0L;
     return new SFixed64Rules();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.validate.ValidateProto.internal_static_validate_SFixed64Rules_descriptor;
@@ -542,11 +537,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.validate.SFixed64Rules parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.validate.SFixed64Rules parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -931,7 +928,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setConst(long value) {
-      
+
       const_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
@@ -990,7 +987,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLt(long value) {
-      
+
       lt_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
@@ -1050,7 +1047,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setLte(long value) {
-      
+
       lte_ = value;
       bitField0_ |= 0x00000004;
       onChanged();
@@ -1113,7 +1110,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGt(long value) {
-      
+
       gt_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
@@ -1177,7 +1174,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setGte(long value) {
-      
+
       gte_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -1259,7 +1256,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setIn(
         int index, long value) {
-      
+
       ensureInIsMutable();
       in_.setLong(index, value);
       onChanged();
@@ -1276,7 +1273,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addIn(long value) {
-      
+
       ensureInIsMutable();
       in_.addLong(value);
       onChanged();
@@ -1375,7 +1372,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setNotIn(
         int index, long value) {
-      
+
       ensureNotInIsMutable();
       notIn_.setLong(index, value);
       onChanged();
@@ -1392,7 +1389,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder addNotIn(long value) {
-      
+
       ensureNotInIsMutable();
       notIn_.addLong(value);
       onChanged();
@@ -1470,7 +1467,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setIgnoreEmpty(boolean value) {
-      
+
       ignoreEmpty_ = value;
       bitField0_ |= 0x00000080;
       onChanged();

@@ -7,11 +7,16 @@ package ai.visma.grpc.gateway.protoc_gen_openapiv2.options;
  * <pre>
  * `JSONSchema` represents properties from JSON Schema taken, and as used, in
  * the OpenAPI v2 spec.
+ *
  * This includes changes made by OpenAPI v2.
+ *
  * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
+ *
  * See also: https://cswr.github.io/JsonSchema/spec/basic_types/,
  * https://github.com/json-schema-org/json-schema-spec/blob/master/schema.json
+ *
  * Example:
+ *
  *  message SimpleMessage {
  *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
  *      json_schema: {
@@ -20,6 +25,7 @@ package ai.visma.grpc.gateway.protoc_gen_openapiv2.options;
  *        required: ["id"]
  *      }
  *    };
+ *
  *    // Id represents the message identifier.
  *    string id = 1; [
  *        (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
@@ -46,11 +52,14 @@ private static final long serialVersionUID = 0L;
     default_ = "";
     example_ = "";
     pattern_ = "";
-    required_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    array_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    required_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    array_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     type_ = java.util.Collections.emptyList();
     format_ = "";
-    enum_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    enum_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -60,11 +69,6 @@ private static final long serialVersionUID = 0L;
     return new JSONSchema();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Openapiv2Proto.internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_descriptor;
@@ -310,11 +314,6 @@ private static final long serialVersionUID = 0L;
       return new FieldConfiguration();
     }
 
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
       return ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Openapiv2Proto.internal_static_grpc_gateway_protoc_gen_openapiv2_options_JSONSchema_FieldConfiguration_descriptor;
@@ -489,11 +488,13 @@ private static final long serialVersionUID = 0L;
       return com.google.protobuf.GeneratedMessageV3
           .parseWithIOException(PARSER, input, extensionRegistry);
     }
+
     public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return com.google.protobuf.GeneratedMessageV3
           .parseDelimitedWithIOException(PARSER, input);
     }
+
     public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema.FieldConfiguration parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1315,7 +1316,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int REQUIRED_FIELD_NUMBER = 26;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList required_;
+  private com.google.protobuf.LazyStringArrayList required_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <code>repeated string required = 26 [json_name = "required"];</code>
    * @return A list containing the required.
@@ -1351,7 +1353,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int ARRAY_FIELD_NUMBER = 34;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList array_;
+  private com.google.protobuf.LazyStringArrayList array_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Items in 'array' must be unique.
@@ -1508,7 +1511,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int ENUM_FIELD_NUMBER = 46;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList enum_;
+  private com.google.protobuf.LazyStringArrayList enum_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * Items in `enum` must be unique https://tools.ietf.org/html/draft-fge-json-schema-validation-00#section-5.5.1
@@ -2116,11 +2120,13 @@ com.google.protobuf.Value defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -2166,11 +2172,16 @@ com.google.protobuf.Value defaultValue) {
    * <pre>
    * `JSONSchema` represents properties from JSON Schema taken, and as used, in
    * the OpenAPI v2 spec.
+   *
    * This includes changes made by OpenAPI v2.
+   *
    * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#schemaObject
+   *
    * See also: https://cswr.github.io/JsonSchema/spec/basic_types/,
    * https://github.com/json-schema-org/json-schema-spec/blob/master/schema.json
+   *
    * Example:
+   *
    *  message SimpleMessage {
    *    option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_schema) = {
    *      json_schema: {
@@ -2179,6 +2190,7 @@ com.google.protobuf.Value defaultValue) {
    *        required: ["id"]
    *      }
    *    };
+   *
    *    // Id represents the message identifier.
    *    string id = 1; [
    *        (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_field) = {
@@ -2261,15 +2273,15 @@ com.google.protobuf.Value defaultValue) {
       uniqueItems_ = false;
       maxProperties_ = 0L;
       minProperties_ = 0L;
-      required_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00080000);
-      array_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00100000);
+      required_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      array_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       type_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00200000);
       format_ = "";
-      enum_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00800000);
+      enum_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       fieldConfiguration_ = null;
       if (fieldConfigurationBuilder_ != null) {
         fieldConfigurationBuilder_.dispose();
@@ -2309,26 +2321,11 @@ com.google.protobuf.Value defaultValue) {
     }
 
     private void buildPartialRepeatedFields(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema result) {
-      if (((bitField0_ & 0x00080000) != 0)) {
-        required_ = required_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00080000);
-      }
-      result.required_ = required_;
-      if (((bitField0_ & 0x00100000) != 0)) {
-        array_ = array_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00100000);
-      }
-      result.array_ = array_;
       if (((bitField0_ & 0x00200000) != 0)) {
         type_ = java.util.Collections.unmodifiableList(type_);
         bitField0_ = (bitField0_ & ~0x00200000);
       }
       result.type_ = type_;
-      if (((bitField0_ & 0x00800000) != 0)) {
-        enum_ = enum_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00800000);
-      }
-      result.enum_ = enum_;
     }
 
     private void buildPartial0(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.JSONSchema result) {
@@ -2390,8 +2387,20 @@ com.google.protobuf.Value defaultValue) {
       if (((from_bitField0_ & 0x00040000) != 0)) {
         result.minProperties_ = minProperties_;
       }
+      if (((from_bitField0_ & 0x00080000) != 0)) {
+        required_.makeImmutable();
+        result.required_ = required_;
+      }
+      if (((from_bitField0_ & 0x00100000) != 0)) {
+        array_.makeImmutable();
+        result.array_ = array_;
+      }
       if (((from_bitField0_ & 0x00400000) != 0)) {
         result.format_ = format_;
+      }
+      if (((from_bitField0_ & 0x00800000) != 0)) {
+        enum_.makeImmutable();
+        result.enum_ = enum_;
       }
       if (((from_bitField0_ & 0x01000000) != 0)) {
         result.fieldConfiguration_ = fieldConfigurationBuilder_ == null
@@ -2520,7 +2529,7 @@ com.google.protobuf.Value defaultValue) {
       if (!other.required_.isEmpty()) {
         if (required_.isEmpty()) {
           required_ = other.required_;
-          bitField0_ = (bitField0_ & ~0x00080000);
+          bitField0_ |= 0x00080000;
         } else {
           ensureRequiredIsMutable();
           required_.addAll(other.required_);
@@ -2530,7 +2539,7 @@ com.google.protobuf.Value defaultValue) {
       if (!other.array_.isEmpty()) {
         if (array_.isEmpty()) {
           array_ = other.array_;
-          bitField0_ = (bitField0_ & ~0x00100000);
+          bitField0_ |= 0x00100000;
         } else {
           ensureArrayIsMutable();
           array_.addAll(other.array_);
@@ -2555,7 +2564,7 @@ com.google.protobuf.Value defaultValue) {
       if (!other.enum_.isEmpty()) {
         if (enum_.isEmpty()) {
           enum_ = other.enum_;
-          bitField0_ = (bitField0_ & ~0x00800000);
+          bitField0_ |= 0x00800000;
         } else {
           ensureEnumIsMutable();
           enum_.addAll(other.enum_);
@@ -3150,7 +3159,7 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setReadOnly(boolean value) {
-      
+
       readOnly_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
@@ -3284,7 +3293,7 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setMultipleOf(double value) {
-      
+
       multipleOf_ = value;
       bitField0_ |= 0x00000040;
       onChanged();
@@ -3326,7 +3335,7 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setMaximum(double value) {
-      
+
       maximum_ = value;
       bitField0_ |= 0x00000080;
       onChanged();
@@ -3363,7 +3372,7 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setExclusiveMaximum(boolean value) {
-      
+
       exclusiveMaximum_ = value;
       bitField0_ |= 0x00000100;
       onChanged();
@@ -3405,7 +3414,7 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setMinimum(double value) {
-      
+
       minimum_ = value;
       bitField0_ |= 0x00000200;
       onChanged();
@@ -3442,7 +3451,7 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setExclusiveMinimum(boolean value) {
-      
+
       exclusiveMinimum_ = value;
       bitField0_ |= 0x00000400;
       onChanged();
@@ -3474,7 +3483,7 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setMaxLength(long value) {
-      
+
       maxLength_ = value;
       bitField0_ |= 0x00000800;
       onChanged();
@@ -3506,7 +3515,7 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setMinLength(long value) {
-      
+
       minLength_ = value;
       bitField0_ |= 0x00001000;
       onChanged();
@@ -3610,7 +3619,7 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setMaxItems(long value) {
-      
+
       maxItems_ = value;
       bitField0_ |= 0x00004000;
       onChanged();
@@ -3642,7 +3651,7 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setMinItems(long value) {
-      
+
       minItems_ = value;
       bitField0_ |= 0x00008000;
       onChanged();
@@ -3674,7 +3683,7 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setUniqueItems(boolean value) {
-      
+
       uniqueItems_ = value;
       bitField0_ |= 0x00010000;
       onChanged();
@@ -3706,7 +3715,7 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setMaxProperties(long value) {
-      
+
       maxProperties_ = value;
       bitField0_ |= 0x00020000;
       onChanged();
@@ -3738,7 +3747,7 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setMinProperties(long value) {
-      
+
       minProperties_ = value;
       bitField0_ |= 0x00040000;
       onChanged();
@@ -3755,12 +3764,13 @@ com.google.protobuf.Value defaultValue) {
       return this;
     }
 
-    private com.google.protobuf.LazyStringList required_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList required_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureRequiredIsMutable() {
-      if (!((bitField0_ & 0x00080000) != 0)) {
+      if (!required_.isModifiable()) {
         required_ = new com.google.protobuf.LazyStringArrayList(required_);
-        bitField0_ |= 0x00080000;
-       }
+      }
+      bitField0_ |= 0x00080000;
     }
     /**
      * <code>repeated string required = 26 [json_name = "required"];</code>
@@ -3768,7 +3778,8 @@ com.google.protobuf.Value defaultValue) {
      */
     public com.google.protobuf.ProtocolStringList
         getRequiredList() {
-      return required_.getUnmodifiableView();
+      required_.makeImmutable();
+      return required_;
     }
     /**
      * <code>repeated string required = 26 [json_name = "required"];</code>
@@ -3805,6 +3816,7 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       ensureRequiredIsMutable();
       required_.set(index, value);
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -3818,6 +3830,7 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       ensureRequiredIsMutable();
       required_.add(value);
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -3831,6 +3844,7 @@ com.google.protobuf.Value defaultValue) {
       ensureRequiredIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, required_);
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
@@ -3839,8 +3853,9 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearRequired() {
-      required_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00080000);
+      required_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00080000);;
       onChanged();
       return this;
     }
@@ -3855,16 +3870,18 @@ com.google.protobuf.Value defaultValue) {
       checkByteStringIsUtf8(value);
       ensureRequiredIsMutable();
       required_.add(value);
+      bitField0_ |= 0x00080000;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList array_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList array_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureArrayIsMutable() {
-      if (!((bitField0_ & 0x00100000) != 0)) {
+      if (!array_.isModifiable()) {
         array_ = new com.google.protobuf.LazyStringArrayList(array_);
-        bitField0_ |= 0x00100000;
-       }
+      }
+      bitField0_ |= 0x00100000;
     }
     /**
      * <pre>
@@ -3876,7 +3893,8 @@ com.google.protobuf.Value defaultValue) {
      */
     public com.google.protobuf.ProtocolStringList
         getArrayList() {
-      return array_.getUnmodifiableView();
+      array_.makeImmutable();
+      return array_;
     }
     /**
      * <pre>
@@ -3929,6 +3947,7 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       ensureArrayIsMutable();
       array_.set(index, value);
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -3946,6 +3965,7 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       ensureArrayIsMutable();
       array_.add(value);
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -3963,6 +3983,7 @@ com.google.protobuf.Value defaultValue) {
       ensureArrayIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, array_);
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -3975,8 +3996,9 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearArray() {
-      array_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00100000);
+      array_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00100000);;
       onChanged();
       return this;
     }
@@ -3995,6 +4017,7 @@ com.google.protobuf.Value defaultValue) {
       checkByteStringIsUtf8(value);
       ensureArrayIsMutable();
       array_.add(value);
+      bitField0_ |= 0x00100000;
       onChanged();
       return this;
     }
@@ -4231,12 +4254,13 @@ com.google.protobuf.Value defaultValue) {
       return this;
     }
 
-    private com.google.protobuf.LazyStringList enum_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList enum_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureEnumIsMutable() {
-      if (!((bitField0_ & 0x00800000) != 0)) {
+      if (!enum_.isModifiable()) {
         enum_ = new com.google.protobuf.LazyStringArrayList(enum_);
-        bitField0_ |= 0x00800000;
-       }
+      }
+      bitField0_ |= 0x00800000;
     }
     /**
      * <pre>
@@ -4248,7 +4272,8 @@ com.google.protobuf.Value defaultValue) {
      */
     public com.google.protobuf.ProtocolStringList
         getEnumList() {
-      return enum_.getUnmodifiableView();
+      enum_.makeImmutable();
+      return enum_;
     }
     /**
      * <pre>
@@ -4301,6 +4326,7 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       ensureEnumIsMutable();
       enum_.set(index, value);
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -4318,6 +4344,7 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       ensureEnumIsMutable();
       enum_.add(value);
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -4335,6 +4362,7 @@ com.google.protobuf.Value defaultValue) {
       ensureEnumIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, enum_);
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }
@@ -4347,8 +4375,9 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearEnum() {
-      enum_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00800000);
+      enum_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00800000);;
       onChanged();
       return this;
     }
@@ -4367,6 +4396,7 @@ com.google.protobuf.Value defaultValue) {
       checkByteStringIsUtf8(value);
       ensureEnumIsMutable();
       enum_.add(value);
+      bitField0_ |= 0x00800000;
       onChanged();
       return this;
     }

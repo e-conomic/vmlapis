@@ -13,7 +13,13 @@
 
 var jspb = require('google-protobuf');
 var goog = jspb;
-var global = (function() { return this || window || global || self || Function('return this')(); }).call(null);
+var global =
+    (typeof globalThis !== 'undefined' && globalThis) ||
+    (typeof window !== 'undefined' && window) ||
+    (typeof global !== 'undefined' && global) ||
+    (typeof self !== 'undefined' && self) ||
+    (function () { return this; }).call(null) ||
+    Function('return this')();
 
 goog.exportSymbol('proto.asgt.type.FeatureStat', null, global);
 goog.exportSymbol('proto.asgt.type.FeatureStat.Type', null, global);
@@ -990,7 +996,8 @@ proto.asgt.type.TrainStatistics.prototype.getTargetStatsByTargetMap = function(o
  */
 proto.asgt.type.TrainStatistics.prototype.clearTargetStatsByTargetMap = function() {
   this.getTargetStatsByTargetMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**
@@ -1012,7 +1019,8 @@ proto.asgt.type.TrainStatistics.prototype.getFeatureStatsByTargetMap = function(
  */
 proto.asgt.type.TrainStatistics.prototype.clearFeatureStatsByTargetMap = function() {
   this.getFeatureStatsByTargetMap().clear();
-  return this;};
+  return this;
+};
 
 
 /**

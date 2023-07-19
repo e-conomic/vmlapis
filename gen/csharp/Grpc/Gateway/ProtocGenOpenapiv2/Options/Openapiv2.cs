@@ -707,7 +707,7 @@ namespace Grpc.Gateway.ProtocGenOpenapiv2.Options {
       schemes_.Add(other.schemes_);
       consumes_.Add(other.consumes_);
       produces_.Add(other.produces_);
-      responses_.Add(other.responses_);
+      responses_.MergeFrom(other.responses_);
       if (other.securityDefinitions_ != null) {
         if (securityDefinitions_ == null) {
           SecurityDefinitions = new global::Grpc.Gateway.ProtocGenOpenapiv2.Options.SecurityDefinitions();
@@ -721,7 +721,7 @@ namespace Grpc.Gateway.ProtocGenOpenapiv2.Options {
         }
         ExternalDocs.MergeFrom(other.ExternalDocs);
       }
-      extensions_.Add(other.extensions_);
+      extensions_.MergeFrom(other.extensions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1335,13 +1335,13 @@ namespace Grpc.Gateway.ProtocGenOpenapiv2.Options {
       }
       consumes_.Add(other.consumes_);
       produces_.Add(other.produces_);
-      responses_.Add(other.responses_);
+      responses_.MergeFrom(other.responses_);
       schemes_.Add(other.schemes_);
       if (other.Deprecated != false) {
         Deprecated = other.Deprecated;
       }
       security_.Add(other.security_);
-      extensions_.Add(other.extensions_);
+      extensions_.MergeFrom(other.extensions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2091,9 +2091,9 @@ namespace Grpc.Gateway.ProtocGenOpenapiv2.Options {
         }
         Schema.MergeFrom(other.Schema);
       }
-      headers_.Add(other.headers_);
-      examples_.Add(other.examples_);
-      extensions_.Add(other.extensions_);
+      headers_.MergeFrom(other.headers_);
+      examples_.MergeFrom(other.examples_);
+      extensions_.MergeFrom(other.extensions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2534,7 +2534,7 @@ namespace Grpc.Gateway.ProtocGenOpenapiv2.Options {
       if (other.Version.Length != 0) {
         Version = other.Version;
       }
-      extensions_.Add(other.extensions_);
+      extensions_.MergeFrom(other.extensions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4701,7 +4701,7 @@ namespace Grpc.Gateway.ProtocGenOpenapiv2.Options {
         }
         FieldConfiguration.MergeFrom(other.FieldConfiguration);
       }
-      extensions_.Add(other.extensions_);
+      extensions_.MergeFrom(other.extensions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5566,7 +5566,7 @@ namespace Grpc.Gateway.ProtocGenOpenapiv2.Options {
       if (other == null) {
         return;
       }
-      security_.Add(other.security_);
+      security_.MergeFrom(other.security_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6025,7 +6025,7 @@ namespace Grpc.Gateway.ProtocGenOpenapiv2.Options {
         }
         Scopes.MergeFrom(other.Scopes);
       }
-      extensions_.Add(other.extensions_);
+      extensions_.MergeFrom(other.extensions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6332,7 +6332,7 @@ namespace Grpc.Gateway.ProtocGenOpenapiv2.Options {
       if (other == null) {
         return;
       }
-      securityRequirement_.Add(other.securityRequirement_);
+      securityRequirement_.MergeFrom(other.securityRequirement_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -6712,7 +6712,7 @@ namespace Grpc.Gateway.ProtocGenOpenapiv2.Options {
       if (other == null) {
         return;
       }
-      scope_.Add(other.scope_);
+      scope_.MergeFrom(other.scope_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 

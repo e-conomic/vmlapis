@@ -56,8 +56,8 @@ public final class JesterProto {
       "onsR\007options\022\022\n\004tags\030\005 \003(\tR\004tags2\200\001\n\006Jes" +
       "ter\022v\n\007Suggest\022!.asgt.jester.v1.Suggesti" +
       "onRequest\032\".asgt.jester.v1.SuggestionRes" +
-      "ponse\"$\202\323\344\223\002\036:\001*\"\031/v1/{type}/{name}:sugg" +
-      "estB\370\001\n\027ai.visma.asgt.jester.v1B\013JesterP" +
+      "ponse\"$\202\323\344\223\002\036\"\031/v1/{type}/{name}:suggest" +
+      ":\001*B\370\001\n\027ai.visma.asgt.jester.v1B\013JesterP" +
       "rotoP\001Z9github.com/e-conomic/vmlapis/gen" +
       "/go/asgt/jester/v1;jester\242\002\003AJX\252\002\016Asgt.J" +
       "ester.V1\312\002\016Asgt\\Jester\\V1\342\002\032Asgt\\Jester\\" +

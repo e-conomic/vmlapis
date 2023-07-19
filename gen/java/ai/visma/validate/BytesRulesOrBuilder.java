@@ -333,5 +333,5 @@ public interface BytesRulesOrBuilder extends
    */
   boolean getIgnoreEmpty();
 
-  public ai.visma.validate.BytesRules.WellKnownCase getWellKnownCase();
+  ai.visma.validate.BytesRules.WellKnownCase getWellKnownCase();
 }

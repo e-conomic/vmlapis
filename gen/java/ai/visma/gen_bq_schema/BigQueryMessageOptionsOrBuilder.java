@@ -10,6 +10,7 @@ public interface BigQueryMessageOptionsOrBuilder extends
   /**
    * <pre>
    * Specifies a name of table in BigQuery for the message.
+   *
    * If not blank, indicates the message is a type of record to be stored into BigQuery.
    * </pre>
    *
@@ -20,6 +21,7 @@ public interface BigQueryMessageOptionsOrBuilder extends
   /**
    * <pre>
    * Specifies a name of table in BigQuery for the message.
+   *
    * If not blank, indicates the message is a type of record to be stored into BigQuery.
    * </pre>
    *

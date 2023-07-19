@@ -3,8 +3,8 @@ from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
 from typing import ClassVar as _ClassVar, Optional as _Optional
 
-BIGQUERY_OPTS_FIELD_NUMBER: _ClassVar[int]
 DESCRIPTOR: _descriptor.FileDescriptor
+BIGQUERY_OPTS_FIELD_NUMBER: _ClassVar[int]
 bigquery_opts: _descriptor.FieldDescriptor
 
 class BigQueryMessageOptions(_message.Message):

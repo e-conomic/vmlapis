@@ -227,6 +227,7 @@
         "detectedLanguages": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/TextAnnotationDetectedLanguage"
           },
           "description": "A list of detected languages together with confidence."
@@ -260,6 +261,7 @@
         "details": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/protobufAny"
           }
         }
@@ -334,6 +336,7 @@
         "paragraphs": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeParagraph"
           },
           "description": "List of paragraphs in this block (if this blocks is of type text)."
@@ -356,6 +359,7 @@
         "vertices": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeVertex"
           },
           "description": "The bounding polygon vertices."
@@ -363,6 +367,7 @@
         "normalizedVertices": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeNormalizedVertex"
           },
           "description": "The bounding polygon normalized vertices."
@@ -519,6 +524,7 @@
         "blocks": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeBlock"
           },
           "description": "List of blocks of text, images etc on this page."
@@ -545,6 +551,7 @@
         "words": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeWord"
           },
           "description": "List of words in this paragraph."
@@ -586,6 +593,7 @@
         "pages": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typePage"
           },
           "description": "List of pages detected by OCR."
@@ -637,6 +645,7 @@
         "symbols": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeSymbol"
           },
           "description": "List of symbols in the word.\nThe order of the symbols follows the natural reading order."
@@ -667,6 +676,7 @@
         "callsPerMonth": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/v1CallsPerMonth"
           }
         }
@@ -724,6 +734,7 @@
         "features": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/v1Feature"
           }
         },
@@ -750,6 +761,7 @@
         "orderDate": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "orderDate\nISO 8601 date string, ie. a string of the format \"YYYY-MM-DD\"\nExample: \"2019-12-31\""
@@ -757,6 +769,7 @@
         "paymentDueDate": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "paymentDueDate\nISO 8601 date, ie. a string of the format \"YYYY-MM-DD\"\nExample: \"2019-12-31\""
@@ -764,6 +777,7 @@
         "currency": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "currency\nISO 4217 string, ie. a 3-letter capitalized string\nExample: \"NOK\""
@@ -771,6 +785,7 @@
         "totalVat": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "totalVat\nA string that parses as a two-decimal number\nExample: \"10.0\" or \"11.11\""
@@ -778,6 +793,7 @@
         "totalInclVat": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "totalInclVat\nA string that parses as a two-decimal number\nExample: \"10.0\" or \"11.11\""
@@ -785,6 +801,7 @@
         "totalExclVat": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "totalExclVat\nA string that parses as a two-decimal number\nExample: \"10.0\" or \"11.11\""
@@ -792,6 +809,7 @@
         "supplierCorporateId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "description": "[DEPRECATED]\nUse SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.\nsupplierCorporateId\nThe company VAT number\nExample: \"123456789B01\" (for Dutch companies)\nor \"12345678\" (for Norwegian companies)\nNote: The field is repeated because multiple VAT numbers might exist.\nIf you have the VAT number of you customer, you can use this information\nto find out which VAT number belongs to the supplier of the invoice."
@@ -799,6 +817,7 @@
         "supplierCountryCode": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "supplierCountryCode\nISO 3166-1 alpha-2 string, ei. a two-letter capitalized string\nExample: \"NO\""
@@ -806,6 +825,7 @@
         "documentType": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "documentType\nEither \"Receipt\" or \"Invoice\""
@@ -813,6 +833,7 @@
         "paymentMethod": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "paymentMethod\nEither \"Cash\" or \"CreditCard\""
@@ -820,6 +841,7 @@
         "creditCardLastFour": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "creditCardNumber\nFour digits\nExample: \"0012\""
@@ -827,6 +849,7 @@
         "invoiceNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "[DEPRECATED]\nuse document number instead\ninvoiceNumber\nThe supplier defined identifier af the invoice\nExample: \"12345-A99\""
@@ -838,6 +861,7 @@
         "ocrLineDkType": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "example: \"71\""
@@ -845,6 +869,7 @@
         "ocrLineDkPaymentId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "example: \"000002879094031\""
@@ -852,6 +877,7 @@
         "ocrLineDkCreditorId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "example: \"86570807\""
@@ -859,6 +885,7 @@
         "ocrLineSePaymentId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "example: \"050765098\""
@@ -866,6 +893,7 @@
         "ocrLineSeBankgiroCreditorId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "example: \"2654507\""
@@ -873,6 +901,7 @@
         "ocrLineSePlusgiroCreditorId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "example: \"5000872\""
@@ -880,6 +909,7 @@
         "ocrLineNoPaymentId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "example: \"12345678903\""
@@ -887,6 +917,7 @@
         "ocrLineFiPaymentId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "example: \"0817937867870002\""
@@ -894,6 +925,7 @@
         "ocrLineNlPaymentId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "example: \"00000159220010146012\""
@@ -909,6 +941,7 @@
         "iban": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "The first two letters are a country code. The next two digits are\ncheck digits for the ISO 7064 Mod 97, 10 checksum\nexample: \"DK50 0040 0440 1162 43\", \"NO8330001234567\""
@@ -916,6 +949,7 @@
         "lines": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeLineCandidate"
           },
           "title": "Invoice lines represented in a form of text, amount and page reference\nto state on which page the line was found"
@@ -927,6 +961,7 @@
         "bankAccountNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "Country specific bank account number"
@@ -934,6 +969,7 @@
         "bankRegistrationNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "Country specific bank registration number"
@@ -941,6 +977,7 @@
         "bic": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "Returns business identifier code"
@@ -948,6 +985,7 @@
         "documentNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "Represents identifier of the document"
@@ -955,6 +993,7 @@
         "documentDate": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "Returns document date"
@@ -962,6 +1001,7 @@
         "orderNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "Represents the identifier that supplier assigned to the order"
@@ -969,6 +1009,7 @@
         "supplierName": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "Returns supplier name"
@@ -976,6 +1017,7 @@
         "supplierVatNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "[EXPERIMENTAL]\nReturns supplier VAT number"
@@ -983,6 +1025,7 @@
         "supplierOrganisationNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "[EXPERIMENTAL]\nReturns the business ID or organisation number of the supplier"
@@ -990,6 +1033,7 @@
         "supplierAddress": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "[EXPERIMENTAL]\nReturns supplier address"
@@ -997,6 +1041,7 @@
         "customerNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "[EXPERIMENTAL]\nReturns customer identifier/number"
@@ -1023,6 +1068,7 @@
         "answer": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeCandidate"
           }
         }
@@ -1118,6 +1164,7 @@
         "fieldCorrectness": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/v1Correctness"
           }
         }
@@ -1389,204 +1436,238 @@
         "totalInclVat": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "totalVat": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "totalExclVat": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "orderDate": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "paymentDueDate": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "documentType": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "currency": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "creditCardLastFour": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "paymentMethod": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "ocrLineDkType": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "ocrLineDkPaymentId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "ocrLineDkCreditorId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "ocrLineSePaymentId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "ocrLineSeBankgiroCreditorId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "ocrLineSePlusgiroCreditorId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "ocrLineNoPaymentId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "ocrLineFiPaymentId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "ocrLineNlPaymentId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "supplierCorporateId": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "supplierCountryCode": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "invoiceNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "iban": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "orderReference": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "bankAccountNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "bankRegistrationNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "supplierName": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "bic": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "documentNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "documentDate": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "orderNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "supplierVatNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "supplierOrganisationNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "supplierAddress": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         },
         "customerNumber": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
         }
@@ -1619,12 +1700,14 @@
         "orderDate": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeDate"
           }
         },
         "paymentDueDate": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeDate"
           }
         },
@@ -1769,6 +1852,7 @@
         "documentDate": {
           "type": "array",
           "items": {
+            "type": "object",
             "$ref": "#/definitions/typeDate"
           }
         },

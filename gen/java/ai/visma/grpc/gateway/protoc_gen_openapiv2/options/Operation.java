@@ -6,13 +6,17 @@ package ai.visma.grpc.gateway.protoc_gen_openapiv2.options;
 /**
  * <pre>
  * `Operation` is a representation of OpenAPI v2 specification's Operation object.
+ *
  * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#operationObject
+ *
  * Example:
+ *
  *  service EchoService {
  *    rpc Echo(SimpleMessage) returns (SimpleMessage) {
  *      option (google.api.http) = {
  *        get: "/v1/example/echo/{id}"
  *      };
+ *
  *      option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
  *        summary: "Get a message.";
  *        operation_id: "getMessage";
@@ -40,12 +44,15 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Operation() {
-    tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    tags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     summary_ = "";
     description_ = "";
     operationId_ = "";
-    consumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    produces_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    consumes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    produces_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     schemes_ = java.util.Collections.emptyList();
     security_ = java.util.Collections.emptyList();
   }
@@ -57,11 +64,6 @@ private static final long serialVersionUID = 0L;
     return new Operation();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Openapiv2Proto.internal_static_grpc_gateway_protoc_gen_openapiv2_options_Operation_descriptor;
@@ -91,7 +93,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int TAGS_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList tags_;
+  private com.google.protobuf.LazyStringArrayList tags_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * A list of tags for API documentation control. Tags can be used for logical
@@ -336,7 +339,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int CONSUMES_FIELD_NUMBER = 6;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList consumes_;
+  private com.google.protobuf.LazyStringArrayList consumes_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * A list of MIME types the operation can consume. This overrides the consumes
@@ -396,7 +400,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int PRODUCES_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList produces_;
+  private com.google.protobuf.LazyStringArrayList produces_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <pre>
    * A list of MIME types the operation can produce. This overrides the produces
@@ -1106,11 +1111,13 @@ com.google.protobuf.Value defaultValue) {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Operation parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Operation parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -1155,13 +1162,17 @@ com.google.protobuf.Value defaultValue) {
   /**
    * <pre>
    * `Operation` is a representation of OpenAPI v2 specification's Operation object.
+   *
    * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#operationObject
+   *
    * Example:
+   *
    *  service EchoService {
    *    rpc Echo(SimpleMessage) returns (SimpleMessage) {
    *      option (google.api.http) = {
    *        get: "/v1/example/echo/{id}"
    *      };
+   *
    *      option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_operation) = {
    *        summary: "Get a message.";
    *        operation_id: "getMessage";
@@ -1236,8 +1247,8 @@ com.google.protobuf.Value defaultValue) {
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       summary_ = "";
       description_ = "";
       externalDocs_ = null;
@@ -1246,10 +1257,10 @@ com.google.protobuf.Value defaultValue) {
         externalDocsBuilder_ = null;
       }
       operationId_ = "";
-      consumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000020);
-      produces_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
+      consumes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      produces_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       internalGetMutableResponses().clear();
       schemes_ = java.util.Collections.emptyList();
       bitField0_ = (bitField0_ & ~0x00000100);
@@ -1295,21 +1306,6 @@ com.google.protobuf.Value defaultValue) {
     }
 
     private void buildPartialRepeatedFields(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Operation result) {
-      if (((bitField0_ & 0x00000001) != 0)) {
-        tags_ = tags_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      }
-      result.tags_ = tags_;
-      if (((bitField0_ & 0x00000020) != 0)) {
-        consumes_ = consumes_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000020);
-      }
-      result.consumes_ = consumes_;
-      if (((bitField0_ & 0x00000040) != 0)) {
-        produces_ = produces_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000040);
-      }
-      result.produces_ = produces_;
       if (((bitField0_ & 0x00000100) != 0)) {
         schemes_ = java.util.Collections.unmodifiableList(schemes_);
         bitField0_ = (bitField0_ & ~0x00000100);
@@ -1328,6 +1324,10 @@ com.google.protobuf.Value defaultValue) {
 
     private void buildPartial0(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Operation result) {
       int from_bitField0_ = bitField0_;
+      if (((from_bitField0_ & 0x00000001) != 0)) {
+        tags_.makeImmutable();
+        result.tags_ = tags_;
+      }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.summary_ = summary_;
       }
@@ -1341,6 +1341,14 @@ com.google.protobuf.Value defaultValue) {
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.operationId_ = operationId_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        consumes_.makeImmutable();
+        result.consumes_ = consumes_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        produces_.makeImmutable();
+        result.produces_ = produces_;
       }
       if (((from_bitField0_ & 0x00000080) != 0)) {
         result.responses_ = internalGetResponses();
@@ -1402,7 +1410,7 @@ com.google.protobuf.Value defaultValue) {
       if (!other.tags_.isEmpty()) {
         if (tags_.isEmpty()) {
           tags_ = other.tags_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ |= 0x00000001;
         } else {
           ensureTagsIsMutable();
           tags_.addAll(other.tags_);
@@ -1430,7 +1438,7 @@ com.google.protobuf.Value defaultValue) {
       if (!other.consumes_.isEmpty()) {
         if (consumes_.isEmpty()) {
           consumes_ = other.consumes_;
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ |= 0x00000020;
         } else {
           ensureConsumesIsMutable();
           consumes_.addAll(other.consumes_);
@@ -1440,7 +1448,7 @@ com.google.protobuf.Value defaultValue) {
       if (!other.produces_.isEmpty()) {
         if (produces_.isEmpty()) {
           produces_ = other.produces_;
-          bitField0_ = (bitField0_ & ~0x00000040);
+          bitField0_ |= 0x00000040;
         } else {
           ensureProducesIsMutable();
           produces_.addAll(other.produces_);
@@ -1628,12 +1636,13 @@ com.google.protobuf.Value defaultValue) {
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList tags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureTagsIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!tags_.isModifiable()) {
         tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-        bitField0_ |= 0x00000001;
-       }
+      }
+      bitField0_ |= 0x00000001;
     }
     /**
      * <pre>
@@ -1646,7 +1655,8 @@ com.google.protobuf.Value defaultValue) {
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
-      return tags_.getUnmodifiableView();
+      tags_.makeImmutable();
+      return tags_;
     }
     /**
      * <pre>
@@ -1703,6 +1713,7 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       ensureTagsIsMutable();
       tags_.set(index, value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1721,6 +1732,7 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       ensureTagsIsMutable();
       tags_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1739,6 +1751,7 @@ com.google.protobuf.Value defaultValue) {
       ensureTagsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, tags_);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -1752,8 +1765,9 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearTags() {
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      tags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
@@ -1773,6 +1787,7 @@ com.google.protobuf.Value defaultValue) {
       checkByteStringIsUtf8(value);
       ensureTagsIsMutable();
       tags_.add(value);
+      bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
@@ -2233,12 +2248,13 @@ com.google.protobuf.Value defaultValue) {
       return this;
     }
 
-    private com.google.protobuf.LazyStringList consumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList consumes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureConsumesIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!consumes_.isModifiable()) {
         consumes_ = new com.google.protobuf.LazyStringArrayList(consumes_);
-        bitField0_ |= 0x00000020;
-       }
+      }
+      bitField0_ |= 0x00000020;
     }
     /**
      * <pre>
@@ -2252,7 +2268,8 @@ com.google.protobuf.Value defaultValue) {
      */
     public com.google.protobuf.ProtocolStringList
         getConsumesList() {
-      return consumes_.getUnmodifiableView();
+      consumes_.makeImmutable();
+      return consumes_;
     }
     /**
      * <pre>
@@ -2313,6 +2330,7 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       ensureConsumesIsMutable();
       consumes_.set(index, value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2332,6 +2350,7 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       ensureConsumesIsMutable();
       consumes_.add(value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2351,6 +2370,7 @@ com.google.protobuf.Value defaultValue) {
       ensureConsumesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, consumes_);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -2365,8 +2385,9 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearConsumes() {
-      consumes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000020);
+      consumes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000020);;
       onChanged();
       return this;
     }
@@ -2387,16 +2408,18 @@ com.google.protobuf.Value defaultValue) {
       checkByteStringIsUtf8(value);
       ensureConsumesIsMutable();
       consumes_.add(value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList produces_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList produces_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureProducesIsMutable() {
-      if (!((bitField0_ & 0x00000040) != 0)) {
+      if (!produces_.isModifiable()) {
         produces_ = new com.google.protobuf.LazyStringArrayList(produces_);
-        bitField0_ |= 0x00000040;
-       }
+      }
+      bitField0_ |= 0x00000040;
     }
     /**
      * <pre>
@@ -2410,7 +2433,8 @@ com.google.protobuf.Value defaultValue) {
      */
     public com.google.protobuf.ProtocolStringList
         getProducesList() {
-      return produces_.getUnmodifiableView();
+      produces_.makeImmutable();
+      return produces_;
     }
     /**
      * <pre>
@@ -2471,6 +2495,7 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       ensureProducesIsMutable();
       produces_.set(index, value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2490,6 +2515,7 @@ com.google.protobuf.Value defaultValue) {
       if (value == null) { throw new NullPointerException(); }
       ensureProducesIsMutable();
       produces_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2509,6 +2535,7 @@ com.google.protobuf.Value defaultValue) {
       ensureProducesIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, produces_);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2523,8 +2550,9 @@ com.google.protobuf.Value defaultValue) {
      * @return This builder for chaining.
      */
     public Builder clearProduces() {
-      produces_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000040);
+      produces_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);;
       onChanged();
       return this;
     }
@@ -2545,6 +2573,7 @@ com.google.protobuf.Value defaultValue) {
       checkByteStringIsUtf8(value);
       ensureProducesIsMutable();
       produces_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2948,7 +2977,7 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Response defaultValue) {
      * @return This builder for chaining.
      */
     public Builder setDeprecated(boolean value) {
-      
+
       deprecated_ = value;
       bitField0_ |= 0x00000200;
       onChanged();

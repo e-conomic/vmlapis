@@ -7,7 +7,9 @@ package ai.visma.grpc.gateway.protoc_gen_openapiv2.options;
  * <pre>
  * `SecurityDefinitions` is a representation of OpenAPI v2 specification's
  * Security Definitions object.
+ *
  * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#securityDefinitionsObject
+ *
  * A declaration of the security schemes available to be used in the
  * specification. This does not enforce the security schemes on the operations
  * and only serves to provide the relevant details for each scheme.
@@ -34,11 +36,6 @@ private static final long serialVersionUID = 0L;
     return new SecurityDefinitions();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.grpc.gateway.protoc_gen_openapiv2.options.Openapiv2Proto.internal_static_grpc_gateway_protoc_gen_openapiv2_options_SecurityDefinitions_descriptor;
@@ -283,11 +280,13 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme defaultValue) 
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityDefinitions parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -333,7 +332,9 @@ ai.visma.grpc.gateway.protoc_gen_openapiv2.options.SecurityScheme defaultValue) 
    * <pre>
    * `SecurityDefinitions` is a representation of OpenAPI v2 specification's
    * Security Definitions object.
+   *
    * See: https://github.com/OAI/OpenAPI-Specification/blob/3.0.0/versions/2.0.md#securityDefinitionsObject
+   *
    * A declaration of the security schemes available to be used in the
    * specification. This does not enforce the security schemes on the operations
    * and only serves to provide the relevant details for each scheme.

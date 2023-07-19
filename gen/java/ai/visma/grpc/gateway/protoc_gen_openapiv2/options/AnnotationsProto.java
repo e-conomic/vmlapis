@@ -23,6 +23,7 @@ public final class AnnotationsProto {
   /**
    * <pre>
    * ID assigned by protobuf-global-extension-registry&#64;google.com for gRPC-Gateway project.
+   *
    * All IDs are the same, as assigned. It is okay that they are the same, as they extend
    * different descriptor messages.
    * </pre>
@@ -40,6 +41,7 @@ public final class AnnotationsProto {
   /**
    * <pre>
    * ID assigned by protobuf-global-extension-registry&#64;google.com for gRPC-Gateway project.
+   *
    * All IDs are the same, as assigned. It is okay that they are the same, as they extend
    * different descriptor messages.
    * </pre>
@@ -57,6 +59,7 @@ public final class AnnotationsProto {
   /**
    * <pre>
    * ID assigned by protobuf-global-extension-registry&#64;google.com for gRPC-Gateway project.
+   *
    * All IDs are the same, as assigned. It is okay that they are the same, as they extend
    * different descriptor messages.
    * </pre>
@@ -74,6 +77,7 @@ public final class AnnotationsProto {
   /**
    * <pre>
    * ID assigned by protobuf-global-extension-registry&#64;google.com for gRPC-Gateway project.
+   *
    * All IDs are the same, as assigned. It is okay that they are the same, as they extend
    * different descriptor messages.
    * </pre>
@@ -91,6 +95,7 @@ public final class AnnotationsProto {
   /**
    * <pre>
    * ID assigned by protobuf-global-extension-registry&#64;google.com for gRPC-Gateway project.
+   *
    * All IDs are the same, as assigned. It is okay that they are the same, as they extend
    * different descriptor messages.
    * </pre>

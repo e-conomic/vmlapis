@@ -7,22 +7,22 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class TrainModelEvent(_message.Message):
-    __slots__ = ["artifacts", "dataset", "model_version", "status", "status_message"]
+    __slots__ = ["dataset", "model_version", "status", "status_message", "artifacts"]
     class Artifact(_message.Message):
-        __slots__ = ["path", "type"]
-        PATH_FIELD_NUMBER: _ClassVar[int]
+        __slots__ = ["type", "path"]
         TYPE_FIELD_NUMBER: _ClassVar[int]
-        path: str
+        PATH_FIELD_NUMBER: _ClassVar[int]
         type: str
+        path: str
         def __init__(self, type: _Optional[str] = ..., path: _Optional[str] = ...) -> None: ...
-    ARTIFACTS_FIELD_NUMBER: _ClassVar[int]
     DATASET_FIELD_NUMBER: _ClassVar[int]
     MODEL_VERSION_FIELD_NUMBER: _ClassVar[int]
     STATUS_FIELD_NUMBER: _ClassVar[int]
     STATUS_MESSAGE_FIELD_NUMBER: _ClassVar[int]
-    artifacts: _containers.RepeatedCompositeFieldContainer[TrainModelEvent.Artifact]
+    ARTIFACTS_FIELD_NUMBER: _ClassVar[int]
     dataset: _dataset_pb2.Dataset
     model_version: int
     status: str
     status_message: str
+    artifacts: _containers.RepeatedCompositeFieldContainer[TrainModelEvent.Artifact]
     def __init__(self, dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ..., model_version: _Optional[int] = ..., status: _Optional[str] = ..., status_message: _Optional[str] = ..., artifacts: _Optional[_Iterable[_Union[TrainModelEvent.Artifact, _Mapping]]] = ...) -> None: ...

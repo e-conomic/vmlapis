@@ -429,12 +429,12 @@ public final class DataserviceProto {
       "areFeedbackRequest\032\026.google.protobuf.Emp" +
       "ty\022g\n\010Feedback\022#.ssn.dataservice.v1.Feed" +
       "backRequest\032\026.google.protobuf.Empty\"\036\202\323\344" +
-      "\223\002\030:\001*\"\023/v1/feedback:create\022[\n\020Calculate" +
+      "\223\002\030\"\023/v1/feedback:create:\001*\022[\n\020Calculate" +
       "Metrics\022\".ssn.dataservice.v1.MetricsRequ" +
       "est\032#.ssn.dataservice.v1.FeedbackMetrics" +
       "\022c\n\006Delete\022!.ssn.dataservice.v1.DeleteRe" +
-      "quest\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030:\001*" +
-      "\"\023/v1/feedback:delete\022X\n\023CallsPerMonthMe" +
+      "quest\032\026.google.protobuf.Empty\"\036\202\323\344\223\002\030\"\023/" +
+      "v1/feedback:delete:\001*\022X\n\023CallsPerMonthMe" +
       "tric\022\026.google.protobuf.Empty\032).ssn.datas" +
       "ervice.v1.CallsPerMonthResponseB\335\001\n\033ai.v" +
       "isma.ssn.dataservice.v1B\020DataserviceProt" +

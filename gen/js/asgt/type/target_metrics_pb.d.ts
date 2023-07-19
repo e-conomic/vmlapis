@@ -35,6 +35,18 @@ export namespace TargetMetrics {
     getAnswerRate(): number;
     setAnswerRate(value: number): Metric;
 
+    getTruePositive(): number;
+    setTruePositive(value: number): Metric;
+
+    getTrueNegative(): number;
+    setTrueNegative(value: number): Metric;
+
+    getFalsePositive(): number;
+    setFalsePositive(value: number): Metric;
+
+    getFalseNegative(): number;
+    setFalseNegative(value: number): Metric;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Metric.AsObject;
     static toObject(includeInstance: boolean, msg: Metric): Metric.AsObject;
@@ -48,6 +60,10 @@ export namespace TargetMetrics {
       precision: number,
       confidence: number,
       answerRate: number,
+      truePositive: number,
+      trueNegative: number,
+      falsePositive: number,
+      falseNegative: number,
     }
   }
 

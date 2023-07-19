@@ -26,11 +26,6 @@ private static final long serialVersionUID = 0L;
     return new DocumentSource();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.ssn.annotator.v1.AnnotatorProto.internal_static_ssn_annotator_v1_DocumentSource_descriptor;
@@ -50,6 +45,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The URI of the source document. Can be either:
+   *
    * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
    *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
    *    completed. Your request may fail if the specified host denies the
@@ -75,6 +71,7 @@ private static final long serialVersionUID = 0L;
   /**
    * <pre>
    * The URI of the source document. Can be either:
+   *
    * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
    *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
    *    completed. Your request may fail if the specified host denies the
@@ -207,11 +204,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.ssn.annotator.v1.DocumentSource parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.ssn.annotator.v1.DocumentSource parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -427,6 +426,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The URI of the source document. Can be either:
+     *
      * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
      *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
      *    completed. Your request may fail if the specified host denies the
@@ -451,6 +451,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The URI of the source document. Can be either:
+     *
      * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
      *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
      *    completed. Your request may fail if the specified host denies the
@@ -476,6 +477,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The URI of the source document. Can be either:
+     *
      * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
      *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
      *    completed. Your request may fail if the specified host denies the
@@ -497,6 +499,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The URI of the source document. Can be either:
+     *
      * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
      *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
      *    completed. Your request may fail if the specified host denies the
@@ -515,6 +518,7 @@ private static final long serialVersionUID = 0L;
     /**
      * <pre>
      * The URI of the source document. Can be either:
+     *
      * 1. A publicly-accessible image HTTP/HTTPS URL. When fetching images from
      *    HTTP/HTTPS URLs, We cannot guarantee that the request will be
      *    completed. Your request may fail if the specified host denies the

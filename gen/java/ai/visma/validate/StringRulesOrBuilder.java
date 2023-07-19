@@ -677,5 +677,5 @@ public interface StringRulesOrBuilder extends
    */
   boolean getIgnoreEmpty();
 
-  public ai.visma.validate.StringRules.WellKnownCase getWellKnownCase();
+  ai.visma.validate.StringRules.WellKnownCase getWellKnownCase();
 }

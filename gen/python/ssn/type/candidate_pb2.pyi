@@ -7,54 +7,53 @@ from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Opti
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
-class Candidate(_message.Message):
-    __slots__ = ["bounding_box", "confidence", "model_metadata", "page_ref", "text", "type", "value"]
-    class Type(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-        __slots__ = []
-    BOUNDING_BOX_FIELD_NUMBER: _ClassVar[int]
-    CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
-    DOCUMENT: Candidate.Type
-    FIELD: Candidate.Type
-    MODEL_METADATA_FIELD_NUMBER: _ClassVar[int]
-    PAGE_REF_FIELD_NUMBER: _ClassVar[int]
-    TEXT_FIELD_NUMBER: _ClassVar[int]
-    TYPE_FIELD_NUMBER: _ClassVar[int]
-    UNKNOWN: Candidate.Type
-    VALUE_FIELD_NUMBER: _ClassVar[int]
-    bounding_box: _geometry_pb2.BoundingPoly
-    confidence: Confidence
-    model_metadata: ModelSpec
-    page_ref: int
-    text: str
-    type: Candidate.Type
-    value: str
-    def __init__(self, value: _Optional[str] = ..., text: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., bounding_box: _Optional[_Union[_geometry_pb2.BoundingPoly, _Mapping]] = ..., type: _Optional[_Union[Candidate.Type, str]] = ..., page_ref: _Optional[int] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ...) -> None: ...
-
 class Confidence(_message.Message):
     __slots__ = ["level", "value"]
     class Level(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
         __slots__ = []
-    HIGH: Confidence.Level
-    LEVEL_FIELD_NUMBER: _ClassVar[int]
+        UNKNOWN: _ClassVar[Confidence.Level]
+        VERY_LOW: _ClassVar[Confidence.Level]
+        LOW: _ClassVar[Confidence.Level]
+        MID: _ClassVar[Confidence.Level]
+        HIGH: _ClassVar[Confidence.Level]
+        VERY_HIGH: _ClassVar[Confidence.Level]
+    UNKNOWN: Confidence.Level
+    VERY_LOW: Confidence.Level
     LOW: Confidence.Level
     MID: Confidence.Level
-    UNKNOWN: Confidence.Level
-    VALUE_FIELD_NUMBER: _ClassVar[int]
+    HIGH: Confidence.Level
     VERY_HIGH: Confidence.Level
-    VERY_LOW: Confidence.Level
+    LEVEL_FIELD_NUMBER: _ClassVar[int]
+    VALUE_FIELD_NUMBER: _ClassVar[int]
     level: Confidence.Level
     value: _wrappers_pb2.FloatValue
     def __init__(self, level: _Optional[_Union[Confidence.Level, str]] = ..., value: _Optional[_Union[_wrappers_pb2.FloatValue, _Mapping]] = ...) -> None: ...
 
-class LineCandidate(_message.Message):
-    __slots__ = ["amount", "page_ref", "text"]
-    AMOUNT_FIELD_NUMBER: _ClassVar[int]
-    PAGE_REF_FIELD_NUMBER: _ClassVar[int]
+class Candidate(_message.Message):
+    __slots__ = ["value", "text", "confidence", "bounding_box", "type", "page_ref", "model_metadata"]
+    class Type(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
+        __slots__ = []
+        UNKNOWN: _ClassVar[Candidate.Type]
+        FIELD: _ClassVar[Candidate.Type]
+        DOCUMENT: _ClassVar[Candidate.Type]
+    UNKNOWN: Candidate.Type
+    FIELD: Candidate.Type
+    DOCUMENT: Candidate.Type
+    VALUE_FIELD_NUMBER: _ClassVar[int]
     TEXT_FIELD_NUMBER: _ClassVar[int]
-    amount: float
-    page_ref: int
+    CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
+    BOUNDING_BOX_FIELD_NUMBER: _ClassVar[int]
+    TYPE_FIELD_NUMBER: _ClassVar[int]
+    PAGE_REF_FIELD_NUMBER: _ClassVar[int]
+    MODEL_METADATA_FIELD_NUMBER: _ClassVar[int]
+    value: str
     text: str
-    def __init__(self, text: _Optional[str] = ..., amount: _Optional[float] = ..., page_ref: _Optional[int] = ...) -> None: ...
+    confidence: Confidence
+    bounding_box: _geometry_pb2.BoundingPoly
+    type: Candidate.Type
+    page_ref: int
+    model_metadata: ModelSpec
+    def __init__(self, value: _Optional[str] = ..., text: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., bounding_box: _Optional[_Union[_geometry_pb2.BoundingPoly, _Mapping]] = ..., type: _Optional[_Union[Candidate.Type, str]] = ..., page_ref: _Optional[int] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ...) -> None: ...
 
 class ModelSpec(_message.Message):
     __slots__ = ["model_name", "model_ver"]
@@ -63,3 +62,13 @@ class ModelSpec(_message.Message):
     model_name: str
     model_ver: _wrappers_pb2.Int64Value
     def __init__(self, model_name: _Optional[str] = ..., model_ver: _Optional[_Union[_wrappers_pb2.Int64Value, _Mapping]] = ...) -> None: ...
+
+class LineCandidate(_message.Message):
+    __slots__ = ["text", "amount", "page_ref"]
+    TEXT_FIELD_NUMBER: _ClassVar[int]
+    AMOUNT_FIELD_NUMBER: _ClassVar[int]
+    PAGE_REF_FIELD_NUMBER: _ClassVar[int]
+    text: str
+    amount: float
+    page_ref: int
+    def __init__(self, text: _Optional[str] = ..., amount: _Optional[float] = ..., page_ref: _Optional[int] = ...) -> None: ...

@@ -8,7 +8,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.51.0)",
+    value = "by gRPC proto compiler (version 1.56.1)",
     comments = "Source: ssn/ocrservice/v1/ocrservice.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class OcrServiceGrpc {
@@ -129,48 +129,45 @@ public final class OcrServiceGrpc {
    * Interface exported by the server.
    * </pre>
    */
-  public static abstract class OcrServiceImplBase implements io.grpc.BindableService {
+  public interface AsyncService {
 
     /**
      */
-    public void ocrScanImage(ai.visma.ssn.ocrservice.v1.OcrScanImageRequest request,
+    default void ocrScanImage(ai.visma.ssn.ocrservice.v1.OcrScanImageRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.OcrScanImageResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getOcrScanImageMethod(), responseObserver);
     }
 
     /**
      */
-    public void getTextAnnotation(ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest request,
+    default void getTextAnnotation(ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTextAnnotationMethod(), responseObserver);
-    }
-
-    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
-      return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
-          .addMethod(
-            getOcrScanImageMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.ssn.ocrservice.v1.OcrScanImageRequest,
-                ai.visma.ssn.ocrservice.v1.OcrScanImageResponse>(
-                  this, METHODID_OCR_SCAN_IMAGE)))
-          .addMethod(
-            getGetTextAnnotationMethod(),
-            io.grpc.stub.ServerCalls.asyncUnaryCall(
-              new MethodHandlers<
-                ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest,
-                ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse>(
-                  this, METHODID_GET_TEXT_ANNOTATION)))
-          .build();
     }
   }
 
   /**
+   * Base class for the server implementation of the service OcrService.
    * <pre>
    * Interface exported by the server.
    * </pre>
    */
-  public static final class OcrServiceStub extends io.grpc.stub.AbstractAsyncStub<OcrServiceStub> {
+  public static abstract class OcrServiceImplBase
+      implements io.grpc.BindableService, AsyncService {
+
+    @java.lang.Override public final io.grpc.ServerServiceDefinition bindService() {
+      return OcrServiceGrpc.bindService(this);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do asynchronous rpc calls to service OcrService.
+   * <pre>
+   * Interface exported by the server.
+   * </pre>
+   */
+  public static final class OcrServiceStub
+      extends io.grpc.stub.AbstractAsyncStub<OcrServiceStub> {
     private OcrServiceStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -200,11 +197,13 @@ public final class OcrServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do synchronous rpc calls to service OcrService.
    * <pre>
    * Interface exported by the server.
    * </pre>
    */
-  public static final class OcrServiceBlockingStub extends io.grpc.stub.AbstractBlockingStub<OcrServiceBlockingStub> {
+  public static final class OcrServiceBlockingStub
+      extends io.grpc.stub.AbstractBlockingStub<OcrServiceBlockingStub> {
     private OcrServiceBlockingStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -232,11 +231,13 @@ public final class OcrServiceGrpc {
   }
 
   /**
+   * A stub to allow clients to do ListenableFuture-style rpc calls to service OcrService.
    * <pre>
    * Interface exported by the server.
    * </pre>
    */
-  public static final class OcrServiceFutureStub extends io.grpc.stub.AbstractFutureStub<OcrServiceFutureStub> {
+  public static final class OcrServiceFutureStub
+      extends io.grpc.stub.AbstractFutureStub<OcrServiceFutureStub> {
     private OcrServiceFutureStub(
         io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
       super(channel, callOptions);
@@ -273,10 +274,10 @@ public final class OcrServiceGrpc {
       io.grpc.stub.ServerCalls.ServerStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.ClientStreamingMethod<Req, Resp>,
       io.grpc.stub.ServerCalls.BidiStreamingMethod<Req, Resp> {
-    private final OcrServiceImplBase serviceImpl;
+    private final AsyncService serviceImpl;
     private final int methodId;
 
-    MethodHandlers(OcrServiceImplBase serviceImpl, int methodId) {
+    MethodHandlers(AsyncService serviceImpl, int methodId) {
       this.serviceImpl = serviceImpl;
       this.methodId = methodId;
     }
@@ -307,6 +308,25 @@ public final class OcrServiceGrpc {
           throw new AssertionError();
       }
     }
+  }
+
+  public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
+    return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
+        .addMethod(
+          getOcrScanImageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.ocrservice.v1.OcrScanImageRequest,
+              ai.visma.ssn.ocrservice.v1.OcrScanImageResponse>(
+                service, METHODID_OCR_SCAN_IMAGE)))
+        .addMethod(
+          getGetTextAnnotationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest,
+              ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse>(
+                service, METHODID_GET_TEXT_ANNOTATION)))
+        .build();
   }
 
   private static abstract class OcrServiceBaseDescriptorSupplier

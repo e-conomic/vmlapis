@@ -389,7 +389,7 @@ namespace Asgt.Modelregistry.V1 {
       if (other.ModelVersion != 0L) {
         ModelVersion = other.ModelVersion;
       }
-      metrics_.Add(other.metrics_);
+      metrics_.MergeFrom(other.metrics_);
       targetMetrics_.Add(other.targetMetrics_);
       if (other.InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) {
         InputType = other.InputType;

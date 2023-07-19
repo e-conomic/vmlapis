@@ -88,7 +88,7 @@ public final class ScannerProto {
       "GE_GRADE\020\023\022\010\n\004NAME\020\024\022\t\n\005LEVEL\020\0252o\n\007Scann" +
       "er\022d\n\006ScanCV\022\034.cv.scanner.v1.ScanCVReque" +
       "st\032\035.cv.scanner.v1.ScanCVResponse\"\035\202\323\344\223\002" +
-      "\027:\001*\"\022/v1/scanner:scancvB\262\001\n\026ai.visma.cv" +
+      "\027\"\022/v1/scanner:scancv:\001*B\262\001\n\026ai.visma.cv" +
       ".scanner.v1B\014ScannerProtoP\001Z4github.com/" +
       "e-conomic/vmlapis/gen/go/cv/scanner/v1;c" +
       "v\242\002\003CSX\252\002\rCv.Scanner.V1\312\002\rCv\\Scanner\\V1\342" +

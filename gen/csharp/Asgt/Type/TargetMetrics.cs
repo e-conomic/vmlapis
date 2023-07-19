@@ -24,20 +24,23 @@ namespace Asgt.Type {
     static TargetMetricsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8SCWFzZ3QudHlwZSLL",
-            "AQoNVGFyZ2V0TWV0cmljcxIWCgZ0YXJnZXQYASABKAlSBnRhcmdldBI5Cgdt",
+            "Ch5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8SCWFzZ3QudHlwZSLk",
+            "AgoNVGFyZ2V0TWV0cmljcxIWCgZ0YXJnZXQYASABKAlSBnRhcmdldBI5Cgdt",
             "ZXRyaWNzGAIgAygLMh8uYXNndC50eXBlLlRhcmdldE1ldHJpY3MuTWV0cmlj",
-            "UgdtZXRyaWNzGmcKBk1ldHJpYxIcCglwcmVjaXNpb24YASABKAJSCXByZWNp",
-            "c2lvbhIeCgpjb25maWRlbmNlGAIgASgCUgpjb25maWRlbmNlEh8KC2Fuc3dl",
-            "cl9yYXRlGAMgASgCUgphbnN3ZXJSYXRlQqUBChJhaS52aXNtYS5hc2d0LnR5",
-            "cGVCElRhcmdldE1ldHJpY3NQcm90b1ABWjZnaXRodWIuY29tL2UtY29ub21p",
-            "Yy92bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7YXNndHR5cGWiAgNBVFiqAglB",
-            "c2d0LlR5cGXKAglBc2d0XFR5cGXiAhVBc2d0XFR5cGVcR1BCTWV0YWRhdGHq",
-            "AgpBc2d0OjpUeXBlYgZwcm90bzM="));
+            "UgdtZXRyaWNzGv8BCgZNZXRyaWMSHAoJcHJlY2lzaW9uGAEgASgCUglwcmVj",
+            "aXNpb24SHgoKY29uZmlkZW5jZRgCIAEoAlIKY29uZmlkZW5jZRIfCgthbnN3",
+            "ZXJfcmF0ZRgDIAEoAlIKYW5zd2VyUmF0ZRIjCg10cnVlX3Bvc2l0aXZlGAQg",
+            "ASgFUgx0cnVlUG9zaXRpdmUSIwoNdHJ1ZV9uZWdhdGl2ZRgFIAEoBVIMdHJ1",
+            "ZU5lZ2F0aXZlEiUKDmZhbHNlX3Bvc2l0aXZlGAYgASgFUg1mYWxzZVBvc2l0",
+            "aXZlEiUKDmZhbHNlX25lZ2F0aXZlGAcgASgFUg1mYWxzZU5lZ2F0aXZlQqUB",
+            "ChJhaS52aXNtYS5hc2d0LnR5cGVCElRhcmdldE1ldHJpY3NQcm90b1ABWjZn",
+            "aXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7",
+            "YXNndHR5cGWiAgNBVFiqAglBc2d0LlR5cGXKAglBc2d0XFR5cGXiAhVBc2d0",
+            "XFR5cGVcR1BCTWV0YWRhdGHqAgpBc2d0OjpUeXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics), global::Asgt.Type.TargetMetrics.Parser, new[]{ "Target", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.Metric), global::Asgt.Type.TargetMetrics.Types.Metric.Parser, new[]{ "Precision", "Confidence", "AnswerRate" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics), global::Asgt.Type.TargetMetrics.Parser, new[]{ "Target", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.Metric), global::Asgt.Type.TargetMetrics.Types.Metric.Parser, new[]{ "Precision", "Confidence", "AnswerRate", "TruePositive", "TrueNegative", "FalsePositive", "FalseNegative" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -299,6 +302,10 @@ namespace Asgt.Type {
           precision_ = other.precision_;
           confidence_ = other.confidence_;
           answerRate_ = other.answerRate_;
+          truePositive_ = other.truePositive_;
+          trueNegative_ = other.trueNegative_;
+          falsePositive_ = other.falsePositive_;
+          falseNegative_ = other.falseNegative_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -344,6 +351,54 @@ namespace Asgt.Type {
           }
         }
 
+        /// <summary>Field number for the "true_positive" field.</summary>
+        public const int TruePositiveFieldNumber = 4;
+        private int truePositive_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int TruePositive {
+          get { return truePositive_; }
+          set {
+            truePositive_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "true_negative" field.</summary>
+        public const int TrueNegativeFieldNumber = 5;
+        private int trueNegative_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int TrueNegative {
+          get { return trueNegative_; }
+          set {
+            trueNegative_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "false_positive" field.</summary>
+        public const int FalsePositiveFieldNumber = 6;
+        private int falsePositive_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int FalsePositive {
+          get { return falsePositive_; }
+          set {
+            falsePositive_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "false_negative" field.</summary>
+        public const int FalseNegativeFieldNumber = 7;
+        private int falseNegative_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int FalseNegative {
+          get { return falseNegative_; }
+          set {
+            falseNegative_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -362,6 +417,10 @@ namespace Asgt.Type {
           if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Precision, other.Precision)) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Confidence, other.Confidence)) return false;
           if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(AnswerRate, other.AnswerRate)) return false;
+          if (TruePositive != other.TruePositive) return false;
+          if (TrueNegative != other.TrueNegative) return false;
+          if (FalsePositive != other.FalsePositive) return false;
+          if (FalseNegative != other.FalseNegative) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -372,6 +431,10 @@ namespace Asgt.Type {
           if (Precision != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Precision);
           if (Confidence != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Confidence);
           if (AnswerRate != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(AnswerRate);
+          if (TruePositive != 0) hash ^= TruePositive.GetHashCode();
+          if (TrueNegative != 0) hash ^= TrueNegative.GetHashCode();
+          if (FalsePositive != 0) hash ^= FalsePositive.GetHashCode();
+          if (FalseNegative != 0) hash ^= FalseNegative.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -402,6 +465,22 @@ namespace Asgt.Type {
             output.WriteRawTag(29);
             output.WriteFloat(AnswerRate);
           }
+          if (TruePositive != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(TruePositive);
+          }
+          if (TrueNegative != 0) {
+            output.WriteRawTag(40);
+            output.WriteInt32(TrueNegative);
+          }
+          if (FalsePositive != 0) {
+            output.WriteRawTag(48);
+            output.WriteInt32(FalsePositive);
+          }
+          if (FalseNegative != 0) {
+            output.WriteRawTag(56);
+            output.WriteInt32(FalseNegative);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -424,6 +503,22 @@ namespace Asgt.Type {
             output.WriteRawTag(29);
             output.WriteFloat(AnswerRate);
           }
+          if (TruePositive != 0) {
+            output.WriteRawTag(32);
+            output.WriteInt32(TruePositive);
+          }
+          if (TrueNegative != 0) {
+            output.WriteRawTag(40);
+            output.WriteInt32(TrueNegative);
+          }
+          if (FalsePositive != 0) {
+            output.WriteRawTag(48);
+            output.WriteInt32(FalsePositive);
+          }
+          if (FalseNegative != 0) {
+            output.WriteRawTag(56);
+            output.WriteInt32(FalseNegative);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -442,6 +537,18 @@ namespace Asgt.Type {
           }
           if (AnswerRate != 0F) {
             size += 1 + 4;
+          }
+          if (TruePositive != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TruePositive);
+          }
+          if (TrueNegative != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(TrueNegative);
+          }
+          if (FalsePositive != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(FalsePositive);
+          }
+          if (FalseNegative != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(FalseNegative);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -463,6 +570,18 @@ namespace Asgt.Type {
           }
           if (other.AnswerRate != 0F) {
             AnswerRate = other.AnswerRate;
+          }
+          if (other.TruePositive != 0) {
+            TruePositive = other.TruePositive;
+          }
+          if (other.TrueNegative != 0) {
+            TrueNegative = other.TrueNegative;
+          }
+          if (other.FalsePositive != 0) {
+            FalsePositive = other.FalsePositive;
+          }
+          if (other.FalseNegative != 0) {
+            FalseNegative = other.FalseNegative;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -491,6 +610,22 @@ namespace Asgt.Type {
                 AnswerRate = input.ReadFloat();
                 break;
               }
+              case 32: {
+                TruePositive = input.ReadInt32();
+                break;
+              }
+              case 40: {
+                TrueNegative = input.ReadInt32();
+                break;
+              }
+              case 48: {
+                FalsePositive = input.ReadInt32();
+                break;
+              }
+              case 56: {
+                FalseNegative = input.ReadInt32();
+                break;
+              }
             }
           }
         #endif
@@ -516,6 +651,22 @@ namespace Asgt.Type {
               }
               case 29: {
                 AnswerRate = input.ReadFloat();
+                break;
+              }
+              case 32: {
+                TruePositive = input.ReadInt32();
+                break;
+              }
+              case 40: {
+                TrueNegative = input.ReadInt32();
+                break;
+              }
+              case 48: {
+                FalsePositive = input.ReadInt32();
+                break;
+              }
+              case 56: {
+                FalseNegative = input.ReadInt32();
                 break;
               }
             }

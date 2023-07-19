@@ -19,8 +19,10 @@ private static final long serialVersionUID = 0L;
     consumer_ = "";
     name_ = "";
     type_ = "";
-    tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-    targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    tags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    targets_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -30,11 +32,6 @@ private static final long serialVersionUID = 0L;
     return new Dataset();
   }
 
-  @java.lang.Override
-  public final com.google.protobuf.UnknownFieldSet
-  getUnknownFields() {
-    return this.unknownFields;
-  }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
     return ai.visma.asgt.type.DatasetProto.internal_static_asgt_type_Dataset_descriptor;
@@ -167,7 +164,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int TAGS_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList tags_;
+  private com.google.protobuf.LazyStringArrayList tags_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <code>repeated string tags = 4 [json_name = "tags"];</code>
    * @return A list containing the tags.
@@ -203,7 +201,8 @@ private static final long serialVersionUID = 0L;
 
   public static final int TARGETS_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringList targets_;
+  private com.google.protobuf.LazyStringArrayList targets_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
    * <code>repeated string targets = 5 [json_name = "targets"];</code>
    * @return A list containing the targets.
@@ -594,11 +593,13 @@ private static final long serialVersionUID = 0L;
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
+
   public static ai.visma.asgt.type.Dataset parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
+
   public static ai.visma.asgt.type.Dataset parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
@@ -677,10 +678,10 @@ private static final long serialVersionUID = 0L;
       consumer_ = "";
       name_ = "";
       type_ = "";
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
-      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      tags_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      targets_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       retentionPolicy_ = null;
       if (retentionPolicyBuilder_ != null) {
         retentionPolicyBuilder_.dispose();
@@ -728,23 +729,9 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public ai.visma.asgt.type.Dataset buildPartial() {
       ai.visma.asgt.type.Dataset result = new ai.visma.asgt.type.Dataset(this);
-      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
-    }
-
-    private void buildPartialRepeatedFields(ai.visma.asgt.type.Dataset result) {
-      if (((bitField0_ & 0x00000008) != 0)) {
-        tags_ = tags_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000008);
-      }
-      result.tags_ = tags_;
-      if (((bitField0_ & 0x00000010) != 0)) {
-        targets_ = targets_.getUnmodifiableView();
-        bitField0_ = (bitField0_ & ~0x00000010);
-      }
-      result.targets_ = targets_;
     }
 
     private void buildPartial0(ai.visma.asgt.type.Dataset result) {
@@ -757,6 +744,14 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.type_ = type_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        tags_.makeImmutable();
+        result.tags_ = tags_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        targets_.makeImmutable();
+        result.targets_ = targets_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.retentionPolicy_ = retentionPolicyBuilder_ == null
@@ -845,7 +840,7 @@ private static final long serialVersionUID = 0L;
       if (!other.tags_.isEmpty()) {
         if (tags_.isEmpty()) {
           tags_ = other.tags_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ |= 0x00000008;
         } else {
           ensureTagsIsMutable();
           tags_.addAll(other.tags_);
@@ -855,7 +850,7 @@ private static final long serialVersionUID = 0L;
       if (!other.targets_.isEmpty()) {
         if (targets_.isEmpty()) {
           targets_ = other.targets_;
-          bitField0_ = (bitField0_ & ~0x00000010);
+          bitField0_ |= 0x00000010;
         } else {
           ensureTargetsIsMutable();
           targets_.addAll(other.targets_);
@@ -1196,12 +1191,13 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private com.google.protobuf.LazyStringList tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList tags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureTagsIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!tags_.isModifiable()) {
         tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
-        bitField0_ |= 0x00000008;
-       }
+      }
+      bitField0_ |= 0x00000008;
     }
     /**
      * <code>repeated string tags = 4 [json_name = "tags"];</code>
@@ -1209,7 +1205,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getTagsList() {
-      return tags_.getUnmodifiableView();
+      tags_.makeImmutable();
+      return tags_;
     }
     /**
      * <code>repeated string tags = 4 [json_name = "tags"];</code>
@@ -1246,6 +1243,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureTagsIsMutable();
       tags_.set(index, value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1259,6 +1257,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureTagsIsMutable();
       tags_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1272,6 +1271,7 @@ private static final long serialVersionUID = 0L;
       ensureTagsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, tags_);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1280,8 +1280,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTags() {
-      tags_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000008);
+      tags_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);;
       onChanged();
       return this;
     }
@@ -1296,16 +1297,18 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureTagsIsMutable();
       tags_.add(value);
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
 
-    private com.google.protobuf.LazyStringList targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private com.google.protobuf.LazyStringArrayList targets_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureTargetsIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
+      if (!targets_.isModifiable()) {
         targets_ = new com.google.protobuf.LazyStringArrayList(targets_);
-        bitField0_ |= 0x00000010;
-       }
+      }
+      bitField0_ |= 0x00000010;
     }
     /**
      * <code>repeated string targets = 5 [json_name = "targets"];</code>
@@ -1313,7 +1316,8 @@ private static final long serialVersionUID = 0L;
      */
     public com.google.protobuf.ProtocolStringList
         getTargetsList() {
-      return targets_.getUnmodifiableView();
+      targets_.makeImmutable();
+      return targets_;
     }
     /**
      * <code>repeated string targets = 5 [json_name = "targets"];</code>
@@ -1350,6 +1354,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureTargetsIsMutable();
       targets_.set(index, value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1363,6 +1368,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureTargetsIsMutable();
       targets_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1376,6 +1382,7 @@ private static final long serialVersionUID = 0L;
       ensureTargetsIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, targets_);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1384,8 +1391,9 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearTargets() {
-      targets_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000010);
+      targets_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);;
       onChanged();
       return this;
     }
@@ -1400,6 +1408,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureTargetsIsMutable();
       targets_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1784,7 +1793,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder setSize(long value) {
-      
+
       size_ = value;
       bitField0_ |= 0x00000100;
       onChanged();

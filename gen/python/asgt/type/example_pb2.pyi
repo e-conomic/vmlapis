@@ -8,11 +8,11 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Example(_message.Message):
-    __slots__ = ["data", "id", "target_values"]
+    __slots__ = ["data", "target_values", "id"]
     DATA_FIELD_NUMBER: _ClassVar[int]
-    ID_FIELD_NUMBER: _ClassVar[int]
     TARGET_VALUES_FIELD_NUMBER: _ClassVar[int]
+    ID_FIELD_NUMBER: _ClassVar[int]
     data: _data_pb2.Data
-    id: str
     target_values: _containers.RepeatedCompositeFieldContainer[_target_value_pb2.TargetValue]
+    id: str
     def __init__(self, data: _Optional[_Union[_data_pb2.Data, _Mapping]] = ..., target_values: _Optional[_Iterable[_Union[_target_value_pb2.TargetValue, _Mapping]]] = ..., id: _Optional[str] = ...) -> None: ...
