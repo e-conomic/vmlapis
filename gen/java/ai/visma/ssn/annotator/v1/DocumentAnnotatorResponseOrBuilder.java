@@ -1110,6 +1110,45 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getOcrLineBePaymentIdList();
+  /**
+   * <pre>
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  ai.visma.ssn.type.Candidate getOcrLineBePaymentId(int index);
+  /**
+   * <pre>
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  int getOcrLineBePaymentIdCount();
+  /**
+   * <pre>
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getOcrLineBePaymentIdOrBuilderList();
+  /**
+   * <pre>
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 40 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getOcrLineBePaymentIdOrBuilder(
+      int index);
+
+  /**
+   * <pre>
    * Return a string containing the text from the document
    * </pre>
    *
@@ -1775,5 +1814,225 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * <code>repeated .ssn.type.Candidate customer_number = 38 [json_name = "customerNumber"];</code>
    */
   ai.visma.ssn.type.CandidateOrBuilder getCustomerNumberOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Equivalent of order number for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getReceiverOrderNumberList();
+  /**
+   * <pre>
+   * Equivalent of order number for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
+   */
+  ai.visma.ssn.type.Candidate getReceiverOrderNumber(int index);
+  /**
+   * <pre>
+   * Equivalent of order number for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
+   */
+  int getReceiverOrderNumberCount();
+  /**
+   * <pre>
+   * Equivalent of order number for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getReceiverOrderNumberOrBuilderList();
+  /**
+   * <pre>
+   * Equivalent of order number for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_order_number = 39 [json_name = "receiverOrderNumber"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getReceiverOrderNumberOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Equivalent of address for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getReceiverAddressList();
+  /**
+   * <pre>
+   * Equivalent of address for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
+   */
+  ai.visma.ssn.type.Candidate getReceiverAddress(int index);
+  /**
+   * <pre>
+   * Equivalent of address for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
+   */
+  int getReceiverAddressCount();
+  /**
+   * <pre>
+   * Equivalent of address for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getReceiverAddressOrBuilderList();
+  /**
+   * <pre>
+   * Equivalent of address for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_address = 41 [json_name = "receiverAddress"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getReceiverAddressOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Equivalent of country code for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getReceiverCountryCodeList();
+  /**
+   * <pre>
+   * Equivalent of country code for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
+   */
+  ai.visma.ssn.type.Candidate getReceiverCountryCode(int index);
+  /**
+   * <pre>
+   * Equivalent of country code for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
+   */
+  int getReceiverCountryCodeCount();
+  /**
+   * <pre>
+   * Equivalent of country code for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getReceiverCountryCodeOrBuilderList();
+  /**
+   * <pre>
+   * Equivalent of country code for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_country_code = 42 [json_name = "receiverCountryCode"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getReceiverCountryCodeOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Equivalent of supplier name for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getReceiverNameList();
+  /**
+   * <pre>
+   * Equivalent of supplier name for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
+   */
+  ai.visma.ssn.type.Candidate getReceiverName(int index);
+  /**
+   * <pre>
+   * Equivalent of supplier name for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
+   */
+  int getReceiverNameCount();
+  /**
+   * <pre>
+   * Equivalent of supplier name for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getReceiverNameOrBuilderList();
+  /**
+   * <pre>
+   * Equivalent of supplier name for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_name = 43 [json_name = "receiverName"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getReceiverNameOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * Equivalent of VAT number for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getReceiverVatNumberList();
+  /**
+   * <pre>
+   * Equivalent of VAT number for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
+   */
+  ai.visma.ssn.type.Candidate getReceiverVatNumber(int index);
+  /**
+   * <pre>
+   * Equivalent of VAT number for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
+   */
+  int getReceiverVatNumberCount();
+  /**
+   * <pre>
+   * Equivalent of VAT number for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getReceiverVatNumberOrBuilderList();
+  /**
+   * <pre>
+   * Equivalent of VAT number for receiver
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate receiver_vat_number = 44 [json_name = "receiverVatNumber"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getReceiverVatNumberOrBuilder(
       int index);
 }

@@ -54,6 +54,12 @@ message FeatureGenRequest {
     string supplier_address = 32;
     string credit_card_last_four = 33;
     string customer_number = 34;
+    string receiver_order_number = 35;
+    string ocr_line_be_payment_id = 36;
+    string receiver_address = 37;
+    string receiver_country_code = 38;
+    string receiver_name = 39;
+    string receiver_vat_number = 40;
   }
   TruthLabels truth_labels = 1;
   ssn.type.TextAnnotation text_annotation = 2;
@@ -107,6 +113,12 @@ message PredictResponse {
   repeated ssn.type.Candidate supplier_address = 33;
   repeated ssn.type.Candidate credit_card_last_four = 34;
   repeated ssn.type.Candidate customer_number = 35;
+  repeated ssn.type.Candidate receiver_order_number = 36;
+  repeated ssn.type.Candidate ocr_line_be_payment_id = 37;
+  repeated ssn.type.Candidate receiver_address = 38;
+  repeated ssn.type.Candidate receiver_country_code = 39;
+  repeated ssn.type.Candidate receiver_name = 40;
+  repeated ssn.type.Candidate receiver_vat_number = 41;
 }
 
 message FeatureGenPredictRequest {

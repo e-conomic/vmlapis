@@ -516,4 +516,94 @@ public interface TrueValuesOrBuilder extends
    * <code>.google.protobuf.StringValue customer_number = 34 [json_name = "customerNumber"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder();
+
+  /**
+   * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   * @return Whether the receiverOrderNumber field is set.
+   */
+  boolean hasReceiverOrderNumber();
+  /**
+   * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   * @return The receiverOrderNumber.
+   */
+  com.google.protobuf.StringValue getReceiverOrderNumber();
+  /**
+   * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getReceiverOrderNumberOrBuilder();
+
+  /**
+   * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   * @return Whether the ocrLineBePaymentId field is set.
+   */
+  boolean hasOcrLineBePaymentId();
+  /**
+   * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   * @return The ocrLineBePaymentId.
+   */
+  com.google.protobuf.StringValue getOcrLineBePaymentId();
+  /**
+   * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getOcrLineBePaymentIdOrBuilder();
+
+  /**
+   * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   * @return Whether the receiverAddress field is set.
+   */
+  boolean hasReceiverAddress();
+  /**
+   * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   * @return The receiverAddress.
+   */
+  com.google.protobuf.StringValue getReceiverAddress();
+  /**
+   * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getReceiverAddressOrBuilder();
+
+  /**
+   * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   * @return Whether the receiverCountryCode field is set.
+   */
+  boolean hasReceiverCountryCode();
+  /**
+   * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   * @return The receiverCountryCode.
+   */
+  com.google.protobuf.StringValue getReceiverCountryCode();
+  /**
+   * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getReceiverCountryCodeOrBuilder();
+
+  /**
+   * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+   * @return Whether the receiverName field is set.
+   */
+  boolean hasReceiverName();
+  /**
+   * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+   * @return The receiverName.
+   */
+  com.google.protobuf.StringValue getReceiverName();
+  /**
+   * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getReceiverNameOrBuilder();
+
+  /**
+   * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   * @return Whether the receiverVatNumber field is set.
+   */
+  boolean hasReceiverVatNumber();
+  /**
+   * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   * @return The receiverVatNumber.
+   */
+  com.google.protobuf.StringValue getReceiverVatNumber();
+  /**
+   * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getReceiverVatNumberOrBuilder();
 }

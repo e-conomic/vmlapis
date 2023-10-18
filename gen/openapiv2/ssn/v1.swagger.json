@@ -930,6 +930,13 @@
           },
           "title": "example: \"00000159220010146012\""
         },
+        "ocrLineBePaymentId": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          }
+        },
         "text": {
           "type": "string",
           "title": "Return a string containing the text from the document"
@@ -1045,6 +1052,46 @@
             "$ref": "#/definitions/typeCandidate"
           },
           "title": "[EXPERIMENTAL]\nReturns customer identifier/number"
+        },
+        "receiverOrderNumber": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Equivalent of order number for receiver"
+        },
+        "receiverAddress": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Equivalent of address for receiver"
+        },
+        "receiverCountryCode": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Equivalent of country code for receiver"
+        },
+        "receiverName": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Equivalent of supplier name for receiver"
+        },
+        "receiverVatNumber": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "Equivalent of VAT number for receiver"
         }
       }
     },
@@ -1128,6 +1175,7 @@
         "OCR_LINE_NO_PAYMENT_ID",
         "OCR_LINE_FI_PAYMENT_ID",
         "OCR_LINE_NL_PAYMENT_ID",
+        "OCR_LINE_BE_PAYMENT_ID",
         "TEXT",
         "IBAN",
         "LINES",
@@ -1142,10 +1190,15 @@
         "SUPPLIER_VAT_NUMBER",
         "SUPPLIER_ORGANISATION_NUMBER",
         "SUPPLIER_ADDRESS",
-        "CUSTOMER_NUMBER"
+        "CUSTOMER_NUMBER",
+        "RECEIVER_ORDER_NUMBER",
+        "RECEIVER_ADDRESS",
+        "RECEIVER_COUNTRY_CODE",
+        "RECEIVER_NAME",
+        "RECEIVER_VAT_NUMBER"
       ],
       "default": "DEFAULT",
-      "title": "- DEFAULT: Run default feature set\n - TEXT_ANNOTATION: Return text annotation\n - ORDER_DATE: Run order date detection\n - PAYMENT_DUE_DATE: Run due date detection\n - CURRENCY: Run currency detection\n - TOTAL_VAT: Run total vat detection\n - TOTAL_INCL_VAT: Run total incl vat detection\n - TOTAL_EXCL_VAT: Run total excl vat detection\n - SUPPLIER_CORPORATE_ID: [DEPRECATED] Run supplier corporate id detection.\nUse SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.\n - SUPPLIER_COUNTRY_CODE: Run country code detection\n - DOCUMENT_TYPE: Run document type detection\n - PAYMENT_METHOD: Run pyment method detection\n - CREDIT_CARD_LAST_FOUR: Run credit card number detection\n - INVOICE_NUMBER: [DEPRECATED] Run invoice number detection\n - OCR_LINE_DK_TYPE: Run danish ocr line detection, for the type\n - OCR_LINE_DK_PAYMENT_ID: Run danish ocr line detection, for the payment id\n - OCR_LINE_DK_CREDITOR_ID: Run danish ocr line detection, for the creditor id\n - OCR_LINE_SE_PAYMENT_ID: Run swedish ocr line detection for the payment id\n - OCR_LINE_SE_BANKGIRO_CREDITOR_ID: Run swedish ocr line detection for the bankgiro creditor id\n - OCR_LINE_SE_PLUSGIRO_CREDITOR_ID: Run swedish ocr line detection for the plusgiro creditor id\n - OCR_LINE_NO_PAYMENT_ID: Run norwegian ocr line detection or the payment id\n - OCR_LINE_FI_PAYMENT_ID: Run finish ocr line detection or the payment id\n - OCR_LINE_NL_PAYMENT_ID: Run dutch ocr line detection for the payment id\n - TEXT: Return document text\n - IBAN: Run IBAN detection\n - LINES: Run LINES detection\n - PREVIEW: Run first page of PDF to PNG conversion\n - BANK_ACCOUNT_NUMBER: Run bank account number detection\n - BANK_REGISTRATION_NUMBER: Run bank registration number detection\n - BIC: Run business identifier code detection\n - DOCUMENT_NUMBER: Run document number detection\n - DOCUMENT_DATE: Run document date detection\n - ORDER_NUMBER: Run order number detection\n - SUPPLIER_NAME: Run spplier name detection\n - SUPPLIER_VAT_NUMBER: [EXPERIMENTAL] Run supplier VAT detection\n - SUPPLIER_ORGANISATION_NUMBER: [EXPERIMENTAL] Run supplier organisation number detection\n - SUPPLIER_ADDRESS: [EXPERIMENTAL] Run supplier address detection\n - CUSTOMER_NUMBER: [EXPERIMENTAL] Run customer identifier detection"
+      "title": "- DEFAULT: Run default feature set\n - TEXT_ANNOTATION: Return text annotation\n - ORDER_DATE: Run order date detection\n - PAYMENT_DUE_DATE: Run due date detection\n - CURRENCY: Run currency detection\n - TOTAL_VAT: Run total vat detection\n - TOTAL_INCL_VAT: Run total incl vat detection\n - TOTAL_EXCL_VAT: Run total excl vat detection\n - SUPPLIER_CORPORATE_ID: [DEPRECATED] Run supplier corporate id detection.\nUse SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.\n - SUPPLIER_COUNTRY_CODE: Run country code detection\n - DOCUMENT_TYPE: Run document type detection\n - PAYMENT_METHOD: Run pyment method detection\n - CREDIT_CARD_LAST_FOUR: Run credit card number detection\n - INVOICE_NUMBER: [DEPRECATED] Run invoice number detection\n - OCR_LINE_DK_TYPE: Run danish ocr line detection, for the type\n - OCR_LINE_DK_PAYMENT_ID: Run danish ocr line detection, for the payment id\n - OCR_LINE_DK_CREDITOR_ID: Run danish ocr line detection, for the creditor id\n - OCR_LINE_SE_PAYMENT_ID: Run swedish ocr line detection for the payment id\n - OCR_LINE_SE_BANKGIRO_CREDITOR_ID: Run swedish ocr line detection for the bankgiro creditor id\n - OCR_LINE_SE_PLUSGIRO_CREDITOR_ID: Run swedish ocr line detection for the plusgiro creditor id\n - OCR_LINE_NO_PAYMENT_ID: Run norwegian ocr line detection or the payment id\n - OCR_LINE_FI_PAYMENT_ID: Run finish ocr line detection or the payment id\n - OCR_LINE_NL_PAYMENT_ID: Run dutch ocr line detection for the payment id\n - OCR_LINE_BE_PAYMENT_ID: Run belgian ocr line detection for the payment id\n - TEXT: Return document text\n - IBAN: Run IBAN detection\n - LINES: Run LINES detection\n - PREVIEW: Run first page of PDF to PNG conversion\n - BANK_ACCOUNT_NUMBER: Run bank account number detection\n - BANK_REGISTRATION_NUMBER: Run bank registration number detection\n - BIC: Run business identifier code detection\n - DOCUMENT_NUMBER: Run document number detection\n - DOCUMENT_DATE: Run document date detection\n - ORDER_NUMBER: Run order number detection\n - SUPPLIER_NAME: Run supplier name detection\n - SUPPLIER_VAT_NUMBER: [EXPERIMENTAL] Run supplier VAT detection\n - SUPPLIER_ORGANISATION_NUMBER: [EXPERIMENTAL] Run supplier organisation number detection\n - SUPPLIER_ADDRESS: [EXPERIMENTAL] Run supplier address detection\n - CUSTOMER_NUMBER: [EXPERIMENTAL] Run customer identifier detection\n - RECEIVER_ORDER_NUMBER: Receiver order number\n - RECEIVER_ADDRESS: Receiver address\n - RECEIVER_COUNTRY_CODE: Receiver country code\n - RECEIVER_NAME: Receiver name\n - RECEIVER_VAT_NUMBER: Receiver VAT number"
     },
     "v1FeedbackMetrics": {
       "type": "object",
@@ -1427,6 +1480,48 @@
             "type": "number",
             "format": "float"
           }
+        },
+        "receiverOrderNumber": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "ocrLineBePaymentId": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "receiverAddress": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "receiverCountryCode": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "receiverName": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "receiverVatNumber": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
         }
       }
     },
@@ -1670,6 +1765,48 @@
             "type": "object",
             "$ref": "#/definitions/typeModelSpec"
           }
+        },
+        "receiverOrderNumber": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "ocrLineBePaymentId": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "receiverAddress": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "receiverCountryCode": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "receiverName": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeModelSpec"
+          }
+        },
+        "receiverVatNumber": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeModelSpec"
+          }
         }
       }
     },
@@ -1885,6 +2022,42 @@
           "items": {
             "type": "string"
           }
+        },
+        "receiverOrderNumber": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ocrLineBePaymentId": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiverAddress": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiverCountryCode": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiverName": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "receiverVatNumber": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -2002,6 +2175,24 @@
           "type": "string"
         },
         "customerNumber": {
+          "type": "string"
+        },
+        "receiverOrderNumber": {
+          "type": "string"
+        },
+        "ocrLineBePaymentId": {
+          "type": "string"
+        },
+        "receiverAddress": {
+          "type": "string"
+        },
+        "receiverCountryCode": {
+          "type": "string"
+        },
+        "receiverName": {
+          "type": "string"
+        },
+        "receiverVatNumber": {
           "type": "string"
         }
       }

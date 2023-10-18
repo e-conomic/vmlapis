@@ -822,4 +822,148 @@ public interface PredictionConfidencesOrBuilder extends
    */
   com.google.protobuf.FloatValueOrBuilder getCustomerNumberOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   */
+  java.util.List<com.google.protobuf.FloatValue> 
+      getReceiverOrderNumberList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   */
+  com.google.protobuf.FloatValue getReceiverOrderNumber(int index);
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   */
+  int getReceiverOrderNumberCount();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+      getReceiverOrderNumberOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getReceiverOrderNumberOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .google.protobuf.FloatValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  java.util.List<com.google.protobuf.FloatValue> 
+      getOcrLineBePaymentIdList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  com.google.protobuf.FloatValue getOcrLineBePaymentId(int index);
+  /**
+   * <code>repeated .google.protobuf.FloatValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  int getOcrLineBePaymentIdCount();
+  /**
+   * <code>repeated .google.protobuf.FloatValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+      getOcrLineBePaymentIdOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getOcrLineBePaymentIdOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   */
+  java.util.List<com.google.protobuf.FloatValue> 
+      getReceiverAddressList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   */
+  com.google.protobuf.FloatValue getReceiverAddress(int index);
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   */
+  int getReceiverAddressCount();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+      getReceiverAddressOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getReceiverAddressOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   */
+  java.util.List<com.google.protobuf.FloatValue> 
+      getReceiverCountryCodeList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   */
+  com.google.protobuf.FloatValue getReceiverCountryCode(int index);
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   */
+  int getReceiverCountryCodeCount();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+      getReceiverCountryCodeOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getReceiverCountryCodeOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_name = 39 [json_name = "receiverName"];</code>
+   */
+  java.util.List<com.google.protobuf.FloatValue> 
+      getReceiverNameList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_name = 39 [json_name = "receiverName"];</code>
+   */
+  com.google.protobuf.FloatValue getReceiverName(int index);
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_name = 39 [json_name = "receiverName"];</code>
+   */
+  int getReceiverNameCount();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_name = 39 [json_name = "receiverName"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+      getReceiverNameOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_name = 39 [json_name = "receiverName"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getReceiverNameOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   */
+  java.util.List<com.google.protobuf.FloatValue> 
+      getReceiverVatNumberList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   */
+  com.google.protobuf.FloatValue getReceiverVatNumber(int index);
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   */
+  int getReceiverVatNumberCount();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.FloatValueOrBuilder> 
+      getReceiverVatNumberOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.FloatValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   */
+  com.google.protobuf.FloatValueOrBuilder getReceiverVatNumberOrBuilder(
+      int index);
 }

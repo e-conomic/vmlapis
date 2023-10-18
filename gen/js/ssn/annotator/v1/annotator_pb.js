@@ -349,6 +349,7 @@ proto.ssn.annotator.v1.Feature.Type = {
   OCR_LINE_NO_PAYMENT_ID: 20,
   OCR_LINE_FI_PAYMENT_ID: 21,
   OCR_LINE_NL_PAYMENT_ID: 22,
+  OCR_LINE_BE_PAYMENT_ID: 39,
   TEXT: 23,
   IBAN: 24,
   LINES: 25,
@@ -363,7 +364,12 @@ proto.ssn.annotator.v1.Feature.Type = {
   SUPPLIER_VAT_NUMBER: 34,
   SUPPLIER_ORGANISATION_NUMBER: 35,
   SUPPLIER_ADDRESS: 36,
-  CUSTOMER_NUMBER: 37
+  CUSTOMER_NUMBER: 37,
+  RECEIVER_ORDER_NUMBER: 38,
+  RECEIVER_ADDRESS: 40,
+  RECEIVER_COUNTRY_CODE: 41,
+  RECEIVER_NAME: 42,
+  RECEIVER_VAT_NUMBER: 43
 };
 
 /**
@@ -1132,7 +1138,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearSegmentsList = fu
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,25,26,28,29,30,31,32,33,34,35,36,37,38];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44];
 
 
 
@@ -1208,6 +1214,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     ocrLineNlPaymentIdList: jspb.Message.toObjectList(msg.getOcrLineNlPaymentIdList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    ocrLineBePaymentIdList: jspb.Message.toObjectList(msg.getOcrLineBePaymentIdList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     text: jspb.Message.getFieldWithDefault(msg, 23, ""),
     feedbackId: jspb.Message.getFieldWithDefault(msg, 24, ""),
     ibanList: jspb.Message.toObjectList(msg.getIbanList(),
@@ -1236,6 +1244,16 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     supplierAddressList: jspb.Message.toObjectList(msg.getSupplierAddressList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     customerNumberList: jspb.Message.toObjectList(msg.getCustomerNumberList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    receiverOrderNumberList: jspb.Message.toObjectList(msg.getReceiverOrderNumberList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    receiverAddressList: jspb.Message.toObjectList(msg.getReceiverAddressList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    receiverCountryCodeList: jspb.Message.toObjectList(msg.getReceiverCountryCodeList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    receiverNameList: jspb.Message.toObjectList(msg.getReceiverNameList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance),
+    receiverVatNumberList: jspb.Message.toObjectList(msg.getReceiverVatNumberList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance)
   };
 
@@ -1383,6 +1401,11 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addOcrLineNlPaymentId(value);
       break;
+    case 40:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addOcrLineBePaymentId(value);
+      break;
     case 23:
       var value = /** @type {string} */ (reader.readString());
       msg.setText(value);
@@ -1459,6 +1482,31 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_candidate_pb.Candidate;
       reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
       msg.addCustomerNumber(value);
+      break;
+    case 39:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addReceiverOrderNumber(value);
+      break;
+    case 41:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addReceiverAddress(value);
+      break;
+    case 42:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addReceiverCountryCode(value);
+      break;
+    case 43:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addReceiverName(value);
+      break;
+    case 44:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addReceiverVatNumber(value);
       break;
     default:
       reader.skipField();
@@ -1665,6 +1713,14 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
+  f = message.getOcrLineBePaymentIdList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      40,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
   f = message.getText();
   if (f.length > 0) {
     writer.writeString(
@@ -1786,6 +1842,46 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       38,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverOrderNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      39,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverAddressList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      41,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverCountryCodeList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      42,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverNameList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      43,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverVatNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      44,
       f,
       ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
@@ -2629,6 +2725,44 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearOcrLineNlPayment
 
 
 /**
+ * repeated ssn.type.Candidate ocr_line_be_payment_id = 40;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getOcrLineBePaymentIdList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 40));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setOcrLineBePaymentIdList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 40, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addOcrLineBePaymentId = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 40, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearOcrLineBePaymentIdList = function() {
+  return this.setOcrLineBePaymentIdList([]);
+};
+
+
+/**
  * optional string text = 23;
  * @return {string}
  */
@@ -3173,6 +3307,196 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addCustomerNumber = f
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearCustomerNumberList = function() {
   return this.setCustomerNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate receiver_order_number = 39;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getReceiverOrderNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 39));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setReceiverOrderNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 39, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addReceiverOrderNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 39, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearReceiverOrderNumberList = function() {
+  return this.setReceiverOrderNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate receiver_address = 41;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getReceiverAddressList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 41));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setReceiverAddressList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 41, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addReceiverAddress = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 41, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearReceiverAddressList = function() {
+  return this.setReceiverAddressList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate receiver_country_code = 42;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getReceiverCountryCodeList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 42));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setReceiverCountryCodeList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 42, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addReceiverCountryCode = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 42, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearReceiverCountryCodeList = function() {
+  return this.setReceiverCountryCodeList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate receiver_name = 43;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getReceiverNameList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 43));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setReceiverNameList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 43, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addReceiverName = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 43, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearReceiverNameList = function() {
+  return this.setReceiverNameList([]);
+};
+
+
+/**
+ * repeated ssn.type.Candidate receiver_vat_number = 44;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getReceiverVatNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 44));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setReceiverVatNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 44, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addReceiverVatNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 44, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearReceiverVatNumberList = function() {
+  return this.setReceiverVatNumberList([]);
 };
 
 

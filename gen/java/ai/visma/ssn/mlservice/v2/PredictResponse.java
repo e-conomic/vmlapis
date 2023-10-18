@@ -55,6 +55,12 @@ private static final long serialVersionUID = 0L;
     supplierAddress_ = java.util.Collections.emptyList();
     creditCardLastFour_ = java.util.Collections.emptyList();
     customerNumber_ = java.util.Collections.emptyList();
+    receiverOrderNumber_ = java.util.Collections.emptyList();
+    ocrLineBePaymentId_ = java.util.Collections.emptyList();
+    receiverAddress_ = java.util.Collections.emptyList();
+    receiverCountryCode_ = java.util.Collections.emptyList();
+    receiverName_ = java.util.Collections.emptyList();
+    receiverVatNumber_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -1532,6 +1538,252 @@ private static final long serialVersionUID = 0L;
     return customerNumber_.get(index);
   }
 
+  public static final int RECEIVER_ORDER_NUMBER_FIELD_NUMBER = 36;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> receiverOrderNumber_;
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getReceiverOrderNumberList() {
+    return receiverOrderNumber_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getReceiverOrderNumberOrBuilderList() {
+    return receiverOrderNumber_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+   */
+  @java.lang.Override
+  public int getReceiverOrderNumberCount() {
+    return receiverOrderNumber_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getReceiverOrderNumber(int index) {
+    return receiverOrderNumber_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getReceiverOrderNumberOrBuilder(
+      int index) {
+    return receiverOrderNumber_.get(index);
+  }
+
+  public static final int OCR_LINE_BE_PAYMENT_ID_FIELD_NUMBER = 37;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> ocrLineBePaymentId_;
+  /**
+   * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getOcrLineBePaymentIdList() {
+    return ocrLineBePaymentId_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getOcrLineBePaymentIdOrBuilderList() {
+    return ocrLineBePaymentId_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  @java.lang.Override
+  public int getOcrLineBePaymentIdCount() {
+    return ocrLineBePaymentId_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getOcrLineBePaymentId(int index) {
+    return ocrLineBePaymentId_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getOcrLineBePaymentIdOrBuilder(
+      int index) {
+    return ocrLineBePaymentId_.get(index);
+  }
+
+  public static final int RECEIVER_ADDRESS_FIELD_NUMBER = 38;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> receiverAddress_;
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getReceiverAddressList() {
+    return receiverAddress_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getReceiverAddressOrBuilderList() {
+    return receiverAddress_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+   */
+  @java.lang.Override
+  public int getReceiverAddressCount() {
+    return receiverAddress_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getReceiverAddress(int index) {
+    return receiverAddress_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getReceiverAddressOrBuilder(
+      int index) {
+    return receiverAddress_.get(index);
+  }
+
+  public static final int RECEIVER_COUNTRY_CODE_FIELD_NUMBER = 39;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> receiverCountryCode_;
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getReceiverCountryCodeList() {
+    return receiverCountryCode_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getReceiverCountryCodeOrBuilderList() {
+    return receiverCountryCode_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+   */
+  @java.lang.Override
+  public int getReceiverCountryCodeCount() {
+    return receiverCountryCode_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getReceiverCountryCode(int index) {
+    return receiverCountryCode_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getReceiverCountryCodeOrBuilder(
+      int index) {
+    return receiverCountryCode_.get(index);
+  }
+
+  public static final int RECEIVER_NAME_FIELD_NUMBER = 40;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> receiverName_;
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getReceiverNameList() {
+    return receiverName_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getReceiverNameOrBuilderList() {
+    return receiverName_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+   */
+  @java.lang.Override
+  public int getReceiverNameCount() {
+    return receiverName_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getReceiverName(int index) {
+    return receiverName_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getReceiverNameOrBuilder(
+      int index) {
+    return receiverName_.get(index);
+  }
+
+  public static final int RECEIVER_VAT_NUMBER_FIELD_NUMBER = 41;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.Candidate> receiverVatNumber_;
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.Candidate> getReceiverVatNumberList() {
+    return receiverVatNumber_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getReceiverVatNumberOrBuilderList() {
+    return receiverVatNumber_;
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+   */
+  @java.lang.Override
+  public int getReceiverVatNumberCount() {
+    return receiverVatNumber_.size();
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getReceiverVatNumber(int index) {
+    return receiverVatNumber_.get(index);
+  }
+  /**
+   * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getReceiverVatNumberOrBuilder(
+      int index) {
+    return receiverVatNumber_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1650,6 +1902,24 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < customerNumber_.size(); i++) {
       output.writeMessage(35, customerNumber_.get(i));
+    }
+    for (int i = 0; i < receiverOrderNumber_.size(); i++) {
+      output.writeMessage(36, receiverOrderNumber_.get(i));
+    }
+    for (int i = 0; i < ocrLineBePaymentId_.size(); i++) {
+      output.writeMessage(37, ocrLineBePaymentId_.get(i));
+    }
+    for (int i = 0; i < receiverAddress_.size(); i++) {
+      output.writeMessage(38, receiverAddress_.get(i));
+    }
+    for (int i = 0; i < receiverCountryCode_.size(); i++) {
+      output.writeMessage(39, receiverCountryCode_.get(i));
+    }
+    for (int i = 0; i < receiverName_.size(); i++) {
+      output.writeMessage(40, receiverName_.get(i));
+    }
+    for (int i = 0; i < receiverVatNumber_.size(); i++) {
+      output.writeMessage(41, receiverVatNumber_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -1800,6 +2070,30 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(35, customerNumber_.get(i));
     }
+    for (int i = 0; i < receiverOrderNumber_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(36, receiverOrderNumber_.get(i));
+    }
+    for (int i = 0; i < ocrLineBePaymentId_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(37, ocrLineBePaymentId_.get(i));
+    }
+    for (int i = 0; i < receiverAddress_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(38, receiverAddress_.get(i));
+    }
+    for (int i = 0; i < receiverCountryCode_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(39, receiverCountryCode_.get(i));
+    }
+    for (int i = 0; i < receiverName_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(40, receiverName_.get(i));
+    }
+    for (int i = 0; i < receiverVatNumber_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(41, receiverVatNumber_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1885,6 +2179,18 @@ private static final long serialVersionUID = 0L;
         .equals(other.getCreditCardLastFourList())) return false;
     if (!getCustomerNumberList()
         .equals(other.getCustomerNumberList())) return false;
+    if (!getReceiverOrderNumberList()
+        .equals(other.getReceiverOrderNumberList())) return false;
+    if (!getOcrLineBePaymentIdList()
+        .equals(other.getOcrLineBePaymentIdList())) return false;
+    if (!getReceiverAddressList()
+        .equals(other.getReceiverAddressList())) return false;
+    if (!getReceiverCountryCodeList()
+        .equals(other.getReceiverCountryCodeList())) return false;
+    if (!getReceiverNameList()
+        .equals(other.getReceiverNameList())) return false;
+    if (!getReceiverVatNumberList()
+        .equals(other.getReceiverVatNumberList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -2035,6 +2341,30 @@ private static final long serialVersionUID = 0L;
     if (getCustomerNumberCount() > 0) {
       hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getCustomerNumberList().hashCode();
+    }
+    if (getReceiverOrderNumberCount() > 0) {
+      hash = (37 * hash) + RECEIVER_ORDER_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverOrderNumberList().hashCode();
+    }
+    if (getOcrLineBePaymentIdCount() > 0) {
+      hash = (37 * hash) + OCR_LINE_BE_PAYMENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOcrLineBePaymentIdList().hashCode();
+    }
+    if (getReceiverAddressCount() > 0) {
+      hash = (37 * hash) + RECEIVER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverAddressList().hashCode();
+    }
+    if (getReceiverCountryCodeCount() > 0) {
+      hash = (37 * hash) + RECEIVER_COUNTRY_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverCountryCodeList().hashCode();
+    }
+    if (getReceiverNameCount() > 0) {
+      hash = (37 * hash) + RECEIVER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverNameList().hashCode();
+    }
+    if (getReceiverVatNumberCount() > 0) {
+      hash = (37 * hash) + RECEIVER_VAT_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverVatNumberList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -2417,6 +2747,48 @@ private static final long serialVersionUID = 0L;
         customerNumberBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00000004);
+      if (receiverOrderNumberBuilder_ == null) {
+        receiverOrderNumber_ = java.util.Collections.emptyList();
+      } else {
+        receiverOrderNumber_ = null;
+        receiverOrderNumberBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000008);
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        ocrLineBePaymentId_ = java.util.Collections.emptyList();
+      } else {
+        ocrLineBePaymentId_ = null;
+        ocrLineBePaymentIdBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000010);
+      if (receiverAddressBuilder_ == null) {
+        receiverAddress_ = java.util.Collections.emptyList();
+      } else {
+        receiverAddress_ = null;
+        receiverAddressBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000020);
+      if (receiverCountryCodeBuilder_ == null) {
+        receiverCountryCode_ = java.util.Collections.emptyList();
+      } else {
+        receiverCountryCode_ = null;
+        receiverCountryCodeBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000040);
+      if (receiverNameBuilder_ == null) {
+        receiverName_ = java.util.Collections.emptyList();
+      } else {
+        receiverName_ = null;
+        receiverNameBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000080);
+      if (receiverVatNumberBuilder_ == null) {
+        receiverVatNumber_ = java.util.Collections.emptyList();
+      } else {
+        receiverVatNumber_ = null;
+        receiverVatNumberBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00000100);
       return this;
     }
 
@@ -2765,6 +3137,60 @@ private static final long serialVersionUID = 0L;
         result.customerNumber_ = customerNumber_;
       } else {
         result.customerNumber_ = customerNumberBuilder_.build();
+      }
+      if (receiverOrderNumberBuilder_ == null) {
+        if (((bitField1_ & 0x00000008) != 0)) {
+          receiverOrderNumber_ = java.util.Collections.unmodifiableList(receiverOrderNumber_);
+          bitField1_ = (bitField1_ & ~0x00000008);
+        }
+        result.receiverOrderNumber_ = receiverOrderNumber_;
+      } else {
+        result.receiverOrderNumber_ = receiverOrderNumberBuilder_.build();
+      }
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        if (((bitField1_ & 0x00000010) != 0)) {
+          ocrLineBePaymentId_ = java.util.Collections.unmodifiableList(ocrLineBePaymentId_);
+          bitField1_ = (bitField1_ & ~0x00000010);
+        }
+        result.ocrLineBePaymentId_ = ocrLineBePaymentId_;
+      } else {
+        result.ocrLineBePaymentId_ = ocrLineBePaymentIdBuilder_.build();
+      }
+      if (receiverAddressBuilder_ == null) {
+        if (((bitField1_ & 0x00000020) != 0)) {
+          receiverAddress_ = java.util.Collections.unmodifiableList(receiverAddress_);
+          bitField1_ = (bitField1_ & ~0x00000020);
+        }
+        result.receiverAddress_ = receiverAddress_;
+      } else {
+        result.receiverAddress_ = receiverAddressBuilder_.build();
+      }
+      if (receiverCountryCodeBuilder_ == null) {
+        if (((bitField1_ & 0x00000040) != 0)) {
+          receiverCountryCode_ = java.util.Collections.unmodifiableList(receiverCountryCode_);
+          bitField1_ = (bitField1_ & ~0x00000040);
+        }
+        result.receiverCountryCode_ = receiverCountryCode_;
+      } else {
+        result.receiverCountryCode_ = receiverCountryCodeBuilder_.build();
+      }
+      if (receiverNameBuilder_ == null) {
+        if (((bitField1_ & 0x00000080) != 0)) {
+          receiverName_ = java.util.Collections.unmodifiableList(receiverName_);
+          bitField1_ = (bitField1_ & ~0x00000080);
+        }
+        result.receiverName_ = receiverName_;
+      } else {
+        result.receiverName_ = receiverNameBuilder_.build();
+      }
+      if (receiverVatNumberBuilder_ == null) {
+        if (((bitField1_ & 0x00000100) != 0)) {
+          receiverVatNumber_ = java.util.Collections.unmodifiableList(receiverVatNumber_);
+          bitField1_ = (bitField1_ & ~0x00000100);
+        }
+        result.receiverVatNumber_ = receiverVatNumber_;
+      } else {
+        result.receiverVatNumber_ = receiverVatNumberBuilder_.build();
       }
     }
 
@@ -3730,6 +4156,162 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (receiverOrderNumberBuilder_ == null) {
+        if (!other.receiverOrderNumber_.isEmpty()) {
+          if (receiverOrderNumber_.isEmpty()) {
+            receiverOrderNumber_ = other.receiverOrderNumber_;
+            bitField1_ = (bitField1_ & ~0x00000008);
+          } else {
+            ensureReceiverOrderNumberIsMutable();
+            receiverOrderNumber_.addAll(other.receiverOrderNumber_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.receiverOrderNumber_.isEmpty()) {
+          if (receiverOrderNumberBuilder_.isEmpty()) {
+            receiverOrderNumberBuilder_.dispose();
+            receiverOrderNumberBuilder_ = null;
+            receiverOrderNumber_ = other.receiverOrderNumber_;
+            bitField1_ = (bitField1_ & ~0x00000008);
+            receiverOrderNumberBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getReceiverOrderNumberFieldBuilder() : null;
+          } else {
+            receiverOrderNumberBuilder_.addAllMessages(other.receiverOrderNumber_);
+          }
+        }
+      }
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        if (!other.ocrLineBePaymentId_.isEmpty()) {
+          if (ocrLineBePaymentId_.isEmpty()) {
+            ocrLineBePaymentId_ = other.ocrLineBePaymentId_;
+            bitField1_ = (bitField1_ & ~0x00000010);
+          } else {
+            ensureOcrLineBePaymentIdIsMutable();
+            ocrLineBePaymentId_.addAll(other.ocrLineBePaymentId_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.ocrLineBePaymentId_.isEmpty()) {
+          if (ocrLineBePaymentIdBuilder_.isEmpty()) {
+            ocrLineBePaymentIdBuilder_.dispose();
+            ocrLineBePaymentIdBuilder_ = null;
+            ocrLineBePaymentId_ = other.ocrLineBePaymentId_;
+            bitField1_ = (bitField1_ & ~0x00000010);
+            ocrLineBePaymentIdBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getOcrLineBePaymentIdFieldBuilder() : null;
+          } else {
+            ocrLineBePaymentIdBuilder_.addAllMessages(other.ocrLineBePaymentId_);
+          }
+        }
+      }
+      if (receiverAddressBuilder_ == null) {
+        if (!other.receiverAddress_.isEmpty()) {
+          if (receiverAddress_.isEmpty()) {
+            receiverAddress_ = other.receiverAddress_;
+            bitField1_ = (bitField1_ & ~0x00000020);
+          } else {
+            ensureReceiverAddressIsMutable();
+            receiverAddress_.addAll(other.receiverAddress_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.receiverAddress_.isEmpty()) {
+          if (receiverAddressBuilder_.isEmpty()) {
+            receiverAddressBuilder_.dispose();
+            receiverAddressBuilder_ = null;
+            receiverAddress_ = other.receiverAddress_;
+            bitField1_ = (bitField1_ & ~0x00000020);
+            receiverAddressBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getReceiverAddressFieldBuilder() : null;
+          } else {
+            receiverAddressBuilder_.addAllMessages(other.receiverAddress_);
+          }
+        }
+      }
+      if (receiverCountryCodeBuilder_ == null) {
+        if (!other.receiverCountryCode_.isEmpty()) {
+          if (receiverCountryCode_.isEmpty()) {
+            receiverCountryCode_ = other.receiverCountryCode_;
+            bitField1_ = (bitField1_ & ~0x00000040);
+          } else {
+            ensureReceiverCountryCodeIsMutable();
+            receiverCountryCode_.addAll(other.receiverCountryCode_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.receiverCountryCode_.isEmpty()) {
+          if (receiverCountryCodeBuilder_.isEmpty()) {
+            receiverCountryCodeBuilder_.dispose();
+            receiverCountryCodeBuilder_ = null;
+            receiverCountryCode_ = other.receiverCountryCode_;
+            bitField1_ = (bitField1_ & ~0x00000040);
+            receiverCountryCodeBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getReceiverCountryCodeFieldBuilder() : null;
+          } else {
+            receiverCountryCodeBuilder_.addAllMessages(other.receiverCountryCode_);
+          }
+        }
+      }
+      if (receiverNameBuilder_ == null) {
+        if (!other.receiverName_.isEmpty()) {
+          if (receiverName_.isEmpty()) {
+            receiverName_ = other.receiverName_;
+            bitField1_ = (bitField1_ & ~0x00000080);
+          } else {
+            ensureReceiverNameIsMutable();
+            receiverName_.addAll(other.receiverName_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.receiverName_.isEmpty()) {
+          if (receiverNameBuilder_.isEmpty()) {
+            receiverNameBuilder_.dispose();
+            receiverNameBuilder_ = null;
+            receiverName_ = other.receiverName_;
+            bitField1_ = (bitField1_ & ~0x00000080);
+            receiverNameBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getReceiverNameFieldBuilder() : null;
+          } else {
+            receiverNameBuilder_.addAllMessages(other.receiverName_);
+          }
+        }
+      }
+      if (receiverVatNumberBuilder_ == null) {
+        if (!other.receiverVatNumber_.isEmpty()) {
+          if (receiverVatNumber_.isEmpty()) {
+            receiverVatNumber_ = other.receiverVatNumber_;
+            bitField1_ = (bitField1_ & ~0x00000100);
+          } else {
+            ensureReceiverVatNumberIsMutable();
+            receiverVatNumber_.addAll(other.receiverVatNumber_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.receiverVatNumber_.isEmpty()) {
+          if (receiverVatNumberBuilder_.isEmpty()) {
+            receiverVatNumberBuilder_.dispose();
+            receiverVatNumberBuilder_ = null;
+            receiverVatNumber_ = other.receiverVatNumber_;
+            bitField1_ = (bitField1_ & ~0x00000100);
+            receiverVatNumberBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getReceiverVatNumberFieldBuilder() : null;
+          } else {
+            receiverVatNumberBuilder_.addAllMessages(other.receiverVatNumber_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -4211,6 +4793,84 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 282
+            case 290: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (receiverOrderNumberBuilder_ == null) {
+                ensureReceiverOrderNumberIsMutable();
+                receiverOrderNumber_.add(m);
+              } else {
+                receiverOrderNumberBuilder_.addMessage(m);
+              }
+              break;
+            } // case 290
+            case 298: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (ocrLineBePaymentIdBuilder_ == null) {
+                ensureOcrLineBePaymentIdIsMutable();
+                ocrLineBePaymentId_.add(m);
+              } else {
+                ocrLineBePaymentIdBuilder_.addMessage(m);
+              }
+              break;
+            } // case 298
+            case 306: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (receiverAddressBuilder_ == null) {
+                ensureReceiverAddressIsMutable();
+                receiverAddress_.add(m);
+              } else {
+                receiverAddressBuilder_.addMessage(m);
+              }
+              break;
+            } // case 306
+            case 314: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (receiverCountryCodeBuilder_ == null) {
+                ensureReceiverCountryCodeIsMutable();
+                receiverCountryCode_.add(m);
+              } else {
+                receiverCountryCodeBuilder_.addMessage(m);
+              }
+              break;
+            } // case 314
+            case 322: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (receiverNameBuilder_ == null) {
+                ensureReceiverNameIsMutable();
+                receiverName_.add(m);
+              } else {
+                receiverNameBuilder_.addMessage(m);
+              }
+              break;
+            } // case 322
+            case 330: {
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (receiverVatNumberBuilder_ == null) {
+                ensureReceiverVatNumberIsMutable();
+                receiverVatNumber_.add(m);
+              } else {
+                receiverVatNumberBuilder_.addMessage(m);
+              }
+              break;
+            } // case 330
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -12699,6 +13359,1446 @@ private static final long serialVersionUID = 0L;
         customerNumber_ = null;
       }
       return customerNumberBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> receiverOrderNumber_ =
+      java.util.Collections.emptyList();
+    private void ensureReceiverOrderNumberIsMutable() {
+      if (!((bitField1_ & 0x00000008) != 0)) {
+        receiverOrderNumber_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(receiverOrderNumber_);
+        bitField1_ |= 0x00000008;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> receiverOrderNumberBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getReceiverOrderNumberList() {
+      if (receiverOrderNumberBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(receiverOrderNumber_);
+      } else {
+        return receiverOrderNumberBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public int getReceiverOrderNumberCount() {
+      if (receiverOrderNumberBuilder_ == null) {
+        return receiverOrderNumber_.size();
+      } else {
+        return receiverOrderNumberBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate getReceiverOrderNumber(int index) {
+      if (receiverOrderNumberBuilder_ == null) {
+        return receiverOrderNumber_.get(index);
+      } else {
+        return receiverOrderNumberBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public Builder setReceiverOrderNumber(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (receiverOrderNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverOrderNumberIsMutable();
+        receiverOrderNumber_.set(index, value);
+        onChanged();
+      } else {
+        receiverOrderNumberBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public Builder setReceiverOrderNumber(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverOrderNumberBuilder_ == null) {
+        ensureReceiverOrderNumberIsMutable();
+        receiverOrderNumber_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        receiverOrderNumberBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public Builder addReceiverOrderNumber(ai.visma.ssn.type.Candidate value) {
+      if (receiverOrderNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverOrderNumberIsMutable();
+        receiverOrderNumber_.add(value);
+        onChanged();
+      } else {
+        receiverOrderNumberBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public Builder addReceiverOrderNumber(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (receiverOrderNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverOrderNumberIsMutable();
+        receiverOrderNumber_.add(index, value);
+        onChanged();
+      } else {
+        receiverOrderNumberBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public Builder addReceiverOrderNumber(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverOrderNumberBuilder_ == null) {
+        ensureReceiverOrderNumberIsMutable();
+        receiverOrderNumber_.add(builderForValue.build());
+        onChanged();
+      } else {
+        receiverOrderNumberBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public Builder addReceiverOrderNumber(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverOrderNumberBuilder_ == null) {
+        ensureReceiverOrderNumberIsMutable();
+        receiverOrderNumber_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        receiverOrderNumberBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public Builder addAllReceiverOrderNumber(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (receiverOrderNumberBuilder_ == null) {
+        ensureReceiverOrderNumberIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, receiverOrderNumber_);
+        onChanged();
+      } else {
+        receiverOrderNumberBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public Builder clearReceiverOrderNumber() {
+      if (receiverOrderNumberBuilder_ == null) {
+        receiverOrderNumber_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000008);
+        onChanged();
+      } else {
+        receiverOrderNumberBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public Builder removeReceiverOrderNumber(int index) {
+      if (receiverOrderNumberBuilder_ == null) {
+        ensureReceiverOrderNumberIsMutable();
+        receiverOrderNumber_.remove(index);
+        onChanged();
+      } else {
+        receiverOrderNumberBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getReceiverOrderNumberBuilder(
+        int index) {
+      return getReceiverOrderNumberFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getReceiverOrderNumberOrBuilder(
+        int index) {
+      if (receiverOrderNumberBuilder_ == null) {
+        return receiverOrderNumber_.get(index);  } else {
+        return receiverOrderNumberBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getReceiverOrderNumberOrBuilderList() {
+      if (receiverOrderNumberBuilder_ != null) {
+        return receiverOrderNumberBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(receiverOrderNumber_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addReceiverOrderNumberBuilder() {
+      return getReceiverOrderNumberFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addReceiverOrderNumberBuilder(
+        int index) {
+      return getReceiverOrderNumberFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_order_number = 36 [json_name = "receiverOrderNumber"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getReceiverOrderNumberBuilderList() {
+      return getReceiverOrderNumberFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getReceiverOrderNumberFieldBuilder() {
+      if (receiverOrderNumberBuilder_ == null) {
+        receiverOrderNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                receiverOrderNumber_,
+                ((bitField1_ & 0x00000008) != 0),
+                getParentForChildren(),
+                isClean());
+        receiverOrderNumber_ = null;
+      }
+      return receiverOrderNumberBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> ocrLineBePaymentId_ =
+      java.util.Collections.emptyList();
+    private void ensureOcrLineBePaymentIdIsMutable() {
+      if (!((bitField1_ & 0x00000010) != 0)) {
+        ocrLineBePaymentId_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(ocrLineBePaymentId_);
+        bitField1_ |= 0x00000010;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> ocrLineBePaymentIdBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getOcrLineBePaymentIdList() {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(ocrLineBePaymentId_);
+      } else {
+        return ocrLineBePaymentIdBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public int getOcrLineBePaymentIdCount() {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        return ocrLineBePaymentId_.size();
+      } else {
+        return ocrLineBePaymentIdBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public ai.visma.ssn.type.Candidate getOcrLineBePaymentId(int index) {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        return ocrLineBePaymentId_.get(index);
+      } else {
+        return ocrLineBePaymentIdBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public Builder setOcrLineBePaymentId(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOcrLineBePaymentIdIsMutable();
+        ocrLineBePaymentId_.set(index, value);
+        onChanged();
+      } else {
+        ocrLineBePaymentIdBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public Builder setOcrLineBePaymentId(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        ensureOcrLineBePaymentIdIsMutable();
+        ocrLineBePaymentId_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        ocrLineBePaymentIdBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public Builder addOcrLineBePaymentId(ai.visma.ssn.type.Candidate value) {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOcrLineBePaymentIdIsMutable();
+        ocrLineBePaymentId_.add(value);
+        onChanged();
+      } else {
+        ocrLineBePaymentIdBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public Builder addOcrLineBePaymentId(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureOcrLineBePaymentIdIsMutable();
+        ocrLineBePaymentId_.add(index, value);
+        onChanged();
+      } else {
+        ocrLineBePaymentIdBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public Builder addOcrLineBePaymentId(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        ensureOcrLineBePaymentIdIsMutable();
+        ocrLineBePaymentId_.add(builderForValue.build());
+        onChanged();
+      } else {
+        ocrLineBePaymentIdBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public Builder addOcrLineBePaymentId(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        ensureOcrLineBePaymentIdIsMutable();
+        ocrLineBePaymentId_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        ocrLineBePaymentIdBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public Builder addAllOcrLineBePaymentId(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        ensureOcrLineBePaymentIdIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, ocrLineBePaymentId_);
+        onChanged();
+      } else {
+        ocrLineBePaymentIdBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public Builder clearOcrLineBePaymentId() {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        ocrLineBePaymentId_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000010);
+        onChanged();
+      } else {
+        ocrLineBePaymentIdBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public Builder removeOcrLineBePaymentId(int index) {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        ensureOcrLineBePaymentIdIsMutable();
+        ocrLineBePaymentId_.remove(index);
+        onChanged();
+      } else {
+        ocrLineBePaymentIdBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getOcrLineBePaymentIdBuilder(
+        int index) {
+      return getOcrLineBePaymentIdFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getOcrLineBePaymentIdOrBuilder(
+        int index) {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        return ocrLineBePaymentId_.get(index);  } else {
+        return ocrLineBePaymentIdBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getOcrLineBePaymentIdOrBuilderList() {
+      if (ocrLineBePaymentIdBuilder_ != null) {
+        return ocrLineBePaymentIdBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(ocrLineBePaymentId_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addOcrLineBePaymentIdBuilder() {
+      return getOcrLineBePaymentIdFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addOcrLineBePaymentIdBuilder(
+        int index) {
+      return getOcrLineBePaymentIdFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate ocr_line_be_payment_id = 37 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getOcrLineBePaymentIdBuilderList() {
+      return getOcrLineBePaymentIdFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getOcrLineBePaymentIdFieldBuilder() {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        ocrLineBePaymentIdBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                ocrLineBePaymentId_,
+                ((bitField1_ & 0x00000010) != 0),
+                getParentForChildren(),
+                isClean());
+        ocrLineBePaymentId_ = null;
+      }
+      return ocrLineBePaymentIdBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> receiverAddress_ =
+      java.util.Collections.emptyList();
+    private void ensureReceiverAddressIsMutable() {
+      if (!((bitField1_ & 0x00000020) != 0)) {
+        receiverAddress_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(receiverAddress_);
+        bitField1_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> receiverAddressBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getReceiverAddressList() {
+      if (receiverAddressBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(receiverAddress_);
+      } else {
+        return receiverAddressBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public int getReceiverAddressCount() {
+      if (receiverAddressBuilder_ == null) {
+        return receiverAddress_.size();
+      } else {
+        return receiverAddressBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public ai.visma.ssn.type.Candidate getReceiverAddress(int index) {
+      if (receiverAddressBuilder_ == null) {
+        return receiverAddress_.get(index);
+      } else {
+        return receiverAddressBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public Builder setReceiverAddress(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (receiverAddressBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverAddressIsMutable();
+        receiverAddress_.set(index, value);
+        onChanged();
+      } else {
+        receiverAddressBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public Builder setReceiverAddress(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverAddressBuilder_ == null) {
+        ensureReceiverAddressIsMutable();
+        receiverAddress_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        receiverAddressBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public Builder addReceiverAddress(ai.visma.ssn.type.Candidate value) {
+      if (receiverAddressBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverAddressIsMutable();
+        receiverAddress_.add(value);
+        onChanged();
+      } else {
+        receiverAddressBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public Builder addReceiverAddress(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (receiverAddressBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverAddressIsMutable();
+        receiverAddress_.add(index, value);
+        onChanged();
+      } else {
+        receiverAddressBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public Builder addReceiverAddress(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverAddressBuilder_ == null) {
+        ensureReceiverAddressIsMutable();
+        receiverAddress_.add(builderForValue.build());
+        onChanged();
+      } else {
+        receiverAddressBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public Builder addReceiverAddress(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverAddressBuilder_ == null) {
+        ensureReceiverAddressIsMutable();
+        receiverAddress_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        receiverAddressBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public Builder addAllReceiverAddress(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (receiverAddressBuilder_ == null) {
+        ensureReceiverAddressIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, receiverAddress_);
+        onChanged();
+      } else {
+        receiverAddressBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public Builder clearReceiverAddress() {
+      if (receiverAddressBuilder_ == null) {
+        receiverAddress_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000020);
+        onChanged();
+      } else {
+        receiverAddressBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public Builder removeReceiverAddress(int index) {
+      if (receiverAddressBuilder_ == null) {
+        ensureReceiverAddressIsMutable();
+        receiverAddress_.remove(index);
+        onChanged();
+      } else {
+        receiverAddressBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getReceiverAddressBuilder(
+        int index) {
+      return getReceiverAddressFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getReceiverAddressOrBuilder(
+        int index) {
+      if (receiverAddressBuilder_ == null) {
+        return receiverAddress_.get(index);  } else {
+        return receiverAddressBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getReceiverAddressOrBuilderList() {
+      if (receiverAddressBuilder_ != null) {
+        return receiverAddressBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(receiverAddress_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addReceiverAddressBuilder() {
+      return getReceiverAddressFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addReceiverAddressBuilder(
+        int index) {
+      return getReceiverAddressFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_address = 38 [json_name = "receiverAddress"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getReceiverAddressBuilderList() {
+      return getReceiverAddressFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getReceiverAddressFieldBuilder() {
+      if (receiverAddressBuilder_ == null) {
+        receiverAddressBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                receiverAddress_,
+                ((bitField1_ & 0x00000020) != 0),
+                getParentForChildren(),
+                isClean());
+        receiverAddress_ = null;
+      }
+      return receiverAddressBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> receiverCountryCode_ =
+      java.util.Collections.emptyList();
+    private void ensureReceiverCountryCodeIsMutable() {
+      if (!((bitField1_ & 0x00000040) != 0)) {
+        receiverCountryCode_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(receiverCountryCode_);
+        bitField1_ |= 0x00000040;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> receiverCountryCodeBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getReceiverCountryCodeList() {
+      if (receiverCountryCodeBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(receiverCountryCode_);
+      } else {
+        return receiverCountryCodeBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public int getReceiverCountryCodeCount() {
+      if (receiverCountryCodeBuilder_ == null) {
+        return receiverCountryCode_.size();
+      } else {
+        return receiverCountryCodeBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public ai.visma.ssn.type.Candidate getReceiverCountryCode(int index) {
+      if (receiverCountryCodeBuilder_ == null) {
+        return receiverCountryCode_.get(index);
+      } else {
+        return receiverCountryCodeBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder setReceiverCountryCode(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (receiverCountryCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverCountryCodeIsMutable();
+        receiverCountryCode_.set(index, value);
+        onChanged();
+      } else {
+        receiverCountryCodeBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder setReceiverCountryCode(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverCountryCodeBuilder_ == null) {
+        ensureReceiverCountryCodeIsMutable();
+        receiverCountryCode_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        receiverCountryCodeBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder addReceiverCountryCode(ai.visma.ssn.type.Candidate value) {
+      if (receiverCountryCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverCountryCodeIsMutable();
+        receiverCountryCode_.add(value);
+        onChanged();
+      } else {
+        receiverCountryCodeBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder addReceiverCountryCode(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (receiverCountryCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverCountryCodeIsMutable();
+        receiverCountryCode_.add(index, value);
+        onChanged();
+      } else {
+        receiverCountryCodeBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder addReceiverCountryCode(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverCountryCodeBuilder_ == null) {
+        ensureReceiverCountryCodeIsMutable();
+        receiverCountryCode_.add(builderForValue.build());
+        onChanged();
+      } else {
+        receiverCountryCodeBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder addReceiverCountryCode(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverCountryCodeBuilder_ == null) {
+        ensureReceiverCountryCodeIsMutable();
+        receiverCountryCode_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        receiverCountryCodeBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder addAllReceiverCountryCode(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (receiverCountryCodeBuilder_ == null) {
+        ensureReceiverCountryCodeIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, receiverCountryCode_);
+        onChanged();
+      } else {
+        receiverCountryCodeBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder clearReceiverCountryCode() {
+      if (receiverCountryCodeBuilder_ == null) {
+        receiverCountryCode_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000040);
+        onChanged();
+      } else {
+        receiverCountryCodeBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder removeReceiverCountryCode(int index) {
+      if (receiverCountryCodeBuilder_ == null) {
+        ensureReceiverCountryCodeIsMutable();
+        receiverCountryCode_.remove(index);
+        onChanged();
+      } else {
+        receiverCountryCodeBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getReceiverCountryCodeBuilder(
+        int index) {
+      return getReceiverCountryCodeFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getReceiverCountryCodeOrBuilder(
+        int index) {
+      if (receiverCountryCodeBuilder_ == null) {
+        return receiverCountryCode_.get(index);  } else {
+        return receiverCountryCodeBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getReceiverCountryCodeOrBuilderList() {
+      if (receiverCountryCodeBuilder_ != null) {
+        return receiverCountryCodeBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(receiverCountryCode_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addReceiverCountryCodeBuilder() {
+      return getReceiverCountryCodeFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addReceiverCountryCodeBuilder(
+        int index) {
+      return getReceiverCountryCodeFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_country_code = 39 [json_name = "receiverCountryCode"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getReceiverCountryCodeBuilderList() {
+      return getReceiverCountryCodeFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getReceiverCountryCodeFieldBuilder() {
+      if (receiverCountryCodeBuilder_ == null) {
+        receiverCountryCodeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                receiverCountryCode_,
+                ((bitField1_ & 0x00000040) != 0),
+                getParentForChildren(),
+                isClean());
+        receiverCountryCode_ = null;
+      }
+      return receiverCountryCodeBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> receiverName_ =
+      java.util.Collections.emptyList();
+    private void ensureReceiverNameIsMutable() {
+      if (!((bitField1_ & 0x00000080) != 0)) {
+        receiverName_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(receiverName_);
+        bitField1_ |= 0x00000080;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> receiverNameBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getReceiverNameList() {
+      if (receiverNameBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(receiverName_);
+      } else {
+        return receiverNameBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public int getReceiverNameCount() {
+      if (receiverNameBuilder_ == null) {
+        return receiverName_.size();
+      } else {
+        return receiverNameBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public ai.visma.ssn.type.Candidate getReceiverName(int index) {
+      if (receiverNameBuilder_ == null) {
+        return receiverName_.get(index);
+      } else {
+        return receiverNameBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public Builder setReceiverName(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (receiverNameBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverNameIsMutable();
+        receiverName_.set(index, value);
+        onChanged();
+      } else {
+        receiverNameBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public Builder setReceiverName(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverNameBuilder_ == null) {
+        ensureReceiverNameIsMutable();
+        receiverName_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        receiverNameBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public Builder addReceiverName(ai.visma.ssn.type.Candidate value) {
+      if (receiverNameBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverNameIsMutable();
+        receiverName_.add(value);
+        onChanged();
+      } else {
+        receiverNameBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public Builder addReceiverName(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (receiverNameBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverNameIsMutable();
+        receiverName_.add(index, value);
+        onChanged();
+      } else {
+        receiverNameBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public Builder addReceiverName(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverNameBuilder_ == null) {
+        ensureReceiverNameIsMutable();
+        receiverName_.add(builderForValue.build());
+        onChanged();
+      } else {
+        receiverNameBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public Builder addReceiverName(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverNameBuilder_ == null) {
+        ensureReceiverNameIsMutable();
+        receiverName_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        receiverNameBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public Builder addAllReceiverName(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (receiverNameBuilder_ == null) {
+        ensureReceiverNameIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, receiverName_);
+        onChanged();
+      } else {
+        receiverNameBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public Builder clearReceiverName() {
+      if (receiverNameBuilder_ == null) {
+        receiverName_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000080);
+        onChanged();
+      } else {
+        receiverNameBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public Builder removeReceiverName(int index) {
+      if (receiverNameBuilder_ == null) {
+        ensureReceiverNameIsMutable();
+        receiverName_.remove(index);
+        onChanged();
+      } else {
+        receiverNameBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getReceiverNameBuilder(
+        int index) {
+      return getReceiverNameFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getReceiverNameOrBuilder(
+        int index) {
+      if (receiverNameBuilder_ == null) {
+        return receiverName_.get(index);  } else {
+        return receiverNameBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getReceiverNameOrBuilderList() {
+      if (receiverNameBuilder_ != null) {
+        return receiverNameBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(receiverName_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addReceiverNameBuilder() {
+      return getReceiverNameFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addReceiverNameBuilder(
+        int index) {
+      return getReceiverNameFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_name = 40 [json_name = "receiverName"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getReceiverNameBuilderList() {
+      return getReceiverNameFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getReceiverNameFieldBuilder() {
+      if (receiverNameBuilder_ == null) {
+        receiverNameBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                receiverName_,
+                ((bitField1_ & 0x00000080) != 0),
+                getParentForChildren(),
+                isClean());
+        receiverName_ = null;
+      }
+      return receiverNameBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.Candidate> receiverVatNumber_ =
+      java.util.Collections.emptyList();
+    private void ensureReceiverVatNumberIsMutable() {
+      if (!((bitField1_ & 0x00000100) != 0)) {
+        receiverVatNumber_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(receiverVatNumber_);
+        bitField1_ |= 0x00000100;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> receiverVatNumberBuilder_;
+
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate> getReceiverVatNumberList() {
+      if (receiverVatNumberBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(receiverVatNumber_);
+      } else {
+        return receiverVatNumberBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public int getReceiverVatNumberCount() {
+      if (receiverVatNumberBuilder_ == null) {
+        return receiverVatNumber_.size();
+      } else {
+        return receiverVatNumberBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate getReceiverVatNumber(int index) {
+      if (receiverVatNumberBuilder_ == null) {
+        return receiverVatNumber_.get(index);
+      } else {
+        return receiverVatNumberBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder setReceiverVatNumber(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (receiverVatNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverVatNumberIsMutable();
+        receiverVatNumber_.set(index, value);
+        onChanged();
+      } else {
+        receiverVatNumberBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder setReceiverVatNumber(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverVatNumberBuilder_ == null) {
+        ensureReceiverVatNumberIsMutable();
+        receiverVatNumber_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        receiverVatNumberBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder addReceiverVatNumber(ai.visma.ssn.type.Candidate value) {
+      if (receiverVatNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverVatNumberIsMutable();
+        receiverVatNumber_.add(value);
+        onChanged();
+      } else {
+        receiverVatNumberBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder addReceiverVatNumber(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (receiverVatNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureReceiverVatNumberIsMutable();
+        receiverVatNumber_.add(index, value);
+        onChanged();
+      } else {
+        receiverVatNumberBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder addReceiverVatNumber(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverVatNumberBuilder_ == null) {
+        ensureReceiverVatNumberIsMutable();
+        receiverVatNumber_.add(builderForValue.build());
+        onChanged();
+      } else {
+        receiverVatNumberBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder addReceiverVatNumber(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (receiverVatNumberBuilder_ == null) {
+        ensureReceiverVatNumberIsMutable();
+        receiverVatNumber_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        receiverVatNumberBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder addAllReceiverVatNumber(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (receiverVatNumberBuilder_ == null) {
+        ensureReceiverVatNumberIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, receiverVatNumber_);
+        onChanged();
+      } else {
+        receiverVatNumberBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder clearReceiverVatNumber() {
+      if (receiverVatNumberBuilder_ == null) {
+        receiverVatNumber_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00000100);
+        onChanged();
+      } else {
+        receiverVatNumberBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder removeReceiverVatNumber(int index) {
+      if (receiverVatNumberBuilder_ == null) {
+        ensureReceiverVatNumberIsMutable();
+        receiverVatNumber_.remove(index);
+        onChanged();
+      } else {
+        receiverVatNumberBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getReceiverVatNumberBuilder(
+        int index) {
+      return getReceiverVatNumberFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getReceiverVatNumberOrBuilder(
+        int index) {
+      if (receiverVatNumberBuilder_ == null) {
+        return receiverVatNumber_.get(index);  } else {
+        return receiverVatNumberBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getReceiverVatNumberOrBuilderList() {
+      if (receiverVatNumberBuilder_ != null) {
+        return receiverVatNumberBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(receiverVatNumber_);
+      }
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addReceiverVatNumberBuilder() {
+      return getReceiverVatNumberFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addReceiverVatNumberBuilder(
+        int index) {
+      return getReceiverVatNumberFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ssn.type.Candidate receiver_vat_number = 41 [json_name = "receiverVatNumber"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getReceiverVatNumberBuilderList() {
+      return getReceiverVatNumberFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getReceiverVatNumberFieldBuilder() {
+      if (receiverVatNumberBuilder_ == null) {
+        receiverVatNumberBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                receiverVatNumber_,
+                ((bitField1_ & 0x00000100) != 0),
+                getParentForChildren(),
+                isClean());
+        receiverVatNumber_ = null;
+      }
+      return receiverVatNumberBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

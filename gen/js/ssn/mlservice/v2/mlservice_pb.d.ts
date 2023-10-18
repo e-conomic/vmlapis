@@ -143,6 +143,24 @@ export namespace FeatureGenRequest {
     getCustomerNumber(): string;
     setCustomerNumber(value: string): TruthLabels;
 
+    getReceiverOrderNumber(): string;
+    setReceiverOrderNumber(value: string): TruthLabels;
+
+    getOcrLineBePaymentId(): string;
+    setOcrLineBePaymentId(value: string): TruthLabels;
+
+    getReceiverAddress(): string;
+    setReceiverAddress(value: string): TruthLabels;
+
+    getReceiverCountryCode(): string;
+    setReceiverCountryCode(value: string): TruthLabels;
+
+    getReceiverName(): string;
+    setReceiverName(value: string): TruthLabels;
+
+    getReceiverVatNumber(): string;
+    setReceiverVatNumber(value: string): TruthLabels;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): TruthLabels.AsObject;
     static toObject(includeInstance: boolean, msg: TruthLabels): TruthLabels.AsObject;
@@ -187,6 +205,12 @@ export namespace FeatureGenRequest {
       supplierAddress: string,
       creditCardLastFour: string,
       customerNumber: string,
+      receiverOrderNumber: string,
+      ocrLineBePaymentId: string,
+      receiverAddress: string,
+      receiverCountryCode: string,
+      receiverName: string,
+      receiverVatNumber: string,
     }
   }
 
@@ -400,6 +424,36 @@ export class PredictResponse extends jspb.Message {
   clearCustomerNumberList(): PredictResponse;
   addCustomerNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
+  getReceiverOrderNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setReceiverOrderNumberList(value: Array<ssn_type_candidate_pb.Candidate>): PredictResponse;
+  clearReceiverOrderNumberList(): PredictResponse;
+  addReceiverOrderNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getOcrLineBePaymentIdList(): Array<ssn_type_candidate_pb.Candidate>;
+  setOcrLineBePaymentIdList(value: Array<ssn_type_candidate_pb.Candidate>): PredictResponse;
+  clearOcrLineBePaymentIdList(): PredictResponse;
+  addOcrLineBePaymentId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getReceiverAddressList(): Array<ssn_type_candidate_pb.Candidate>;
+  setReceiverAddressList(value: Array<ssn_type_candidate_pb.Candidate>): PredictResponse;
+  clearReceiverAddressList(): PredictResponse;
+  addReceiverAddress(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getReceiverCountryCodeList(): Array<ssn_type_candidate_pb.Candidate>;
+  setReceiverCountryCodeList(value: Array<ssn_type_candidate_pb.Candidate>): PredictResponse;
+  clearReceiverCountryCodeList(): PredictResponse;
+  addReceiverCountryCode(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getReceiverNameList(): Array<ssn_type_candidate_pb.Candidate>;
+  setReceiverNameList(value: Array<ssn_type_candidate_pb.Candidate>): PredictResponse;
+  clearReceiverNameList(): PredictResponse;
+  addReceiverName(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getReceiverVatNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setReceiverVatNumberList(value: Array<ssn_type_candidate_pb.Candidate>): PredictResponse;
+  clearReceiverVatNumberList(): PredictResponse;
+  addReceiverVatNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictResponse.AsObject;
   static toObject(includeInstance: boolean, msg: PredictResponse): PredictResponse.AsObject;
@@ -445,6 +499,12 @@ export namespace PredictResponse {
     supplierAddressList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     creditCardLastFourList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     customerNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    receiverOrderNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    ocrLineBePaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    receiverAddressList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    receiverCountryCodeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    receiverNameList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    receiverVatNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
   }
 }
 

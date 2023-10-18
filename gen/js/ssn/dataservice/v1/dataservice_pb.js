@@ -1033,7 +1033,13 @@ proto.ssn.dataservice.v1.TrueValues.toObject = function(includeInstance, msg) {
     supplierVatNumber: (f = msg.getSupplierVatNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     supplierOrganisationNumber: (f = msg.getSupplierOrganisationNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     supplierAddress: (f = msg.getSupplierAddress()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
-    customerNumber: (f = msg.getCustomerNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
+    customerNumber: (f = msg.getCustomerNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    receiverOrderNumber: (f = msg.getReceiverOrderNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    ocrLineBePaymentId: (f = msg.getOcrLineBePaymentId()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    receiverAddress: (f = msg.getReceiverAddress()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    receiverCountryCode: (f = msg.getReceiverCountryCode()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    receiverName: (f = msg.getReceiverName()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    receiverVatNumber: (f = msg.getReceiverVatNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1239,6 +1245,36 @@ proto.ssn.dataservice.v1.TrueValues.deserializeBinaryFromReader = function(msg, 
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setCustomerNumber(value);
+      break;
+    case 35:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setReceiverOrderNumber(value);
+      break;
+    case 36:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setOcrLineBePaymentId(value);
+      break;
+    case 37:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setReceiverAddress(value);
+      break;
+    case 38:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setReceiverCountryCode(value);
+      break;
+    case 39:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setReceiverName(value);
+      break;
+    case 40:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.setReceiverVatNumber(value);
       break;
     default:
       reader.skipField();
@@ -1537,6 +1573,54 @@ proto.ssn.dataservice.v1.TrueValues.serializeBinaryToWriter = function(message, 
   if (f != null) {
     writer.writeMessage(
       34,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverOrderNumber();
+  if (f != null) {
+    writer.writeMessage(
+      35,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getOcrLineBePaymentId();
+  if (f != null) {
+    writer.writeMessage(
+      36,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverAddress();
+  if (f != null) {
+    writer.writeMessage(
+      37,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverCountryCode();
+  if (f != null) {
+    writer.writeMessage(
+      38,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverName();
+  if (f != null) {
+    writer.writeMessage(
+      39,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverVatNumber();
+  if (f != null) {
+    writer.writeMessage(
+      40,
       f,
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
@@ -2802,13 +2886,235 @@ proto.ssn.dataservice.v1.TrueValues.prototype.hasCustomerNumber = function() {
 };
 
 
+/**
+ * optional google.protobuf.StringValue receiver_order_number = 35;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getReceiverOrderNumber = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 35));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.StringValue|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setReceiverOrderNumber = function(value) {
+  return jspb.Message.setWrapperField(this, 35, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearReceiverOrderNumber = function() {
+  return this.setReceiverOrderNumber(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasReceiverOrderNumber = function() {
+  return jspb.Message.getField(this, 35) != null;
+};
+
+
+/**
+ * optional google.protobuf.StringValue ocr_line_be_payment_id = 36;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getOcrLineBePaymentId = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 36));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.StringValue|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setOcrLineBePaymentId = function(value) {
+  return jspb.Message.setWrapperField(this, 36, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearOcrLineBePaymentId = function() {
+  return this.setOcrLineBePaymentId(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasOcrLineBePaymentId = function() {
+  return jspb.Message.getField(this, 36) != null;
+};
+
+
+/**
+ * optional google.protobuf.StringValue receiver_address = 37;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getReceiverAddress = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 37));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.StringValue|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setReceiverAddress = function(value) {
+  return jspb.Message.setWrapperField(this, 37, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearReceiverAddress = function() {
+  return this.setReceiverAddress(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasReceiverAddress = function() {
+  return jspb.Message.getField(this, 37) != null;
+};
+
+
+/**
+ * optional google.protobuf.StringValue receiver_country_code = 38;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getReceiverCountryCode = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 38));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.StringValue|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setReceiverCountryCode = function(value) {
+  return jspb.Message.setWrapperField(this, 38, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearReceiverCountryCode = function() {
+  return this.setReceiverCountryCode(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasReceiverCountryCode = function() {
+  return jspb.Message.getField(this, 38) != null;
+};
+
+
+/**
+ * optional google.protobuf.StringValue receiver_name = 39;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getReceiverName = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 39));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.StringValue|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setReceiverName = function(value) {
+  return jspb.Message.setWrapperField(this, 39, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearReceiverName = function() {
+  return this.setReceiverName(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasReceiverName = function() {
+  return jspb.Message.getField(this, 39) != null;
+};
+
+
+/**
+ * optional google.protobuf.StringValue receiver_vat_number = 40;
+ * @return {?proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getReceiverVatNumber = function() {
+  return /** @type{?proto.google.protobuf.StringValue} */ (
+    jspb.Message.getWrapperField(this, google_protobuf_wrappers_pb.StringValue, 40));
+};
+
+
+/**
+ * @param {?proto.google.protobuf.StringValue|undefined} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setReceiverVatNumber = function(value) {
+  return jspb.Message.setWrapperField(this, 40, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearReceiverVatNumber = function() {
+  return this.setReceiverVatNumber(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.hasReceiverVatNumber = function() {
+  return jspb.Message.getField(this, 40) != null;
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionValues.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34];
+proto.ssn.dataservice.v1.PredictionValues.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40];
 
 
 
@@ -2908,6 +3214,18 @@ proto.ssn.dataservice.v1.PredictionValues.toObject = function(includeInstance, m
     supplierAddressList: jspb.Message.toObjectList(msg.getSupplierAddressList(),
     google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
     customerNumberList: jspb.Message.toObjectList(msg.getCustomerNumberList(),
+    google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
+    receiverOrderNumberList: jspb.Message.toObjectList(msg.getReceiverOrderNumberList(),
+    google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
+    ocrLineBePaymentIdList: jspb.Message.toObjectList(msg.getOcrLineBePaymentIdList(),
+    google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
+    receiverAddressList: jspb.Message.toObjectList(msg.getReceiverAddressList(),
+    google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
+    receiverCountryCodeList: jspb.Message.toObjectList(msg.getReceiverCountryCodeList(),
+    google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
+    receiverNameList: jspb.Message.toObjectList(msg.getReceiverNameList(),
+    google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
+    receiverVatNumberList: jspb.Message.toObjectList(msg.getReceiverVatNumberList(),
     google_protobuf_wrappers_pb.StringValue.toObject, includeInstance)
   };
 
@@ -3114,6 +3432,36 @@ proto.ssn.dataservice.v1.PredictionValues.deserializeBinaryFromReader = function
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.addCustomerNumber(value);
+      break;
+    case 35:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.addReceiverOrderNumber(value);
+      break;
+    case 36:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.addOcrLineBePaymentId(value);
+      break;
+    case 37:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.addReceiverAddress(value);
+      break;
+    case 38:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.addReceiverCountryCode(value);
+      break;
+    case 39:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.addReceiverName(value);
+      break;
+    case 40:
+      var value = new google_protobuf_wrappers_pb.StringValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
+      msg.addReceiverVatNumber(value);
       break;
     default:
       reader.skipField();
@@ -3412,6 +3760,54 @@ proto.ssn.dataservice.v1.PredictionValues.serializeBinaryToWriter = function(mes
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       34,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverOrderNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      35,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getOcrLineBePaymentIdList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      36,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverAddressList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      37,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverCountryCodeList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      38,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverNameList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      39,
+      f,
+      google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverVatNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      40,
       f,
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
     );
@@ -4711,13 +5107,241 @@ proto.ssn.dataservice.v1.PredictionValues.prototype.clearCustomerNumberList = fu
 };
 
 
+/**
+ * repeated google.protobuf.StringValue receiver_order_number = 35;
+ * @return {!Array<!proto.google.protobuf.StringValue>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getReceiverOrderNumberList = function() {
+  return /** @type{!Array<!proto.google.protobuf.StringValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.StringValue, 35));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.StringValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setReceiverOrderNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 35, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.StringValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addReceiverOrderNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 35, opt_value, proto.google.protobuf.StringValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearReceiverOrderNumberList = function() {
+  return this.setReceiverOrderNumberList([]);
+};
+
+
+/**
+ * repeated google.protobuf.StringValue ocr_line_be_payment_id = 36;
+ * @return {!Array<!proto.google.protobuf.StringValue>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getOcrLineBePaymentIdList = function() {
+  return /** @type{!Array<!proto.google.protobuf.StringValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.StringValue, 36));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.StringValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setOcrLineBePaymentIdList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 36, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.StringValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addOcrLineBePaymentId = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 36, opt_value, proto.google.protobuf.StringValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearOcrLineBePaymentIdList = function() {
+  return this.setOcrLineBePaymentIdList([]);
+};
+
+
+/**
+ * repeated google.protobuf.StringValue receiver_address = 37;
+ * @return {!Array<!proto.google.protobuf.StringValue>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getReceiverAddressList = function() {
+  return /** @type{!Array<!proto.google.protobuf.StringValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.StringValue, 37));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.StringValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setReceiverAddressList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 37, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.StringValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addReceiverAddress = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 37, opt_value, proto.google.protobuf.StringValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearReceiverAddressList = function() {
+  return this.setReceiverAddressList([]);
+};
+
+
+/**
+ * repeated google.protobuf.StringValue receiver_country_code = 38;
+ * @return {!Array<!proto.google.protobuf.StringValue>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getReceiverCountryCodeList = function() {
+  return /** @type{!Array<!proto.google.protobuf.StringValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.StringValue, 38));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.StringValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setReceiverCountryCodeList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 38, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.StringValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addReceiverCountryCode = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 38, opt_value, proto.google.protobuf.StringValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearReceiverCountryCodeList = function() {
+  return this.setReceiverCountryCodeList([]);
+};
+
+
+/**
+ * repeated google.protobuf.StringValue receiver_name = 39;
+ * @return {!Array<!proto.google.protobuf.StringValue>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getReceiverNameList = function() {
+  return /** @type{!Array<!proto.google.protobuf.StringValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.StringValue, 39));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.StringValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setReceiverNameList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 39, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.StringValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addReceiverName = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 39, opt_value, proto.google.protobuf.StringValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearReceiverNameList = function() {
+  return this.setReceiverNameList([]);
+};
+
+
+/**
+ * repeated google.protobuf.StringValue receiver_vat_number = 40;
+ * @return {!Array<!proto.google.protobuf.StringValue>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getReceiverVatNumberList = function() {
+  return /** @type{!Array<!proto.google.protobuf.StringValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.StringValue, 40));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.StringValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setReceiverVatNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 40, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.StringValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.StringValue}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addReceiverVatNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 40, opt_value, proto.google.protobuf.StringValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearReceiverVatNumberList = function() {
+  return this.setReceiverVatNumberList([]);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionConfidences.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34];
+proto.ssn.dataservice.v1.PredictionConfidences.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40];
 
 
 
@@ -4817,6 +5441,18 @@ proto.ssn.dataservice.v1.PredictionConfidences.toObject = function(includeInstan
     supplierAddressList: jspb.Message.toObjectList(msg.getSupplierAddressList(),
     google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
     customerNumberList: jspb.Message.toObjectList(msg.getCustomerNumberList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    receiverOrderNumberList: jspb.Message.toObjectList(msg.getReceiverOrderNumberList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    ocrLineBePaymentIdList: jspb.Message.toObjectList(msg.getOcrLineBePaymentIdList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    receiverAddressList: jspb.Message.toObjectList(msg.getReceiverAddressList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    receiverCountryCodeList: jspb.Message.toObjectList(msg.getReceiverCountryCodeList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    receiverNameList: jspb.Message.toObjectList(msg.getReceiverNameList(),
+    google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance),
+    receiverVatNumberList: jspb.Message.toObjectList(msg.getReceiverVatNumberList(),
     google_protobuf_wrappers_pb.FloatValue.toObject, includeInstance)
   };
 
@@ -5023,6 +5659,36 @@ proto.ssn.dataservice.v1.PredictionConfidences.deserializeBinaryFromReader = fun
       var value = new google_protobuf_wrappers_pb.FloatValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
       msg.addCustomerNumber(value);
+      break;
+    case 35:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addReceiverOrderNumber(value);
+      break;
+    case 36:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addOcrLineBePaymentId(value);
+      break;
+    case 37:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addReceiverAddress(value);
+      break;
+    case 38:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addReceiverCountryCode(value);
+      break;
+    case 39:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addReceiverName(value);
+      break;
+    case 40:
+      var value = new google_protobuf_wrappers_pb.FloatValue;
+      reader.readMessage(value,google_protobuf_wrappers_pb.FloatValue.deserializeBinaryFromReader);
+      msg.addReceiverVatNumber(value);
       break;
     default:
       reader.skipField();
@@ -5321,6 +5987,54 @@ proto.ssn.dataservice.v1.PredictionConfidences.serializeBinaryToWriter = functio
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       34,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverOrderNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      35,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getOcrLineBePaymentIdList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      36,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverAddressList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      37,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverCountryCodeList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      38,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverNameList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      39,
+      f,
+      google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverVatNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      40,
       f,
       google_protobuf_wrappers_pb.FloatValue.serializeBinaryToWriter
     );
@@ -6620,13 +7334,241 @@ proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearCustomerNumberList
 };
 
 
+/**
+ * repeated google.protobuf.FloatValue receiver_order_number = 35;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getReceiverOrderNumberList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 35));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.FloatValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+*/
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setReceiverOrderNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 35, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addReceiverOrderNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 35, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearReceiverOrderNumberList = function() {
+  return this.setReceiverOrderNumberList([]);
+};
+
+
+/**
+ * repeated google.protobuf.FloatValue ocr_line_be_payment_id = 36;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getOcrLineBePaymentIdList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 36));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.FloatValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+*/
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setOcrLineBePaymentIdList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 36, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addOcrLineBePaymentId = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 36, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearOcrLineBePaymentIdList = function() {
+  return this.setOcrLineBePaymentIdList([]);
+};
+
+
+/**
+ * repeated google.protobuf.FloatValue receiver_address = 37;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getReceiverAddressList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 37));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.FloatValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+*/
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setReceiverAddressList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 37, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addReceiverAddress = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 37, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearReceiverAddressList = function() {
+  return this.setReceiverAddressList([]);
+};
+
+
+/**
+ * repeated google.protobuf.FloatValue receiver_country_code = 38;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getReceiverCountryCodeList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 38));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.FloatValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+*/
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setReceiverCountryCodeList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 38, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addReceiverCountryCode = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 38, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearReceiverCountryCodeList = function() {
+  return this.setReceiverCountryCodeList([]);
+};
+
+
+/**
+ * repeated google.protobuf.FloatValue receiver_name = 39;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getReceiverNameList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 39));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.FloatValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+*/
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setReceiverNameList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 39, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addReceiverName = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 39, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearReceiverNameList = function() {
+  return this.setReceiverNameList([]);
+};
+
+
+/**
+ * repeated google.protobuf.FloatValue receiver_vat_number = 40;
+ * @return {!Array<!proto.google.protobuf.FloatValue>}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.getReceiverVatNumberList = function() {
+  return /** @type{!Array<!proto.google.protobuf.FloatValue>} */ (
+    jspb.Message.getRepeatedWrapperField(this, google_protobuf_wrappers_pb.FloatValue, 40));
+};
+
+
+/**
+ * @param {!Array<!proto.google.protobuf.FloatValue>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+*/
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.setReceiverVatNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 40, value);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.FloatValue=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.google.protobuf.FloatValue}
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.addReceiverVatNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 40, opt_value, proto.google.protobuf.FloatValue, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionConfidences} returns this
+ */
+proto.ssn.dataservice.v1.PredictionConfidences.prototype.clearReceiverVatNumberList = function() {
+  return this.setReceiverVatNumberList([]);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34];
+proto.ssn.dataservice.v1.PredictionMetadata.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40];
 
 
 
@@ -6726,6 +7668,18 @@ proto.ssn.dataservice.v1.PredictionMetadata.toObject = function(includeInstance,
     supplierAddressList: jspb.Message.toObjectList(msg.getSupplierAddressList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
     customerNumberList: jspb.Message.toObjectList(msg.getCustomerNumberList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    receiverOrderNumberList: jspb.Message.toObjectList(msg.getReceiverOrderNumberList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    ocrLineBePaymentIdList: jspb.Message.toObjectList(msg.getOcrLineBePaymentIdList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    receiverAddressList: jspb.Message.toObjectList(msg.getReceiverAddressList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    receiverCountryCodeList: jspb.Message.toObjectList(msg.getReceiverCountryCodeList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    receiverNameList: jspb.Message.toObjectList(msg.getReceiverNameList(),
+    ssn_type_candidate_pb.ModelSpec.toObject, includeInstance),
+    receiverVatNumberList: jspb.Message.toObjectList(msg.getReceiverVatNumberList(),
     ssn_type_candidate_pb.ModelSpec.toObject, includeInstance)
   };
 
@@ -6932,6 +7886,36 @@ proto.ssn.dataservice.v1.PredictionMetadata.deserializeBinaryFromReader = functi
       var value = new ssn_type_candidate_pb.ModelSpec;
       reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
       msg.addCustomerNumber(value);
+      break;
+    case 35:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addReceiverOrderNumber(value);
+      break;
+    case 36:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addOcrLineBePaymentId(value);
+      break;
+    case 37:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addReceiverAddress(value);
+      break;
+    case 38:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addReceiverCountryCode(value);
+      break;
+    case 39:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addReceiverName(value);
+      break;
+    case 40:
+      var value = new ssn_type_candidate_pb.ModelSpec;
+      reader.readMessage(value,ssn_type_candidate_pb.ModelSpec.deserializeBinaryFromReader);
+      msg.addReceiverVatNumber(value);
       break;
     default:
       reader.skipField();
@@ -7230,6 +8214,54 @@ proto.ssn.dataservice.v1.PredictionMetadata.serializeBinaryToWriter = function(m
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       34,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverOrderNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      35,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getOcrLineBePaymentIdList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      36,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverAddressList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      37,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverCountryCodeList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      38,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverNameList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      39,
+      f,
+      ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getReceiverVatNumberList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      40,
       f,
       ssn_type_candidate_pb.ModelSpec.serializeBinaryToWriter
     );
@@ -8526,6 +9558,234 @@ proto.ssn.dataservice.v1.PredictionMetadata.prototype.addCustomerNumber = functi
  */
 proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearCustomerNumberList = function() {
   return this.setCustomerNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec receiver_order_number = 35;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getReceiverOrderNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 35));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.ModelSpec>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setReceiverOrderNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 35, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addReceiverOrderNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 35, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearReceiverOrderNumberList = function() {
+  return this.setReceiverOrderNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec ocr_line_be_payment_id = 36;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getOcrLineBePaymentIdList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 36));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.ModelSpec>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setOcrLineBePaymentIdList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 36, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addOcrLineBePaymentId = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 36, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearOcrLineBePaymentIdList = function() {
+  return this.setOcrLineBePaymentIdList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec receiver_address = 37;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getReceiverAddressList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 37));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.ModelSpec>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setReceiverAddressList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 37, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addReceiverAddress = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 37, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearReceiverAddressList = function() {
+  return this.setReceiverAddressList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec receiver_country_code = 38;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getReceiverCountryCodeList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 38));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.ModelSpec>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setReceiverCountryCodeList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 38, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addReceiverCountryCode = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 38, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearReceiverCountryCodeList = function() {
+  return this.setReceiverCountryCodeList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec receiver_name = 39;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getReceiverNameList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 39));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.ModelSpec>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setReceiverNameList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 39, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addReceiverName = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 39, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearReceiverNameList = function() {
+  return this.setReceiverNameList([]);
+};
+
+
+/**
+ * repeated ssn.type.ModelSpec receiver_vat_number = 40;
+ * @return {!Array<!proto.ssn.type.ModelSpec>}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.getReceiverVatNumberList = function() {
+  return /** @type{!Array<!proto.ssn.type.ModelSpec>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.ModelSpec, 40));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.ModelSpec>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+*/
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.setReceiverVatNumberList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 40, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.ModelSpec=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.ModelSpec}
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.addReceiverVatNumber = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 40, opt_value, proto.ssn.type.ModelSpec, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionMetadata} returns this
+ */
+proto.ssn.dataservice.v1.PredictionMetadata.prototype.clearReceiverVatNumberList = function() {
+  return this.setReceiverVatNumberList([]);
 };
 
 

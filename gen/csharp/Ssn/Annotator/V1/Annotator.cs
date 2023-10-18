@@ -28,11 +28,11 @@ namespace Ssn.Annotator.V1 {
             "YXRvci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoucHJvdG9j",
             "LWdlbi1vcGVuYXBpdjIvb3B0aW9ucy9hbm5vdGF0aW9ucy5wcm90bxoYc3Nu",
             "L3R5cGUvY2FuZGlkYXRlLnByb3RvGh5zc24vdHlwZS90ZXh0X2Fubm90YXRp",
-            "b24ucHJvdG8aE3Nzbi90eXBlL3RpZXIucHJvdG8i7QcKB0ZlYXR1cmUSMgoE",
+            "b24ucHJvdG8aE3Nzbi90eXBlL3RpZXIucHJvdG8igQkKB0ZlYXR1cmUSMgoE",
             "dHlwZRgBIAEoDjIeLnNzbi5hbm5vdGF0b3IudjEuRmVhdHVyZS5UeXBlUgR0",
             "eXBlEh8KC21heF9yZXN1bHRzGAIgASgFUgptYXhSZXN1bHRzEkEKDm1pbl9j",
             "b25maWRlbmNlGAMgASgOMhouc3NuLnR5cGUuQ29uZmlkZW5jZS5MZXZlbFIN",
-            "bWluQ29uZmlkZW5jZSLJBgoEVHlwZRILCgdERUZBVUxUEAASEwoPVEVYVF9B",
+            "bWluQ29uZmlkZW5jZSLdBwoEVHlwZRILCgdERUZBVUxUEAASEwoPVEVYVF9B",
             "Tk5PVEFUSU9OEAESDgoKT1JERVJfREFURRACEhQKEFBBWU1FTlRfRFVFX0RB",
             "VEUQAxIMCghDVVJSRU5DWRAEEg0KCVRPVEFMX1ZBVBAFEhIKDlRPVEFMX0lO",
             "Q0xfVkFUEAYSEgoOVE9UQUxfRVhDTF9WQVQQBxIZChVTVVBQTElFUl9DT1JQ",
@@ -44,92 +44,104 @@ namespace Ssn.Annotator.V1 {
             "X0lEEBESJAogT0NSX0xJTkVfU0VfQkFOS0dJUk9fQ1JFRElUT1JfSUQQEhIk",
             "CiBPQ1JfTElORV9TRV9QTFVTR0lST19DUkVESVRPUl9JRBATEhoKFk9DUl9M",
             "SU5FX05PX1BBWU1FTlRfSUQQFBIaChZPQ1JfTElORV9GSV9QQVlNRU5UX0lE",
-            "EBUSGgoWT0NSX0xJTkVfTkxfUEFZTUVOVF9JRBAWEggKBFRFWFQQFxIICgRJ",
-            "QkFOEBgSCQoFTElORVMQGRILCgdQUkVWSUVXEBoSFwoTQkFOS19BQ0NPVU5U",
-            "X05VTUJFUhAbEhwKGEJBTktfUkVHSVNUUkFUSU9OX05VTUJFUhAcEgcKA0JJ",
-            "QxAdEhMKD0RPQ1VNRU5UX05VTUJFUhAeEhEKDURPQ1VNRU5UX0RBVEUQHxIQ",
-            "CgxPUkRFUl9OVU1CRVIQIBIRCg1TVVBQTElFUl9OQU1FECESFwoTU1VQUExJ",
-            "RVJfVkFUX05VTUJFUhAiEiAKHFNVUFBMSUVSX09SR0FOSVNBVElPTl9OVU1C",
-            "RVIQIxIUChBTVVBQTElFUl9BRERSRVNTECQSEwoPQ1VTVE9NRVJfTlVNQkVS",
-            "ECUibQoXRG9jdW1lbnRRdWVzdGlvblJlcXVlc3QSNgoIZG9jdW1lbnQYASAB",
-            "KAsyGi5zc24uYW5ub3RhdG9yLnYxLkRvY3VtZW50Ughkb2N1bWVudBIaCghx",
-            "dWVzdGlvbhgCIAMoCVIIcXVlc3Rpb24iRwoYRG9jdW1lbnRRdWVzdGlvblJl",
-            "c3BvbnNlEisKBmFuc3dlchgBIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIG",
-            "YW5zd2VyIt0BChhEb2N1bWVudEFubm90YXRvclJlcXVlc3QSNgoIZG9jdW1l",
-            "bnQYASABKAsyGi5zc24uYW5ub3RhdG9yLnYxLkRvY3VtZW50Ughkb2N1bWVu",
-            "dBI1CghmZWF0dXJlcxgCIAMoCzIZLnNzbi5hbm5vdGF0b3IudjEuRmVhdHVy",
-            "ZVIIZmVhdHVyZXMSEgoEdGFncxgDIAMoCVIEdGFncxIiCgR0aWVyGAQgASgO",
-            "Mg4uc3NuLnR5cGUuVGllclIEdGllchIaCghzZWdtZW50cxgFIAMoCVIIc2Vn",
-            "bWVudHMiyhIKGURvY3VtZW50QW5ub3RhdG9yUmVzcG9uc2USMgoKb3JkZXJf",
-            "ZGF0ZRgBIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIJb3JkZXJEYXRlEj0K",
-            "EHBheW1lbnRfZHVlX2RhdGUYAiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVS",
-            "DnBheW1lbnREdWVEYXRlEi8KCGN1cnJlbmN5GAMgAygLMhMuc3NuLnR5cGUu",
-            "Q2FuZGlkYXRlUghjdXJyZW5jeRIwCgl0b3RhbF92YXQYBCADKAsyEy5zc24u",
-            "dHlwZS5DYW5kaWRhdGVSCHRvdGFsVmF0EjkKDnRvdGFsX2luY2xfdmF0GAUg",
-            "AygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgx0b3RhbEluY2xWYXQSOQoOdG90",
-            "YWxfZXhjbF92YXQYBiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDHRvdGFs",
-            "RXhjbFZhdBJHChVzdXBwbGllcl9jb3Jwb3JhdGVfaWQYByADKAsyEy5zc24u",
-            "dHlwZS5DYW5kaWRhdGVSE3N1cHBsaWVyQ29ycG9yYXRlSWQSRwoVc3VwcGxp",
-            "ZXJfY291bnRyeV9jb2RlGAggAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhNz",
-            "dXBwbGllckNvdW50cnlDb2RlEjgKDWRvY3VtZW50X3R5cGUYCSADKAsyEy5z",
-            "c24udHlwZS5DYW5kaWRhdGVSDGRvY3VtZW50VHlwZRI6Cg5wYXltZW50X21l",
-            "dGhvZBgKIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVINcGF5bWVudE1ldGhv",
-            "ZBJGChVjcmVkaXRfY2FyZF9sYXN0X2ZvdXIYCyADKAsyEy5zc24udHlwZS5D",
-            "YW5kaWRhdGVSEmNyZWRpdENhcmRMYXN0Rm91chI6Cg5pbnZvaWNlX251bWJl",
-            "chgMIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVINaW52b2ljZU51bWJlchJB",
-            "Cg90ZXh0X2Fubm90YXRpb24YDSABKAsyGC5zc24udHlwZS5UZXh0QW5ub3Rh",
-            "dGlvblIOdGV4dEFubm90YXRpb24SPAoQb2NyX2xpbmVfZGtfdHlwZRgOIAMo",
-            "CzITLnNzbi50eXBlLkNhbmRpZGF0ZVINb2NyTGluZURrVHlwZRJHChZvY3Jf",
-            "bGluZV9ka19wYXltZW50X2lkGA8gAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRl",
-            "UhJvY3JMaW5lRGtQYXltZW50SWQSSQoXb2NyX2xpbmVfZGtfY3JlZGl0b3Jf",
-            "aWQYECADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSE29jckxpbmVEa0NyZWRp",
-            "dG9ySWQSRwoWb2NyX2xpbmVfc2VfcGF5bWVudF9pZBgRIAMoCzITLnNzbi50",
-            "eXBlLkNhbmRpZGF0ZVISb2NyTGluZVNlUGF5bWVudElkEloKIG9jcl9saW5l",
-            "X3NlX2JhbmtnaXJvX2NyZWRpdG9yX2lkGBIgAygLMhMuc3NuLnR5cGUuQ2Fu",
-            "ZGlkYXRlUhtvY3JMaW5lU2VCYW5rZ2lyb0NyZWRpdG9ySWQSWgogb2NyX2xp",
-            "bmVfc2VfcGx1c2dpcm9fY3JlZGl0b3JfaWQYEyADKAsyEy5zc24udHlwZS5D",
-            "YW5kaWRhdGVSG29jckxpbmVTZVBsdXNnaXJvQ3JlZGl0b3JJZBJHChZvY3Jf",
-            "bGluZV9ub19wYXltZW50X2lkGBQgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRl",
-            "UhJvY3JMaW5lTm9QYXltZW50SWQSRwoWb2NyX2xpbmVfZmlfcGF5bWVudF9p",
-            "ZBgVIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVISb2NyTGluZUZpUGF5bWVu",
-            "dElkEkcKFm9jcl9saW5lX25sX3BheW1lbnRfaWQYFiADKAsyEy5zc24udHlw",
-            "ZS5DYW5kaWRhdGVSEm9jckxpbmVObFBheW1lbnRJZBISCgR0ZXh0GBcgASgJ",
-            "UgR0ZXh0Eh8KC2ZlZWRiYWNrX2lkGBggASgJUgpmZWVkYmFja0lkEicKBGli",
-            "YW4YGSADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSBGliYW4SLQoFbGluZXMY",
-            "GiADKAsyFy5zc24udHlwZS5MaW5lQ2FuZGlkYXRlUgVsaW5lcxIYCgdwcmV2",
-            "aWV3GBsgASgJUgdwcmV2aWV3EkMKE2JhbmtfYWNjb3VudF9udW1iZXIYHCAD",
-            "KAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEWJhbmtBY2NvdW50TnVtYmVyEk0K",
-            "GGJhbmtfcmVnaXN0cmF0aW9uX251bWJlchgdIAMoCzITLnNzbi50eXBlLkNh",
-            "bmRpZGF0ZVIWYmFua1JlZ2lzdHJhdGlvbk51bWJlchIlCgNiaWMYHiADKAsy",
-            "Ey5zc24udHlwZS5DYW5kaWRhdGVSA2JpYxI8Cg9kb2N1bWVudF9udW1iZXIY",
-            "HyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDmRvY3VtZW50TnVtYmVyEjgK",
-            "DWRvY3VtZW50X2RhdGUYICADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDGRv",
-            "Y3VtZW50RGF0ZRI2CgxvcmRlcl9udW1iZXIYISADKAsyEy5zc24udHlwZS5D",
-            "YW5kaWRhdGVSC29yZGVyTnVtYmVyEjgKDXN1cHBsaWVyX25hbWUYIiADKAsy",
-            "Ey5zc24udHlwZS5DYW5kaWRhdGVSDHN1cHBsaWVyTmFtZRJDChNzdXBwbGll",
-            "cl92YXRfbnVtYmVyGCMgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhFzdXBw",
-            "bGllclZhdE51bWJlchJVChxzdXBwbGllcl9vcmdhbmlzYXRpb25fbnVtYmVy",
-            "GCQgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhpzdXBwbGllck9yZ2FuaXNh",
-            "dGlvbk51bWJlchI+ChBzdXBwbGllcl9hZGRyZXNzGCUgAygLMhMuc3NuLnR5",
-            "cGUuQ2FuZGlkYXRlUg9zdXBwbGllckFkZHJlc3MSPAoPY3VzdG9tZXJfbnVt",
-            "YmVyGCYgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUg5jdXN0b21lck51bWJl",
-            "ciJeCghEb2N1bWVudBIYCgdjb250ZW50GAEgASgMUgdjb250ZW50EjgKBnNv",
-            "dXJjZRgCIAEoCzIgLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRTb3VyY2VS",
-            "BnNvdXJjZSIrCg5Eb2N1bWVudFNvdXJjZRIZCghodHRwX3VyaRgBIAEoCVIH",
-            "aHR0cFVyaTK9AgoRRG9jdW1lbnRBbm5vdGF0b3ISjQEKEEFubm90YXRlRG9j",
-            "dW1lbnQSKi5zc24uYW5ub3RhdG9yLnYxLkRvY3VtZW50QW5ub3RhdG9yUmVx",
-            "dWVzdBorLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRBbm5vdGF0b3JSZXNw",
-            "b25zZSIggtPkkwIaOgEqIhUvdjEvZG9jdW1lbnQ6YW5ub3RhdGUSlwEKFkFu",
-            "c3dlckRvY3VtZW50UXVlc3Rpb24SKS5zc24uYW5ub3RhdG9yLnYxLkRvY3Vt",
-            "ZW50UXVlc3Rpb25SZXF1ZXN0Giouc3NuLmFubm90YXRvci52MS5Eb2N1bWVu",
-            "dFF1ZXN0aW9uUmVzcG9uc2UiJoLT5JMCIDoBKiIbL3YxL2RvY3VtZW50OmFu",
-            "c3dlcnF1ZXN0aW9uQogCChlhaS52aXNtYS5zc24uYW5ub3RhdG9yLnYxQg5B",
-            "bm5vdGF0b3JQcm90b1ABWj5naXRodWIuY29tL2UtY29ub21pYy92bWxhcGlz",
-            "L2dlbi9nby9zc24vYW5ub3RhdG9yL3YxO2Fubm90YXRvcqICA1NBWKoCEFNz",
-            "bi5Bbm5vdGF0b3IuVjHKAhBTc25cQW5ub3RhdG9yXFYx4gIcU3NuXEFubm90",
-            "YXRvclxWMVxHUEJNZXRhZGF0YeoCElNzbjo6QW5ub3RhdG9yOjpWMZJBOBIP",
-            "CglTbWFydFNjYW4yAnYxKgECMhBhcHBsaWNhdGlvbi9qc29uOhBhcHBsaWNh",
-            "dGlvbi9qc29uYgZwcm90bzM="));
+            "EBUSGgoWT0NSX0xJTkVfTkxfUEFZTUVOVF9JRBAWEhoKFk9DUl9MSU5FX0JF",
+            "X1BBWU1FTlRfSUQQJxIICgRURVhUEBcSCAoESUJBThAYEgkKBUxJTkVTEBkS",
+            "CwoHUFJFVklFVxAaEhcKE0JBTktfQUNDT1VOVF9OVU1CRVIQGxIcChhCQU5L",
+            "X1JFR0lTVFJBVElPTl9OVU1CRVIQHBIHCgNCSUMQHRITCg9ET0NVTUVOVF9O",
+            "VU1CRVIQHhIRCg1ET0NVTUVOVF9EQVRFEB8SEAoMT1JERVJfTlVNQkVSECAS",
+            "EQoNU1VQUExJRVJfTkFNRRAhEhcKE1NVUFBMSUVSX1ZBVF9OVU1CRVIQIhIg",
+            "ChxTVVBQTElFUl9PUkdBTklTQVRJT05fTlVNQkVSECMSFAoQU1VQUExJRVJf",
+            "QUREUkVTUxAkEhMKD0NVU1RPTUVSX05VTUJFUhAlEhkKFVJFQ0VJVkVSX09S",
+            "REVSX05VTUJFUhAmEhQKEFJFQ0VJVkVSX0FERFJFU1MQKBIZChVSRUNFSVZF",
+            "Ul9DT1VOVFJZX0NPREUQKRIRCg1SRUNFSVZFUl9OQU1FECoSFwoTUkVDRUlW",
+            "RVJfVkFUX05VTUJFUhArIm0KF0RvY3VtZW50UXVlc3Rpb25SZXF1ZXN0EjYK",
+            "CGRvY3VtZW50GAEgASgLMhouc3NuLmFubm90YXRvci52MS5Eb2N1bWVudFII",
+            "ZG9jdW1lbnQSGgoIcXVlc3Rpb24YAiADKAlSCHF1ZXN0aW9uIkcKGERvY3Vt",
+            "ZW50UXVlc3Rpb25SZXNwb25zZRIrCgZhbnN3ZXIYASADKAsyEy5zc24udHlw",
+            "ZS5DYW5kaWRhdGVSBmFuc3dlciLdAQoYRG9jdW1lbnRBbm5vdGF0b3JSZXF1",
+            "ZXN0EjYKCGRvY3VtZW50GAEgASgLMhouc3NuLmFubm90YXRvci52MS5Eb2N1",
+            "bWVudFIIZG9jdW1lbnQSNQoIZmVhdHVyZXMYAiADKAsyGS5zc24uYW5ub3Rh",
+            "dG9yLnYxLkZlYXR1cmVSCGZlYXR1cmVzEhIKBHRhZ3MYAyADKAlSBHRhZ3MS",
+            "IgoEdGllchgEIAEoDjIOLnNzbi50eXBlLlRpZXJSBHRpZXISGgoIc2VnbWVu",
+            "dHMYBSADKAlSCHNlZ21lbnRzIuQVChlEb2N1bWVudEFubm90YXRvclJlc3Bv",
+            "bnNlEjIKCm9yZGVyX2RhdGUYASADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVS",
+            "CW9yZGVyRGF0ZRI9ChBwYXltZW50X2R1ZV9kYXRlGAIgAygLMhMuc3NuLnR5",
+            "cGUuQ2FuZGlkYXRlUg5wYXltZW50RHVlRGF0ZRIvCghjdXJyZW5jeRgDIAMo",
+            "CzITLnNzbi50eXBlLkNhbmRpZGF0ZVIIY3VycmVuY3kSMAoJdG90YWxfdmF0",
+            "GAQgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgh0b3RhbFZhdBI5Cg50b3Rh",
+            "bF9pbmNsX3ZhdBgFIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIMdG90YWxJ",
+            "bmNsVmF0EjkKDnRvdGFsX2V4Y2xfdmF0GAYgAygLMhMuc3NuLnR5cGUuQ2Fu",
+            "ZGlkYXRlUgx0b3RhbEV4Y2xWYXQSRwoVc3VwcGxpZXJfY29ycG9yYXRlX2lk",
+            "GAcgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhNzdXBwbGllckNvcnBvcmF0",
+            "ZUlkEkcKFXN1cHBsaWVyX2NvdW50cnlfY29kZRgIIAMoCzITLnNzbi50eXBl",
+            "LkNhbmRpZGF0ZVITc3VwcGxpZXJDb3VudHJ5Q29kZRI4Cg1kb2N1bWVudF90",
+            "eXBlGAkgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgxkb2N1bWVudFR5cGUS",
+            "OgoOcGF5bWVudF9tZXRob2QYCiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVS",
+            "DXBheW1lbnRNZXRob2QSRgoVY3JlZGl0X2NhcmRfbGFzdF9mb3VyGAsgAygL",
+            "MhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhJjcmVkaXRDYXJkTGFzdEZvdXISOgoO",
+            "aW52b2ljZV9udW1iZXIYDCADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDWlu",
+            "dm9pY2VOdW1iZXISQQoPdGV4dF9hbm5vdGF0aW9uGA0gASgLMhguc3NuLnR5",
+            "cGUuVGV4dEFubm90YXRpb25SDnRleHRBbm5vdGF0aW9uEjwKEG9jcl9saW5l",
+            "X2RrX3R5cGUYDiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDW9jckxpbmVE",
+            "a1R5cGUSRwoWb2NyX2xpbmVfZGtfcGF5bWVudF9pZBgPIAMoCzITLnNzbi50",
+            "eXBlLkNhbmRpZGF0ZVISb2NyTGluZURrUGF5bWVudElkEkkKF29jcl9saW5l",
+            "X2RrX2NyZWRpdG9yX2lkGBAgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhNv",
+            "Y3JMaW5lRGtDcmVkaXRvcklkEkcKFm9jcl9saW5lX3NlX3BheW1lbnRfaWQY",
+            "ESADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEm9jckxpbmVTZVBheW1lbnRJ",
+            "ZBJaCiBvY3JfbGluZV9zZV9iYW5rZ2lyb19jcmVkaXRvcl9pZBgSIAMoCzIT",
+            "LnNzbi50eXBlLkNhbmRpZGF0ZVIbb2NyTGluZVNlQmFua2dpcm9DcmVkaXRv",
+            "cklkEloKIG9jcl9saW5lX3NlX3BsdXNnaXJvX2NyZWRpdG9yX2lkGBMgAygL",
+            "MhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhtvY3JMaW5lU2VQbHVzZ2lyb0NyZWRp",
+            "dG9ySWQSRwoWb2NyX2xpbmVfbm9fcGF5bWVudF9pZBgUIAMoCzITLnNzbi50",
+            "eXBlLkNhbmRpZGF0ZVISb2NyTGluZU5vUGF5bWVudElkEkcKFm9jcl9saW5l",
+            "X2ZpX3BheW1lbnRfaWQYFSADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEm9j",
+            "ckxpbmVGaVBheW1lbnRJZBJHChZvY3JfbGluZV9ubF9wYXltZW50X2lkGBYg",
+            "AygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUhJvY3JMaW5lTmxQYXltZW50SWQS",
+            "RwoWb2NyX2xpbmVfYmVfcGF5bWVudF9pZBgoIAMoCzITLnNzbi50eXBlLkNh",
+            "bmRpZGF0ZVISb2NyTGluZUJlUGF5bWVudElkEhIKBHRleHQYFyABKAlSBHRl",
+            "eHQSHwoLZmVlZGJhY2tfaWQYGCABKAlSCmZlZWRiYWNrSWQSJwoEaWJhbhgZ",
+            "IAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIEaWJhbhItCgVsaW5lcxgaIAMo",
+            "CzIXLnNzbi50eXBlLkxpbmVDYW5kaWRhdGVSBWxpbmVzEhgKB3ByZXZpZXcY",
+            "GyABKAlSB3ByZXZpZXcSQwoTYmFua19hY2NvdW50X251bWJlchgcIAMoCzIT",
+            "LnNzbi50eXBlLkNhbmRpZGF0ZVIRYmFua0FjY291bnROdW1iZXISTQoYYmFu",
+            "a19yZWdpc3RyYXRpb25fbnVtYmVyGB0gAygLMhMuc3NuLnR5cGUuQ2FuZGlk",
+            "YXRlUhZiYW5rUmVnaXN0cmF0aW9uTnVtYmVyEiUKA2JpYxgeIAMoCzITLnNz",
+            "bi50eXBlLkNhbmRpZGF0ZVIDYmljEjwKD2RvY3VtZW50X251bWJlchgfIAMo",
+            "CzITLnNzbi50eXBlLkNhbmRpZGF0ZVIOZG9jdW1lbnROdW1iZXISOAoNZG9j",
+            "dW1lbnRfZGF0ZRggIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIMZG9jdW1l",
+            "bnREYXRlEjYKDG9yZGVyX251bWJlchghIAMoCzITLnNzbi50eXBlLkNhbmRp",
+            "ZGF0ZVILb3JkZXJOdW1iZXISOAoNc3VwcGxpZXJfbmFtZRgiIAMoCzITLnNz",
+            "bi50eXBlLkNhbmRpZGF0ZVIMc3VwcGxpZXJOYW1lEkMKE3N1cHBsaWVyX3Zh",
+            "dF9udW1iZXIYIyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSEXN1cHBsaWVy",
+            "VmF0TnVtYmVyElUKHHN1cHBsaWVyX29yZ2FuaXNhdGlvbl9udW1iZXIYJCAD",
+            "KAsyEy5zc24udHlwZS5DYW5kaWRhdGVSGnN1cHBsaWVyT3JnYW5pc2F0aW9u",
+            "TnVtYmVyEj4KEHN1cHBsaWVyX2FkZHJlc3MYJSADKAsyEy5zc24udHlwZS5D",
+            "YW5kaWRhdGVSD3N1cHBsaWVyQWRkcmVzcxI8Cg9jdXN0b21lcl9udW1iZXIY",
+            "JiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDmN1c3RvbWVyTnVtYmVyEkcK",
+            "FXJlY2VpdmVyX29yZGVyX251bWJlchgnIAMoCzITLnNzbi50eXBlLkNhbmRp",
+            "ZGF0ZVITcmVjZWl2ZXJPcmRlck51bWJlchI+ChByZWNlaXZlcl9hZGRyZXNz",
+            "GCkgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUg9yZWNlaXZlckFkZHJlc3MS",
+            "RwoVcmVjZWl2ZXJfY291bnRyeV9jb2RlGCogAygLMhMuc3NuLnR5cGUuQ2Fu",
+            "ZGlkYXRlUhNyZWNlaXZlckNvdW50cnlDb2RlEjgKDXJlY2VpdmVyX25hbWUY",
+            "KyADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSDHJlY2VpdmVyTmFtZRJDChNy",
+            "ZWNlaXZlcl92YXRfbnVtYmVyGCwgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRl",
+            "UhFyZWNlaXZlclZhdE51bWJlciJeCghEb2N1bWVudBIYCgdjb250ZW50GAEg",
+            "ASgMUgdjb250ZW50EjgKBnNvdXJjZRgCIAEoCzIgLnNzbi5hbm5vdGF0b3Iu",
+            "djEuRG9jdW1lbnRTb3VyY2VSBnNvdXJjZSIrCg5Eb2N1bWVudFNvdXJjZRIZ",
+            "CghodHRwX3VyaRgBIAEoCVIHaHR0cFVyaTK9AgoRRG9jdW1lbnRBbm5vdGF0",
+            "b3ISjQEKEEFubm90YXRlRG9jdW1lbnQSKi5zc24uYW5ub3RhdG9yLnYxLkRv",
+            "Y3VtZW50QW5ub3RhdG9yUmVxdWVzdBorLnNzbi5hbm5vdGF0b3IudjEuRG9j",
+            "dW1lbnRBbm5vdGF0b3JSZXNwb25zZSIggtPkkwIaOgEqIhUvdjEvZG9jdW1l",
+            "bnQ6YW5ub3RhdGUSlwEKFkFuc3dlckRvY3VtZW50UXVlc3Rpb24SKS5zc24u",
+            "YW5ub3RhdG9yLnYxLkRvY3VtZW50UXVlc3Rpb25SZXF1ZXN0Giouc3NuLmFu",
+            "bm90YXRvci52MS5Eb2N1bWVudFF1ZXN0aW9uUmVzcG9uc2UiJoLT5JMCIDoB",
+            "KiIbL3YxL2RvY3VtZW50OmFuc3dlcnF1ZXN0aW9uQogCChlhaS52aXNtYS5z",
+            "c24uYW5ub3RhdG9yLnYxQg5Bbm5vdGF0b3JQcm90b1ABWj5naXRodWIuY29t",
+            "L2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vYW5ub3RhdG9yL3YxO2Fu",
+            "bm90YXRvcqICA1NBWKoCEFNzbi5Bbm5vdGF0b3IuVjHKAhBTc25cQW5ub3Rh",
+            "dG9yXFYx4gIcU3NuXEFubm90YXRvclxWMVxHUEJNZXRhZGF0YeoCElNzbjo6",
+            "QW5ub3RhdG9yOjpWMZJBOBIPCglTbWFydFNjYW4yAnYxKgECMhBhcHBsaWNh",
+            "dGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -137,7 +149,7 @@ namespace Ssn.Annotator.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentQuestionRequest), global::Ssn.Annotator.V1.DocumentQuestionRequest.Parser, new[]{ "Document", "Question" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentQuestionResponse), global::Ssn.Annotator.V1.DocumentQuestionResponse.Parser, new[]{ "Answer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorRequest), global::Ssn.Annotator.V1.DocumentAnnotatorRequest.Parser, new[]{ "Document", "Features", "Tags", "Tier", "Segments" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorResponse), global::Ssn.Annotator.V1.DocumentAnnotatorResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentAnnotatorResponse), global::Ssn.Annotator.V1.DocumentAnnotatorResponse.Parser, new[]{ "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "OcrLineBePaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", "ReceiverOrderNumber", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.Document), global::Ssn.Annotator.V1.Document.Parser, new[]{ "Content", "Source" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Annotator.V1.DocumentSource), global::Ssn.Annotator.V1.DocumentSource.Parser, new[]{ "HttpUri" }, null, null, null, null)
           }));
@@ -517,6 +529,10 @@ namespace Ssn.Annotator.V1 {
         /// </summary>
         [pbr::OriginalName("OCR_LINE_NL_PAYMENT_ID")] OcrLineNlPaymentId = 22,
         /// <summary>
+        /// Run belgian ocr line detection for the payment id
+        /// </summary>
+        [pbr::OriginalName("OCR_LINE_BE_PAYMENT_ID")] OcrLineBePaymentId = 39,
+        /// <summary>
         /// Return document text
         /// </summary>
         [pbr::OriginalName("TEXT")] Text = 23,
@@ -557,7 +573,7 @@ namespace Ssn.Annotator.V1 {
         /// </summary>
         [pbr::OriginalName("ORDER_NUMBER")] OrderNumber = 32,
         /// <summary>
-        /// Run spplier name detection
+        /// Run supplier name detection
         /// </summary>
         [pbr::OriginalName("SUPPLIER_NAME")] SupplierName = 33,
         /// <summary>
@@ -576,6 +592,26 @@ namespace Ssn.Annotator.V1 {
         /// [EXPERIMENTAL] Run customer identifier detection
         /// </summary>
         [pbr::OriginalName("CUSTOMER_NUMBER")] CustomerNumber = 37,
+        /// <summary>
+        /// Receiver order number
+        /// </summary>
+        [pbr::OriginalName("RECEIVER_ORDER_NUMBER")] ReceiverOrderNumber = 38,
+        /// <summary>
+        /// Receiver address
+        /// </summary>
+        [pbr::OriginalName("RECEIVER_ADDRESS")] ReceiverAddress = 40,
+        /// <summary>
+        /// Receiver country code
+        /// </summary>
+        [pbr::OriginalName("RECEIVER_COUNTRY_CODE")] ReceiverCountryCode = 41,
+        /// <summary>
+        /// Receiver name
+        /// </summary>
+        [pbr::OriginalName("RECEIVER_NAME")] ReceiverName = 42,
+        /// <summary>
+        /// Receiver VAT number
+        /// </summary>
+        [pbr::OriginalName("RECEIVER_VAT_NUMBER")] ReceiverVatNumber = 43,
       }
 
     }
@@ -1354,6 +1390,7 @@ namespace Ssn.Annotator.V1 {
       ocrLineNoPaymentId_ = other.ocrLineNoPaymentId_.Clone();
       ocrLineFiPaymentId_ = other.ocrLineFiPaymentId_.Clone();
       ocrLineNlPaymentId_ = other.ocrLineNlPaymentId_.Clone();
+      ocrLineBePaymentId_ = other.ocrLineBePaymentId_.Clone();
       text_ = other.text_;
       feedbackId_ = other.feedbackId_;
       iban_ = other.iban_.Clone();
@@ -1370,6 +1407,11 @@ namespace Ssn.Annotator.V1 {
       supplierOrganisationNumber_ = other.supplierOrganisationNumber_.Clone();
       supplierAddress_ = other.supplierAddress_.Clone();
       customerNumber_ = other.customerNumber_.Clone();
+      receiverOrderNumber_ = other.receiverOrderNumber_.Clone();
+      receiverAddress_ = other.receiverAddress_.Clone();
+      receiverCountryCode_ = other.receiverCountryCode_.Clone();
+      receiverName_ = other.receiverName_.Clone();
+      receiverVatNumber_ = other.receiverVatNumber_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1718,6 +1760,19 @@ namespace Ssn.Annotator.V1 {
       get { return ocrLineNlPaymentId_; }
     }
 
+    /// <summary>Field number for the "ocr_line_be_payment_id" field.</summary>
+    public const int OcrLineBePaymentIdFieldNumber = 40;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_ocrLineBePaymentId_codec
+        = pb::FieldCodec.ForMessage(322, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> ocrLineBePaymentId_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> OcrLineBePaymentId {
+      get { return ocrLineBePaymentId_; }
+    }
+
     /// <summary>Field number for the "text" field.</summary>
     public const int TextFieldNumber = 23;
     private string text_ = "";
@@ -1953,6 +2008,76 @@ namespace Ssn.Annotator.V1 {
       get { return customerNumber_; }
     }
 
+    /// <summary>Field number for the "receiver_order_number" field.</summary>
+    public const int ReceiverOrderNumberFieldNumber = 39;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_receiverOrderNumber_codec
+        = pb::FieldCodec.ForMessage(314, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> receiverOrderNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Equivalent of order number for receiver
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> ReceiverOrderNumber {
+      get { return receiverOrderNumber_; }
+    }
+
+    /// <summary>Field number for the "receiver_address" field.</summary>
+    public const int ReceiverAddressFieldNumber = 41;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_receiverAddress_codec
+        = pb::FieldCodec.ForMessage(330, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> receiverAddress_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Equivalent of address for receiver
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> ReceiverAddress {
+      get { return receiverAddress_; }
+    }
+
+    /// <summary>Field number for the "receiver_country_code" field.</summary>
+    public const int ReceiverCountryCodeFieldNumber = 42;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_receiverCountryCode_codec
+        = pb::FieldCodec.ForMessage(338, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> receiverCountryCode_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Equivalent of country code for receiver
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> ReceiverCountryCode {
+      get { return receiverCountryCode_; }
+    }
+
+    /// <summary>Field number for the "receiver_name" field.</summary>
+    public const int ReceiverNameFieldNumber = 43;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_receiverName_codec
+        = pb::FieldCodec.ForMessage(346, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> receiverName_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Equivalent of supplier name for receiver
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> ReceiverName {
+      get { return receiverName_; }
+    }
+
+    /// <summary>Field number for the "receiver_vat_number" field.</summary>
+    public const int ReceiverVatNumberFieldNumber = 44;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_receiverVatNumber_codec
+        = pb::FieldCodec.ForMessage(354, global::Ssn.Type.Candidate.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> receiverVatNumber_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    /// <summary>
+    /// Equivalent of VAT number for receiver
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> ReceiverVatNumber {
+      get { return receiverVatNumber_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1990,6 +2115,7 @@ namespace Ssn.Annotator.V1 {
       if(!ocrLineNoPaymentId_.Equals(other.ocrLineNoPaymentId_)) return false;
       if(!ocrLineFiPaymentId_.Equals(other.ocrLineFiPaymentId_)) return false;
       if(!ocrLineNlPaymentId_.Equals(other.ocrLineNlPaymentId_)) return false;
+      if(!ocrLineBePaymentId_.Equals(other.ocrLineBePaymentId_)) return false;
       if (Text != other.Text) return false;
       if (FeedbackId != other.FeedbackId) return false;
       if(!iban_.Equals(other.iban_)) return false;
@@ -2006,6 +2132,11 @@ namespace Ssn.Annotator.V1 {
       if(!supplierOrganisationNumber_.Equals(other.supplierOrganisationNumber_)) return false;
       if(!supplierAddress_.Equals(other.supplierAddress_)) return false;
       if(!customerNumber_.Equals(other.customerNumber_)) return false;
+      if(!receiverOrderNumber_.Equals(other.receiverOrderNumber_)) return false;
+      if(!receiverAddress_.Equals(other.receiverAddress_)) return false;
+      if(!receiverCountryCode_.Equals(other.receiverCountryCode_)) return false;
+      if(!receiverName_.Equals(other.receiverName_)) return false;
+      if(!receiverVatNumber_.Equals(other.receiverVatNumber_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2035,6 +2166,7 @@ namespace Ssn.Annotator.V1 {
       hash ^= ocrLineNoPaymentId_.GetHashCode();
       hash ^= ocrLineFiPaymentId_.GetHashCode();
       hash ^= ocrLineNlPaymentId_.GetHashCode();
+      hash ^= ocrLineBePaymentId_.GetHashCode();
       if (Text.Length != 0) hash ^= Text.GetHashCode();
       if (FeedbackId.Length != 0) hash ^= FeedbackId.GetHashCode();
       hash ^= iban_.GetHashCode();
@@ -2051,6 +2183,11 @@ namespace Ssn.Annotator.V1 {
       hash ^= supplierOrganisationNumber_.GetHashCode();
       hash ^= supplierAddress_.GetHashCode();
       hash ^= customerNumber_.GetHashCode();
+      hash ^= receiverOrderNumber_.GetHashCode();
+      hash ^= receiverAddress_.GetHashCode();
+      hash ^= receiverCountryCode_.GetHashCode();
+      hash ^= receiverName_.GetHashCode();
+      hash ^= receiverVatNumber_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2119,6 +2256,12 @@ namespace Ssn.Annotator.V1 {
       supplierOrganisationNumber_.WriteTo(output, _repeated_supplierOrganisationNumber_codec);
       supplierAddress_.WriteTo(output, _repeated_supplierAddress_codec);
       customerNumber_.WriteTo(output, _repeated_customerNumber_codec);
+      receiverOrderNumber_.WriteTo(output, _repeated_receiverOrderNumber_codec);
+      ocrLineBePaymentId_.WriteTo(output, _repeated_ocrLineBePaymentId_codec);
+      receiverAddress_.WriteTo(output, _repeated_receiverAddress_codec);
+      receiverCountryCode_.WriteTo(output, _repeated_receiverCountryCode_codec);
+      receiverName_.WriteTo(output, _repeated_receiverName_codec);
+      receiverVatNumber_.WriteTo(output, _repeated_receiverVatNumber_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2179,6 +2322,12 @@ namespace Ssn.Annotator.V1 {
       supplierOrganisationNumber_.WriteTo(ref output, _repeated_supplierOrganisationNumber_codec);
       supplierAddress_.WriteTo(ref output, _repeated_supplierAddress_codec);
       customerNumber_.WriteTo(ref output, _repeated_customerNumber_codec);
+      receiverOrderNumber_.WriteTo(ref output, _repeated_receiverOrderNumber_codec);
+      ocrLineBePaymentId_.WriteTo(ref output, _repeated_ocrLineBePaymentId_codec);
+      receiverAddress_.WriteTo(ref output, _repeated_receiverAddress_codec);
+      receiverCountryCode_.WriteTo(ref output, _repeated_receiverCountryCode_codec);
+      receiverName_.WriteTo(ref output, _repeated_receiverName_codec);
+      receiverVatNumber_.WriteTo(ref output, _repeated_receiverVatNumber_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2213,6 +2362,7 @@ namespace Ssn.Annotator.V1 {
       size += ocrLineNoPaymentId_.CalculateSize(_repeated_ocrLineNoPaymentId_codec);
       size += ocrLineFiPaymentId_.CalculateSize(_repeated_ocrLineFiPaymentId_codec);
       size += ocrLineNlPaymentId_.CalculateSize(_repeated_ocrLineNlPaymentId_codec);
+      size += ocrLineBePaymentId_.CalculateSize(_repeated_ocrLineBePaymentId_codec);
       if (Text.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Text);
       }
@@ -2235,6 +2385,11 @@ namespace Ssn.Annotator.V1 {
       size += supplierOrganisationNumber_.CalculateSize(_repeated_supplierOrganisationNumber_codec);
       size += supplierAddress_.CalculateSize(_repeated_supplierAddress_codec);
       size += customerNumber_.CalculateSize(_repeated_customerNumber_codec);
+      size += receiverOrderNumber_.CalculateSize(_repeated_receiverOrderNumber_codec);
+      size += receiverAddress_.CalculateSize(_repeated_receiverAddress_codec);
+      size += receiverCountryCode_.CalculateSize(_repeated_receiverCountryCode_codec);
+      size += receiverName_.CalculateSize(_repeated_receiverName_codec);
+      size += receiverVatNumber_.CalculateSize(_repeated_receiverVatNumber_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2274,6 +2429,7 @@ namespace Ssn.Annotator.V1 {
       ocrLineNoPaymentId_.Add(other.ocrLineNoPaymentId_);
       ocrLineFiPaymentId_.Add(other.ocrLineFiPaymentId_);
       ocrLineNlPaymentId_.Add(other.ocrLineNlPaymentId_);
+      ocrLineBePaymentId_.Add(other.ocrLineBePaymentId_);
       if (other.Text.Length != 0) {
         Text = other.Text;
       }
@@ -2296,6 +2452,11 @@ namespace Ssn.Annotator.V1 {
       supplierOrganisationNumber_.Add(other.supplierOrganisationNumber_);
       supplierAddress_.Add(other.supplierAddress_);
       customerNumber_.Add(other.customerNumber_);
+      receiverOrderNumber_.Add(other.receiverOrderNumber_);
+      receiverAddress_.Add(other.receiverAddress_);
+      receiverCountryCode_.Add(other.receiverCountryCode_);
+      receiverName_.Add(other.receiverName_);
+      receiverVatNumber_.Add(other.receiverVatNumber_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2466,6 +2627,30 @@ namespace Ssn.Annotator.V1 {
             customerNumber_.AddEntriesFrom(input, _repeated_customerNumber_codec);
             break;
           }
+          case 314: {
+            receiverOrderNumber_.AddEntriesFrom(input, _repeated_receiverOrderNumber_codec);
+            break;
+          }
+          case 322: {
+            ocrLineBePaymentId_.AddEntriesFrom(input, _repeated_ocrLineBePaymentId_codec);
+            break;
+          }
+          case 330: {
+            receiverAddress_.AddEntriesFrom(input, _repeated_receiverAddress_codec);
+            break;
+          }
+          case 338: {
+            receiverCountryCode_.AddEntriesFrom(input, _repeated_receiverCountryCode_codec);
+            break;
+          }
+          case 346: {
+            receiverName_.AddEntriesFrom(input, _repeated_receiverName_codec);
+            break;
+          }
+          case 354: {
+            receiverVatNumber_.AddEntriesFrom(input, _repeated_receiverVatNumber_codec);
+            break;
+          }
         }
       }
     #endif
@@ -2634,6 +2819,30 @@ namespace Ssn.Annotator.V1 {
           }
           case 306: {
             customerNumber_.AddEntriesFrom(ref input, _repeated_customerNumber_codec);
+            break;
+          }
+          case 314: {
+            receiverOrderNumber_.AddEntriesFrom(ref input, _repeated_receiverOrderNumber_codec);
+            break;
+          }
+          case 322: {
+            ocrLineBePaymentId_.AddEntriesFrom(ref input, _repeated_ocrLineBePaymentId_codec);
+            break;
+          }
+          case 330: {
+            receiverAddress_.AddEntriesFrom(ref input, _repeated_receiverAddress_codec);
+            break;
+          }
+          case 338: {
+            receiverCountryCode_.AddEntriesFrom(ref input, _repeated_receiverCountryCode_codec);
+            break;
+          }
+          case 346: {
+            receiverName_.AddEntriesFrom(ref input, _repeated_receiverName_codec);
+            break;
+          }
+          case 354: {
+            receiverVatNumber_.AddEntriesFrom(ref input, _repeated_receiverVatNumber_codec);
             break;
           }
         }
