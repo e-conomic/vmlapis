@@ -449,6 +449,78 @@ private static final long serialVersionUID = 0L;
      */
     com.google.protobuf.ByteString
         getCustomerNumberBytes();
+
+    /**
+     * <code>string receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+     * @return The receiverOrderNumber.
+     */
+    java.lang.String getReceiverOrderNumber();
+    /**
+     * <code>string receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+     * @return The bytes for receiverOrderNumber.
+     */
+    com.google.protobuf.ByteString
+        getReceiverOrderNumberBytes();
+
+    /**
+     * <code>string ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+     * @return The ocrLineBePaymentId.
+     */
+    java.lang.String getOcrLineBePaymentId();
+    /**
+     * <code>string ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+     * @return The bytes for ocrLineBePaymentId.
+     */
+    com.google.protobuf.ByteString
+        getOcrLineBePaymentIdBytes();
+
+    /**
+     * <code>string receiver_address = 37 [json_name = "receiverAddress"];</code>
+     * @return The receiverAddress.
+     */
+    java.lang.String getReceiverAddress();
+    /**
+     * <code>string receiver_address = 37 [json_name = "receiverAddress"];</code>
+     * @return The bytes for receiverAddress.
+     */
+    com.google.protobuf.ByteString
+        getReceiverAddressBytes();
+
+    /**
+     * <code>string receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+     * @return The receiverCountryCode.
+     */
+    java.lang.String getReceiverCountryCode();
+    /**
+     * <code>string receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+     * @return The bytes for receiverCountryCode.
+     */
+    com.google.protobuf.ByteString
+        getReceiverCountryCodeBytes();
+
+    /**
+     * <code>string receiver_name = 39 [json_name = "receiverName"];</code>
+     * @return The receiverName.
+     */
+    java.lang.String getReceiverName();
+    /**
+     * <code>string receiver_name = 39 [json_name = "receiverName"];</code>
+     * @return The bytes for receiverName.
+     */
+    com.google.protobuf.ByteString
+        getReceiverNameBytes();
+
+    /**
+     * <code>string receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+     * @return The receiverVatNumber.
+     */
+    java.lang.String getReceiverVatNumber();
+    /**
+     * <code>string receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+     * @return The bytes for receiverVatNumber.
+     */
+    com.google.protobuf.ByteString
+        getReceiverVatNumberBytes();
   }
   /**
    * Protobuf type {@code ssn.mlservice.v2.FeatureGenRequest.TruthLabels}
@@ -491,6 +563,12 @@ private static final long serialVersionUID = 0L;
       supplierAddress_ = "";
       creditCardLastFour_ = "";
       customerNumber_ = "";
+      receiverOrderNumber_ = "";
+      ocrLineBePaymentId_ = "";
+      receiverAddress_ = "";
+      receiverCountryCode_ = "";
+      receiverName_ = "";
+      receiverVatNumber_ = "";
     }
 
     @java.lang.Override
@@ -1724,6 +1802,240 @@ private static final long serialVersionUID = 0L;
       }
     }
 
+    public static final int RECEIVER_ORDER_NUMBER_FIELD_NUMBER = 35;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object receiverOrderNumber_ = "";
+    /**
+     * <code>string receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+     * @return The receiverOrderNumber.
+     */
+    @java.lang.Override
+    public java.lang.String getReceiverOrderNumber() {
+      java.lang.Object ref = receiverOrderNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        receiverOrderNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+     * @return The bytes for receiverOrderNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReceiverOrderNumberBytes() {
+      java.lang.Object ref = receiverOrderNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        receiverOrderNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int OCR_LINE_BE_PAYMENT_ID_FIELD_NUMBER = 36;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object ocrLineBePaymentId_ = "";
+    /**
+     * <code>string ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+     * @return The ocrLineBePaymentId.
+     */
+    @java.lang.Override
+    public java.lang.String getOcrLineBePaymentId() {
+      java.lang.Object ref = ocrLineBePaymentId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ocrLineBePaymentId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+     * @return The bytes for ocrLineBePaymentId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getOcrLineBePaymentIdBytes() {
+      java.lang.Object ref = ocrLineBePaymentId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ocrLineBePaymentId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECEIVER_ADDRESS_FIELD_NUMBER = 37;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object receiverAddress_ = "";
+    /**
+     * <code>string receiver_address = 37 [json_name = "receiverAddress"];</code>
+     * @return The receiverAddress.
+     */
+    @java.lang.Override
+    public java.lang.String getReceiverAddress() {
+      java.lang.Object ref = receiverAddress_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        receiverAddress_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string receiver_address = 37 [json_name = "receiverAddress"];</code>
+     * @return The bytes for receiverAddress.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReceiverAddressBytes() {
+      java.lang.Object ref = receiverAddress_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        receiverAddress_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECEIVER_COUNTRY_CODE_FIELD_NUMBER = 38;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object receiverCountryCode_ = "";
+    /**
+     * <code>string receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+     * @return The receiverCountryCode.
+     */
+    @java.lang.Override
+    public java.lang.String getReceiverCountryCode() {
+      java.lang.Object ref = receiverCountryCode_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        receiverCountryCode_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+     * @return The bytes for receiverCountryCode.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReceiverCountryCodeBytes() {
+      java.lang.Object ref = receiverCountryCode_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        receiverCountryCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECEIVER_NAME_FIELD_NUMBER = 39;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object receiverName_ = "";
+    /**
+     * <code>string receiver_name = 39 [json_name = "receiverName"];</code>
+     * @return The receiverName.
+     */
+    @java.lang.Override
+    public java.lang.String getReceiverName() {
+      java.lang.Object ref = receiverName_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        receiverName_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string receiver_name = 39 [json_name = "receiverName"];</code>
+     * @return The bytes for receiverName.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReceiverNameBytes() {
+      java.lang.Object ref = receiverName_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        receiverName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int RECEIVER_VAT_NUMBER_FIELD_NUMBER = 40;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object receiverVatNumber_ = "";
+    /**
+     * <code>string receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+     * @return The receiverVatNumber.
+     */
+    @java.lang.Override
+    public java.lang.String getReceiverVatNumber() {
+      java.lang.Object ref = receiverVatNumber_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        receiverVatNumber_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+     * @return The bytes for receiverVatNumber.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getReceiverVatNumberBytes() {
+      java.lang.Object ref = receiverVatNumber_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        receiverVatNumber_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -1839,6 +2151,24 @@ private static final long serialVersionUID = 0L;
       }
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerNumber_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 34, customerNumber_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiverOrderNumber_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 35, receiverOrderNumber_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineBePaymentId_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 36, ocrLineBePaymentId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiverAddress_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 37, receiverAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiverCountryCode_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 38, receiverCountryCode_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiverName_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 39, receiverName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiverVatNumber_)) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 40, receiverVatNumber_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -1957,6 +2287,24 @@ private static final long serialVersionUID = 0L;
       if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerNumber_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(34, customerNumber_);
       }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiverOrderNumber_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(35, receiverOrderNumber_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(ocrLineBePaymentId_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(36, ocrLineBePaymentId_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiverAddress_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(37, receiverAddress_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiverCountryCode_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(38, receiverCountryCode_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiverName_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(39, receiverName_);
+      }
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(receiverVatNumber_)) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(40, receiverVatNumber_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -2052,6 +2400,18 @@ private static final long serialVersionUID = 0L;
           .equals(other.getCreditCardLastFour())) return false;
       if (!getCustomerNumber()
           .equals(other.getCustomerNumber())) return false;
+      if (!getReceiverOrderNumber()
+          .equals(other.getReceiverOrderNumber())) return false;
+      if (!getOcrLineBePaymentId()
+          .equals(other.getOcrLineBePaymentId())) return false;
+      if (!getReceiverAddress()
+          .equals(other.getReceiverAddress())) return false;
+      if (!getReceiverCountryCode()
+          .equals(other.getReceiverCountryCode())) return false;
+      if (!getReceiverName()
+          .equals(other.getReceiverName())) return false;
+      if (!getReceiverVatNumber()
+          .equals(other.getReceiverVatNumber())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -2140,6 +2500,18 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getCreditCardLastFour().hashCode();
       hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getCustomerNumber().hashCode();
+      hash = (37 * hash) + RECEIVER_ORDER_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverOrderNumber().hashCode();
+      hash = (37 * hash) + OCR_LINE_BE_PAYMENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOcrLineBePaymentId().hashCode();
+      hash = (37 * hash) + RECEIVER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverAddress().hashCode();
+      hash = (37 * hash) + RECEIVER_COUNTRY_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverCountryCode().hashCode();
+      hash = (37 * hash) + RECEIVER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverName().hashCode();
+      hash = (37 * hash) + RECEIVER_VAT_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverVatNumber().hashCode();
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -2318,6 +2690,12 @@ private static final long serialVersionUID = 0L;
         supplierAddress_ = "";
         creditCardLastFour_ = "";
         customerNumber_ = "";
+        receiverOrderNumber_ = "";
+        ocrLineBePaymentId_ = "";
+        receiverAddress_ = "";
+        receiverCountryCode_ = "";
+        receiverName_ = "";
+        receiverVatNumber_ = "";
         return this;
       }
 
@@ -2463,6 +2841,24 @@ private static final long serialVersionUID = 0L;
         }
         if (((from_bitField1_ & 0x00000002) != 0)) {
           result.customerNumber_ = customerNumber_;
+        }
+        if (((from_bitField1_ & 0x00000004) != 0)) {
+          result.receiverOrderNumber_ = receiverOrderNumber_;
+        }
+        if (((from_bitField1_ & 0x00000008) != 0)) {
+          result.ocrLineBePaymentId_ = ocrLineBePaymentId_;
+        }
+        if (((from_bitField1_ & 0x00000010) != 0)) {
+          result.receiverAddress_ = receiverAddress_;
+        }
+        if (((from_bitField1_ & 0x00000020) != 0)) {
+          result.receiverCountryCode_ = receiverCountryCode_;
+        }
+        if (((from_bitField1_ & 0x00000040) != 0)) {
+          result.receiverName_ = receiverName_;
+        }
+        if (((from_bitField1_ & 0x00000080) != 0)) {
+          result.receiverVatNumber_ = receiverVatNumber_;
         }
       }
 
@@ -2668,6 +3064,36 @@ private static final long serialVersionUID = 0L;
           bitField1_ |= 0x00000002;
           onChanged();
         }
+        if (!other.getReceiverOrderNumber().isEmpty()) {
+          receiverOrderNumber_ = other.receiverOrderNumber_;
+          bitField1_ |= 0x00000004;
+          onChanged();
+        }
+        if (!other.getOcrLineBePaymentId().isEmpty()) {
+          ocrLineBePaymentId_ = other.ocrLineBePaymentId_;
+          bitField1_ |= 0x00000008;
+          onChanged();
+        }
+        if (!other.getReceiverAddress().isEmpty()) {
+          receiverAddress_ = other.receiverAddress_;
+          bitField1_ |= 0x00000010;
+          onChanged();
+        }
+        if (!other.getReceiverCountryCode().isEmpty()) {
+          receiverCountryCode_ = other.receiverCountryCode_;
+          bitField1_ |= 0x00000020;
+          onChanged();
+        }
+        if (!other.getReceiverName().isEmpty()) {
+          receiverName_ = other.receiverName_;
+          bitField1_ |= 0x00000040;
+          onChanged();
+        }
+        if (!other.getReceiverVatNumber().isEmpty()) {
+          receiverVatNumber_ = other.receiverVatNumber_;
+          bitField1_ |= 0x00000080;
+          onChanged();
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -2870,6 +3296,36 @@ private static final long serialVersionUID = 0L;
                 bitField1_ |= 0x00000002;
                 break;
               } // case 274
+              case 282: {
+                receiverOrderNumber_ = input.readStringRequireUtf8();
+                bitField1_ |= 0x00000004;
+                break;
+              } // case 282
+              case 290: {
+                ocrLineBePaymentId_ = input.readStringRequireUtf8();
+                bitField1_ |= 0x00000008;
+                break;
+              } // case 290
+              case 298: {
+                receiverAddress_ = input.readStringRequireUtf8();
+                bitField1_ |= 0x00000010;
+                break;
+              } // case 298
+              case 306: {
+                receiverCountryCode_ = input.readStringRequireUtf8();
+                bitField1_ |= 0x00000020;
+                break;
+              } // case 306
+              case 314: {
+                receiverName_ = input.readStringRequireUtf8();
+                bitField1_ |= 0x00000040;
+                break;
+              } // case 314
+              case 322: {
+                receiverVatNumber_ = input.readStringRequireUtf8();
+                bitField1_ |= 0x00000080;
+                break;
+              } // case 322
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -5373,6 +5829,438 @@ private static final long serialVersionUID = 0L;
         checkByteStringIsUtf8(value);
         customerNumber_ = value;
         bitField1_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object receiverOrderNumber_ = "";
+      /**
+       * <code>string receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+       * @return The receiverOrderNumber.
+       */
+      public java.lang.String getReceiverOrderNumber() {
+        java.lang.Object ref = receiverOrderNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          receiverOrderNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+       * @return The bytes for receiverOrderNumber.
+       */
+      public com.google.protobuf.ByteString
+          getReceiverOrderNumberBytes() {
+        java.lang.Object ref = receiverOrderNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          receiverOrderNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+       * @param value The receiverOrderNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverOrderNumber(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        receiverOrderNumber_ = value;
+        bitField1_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiverOrderNumber() {
+        receiverOrderNumber_ = getDefaultInstance().getReceiverOrderNumber();
+        bitField1_ = (bitField1_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+       * @param value The bytes for receiverOrderNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverOrderNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        receiverOrderNumber_ = value;
+        bitField1_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object ocrLineBePaymentId_ = "";
+      /**
+       * <code>string ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+       * @return The ocrLineBePaymentId.
+       */
+      public java.lang.String getOcrLineBePaymentId() {
+        java.lang.Object ref = ocrLineBePaymentId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          ocrLineBePaymentId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+       * @return The bytes for ocrLineBePaymentId.
+       */
+      public com.google.protobuf.ByteString
+          getOcrLineBePaymentIdBytes() {
+        java.lang.Object ref = ocrLineBePaymentId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          ocrLineBePaymentId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+       * @param value The ocrLineBePaymentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOcrLineBePaymentId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        ocrLineBePaymentId_ = value;
+        bitField1_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearOcrLineBePaymentId() {
+        ocrLineBePaymentId_ = getDefaultInstance().getOcrLineBePaymentId();
+        bitField1_ = (bitField1_ & ~0x00000008);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+       * @param value The bytes for ocrLineBePaymentId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setOcrLineBePaymentIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        ocrLineBePaymentId_ = value;
+        bitField1_ |= 0x00000008;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object receiverAddress_ = "";
+      /**
+       * <code>string receiver_address = 37 [json_name = "receiverAddress"];</code>
+       * @return The receiverAddress.
+       */
+      public java.lang.String getReceiverAddress() {
+        java.lang.Object ref = receiverAddress_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          receiverAddress_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string receiver_address = 37 [json_name = "receiverAddress"];</code>
+       * @return The bytes for receiverAddress.
+       */
+      public com.google.protobuf.ByteString
+          getReceiverAddressBytes() {
+        java.lang.Object ref = receiverAddress_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          receiverAddress_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string receiver_address = 37 [json_name = "receiverAddress"];</code>
+       * @param value The receiverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverAddress(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        receiverAddress_ = value;
+        bitField1_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver_address = 37 [json_name = "receiverAddress"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiverAddress() {
+        receiverAddress_ = getDefaultInstance().getReceiverAddress();
+        bitField1_ = (bitField1_ & ~0x00000010);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver_address = 37 [json_name = "receiverAddress"];</code>
+       * @param value The bytes for receiverAddress to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverAddressBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        receiverAddress_ = value;
+        bitField1_ |= 0x00000010;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object receiverCountryCode_ = "";
+      /**
+       * <code>string receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+       * @return The receiverCountryCode.
+       */
+      public java.lang.String getReceiverCountryCode() {
+        java.lang.Object ref = receiverCountryCode_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          receiverCountryCode_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+       * @return The bytes for receiverCountryCode.
+       */
+      public com.google.protobuf.ByteString
+          getReceiverCountryCodeBytes() {
+        java.lang.Object ref = receiverCountryCode_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          receiverCountryCode_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+       * @param value The receiverCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverCountryCode(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        receiverCountryCode_ = value;
+        bitField1_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiverCountryCode() {
+        receiverCountryCode_ = getDefaultInstance().getReceiverCountryCode();
+        bitField1_ = (bitField1_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+       * @param value The bytes for receiverCountryCode to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverCountryCodeBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        receiverCountryCode_ = value;
+        bitField1_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object receiverName_ = "";
+      /**
+       * <code>string receiver_name = 39 [json_name = "receiverName"];</code>
+       * @return The receiverName.
+       */
+      public java.lang.String getReceiverName() {
+        java.lang.Object ref = receiverName_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          receiverName_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string receiver_name = 39 [json_name = "receiverName"];</code>
+       * @return The bytes for receiverName.
+       */
+      public com.google.protobuf.ByteString
+          getReceiverNameBytes() {
+        java.lang.Object ref = receiverName_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          receiverName_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string receiver_name = 39 [json_name = "receiverName"];</code>
+       * @param value The receiverName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverName(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        receiverName_ = value;
+        bitField1_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver_name = 39 [json_name = "receiverName"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiverName() {
+        receiverName_ = getDefaultInstance().getReceiverName();
+        bitField1_ = (bitField1_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver_name = 39 [json_name = "receiverName"];</code>
+       * @param value The bytes for receiverName to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverNameBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        receiverName_ = value;
+        bitField1_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object receiverVatNumber_ = "";
+      /**
+       * <code>string receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+       * @return The receiverVatNumber.
+       */
+      public java.lang.String getReceiverVatNumber() {
+        java.lang.Object ref = receiverVatNumber_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          receiverVatNumber_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+       * @return The bytes for receiverVatNumber.
+       */
+      public com.google.protobuf.ByteString
+          getReceiverVatNumberBytes() {
+        java.lang.Object ref = receiverVatNumber_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          receiverVatNumber_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+       * @param value The receiverVatNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverVatNumber(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        receiverVatNumber_ = value;
+        bitField1_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearReceiverVatNumber() {
+        receiverVatNumber_ = getDefaultInstance().getReceiverVatNumber();
+        bitField1_ = (bitField1_ & ~0x00000080);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+       * @param value The bytes for receiverVatNumber to set.
+       * @return This builder for chaining.
+       */
+      public Builder setReceiverVatNumberBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        receiverVatNumber_ = value;
+        bitField1_ |= 0x00000080;
         onChanged();
         return this;
       }

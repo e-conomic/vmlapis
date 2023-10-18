@@ -56,12 +56,12 @@ public final class MlserviceProto {
       "\n ssn/mlservice/v2/mlservice.proto\022\020ssn." +
       "mlservice.v2\032\026google/type/date.proto\032\030ss" +
       "n/type/candidate.proto\032\036ssn/type/text_an" +
-      "notation.proto\"\352\r\n\021FeatureGenRequest\022R\n\014" +
+      "notation.proto\"\206\020\n\021FeatureGenRequest\022R\n\014" +
       "truth_labels\030\001 \001(\0132/.ssn.mlservice.v2.Fe" +
       "atureGenRequest.TruthLabelsR\013truthLabels" +
       "\022A\n\017text_annotation\030\002 \001(\0132\030.ssn.type.Tex" +
       "tAnnotationR\016textAnnotation\022\016\n\002id\030\003 \001(\tR" +
-      "\002id\032\255\014\n\013TruthLabels\022$\n\016total_incl_vat\030\001 " +
+      "\002id\032\311\016\n\013TruthLabels\022$\n\016total_incl_vat\030\001 " +
       "\001(\001R\014totalInclVat\022\033\n\ttotal_vat\030\002 \001(\001R\010to" +
       "talVat\022$\n\016total_excl_vat\030\003 \001(\001R\014totalExc" +
       "lVat\0220\n\norder_date\030\004 \001(\0132\021.google.type.D" +
@@ -100,84 +100,102 @@ public final class MlserviceProto {
       "sationNumber\022)\n\020supplier_address\030  \001(\tR\017" +
       "supplierAddress\0221\n\025credit_card_last_four" +
       "\030! \001(\tR\022creditCardLastFour\022\'\n\017customer_n" +
-      "umber\030\" \001(\tR\016customerNumber\"\032\n\022FeatureGe" +
-      "nResponseJ\004\010\001\020\002\"G\n\016PredictRequest\022/\n\024top" +
-      "_n_most_confident\030\002 \001(\rR\021topNMostConfide" +
-      "ntJ\004\010\001\020\002\"\361\021\n\017PredictResponse\0222\n\norder_da" +
-      "te\030\001 \003(\0132\023.ssn.type.CandidateR\torderDate" +
-      "\022=\n\020payment_due_date\030\002 \003(\0132\023.ssn.type.Ca" +
-      "ndidateR\016paymentDueDate\022/\n\010currency\030\003 \003(" +
-      "\0132\023.ssn.type.CandidateR\010currency\0220\n\ttota" +
-      "l_vat\030\004 \003(\0132\023.ssn.type.CandidateR\010totalV" +
-      "at\0229\n\016total_incl_vat\030\005 \003(\0132\023.ssn.type.Ca" +
-      "ndidateR\014totalInclVat\0229\n\016total_excl_vat\030" +
-      "\006 \003(\0132\023.ssn.type.CandidateR\014totalExclVat" +
-      "\022G\n\025supplier_corporate_id\030\007 \003(\0132\023.ssn.ty" +
-      "pe.CandidateR\023supplierCorporateId\022G\n\025sup" +
-      "plier_country_code\030\010 \003(\0132\023.ssn.type.Cand" +
-      "idateR\023supplierCountryCode\0228\n\rdocument_t" +
-      "ype\030\t \003(\0132\023.ssn.type.CandidateR\014document" +
-      "Type\022:\n\016payment_method\030\n \003(\0132\023.ssn.type." +
-      "CandidateR\rpaymentMethod\022A\n\022credit_card_" +
-      "number\030\013 \003(\0132\023.ssn.type.CandidateR\020credi" +
-      "tCardNumber\022:\n\016invoice_number\030\014 \003(\0132\023.ss" +
-      "n.type.CandidateR\rinvoiceNumber\022<\n\020ocr_l" +
-      "ine_dk_type\030\r \003(\0132\023.ssn.type.CandidateR\r" +
-      "ocrLineDkType\022G\n\026ocr_line_dk_payment_id\030" +
-      "\016 \003(\0132\023.ssn.type.CandidateR\022ocrLineDkPay" +
-      "mentId\022I\n\027ocr_line_dk_creditor_id\030\017 \003(\0132" +
-      "\023.ssn.type.CandidateR\023ocrLineDkCreditorI" +
-      "d\022G\n\026ocr_line_se_payment_id\030\020 \003(\0132\023.ssn." +
-      "type.CandidateR\022ocrLineSePaymentId\022Z\n oc" +
-      "r_line_se_bankgiro_creditor_id\030\021 \003(\0132\023.s" +
-      "sn.type.CandidateR\033ocrLineSeBankgiroCred" +
-      "itorId\022Z\n ocr_line_se_plusgiro_creditor_" +
-      "id\030\022 \003(\0132\023.ssn.type.CandidateR\033ocrLineSe" +
-      "PlusgiroCreditorId\022G\n\026ocr_line_no_paymen" +
-      "t_id\030\023 \003(\0132\023.ssn.type.CandidateR\022ocrLine" +
-      "NoPaymentId\022G\n\026ocr_line_fi_payment_id\030\024 " +
-      "\003(\0132\023.ssn.type.CandidateR\022ocrLineFiPayme" +
-      "ntId\022G\n\026ocr_line_nl_payment_id\030\025 \003(\0132\023.s" +
-      "sn.type.CandidateR\022ocrLineNlPaymentId\022\'\n" +
-      "\004iban\030\026 \003(\0132\023.ssn.type.CandidateR\004iban\022-" +
-      "\n\005lines\030\027 \003(\0132\027.ssn.type.LineCandidateR\005" +
-      "lines\022C\n\023bank_account_number\030\030 \003(\0132\023.ssn" +
-      ".type.CandidateR\021bankAccountNumber\022M\n\030ba" +
-      "nk_registration_number\030\031 \003(\0132\023.ssn.type." +
-      "CandidateR\026bankRegistrationNumber\022%\n\003bic" +
-      "\030\032 \003(\0132\023.ssn.type.CandidateR\003bic\022<\n\017docu" +
-      "ment_number\030\033 \003(\0132\023.ssn.type.CandidateR\016" +
-      "documentNumber\0228\n\rdocument_date\030\034 \003(\0132\023." +
-      "ssn.type.CandidateR\014documentDate\0226\n\014orde" +
-      "r_number\030\035 \003(\0132\023.ssn.type.CandidateR\013ord" +
-      "erNumber\0228\n\rsupplier_name\030\036 \003(\0132\023.ssn.ty" +
-      "pe.CandidateR\014supplierName\022C\n\023supplier_v" +
-      "at_number\030\037 \003(\0132\023.ssn.type.CandidateR\021su" +
-      "pplierVatNumber\022U\n\034supplier_organisation" +
-      "_number\030  \003(\0132\023.ssn.type.CandidateR\032supp" +
-      "lierOrganisationNumber\022>\n\020supplier_addre" +
-      "ss\030! \003(\0132\023.ssn.type.CandidateR\017supplierA" +
-      "ddress\022F\n\025credit_card_last_four\030\" \003(\0132\023." +
-      "ssn.type.CandidateR\022creditCardLastFour\022<" +
-      "\n\017customer_number\030# \003(\0132\023.ssn.type.Candi" +
-      "dateR\016customerNumber\"\272\001\n\030FeatureGenPredi" +
-      "ctRequest\022S\n\023feature_gen_request\030\001 \001(\0132#" +
-      ".ssn.mlservice.v2.FeatureGenRequestR\021fea" +
-      "tureGenRequest\022I\n\017predict_request\030\002 \001(\0132" +
-      " .ssn.mlservice.v2.PredictRequestR\016predi" +
-      "ctRequest2\230\002\n\tMlService\022W\n\nFeatureGen\022#." +
-      "ssn.mlservice.v2.FeatureGenRequest\032$.ssn" +
-      ".mlservice.v2.FeatureGenResponse\022N\n\007Pred" +
-      "ict\022 .ssn.mlservice.v2.PredictRequest\032!." +
-      "ssn.mlservice.v2.PredictResponse\022b\n\021Feat" +
-      "ureGenPredict\022*.ssn.mlservice.v2.Feature" +
-      "GenPredictRequest\032!.ssn.mlservice.v2.Pre" +
-      "dictResponseB\315\001\n\031ai.visma.ssn.mlservice." +
-      "v2B\016MlserviceProtoP\001Z>github.com/e-conom" +
-      "ic/vmlapis/gen/go/ssn/mlservice/v2;mlser" +
-      "vice\242\002\003SMX\252\002\020Ssn.Mlservice.V2\312\002\020Ssn\\Mlse" +
-      "rvice\\V2\342\002\034Ssn\\Mlservice\\V2\\GPBMetadata\352" +
-      "\002\022Ssn::Mlservice::V2b\006proto3"
+      "umber\030\" \001(\tR\016customerNumber\0222\n\025receiver_" +
+      "order_number\030# \001(\tR\023receiverOrderNumber\022" +
+      "2\n\026ocr_line_be_payment_id\030$ \001(\tR\022ocrLine" +
+      "BePaymentId\022)\n\020receiver_address\030% \001(\tR\017r" +
+      "eceiverAddress\0222\n\025receiver_country_code\030" +
+      "& \001(\tR\023receiverCountryCode\022#\n\rreceiver_n" +
+      "ame\030\' \001(\tR\014receiverName\022.\n\023receiver_vat_" +
+      "number\030( \001(\tR\021receiverVatNumber\"\032\n\022Featu" +
+      "reGenResponseJ\004\010\001\020\002\"G\n\016PredictRequest\022/\n" +
+      "\024top_n_most_confident\030\002 \001(\rR\021topNMostCon" +
+      "fidentJ\004\010\001\020\002\"\213\025\n\017PredictResponse\0222\n\norde" +
+      "r_date\030\001 \003(\0132\023.ssn.type.CandidateR\torder" +
+      "Date\022=\n\020payment_due_date\030\002 \003(\0132\023.ssn.typ" +
+      "e.CandidateR\016paymentDueDate\022/\n\010currency\030" +
+      "\003 \003(\0132\023.ssn.type.CandidateR\010currency\0220\n\t" +
+      "total_vat\030\004 \003(\0132\023.ssn.type.CandidateR\010to" +
+      "talVat\0229\n\016total_incl_vat\030\005 \003(\0132\023.ssn.typ" +
+      "e.CandidateR\014totalInclVat\0229\n\016total_excl_" +
+      "vat\030\006 \003(\0132\023.ssn.type.CandidateR\014totalExc" +
+      "lVat\022G\n\025supplier_corporate_id\030\007 \003(\0132\023.ss" +
+      "n.type.CandidateR\023supplierCorporateId\022G\n" +
+      "\025supplier_country_code\030\010 \003(\0132\023.ssn.type." +
+      "CandidateR\023supplierCountryCode\0228\n\rdocume" +
+      "nt_type\030\t \003(\0132\023.ssn.type.CandidateR\014docu" +
+      "mentType\022:\n\016payment_method\030\n \003(\0132\023.ssn.t" +
+      "ype.CandidateR\rpaymentMethod\022A\n\022credit_c" +
+      "ard_number\030\013 \003(\0132\023.ssn.type.CandidateR\020c" +
+      "reditCardNumber\022:\n\016invoice_number\030\014 \003(\0132" +
+      "\023.ssn.type.CandidateR\rinvoiceNumber\022<\n\020o" +
+      "cr_line_dk_type\030\r \003(\0132\023.ssn.type.Candida" +
+      "teR\rocrLineDkType\022G\n\026ocr_line_dk_payment" +
+      "_id\030\016 \003(\0132\023.ssn.type.CandidateR\022ocrLineD" +
+      "kPaymentId\022I\n\027ocr_line_dk_creditor_id\030\017 " +
+      "\003(\0132\023.ssn.type.CandidateR\023ocrLineDkCredi" +
+      "torId\022G\n\026ocr_line_se_payment_id\030\020 \003(\0132\023." +
+      "ssn.type.CandidateR\022ocrLineSePaymentId\022Z" +
+      "\n ocr_line_se_bankgiro_creditor_id\030\021 \003(\013" +
+      "2\023.ssn.type.CandidateR\033ocrLineSeBankgiro" +
+      "CreditorId\022Z\n ocr_line_se_plusgiro_credi" +
+      "tor_id\030\022 \003(\0132\023.ssn.type.CandidateR\033ocrLi" +
+      "neSePlusgiroCreditorId\022G\n\026ocr_line_no_pa" +
+      "yment_id\030\023 \003(\0132\023.ssn.type.CandidateR\022ocr" +
+      "LineNoPaymentId\022G\n\026ocr_line_fi_payment_i" +
+      "d\030\024 \003(\0132\023.ssn.type.CandidateR\022ocrLineFiP" +
+      "aymentId\022G\n\026ocr_line_nl_payment_id\030\025 \003(\013" +
+      "2\023.ssn.type.CandidateR\022ocrLineNlPaymentI" +
+      "d\022\'\n\004iban\030\026 \003(\0132\023.ssn.type.CandidateR\004ib" +
+      "an\022-\n\005lines\030\027 \003(\0132\027.ssn.type.LineCandida" +
+      "teR\005lines\022C\n\023bank_account_number\030\030 \003(\0132\023" +
+      ".ssn.type.CandidateR\021bankAccountNumber\022M" +
+      "\n\030bank_registration_number\030\031 \003(\0132\023.ssn.t" +
+      "ype.CandidateR\026bankRegistrationNumber\022%\n" +
+      "\003bic\030\032 \003(\0132\023.ssn.type.CandidateR\003bic\022<\n\017" +
+      "document_number\030\033 \003(\0132\023.ssn.type.Candida" +
+      "teR\016documentNumber\0228\n\rdocument_date\030\034 \003(" +
+      "\0132\023.ssn.type.CandidateR\014documentDate\0226\n\014" +
+      "order_number\030\035 \003(\0132\023.ssn.type.CandidateR" +
+      "\013orderNumber\0228\n\rsupplier_name\030\036 \003(\0132\023.ss" +
+      "n.type.CandidateR\014supplierName\022C\n\023suppli" +
+      "er_vat_number\030\037 \003(\0132\023.ssn.type.Candidate" +
+      "R\021supplierVatNumber\022U\n\034supplier_organisa" +
+      "tion_number\030  \003(\0132\023.ssn.type.CandidateR\032" +
+      "supplierOrganisationNumber\022>\n\020supplier_a" +
+      "ddress\030! \003(\0132\023.ssn.type.CandidateR\017suppl" +
+      "ierAddress\022F\n\025credit_card_last_four\030\" \003(" +
+      "\0132\023.ssn.type.CandidateR\022creditCardLastFo" +
+      "ur\022<\n\017customer_number\030# \003(\0132\023.ssn.type.C" +
+      "andidateR\016customerNumber\022G\n\025receiver_ord" +
+      "er_number\030$ \003(\0132\023.ssn.type.CandidateR\023re" +
+      "ceiverOrderNumber\022G\n\026ocr_line_be_payment" +
+      "_id\030% \003(\0132\023.ssn.type.CandidateR\022ocrLineB" +
+      "ePaymentId\022>\n\020receiver_address\030& \003(\0132\023.s" +
+      "sn.type.CandidateR\017receiverAddress\022G\n\025re" +
+      "ceiver_country_code\030\' \003(\0132\023.ssn.type.Can" +
+      "didateR\023receiverCountryCode\0228\n\rreceiver_" +
+      "name\030( \003(\0132\023.ssn.type.CandidateR\014receive" +
+      "rName\022C\n\023receiver_vat_number\030) \003(\0132\023.ssn" +
+      ".type.CandidateR\021receiverVatNumber\"\272\001\n\030F" +
+      "eatureGenPredictRequest\022S\n\023feature_gen_r" +
+      "equest\030\001 \001(\0132#.ssn.mlservice.v2.FeatureG" +
+      "enRequestR\021featureGenRequest\022I\n\017predict_" +
+      "request\030\002 \001(\0132 .ssn.mlservice.v2.Predict" +
+      "RequestR\016predictRequest2\230\002\n\tMlService\022W\n" +
+      "\nFeatureGen\022#.ssn.mlservice.v2.FeatureGe" +
+      "nRequest\032$.ssn.mlservice.v2.FeatureGenRe" +
+      "sponse\022N\n\007Predict\022 .ssn.mlservice.v2.Pre" +
+      "dictRequest\032!.ssn.mlservice.v2.PredictRe" +
+      "sponse\022b\n\021FeatureGenPredict\022*.ssn.mlserv" +
+      "ice.v2.FeatureGenPredictRequest\032!.ssn.ml" +
+      "service.v2.PredictResponseB\315\001\n\031ai.visma." +
+      "ssn.mlservice.v2B\016MlserviceProtoP\001Z>gith" +
+      "ub.com/e-conomic/vmlapis/gen/go/ssn/mlse" +
+      "rvice/v2;mlservice\242\002\003SMX\252\002\020Ssn.Mlservice" +
+      ".V2\312\002\020Ssn\\Mlservice\\V2\342\002\034Ssn\\Mlservice\\V" +
+      "2\\GPBMetadata\352\002\022Ssn::Mlservice::V2b\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -197,7 +215,7 @@ public final class MlserviceProto {
     internal_static_ssn_mlservice_v2_FeatureGenRequest_TruthLabels_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_FeatureGenRequest_TruthLabels_descriptor,
-        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour", "CustomerNumber", });
+        new java.lang.String[] { "TotalInclVat", "TotalVat", "TotalExclVat", "OrderDate", "PaymentDueDate", "DocumentType", "Currency", "CreditCardNumber", "PaymentMethod", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "SupplierCorporateId", "SupplierCountryCode", "InvoiceNumber", "Iban", "BankAccountNumber", "BankRegistrationNumber", "SupplierName", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour", "CustomerNumber", "ReceiverOrderNumber", "OcrLineBePaymentId", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", });
     internal_static_ssn_mlservice_v2_FeatureGenResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ssn_mlservice_v2_FeatureGenResponse_fieldAccessorTable = new
@@ -215,7 +233,7 @@ public final class MlserviceProto {
     internal_static_ssn_mlservice_v2_PredictResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_PredictResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour", "CustomerNumber", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardNumber", "InvoiceNumber", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "Iban", "Lines", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CreditCardLastFour", "CustomerNumber", "ReceiverOrderNumber", "OcrLineBePaymentId", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", });
     internal_static_ssn_mlservice_v2_FeatureGenPredictRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
     internal_static_ssn_mlservice_v2_FeatureGenPredictRequest_fieldAccessorTable = new

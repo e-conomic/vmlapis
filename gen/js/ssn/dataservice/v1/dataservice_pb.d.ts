@@ -250,6 +250,36 @@ export class TrueValues extends jspb.Message {
   hasCustomerNumber(): boolean;
   clearCustomerNumber(): TrueValues;
 
+  getReceiverOrderNumber(): google_protobuf_wrappers_pb.StringValue | undefined;
+  setReceiverOrderNumber(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
+  hasReceiverOrderNumber(): boolean;
+  clearReceiverOrderNumber(): TrueValues;
+
+  getOcrLineBePaymentId(): google_protobuf_wrappers_pb.StringValue | undefined;
+  setOcrLineBePaymentId(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
+  hasOcrLineBePaymentId(): boolean;
+  clearOcrLineBePaymentId(): TrueValues;
+
+  getReceiverAddress(): google_protobuf_wrappers_pb.StringValue | undefined;
+  setReceiverAddress(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
+  hasReceiverAddress(): boolean;
+  clearReceiverAddress(): TrueValues;
+
+  getReceiverCountryCode(): google_protobuf_wrappers_pb.StringValue | undefined;
+  setReceiverCountryCode(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
+  hasReceiverCountryCode(): boolean;
+  clearReceiverCountryCode(): TrueValues;
+
+  getReceiverName(): google_protobuf_wrappers_pb.StringValue | undefined;
+  setReceiverName(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
+  hasReceiverName(): boolean;
+  clearReceiverName(): TrueValues;
+
+  getReceiverVatNumber(): google_protobuf_wrappers_pb.StringValue | undefined;
+  setReceiverVatNumber(value?: google_protobuf_wrappers_pb.StringValue): TrueValues;
+  hasReceiverVatNumber(): boolean;
+  clearReceiverVatNumber(): TrueValues;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TrueValues.AsObject;
   static toObject(includeInstance: boolean, msg: TrueValues): TrueValues.AsObject;
@@ -294,6 +324,12 @@ export namespace TrueValues {
     supplierOrganisationNumber?: google_protobuf_wrappers_pb.StringValue.AsObject,
     supplierAddress?: google_protobuf_wrappers_pb.StringValue.AsObject,
     customerNumber?: google_protobuf_wrappers_pb.StringValue.AsObject,
+    receiverOrderNumber?: google_protobuf_wrappers_pb.StringValue.AsObject,
+    ocrLineBePaymentId?: google_protobuf_wrappers_pb.StringValue.AsObject,
+    receiverAddress?: google_protobuf_wrappers_pb.StringValue.AsObject,
+    receiverCountryCode?: google_protobuf_wrappers_pb.StringValue.AsObject,
+    receiverName?: google_protobuf_wrappers_pb.StringValue.AsObject,
+    receiverVatNumber?: google_protobuf_wrappers_pb.StringValue.AsObject,
   }
 }
 
@@ -468,6 +504,36 @@ export class PredictionValues extends jspb.Message {
   clearCustomerNumberList(): PredictionValues;
   addCustomerNumber(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
 
+  getReceiverOrderNumberList(): Array<google_protobuf_wrappers_pb.StringValue>;
+  setReceiverOrderNumberList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
+  clearReceiverOrderNumberList(): PredictionValues;
+  addReceiverOrderNumber(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
+
+  getOcrLineBePaymentIdList(): Array<google_protobuf_wrappers_pb.StringValue>;
+  setOcrLineBePaymentIdList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
+  clearOcrLineBePaymentIdList(): PredictionValues;
+  addOcrLineBePaymentId(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
+
+  getReceiverAddressList(): Array<google_protobuf_wrappers_pb.StringValue>;
+  setReceiverAddressList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
+  clearReceiverAddressList(): PredictionValues;
+  addReceiverAddress(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
+
+  getReceiverCountryCodeList(): Array<google_protobuf_wrappers_pb.StringValue>;
+  setReceiverCountryCodeList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
+  clearReceiverCountryCodeList(): PredictionValues;
+  addReceiverCountryCode(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
+
+  getReceiverNameList(): Array<google_protobuf_wrappers_pb.StringValue>;
+  setReceiverNameList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
+  clearReceiverNameList(): PredictionValues;
+  addReceiverName(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
+
+  getReceiverVatNumberList(): Array<google_protobuf_wrappers_pb.StringValue>;
+  setReceiverVatNumberList(value: Array<google_protobuf_wrappers_pb.StringValue>): PredictionValues;
+  clearReceiverVatNumberList(): PredictionValues;
+  addReceiverVatNumber(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionValues.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionValues): PredictionValues.AsObject;
@@ -512,6 +578,12 @@ export namespace PredictionValues {
     supplierOrganisationNumberList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
     supplierAddressList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
     customerNumberList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
+    receiverOrderNumberList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
+    ocrLineBePaymentIdList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
+    receiverAddressList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
+    receiverCountryCodeList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
+    receiverNameList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
+    receiverVatNumberList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
   }
 }
 
@@ -686,6 +758,36 @@ export class PredictionConfidences extends jspb.Message {
   clearCustomerNumberList(): PredictionConfidences;
   addCustomerNumber(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
 
+  getReceiverOrderNumberList(): Array<google_protobuf_wrappers_pb.FloatValue>;
+  setReceiverOrderNumberList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
+  clearReceiverOrderNumberList(): PredictionConfidences;
+  addReceiverOrderNumber(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
+
+  getOcrLineBePaymentIdList(): Array<google_protobuf_wrappers_pb.FloatValue>;
+  setOcrLineBePaymentIdList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
+  clearOcrLineBePaymentIdList(): PredictionConfidences;
+  addOcrLineBePaymentId(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
+
+  getReceiverAddressList(): Array<google_protobuf_wrappers_pb.FloatValue>;
+  setReceiverAddressList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
+  clearReceiverAddressList(): PredictionConfidences;
+  addReceiverAddress(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
+
+  getReceiverCountryCodeList(): Array<google_protobuf_wrappers_pb.FloatValue>;
+  setReceiverCountryCodeList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
+  clearReceiverCountryCodeList(): PredictionConfidences;
+  addReceiverCountryCode(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
+
+  getReceiverNameList(): Array<google_protobuf_wrappers_pb.FloatValue>;
+  setReceiverNameList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
+  clearReceiverNameList(): PredictionConfidences;
+  addReceiverName(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
+
+  getReceiverVatNumberList(): Array<google_protobuf_wrappers_pb.FloatValue>;
+  setReceiverVatNumberList(value: Array<google_protobuf_wrappers_pb.FloatValue>): PredictionConfidences;
+  clearReceiverVatNumberList(): PredictionConfidences;
+  addReceiverVatNumber(value?: google_protobuf_wrappers_pb.FloatValue, index?: number): google_protobuf_wrappers_pb.FloatValue;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionConfidences.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionConfidences): PredictionConfidences.AsObject;
@@ -730,6 +832,12 @@ export namespace PredictionConfidences {
     supplierOrganisationNumberList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
     supplierAddressList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
     customerNumberList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
+    receiverOrderNumberList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
+    ocrLineBePaymentIdList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
+    receiverAddressList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
+    receiverCountryCodeList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
+    receiverNameList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
+    receiverVatNumberList: Array<google_protobuf_wrappers_pb.FloatValue.AsObject>,
   }
 }
 
@@ -904,6 +1012,36 @@ export class PredictionMetadata extends jspb.Message {
   clearCustomerNumberList(): PredictionMetadata;
   addCustomerNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
 
+  getReceiverOrderNumberList(): Array<ssn_type_candidate_pb.ModelSpec>;
+  setReceiverOrderNumberList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
+  clearReceiverOrderNumberList(): PredictionMetadata;
+  addReceiverOrderNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
+
+  getOcrLineBePaymentIdList(): Array<ssn_type_candidate_pb.ModelSpec>;
+  setOcrLineBePaymentIdList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
+  clearOcrLineBePaymentIdList(): PredictionMetadata;
+  addOcrLineBePaymentId(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
+
+  getReceiverAddressList(): Array<ssn_type_candidate_pb.ModelSpec>;
+  setReceiverAddressList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
+  clearReceiverAddressList(): PredictionMetadata;
+  addReceiverAddress(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
+
+  getReceiverCountryCodeList(): Array<ssn_type_candidate_pb.ModelSpec>;
+  setReceiverCountryCodeList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
+  clearReceiverCountryCodeList(): PredictionMetadata;
+  addReceiverCountryCode(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
+
+  getReceiverNameList(): Array<ssn_type_candidate_pb.ModelSpec>;
+  setReceiverNameList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
+  clearReceiverNameList(): PredictionMetadata;
+  addReceiverName(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
+
+  getReceiverVatNumberList(): Array<ssn_type_candidate_pb.ModelSpec>;
+  setReceiverVatNumberList(value: Array<ssn_type_candidate_pb.ModelSpec>): PredictionMetadata;
+  clearReceiverVatNumberList(): PredictionMetadata;
+  addReceiverVatNumber(value?: ssn_type_candidate_pb.ModelSpec, index?: number): ssn_type_candidate_pb.ModelSpec;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionMetadata.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionMetadata): PredictionMetadata.AsObject;
@@ -948,6 +1086,12 @@ export namespace PredictionMetadata {
     supplierOrganisationNumberList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     supplierAddressList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
     customerNumberList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
+    receiverOrderNumberList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
+    ocrLineBePaymentIdList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
+    receiverAddressList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
+    receiverCountryCodeList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
+    receiverNameList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
+    receiverVatNumberList: Array<ssn_type_candidate_pb.ModelSpec.AsObject>,
   }
 }
 

@@ -232,6 +232,14 @@ private static final long serialVersionUID = 0L;
     OCR_LINE_NL_PAYMENT_ID(22),
     /**
      * <pre>
+     * Run belgian ocr line detection for the payment id
+     * </pre>
+     *
+     * <code>OCR_LINE_BE_PAYMENT_ID = 39;</code>
+     */
+    OCR_LINE_BE_PAYMENT_ID(39),
+    /**
+     * <pre>
      * Return document text
      * </pre>
      *
@@ -312,7 +320,7 @@ private static final long serialVersionUID = 0L;
     ORDER_NUMBER(32),
     /**
      * <pre>
-     * Run spplier name detection
+     * Run supplier name detection
      * </pre>
      *
      * <code>SUPPLIER_NAME = 33;</code>
@@ -350,6 +358,46 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOMER_NUMBER = 37;</code>
      */
     CUSTOMER_NUMBER(37),
+    /**
+     * <pre>
+     * Receiver order number
+     * </pre>
+     *
+     * <code>RECEIVER_ORDER_NUMBER = 38;</code>
+     */
+    RECEIVER_ORDER_NUMBER(38),
+    /**
+     * <pre>
+     * Receiver address
+     * </pre>
+     *
+     * <code>RECEIVER_ADDRESS = 40;</code>
+     */
+    RECEIVER_ADDRESS(40),
+    /**
+     * <pre>
+     * Receiver country code
+     * </pre>
+     *
+     * <code>RECEIVER_COUNTRY_CODE = 41;</code>
+     */
+    RECEIVER_COUNTRY_CODE(41),
+    /**
+     * <pre>
+     * Receiver name
+     * </pre>
+     *
+     * <code>RECEIVER_NAME = 42;</code>
+     */
+    RECEIVER_NAME(42),
+    /**
+     * <pre>
+     * Receiver VAT number
+     * </pre>
+     *
+     * <code>RECEIVER_VAT_NUMBER = 43;</code>
+     */
+    RECEIVER_VAT_NUMBER(43),
     UNRECOGNIZED(-1),
     ;
 
@@ -540,6 +588,14 @@ private static final long serialVersionUID = 0L;
     public static final int OCR_LINE_NL_PAYMENT_ID_VALUE = 22;
     /**
      * <pre>
+     * Run belgian ocr line detection for the payment id
+     * </pre>
+     *
+     * <code>OCR_LINE_BE_PAYMENT_ID = 39;</code>
+     */
+    public static final int OCR_LINE_BE_PAYMENT_ID_VALUE = 39;
+    /**
+     * <pre>
      * Return document text
      * </pre>
      *
@@ -620,7 +676,7 @@ private static final long serialVersionUID = 0L;
     public static final int ORDER_NUMBER_VALUE = 32;
     /**
      * <pre>
-     * Run spplier name detection
+     * Run supplier name detection
      * </pre>
      *
      * <code>SUPPLIER_NAME = 33;</code>
@@ -658,6 +714,46 @@ private static final long serialVersionUID = 0L;
      * <code>CUSTOMER_NUMBER = 37;</code>
      */
     public static final int CUSTOMER_NUMBER_VALUE = 37;
+    /**
+     * <pre>
+     * Receiver order number
+     * </pre>
+     *
+     * <code>RECEIVER_ORDER_NUMBER = 38;</code>
+     */
+    public static final int RECEIVER_ORDER_NUMBER_VALUE = 38;
+    /**
+     * <pre>
+     * Receiver address
+     * </pre>
+     *
+     * <code>RECEIVER_ADDRESS = 40;</code>
+     */
+    public static final int RECEIVER_ADDRESS_VALUE = 40;
+    /**
+     * <pre>
+     * Receiver country code
+     * </pre>
+     *
+     * <code>RECEIVER_COUNTRY_CODE = 41;</code>
+     */
+    public static final int RECEIVER_COUNTRY_CODE_VALUE = 41;
+    /**
+     * <pre>
+     * Receiver name
+     * </pre>
+     *
+     * <code>RECEIVER_NAME = 42;</code>
+     */
+    public static final int RECEIVER_NAME_VALUE = 42;
+    /**
+     * <pre>
+     * Receiver VAT number
+     * </pre>
+     *
+     * <code>RECEIVER_VAT_NUMBER = 43;</code>
+     */
+    public static final int RECEIVER_VAT_NUMBER_VALUE = 43;
 
 
     public final int getNumber() {
@@ -707,6 +803,7 @@ private static final long serialVersionUID = 0L;
         case 20: return OCR_LINE_NO_PAYMENT_ID;
         case 21: return OCR_LINE_FI_PAYMENT_ID;
         case 22: return OCR_LINE_NL_PAYMENT_ID;
+        case 39: return OCR_LINE_BE_PAYMENT_ID;
         case 23: return TEXT;
         case 24: return IBAN;
         case 25: return LINES;
@@ -722,6 +819,11 @@ private static final long serialVersionUID = 0L;
         case 35: return SUPPLIER_ORGANISATION_NUMBER;
         case 36: return SUPPLIER_ADDRESS;
         case 37: return CUSTOMER_NUMBER;
+        case 38: return RECEIVER_ORDER_NUMBER;
+        case 40: return RECEIVER_ADDRESS;
+        case 41: return RECEIVER_COUNTRY_CODE;
+        case 42: return RECEIVER_NAME;
+        case 43: return RECEIVER_VAT_NUMBER;
         default: return null;
       }
     }

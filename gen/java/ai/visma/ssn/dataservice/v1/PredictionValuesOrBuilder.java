@@ -822,4 +822,148 @@ public interface PredictionValuesOrBuilder extends
    */
   com.google.protobuf.StringValueOrBuilder getCustomerNumberOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   */
+  java.util.List<com.google.protobuf.StringValue> 
+      getReceiverOrderNumberList();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   */
+  com.google.protobuf.StringValue getReceiverOrderNumber(int index);
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   */
+  int getReceiverOrderNumberCount();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+      getReceiverOrderNumberOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getReceiverOrderNumberOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  java.util.List<com.google.protobuf.StringValue> 
+      getOcrLineBePaymentIdList();
+  /**
+   * <code>repeated .google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  com.google.protobuf.StringValue getOcrLineBePaymentId(int index);
+  /**
+   * <code>repeated .google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  int getOcrLineBePaymentIdCount();
+  /**
+   * <code>repeated .google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+      getOcrLineBePaymentIdOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getOcrLineBePaymentIdOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   */
+  java.util.List<com.google.protobuf.StringValue> 
+      getReceiverAddressList();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   */
+  com.google.protobuf.StringValue getReceiverAddress(int index);
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   */
+  int getReceiverAddressCount();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+      getReceiverAddressOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getReceiverAddressOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   */
+  java.util.List<com.google.protobuf.StringValue> 
+      getReceiverCountryCodeList();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   */
+  com.google.protobuf.StringValue getReceiverCountryCode(int index);
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   */
+  int getReceiverCountryCodeCount();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+      getReceiverCountryCodeOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getReceiverCountryCodeOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+   */
+  java.util.List<com.google.protobuf.StringValue> 
+      getReceiverNameList();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+   */
+  com.google.protobuf.StringValue getReceiverName(int index);
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+   */
+  int getReceiverNameCount();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+      getReceiverNameOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getReceiverNameOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   */
+  java.util.List<com.google.protobuf.StringValue> 
+      getReceiverVatNumberList();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   */
+  com.google.protobuf.StringValue getReceiverVatNumber(int index);
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   */
+  int getReceiverVatNumberCount();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   */
+  java.util.List<? extends com.google.protobuf.StringValueOrBuilder> 
+      getReceiverVatNumberOrBuilderList();
+  /**
+   * <code>repeated .google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   */
+  com.google.protobuf.StringValueOrBuilder getReceiverVatNumberOrBuilder(
+      int index);
 }

@@ -922,6 +922,162 @@ private static final long serialVersionUID = 0L;
     return customerNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : customerNumber_;
   }
 
+  public static final int RECEIVER_ORDER_NUMBER_FIELD_NUMBER = 35;
+  private com.google.protobuf.StringValue receiverOrderNumber_;
+  /**
+   * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   * @return Whether the receiverOrderNumber field is set.
+   */
+  @java.lang.Override
+  public boolean hasReceiverOrderNumber() {
+    return receiverOrderNumber_ != null;
+  }
+  /**
+   * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   * @return The receiverOrderNumber.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getReceiverOrderNumber() {
+    return receiverOrderNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverOrderNumber_;
+  }
+  /**
+   * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getReceiverOrderNumberOrBuilder() {
+    return receiverOrderNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverOrderNumber_;
+  }
+
+  public static final int OCR_LINE_BE_PAYMENT_ID_FIELD_NUMBER = 36;
+  private com.google.protobuf.StringValue ocrLineBePaymentId_;
+  /**
+   * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   * @return Whether the ocrLineBePaymentId field is set.
+   */
+  @java.lang.Override
+  public boolean hasOcrLineBePaymentId() {
+    return ocrLineBePaymentId_ != null;
+  }
+  /**
+   * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   * @return The ocrLineBePaymentId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getOcrLineBePaymentId() {
+    return ocrLineBePaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineBePaymentId_;
+  }
+  /**
+   * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getOcrLineBePaymentIdOrBuilder() {
+    return ocrLineBePaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineBePaymentId_;
+  }
+
+  public static final int RECEIVER_ADDRESS_FIELD_NUMBER = 37;
+  private com.google.protobuf.StringValue receiverAddress_;
+  /**
+   * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   * @return Whether the receiverAddress field is set.
+   */
+  @java.lang.Override
+  public boolean hasReceiverAddress() {
+    return receiverAddress_ != null;
+  }
+  /**
+   * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   * @return The receiverAddress.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getReceiverAddress() {
+    return receiverAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverAddress_;
+  }
+  /**
+   * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getReceiverAddressOrBuilder() {
+    return receiverAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverAddress_;
+  }
+
+  public static final int RECEIVER_COUNTRY_CODE_FIELD_NUMBER = 38;
+  private com.google.protobuf.StringValue receiverCountryCode_;
+  /**
+   * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   * @return Whether the receiverCountryCode field is set.
+   */
+  @java.lang.Override
+  public boolean hasReceiverCountryCode() {
+    return receiverCountryCode_ != null;
+  }
+  /**
+   * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   * @return The receiverCountryCode.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getReceiverCountryCode() {
+    return receiverCountryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverCountryCode_;
+  }
+  /**
+   * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getReceiverCountryCodeOrBuilder() {
+    return receiverCountryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverCountryCode_;
+  }
+
+  public static final int RECEIVER_NAME_FIELD_NUMBER = 39;
+  private com.google.protobuf.StringValue receiverName_;
+  /**
+   * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+   * @return Whether the receiverName field is set.
+   */
+  @java.lang.Override
+  public boolean hasReceiverName() {
+    return receiverName_ != null;
+  }
+  /**
+   * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+   * @return The receiverName.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getReceiverName() {
+    return receiverName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverName_;
+  }
+  /**
+   * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getReceiverNameOrBuilder() {
+    return receiverName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverName_;
+  }
+
+  public static final int RECEIVER_VAT_NUMBER_FIELD_NUMBER = 40;
+  private com.google.protobuf.StringValue receiverVatNumber_;
+  /**
+   * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   * @return Whether the receiverVatNumber field is set.
+   */
+  @java.lang.Override
+  public boolean hasReceiverVatNumber() {
+    return receiverVatNumber_ != null;
+  }
+  /**
+   * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   * @return The receiverVatNumber.
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValue getReceiverVatNumber() {
+    return receiverVatNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverVatNumber_;
+  }
+  /**
+   * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.StringValueOrBuilder getReceiverVatNumberOrBuilder() {
+    return receiverVatNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverVatNumber_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1037,6 +1193,24 @@ private static final long serialVersionUID = 0L;
     }
     if (customerNumber_ != null) {
       output.writeMessage(34, getCustomerNumber());
+    }
+    if (receiverOrderNumber_ != null) {
+      output.writeMessage(35, getReceiverOrderNumber());
+    }
+    if (ocrLineBePaymentId_ != null) {
+      output.writeMessage(36, getOcrLineBePaymentId());
+    }
+    if (receiverAddress_ != null) {
+      output.writeMessage(37, getReceiverAddress());
+    }
+    if (receiverCountryCode_ != null) {
+      output.writeMessage(38, getReceiverCountryCode());
+    }
+    if (receiverName_ != null) {
+      output.writeMessage(39, getReceiverName());
+    }
+    if (receiverVatNumber_ != null) {
+      output.writeMessage(40, getReceiverVatNumber());
     }
     getUnknownFields().writeTo(output);
   }
@@ -1182,6 +1356,30 @@ private static final long serialVersionUID = 0L;
     if (customerNumber_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(34, getCustomerNumber());
+    }
+    if (receiverOrderNumber_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(35, getReceiverOrderNumber());
+    }
+    if (ocrLineBePaymentId_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(36, getOcrLineBePaymentId());
+    }
+    if (receiverAddress_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(37, getReceiverAddress());
+    }
+    if (receiverCountryCode_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(38, getReceiverCountryCode());
+    }
+    if (receiverName_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(39, getReceiverName());
+    }
+    if (receiverVatNumber_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(40, getReceiverVatNumber());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1368,6 +1566,36 @@ private static final long serialVersionUID = 0L;
       if (!getCustomerNumber()
           .equals(other.getCustomerNumber())) return false;
     }
+    if (hasReceiverOrderNumber() != other.hasReceiverOrderNumber()) return false;
+    if (hasReceiverOrderNumber()) {
+      if (!getReceiverOrderNumber()
+          .equals(other.getReceiverOrderNumber())) return false;
+    }
+    if (hasOcrLineBePaymentId() != other.hasOcrLineBePaymentId()) return false;
+    if (hasOcrLineBePaymentId()) {
+      if (!getOcrLineBePaymentId()
+          .equals(other.getOcrLineBePaymentId())) return false;
+    }
+    if (hasReceiverAddress() != other.hasReceiverAddress()) return false;
+    if (hasReceiverAddress()) {
+      if (!getReceiverAddress()
+          .equals(other.getReceiverAddress())) return false;
+    }
+    if (hasReceiverCountryCode() != other.hasReceiverCountryCode()) return false;
+    if (hasReceiverCountryCode()) {
+      if (!getReceiverCountryCode()
+          .equals(other.getReceiverCountryCode())) return false;
+    }
+    if (hasReceiverName() != other.hasReceiverName()) return false;
+    if (hasReceiverName()) {
+      if (!getReceiverName()
+          .equals(other.getReceiverName())) return false;
+    }
+    if (hasReceiverVatNumber() != other.hasReceiverVatNumber()) return false;
+    if (hasReceiverVatNumber()) {
+      if (!getReceiverVatNumber()
+          .equals(other.getReceiverVatNumber())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1514,6 +1742,30 @@ private static final long serialVersionUID = 0L;
     if (hasCustomerNumber()) {
       hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getCustomerNumber().hashCode();
+    }
+    if (hasReceiverOrderNumber()) {
+      hash = (37 * hash) + RECEIVER_ORDER_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverOrderNumber().hashCode();
+    }
+    if (hasOcrLineBePaymentId()) {
+      hash = (37 * hash) + OCR_LINE_BE_PAYMENT_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getOcrLineBePaymentId().hashCode();
+    }
+    if (hasReceiverAddress()) {
+      hash = (37 * hash) + RECEIVER_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverAddress().hashCode();
+    }
+    if (hasReceiverCountryCode()) {
+      hash = (37 * hash) + RECEIVER_COUNTRY_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverCountryCode().hashCode();
+    }
+    if (hasReceiverName()) {
+      hash = (37 * hash) + RECEIVER_NAME_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverName().hashCode();
+    }
+    if (hasReceiverVatNumber()) {
+      hash = (37 * hash) + RECEIVER_VAT_NUMBER_FIELD_NUMBER;
+      hash = (53 * hash) + getReceiverVatNumber().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1817,6 +2069,36 @@ private static final long serialVersionUID = 0L;
         customerNumberBuilder_.dispose();
         customerNumberBuilder_ = null;
       }
+      receiverOrderNumber_ = null;
+      if (receiverOrderNumberBuilder_ != null) {
+        receiverOrderNumberBuilder_.dispose();
+        receiverOrderNumberBuilder_ = null;
+      }
+      ocrLineBePaymentId_ = null;
+      if (ocrLineBePaymentIdBuilder_ != null) {
+        ocrLineBePaymentIdBuilder_.dispose();
+        ocrLineBePaymentIdBuilder_ = null;
+      }
+      receiverAddress_ = null;
+      if (receiverAddressBuilder_ != null) {
+        receiverAddressBuilder_.dispose();
+        receiverAddressBuilder_ = null;
+      }
+      receiverCountryCode_ = null;
+      if (receiverCountryCodeBuilder_ != null) {
+        receiverCountryCodeBuilder_.dispose();
+        receiverCountryCodeBuilder_ = null;
+      }
+      receiverName_ = null;
+      if (receiverNameBuilder_ != null) {
+        receiverNameBuilder_.dispose();
+        receiverNameBuilder_ = null;
+      }
+      receiverVatNumber_ = null;
+      if (receiverVatNumberBuilder_ != null) {
+        receiverVatNumberBuilder_.dispose();
+        receiverVatNumberBuilder_ = null;
+      }
       return this;
     }
 
@@ -2025,6 +2307,36 @@ private static final long serialVersionUID = 0L;
             ? customerNumber_
             : customerNumberBuilder_.build();
       }
+      if (((from_bitField1_ & 0x00000004) != 0)) {
+        result.receiverOrderNumber_ = receiverOrderNumberBuilder_ == null
+            ? receiverOrderNumber_
+            : receiverOrderNumberBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000008) != 0)) {
+        result.ocrLineBePaymentId_ = ocrLineBePaymentIdBuilder_ == null
+            ? ocrLineBePaymentId_
+            : ocrLineBePaymentIdBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000010) != 0)) {
+        result.receiverAddress_ = receiverAddressBuilder_ == null
+            ? receiverAddress_
+            : receiverAddressBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000020) != 0)) {
+        result.receiverCountryCode_ = receiverCountryCodeBuilder_ == null
+            ? receiverCountryCode_
+            : receiverCountryCodeBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000040) != 0)) {
+        result.receiverName_ = receiverNameBuilder_ == null
+            ? receiverName_
+            : receiverNameBuilder_.build();
+      }
+      if (((from_bitField1_ & 0x00000080) != 0)) {
+        result.receiverVatNumber_ = receiverVatNumberBuilder_ == null
+            ? receiverVatNumber_
+            : receiverVatNumberBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -2172,6 +2484,24 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasCustomerNumber()) {
         mergeCustomerNumber(other.getCustomerNumber());
+      }
+      if (other.hasReceiverOrderNumber()) {
+        mergeReceiverOrderNumber(other.getReceiverOrderNumber());
+      }
+      if (other.hasOcrLineBePaymentId()) {
+        mergeOcrLineBePaymentId(other.getOcrLineBePaymentId());
+      }
+      if (other.hasReceiverAddress()) {
+        mergeReceiverAddress(other.getReceiverAddress());
+      }
+      if (other.hasReceiverCountryCode()) {
+        mergeReceiverCountryCode(other.getReceiverCountryCode());
+      }
+      if (other.hasReceiverName()) {
+        mergeReceiverName(other.getReceiverName());
+      }
+      if (other.hasReceiverVatNumber()) {
+        mergeReceiverVatNumber(other.getReceiverVatNumber());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -2437,6 +2767,48 @@ private static final long serialVersionUID = 0L;
               bitField1_ |= 0x00000002;
               break;
             } // case 274
+            case 282: {
+              input.readMessage(
+                  getReceiverOrderNumberFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000004;
+              break;
+            } // case 282
+            case 290: {
+              input.readMessage(
+                  getOcrLineBePaymentIdFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000008;
+              break;
+            } // case 290
+            case 298: {
+              input.readMessage(
+                  getReceiverAddressFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000010;
+              break;
+            } // case 298
+            case 306: {
+              input.readMessage(
+                  getReceiverCountryCodeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000020;
+              break;
+            } // case 306
+            case 314: {
+              input.readMessage(
+                  getReceiverNameFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000040;
+              break;
+            } // case 314
+            case 322: {
+              input.readMessage(
+                  getReceiverVatNumberFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00000080;
+              break;
+            } // case 322
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -6499,6 +6871,720 @@ private static final long serialVersionUID = 0L;
         customerNumber_ = null;
       }
       return customerNumberBuilder_;
+    }
+
+    private com.google.protobuf.StringValue receiverOrderNumber_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> receiverOrderNumberBuilder_;
+    /**
+     * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+     * @return Whether the receiverOrderNumber field is set.
+     */
+    public boolean hasReceiverOrderNumber() {
+      return ((bitField1_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+     * @return The receiverOrderNumber.
+     */
+    public com.google.protobuf.StringValue getReceiverOrderNumber() {
+      if (receiverOrderNumberBuilder_ == null) {
+        return receiverOrderNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverOrderNumber_;
+      } else {
+        return receiverOrderNumberBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+     */
+    public Builder setReceiverOrderNumber(com.google.protobuf.StringValue value) {
+      if (receiverOrderNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        receiverOrderNumber_ = value;
+      } else {
+        receiverOrderNumberBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+     */
+    public Builder setReceiverOrderNumber(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (receiverOrderNumberBuilder_ == null) {
+        receiverOrderNumber_ = builderForValue.build();
+      } else {
+        receiverOrderNumberBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+     */
+    public Builder mergeReceiverOrderNumber(com.google.protobuf.StringValue value) {
+      if (receiverOrderNumberBuilder_ == null) {
+        if (((bitField1_ & 0x00000004) != 0) &&
+          receiverOrderNumber_ != null &&
+          receiverOrderNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getReceiverOrderNumberBuilder().mergeFrom(value);
+        } else {
+          receiverOrderNumber_ = value;
+        }
+      } else {
+        receiverOrderNumberBuilder_.mergeFrom(value);
+      }
+      bitField1_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+     */
+    public Builder clearReceiverOrderNumber() {
+      bitField1_ = (bitField1_ & ~0x00000004);
+      receiverOrderNumber_ = null;
+      if (receiverOrderNumberBuilder_ != null) {
+        receiverOrderNumberBuilder_.dispose();
+        receiverOrderNumberBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getReceiverOrderNumberBuilder() {
+      bitField1_ |= 0x00000004;
+      onChanged();
+      return getReceiverOrderNumberFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getReceiverOrderNumberOrBuilder() {
+      if (receiverOrderNumberBuilder_ != null) {
+        return receiverOrderNumberBuilder_.getMessageOrBuilder();
+      } else {
+        return receiverOrderNumber_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : receiverOrderNumber_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_order_number = 35 [json_name = "receiverOrderNumber"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getReceiverOrderNumberFieldBuilder() {
+      if (receiverOrderNumberBuilder_ == null) {
+        receiverOrderNumberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getReceiverOrderNumber(),
+                getParentForChildren(),
+                isClean());
+        receiverOrderNumber_ = null;
+      }
+      return receiverOrderNumberBuilder_;
+    }
+
+    private com.google.protobuf.StringValue ocrLineBePaymentId_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> ocrLineBePaymentIdBuilder_;
+    /**
+     * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+     * @return Whether the ocrLineBePaymentId field is set.
+     */
+    public boolean hasOcrLineBePaymentId() {
+      return ((bitField1_ & 0x00000008) != 0);
+    }
+    /**
+     * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+     * @return The ocrLineBePaymentId.
+     */
+    public com.google.protobuf.StringValue getOcrLineBePaymentId() {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        return ocrLineBePaymentId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : ocrLineBePaymentId_;
+      } else {
+        return ocrLineBePaymentIdBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public Builder setOcrLineBePaymentId(com.google.protobuf.StringValue value) {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ocrLineBePaymentId_ = value;
+      } else {
+        ocrLineBePaymentIdBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public Builder setOcrLineBePaymentId(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        ocrLineBePaymentId_ = builderForValue.build();
+      } else {
+        ocrLineBePaymentIdBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public Builder mergeOcrLineBePaymentId(com.google.protobuf.StringValue value) {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        if (((bitField1_ & 0x00000008) != 0) &&
+          ocrLineBePaymentId_ != null &&
+          ocrLineBePaymentId_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getOcrLineBePaymentIdBuilder().mergeFrom(value);
+        } else {
+          ocrLineBePaymentId_ = value;
+        }
+      } else {
+        ocrLineBePaymentIdBuilder_.mergeFrom(value);
+      }
+      bitField1_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public Builder clearOcrLineBePaymentId() {
+      bitField1_ = (bitField1_ & ~0x00000008);
+      ocrLineBePaymentId_ = null;
+      if (ocrLineBePaymentIdBuilder_ != null) {
+        ocrLineBePaymentIdBuilder_.dispose();
+        ocrLineBePaymentIdBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getOcrLineBePaymentIdBuilder() {
+      bitField1_ |= 0x00000008;
+      onChanged();
+      return getOcrLineBePaymentIdFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getOcrLineBePaymentIdOrBuilder() {
+      if (ocrLineBePaymentIdBuilder_ != null) {
+        return ocrLineBePaymentIdBuilder_.getMessageOrBuilder();
+      } else {
+        return ocrLineBePaymentId_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : ocrLineBePaymentId_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue ocr_line_be_payment_id = 36 [json_name = "ocrLineBePaymentId"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getOcrLineBePaymentIdFieldBuilder() {
+      if (ocrLineBePaymentIdBuilder_ == null) {
+        ocrLineBePaymentIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getOcrLineBePaymentId(),
+                getParentForChildren(),
+                isClean());
+        ocrLineBePaymentId_ = null;
+      }
+      return ocrLineBePaymentIdBuilder_;
+    }
+
+    private com.google.protobuf.StringValue receiverAddress_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> receiverAddressBuilder_;
+    /**
+     * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+     * @return Whether the receiverAddress field is set.
+     */
+    public boolean hasReceiverAddress() {
+      return ((bitField1_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+     * @return The receiverAddress.
+     */
+    public com.google.protobuf.StringValue getReceiverAddress() {
+      if (receiverAddressBuilder_ == null) {
+        return receiverAddress_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverAddress_;
+      } else {
+        return receiverAddressBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+     */
+    public Builder setReceiverAddress(com.google.protobuf.StringValue value) {
+      if (receiverAddressBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        receiverAddress_ = value;
+      } else {
+        receiverAddressBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+     */
+    public Builder setReceiverAddress(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (receiverAddressBuilder_ == null) {
+        receiverAddress_ = builderForValue.build();
+      } else {
+        receiverAddressBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+     */
+    public Builder mergeReceiverAddress(com.google.protobuf.StringValue value) {
+      if (receiverAddressBuilder_ == null) {
+        if (((bitField1_ & 0x00000010) != 0) &&
+          receiverAddress_ != null &&
+          receiverAddress_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getReceiverAddressBuilder().mergeFrom(value);
+        } else {
+          receiverAddress_ = value;
+        }
+      } else {
+        receiverAddressBuilder_.mergeFrom(value);
+      }
+      bitField1_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+     */
+    public Builder clearReceiverAddress() {
+      bitField1_ = (bitField1_ & ~0x00000010);
+      receiverAddress_ = null;
+      if (receiverAddressBuilder_ != null) {
+        receiverAddressBuilder_.dispose();
+        receiverAddressBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getReceiverAddressBuilder() {
+      bitField1_ |= 0x00000010;
+      onChanged();
+      return getReceiverAddressFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getReceiverAddressOrBuilder() {
+      if (receiverAddressBuilder_ != null) {
+        return receiverAddressBuilder_.getMessageOrBuilder();
+      } else {
+        return receiverAddress_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : receiverAddress_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_address = 37 [json_name = "receiverAddress"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getReceiverAddressFieldBuilder() {
+      if (receiverAddressBuilder_ == null) {
+        receiverAddressBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getReceiverAddress(),
+                getParentForChildren(),
+                isClean());
+        receiverAddress_ = null;
+      }
+      return receiverAddressBuilder_;
+    }
+
+    private com.google.protobuf.StringValue receiverCountryCode_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> receiverCountryCodeBuilder_;
+    /**
+     * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+     * @return Whether the receiverCountryCode field is set.
+     */
+    public boolean hasReceiverCountryCode() {
+      return ((bitField1_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+     * @return The receiverCountryCode.
+     */
+    public com.google.protobuf.StringValue getReceiverCountryCode() {
+      if (receiverCountryCodeBuilder_ == null) {
+        return receiverCountryCode_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverCountryCode_;
+      } else {
+        return receiverCountryCodeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder setReceiverCountryCode(com.google.protobuf.StringValue value) {
+      if (receiverCountryCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        receiverCountryCode_ = value;
+      } else {
+        receiverCountryCodeBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder setReceiverCountryCode(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (receiverCountryCodeBuilder_ == null) {
+        receiverCountryCode_ = builderForValue.build();
+      } else {
+        receiverCountryCodeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder mergeReceiverCountryCode(com.google.protobuf.StringValue value) {
+      if (receiverCountryCodeBuilder_ == null) {
+        if (((bitField1_ & 0x00000020) != 0) &&
+          receiverCountryCode_ != null &&
+          receiverCountryCode_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getReceiverCountryCodeBuilder().mergeFrom(value);
+        } else {
+          receiverCountryCode_ = value;
+        }
+      } else {
+        receiverCountryCodeBuilder_.mergeFrom(value);
+      }
+      bitField1_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+     */
+    public Builder clearReceiverCountryCode() {
+      bitField1_ = (bitField1_ & ~0x00000020);
+      receiverCountryCode_ = null;
+      if (receiverCountryCodeBuilder_ != null) {
+        receiverCountryCodeBuilder_.dispose();
+        receiverCountryCodeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getReceiverCountryCodeBuilder() {
+      bitField1_ |= 0x00000020;
+      onChanged();
+      return getReceiverCountryCodeFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getReceiverCountryCodeOrBuilder() {
+      if (receiverCountryCodeBuilder_ != null) {
+        return receiverCountryCodeBuilder_.getMessageOrBuilder();
+      } else {
+        return receiverCountryCode_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : receiverCountryCode_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_country_code = 38 [json_name = "receiverCountryCode"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getReceiverCountryCodeFieldBuilder() {
+      if (receiverCountryCodeBuilder_ == null) {
+        receiverCountryCodeBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getReceiverCountryCode(),
+                getParentForChildren(),
+                isClean());
+        receiverCountryCode_ = null;
+      }
+      return receiverCountryCodeBuilder_;
+    }
+
+    private com.google.protobuf.StringValue receiverName_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> receiverNameBuilder_;
+    /**
+     * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+     * @return Whether the receiverName field is set.
+     */
+    public boolean hasReceiverName() {
+      return ((bitField1_ & 0x00000040) != 0);
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+     * @return The receiverName.
+     */
+    public com.google.protobuf.StringValue getReceiverName() {
+      if (receiverNameBuilder_ == null) {
+        return receiverName_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverName_;
+      } else {
+        return receiverNameBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+     */
+    public Builder setReceiverName(com.google.protobuf.StringValue value) {
+      if (receiverNameBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        receiverName_ = value;
+      } else {
+        receiverNameBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+     */
+    public Builder setReceiverName(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (receiverNameBuilder_ == null) {
+        receiverName_ = builderForValue.build();
+      } else {
+        receiverNameBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+     */
+    public Builder mergeReceiverName(com.google.protobuf.StringValue value) {
+      if (receiverNameBuilder_ == null) {
+        if (((bitField1_ & 0x00000040) != 0) &&
+          receiverName_ != null &&
+          receiverName_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getReceiverNameBuilder().mergeFrom(value);
+        } else {
+          receiverName_ = value;
+        }
+      } else {
+        receiverNameBuilder_.mergeFrom(value);
+      }
+      bitField1_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+     */
+    public Builder clearReceiverName() {
+      bitField1_ = (bitField1_ & ~0x00000040);
+      receiverName_ = null;
+      if (receiverNameBuilder_ != null) {
+        receiverNameBuilder_.dispose();
+        receiverNameBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getReceiverNameBuilder() {
+      bitField1_ |= 0x00000040;
+      onChanged();
+      return getReceiverNameFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getReceiverNameOrBuilder() {
+      if (receiverNameBuilder_ != null) {
+        return receiverNameBuilder_.getMessageOrBuilder();
+      } else {
+        return receiverName_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : receiverName_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_name = 39 [json_name = "receiverName"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getReceiverNameFieldBuilder() {
+      if (receiverNameBuilder_ == null) {
+        receiverNameBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getReceiverName(),
+                getParentForChildren(),
+                isClean());
+        receiverName_ = null;
+      }
+      return receiverNameBuilder_;
+    }
+
+    private com.google.protobuf.StringValue receiverVatNumber_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> receiverVatNumberBuilder_;
+    /**
+     * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+     * @return Whether the receiverVatNumber field is set.
+     */
+    public boolean hasReceiverVatNumber() {
+      return ((bitField1_ & 0x00000080) != 0);
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+     * @return The receiverVatNumber.
+     */
+    public com.google.protobuf.StringValue getReceiverVatNumber() {
+      if (receiverVatNumberBuilder_ == null) {
+        return receiverVatNumber_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : receiverVatNumber_;
+      } else {
+        return receiverVatNumberBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder setReceiverVatNumber(com.google.protobuf.StringValue value) {
+      if (receiverVatNumberBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        receiverVatNumber_ = value;
+      } else {
+        receiverVatNumberBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder setReceiverVatNumber(
+        com.google.protobuf.StringValue.Builder builderForValue) {
+      if (receiverVatNumberBuilder_ == null) {
+        receiverVatNumber_ = builderForValue.build();
+      } else {
+        receiverVatNumberBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder mergeReceiverVatNumber(com.google.protobuf.StringValue value) {
+      if (receiverVatNumberBuilder_ == null) {
+        if (((bitField1_ & 0x00000080) != 0) &&
+          receiverVatNumber_ != null &&
+          receiverVatNumber_ != com.google.protobuf.StringValue.getDefaultInstance()) {
+          getReceiverVatNumberBuilder().mergeFrom(value);
+        } else {
+          receiverVatNumber_ = value;
+        }
+      } else {
+        receiverVatNumberBuilder_.mergeFrom(value);
+      }
+      bitField1_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+     */
+    public Builder clearReceiverVatNumber() {
+      bitField1_ = (bitField1_ & ~0x00000080);
+      receiverVatNumber_ = null;
+      if (receiverVatNumberBuilder_ != null) {
+        receiverVatNumberBuilder_.dispose();
+        receiverVatNumberBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+     */
+    public com.google.protobuf.StringValue.Builder getReceiverVatNumberBuilder() {
+      bitField1_ |= 0x00000080;
+      onChanged();
+      return getReceiverVatNumberFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+     */
+    public com.google.protobuf.StringValueOrBuilder getReceiverVatNumberOrBuilder() {
+      if (receiverVatNumberBuilder_ != null) {
+        return receiverVatNumberBuilder_.getMessageOrBuilder();
+      } else {
+        return receiverVatNumber_ == null ?
+            com.google.protobuf.StringValue.getDefaultInstance() : receiverVatNumber_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+        getReceiverVatNumberFieldBuilder() {
+      if (receiverVatNumberBuilder_ == null) {
+        receiverVatNumberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                getReceiverVatNumber(),
+                getParentForChildren(),
+                isClean());
+        receiverVatNumber_ = null;
+      }
+      return receiverVatNumberBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

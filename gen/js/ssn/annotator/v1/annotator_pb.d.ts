@@ -56,6 +56,7 @@ export namespace Feature {
     OCR_LINE_NO_PAYMENT_ID = 20,
     OCR_LINE_FI_PAYMENT_ID = 21,
     OCR_LINE_NL_PAYMENT_ID = 22,
+    OCR_LINE_BE_PAYMENT_ID = 39,
     TEXT = 23,
     IBAN = 24,
     LINES = 25,
@@ -71,6 +72,11 @@ export namespace Feature {
     SUPPLIER_ORGANISATION_NUMBER = 35,
     SUPPLIER_ADDRESS = 36,
     CUSTOMER_NUMBER = 37,
+    RECEIVER_ORDER_NUMBER = 38,
+    RECEIVER_ADDRESS = 40,
+    RECEIVER_COUNTRY_CODE = 41,
+    RECEIVER_NAME = 42,
+    RECEIVER_VAT_NUMBER = 43,
   }
 }
 
@@ -273,6 +279,11 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearOcrLineNlPaymentIdList(): DocumentAnnotatorResponse;
   addOcrLineNlPaymentId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
+  getOcrLineBePaymentIdList(): Array<ssn_type_candidate_pb.Candidate>;
+  setOcrLineBePaymentIdList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearOcrLineBePaymentIdList(): DocumentAnnotatorResponse;
+  addOcrLineBePaymentId(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
   getText(): string;
   setText(value: string): DocumentAnnotatorResponse;
 
@@ -347,6 +358,31 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearCustomerNumberList(): DocumentAnnotatorResponse;
   addCustomerNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
+  getReceiverOrderNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setReceiverOrderNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearReceiverOrderNumberList(): DocumentAnnotatorResponse;
+  addReceiverOrderNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getReceiverAddressList(): Array<ssn_type_candidate_pb.Candidate>;
+  setReceiverAddressList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearReceiverAddressList(): DocumentAnnotatorResponse;
+  addReceiverAddress(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getReceiverCountryCodeList(): Array<ssn_type_candidate_pb.Candidate>;
+  setReceiverCountryCodeList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearReceiverCountryCodeList(): DocumentAnnotatorResponse;
+  addReceiverCountryCode(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getReceiverNameList(): Array<ssn_type_candidate_pb.Candidate>;
+  setReceiverNameList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearReceiverNameList(): DocumentAnnotatorResponse;
+  addReceiverName(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  getReceiverVatNumberList(): Array<ssn_type_candidate_pb.Candidate>;
+  setReceiverVatNumberList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentAnnotatorResponse;
+  clearReceiverVatNumberList(): DocumentAnnotatorResponse;
+  addReceiverVatNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -379,6 +415,7 @@ export namespace DocumentAnnotatorResponse {
     ocrLineNoPaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     ocrLineFiPaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     ocrLineNlPaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    ocrLineBePaymentIdList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     text: string,
     feedbackId: string,
     ibanList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
@@ -395,6 +432,11 @@ export namespace DocumentAnnotatorResponse {
     supplierOrganisationNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     supplierAddressList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     customerNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    receiverOrderNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    receiverAddressList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    receiverCountryCodeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    receiverNameList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    receiverVatNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
   }
 }
 
