@@ -84,6 +84,8 @@ message Feature {
     OCR_LINE_FI_PAYMENT_ID = 21;
     // Run dutch ocr line detection for the payment id
     OCR_LINE_NL_PAYMENT_ID = 22;
+    // Run belgian ocr line detection for the payment id
+    OCR_LINE_BE_PAYMENT_ID = 39;
     // Return document text
     TEXT = 23;
     // Run IBAN detection
@@ -104,7 +106,7 @@ message Feature {
     DOCUMENT_DATE = 31;
     // Run order number detection
     ORDER_NUMBER = 32;
-    // Run spplier name detection
+    // Run supplier name detection
     SUPPLIER_NAME = 33;
     // [EXPERIMENTAL] Run supplier VAT detection
     SUPPLIER_VAT_NUMBER = 34;
@@ -114,6 +116,16 @@ message Feature {
     SUPPLIER_ADDRESS = 36;
     // [EXPERIMENTAL] Run customer identifier detection
     CUSTOMER_NUMBER = 37;
+    // Receiver order number
+    RECEIVER_ORDER_NUMBER = 38;
+    // Receiver address
+    RECEIVER_ADDRESS = 40;
+    // Receiver country code
+    RECEIVER_COUNTRY_CODE = 41;
+    // Receiver name
+    RECEIVER_NAME = 42;
+    // Receiver VAT number
+    RECEIVER_VAT_NUMBER = 43;
   }
   // The feature type.
   Type type = 1;
@@ -214,6 +226,8 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.Candidate ocr_line_fi_payment_id = 21;
   // example: "00000159220010146012"
   repeated ssn.type.Candidate ocr_line_nl_payment_id = 22;
+  //
+  repeated ssn.type.Candidate ocr_line_be_payment_id = 40;
   // Return a string containing the text from the document
   string text = 23;
   // Feedback ID is used to correct made predictions through the
@@ -254,6 +268,16 @@ message DocumentAnnotatorResponse {
   // [EXPERIMENTAL]
   // Returns customer identifier/number
   repeated ssn.type.Candidate customer_number = 38;
+  // Equivalent of order number for receiver
+  repeated ssn.type.Candidate receiver_order_number = 39;
+  // Equivalent of address for receiver
+  repeated ssn.type.Candidate receiver_address = 41;
+  // Equivalent of country code for receiver
+  repeated ssn.type.Candidate receiver_country_code = 42;
+  // Equivalent of supplier name for receiver
+  repeated ssn.type.Candidate receiver_name = 43;
+  // Equivalent of VAT number for receiver
+  repeated ssn.type.Candidate receiver_vat_number = 44;
 }
 
 message Document {

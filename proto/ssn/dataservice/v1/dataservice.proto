@@ -92,6 +92,12 @@ message TrueValues {
   google.protobuf.StringValue supplier_organisation_number = 32;
   google.protobuf.StringValue supplier_address = 33;
   google.protobuf.StringValue customer_number = 34;
+  google.protobuf.StringValue receiver_order_number = 35;
+  google.protobuf.StringValue ocr_line_be_payment_id = 36;
+  google.protobuf.StringValue receiver_address = 37;
+  google.protobuf.StringValue receiver_country_code = 38;
+  google.protobuf.StringValue receiver_name = 39;
+  google.protobuf.StringValue receiver_vat_number = 40;
 }
 
 message PredictionValues {
@@ -129,6 +135,12 @@ message PredictionValues {
   repeated google.protobuf.StringValue supplier_organisation_number = 32;
   repeated google.protobuf.StringValue supplier_address = 33;
   repeated google.protobuf.StringValue customer_number = 34;
+  repeated google.protobuf.StringValue receiver_order_number = 35;
+  repeated google.protobuf.StringValue ocr_line_be_payment_id = 36;
+  repeated google.protobuf.StringValue receiver_address = 37;
+  repeated google.protobuf.StringValue receiver_country_code = 38;
+  repeated google.protobuf.StringValue receiver_name = 39;
+  repeated google.protobuf.StringValue receiver_vat_number = 40;
 }
 
 message PredictionConfidences {
@@ -166,6 +178,12 @@ message PredictionConfidences {
   repeated google.protobuf.FloatValue supplier_organisation_number = 32;
   repeated google.protobuf.FloatValue supplier_address = 33;
   repeated google.protobuf.FloatValue customer_number = 34;
+  repeated google.protobuf.FloatValue receiver_order_number = 35;
+  repeated google.protobuf.FloatValue ocr_line_be_payment_id = 36;
+  repeated google.protobuf.FloatValue receiver_address = 37;
+  repeated google.protobuf.FloatValue receiver_country_code = 38;
+  repeated google.protobuf.FloatValue receiver_name = 39;
+  repeated google.protobuf.FloatValue receiver_vat_number = 40;
 }
 
 message PredictionMetadata {
@@ -203,6 +221,12 @@ message PredictionMetadata {
   repeated ssn.type.ModelSpec supplier_organisation_number = 32;
   repeated ssn.type.ModelSpec supplier_address = 33;
   repeated ssn.type.ModelSpec customer_number = 34;
+  repeated ssn.type.ModelSpec receiver_order_number = 35;
+  repeated ssn.type.ModelSpec ocr_line_be_payment_id = 36;
+  repeated ssn.type.ModelSpec receiver_address = 37;
+  repeated ssn.type.ModelSpec receiver_country_code = 38;
+  repeated ssn.type.ModelSpec receiver_name = 39;
+  repeated ssn.type.ModelSpec receiver_vat_number = 40;
 }
 
 message CreateDocumentRequest {
