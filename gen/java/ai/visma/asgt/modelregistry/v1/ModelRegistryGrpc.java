@@ -77,6 +77,37 @@ public final class ModelRegistryGrpc {
     return getGetCurrentModelMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest,
+      ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse> getGetCurrentFullModelMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetCurrentFullModel",
+      requestType = ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest.class,
+      responseType = ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest,
+      ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse> getGetCurrentFullModelMethod() {
+    io.grpc.MethodDescriptor<ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest, ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse> getGetCurrentFullModelMethod;
+    if ((getGetCurrentFullModelMethod = ModelRegistryGrpc.getGetCurrentFullModelMethod) == null) {
+      synchronized (ModelRegistryGrpc.class) {
+        if ((getGetCurrentFullModelMethod = ModelRegistryGrpc.getGetCurrentFullModelMethod) == null) {
+          ModelRegistryGrpc.getGetCurrentFullModelMethod = getGetCurrentFullModelMethod =
+              io.grpc.MethodDescriptor.<ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest, ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetCurrentFullModel"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ModelRegistryMethodDescriptorSupplier("GetCurrentFullModel"))
+              .build();
+        }
+      }
+    }
+    return getGetCurrentFullModelMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -141,6 +172,13 @@ public final class ModelRegistryGrpc {
         io.grpc.stub.StreamObserver<ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCurrentModelMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void getCurrentFullModel(ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetCurrentFullModelMethod(), responseObserver);
+    }
   }
 
   /**
@@ -188,6 +226,14 @@ public final class ModelRegistryGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetCurrentModelMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void getCurrentFullModel(ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetCurrentFullModelMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -221,6 +267,13 @@ public final class ModelRegistryGrpc {
     public ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse getCurrentModel(ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetCurrentModelMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse getCurrentFullModel(ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetCurrentFullModelMethod(), getCallOptions(), request);
     }
   }
 
@@ -258,10 +311,19 @@ public final class ModelRegistryGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetCurrentModelMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse> getCurrentFullModel(
+        ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetCurrentFullModelMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_REGISTER_MODEL = 0;
   private static final int METHODID_GET_CURRENT_MODEL = 1;
+  private static final int METHODID_GET_CURRENT_FULL_MODEL = 2;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -286,6 +348,10 @@ public final class ModelRegistryGrpc {
           break;
         case METHODID_GET_CURRENT_MODEL:
           serviceImpl.getCurrentModel((ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse>) responseObserver);
+          break;
+        case METHODID_GET_CURRENT_FULL_MODEL:
+          serviceImpl.getCurrentFullModel((ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse>) responseObserver);
           break;
         default:
@@ -320,6 +386,13 @@ public final class ModelRegistryGrpc {
               ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest,
               ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse>(
                 service, METHODID_GET_CURRENT_MODEL)))
+        .addMethod(
+          getGetCurrentFullModelMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.modelregistry.v1.GetCurrentModelRequest,
+              ai.visma.asgt.modelregistry.v1.GetCurrentModelResponse>(
+                service, METHODID_GET_CURRENT_FULL_MODEL)))
         .build();
   }
 
@@ -370,6 +443,7 @@ public final class ModelRegistryGrpc {
               .setSchemaDescriptor(new ModelRegistryFileDescriptorSupplier())
               .addMethod(getRegisterModelMethod())
               .addMethod(getGetCurrentModelMethod())
+              .addMethod(getGetCurrentFullModelMethod())
               .build();
         }
       }

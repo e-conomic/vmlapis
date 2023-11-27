@@ -25,6 +25,11 @@ class ModelRegistryStub(object):
                 request_serializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.SerializeToString,
                 response_deserializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.FromString,
                 )
+        self.GetCurrentFullModel = channel.unary_unary(
+                '/asgt.modelregistry.v1.ModelRegistry/GetCurrentFullModel',
+                request_serializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.SerializeToString,
+                response_deserializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.FromString,
+                )
 
 
 class ModelRegistryServicer(object):
@@ -43,6 +48,12 @@ class ModelRegistryServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetCurrentFullModel(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_ModelRegistryServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -53,6 +64,11 @@ def add_ModelRegistryServicer_to_server(servicer, server):
             ),
             'GetCurrentModel': grpc.unary_unary_rpc_method_handler(
                     servicer.GetCurrentModel,
+                    request_deserializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.FromString,
+                    response_serializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.SerializeToString,
+            ),
+            'GetCurrentFullModel': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetCurrentFullModel,
                     request_deserializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.FromString,
                     response_serializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.SerializeToString,
             ),
@@ -95,6 +111,23 @@ class ModelRegistry(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/asgt.modelregistry.v1.ModelRegistry/GetCurrentModel',
+            asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.SerializeToString,
+            asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetCurrentFullModel(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/asgt.modelregistry.v1.ModelRegistry/GetCurrentFullModel',
             asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.SerializeToString,
             asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.FromString,
             options, channel_credentials,

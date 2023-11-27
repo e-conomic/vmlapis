@@ -212,5 +212,66 @@ proto.asgt.modelregistry.v1.ModelRegistryPromiseClient.prototype.getCurrentModel
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.modelregistry.v1.GetCurrentModelRequest,
+ *   !proto.asgt.modelregistry.v1.GetCurrentModelResponse>}
+ */
+const methodDescriptor_ModelRegistry_GetCurrentFullModel = new grpc.web.MethodDescriptor(
+  '/asgt.modelregistry.v1.ModelRegistry/GetCurrentFullModel',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.modelregistry.v1.GetCurrentModelRequest,
+  proto.asgt.modelregistry.v1.GetCurrentModelResponse,
+  /**
+   * @param {!proto.asgt.modelregistry.v1.GetCurrentModelRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.asgt.modelregistry.v1.GetCurrentModelResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.modelregistry.v1.GetCurrentModelRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.asgt.modelregistry.v1.GetCurrentModelResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.modelregistry.v1.GetCurrentModelResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.modelregistry.v1.ModelRegistryClient.prototype.getCurrentFullModel =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.modelregistry.v1.ModelRegistry/GetCurrentFullModel',
+      request,
+      metadata || {},
+      methodDescriptor_ModelRegistry_GetCurrentFullModel,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.modelregistry.v1.GetCurrentModelRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.asgt.modelregistry.v1.GetCurrentModelResponse>}
+ *     Promise that resolves to the response
+ */
+proto.asgt.modelregistry.v1.ModelRegistryPromiseClient.prototype.getCurrentFullModel =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.modelregistry.v1.ModelRegistry/GetCurrentFullModel',
+      request,
+      metadata || {},
+      methodDescriptor_ModelRegistry_GetCurrentFullModel);
+};
+
+
 module.exports = proto.asgt.modelregistry.v1;
 
