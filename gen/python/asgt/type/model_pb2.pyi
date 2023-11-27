@@ -1,3 +1,4 @@
+from asgt.type import model_file_pb2 as _model_file_pb2
 from asgt.type import target_metrics_pb2 as _target_metrics_pb2
 from gen_bq_schema import bq_field_pb2 as _bq_field_pb2
 from google.protobuf import timestamp_pb2 as _timestamp_pb2
@@ -10,7 +11,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Model(_message.Message):
-    __slots__ = ["version", "created_at", "dataset_size", "training_size", "confidence_scores", "input_type", "dataset_type"]
+    __slots__ = ["version", "created_at", "dataset_size", "training_size", "confidence_scores", "input_type", "dataset_type", "model_files"]
     class InputType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
         __slots__ = []
         FEATURE_TENSORS: _ClassVar[Model.InputType]
@@ -24,6 +25,7 @@ class Model(_message.Message):
     CONFIDENCE_SCORES_FIELD_NUMBER: _ClassVar[int]
     INPUT_TYPE_FIELD_NUMBER: _ClassVar[int]
     DATASET_TYPE_FIELD_NUMBER: _ClassVar[int]
+    MODEL_FILES_FIELD_NUMBER: _ClassVar[int]
     version: int
     created_at: _timestamp_pb2.Timestamp
     dataset_size: int
@@ -31,4 +33,5 @@ class Model(_message.Message):
     confidence_scores: _containers.RepeatedCompositeFieldContainer[_target_metrics_pb2.TargetMetrics]
     input_type: Model.InputType
     dataset_type: str
-    def __init__(self, version: _Optional[int] = ..., created_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., dataset_size: _Optional[int] = ..., training_size: _Optional[int] = ..., confidence_scores: _Optional[_Iterable[_Union[_target_metrics_pb2.TargetMetrics, _Mapping]]] = ..., input_type: _Optional[_Union[Model.InputType, str]] = ..., dataset_type: _Optional[str] = ...) -> None: ...
+    model_files: _containers.RepeatedCompositeFieldContainer[_model_file_pb2.ModelFile]
+    def __init__(self, version: _Optional[int] = ..., created_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., dataset_size: _Optional[int] = ..., training_size: _Optional[int] = ..., confidence_scores: _Optional[_Iterable[_Union[_target_metrics_pb2.TargetMetrics, _Mapping]]] = ..., input_type: _Optional[_Union[Model.InputType, str]] = ..., dataset_type: _Optional[str] = ..., model_files: _Optional[_Iterable[_Union[_model_file_pb2.ModelFile, _Mapping]]] = ...) -> None: ...

@@ -86,4 +86,28 @@ public interface ModelOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDatasetTypeBytes();
+
+  /**
+   * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  java.util.List<ai.visma.asgt.type.ModelFile> 
+      getModelFilesList();
+  /**
+   * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  ai.visma.asgt.type.ModelFile getModelFiles(int index);
+  /**
+   * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  int getModelFilesCount();
+  /**
+   * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.asgt.type.ModelFileOrBuilder> 
+      getModelFilesOrBuilderList();
+  /**
+   * <code>repeated .asgt.type.ModelFile model_files = 10 [json_name = "modelFiles", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  ai.visma.asgt.type.ModelFileOrBuilder getModelFilesOrBuilder(
+      int index);
 }

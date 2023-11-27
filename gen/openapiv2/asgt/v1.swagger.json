@@ -618,6 +618,25 @@
         },
         "datasetType": {
           "type": "string"
+        },
+        "modelFiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeModelFile"
+          }
+        }
+      }
+    },
+    "typeModelFile": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "data": {
+          "type": "string",
+          "format": "byte"
         }
       }
     },

@@ -1,5 +1,6 @@
 import * as jspb from 'google-protobuf'
 
+import * as asgt_type_model_file_pb from '../../asgt/type/model_file_pb';
 import * as asgt_type_target_metrics_pb from '../../asgt/type/target_metrics_pb';
 import * as gen_bq_schema_bq_field_pb from '../../gen_bq_schema/bq_field_pb';
 import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb';
@@ -31,6 +32,11 @@ export class Model extends jspb.Message {
   getDatasetType(): string;
   setDatasetType(value: string): Model;
 
+  getModelFilesList(): Array<asgt_type_model_file_pb.ModelFile>;
+  setModelFilesList(value: Array<asgt_type_model_file_pb.ModelFile>): Model;
+  clearModelFilesList(): Model;
+  addModelFiles(value?: asgt_type_model_file_pb.ModelFile, index?: number): asgt_type_model_file_pb.ModelFile;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Model.AsObject;
   static toObject(includeInstance: boolean, msg: Model): Model.AsObject;
@@ -48,6 +54,7 @@ export namespace Model {
     confidenceScoresList: Array<asgt_type_target_metrics_pb.TargetMetrics.AsObject>,
     inputType: Model.InputType,
     datasetType: string,
+    modelFilesList: Array<asgt_type_model_file_pb.ModelFile.AsObject>,
   }
 
   export enum InputType { 

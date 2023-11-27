@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package asgt.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
+
+message ModelFile {
+  string name = 1;
+  bytes data = 2;
+}

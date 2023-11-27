@@ -24,26 +24,28 @@ namespace Asgt.Type {
     static ModelReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChVhc2d0L3R5cGUvbW9kZWwucHJvdG8SCWFzZ3QudHlwZRoeYXNndC90eXBl",
-            "L3RhcmdldF9tZXRyaWNzLnByb3RvGhxnZW5fYnFfc2NoZW1hL2JxX2ZpZWxk",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIqEDCgVN",
-            "b2RlbBIfCgd2ZXJzaW9uGAMgASgDQgXqPwIIAVIHdmVyc2lvbhI5CgpjcmVh",
-            "dGVkX2F0GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJY3Jl",
-            "YXRlZEF0EigKDGRhdGFzZXRfc2l6ZRgFIAEoBUIF6j8CGAFSC2RhdGFzZXRT",
-            "aXplEioKDXRyYWluaW5nX3NpemUYBiABKAVCBeo/AhgBUgx0cmFpbmluZ1Np",
-            "emUSTAoRY29uZmlkZW5jZV9zY29yZXMYByADKAsyGC5hc2d0LnR5cGUuVGFy",
-            "Z2V0TWV0cmljc0IF6j8CGAFSEGNvbmZpZGVuY2VTY29yZXMSOQoKaW5wdXRf",
-            "dHlwZRgIIAEoDjIaLmFzZ3QudHlwZS5Nb2RlbC5JbnB1dFR5cGVSCWlucHV0",
-            "VHlwZRIhCgxkYXRhc2V0X3R5cGUYCSABKAlSC2RhdGFzZXRUeXBlIjQKCUlu",
+            "ChVhc2d0L3R5cGUvbW9kZWwucHJvdG8SCWFzZ3QudHlwZRoaYXNndC90eXBl",
+            "L21vZGVsX2ZpbGUucHJvdG8aHmFzZ3QvdHlwZS90YXJnZXRfbWV0cmljcy5w",
+            "cm90bxocZ2VuX2JxX3NjaGVtYS9icV9maWVsZC5wcm90bxofZ29vZ2xlL3By",
+            "b3RvYnVmL3RpbWVzdGFtcC5wcm90byLfAwoFTW9kZWwSHwoHdmVyc2lvbhgD",
+            "IAEoA0IF6j8CCAFSB3ZlcnNpb24SOQoKY3JlYXRlZF9hdBgEIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCWNyZWF0ZWRBdBIoCgxkYXRhc2V0",
+            "X3NpemUYBSABKAVCBeo/AhgBUgtkYXRhc2V0U2l6ZRIqCg10cmFpbmluZ19z",
+            "aXplGAYgASgFQgXqPwIYAVIMdHJhaW5pbmdTaXplEkwKEWNvbmZpZGVuY2Vf",
+            "c2NvcmVzGAcgAygLMhguYXNndC50eXBlLlRhcmdldE1ldHJpY3NCBeo/AhgB",
+            "UhBjb25maWRlbmNlU2NvcmVzEjkKCmlucHV0X3R5cGUYCCABKA4yGi5hc2d0",
+            "LnR5cGUuTW9kZWwuSW5wdXRUeXBlUglpbnB1dFR5cGUSIQoMZGF0YXNldF90",
+            "eXBlGAkgASgJUgtkYXRhc2V0VHlwZRI8Cgttb2RlbF9maWxlcxgKIAMoCzIU",
+            "LmFzZ3QudHlwZS5Nb2RlbEZpbGVCBeo/AhgBUgptb2RlbEZpbGVzIjQKCUlu",
             "cHV0VHlwZRITCg9GRUFUVVJFX1RFTlNPUlMQABISCg5FWEFNUExFX1RFTlNP",
             "UhABSgQIARADQp0BChJhaS52aXNtYS5hc2d0LnR5cGVCCk1vZGVsUHJvdG9Q",
             "AVo2Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC90",
             "eXBlO2FzZ3R0eXBlogIDQVRYqgIJQXNndC5UeXBlygIJQXNndFxUeXBl4gIV",
             "QXNndFxUeXBlXEdQQk1ldGFkYXRh6gIKQXNndDo6VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Asgt.Type.ModelFileReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType", "ModelFiles" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputType) }, null, null)
           }));
     }
     #endregion
@@ -91,6 +93,7 @@ namespace Asgt.Type {
       confidenceScores_ = other.confidenceScores_.Clone();
       inputType_ = other.inputType_;
       datasetType_ = other.datasetType_;
+      modelFiles_ = other.modelFiles_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -183,6 +186,17 @@ namespace Asgt.Type {
       }
     }
 
+    /// <summary>Field number for the "model_files" field.</summary>
+    public const int ModelFilesFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Asgt.Type.ModelFile> _repeated_modelFiles_codec
+        = pb::FieldCodec.ForMessage(82, global::Asgt.Type.ModelFile.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.ModelFile> modelFiles_ = new pbc::RepeatedField<global::Asgt.Type.ModelFile>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Asgt.Type.ModelFile> ModelFiles {
+      get { return modelFiles_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -205,6 +219,7 @@ namespace Asgt.Type {
       if(!confidenceScores_.Equals(other.confidenceScores_)) return false;
       if (InputType != other.InputType) return false;
       if (DatasetType != other.DatasetType) return false;
+      if(!modelFiles_.Equals(other.modelFiles_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -219,6 +234,7 @@ namespace Asgt.Type {
       hash ^= confidenceScores_.GetHashCode();
       if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) hash ^= InputType.GetHashCode();
       if (DatasetType.Length != 0) hash ^= DatasetType.GetHashCode();
+      hash ^= modelFiles_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -262,6 +278,7 @@ namespace Asgt.Type {
         output.WriteRawTag(74);
         output.WriteString(DatasetType);
       }
+      modelFiles_.WriteTo(output, _repeated_modelFiles_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -297,6 +314,7 @@ namespace Asgt.Type {
         output.WriteRawTag(74);
         output.WriteString(DatasetType);
       }
+      modelFiles_.WriteTo(ref output, _repeated_modelFiles_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -326,6 +344,7 @@ namespace Asgt.Type {
       if (DatasetType.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetType);
       }
+      size += modelFiles_.CalculateSize(_repeated_modelFiles_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -360,6 +379,7 @@ namespace Asgt.Type {
       if (other.DatasetType.Length != 0) {
         DatasetType = other.DatasetType;
       }
+      modelFiles_.Add(other.modelFiles_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -406,6 +426,10 @@ namespace Asgt.Type {
             DatasetType = input.ReadString();
             break;
           }
+          case 82: {
+            modelFiles_.AddEntriesFrom(input, _repeated_modelFiles_codec);
+            break;
+          }
         }
       }
     #endif
@@ -450,6 +474,10 @@ namespace Asgt.Type {
           }
           case 74: {
             DatasetType = input.ReadString();
+            break;
+          }
+          case 82: {
+            modelFiles_.AddEntriesFrom(ref input, _repeated_modelFiles_codec);
             break;
           }
         }
