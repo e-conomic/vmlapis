@@ -398,6 +398,14 @@ private static final long serialVersionUID = 0L;
      * <code>RECEIVER_VAT_NUMBER = 43;</code>
      */
     RECEIVER_VAT_NUMBER(43),
+    /**
+     * <pre>
+     * Purchase Lines
+     * </pre>
+     *
+     * <code>PURCHASE_LINES = 44;</code>
+     */
+    PURCHASE_LINES(44),
     UNRECOGNIZED(-1),
     ;
 
@@ -754,6 +762,14 @@ private static final long serialVersionUID = 0L;
      * <code>RECEIVER_VAT_NUMBER = 43;</code>
      */
     public static final int RECEIVER_VAT_NUMBER_VALUE = 43;
+    /**
+     * <pre>
+     * Purchase Lines
+     * </pre>
+     *
+     * <code>PURCHASE_LINES = 44;</code>
+     */
+    public static final int PURCHASE_LINES_VALUE = 44;
 
 
     public final int getNumber() {
@@ -824,6 +840,7 @@ private static final long serialVersionUID = 0L;
         case 41: return RECEIVER_COUNTRY_CODE;
         case 42: return RECEIVER_NAME;
         case 43: return RECEIVER_VAT_NUMBER;
+        case 44: return PURCHASE_LINES;
         default: return null;
       }
     }

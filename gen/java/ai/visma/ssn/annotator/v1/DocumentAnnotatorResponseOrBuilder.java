@@ -2035,4 +2035,68 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    */
   ai.visma.ssn.type.CandidateOrBuilder getReceiverVatNumberOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list of candidates, where each
+   * candidate is a single purchase lines. Each purchase line may have page number,
+   * code, description, quantity, item number, unit, total discount, percentage discount,
+   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+   * unit price excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> 
+      getPurchaseLinesList();
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list of candidates, where each
+   * candidate is a single purchase lines. Each purchase line may have page number,
+   * code, description, quantity, item number, unit, total discount, percentage discount,
+   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+   * unit price excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+   */
+  ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLines(int index);
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list of candidates, where each
+   * candidate is a single purchase lines. Each purchase line may have page number,
+   * code, description, quantity, item number, unit, total discount, percentage discount,
+   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+   * unit price excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+   */
+  int getPurchaseLinesCount();
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list of candidates, where each
+   * candidate is a single purchase lines. Each purchase line may have page number,
+   * code, description, quantity, item number, unit, total discount, percentage discount,
+   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+   * unit price excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> 
+      getPurchaseLinesOrBuilderList();
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list of candidates, where each
+   * candidate is a single purchase lines. Each purchase line may have page number,
+   * code, description, quantity, item number, unit, total discount, percentage discount,
+   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+   * unit price excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+   */
+  ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLinesOrBuilder(
+      int index);
 }

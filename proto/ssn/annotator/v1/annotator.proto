@@ -126,6 +126,8 @@ message Feature {
     RECEIVER_NAME = 42;
     // Receiver VAT number
     RECEIVER_VAT_NUMBER = 43;
+    // Purchase Lines
+    PURCHASE_LINES = 44;
   }
   // The feature type.
   Type type = 1;
@@ -134,13 +136,6 @@ message Feature {
   int32 max_results = 2;
   // The minimum confidence for predictions that the caller wants returned
   ssn.type.Confidence.Level min_confidence = 3;
-}
-message DocumentQuestionRequest {
-  Document document = 1;
-  repeated string question = 2;
-}
-message DocumentQuestionResponse {
-  repeated ssn.type.Candidate answer = 1;
 }
 
 message DocumentAnnotatorRequest {
@@ -278,6 +273,12 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.Candidate receiver_name = 43;
   // Equivalent of VAT number for receiver
   repeated ssn.type.Candidate receiver_vat_number = 44;
+  // Purchase lines for the document. This is a list of candidates, where each
+  // candidate is a single purchase lines. Each purchase line may have page number,
+  // code, description, quantity, item number, unit, total discount, percentage discount,
+  // total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+  // unit price excl vat
+  repeated ssn.type.PurchaseLineCandidate purchase_lines = 45;
 }
 
 message Document {
@@ -300,4 +301,12 @@ message DocumentSource {
   //    request (e.g. due to request throttling or DOS prevention).
   //
   string http_uri = 1;
+}
+
+message DocumentQuestionRequest {
+  Document document = 1;
+  repeated string question = 2;
+}
+message DocumentQuestionResponse {
+  repeated ssn.type.Candidate answer = 1;
 }

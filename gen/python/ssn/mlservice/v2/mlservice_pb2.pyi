@@ -204,3 +204,17 @@ class FeatureGenPredictRequest(_message.Message):
     feature_gen_request: FeatureGenRequest
     predict_request: PredictRequest
     def __init__(self, feature_gen_request: _Optional[_Union[FeatureGenRequest, _Mapping]] = ..., predict_request: _Optional[_Union[PredictRequest, _Mapping]] = ...) -> None: ...
+
+class PurchaseLinesRequest(_message.Message):
+    __slots__ = ["text_annotation", "image"]
+    TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
+    IMAGE_FIELD_NUMBER: _ClassVar[int]
+    text_annotation: _text_annotation_pb2.TextAnnotation
+    image: bytes
+    def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[bytes] = ...) -> None: ...
+
+class PurchaseLinesResponse(_message.Message):
+    __slots__ = ["purchase_lines"]
+    PURCHASE_LINES_FIELD_NUMBER: _ClassVar[int]
+    purchase_lines: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PurchaseLineCandidate]
+    def __init__(self, purchase_lines: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ...) -> None: ...

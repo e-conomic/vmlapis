@@ -556,27 +556,27 @@ public interface PredictResponseOrBuilder extends
       int index);
 
   /**
-   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
+   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
    */
-  java.util.List<ai.visma.ssn.type.LineCandidate> 
+  @java.lang.Deprecated java.util.List<ai.visma.ssn.type.LineCandidate> 
       getLinesList();
   /**
-   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
+   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
    */
-  ai.visma.ssn.type.LineCandidate getLines(int index);
+  @java.lang.Deprecated ai.visma.ssn.type.LineCandidate getLines(int index);
   /**
-   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
+   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
    */
-  int getLinesCount();
+  @java.lang.Deprecated int getLinesCount();
   /**
-   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
+   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
    */
-  java.util.List<? extends ai.visma.ssn.type.LineCandidateOrBuilder> 
+  @java.lang.Deprecated java.util.List<? extends ai.visma.ssn.type.LineCandidateOrBuilder> 
       getLinesOrBuilderList();
   /**
-   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
+   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
    */
-  ai.visma.ssn.type.LineCandidateOrBuilder getLinesOrBuilder(
+  @java.lang.Deprecated ai.visma.ssn.type.LineCandidateOrBuilder getLinesOrBuilder(
       int index);
 
   /**

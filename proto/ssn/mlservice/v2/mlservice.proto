@@ -100,7 +100,7 @@ message PredictResponse {
   repeated ssn.type.Candidate ocr_line_fi_payment_id = 20;
   repeated ssn.type.Candidate ocr_line_nl_payment_id = 21;
   repeated ssn.type.Candidate iban = 22;
-  repeated ssn.type.LineCandidate lines = 23;
+  repeated ssn.type.LineCandidate lines = 23 [deprecated = true];
   repeated ssn.type.Candidate bank_account_number = 24;
   repeated ssn.type.Candidate bank_registration_number = 25;
   repeated ssn.type.Candidate bic = 26;
@@ -124,4 +124,15 @@ message PredictResponse {
 message FeatureGenPredictRequest {
   FeatureGenRequest feature_gen_request = 1;
   PredictRequest predict_request = 2;
+}
+
+// Purchase Lines API
+
+message PurchaseLinesRequest {
+  ssn.type.TextAnnotation text_annotation = 1;
+  bytes image = 2;
+}
+
+message PurchaseLinesResponse {
+  repeated ssn.type.PurchaseLineCandidate purchase_lines = 1;
 }

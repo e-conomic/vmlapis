@@ -77,52 +77,7 @@ export namespace Feature {
     RECEIVER_COUNTRY_CODE = 41,
     RECEIVER_NAME = 42,
     RECEIVER_VAT_NUMBER = 43,
-  }
-}
-
-export class DocumentQuestionRequest extends jspb.Message {
-  getDocument(): Document | undefined;
-  setDocument(value?: Document): DocumentQuestionRequest;
-  hasDocument(): boolean;
-  clearDocument(): DocumentQuestionRequest;
-
-  getQuestionList(): Array<string>;
-  setQuestionList(value: Array<string>): DocumentQuestionRequest;
-  clearQuestionList(): DocumentQuestionRequest;
-  addQuestion(value: string, index?: number): DocumentQuestionRequest;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): DocumentQuestionRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: DocumentQuestionRequest): DocumentQuestionRequest.AsObject;
-  static serializeBinaryToWriter(message: DocumentQuestionRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): DocumentQuestionRequest;
-  static deserializeBinaryFromReader(message: DocumentQuestionRequest, reader: jspb.BinaryReader): DocumentQuestionRequest;
-}
-
-export namespace DocumentQuestionRequest {
-  export type AsObject = {
-    document?: Document.AsObject,
-    questionList: Array<string>,
-  }
-}
-
-export class DocumentQuestionResponse extends jspb.Message {
-  getAnswerList(): Array<ssn_type_candidate_pb.Candidate>;
-  setAnswerList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentQuestionResponse;
-  clearAnswerList(): DocumentQuestionResponse;
-  addAnswer(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): DocumentQuestionResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: DocumentQuestionResponse): DocumentQuestionResponse.AsObject;
-  static serializeBinaryToWriter(message: DocumentQuestionResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): DocumentQuestionResponse;
-  static deserializeBinaryFromReader(message: DocumentQuestionResponse, reader: jspb.BinaryReader): DocumentQuestionResponse;
-}
-
-export namespace DocumentQuestionResponse {
-  export type AsObject = {
-    answerList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    PURCHASE_LINES = 44,
   }
 }
 
@@ -383,6 +338,11 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearReceiverVatNumberList(): DocumentAnnotatorResponse;
   addReceiverVatNumber(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
+  getPurchaseLinesList(): Array<ssn_type_candidate_pb.PurchaseLineCandidate>;
+  setPurchaseLinesList(value: Array<ssn_type_candidate_pb.PurchaseLineCandidate>): DocumentAnnotatorResponse;
+  clearPurchaseLinesList(): DocumentAnnotatorResponse;
+  addPurchaseLines(value?: ssn_type_candidate_pb.PurchaseLineCandidate, index?: number): ssn_type_candidate_pb.PurchaseLineCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -437,6 +397,7 @@ export namespace DocumentAnnotatorResponse {
     receiverCountryCodeList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     receiverNameList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     receiverVatNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
   }
 }
 
@@ -481,6 +442,52 @@ export class DocumentSource extends jspb.Message {
 export namespace DocumentSource {
   export type AsObject = {
     httpUri: string,
+  }
+}
+
+export class DocumentQuestionRequest extends jspb.Message {
+  getDocument(): Document | undefined;
+  setDocument(value?: Document): DocumentQuestionRequest;
+  hasDocument(): boolean;
+  clearDocument(): DocumentQuestionRequest;
+
+  getQuestionList(): Array<string>;
+  setQuestionList(value: Array<string>): DocumentQuestionRequest;
+  clearQuestionList(): DocumentQuestionRequest;
+  addQuestion(value: string, index?: number): DocumentQuestionRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DocumentQuestionRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: DocumentQuestionRequest): DocumentQuestionRequest.AsObject;
+  static serializeBinaryToWriter(message: DocumentQuestionRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DocumentQuestionRequest;
+  static deserializeBinaryFromReader(message: DocumentQuestionRequest, reader: jspb.BinaryReader): DocumentQuestionRequest;
+}
+
+export namespace DocumentQuestionRequest {
+  export type AsObject = {
+    document?: Document.AsObject,
+    questionList: Array<string>,
+  }
+}
+
+export class DocumentQuestionResponse extends jspb.Message {
+  getAnswerList(): Array<ssn_type_candidate_pb.Candidate>;
+  setAnswerList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentQuestionResponse;
+  clearAnswerList(): DocumentQuestionResponse;
+  addAnswer(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DocumentQuestionResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: DocumentQuestionResponse): DocumentQuestionResponse.AsObject;
+  static serializeBinaryToWriter(message: DocumentQuestionResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DocumentQuestionResponse;
+  static deserializeBinaryFromReader(message: DocumentQuestionResponse, reader: jspb.BinaryReader): DocumentQuestionResponse;
+}
+
+export namespace DocumentQuestionResponse {
+  export type AsObject = {
+    answerList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
   }
 }
 
