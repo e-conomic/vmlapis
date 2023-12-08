@@ -1009,39 +1009,39 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ssn.type.LineCandidate> lines_;
   /**
-   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
    */
   @java.lang.Override
-  @java.lang.Deprecated public java.util.List<ai.visma.ssn.type.LineCandidate> getLinesList() {
+  public java.util.List<ai.visma.ssn.type.LineCandidate> getLinesList() {
     return lines_;
   }
   /**
-   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
    */
   @java.lang.Override
-  @java.lang.Deprecated public java.util.List<? extends ai.visma.ssn.type.LineCandidateOrBuilder> 
+  public java.util.List<? extends ai.visma.ssn.type.LineCandidateOrBuilder> 
       getLinesOrBuilderList() {
     return lines_;
   }
   /**
-   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
    */
   @java.lang.Override
-  @java.lang.Deprecated public int getLinesCount() {
+  public int getLinesCount() {
     return lines_.size();
   }
   /**
-   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
    */
   @java.lang.Override
-  @java.lang.Deprecated public ai.visma.ssn.type.LineCandidate getLines(int index) {
+  public ai.visma.ssn.type.LineCandidate getLines(int index) {
     return lines_.get(index);
   }
   /**
-   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+   * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
    */
   @java.lang.Override
-  @java.lang.Deprecated public ai.visma.ssn.type.LineCandidateOrBuilder getLinesOrBuilder(
+  public ai.visma.ssn.type.LineCandidateOrBuilder getLinesOrBuilder(
       int index) {
     return lines_.get(index);
   }
@@ -10254,9 +10254,9 @@ private static final long serialVersionUID = 0L;
         ai.visma.ssn.type.LineCandidate, ai.visma.ssn.type.LineCandidate.Builder, ai.visma.ssn.type.LineCandidateOrBuilder> linesBuilder_;
 
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public java.util.List<ai.visma.ssn.type.LineCandidate> getLinesList() {
+    public java.util.List<ai.visma.ssn.type.LineCandidate> getLinesList() {
       if (linesBuilder_ == null) {
         return java.util.Collections.unmodifiableList(lines_);
       } else {
@@ -10264,9 +10264,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public int getLinesCount() {
+    public int getLinesCount() {
       if (linesBuilder_ == null) {
         return lines_.size();
       } else {
@@ -10274,9 +10274,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public ai.visma.ssn.type.LineCandidate getLines(int index) {
+    public ai.visma.ssn.type.LineCandidate getLines(int index) {
       if (linesBuilder_ == null) {
         return lines_.get(index);
       } else {
@@ -10284,9 +10284,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public Builder setLines(
+    public Builder setLines(
         int index, ai.visma.ssn.type.LineCandidate value) {
       if (linesBuilder_ == null) {
         if (value == null) {
@@ -10301,9 +10301,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public Builder setLines(
+    public Builder setLines(
         int index, ai.visma.ssn.type.LineCandidate.Builder builderForValue) {
       if (linesBuilder_ == null) {
         ensureLinesIsMutable();
@@ -10315,9 +10315,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public Builder addLines(ai.visma.ssn.type.LineCandidate value) {
+    public Builder addLines(ai.visma.ssn.type.LineCandidate value) {
       if (linesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
@@ -10331,9 +10331,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public Builder addLines(
+    public Builder addLines(
         int index, ai.visma.ssn.type.LineCandidate value) {
       if (linesBuilder_ == null) {
         if (value == null) {
@@ -10348,9 +10348,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public Builder addLines(
+    public Builder addLines(
         ai.visma.ssn.type.LineCandidate.Builder builderForValue) {
       if (linesBuilder_ == null) {
         ensureLinesIsMutable();
@@ -10362,9 +10362,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public Builder addLines(
+    public Builder addLines(
         int index, ai.visma.ssn.type.LineCandidate.Builder builderForValue) {
       if (linesBuilder_ == null) {
         ensureLinesIsMutable();
@@ -10376,9 +10376,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public Builder addAllLines(
+    public Builder addAllLines(
         java.lang.Iterable<? extends ai.visma.ssn.type.LineCandidate> values) {
       if (linesBuilder_ == null) {
         ensureLinesIsMutable();
@@ -10391,9 +10391,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public Builder clearLines() {
+    public Builder clearLines() {
       if (linesBuilder_ == null) {
         lines_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00400000);
@@ -10404,9 +10404,9 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public Builder removeLines(int index) {
+    public Builder removeLines(int index) {
       if (linesBuilder_ == null) {
         ensureLinesIsMutable();
         lines_.remove(index);
@@ -10417,16 +10417,16 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public ai.visma.ssn.type.LineCandidate.Builder getLinesBuilder(
+    public ai.visma.ssn.type.LineCandidate.Builder getLinesBuilder(
         int index) {
       return getLinesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public ai.visma.ssn.type.LineCandidateOrBuilder getLinesOrBuilder(
+    public ai.visma.ssn.type.LineCandidateOrBuilder getLinesOrBuilder(
         int index) {
       if (linesBuilder_ == null) {
         return lines_.get(index);  } else {
@@ -10434,9 +10434,9 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public java.util.List<? extends ai.visma.ssn.type.LineCandidateOrBuilder> 
+    public java.util.List<? extends ai.visma.ssn.type.LineCandidateOrBuilder> 
          getLinesOrBuilderList() {
       if (linesBuilder_ != null) {
         return linesBuilder_.getMessageOrBuilderList();
@@ -10445,24 +10445,24 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public ai.visma.ssn.type.LineCandidate.Builder addLinesBuilder() {
+    public ai.visma.ssn.type.LineCandidate.Builder addLinesBuilder() {
       return getLinesFieldBuilder().addBuilder(
           ai.visma.ssn.type.LineCandidate.getDefaultInstance());
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public ai.visma.ssn.type.LineCandidate.Builder addLinesBuilder(
+    public ai.visma.ssn.type.LineCandidate.Builder addLinesBuilder(
         int index) {
       return getLinesFieldBuilder().addBuilder(
           index, ai.visma.ssn.type.LineCandidate.getDefaultInstance());
     }
     /**
-     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines", deprecated = true];</code>
+     * <code>repeated .ssn.type.LineCandidate lines = 23 [json_name = "lines"];</code>
      */
-    @java.lang.Deprecated public java.util.List<ai.visma.ssn.type.LineCandidate.Builder> 
+    public java.util.List<ai.visma.ssn.type.LineCandidate.Builder> 
          getLinesBuilderList() {
       return getLinesFieldBuilder().getBuilderList();
     }
