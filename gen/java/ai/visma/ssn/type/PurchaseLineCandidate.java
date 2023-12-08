@@ -302,7 +302,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TOTAL_DISCOUNT_FIELD_NUMBER = 12;
+  public static final int TOTAL_DISCOUNT_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
   private volatile java.lang.Object totalDiscount_ = "";
   /**
@@ -310,7 +310,7 @@ private static final long serialVersionUID = 0L;
    * Total discount is the total discount of the line
    * </pre>
    *
-   * <code>string total_discount = 12 [json_name = "totalDiscount"];</code>
+   * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
    * @return The totalDiscount.
    */
   @java.lang.Override
@@ -331,7 +331,7 @@ private static final long serialVersionUID = 0L;
    * Total discount is the total discount of the line
    * </pre>
    *
-   * <code>string total_discount = 12 [json_name = "totalDiscount"];</code>
+   * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
    * @return The bytes for totalDiscount.
    */
   @java.lang.Override
@@ -349,7 +349,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PERCENTAGE_DISCOUNT_FIELD_NUMBER = 13;
+  public static final int PERCENTAGE_DISCOUNT_FIELD_NUMBER = 8;
   @SuppressWarnings("serial")
   private volatile java.lang.Object percentageDiscount_ = "";
   /**
@@ -357,7 +357,7 @@ private static final long serialVersionUID = 0L;
    * Percentage discount is the percentage discount of the line
    * </pre>
    *
-   * <code>string percentage_discount = 13 [json_name = "percentageDiscount"];</code>
+   * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
    * @return The percentageDiscount.
    */
   @java.lang.Override
@@ -378,7 +378,7 @@ private static final long serialVersionUID = 0L;
    * Percentage discount is the percentage discount of the line
    * </pre>
    *
-   * <code>string percentage_discount = 13 [json_name = "percentageDiscount"];</code>
+   * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
    * @return The bytes for percentageDiscount.
    */
   @java.lang.Override
@@ -396,7 +396,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 14;
+  public static final int TOTAL_INCL_VAT_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
   private volatile java.lang.Object totalInclVat_ = "";
   /**
@@ -404,7 +404,7 @@ private static final long serialVersionUID = 0L;
    * Total incl vat is the total price of the line including vat
    * </pre>
    *
-   * <code>string total_incl_vat = 14 [json_name = "totalInclVat"];</code>
+   * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
    * @return The totalInclVat.
    */
   @java.lang.Override
@@ -425,7 +425,7 @@ private static final long serialVersionUID = 0L;
    * Total incl vat is the total price of the line including vat
    * </pre>
    *
-   * <code>string total_incl_vat = 14 [json_name = "totalInclVat"];</code>
+   * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
    * @return The bytes for totalInclVat.
    */
   @java.lang.Override
@@ -443,7 +443,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 15;
+  public static final int TOTAL_EXCL_VAT_FIELD_NUMBER = 10;
   @SuppressWarnings("serial")
   private volatile java.lang.Object totalExclVat_ = "";
   /**
@@ -451,7 +451,7 @@ private static final long serialVersionUID = 0L;
    * Total excl vat is the total price of the line excluding vat
    * </pre>
    *
-   * <code>string total_excl_vat = 15 [json_name = "totalExclVat"];</code>
+   * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
    * @return The totalExclVat.
    */
   @java.lang.Override
@@ -472,7 +472,7 @@ private static final long serialVersionUID = 0L;
    * Total excl vat is the total price of the line excluding vat
    * </pre>
    *
-   * <code>string total_excl_vat = 15 [json_name = "totalExclVat"];</code>
+   * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
    * @return The bytes for totalExclVat.
    */
   @java.lang.Override
@@ -490,7 +490,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int TOTAL_VAT_FIELD_NUMBER = 16;
+  public static final int TOTAL_VAT_FIELD_NUMBER = 11;
   @SuppressWarnings("serial")
   private volatile java.lang.Object totalVat_ = "";
   /**
@@ -498,7 +498,7 @@ private static final long serialVersionUID = 0L;
    * Total vat is the total vat of the line
    * </pre>
    *
-   * <code>string total_vat = 16 [json_name = "totalVat"];</code>
+   * <code>string total_vat = 11 [json_name = "totalVat"];</code>
    * @return The totalVat.
    */
   @java.lang.Override
@@ -519,7 +519,7 @@ private static final long serialVersionUID = 0L;
    * Total vat is the total vat of the line
    * </pre>
    *
-   * <code>string total_vat = 16 [json_name = "totalVat"];</code>
+   * <code>string total_vat = 11 [json_name = "totalVat"];</code>
    * @return The bytes for totalVat.
    */
   @java.lang.Override
@@ -537,7 +537,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int PERCENTAGE_VAT_FIELD_NUMBER = 17;
+  public static final int PERCENTAGE_VAT_FIELD_NUMBER = 12;
   @SuppressWarnings("serial")
   private volatile java.lang.Object percentageVat_ = "";
   /**
@@ -545,7 +545,7 @@ private static final long serialVersionUID = 0L;
    * Percentage vat is the percentage vat of the line
    * </pre>
    *
-   * <code>string percentage_vat = 17 [json_name = "percentageVat"];</code>
+   * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
    * @return The percentageVat.
    */
   @java.lang.Override
@@ -566,7 +566,7 @@ private static final long serialVersionUID = 0L;
    * Percentage vat is the percentage vat of the line
    * </pre>
    *
-   * <code>string percentage_vat = 17 [json_name = "percentageVat"];</code>
+   * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
    * @return The bytes for percentageVat.
    */
   @java.lang.Override
@@ -584,7 +584,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int UNIT_PRICE_INCL_VAT_FIELD_NUMBER = 18;
+  public static final int UNIT_PRICE_INCL_VAT_FIELD_NUMBER = 13;
   @SuppressWarnings("serial")
   private volatile java.lang.Object unitPriceInclVat_ = "";
   /**
@@ -592,7 +592,7 @@ private static final long serialVersionUID = 0L;
    * Unit price incl vat is the unit price of the line including vat
    * </pre>
    *
-   * <code>string unit_price_incl_vat = 18 [json_name = "unitPriceInclVat"];</code>
+   * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
    * @return The unitPriceInclVat.
    */
   @java.lang.Override
@@ -613,7 +613,7 @@ private static final long serialVersionUID = 0L;
    * Unit price incl vat is the unit price of the line including vat
    * </pre>
    *
-   * <code>string unit_price_incl_vat = 18 [json_name = "unitPriceInclVat"];</code>
+   * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
    * @return The bytes for unitPriceInclVat.
    */
   @java.lang.Override
@@ -631,7 +631,7 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int UNIT_PRICE_EXCL_VAT_FIELD_NUMBER = 19;
+  public static final int UNIT_PRICE_EXCL_VAT_FIELD_NUMBER = 14;
   @SuppressWarnings("serial")
   private volatile java.lang.Object unitPriceExclVat_ = "";
   /**
@@ -639,7 +639,7 @@ private static final long serialVersionUID = 0L;
    * Unit price excl vat is the unit price of the line excluding vat
    * </pre>
    *
-   * <code>string unit_price_excl_vat = 19 [json_name = "unitPriceExclVat"];</code>
+   * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
    * @return The unitPriceExclVat.
    */
   @java.lang.Override
@@ -660,7 +660,7 @@ private static final long serialVersionUID = 0L;
    * Unit price excl vat is the unit price of the line excluding vat
    * </pre>
    *
-   * <code>string unit_price_excl_vat = 19 [json_name = "unitPriceExclVat"];</code>
+   * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
    * @return The bytes for unitPriceExclVat.
    */
   @java.lang.Override
@@ -711,28 +711,28 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, unit_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalDiscount_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, totalDiscount_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, totalDiscount_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(percentageDiscount_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, percentageDiscount_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, percentageDiscount_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalInclVat_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, totalInclVat_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, totalInclVat_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalExclVat_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, totalExclVat_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 10, totalExclVat_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalVat_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, totalVat_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, totalVat_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(percentageVat_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 17, percentageVat_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, percentageVat_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unitPriceInclVat_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 18, unitPriceInclVat_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, unitPriceInclVat_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unitPriceExclVat_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 19, unitPriceExclVat_);
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, unitPriceExclVat_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -763,28 +763,28 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, unit_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalDiscount_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, totalDiscount_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, totalDiscount_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(percentageDiscount_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, percentageDiscount_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, percentageDiscount_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalInclVat_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, totalInclVat_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, totalInclVat_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalExclVat_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, totalExclVat_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(10, totalExclVat_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(totalVat_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, totalVat_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, totalVat_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(percentageVat_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, percentageVat_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(12, percentageVat_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unitPriceInclVat_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, unitPriceInclVat_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, unitPriceInclVat_);
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unitPriceExclVat_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(19, unitPriceExclVat_);
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, unitPriceExclVat_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1258,46 +1258,46 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000020;
               break;
             } // case 50
-            case 98: {
+            case 58: {
               totalDiscount_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000040;
               break;
-            } // case 98
-            case 106: {
+            } // case 58
+            case 66: {
               percentageDiscount_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000080;
               break;
-            } // case 106
-            case 114: {
+            } // case 66
+            case 74: {
               totalInclVat_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000100;
               break;
-            } // case 114
-            case 122: {
+            } // case 74
+            case 82: {
               totalExclVat_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000200;
               break;
-            } // case 122
-            case 130: {
+            } // case 82
+            case 90: {
               totalVat_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000400;
               break;
-            } // case 130
-            case 138: {
+            } // case 90
+            case 98: {
               percentageVat_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000800;
               break;
-            } // case 138
-            case 146: {
+            } // case 98
+            case 106: {
               unitPriceInclVat_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00001000;
               break;
-            } // case 146
-            case 154: {
+            } // case 106
+            case 114: {
               unitPriceExclVat_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00002000;
               break;
-            } // case 154
+            } // case 114
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1828,7 +1828,7 @@ private static final long serialVersionUID = 0L;
      * Total discount is the total discount of the line
      * </pre>
      *
-     * <code>string total_discount = 12 [json_name = "totalDiscount"];</code>
+     * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
      * @return The totalDiscount.
      */
     public java.lang.String getTotalDiscount() {
@@ -1848,7 +1848,7 @@ private static final long serialVersionUID = 0L;
      * Total discount is the total discount of the line
      * </pre>
      *
-     * <code>string total_discount = 12 [json_name = "totalDiscount"];</code>
+     * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
      * @return The bytes for totalDiscount.
      */
     public com.google.protobuf.ByteString
@@ -1869,7 +1869,7 @@ private static final long serialVersionUID = 0L;
      * Total discount is the total discount of the line
      * </pre>
      *
-     * <code>string total_discount = 12 [json_name = "totalDiscount"];</code>
+     * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
      * @param value The totalDiscount to set.
      * @return This builder for chaining.
      */
@@ -1886,7 +1886,7 @@ private static final long serialVersionUID = 0L;
      * Total discount is the total discount of the line
      * </pre>
      *
-     * <code>string total_discount = 12 [json_name = "totalDiscount"];</code>
+     * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTotalDiscount() {
@@ -1900,7 +1900,7 @@ private static final long serialVersionUID = 0L;
      * Total discount is the total discount of the line
      * </pre>
      *
-     * <code>string total_discount = 12 [json_name = "totalDiscount"];</code>
+     * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
      * @param value The bytes for totalDiscount to set.
      * @return This builder for chaining.
      */
@@ -1920,7 +1920,7 @@ private static final long serialVersionUID = 0L;
      * Percentage discount is the percentage discount of the line
      * </pre>
      *
-     * <code>string percentage_discount = 13 [json_name = "percentageDiscount"];</code>
+     * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
      * @return The percentageDiscount.
      */
     public java.lang.String getPercentageDiscount() {
@@ -1940,7 +1940,7 @@ private static final long serialVersionUID = 0L;
      * Percentage discount is the percentage discount of the line
      * </pre>
      *
-     * <code>string percentage_discount = 13 [json_name = "percentageDiscount"];</code>
+     * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
      * @return The bytes for percentageDiscount.
      */
     public com.google.protobuf.ByteString
@@ -1961,7 +1961,7 @@ private static final long serialVersionUID = 0L;
      * Percentage discount is the percentage discount of the line
      * </pre>
      *
-     * <code>string percentage_discount = 13 [json_name = "percentageDiscount"];</code>
+     * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
      * @param value The percentageDiscount to set.
      * @return This builder for chaining.
      */
@@ -1978,7 +1978,7 @@ private static final long serialVersionUID = 0L;
      * Percentage discount is the percentage discount of the line
      * </pre>
      *
-     * <code>string percentage_discount = 13 [json_name = "percentageDiscount"];</code>
+     * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPercentageDiscount() {
@@ -1992,7 +1992,7 @@ private static final long serialVersionUID = 0L;
      * Percentage discount is the percentage discount of the line
      * </pre>
      *
-     * <code>string percentage_discount = 13 [json_name = "percentageDiscount"];</code>
+     * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
      * @param value The bytes for percentageDiscount to set.
      * @return This builder for chaining.
      */
@@ -2012,7 +2012,7 @@ private static final long serialVersionUID = 0L;
      * Total incl vat is the total price of the line including vat
      * </pre>
      *
-     * <code>string total_incl_vat = 14 [json_name = "totalInclVat"];</code>
+     * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
      * @return The totalInclVat.
      */
     public java.lang.String getTotalInclVat() {
@@ -2032,7 +2032,7 @@ private static final long serialVersionUID = 0L;
      * Total incl vat is the total price of the line including vat
      * </pre>
      *
-     * <code>string total_incl_vat = 14 [json_name = "totalInclVat"];</code>
+     * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
      * @return The bytes for totalInclVat.
      */
     public com.google.protobuf.ByteString
@@ -2053,7 +2053,7 @@ private static final long serialVersionUID = 0L;
      * Total incl vat is the total price of the line including vat
      * </pre>
      *
-     * <code>string total_incl_vat = 14 [json_name = "totalInclVat"];</code>
+     * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
      * @param value The totalInclVat to set.
      * @return This builder for chaining.
      */
@@ -2070,7 +2070,7 @@ private static final long serialVersionUID = 0L;
      * Total incl vat is the total price of the line including vat
      * </pre>
      *
-     * <code>string total_incl_vat = 14 [json_name = "totalInclVat"];</code>
+     * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTotalInclVat() {
@@ -2084,7 +2084,7 @@ private static final long serialVersionUID = 0L;
      * Total incl vat is the total price of the line including vat
      * </pre>
      *
-     * <code>string total_incl_vat = 14 [json_name = "totalInclVat"];</code>
+     * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
      * @param value The bytes for totalInclVat to set.
      * @return This builder for chaining.
      */
@@ -2104,7 +2104,7 @@ private static final long serialVersionUID = 0L;
      * Total excl vat is the total price of the line excluding vat
      * </pre>
      *
-     * <code>string total_excl_vat = 15 [json_name = "totalExclVat"];</code>
+     * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
      * @return The totalExclVat.
      */
     public java.lang.String getTotalExclVat() {
@@ -2124,7 +2124,7 @@ private static final long serialVersionUID = 0L;
      * Total excl vat is the total price of the line excluding vat
      * </pre>
      *
-     * <code>string total_excl_vat = 15 [json_name = "totalExclVat"];</code>
+     * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
      * @return The bytes for totalExclVat.
      */
     public com.google.protobuf.ByteString
@@ -2145,7 +2145,7 @@ private static final long serialVersionUID = 0L;
      * Total excl vat is the total price of the line excluding vat
      * </pre>
      *
-     * <code>string total_excl_vat = 15 [json_name = "totalExclVat"];</code>
+     * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
      * @param value The totalExclVat to set.
      * @return This builder for chaining.
      */
@@ -2162,7 +2162,7 @@ private static final long serialVersionUID = 0L;
      * Total excl vat is the total price of the line excluding vat
      * </pre>
      *
-     * <code>string total_excl_vat = 15 [json_name = "totalExclVat"];</code>
+     * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTotalExclVat() {
@@ -2176,7 +2176,7 @@ private static final long serialVersionUID = 0L;
      * Total excl vat is the total price of the line excluding vat
      * </pre>
      *
-     * <code>string total_excl_vat = 15 [json_name = "totalExclVat"];</code>
+     * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
      * @param value The bytes for totalExclVat to set.
      * @return This builder for chaining.
      */
@@ -2196,7 +2196,7 @@ private static final long serialVersionUID = 0L;
      * Total vat is the total vat of the line
      * </pre>
      *
-     * <code>string total_vat = 16 [json_name = "totalVat"];</code>
+     * <code>string total_vat = 11 [json_name = "totalVat"];</code>
      * @return The totalVat.
      */
     public java.lang.String getTotalVat() {
@@ -2216,7 +2216,7 @@ private static final long serialVersionUID = 0L;
      * Total vat is the total vat of the line
      * </pre>
      *
-     * <code>string total_vat = 16 [json_name = "totalVat"];</code>
+     * <code>string total_vat = 11 [json_name = "totalVat"];</code>
      * @return The bytes for totalVat.
      */
     public com.google.protobuf.ByteString
@@ -2237,7 +2237,7 @@ private static final long serialVersionUID = 0L;
      * Total vat is the total vat of the line
      * </pre>
      *
-     * <code>string total_vat = 16 [json_name = "totalVat"];</code>
+     * <code>string total_vat = 11 [json_name = "totalVat"];</code>
      * @param value The totalVat to set.
      * @return This builder for chaining.
      */
@@ -2254,7 +2254,7 @@ private static final long serialVersionUID = 0L;
      * Total vat is the total vat of the line
      * </pre>
      *
-     * <code>string total_vat = 16 [json_name = "totalVat"];</code>
+     * <code>string total_vat = 11 [json_name = "totalVat"];</code>
      * @return This builder for chaining.
      */
     public Builder clearTotalVat() {
@@ -2268,7 +2268,7 @@ private static final long serialVersionUID = 0L;
      * Total vat is the total vat of the line
      * </pre>
      *
-     * <code>string total_vat = 16 [json_name = "totalVat"];</code>
+     * <code>string total_vat = 11 [json_name = "totalVat"];</code>
      * @param value The bytes for totalVat to set.
      * @return This builder for chaining.
      */
@@ -2288,7 +2288,7 @@ private static final long serialVersionUID = 0L;
      * Percentage vat is the percentage vat of the line
      * </pre>
      *
-     * <code>string percentage_vat = 17 [json_name = "percentageVat"];</code>
+     * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
      * @return The percentageVat.
      */
     public java.lang.String getPercentageVat() {
@@ -2308,7 +2308,7 @@ private static final long serialVersionUID = 0L;
      * Percentage vat is the percentage vat of the line
      * </pre>
      *
-     * <code>string percentage_vat = 17 [json_name = "percentageVat"];</code>
+     * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
      * @return The bytes for percentageVat.
      */
     public com.google.protobuf.ByteString
@@ -2329,7 +2329,7 @@ private static final long serialVersionUID = 0L;
      * Percentage vat is the percentage vat of the line
      * </pre>
      *
-     * <code>string percentage_vat = 17 [json_name = "percentageVat"];</code>
+     * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
      * @param value The percentageVat to set.
      * @return This builder for chaining.
      */
@@ -2346,7 +2346,7 @@ private static final long serialVersionUID = 0L;
      * Percentage vat is the percentage vat of the line
      * </pre>
      *
-     * <code>string percentage_vat = 17 [json_name = "percentageVat"];</code>
+     * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
      * @return This builder for chaining.
      */
     public Builder clearPercentageVat() {
@@ -2360,7 +2360,7 @@ private static final long serialVersionUID = 0L;
      * Percentage vat is the percentage vat of the line
      * </pre>
      *
-     * <code>string percentage_vat = 17 [json_name = "percentageVat"];</code>
+     * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
      * @param value The bytes for percentageVat to set.
      * @return This builder for chaining.
      */
@@ -2380,7 +2380,7 @@ private static final long serialVersionUID = 0L;
      * Unit price incl vat is the unit price of the line including vat
      * </pre>
      *
-     * <code>string unit_price_incl_vat = 18 [json_name = "unitPriceInclVat"];</code>
+     * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
      * @return The unitPriceInclVat.
      */
     public java.lang.String getUnitPriceInclVat() {
@@ -2400,7 +2400,7 @@ private static final long serialVersionUID = 0L;
      * Unit price incl vat is the unit price of the line including vat
      * </pre>
      *
-     * <code>string unit_price_incl_vat = 18 [json_name = "unitPriceInclVat"];</code>
+     * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
      * @return The bytes for unitPriceInclVat.
      */
     public com.google.protobuf.ByteString
@@ -2421,7 +2421,7 @@ private static final long serialVersionUID = 0L;
      * Unit price incl vat is the unit price of the line including vat
      * </pre>
      *
-     * <code>string unit_price_incl_vat = 18 [json_name = "unitPriceInclVat"];</code>
+     * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
      * @param value The unitPriceInclVat to set.
      * @return This builder for chaining.
      */
@@ -2438,7 +2438,7 @@ private static final long serialVersionUID = 0L;
      * Unit price incl vat is the unit price of the line including vat
      * </pre>
      *
-     * <code>string unit_price_incl_vat = 18 [json_name = "unitPriceInclVat"];</code>
+     * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
      * @return This builder for chaining.
      */
     public Builder clearUnitPriceInclVat() {
@@ -2452,7 +2452,7 @@ private static final long serialVersionUID = 0L;
      * Unit price incl vat is the unit price of the line including vat
      * </pre>
      *
-     * <code>string unit_price_incl_vat = 18 [json_name = "unitPriceInclVat"];</code>
+     * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
      * @param value The bytes for unitPriceInclVat to set.
      * @return This builder for chaining.
      */
@@ -2472,7 +2472,7 @@ private static final long serialVersionUID = 0L;
      * Unit price excl vat is the unit price of the line excluding vat
      * </pre>
      *
-     * <code>string unit_price_excl_vat = 19 [json_name = "unitPriceExclVat"];</code>
+     * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
      * @return The unitPriceExclVat.
      */
     public java.lang.String getUnitPriceExclVat() {
@@ -2492,7 +2492,7 @@ private static final long serialVersionUID = 0L;
      * Unit price excl vat is the unit price of the line excluding vat
      * </pre>
      *
-     * <code>string unit_price_excl_vat = 19 [json_name = "unitPriceExclVat"];</code>
+     * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
      * @return The bytes for unitPriceExclVat.
      */
     public com.google.protobuf.ByteString
@@ -2513,7 +2513,7 @@ private static final long serialVersionUID = 0L;
      * Unit price excl vat is the unit price of the line excluding vat
      * </pre>
      *
-     * <code>string unit_price_excl_vat = 19 [json_name = "unitPriceExclVat"];</code>
+     * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
      * @param value The unitPriceExclVat to set.
      * @return This builder for chaining.
      */
@@ -2530,7 +2530,7 @@ private static final long serialVersionUID = 0L;
      * Unit price excl vat is the unit price of the line excluding vat
      * </pre>
      *
-     * <code>string unit_price_excl_vat = 19 [json_name = "unitPriceExclVat"];</code>
+     * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
      * @return This builder for chaining.
      */
     public Builder clearUnitPriceExclVat() {
@@ -2544,7 +2544,7 @@ private static final long serialVersionUID = 0L;
      * Unit price excl vat is the unit price of the line excluding vat
      * </pre>
      *
-     * <code>string unit_price_excl_vat = 19 [json_name = "unitPriceExclVat"];</code>
+     * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
      * @param value The bytes for unitPriceExclVat to set.
      * @return This builder for chaining.
      */

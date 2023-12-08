@@ -46,14 +46,14 @@ namespace Ssn.Type {
             "CHBhZ2VfcmVmGAEgASgNUgdwYWdlUmVmEhIKBGNvZGUYAiABKAlSBGNvZGUS",
             "IAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEhoKCHF1YW50aXR5",
             "GAQgASgJUghxdWFudGl0eRIfCgtpdGVtX251bWJlchgFIAEoCVIKaXRlbU51",
-            "bWJlchISCgR1bml0GAYgASgJUgR1bml0EiUKDnRvdGFsX2Rpc2NvdW50GAwg",
-            "ASgJUg10b3RhbERpc2NvdW50Ei8KE3BlcmNlbnRhZ2VfZGlzY291bnQYDSAB",
-            "KAlSEnBlcmNlbnRhZ2VEaXNjb3VudBIkCg50b3RhbF9pbmNsX3ZhdBgOIAEo",
-            "CVIMdG90YWxJbmNsVmF0EiQKDnRvdGFsX2V4Y2xfdmF0GA8gASgJUgx0b3Rh",
-            "bEV4Y2xWYXQSGwoJdG90YWxfdmF0GBAgASgJUgh0b3RhbFZhdBIlCg5wZXJj",
-            "ZW50YWdlX3ZhdBgRIAEoCVINcGVyY2VudGFnZVZhdBItChN1bml0X3ByaWNl",
-            "X2luY2xfdmF0GBIgASgJUhB1bml0UHJpY2VJbmNsVmF0Ei0KE3VuaXRfcHJp",
-            "Y2VfZXhjbF92YXQYEyABKAlSEHVuaXRQcmljZUV4Y2xWYXRCmgEKEWFpLnZp",
+            "bWJlchISCgR1bml0GAYgASgJUgR1bml0EiUKDnRvdGFsX2Rpc2NvdW50GAcg",
+            "ASgJUg10b3RhbERpc2NvdW50Ei8KE3BlcmNlbnRhZ2VfZGlzY291bnQYCCAB",
+            "KAlSEnBlcmNlbnRhZ2VEaXNjb3VudBIkCg50b3RhbF9pbmNsX3ZhdBgJIAEo",
+            "CVIMdG90YWxJbmNsVmF0EiQKDnRvdGFsX2V4Y2xfdmF0GAogASgJUgx0b3Rh",
+            "bEV4Y2xWYXQSGwoJdG90YWxfdmF0GAsgASgJUgh0b3RhbFZhdBIlCg5wZXJj",
+            "ZW50YWdlX3ZhdBgMIAEoCVINcGVyY2VudGFnZVZhdBItChN1bml0X3ByaWNl",
+            "X2luY2xfdmF0GA0gASgJUhB1bml0UHJpY2VJbmNsVmF0Ei0KE3VuaXRfcHJp",
+            "Y2VfZXhjbF92YXQYDiABKAlSEHVuaXRQcmljZUV4Y2xWYXRCmgEKEWFpLnZp",
             "c21hLnNzbi50eXBlQg5DYW5kaWRhdGVQcm90b1ABWjRnaXRodWIuY29tL2Ut",
             "Y29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vdHlwZTtzc250eXBlogIDU1RY",
             "qgIIU3NuLlR5cGXKAghTc25cVHlwZeICFFNzblxUeXBlXEdQQk1ldGFkYXRh",
@@ -1488,7 +1488,7 @@ namespace Ssn.Type {
     }
 
     /// <summary>Field number for the "total_discount" field.</summary>
-    public const int TotalDiscountFieldNumber = 12;
+    public const int TotalDiscountFieldNumber = 7;
     private string totalDiscount_ = "";
     /// <summary>
     /// Total discount is the total discount of the line
@@ -1503,7 +1503,7 @@ namespace Ssn.Type {
     }
 
     /// <summary>Field number for the "percentage_discount" field.</summary>
-    public const int PercentageDiscountFieldNumber = 13;
+    public const int PercentageDiscountFieldNumber = 8;
     private string percentageDiscount_ = "";
     /// <summary>
     /// Percentage discount is the percentage discount of the line
@@ -1518,7 +1518,7 @@ namespace Ssn.Type {
     }
 
     /// <summary>Field number for the "total_incl_vat" field.</summary>
-    public const int TotalInclVatFieldNumber = 14;
+    public const int TotalInclVatFieldNumber = 9;
     private string totalInclVat_ = "";
     /// <summary>
     /// Total incl vat is the total price of the line including vat
@@ -1533,7 +1533,7 @@ namespace Ssn.Type {
     }
 
     /// <summary>Field number for the "total_excl_vat" field.</summary>
-    public const int TotalExclVatFieldNumber = 15;
+    public const int TotalExclVatFieldNumber = 10;
     private string totalExclVat_ = "";
     /// <summary>
     /// Total excl vat is the total price of the line excluding vat
@@ -1548,7 +1548,7 @@ namespace Ssn.Type {
     }
 
     /// <summary>Field number for the "total_vat" field.</summary>
-    public const int TotalVatFieldNumber = 16;
+    public const int TotalVatFieldNumber = 11;
     private string totalVat_ = "";
     /// <summary>
     /// Total vat is the total vat of the line
@@ -1563,7 +1563,7 @@ namespace Ssn.Type {
     }
 
     /// <summary>Field number for the "percentage_vat" field.</summary>
-    public const int PercentageVatFieldNumber = 17;
+    public const int PercentageVatFieldNumber = 12;
     private string percentageVat_ = "";
     /// <summary>
     /// Percentage vat is the percentage vat of the line
@@ -1578,7 +1578,7 @@ namespace Ssn.Type {
     }
 
     /// <summary>Field number for the "unit_price_incl_vat" field.</summary>
-    public const int UnitPriceInclVatFieldNumber = 18;
+    public const int UnitPriceInclVatFieldNumber = 13;
     private string unitPriceInclVat_ = "";
     /// <summary>
     /// Unit price incl vat is the unit price of the line including vat
@@ -1593,7 +1593,7 @@ namespace Ssn.Type {
     }
 
     /// <summary>Field number for the "unit_price_excl_vat" field.</summary>
-    public const int UnitPriceExclVatFieldNumber = 19;
+    public const int UnitPriceExclVatFieldNumber = 14;
     private string unitPriceExclVat_ = "";
     /// <summary>
     /// Unit price excl vat is the unit price of the line excluding vat
@@ -1700,35 +1700,35 @@ namespace Ssn.Type {
         output.WriteString(Unit);
       }
       if (TotalDiscount.Length != 0) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(58);
         output.WriteString(TotalDiscount);
       }
       if (PercentageDiscount.Length != 0) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(66);
         output.WriteString(PercentageDiscount);
       }
       if (TotalInclVat.Length != 0) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(74);
         output.WriteString(TotalInclVat);
       }
       if (TotalExclVat.Length != 0) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(82);
         output.WriteString(TotalExclVat);
       }
       if (TotalVat.Length != 0) {
-        output.WriteRawTag(130, 1);
+        output.WriteRawTag(90);
         output.WriteString(TotalVat);
       }
       if (PercentageVat.Length != 0) {
-        output.WriteRawTag(138, 1);
+        output.WriteRawTag(98);
         output.WriteString(PercentageVat);
       }
       if (UnitPriceInclVat.Length != 0) {
-        output.WriteRawTag(146, 1);
+        output.WriteRawTag(106);
         output.WriteString(UnitPriceInclVat);
       }
       if (UnitPriceExclVat.Length != 0) {
-        output.WriteRawTag(154, 1);
+        output.WriteRawTag(114);
         output.WriteString(UnitPriceExclVat);
       }
       if (_unknownFields != null) {
@@ -1766,35 +1766,35 @@ namespace Ssn.Type {
         output.WriteString(Unit);
       }
       if (TotalDiscount.Length != 0) {
-        output.WriteRawTag(98);
+        output.WriteRawTag(58);
         output.WriteString(TotalDiscount);
       }
       if (PercentageDiscount.Length != 0) {
-        output.WriteRawTag(106);
+        output.WriteRawTag(66);
         output.WriteString(PercentageDiscount);
       }
       if (TotalInclVat.Length != 0) {
-        output.WriteRawTag(114);
+        output.WriteRawTag(74);
         output.WriteString(TotalInclVat);
       }
       if (TotalExclVat.Length != 0) {
-        output.WriteRawTag(122);
+        output.WriteRawTag(82);
         output.WriteString(TotalExclVat);
       }
       if (TotalVat.Length != 0) {
-        output.WriteRawTag(130, 1);
+        output.WriteRawTag(90);
         output.WriteString(TotalVat);
       }
       if (PercentageVat.Length != 0) {
-        output.WriteRawTag(138, 1);
+        output.WriteRawTag(98);
         output.WriteString(PercentageVat);
       }
       if (UnitPriceInclVat.Length != 0) {
-        output.WriteRawTag(146, 1);
+        output.WriteRawTag(106);
         output.WriteString(UnitPriceInclVat);
       }
       if (UnitPriceExclVat.Length != 0) {
-        output.WriteRawTag(154, 1);
+        output.WriteRawTag(114);
         output.WriteString(UnitPriceExclVat);
       }
       if (_unknownFields != null) {
@@ -1838,16 +1838,16 @@ namespace Ssn.Type {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TotalExclVat);
       }
       if (TotalVat.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(TotalVat);
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TotalVat);
       }
       if (PercentageVat.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(PercentageVat);
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PercentageVat);
       }
       if (UnitPriceInclVat.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(UnitPriceInclVat);
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UnitPriceInclVat);
       }
       if (UnitPriceExclVat.Length != 0) {
-        size += 2 + pb::CodedOutputStream.ComputeStringSize(UnitPriceExclVat);
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UnitPriceExclVat);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1942,35 +1942,35 @@ namespace Ssn.Type {
             Unit = input.ReadString();
             break;
           }
-          case 98: {
+          case 58: {
             TotalDiscount = input.ReadString();
             break;
           }
-          case 106: {
+          case 66: {
             PercentageDiscount = input.ReadString();
             break;
           }
-          case 114: {
+          case 74: {
             TotalInclVat = input.ReadString();
             break;
           }
-          case 122: {
+          case 82: {
             TotalExclVat = input.ReadString();
             break;
           }
-          case 130: {
+          case 90: {
             TotalVat = input.ReadString();
             break;
           }
-          case 138: {
+          case 98: {
             PercentageVat = input.ReadString();
             break;
           }
-          case 146: {
+          case 106: {
             UnitPriceInclVat = input.ReadString();
             break;
           }
-          case 154: {
+          case 114: {
             UnitPriceExclVat = input.ReadString();
             break;
           }
@@ -2013,35 +2013,35 @@ namespace Ssn.Type {
             Unit = input.ReadString();
             break;
           }
-          case 98: {
+          case 58: {
             TotalDiscount = input.ReadString();
             break;
           }
-          case 106: {
+          case 66: {
             PercentageDiscount = input.ReadString();
             break;
           }
-          case 114: {
+          case 74: {
             TotalInclVat = input.ReadString();
             break;
           }
-          case 122: {
+          case 82: {
             TotalExclVat = input.ReadString();
             break;
           }
-          case 130: {
+          case 90: {
             TotalVat = input.ReadString();
             break;
           }
-          case 138: {
+          case 98: {
             PercentageVat = input.ReadString();
             break;
           }
-          case 146: {
+          case 106: {
             UnitPriceInclVat = input.ReadString();
             break;
           }
-          case 154: {
+          case 114: {
             UnitPriceExclVat = input.ReadString();
             break;
           }

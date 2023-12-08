@@ -1121,14 +1121,14 @@ proto.ssn.type.PurchaseLineCandidate.toObject = function(includeInstance, msg) {
     quantity: jspb.Message.getFieldWithDefault(msg, 4, ""),
     itemNumber: jspb.Message.getFieldWithDefault(msg, 5, ""),
     unit: jspb.Message.getFieldWithDefault(msg, 6, ""),
-    totalDiscount: jspb.Message.getFieldWithDefault(msg, 12, ""),
-    percentageDiscount: jspb.Message.getFieldWithDefault(msg, 13, ""),
-    totalInclVat: jspb.Message.getFieldWithDefault(msg, 14, ""),
-    totalExclVat: jspb.Message.getFieldWithDefault(msg, 15, ""),
-    totalVat: jspb.Message.getFieldWithDefault(msg, 16, ""),
-    percentageVat: jspb.Message.getFieldWithDefault(msg, 17, ""),
-    unitPriceInclVat: jspb.Message.getFieldWithDefault(msg, 18, ""),
-    unitPriceExclVat: jspb.Message.getFieldWithDefault(msg, 19, "")
+    totalDiscount: jspb.Message.getFieldWithDefault(msg, 7, ""),
+    percentageDiscount: jspb.Message.getFieldWithDefault(msg, 8, ""),
+    totalInclVat: jspb.Message.getFieldWithDefault(msg, 9, ""),
+    totalExclVat: jspb.Message.getFieldWithDefault(msg, 10, ""),
+    totalVat: jspb.Message.getFieldWithDefault(msg, 11, ""),
+    percentageVat: jspb.Message.getFieldWithDefault(msg, 12, ""),
+    unitPriceInclVat: jspb.Message.getFieldWithDefault(msg, 13, ""),
+    unitPriceExclVat: jspb.Message.getFieldWithDefault(msg, 14, "")
   };
 
   if (includeInstance) {
@@ -1189,35 +1189,35 @@ proto.ssn.type.PurchaseLineCandidate.deserializeBinaryFromReader = function(msg,
       var value = /** @type {string} */ (reader.readString());
       msg.setUnit(value);
       break;
-    case 12:
+    case 7:
       var value = /** @type {string} */ (reader.readString());
       msg.setTotalDiscount(value);
       break;
-    case 13:
+    case 8:
       var value = /** @type {string} */ (reader.readString());
       msg.setPercentageDiscount(value);
       break;
-    case 14:
+    case 9:
       var value = /** @type {string} */ (reader.readString());
       msg.setTotalInclVat(value);
       break;
-    case 15:
+    case 10:
       var value = /** @type {string} */ (reader.readString());
       msg.setTotalExclVat(value);
       break;
-    case 16:
+    case 11:
       var value = /** @type {string} */ (reader.readString());
       msg.setTotalVat(value);
       break;
-    case 17:
+    case 12:
       var value = /** @type {string} */ (reader.readString());
       msg.setPercentageVat(value);
       break;
-    case 18:
+    case 13:
       var value = /** @type {string} */ (reader.readString());
       msg.setUnitPriceInclVat(value);
       break;
-    case 19:
+    case 14:
       var value = /** @type {string} */ (reader.readString());
       msg.setUnitPriceExclVat(value);
       break;
@@ -1295,56 +1295,56 @@ proto.ssn.type.PurchaseLineCandidate.serializeBinaryToWriter = function(message,
   f = message.getTotalDiscount();
   if (f.length > 0) {
     writer.writeString(
-      12,
+      7,
       f
     );
   }
   f = message.getPercentageDiscount();
   if (f.length > 0) {
     writer.writeString(
-      13,
+      8,
       f
     );
   }
   f = message.getTotalInclVat();
   if (f.length > 0) {
     writer.writeString(
-      14,
+      9,
       f
     );
   }
   f = message.getTotalExclVat();
   if (f.length > 0) {
     writer.writeString(
-      15,
+      10,
       f
     );
   }
   f = message.getTotalVat();
   if (f.length > 0) {
     writer.writeString(
-      16,
+      11,
       f
     );
   }
   f = message.getPercentageVat();
   if (f.length > 0) {
     writer.writeString(
-      17,
+      12,
       f
     );
   }
   f = message.getUnitPriceInclVat();
   if (f.length > 0) {
     writer.writeString(
-      18,
+      13,
       f
     );
   }
   f = message.getUnitPriceExclVat();
   if (f.length > 0) {
     writer.writeString(
-      19,
+      14,
       f
     );
   }
@@ -1460,11 +1460,11 @@ proto.ssn.type.PurchaseLineCandidate.prototype.setUnit = function(value) {
 
 
 /**
- * optional string total_discount = 12;
+ * optional string total_discount = 7;
  * @return {string}
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.getTotalDiscount = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
 };
 
 
@@ -1473,16 +1473,16 @@ proto.ssn.type.PurchaseLineCandidate.prototype.getTotalDiscount = function() {
  * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.setTotalDiscount = function(value) {
-  return jspb.Message.setProto3StringField(this, 12, value);
+  return jspb.Message.setProto3StringField(this, 7, value);
 };
 
 
 /**
- * optional string percentage_discount = 13;
+ * optional string percentage_discount = 8;
  * @return {string}
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.getPercentageDiscount = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 13, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 8, ""));
 };
 
 
@@ -1491,16 +1491,16 @@ proto.ssn.type.PurchaseLineCandidate.prototype.getPercentageDiscount = function(
  * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.setPercentageDiscount = function(value) {
-  return jspb.Message.setProto3StringField(this, 13, value);
+  return jspb.Message.setProto3StringField(this, 8, value);
 };
 
 
 /**
- * optional string total_incl_vat = 14;
+ * optional string total_incl_vat = 9;
  * @return {string}
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.getTotalInclVat = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 9, ""));
 };
 
 
@@ -1509,16 +1509,16 @@ proto.ssn.type.PurchaseLineCandidate.prototype.getTotalInclVat = function() {
  * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.setTotalInclVat = function(value) {
-  return jspb.Message.setProto3StringField(this, 14, value);
+  return jspb.Message.setProto3StringField(this, 9, value);
 };
 
 
 /**
- * optional string total_excl_vat = 15;
+ * optional string total_excl_vat = 10;
  * @return {string}
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.getTotalExclVat = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 15, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 10, ""));
 };
 
 
@@ -1527,16 +1527,16 @@ proto.ssn.type.PurchaseLineCandidate.prototype.getTotalExclVat = function() {
  * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.setTotalExclVat = function(value) {
-  return jspb.Message.setProto3StringField(this, 15, value);
+  return jspb.Message.setProto3StringField(this, 10, value);
 };
 
 
 /**
- * optional string total_vat = 16;
+ * optional string total_vat = 11;
  * @return {string}
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.getTotalVat = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 16, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 11, ""));
 };
 
 
@@ -1545,16 +1545,16 @@ proto.ssn.type.PurchaseLineCandidate.prototype.getTotalVat = function() {
  * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.setTotalVat = function(value) {
-  return jspb.Message.setProto3StringField(this, 16, value);
+  return jspb.Message.setProto3StringField(this, 11, value);
 };
 
 
 /**
- * optional string percentage_vat = 17;
+ * optional string percentage_vat = 12;
  * @return {string}
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.getPercentageVat = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 17, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 12, ""));
 };
 
 
@@ -1563,16 +1563,16 @@ proto.ssn.type.PurchaseLineCandidate.prototype.getPercentageVat = function() {
  * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.setPercentageVat = function(value) {
-  return jspb.Message.setProto3StringField(this, 17, value);
+  return jspb.Message.setProto3StringField(this, 12, value);
 };
 
 
 /**
- * optional string unit_price_incl_vat = 18;
+ * optional string unit_price_incl_vat = 13;
  * @return {string}
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.getUnitPriceInclVat = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 18, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 13, ""));
 };
 
 
@@ -1581,16 +1581,16 @@ proto.ssn.type.PurchaseLineCandidate.prototype.getUnitPriceInclVat = function() 
  * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.setUnitPriceInclVat = function(value) {
-  return jspb.Message.setProto3StringField(this, 18, value);
+  return jspb.Message.setProto3StringField(this, 13, value);
 };
 
 
 /**
- * optional string unit_price_excl_vat = 19;
+ * optional string unit_price_excl_vat = 14;
  * @return {string}
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.getUnitPriceExclVat = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 19, ""));
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 14, ""));
 };
 
 
@@ -1599,7 +1599,7 @@ proto.ssn.type.PurchaseLineCandidate.prototype.getUnitPriceExclVat = function() 
  * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.setUnitPriceExclVat = function(value) {
-  return jspb.Message.setProto3StringField(this, 19, value);
+  return jspb.Message.setProto3StringField(this, 14, value);
 };
 
 

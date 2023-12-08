@@ -123,7 +123,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Total discount is the total discount of the line
    * </pre>
    *
-   * <code>string total_discount = 12 [json_name = "totalDiscount"];</code>
+   * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
    * @return The totalDiscount.
    */
   java.lang.String getTotalDiscount();
@@ -132,7 +132,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Total discount is the total discount of the line
    * </pre>
    *
-   * <code>string total_discount = 12 [json_name = "totalDiscount"];</code>
+   * <code>string total_discount = 7 [json_name = "totalDiscount"];</code>
    * @return The bytes for totalDiscount.
    */
   com.google.protobuf.ByteString
@@ -143,7 +143,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Percentage discount is the percentage discount of the line
    * </pre>
    *
-   * <code>string percentage_discount = 13 [json_name = "percentageDiscount"];</code>
+   * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
    * @return The percentageDiscount.
    */
   java.lang.String getPercentageDiscount();
@@ -152,7 +152,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Percentage discount is the percentage discount of the line
    * </pre>
    *
-   * <code>string percentage_discount = 13 [json_name = "percentageDiscount"];</code>
+   * <code>string percentage_discount = 8 [json_name = "percentageDiscount"];</code>
    * @return The bytes for percentageDiscount.
    */
   com.google.protobuf.ByteString
@@ -163,7 +163,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Total incl vat is the total price of the line including vat
    * </pre>
    *
-   * <code>string total_incl_vat = 14 [json_name = "totalInclVat"];</code>
+   * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
    * @return The totalInclVat.
    */
   java.lang.String getTotalInclVat();
@@ -172,7 +172,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Total incl vat is the total price of the line including vat
    * </pre>
    *
-   * <code>string total_incl_vat = 14 [json_name = "totalInclVat"];</code>
+   * <code>string total_incl_vat = 9 [json_name = "totalInclVat"];</code>
    * @return The bytes for totalInclVat.
    */
   com.google.protobuf.ByteString
@@ -183,7 +183,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Total excl vat is the total price of the line excluding vat
    * </pre>
    *
-   * <code>string total_excl_vat = 15 [json_name = "totalExclVat"];</code>
+   * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
    * @return The totalExclVat.
    */
   java.lang.String getTotalExclVat();
@@ -192,7 +192,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Total excl vat is the total price of the line excluding vat
    * </pre>
    *
-   * <code>string total_excl_vat = 15 [json_name = "totalExclVat"];</code>
+   * <code>string total_excl_vat = 10 [json_name = "totalExclVat"];</code>
    * @return The bytes for totalExclVat.
    */
   com.google.protobuf.ByteString
@@ -203,7 +203,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Total vat is the total vat of the line
    * </pre>
    *
-   * <code>string total_vat = 16 [json_name = "totalVat"];</code>
+   * <code>string total_vat = 11 [json_name = "totalVat"];</code>
    * @return The totalVat.
    */
   java.lang.String getTotalVat();
@@ -212,7 +212,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Total vat is the total vat of the line
    * </pre>
    *
-   * <code>string total_vat = 16 [json_name = "totalVat"];</code>
+   * <code>string total_vat = 11 [json_name = "totalVat"];</code>
    * @return The bytes for totalVat.
    */
   com.google.protobuf.ByteString
@@ -223,7 +223,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Percentage vat is the percentage vat of the line
    * </pre>
    *
-   * <code>string percentage_vat = 17 [json_name = "percentageVat"];</code>
+   * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
    * @return The percentageVat.
    */
   java.lang.String getPercentageVat();
@@ -232,7 +232,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Percentage vat is the percentage vat of the line
    * </pre>
    *
-   * <code>string percentage_vat = 17 [json_name = "percentageVat"];</code>
+   * <code>string percentage_vat = 12 [json_name = "percentageVat"];</code>
    * @return The bytes for percentageVat.
    */
   com.google.protobuf.ByteString
@@ -243,7 +243,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Unit price incl vat is the unit price of the line including vat
    * </pre>
    *
-   * <code>string unit_price_incl_vat = 18 [json_name = "unitPriceInclVat"];</code>
+   * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
    * @return The unitPriceInclVat.
    */
   java.lang.String getUnitPriceInclVat();
@@ -252,7 +252,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Unit price incl vat is the unit price of the line including vat
    * </pre>
    *
-   * <code>string unit_price_incl_vat = 18 [json_name = "unitPriceInclVat"];</code>
+   * <code>string unit_price_incl_vat = 13 [json_name = "unitPriceInclVat"];</code>
    * @return The bytes for unitPriceInclVat.
    */
   com.google.protobuf.ByteString
@@ -263,7 +263,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Unit price excl vat is the unit price of the line excluding vat
    * </pre>
    *
-   * <code>string unit_price_excl_vat = 19 [json_name = "unitPriceExclVat"];</code>
+   * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
    * @return The unitPriceExclVat.
    */
   java.lang.String getUnitPriceExclVat();
@@ -272,7 +272,7 @@ public interface PurchaseLineCandidateOrBuilder extends
    * Unit price excl vat is the unit price of the line excluding vat
    * </pre>
    *
-   * <code>string unit_price_excl_vat = 19 [json_name = "unitPriceExclVat"];</code>
+   * <code>string unit_price_excl_vat = 14 [json_name = "unitPriceExclVat"];</code>
    * @return The bytes for unitPriceExclVat.
    */
   com.google.protobuf.ByteString

@@ -100,19 +100,19 @@ message PurchaseLineCandidate {
   // Unit is the unit of the item
   string unit = 6;
   // Total discount is the total discount of the line
-  string total_discount = 12;
+  string total_discount = 7;
   // Percentage discount is the percentage discount of the line
-  string percentage_discount = 13;
+  string percentage_discount = 8;
   // Total incl vat is the total price of the line including vat
-  string total_incl_vat = 14;
+  string total_incl_vat = 9;
   // Total excl vat is the total price of the line excluding vat
-  string total_excl_vat = 15;
+  string total_excl_vat = 10;
   // Total vat is the total vat of the line
-  string total_vat = 16;
+  string total_vat = 11;
   // Percentage vat is the percentage vat of the line
-  string percentage_vat = 17;
+  string percentage_vat = 12;
   // Unit price incl vat is the unit price of the line including vat
-  string unit_price_incl_vat = 18;
+  string unit_price_incl_vat = 13;
   // Unit price excl vat is the unit price of the line excluding vat
-  string unit_price_excl_vat = 19;
+  string unit_price_excl_vat = 14;
 }

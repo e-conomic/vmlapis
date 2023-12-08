@@ -73,14 +73,14 @@ public final class CandidateProto {
       "\022\n\004code\030\002 \001(\tR\004code\022 \n\013description\030\003 \001(\t" +
       "R\013description\022\032\n\010quantity\030\004 \001(\tR\010quantit" +
       "y\022\037\n\013item_number\030\005 \001(\tR\nitemNumber\022\022\n\004un" +
-      "it\030\006 \001(\tR\004unit\022%\n\016total_discount\030\014 \001(\tR\r" +
-      "totalDiscount\022/\n\023percentage_discount\030\r \001" +
+      "it\030\006 \001(\tR\004unit\022%\n\016total_discount\030\007 \001(\tR\r" +
+      "totalDiscount\022/\n\023percentage_discount\030\010 \001" +
       "(\tR\022percentageDiscount\022$\n\016total_incl_vat" +
-      "\030\016 \001(\tR\014totalInclVat\022$\n\016total_excl_vat\030\017" +
-      " \001(\tR\014totalExclVat\022\033\n\ttotal_vat\030\020 \001(\tR\010t" +
-      "otalVat\022%\n\016percentage_vat\030\021 \001(\tR\rpercent" +
-      "ageVat\022-\n\023unit_price_incl_vat\030\022 \001(\tR\020uni" +
-      "tPriceInclVat\022-\n\023unit_price_excl_vat\030\023 \001" +
+      "\030\t \001(\tR\014totalInclVat\022$\n\016total_excl_vat\030\n" +
+      " \001(\tR\014totalExclVat\022\033\n\ttotal_vat\030\013 \001(\tR\010t" +
+      "otalVat\022%\n\016percentage_vat\030\014 \001(\tR\rpercent" +
+      "ageVat\022-\n\023unit_price_incl_vat\030\r \001(\tR\020uni" +
+      "tPriceInclVat\022-\n\023unit_price_excl_vat\030\016 \001" +
       "(\tR\020unitPriceExclVatB\232\001\n\021ai.visma.ssn.ty" +
       "peB\016CandidateProtoP\001Z4github.com/e-conom" +
       "ic/vmlapis/gen/go/ssn/type;ssntype\242\002\003STX" +
