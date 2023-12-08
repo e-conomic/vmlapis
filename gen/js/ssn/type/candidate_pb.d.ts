@@ -141,3 +141,73 @@ export namespace LineCandidate {
   }
 }
 
+export class PurchaseLineCandidate extends jspb.Message {
+  getPageRef(): number;
+  setPageRef(value: number): PurchaseLineCandidate;
+
+  getCode(): string;
+  setCode(value: string): PurchaseLineCandidate;
+
+  getDescription(): string;
+  setDescription(value: string): PurchaseLineCandidate;
+
+  getQuantity(): string;
+  setQuantity(value: string): PurchaseLineCandidate;
+
+  getItemNumber(): string;
+  setItemNumber(value: string): PurchaseLineCandidate;
+
+  getUnit(): string;
+  setUnit(value: string): PurchaseLineCandidate;
+
+  getTotalDiscount(): string;
+  setTotalDiscount(value: string): PurchaseLineCandidate;
+
+  getPercentageDiscount(): string;
+  setPercentageDiscount(value: string): PurchaseLineCandidate;
+
+  getTotalInclVat(): string;
+  setTotalInclVat(value: string): PurchaseLineCandidate;
+
+  getTotalExclVat(): string;
+  setTotalExclVat(value: string): PurchaseLineCandidate;
+
+  getTotalVat(): string;
+  setTotalVat(value: string): PurchaseLineCandidate;
+
+  getPercentageVat(): string;
+  setPercentageVat(value: string): PurchaseLineCandidate;
+
+  getUnitPriceInclVat(): string;
+  setUnitPriceInclVat(value: string): PurchaseLineCandidate;
+
+  getUnitPriceExclVat(): string;
+  setUnitPriceExclVat(value: string): PurchaseLineCandidate;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PurchaseLineCandidate.AsObject;
+  static toObject(includeInstance: boolean, msg: PurchaseLineCandidate): PurchaseLineCandidate.AsObject;
+  static serializeBinaryToWriter(message: PurchaseLineCandidate, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PurchaseLineCandidate;
+  static deserializeBinaryFromReader(message: PurchaseLineCandidate, reader: jspb.BinaryReader): PurchaseLineCandidate;
+}
+
+export namespace PurchaseLineCandidate {
+  export type AsObject = {
+    pageRef: number,
+    code: string,
+    description: string,
+    quantity: string,
+    itemNumber: string,
+    unit: string,
+    totalDiscount: string,
+    percentageDiscount: string,
+    totalInclVat: string,
+    totalExclVat: string,
+    totalVat: string,
+    percentageVat: string,
+    unitPriceInclVat: string,
+    unitPriceExclVat: string,
+  }
+}
+

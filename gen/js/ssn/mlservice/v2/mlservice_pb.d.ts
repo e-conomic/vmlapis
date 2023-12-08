@@ -534,3 +534,49 @@ export namespace FeatureGenPredictRequest {
   }
 }
 
+export class PurchaseLinesRequest extends jspb.Message {
+  getTextAnnotation(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
+  setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): PurchaseLinesRequest;
+  hasTextAnnotation(): boolean;
+  clearTextAnnotation(): PurchaseLinesRequest;
+
+  getImage(): Uint8Array | string;
+  getImage_asU8(): Uint8Array;
+  getImage_asB64(): string;
+  setImage(value: Uint8Array | string): PurchaseLinesRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PurchaseLinesRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: PurchaseLinesRequest): PurchaseLinesRequest.AsObject;
+  static serializeBinaryToWriter(message: PurchaseLinesRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PurchaseLinesRequest;
+  static deserializeBinaryFromReader(message: PurchaseLinesRequest, reader: jspb.BinaryReader): PurchaseLinesRequest;
+}
+
+export namespace PurchaseLinesRequest {
+  export type AsObject = {
+    textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
+    image: Uint8Array | string,
+  }
+}
+
+export class PurchaseLinesResponse extends jspb.Message {
+  getPurchaseLinesList(): Array<ssn_type_candidate_pb.PurchaseLineCandidate>;
+  setPurchaseLinesList(value: Array<ssn_type_candidate_pb.PurchaseLineCandidate>): PurchaseLinesResponse;
+  clearPurchaseLinesList(): PurchaseLinesResponse;
+  addPurchaseLines(value?: ssn_type_candidate_pb.PurchaseLineCandidate, index?: number): ssn_type_candidate_pb.PurchaseLineCandidate;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PurchaseLinesResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: PurchaseLinesResponse): PurchaseLinesResponse.AsObject;
+  static serializeBinaryToWriter(message: PurchaseLinesResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PurchaseLinesResponse;
+  static deserializeBinaryFromReader(message: PurchaseLinesResponse, reader: jspb.BinaryReader): PurchaseLinesResponse;
+}
+
+export namespace PurchaseLinesResponse {
+  export type AsObject = {
+    purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
+  }
+}
+
