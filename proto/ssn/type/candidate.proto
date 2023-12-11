@@ -84,3 +84,35 @@ message LineCandidate {
   // page_ref start from 1.
   uint32 page_ref = 6;
 }
+
+message PurchaseLineCandidate {
+  // A reference to the page where the line was found.
+  // page_ref start from 1.
+  uint32 page_ref = 1;
+  // Code is an ID that supplier uses to identify the item
+  string code = 2;
+  // Description is a piece of text that describes the item
+  string description = 3;
+  // Quantity is the number of items
+  string quantity = 4;
+  // ItemNumber is the number of the item
+  string item_number = 5;
+  // Unit is the unit of the item
+  string unit = 6;
+  // Total discount is the total discount of the line
+  string total_discount = 7;
+  // Percentage discount is the percentage discount of the line
+  string percentage_discount = 8;
+  // Total incl vat is the total price of the line including vat
+  string total_incl_vat = 9;
+  // Total excl vat is the total price of the line excluding vat
+  string total_excl_vat = 10;
+  // Total vat is the total vat of the line
+  string total_vat = 11;
+  // Percentage vat is the percentage vat of the line
+  string percentage_vat = 12;
+  // Unit price incl vat is the unit price of the line including vat
+  string unit_price_incl_vat = 13;
+  // Unit price excl vat is the unit price of the line excluding vat
+  string unit_price_excl_vat = 14;
+}

@@ -59,6 +59,7 @@ private static final long serialVersionUID = 0L;
     receiverCountryCode_ = java.util.Collections.emptyList();
     receiverName_ = java.util.Collections.emptyList();
     receiverVatNumber_ = java.util.Collections.emptyList();
+    purchaseLines_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -2882,6 +2883,87 @@ private static final long serialVersionUID = 0L;
     return receiverVatNumber_.get(index);
   }
 
+  public static final int PURCHASE_LINES_FIELD_NUMBER = 45;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> purchaseLines_;
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list of candidates, where each
+   * candidate is a single purchase lines. Each purchase line may have page number,
+   * code, description, quantity, item number, unit, total discount, percentage discount,
+   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+   * unit price excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> getPurchaseLinesList() {
+    return purchaseLines_;
+  }
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list of candidates, where each
+   * candidate is a single purchase lines. Each purchase line may have page number,
+   * code, description, quantity, item number, unit, total discount, percentage discount,
+   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+   * unit price excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> 
+      getPurchaseLinesOrBuilderList() {
+    return purchaseLines_;
+  }
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list of candidates, where each
+   * candidate is a single purchase lines. Each purchase line may have page number,
+   * code, description, quantity, item number, unit, total discount, percentage discount,
+   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+   * unit price excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+   */
+  @java.lang.Override
+  public int getPurchaseLinesCount() {
+    return purchaseLines_.size();
+  }
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list of candidates, where each
+   * candidate is a single purchase lines. Each purchase line may have page number,
+   * code, description, quantity, item number, unit, total discount, percentage discount,
+   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+   * unit price excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLines(int index) {
+    return purchaseLines_.get(index);
+  }
+  /**
+   * <pre>
+   * Purchase lines for the document. This is a list of candidates, where each
+   * candidate is a single purchase lines. Each purchase line may have page number,
+   * code, description, quantity, item number, unit, total discount, percentage discount,
+   * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+   * unit price excl vat
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLinesOrBuilder(
+      int index) {
+    return purchaseLines_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3027,6 +3109,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < receiverVatNumber_.size(); i++) {
       output.writeMessage(44, receiverVatNumber_.get(i));
+    }
+    for (int i = 0; i < purchaseLines_.size(); i++) {
+      output.writeMessage(45, purchaseLines_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -3210,6 +3295,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(44, receiverVatNumber_.get(i));
     }
+    for (int i = 0; i < purchaseLines_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(45, purchaseLines_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3316,6 +3405,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getReceiverNameList())) return false;
     if (!getReceiverVatNumberList()
         .equals(other.getReceiverVatNumberList())) return false;
+    if (!getPurchaseLinesList()
+        .equals(other.getPurchaseLinesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3496,6 +3587,10 @@ private static final long serialVersionUID = 0L;
     if (getReceiverVatNumberCount() > 0) {
       hash = (37 * hash) + RECEIVER_VAT_NUMBER_FIELD_NUMBER;
       hash = (53 * hash) + getReceiverVatNumberList().hashCode();
+    }
+    if (getPurchaseLinesCount() > 0) {
+      hash = (37 * hash) + PURCHASE_LINES_FIELD_NUMBER;
+      hash = (53 * hash) + getPurchaseLinesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -3917,6 +4012,13 @@ private static final long serialVersionUID = 0L;
         receiverVatNumberBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00000800);
+      if (purchaseLinesBuilder_ == null) {
+        purchaseLines_ = java.util.Collections.emptyList();
+      } else {
+        purchaseLines_ = null;
+        purchaseLinesBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00001000);
       return this;
     }
 
@@ -4310,6 +4412,15 @@ private static final long serialVersionUID = 0L;
         result.receiverVatNumber_ = receiverVatNumber_;
       } else {
         result.receiverVatNumber_ = receiverVatNumberBuilder_.build();
+      }
+      if (purchaseLinesBuilder_ == null) {
+        if (((bitField1_ & 0x00001000) != 0)) {
+          purchaseLines_ = java.util.Collections.unmodifiableList(purchaseLines_);
+          bitField1_ = (bitField1_ & ~0x00001000);
+        }
+        result.purchaseLines_ = purchaseLines_;
+      } else {
+        result.purchaseLines_ = purchaseLinesBuilder_.build();
       }
     }
 
@@ -5437,6 +5548,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (purchaseLinesBuilder_ == null) {
+        if (!other.purchaseLines_.isEmpty()) {
+          if (purchaseLines_.isEmpty()) {
+            purchaseLines_ = other.purchaseLines_;
+            bitField1_ = (bitField1_ & ~0x00001000);
+          } else {
+            ensurePurchaseLinesIsMutable();
+            purchaseLines_.addAll(other.purchaseLines_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.purchaseLines_.isEmpty()) {
+          if (purchaseLinesBuilder_.isEmpty()) {
+            purchaseLinesBuilder_.dispose();
+            purchaseLinesBuilder_ = null;
+            purchaseLines_ = other.purchaseLines_;
+            bitField1_ = (bitField1_ & ~0x00001000);
+            purchaseLinesBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getPurchaseLinesFieldBuilder() : null;
+          } else {
+            purchaseLinesBuilder_.addAllMessages(other.purchaseLines_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -6005,6 +6142,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 354
+            case 362: {
+              ai.visma.ssn.type.PurchaseLineCandidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.PurchaseLineCandidate.parser(),
+                      extensionRegistry);
+              if (purchaseLinesBuilder_ == null) {
+                ensurePurchaseLinesIsMutable();
+                purchaseLines_.add(m);
+              } else {
+                purchaseLinesBuilder_.addMessage(m);
+              }
+              break;
+            } // case 362
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -19585,6 +19735,390 @@ private static final long serialVersionUID = 0L;
         receiverVatNumber_ = null;
       }
       return receiverVatNumberBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> purchaseLines_ =
+      java.util.Collections.emptyList();
+    private void ensurePurchaseLinesIsMutable() {
+      if (!((bitField1_ & 0x00001000) != 0)) {
+        purchaseLines_ = new java.util.ArrayList<ai.visma.ssn.type.PurchaseLineCandidate>(purchaseLines_);
+        bitField1_ |= 0x00001000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.PurchaseLineCandidate, ai.visma.ssn.type.PurchaseLineCandidate.Builder, ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> purchaseLinesBuilder_;
+
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> getPurchaseLinesList() {
+      if (purchaseLinesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(purchaseLines_);
+      } else {
+        return purchaseLinesBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public int getPurchaseLinesCount() {
+      if (purchaseLinesBuilder_ == null) {
+        return purchaseLines_.size();
+      } else {
+        return purchaseLinesBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLines(int index) {
+      if (purchaseLinesBuilder_ == null) {
+        return purchaseLines_.get(index);
+      } else {
+        return purchaseLinesBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public Builder setPurchaseLines(
+        int index, ai.visma.ssn.type.PurchaseLineCandidate value) {
+      if (purchaseLinesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePurchaseLinesIsMutable();
+        purchaseLines_.set(index, value);
+        onChanged();
+      } else {
+        purchaseLinesBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public Builder setPurchaseLines(
+        int index, ai.visma.ssn.type.PurchaseLineCandidate.Builder builderForValue) {
+      if (purchaseLinesBuilder_ == null) {
+        ensurePurchaseLinesIsMutable();
+        purchaseLines_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        purchaseLinesBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public Builder addPurchaseLines(ai.visma.ssn.type.PurchaseLineCandidate value) {
+      if (purchaseLinesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePurchaseLinesIsMutable();
+        purchaseLines_.add(value);
+        onChanged();
+      } else {
+        purchaseLinesBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public Builder addPurchaseLines(
+        int index, ai.visma.ssn.type.PurchaseLineCandidate value) {
+      if (purchaseLinesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePurchaseLinesIsMutable();
+        purchaseLines_.add(index, value);
+        onChanged();
+      } else {
+        purchaseLinesBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public Builder addPurchaseLines(
+        ai.visma.ssn.type.PurchaseLineCandidate.Builder builderForValue) {
+      if (purchaseLinesBuilder_ == null) {
+        ensurePurchaseLinesIsMutable();
+        purchaseLines_.add(builderForValue.build());
+        onChanged();
+      } else {
+        purchaseLinesBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public Builder addPurchaseLines(
+        int index, ai.visma.ssn.type.PurchaseLineCandidate.Builder builderForValue) {
+      if (purchaseLinesBuilder_ == null) {
+        ensurePurchaseLinesIsMutable();
+        purchaseLines_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        purchaseLinesBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public Builder addAllPurchaseLines(
+        java.lang.Iterable<? extends ai.visma.ssn.type.PurchaseLineCandidate> values) {
+      if (purchaseLinesBuilder_ == null) {
+        ensurePurchaseLinesIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, purchaseLines_);
+        onChanged();
+      } else {
+        purchaseLinesBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public Builder clearPurchaseLines() {
+      if (purchaseLinesBuilder_ == null) {
+        purchaseLines_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00001000);
+        onChanged();
+      } else {
+        purchaseLinesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public Builder removePurchaseLines(int index) {
+      if (purchaseLinesBuilder_ == null) {
+        ensurePurchaseLinesIsMutable();
+        purchaseLines_.remove(index);
+        onChanged();
+      } else {
+        purchaseLinesBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLineCandidate.Builder getPurchaseLinesBuilder(
+        int index) {
+      return getPurchaseLinesFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLinesOrBuilder(
+        int index) {
+      if (purchaseLinesBuilder_ == null) {
+        return purchaseLines_.get(index);  } else {
+        return purchaseLinesBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> 
+         getPurchaseLinesOrBuilderList() {
+      if (purchaseLinesBuilder_ != null) {
+        return purchaseLinesBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(purchaseLines_);
+      }
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLineCandidate.Builder addPurchaseLinesBuilder() {
+      return getPurchaseLinesFieldBuilder().addBuilder(
+          ai.visma.ssn.type.PurchaseLineCandidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public ai.visma.ssn.type.PurchaseLineCandidate.Builder addPurchaseLinesBuilder(
+        int index) {
+      return getPurchaseLinesFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.PurchaseLineCandidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Purchase lines for the document. This is a list of candidates, where each
+     * candidate is a single purchase lines. Each purchase line may have page number,
+     * code, description, quantity, item number, unit, total discount, percentage discount,
+     * total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
+     * unit price excl vat
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 45 [json_name = "purchaseLines"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.PurchaseLineCandidate.Builder> 
+         getPurchaseLinesBuilderList() {
+      return getPurchaseLinesFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.PurchaseLineCandidate, ai.visma.ssn.type.PurchaseLineCandidate.Builder, ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> 
+        getPurchaseLinesFieldBuilder() {
+      if (purchaseLinesBuilder_ == null) {
+        purchaseLinesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.ssn.type.PurchaseLineCandidate, ai.visma.ssn.type.PurchaseLineCandidate.Builder, ai.visma.ssn.type.PurchaseLineCandidateOrBuilder>(
+                purchaseLines_,
+                ((bitField1_ & 0x00001000) != 0),
+                getParentForChildren(),
+                isClean());
+        purchaseLines_ = null;
+      }
+      return purchaseLinesBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

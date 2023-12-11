@@ -42,18 +42,30 @@ namespace Ssn.Type {
             "bE5hbWUSOAoJbW9kZWxfdmVyGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLklu",
             "dDY0VmFsdWVSCG1vZGVsVmVyIlYKDUxpbmVDYW5kaWRhdGUSEgoEdGV4dBgB",
             "IAEoCVIEdGV4dBIWCgZhbW91bnQYAiABKAFSBmFtb3VudBIZCghwYWdlX3Jl",
-            "ZhgGIAEoDVIHcGFnZVJlZkKaAQoRYWkudmlzbWEuc3NuLnR5cGVCDkNhbmRp",
-            "ZGF0ZVByb3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2Vu",
-            "L2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNTVFiqAghTc24uVHlwZcoCCFNzblxU",
-            "eXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRhdGHqAglTc246OlR5cGViBnByb3Rv",
-            "Mw=="));
+            "ZhgGIAEoDVIHcGFnZVJlZiL/AwoVUHVyY2hhc2VMaW5lQ2FuZGlkYXRlEhkK",
+            "CHBhZ2VfcmVmGAEgASgNUgdwYWdlUmVmEhIKBGNvZGUYAiABKAlSBGNvZGUS",
+            "IAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEhoKCHF1YW50aXR5",
+            "GAQgASgJUghxdWFudGl0eRIfCgtpdGVtX251bWJlchgFIAEoCVIKaXRlbU51",
+            "bWJlchISCgR1bml0GAYgASgJUgR1bml0EiUKDnRvdGFsX2Rpc2NvdW50GAcg",
+            "ASgJUg10b3RhbERpc2NvdW50Ei8KE3BlcmNlbnRhZ2VfZGlzY291bnQYCCAB",
+            "KAlSEnBlcmNlbnRhZ2VEaXNjb3VudBIkCg50b3RhbF9pbmNsX3ZhdBgJIAEo",
+            "CVIMdG90YWxJbmNsVmF0EiQKDnRvdGFsX2V4Y2xfdmF0GAogASgJUgx0b3Rh",
+            "bEV4Y2xWYXQSGwoJdG90YWxfdmF0GAsgASgJUgh0b3RhbFZhdBIlCg5wZXJj",
+            "ZW50YWdlX3ZhdBgMIAEoCVINcGVyY2VudGFnZVZhdBItChN1bml0X3ByaWNl",
+            "X2luY2xfdmF0GA0gASgJUhB1bml0UHJpY2VJbmNsVmF0Ei0KE3VuaXRfcHJp",
+            "Y2VfZXhjbF92YXQYDiABKAlSEHVuaXRQcmljZUV4Y2xWYXRCmgEKEWFpLnZp",
+            "c21hLnNzbi50eXBlQg5DYW5kaWRhdGVQcm90b1ABWjRnaXRodWIuY29tL2Ut",
+            "Y29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vdHlwZTtzc250eXBlogIDU1RY",
+            "qgIIU3NuLlR5cGXKAghTc25cVHlwZeICFFNzblxUeXBlXEdQQk1ldGFkYXRh",
+            "6gIJU3NuOjpUeXBlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Confidence), global::Ssn.Type.Confidence.Parser, new[]{ "Level", "Value" }, null, new[]{ typeof(global::Ssn.Type.Confidence.Types.Level) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.ModelSpec), global::Ssn.Type.ModelSpec.Parser, new[]{ "ModelName", "ModelVer" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1318,6 +1330,719 @@ namespace Ssn.Type {
           }
           case 48: {
             PageRef = input.ReadUInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class PurchaseLineCandidate : pb::IMessage<PurchaseLineCandidate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PurchaseLineCandidate> _parser = new pb::MessageParser<PurchaseLineCandidate>(() => new PurchaseLineCandidate());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PurchaseLineCandidate> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PurchaseLineCandidate() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PurchaseLineCandidate(PurchaseLineCandidate other) : this() {
+      pageRef_ = other.pageRef_;
+      code_ = other.code_;
+      description_ = other.description_;
+      quantity_ = other.quantity_;
+      itemNumber_ = other.itemNumber_;
+      unit_ = other.unit_;
+      totalDiscount_ = other.totalDiscount_;
+      percentageDiscount_ = other.percentageDiscount_;
+      totalInclVat_ = other.totalInclVat_;
+      totalExclVat_ = other.totalExclVat_;
+      totalVat_ = other.totalVat_;
+      percentageVat_ = other.percentageVat_;
+      unitPriceInclVat_ = other.unitPriceInclVat_;
+      unitPriceExclVat_ = other.unitPriceExclVat_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PurchaseLineCandidate Clone() {
+      return new PurchaseLineCandidate(this);
+    }
+
+    /// <summary>Field number for the "page_ref" field.</summary>
+    public const int PageRefFieldNumber = 1;
+    private uint pageRef_;
+    /// <summary>
+    /// A reference to the page where the line was found.
+    /// page_ref start from 1.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PageRef {
+      get { return pageRef_; }
+      set {
+        pageRef_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "code" field.</summary>
+    public const int CodeFieldNumber = 2;
+    private string code_ = "";
+    /// <summary>
+    /// Code is an ID that supplier uses to identify the item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Code {
+      get { return code_; }
+      set {
+        code_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private string description_ = "";
+    /// <summary>
+    /// Description is a piece of text that describes the item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "quantity" field.</summary>
+    public const int QuantityFieldNumber = 4;
+    private string quantity_ = "";
+    /// <summary>
+    /// Quantity is the number of items
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Quantity {
+      get { return quantity_; }
+      set {
+        quantity_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "item_number" field.</summary>
+    public const int ItemNumberFieldNumber = 5;
+    private string itemNumber_ = "";
+    /// <summary>
+    /// ItemNumber is the number of the item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ItemNumber {
+      get { return itemNumber_; }
+      set {
+        itemNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "unit" field.</summary>
+    public const int UnitFieldNumber = 6;
+    private string unit_ = "";
+    /// <summary>
+    /// Unit is the unit of the item
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Unit {
+      get { return unit_; }
+      set {
+        unit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "total_discount" field.</summary>
+    public const int TotalDiscountFieldNumber = 7;
+    private string totalDiscount_ = "";
+    /// <summary>
+    /// Total discount is the total discount of the line
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TotalDiscount {
+      get { return totalDiscount_; }
+      set {
+        totalDiscount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "percentage_discount" field.</summary>
+    public const int PercentageDiscountFieldNumber = 8;
+    private string percentageDiscount_ = "";
+    /// <summary>
+    /// Percentage discount is the percentage discount of the line
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PercentageDiscount {
+      get { return percentageDiscount_; }
+      set {
+        percentageDiscount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "total_incl_vat" field.</summary>
+    public const int TotalInclVatFieldNumber = 9;
+    private string totalInclVat_ = "";
+    /// <summary>
+    /// Total incl vat is the total price of the line including vat
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TotalInclVat {
+      get { return totalInclVat_; }
+      set {
+        totalInclVat_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "total_excl_vat" field.</summary>
+    public const int TotalExclVatFieldNumber = 10;
+    private string totalExclVat_ = "";
+    /// <summary>
+    /// Total excl vat is the total price of the line excluding vat
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TotalExclVat {
+      get { return totalExclVat_; }
+      set {
+        totalExclVat_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "total_vat" field.</summary>
+    public const int TotalVatFieldNumber = 11;
+    private string totalVat_ = "";
+    /// <summary>
+    /// Total vat is the total vat of the line
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TotalVat {
+      get { return totalVat_; }
+      set {
+        totalVat_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "percentage_vat" field.</summary>
+    public const int PercentageVatFieldNumber = 12;
+    private string percentageVat_ = "";
+    /// <summary>
+    /// Percentage vat is the percentage vat of the line
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PercentageVat {
+      get { return percentageVat_; }
+      set {
+        percentageVat_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "unit_price_incl_vat" field.</summary>
+    public const int UnitPriceInclVatFieldNumber = 13;
+    private string unitPriceInclVat_ = "";
+    /// <summary>
+    /// Unit price incl vat is the unit price of the line including vat
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UnitPriceInclVat {
+      get { return unitPriceInclVat_; }
+      set {
+        unitPriceInclVat_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "unit_price_excl_vat" field.</summary>
+    public const int UnitPriceExclVatFieldNumber = 14;
+    private string unitPriceExclVat_ = "";
+    /// <summary>
+    /// Unit price excl vat is the unit price of the line excluding vat
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string UnitPriceExclVat {
+      get { return unitPriceExclVat_; }
+      set {
+        unitPriceExclVat_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PurchaseLineCandidate);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PurchaseLineCandidate other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PageRef != other.PageRef) return false;
+      if (Code != other.Code) return false;
+      if (Description != other.Description) return false;
+      if (Quantity != other.Quantity) return false;
+      if (ItemNumber != other.ItemNumber) return false;
+      if (Unit != other.Unit) return false;
+      if (TotalDiscount != other.TotalDiscount) return false;
+      if (PercentageDiscount != other.PercentageDiscount) return false;
+      if (TotalInclVat != other.TotalInclVat) return false;
+      if (TotalExclVat != other.TotalExclVat) return false;
+      if (TotalVat != other.TotalVat) return false;
+      if (PercentageVat != other.PercentageVat) return false;
+      if (UnitPriceInclVat != other.UnitPriceInclVat) return false;
+      if (UnitPriceExclVat != other.UnitPriceExclVat) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PageRef != 0) hash ^= PageRef.GetHashCode();
+      if (Code.Length != 0) hash ^= Code.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (Quantity.Length != 0) hash ^= Quantity.GetHashCode();
+      if (ItemNumber.Length != 0) hash ^= ItemNumber.GetHashCode();
+      if (Unit.Length != 0) hash ^= Unit.GetHashCode();
+      if (TotalDiscount.Length != 0) hash ^= TotalDiscount.GetHashCode();
+      if (PercentageDiscount.Length != 0) hash ^= PercentageDiscount.GetHashCode();
+      if (TotalInclVat.Length != 0) hash ^= TotalInclVat.GetHashCode();
+      if (TotalExclVat.Length != 0) hash ^= TotalExclVat.GetHashCode();
+      if (TotalVat.Length != 0) hash ^= TotalVat.GetHashCode();
+      if (PercentageVat.Length != 0) hash ^= PercentageVat.GetHashCode();
+      if (UnitPriceInclVat.Length != 0) hash ^= UnitPriceInclVat.GetHashCode();
+      if (UnitPriceExclVat.Length != 0) hash ^= UnitPriceExclVat.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PageRef != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PageRef);
+      }
+      if (Code.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Code);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (Quantity.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Quantity);
+      }
+      if (ItemNumber.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ItemNumber);
+      }
+      if (Unit.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Unit);
+      }
+      if (TotalDiscount.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(TotalDiscount);
+      }
+      if (PercentageDiscount.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(PercentageDiscount);
+      }
+      if (TotalInclVat.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(TotalInclVat);
+      }
+      if (TotalExclVat.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(TotalExclVat);
+      }
+      if (TotalVat.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(TotalVat);
+      }
+      if (PercentageVat.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(PercentageVat);
+      }
+      if (UnitPriceInclVat.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(UnitPriceInclVat);
+      }
+      if (UnitPriceExclVat.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(UnitPriceExclVat);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PageRef != 0) {
+        output.WriteRawTag(8);
+        output.WriteUInt32(PageRef);
+      }
+      if (Code.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Code);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Description);
+      }
+      if (Quantity.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Quantity);
+      }
+      if (ItemNumber.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ItemNumber);
+      }
+      if (Unit.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Unit);
+      }
+      if (TotalDiscount.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(TotalDiscount);
+      }
+      if (PercentageDiscount.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(PercentageDiscount);
+      }
+      if (TotalInclVat.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(TotalInclVat);
+      }
+      if (TotalExclVat.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(TotalExclVat);
+      }
+      if (TotalVat.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(TotalVat);
+      }
+      if (PercentageVat.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(PercentageVat);
+      }
+      if (UnitPriceInclVat.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(UnitPriceInclVat);
+      }
+      if (UnitPriceExclVat.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(UnitPriceExclVat);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PageRef != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PageRef);
+      }
+      if (Code.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Code);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (Quantity.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Quantity);
+      }
+      if (ItemNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ItemNumber);
+      }
+      if (Unit.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Unit);
+      }
+      if (TotalDiscount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TotalDiscount);
+      }
+      if (PercentageDiscount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PercentageDiscount);
+      }
+      if (TotalInclVat.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TotalInclVat);
+      }
+      if (TotalExclVat.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TotalExclVat);
+      }
+      if (TotalVat.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TotalVat);
+      }
+      if (PercentageVat.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PercentageVat);
+      }
+      if (UnitPriceInclVat.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UnitPriceInclVat);
+      }
+      if (UnitPriceExclVat.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(UnitPriceExclVat);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PurchaseLineCandidate other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PageRef != 0) {
+        PageRef = other.PageRef;
+      }
+      if (other.Code.Length != 0) {
+        Code = other.Code;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.Quantity.Length != 0) {
+        Quantity = other.Quantity;
+      }
+      if (other.ItemNumber.Length != 0) {
+        ItemNumber = other.ItemNumber;
+      }
+      if (other.Unit.Length != 0) {
+        Unit = other.Unit;
+      }
+      if (other.TotalDiscount.Length != 0) {
+        TotalDiscount = other.TotalDiscount;
+      }
+      if (other.PercentageDiscount.Length != 0) {
+        PercentageDiscount = other.PercentageDiscount;
+      }
+      if (other.TotalInclVat.Length != 0) {
+        TotalInclVat = other.TotalInclVat;
+      }
+      if (other.TotalExclVat.Length != 0) {
+        TotalExclVat = other.TotalExclVat;
+      }
+      if (other.TotalVat.Length != 0) {
+        TotalVat = other.TotalVat;
+      }
+      if (other.PercentageVat.Length != 0) {
+        PercentageVat = other.PercentageVat;
+      }
+      if (other.UnitPriceInclVat.Length != 0) {
+        UnitPriceInclVat = other.UnitPriceInclVat;
+      }
+      if (other.UnitPriceExclVat.Length != 0) {
+        UnitPriceExclVat = other.UnitPriceExclVat;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            PageRef = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            Code = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            Quantity = input.ReadString();
+            break;
+          }
+          case 42: {
+            ItemNumber = input.ReadString();
+            break;
+          }
+          case 50: {
+            Unit = input.ReadString();
+            break;
+          }
+          case 58: {
+            TotalDiscount = input.ReadString();
+            break;
+          }
+          case 66: {
+            PercentageDiscount = input.ReadString();
+            break;
+          }
+          case 74: {
+            TotalInclVat = input.ReadString();
+            break;
+          }
+          case 82: {
+            TotalExclVat = input.ReadString();
+            break;
+          }
+          case 90: {
+            TotalVat = input.ReadString();
+            break;
+          }
+          case 98: {
+            PercentageVat = input.ReadString();
+            break;
+          }
+          case 106: {
+            UnitPriceInclVat = input.ReadString();
+            break;
+          }
+          case 114: {
+            UnitPriceExclVat = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            PageRef = input.ReadUInt32();
+            break;
+          }
+          case 18: {
+            Code = input.ReadString();
+            break;
+          }
+          case 26: {
+            Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            Quantity = input.ReadString();
+            break;
+          }
+          case 42: {
+            ItemNumber = input.ReadString();
+            break;
+          }
+          case 50: {
+            Unit = input.ReadString();
+            break;
+          }
+          case 58: {
+            TotalDiscount = input.ReadString();
+            break;
+          }
+          case 66: {
+            PercentageDiscount = input.ReadString();
+            break;
+          }
+          case 74: {
+            TotalInclVat = input.ReadString();
+            break;
+          }
+          case 82: {
+            TotalExclVat = input.ReadString();
+            break;
+          }
+          case 90: {
+            TotalVat = input.ReadString();
+            break;
+          }
+          case 98: {
+            PercentageVat = input.ReadString();
+            break;
+          }
+          case 106: {
+            UnitPriceInclVat = input.ReadString();
+            break;
+          }
+          case 114: {
+            UnitPriceExclVat = input.ReadString();
             break;
           }
         }

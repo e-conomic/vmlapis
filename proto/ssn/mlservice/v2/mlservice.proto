@@ -125,3 +125,14 @@ message FeatureGenPredictRequest {
   FeatureGenRequest feature_gen_request = 1;
   PredictRequest predict_request = 2;
 }
+
+// Purchase Lines API
+
+message PurchaseLinesRequest {
+  ssn.type.TextAnnotation text_annotation = 1;
+  bytes image = 2;
+}
+
+message PurchaseLinesResponse {
+  repeated ssn.type.PurchaseLineCandidate purchase_lines = 1;
+}
