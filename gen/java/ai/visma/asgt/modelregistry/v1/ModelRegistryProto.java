@@ -67,19 +67,22 @@ public final class ModelRegistryProto {
       "e:\0028\001\"F\n\026GetCurrentModelRequest\022,\n\007datas" +
       "et\030\001 \001(\0132\022.asgt.type.DatasetR\007dataset\"A\n" +
       "\027GetCurrentModelResponse\022&\n\005model\030\001 \001(\0132" +
-      "\020.asgt.type.ModelR\005model2\327\001\n\rModelRegist" +
+      "\020.asgt.type.ModelR\005model2\315\002\n\rModelRegist" +
       "ry\022T\n\rRegisterModel\022+.asgt.modelregistry" +
       ".v1.RegisterModelRequest\032\026.google.protob" +
       "uf.Empty\022p\n\017GetCurrentModel\022-.asgt.model" +
       "registry.v1.GetCurrentModelRequest\032..asg" +
       "t.modelregistry.v1.GetCurrentModelRespon" +
-      "seB\363\001\n\036ai.visma.asgt.modelregistry.v1B\022M" +
-      "odelRegistryProtoP\001ZGgithub.com/e-conomi" +
-      "c/vmlapis/gen/go/asgt/modelregistry/v1;m" +
-      "odelregistry\242\002\003AMX\252\002\025Asgt.Modelregistry." +
-      "V1\312\002\025Asgt\\Modelregistry\\V1\342\002!Asgt\\Modelr" +
-      "egistry\\V1\\GPBMetadata\352\002\027Asgt::Modelregi" +
-      "stry::V1b\006proto3"
+      "se\022t\n\023GetCurrentFullModel\022-.asgt.modelre" +
+      "gistry.v1.GetCurrentModelRequest\032..asgt." +
+      "modelregistry.v1.GetCurrentModelResponse" +
+      "B\363\001\n\036ai.visma.asgt.modelregistry.v1B\022Mod" +
+      "elRegistryProtoP\001ZGgithub.com/e-conomic/" +
+      "vmlapis/gen/go/asgt/modelregistry/v1;mod" +
+      "elregistry\242\002\003AMX\252\002\025Asgt.Modelregistry.V1" +
+      "\312\002\025Asgt\\Modelregistry\\V1\342\002!Asgt\\Modelreg" +
+      "istry\\V1\\GPBMetadata\352\002\027Asgt::Modelregist" +
+      "ry::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

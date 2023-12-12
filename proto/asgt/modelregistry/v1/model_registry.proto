@@ -18,6 +18,8 @@ service ModelRegistry {
 
   rpc GetCurrentModel(GetCurrentModelRequest) returns (GetCurrentModelResponse);
 
+  rpc GetCurrentFullModel(GetCurrentModelRequest) returns (GetCurrentModelResponse);
+
   // List the most recent versions of a model trained with a specified dataset
   //  rpc ListModelVersions (ListModelVersionsRequest) returns (ListModelVersionsResponse);
 }

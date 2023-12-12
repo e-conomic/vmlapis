@@ -28,28 +28,32 @@ public final class ModelProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\025asgt/type/model.proto\022\tasgt.type\032\036asgt" +
-      "/type/target_metrics.proto\032\034gen_bq_schem" +
-      "a/bq_field.proto\032\037google/protobuf/timest" +
-      "amp.proto\"\241\003\n\005Model\022\037\n\007version\030\003 \001(\003B\005\352?" +
-      "\002\010\001R\007version\0229\n\ncreated_at\030\004 \001(\0132\032.googl" +
-      "e.protobuf.TimestampR\tcreatedAt\022(\n\014datas" +
-      "et_size\030\005 \001(\005B\005\352?\002\030\001R\013datasetSize\022*\n\rtra" +
-      "ining_size\030\006 \001(\005B\005\352?\002\030\001R\014trainingSize\022L\n" +
-      "\021confidence_scores\030\007 \003(\0132\030.asgt.type.Tar" +
-      "getMetricsB\005\352?\002\030\001R\020confidenceScores\0229\n\ni" +
-      "nput_type\030\010 \001(\0162\032.asgt.type.Model.InputT" +
-      "ypeR\tinputType\022!\n\014dataset_type\030\t \001(\tR\013da" +
-      "tasetType\"4\n\tInputType\022\023\n\017FEATURE_TENSOR" +
-      "S\020\000\022\022\n\016EXAMPLE_TENSOR\020\001J\004\010\001\020\003B\235\001\n\022ai.vis" +
-      "ma.asgt.typeB\nModelProtoP\001Z6github.com/e" +
-      "-conomic/vmlapis/gen/go/asgt/type;asgtty" +
-      "pe\242\002\003ATX\252\002\tAsgt.Type\312\002\tAsgt\\Type\342\002\025Asgt\\" +
-      "Type\\GPBMetadata\352\002\nAsgt::Typeb\006proto3"
+      "\n\025asgt/type/model.proto\022\tasgt.type\032\032asgt" +
+      "/type/model_file.proto\032\036asgt/type/target" +
+      "_metrics.proto\032\034gen_bq_schema/bq_field.p" +
+      "roto\032\037google/protobuf/timestamp.proto\"\337\003" +
+      "\n\005Model\022\037\n\007version\030\003 \001(\003B\005\352?\002\010\001R\007version" +
+      "\0229\n\ncreated_at\030\004 \001(\0132\032.google.protobuf.T" +
+      "imestampR\tcreatedAt\022(\n\014dataset_size\030\005 \001(" +
+      "\005B\005\352?\002\030\001R\013datasetSize\022*\n\rtraining_size\030\006" +
+      " \001(\005B\005\352?\002\030\001R\014trainingSize\022L\n\021confidence_" +
+      "scores\030\007 \003(\0132\030.asgt.type.TargetMetricsB\005" +
+      "\352?\002\030\001R\020confidenceScores\0229\n\ninput_type\030\010 " +
+      "\001(\0162\032.asgt.type.Model.InputTypeR\tinputTy" +
+      "pe\022!\n\014dataset_type\030\t \001(\tR\013datasetType\022<\n" +
+      "\013model_files\030\n \003(\0132\024.asgt.type.ModelFile" +
+      "B\005\352?\002\030\001R\nmodelFiles\"4\n\tInputType\022\023\n\017FEAT" +
+      "URE_TENSORS\020\000\022\022\n\016EXAMPLE_TENSOR\020\001J\004\010\001\020\003B" +
+      "\235\001\n\022ai.visma.asgt.typeB\nModelProtoP\001Z6gi" +
+      "thub.com/e-conomic/vmlapis/gen/go/asgt/t" +
+      "ype;asgttype\242\002\003ATX\252\002\tAsgt.Type\312\002\tAsgt\\Ty" +
+      "pe\342\002\025Asgt\\Type\\GPBMetadata\352\002\nAsgt::Typeb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          ai.visma.asgt.type.ModelFileProto.getDescriptor(),
           ai.visma.asgt.type.TargetMetricsProto.getDescriptor(),
           ai.visma.gen_bq_schema.BqFieldProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
@@ -59,12 +63,13 @@ public final class ModelProto {
     internal_static_asgt_type_Model_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Model_descriptor,
-        new java.lang.String[] { "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType", });
+        new java.lang.String[] { "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType", "ModelFiles", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(ai.visma.gen_bq_schema.BqFieldProto.bigquery);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
+    ai.visma.asgt.type.ModelFileProto.getDescriptor();
     ai.visma.asgt.type.TargetMetricsProto.getDescriptor();
     ai.visma.gen_bq_schema.BqFieldProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();

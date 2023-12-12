@@ -20,8 +20,9 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	ModelRegistry_RegisterModel_FullMethodName   = "/asgt.modelregistry.v1.ModelRegistry/RegisterModel"
-	ModelRegistry_GetCurrentModel_FullMethodName = "/asgt.modelregistry.v1.ModelRegistry/GetCurrentModel"
+	ModelRegistry_RegisterModel_FullMethodName       = "/asgt.modelregistry.v1.ModelRegistry/RegisterModel"
+	ModelRegistry_GetCurrentModel_FullMethodName     = "/asgt.modelregistry.v1.ModelRegistry/GetCurrentModel"
+	ModelRegistry_GetCurrentFullModel_FullMethodName = "/asgt.modelregistry.v1.ModelRegistry/GetCurrentFullModel"
 )
 
 // ModelRegistryClient is the client API for ModelRegistry service.
@@ -30,6 +31,7 @@ const (
 type ModelRegistryClient interface {
 	RegisterModel(ctx context.Context, in *RegisterModelRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	GetCurrentModel(ctx context.Context, in *GetCurrentModelRequest, opts ...grpc.CallOption) (*GetCurrentModelResponse, error)
+	GetCurrentFullModel(ctx context.Context, in *GetCurrentModelRequest, opts ...grpc.CallOption) (*GetCurrentModelResponse, error)
 }
 
 type modelRegistryClient struct {
@@ -58,12 +60,22 @@ func (c *modelRegistryClient) GetCurrentModel(ctx context.Context, in *GetCurren
 	return out, nil
 }
 
+func (c *modelRegistryClient) GetCurrentFullModel(ctx context.Context, in *GetCurrentModelRequest, opts ...grpc.CallOption) (*GetCurrentModelResponse, error) {
+	out := new(GetCurrentModelResponse)
+	err := c.cc.Invoke(ctx, ModelRegistry_GetCurrentFullModel_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // ModelRegistryServer is the server API for ModelRegistry service.
 // All implementations should embed UnimplementedModelRegistryServer
 // for forward compatibility
 type ModelRegistryServer interface {
 	RegisterModel(context.Context, *RegisterModelRequest) (*emptypb.Empty, error)
 	GetCurrentModel(context.Context, *GetCurrentModelRequest) (*GetCurrentModelResponse, error)
+	GetCurrentFullModel(context.Context, *GetCurrentModelRequest) (*GetCurrentModelResponse, error)
 }
 
 // UnimplementedModelRegistryServer should be embedded to have forward compatible implementations.
@@ -75,6 +87,9 @@ func (UnimplementedModelRegistryServer) RegisterModel(context.Context, *Register
 }
 func (UnimplementedModelRegistryServer) GetCurrentModel(context.Context, *GetCurrentModelRequest) (*GetCurrentModelResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetCurrentModel not implemented")
+}
+func (UnimplementedModelRegistryServer) GetCurrentFullModel(context.Context, *GetCurrentModelRequest) (*GetCurrentModelResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetCurrentFullModel not implemented")
 }
 
 // UnsafeModelRegistryServer may be embedded to opt out of forward compatibility for this service.
@@ -124,6 +139,24 @@ func _ModelRegistry_GetCurrentModel_Handler(srv interface{}, ctx context.Context
 	return interceptor(ctx, in, info, handler)
 }
 
+func _ModelRegistry_GetCurrentFullModel_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(GetCurrentModelRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(ModelRegistryServer).GetCurrentFullModel(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: ModelRegistry_GetCurrentFullModel_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(ModelRegistryServer).GetCurrentFullModel(ctx, req.(*GetCurrentModelRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // ModelRegistry_ServiceDesc is the grpc.ServiceDesc for ModelRegistry service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -138,6 +171,10 @@ var ModelRegistry_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetCurrentModel",
 			Handler:    _ModelRegistry_GetCurrentModel_Handler,
+		},
+		{
+			MethodName: "GetCurrentFullModel",
+			Handler:    _ModelRegistry_GetCurrentFullModel_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

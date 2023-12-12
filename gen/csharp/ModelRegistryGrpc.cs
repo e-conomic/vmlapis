@@ -70,6 +70,14 @@ namespace Asgt.Modelregistry.V1 {
         __Marshaller_asgt_modelregistry_v1_GetCurrentModelRequest,
         __Marshaller_asgt_modelregistry_v1_GetCurrentModelResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Asgt.Modelregistry.V1.GetCurrentModelRequest, global::Asgt.Modelregistry.V1.GetCurrentModelResponse> __Method_GetCurrentFullModel = new grpc::Method<global::Asgt.Modelregistry.V1.GetCurrentModelRequest, global::Asgt.Modelregistry.V1.GetCurrentModelResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetCurrentFullModel",
+        __Marshaller_asgt_modelregistry_v1_GetCurrentModelRequest,
+        __Marshaller_asgt_modelregistry_v1_GetCurrentModelResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -94,6 +102,12 @@ namespace Asgt.Modelregistry.V1 {
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Asgt.Modelregistry.V1.GetCurrentModelResponse> GetCurrentModel(global::Asgt.Modelregistry.V1.GetCurrentModelRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Asgt.Modelregistry.V1.GetCurrentModelResponse> GetCurrentFullModel(global::Asgt.Modelregistry.V1.GetCurrentModelRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -195,6 +209,26 @@ namespace Asgt.Modelregistry.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetCurrentModel, null, options, request);
       }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Asgt.Modelregistry.V1.GetCurrentModelResponse GetCurrentFullModel(global::Asgt.Modelregistry.V1.GetCurrentModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCurrentFullModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Asgt.Modelregistry.V1.GetCurrentModelResponse GetCurrentFullModel(global::Asgt.Modelregistry.V1.GetCurrentModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetCurrentFullModel, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Asgt.Modelregistry.V1.GetCurrentModelResponse> GetCurrentFullModelAsync(global::Asgt.Modelregistry.V1.GetCurrentModelRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCurrentFullModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Asgt.Modelregistry.V1.GetCurrentModelResponse> GetCurrentFullModelAsync(global::Asgt.Modelregistry.V1.GetCurrentModelRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetCurrentFullModel, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ModelRegistryClient NewInstance(ClientBaseConfiguration configuration)
@@ -210,7 +244,8 @@ namespace Asgt.Modelregistry.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_RegisterModel, serviceImpl.RegisterModel)
-          .AddMethod(__Method_GetCurrentModel, serviceImpl.GetCurrentModel).Build();
+          .AddMethod(__Method_GetCurrentModel, serviceImpl.GetCurrentModel)
+          .AddMethod(__Method_GetCurrentFullModel, serviceImpl.GetCurrentFullModel).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -222,6 +257,7 @@ namespace Asgt.Modelregistry.V1 {
     {
       serviceBinder.AddMethod(__Method_RegisterModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Modelregistry.V1.RegisterModelRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.RegisterModel));
       serviceBinder.AddMethod(__Method_GetCurrentModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Modelregistry.V1.GetCurrentModelRequest, global::Asgt.Modelregistry.V1.GetCurrentModelResponse>(serviceImpl.GetCurrentModel));
+      serviceBinder.AddMethod(__Method_GetCurrentFullModel, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Modelregistry.V1.GetCurrentModelRequest, global::Asgt.Modelregistry.V1.GetCurrentModelResponse>(serviceImpl.GetCurrentFullModel));
     }
 
   }

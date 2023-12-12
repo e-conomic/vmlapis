@@ -21,6 +21,8 @@ var global =
     (function () { return this; }).call(null) ||
     Function('return this')();
 
+var asgt_type_model_file_pb = require('../../asgt/type/model_file_pb.js');
+goog.object.extend(proto, asgt_type_model_file_pb);
 var asgt_type_target_metrics_pb = require('../../asgt/type/target_metrics_pb.js');
 goog.object.extend(proto, asgt_type_target_metrics_pb);
 var gen_bq_schema_bq_field_pb = require('../../gen_bq_schema/bq_field_pb.js');
@@ -56,7 +58,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.type.Model.repeatedFields_ = [7];
+proto.asgt.type.Model.repeatedFields_ = [7,10];
 
 
 
@@ -96,7 +98,9 @@ proto.asgt.type.Model.toObject = function(includeInstance, msg) {
     confidenceScoresList: jspb.Message.toObjectList(msg.getConfidenceScoresList(),
     asgt_type_target_metrics_pb.TargetMetrics.toObject, includeInstance),
     inputType: jspb.Message.getFieldWithDefault(msg, 8, 0),
-    datasetType: jspb.Message.getFieldWithDefault(msg, 9, "")
+    datasetType: jspb.Message.getFieldWithDefault(msg, 9, ""),
+    modelFilesList: jspb.Message.toObjectList(msg.getModelFilesList(),
+    asgt_type_model_file_pb.ModelFile.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -162,6 +166,11 @@ proto.asgt.type.Model.deserializeBinaryFromReader = function(msg, reader) {
     case 9:
       var value = /** @type {string} */ (reader.readString());
       msg.setDatasetType(value);
+      break;
+    case 10:
+      var value = new asgt_type_model_file_pb.ModelFile;
+      reader.readMessage(value,asgt_type_model_file_pb.ModelFile.deserializeBinaryFromReader);
+      msg.addModelFiles(value);
       break;
     default:
       reader.skipField();
@@ -241,6 +250,14 @@ proto.asgt.type.Model.serializeBinaryToWriter = function(message, writer) {
     writer.writeString(
       9,
       f
+    );
+  }
+  f = message.getModelFilesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      10,
+      f,
+      asgt_type_model_file_pb.ModelFile.serializeBinaryToWriter
     );
   }
 };
@@ -416,6 +433,44 @@ proto.asgt.type.Model.prototype.getDatasetType = function() {
  */
 proto.asgt.type.Model.prototype.setDatasetType = function(value) {
   return jspb.Message.setProto3StringField(this, 9, value);
+};
+
+
+/**
+ * repeated ModelFile model_files = 10;
+ * @return {!Array<!proto.asgt.type.ModelFile>}
+ */
+proto.asgt.type.Model.prototype.getModelFilesList = function() {
+  return /** @type{!Array<!proto.asgt.type.ModelFile>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_type_model_file_pb.ModelFile, 10));
+};
+
+
+/**
+ * @param {!Array<!proto.asgt.type.ModelFile>} value
+ * @return {!proto.asgt.type.Model} returns this
+*/
+proto.asgt.type.Model.prototype.setModelFilesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 10, value);
+};
+
+
+/**
+ * @param {!proto.asgt.type.ModelFile=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.ModelFile}
+ */
+proto.asgt.type.Model.prototype.addModelFiles = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 10, opt_value, proto.asgt.type.ModelFile, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.type.Model} returns this
+ */
+proto.asgt.type.Model.prototype.clearModelFilesList = function() {
+  return this.setModelFilesList([]);
 };
 
 

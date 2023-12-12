@@ -23,6 +23,13 @@ export class ModelRegistryClient {
                response: asgt_modelregistry_v1_model_registry_pb.GetCurrentModelResponse) => void
   ): grpcWeb.ClientReadableStream<asgt_modelregistry_v1_model_registry_pb.GetCurrentModelResponse>;
 
+  getCurrentFullModel(
+    request: asgt_modelregistry_v1_model_registry_pb.GetCurrentModelRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: asgt_modelregistry_v1_model_registry_pb.GetCurrentModelResponse) => void
+  ): grpcWeb.ClientReadableStream<asgt_modelregistry_v1_model_registry_pb.GetCurrentModelResponse>;
+
 }
 
 export class ModelRegistryPromiseClient {
@@ -36,6 +43,11 @@ export class ModelRegistryPromiseClient {
   ): Promise<google_protobuf_empty_pb.Empty>;
 
   getCurrentModel(
+    request: asgt_modelregistry_v1_model_registry_pb.GetCurrentModelRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<asgt_modelregistry_v1_model_registry_pb.GetCurrentModelResponse>;
+
+  getCurrentFullModel(
     request: asgt_modelregistry_v1_model_registry_pb.GetCurrentModelRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<asgt_modelregistry_v1_model_registry_pb.GetCurrentModelResponse>;
