@@ -13,6 +13,7 @@ option java_outer_classname = "OcrServiceProto";
 service OcrService {
   rpc OcrScanImage(OcrScanImageRequest) returns (OcrScanImageResponse);
   rpc GetTextAnnotation(GetTextAnnotationRequest) returns (GetTextAnnotationResponse);
+  rpc GetTextAnnotations(GetTextAnnotationsRequest) returns (GetTextAnnotationsResponse);
 }
 
 message GetTextAnnotationRequest {
@@ -23,6 +24,16 @@ message GetTextAnnotationRequest {
 message GetTextAnnotationResponse {
   ssn.type.TextAnnotation text_annotation = 2;
   google.protobuf.BytesValue image = 3;
+}
+
+message GetTextAnnotationsRequest {
+  ssn.annotator.v1.Document document = 4;
+  bool preview = 5;
+}
+
+message GetTextAnnotationsResponse {
+  ssn.type.TextAnnotation text_annotation = 4;
+  google.protobuf.BytesValue image = 5;
 }
 
 message OcrScanImageRequest {
