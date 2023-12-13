@@ -25,6 +25,16 @@ public final class OcrserviceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_ocrservice_v1_GetTextAnnotationsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_ocrservice_v1_GetTextAnnotationsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_ocrservice_v1_GetTextAnnotationsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_ocrservice_v1_GetTextAnnotationsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ssn_ocrservice_v1_OcrScanImageRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -53,20 +63,29 @@ public final class OcrserviceProto {
       "ationResponse\022A\n\017text_annotation\030\002 \001(\0132\030" +
       ".ssn.type.TextAnnotationR\016textAnnotation" +
       "\0221\n\005image\030\003 \001(\0132\033.google.protobuf.BytesV" +
-      "alueR\005image\")\n\023OcrScanImageRequest\022\022\n\004da" +
-      "ta\030\001 \001(\014R\004data\"3\n\024OcrScanImageResponse\022\033" +
-      "\n\ttess_hocr\030\001 \001(\tR\010tessHocr2\335\001\n\nOcrServi" +
-      "ce\022_\n\014OcrScanImage\022&.ssn.ocrservice.v1.O" +
-      "crScanImageRequest\032\'.ssn.ocrservice.v1.O" +
-      "crScanImageResponse\022n\n\021GetTextAnnotation" +
-      "\022+.ssn.ocrservice.v1.GetTextAnnotationRe" +
-      "quest\032,.ssn.ocrservice.v1.GetTextAnnotat" +
-      "ionResponseB\325\001\n\032ai.visma.ssn.ocrservice." +
-      "v1B\017OcrserviceProtoP\001Z@github.com/e-cono" +
-      "mic/vmlapis/gen/go/ssn/ocrservice/v1;ocr" +
-      "service\242\002\003SOX\252\002\021Ssn.Ocrservice.V1\312\002\021Ssn\\" +
-      "Ocrservice\\V1\342\002\035Ssn\\Ocrservice\\V1\\GPBMet" +
-      "adata\352\002\023Ssn::Ocrservice::V1b\006proto3"
+      "alueR\005image\"m\n\031GetTextAnnotationsRequest" +
+      "\0226\n\010document\030\004 \001(\0132\032.ssn.annotator.v1.Do" +
+      "cumentR\010document\022\030\n\007preview\030\005 \001(\010R\007previ" +
+      "ew\"u\n\032GetTextAnnotationsResponse\022A\n\017text" +
+      "_annotation\030\004 \001(\0132\030.ssn.type.TextAnnotat" +
+      "ionR\016textAnnotation\022\024\n\005image\030\005 \001(\014R\005imag" +
+      "e\")\n\023OcrScanImageRequest\022\022\n\004data\030\001 \001(\014R\004" +
+      "data\"3\n\024OcrScanImageResponse\022\033\n\ttess_hoc" +
+      "r\030\001 \001(\tR\010tessHocr2\322\002\n\nOcrService\022_\n\014OcrS" +
+      "canImage\022&.ssn.ocrservice.v1.OcrScanImag" +
+      "eRequest\032\'.ssn.ocrservice.v1.OcrScanImag" +
+      "eResponse\022n\n\021GetTextAnnotation\022+.ssn.ocr" +
+      "service.v1.GetTextAnnotationRequest\032,.ss" +
+      "n.ocrservice.v1.GetTextAnnotationRespons" +
+      "e\022s\n\022GetTextAnnotations\022,.ssn.ocrservice" +
+      ".v1.GetTextAnnotationsRequest\032-.ssn.ocrs" +
+      "ervice.v1.GetTextAnnotationsResponse0\001B\325" +
+      "\001\n\032ai.visma.ssn.ocrservice.v1B\017Ocrservic" +
+      "eProtoP\001Z@github.com/e-conomic/vmlapis/g" +
+      "en/go/ssn/ocrservice/v1;ocrservice\242\002\003SOX" +
+      "\252\002\021Ssn.Ocrservice.V1\312\002\021Ssn\\Ocrservice\\V1" +
+      "\342\002\035Ssn\\Ocrservice\\V1\\GPBMetadata\352\002\023Ssn::" +
+      "Ocrservice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -87,14 +106,26 @@ public final class OcrserviceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_descriptor,
         new java.lang.String[] { "TextAnnotation", "Image", });
-    internal_static_ssn_ocrservice_v1_OcrScanImageRequest_descriptor =
+    internal_static_ssn_ocrservice_v1_GetTextAnnotationsRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_ssn_ocrservice_v1_GetTextAnnotationsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_ocrservice_v1_GetTextAnnotationsRequest_descriptor,
+        new java.lang.String[] { "Document", "Preview", });
+    internal_static_ssn_ocrservice_v1_GetTextAnnotationsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_ssn_ocrservice_v1_GetTextAnnotationsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_ocrservice_v1_GetTextAnnotationsResponse_descriptor,
+        new java.lang.String[] { "TextAnnotation", "Image", });
+    internal_static_ssn_ocrservice_v1_OcrScanImageRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
     internal_static_ssn_ocrservice_v1_OcrScanImageRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_OcrScanImageRequest_descriptor,
         new java.lang.String[] { "Data", });
     internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_ssn_ocrservice_v1_OcrScanImageResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_OcrScanImageResponse_descriptor,

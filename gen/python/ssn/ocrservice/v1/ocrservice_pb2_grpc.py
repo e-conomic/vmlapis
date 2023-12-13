@@ -25,6 +25,11 @@ class OcrServiceStub(object):
                 request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.SerializeToString,
                 response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.FromString,
                 )
+        self.GetTextAnnotations = channel.unary_stream(
+                '/ssn.ocrservice.v1.OcrService/GetTextAnnotations',
+                request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationsRequest.SerializeToString,
+                response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationsResponse.FromString,
+                )
 
 
 class OcrServiceServicer(object):
@@ -43,6 +48,12 @@ class OcrServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def GetTextAnnotations(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_OcrServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -55,6 +66,11 @@ def add_OcrServiceServicer_to_server(servicer, server):
                     servicer.GetTextAnnotation,
                     request_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.FromString,
                     response_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.SerializeToString,
+            ),
+            'GetTextAnnotations': grpc.unary_stream_rpc_method_handler(
+                    servicer.GetTextAnnotations,
+                    request_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationsRequest.FromString,
+                    response_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationsResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -98,5 +114,22 @@ class OcrService(object):
         return grpc.experimental.unary_unary(request, target, '/ssn.ocrservice.v1.OcrService/GetTextAnnotation',
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.SerializeToString,
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetTextAnnotations(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_stream(request, target, '/ssn.ocrservice.v1.OcrService/GetTextAnnotations',
+            ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationsRequest.SerializeToString,
+            ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationsResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
