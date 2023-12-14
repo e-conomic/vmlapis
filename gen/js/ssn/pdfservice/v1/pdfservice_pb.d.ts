@@ -53,6 +53,7 @@ export namespace RasterizePdfRequest {
     FIRST = 1,
     LAST = 2,
     ALL = 3,
+    FIRST_FIVE = 4,
   }
 }
 
