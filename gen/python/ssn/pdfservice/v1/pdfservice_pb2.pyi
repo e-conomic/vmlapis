@@ -27,10 +27,12 @@ class RasterizePdfRequest(_message.Message):
         FIRST: _ClassVar[RasterizePdfRequest.PageOption]
         LAST: _ClassVar[RasterizePdfRequest.PageOption]
         ALL: _ClassVar[RasterizePdfRequest.PageOption]
+        FIRST_FIVE: _ClassVar[RasterizePdfRequest.PageOption]
     FIRST_LAST: RasterizePdfRequest.PageOption
     FIRST: RasterizePdfRequest.PageOption
     LAST: RasterizePdfRequest.PageOption
     ALL: RasterizePdfRequest.PageOption
+    FIRST_FIVE: RasterizePdfRequest.PageOption
     DATA_FIELD_NUMBER: _ClassVar[int]
     DPI_FIELD_NUMBER: _ClassVar[int]
     FORMAT_FIELD_NUMBER: _ClassVar[int]
