@@ -27,8 +27,8 @@ class OcrServiceStub(object):
                 )
         self.GetTextAnnotations = channel.unary_stream(
                 '/ssn.ocrservice.v1.OcrService/GetTextAnnotations',
-                request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationsRequest.SerializeToString,
-                response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationsResponse.FromString,
+                request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.SerializeToString,
+                response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.FromString,
                 )
 
 
@@ -69,8 +69,8 @@ def add_OcrServiceServicer_to_server(servicer, server):
             ),
             'GetTextAnnotations': grpc.unary_stream_rpc_method_handler(
                     servicer.GetTextAnnotations,
-                    request_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationsRequest.FromString,
-                    response_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationsResponse.SerializeToString,
+                    request_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.FromString,
+                    response_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -129,7 +129,7 @@ class OcrService(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_stream(request, target, '/ssn.ocrservice.v1.OcrService/GetTextAnnotations',
-            ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationsRequest.SerializeToString,
-            ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationsResponse.FromString,
+            ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.SerializeToString,
+            ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

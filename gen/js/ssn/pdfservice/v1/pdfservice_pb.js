@@ -252,7 +252,8 @@ proto.ssn.pdfservice.v1.RasterizePdfRequest.PageOption = {
   FIRST_LAST: 0,
   FIRST: 1,
   LAST: 2,
-  ALL: 3
+  ALL: 3,
+  FIRST_FIVE: 4
 };
 
 /**

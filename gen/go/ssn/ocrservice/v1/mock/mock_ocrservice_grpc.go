@@ -58,7 +58,7 @@ func (mr *MockOcrServiceClientMockRecorder) GetTextAnnotation(ctx, in interface{
 }
 
 // GetTextAnnotations mocks base method.
-func (m *MockOcrServiceClient) GetTextAnnotations(ctx context.Context, in *ocrservice.GetTextAnnotationsRequest, opts ...grpc.CallOption) (ocrservice.OcrService_GetTextAnnotationsClient, error) {
+func (m *MockOcrServiceClient) GetTextAnnotations(ctx context.Context, in *ocrservice.GetTextAnnotationRequest, opts ...grpc.CallOption) (ocrservice.OcrService_GetTextAnnotationsClient, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
@@ -164,10 +164,10 @@ func (mr *MockOcrService_GetTextAnnotationsClientMockRecorder) Header() *gomock.
 }
 
 // Recv mocks base method.
-func (m *MockOcrService_GetTextAnnotationsClient) Recv() (*ocrservice.GetTextAnnotationsResponse, error) {
+func (m *MockOcrService_GetTextAnnotationsClient) Recv() (*ocrservice.GetTextAnnotationResponse, error) {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Recv")
-	ret0, _ := ret[0].(*ocrservice.GetTextAnnotationsResponse)
+	ret0, _ := ret[0].(*ocrservice.GetTextAnnotationResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
@@ -259,7 +259,7 @@ func (mr *MockOcrServiceServerMockRecorder) GetTextAnnotation(arg0, arg1 interfa
 }
 
 // GetTextAnnotations mocks base method.
-func (m *MockOcrServiceServer) GetTextAnnotations(arg0 *ocrservice.GetTextAnnotationsRequest, arg1 ocrservice.OcrService_GetTextAnnotationsServer) error {
+func (m *MockOcrServiceServer) GetTextAnnotations(arg0 *ocrservice.GetTextAnnotationRequest, arg1 ocrservice.OcrService_GetTextAnnotationsServer) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "GetTextAnnotations", arg0, arg1)
 	ret0, _ := ret[0].(error)
@@ -374,7 +374,7 @@ func (mr *MockOcrService_GetTextAnnotationsServerMockRecorder) RecvMsg(m interfa
 }
 
 // Send mocks base method.
-func (m *MockOcrService_GetTextAnnotationsServer) Send(arg0 *ocrservice.GetTextAnnotationsResponse) error {
+func (m *MockOcrService_GetTextAnnotationsServer) Send(arg0 *ocrservice.GetTextAnnotationResponse) error {
 	m.ctrl.T.Helper()
 	ret := m.ctrl.Call(m, "Send", arg0)
 	ret0, _ := ret[0].(error)

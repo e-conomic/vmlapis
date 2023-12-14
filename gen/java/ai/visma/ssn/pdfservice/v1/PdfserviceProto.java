@@ -34,7 +34,7 @@ public final class PdfserviceProto {
   static {
     java.lang.String[] descriptorData = {
       "\n\"ssn/pdfservice/v1/pdfservice.proto\022\021ss" +
-      "n.pdfservice.v1\"\232\003\n\023RasterizePdfRequest\022" +
+      "n.pdfservice.v1\"\252\003\n\023RasterizePdfRequest\022" +
       "\022\n\004data\030\001 \001(\014R\004data\022\020\n\003dpi\030\002 \001(\rR\003dpi\022E\n" +
       "\006format\030\003 \001(\0162-.ssn.pdfservice.v1.Raster" +
       "izePdfRequest.FormatR\006format\022G\n\005color\030\004 " +
@@ -43,23 +43,23 @@ public final class PdfserviceProto {
       "sn.pdfservice.v1.RasterizePdfRequest.Pag" +
       "eOptionR\005pages\"%\n\006Format\022\007\n\003PNG\020\000\022\010\n\004JPE" +
       "G\020\001\022\010\n\004WEBP\020\002\"!\n\nColorSpace\022\010\n\004GRAY\020\000\022\t\n" +
-      "\005COLOR\020\001\":\n\nPageOption\022\016\n\nFIRST_LAST\020\000\022\t" +
-      "\n\005FIRST\020\001\022\010\n\004LAST\020\002\022\007\n\003ALL\020\003\"\204\001\n\024Rasteri" +
-      "zePdfResponse\022\024\n\005index\030\001 \001(\rR\005index\022\022\n\004d" +
-      "ata\030\002 \001(\014R\004data\022\024\n\005width\030\003 \001(\rR\005width\022\026\n" +
-      "\006height\030\004 \001(\rR\006height\022\024\n\005scale\030\005 \001(\001R\005sc" +
-      "ale2\332\001\n\nPdfService\022i\n\024InternalRasterizeP" +
-      "df\022&.ssn.pdfservice.v1.RasterizePdfReque" +
-      "st\032\'.ssn.pdfservice.v1.RasterizePdfRespo" +
-      "nse0\001\022a\n\014RasterizePdf\022&.ssn.pdfservice.v" +
-      "1.RasterizePdfRequest\032\'.ssn.pdfservice.v" +
-      "1.RasterizePdfResponse0\001B\325\001\n\032ai.visma.ss" +
-      "n.pdfservice.v1B\017PdfserviceProtoP\001Z@gith" +
-      "ub.com/e-conomic/vmlapis/gen/go/ssn/pdfs" +
-      "ervice/v1;pdfservice\242\002\003SPX\252\002\021Ssn.Pdfserv" +
-      "ice.V1\312\002\021Ssn\\Pdfservice\\V1\342\002\035Ssn\\Pdfserv" +
-      "ice\\V1\\GPBMetadata\352\002\023Ssn::Pdfservice::V1" +
-      "b\006proto3"
+      "\005COLOR\020\001\"J\n\nPageOption\022\016\n\nFIRST_LAST\020\000\022\t" +
+      "\n\005FIRST\020\001\022\010\n\004LAST\020\002\022\007\n\003ALL\020\003\022\016\n\nFIRST_FI" +
+      "VE\020\004\"\204\001\n\024RasterizePdfResponse\022\024\n\005index\030\001" +
+      " \001(\rR\005index\022\022\n\004data\030\002 \001(\014R\004data\022\024\n\005width" +
+      "\030\003 \001(\rR\005width\022\026\n\006height\030\004 \001(\rR\006height\022\024\n" +
+      "\005scale\030\005 \001(\001R\005scale2\332\001\n\nPdfService\022i\n\024In" +
+      "ternalRasterizePdf\022&.ssn.pdfservice.v1.R" +
+      "asterizePdfRequest\032\'.ssn.pdfservice.v1.R" +
+      "asterizePdfResponse0\001\022a\n\014RasterizePdf\022&." +
+      "ssn.pdfservice.v1.RasterizePdfRequest\032\'." +
+      "ssn.pdfservice.v1.RasterizePdfResponse0\001" +
+      "B\325\001\n\032ai.visma.ssn.pdfservice.v1B\017Pdfserv" +
+      "iceProtoP\001Z@github.com/e-conomic/vmlapis" +
+      "/gen/go/ssn/pdfservice/v1;pdfservice\242\002\003S" +
+      "PX\252\002\021Ssn.Pdfservice.V1\312\002\021Ssn\\Pdfservice\\" +
+      "V1\342\002\035Ssn\\Pdfservice\\V1\\GPBMetadata\352\002\023Ssn" +
+      "::Pdfservice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

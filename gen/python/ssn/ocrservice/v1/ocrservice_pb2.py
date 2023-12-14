@@ -16,7 +16,7 @@ from vml_proto.ssn.annotator.v1 import annotator_pb2 as ssn_dot_annotator_dot_v1
 from vml_proto.ssn.type import text_annotation_pb2 as ssn_dot_type_dot_text__annotation__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x1egoogle/protobuf/wrappers.proto\x1a ssn/annotator/v1/annotator.proto\x1a\x1essn/type/text_annotation.proto\"l\n\x18GetTextAnnotationRequest\x12\x36\n\x08\x64ocument\x18\x02 \x01(\x0b\x32\x1a.ssn.annotator.v1.DocumentR\x08\x64ocument\x12\x18\n\x07preview\x18\x03 \x01(\x08R\x07preview\"\x91\x01\n\x19GetTextAnnotationResponse\x12\x41\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotationR\x0etextAnnotation\x12\x31\n\x05image\x18\x03 \x01(\x0b\x32\x1b.google.protobuf.BytesValueR\x05image\"m\n\x19GetTextAnnotationsRequest\x12\x36\n\x08\x64ocument\x18\x04 \x01(\x0b\x32\x1a.ssn.annotator.v1.DocumentR\x08\x64ocument\x12\x18\n\x07preview\x18\x05 \x01(\x08R\x07preview\"u\n\x1aGetTextAnnotationsResponse\x12\x41\n\x0ftext_annotation\x18\x04 \x01(\x0b\x32\x18.ssn.type.TextAnnotationR\x0etextAnnotation\x12\x14\n\x05image\x18\x05 \x01(\x0cR\x05image\")\n\x13OcrScanImageRequest\x12\x12\n\x04\x64\x61ta\x18\x01 \x01(\x0cR\x04\x64\x61ta\"3\n\x14OcrScanImageResponse\x12\x1b\n\ttess_hocr\x18\x01 \x01(\tR\x08tessHocr2\xd2\x02\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponse\x12s\n\x12GetTextAnnotations\x12,.ssn.ocrservice.v1.GetTextAnnotationsRequest\x1a-.ssn.ocrservice.v1.GetTextAnnotationsResponse0\x01\x42SB\x0fOcrServiceProtoZ@github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrserviceb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\"ssn/ocrservice/v1/ocrservice.proto\x12\x11ssn.ocrservice.v1\x1a\x1egoogle/protobuf/wrappers.proto\x1a ssn/annotator/v1/annotator.proto\x1a\x1essn/type/text_annotation.proto\"l\n\x18GetTextAnnotationRequest\x12\x36\n\x08\x64ocument\x18\x02 \x01(\x0b\x32\x1a.ssn.annotator.v1.DocumentR\x08\x64ocument\x12\x18\n\x07preview\x18\x03 \x01(\x08R\x07preview\"\x91\x01\n\x19GetTextAnnotationResponse\x12\x41\n\x0ftext_annotation\x18\x02 \x01(\x0b\x32\x18.ssn.type.TextAnnotationR\x0etextAnnotation\x12\x31\n\x05image\x18\x03 \x01(\x0b\x32\x1b.google.protobuf.BytesValueR\x05image\")\n\x13OcrScanImageRequest\x12\x12\n\x04\x64\x61ta\x18\x01 \x01(\x0cR\x04\x64\x61ta\"3\n\x14OcrScanImageResponse\x12\x1b\n\ttess_hocr\x18\x01 \x01(\tR\x08tessHocr2\xd0\x02\n\nOcrService\x12_\n\x0cOcrScanImage\x12&.ssn.ocrservice.v1.OcrScanImageRequest\x1a\'.ssn.ocrservice.v1.OcrScanImageResponse\x12n\n\x11GetTextAnnotation\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponse\x12q\n\x12GetTextAnnotations\x12+.ssn.ocrservice.v1.GetTextAnnotationRequest\x1a,.ssn.ocrservice.v1.GetTextAnnotationResponse0\x01\x42SB\x0fOcrServiceProtoZ@github.com/e-conomic/vmlapis/gen/go/ssn/ocrservice/v1;ocrserviceb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -29,14 +29,10 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _globals['_GETTEXTANNOTATIONREQUEST']._serialized_end=263
   _globals['_GETTEXTANNOTATIONRESPONSE']._serialized_start=266
   _globals['_GETTEXTANNOTATIONRESPONSE']._serialized_end=411
-  _globals['_GETTEXTANNOTATIONSREQUEST']._serialized_start=413
-  _globals['_GETTEXTANNOTATIONSREQUEST']._serialized_end=522
-  _globals['_GETTEXTANNOTATIONSRESPONSE']._serialized_start=524
-  _globals['_GETTEXTANNOTATIONSRESPONSE']._serialized_end=641
-  _globals['_OCRSCANIMAGEREQUEST']._serialized_start=643
-  _globals['_OCRSCANIMAGEREQUEST']._serialized_end=684
-  _globals['_OCRSCANIMAGERESPONSE']._serialized_start=686
-  _globals['_OCRSCANIMAGERESPONSE']._serialized_end=737
-  _globals['_OCRSERVICE']._serialized_start=740
-  _globals['_OCRSERVICE']._serialized_end=1078
+  _globals['_OCRSCANIMAGEREQUEST']._serialized_start=413
+  _globals['_OCRSCANIMAGEREQUEST']._serialized_end=454
+  _globals['_OCRSCANIMAGERESPONSE']._serialized_start=456
+  _globals['_OCRSCANIMAGERESPONSE']._serialized_end=507
+  _globals['_OCRSERVICE']._serialized_start=510
+  _globals['_OCRSERVICE']._serialized_end=846
 # @@protoc_insertion_point(module_scope)

@@ -80,29 +80,29 @@ public final class OcrServiceGrpc {
     return getGetTextAnnotationMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.GetTextAnnotationsRequest,
-      ai.visma.ssn.ocrservice.v1.GetTextAnnotationsResponse> getGetTextAnnotationsMethod;
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest,
+      ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse> getGetTextAnnotationsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetTextAnnotations",
-      requestType = ai.visma.ssn.ocrservice.v1.GetTextAnnotationsRequest.class,
-      responseType = ai.visma.ssn.ocrservice.v1.GetTextAnnotationsResponse.class,
+      requestType = ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest.class,
+      responseType = ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
-  public static io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.GetTextAnnotationsRequest,
-      ai.visma.ssn.ocrservice.v1.GetTextAnnotationsResponse> getGetTextAnnotationsMethod() {
-    io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.GetTextAnnotationsRequest, ai.visma.ssn.ocrservice.v1.GetTextAnnotationsResponse> getGetTextAnnotationsMethod;
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest,
+      ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse> getGetTextAnnotationsMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest, ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse> getGetTextAnnotationsMethod;
     if ((getGetTextAnnotationsMethod = OcrServiceGrpc.getGetTextAnnotationsMethod) == null) {
       synchronized (OcrServiceGrpc.class) {
         if ((getGetTextAnnotationsMethod = OcrServiceGrpc.getGetTextAnnotationsMethod) == null) {
           OcrServiceGrpc.getGetTextAnnotationsMethod = getGetTextAnnotationsMethod =
-              io.grpc.MethodDescriptor.<ai.visma.ssn.ocrservice.v1.GetTextAnnotationsRequest, ai.visma.ssn.ocrservice.v1.GetTextAnnotationsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest, ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetTextAnnotations"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ai.visma.ssn.ocrservice.v1.GetTextAnnotationsRequest.getDefaultInstance()))
+                  ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ai.visma.ssn.ocrservice.v1.GetTextAnnotationsResponse.getDefaultInstance()))
+                  ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse.getDefaultInstance()))
               .setSchemaDescriptor(new OcrServiceMethodDescriptorSupplier("GetTextAnnotations"))
               .build();
         }
@@ -178,8 +178,8 @@ public final class OcrServiceGrpc {
 
     /**
      */
-    default void getTextAnnotations(ai.visma.ssn.ocrservice.v1.GetTextAnnotationsRequest request,
-        io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.GetTextAnnotationsResponse> responseObserver) {
+    default void getTextAnnotations(ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTextAnnotationsMethod(), responseObserver);
     }
   }
@@ -235,8 +235,8 @@ public final class OcrServiceGrpc {
 
     /**
      */
-    public void getTextAnnotations(ai.visma.ssn.ocrservice.v1.GetTextAnnotationsRequest request,
-        io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.GetTextAnnotationsResponse> responseObserver) {
+    public void getTextAnnotations(ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getGetTextAnnotationsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -277,8 +277,8 @@ public final class OcrServiceGrpc {
 
     /**
      */
-    public java.util.Iterator<ai.visma.ssn.ocrservice.v1.GetTextAnnotationsResponse> getTextAnnotations(
-        ai.visma.ssn.ocrservice.v1.GetTextAnnotationsRequest request) {
+    public java.util.Iterator<ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse> getTextAnnotations(
+        ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest request) {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getGetTextAnnotationsMethod(), getCallOptions(), request);
     }
@@ -350,8 +350,8 @@ public final class OcrServiceGrpc {
               (io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse>) responseObserver);
           break;
         case METHODID_GET_TEXT_ANNOTATIONS:
-          serviceImpl.getTextAnnotations((ai.visma.ssn.ocrservice.v1.GetTextAnnotationsRequest) request,
-              (io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.GetTextAnnotationsResponse>) responseObserver);
+          serviceImpl.getTextAnnotations((ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -389,8 +389,8 @@ public final class OcrServiceGrpc {
           getGetTextAnnotationsMethod(),
           io.grpc.stub.ServerCalls.asyncServerStreamingCall(
             new MethodHandlers<
-              ai.visma.ssn.ocrservice.v1.GetTextAnnotationsRequest,
-              ai.visma.ssn.ocrservice.v1.GetTextAnnotationsResponse>(
+              ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest,
+              ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse>(
                 service, METHODID_GET_TEXT_ANNOTATIONS)))
         .build();
   }

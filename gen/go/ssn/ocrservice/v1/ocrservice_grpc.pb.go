@@ -30,7 +30,7 @@ const (
 type OcrServiceClient interface {
 	OcrScanImage(ctx context.Context, in *OcrScanImageRequest, opts ...grpc.CallOption) (*OcrScanImageResponse, error)
 	GetTextAnnotation(ctx context.Context, in *GetTextAnnotationRequest, opts ...grpc.CallOption) (*GetTextAnnotationResponse, error)
-	GetTextAnnotations(ctx context.Context, in *GetTextAnnotationsRequest, opts ...grpc.CallOption) (OcrService_GetTextAnnotationsClient, error)
+	GetTextAnnotations(ctx context.Context, in *GetTextAnnotationRequest, opts ...grpc.CallOption) (OcrService_GetTextAnnotationsClient, error)
 }
 
 type ocrServiceClient struct {
@@ -59,7 +59,7 @@ func (c *ocrServiceClient) GetTextAnnotation(ctx context.Context, in *GetTextAnn
 	return out, nil
 }
 
-func (c *ocrServiceClient) GetTextAnnotations(ctx context.Context, in *GetTextAnnotationsRequest, opts ...grpc.CallOption) (OcrService_GetTextAnnotationsClient, error) {
+func (c *ocrServiceClient) GetTextAnnotations(ctx context.Context, in *GetTextAnnotationRequest, opts ...grpc.CallOption) (OcrService_GetTextAnnotationsClient, error) {
 	stream, err := c.cc.NewStream(ctx, &OcrService_ServiceDesc.Streams[0], OcrService_GetTextAnnotations_FullMethodName, opts...)
 	if err != nil {
 		return nil, err
@@ -75,7 +75,7 @@ func (c *ocrServiceClient) GetTextAnnotations(ctx context.Context, in *GetTextAn
 }
 
 type OcrService_GetTextAnnotationsClient interface {
-	Recv() (*GetTextAnnotationsResponse, error)
+	Recv() (*GetTextAnnotationResponse, error)
 	grpc.ClientStream
 }
 
@@ -83,8 +83,8 @@ type ocrServiceGetTextAnnotationsClient struct {
 	grpc.ClientStream
 }
 
-func (x *ocrServiceGetTextAnnotationsClient) Recv() (*GetTextAnnotationsResponse, error) {
-	m := new(GetTextAnnotationsResponse)
+func (x *ocrServiceGetTextAnnotationsClient) Recv() (*GetTextAnnotationResponse, error) {
+	m := new(GetTextAnnotationResponse)
 	if err := x.ClientStream.RecvMsg(m); err != nil {
 		return nil, err
 	}
@@ -97,7 +97,7 @@ func (x *ocrServiceGetTextAnnotationsClient) Recv() (*GetTextAnnotationsResponse
 type OcrServiceServer interface {
 	OcrScanImage(context.Context, *OcrScanImageRequest) (*OcrScanImageResponse, error)
 	GetTextAnnotation(context.Context, *GetTextAnnotationRequest) (*GetTextAnnotationResponse, error)
-	GetTextAnnotations(*GetTextAnnotationsRequest, OcrService_GetTextAnnotationsServer) error
+	GetTextAnnotations(*GetTextAnnotationRequest, OcrService_GetTextAnnotationsServer) error
 }
 
 // UnimplementedOcrServiceServer should be embedded to have forward compatible implementations.
@@ -110,7 +110,7 @@ func (UnimplementedOcrServiceServer) OcrScanImage(context.Context, *OcrScanImage
 func (UnimplementedOcrServiceServer) GetTextAnnotation(context.Context, *GetTextAnnotationRequest) (*GetTextAnnotationResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetTextAnnotation not implemented")
 }
-func (UnimplementedOcrServiceServer) GetTextAnnotations(*GetTextAnnotationsRequest, OcrService_GetTextAnnotationsServer) error {
+func (UnimplementedOcrServiceServer) GetTextAnnotations(*GetTextAnnotationRequest, OcrService_GetTextAnnotationsServer) error {
 	return status.Errorf(codes.Unimplemented, "method GetTextAnnotations not implemented")
 }
 
@@ -162,7 +162,7 @@ func _OcrService_GetTextAnnotation_Handler(srv interface{}, ctx context.Context,
 }
 
 func _OcrService_GetTextAnnotations_Handler(srv interface{}, stream grpc.ServerStream) error {
-	m := new(GetTextAnnotationsRequest)
+	m := new(GetTextAnnotationRequest)
 	if err := stream.RecvMsg(m); err != nil {
 		return err
 	}
@@ -170,7 +170,7 @@ func _OcrService_GetTextAnnotations_Handler(srv interface{}, stream grpc.ServerS
 }
 
 type OcrService_GetTextAnnotationsServer interface {
-	Send(*GetTextAnnotationsResponse) error
+	Send(*GetTextAnnotationResponse) error
 	grpc.ServerStream
 }
 
@@ -178,7 +178,7 @@ type ocrServiceGetTextAnnotationsServer struct {
 	grpc.ServerStream
 }
 
-func (x *ocrServiceGetTextAnnotationsServer) Send(m *GetTextAnnotationsResponse) error {
+func (x *ocrServiceGetTextAnnotationsServer) Send(m *GetTextAnnotationResponse) error {
 	return x.ServerStream.SendMsg(m)
 }
 

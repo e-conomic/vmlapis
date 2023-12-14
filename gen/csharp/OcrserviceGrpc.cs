@@ -56,10 +56,6 @@ namespace Ssn.Ocrservice.V1 {
     static readonly grpc::Marshaller<global::Ssn.Ocrservice.V1.GetTextAnnotationRequest> __Marshaller_ssn_ocrservice_v1_GetTextAnnotationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Ocrservice.V1.GetTextAnnotationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ssn.Ocrservice.V1.GetTextAnnotationResponse> __Marshaller_ssn_ocrservice_v1_GetTextAnnotationResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Ocrservice.V1.GetTextAnnotationResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Ssn.Ocrservice.V1.GetTextAnnotationsRequest> __Marshaller_ssn_ocrservice_v1_GetTextAnnotationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Ocrservice.V1.GetTextAnnotationsRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Ssn.Ocrservice.V1.GetTextAnnotationsResponse> __Marshaller_ssn_ocrservice_v1_GetTextAnnotationsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Ocrservice.V1.GetTextAnnotationsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ssn.Ocrservice.V1.OcrScanImageRequest, global::Ssn.Ocrservice.V1.OcrScanImageResponse> __Method_OcrScanImage = new grpc::Method<global::Ssn.Ocrservice.V1.OcrScanImageRequest, global::Ssn.Ocrservice.V1.OcrScanImageResponse>(
@@ -78,12 +74,12 @@ namespace Ssn.Ocrservice.V1 {
         __Marshaller_ssn_ocrservice_v1_GetTextAnnotationResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Ssn.Ocrservice.V1.GetTextAnnotationsRequest, global::Ssn.Ocrservice.V1.GetTextAnnotationsResponse> __Method_GetTextAnnotations = new grpc::Method<global::Ssn.Ocrservice.V1.GetTextAnnotationsRequest, global::Ssn.Ocrservice.V1.GetTextAnnotationsResponse>(
+    static readonly grpc::Method<global::Ssn.Ocrservice.V1.GetTextAnnotationRequest, global::Ssn.Ocrservice.V1.GetTextAnnotationResponse> __Method_GetTextAnnotations = new grpc::Method<global::Ssn.Ocrservice.V1.GetTextAnnotationRequest, global::Ssn.Ocrservice.V1.GetTextAnnotationResponse>(
         grpc::MethodType.ServerStreaming,
         __ServiceName,
         "GetTextAnnotations",
-        __Marshaller_ssn_ocrservice_v1_GetTextAnnotationsRequest,
-        __Marshaller_ssn_ocrservice_v1_GetTextAnnotationsResponse);
+        __Marshaller_ssn_ocrservice_v1_GetTextAnnotationRequest,
+        __Marshaller_ssn_ocrservice_v1_GetTextAnnotationResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -108,7 +104,7 @@ namespace Ssn.Ocrservice.V1 {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task GetTextAnnotations(global::Ssn.Ocrservice.V1.GetTextAnnotationsRequest request, grpc::IServerStreamWriter<global::Ssn.Ocrservice.V1.GetTextAnnotationsResponse> responseStream, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task GetTextAnnotations(global::Ssn.Ocrservice.V1.GetTextAnnotationRequest request, grpc::IServerStreamWriter<global::Ssn.Ocrservice.V1.GetTextAnnotationResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -183,12 +179,12 @@ namespace Ssn.Ocrservice.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetTextAnnotation, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncServerStreamingCall<global::Ssn.Ocrservice.V1.GetTextAnnotationsResponse> GetTextAnnotations(global::Ssn.Ocrservice.V1.GetTextAnnotationsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncServerStreamingCall<global::Ssn.Ocrservice.V1.GetTextAnnotationResponse> GetTextAnnotations(global::Ssn.Ocrservice.V1.GetTextAnnotationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetTextAnnotations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncServerStreamingCall<global::Ssn.Ocrservice.V1.GetTextAnnotationsResponse> GetTextAnnotations(global::Ssn.Ocrservice.V1.GetTextAnnotationsRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncServerStreamingCall<global::Ssn.Ocrservice.V1.GetTextAnnotationResponse> GetTextAnnotations(global::Ssn.Ocrservice.V1.GetTextAnnotationRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_GetTextAnnotations, null, options, request);
       }
@@ -220,7 +216,7 @@ namespace Ssn.Ocrservice.V1 {
     {
       serviceBinder.AddMethod(__Method_OcrScanImage, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Ocrservice.V1.OcrScanImageRequest, global::Ssn.Ocrservice.V1.OcrScanImageResponse>(serviceImpl.OcrScanImage));
       serviceBinder.AddMethod(__Method_GetTextAnnotation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Ocrservice.V1.GetTextAnnotationRequest, global::Ssn.Ocrservice.V1.GetTextAnnotationResponse>(serviceImpl.GetTextAnnotation));
-      serviceBinder.AddMethod(__Method_GetTextAnnotations, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ssn.Ocrservice.V1.GetTextAnnotationsRequest, global::Ssn.Ocrservice.V1.GetTextAnnotationsResponse>(serviceImpl.GetTextAnnotations));
+      serviceBinder.AddMethod(__Method_GetTextAnnotations, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ssn.Ocrservice.V1.GetTextAnnotationRequest, global::Ssn.Ocrservice.V1.GetTextAnnotationResponse>(serviceImpl.GetTextAnnotations));
     }
 
   }
