@@ -204,5 +204,61 @@ proto.ssn.ocrservice.v1.OcrServicePromiseClient.prototype.getTextAnnotation =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.ocrservice.v1.GetTextAnnotationRequest,
+ *   !proto.ssn.ocrservice.v1.GetTextAnnotationResponse>}
+ */
+const methodDescriptor_OcrService_GetTextAnnotations = new grpc.web.MethodDescriptor(
+  '/ssn.ocrservice.v1.OcrService/GetTextAnnotations',
+  grpc.web.MethodType.SERVER_STREAMING,
+  proto.ssn.ocrservice.v1.GetTextAnnotationRequest,
+  proto.ssn.ocrservice.v1.GetTextAnnotationResponse,
+  /**
+   * @param {!proto.ssn.ocrservice.v1.GetTextAnnotationRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.ocrservice.v1.GetTextAnnotationResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.ocrservice.v1.GetTextAnnotationRequest} request The request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.ocrservice.v1.GetTextAnnotationResponse>}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.ocrservice.v1.OcrServiceClient.prototype.getTextAnnotations =
+    function(request, metadata) {
+  return this.client_.serverStreaming(this.hostname_ +
+      '/ssn.ocrservice.v1.OcrService/GetTextAnnotations',
+      request,
+      metadata || {},
+      methodDescriptor_OcrService_GetTextAnnotations);
+};
+
+
+/**
+ * @param {!proto.ssn.ocrservice.v1.GetTextAnnotationRequest} request The request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.ocrservice.v1.GetTextAnnotationResponse>}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.ocrservice.v1.OcrServicePromiseClient.prototype.getTextAnnotations =
+    function(request, metadata) {
+  return this.client_.serverStreaming(this.hostname_ +
+      '/ssn.ocrservice.v1.OcrService/GetTextAnnotations',
+      request,
+      metadata || {},
+      methodDescriptor_OcrService_GetTextAnnotations);
+};
+
+
 module.exports = proto.ssn.ocrservice.v1;
 

@@ -19,8 +19,9 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	OcrService_OcrScanImage_FullMethodName      = "/ssn.ocrservice.v1.OcrService/OcrScanImage"
-	OcrService_GetTextAnnotation_FullMethodName = "/ssn.ocrservice.v1.OcrService/GetTextAnnotation"
+	OcrService_OcrScanImage_FullMethodName       = "/ssn.ocrservice.v1.OcrService/OcrScanImage"
+	OcrService_GetTextAnnotation_FullMethodName  = "/ssn.ocrservice.v1.OcrService/GetTextAnnotation"
+	OcrService_GetTextAnnotations_FullMethodName = "/ssn.ocrservice.v1.OcrService/GetTextAnnotations"
 )
 
 // OcrServiceClient is the client API for OcrService service.
@@ -29,6 +30,7 @@ const (
 type OcrServiceClient interface {
 	OcrScanImage(ctx context.Context, in *OcrScanImageRequest, opts ...grpc.CallOption) (*OcrScanImageResponse, error)
 	GetTextAnnotation(ctx context.Context, in *GetTextAnnotationRequest, opts ...grpc.CallOption) (*GetTextAnnotationResponse, error)
+	GetTextAnnotations(ctx context.Context, in *GetTextAnnotationRequest, opts ...grpc.CallOption) (OcrService_GetTextAnnotationsClient, error)
 }
 
 type ocrServiceClient struct {
@@ -57,12 +59,45 @@ func (c *ocrServiceClient) GetTextAnnotation(ctx context.Context, in *GetTextAnn
 	return out, nil
 }
 
+func (c *ocrServiceClient) GetTextAnnotations(ctx context.Context, in *GetTextAnnotationRequest, opts ...grpc.CallOption) (OcrService_GetTextAnnotationsClient, error) {
+	stream, err := c.cc.NewStream(ctx, &OcrService_ServiceDesc.Streams[0], OcrService_GetTextAnnotations_FullMethodName, opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &ocrServiceGetTextAnnotationsClient{stream}
+	if err := x.ClientStream.SendMsg(in); err != nil {
+		return nil, err
+	}
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	return x, nil
+}
+
+type OcrService_GetTextAnnotationsClient interface {
+	Recv() (*GetTextAnnotationResponse, error)
+	grpc.ClientStream
+}
+
+type ocrServiceGetTextAnnotationsClient struct {
+	grpc.ClientStream
+}
+
+func (x *ocrServiceGetTextAnnotationsClient) Recv() (*GetTextAnnotationResponse, error) {
+	m := new(GetTextAnnotationResponse)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
 // OcrServiceServer is the server API for OcrService service.
 // All implementations should embed UnimplementedOcrServiceServer
 // for forward compatibility
 type OcrServiceServer interface {
 	OcrScanImage(context.Context, *OcrScanImageRequest) (*OcrScanImageResponse, error)
 	GetTextAnnotation(context.Context, *GetTextAnnotationRequest) (*GetTextAnnotationResponse, error)
+	GetTextAnnotations(*GetTextAnnotationRequest, OcrService_GetTextAnnotationsServer) error
 }
 
 // UnimplementedOcrServiceServer should be embedded to have forward compatible implementations.
@@ -74,6 +109,9 @@ func (UnimplementedOcrServiceServer) OcrScanImage(context.Context, *OcrScanImage
 }
 func (UnimplementedOcrServiceServer) GetTextAnnotation(context.Context, *GetTextAnnotationRequest) (*GetTextAnnotationResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetTextAnnotation not implemented")
+}
+func (UnimplementedOcrServiceServer) GetTextAnnotations(*GetTextAnnotationRequest, OcrService_GetTextAnnotationsServer) error {
+	return status.Errorf(codes.Unimplemented, "method GetTextAnnotations not implemented")
 }
 
 // UnsafeOcrServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -123,6 +161,27 @@ func _OcrService_GetTextAnnotation_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _OcrService_GetTextAnnotations_Handler(srv interface{}, stream grpc.ServerStream) error {
+	m := new(GetTextAnnotationRequest)
+	if err := stream.RecvMsg(m); err != nil {
+		return err
+	}
+	return srv.(OcrServiceServer).GetTextAnnotations(m, &ocrServiceGetTextAnnotationsServer{stream})
+}
+
+type OcrService_GetTextAnnotationsServer interface {
+	Send(*GetTextAnnotationResponse) error
+	grpc.ServerStream
+}
+
+type ocrServiceGetTextAnnotationsServer struct {
+	grpc.ServerStream
+}
+
+func (x *ocrServiceGetTextAnnotationsServer) Send(m *GetTextAnnotationResponse) error {
+	return x.ServerStream.SendMsg(m)
+}
+
 // OcrService_ServiceDesc is the grpc.ServiceDesc for OcrService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -139,6 +198,12 @@ var OcrService_ServiceDesc = grpc.ServiceDesc{
 			Handler:    _OcrService_GetTextAnnotation_Handler,
 		},
 	},
-	Streams:  []grpc.StreamDesc{},
+	Streams: []grpc.StreamDesc{
+		{
+			StreamName:    "GetTextAnnotations",
+			Handler:       _OcrService_GetTextAnnotations_Handler,
+			ServerStreams: true,
+		},
+	},
 	Metadata: "ssn/ocrservice/v1/ocrservice.proto",
 }

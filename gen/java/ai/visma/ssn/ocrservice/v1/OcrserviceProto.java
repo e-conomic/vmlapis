@@ -55,18 +55,21 @@ public final class OcrserviceProto {
       "\0221\n\005image\030\003 \001(\0132\033.google.protobuf.BytesV" +
       "alueR\005image\")\n\023OcrScanImageRequest\022\022\n\004da" +
       "ta\030\001 \001(\014R\004data\"3\n\024OcrScanImageResponse\022\033" +
-      "\n\ttess_hocr\030\001 \001(\tR\010tessHocr2\335\001\n\nOcrServi" +
+      "\n\ttess_hocr\030\001 \001(\tR\010tessHocr2\320\002\n\nOcrServi" +
       "ce\022_\n\014OcrScanImage\022&.ssn.ocrservice.v1.O" +
       "crScanImageRequest\032\'.ssn.ocrservice.v1.O" +
       "crScanImageResponse\022n\n\021GetTextAnnotation" +
       "\022+.ssn.ocrservice.v1.GetTextAnnotationRe" +
       "quest\032,.ssn.ocrservice.v1.GetTextAnnotat" +
-      "ionResponseB\325\001\n\032ai.visma.ssn.ocrservice." +
-      "v1B\017OcrserviceProtoP\001Z@github.com/e-cono" +
-      "mic/vmlapis/gen/go/ssn/ocrservice/v1;ocr" +
-      "service\242\002\003SOX\252\002\021Ssn.Ocrservice.V1\312\002\021Ssn\\" +
-      "Ocrservice\\V1\342\002\035Ssn\\Ocrservice\\V1\\GPBMet" +
-      "adata\352\002\023Ssn::Ocrservice::V1b\006proto3"
+      "ionResponse\022q\n\022GetTextAnnotations\022+.ssn." +
+      "ocrservice.v1.GetTextAnnotationRequest\032," +
+      ".ssn.ocrservice.v1.GetTextAnnotationResp" +
+      "onse0\001B\325\001\n\032ai.visma.ssn.ocrservice.v1B\017O" +
+      "crserviceProtoP\001Z@github.com/e-conomic/v" +
+      "mlapis/gen/go/ssn/ocrservice/v1;ocrservi" +
+      "ce\242\002\003SOX\252\002\021Ssn.Ocrservice.V1\312\002\021Ssn\\Ocrse" +
+      "rvice\\V1\342\002\035Ssn\\Ocrservice\\V1\\GPBMetadata" +
+      "\352\002\023Ssn::Ocrservice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

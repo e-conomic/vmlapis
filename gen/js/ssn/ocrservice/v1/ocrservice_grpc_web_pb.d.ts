@@ -22,6 +22,11 @@ export class OcrServiceClient {
                response: ssn_ocrservice_v1_ocrservice_pb.GetTextAnnotationResponse) => void
   ): grpcWeb.ClientReadableStream<ssn_ocrservice_v1_ocrservice_pb.GetTextAnnotationResponse>;
 
+  getTextAnnotations(
+    request: ssn_ocrservice_v1_ocrservice_pb.GetTextAnnotationRequest,
+    metadata?: grpcWeb.Metadata
+  ): grpcWeb.ClientReadableStream<ssn_ocrservice_v1_ocrservice_pb.GetTextAnnotationResponse>;
+
 }
 
 export class OcrServicePromiseClient {
@@ -38,6 +43,11 @@ export class OcrServicePromiseClient {
     request: ssn_ocrservice_v1_ocrservice_pb.GetTextAnnotationRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<ssn_ocrservice_v1_ocrservice_pb.GetTextAnnotationResponse>;
+
+  getTextAnnotations(
+    request: ssn_ocrservice_v1_ocrservice_pb.GetTextAnnotationRequest,
+    metadata?: grpcWeb.Metadata
+  ): grpcWeb.ClientReadableStream<ssn_ocrservice_v1_ocrservice_pb.GetTextAnnotationResponse>;
 
 }
 
