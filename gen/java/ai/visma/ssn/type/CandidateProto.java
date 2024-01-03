@@ -68,7 +68,7 @@ public final class CandidateProto {
       "\0228\n\tmodel_ver\030\002 \001(\0132\033.google.protobuf.In" +
       "t64ValueR\010modelVer\"V\n\rLineCandidate\022\022\n\004t" +
       "ext\030\001 \001(\tR\004text\022\026\n\006amount\030\002 \001(\001R\006amount\022" +
-      "\031\n\010page_ref\030\006 \001(\rR\007pageRef\"\377\003\n\025PurchaseL" +
+      "\031\n\010page_ref\030\006 \001(\rR\007pageRef\"\306\004\n\025PurchaseL" +
       "ineCandidate\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\022" +
       "\022\n\004code\030\002 \001(\tR\004code\022 \n\013description\030\003 \001(\t" +
       "R\013description\022\032\n\010quantity\030\004 \001(\tR\010quantit" +
@@ -81,11 +81,13 @@ public final class CandidateProto {
       "otalVat\022%\n\016percentage_vat\030\014 \001(\tR\rpercent" +
       "ageVat\022-\n\023unit_price_incl_vat\030\r \001(\tR\020uni" +
       "tPriceInclVat\022-\n\023unit_price_excl_vat\030\016 \001" +
-      "(\tR\020unitPriceExclVatB\232\001\n\021ai.visma.ssn.ty" +
-      "peB\016CandidateProtoP\001Z4github.com/e-conom" +
-      "ic/vmlapis/gen/go/ssn/type;ssntype\242\002\003STX" +
-      "\252\002\010Ssn.Type\312\002\010Ssn\\Type\342\002\024Ssn\\Type\\GPBMet" +
-      "adata\352\002\tSsn::Typeb\006proto3"
+      "(\tR\020unitPriceExclVat\022\035\n\nline_total\030\017 \001(\t" +
+      "R\tlineTotal\022&\n\017line_unit_price\030\020 \001(\tR\rli" +
+      "neUnitPriceB\232\001\n\021ai.visma.ssn.typeB\016Candi" +
+      "dateProtoP\001Z4github.com/e-conomic/vmlapi" +
+      "s/gen/go/ssn/type;ssntype\242\002\003STX\252\002\010Ssn.Ty" +
+      "pe\312\002\010Ssn\\Type\342\002\024Ssn\\Type\\GPBMetadata\352\002\tS" +
+      "sn::Typeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -122,7 +124,7 @@ public final class CandidateProto {
     internal_static_ssn_type_PurchaseLineCandidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_type_PurchaseLineCandidate_descriptor,
-        new java.lang.String[] { "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", });
+        new java.lang.String[] { "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "LineTotal", "LineUnitPrice", });
     com.google.protobuf.WrappersProto.getDescriptor();
     ai.visma.ssn.type.GeometryProto.getDescriptor();
   }

@@ -42,7 +42,7 @@ namespace Ssn.Type {
             "bE5hbWUSOAoJbW9kZWxfdmVyGAIgASgLMhsuZ29vZ2xlLnByb3RvYnVmLklu",
             "dDY0VmFsdWVSCG1vZGVsVmVyIlYKDUxpbmVDYW5kaWRhdGUSEgoEdGV4dBgB",
             "IAEoCVIEdGV4dBIWCgZhbW91bnQYAiABKAFSBmFtb3VudBIZCghwYWdlX3Jl",
-            "ZhgGIAEoDVIHcGFnZVJlZiL/AwoVUHVyY2hhc2VMaW5lQ2FuZGlkYXRlEhkK",
+            "ZhgGIAEoDVIHcGFnZVJlZiLGBAoVUHVyY2hhc2VMaW5lQ2FuZGlkYXRlEhkK",
             "CHBhZ2VfcmVmGAEgASgNUgdwYWdlUmVmEhIKBGNvZGUYAiABKAlSBGNvZGUS",
             "IAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEhoKCHF1YW50aXR5",
             "GAQgASgJUghxdWFudGl0eRIfCgtpdGVtX251bWJlchgFIAEoCVIKaXRlbU51",
@@ -53,11 +53,13 @@ namespace Ssn.Type {
             "bEV4Y2xWYXQSGwoJdG90YWxfdmF0GAsgASgJUgh0b3RhbFZhdBIlCg5wZXJj",
             "ZW50YWdlX3ZhdBgMIAEoCVINcGVyY2VudGFnZVZhdBItChN1bml0X3ByaWNl",
             "X2luY2xfdmF0GA0gASgJUhB1bml0UHJpY2VJbmNsVmF0Ei0KE3VuaXRfcHJp",
-            "Y2VfZXhjbF92YXQYDiABKAlSEHVuaXRQcmljZUV4Y2xWYXRCmgEKEWFpLnZp",
-            "c21hLnNzbi50eXBlQg5DYW5kaWRhdGVQcm90b1ABWjRnaXRodWIuY29tL2Ut",
-            "Y29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vdHlwZTtzc250eXBlogIDU1RY",
-            "qgIIU3NuLlR5cGXKAghTc25cVHlwZeICFFNzblxUeXBlXEdQQk1ldGFkYXRh",
-            "6gIJU3NuOjpUeXBlYgZwcm90bzM="));
+            "Y2VfZXhjbF92YXQYDiABKAlSEHVuaXRQcmljZUV4Y2xWYXQSHQoKbGluZV90",
+            "b3RhbBgPIAEoCVIJbGluZVRvdGFsEiYKD2xpbmVfdW5pdF9wcmljZRgQIAEo",
+            "CVINbGluZVVuaXRQcmljZUKaAQoRYWkudmlzbWEuc3NuLnR5cGVCDkNhbmRp",
+            "ZGF0ZVByb3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2Vu",
+            "L2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNTVFiqAghTc24uVHlwZcoCCFNzblxU",
+            "eXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRhdGHqAglTc246OlR5cGViBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -65,7 +67,7 @@ namespace Ssn.Type {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.ModelSpec), global::Ssn.Type.ModelSpec.Parser, new[]{ "ModelName", "ModelVer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "LineTotal", "LineUnitPrice" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1387,6 +1389,8 @@ namespace Ssn.Type {
       percentageVat_ = other.percentageVat_;
       unitPriceInclVat_ = other.unitPriceInclVat_;
       unitPriceExclVat_ = other.unitPriceExclVat_;
+      lineTotal_ = other.lineTotal_;
+      lineUnitPrice_ = other.lineUnitPrice_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1607,6 +1611,36 @@ namespace Ssn.Type {
       }
     }
 
+    /// <summary>Field number for the "line_total" field.</summary>
+    public const int LineTotalFieldNumber = 15;
+    private string lineTotal_ = "";
+    /// <summary>
+    /// Line total is the total price of the line (with/without vat)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LineTotal {
+      get { return lineTotal_; }
+      set {
+        lineTotal_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "line_unit_price" field.</summary>
+    public const int LineUnitPriceFieldNumber = 16;
+    private string lineUnitPrice_ = "";
+    /// <summary>
+    /// Line unit price is the unit price of the line (with/without vat)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LineUnitPrice {
+      get { return lineUnitPrice_; }
+      set {
+        lineUnitPrice_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1636,6 +1670,8 @@ namespace Ssn.Type {
       if (PercentageVat != other.PercentageVat) return false;
       if (UnitPriceInclVat != other.UnitPriceInclVat) return false;
       if (UnitPriceExclVat != other.UnitPriceExclVat) return false;
+      if (LineTotal != other.LineTotal) return false;
+      if (LineUnitPrice != other.LineUnitPrice) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1657,6 +1693,8 @@ namespace Ssn.Type {
       if (PercentageVat.Length != 0) hash ^= PercentageVat.GetHashCode();
       if (UnitPriceInclVat.Length != 0) hash ^= UnitPriceInclVat.GetHashCode();
       if (UnitPriceExclVat.Length != 0) hash ^= UnitPriceExclVat.GetHashCode();
+      if (LineTotal.Length != 0) hash ^= LineTotal.GetHashCode();
+      if (LineUnitPrice.Length != 0) hash ^= LineUnitPrice.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1731,6 +1769,14 @@ namespace Ssn.Type {
         output.WriteRawTag(114);
         output.WriteString(UnitPriceExclVat);
       }
+      if (LineTotal.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(LineTotal);
+      }
+      if (LineUnitPrice.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(LineUnitPrice);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1797,6 +1843,14 @@ namespace Ssn.Type {
         output.WriteRawTag(114);
         output.WriteString(UnitPriceExclVat);
       }
+      if (LineTotal.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(LineTotal);
+      }
+      if (LineUnitPrice.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(LineUnitPrice);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1848,6 +1902,12 @@ namespace Ssn.Type {
       }
       if (UnitPriceExclVat.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(UnitPriceExclVat);
+      }
+      if (LineTotal.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LineTotal);
+      }
+      if (LineUnitPrice.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(LineUnitPrice);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1902,6 +1962,12 @@ namespace Ssn.Type {
       }
       if (other.UnitPriceExclVat.Length != 0) {
         UnitPriceExclVat = other.UnitPriceExclVat;
+      }
+      if (other.LineTotal.Length != 0) {
+        LineTotal = other.LineTotal;
+      }
+      if (other.LineUnitPrice.Length != 0) {
+        LineUnitPrice = other.LineUnitPrice;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1974,6 +2040,14 @@ namespace Ssn.Type {
             UnitPriceExclVat = input.ReadString();
             break;
           }
+          case 122: {
+            LineTotal = input.ReadString();
+            break;
+          }
+          case 130: {
+            LineUnitPrice = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2043,6 +2117,14 @@ namespace Ssn.Type {
           }
           case 114: {
             UnitPriceExclVat = input.ReadString();
+            break;
+          }
+          case 122: {
+            LineTotal = input.ReadString();
+            break;
+          }
+          case 130: {
+            LineUnitPrice = input.ReadString();
             break;
           }
         }

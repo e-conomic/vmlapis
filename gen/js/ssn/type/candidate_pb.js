@@ -1128,7 +1128,9 @@ proto.ssn.type.PurchaseLineCandidate.toObject = function(includeInstance, msg) {
     totalVat: jspb.Message.getFieldWithDefault(msg, 11, ""),
     percentageVat: jspb.Message.getFieldWithDefault(msg, 12, ""),
     unitPriceInclVat: jspb.Message.getFieldWithDefault(msg, 13, ""),
-    unitPriceExclVat: jspb.Message.getFieldWithDefault(msg, 14, "")
+    unitPriceExclVat: jspb.Message.getFieldWithDefault(msg, 14, ""),
+    lineTotal: jspb.Message.getFieldWithDefault(msg, 15, ""),
+    lineUnitPrice: jspb.Message.getFieldWithDefault(msg, 16, "")
   };
 
   if (includeInstance) {
@@ -1220,6 +1222,14 @@ proto.ssn.type.PurchaseLineCandidate.deserializeBinaryFromReader = function(msg,
     case 14:
       var value = /** @type {string} */ (reader.readString());
       msg.setUnitPriceExclVat(value);
+      break;
+    case 15:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLineTotal(value);
+      break;
+    case 16:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLineUnitPrice(value);
       break;
     default:
       reader.skipField();
@@ -1345,6 +1355,20 @@ proto.ssn.type.PurchaseLineCandidate.serializeBinaryToWriter = function(message,
   if (f.length > 0) {
     writer.writeString(
       14,
+      f
+    );
+  }
+  f = message.getLineTotal();
+  if (f.length > 0) {
+    writer.writeString(
+      15,
+      f
+    );
+  }
+  f = message.getLineUnitPrice();
+  if (f.length > 0) {
+    writer.writeString(
+      16,
       f
     );
   }
@@ -1600,6 +1624,42 @@ proto.ssn.type.PurchaseLineCandidate.prototype.getUnitPriceExclVat = function() 
  */
 proto.ssn.type.PurchaseLineCandidate.prototype.setUnitPriceExclVat = function(value) {
   return jspb.Message.setProto3StringField(this, 14, value);
+};
+
+
+/**
+ * optional string line_total = 15;
+ * @return {string}
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.getLineTotal = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 15, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.setLineTotal = function(value) {
+  return jspb.Message.setProto3StringField(this, 15, value);
+};
+
+
+/**
+ * optional string line_unit_price = 16;
+ * @return {string}
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.getLineUnitPrice = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 16, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.type.PurchaseLineCandidate} returns this
+ */
+proto.ssn.type.PurchaseLineCandidate.prototype.setLineUnitPrice = function(value) {
+  return jspb.Message.setProto3StringField(this, 16, value);
 };
 
 

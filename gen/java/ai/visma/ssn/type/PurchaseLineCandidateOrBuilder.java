@@ -277,4 +277,44 @@ public interface PurchaseLineCandidateOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUnitPriceExclVatBytes();
+
+  /**
+   * <pre>
+   * Line total is the total price of the line (with/without vat)
+   * </pre>
+   *
+   * <code>string line_total = 15 [json_name = "lineTotal"];</code>
+   * @return The lineTotal.
+   */
+  java.lang.String getLineTotal();
+  /**
+   * <pre>
+   * Line total is the total price of the line (with/without vat)
+   * </pre>
+   *
+   * <code>string line_total = 15 [json_name = "lineTotal"];</code>
+   * @return The bytes for lineTotal.
+   */
+  com.google.protobuf.ByteString
+      getLineTotalBytes();
+
+  /**
+   * <pre>
+   * Line unit price is the unit price of the line (with/without vat)
+   * </pre>
+   *
+   * <code>string line_unit_price = 16 [json_name = "lineUnitPrice"];</code>
+   * @return The lineUnitPrice.
+   */
+  java.lang.String getLineUnitPrice();
+  /**
+   * <pre>
+   * Line unit price is the unit price of the line (with/without vat)
+   * </pre>
+   *
+   * <code>string line_unit_price = 16 [json_name = "lineUnitPrice"];</code>
+   * @return The bytes for lineUnitPrice.
+   */
+  com.google.protobuf.ByteString
+      getLineUnitPriceBytes();
 }

@@ -184,6 +184,12 @@ export class PurchaseLineCandidate extends jspb.Message {
   getUnitPriceExclVat(): string;
   setUnitPriceExclVat(value: string): PurchaseLineCandidate;
 
+  getLineTotal(): string;
+  setLineTotal(value: string): PurchaseLineCandidate;
+
+  getLineUnitPrice(): string;
+  setLineUnitPrice(value: string): PurchaseLineCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLineCandidate.AsObject;
   static toObject(includeInstance: boolean, msg: PurchaseLineCandidate): PurchaseLineCandidate.AsObject;
@@ -208,6 +214,8 @@ export namespace PurchaseLineCandidate {
     percentageVat: string,
     unitPriceInclVat: string,
     unitPriceExclVat: string,
+    lineTotal: string,
+    lineUnitPrice: string,
   }
 }
 
