@@ -115,4 +115,8 @@ message PurchaseLineCandidate {
   string unit_price_incl_vat = 13;
   // Unit price excl vat is the unit price of the line excluding vat
   string unit_price_excl_vat = 14;
+  // Line total is the total price of the line (with/without vat)
+  string line_total = 15;
+  // Line unit price is the unit price of the line (with/without vat)
+  string line_unit_price = 16;
 }
