@@ -86,6 +86,7 @@ message LineCandidate {
 }
 
 message PurchaseLineCandidate {
+  reserved 15, 16;
   // A reference to the page where the line was found.
   // page_ref start from 1.
   uint32 page_ref = 1;
@@ -115,8 +116,8 @@ message PurchaseLineCandidate {
   string unit_price_incl_vat = 13;
   // Unit price excl vat is the unit price of the line excluding vat
   string unit_price_excl_vat = 14;
-  // Line total is the total price of the line (with/without vat)
-  string line_total = 15;
-  // Line unit price is the unit price of the line (with/without vat)
-  string line_unit_price = 16;
+  // Total is the total price of the line (with/without vat)
+  string total = 17;
+  // Unit price is the unit price of the line (with/without vat)
+  string unit_price = 18;
 }

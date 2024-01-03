@@ -624,13 +624,13 @@
           "type": "string",
           "title": "Unit price excl vat is the unit price of the line excluding vat"
         },
-        "lineTotal": {
+        "total": {
           "type": "string",
-          "title": "Line total is the total price of the line (with/without vat)"
+          "title": "Total is the total price of the line (with/without vat)"
         },
-        "lineUnitPrice": {
+        "unitPrice": {
           "type": "string",
-          "title": "Line unit price is the unit price of the line (with/without vat)"
+          "title": "Unit price is the unit price of the line (with/without vat)"
         }
       }
     },

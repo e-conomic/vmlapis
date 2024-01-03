@@ -74,7 +74,7 @@ class LineCandidate(_message.Message):
     def __init__(self, text: _Optional[str] = ..., amount: _Optional[float] = ..., page_ref: _Optional[int] = ...) -> None: ...
 
 class PurchaseLineCandidate(_message.Message):
-    __slots__ = ["page_ref", "code", "description", "quantity", "item_number", "unit", "total_discount", "percentage_discount", "total_incl_vat", "total_excl_vat", "total_vat", "percentage_vat", "unit_price_incl_vat", "unit_price_excl_vat", "line_total", "line_unit_price"]
+    __slots__ = ["page_ref", "code", "description", "quantity", "item_number", "unit", "total_discount", "percentage_discount", "total_incl_vat", "total_excl_vat", "total_vat", "percentage_vat", "unit_price_incl_vat", "unit_price_excl_vat", "total", "unit_price"]
     PAGE_REF_FIELD_NUMBER: _ClassVar[int]
     CODE_FIELD_NUMBER: _ClassVar[int]
     DESCRIPTION_FIELD_NUMBER: _ClassVar[int]
@@ -89,8 +89,8 @@ class PurchaseLineCandidate(_message.Message):
     PERCENTAGE_VAT_FIELD_NUMBER: _ClassVar[int]
     UNIT_PRICE_INCL_VAT_FIELD_NUMBER: _ClassVar[int]
     UNIT_PRICE_EXCL_VAT_FIELD_NUMBER: _ClassVar[int]
-    LINE_TOTAL_FIELD_NUMBER: _ClassVar[int]
-    LINE_UNIT_PRICE_FIELD_NUMBER: _ClassVar[int]
+    TOTAL_FIELD_NUMBER: _ClassVar[int]
+    UNIT_PRICE_FIELD_NUMBER: _ClassVar[int]
     page_ref: int
     code: str
     description: str
@@ -105,6 +105,6 @@ class PurchaseLineCandidate(_message.Message):
     percentage_vat: str
     unit_price_incl_vat: str
     unit_price_excl_vat: str
-    line_total: str
-    line_unit_price: str
-    def __init__(self, page_ref: _Optional[int] = ..., code: _Optional[str] = ..., description: _Optional[str] = ..., quantity: _Optional[str] = ..., item_number: _Optional[str] = ..., unit: _Optional[str] = ..., total_discount: _Optional[str] = ..., percentage_discount: _Optional[str] = ..., total_incl_vat: _Optional[str] = ..., total_excl_vat: _Optional[str] = ..., total_vat: _Optional[str] = ..., percentage_vat: _Optional[str] = ..., unit_price_incl_vat: _Optional[str] = ..., unit_price_excl_vat: _Optional[str] = ..., line_total: _Optional[str] = ..., line_unit_price: _Optional[str] = ...) -> None: ...
+    total: str
+    unit_price: str
+    def __init__(self, page_ref: _Optional[int] = ..., code: _Optional[str] = ..., description: _Optional[str] = ..., quantity: _Optional[str] = ..., item_number: _Optional[str] = ..., unit: _Optional[str] = ..., total_discount: _Optional[str] = ..., percentage_discount: _Optional[str] = ..., total_incl_vat: _Optional[str] = ..., total_excl_vat: _Optional[str] = ..., total_vat: _Optional[str] = ..., percentage_vat: _Optional[str] = ..., unit_price_incl_vat: _Optional[str] = ..., unit_price_excl_vat: _Optional[str] = ..., total: _Optional[str] = ..., unit_price: _Optional[str] = ...) -> None: ...
