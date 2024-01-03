@@ -29,8 +29,8 @@ private static final long serialVersionUID = 0L;
     percentageVat_ = "";
     unitPriceInclVat_ = "";
     unitPriceExclVat_ = "";
-    lineTotal_ = "";
-    lineUnitPrice_ = "";
+    total_ = "";
+    unitPrice_ = "";
   }
 
   @java.lang.Override
@@ -680,94 +680,94 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int LINE_TOTAL_FIELD_NUMBER = 15;
+  public static final int TOTAL_FIELD_NUMBER = 17;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object lineTotal_ = "";
+  private volatile java.lang.Object total_ = "";
   /**
    * <pre>
-   * Line total is the total price of the line (with/without vat)
+   * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>string line_total = 15 [json_name = "lineTotal"];</code>
-   * @return The lineTotal.
+   * <code>string total = 17 [json_name = "total"];</code>
+   * @return The total.
    */
   @java.lang.Override
-  public java.lang.String getLineTotal() {
-    java.lang.Object ref = lineTotal_;
+  public java.lang.String getTotal() {
+    java.lang.Object ref = total_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      lineTotal_ = s;
+      total_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * Line total is the total price of the line (with/without vat)
+   * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>string line_total = 15 [json_name = "lineTotal"];</code>
-   * @return The bytes for lineTotal.
+   * <code>string total = 17 [json_name = "total"];</code>
+   * @return The bytes for total.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getLineTotalBytes() {
-    java.lang.Object ref = lineTotal_;
+      getTotalBytes() {
+    java.lang.Object ref = total_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      lineTotal_ = b;
+      total_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
     }
   }
 
-  public static final int LINE_UNIT_PRICE_FIELD_NUMBER = 16;
+  public static final int UNIT_PRICE_FIELD_NUMBER = 18;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object lineUnitPrice_ = "";
+  private volatile java.lang.Object unitPrice_ = "";
   /**
    * <pre>
-   * Line unit price is the unit price of the line (with/without vat)
+   * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>string line_unit_price = 16 [json_name = "lineUnitPrice"];</code>
-   * @return The lineUnitPrice.
+   * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
+   * @return The unitPrice.
    */
   @java.lang.Override
-  public java.lang.String getLineUnitPrice() {
-    java.lang.Object ref = lineUnitPrice_;
+  public java.lang.String getUnitPrice() {
+    java.lang.Object ref = unitPrice_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      lineUnitPrice_ = s;
+      unitPrice_ = s;
       return s;
     }
   }
   /**
    * <pre>
-   * Line unit price is the unit price of the line (with/without vat)
+   * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>string line_unit_price = 16 [json_name = "lineUnitPrice"];</code>
-   * @return The bytes for lineUnitPrice.
+   * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
+   * @return The bytes for unitPrice.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getLineUnitPriceBytes() {
-    java.lang.Object ref = lineUnitPrice_;
+      getUnitPriceBytes() {
+    java.lang.Object ref = unitPrice_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      lineUnitPrice_ = b;
+      unitPrice_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -830,11 +830,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unitPriceExclVat_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 14, unitPriceExclVat_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lineTotal_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 15, lineTotal_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(total_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 17, total_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lineUnitPrice_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, lineUnitPrice_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unitPrice_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 18, unitPrice_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -888,11 +888,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unitPriceExclVat_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, unitPriceExclVat_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lineTotal_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(15, lineTotal_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(total_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(17, total_);
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(lineUnitPrice_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, lineUnitPrice_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unitPrice_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, unitPrice_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -937,10 +937,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getUnitPriceInclVat())) return false;
     if (!getUnitPriceExclVat()
         .equals(other.getUnitPriceExclVat())) return false;
-    if (!getLineTotal()
-        .equals(other.getLineTotal())) return false;
-    if (!getLineUnitPrice()
-        .equals(other.getLineUnitPrice())) return false;
+    if (!getTotal()
+        .equals(other.getTotal())) return false;
+    if (!getUnitPrice()
+        .equals(other.getUnitPrice())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -980,10 +980,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getUnitPriceInclVat().hashCode();
     hash = (37 * hash) + UNIT_PRICE_EXCL_VAT_FIELD_NUMBER;
     hash = (53 * hash) + getUnitPriceExclVat().hashCode();
-    hash = (37 * hash) + LINE_TOTAL_FIELD_NUMBER;
-    hash = (53 * hash) + getLineTotal().hashCode();
-    hash = (37 * hash) + LINE_UNIT_PRICE_FIELD_NUMBER;
-    hash = (53 * hash) + getLineUnitPrice().hashCode();
+    hash = (37 * hash) + TOTAL_FIELD_NUMBER;
+    hash = (53 * hash) + getTotal().hashCode();
+    hash = (37 * hash) + UNIT_PRICE_FIELD_NUMBER;
+    hash = (53 * hash) + getUnitPrice().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1129,8 +1129,8 @@ private static final long serialVersionUID = 0L;
       percentageVat_ = "";
       unitPriceInclVat_ = "";
       unitPriceExclVat_ = "";
-      lineTotal_ = "";
-      lineUnitPrice_ = "";
+      total_ = "";
+      unitPrice_ = "";
       return this;
     }
 
@@ -1207,10 +1207,10 @@ private static final long serialVersionUID = 0L;
         result.unitPriceExclVat_ = unitPriceExclVat_;
       }
       if (((from_bitField0_ & 0x00004000) != 0)) {
-        result.lineTotal_ = lineTotal_;
+        result.total_ = total_;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
-        result.lineUnitPrice_ = lineUnitPrice_;
+        result.unitPrice_ = unitPrice_;
       }
     }
 
@@ -1326,13 +1326,13 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00002000;
         onChanged();
       }
-      if (!other.getLineTotal().isEmpty()) {
-        lineTotal_ = other.lineTotal_;
+      if (!other.getTotal().isEmpty()) {
+        total_ = other.total_;
         bitField0_ |= 0x00004000;
         onChanged();
       }
-      if (!other.getLineUnitPrice().isEmpty()) {
-        lineUnitPrice_ = other.lineUnitPrice_;
+      if (!other.getUnitPrice().isEmpty()) {
+        unitPrice_ = other.unitPrice_;
         bitField0_ |= 0x00008000;
         onChanged();
       }
@@ -1432,16 +1432,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00002000;
               break;
             } // case 114
-            case 122: {
-              lineTotal_ = input.readStringRequireUtf8();
+            case 138: {
+              total_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00004000;
               break;
-            } // case 122
-            case 130: {
-              lineUnitPrice_ = input.readStringRequireUtf8();
+            } // case 138
+            case 146: {
+              unitPrice_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00008000;
               break;
-            } // case 130
+            } // case 146
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2702,22 +2702,22 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object lineTotal_ = "";
+    private java.lang.Object total_ = "";
     /**
      * <pre>
-     * Line total is the total price of the line (with/without vat)
+     * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>string line_total = 15 [json_name = "lineTotal"];</code>
-     * @return The lineTotal.
+     * <code>string total = 17 [json_name = "total"];</code>
+     * @return The total.
      */
-    public java.lang.String getLineTotal() {
-      java.lang.Object ref = lineTotal_;
+    public java.lang.String getTotal() {
+      java.lang.Object ref = total_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        lineTotal_ = s;
+        total_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -2725,20 +2725,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Line total is the total price of the line (with/without vat)
+     * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>string line_total = 15 [json_name = "lineTotal"];</code>
-     * @return The bytes for lineTotal.
+     * <code>string total = 17 [json_name = "total"];</code>
+     * @return The bytes for total.
      */
     public com.google.protobuf.ByteString
-        getLineTotalBytes() {
-      java.lang.Object ref = lineTotal_;
+        getTotalBytes() {
+      java.lang.Object ref = total_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        lineTotal_ = b;
+        total_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2746,70 +2746,70 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Line total is the total price of the line (with/without vat)
+     * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>string line_total = 15 [json_name = "lineTotal"];</code>
-     * @param value The lineTotal to set.
+     * <code>string total = 17 [json_name = "total"];</code>
+     * @param value The total to set.
      * @return This builder for chaining.
      */
-    public Builder setLineTotal(
+    public Builder setTotal(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      lineTotal_ = value;
+      total_ = value;
       bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Line total is the total price of the line (with/without vat)
+     * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>string line_total = 15 [json_name = "lineTotal"];</code>
+     * <code>string total = 17 [json_name = "total"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearLineTotal() {
-      lineTotal_ = getDefaultInstance().getLineTotal();
+    public Builder clearTotal() {
+      total_ = getDefaultInstance().getTotal();
       bitField0_ = (bitField0_ & ~0x00004000);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Line total is the total price of the line (with/without vat)
+     * Total is the total price of the line (with/without vat)
      * </pre>
      *
-     * <code>string line_total = 15 [json_name = "lineTotal"];</code>
-     * @param value The bytes for lineTotal to set.
+     * <code>string total = 17 [json_name = "total"];</code>
+     * @param value The bytes for total to set.
      * @return This builder for chaining.
      */
-    public Builder setLineTotalBytes(
+    public Builder setTotalBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      lineTotal_ = value;
+      total_ = value;
       bitField0_ |= 0x00004000;
       onChanged();
       return this;
     }
 
-    private java.lang.Object lineUnitPrice_ = "";
+    private java.lang.Object unitPrice_ = "";
     /**
      * <pre>
-     * Line unit price is the unit price of the line (with/without vat)
+     * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>string line_unit_price = 16 [json_name = "lineUnitPrice"];</code>
-     * @return The lineUnitPrice.
+     * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
+     * @return The unitPrice.
      */
-    public java.lang.String getLineUnitPrice() {
-      java.lang.Object ref = lineUnitPrice_;
+    public java.lang.String getUnitPrice() {
+      java.lang.Object ref = unitPrice_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        lineUnitPrice_ = s;
+        unitPrice_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -2817,20 +2817,20 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Line unit price is the unit price of the line (with/without vat)
+     * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>string line_unit_price = 16 [json_name = "lineUnitPrice"];</code>
-     * @return The bytes for lineUnitPrice.
+     * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
+     * @return The bytes for unitPrice.
      */
     public com.google.protobuf.ByteString
-        getLineUnitPriceBytes() {
-      java.lang.Object ref = lineUnitPrice_;
+        getUnitPriceBytes() {
+      java.lang.Object ref = unitPrice_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        lineUnitPrice_ = b;
+        unitPrice_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -2838,49 +2838,49 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Line unit price is the unit price of the line (with/without vat)
+     * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>string line_unit_price = 16 [json_name = "lineUnitPrice"];</code>
-     * @param value The lineUnitPrice to set.
+     * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
+     * @param value The unitPrice to set.
      * @return This builder for chaining.
      */
-    public Builder setLineUnitPrice(
+    public Builder setUnitPrice(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      lineUnitPrice_ = value;
+      unitPrice_ = value;
       bitField0_ |= 0x00008000;
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Line unit price is the unit price of the line (with/without vat)
+     * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>string line_unit_price = 16 [json_name = "lineUnitPrice"];</code>
+     * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearLineUnitPrice() {
-      lineUnitPrice_ = getDefaultInstance().getLineUnitPrice();
+    public Builder clearUnitPrice() {
+      unitPrice_ = getDefaultInstance().getUnitPrice();
       bitField0_ = (bitField0_ & ~0x00008000);
       onChanged();
       return this;
     }
     /**
      * <pre>
-     * Line unit price is the unit price of the line (with/without vat)
+     * Unit price is the unit price of the line (with/without vat)
      * </pre>
      *
-     * <code>string line_unit_price = 16 [json_name = "lineUnitPrice"];</code>
-     * @param value The bytes for lineUnitPrice to set.
+     * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
+     * @param value The bytes for unitPrice to set.
      * @return This builder for chaining.
      */
-    public Builder setLineUnitPriceBytes(
+    public Builder setUnitPriceBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      lineUnitPrice_ = value;
+      unitPrice_ = value;
       bitField0_ |= 0x00008000;
       onChanged();
       return this;

@@ -280,41 +280,41 @@ public interface PurchaseLineCandidateOrBuilder extends
 
   /**
    * <pre>
-   * Line total is the total price of the line (with/without vat)
+   * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>string line_total = 15 [json_name = "lineTotal"];</code>
-   * @return The lineTotal.
+   * <code>string total = 17 [json_name = "total"];</code>
+   * @return The total.
    */
-  java.lang.String getLineTotal();
+  java.lang.String getTotal();
   /**
    * <pre>
-   * Line total is the total price of the line (with/without vat)
+   * Total is the total price of the line (with/without vat)
    * </pre>
    *
-   * <code>string line_total = 15 [json_name = "lineTotal"];</code>
-   * @return The bytes for lineTotal.
+   * <code>string total = 17 [json_name = "total"];</code>
+   * @return The bytes for total.
    */
   com.google.protobuf.ByteString
-      getLineTotalBytes();
+      getTotalBytes();
 
   /**
    * <pre>
-   * Line unit price is the unit price of the line (with/without vat)
+   * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>string line_unit_price = 16 [json_name = "lineUnitPrice"];</code>
-   * @return The lineUnitPrice.
+   * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
+   * @return The unitPrice.
    */
-  java.lang.String getLineUnitPrice();
+  java.lang.String getUnitPrice();
   /**
    * <pre>
-   * Line unit price is the unit price of the line (with/without vat)
+   * Unit price is the unit price of the line (with/without vat)
    * </pre>
    *
-   * <code>string line_unit_price = 16 [json_name = "lineUnitPrice"];</code>
-   * @return The bytes for lineUnitPrice.
+   * <code>string unit_price = 18 [json_name = "unitPrice"];</code>
+   * @return The bytes for unitPrice.
    */
   com.google.protobuf.ByteString
-      getLineUnitPriceBytes();
+      getUnitPriceBytes();
 }
