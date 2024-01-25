@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+import "ssn/annotator/v1/annotator.proto";
+import "ssn/type/candidate.proto";
+
+package everything.transaction.v1;
+
+// api.{{env}}.everything.visma.ai
+service TransactionService {
+  rpc CreateTransaction(CreateTransactionRequest) returns (CreateTransactionResponse) {
+    option (google.api.http) = {
+      post: "/v1/transactions"
+      body: "*"
+    };
+  }
+  rpc AnnotateTransaction(AnnotateTransactionRequest) returns (AnnotateTransactionResponse) {
+    option (google.api.http) = {get: "/v1/transactions/{id}/annotations"};
+  }
+  rpc GetTransactionOperations(GetTransactionOperationsRequest) returns (GetTransactionOperationsResposne) {
+    option (google.api.http) = {get: "/v1/transactions/{id}/operations"};
+  }
+  rpc DeleteTransaction(DeleteTransactionRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {delete: "/v1/transactions/{id}"};
+  }
+}
+
+// post: "/v1/transactions"
+message CreateTransactionRequest {
+  // we could have an ID here, in case they wanted to provide their own
+  ssn.annotator.v1.Document document = 1;
+  repeated string tags = 2;
+}
+message CreateTransactionResponse {
+  string id = 1;
+}
+
+// get: "/v1/transactions/{id}/annotations"
+message AnnotateTransactionRequest {
+  string id = 1;
+}
+message AnnotateTransactionResponse {
+  string id = 1;
+  repeated Annotation annotations = 2; // FEATURE NAME --> SSN CANDIDATES
+}
+
+message Annotation {
+  string feature = 1; // feature name e.g. "TOTAL_INCL_VAT"
+  oneof candidates {
+    repeated ssn.type.Candidate candidate = 2;
+    repeated ssn.type.PurchaseLineCandidate purchase_line_candidate = 3;
+  }
+}
+
+// get: "/v1/transactions/{id}/operations"
+message GetTransactionOperationsRequest {
+  string id = 1;
+}
+message GetTransactionOperationsResposne {
+  string id = 1;
+  string status = 2;
+  string error = 3;
+}
+
+// delete: "/v1/transactions/{id}"
+message DeleteTransactionRequest {
+  string id = 1;
+}
