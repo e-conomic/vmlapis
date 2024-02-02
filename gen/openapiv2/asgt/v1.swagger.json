@@ -174,6 +174,51 @@
         ]
       }
     },
+    "/v1/{type}/{name}:train": {
+      "post": {
+        "operationId": "DataService_TrainDataset",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "type",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object"
+            }
+          }
+        ],
+        "tags": [
+          "DataService"
+        ]
+      }
+    },
     "/v1/{type}/{name}:update": {
       "put": {
         "operationId": "DataService_UpdateDataset",

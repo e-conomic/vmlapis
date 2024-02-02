@@ -760,5 +760,66 @@ proto.asgt.v2.DatasetServicePromiseClient.prototype.getTrainings =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.v2.TrainDatasetRequest,
+ *   !proto.google.protobuf.Empty>}
+ */
+const methodDescriptor_DatasetService_TrainDataset = new grpc.web.MethodDescriptor(
+  '/asgt.v2.DatasetService/TrainDataset',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.v2.TrainDatasetRequest,
+  google_protobuf_empty_pb.Empty,
+  /**
+   * @param {!proto.asgt.v2.TrainDatasetRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_empty_pb.Empty.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.v2.TrainDatasetRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.google.protobuf.Empty)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.v2.DatasetServiceClient.prototype.trainDataset =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.v2.DatasetService/TrainDataset',
+      request,
+      metadata || {},
+      methodDescriptor_DatasetService_TrainDataset,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.v2.TrainDatasetRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.google.protobuf.Empty>}
+ *     Promise that resolves to the response
+ */
+proto.asgt.v2.DatasetServicePromiseClient.prototype.trainDataset =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.v2.DatasetService/TrainDataset',
+      request,
+      metadata || {},
+      methodDescriptor_DatasetService_TrainDataset);
+};
+
+
 module.exports = proto.asgt.v2;
 

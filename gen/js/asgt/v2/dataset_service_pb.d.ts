@@ -237,6 +237,24 @@ export namespace GetDatasetTrainingsRequest {
   }
 }
 
+export class TrainDatasetRequest extends jspb.Message {
+  getDatasetName(): string;
+  setDatasetName(value: string): TrainDatasetRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): TrainDatasetRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: TrainDatasetRequest): TrainDatasetRequest.AsObject;
+  static serializeBinaryToWriter(message: TrainDatasetRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): TrainDatasetRequest;
+  static deserializeBinaryFromReader(message: TrainDatasetRequest, reader: jspb.BinaryReader): TrainDatasetRequest;
+}
+
+export namespace TrainDatasetRequest {
+  export type AsObject = {
+    datasetName: string,
+  }
+}
+
 export class GetTrainingsRequest extends jspb.Message {
   getOptions(): TrainingRequestOptions | undefined;
   setOptions(value?: TrainingRequestOptions): GetTrainingsRequest;

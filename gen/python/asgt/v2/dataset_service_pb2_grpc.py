@@ -71,6 +71,11 @@ class DatasetServiceStub(object):
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.GetTrainingsRequest.SerializeToString,
                 response_deserializer=asgt_dot_v2_dot_dataset__service__pb2.TrainingsResponse.FromString,
                 )
+        self.TrainDataset = channel.unary_unary(
+                '/asgt.v2.DatasetService/TrainDataset',
+                request_serializer=asgt_dot_v2_dot_dataset__service__pb2.TrainDatasetRequest.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
 
 
 class DatasetServiceServicer(object):
@@ -163,6 +168,13 @@ class DatasetServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def TrainDataset(self, request, context):
+        """Force the training of the dataset to start instantly.
+        """
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_DatasetServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -220,6 +232,11 @@ def add_DatasetServiceServicer_to_server(servicer, server):
                     servicer.GetTrainings,
                     request_deserializer=asgt_dot_v2_dot_dataset__service__pb2.GetTrainingsRequest.FromString,
                     response_serializer=asgt_dot_v2_dot_dataset__service__pb2.TrainingsResponse.SerializeToString,
+            ),
+            'TrainDataset': grpc.unary_unary_rpc_method_handler(
+                    servicer.TrainDataset,
+                    request_deserializer=asgt_dot_v2_dot_dataset__service__pb2.TrainDatasetRequest.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -415,5 +432,22 @@ class DatasetService(object):
         return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/GetTrainings',
             asgt_dot_v2_dot_dataset__service__pb2.GetTrainingsRequest.SerializeToString,
             asgt_dot_v2_dot_dataset__service__pb2.TrainingsResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def TrainDataset(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/TrainDataset',
+            asgt_dot_v2_dot_dataset__service__pb2.TrainDatasetRequest.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

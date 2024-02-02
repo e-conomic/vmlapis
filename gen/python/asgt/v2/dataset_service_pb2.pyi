@@ -88,6 +88,12 @@ class GetDatasetTrainingsRequest(_message.Message):
     options: TrainingRequestOptions
     def __init__(self, dataset_name: _Optional[str] = ..., options: _Optional[_Union[TrainingRequestOptions, _Mapping]] = ...) -> None: ...
 
+class TrainDatasetRequest(_message.Message):
+    __slots__ = ["dataset_name"]
+    DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
+    dataset_name: str
+    def __init__(self, dataset_name: _Optional[str] = ...) -> None: ...
+
 class GetTrainingsRequest(_message.Message):
     __slots__ = ["options"]
     OPTIONS_FIELD_NUMBER: _ClassVar[int]

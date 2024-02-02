@@ -32,6 +32,7 @@ const (
 	DatasetService_TruncateDataset_FullMethodName       = "/asgt.v2.DatasetService/TruncateDataset"
 	DatasetService_GetDatasetTrainings_FullMethodName   = "/asgt.v2.DatasetService/GetDatasetTrainings"
 	DatasetService_GetTrainings_FullMethodName          = "/asgt.v2.DatasetService/GetTrainings"
+	DatasetService_TrainDataset_FullMethodName          = "/asgt.v2.DatasetService/TrainDataset"
 )
 
 // DatasetServiceClient is the client API for DatasetService service.
@@ -70,6 +71,8 @@ type DatasetServiceClient interface {
 	// Get the specified number of the most recent trainings accross all consumer's datasets.
 	// Number of requested trainings has to be larger than 0 but no larger than 100.
 	GetTrainings(ctx context.Context, in *GetTrainingsRequest, opts ...grpc.CallOption) (*TrainingsResponse, error)
+	// Force the training of the dataset to start instantly.
+	TrainDataset(ctx context.Context, in *TrainDatasetRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
 
 type datasetServiceClient struct {
@@ -179,6 +182,15 @@ func (c *datasetServiceClient) GetTrainings(ctx context.Context, in *GetTraining
 	return out, nil
 }
 
+func (c *datasetServiceClient) TrainDataset(ctx context.Context, in *TrainDatasetRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+	out := new(emptypb.Empty)
+	err := c.cc.Invoke(ctx, DatasetService_TrainDataset_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DatasetServiceServer is the server API for DatasetService service.
 // All implementations should embed UnimplementedDatasetServiceServer
 // for forward compatibility
@@ -215,6 +227,8 @@ type DatasetServiceServer interface {
 	// Get the specified number of the most recent trainings accross all consumer's datasets.
 	// Number of requested trainings has to be larger than 0 but no larger than 100.
 	GetTrainings(context.Context, *GetTrainingsRequest) (*TrainingsResponse, error)
+	// Force the training of the dataset to start instantly.
+	TrainDataset(context.Context, *TrainDatasetRequest) (*emptypb.Empty, error)
 }
 
 // UnimplementedDatasetServiceServer should be embedded to have forward compatible implementations.
@@ -253,6 +267,9 @@ func (UnimplementedDatasetServiceServer) GetDatasetTrainings(context.Context, *G
 }
 func (UnimplementedDatasetServiceServer) GetTrainings(context.Context, *GetTrainingsRequest) (*TrainingsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetTrainings not implemented")
+}
+func (UnimplementedDatasetServiceServer) TrainDataset(context.Context, *TrainDatasetRequest) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method TrainDataset not implemented")
 }
 
 // UnsafeDatasetServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -464,6 +481,24 @@ func _DatasetService_GetTrainings_Handler(srv interface{}, ctx context.Context, 
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DatasetService_TrainDataset_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(TrainDatasetRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DatasetServiceServer).TrainDataset(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DatasetService_TrainDataset_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DatasetServiceServer).TrainDataset(ctx, req.(*TrainDatasetRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DatasetService_ServiceDesc is the grpc.ServiceDesc for DatasetService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -514,6 +549,10 @@ var DatasetService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetTrainings",
 			Handler:    _DatasetService_GetTrainings_Handler,
+		},
+		{
+			MethodName: "TrainDataset",
+			Handler:    _DatasetService_TrainDataset_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

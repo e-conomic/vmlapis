@@ -1573,6 +1573,132 @@ var _ interface {
 
 var _GetDatasetTrainingsRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
+// Validate checks the field values on TrainDatasetRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *TrainDatasetRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on TrainDatasetRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// TrainDatasetRequestMultiError, or nil if none found.
+func (m *TrainDatasetRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *TrainDatasetRequest) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	if len(m.GetDatasetName()) > 256 {
+		err := TrainDatasetRequestValidationError{
+			field:  "DatasetName",
+			reason: "value length must be at most 256 bytes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if !_TrainDatasetRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
+		err := TrainDatasetRequestValidationError{
+			field:  "DatasetName",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return TrainDatasetRequestMultiError(errors)
+	}
+
+	return nil
+}
+
+// TrainDatasetRequestMultiError is an error wrapping multiple validation
+// errors returned by TrainDatasetRequest.ValidateAll() if the designated
+// constraints aren't met.
+type TrainDatasetRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m TrainDatasetRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m TrainDatasetRequestMultiError) AllErrors() []error { return m }
+
+// TrainDatasetRequestValidationError is the validation error returned by
+// TrainDatasetRequest.Validate if the designated constraints aren't met.
+type TrainDatasetRequestValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e TrainDatasetRequestValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e TrainDatasetRequestValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e TrainDatasetRequestValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e TrainDatasetRequestValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e TrainDatasetRequestValidationError) ErrorName() string {
+	return "TrainDatasetRequestValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e TrainDatasetRequestValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sTrainDatasetRequest.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = TrainDatasetRequestValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = TrainDatasetRequestValidationError{}
+
+var _TrainDatasetRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+
 // Validate checks the field values on GetTrainingsRequest with the rules
 // defined in the proto definition for this message. If any rules are
 // violated, the first error encountered is returned, or nil if there are no violations.

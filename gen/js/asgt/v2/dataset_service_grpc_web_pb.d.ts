@@ -87,6 +87,13 @@ export class DatasetServiceClient {
                response: asgt_v2_dataset_service_pb.TrainingsResponse) => void
   ): grpcWeb.ClientReadableStream<asgt_v2_dataset_service_pb.TrainingsResponse>;
 
+  trainDataset(
+    request: asgt_v2_dataset_service_pb.TrainDatasetRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: google_protobuf_empty_pb.Empty) => void
+  ): grpcWeb.ClientReadableStream<google_protobuf_empty_pb.Empty>;
+
 }
 
 export class DatasetServicePromiseClient {
@@ -148,6 +155,11 @@ export class DatasetServicePromiseClient {
     request: asgt_v2_dataset_service_pb.GetTrainingsRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<asgt_v2_dataset_service_pb.TrainingsResponse>;
+
+  trainDataset(
+    request: asgt_v2_dataset_service_pb.TrainDatasetRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<google_protobuf_empty_pb.Empty>;
 
 }
 

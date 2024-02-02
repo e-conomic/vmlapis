@@ -67,6 +67,8 @@ namespace Asgt.Dataservice.V1 {
     static readonly grpc::Marshaller<global::Asgt.Dataservice.V1.CalculateMetricsRequest> __Marshaller_asgt_dataservice_v1_CalculateMetricsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.Dataservice.V1.CalculateMetricsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Asgt.Dataservice.V1.CalculateMetricsResponse> __Marshaller_asgt_dataservice_v1_CalculateMetricsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.Dataservice.V1.CalculateMetricsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Asgt.Dataservice.V1.TrainDatasetRequest> __Marshaller_asgt_dataservice_v1_TrainDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.Dataservice.V1.TrainDatasetRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Asgt.Dataservice.V1.CreateRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_CreateDataset = new grpc::Method<global::Asgt.Dataservice.V1.CreateRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
@@ -132,6 +134,14 @@ namespace Asgt.Dataservice.V1 {
         __Marshaller_asgt_dataservice_v1_CalculateMetricsRequest,
         __Marshaller_asgt_dataservice_v1_CalculateMetricsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Asgt.Dataservice.V1.TrainDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_TrainDataset = new grpc::Method<global::Asgt.Dataservice.V1.TrainDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TrainDataset",
+        __Marshaller_asgt_dataservice_v1_TrainDatasetRequest,
+        __Marshaller_google_protobuf_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -186,6 +196,12 @@ namespace Asgt.Dataservice.V1 {
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Asgt.Dataservice.V1.CalculateMetricsResponse> CalculateMetrics(global::Asgt.Dataservice.V1.CalculateMetricsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> TrainDataset(global::Asgt.Dataservice.V1.TrainDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -379,6 +395,26 @@ namespace Asgt.Dataservice.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CalculateMetrics, null, options, request);
       }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty TrainDataset(global::Asgt.Dataservice.V1.TrainDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TrainDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty TrainDataset(global::Asgt.Dataservice.V1.TrainDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TrainDataset, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> TrainDatasetAsync(global::Asgt.Dataservice.V1.TrainDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TrainDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> TrainDatasetAsync(global::Asgt.Dataservice.V1.TrainDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TrainDataset, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -400,7 +436,8 @@ namespace Asgt.Dataservice.V1 {
           .AddMethod(__Method_UpdateDataset, serviceImpl.UpdateDataset)
           .AddMethod(__Method_RegisterQueryStats, serviceImpl.RegisterQueryStats)
           .AddMethod(__Method_CallsPerMonthMetric, serviceImpl.CallsPerMonthMetric)
-          .AddMethod(__Method_CalculateMetrics, serviceImpl.CalculateMetrics).Build();
+          .AddMethod(__Method_CalculateMetrics, serviceImpl.CalculateMetrics)
+          .AddMethod(__Method_TrainDataset, serviceImpl.TrainDataset).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -418,6 +455,7 @@ namespace Asgt.Dataservice.V1 {
       serviceBinder.AddMethod(__Method_RegisterQueryStats, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Dataservice.V1.RegisterQueryStatsRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.RegisterQueryStats));
       serviceBinder.AddMethod(__Method_CallsPerMonthMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Ssn.Dataservice.V1.CallsPerMonthResponse>(serviceImpl.CallsPerMonthMetric));
       serviceBinder.AddMethod(__Method_CalculateMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Dataservice.V1.CalculateMetricsRequest, global::Asgt.Dataservice.V1.CalculateMetricsResponse>(serviceImpl.CalculateMetrics));
+      serviceBinder.AddMethod(__Method_TrainDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Dataservice.V1.TrainDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.TrainDataset));
     }
 
   }

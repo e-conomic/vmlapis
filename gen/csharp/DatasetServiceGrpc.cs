@@ -73,6 +73,8 @@ namespace Asgt.V2 {
     static readonly grpc::Marshaller<global::Asgt.V2.TrainingsResponse> __Marshaller_asgt_v2_TrainingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.V2.TrainingsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Asgt.V2.GetTrainingsRequest> __Marshaller_asgt_v2_GetTrainingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.V2.GetTrainingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Asgt.V2.TrainDatasetRequest> __Marshaller_asgt_v2_TrainDatasetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.V2.TrainDatasetRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Asgt.V2.GetDatasetRequest, global::Asgt.Type.Dataset> __Method_GetDataset = new grpc::Method<global::Asgt.V2.GetDatasetRequest, global::Asgt.Type.Dataset>(
@@ -161,6 +163,14 @@ namespace Asgt.V2 {
         "GetTrainings",
         __Marshaller_asgt_v2_GetTrainingsRequest,
         __Marshaller_asgt_v2_TrainingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Asgt.V2.TrainDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_TrainDataset = new grpc::Method<global::Asgt.V2.TrainDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "TrainDataset",
+        __Marshaller_asgt_v2_TrainDatasetRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -310,6 +320,18 @@ namespace Asgt.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Asgt.V2.TrainingsResponse> GetTrainings(global::Asgt.V2.GetTrainingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Force the training of the dataset to start instantly.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> TrainDataset(global::Asgt.V2.TrainDatasetRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -911,6 +933,54 @@ namespace Asgt.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetTrainings, null, options, request);
       }
+      /// <summary>
+      /// Force the training of the dataset to start instantly.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty TrainDataset(global::Asgt.V2.TrainDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TrainDataset(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Force the training of the dataset to start instantly.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty TrainDataset(global::Asgt.V2.TrainDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_TrainDataset, null, options, request);
+      }
+      /// <summary>
+      /// Force the training of the dataset to start instantly.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> TrainDatasetAsync(global::Asgt.V2.TrainDatasetRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return TrainDatasetAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Force the training of the dataset to start instantly.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> TrainDatasetAsync(global::Asgt.V2.TrainDatasetRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_TrainDataset, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DatasetServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -935,7 +1005,8 @@ namespace Asgt.V2 {
           .AddMethod(__Method_BatchCreateExample, serviceImpl.BatchCreateExample)
           .AddMethod(__Method_TruncateDataset, serviceImpl.TruncateDataset)
           .AddMethod(__Method_GetDatasetTrainings, serviceImpl.GetDatasetTrainings)
-          .AddMethod(__Method_GetTrainings, serviceImpl.GetTrainings).Build();
+          .AddMethod(__Method_GetTrainings, serviceImpl.GetTrainings)
+          .AddMethod(__Method_TrainDataset, serviceImpl.TrainDataset).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -956,6 +1027,7 @@ namespace Asgt.V2 {
       serviceBinder.AddMethod(__Method_TruncateDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.V2.TruncateDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.TruncateDataset));
       serviceBinder.AddMethod(__Method_GetDatasetTrainings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.V2.GetDatasetTrainingsRequest, global::Asgt.V2.TrainingsResponse>(serviceImpl.GetDatasetTrainings));
       serviceBinder.AddMethod(__Method_GetTrainings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.V2.GetTrainingsRequest, global::Asgt.V2.TrainingsResponse>(serviceImpl.GetTrainings));
+      serviceBinder.AddMethod(__Method_TrainDataset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.V2.TrainDatasetRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.TrainDataset));
     }
 
   }

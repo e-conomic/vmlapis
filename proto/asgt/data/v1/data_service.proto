@@ -54,6 +54,13 @@ service DataService {
   rpc CallsPerMonthMetric(google.protobuf.Empty) returns (ssn.dataservice.v1.CallsPerMonthResponse);
 
   rpc CalculateMetrics(CalculateMetricsRequest) returns (CalculateMetricsResponse);
+
+  rpc TrainDataset(TrainDatasetRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1/{type}/{name}:train"
+      body: "*"
+    };
+  }
 }
 
 message CalculateMetricsRequest {
@@ -118,4 +125,9 @@ message RegisterQueryStatsRequest {
   string model_type = 2;
   int32 batch_size = 3;
   repeated string tags = 4;
+}
+
+message TrainDatasetRequest {
+  string name = 1;
+  string type = 2;
 }

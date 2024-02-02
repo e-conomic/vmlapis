@@ -114,3 +114,11 @@ class RegisterQueryStatsRequest(_message.Message):
     batch_size: int
     tags: _containers.RepeatedScalarFieldContainer[str]
     def __init__(self, dataset: _Optional[str] = ..., model_type: _Optional[str] = ..., batch_size: _Optional[int] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
+
+class TrainDatasetRequest(_message.Message):
+    __slots__ = ["name", "type"]
+    NAME_FIELD_NUMBER: _ClassVar[int]
+    TYPE_FIELD_NUMBER: _ClassVar[int]
+    name: str
+    type: str
+    def __init__(self, name: _Optional[str] = ..., type: _Optional[str] = ...) -> None: ...

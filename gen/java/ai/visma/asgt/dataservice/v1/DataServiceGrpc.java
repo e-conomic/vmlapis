@@ -263,6 +263,37 @@ public final class DataServiceGrpc {
     return getCalculateMetricsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.dataservice.v1.TrainDatasetRequest,
+      com.google.protobuf.Empty> getTrainDatasetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TrainDataset",
+      requestType = ai.visma.asgt.dataservice.v1.TrainDatasetRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.asgt.dataservice.v1.TrainDatasetRequest,
+      com.google.protobuf.Empty> getTrainDatasetMethod() {
+    io.grpc.MethodDescriptor<ai.visma.asgt.dataservice.v1.TrainDatasetRequest, com.google.protobuf.Empty> getTrainDatasetMethod;
+    if ((getTrainDatasetMethod = DataServiceGrpc.getTrainDatasetMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getTrainDatasetMethod = DataServiceGrpc.getTrainDatasetMethod) == null) {
+          DataServiceGrpc.getTrainDatasetMethod = getTrainDatasetMethod =
+              io.grpc.MethodDescriptor.<ai.visma.asgt.dataservice.v1.TrainDatasetRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TrainDataset"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.dataservice.v1.TrainDatasetRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("TrainDataset"))
+              .build();
+        }
+      }
+    }
+    return getTrainDatasetMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -366,6 +397,13 @@ public final class DataServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.asgt.dataservice.v1.CalculateMetricsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCalculateMetricsMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void trainDataset(ai.visma.asgt.dataservice.v1.TrainDatasetRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTrainDatasetMethod(), responseObserver);
+    }
   }
 
   /**
@@ -458,6 +496,14 @@ public final class DataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCalculateMetricsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void trainDataset(ai.visma.asgt.dataservice.v1.TrainDatasetRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTrainDatasetMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -530,6 +576,13 @@ public final class DataServiceGrpc {
     public ai.visma.asgt.dataservice.v1.CalculateMetricsResponse calculateMetrics(ai.visma.asgt.dataservice.v1.CalculateMetricsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCalculateMetricsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty trainDataset(ai.visma.asgt.dataservice.v1.TrainDatasetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTrainDatasetMethod(), getCallOptions(), request);
     }
   }
 
@@ -612,6 +665,14 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCalculateMetricsMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> trainDataset(
+        ai.visma.asgt.dataservice.v1.TrainDatasetRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTrainDatasetMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_DATASET = 0;
@@ -622,6 +683,7 @@ public final class DataServiceGrpc {
   private static final int METHODID_REGISTER_QUERY_STATS = 5;
   private static final int METHODID_CALLS_PER_MONTH_METRIC = 6;
   private static final int METHODID_CALCULATE_METRICS = 7;
+  private static final int METHODID_TRAIN_DATASET = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -671,6 +733,10 @@ public final class DataServiceGrpc {
         case METHODID_CALCULATE_METRICS:
           serviceImpl.calculateMetrics((ai.visma.asgt.dataservice.v1.CalculateMetricsRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.asgt.dataservice.v1.CalculateMetricsResponse>) responseObserver);
+          break;
+        case METHODID_TRAIN_DATASET:
+          serviceImpl.trainDataset((ai.visma.asgt.dataservice.v1.TrainDatasetRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -746,6 +812,13 @@ public final class DataServiceGrpc {
               ai.visma.asgt.dataservice.v1.CalculateMetricsRequest,
               ai.visma.asgt.dataservice.v1.CalculateMetricsResponse>(
                 service, METHODID_CALCULATE_METRICS)))
+        .addMethod(
+          getTrainDatasetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.dataservice.v1.TrainDatasetRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_TRAIN_DATASET)))
         .build();
   }
 
@@ -802,6 +875,7 @@ public final class DataServiceGrpc {
               .addMethod(getRegisterQueryStatsMethod())
               .addMethod(getCallsPerMonthMetricMethod())
               .addMethod(getCalculateMetricsMethod())
+              .addMethod(getTrainDatasetMethod())
               .build();
         }
       }

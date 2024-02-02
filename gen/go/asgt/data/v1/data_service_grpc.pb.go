@@ -29,6 +29,7 @@ const (
 	DataService_RegisterQueryStats_FullMethodName  = "/asgt.dataservice.v1.DataService/RegisterQueryStats"
 	DataService_CallsPerMonthMetric_FullMethodName = "/asgt.dataservice.v1.DataService/CallsPerMonthMetric"
 	DataService_CalculateMetrics_FullMethodName    = "/asgt.dataservice.v1.DataService/CalculateMetrics"
+	DataService_TrainDataset_FullMethodName        = "/asgt.dataservice.v1.DataService/TrainDataset"
 )
 
 // DataServiceClient is the client API for DataService service.
@@ -43,6 +44,7 @@ type DataServiceClient interface {
 	RegisterQueryStats(ctx context.Context, in *RegisterQueryStatsRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 	CallsPerMonthMetric(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*v1.CallsPerMonthResponse, error)
 	CalculateMetrics(ctx context.Context, in *CalculateMetricsRequest, opts ...grpc.CallOption) (*CalculateMetricsResponse, error)
+	TrainDataset(ctx context.Context, in *TrainDatasetRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
 
 type dataServiceClient struct {
@@ -125,6 +127,15 @@ func (c *dataServiceClient) CalculateMetrics(ctx context.Context, in *CalculateM
 	return out, nil
 }
 
+func (c *dataServiceClient) TrainDataset(ctx context.Context, in *TrainDatasetRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+	out := new(emptypb.Empty)
+	err := c.cc.Invoke(ctx, DataService_TrainDataset_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // DataServiceServer is the server API for DataService service.
 // All implementations should embed UnimplementedDataServiceServer
 // for forward compatibility
@@ -137,6 +148,7 @@ type DataServiceServer interface {
 	RegisterQueryStats(context.Context, *RegisterQueryStatsRequest) (*emptypb.Empty, error)
 	CallsPerMonthMetric(context.Context, *emptypb.Empty) (*v1.CallsPerMonthResponse, error)
 	CalculateMetrics(context.Context, *CalculateMetricsRequest) (*CalculateMetricsResponse, error)
+	TrainDataset(context.Context, *TrainDatasetRequest) (*emptypb.Empty, error)
 }
 
 // UnimplementedDataServiceServer should be embedded to have forward compatible implementations.
@@ -166,6 +178,9 @@ func (UnimplementedDataServiceServer) CallsPerMonthMetric(context.Context, *empt
 }
 func (UnimplementedDataServiceServer) CalculateMetrics(context.Context, *CalculateMetricsRequest) (*CalculateMetricsResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method CalculateMetrics not implemented")
+}
+func (UnimplementedDataServiceServer) TrainDataset(context.Context, *TrainDatasetRequest) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method TrainDataset not implemented")
 }
 
 // UnsafeDataServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -323,6 +338,24 @@ func _DataService_CalculateMetrics_Handler(srv interface{}, ctx context.Context,
 	return interceptor(ctx, in, info, handler)
 }
 
+func _DataService_TrainDataset_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(TrainDatasetRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(DataServiceServer).TrainDataset(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: DataService_TrainDataset_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(DataServiceServer).TrainDataset(ctx, req.(*TrainDatasetRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // DataService_ServiceDesc is the grpc.ServiceDesc for DataService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -361,6 +394,10 @@ var DataService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "CalculateMetrics",
 			Handler:    _DataService_CalculateMetrics_Handler,
+		},
+		{
+			MethodName: "TrainDataset",
+			Handler:    _DataService_TrainDataset_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

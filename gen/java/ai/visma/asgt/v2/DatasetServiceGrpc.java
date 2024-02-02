@@ -356,6 +356,37 @@ public final class DatasetServiceGrpc {
     return getGetTrainingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.v2.TrainDatasetRequest,
+      com.google.protobuf.Empty> getTrainDatasetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TrainDataset",
+      requestType = ai.visma.asgt.v2.TrainDatasetRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.asgt.v2.TrainDatasetRequest,
+      com.google.protobuf.Empty> getTrainDatasetMethod() {
+    io.grpc.MethodDescriptor<ai.visma.asgt.v2.TrainDatasetRequest, com.google.protobuf.Empty> getTrainDatasetMethod;
+    if ((getTrainDatasetMethod = DatasetServiceGrpc.getTrainDatasetMethod) == null) {
+      synchronized (DatasetServiceGrpc.class) {
+        if ((getTrainDatasetMethod = DatasetServiceGrpc.getTrainDatasetMethod) == null) {
+          DatasetServiceGrpc.getTrainDatasetMethod = getTrainDatasetMethod =
+              io.grpc.MethodDescriptor.<ai.visma.asgt.v2.TrainDatasetRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TrainDataset"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.v2.TrainDatasetRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("TrainDataset"))
+              .build();
+        }
+      }
+    }
+    return getTrainDatasetMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -523,6 +554,16 @@ public final class DatasetServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.asgt.v2.TrainingsResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTrainingsMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Force the training of the dataset to start instantly.
+     * </pre>
+     */
+    default void trainDataset(ai.visma.asgt.v2.TrainDatasetRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTrainDatasetMethod(), responseObserver);
+    }
   }
 
   /**
@@ -682,6 +723,17 @@ public final class DatasetServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetTrainingsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Force the training of the dataset to start instantly.
+     * </pre>
+     */
+    public void trainDataset(ai.visma.asgt.v2.TrainDatasetRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTrainDatasetMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -818,6 +870,16 @@ public final class DatasetServiceGrpc {
     public ai.visma.asgt.v2.TrainingsResponse getTrainings(ai.visma.asgt.v2.GetTrainingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetTrainingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Force the training of the dataset to start instantly.
+     * </pre>
+     */
+    public com.google.protobuf.Empty trainDataset(ai.visma.asgt.v2.TrainDatasetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTrainDatasetMethod(), getCallOptions(), request);
     }
   }
 
@@ -967,6 +1029,17 @@ public final class DatasetServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTrainingsMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Force the training of the dataset to start instantly.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> trainDataset(
+        ai.visma.asgt.v2.TrainDatasetRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTrainDatasetMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_GET_DATASET = 0;
@@ -980,6 +1053,7 @@ public final class DatasetServiceGrpc {
   private static final int METHODID_TRUNCATE_DATASET = 8;
   private static final int METHODID_GET_DATASET_TRAININGS = 9;
   private static final int METHODID_GET_TRAININGS = 10;
+  private static final int METHODID_TRAIN_DATASET = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1041,6 +1115,10 @@ public final class DatasetServiceGrpc {
         case METHODID_GET_TRAININGS:
           serviceImpl.getTrainings((ai.visma.asgt.v2.GetTrainingsRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.asgt.v2.TrainingsResponse>) responseObserver);
+          break;
+        case METHODID_TRAIN_DATASET:
+          serviceImpl.trainDataset((ai.visma.asgt.v2.TrainDatasetRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1137,6 +1215,13 @@ public final class DatasetServiceGrpc {
               ai.visma.asgt.v2.GetTrainingsRequest,
               ai.visma.asgt.v2.TrainingsResponse>(
                 service, METHODID_GET_TRAININGS)))
+        .addMethod(
+          getTrainDatasetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.TrainDatasetRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_TRAIN_DATASET)))
         .build();
   }
 
@@ -1196,6 +1281,7 @@ public final class DatasetServiceGrpc {
               .addMethod(getTruncateDatasetMethod())
               .addMethod(getGetDatasetTrainingsMethod())
               .addMethod(getGetTrainingsMethod())
+              .addMethod(getTrainDatasetMethod())
               .build();
         }
       }

@@ -64,6 +64,11 @@ public final class DataServiceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_dataservice_v1_TrainDatasetRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_dataservice_v1_TrainDatasetRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -113,34 +118,39 @@ public final class DataServiceProto {
       "ryStatsRequest\022\030\n\007dataset\030\001 \001(\tR\007dataset" +
       "\022\035\n\nmodel_type\030\002 \001(\tR\tmodelType\022\035\n\nbatch" +
       "_size\030\003 \001(\005R\tbatchSize\022\022\n\004tags\030\004 \003(\tR\004ta" +
-      "gs2\353\006\n\013DataService\022i\n\rCreateDataset\022\".as" +
-      "gt.dataservice.v1.CreateRequest\032\026.google" +
-      ".protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:crea" +
-      "te:\001*\022q\n\nAppendData\022&.asgt.dataservice.v" +
-      "1.AppendDataRequest\032\026.google.protobuf.Em" +
-      "pty\"#\202\323\344\223\002\035\"\030/v1/{type}/{name}:append:\001*" +
-      "\022f\n\nDeleteData\022\".asgt.dataservice.v1.Del" +
-      "eteRequest\032\026.google.protobuf.Empty\"\034\202\323\344\223" +
-      "\002\026\"\021/v1/{type}:delete:\001*\022t\n\007GetInfo\022#.as" +
-      "gt.dataservice.v1.GetInfoRequest\032$.asgt." +
-      "dataservice.v1.GetInfoResponse\"\036\202\323\344\223\002\030\022\026" +
-      "/v1/{type}/{name}:info\022w\n\rUpdateDataset\022" +
-      ").asgt.dataservice.v1.UpdateDatasetReque" +
-      "st\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\032\030/v1/" +
-      "{type}/{name}:update:\001*\022\\\n\022RegisterQuery" +
-      "Stats\022..asgt.dataservice.v1.RegisterQuer" +
-      "yStatsRequest\032\026.google.protobuf.Empty\022X\n" +
-      "\023CallsPerMonthMetric\022\026.google.protobuf.E" +
-      "mpty\032).ssn.dataservice.v1.CallsPerMonthR" +
-      "esponse\022o\n\020CalculateMetrics\022,.asgt.datas" +
-      "ervice.v1.CalculateMetricsRequest\032-.asgt" +
-      ".dataservice.v1.CalculateMetricsResponse" +
-      "B\325\001\n\034ai.visma.asgt.dataservice.v1B\020DataS" +
-      "erviceProtoP\001Z5github.com/e-conomic/vmla" +
-      "pis/gen/go/asgt/data/v1;data\242\002\003ADX\252\002\023Asg" +
-      "t.Dataservice.V1\312\002\023Asgt\\Dataservice\\V1\342\002" +
-      "\037Asgt\\Dataservice\\V1\\GPBMetadata\352\002\025Asgt:" +
-      ":Dataservice::V1b\006proto3"
+      "gs\"=\n\023TrainDatasetRequest\022\022\n\004name\030\001 \001(\tR" +
+      "\004name\022\022\n\004type\030\002 \001(\tR\004type2\341\007\n\013DataServic" +
+      "e\022i\n\rCreateDataset\022\".asgt.dataservice.v1" +
+      ".CreateRequest\032\026.google.protobuf.Empty\"\034" +
+      "\202\323\344\223\002\026\"\021/v1/{type}:create:\001*\022q\n\nAppendDa" +
+      "ta\022&.asgt.dataservice.v1.AppendDataReque" +
+      "st\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\"\030/v1/" +
+      "{type}/{name}:append:\001*\022f\n\nDeleteData\022\"." +
+      "asgt.dataservice.v1.DeleteRequest\032\026.goog" +
+      "le.protobuf.Empty\"\034\202\323\344\223\002\026\"\021/v1/{type}:de" +
+      "lete:\001*\022t\n\007GetInfo\022#.asgt.dataservice.v1" +
+      ".GetInfoRequest\032$.asgt.dataservice.v1.Ge" +
+      "tInfoResponse\"\036\202\323\344\223\002\030\022\026/v1/{type}/{name}" +
+      ":info\022w\n\rUpdateDataset\022).asgt.dataservic" +
+      "e.v1.UpdateDatasetRequest\032\026.google.proto" +
+      "buf.Empty\"#\202\323\344\223\002\035\032\030/v1/{type}/{name}:upd" +
+      "ate:\001*\022\\\n\022RegisterQueryStats\022..asgt.data" +
+      "service.v1.RegisterQueryStatsRequest\032\026.g" +
+      "oogle.protobuf.Empty\022X\n\023CallsPerMonthMet" +
+      "ric\022\026.google.protobuf.Empty\032).ssn.datase" +
+      "rvice.v1.CallsPerMonthResponse\022o\n\020Calcul" +
+      "ateMetrics\022,.asgt.dataservice.v1.Calcula" +
+      "teMetricsRequest\032-.asgt.dataservice.v1.C" +
+      "alculateMetricsResponse\022t\n\014TrainDataset\022" +
+      "(.asgt.dataservice.v1.TrainDatasetReques" +
+      "t\032\026.google.protobuf.Empty\"\"\202\323\344\223\002\034\"\027/v1/{" +
+      "type}/{name}:train:\001*B\325\001\n\034ai.visma.asgt." +
+      "dataservice.v1B\020DataServiceProtoP\001Z5gith" +
+      "ub.com/e-conomic/vmlapis/gen/go/asgt/dat" +
+      "a/v1;data\242\002\003ADX\252\002\023Asgt.Dataservice.V1\312\002\023" +
+      "Asgt\\Dataservice\\V1\342\002\037Asgt\\Dataservice\\V" +
+      "1\\GPBMetadata\352\002\025Asgt::Dataservice::V1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -215,6 +225,12 @@ public final class DataServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_dataservice_v1_RegisterQueryStatsRequest_descriptor,
         new java.lang.String[] { "Dataset", "ModelType", "BatchSize", "Tags", });
+    internal_static_asgt_dataservice_v1_TrainDatasetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_asgt_dataservice_v1_TrainDatasetRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_dataservice_v1_TrainDatasetRequest_descriptor,
+        new java.lang.String[] { "Name", "Type", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
