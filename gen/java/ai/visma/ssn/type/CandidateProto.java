@@ -39,6 +39,11 @@ public final class CandidateProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_type_PurchaseLineCandidate_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_type_AnswerCandidate_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_type_AnswerCandidate_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -83,11 +88,15 @@ public final class CandidateProto {
       "tPriceInclVat\022-\n\023unit_price_excl_vat\030\016 \001" +
       "(\tR\020unitPriceExclVat\022\024\n\005total\030\021 \001(\tR\005tot" +
       "al\022\035\n\nunit_price\030\022 \001(\tR\tunitPriceJ\004\010\017\020\020J" +
-      "\004\010\020\020\021B\232\001\n\021ai.visma.ssn.typeB\016CandidatePr" +
-      "otoP\001Z4github.com/e-conomic/vmlapis/gen/" +
-      "go/ssn/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010S" +
-      "sn\\Type\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Ty" +
-      "peb\006proto3"
+      "\004\010\020\020\021\"\267\001\n\017AnswerCandidate\022\032\n\010question\030\001 " +
+      "\001(\tR\010question\022\026\n\006answer\030\002 \001(\tR\006answer\0224\n" +
+      "\nconfidence\030\003 \001(\0132\024.ssn.type.ConfidenceR" +
+      "\nconfidence\022:\n\016model_metadata\030\007 \001(\0132\023.ss" +
+      "n.type.ModelSpecR\rmodelMetadataB\232\001\n\021ai.v" +
+      "isma.ssn.typeB\016CandidateProtoP\001Z4github." +
+      "com/e-conomic/vmlapis/gen/go/ssn/type;ss" +
+      "ntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Type\342\002\024Ssn\\" +
+      "Type\\GPBMetadata\352\002\tSsn::Typeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -125,6 +134,12 @@ public final class CandidateProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_type_PurchaseLineCandidate_descriptor,
         new java.lang.String[] { "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", });
+    internal_static_ssn_type_AnswerCandidate_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_ssn_type_AnswerCandidate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_type_AnswerCandidate_descriptor,
+        new java.lang.String[] { "Question", "Answer", "Confidence", "ModelMetadata", });
     com.google.protobuf.WrappersProto.getDescriptor();
     ai.visma.ssn.type.GeometryProto.getDescriptor();
   }

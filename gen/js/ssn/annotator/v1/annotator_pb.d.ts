@@ -105,6 +105,11 @@ export class DocumentAnnotatorRequest extends jspb.Message {
   clearSegmentsList(): DocumentAnnotatorRequest;
   addSegments(value: string, index?: number): DocumentAnnotatorRequest;
 
+  getQuestionsList(): Array<string>;
+  setQuestionsList(value: Array<string>): DocumentAnnotatorRequest;
+  clearQuestionsList(): DocumentAnnotatorRequest;
+  addQuestions(value: string, index?: number): DocumentAnnotatorRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorRequest.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorRequest): DocumentAnnotatorRequest.AsObject;
@@ -120,6 +125,7 @@ export namespace DocumentAnnotatorRequest {
     tagsList: Array<string>,
     tier: ssn_type_tier_pb.Tier,
     segmentsList: Array<string>,
+    questionsList: Array<string>,
   }
 }
 
@@ -343,6 +349,11 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearPurchaseLinesList(): DocumentAnnotatorResponse;
   addPurchaseLines(value?: ssn_type_candidate_pb.PurchaseLineCandidate, index?: number): ssn_type_candidate_pb.PurchaseLineCandidate;
 
+  getAnswersList(): Array<ssn_type_candidate_pb.AnswerCandidate>;
+  setAnswersList(value: Array<ssn_type_candidate_pb.AnswerCandidate>): DocumentAnnotatorResponse;
+  clearAnswersList(): DocumentAnnotatorResponse;
+  addAnswers(value?: ssn_type_candidate_pb.AnswerCandidate, index?: number): ssn_type_candidate_pb.AnswerCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -398,6 +409,7 @@ export namespace DocumentAnnotatorResponse {
     receiverNameList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     receiverVatNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
+    answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
   }
 }
 
@@ -472,10 +484,10 @@ export namespace DocumentQuestionRequest {
 }
 
 export class DocumentQuestionResponse extends jspb.Message {
-  getAnswerList(): Array<ssn_type_candidate_pb.Candidate>;
-  setAnswerList(value: Array<ssn_type_candidate_pb.Candidate>): DocumentQuestionResponse;
-  clearAnswerList(): DocumentQuestionResponse;
-  addAnswer(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+  getAnswersList(): Array<ssn_type_candidate_pb.AnswerCandidate>;
+  setAnswersList(value: Array<ssn_type_candidate_pb.AnswerCandidate>): DocumentQuestionResponse;
+  clearAnswersList(): DocumentQuestionResponse;
+  addAnswers(value?: ssn_type_candidate_pb.AnswerCandidate, index?: number): ssn_type_candidate_pb.AnswerCandidate;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentQuestionResponse.AsObject;
@@ -487,7 +499,7 @@ export class DocumentQuestionResponse extends jspb.Message {
 
 export namespace DocumentQuestionResponse {
   export type AsObject = {
-    answerList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
   }
 }
 

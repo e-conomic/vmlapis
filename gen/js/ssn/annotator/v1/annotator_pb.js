@@ -433,7 +433,7 @@ proto.ssn.annotator.v1.Feature.prototype.setMinConfidence = function(value) {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorRequest.repeatedFields_ = [2,3,5];
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.repeatedFields_ = [2,3,5,6];
 
 
 
@@ -471,7 +471,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.toObject = function(includeInsta
     proto.ssn.annotator.v1.Feature.toObject, includeInstance),
     tagsList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
     tier: jspb.Message.getFieldWithDefault(msg, 4, 0),
-    segmentsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f
+    segmentsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
+    questionsList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -529,6 +530,10 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.deserializeBinaryFromReader = fu
     case 5:
       var value = /** @type {string} */ (reader.readString());
       msg.addSegments(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addQuestions(value);
       break;
     default:
       reader.skipField();
@@ -593,6 +598,13 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.serializeBinaryToWriter = functi
   if (f.length > 0) {
     writer.writeRepeatedString(
       5,
+      f
+    );
+  }
+  f = message.getQuestionsList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      6,
       f
     );
   }
@@ -766,13 +778,50 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearSegmentsList = fu
 };
 
 
+/**
+ * repeated string questions = 6;
+ * @return {!Array<string>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.getQuestionsList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 6));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorRequest} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.setQuestionsList = function(value) {
+  return jspb.Message.setField(this, 6, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorRequest} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.addQuestions = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorRequest} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearQuestionsList = function() {
+  return this.setQuestionsList([]);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46];
 
 
 
@@ -890,7 +939,9 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     receiverVatNumberList: jspb.Message.toObjectList(msg.getReceiverVatNumberList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
     purchaseLinesList: jspb.Message.toObjectList(msg.getPurchaseLinesList(),
-    ssn_type_candidate_pb.PurchaseLineCandidate.toObject, includeInstance)
+    ssn_type_candidate_pb.PurchaseLineCandidate.toObject, includeInstance),
+    answersList: jspb.Message.toObjectList(msg.getAnswersList(),
+    ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1148,6 +1199,11 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_candidate_pb.PurchaseLineCandidate;
       reader.readMessage(value,ssn_type_candidate_pb.PurchaseLineCandidate.deserializeBinaryFromReader);
       msg.addPurchaseLines(value);
+      break;
+    case 46:
+      var value = new ssn_type_candidate_pb.AnswerCandidate;
+      reader.readMessage(value,ssn_type_candidate_pb.AnswerCandidate.deserializeBinaryFromReader);
+      msg.addAnswers(value);
       break;
     default:
       reader.skipField();
@@ -1533,6 +1589,14 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       45,
       f,
       ssn_type_candidate_pb.PurchaseLineCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getAnswersList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      46,
+      f,
+      ssn_type_candidate_pb.AnswerCandidate.serializeBinaryToWriter
     );
   }
 };
@@ -3187,6 +3251,44 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearPurchaseLinesLis
 };
 
 
+/**
+ * repeated ssn.type.AnswerCandidate answers = 46;
+ * @return {!Array<!proto.ssn.type.AnswerCandidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getAnswersList = function() {
+  return /** @type{!Array<!proto.ssn.type.AnswerCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.AnswerCandidate, 46));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.AnswerCandidate>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setAnswersList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 46, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.AnswerCandidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.AnswerCandidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addAnswers = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 46, opt_value, proto.ssn.type.AnswerCandidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearAnswersList = function() {
+  return this.setAnswersList([]);
+};
+
+
 
 
 
@@ -3735,7 +3837,7 @@ proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.clearQuestionList = fun
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentQuestionResponse.repeatedFields_ = [1];
+proto.ssn.annotator.v1.DocumentQuestionResponse.repeatedFields_ = [2];
 
 
 
@@ -3768,8 +3870,8 @@ proto.ssn.annotator.v1.DocumentQuestionResponse.prototype.toObject = function(op
  */
 proto.ssn.annotator.v1.DocumentQuestionResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    answerList: jspb.Message.toObjectList(msg.getAnswerList(),
-    ssn_type_candidate_pb.Candidate.toObject, includeInstance)
+    answersList: jspb.Message.toObjectList(msg.getAnswersList(),
+    ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -3806,10 +3908,10 @@ proto.ssn.annotator.v1.DocumentQuestionResponse.deserializeBinaryFromReader = fu
     }
     var field = reader.getFieldNumber();
     switch (field) {
-    case 1:
-      var value = new ssn_type_candidate_pb.Candidate;
-      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
-      msg.addAnswer(value);
+    case 2:
+      var value = new ssn_type_candidate_pb.AnswerCandidate;
+      reader.readMessage(value,ssn_type_candidate_pb.AnswerCandidate.deserializeBinaryFromReader);
+      msg.addAnswers(value);
       break;
     default:
       reader.skipField();
@@ -3840,43 +3942,43 @@ proto.ssn.annotator.v1.DocumentQuestionResponse.prototype.serializeBinary = func
  */
 proto.ssn.annotator.v1.DocumentQuestionResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getAnswerList();
+  f = message.getAnswersList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      1,
+      2,
       f,
-      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.AnswerCandidate.serializeBinaryToWriter
     );
   }
 };
 
 
 /**
- * repeated ssn.type.Candidate answer = 1;
- * @return {!Array<!proto.ssn.type.Candidate>}
+ * repeated ssn.type.AnswerCandidate answers = 2;
+ * @return {!Array<!proto.ssn.type.AnswerCandidate>}
  */
-proto.ssn.annotator.v1.DocumentQuestionResponse.prototype.getAnswerList = function() {
-  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 1));
+proto.ssn.annotator.v1.DocumentQuestionResponse.prototype.getAnswersList = function() {
+  return /** @type{!Array<!proto.ssn.type.AnswerCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.AnswerCandidate, 2));
 };
 
 
 /**
- * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @param {!Array<!proto.ssn.type.AnswerCandidate>} value
  * @return {!proto.ssn.annotator.v1.DocumentQuestionResponse} returns this
 */
-proto.ssn.annotator.v1.DocumentQuestionResponse.prototype.setAnswerList = function(value) {
-  return jspb.Message.setRepeatedWrapperField(this, 1, value);
+proto.ssn.annotator.v1.DocumentQuestionResponse.prototype.setAnswersList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
 
 
 /**
- * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {!proto.ssn.type.AnswerCandidate=} opt_value
  * @param {number=} opt_index
- * @return {!proto.ssn.type.Candidate}
+ * @return {!proto.ssn.type.AnswerCandidate}
  */
-proto.ssn.annotator.v1.DocumentQuestionResponse.prototype.addAnswer = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ssn.type.Candidate, opt_index);
+proto.ssn.annotator.v1.DocumentQuestionResponse.prototype.addAnswers = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.ssn.type.AnswerCandidate, opt_index);
 };
 
 
@@ -3884,8 +3986,8 @@ proto.ssn.annotator.v1.DocumentQuestionResponse.prototype.addAnswer = function(o
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.annotator.v1.DocumentQuestionResponse} returns this
  */
-proto.ssn.annotator.v1.DocumentQuestionResponse.prototype.clearAnswerList = function() {
-  return this.setAnswerList([]);
+proto.ssn.annotator.v1.DocumentQuestionResponse.prototype.clearAnswersList = function() {
+  return this.setAnswersList([]);
 };
 
 

@@ -8,26 +8,26 @@ public interface DocumentQuestionResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .ssn.type.Candidate answer = 1 [json_name = "answer"];</code>
+   * <code>repeated .ssn.type.AnswerCandidate answers = 2 [json_name = "answers"];</code>
    */
-  java.util.List<ai.visma.ssn.type.Candidate> 
-      getAnswerList();
+  java.util.List<ai.visma.ssn.type.AnswerCandidate> 
+      getAnswersList();
   /**
-   * <code>repeated .ssn.type.Candidate answer = 1 [json_name = "answer"];</code>
+   * <code>repeated .ssn.type.AnswerCandidate answers = 2 [json_name = "answers"];</code>
    */
-  ai.visma.ssn.type.Candidate getAnswer(int index);
+  ai.visma.ssn.type.AnswerCandidate getAnswers(int index);
   /**
-   * <code>repeated .ssn.type.Candidate answer = 1 [json_name = "answer"];</code>
+   * <code>repeated .ssn.type.AnswerCandidate answers = 2 [json_name = "answers"];</code>
    */
-  int getAnswerCount();
+  int getAnswersCount();
   /**
-   * <code>repeated .ssn.type.Candidate answer = 1 [json_name = "answer"];</code>
+   * <code>repeated .ssn.type.AnswerCandidate answers = 2 [json_name = "answers"];</code>
    */
-  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getAnswerOrBuilderList();
+  java.util.List<? extends ai.visma.ssn.type.AnswerCandidateOrBuilder> 
+      getAnswersOrBuilderList();
   /**
-   * <code>repeated .ssn.type.Candidate answer = 1 [json_name = "answer"];</code>
+   * <code>repeated .ssn.type.AnswerCandidate answers = 2 [json_name = "answers"];</code>
    */
-  ai.visma.ssn.type.CandidateOrBuilder getAnswerOrBuilder(
+  ai.visma.ssn.type.AnswerCandidateOrBuilder getAnswersOrBuilder(
       int index);
 }
