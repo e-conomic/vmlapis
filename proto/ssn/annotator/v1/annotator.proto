@@ -309,7 +309,7 @@ message DocumentSource {
 
 message DocumentQuestionRequest {
   Document document = 1;
-  repeated string question = 2;
+  repeated string questions = 2;
 }
 message DocumentQuestionResponse {
   reserved 1;

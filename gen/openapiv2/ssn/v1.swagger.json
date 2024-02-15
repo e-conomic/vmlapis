@@ -1214,7 +1214,7 @@
         "document": {
           "$ref": "#/definitions/ssnannotatorv1Document"
         },
-        "question": {
+        "questions": {
           "type": "array",
           "items": {
             "type": "string"

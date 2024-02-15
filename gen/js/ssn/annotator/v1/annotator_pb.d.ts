@@ -463,10 +463,10 @@ export class DocumentQuestionRequest extends jspb.Message {
   hasDocument(): boolean;
   clearDocument(): DocumentQuestionRequest;
 
-  getQuestionList(): Array<string>;
-  setQuestionList(value: Array<string>): DocumentQuestionRequest;
-  clearQuestionList(): DocumentQuestionRequest;
-  addQuestion(value: string, index?: number): DocumentQuestionRequest;
+  getQuestionsList(): Array<string>;
+  setQuestionsList(value: Array<string>): DocumentQuestionRequest;
+  clearQuestionsList(): DocumentQuestionRequest;
+  addQuestions(value: string, index?: number): DocumentQuestionRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentQuestionRequest.AsObject;
@@ -479,7 +479,7 @@ export class DocumentQuestionRequest extends jspb.Message {
 export namespace DocumentQuestionRequest {
   export type AsObject = {
     document?: Document.AsObject,
-    questionList: Array<string>,
+    questionsList: Array<string>,
   }
 }
 

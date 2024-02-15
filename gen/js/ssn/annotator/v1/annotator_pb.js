@@ -3664,7 +3664,7 @@ proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.toObject = function(opt
 proto.ssn.annotator.v1.DocumentQuestionRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     document: (f = msg.getDocument()) && proto.ssn.annotator.v1.Document.toObject(includeInstance, f),
-    questionList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f
+    questionsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -3708,7 +3708,7 @@ proto.ssn.annotator.v1.DocumentQuestionRequest.deserializeBinaryFromReader = fun
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.addQuestion(value);
+      msg.addQuestions(value);
       break;
     default:
       reader.skipField();
@@ -3747,7 +3747,7 @@ proto.ssn.annotator.v1.DocumentQuestionRequest.serializeBinaryToWriter = functio
       proto.ssn.annotator.v1.Document.serializeBinaryToWriter
     );
   }
-  f = message.getQuestionList();
+  f = message.getQuestionsList();
   if (f.length > 0) {
     writer.writeRepeatedString(
       2,
@@ -3795,10 +3795,10 @@ proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.hasDocument = function(
 
 
 /**
- * repeated string question = 2;
+ * repeated string questions = 2;
  * @return {!Array<string>}
  */
-proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.getQuestionList = function() {
+proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.getQuestionsList = function() {
   return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
 };
 
@@ -3807,7 +3807,7 @@ proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.getQuestionList = funct
  * @param {!Array<string>} value
  * @return {!proto.ssn.annotator.v1.DocumentQuestionRequest} returns this
  */
-proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.setQuestionList = function(value) {
+proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.setQuestionsList = function(value) {
   return jspb.Message.setField(this, 2, value || []);
 };
 
@@ -3817,7 +3817,7 @@ proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.setQuestionList = funct
  * @param {number=} opt_index
  * @return {!proto.ssn.annotator.v1.DocumentQuestionRequest} returns this
  */
-proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.addQuestion = function(value, opt_index) {
+proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.addQuestions = function(value, opt_index) {
   return jspb.Message.addToRepeatedField(this, 2, value, opt_index);
 };
 
@@ -3826,8 +3826,8 @@ proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.addQuestion = function(
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.annotator.v1.DocumentQuestionRequest} returns this
  */
-proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.clearQuestionList = function() {
-  return this.setQuestionList([]);
+proto.ssn.annotator.v1.DocumentQuestionRequest.prototype.clearQuestionsList = function() {
+  return this.setQuestionsList([]);
 };
 
 

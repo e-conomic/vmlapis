@@ -175,27 +175,27 @@ public final class AnnotatorProto {
       "ocument\022\030\n\007content\030\001 \001(\014R\007content\0228\n\006sou" +
       "rce\030\002 \001(\0132 .ssn.annotator.v1.DocumentSou" +
       "rceR\006source\"+\n\016DocumentSource\022\031\n\010http_ur" +
-      "i\030\001 \001(\tR\007httpUri\"m\n\027DocumentQuestionRequ" +
+      "i\030\001 \001(\tR\007httpUri\"o\n\027DocumentQuestionRequ" +
       "est\0226\n\010document\030\001 \001(\0132\032.ssn.annotator.v1" +
-      ".DocumentR\010document\022\032\n\010question\030\002 \003(\tR\010q" +
-      "uestion\"U\n\030DocumentQuestionResponse\0223\n\007a" +
-      "nswers\030\002 \003(\0132\031.ssn.type.AnswerCandidateR" +
-      "\007answersJ\004\010\001\020\0022\275\002\n\021DocumentAnnotator\022\215\001\n" +
-      "\020AnnotateDocument\022*.ssn.annotator.v1.Doc" +
-      "umentAnnotatorRequest\032+.ssn.annotator.v1" +
-      ".DocumentAnnotatorResponse\" \202\323\344\223\002\032\"\025/v1/" +
-      "document:annotate:\001*\022\227\001\n\026AnswerDocumentQ" +
-      "uestion\022).ssn.annotator.v1.DocumentQuest" +
-      "ionRequest\032*.ssn.annotator.v1.DocumentQu" +
-      "estionResponse\"&\202\323\344\223\002 \"\033/v1/document:ans" +
-      "werquestion:\001*B\210\002\n\031ai.visma.ssn.annotato" +
-      "r.v1B\016AnnotatorProtoP\001Z>github.com/e-con" +
-      "omic/vmlapis/gen/go/ssn/annotator/v1;ann" +
-      "otator\242\002\003SAX\252\002\020Ssn.Annotator.V1\312\002\020Ssn\\An" +
-      "notator\\V1\342\002\034Ssn\\Annotator\\V1\\GPBMetadat" +
-      "a\352\002\022Ssn::Annotator::V1\222A8\022\017\n\tSmartScan2\002" +
-      "v1*\001\0022\020application/json:\020application/jso" +
-      "nb\006proto3"
+      ".DocumentR\010document\022\034\n\tquestions\030\002 \003(\tR\t" +
+      "questions\"U\n\030DocumentQuestionResponse\0223\n" +
+      "\007answers\030\002 \003(\0132\031.ssn.type.AnswerCandidat" +
+      "eR\007answersJ\004\010\001\020\0022\275\002\n\021DocumentAnnotator\022\215" +
+      "\001\n\020AnnotateDocument\022*.ssn.annotator.v1.D" +
+      "ocumentAnnotatorRequest\032+.ssn.annotator." +
+      "v1.DocumentAnnotatorResponse\" \202\323\344\223\002\032\"\025/v" +
+      "1/document:annotate:\001*\022\227\001\n\026AnswerDocumen" +
+      "tQuestion\022).ssn.annotator.v1.DocumentQue" +
+      "stionRequest\032*.ssn.annotator.v1.Document" +
+      "QuestionResponse\"&\202\323\344\223\002 \"\033/v1/document:a" +
+      "nswerquestion:\001*B\210\002\n\031ai.visma.ssn.annota" +
+      "tor.v1B\016AnnotatorProtoP\001Z>github.com/e-c" +
+      "onomic/vmlapis/gen/go/ssn/annotator/v1;a" +
+      "nnotator\242\002\003SAX\252\002\020Ssn.Annotator.V1\312\002\020Ssn\\" +
+      "Annotator\\V1\342\002\034Ssn\\Annotator\\V1\\GPBMetad" +
+      "ata\352\002\022Ssn::Annotator::V1\222A8\022\017\n\tSmartScan" +
+      "2\002v1*\001\0022\020application/json:\020application/j" +
+      "sonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -241,7 +241,7 @@ public final class AnnotatorProto {
     internal_static_ssn_annotator_v1_DocumentQuestionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_annotator_v1_DocumentQuestionRequest_descriptor,
-        new java.lang.String[] { "Document", "Question", });
+        new java.lang.String[] { "Document", "Questions", });
     internal_static_ssn_annotator_v1_DocumentQuestionResponse_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_ssn_annotator_v1_DocumentQuestionResponse_fieldAccessorTable = new

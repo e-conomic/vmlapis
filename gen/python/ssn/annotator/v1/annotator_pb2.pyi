@@ -240,12 +240,12 @@ class DocumentSource(_message.Message):
     def __init__(self, http_uri: _Optional[str] = ...) -> None: ...
 
 class DocumentQuestionRequest(_message.Message):
-    __slots__ = ["document", "question"]
+    __slots__ = ["document", "questions"]
     DOCUMENT_FIELD_NUMBER: _ClassVar[int]
-    QUESTION_FIELD_NUMBER: _ClassVar[int]
+    QUESTIONS_FIELD_NUMBER: _ClassVar[int]
     document: Document
-    question: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, document: _Optional[_Union[Document, _Mapping]] = ..., question: _Optional[_Iterable[str]] = ...) -> None: ...
+    questions: _containers.RepeatedScalarFieldContainer[str]
+    def __init__(self, document: _Optional[_Union[Document, _Mapping]] = ..., questions: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class DocumentQuestionResponse(_message.Message):
     __slots__ = ["answers"]
