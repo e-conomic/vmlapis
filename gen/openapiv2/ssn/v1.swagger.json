@@ -321,6 +321,27 @@
         }
       }
     },
+    "typeAnswerCandidate": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string",
+          "title": "Question asked in the request"
+        },
+        "answer": {
+          "type": "string",
+          "title": "Model prediction for the question"
+        },
+        "confidence": {
+          "$ref": "#/definitions/typeConfidence",
+          "title": "Confidence of the prediction"
+        },
+        "modelMetadata": {
+          "$ref": "#/definitions/typeModelSpec",
+          "title": "Model metadata"
+        }
+      }
+    },
     "typeBlock": {
       "type": "object",
       "properties": {
@@ -822,6 +843,12 @@
           "items": {
             "type": "string"
           }
+        },
+        "questions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -1170,6 +1197,14 @@
             "$ref": "#/definitions/typePurchaseLineCandidate"
           },
           "title": "Purchase lines for the document. This is a list of candidates, where each\ncandidate is a single purchase lines. Each purchase line may have page number,\ncode, description, quantity, item number, unit, total discount, percentage discount,\ntotal incl vat, total excl vat, total vat, percentage vat, unit price incl vat,\nunit price excl vat"
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeAnswerCandidate"
+          },
+          "title": "Answer Candidates for the questions asked in th request abotu the document\nEach Answer is question and answer pair"
         }
       }
     },
@@ -1179,7 +1214,7 @@
         "document": {
           "$ref": "#/definitions/ssnannotatorv1Document"
         },
-        "question": {
+        "questions": {
           "type": "array",
           "items": {
             "type": "string"
@@ -1190,11 +1225,11 @@
     "v1DocumentQuestionResponse": {
       "type": "object",
       "properties": {
-        "answer": {
+        "answers": {
           "type": "array",
           "items": {
             "type": "object",
-            "$ref": "#/definitions/typeCandidate"
+            "$ref": "#/definitions/typeAnswerCandidate"
           }
         }
       }

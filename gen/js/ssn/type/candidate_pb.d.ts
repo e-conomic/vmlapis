@@ -219,3 +219,37 @@ export namespace PurchaseLineCandidate {
   }
 }
 
+export class AnswerCandidate extends jspb.Message {
+  getQuestion(): string;
+  setQuestion(value: string): AnswerCandidate;
+
+  getAnswer(): string;
+  setAnswer(value: string): AnswerCandidate;
+
+  getConfidence(): Confidence | undefined;
+  setConfidence(value?: Confidence): AnswerCandidate;
+  hasConfidence(): boolean;
+  clearConfidence(): AnswerCandidate;
+
+  getModelMetadata(): ModelSpec | undefined;
+  setModelMetadata(value?: ModelSpec): AnswerCandidate;
+  hasModelMetadata(): boolean;
+  clearModelMetadata(): AnswerCandidate;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AnswerCandidate.AsObject;
+  static toObject(includeInstance: boolean, msg: AnswerCandidate): AnswerCandidate.AsObject;
+  static serializeBinaryToWriter(message: AnswerCandidate, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AnswerCandidate;
+  static deserializeBinaryFromReader(message: AnswerCandidate, reader: jspb.BinaryReader): AnswerCandidate;
+}
+
+export namespace AnswerCandidate {
+  export type AsObject = {
+    question: string,
+    answer: string,
+    confidence?: Confidence.AsObject,
+    modelMetadata?: ModelSpec.AsObject,
+  }
+}
+

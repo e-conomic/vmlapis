@@ -55,10 +55,15 @@ namespace Ssn.Type {
             "X2luY2xfdmF0GA0gASgJUhB1bml0UHJpY2VJbmNsVmF0Ei0KE3VuaXRfcHJp",
             "Y2VfZXhjbF92YXQYDiABKAlSEHVuaXRQcmljZUV4Y2xWYXQSFAoFdG90YWwY",
             "ESABKAlSBXRvdGFsEh0KCnVuaXRfcHJpY2UYEiABKAlSCXVuaXRQcmljZUoE",
-            "CA8QEEoECBAQEUKaAQoRYWkudmlzbWEuc3NuLnR5cGVCDkNhbmRpZGF0ZVBy",
-            "b3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nz",
-            "bi90eXBlO3NzbnR5cGWiAgNTVFiqAghTc24uVHlwZcoCCFNzblxUeXBl4gIU",
-            "U3NuXFR5cGVcR1BCTWV0YWRhdGHqAglTc246OlR5cGViBnByb3RvMw=="));
+            "CA8QEEoECBAQESK3AQoPQW5zd2VyQ2FuZGlkYXRlEhoKCHF1ZXN0aW9uGAEg",
+            "ASgJUghxdWVzdGlvbhIWCgZhbnN3ZXIYAiABKAlSBmFuc3dlchI0Cgpjb25m",
+            "aWRlbmNlGAMgASgLMhQuc3NuLnR5cGUuQ29uZmlkZW5jZVIKY29uZmlkZW5j",
+            "ZRI6Cg5tb2RlbF9tZXRhZGF0YRgHIAEoCzITLnNzbi50eXBlLk1vZGVsU3Bl",
+            "Y1INbW9kZWxNZXRhZGF0YUKaAQoRYWkudmlzbWEuc3NuLnR5cGVCDkNhbmRp",
+            "ZGF0ZVByb3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2Vu",
+            "L2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNTVFiqAghTc24uVHlwZcoCCFNzblxU",
+            "eXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRhdGHqAglTc246OlR5cGViBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -66,7 +71,8 @@ namespace Ssn.Type {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.Candidate), global::Ssn.Type.Candidate.Parser, new[]{ "Value", "Text", "Confidence", "BoundingBox", "Type", "PageRef", "ModelMetadata" }, null, new[]{ typeof(global::Ssn.Type.Candidate.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.ModelSpec), global::Ssn.Type.ModelSpec.Parser, new[]{ "ModelName", "ModelVer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.AnswerCandidate), global::Ssn.Type.AnswerCandidate.Parser, new[]{ "Question", "Answer", "Confidence", "ModelMetadata" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2124,6 +2130,336 @@ namespace Ssn.Type {
           }
           case 146: {
             UnitPrice = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class AnswerCandidate : pb::IMessage<AnswerCandidate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnswerCandidate> _parser = new pb::MessageParser<AnswerCandidate>(() => new AnswerCandidate());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AnswerCandidate> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnswerCandidate() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnswerCandidate(AnswerCandidate other) : this() {
+      question_ = other.question_;
+      answer_ = other.answer_;
+      confidence_ = other.confidence_ != null ? other.confidence_.Clone() : null;
+      modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnswerCandidate Clone() {
+      return new AnswerCandidate(this);
+    }
+
+    /// <summary>Field number for the "question" field.</summary>
+    public const int QuestionFieldNumber = 1;
+    private string question_ = "";
+    /// <summary>
+    /// Question asked in the request
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Question {
+      get { return question_; }
+      set {
+        question_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "answer" field.</summary>
+    public const int AnswerFieldNumber = 2;
+    private string answer_ = "";
+    /// <summary>
+    /// Model prediction for the question
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Answer {
+      get { return answer_; }
+      set {
+        answer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "confidence" field.</summary>
+    public const int ConfidenceFieldNumber = 3;
+    private global::Ssn.Type.Confidence confidence_;
+    /// <summary>
+    /// Confidence of the prediction
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ssn.Type.Confidence Confidence {
+      get { return confidence_; }
+      set {
+        confidence_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "model_metadata" field.</summary>
+    public const int ModelMetadataFieldNumber = 7;
+    private global::Ssn.Type.ModelSpec modelMetadata_;
+    /// <summary>
+    /// Model metadata
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ssn.Type.ModelSpec ModelMetadata {
+      get { return modelMetadata_; }
+      set {
+        modelMetadata_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AnswerCandidate);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AnswerCandidate other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Question != other.Question) return false;
+      if (Answer != other.Answer) return false;
+      if (!object.Equals(Confidence, other.Confidence)) return false;
+      if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Question.Length != 0) hash ^= Question.GetHashCode();
+      if (Answer.Length != 0) hash ^= Answer.GetHashCode();
+      if (confidence_ != null) hash ^= Confidence.GetHashCode();
+      if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Question.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Question);
+      }
+      if (Answer.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Answer);
+      }
+      if (confidence_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Confidence);
+      }
+      if (modelMetadata_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ModelMetadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Question.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Question);
+      }
+      if (Answer.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Answer);
+      }
+      if (confidence_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Confidence);
+      }
+      if (modelMetadata_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ModelMetadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Question.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Question);
+      }
+      if (Answer.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Answer);
+      }
+      if (confidence_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Confidence);
+      }
+      if (modelMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AnswerCandidate other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Question.Length != 0) {
+        Question = other.Question;
+      }
+      if (other.Answer.Length != 0) {
+        Answer = other.Answer;
+      }
+      if (other.confidence_ != null) {
+        if (confidence_ == null) {
+          Confidence = new global::Ssn.Type.Confidence();
+        }
+        Confidence.MergeFrom(other.Confidence);
+      }
+      if (other.modelMetadata_ != null) {
+        if (modelMetadata_ == null) {
+          ModelMetadata = new global::Ssn.Type.ModelSpec();
+        }
+        ModelMetadata.MergeFrom(other.ModelMetadata);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Question = input.ReadString();
+            break;
+          }
+          case 18: {
+            Answer = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (confidence_ == null) {
+              Confidence = new global::Ssn.Type.Confidence();
+            }
+            input.ReadMessage(Confidence);
+            break;
+          }
+          case 58: {
+            if (modelMetadata_ == null) {
+              ModelMetadata = new global::Ssn.Type.ModelSpec();
+            }
+            input.ReadMessage(ModelMetadata);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Question = input.ReadString();
+            break;
+          }
+          case 18: {
+            Answer = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (confidence_ == null) {
+              Confidence = new global::Ssn.Type.Confidence();
+            }
+            input.ReadMessage(Confidence);
+            break;
+          }
+          case 58: {
+            if (modelMetadata_ == null) {
+              ModelMetadata = new global::Ssn.Type.ModelSpec();
+            }
+            input.ReadMessage(ModelMetadata);
             break;
           }
         }

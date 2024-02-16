@@ -144,6 +144,7 @@ message DocumentAnnotatorRequest {
   repeated string tags = 3;
   ssn.type.Tier tier = 4;
   repeated string segments = 5;
+  repeated string questions = 6;
 }
 
 message DocumentAnnotatorResponse {
@@ -279,6 +280,9 @@ message DocumentAnnotatorResponse {
   // total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
   // unit price excl vat
   repeated ssn.type.PurchaseLineCandidate purchase_lines = 45;
+  // Answer Candidates for the questions asked in th request abotu the document
+  // Each Answer is question and answer pair
+  repeated ssn.type.AnswerCandidate answers = 46;
 }
 
 message Document {
@@ -305,8 +309,9 @@ message DocumentSource {
 
 message DocumentQuestionRequest {
   Document document = 1;
-  repeated string question = 2;
+  repeated string questions = 2;
 }
 message DocumentQuestionResponse {
-  repeated ssn.type.Candidate answer = 1;
+  reserved 1;
+  repeated ssn.type.AnswerCandidate answers = 2;
 }

@@ -106,4 +106,29 @@ public interface DocumentAnnotatorRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getSegmentsBytes(int index);
+
+  /**
+   * <code>repeated string questions = 6 [json_name = "questions"];</code>
+   * @return A list containing the questions.
+   */
+  java.util.List<java.lang.String>
+      getQuestionsList();
+  /**
+   * <code>repeated string questions = 6 [json_name = "questions"];</code>
+   * @return The count of questions.
+   */
+  int getQuestionsCount();
+  /**
+   * <code>repeated string questions = 6 [json_name = "questions"];</code>
+   * @param index The index of the element to return.
+   * @return The questions at the given index.
+   */
+  java.lang.String getQuestions(int index);
+  /**
+   * <code>repeated string questions = 6 [json_name = "questions"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the questions at the given index.
+   */
+  com.google.protobuf.ByteString
+      getQuestionsBytes(int index);
 }

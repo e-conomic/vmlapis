@@ -121,3 +121,13 @@ message PurchaseLineCandidate {
   // Unit price is the unit price of the line (with/without vat)
   string unit_price = 18;
 }
+message AnswerCandidate {
+  // Question asked in the request
+  string question = 1;
+  // Model prediction for the question
+  string answer = 2;
+  // Confidence of the prediction
+  Confidence confidence = 3;
+  // Model metadata
+  ModelSpec model_metadata = 7;
+}

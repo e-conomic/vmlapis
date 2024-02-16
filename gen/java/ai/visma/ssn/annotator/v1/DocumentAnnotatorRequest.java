@@ -22,6 +22,8 @@ private static final long serialVersionUID = 0L;
     tier_ = 0;
     segments_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    questions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -203,6 +205,43 @@ private static final long serialVersionUID = 0L;
     return segments_.getByteString(index);
   }
 
+  public static final int QUESTIONS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList questions_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string questions = 6 [json_name = "questions"];</code>
+   * @return A list containing the questions.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getQuestionsList() {
+    return questions_;
+  }
+  /**
+   * <code>repeated string questions = 6 [json_name = "questions"];</code>
+   * @return The count of questions.
+   */
+  public int getQuestionsCount() {
+    return questions_.size();
+  }
+  /**
+   * <code>repeated string questions = 6 [json_name = "questions"];</code>
+   * @param index The index of the element to return.
+   * @return The questions at the given index.
+   */
+  public java.lang.String getQuestions(int index) {
+    return questions_.get(index);
+  }
+  /**
+   * <code>repeated string questions = 6 [json_name = "questions"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the questions at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getQuestionsBytes(int index) {
+    return questions_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -231,6 +270,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < segments_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, segments_.getRaw(i));
+    }
+    for (int i = 0; i < questions_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, questions_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -269,6 +311,14 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getSegmentsList().size();
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < questions_.size(); i++) {
+        dataSize += computeStringSizeNoTag(questions_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getQuestionsList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -296,6 +346,8 @@ private static final long serialVersionUID = 0L;
     if (tier_ != other.tier_) return false;
     if (!getSegmentsList()
         .equals(other.getSegmentsList())) return false;
+    if (!getQuestionsList()
+        .equals(other.getQuestionsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -324,6 +376,10 @@ private static final long serialVersionUID = 0L;
     if (getSegmentsCount() > 0) {
       hash = (37 * hash) + SEGMENTS_FIELD_NUMBER;
       hash = (53 * hash) + getSegmentsList().hashCode();
+    }
+    if (getQuestionsCount() > 0) {
+      hash = (37 * hash) + QUESTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + getQuestionsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -473,6 +529,8 @@ private static final long serialVersionUID = 0L;
       tier_ = 0;
       segments_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      questions_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -534,6 +592,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         segments_.makeImmutable();
         result.segments_ = segments_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        questions_.makeImmutable();
+        result.questions_ = questions_;
       }
     }
 
@@ -633,6 +695,16 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (!other.questions_.isEmpty()) {
+        if (questions_.isEmpty()) {
+          questions_ = other.questions_;
+          bitField0_ |= 0x00000020;
+        } else {
+          ensureQuestionsIsMutable();
+          questions_.addAll(other.questions_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -696,6 +768,12 @@ private static final long serialVersionUID = 0L;
               segments_.add(s);
               break;
             } // case 42
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureQuestionsIsMutable();
+              questions_.add(s);
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1343,6 +1421,117 @@ private static final long serialVersionUID = 0L;
       ensureSegmentsIsMutable();
       segments_.add(value);
       bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList questions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureQuestionsIsMutable() {
+      if (!questions_.isModifiable()) {
+        questions_ = new com.google.protobuf.LazyStringArrayList(questions_);
+      }
+      bitField0_ |= 0x00000020;
+    }
+    /**
+     * <code>repeated string questions = 6 [json_name = "questions"];</code>
+     * @return A list containing the questions.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getQuestionsList() {
+      questions_.makeImmutable();
+      return questions_;
+    }
+    /**
+     * <code>repeated string questions = 6 [json_name = "questions"];</code>
+     * @return The count of questions.
+     */
+    public int getQuestionsCount() {
+      return questions_.size();
+    }
+    /**
+     * <code>repeated string questions = 6 [json_name = "questions"];</code>
+     * @param index The index of the element to return.
+     * @return The questions at the given index.
+     */
+    public java.lang.String getQuestions(int index) {
+      return questions_.get(index);
+    }
+    /**
+     * <code>repeated string questions = 6 [json_name = "questions"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the questions at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getQuestionsBytes(int index) {
+      return questions_.getByteString(index);
+    }
+    /**
+     * <code>repeated string questions = 6 [json_name = "questions"];</code>
+     * @param index The index to set the value at.
+     * @param value The questions to set.
+     * @return This builder for chaining.
+     */
+    public Builder setQuestions(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureQuestionsIsMutable();
+      questions_.set(index, value);
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string questions = 6 [json_name = "questions"];</code>
+     * @param value The questions to add.
+     * @return This builder for chaining.
+     */
+    public Builder addQuestions(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureQuestionsIsMutable();
+      questions_.add(value);
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string questions = 6 [json_name = "questions"];</code>
+     * @param values The questions to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllQuestions(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureQuestionsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, questions_);
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string questions = 6 [json_name = "questions"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearQuestions() {
+      questions_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000020);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string questions = 6 [json_name = "questions"];</code>
+     * @param value The bytes of the questions to add.
+     * @return This builder for chaining.
+     */
+    public Builder addQuestionsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureQuestionsIsMutable();
+      questions_.add(value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

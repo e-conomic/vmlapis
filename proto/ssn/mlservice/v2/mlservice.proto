@@ -136,3 +136,13 @@ message PurchaseLinesRequest {
 message PurchaseLinesResponse {
   repeated ssn.type.PurchaseLineCandidate purchase_lines = 1;
 }
+
+message DocQARequest {
+  ssn.type.TextAnnotation text_annotation = 1;
+  bytes image = 2;
+  repeated string questions = 3;
+}
+
+message DocQAResponse {
+  repeated ssn.type.AnswerCandidate answers = 1;
+}

@@ -60,6 +60,7 @@ private static final long serialVersionUID = 0L;
     receiverName_ = java.util.Collections.emptyList();
     receiverVatNumber_ = java.util.Collections.emptyList();
     purchaseLines_ = java.util.Collections.emptyList();
+    answers_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -2964,6 +2965,72 @@ private static final long serialVersionUID = 0L;
     return purchaseLines_.get(index);
   }
 
+  public static final int ANSWERS_FIELD_NUMBER = 46;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.AnswerCandidate> answers_;
+  /**
+   * <pre>
+   * Answer Candidates for the questions asked in th request abotu the document
+   * Each Answer is question and answer pair
+   * </pre>
+   *
+   * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.AnswerCandidate> getAnswersList() {
+    return answers_;
+  }
+  /**
+   * <pre>
+   * Answer Candidates for the questions asked in th request abotu the document
+   * Each Answer is question and answer pair
+   * </pre>
+   *
+   * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.AnswerCandidateOrBuilder> 
+      getAnswersOrBuilderList() {
+    return answers_;
+  }
+  /**
+   * <pre>
+   * Answer Candidates for the questions asked in th request abotu the document
+   * Each Answer is question and answer pair
+   * </pre>
+   *
+   * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+   */
+  @java.lang.Override
+  public int getAnswersCount() {
+    return answers_.size();
+  }
+  /**
+   * <pre>
+   * Answer Candidates for the questions asked in th request abotu the document
+   * Each Answer is question and answer pair
+   * </pre>
+   *
+   * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.AnswerCandidate getAnswers(int index) {
+    return answers_.get(index);
+  }
+  /**
+   * <pre>
+   * Answer Candidates for the questions asked in th request abotu the document
+   * Each Answer is question and answer pair
+   * </pre>
+   *
+   * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.AnswerCandidateOrBuilder getAnswersOrBuilder(
+      int index) {
+    return answers_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3112,6 +3179,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < purchaseLines_.size(); i++) {
       output.writeMessage(45, purchaseLines_.get(i));
+    }
+    for (int i = 0; i < answers_.size(); i++) {
+      output.writeMessage(46, answers_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -3299,6 +3369,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(45, purchaseLines_.get(i));
     }
+    for (int i = 0; i < answers_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(46, answers_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3407,6 +3481,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getReceiverVatNumberList())) return false;
     if (!getPurchaseLinesList()
         .equals(other.getPurchaseLinesList())) return false;
+    if (!getAnswersList()
+        .equals(other.getAnswersList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3591,6 +3667,10 @@ private static final long serialVersionUID = 0L;
     if (getPurchaseLinesCount() > 0) {
       hash = (37 * hash) + PURCHASE_LINES_FIELD_NUMBER;
       hash = (53 * hash) + getPurchaseLinesList().hashCode();
+    }
+    if (getAnswersCount() > 0) {
+      hash = (37 * hash) + ANSWERS_FIELD_NUMBER;
+      hash = (53 * hash) + getAnswersList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -4019,6 +4099,13 @@ private static final long serialVersionUID = 0L;
         purchaseLinesBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00001000);
+      if (answersBuilder_ == null) {
+        answers_ = java.util.Collections.emptyList();
+      } else {
+        answers_ = null;
+        answersBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00002000);
       return this;
     }
 
@@ -4421,6 +4508,15 @@ private static final long serialVersionUID = 0L;
         result.purchaseLines_ = purchaseLines_;
       } else {
         result.purchaseLines_ = purchaseLinesBuilder_.build();
+      }
+      if (answersBuilder_ == null) {
+        if (((bitField1_ & 0x00002000) != 0)) {
+          answers_ = java.util.Collections.unmodifiableList(answers_);
+          bitField1_ = (bitField1_ & ~0x00002000);
+        }
+        result.answers_ = answers_;
+      } else {
+        result.answers_ = answersBuilder_.build();
       }
     }
 
@@ -5574,6 +5670,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (answersBuilder_ == null) {
+        if (!other.answers_.isEmpty()) {
+          if (answers_.isEmpty()) {
+            answers_ = other.answers_;
+            bitField1_ = (bitField1_ & ~0x00002000);
+          } else {
+            ensureAnswersIsMutable();
+            answers_.addAll(other.answers_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.answers_.isEmpty()) {
+          if (answersBuilder_.isEmpty()) {
+            answersBuilder_.dispose();
+            answersBuilder_ = null;
+            answers_ = other.answers_;
+            bitField1_ = (bitField1_ & ~0x00002000);
+            answersBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getAnswersFieldBuilder() : null;
+          } else {
+            answersBuilder_.addAllMessages(other.answers_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -6155,6 +6277,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 362
+            case 370: {
+              ai.visma.ssn.type.AnswerCandidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.AnswerCandidate.parser(),
+                      extensionRegistry);
+              if (answersBuilder_ == null) {
+                ensureAnswersIsMutable();
+                answers_.add(m);
+              } else {
+                answersBuilder_.addMessage(m);
+              }
+              break;
+            } // case 370
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -20119,6 +20254,336 @@ private static final long serialVersionUID = 0L;
         purchaseLines_ = null;
       }
       return purchaseLinesBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.AnswerCandidate> answers_ =
+      java.util.Collections.emptyList();
+    private void ensureAnswersIsMutable() {
+      if (!((bitField1_ & 0x00002000) != 0)) {
+        answers_ = new java.util.ArrayList<ai.visma.ssn.type.AnswerCandidate>(answers_);
+        bitField1_ |= 0x00002000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.AnswerCandidate, ai.visma.ssn.type.AnswerCandidate.Builder, ai.visma.ssn.type.AnswerCandidateOrBuilder> answersBuilder_;
+
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.AnswerCandidate> getAnswersList() {
+      if (answersBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(answers_);
+      } else {
+        return answersBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public int getAnswersCount() {
+      if (answersBuilder_ == null) {
+        return answers_.size();
+      } else {
+        return answersBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public ai.visma.ssn.type.AnswerCandidate getAnswers(int index) {
+      if (answersBuilder_ == null) {
+        return answers_.get(index);
+      } else {
+        return answersBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public Builder setAnswers(
+        int index, ai.visma.ssn.type.AnswerCandidate value) {
+      if (answersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAnswersIsMutable();
+        answers_.set(index, value);
+        onChanged();
+      } else {
+        answersBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public Builder setAnswers(
+        int index, ai.visma.ssn.type.AnswerCandidate.Builder builderForValue) {
+      if (answersBuilder_ == null) {
+        ensureAnswersIsMutable();
+        answers_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        answersBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public Builder addAnswers(ai.visma.ssn.type.AnswerCandidate value) {
+      if (answersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAnswersIsMutable();
+        answers_.add(value);
+        onChanged();
+      } else {
+        answersBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public Builder addAnswers(
+        int index, ai.visma.ssn.type.AnswerCandidate value) {
+      if (answersBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureAnswersIsMutable();
+        answers_.add(index, value);
+        onChanged();
+      } else {
+        answersBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public Builder addAnswers(
+        ai.visma.ssn.type.AnswerCandidate.Builder builderForValue) {
+      if (answersBuilder_ == null) {
+        ensureAnswersIsMutable();
+        answers_.add(builderForValue.build());
+        onChanged();
+      } else {
+        answersBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public Builder addAnswers(
+        int index, ai.visma.ssn.type.AnswerCandidate.Builder builderForValue) {
+      if (answersBuilder_ == null) {
+        ensureAnswersIsMutable();
+        answers_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        answersBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public Builder addAllAnswers(
+        java.lang.Iterable<? extends ai.visma.ssn.type.AnswerCandidate> values) {
+      if (answersBuilder_ == null) {
+        ensureAnswersIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, answers_);
+        onChanged();
+      } else {
+        answersBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public Builder clearAnswers() {
+      if (answersBuilder_ == null) {
+        answers_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00002000);
+        onChanged();
+      } else {
+        answersBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public Builder removeAnswers(int index) {
+      if (answersBuilder_ == null) {
+        ensureAnswersIsMutable();
+        answers_.remove(index);
+        onChanged();
+      } else {
+        answersBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public ai.visma.ssn.type.AnswerCandidate.Builder getAnswersBuilder(
+        int index) {
+      return getAnswersFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public ai.visma.ssn.type.AnswerCandidateOrBuilder getAnswersOrBuilder(
+        int index) {
+      if (answersBuilder_ == null) {
+        return answers_.get(index);  } else {
+        return answersBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.AnswerCandidateOrBuilder> 
+         getAnswersOrBuilderList() {
+      if (answersBuilder_ != null) {
+        return answersBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(answers_);
+      }
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public ai.visma.ssn.type.AnswerCandidate.Builder addAnswersBuilder() {
+      return getAnswersFieldBuilder().addBuilder(
+          ai.visma.ssn.type.AnswerCandidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public ai.visma.ssn.type.AnswerCandidate.Builder addAnswersBuilder(
+        int index) {
+      return getAnswersFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.AnswerCandidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Answer Candidates for the questions asked in th request abotu the document
+     * Each Answer is question and answer pair
+     * </pre>
+     *
+     * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.AnswerCandidate.Builder> 
+         getAnswersBuilderList() {
+      return getAnswersFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.AnswerCandidate, ai.visma.ssn.type.AnswerCandidate.Builder, ai.visma.ssn.type.AnswerCandidateOrBuilder> 
+        getAnswersFieldBuilder() {
+      if (answersBuilder_ == null) {
+        answersBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.ssn.type.AnswerCandidate, ai.visma.ssn.type.AnswerCandidate.Builder, ai.visma.ssn.type.AnswerCandidateOrBuilder>(
+                answers_,
+                ((bitField1_ & 0x00002000) != 0),
+                getParentForChildren(),
+                isClean());
+        answers_ = null;
+      }
+      return answersBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

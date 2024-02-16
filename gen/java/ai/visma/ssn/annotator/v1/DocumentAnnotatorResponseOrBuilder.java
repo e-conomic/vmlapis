@@ -2099,4 +2099,53 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    */
   ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLinesOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Answer Candidates for the questions asked in th request abotu the document
+   * Each Answer is question and answer pair
+   * </pre>
+   *
+   * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.AnswerCandidate> 
+      getAnswersList();
+  /**
+   * <pre>
+   * Answer Candidates for the questions asked in th request abotu the document
+   * Each Answer is question and answer pair
+   * </pre>
+   *
+   * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+   */
+  ai.visma.ssn.type.AnswerCandidate getAnswers(int index);
+  /**
+   * <pre>
+   * Answer Candidates for the questions asked in th request abotu the document
+   * Each Answer is question and answer pair
+   * </pre>
+   *
+   * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+   */
+  int getAnswersCount();
+  /**
+   * <pre>
+   * Answer Candidates for the questions asked in th request abotu the document
+   * Each Answer is question and answer pair
+   * </pre>
+   *
+   * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.AnswerCandidateOrBuilder> 
+      getAnswersOrBuilderList();
+  /**
+   * <pre>
+   * Answer Candidates for the questions asked in th request abotu the document
+   * Each Answer is question and answer pair
+   * </pre>
+   *
+   * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
+   */
+  ai.visma.ssn.type.AnswerCandidateOrBuilder getAnswersOrBuilder(
+      int index);
 }
