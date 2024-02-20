@@ -122,21 +122,21 @@ message PurchaseLineCandidate {
   string unit_price = 18;
 }
 message AnswerCandidate {
-  // Question asked in the request
-  string question = 1;
-  // Model prediction for the question
-  string answer = 2;
-  // Confidence of the prediction
-  Confidence confidence = 3;
-  // Model metadata
-  ModelSpec model_metadata = 7;
   // A reference to the page where the candidate was found.
-  uint32 page_ref = 8;
+  uint32 page_ref = 1;
+  // Question asked in the request
+  string question = 2;
+  // Model prediction for the question
+  string answer = 3;
+  // Confidence of the prediction
+  Confidence confidence = 4;
+  // Model metadata
+  ModelSpec model_metadata = 5;
 }
 
 message PageText {
-  // The page number
-  uint32 page_number = 1;
+  // A reference to the page where the text was found.
+  uint32 page_ref = 1;
   // The text content of the page
   string text = 2;
 }
