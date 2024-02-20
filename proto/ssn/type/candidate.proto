@@ -135,8 +135,8 @@ message AnswerCandidate {
 }
 
 message PageText {
-  // The page number
-  uint32 page_refm = 1;
+  // A reference to the page where the text was found.
+  uint32 page_ref = 1;
   // The text content of the page
   string text = 2;
 }
