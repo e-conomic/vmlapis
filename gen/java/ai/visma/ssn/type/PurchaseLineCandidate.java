@@ -774,6 +774,44 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int MODEL_METADATA_FIELD_NUMBER = 19;
+  private ai.visma.ssn.type.ModelSpec modelMetadata_;
+  /**
+   * <pre>
+   * Model metadata
+   * </pre>
+   *
+   * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+   * @return Whether the modelMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasModelMetadata() {
+    return modelMetadata_ != null;
+  }
+  /**
+   * <pre>
+   * Model metadata
+   * </pre>
+   *
+   * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+   * @return The modelMetadata.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.ModelSpec getModelMetadata() {
+    return modelMetadata_ == null ? ai.visma.ssn.type.ModelSpec.getDefaultInstance() : modelMetadata_;
+  }
+  /**
+   * <pre>
+   * Model metadata
+   * </pre>
+   *
+   * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder() {
+    return modelMetadata_ == null ? ai.visma.ssn.type.ModelSpec.getDefaultInstance() : modelMetadata_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -836,6 +874,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unitPrice_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 18, unitPrice_);
     }
+    if (modelMetadata_ != null) {
+      output.writeMessage(19, getModelMetadata());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -894,6 +935,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(unitPrice_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(18, unitPrice_);
     }
+    if (modelMetadata_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(19, getModelMetadata());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -941,6 +986,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTotal())) return false;
     if (!getUnitPrice()
         .equals(other.getUnitPrice())) return false;
+    if (hasModelMetadata() != other.hasModelMetadata()) return false;
+    if (hasModelMetadata()) {
+      if (!getModelMetadata()
+          .equals(other.getModelMetadata())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -984,6 +1034,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getTotal().hashCode();
     hash = (37 * hash) + UNIT_PRICE_FIELD_NUMBER;
     hash = (53 * hash) + getUnitPrice().hashCode();
+    if (hasModelMetadata()) {
+      hash = (37 * hash) + MODEL_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getModelMetadata().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1131,6 +1185,11 @@ private static final long serialVersionUID = 0L;
       unitPriceExclVat_ = "";
       total_ = "";
       unitPrice_ = "";
+      modelMetadata_ = null;
+      if (modelMetadataBuilder_ != null) {
+        modelMetadataBuilder_.dispose();
+        modelMetadataBuilder_ = null;
+      }
       return this;
     }
 
@@ -1211,6 +1270,11 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00008000) != 0)) {
         result.unitPrice_ = unitPrice_;
+      }
+      if (((from_bitField0_ & 0x00010000) != 0)) {
+        result.modelMetadata_ = modelMetadataBuilder_ == null
+            ? modelMetadata_
+            : modelMetadataBuilder_.build();
       }
     }
 
@@ -1336,6 +1400,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00008000;
         onChanged();
       }
+      if (other.hasModelMetadata()) {
+        mergeModelMetadata(other.getModelMetadata());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1442,6 +1509,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00008000;
               break;
             } // case 146
+            case 154: {
+              input.readMessage(
+                  getModelMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00010000;
+              break;
+            } // case 154
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2884,6 +2958,161 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00008000;
       onChanged();
       return this;
+    }
+
+    private ai.visma.ssn.type.ModelSpec modelMetadata_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> modelMetadataBuilder_;
+    /**
+     * <pre>
+     * Model metadata
+     * </pre>
+     *
+     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     * @return Whether the modelMetadata field is set.
+     */
+    public boolean hasModelMetadata() {
+      return ((bitField0_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * Model metadata
+     * </pre>
+     *
+     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     * @return The modelMetadata.
+     */
+    public ai.visma.ssn.type.ModelSpec getModelMetadata() {
+      if (modelMetadataBuilder_ == null) {
+        return modelMetadata_ == null ? ai.visma.ssn.type.ModelSpec.getDefaultInstance() : modelMetadata_;
+      } else {
+        return modelMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Model metadata
+     * </pre>
+     *
+     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     */
+    public Builder setModelMetadata(ai.visma.ssn.type.ModelSpec value) {
+      if (modelMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        modelMetadata_ = value;
+      } else {
+        modelMetadataBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Model metadata
+     * </pre>
+     *
+     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     */
+    public Builder setModelMetadata(
+        ai.visma.ssn.type.ModelSpec.Builder builderForValue) {
+      if (modelMetadataBuilder_ == null) {
+        modelMetadata_ = builderForValue.build();
+      } else {
+        modelMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Model metadata
+     * </pre>
+     *
+     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     */
+    public Builder mergeModelMetadata(ai.visma.ssn.type.ModelSpec value) {
+      if (modelMetadataBuilder_ == null) {
+        if (((bitField0_ & 0x00010000) != 0) &&
+          modelMetadata_ != null &&
+          modelMetadata_ != ai.visma.ssn.type.ModelSpec.getDefaultInstance()) {
+          getModelMetadataBuilder().mergeFrom(value);
+        } else {
+          modelMetadata_ = value;
+        }
+      } else {
+        modelMetadataBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Model metadata
+     * </pre>
+     *
+     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     */
+    public Builder clearModelMetadata() {
+      bitField0_ = (bitField0_ & ~0x00010000);
+      modelMetadata_ = null;
+      if (modelMetadataBuilder_ != null) {
+        modelMetadataBuilder_.dispose();
+        modelMetadataBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Model metadata
+     * </pre>
+     *
+     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpec.Builder getModelMetadataBuilder() {
+      bitField0_ |= 0x00010000;
+      onChanged();
+      return getModelMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Model metadata
+     * </pre>
+     *
+     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     */
+    public ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder() {
+      if (modelMetadataBuilder_ != null) {
+        return modelMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return modelMetadata_ == null ?
+            ai.visma.ssn.type.ModelSpec.getDefaultInstance() : modelMetadata_;
+      }
+    }
+    /**
+     * <pre>
+     * Model metadata
+     * </pre>
+     *
+     * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder> 
+        getModelMetadataFieldBuilder() {
+      if (modelMetadataBuilder_ == null) {
+        modelMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            ai.visma.ssn.type.ModelSpec, ai.visma.ssn.type.ModelSpec.Builder, ai.visma.ssn.type.ModelSpecOrBuilder>(
+                getModelMetadata(),
+                getParentForChildren(),
+                isClean());
+        modelMetadata_ = null;
+      }
+      return modelMetadataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

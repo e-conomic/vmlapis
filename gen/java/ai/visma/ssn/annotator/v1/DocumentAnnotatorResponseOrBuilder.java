@@ -2102,8 +2102,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
 
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request abotu the document
-   * Each Answer is question and answer pair
+   * Answer Candidates for the questions asked in th request about the document
+   * Each Answer is question and answer pair with page number and confidence
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -2112,8 +2112,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getAnswersList();
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request abotu the document
-   * Each Answer is question and answer pair
+   * Answer Candidates for the questions asked in th request about the document
+   * Each Answer is question and answer pair with page number and confidence
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -2121,8 +2121,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   ai.visma.ssn.type.AnswerCandidate getAnswers(int index);
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request abotu the document
-   * Each Answer is question and answer pair
+   * Answer Candidates for the questions asked in th request about the document
+   * Each Answer is question and answer pair with page number and confidence
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -2130,8 +2130,8 @@ public interface DocumentAnnotatorResponseOrBuilder extends
   int getAnswersCount();
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request abotu the document
-   * Each Answer is question and answer pair
+   * Answer Candidates for the questions asked in th request about the document
+   * Each Answer is question and answer pair with page number and confidence
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -2140,12 +2140,56 @@ public interface DocumentAnnotatorResponseOrBuilder extends
       getAnswersOrBuilderList();
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request abotu the document
-   * Each Answer is question and answer pair
+   * Answer Candidates for the questions asked in th request about the document
+   * Each Answer is question and answer pair with page number and confidence
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
    */
   ai.visma.ssn.type.AnswerCandidateOrBuilder getAnswersOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * The page texts of the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.PageText> 
+      getPageTextsList();
+  /**
+   * <pre>
+   * The page texts of the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+   */
+  ai.visma.ssn.type.PageText getPageTexts(int index);
+  /**
+   * <pre>
+   * The page texts of the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+   */
+  int getPageTextsCount();
+  /**
+   * <pre>
+   * The page texts of the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.PageTextOrBuilder> 
+      getPageTextsOrBuilderList();
+  /**
+   * <pre>
+   * The page texts of the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+   */
+  ai.visma.ssn.type.PageTextOrBuilder getPageTextsOrBuilder(
       int index);
 }

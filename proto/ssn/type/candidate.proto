@@ -120,6 +120,8 @@ message PurchaseLineCandidate {
   string total = 17;
   // Unit price is the unit price of the line (with/without vat)
   string unit_price = 18;
+  // Model metadata
+  ModelSpec model_metadata = 19;
 }
 message AnswerCandidate {
   // Question asked in the request
@@ -130,4 +132,13 @@ message AnswerCandidate {
   Confidence confidence = 3;
   // Model metadata
   ModelSpec model_metadata = 7;
+  // A reference to the page where the candidate was found.
+  uint32 page_ref = 8;
+}
+
+message PageText {
+  // A reference to the page where the text was found.
+  uint32 page_ref = 1;
+  // The text content of the page
+  string text = 2;
 }

@@ -280,9 +280,11 @@ message DocumentAnnotatorResponse {
   // total incl vat, total excl vat, total vat, percentage vat, unit price incl vat,
   // unit price excl vat
   repeated ssn.type.PurchaseLineCandidate purchase_lines = 45;
-  // Answer Candidates for the questions asked in th request abotu the document
-  // Each Answer is question and answer pair
+  // Answer Candidates for the questions asked in th request about the document
+  // Each Answer is question and answer pair with page number and confidence
   repeated ssn.type.AnswerCandidate answers = 46;
+  // The page texts of the document
+  repeated ssn.type.PageText page_texts = 47;
 }
 
 message Document {
@@ -311,6 +313,7 @@ message DocumentQuestionRequest {
   Document document = 1;
   repeated string questions = 2;
 }
+
 message DocumentQuestionResponse {
   reserved 1;
   repeated ssn.type.AnswerCandidate answers = 2;

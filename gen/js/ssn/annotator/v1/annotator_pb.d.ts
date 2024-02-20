@@ -354,6 +354,11 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearAnswersList(): DocumentAnnotatorResponse;
   addAnswers(value?: ssn_type_candidate_pb.AnswerCandidate, index?: number): ssn_type_candidate_pb.AnswerCandidate;
 
+  getPageTextsList(): Array<ssn_type_candidate_pb.PageText>;
+  setPageTextsList(value: Array<ssn_type_candidate_pb.PageText>): DocumentAnnotatorResponse;
+  clearPageTextsList(): DocumentAnnotatorResponse;
+  addPageTexts(value?: ssn_type_candidate_pb.PageText, index?: number): ssn_type_candidate_pb.PageText;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -410,6 +415,7 @@ export namespace DocumentAnnotatorResponse {
     receiverVatNumberList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
     purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
     answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
+    pageTextsList: Array<ssn_type_candidate_pb.PageText.AsObject>,
   }
 }
 

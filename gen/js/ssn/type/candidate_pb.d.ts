@@ -190,6 +190,11 @@ export class PurchaseLineCandidate extends jspb.Message {
   getUnitPrice(): string;
   setUnitPrice(value: string): PurchaseLineCandidate;
 
+  getModelMetadata(): ModelSpec | undefined;
+  setModelMetadata(value?: ModelSpec): PurchaseLineCandidate;
+  hasModelMetadata(): boolean;
+  clearModelMetadata(): PurchaseLineCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PurchaseLineCandidate.AsObject;
   static toObject(includeInstance: boolean, msg: PurchaseLineCandidate): PurchaseLineCandidate.AsObject;
@@ -216,6 +221,7 @@ export namespace PurchaseLineCandidate {
     unitPriceExclVat: string,
     total: string,
     unitPrice: string,
+    modelMetadata?: ModelSpec.AsObject,
   }
 }
 
@@ -236,6 +242,9 @@ export class AnswerCandidate extends jspb.Message {
   hasModelMetadata(): boolean;
   clearModelMetadata(): AnswerCandidate;
 
+  getPageRef(): number;
+  setPageRef(value: number): AnswerCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AnswerCandidate.AsObject;
   static toObject(includeInstance: boolean, msg: AnswerCandidate): AnswerCandidate.AsObject;
@@ -250,6 +259,29 @@ export namespace AnswerCandidate {
     answer: string,
     confidence?: Confidence.AsObject,
     modelMetadata?: ModelSpec.AsObject,
+    pageRef: number,
+  }
+}
+
+export class PageText extends jspb.Message {
+  getPageRef(): number;
+  setPageRef(value: number): PageText;
+
+  getText(): string;
+  setText(value: string): PageText;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PageText.AsObject;
+  static toObject(includeInstance: boolean, msg: PageText): PageText.AsObject;
+  static serializeBinaryToWriter(message: PageText, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PageText;
+  static deserializeBinaryFromReader(message: PageText, reader: jspb.BinaryReader): PageText;
+}
+
+export namespace PageText {
+  export type AsObject = {
+    pageRef: number,
+    text: string,
   }
 }
 

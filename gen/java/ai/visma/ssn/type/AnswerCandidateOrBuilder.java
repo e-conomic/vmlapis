@@ -100,4 +100,14 @@ public interface AnswerCandidateOrBuilder extends
    * <code>.ssn.type.ModelSpec model_metadata = 7 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * A reference to the page where the candidate was found.
+   * </pre>
+   *
+   * <code>uint32 page_ref = 8 [json_name = "pageRef"];</code>
+   * @return The pageRef.
+   */
+  int getPageRef();
 }
