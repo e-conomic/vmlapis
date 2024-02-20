@@ -44,6 +44,11 @@ public final class CandidateProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_type_AnswerCandidate_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_type_PageText_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_type_PageText_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -88,15 +93,18 @@ public final class CandidateProto {
       "tPriceInclVat\022-\n\023unit_price_excl_vat\030\016 \001" +
       "(\tR\020unitPriceExclVat\022\024\n\005total\030\021 \001(\tR\005tot" +
       "al\022\035\n\nunit_price\030\022 \001(\tR\tunitPriceJ\004\010\017\020\020J" +
-      "\004\010\020\020\021\"\267\001\n\017AnswerCandidate\022\032\n\010question\030\001 " +
+      "\004\010\020\020\021\"\322\001\n\017AnswerCandidate\022\032\n\010question\030\001 " +
       "\001(\tR\010question\022\026\n\006answer\030\002 \001(\tR\006answer\0224\n" +
       "\nconfidence\030\003 \001(\0132\024.ssn.type.ConfidenceR" +
       "\nconfidence\022:\n\016model_metadata\030\007 \001(\0132\023.ss" +
-      "n.type.ModelSpecR\rmodelMetadataB\232\001\n\021ai.v" +
-      "isma.ssn.typeB\016CandidateProtoP\001Z4github." +
-      "com/e-conomic/vmlapis/gen/go/ssn/type;ss" +
-      "ntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Type\342\002\024Ssn\\" +
-      "Type\\GPBMetadata\352\002\tSsn::Typeb\006proto3"
+      "n.type.ModelSpecR\rmodelMetadata\022\031\n\010page_" +
+      "ref\030\010 \001(\rR\007pageRef\"9\n\010PageText\022\031\n\010page_r" +
+      "ef\030\001 \001(\rR\007pageRef\022\022\n\004text\030\002 \001(\tR\004textB\232\001" +
+      "\n\021ai.visma.ssn.typeB\016CandidateProtoP\001Z4g" +
+      "ithub.com/e-conomic/vmlapis/gen/go/ssn/t" +
+      "ype;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Type\342" +
+      "\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Typeb\006prot" +
+      "o3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -139,7 +147,13 @@ public final class CandidateProto {
     internal_static_ssn_type_AnswerCandidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_type_AnswerCandidate_descriptor,
-        new java.lang.String[] { "Question", "Answer", "Confidence", "ModelMetadata", });
+        new java.lang.String[] { "Question", "Answer", "Confidence", "ModelMetadata", "PageRef", });
+    internal_static_ssn_type_PageText_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_ssn_type_PageText_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_type_PageText_descriptor,
+        new java.lang.String[] { "PageRef", "Text", });
     com.google.protobuf.WrappersProto.getDescriptor();
     ai.visma.ssn.type.GeometryProto.getDescriptor();
   }

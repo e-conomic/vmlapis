@@ -110,13 +110,23 @@ class PurchaseLineCandidate(_message.Message):
     def __init__(self, page_ref: _Optional[int] = ..., code: _Optional[str] = ..., description: _Optional[str] = ..., quantity: _Optional[str] = ..., item_number: _Optional[str] = ..., unit: _Optional[str] = ..., total_discount: _Optional[str] = ..., percentage_discount: _Optional[str] = ..., total_incl_vat: _Optional[str] = ..., total_excl_vat: _Optional[str] = ..., total_vat: _Optional[str] = ..., percentage_vat: _Optional[str] = ..., unit_price_incl_vat: _Optional[str] = ..., unit_price_excl_vat: _Optional[str] = ..., total: _Optional[str] = ..., unit_price: _Optional[str] = ...) -> None: ...
 
 class AnswerCandidate(_message.Message):
-    __slots__ = ["question", "answer", "confidence", "model_metadata"]
+    __slots__ = ["question", "answer", "confidence", "model_metadata", "page_ref"]
     QUESTION_FIELD_NUMBER: _ClassVar[int]
     ANSWER_FIELD_NUMBER: _ClassVar[int]
     CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
     MODEL_METADATA_FIELD_NUMBER: _ClassVar[int]
+    PAGE_REF_FIELD_NUMBER: _ClassVar[int]
     question: str
     answer: str
     confidence: Confidence
     model_metadata: ModelSpec
-    def __init__(self, question: _Optional[str] = ..., answer: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ...) -> None: ...
+    page_ref: int
+    def __init__(self, question: _Optional[str] = ..., answer: _Optional[str] = ..., confidence: _Optional[_Union[Confidence, _Mapping]] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., page_ref: _Optional[int] = ...) -> None: ...
+
+class PageText(_message.Message):
+    __slots__ = ["page_ref", "text"]
+    PAGE_REF_FIELD_NUMBER: _ClassVar[int]
+    TEXT_FIELD_NUMBER: _ClassVar[int]
+    page_ref: int
+    text: str
+    def __init__(self, page_ref: _Optional[int] = ..., text: _Optional[str] = ...) -> None: ...

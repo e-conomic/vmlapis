@@ -339,6 +339,11 @@
         "modelMetadata": {
           "$ref": "#/definitions/typeModelSpec",
           "title": "Model metadata"
+        },
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the candidate was found."
         }
       }
     },
@@ -557,6 +562,20 @@
         }
       },
       "description": "Detected page from OCR."
+    },
+    "typePageText": {
+      "type": "object",
+      "properties": {
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the text was found."
+        },
+        "text": {
+          "type": "string",
+          "title": "The text content of the page"
+        }
+      }
     },
     "typeParagraph": {
       "type": "object",
@@ -1204,7 +1223,15 @@
             "type": "object",
             "$ref": "#/definitions/typeAnswerCandidate"
           },
-          "title": "Answer Candidates for the questions asked in th request abotu the document\nEach Answer is question and answer pair"
+          "title": "Answer Candidates for the questions asked in th request about the document\nEach Answer is question and answer pair with page number and confidence"
+        },
+        "pageTexts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePageText"
+          },
+          "title": "The page texts of the document"
         }
       }
     },

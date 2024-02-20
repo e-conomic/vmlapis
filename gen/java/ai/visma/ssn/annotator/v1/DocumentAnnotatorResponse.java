@@ -61,6 +61,7 @@ private static final long serialVersionUID = 0L;
     receiverVatNumber_ = java.util.Collections.emptyList();
     purchaseLines_ = java.util.Collections.emptyList();
     answers_ = java.util.Collections.emptyList();
+    pageTexts_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -2970,8 +2971,8 @@ private static final long serialVersionUID = 0L;
   private java.util.List<ai.visma.ssn.type.AnswerCandidate> answers_;
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request abotu the document
-   * Each Answer is question and answer pair
+   * Answer Candidates for the questions asked in th request about the document
+   * Each Answer is question and answer pair with page number and confidence
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -2982,8 +2983,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request abotu the document
-   * Each Answer is question and answer pair
+   * Answer Candidates for the questions asked in th request about the document
+   * Each Answer is question and answer pair with page number and confidence
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -2995,8 +2996,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request abotu the document
-   * Each Answer is question and answer pair
+   * Answer Candidates for the questions asked in th request about the document
+   * Each Answer is question and answer pair with page number and confidence
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -3007,8 +3008,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request abotu the document
-   * Each Answer is question and answer pair
+   * Answer Candidates for the questions asked in th request about the document
+   * Each Answer is question and answer pair with page number and confidence
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -3019,8 +3020,8 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * Answer Candidates for the questions asked in th request abotu the document
-   * Each Answer is question and answer pair
+   * Answer Candidates for the questions asked in th request about the document
+   * Each Answer is question and answer pair with page number and confidence
    * </pre>
    *
    * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -3029,6 +3030,67 @@ private static final long serialVersionUID = 0L;
   public ai.visma.ssn.type.AnswerCandidateOrBuilder getAnswersOrBuilder(
       int index) {
     return answers_.get(index);
+  }
+
+  public static final int PAGE_TEXTS_FIELD_NUMBER = 47;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.PageText> pageTexts_;
+  /**
+   * <pre>
+   * The page texts of the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.PageText> getPageTextsList() {
+    return pageTexts_;
+  }
+  /**
+   * <pre>
+   * The page texts of the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.PageTextOrBuilder> 
+      getPageTextsOrBuilderList() {
+    return pageTexts_;
+  }
+  /**
+   * <pre>
+   * The page texts of the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+   */
+  @java.lang.Override
+  public int getPageTextsCount() {
+    return pageTexts_.size();
+  }
+  /**
+   * <pre>
+   * The page texts of the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.PageText getPageTexts(int index) {
+    return pageTexts_.get(index);
+  }
+  /**
+   * <pre>
+   * The page texts of the document
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.PageTextOrBuilder getPageTextsOrBuilder(
+      int index) {
+    return pageTexts_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -3182,6 +3244,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < answers_.size(); i++) {
       output.writeMessage(46, answers_.get(i));
+    }
+    for (int i = 0; i < pageTexts_.size(); i++) {
+      output.writeMessage(47, pageTexts_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -3373,6 +3438,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(46, answers_.get(i));
     }
+    for (int i = 0; i < pageTexts_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(47, pageTexts_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3483,6 +3552,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPurchaseLinesList())) return false;
     if (!getAnswersList()
         .equals(other.getAnswersList())) return false;
+    if (!getPageTextsList()
+        .equals(other.getPageTextsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3671,6 +3742,10 @@ private static final long serialVersionUID = 0L;
     if (getAnswersCount() > 0) {
       hash = (37 * hash) + ANSWERS_FIELD_NUMBER;
       hash = (53 * hash) + getAnswersList().hashCode();
+    }
+    if (getPageTextsCount() > 0) {
+      hash = (37 * hash) + PAGE_TEXTS_FIELD_NUMBER;
+      hash = (53 * hash) + getPageTextsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -4106,6 +4181,13 @@ private static final long serialVersionUID = 0L;
         answersBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00002000);
+      if (pageTextsBuilder_ == null) {
+        pageTexts_ = java.util.Collections.emptyList();
+      } else {
+        pageTexts_ = null;
+        pageTextsBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00004000);
       return this;
     }
 
@@ -4517,6 +4599,15 @@ private static final long serialVersionUID = 0L;
         result.answers_ = answers_;
       } else {
         result.answers_ = answersBuilder_.build();
+      }
+      if (pageTextsBuilder_ == null) {
+        if (((bitField1_ & 0x00004000) != 0)) {
+          pageTexts_ = java.util.Collections.unmodifiableList(pageTexts_);
+          bitField1_ = (bitField1_ & ~0x00004000);
+        }
+        result.pageTexts_ = pageTexts_;
+      } else {
+        result.pageTexts_ = pageTextsBuilder_.build();
       }
     }
 
@@ -5696,6 +5787,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (pageTextsBuilder_ == null) {
+        if (!other.pageTexts_.isEmpty()) {
+          if (pageTexts_.isEmpty()) {
+            pageTexts_ = other.pageTexts_;
+            bitField1_ = (bitField1_ & ~0x00004000);
+          } else {
+            ensurePageTextsIsMutable();
+            pageTexts_.addAll(other.pageTexts_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.pageTexts_.isEmpty()) {
+          if (pageTextsBuilder_.isEmpty()) {
+            pageTextsBuilder_.dispose();
+            pageTextsBuilder_ = null;
+            pageTexts_ = other.pageTexts_;
+            bitField1_ = (bitField1_ & ~0x00004000);
+            pageTextsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getPageTextsFieldBuilder() : null;
+          } else {
+            pageTextsBuilder_.addAllMessages(other.pageTexts_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -6290,6 +6407,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 370
+            case 378: {
+              ai.visma.ssn.type.PageText m =
+                  input.readMessage(
+                      ai.visma.ssn.type.PageText.parser(),
+                      extensionRegistry);
+              if (pageTextsBuilder_ == null) {
+                ensurePageTextsIsMutable();
+                pageTexts_.add(m);
+              } else {
+                pageTextsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 378
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -20270,8 +20400,8 @@ private static final long serialVersionUID = 0L;
 
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20285,8 +20415,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20300,8 +20430,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20315,8 +20445,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20337,8 +20467,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20356,8 +20486,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20377,8 +20507,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20399,8 +20529,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20418,8 +20548,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20437,8 +20567,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20457,8 +20587,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20475,8 +20605,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20493,8 +20623,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20505,8 +20635,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20520,8 +20650,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20536,8 +20666,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20548,8 +20678,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20561,8 +20691,8 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * Answer Candidates for the questions asked in th request abotu the document
-     * Each Answer is question and answer pair
+     * Answer Candidates for the questions asked in th request about the document
+     * Each Answer is question and answer pair with page number and confidence
      * </pre>
      *
      * <code>repeated .ssn.type.AnswerCandidate answers = 46 [json_name = "answers"];</code>
@@ -20584,6 +20714,318 @@ private static final long serialVersionUID = 0L;
         answers_ = null;
       }
       return answersBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.PageText> pageTexts_ =
+      java.util.Collections.emptyList();
+    private void ensurePageTextsIsMutable() {
+      if (!((bitField1_ & 0x00004000) != 0)) {
+        pageTexts_ = new java.util.ArrayList<ai.visma.ssn.type.PageText>(pageTexts_);
+        bitField1_ |= 0x00004000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.PageText, ai.visma.ssn.type.PageText.Builder, ai.visma.ssn.type.PageTextOrBuilder> pageTextsBuilder_;
+
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.PageText> getPageTextsList() {
+      if (pageTextsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(pageTexts_);
+      } else {
+        return pageTextsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public int getPageTextsCount() {
+      if (pageTextsBuilder_ == null) {
+        return pageTexts_.size();
+      } else {
+        return pageTextsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public ai.visma.ssn.type.PageText getPageTexts(int index) {
+      if (pageTextsBuilder_ == null) {
+        return pageTexts_.get(index);
+      } else {
+        return pageTextsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public Builder setPageTexts(
+        int index, ai.visma.ssn.type.PageText value) {
+      if (pageTextsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePageTextsIsMutable();
+        pageTexts_.set(index, value);
+        onChanged();
+      } else {
+        pageTextsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public Builder setPageTexts(
+        int index, ai.visma.ssn.type.PageText.Builder builderForValue) {
+      if (pageTextsBuilder_ == null) {
+        ensurePageTextsIsMutable();
+        pageTexts_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        pageTextsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public Builder addPageTexts(ai.visma.ssn.type.PageText value) {
+      if (pageTextsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePageTextsIsMutable();
+        pageTexts_.add(value);
+        onChanged();
+      } else {
+        pageTextsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public Builder addPageTexts(
+        int index, ai.visma.ssn.type.PageText value) {
+      if (pageTextsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePageTextsIsMutable();
+        pageTexts_.add(index, value);
+        onChanged();
+      } else {
+        pageTextsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public Builder addPageTexts(
+        ai.visma.ssn.type.PageText.Builder builderForValue) {
+      if (pageTextsBuilder_ == null) {
+        ensurePageTextsIsMutable();
+        pageTexts_.add(builderForValue.build());
+        onChanged();
+      } else {
+        pageTextsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public Builder addPageTexts(
+        int index, ai.visma.ssn.type.PageText.Builder builderForValue) {
+      if (pageTextsBuilder_ == null) {
+        ensurePageTextsIsMutable();
+        pageTexts_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        pageTextsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public Builder addAllPageTexts(
+        java.lang.Iterable<? extends ai.visma.ssn.type.PageText> values) {
+      if (pageTextsBuilder_ == null) {
+        ensurePageTextsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, pageTexts_);
+        onChanged();
+      } else {
+        pageTextsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public Builder clearPageTexts() {
+      if (pageTextsBuilder_ == null) {
+        pageTexts_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00004000);
+        onChanged();
+      } else {
+        pageTextsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public Builder removePageTexts(int index) {
+      if (pageTextsBuilder_ == null) {
+        ensurePageTextsIsMutable();
+        pageTexts_.remove(index);
+        onChanged();
+      } else {
+        pageTextsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public ai.visma.ssn.type.PageText.Builder getPageTextsBuilder(
+        int index) {
+      return getPageTextsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public ai.visma.ssn.type.PageTextOrBuilder getPageTextsOrBuilder(
+        int index) {
+      if (pageTextsBuilder_ == null) {
+        return pageTexts_.get(index);  } else {
+        return pageTextsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.PageTextOrBuilder> 
+         getPageTextsOrBuilderList() {
+      if (pageTextsBuilder_ != null) {
+        return pageTextsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(pageTexts_);
+      }
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public ai.visma.ssn.type.PageText.Builder addPageTextsBuilder() {
+      return getPageTextsFieldBuilder().addBuilder(
+          ai.visma.ssn.type.PageText.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public ai.visma.ssn.type.PageText.Builder addPageTextsBuilder(
+        int index) {
+      return getPageTextsFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.PageText.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The page texts of the document
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 47 [json_name = "pageTexts"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.PageText.Builder> 
+         getPageTextsBuilderList() {
+      return getPageTextsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.PageText, ai.visma.ssn.type.PageText.Builder, ai.visma.ssn.type.PageTextOrBuilder> 
+        getPageTextsFieldBuilder() {
+      if (pageTextsBuilder_ == null) {
+        pageTextsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.ssn.type.PageText, ai.visma.ssn.type.PageText.Builder, ai.visma.ssn.type.PageTextOrBuilder>(
+                pageTexts_,
+                ((bitField1_ & 0x00004000) != 0),
+                getParentForChildren(),
+                isClean());
+        pageTexts_ = null;
+      }
+      return pageTextsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

@@ -821,7 +821,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearQuestionsList = f
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47];
 
 
 
@@ -941,7 +941,9 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     purchaseLinesList: jspb.Message.toObjectList(msg.getPurchaseLinesList(),
     ssn_type_candidate_pb.PurchaseLineCandidate.toObject, includeInstance),
     answersList: jspb.Message.toObjectList(msg.getAnswersList(),
-    ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance)
+    ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance),
+    pageTextsList: jspb.Message.toObjectList(msg.getPageTextsList(),
+    ssn_type_candidate_pb.PageText.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1204,6 +1206,11 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_candidate_pb.AnswerCandidate;
       reader.readMessage(value,ssn_type_candidate_pb.AnswerCandidate.deserializeBinaryFromReader);
       msg.addAnswers(value);
+      break;
+    case 47:
+      var value = new ssn_type_candidate_pb.PageText;
+      reader.readMessage(value,ssn_type_candidate_pb.PageText.deserializeBinaryFromReader);
+      msg.addPageTexts(value);
       break;
     default:
       reader.skipField();
@@ -1597,6 +1604,14 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       46,
       f,
       ssn_type_candidate_pb.AnswerCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getPageTextsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      47,
+      f,
+      ssn_type_candidate_pb.PageText.serializeBinaryToWriter
     );
   }
 };
@@ -3286,6 +3301,44 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addAnswers = function
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearAnswersList = function() {
   return this.setAnswersList([]);
+};
+
+
+/**
+ * repeated ssn.type.PageText page_texts = 47;
+ * @return {!Array<!proto.ssn.type.PageText>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getPageTextsList = function() {
+  return /** @type{!Array<!proto.ssn.type.PageText>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.PageText, 47));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.PageText>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setPageTextsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 47, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.PageText=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.PageText}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addPageTexts = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 47, opt_value, proto.ssn.type.PageText, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearPageTextsList = function() {
+  return this.setPageTextsList([]);
 };
 
 
