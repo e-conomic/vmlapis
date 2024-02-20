@@ -281,7 +281,7 @@ message DocumentAnnotatorResponse {
   // unit price excl vat
   repeated ssn.type.PurchaseLineCandidate purchase_lines = 45;
   // Answer Candidates for the questions asked in th request about the document
-  // Each Answer is question and answer pair
+  // Each Answer is question and answer pair with page number and confidence
   repeated ssn.type.AnswerCandidate answers = 46;
   // The page texts of the document
   repeated ssn.type.PageText page_texts = 47;
