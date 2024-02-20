@@ -130,4 +130,13 @@ message AnswerCandidate {
   Confidence confidence = 3;
   // Model metadata
   ModelSpec model_metadata = 7;
+  // A reference to the page where the candidate was found.
+  uint32 page_ref = 8;
+}
+
+message PageText {
+  // The page number
+  uint32 page_number = 1;
+  // The text content of the page
+  string text = 2;
 }
