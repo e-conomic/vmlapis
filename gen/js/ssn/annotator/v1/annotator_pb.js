@@ -370,7 +370,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   RECEIVER_COUNTRY_CODE: 41,
   RECEIVER_NAME: 42,
   RECEIVER_VAT_NUMBER: 43,
-  PURCHASE_LINES: 44
+  PURCHASE_LINES: 44,
+  PAGE_TEXTS: 45
 };
 
 /**

@@ -406,6 +406,14 @@ private static final long serialVersionUID = 0L;
      * <code>PURCHASE_LINES = 44;</code>
      */
     PURCHASE_LINES(44),
+    /**
+     * <pre>
+     * Page texts
+     * </pre>
+     *
+     * <code>PAGE_TEXTS = 45;</code>
+     */
+    PAGE_TEXTS(45),
     UNRECOGNIZED(-1),
     ;
 
@@ -770,6 +778,14 @@ private static final long serialVersionUID = 0L;
      * <code>PURCHASE_LINES = 44;</code>
      */
     public static final int PURCHASE_LINES_VALUE = 44;
+    /**
+     * <pre>
+     * Page texts
+     * </pre>
+     *
+     * <code>PAGE_TEXTS = 45;</code>
+     */
+    public static final int PAGE_TEXTS_VALUE = 45;
 
 
     public final int getNumber() {
@@ -841,6 +857,7 @@ private static final long serialVersionUID = 0L;
         case 42: return RECEIVER_NAME;
         case 43: return RECEIVER_VAT_NUMBER;
         case 44: return PURCHASE_LINES;
+        case 45: return PAGE_TEXTS;
         default: return null;
       }
     }
