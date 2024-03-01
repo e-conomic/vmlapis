@@ -60,6 +60,7 @@ class Feature(_message.Message):
         RECEIVER_NAME: _ClassVar[Feature.Type]
         RECEIVER_VAT_NUMBER: _ClassVar[Feature.Type]
         PURCHASE_LINES: _ClassVar[Feature.Type]
+        PAGE_TEXTS: _ClassVar[Feature.Type]
     DEFAULT: Feature.Type
     TEXT_ANNOTATION: Feature.Type
     ORDER_DATE: Feature.Type
@@ -105,6 +106,7 @@ class Feature(_message.Message):
     RECEIVER_NAME: Feature.Type
     RECEIVER_VAT_NUMBER: Feature.Type
     PURCHASE_LINES: Feature.Type
+    PAGE_TEXTS: Feature.Type
     TYPE_FIELD_NUMBER: _ClassVar[int]
     MAX_RESULTS_FIELD_NUMBER: _ClassVar[int]
     MIN_CONFIDENCE_FIELD_NUMBER: _ClassVar[int]

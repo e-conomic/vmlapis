@@ -78,6 +78,7 @@ export namespace Feature {
     RECEIVER_NAME = 42,
     RECEIVER_VAT_NUMBER = 43,
     PURCHASE_LINES = 44,
+    PAGE_TEXTS = 45,
   }
 }
 
