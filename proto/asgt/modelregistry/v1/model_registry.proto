@@ -25,11 +25,17 @@ service ModelRegistry {
 }
 
 message RegisterModelRequest {
+  message TargetMetricsUnion {
+    oneof TargetMetricOneOf{
+      asgt.type.TargetMetrics target_metrics_v1 = 1;
+      asgt.type.TargetMetricsV2 target_metrics_v2 = 2;
+    }
+  }
   asgt.type.Dataset dataset = 1;
   asgt.type.Revision revision = 2;
   int64 model_version = 3;
   map<string, int32> metrics = 4;
-  repeated asgt.type.TargetMetrics target_metrics = 5;
+  repeated TargetMetricsUnion target_metrics = 5;
   asgt.type.Model.InputType input_type = 6;
   asgt.type.TrainStatistics train_statistics = 7;
   asgt.type.DatasetStatistics dataset_statistics = 8;

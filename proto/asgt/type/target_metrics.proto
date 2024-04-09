@@ -18,3 +18,23 @@ message TargetMetrics {
   string target = 1;
   repeated Metric metrics = 2;
 }
+
+message TargetMetricsV2 {
+  message Metric {
+    float precision = 1;
+    float answer_rate = 2;
+    int32 true_positive = 3;
+    int32 true_negative = 4;
+    int32 false_positive = 5;
+    int32 false_negative = 6;
+  }
+
+  message Threshold {
+    float confidence = 1;
+    map<string, Metric> per_class_metric = 2;
+    Metric avg_metric = 3;
+  }
+
+  string target = 1;
+  repeated Threshold thresholds = 2;
+}
