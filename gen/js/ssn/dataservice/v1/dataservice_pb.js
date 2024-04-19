@@ -88,7 +88,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.ssn.dataservice.v1.TrueValues = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ssn.dataservice.v1.TrueValues.repeatedFields_, null);
 };
 goog.inherits(proto.ssn.dataservice.v1.TrueValues, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -969,6 +969,13 @@ proto.ssn.dataservice.v1.Document.prototype.hasPredictionMetadata = function() {
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.ssn.dataservice.v1.TrueValues.repeatedFields_ = [41,42];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -1039,7 +1046,11 @@ proto.ssn.dataservice.v1.TrueValues.toObject = function(includeInstance, msg) {
     receiverAddress: (f = msg.getReceiverAddress()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     receiverCountryCode: (f = msg.getReceiverCountryCode()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
     receiverName: (f = msg.getReceiverName()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
-    receiverVatNumber: (f = msg.getReceiverVatNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f)
+    receiverVatNumber: (f = msg.getReceiverVatNumber()) && google_protobuf_wrappers_pb.StringValue.toObject(includeInstance, f),
+    purchaseLinesList: jspb.Message.toObjectList(msg.getPurchaseLinesList(),
+    ssn_type_candidate_pb.PurchaseLineCandidate.toObject, includeInstance),
+    answersList: jspb.Message.toObjectList(msg.getAnswersList(),
+    ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1275,6 +1286,16 @@ proto.ssn.dataservice.v1.TrueValues.deserializeBinaryFromReader = function(msg, 
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.setReceiverVatNumber(value);
+      break;
+    case 41:
+      var value = new ssn_type_candidate_pb.PurchaseLineCandidate;
+      reader.readMessage(value,ssn_type_candidate_pb.PurchaseLineCandidate.deserializeBinaryFromReader);
+      msg.addPurchaseLines(value);
+      break;
+    case 42:
+      var value = new ssn_type_candidate_pb.AnswerCandidate;
+      reader.readMessage(value,ssn_type_candidate_pb.AnswerCandidate.deserializeBinaryFromReader);
+      msg.addAnswers(value);
       break;
     default:
       reader.skipField();
@@ -1623,6 +1644,22 @@ proto.ssn.dataservice.v1.TrueValues.serializeBinaryToWriter = function(message, 
       40,
       f,
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getPurchaseLinesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      41,
+      f,
+      ssn_type_candidate_pb.PurchaseLineCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getAnswersList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      42,
+      f,
+      ssn_type_candidate_pb.AnswerCandidate.serializeBinaryToWriter
     );
   }
 };
@@ -3108,13 +3145,89 @@ proto.ssn.dataservice.v1.TrueValues.prototype.hasReceiverVatNumber = function() 
 };
 
 
+/**
+ * repeated ssn.type.PurchaseLineCandidate purchase_lines = 41;
+ * @return {!Array<!proto.ssn.type.PurchaseLineCandidate>}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getPurchaseLinesList = function() {
+  return /** @type{!Array<!proto.ssn.type.PurchaseLineCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.PurchaseLineCandidate, 41));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.PurchaseLineCandidate>} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setPurchaseLinesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 41, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.PurchaseLineCandidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.PurchaseLineCandidate}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.addPurchaseLines = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 41, opt_value, proto.ssn.type.PurchaseLineCandidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearPurchaseLinesList = function() {
+  return this.setPurchaseLinesList([]);
+};
+
+
+/**
+ * repeated ssn.type.AnswerCandidate answers = 42;
+ * @return {!Array<!proto.ssn.type.AnswerCandidate>}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.getAnswersList = function() {
+  return /** @type{!Array<!proto.ssn.type.AnswerCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.AnswerCandidate, 42));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.AnswerCandidate>} value
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+*/
+proto.ssn.dataservice.v1.TrueValues.prototype.setAnswersList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 42, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.AnswerCandidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.AnswerCandidate}
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.addAnswers = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 42, opt_value, proto.ssn.type.AnswerCandidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.TrueValues} returns this
+ */
+proto.ssn.dataservice.v1.TrueValues.prototype.clearAnswersList = function() {
+  return this.setAnswersList([]);
+};
+
+
 
 /**
  * List of repeated fields within this message type.
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.PredictionValues.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40];
+proto.ssn.dataservice.v1.PredictionValues.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42];
 
 
 
@@ -3226,7 +3339,11 @@ proto.ssn.dataservice.v1.PredictionValues.toObject = function(includeInstance, m
     receiverNameList: jspb.Message.toObjectList(msg.getReceiverNameList(),
     google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
     receiverVatNumberList: jspb.Message.toObjectList(msg.getReceiverVatNumberList(),
-    google_protobuf_wrappers_pb.StringValue.toObject, includeInstance)
+    google_protobuf_wrappers_pb.StringValue.toObject, includeInstance),
+    purchaseLinesList: jspb.Message.toObjectList(msg.getPurchaseLinesList(),
+    ssn_type_candidate_pb.PurchaseLineCandidate.toObject, includeInstance),
+    answersList: jspb.Message.toObjectList(msg.getAnswersList(),
+    ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -3462,6 +3579,16 @@ proto.ssn.dataservice.v1.PredictionValues.deserializeBinaryFromReader = function
       var value = new google_protobuf_wrappers_pb.StringValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.StringValue.deserializeBinaryFromReader);
       msg.addReceiverVatNumber(value);
+      break;
+    case 41:
+      var value = new ssn_type_candidate_pb.PurchaseLineCandidate;
+      reader.readMessage(value,ssn_type_candidate_pb.PurchaseLineCandidate.deserializeBinaryFromReader);
+      msg.addPurchaseLines(value);
+      break;
+    case 42:
+      var value = new ssn_type_candidate_pb.AnswerCandidate;
+      reader.readMessage(value,ssn_type_candidate_pb.AnswerCandidate.deserializeBinaryFromReader);
+      msg.addAnswers(value);
       break;
     default:
       reader.skipField();
@@ -3810,6 +3937,22 @@ proto.ssn.dataservice.v1.PredictionValues.serializeBinaryToWriter = function(mes
       40,
       f,
       google_protobuf_wrappers_pb.StringValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getPurchaseLinesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      41,
+      f,
+      ssn_type_candidate_pb.PurchaseLineCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getAnswersList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      42,
+      f,
+      ssn_type_candidate_pb.AnswerCandidate.serializeBinaryToWriter
     );
   }
 };
@@ -5332,6 +5475,82 @@ proto.ssn.dataservice.v1.PredictionValues.prototype.addReceiverVatNumber = funct
  */
 proto.ssn.dataservice.v1.PredictionValues.prototype.clearReceiverVatNumberList = function() {
   return this.setReceiverVatNumberList([]);
+};
+
+
+/**
+ * repeated ssn.type.PurchaseLineCandidate purchase_lines = 41;
+ * @return {!Array<!proto.ssn.type.PurchaseLineCandidate>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getPurchaseLinesList = function() {
+  return /** @type{!Array<!proto.ssn.type.PurchaseLineCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.PurchaseLineCandidate, 41));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.PurchaseLineCandidate>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setPurchaseLinesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 41, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.PurchaseLineCandidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.PurchaseLineCandidate}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addPurchaseLines = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 41, opt_value, proto.ssn.type.PurchaseLineCandidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearPurchaseLinesList = function() {
+  return this.setPurchaseLinesList([]);
+};
+
+
+/**
+ * repeated ssn.type.AnswerCandidate answers = 42;
+ * @return {!Array<!proto.ssn.type.AnswerCandidate>}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.getAnswersList = function() {
+  return /** @type{!Array<!proto.ssn.type.AnswerCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.AnswerCandidate, 42));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.AnswerCandidate>} value
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+*/
+proto.ssn.dataservice.v1.PredictionValues.prototype.setAnswersList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 42, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.AnswerCandidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.AnswerCandidate}
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.addAnswers = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 42, opt_value, proto.ssn.type.AnswerCandidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.PredictionValues} returns this
+ */
+proto.ssn.dataservice.v1.PredictionValues.prototype.clearAnswersList = function() {
+  return this.setAnswersList([]);
 };
 
 

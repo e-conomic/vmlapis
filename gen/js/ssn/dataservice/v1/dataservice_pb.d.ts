@@ -280,6 +280,16 @@ export class TrueValues extends jspb.Message {
   hasReceiverVatNumber(): boolean;
   clearReceiverVatNumber(): TrueValues;
 
+  getPurchaseLinesList(): Array<ssn_type_candidate_pb.PurchaseLineCandidate>;
+  setPurchaseLinesList(value: Array<ssn_type_candidate_pb.PurchaseLineCandidate>): TrueValues;
+  clearPurchaseLinesList(): TrueValues;
+  addPurchaseLines(value?: ssn_type_candidate_pb.PurchaseLineCandidate, index?: number): ssn_type_candidate_pb.PurchaseLineCandidate;
+
+  getAnswersList(): Array<ssn_type_candidate_pb.AnswerCandidate>;
+  setAnswersList(value: Array<ssn_type_candidate_pb.AnswerCandidate>): TrueValues;
+  clearAnswersList(): TrueValues;
+  addAnswers(value?: ssn_type_candidate_pb.AnswerCandidate, index?: number): ssn_type_candidate_pb.AnswerCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TrueValues.AsObject;
   static toObject(includeInstance: boolean, msg: TrueValues): TrueValues.AsObject;
@@ -330,6 +340,8 @@ export namespace TrueValues {
     receiverCountryCode?: google_protobuf_wrappers_pb.StringValue.AsObject,
     receiverName?: google_protobuf_wrappers_pb.StringValue.AsObject,
     receiverVatNumber?: google_protobuf_wrappers_pb.StringValue.AsObject,
+    purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
+    answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
   }
 }
 
@@ -534,6 +546,16 @@ export class PredictionValues extends jspb.Message {
   clearReceiverVatNumberList(): PredictionValues;
   addReceiverVatNumber(value?: google_protobuf_wrappers_pb.StringValue, index?: number): google_protobuf_wrappers_pb.StringValue;
 
+  getPurchaseLinesList(): Array<ssn_type_candidate_pb.PurchaseLineCandidate>;
+  setPurchaseLinesList(value: Array<ssn_type_candidate_pb.PurchaseLineCandidate>): PredictionValues;
+  clearPurchaseLinesList(): PredictionValues;
+  addPurchaseLines(value?: ssn_type_candidate_pb.PurchaseLineCandidate, index?: number): ssn_type_candidate_pb.PurchaseLineCandidate;
+
+  getAnswersList(): Array<ssn_type_candidate_pb.AnswerCandidate>;
+  setAnswersList(value: Array<ssn_type_candidate_pb.AnswerCandidate>): PredictionValues;
+  clearAnswersList(): PredictionValues;
+  addAnswers(value?: ssn_type_candidate_pb.AnswerCandidate, index?: number): ssn_type_candidate_pb.AnswerCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionValues.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionValues): PredictionValues.AsObject;
@@ -584,6 +606,8 @@ export namespace PredictionValues {
     receiverCountryCodeList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
     receiverNameList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
     receiverVatNumberList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
+    purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
+    answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
   }
 }
 
