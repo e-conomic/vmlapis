@@ -98,6 +98,9 @@ message TrueValues {
   google.protobuf.StringValue receiver_country_code = 38;
   google.protobuf.StringValue receiver_name = 39;
   google.protobuf.StringValue receiver_vat_number = 40;
+
+  repeated ssn.type.PurchaseLineCandidate purchase_lines = 41;
+  repeated ssn.type.AnswerCandidate answers = 42;
 }
 
 message PredictionValues {
@@ -141,6 +144,9 @@ message PredictionValues {
   repeated google.protobuf.StringValue receiver_country_code = 38;
   repeated google.protobuf.StringValue receiver_name = 39;
   repeated google.protobuf.StringValue receiver_vat_number = 40;
+
+  repeated ssn.type.PurchaseLineCandidate purchase_lines = 41;
+  repeated ssn.type.AnswerCandidate answers = 42;
 }
 
 message PredictionConfidences {

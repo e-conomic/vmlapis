@@ -2204,6 +2204,20 @@
           "items": {
             "type": "string"
           }
+        },
+        "purchaseLines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePurchaseLineCandidate"
+          }
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeAnswerCandidate"
+          }
         }
       }
     },
@@ -2340,6 +2354,20 @@
         },
         "receiverVatNumber": {
           "type": "string"
+        },
+        "purchaseLines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePurchaseLineCandidate"
+          }
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeAnswerCandidate"
+          }
         }
       }
     }
