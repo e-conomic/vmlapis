@@ -24,23 +24,28 @@ namespace Asgt.Type {
     static TargetMetricsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8SCWFzZ3QudHlwZSLk",
-            "AgoNVGFyZ2V0TWV0cmljcxIWCgZ0YXJnZXQYASABKAlSBnRhcmdldBI5Cgdt",
+            "Ch5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8SCWFzZ3QudHlwZSKU",
+            "BAoNVGFyZ2V0TWV0cmljcxIWCgZ0YXJnZXQYASABKAlSBnRhcmdldBI5Cgdt",
             "ZXRyaWNzGAIgAygLMh8uYXNndC50eXBlLlRhcmdldE1ldHJpY3MuTWV0cmlj",
-            "UgdtZXRyaWNzGv8BCgZNZXRyaWMSHAoJcHJlY2lzaW9uGAEgASgCUglwcmVj",
-            "aXNpb24SHgoKY29uZmlkZW5jZRgCIAEoAlIKY29uZmlkZW5jZRIfCgthbnN3",
-            "ZXJfcmF0ZRgDIAEoAlIKYW5zd2VyUmF0ZRIjCg10cnVlX3Bvc2l0aXZlGAQg",
-            "ASgFUgx0cnVlUG9zaXRpdmUSIwoNdHJ1ZV9uZWdhdGl2ZRgFIAEoBVIMdHJ1",
-            "ZU5lZ2F0aXZlEiUKDmZhbHNlX3Bvc2l0aXZlGAYgASgFUg1mYWxzZVBvc2l0",
-            "aXZlEiUKDmZhbHNlX25lZ2F0aXZlGAcgASgFUg1mYWxzZU5lZ2F0aXZlQqUB",
-            "ChJhaS52aXNtYS5hc2d0LnR5cGVCElRhcmdldE1ldHJpY3NQcm90b1ABWjZn",
-            "aXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L3R5cGU7",
-            "YXNndHR5cGWiAgNBVFiqAglBc2d0LlR5cGXKAglBc2d0XFR5cGXiAhVBc2d0",
-            "XFR5cGVcR1BCTWV0YWRhdGHqAgpBc2d0OjpUeXBlYgZwcm90bzM="));
+            "UgdtZXRyaWNzEicKD2NsYXNzZXNfb3JkZXJlZBgDIAMoCVIOY2xhc3Nlc09y",
+            "ZGVyZWQaLAoSQ29uZnVzaW9uTWV0cmljUm93EhYKBmNvdW50cxgBIAMoBVIG",
+            "Y291bnRzGtgCCgZNZXRyaWMSHAoJcHJlY2lzaW9uGAEgASgCUglwcmVjaXNp",
+            "b24SHgoKY29uZmlkZW5jZRgCIAEoAlIKY29uZmlkZW5jZRIfCgthbnN3ZXJf",
+            "cmF0ZRgDIAEoAlIKYW5zd2VyUmF0ZRIjCg10cnVlX3Bvc2l0aXZlGAQgASgF",
+            "Ugx0cnVlUG9zaXRpdmUSIwoNdHJ1ZV9uZWdhdGl2ZRgFIAEoBVIMdHJ1ZU5l",
+            "Z2F0aXZlEiUKDmZhbHNlX3Bvc2l0aXZlGAYgASgFUg1mYWxzZVBvc2l0aXZl",
+            "EiUKDmZhbHNlX25lZ2F0aXZlGAcgASgFUg1mYWxzZU5lZ2F0aXZlElcKEENv",
+            "bmZ1c2lvbk1ldHJpY3MYCCADKAsyKy5hc2d0LnR5cGUuVGFyZ2V0TWV0cmlj",
+            "cy5Db25mdXNpb25NZXRyaWNSb3dSEENvbmZ1c2lvbk1ldHJpY3NCpQEKEmFp",
+            "LnZpc21hLmFzZ3QudHlwZUISVGFyZ2V0TWV0cmljc1Byb3RvUAFaNmdpdGh1",
+            "Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvdHlwZTthc2d0",
+            "dHlwZaICA0FUWKoCCUFzZ3QuVHlwZcoCCUFzZ3RcVHlwZeICFUFzZ3RcVHlw",
+            "ZVxHUEJNZXRhZGF0YeoCCkFzZ3Q6OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics), global::Asgt.Type.TargetMetrics.Parser, new[]{ "Target", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.Metric), global::Asgt.Type.TargetMetrics.Types.Metric.Parser, new[]{ "Precision", "Confidence", "AnswerRate", "TruePositive", "TrueNegative", "FalsePositive", "FalseNegative" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics), global::Asgt.Type.TargetMetrics.Parser, new[]{ "Target", "Metrics", "ClassesOrdered" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.ConfusionMetricRow), global::Asgt.Type.TargetMetrics.Types.ConfusionMetricRow.Parser, new[]{ "Counts" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.Metric), global::Asgt.Type.TargetMetrics.Types.Metric.Parser, new[]{ "Precision", "Confidence", "AnswerRate", "TruePositive", "TrueNegative", "FalsePositive", "FalseNegative", "ConfusionMetrics" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -83,6 +88,7 @@ namespace Asgt.Type {
     public TargetMetrics(TargetMetrics other) : this() {
       target_ = other.target_;
       metrics_ = other.metrics_.Clone();
+      classesOrdered_ = other.classesOrdered_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -115,6 +121,17 @@ namespace Asgt.Type {
       get { return metrics_; }
     }
 
+    /// <summary>Field number for the "classes_ordered" field.</summary>
+    public const int ClassesOrderedFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_classesOrdered_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> classesOrdered_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ClassesOrdered {
+      get { return classesOrdered_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -132,6 +149,7 @@ namespace Asgt.Type {
       }
       if (Target != other.Target) return false;
       if(!metrics_.Equals(other.metrics_)) return false;
+      if(!classesOrdered_.Equals(other.classesOrdered_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -141,6 +159,7 @@ namespace Asgt.Type {
       int hash = 1;
       if (Target.Length != 0) hash ^= Target.GetHashCode();
       hash ^= metrics_.GetHashCode();
+      hash ^= classesOrdered_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -164,6 +183,7 @@ namespace Asgt.Type {
         output.WriteString(Target);
       }
       metrics_.WriteTo(output, _repeated_metrics_codec);
+      classesOrdered_.WriteTo(output, _repeated_classesOrdered_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -179,6 +199,7 @@ namespace Asgt.Type {
         output.WriteString(Target);
       }
       metrics_.WriteTo(ref output, _repeated_metrics_codec);
+      classesOrdered_.WriteTo(ref output, _repeated_classesOrdered_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -193,6 +214,7 @@ namespace Asgt.Type {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Target);
       }
       size += metrics_.CalculateSize(_repeated_metrics_codec);
+      size += classesOrdered_.CalculateSize(_repeated_classesOrdered_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -209,6 +231,7 @@ namespace Asgt.Type {
         Target = other.Target;
       }
       metrics_.Add(other.metrics_);
+      classesOrdered_.Add(other.classesOrdered_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -230,6 +253,10 @@ namespace Asgt.Type {
           }
           case 18: {
             metrics_.AddEntriesFrom(input, _repeated_metrics_codec);
+            break;
+          }
+          case 26: {
+            classesOrdered_.AddEntriesFrom(input, _repeated_classesOrdered_codec);
             break;
           }
         }
@@ -255,6 +282,10 @@ namespace Asgt.Type {
             metrics_.AddEntriesFrom(ref input, _repeated_metrics_codec);
             break;
           }
+          case 26: {
+            classesOrdered_.AddEntriesFrom(ref input, _repeated_classesOrdered_codec);
+            break;
+          }
         }
       }
     }
@@ -265,6 +296,186 @@ namespace Asgt.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      public sealed partial class ConfusionMetricRow : pb::IMessage<ConfusionMetricRow>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ConfusionMetricRow> _parser = new pb::MessageParser<ConfusionMetricRow>(() => new ConfusionMetricRow());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ConfusionMetricRow> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Asgt.Type.TargetMetrics.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConfusionMetricRow() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConfusionMetricRow(ConfusionMetricRow other) : this() {
+          counts_ = other.counts_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConfusionMetricRow Clone() {
+          return new ConfusionMetricRow(this);
+        }
+
+        /// <summary>Field number for the "counts" field.</summary>
+        public const int CountsFieldNumber = 1;
+        private static readonly pb::FieldCodec<int> _repeated_counts_codec
+            = pb::FieldCodec.ForInt32(10);
+        private readonly pbc::RepeatedField<int> counts_ = new pbc::RepeatedField<int>();
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<int> Counts {
+          get { return counts_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ConfusionMetricRow);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ConfusionMetricRow other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!counts_.Equals(other.counts_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= counts_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          counts_.WriteTo(output, _repeated_counts_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          counts_.WriteTo(ref output, _repeated_counts_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += counts_.CalculateSize(_repeated_counts_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ConfusionMetricRow other) {
+          if (other == null) {
+            return;
+          }
+          counts_.Add(other.counts_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10:
+              case 8: {
+                counts_.AddEntriesFrom(input, _repeated_counts_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10:
+              case 8: {
+                counts_.AddEntriesFrom(ref input, _repeated_counts_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
       public sealed partial class Metric : pb::IMessage<Metric>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           , pb::IBufferMessage
@@ -279,7 +490,7 @@ namespace Asgt.Type {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Asgt.Type.TargetMetrics.Descriptor.NestedTypes[0]; }
+          get { return global::Asgt.Type.TargetMetrics.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -306,6 +517,7 @@ namespace Asgt.Type {
           trueNegative_ = other.trueNegative_;
           falsePositive_ = other.falsePositive_;
           falseNegative_ = other.falseNegative_;
+          confusionMetrics_ = other.confusionMetrics_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -399,6 +611,17 @@ namespace Asgt.Type {
           }
         }
 
+        /// <summary>Field number for the "ConfusionMetrics" field.</summary>
+        public const int ConfusionMetricsFieldNumber = 8;
+        private static readonly pb::FieldCodec<global::Asgt.Type.TargetMetrics.Types.ConfusionMetricRow> _repeated_confusionMetrics_codec
+            = pb::FieldCodec.ForMessage(66, global::Asgt.Type.TargetMetrics.Types.ConfusionMetricRow.Parser);
+        private readonly pbc::RepeatedField<global::Asgt.Type.TargetMetrics.Types.ConfusionMetricRow> confusionMetrics_ = new pbc::RepeatedField<global::Asgt.Type.TargetMetrics.Types.ConfusionMetricRow>();
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Asgt.Type.TargetMetrics.Types.ConfusionMetricRow> ConfusionMetrics {
+          get { return confusionMetrics_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -421,6 +644,7 @@ namespace Asgt.Type {
           if (TrueNegative != other.TrueNegative) return false;
           if (FalsePositive != other.FalsePositive) return false;
           if (FalseNegative != other.FalseNegative) return false;
+          if(!confusionMetrics_.Equals(other.confusionMetrics_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -435,6 +659,7 @@ namespace Asgt.Type {
           if (TrueNegative != 0) hash ^= TrueNegative.GetHashCode();
           if (FalsePositive != 0) hash ^= FalsePositive.GetHashCode();
           if (FalseNegative != 0) hash ^= FalseNegative.GetHashCode();
+          hash ^= confusionMetrics_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -481,6 +706,7 @@ namespace Asgt.Type {
             output.WriteRawTag(56);
             output.WriteInt32(FalseNegative);
           }
+          confusionMetrics_.WriteTo(output, _repeated_confusionMetrics_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -519,6 +745,7 @@ namespace Asgt.Type {
             output.WriteRawTag(56);
             output.WriteInt32(FalseNegative);
           }
+          confusionMetrics_.WriteTo(ref output, _repeated_confusionMetrics_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -550,6 +777,7 @@ namespace Asgt.Type {
           if (FalseNegative != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(FalseNegative);
           }
+          size += confusionMetrics_.CalculateSize(_repeated_confusionMetrics_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -583,6 +811,7 @@ namespace Asgt.Type {
           if (other.FalseNegative != 0) {
             FalseNegative = other.FalseNegative;
           }
+          confusionMetrics_.Add(other.confusionMetrics_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -626,6 +855,10 @@ namespace Asgt.Type {
                 FalseNegative = input.ReadInt32();
                 break;
               }
+              case 66: {
+                confusionMetrics_.AddEntriesFrom(input, _repeated_confusionMetrics_codec);
+                break;
+              }
             }
           }
         #endif
@@ -667,6 +900,10 @@ namespace Asgt.Type {
               }
               case 56: {
                 FalseNegative = input.ReadInt32();
+                break;
+              }
+              case 66: {
+                confusionMetrics_.AddEntriesFrom(ref input, _repeated_confusionMetrics_codec);
                 break;
               }
             }

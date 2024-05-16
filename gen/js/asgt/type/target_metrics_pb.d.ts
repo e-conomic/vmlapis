@@ -11,6 +11,11 @@ export class TargetMetrics extends jspb.Message {
   clearMetricsList(): TargetMetrics;
   addMetrics(value?: TargetMetrics.Metric, index?: number): TargetMetrics.Metric;
 
+  getClassesOrderedList(): Array<string>;
+  setClassesOrderedList(value: Array<string>): TargetMetrics;
+  clearClassesOrderedList(): TargetMetrics;
+  addClassesOrdered(value: string, index?: number): TargetMetrics;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TargetMetrics.AsObject;
   static toObject(includeInstance: boolean, msg: TargetMetrics): TargetMetrics.AsObject;
@@ -23,7 +28,29 @@ export namespace TargetMetrics {
   export type AsObject = {
     target: string,
     metricsList: Array<TargetMetrics.Metric.AsObject>,
+    classesOrderedList: Array<string>,
   }
+
+  export class ConfusionMetricRow extends jspb.Message {
+    getCountsList(): Array<number>;
+    setCountsList(value: Array<number>): ConfusionMetricRow;
+    clearCountsList(): ConfusionMetricRow;
+    addCounts(value: number, index?: number): ConfusionMetricRow;
+
+    serializeBinary(): Uint8Array;
+    toObject(includeInstance?: boolean): ConfusionMetricRow.AsObject;
+    static toObject(includeInstance: boolean, msg: ConfusionMetricRow): ConfusionMetricRow.AsObject;
+    static serializeBinaryToWriter(message: ConfusionMetricRow, writer: jspb.BinaryWriter): void;
+    static deserializeBinary(bytes: Uint8Array): ConfusionMetricRow;
+    static deserializeBinaryFromReader(message: ConfusionMetricRow, reader: jspb.BinaryReader): ConfusionMetricRow;
+  }
+
+  export namespace ConfusionMetricRow {
+    export type AsObject = {
+      countsList: Array<number>,
+    }
+  }
+
 
   export class Metric extends jspb.Message {
     getPrecision(): number;
@@ -47,6 +74,11 @@ export namespace TargetMetrics {
     getFalseNegative(): number;
     setFalseNegative(value: number): Metric;
 
+    getConfusionmetricsList(): Array<TargetMetrics.ConfusionMetricRow>;
+    setConfusionmetricsList(value: Array<TargetMetrics.ConfusionMetricRow>): Metric;
+    clearConfusionmetricsList(): Metric;
+    addConfusionmetrics(value?: TargetMetrics.ConfusionMetricRow, index?: number): TargetMetrics.ConfusionMetricRow;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Metric.AsObject;
     static toObject(includeInstance: boolean, msg: Metric): Metric.AsObject;
@@ -64,6 +96,7 @@ export namespace TargetMetrics {
       trueNegative: number,
       falsePositive: number,
       falseNegative: number,
+      confusionmetricsList: Array<TargetMetrics.ConfusionMetricRow.AsObject>,
     }
   }
 

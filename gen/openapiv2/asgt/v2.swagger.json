@@ -653,6 +653,18 @@
         }
       }
     },
+    "TargetMetricsConfusionMetricRow": {
+      "type": "object",
+      "properties": {
+        "counts": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      }
+    },
     "TargetMetricsMetric": {
       "type": "object",
       "properties": {
@@ -683,6 +695,13 @@
         "falseNegative": {
           "type": "integer",
           "format": "int32"
+        },
+        "ConfusionMetrics": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/TargetMetricsConfusionMetricRow"
+          }
         }
       }
     },
@@ -956,6 +975,12 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/TargetMetricsMetric"
+          }
+        },
+        "classesOrdered": {
+          "type": "array",
+          "items": {
+            "type": "string"
           }
         }
       }

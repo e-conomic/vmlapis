@@ -13,7 +13,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x61sgt/type/target_metrics.proto\x12\tasgt.type\"\xe4\x02\n\rTargetMetrics\x12\x16\n\x06target\x18\x01 \x01(\tR\x06target\x12\x39\n\x07metrics\x18\x02 \x03(\x0b\x32\x1f.asgt.type.TargetMetrics.MetricR\x07metrics\x1a\xff\x01\n\x06Metric\x12\x1c\n\tprecision\x18\x01 \x01(\x02R\tprecision\x12\x1e\n\nconfidence\x18\x02 \x01(\x02R\nconfidence\x12\x1f\n\x0b\x61nswer_rate\x18\x03 \x01(\x02R\nanswerRate\x12#\n\rtrue_positive\x18\x04 \x01(\x05R\x0ctruePositive\x12#\n\rtrue_negative\x18\x05 \x01(\x05R\x0ctrueNegative\x12%\n\x0e\x66\x61lse_positive\x18\x06 \x01(\x05R\rfalsePositive\x12%\n\x0e\x66\x61lse_negative\x18\x07 \x01(\x05R\rfalseNegativeB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1e\x61sgt/type/target_metrics.proto\x12\tasgt.type\"\x94\x04\n\rTargetMetrics\x12\x16\n\x06target\x18\x01 \x01(\tR\x06target\x12\x39\n\x07metrics\x18\x02 \x03(\x0b\x32\x1f.asgt.type.TargetMetrics.MetricR\x07metrics\x12\'\n\x0f\x63lasses_ordered\x18\x03 \x03(\tR\x0e\x63lassesOrdered\x1a,\n\x12\x43onfusionMetricRow\x12\x16\n\x06\x63ounts\x18\x01 \x03(\x05R\x06\x63ounts\x1a\xd8\x02\n\x06Metric\x12\x1c\n\tprecision\x18\x01 \x01(\x02R\tprecision\x12\x1e\n\nconfidence\x18\x02 \x01(\x02R\nconfidence\x12\x1f\n\x0b\x61nswer_rate\x18\x03 \x01(\x02R\nanswerRate\x12#\n\rtrue_positive\x18\x04 \x01(\x05R\x0ctruePositive\x12#\n\rtrue_negative\x18\x05 \x01(\x05R\x0ctrueNegative\x12%\n\x0e\x66\x61lse_positive\x18\x06 \x01(\x05R\rfalsePositive\x12%\n\x0e\x66\x61lse_negative\x18\x07 \x01(\x05R\rfalseNegative\x12W\n\x10\x43onfusionMetrics\x18\x08 \x03(\x0b\x32+.asgt.type.TargetMetrics.ConfusionMetricRowR\x10\x43onfusionMetricsB8Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -23,7 +23,9 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   DESCRIPTOR._options = None
   DESCRIPTOR._serialized_options = b'Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype'
   _globals['_TARGETMETRICS']._serialized_start=46
-  _globals['_TARGETMETRICS']._serialized_end=402
-  _globals['_TARGETMETRICS_METRIC']._serialized_start=147
-  _globals['_TARGETMETRICS_METRIC']._serialized_end=402
+  _globals['_TARGETMETRICS']._serialized_end=578
+  _globals['_TARGETMETRICS_CONFUSIONMETRICROW']._serialized_start=187
+  _globals['_TARGETMETRICS_CONFUSIONMETRICROW']._serialized_end=231
+  _globals['_TARGETMETRICS_METRIC']._serialized_start=234
+  _globals['_TARGETMETRICS_METRIC']._serialized_end=578
 # @@protoc_insertion_point(module_scope)

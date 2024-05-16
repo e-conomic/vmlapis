@@ -5,6 +5,10 @@ package asgt.type;
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
 message TargetMetrics {
+  message ConfusionMetricRow {
+    repeated int32 counts = 1;
+  }
+
   message Metric {
     float precision = 1;
     float confidence = 2;
@@ -13,8 +17,10 @@ message TargetMetrics {
     int32 true_negative = 5;
     int32 false_positive = 6;
     int32 false_negative = 7;
+    repeated ConfusionMetricRow ConfusionMetrics = 8;
   }
 
   string target = 1;
   repeated Metric metrics = 2;
+  repeated string classes_ordered = 3;
 }

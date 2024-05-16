@@ -18,6 +18,8 @@ private static final long serialVersionUID = 0L;
   private TargetMetrics() {
     target_ = "";
     metrics_ = java.util.Collections.emptyList();
+    classesOrdered_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -38,6 +40,602 @@ private static final long serialVersionUID = 0L;
     return ai.visma.asgt.type.TargetMetricsProto.internal_static_asgt_type_TargetMetrics_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             ai.visma.asgt.type.TargetMetrics.class, ai.visma.asgt.type.TargetMetrics.Builder.class);
+  }
+
+  public interface ConfusionMetricRowOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:asgt.type.TargetMetrics.ConfusionMetricRow)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>repeated int32 counts = 1 [json_name = "counts"];</code>
+     * @return A list containing the counts.
+     */
+    java.util.List<java.lang.Integer> getCountsList();
+    /**
+     * <code>repeated int32 counts = 1 [json_name = "counts"];</code>
+     * @return The count of counts.
+     */
+    int getCountsCount();
+    /**
+     * <code>repeated int32 counts = 1 [json_name = "counts"];</code>
+     * @param index The index of the element to return.
+     * @return The counts at the given index.
+     */
+    int getCounts(int index);
+  }
+  /**
+   * Protobuf type {@code asgt.type.TargetMetrics.ConfusionMetricRow}
+   */
+  public static final class ConfusionMetricRow extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:asgt.type.TargetMetrics.ConfusionMetricRow)
+      ConfusionMetricRowOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ConfusionMetricRow.newBuilder() to construct.
+    private ConfusionMetricRow(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ConfusionMetricRow() {
+      counts_ = emptyIntList();
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ConfusionMetricRow();
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return ai.visma.asgt.type.TargetMetricsProto.internal_static_asgt_type_TargetMetrics_ConfusionMetricRow_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return ai.visma.asgt.type.TargetMetricsProto.internal_static_asgt_type_TargetMetrics_ConfusionMetricRow_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.class, ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.Builder.class);
+    }
+
+    public static final int COUNTS_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private com.google.protobuf.Internal.IntList counts_;
+    /**
+     * <code>repeated int32 counts = 1 [json_name = "counts"];</code>
+     * @return A list containing the counts.
+     */
+    @java.lang.Override
+    public java.util.List<java.lang.Integer>
+        getCountsList() {
+      return counts_;
+    }
+    /**
+     * <code>repeated int32 counts = 1 [json_name = "counts"];</code>
+     * @return The count of counts.
+     */
+    public int getCountsCount() {
+      return counts_.size();
+    }
+    /**
+     * <code>repeated int32 counts = 1 [json_name = "counts"];</code>
+     * @param index The index of the element to return.
+     * @return The counts at the given index.
+     */
+    public int getCounts(int index) {
+      return counts_.getInt(index);
+    }
+    private int countsMemoizedSerializedSize = -1;
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      getSerializedSize();
+      if (getCountsList().size() > 0) {
+        output.writeUInt32NoTag(10);
+        output.writeUInt32NoTag(countsMemoizedSerializedSize);
+      }
+      for (int i = 0; i < counts_.size(); i++) {
+        output.writeInt32NoTag(counts_.getInt(i));
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      {
+        int dataSize = 0;
+        for (int i = 0; i < counts_.size(); i++) {
+          dataSize += com.google.protobuf.CodedOutputStream
+            .computeInt32SizeNoTag(counts_.getInt(i));
+        }
+        size += dataSize;
+        if (!getCountsList().isEmpty()) {
+          size += 1;
+          size += com.google.protobuf.CodedOutputStream
+              .computeInt32SizeNoTag(dataSize);
+        }
+        countsMemoizedSerializedSize = dataSize;
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow)) {
+        return super.equals(obj);
+      }
+      ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow other = (ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow) obj;
+
+      if (!getCountsList()
+          .equals(other.getCountsList())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (getCountsCount() > 0) {
+        hash = (37 * hash) + COUNTS_FIELD_NUMBER;
+        hash = (53 * hash) + getCountsList().hashCode();
+      }
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code asgt.type.TargetMetrics.ConfusionMetricRow}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:asgt.type.TargetMetrics.ConfusionMetricRow)
+        ai.visma.asgt.type.TargetMetrics.ConfusionMetricRowOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return ai.visma.asgt.type.TargetMetricsProto.internal_static_asgt_type_TargetMetrics_ConfusionMetricRow_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return ai.visma.asgt.type.TargetMetricsProto.internal_static_asgt_type_TargetMetrics_ConfusionMetricRow_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.class, ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.Builder.class);
+      }
+
+      // Construct using ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        counts_ = emptyIntList();
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return ai.visma.asgt.type.TargetMetricsProto.internal_static_asgt_type_TargetMetrics_ConfusionMetricRow_descriptor;
+      }
+
+      @java.lang.Override
+      public ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow getDefaultInstanceForType() {
+        return ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow build() {
+        ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow buildPartial() {
+        ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow result = new ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow(this);
+        buildPartialRepeatedFields(result);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartialRepeatedFields(ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow result) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          counts_.makeImmutable();
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.counts_ = counts_;
+      }
+
+      private void buildPartial0(ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow result) {
+        int from_bitField0_ = bitField0_;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow) {
+          return mergeFrom((ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow other) {
+        if (other == ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.getDefaultInstance()) return this;
+        if (!other.counts_.isEmpty()) {
+          if (counts_.isEmpty()) {
+            counts_ = other.counts_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureCountsIsMutable();
+            counts_.addAll(other.counts_);
+          }
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 8: {
+                int v = input.readInt32();
+                ensureCountsIsMutable();
+                counts_.addInt(v);
+                break;
+              } // case 8
+              case 10: {
+                int length = input.readRawVarint32();
+                int limit = input.pushLimit(length);
+                ensureCountsIsMutable();
+                while (input.getBytesUntilLimit() > 0) {
+                  counts_.addInt(input.readInt32());
+                }
+                input.popLimit(limit);
+                break;
+              } // case 10
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private com.google.protobuf.Internal.IntList counts_ = emptyIntList();
+      private void ensureCountsIsMutable() {
+        if (!((bitField0_ & 0x00000001) != 0)) {
+          counts_ = mutableCopy(counts_);
+          bitField0_ |= 0x00000001;
+        }
+      }
+      /**
+       * <code>repeated int32 counts = 1 [json_name = "counts"];</code>
+       * @return A list containing the counts.
+       */
+      public java.util.List<java.lang.Integer>
+          getCountsList() {
+        return ((bitField0_ & 0x00000001) != 0) ?
+                 java.util.Collections.unmodifiableList(counts_) : counts_;
+      }
+      /**
+       * <code>repeated int32 counts = 1 [json_name = "counts"];</code>
+       * @return The count of counts.
+       */
+      public int getCountsCount() {
+        return counts_.size();
+      }
+      /**
+       * <code>repeated int32 counts = 1 [json_name = "counts"];</code>
+       * @param index The index of the element to return.
+       * @return The counts at the given index.
+       */
+      public int getCounts(int index) {
+        return counts_.getInt(index);
+      }
+      /**
+       * <code>repeated int32 counts = 1 [json_name = "counts"];</code>
+       * @param index The index to set the value at.
+       * @param value The counts to set.
+       * @return This builder for chaining.
+       */
+      public Builder setCounts(
+          int index, int value) {
+
+        ensureCountsIsMutable();
+        counts_.setInt(index, value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 counts = 1 [json_name = "counts"];</code>
+       * @param value The counts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addCounts(int value) {
+
+        ensureCountsIsMutable();
+        counts_.addInt(value);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 counts = 1 [json_name = "counts"];</code>
+       * @param values The counts to add.
+       * @return This builder for chaining.
+       */
+      public Builder addAllCounts(
+          java.lang.Iterable<? extends java.lang.Integer> values) {
+        ensureCountsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, counts_);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>repeated int32 counts = 1 [json_name = "counts"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearCounts() {
+        counts_ = emptyIntList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:asgt.type.TargetMetrics.ConfusionMetricRow)
+    }
+
+    // @@protoc_insertion_point(class_scope:asgt.type.TargetMetrics.ConfusionMetricRow)
+    private static final ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow();
+    }
+
+    public static ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ConfusionMetricRow>
+        PARSER = new com.google.protobuf.AbstractParser<ConfusionMetricRow>() {
+      @java.lang.Override
+      public ConfusionMetricRow parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<ConfusionMetricRow> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ConfusionMetricRow> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
   }
 
   public interface MetricOrBuilder extends
@@ -85,6 +683,30 @@ private static final long serialVersionUID = 0L;
      * @return The falseNegative.
      */
     int getFalseNegative();
+
+    /**
+     * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+     */
+    java.util.List<ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow> 
+        getConfusionMetricsList();
+    /**
+     * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+     */
+    ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow getConfusionMetrics(int index);
+    /**
+     * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+     */
+    int getConfusionMetricsCount();
+    /**
+     * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+     */
+    java.util.List<? extends ai.visma.asgt.type.TargetMetrics.ConfusionMetricRowOrBuilder> 
+        getConfusionMetricsOrBuilderList();
+    /**
+     * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+     */
+    ai.visma.asgt.type.TargetMetrics.ConfusionMetricRowOrBuilder getConfusionMetricsOrBuilder(
+        int index);
   }
   /**
    * Protobuf type {@code asgt.type.TargetMetrics.Metric}
@@ -99,6 +721,7 @@ private static final long serialVersionUID = 0L;
       super(builder);
     }
     private Metric() {
+      confusionMetrics_ = java.util.Collections.emptyList();
     }
 
     @java.lang.Override
@@ -198,6 +821,47 @@ private static final long serialVersionUID = 0L;
       return falseNegative_;
     }
 
+    public static final int CONFUSIONMETRICS_FIELD_NUMBER = 8;
+    @SuppressWarnings("serial")
+    private java.util.List<ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow> confusionMetrics_;
+    /**
+     * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow> getConfusionMetricsList() {
+      return confusionMetrics_;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+     */
+    @java.lang.Override
+    public java.util.List<? extends ai.visma.asgt.type.TargetMetrics.ConfusionMetricRowOrBuilder> 
+        getConfusionMetricsOrBuilderList() {
+      return confusionMetrics_;
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+     */
+    @java.lang.Override
+    public int getConfusionMetricsCount() {
+      return confusionMetrics_.size();
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+     */
+    @java.lang.Override
+    public ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow getConfusionMetrics(int index) {
+      return confusionMetrics_.get(index);
+    }
+    /**
+     * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+     */
+    @java.lang.Override
+    public ai.visma.asgt.type.TargetMetrics.ConfusionMetricRowOrBuilder getConfusionMetricsOrBuilder(
+        int index) {
+      return confusionMetrics_.get(index);
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -232,6 +896,9 @@ private static final long serialVersionUID = 0L;
       }
       if (falseNegative_ != 0) {
         output.writeInt32(7, falseNegative_);
+      }
+      for (int i = 0; i < confusionMetrics_.size(); i++) {
+        output.writeMessage(8, confusionMetrics_.get(i));
       }
       getUnknownFields().writeTo(output);
     }
@@ -270,6 +937,10 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, falseNegative_);
       }
+      for (int i = 0; i < confusionMetrics_.size(); i++) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(8, confusionMetrics_.get(i));
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -302,6 +973,8 @@ private static final long serialVersionUID = 0L;
           != other.getFalsePositive()) return false;
       if (getFalseNegative()
           != other.getFalseNegative()) return false;
+      if (!getConfusionMetricsList()
+          .equals(other.getConfusionMetricsList())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -330,6 +1003,10 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getFalsePositive();
       hash = (37 * hash) + FALSE_NEGATIVE_FIELD_NUMBER;
       hash = (53 * hash) + getFalseNegative();
+      if (getConfusionMetricsCount() > 0) {
+        hash = (37 * hash) + CONFUSIONMETRICS_FIELD_NUMBER;
+        hash = (53 * hash) + getConfusionMetricsList().hashCode();
+      }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -468,6 +1145,13 @@ private static final long serialVersionUID = 0L;
         trueNegative_ = 0;
         falsePositive_ = 0;
         falseNegative_ = 0;
+        if (confusionMetricsBuilder_ == null) {
+          confusionMetrics_ = java.util.Collections.emptyList();
+        } else {
+          confusionMetrics_ = null;
+          confusionMetricsBuilder_.clear();
+        }
+        bitField0_ = (bitField0_ & ~0x00000080);
         return this;
       }
 
@@ -494,9 +1178,22 @@ private static final long serialVersionUID = 0L;
       @java.lang.Override
       public ai.visma.asgt.type.TargetMetrics.Metric buildPartial() {
         ai.visma.asgt.type.TargetMetrics.Metric result = new ai.visma.asgt.type.TargetMetrics.Metric(this);
+        buildPartialRepeatedFields(result);
         if (bitField0_ != 0) { buildPartial0(result); }
         onBuilt();
         return result;
+      }
+
+      private void buildPartialRepeatedFields(ai.visma.asgt.type.TargetMetrics.Metric result) {
+        if (confusionMetricsBuilder_ == null) {
+          if (((bitField0_ & 0x00000080) != 0)) {
+            confusionMetrics_ = java.util.Collections.unmodifiableList(confusionMetrics_);
+            bitField0_ = (bitField0_ & ~0x00000080);
+          }
+          result.confusionMetrics_ = confusionMetrics_;
+        } else {
+          result.confusionMetrics_ = confusionMetricsBuilder_.build();
+        }
       }
 
       private void buildPartial0(ai.visma.asgt.type.TargetMetrics.Metric result) {
@@ -589,6 +1286,32 @@ private static final long serialVersionUID = 0L;
         if (other.getFalseNegative() != 0) {
           setFalseNegative(other.getFalseNegative());
         }
+        if (confusionMetricsBuilder_ == null) {
+          if (!other.confusionMetrics_.isEmpty()) {
+            if (confusionMetrics_.isEmpty()) {
+              confusionMetrics_ = other.confusionMetrics_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+            } else {
+              ensureConfusionMetricsIsMutable();
+              confusionMetrics_.addAll(other.confusionMetrics_);
+            }
+            onChanged();
+          }
+        } else {
+          if (!other.confusionMetrics_.isEmpty()) {
+            if (confusionMetricsBuilder_.isEmpty()) {
+              confusionMetricsBuilder_.dispose();
+              confusionMetricsBuilder_ = null;
+              confusionMetrics_ = other.confusionMetrics_;
+              bitField0_ = (bitField0_ & ~0x00000080);
+              confusionMetricsBuilder_ = 
+                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                   getConfusionMetricsFieldBuilder() : null;
+            } else {
+              confusionMetricsBuilder_.addAllMessages(other.confusionMetrics_);
+            }
+          }
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -650,6 +1373,19 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000040;
                 break;
               } // case 56
+              case 66: {
+                ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow m =
+                    input.readMessage(
+                        ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.parser(),
+                        extensionRegistry);
+                if (confusionMetricsBuilder_ == null) {
+                  ensureConfusionMetricsIsMutable();
+                  confusionMetrics_.add(m);
+                } else {
+                  confusionMetricsBuilder_.addMessage(m);
+                }
+                break;
+              } // case 66
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -890,6 +1626,246 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private java.util.List<ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow> confusionMetrics_ =
+        java.util.Collections.emptyList();
+      private void ensureConfusionMetricsIsMutable() {
+        if (!((bitField0_ & 0x00000080) != 0)) {
+          confusionMetrics_ = new java.util.ArrayList<ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow>(confusionMetrics_);
+          bitField0_ |= 0x00000080;
+         }
+      }
+
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow, ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.Builder, ai.visma.asgt.type.TargetMetrics.ConfusionMetricRowOrBuilder> confusionMetricsBuilder_;
+
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public java.util.List<ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow> getConfusionMetricsList() {
+        if (confusionMetricsBuilder_ == null) {
+          return java.util.Collections.unmodifiableList(confusionMetrics_);
+        } else {
+          return confusionMetricsBuilder_.getMessageList();
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public int getConfusionMetricsCount() {
+        if (confusionMetricsBuilder_ == null) {
+          return confusionMetrics_.size();
+        } else {
+          return confusionMetricsBuilder_.getCount();
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow getConfusionMetrics(int index) {
+        if (confusionMetricsBuilder_ == null) {
+          return confusionMetrics_.get(index);
+        } else {
+          return confusionMetricsBuilder_.getMessage(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public Builder setConfusionMetrics(
+          int index, ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow value) {
+        if (confusionMetricsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConfusionMetricsIsMutable();
+          confusionMetrics_.set(index, value);
+          onChanged();
+        } else {
+          confusionMetricsBuilder_.setMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public Builder setConfusionMetrics(
+          int index, ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.Builder builderForValue) {
+        if (confusionMetricsBuilder_ == null) {
+          ensureConfusionMetricsIsMutable();
+          confusionMetrics_.set(index, builderForValue.build());
+          onChanged();
+        } else {
+          confusionMetricsBuilder_.setMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public Builder addConfusionMetrics(ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow value) {
+        if (confusionMetricsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConfusionMetricsIsMutable();
+          confusionMetrics_.add(value);
+          onChanged();
+        } else {
+          confusionMetricsBuilder_.addMessage(value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public Builder addConfusionMetrics(
+          int index, ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow value) {
+        if (confusionMetricsBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          ensureConfusionMetricsIsMutable();
+          confusionMetrics_.add(index, value);
+          onChanged();
+        } else {
+          confusionMetricsBuilder_.addMessage(index, value);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public Builder addConfusionMetrics(
+          ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.Builder builderForValue) {
+        if (confusionMetricsBuilder_ == null) {
+          ensureConfusionMetricsIsMutable();
+          confusionMetrics_.add(builderForValue.build());
+          onChanged();
+        } else {
+          confusionMetricsBuilder_.addMessage(builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public Builder addConfusionMetrics(
+          int index, ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.Builder builderForValue) {
+        if (confusionMetricsBuilder_ == null) {
+          ensureConfusionMetricsIsMutable();
+          confusionMetrics_.add(index, builderForValue.build());
+          onChanged();
+        } else {
+          confusionMetricsBuilder_.addMessage(index, builderForValue.build());
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public Builder addAllConfusionMetrics(
+          java.lang.Iterable<? extends ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow> values) {
+        if (confusionMetricsBuilder_ == null) {
+          ensureConfusionMetricsIsMutable();
+          com.google.protobuf.AbstractMessageLite.Builder.addAll(
+              values, confusionMetrics_);
+          onChanged();
+        } else {
+          confusionMetricsBuilder_.addAllMessages(values);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public Builder clearConfusionMetrics() {
+        if (confusionMetricsBuilder_ == null) {
+          confusionMetrics_ = java.util.Collections.emptyList();
+          bitField0_ = (bitField0_ & ~0x00000080);
+          onChanged();
+        } else {
+          confusionMetricsBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public Builder removeConfusionMetrics(int index) {
+        if (confusionMetricsBuilder_ == null) {
+          ensureConfusionMetricsIsMutable();
+          confusionMetrics_.remove(index);
+          onChanged();
+        } else {
+          confusionMetricsBuilder_.remove(index);
+        }
+        return this;
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.Builder getConfusionMetricsBuilder(
+          int index) {
+        return getConfusionMetricsFieldBuilder().getBuilder(index);
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public ai.visma.asgt.type.TargetMetrics.ConfusionMetricRowOrBuilder getConfusionMetricsOrBuilder(
+          int index) {
+        if (confusionMetricsBuilder_ == null) {
+          return confusionMetrics_.get(index);  } else {
+          return confusionMetricsBuilder_.getMessageOrBuilder(index);
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public java.util.List<? extends ai.visma.asgt.type.TargetMetrics.ConfusionMetricRowOrBuilder> 
+           getConfusionMetricsOrBuilderList() {
+        if (confusionMetricsBuilder_ != null) {
+          return confusionMetricsBuilder_.getMessageOrBuilderList();
+        } else {
+          return java.util.Collections.unmodifiableList(confusionMetrics_);
+        }
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.Builder addConfusionMetricsBuilder() {
+        return getConfusionMetricsFieldBuilder().addBuilder(
+            ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.Builder addConfusionMetricsBuilder(
+          int index) {
+        return getConfusionMetricsFieldBuilder().addBuilder(
+            index, ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.getDefaultInstance());
+      }
+      /**
+       * <code>repeated .asgt.type.TargetMetrics.ConfusionMetricRow ConfusionMetrics = 8 [json_name = "ConfusionMetrics"];</code>
+       */
+      public java.util.List<ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.Builder> 
+           getConfusionMetricsBuilderList() {
+        return getConfusionMetricsFieldBuilder().getBuilderList();
+      }
+      private com.google.protobuf.RepeatedFieldBuilderV3<
+          ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow, ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.Builder, ai.visma.asgt.type.TargetMetrics.ConfusionMetricRowOrBuilder> 
+          getConfusionMetricsFieldBuilder() {
+        if (confusionMetricsBuilder_ == null) {
+          confusionMetricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+              ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow, ai.visma.asgt.type.TargetMetrics.ConfusionMetricRow.Builder, ai.visma.asgt.type.TargetMetrics.ConfusionMetricRowOrBuilder>(
+                  confusionMetrics_,
+                  ((bitField0_ & 0x00000080) != 0),
+                  getParentForChildren(),
+                  isClean());
+          confusionMetrics_ = null;
+        }
+        return confusionMetricsBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1034,6 +2010,43 @@ private static final long serialVersionUID = 0L;
     return metrics_.get(index);
   }
 
+  public static final int CLASSES_ORDERED_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList classesOrdered_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+   * @return A list containing the classesOrdered.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getClassesOrderedList() {
+    return classesOrdered_;
+  }
+  /**
+   * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+   * @return The count of classesOrdered.
+   */
+  public int getClassesOrderedCount() {
+    return classesOrdered_.size();
+  }
+  /**
+   * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+   * @param index The index of the element to return.
+   * @return The classesOrdered at the given index.
+   */
+  public java.lang.String getClassesOrdered(int index) {
+    return classesOrdered_.get(index);
+  }
+  /**
+   * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the classesOrdered at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getClassesOrderedBytes(int index) {
+    return classesOrdered_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1054,6 +2067,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < metrics_.size(); i++) {
       output.writeMessage(2, metrics_.get(i));
     }
+    for (int i = 0; i < classesOrdered_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, classesOrdered_.getRaw(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -1069,6 +2085,14 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < metrics_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, metrics_.get(i));
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < classesOrdered_.size(); i++) {
+        dataSize += computeStringSizeNoTag(classesOrdered_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getClassesOrderedList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1089,6 +2113,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTarget())) return false;
     if (!getMetricsList()
         .equals(other.getMetricsList())) return false;
+    if (!getClassesOrderedList()
+        .equals(other.getClassesOrderedList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1105,6 +2131,10 @@ private static final long serialVersionUID = 0L;
     if (getMetricsCount() > 0) {
       hash = (37 * hash) + METRICS_FIELD_NUMBER;
       hash = (53 * hash) + getMetricsList().hashCode();
+    }
+    if (getClassesOrderedCount() > 0) {
+      hash = (37 * hash) + CLASSES_ORDERED_FIELD_NUMBER;
+      hash = (53 * hash) + getClassesOrderedList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1245,6 +2275,8 @@ private static final long serialVersionUID = 0L;
         metricsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
+      classesOrdered_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -1293,6 +2325,10 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.target_ = target_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        classesOrdered_.makeImmutable();
+        result.classesOrdered_ = classesOrdered_;
       }
     }
 
@@ -1371,6 +2407,16 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (!other.classesOrdered_.isEmpty()) {
+        if (classesOrdered_.isEmpty()) {
+          classesOrdered_ = other.classesOrdered_;
+          bitField0_ |= 0x00000004;
+        } else {
+          ensureClassesOrderedIsMutable();
+          classesOrdered_.addAll(other.classesOrdered_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1415,6 +2461,12 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
+            case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureClassesOrderedIsMutable();
+              classesOrdered_.add(s);
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1742,6 +2794,117 @@ private static final long serialVersionUID = 0L;
         metrics_ = null;
       }
       return metricsBuilder_;
+    }
+
+    private com.google.protobuf.LazyStringArrayList classesOrdered_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureClassesOrderedIsMutable() {
+      if (!classesOrdered_.isModifiable()) {
+        classesOrdered_ = new com.google.protobuf.LazyStringArrayList(classesOrdered_);
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+     * @return A list containing the classesOrdered.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getClassesOrderedList() {
+      classesOrdered_.makeImmutable();
+      return classesOrdered_;
+    }
+    /**
+     * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+     * @return The count of classesOrdered.
+     */
+    public int getClassesOrderedCount() {
+      return classesOrdered_.size();
+    }
+    /**
+     * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+     * @param index The index of the element to return.
+     * @return The classesOrdered at the given index.
+     */
+    public java.lang.String getClassesOrdered(int index) {
+      return classesOrdered_.get(index);
+    }
+    /**
+     * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the classesOrdered at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getClassesOrderedBytes(int index) {
+      return classesOrdered_.getByteString(index);
+    }
+    /**
+     * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+     * @param index The index to set the value at.
+     * @param value The classesOrdered to set.
+     * @return This builder for chaining.
+     */
+    public Builder setClassesOrdered(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureClassesOrderedIsMutable();
+      classesOrdered_.set(index, value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+     * @param value The classesOrdered to add.
+     * @return This builder for chaining.
+     */
+    public Builder addClassesOrdered(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureClassesOrderedIsMutable();
+      classesOrdered_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+     * @param values The classesOrdered to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllClassesOrdered(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureClassesOrderedIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, classesOrdered_);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearClassesOrdered() {
+      classesOrdered_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+     * @param value The bytes of the classesOrdered to add.
+     * @return This builder for chaining.
+     */
+    public Builder addClassesOrderedBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureClassesOrderedIsMutable();
+      classesOrdered_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

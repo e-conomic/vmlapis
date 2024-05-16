@@ -42,4 +42,29 @@ public interface TargetMetricsOrBuilder extends
    */
   ai.visma.asgt.type.TargetMetrics.MetricOrBuilder getMetricsOrBuilder(
       int index);
+
+  /**
+   * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+   * @return A list containing the classesOrdered.
+   */
+  java.util.List<java.lang.String>
+      getClassesOrderedList();
+  /**
+   * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+   * @return The count of classesOrdered.
+   */
+  int getClassesOrderedCount();
+  /**
+   * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+   * @param index The index of the element to return.
+   * @return The classesOrdered at the given index.
+   */
+  java.lang.String getClassesOrdered(int index);
+  /**
+   * <code>repeated string classes_ordered = 3 [json_name = "classesOrdered"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the classesOrdered at the given index.
+   */
+  com.google.protobuf.ByteString
+      getClassesOrderedBytes(int index);
 }
