@@ -27,15 +27,17 @@ class SuggestionOptions(_message.Message):
     def __init__(self, suggestion_limit: _Optional[int] = ..., min_confidence: _Optional[_Union[_prediction_pb2.Confidence.Level, str]] = ...) -> None: ...
 
 class SuggestionRequest(_message.Message):
-    __slots__ = ["name", "type", "inputs", "options", "tags"]
+    __slots__ = ["name", "type", "inputs", "options", "tags", "model"]
     NAME_FIELD_NUMBER: _ClassVar[int]
     TYPE_FIELD_NUMBER: _ClassVar[int]
     INPUTS_FIELD_NUMBER: _ClassVar[int]
     OPTIONS_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
+    MODEL_FIELD_NUMBER: _ClassVar[int]
     name: str
     type: str
     inputs: _containers.RepeatedCompositeFieldContainer[_data_pb2.Data]
     options: SuggestionOptions
     tags: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, name: _Optional[str] = ..., type: _Optional[str] = ..., inputs: _Optional[_Iterable[_Union[_data_pb2.Data, _Mapping]]] = ..., options: _Optional[_Union[SuggestionOptions, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
+    model: _model_pb2.Model
+    def __init__(self, name: _Optional[str] = ..., type: _Optional[str] = ..., inputs: _Optional[_Iterable[_Union[_data_pb2.Data, _Mapping]]] = ..., options: _Optional[_Union[SuggestionOptions, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., model: _Optional[_Union[_model_pb2.Model, _Mapping]] = ...) -> None: ...

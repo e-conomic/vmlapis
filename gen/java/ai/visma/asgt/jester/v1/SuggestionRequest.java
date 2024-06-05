@@ -225,6 +225,32 @@ private static final long serialVersionUID = 0L;
     return tags_.getByteString(index);
   }
 
+  public static final int MODEL_FIELD_NUMBER = 6;
+  private ai.visma.asgt.type.Model model_;
+  /**
+   * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+   * @return Whether the model field is set.
+   */
+  @java.lang.Override
+  public boolean hasModel() {
+    return model_ != null;
+  }
+  /**
+   * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+   * @return The model.
+   */
+  @java.lang.Override
+  public ai.visma.asgt.type.Model getModel() {
+    return model_ == null ? ai.visma.asgt.type.Model.getDefaultInstance() : model_;
+  }
+  /**
+   * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.asgt.type.ModelOrBuilder getModelOrBuilder() {
+    return model_ == null ? ai.visma.asgt.type.Model.getDefaultInstance() : model_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -253,6 +279,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < tags_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, tags_.getRaw(i));
+    }
+    if (model_ != null) {
+      output.writeMessage(6, getModel());
     }
     getUnknownFields().writeTo(output);
   }
@@ -285,6 +314,10 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getTagsList().size();
     }
+    if (model_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, getModel());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -313,6 +346,11 @@ private static final long serialVersionUID = 0L;
     }
     if (!getTagsList()
         .equals(other.getTagsList())) return false;
+    if (hasModel() != other.hasModel()) return false;
+    if (hasModel()) {
+      if (!getModel()
+          .equals(other.getModel())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -339,6 +377,10 @@ private static final long serialVersionUID = 0L;
     if (getTagsCount() > 0) {
       hash = (37 * hash) + TAGS_FIELD_NUMBER;
       hash = (53 * hash) + getTagsList().hashCode();
+    }
+    if (hasModel()) {
+      hash = (37 * hash) + MODEL_FIELD_NUMBER;
+      hash = (53 * hash) + getModel().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -487,6 +529,11 @@ private static final long serialVersionUID = 0L;
       }
       tags_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      model_ = null;
+      if (modelBuilder_ != null) {
+        modelBuilder_.dispose();
+        modelBuilder_ = null;
+      }
       return this;
     }
 
@@ -547,6 +594,11 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         tags_.makeImmutable();
         result.tags_ = tags_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.model_ = modelBuilder_ == null
+            ? model_
+            : modelBuilder_.build();
       }
     }
 
@@ -643,6 +695,9 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (other.hasModel()) {
+        mergeModel(other.getModel());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -705,6 +760,13 @@ private static final long serialVersionUID = 0L;
               tags_.add(s);
               break;
             } // case 42
+            case 50: {
+              input.readMessage(
+                  getModelFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1334,6 +1396,125 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000010;
       onChanged();
       return this;
+    }
+
+    private ai.visma.asgt.type.Model model_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.asgt.type.Model, ai.visma.asgt.type.Model.Builder, ai.visma.asgt.type.ModelOrBuilder> modelBuilder_;
+    /**
+     * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+     * @return Whether the model field is set.
+     */
+    public boolean hasModel() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+     * @return The model.
+     */
+    public ai.visma.asgt.type.Model getModel() {
+      if (modelBuilder_ == null) {
+        return model_ == null ? ai.visma.asgt.type.Model.getDefaultInstance() : model_;
+      } else {
+        return modelBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+     */
+    public Builder setModel(ai.visma.asgt.type.Model value) {
+      if (modelBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        model_ = value;
+      } else {
+        modelBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+     */
+    public Builder setModel(
+        ai.visma.asgt.type.Model.Builder builderForValue) {
+      if (modelBuilder_ == null) {
+        model_ = builderForValue.build();
+      } else {
+        modelBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+     */
+    public Builder mergeModel(ai.visma.asgt.type.Model value) {
+      if (modelBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          model_ != null &&
+          model_ != ai.visma.asgt.type.Model.getDefaultInstance()) {
+          getModelBuilder().mergeFrom(value);
+        } else {
+          model_ = value;
+        }
+      } else {
+        modelBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+     */
+    public Builder clearModel() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      model_ = null;
+      if (modelBuilder_ != null) {
+        modelBuilder_.dispose();
+        modelBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+     */
+    public ai.visma.asgt.type.Model.Builder getModelBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return getModelFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+     */
+    public ai.visma.asgt.type.ModelOrBuilder getModelOrBuilder() {
+      if (modelBuilder_ != null) {
+        return modelBuilder_.getMessageOrBuilder();
+      } else {
+        return model_ == null ?
+            ai.visma.asgt.type.Model.getDefaultInstance() : model_;
+      }
+    }
+    /**
+     * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.asgt.type.Model, ai.visma.asgt.type.Model.Builder, ai.visma.asgt.type.ModelOrBuilder> 
+        getModelFieldBuilder() {
+      if (modelBuilder_ == null) {
+        modelBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            ai.visma.asgt.type.Model, ai.visma.asgt.type.Model.Builder, ai.visma.asgt.type.ModelOrBuilder>(
+                getModel(),
+                getParentForChildren(),
+                isClean());
+        model_ = null;
+      }
+      return modelBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

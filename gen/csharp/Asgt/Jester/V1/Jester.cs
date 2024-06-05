@@ -33,26 +33,27 @@ namespace Asgt.Jester.V1 {
             "dGlvbnMSJgoFbW9kZWwYAiABKAsyEC5hc2d0LnR5cGUuTW9kZWxSBW1vZGVs",
             "IoIBChFTdWdnZXN0aW9uT3B0aW9ucxIpChBzdWdnZXN0aW9uX2xpbWl0GAEg",
             "ASgFUg9zdWdnZXN0aW9uTGltaXQSQgoObWluX2NvbmZpZGVuY2UYAiABKA4y",
-            "Gy5hc2d0LnR5cGUuQ29uZmlkZW5jZS5MZXZlbFINbWluQ29uZmlkZW5jZSK1",
+            "Gy5hc2d0LnR5cGUuQ29uZmlkZW5jZS5MZXZlbFINbWluQ29uZmlkZW5jZSLd",
             "AQoRU3VnZ2VzdGlvblJlcXVlc3QSEgoEbmFtZRgBIAEoCVIEbmFtZRISCgR0",
             "eXBlGAIgASgJUgR0eXBlEicKBmlucHV0cxgDIAMoCzIPLmFzZ3QudHlwZS5E",
             "YXRhUgZpbnB1dHMSOwoHb3B0aW9ucxgEIAEoCzIhLmFzZ3QuamVzdGVyLnYx",
             "LlN1Z2dlc3Rpb25PcHRpb25zUgdvcHRpb25zEhIKBHRhZ3MYBSADKAlSBHRh",
-            "Z3MygAEKBkplc3RlchJ2CgdTdWdnZXN0EiEuYXNndC5qZXN0ZXIudjEuU3Vn",
-            "Z2VzdGlvblJlcXVlc3QaIi5hc2d0Lmplc3Rlci52MS5TdWdnZXN0aW9uUmVz",
-            "cG9uc2UiJILT5JMCHjoBKiIZL3YxL3t0eXBlfS97bmFtZX06c3VnZ2VzdEL4",
-            "AQoXYWkudmlzbWEuYXNndC5qZXN0ZXIudjFCC0plc3RlclByb3RvUAFaOWdp",
-            "dGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvamVzdGVy",
-            "L3YxO2plc3RlcqICA0FKWKoCDkFzZ3QuSmVzdGVyLlYxygIOQXNndFxKZXN0",
-            "ZXJcVjHiAhpBc2d0XEplc3RlclxWMVxHUEJNZXRhZGF0YeoCEEFzZ3Q6Okpl",
-            "c3Rlcjo6VjGSQToSEQoLQXV0b1N1Z2dlc3QyAnYxKgECMhBhcHBsaWNhdGlv",
-            "bi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
+            "Z3MSJgoFbW9kZWwYBiABKAsyEC5hc2d0LnR5cGUuTW9kZWxSBW1vZGVsMoAB",
+            "CgZKZXN0ZXISdgoHU3VnZ2VzdBIhLmFzZ3QuamVzdGVyLnYxLlN1Z2dlc3Rp",
+            "b25SZXF1ZXN0GiIuYXNndC5qZXN0ZXIudjEuU3VnZ2VzdGlvblJlc3BvbnNl",
+            "IiSC0+STAh46ASoiGS92MS97dHlwZX0ve25hbWV9OnN1Z2dlc3RC+AEKF2Fp",
+            "LnZpc21hLmFzZ3QuamVzdGVyLnYxQgtKZXN0ZXJQcm90b1ABWjlnaXRodWIu",
+            "Y29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9hc2d0L2plc3Rlci92MTtq",
+            "ZXN0ZXKiAgNBSliqAg5Bc2d0Lkplc3Rlci5WMcoCDkFzZ3RcSmVzdGVyXFYx",
+            "4gIaQXNndFxKZXN0ZXJcVjFcR1BCTWV0YWRhdGHqAhBBc2d0OjpKZXN0ZXI6",
+            "OlYxkkE6EhEKC0F1dG9TdWdnZXN0MgJ2MSoBAjIQYXBwbGljYXRpb24vanNv",
+            "bjoQYXBwbGljYXRpb24vanNvbmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionResponse), global::Asgt.Jester.V1.SuggestionResponse.Parser, new[]{ "Predictions", "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionOptions), global::Asgt.Jester.V1.SuggestionOptions.Parser, new[]{ "SuggestionLimit", "MinConfidence" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionRequest), global::Asgt.Jester.V1.SuggestionRequest.Parser, new[]{ "Name", "Type", "Inputs", "Options", "Tags" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Jester.V1.SuggestionRequest), global::Asgt.Jester.V1.SuggestionRequest.Parser, new[]{ "Name", "Type", "Inputs", "Options", "Tags", "Model" }, null, null, null, null)
           }));
     }
     #endregion
@@ -551,6 +552,7 @@ namespace Asgt.Jester.V1 {
       inputs_ = other.inputs_.Clone();
       options_ = other.options_ != null ? other.options_.Clone() : null;
       tags_ = other.tags_.Clone();
+      model_ = other.model_ != null ? other.model_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -618,6 +620,18 @@ namespace Asgt.Jester.V1 {
       get { return tags_; }
     }
 
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 6;
+    private global::Asgt.Type.Model model_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Asgt.Type.Model Model {
+      get { return model_; }
+      set {
+        model_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -638,6 +652,7 @@ namespace Asgt.Jester.V1 {
       if(!inputs_.Equals(other.inputs_)) return false;
       if (!object.Equals(Options, other.Options)) return false;
       if(!tags_.Equals(other.tags_)) return false;
+      if (!object.Equals(Model, other.Model)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -650,6 +665,7 @@ namespace Asgt.Jester.V1 {
       hash ^= inputs_.GetHashCode();
       if (options_ != null) hash ^= Options.GetHashCode();
       hash ^= tags_.GetHashCode();
+      if (model_ != null) hash ^= Model.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -682,6 +698,10 @@ namespace Asgt.Jester.V1 {
         output.WriteMessage(Options);
       }
       tags_.WriteTo(output, _repeated_tags_codec);
+      if (model_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Model);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -706,6 +726,10 @@ namespace Asgt.Jester.V1 {
         output.WriteMessage(Options);
       }
       tags_.WriteTo(ref output, _repeated_tags_codec);
+      if (model_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Model);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -727,6 +751,9 @@ namespace Asgt.Jester.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Options);
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
+      if (model_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Model);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -753,6 +780,12 @@ namespace Asgt.Jester.V1 {
         Options.MergeFrom(other.Options);
       }
       tags_.Add(other.tags_);
+      if (other.model_ != null) {
+        if (model_ == null) {
+          Model = new global::Asgt.Type.Model();
+        }
+        Model.MergeFrom(other.Model);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -791,6 +824,13 @@ namespace Asgt.Jester.V1 {
             tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }
+          case 50: {
+            if (model_ == null) {
+              Model = new global::Asgt.Type.Model();
+            }
+            input.ReadMessage(Model);
+            break;
+          }
         }
       }
     #endif
@@ -827,6 +867,13 @@ namespace Asgt.Jester.V1 {
           }
           case 42: {
             tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 50: {
+            if (model_ == null) {
+              Model = new global::Asgt.Type.Model();
+            }
+            input.ReadMessage(Model);
             break;
           }
         }
