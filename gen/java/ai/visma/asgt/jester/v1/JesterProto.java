@@ -49,11 +49,12 @@ public final class JesterProto {
       "SuggestionOptions\022)\n\020suggestion_limit\030\001 " +
       "\001(\005R\017suggestionLimit\022B\n\016min_confidence\030\002" +
       " \001(\0162\033.asgt.type.Confidence.LevelR\rminCo" +
-      "nfidence\"\265\001\n\021SuggestionRequest\022\022\n\004name\030\001" +
+      "nfidence\"\335\001\n\021SuggestionRequest\022\022\n\004name\030\001" +
       " \001(\tR\004name\022\022\n\004type\030\002 \001(\tR\004type\022\'\n\006inputs" +
       "\030\003 \003(\0132\017.asgt.type.DataR\006inputs\022;\n\007optio" +
       "ns\030\004 \001(\0132!.asgt.jester.v1.SuggestionOpti" +
-      "onsR\007options\022\022\n\004tags\030\005 \003(\tR\004tags2\200\001\n\006Jes" +
+      "onsR\007options\022\022\n\004tags\030\005 \003(\tR\004tags\022&\n\005mode" +
+      "l\030\006 \001(\0132\020.asgt.type.ModelR\005model2\200\001\n\006Jes" +
       "ter\022v\n\007Suggest\022!.asgt.jester.v1.Suggesti" +
       "onRequest\032\".asgt.jester.v1.SuggestionRes" +
       "ponse\"$\202\323\344\223\002\036\"\031/v1/{type}/{name}:suggest" +
@@ -91,7 +92,7 @@ public final class JesterProto {
     internal_static_asgt_jester_v1_SuggestionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_jester_v1_SuggestionRequest_descriptor,
-        new java.lang.String[] { "Name", "Type", "Inputs", "Options", "Tags", });
+        new java.lang.String[] { "Name", "Type", "Inputs", "Options", "Tags", "Model", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

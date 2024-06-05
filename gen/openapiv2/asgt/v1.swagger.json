@@ -164,6 +164,9 @@
                   "items": {
                     "type": "string"
                   }
+                },
+                "model": {
+                  "$ref": "#/definitions/typeModel"
                 }
               }
             }

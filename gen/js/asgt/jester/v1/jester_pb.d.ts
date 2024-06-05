@@ -77,6 +77,11 @@ export class SuggestionRequest extends jspb.Message {
   clearTagsList(): SuggestionRequest;
   addTags(value: string, index?: number): SuggestionRequest;
 
+  getModel(): asgt_type_model_pb.Model | undefined;
+  setModel(value?: asgt_type_model_pb.Model): SuggestionRequest;
+  hasModel(): boolean;
+  clearModel(): SuggestionRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): SuggestionRequest.AsObject;
   static toObject(includeInstance: boolean, msg: SuggestionRequest): SuggestionRequest.AsObject;
@@ -92,6 +97,7 @@ export namespace SuggestionRequest {
     inputsList: Array<asgt_type_data_pb.Data.AsObject>,
     options?: SuggestionOptions.AsObject,
     tagsList: Array<string>,
+    model?: asgt_type_model_pb.Model.AsObject,
   }
 }
 

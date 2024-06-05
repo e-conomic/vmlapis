@@ -94,4 +94,19 @@ public interface SuggestionRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTagsBytes(int index);
+
+  /**
+   * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+   * @return Whether the model field is set.
+   */
+  boolean hasModel();
+  /**
+   * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+   * @return The model.
+   */
+  ai.visma.asgt.type.Model getModel();
+  /**
+   * <code>.asgt.type.Model model = 6 [json_name = "model"];</code>
+   */
+  ai.visma.asgt.type.ModelOrBuilder getModelOrBuilder();
 }

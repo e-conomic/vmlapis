@@ -512,7 +512,8 @@ proto.asgt.jester.v1.SuggestionRequest.toObject = function(includeInstance, msg)
     inputsList: jspb.Message.toObjectList(msg.getInputsList(),
     asgt_type_data_pb.Data.toObject, includeInstance),
     options: (f = msg.getOptions()) && proto.asgt.jester.v1.SuggestionOptions.toObject(includeInstance, f),
-    tagsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f
+    tagsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
+    model: (f = msg.getModel()) && asgt_type_model_pb.Model.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -570,6 +571,11 @@ proto.asgt.jester.v1.SuggestionRequest.deserializeBinaryFromReader = function(ms
     case 5:
       var value = /** @type {string} */ (reader.readString());
       msg.addTags(value);
+      break;
+    case 6:
+      var value = new asgt_type_model_pb.Model;
+      reader.readMessage(value,asgt_type_model_pb.Model.deserializeBinaryFromReader);
+      msg.setModel(value);
       break;
     default:
       reader.skipField();
@@ -635,6 +641,14 @@ proto.asgt.jester.v1.SuggestionRequest.serializeBinaryToWriter = function(messag
     writer.writeRepeatedString(
       5,
       f
+    );
+  }
+  f = message.getModel();
+  if (f != null) {
+    writer.writeMessage(
+      6,
+      f,
+      asgt_type_model_pb.Model.serializeBinaryToWriter
     );
   }
 };
@@ -785,6 +799,43 @@ proto.asgt.jester.v1.SuggestionRequest.prototype.addTags = function(value, opt_i
  */
 proto.asgt.jester.v1.SuggestionRequest.prototype.clearTagsList = function() {
   return this.setTagsList([]);
+};
+
+
+/**
+ * optional asgt.type.Model model = 6;
+ * @return {?proto.asgt.type.Model}
+ */
+proto.asgt.jester.v1.SuggestionRequest.prototype.getModel = function() {
+  return /** @type{?proto.asgt.type.Model} */ (
+    jspb.Message.getWrapperField(this, asgt_type_model_pb.Model, 6));
+};
+
+
+/**
+ * @param {?proto.asgt.type.Model|undefined} value
+ * @return {!proto.asgt.jester.v1.SuggestionRequest} returns this
+*/
+proto.asgt.jester.v1.SuggestionRequest.prototype.setModel = function(value) {
+  return jspb.Message.setWrapperField(this, 6, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.asgt.jester.v1.SuggestionRequest} returns this
+ */
+proto.asgt.jester.v1.SuggestionRequest.prototype.clearModel = function() {
+  return this.setModel(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.asgt.jester.v1.SuggestionRequest.prototype.hasModel = function() {
+  return jspb.Message.getField(this, 6) != null;
 };
 
 

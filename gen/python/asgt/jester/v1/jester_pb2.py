@@ -18,7 +18,7 @@ from vml_proto.google.api import annotations_pb2 as google_dot_api_dot_annotatio
 from vml_proto.protoc_gen_openapiv2.options import annotations_pb2 as protoc__gen__openapiv2_dot_options_dot_annotations__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x61sgt/jester/v1/jester.proto\x12\x0e\x61sgt.jester.v1\x1a\x14\x61sgt/type/data.proto\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1cgoogle/api/annotations.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\"u\n\x12SuggestionResponse\x12\x37\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.PredictionR\x0bpredictions\x12&\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.ModelR\x05model\"\x82\x01\n\x11SuggestionOptions\x12)\n\x10suggestion_limit\x18\x01 \x01(\x05R\x0fsuggestionLimit\x12\x42\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.LevelR\rminConfidence\"\xb5\x01\n\x11SuggestionRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x12\n\x04type\x18\x02 \x01(\tR\x04type\x12\'\n\x06inputs\x18\x03 \x03(\x0b\x32\x0f.asgt.type.DataR\x06inputs\x12;\n\x07options\x18\x04 \x01(\x0b\x32!.asgt.jester.v1.SuggestionOptionsR\x07options\x12\x12\n\x04tags\x18\x05 \x03(\tR\x04tags2\x80\x01\n\x06Jester\x12v\n\x07Suggest\x12!.asgt.jester.v1.SuggestionRequest\x1a\".asgt.jester.v1.SuggestionResponse\"$\x82\xd3\xe4\x93\x02\x1e\"\x19/v1/{type}/{name}:suggest:\x01*BxZ9github.com/e-conomic/vmlapis/gen/go/asgt/jester/v1;jester\x92\x41:\x12\x11\n\x0b\x41utoSuggest2\x02v1*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1b\x61sgt/jester/v1/jester.proto\x12\x0e\x61sgt.jester.v1\x1a\x14\x61sgt/type/data.proto\x1a\x15\x61sgt/type/model.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1cgoogle/api/annotations.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\"u\n\x12SuggestionResponse\x12\x37\n\x0bpredictions\x18\x01 \x03(\x0b\x32\x15.asgt.type.PredictionR\x0bpredictions\x12&\n\x05model\x18\x02 \x01(\x0b\x32\x10.asgt.type.ModelR\x05model\"\x82\x01\n\x11SuggestionOptions\x12)\n\x10suggestion_limit\x18\x01 \x01(\x05R\x0fsuggestionLimit\x12\x42\n\x0emin_confidence\x18\x02 \x01(\x0e\x32\x1b.asgt.type.Confidence.LevelR\rminConfidence\"\xdd\x01\n\x11SuggestionRequest\x12\x12\n\x04name\x18\x01 \x01(\tR\x04name\x12\x12\n\x04type\x18\x02 \x01(\tR\x04type\x12\'\n\x06inputs\x18\x03 \x03(\x0b\x32\x0f.asgt.type.DataR\x06inputs\x12;\n\x07options\x18\x04 \x01(\x0b\x32!.asgt.jester.v1.SuggestionOptionsR\x07options\x12\x12\n\x04tags\x18\x05 \x03(\tR\x04tags\x12&\n\x05model\x18\x06 \x01(\x0b\x32\x10.asgt.type.ModelR\x05model2\x80\x01\n\x06Jester\x12v\n\x07Suggest\x12!.asgt.jester.v1.SuggestionRequest\x1a\".asgt.jester.v1.SuggestionResponse\"$\x82\xd3\xe4\x93\x02\x1e\"\x19/v1/{type}/{name}:suggest:\x01*BxZ9github.com/e-conomic/vmlapis/gen/go/asgt/jester/v1;jester\x92\x41:\x12\x11\n\x0b\x41utoSuggest2\x02v1*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -34,7 +34,7 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _globals['_SUGGESTIONOPTIONS']._serialized_start=318
   _globals['_SUGGESTIONOPTIONS']._serialized_end=448
   _globals['_SUGGESTIONREQUEST']._serialized_start=451
-  _globals['_SUGGESTIONREQUEST']._serialized_end=632
-  _globals['_JESTER']._serialized_start=635
-  _globals['_JESTER']._serialized_end=763
+  _globals['_SUGGESTIONREQUEST']._serialized_end=672
+  _globals['_JESTER']._serialized_start=675
+  _globals['_JESTER']._serialized_end=803
 # @@protoc_insertion_point(module_scope)
