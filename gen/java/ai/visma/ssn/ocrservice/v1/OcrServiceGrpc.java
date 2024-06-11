@@ -111,6 +111,99 @@ public final class OcrServiceGrpc {
     return getGetTextAnnotationsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest,
+      ai.visma.ssn.ocrservice.v1.AsyncCreateOperationResponse> getAsyncCreateOperationMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AsyncCreateOperation",
+      requestType = ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest.class,
+      responseType = ai.visma.ssn.ocrservice.v1.AsyncCreateOperationResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest,
+      ai.visma.ssn.ocrservice.v1.AsyncCreateOperationResponse> getAsyncCreateOperationMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest, ai.visma.ssn.ocrservice.v1.AsyncCreateOperationResponse> getAsyncCreateOperationMethod;
+    if ((getAsyncCreateOperationMethod = OcrServiceGrpc.getAsyncCreateOperationMethod) == null) {
+      synchronized (OcrServiceGrpc.class) {
+        if ((getAsyncCreateOperationMethod = OcrServiceGrpc.getAsyncCreateOperationMethod) == null) {
+          OcrServiceGrpc.getAsyncCreateOperationMethod = getAsyncCreateOperationMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest, ai.visma.ssn.ocrservice.v1.AsyncCreateOperationResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AsyncCreateOperation"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.ocrservice.v1.AsyncCreateOperationResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OcrServiceMethodDescriptorSupplier("AsyncCreateOperation"))
+              .build();
+        }
+      }
+    }
+    return getAsyncCreateOperationMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest,
+      ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse> getAsyncGetOperationStatusMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AsyncGetOperationStatus",
+      requestType = ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest.class,
+      responseType = ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest,
+      ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse> getAsyncGetOperationStatusMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest, ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse> getAsyncGetOperationStatusMethod;
+    if ((getAsyncGetOperationStatusMethod = OcrServiceGrpc.getAsyncGetOperationStatusMethod) == null) {
+      synchronized (OcrServiceGrpc.class) {
+        if ((getAsyncGetOperationStatusMethod = OcrServiceGrpc.getAsyncGetOperationStatusMethod) == null) {
+          OcrServiceGrpc.getAsyncGetOperationStatusMethod = getAsyncGetOperationStatusMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest, ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.SERVER_STREAMING)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AsyncGetOperationStatus"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OcrServiceMethodDescriptorSupplier("AsyncGetOperationStatus"))
+              .build();
+        }
+      }
+    }
+    return getAsyncGetOperationStatusMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultRequest,
+      ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultResponse> getAsyncGetOperationResultMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AsyncGetOperationResult",
+      requestType = ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultRequest.class,
+      responseType = ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultRequest,
+      ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultResponse> getAsyncGetOperationResultMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultRequest, ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultResponse> getAsyncGetOperationResultMethod;
+    if ((getAsyncGetOperationResultMethod = OcrServiceGrpc.getAsyncGetOperationResultMethod) == null) {
+      synchronized (OcrServiceGrpc.class) {
+        if ((getAsyncGetOperationResultMethod = OcrServiceGrpc.getAsyncGetOperationResultMethod) == null) {
+          OcrServiceGrpc.getAsyncGetOperationResultMethod = getAsyncGetOperationResultMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultRequest, ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AsyncGetOperationResult"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new OcrServiceMethodDescriptorSupplier("AsyncGetOperationResult"))
+              .build();
+        }
+      }
+    }
+    return getAsyncGetOperationResultMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -182,6 +275,27 @@ public final class OcrServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetTextAnnotationsMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void asyncCreateOperation(ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.AsyncCreateOperationResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAsyncCreateOperationMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void asyncGetOperationStatus(ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAsyncGetOperationStatusMethod(), responseObserver);
+    }
+
+    /**
+     */
+    default void asyncGetOperationResult(ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAsyncGetOperationResultMethod(), responseObserver);
+    }
   }
 
   /**
@@ -240,6 +354,30 @@ public final class OcrServiceGrpc {
       io.grpc.stub.ClientCalls.asyncServerStreamingCall(
           getChannel().newCall(getGetTextAnnotationsMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void asyncCreateOperation(ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.AsyncCreateOperationResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAsyncCreateOperationMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void asyncGetOperationStatus(ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncServerStreamingCall(
+          getChannel().newCall(getAsyncGetOperationStatusMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     */
+    public void asyncGetOperationResult(ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAsyncGetOperationResultMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -282,6 +420,28 @@ public final class OcrServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
           getChannel(), getGetTextAnnotationsMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public ai.visma.ssn.ocrservice.v1.AsyncCreateOperationResponse asyncCreateOperation(ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAsyncCreateOperationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public java.util.Iterator<ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse> asyncGetOperationStatus(
+        ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingServerStreamingCall(
+          getChannel(), getAsyncGetOperationStatusMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultResponse asyncGetOperationResult(ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAsyncGetOperationResultMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -318,11 +478,30 @@ public final class OcrServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetTextAnnotationMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.ocrservice.v1.AsyncCreateOperationResponse> asyncCreateOperation(
+        ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAsyncCreateOperationMethod(), getCallOptions()), request);
+    }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultResponse> asyncGetOperationResult(
+        ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAsyncGetOperationResultMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_OCR_SCAN_IMAGE = 0;
   private static final int METHODID_GET_TEXT_ANNOTATION = 1;
   private static final int METHODID_GET_TEXT_ANNOTATIONS = 2;
+  private static final int METHODID_ASYNC_CREATE_OPERATION = 3;
+  private static final int METHODID_ASYNC_GET_OPERATION_STATUS = 4;
+  private static final int METHODID_ASYNC_GET_OPERATION_RESULT = 5;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -352,6 +531,18 @@ public final class OcrServiceGrpc {
         case METHODID_GET_TEXT_ANNOTATIONS:
           serviceImpl.getTextAnnotations((ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse>) responseObserver);
+          break;
+        case METHODID_ASYNC_CREATE_OPERATION:
+          serviceImpl.asyncCreateOperation((ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.AsyncCreateOperationResponse>) responseObserver);
+          break;
+        case METHODID_ASYNC_GET_OPERATION_STATUS:
+          serviceImpl.asyncGetOperationStatus((ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse>) responseObserver);
+          break;
+        case METHODID_ASYNC_GET_OPERATION_RESULT:
+          serviceImpl.asyncGetOperationResult((ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -392,6 +583,27 @@ public final class OcrServiceGrpc {
               ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest,
               ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse>(
                 service, METHODID_GET_TEXT_ANNOTATIONS)))
+        .addMethod(
+          getAsyncCreateOperationMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest,
+              ai.visma.ssn.ocrservice.v1.AsyncCreateOperationResponse>(
+                service, METHODID_ASYNC_CREATE_OPERATION)))
+        .addMethod(
+          getAsyncGetOperationStatusMethod(),
+          io.grpc.stub.ServerCalls.asyncServerStreamingCall(
+            new MethodHandlers<
+              ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest,
+              ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse>(
+                service, METHODID_ASYNC_GET_OPERATION_STATUS)))
+        .addMethod(
+          getAsyncGetOperationResultMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultRequest,
+              ai.visma.ssn.ocrservice.v1.AsyncGetOperationResultResponse>(
+                service, METHODID_ASYNC_GET_OPERATION_RESULT)))
         .build();
   }
 
@@ -443,6 +655,9 @@ public final class OcrServiceGrpc {
               .addMethod(getOcrScanImageMethod())
               .addMethod(getGetTextAnnotationMethod())
               .addMethod(getGetTextAnnotationsMethod())
+              .addMethod(getAsyncCreateOperationMethod())
+              .addMethod(getAsyncGetOperationStatusMethod())
+              .addMethod(getAsyncGetOperationResultMethod())
               .build();
         }
       }
