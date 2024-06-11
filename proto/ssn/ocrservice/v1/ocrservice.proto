@@ -14,6 +14,9 @@ service OcrService {
   rpc OcrScanImage(OcrScanImageRequest) returns (OcrScanImageResponse);
   rpc GetTextAnnotation(GetTextAnnotationRequest) returns (GetTextAnnotationResponse);
   rpc GetTextAnnotations(GetTextAnnotationRequest) returns (stream GetTextAnnotationResponse);
+  rpc AsyncCreateOperation(AsyncCreateOperationRequest) returns (AsyncCreateOperationResponse);
+  rpc AsyncGetOperationStatus(AsyncGetOperationStatusRequest) returns (stream AsyncGetOperationStatusResponse);
+  rpc AsyncGetOperationResult(AsyncGetOperationResultRequest) returns (AsyncGetOperationResultResponse);
 }
 
 message GetTextAnnotationRequest {
@@ -24,6 +27,33 @@ message GetTextAnnotationRequest {
 message GetTextAnnotationResponse {
   ssn.type.TextAnnotation text_annotation = 2;
   google.protobuf.BytesValue image = 3;
+}
+
+message AsyncCreateOperationRequest {
+  ssn.annotator.v1.Document document = 1;
+}
+
+message AsyncCreateOperationResponse {
+  string operation_name = 1;
+}
+
+message AsyncGetOperationStatusRequest {
+  string operation_name = 1;
+}
+
+message AsyncGetOperationStatusResponse {
+  string operation_name = 1;
+  bool done = 2;
+}
+
+message AsyncGetOperationResultRequest {
+  string operation_name = 1;
+}
+
+message AsyncGetOperationResultResponse {
+  string error = 1;
+  repeated ssn.type.TextAnnotation text_annotation = 2;
+  repeated google.protobuf.BytesValue image = 3;
 }
 
 message OcrScanImageRequest {
