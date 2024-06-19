@@ -8,6 +8,19 @@ import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/candidate.proto";
 
 
+option go_package = "github.com/e-conomic/vmlapis/gen/go/everything/transaction/v1;transaction";
+option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
+  info: {
+    title: "Everything API";
+    version: "v1";
+    description: "";
+  };
+  schemes: HTTPS;
+  consumes: "application/json";
+  produces: "application/json";
+};
+
+
 // api.{{env}}.everything.visma.ai
 // transaction = example (receipt, document, scanned invoice text, etc.)
 service TransactionService {
