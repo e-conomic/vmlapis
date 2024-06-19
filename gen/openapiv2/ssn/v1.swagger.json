@@ -321,6 +321,32 @@
         }
       }
     },
+    "typeAnswerCandidate": {
+      "type": "object",
+      "properties": {
+        "question": {
+          "type": "string",
+          "title": "Question asked in the request"
+        },
+        "answer": {
+          "type": "string",
+          "title": "Model prediction for the question"
+        },
+        "confidence": {
+          "$ref": "#/definitions/typeConfidence",
+          "title": "Confidence of the prediction"
+        },
+        "modelMetadata": {
+          "$ref": "#/definitions/typeModelSpec",
+          "title": "Model metadata"
+        },
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the candidate was found."
+        }
+      }
+    },
     "typeBlock": {
       "type": "object",
       "properties": {
@@ -537,6 +563,20 @@
       },
       "description": "Detected page from OCR."
     },
+    "typePageText": {
+      "type": "object",
+      "properties": {
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the text was found."
+        },
+        "text": {
+          "type": "string",
+          "title": "The text content of the page"
+        }
+      }
+    },
     "typeParagraph": {
       "type": "object",
       "properties": {
@@ -631,6 +671,10 @@
         "unitPrice": {
           "type": "string",
           "title": "Unit price is the unit price of the line (with/without vat)"
+        },
+        "modelMetadata": {
+          "$ref": "#/definitions/typeModelSpec",
+          "title": "Model metadata"
         }
       }
     },
@@ -818,6 +862,12 @@
           "$ref": "#/definitions/typeTier"
         },
         "segments": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "questions": {
           "type": "array",
           "items": {
             "type": "string"
@@ -1170,6 +1220,22 @@
             "$ref": "#/definitions/typePurchaseLineCandidate"
           },
           "title": "Purchase lines for the document. This is a list of candidates, where each\ncandidate is a single purchase lines. Each purchase line may have page number,\ncode, description, quantity, item number, unit, total discount, percentage discount,\ntotal incl vat, total excl vat, total vat, percentage vat, unit price incl vat,\nunit price excl vat"
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeAnswerCandidate"
+          },
+          "title": "Answer Candidates for the questions asked in th request about the document\nEach Answer is question and answer pair with page number and confidence"
+        },
+        "pageTexts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePageText"
+          },
+          "title": "The page texts of the document"
         }
       }
     },
@@ -1179,7 +1245,7 @@
         "document": {
           "$ref": "#/definitions/ssnannotatorv1Document"
         },
-        "question": {
+        "questions": {
           "type": "array",
           "items": {
             "type": "string"
@@ -1190,11 +1256,11 @@
     "v1DocumentQuestionResponse": {
       "type": "object",
       "properties": {
-        "answer": {
+        "answers": {
           "type": "array",
           "items": {
             "type": "object",
-            "$ref": "#/definitions/typeCandidate"
+            "$ref": "#/definitions/typeAnswerCandidate"
           }
         }
       }
@@ -1274,10 +1340,11 @@
         "RECEIVER_COUNTRY_CODE",
         "RECEIVER_NAME",
         "RECEIVER_VAT_NUMBER",
-        "PURCHASE_LINES"
+        "PURCHASE_LINES",
+        "PAGE_TEXTS"
       ],
       "default": "DEFAULT",
-      "title": "- DEFAULT: Run default feature set\n - TEXT_ANNOTATION: Return text annotation\n - ORDER_DATE: Run order date detection\n - PAYMENT_DUE_DATE: Run due date detection\n - CURRENCY: Run currency detection\n - TOTAL_VAT: Run total vat detection\n - TOTAL_INCL_VAT: Run total incl vat detection\n - TOTAL_EXCL_VAT: Run total excl vat detection\n - SUPPLIER_CORPORATE_ID: [DEPRECATED] Run supplier corporate id detection.\nUse SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.\n - SUPPLIER_COUNTRY_CODE: Run country code detection\n - DOCUMENT_TYPE: Run document type detection\n - PAYMENT_METHOD: Run pyment method detection\n - CREDIT_CARD_LAST_FOUR: Run credit card number detection\n - INVOICE_NUMBER: [DEPRECATED] Run invoice number detection\n - OCR_LINE_DK_TYPE: Run danish ocr line detection, for the type\n - OCR_LINE_DK_PAYMENT_ID: Run danish ocr line detection, for the payment id\n - OCR_LINE_DK_CREDITOR_ID: Run danish ocr line detection, for the creditor id\n - OCR_LINE_SE_PAYMENT_ID: Run swedish ocr line detection for the payment id\n - OCR_LINE_SE_BANKGIRO_CREDITOR_ID: Run swedish ocr line detection for the bankgiro creditor id\n - OCR_LINE_SE_PLUSGIRO_CREDITOR_ID: Run swedish ocr line detection for the plusgiro creditor id\n - OCR_LINE_NO_PAYMENT_ID: Run norwegian ocr line detection or the payment id\n - OCR_LINE_FI_PAYMENT_ID: Run finish ocr line detection or the payment id\n - OCR_LINE_NL_PAYMENT_ID: Run dutch ocr line detection for the payment id\n - OCR_LINE_BE_PAYMENT_ID: Run belgian ocr line detection for the payment id\n - TEXT: Return document text\n - IBAN: Run IBAN detection\n - LINES: Run LINES detection\n - PREVIEW: Run first page of PDF to PNG conversion\n - BANK_ACCOUNT_NUMBER: Run bank account number detection\n - BANK_REGISTRATION_NUMBER: Run bank registration number detection\n - BIC: Run business identifier code detection\n - DOCUMENT_NUMBER: Run document number detection\n - DOCUMENT_DATE: Run document date detection\n - ORDER_NUMBER: Run order number detection\n - SUPPLIER_NAME: Run supplier name detection\n - SUPPLIER_VAT_NUMBER: [EXPERIMENTAL] Run supplier VAT detection\n - SUPPLIER_ORGANISATION_NUMBER: [EXPERIMENTAL] Run supplier organisation number detection\n - SUPPLIER_ADDRESS: [EXPERIMENTAL] Run supplier address detection\n - CUSTOMER_NUMBER: [EXPERIMENTAL] Run customer identifier detection\n - RECEIVER_ORDER_NUMBER: Receiver order number\n - RECEIVER_ADDRESS: Receiver address\n - RECEIVER_COUNTRY_CODE: Receiver country code\n - RECEIVER_NAME: Receiver name\n - RECEIVER_VAT_NUMBER: Receiver VAT number\n - PURCHASE_LINES: Purchase Lines"
+      "title": "- DEFAULT: Run default feature set\n - TEXT_ANNOTATION: Return text annotation\n - ORDER_DATE: Run order date detection\n - PAYMENT_DUE_DATE: Run due date detection\n - CURRENCY: Run currency detection\n - TOTAL_VAT: Run total vat detection\n - TOTAL_INCL_VAT: Run total incl vat detection\n - TOTAL_EXCL_VAT: Run total excl vat detection\n - SUPPLIER_CORPORATE_ID: [DEPRECATED] Run supplier corporate id detection.\nUse SUPPLIER_ORGANISATION_NUMBER or SUPPLIER_VAT_NUMBER instead.\n - SUPPLIER_COUNTRY_CODE: Run country code detection\n - DOCUMENT_TYPE: Run document type detection\n - PAYMENT_METHOD: Run pyment method detection\n - CREDIT_CARD_LAST_FOUR: Run credit card number detection\n - INVOICE_NUMBER: [DEPRECATED] Run invoice number detection\n - OCR_LINE_DK_TYPE: Run danish ocr line detection, for the type\n - OCR_LINE_DK_PAYMENT_ID: Run danish ocr line detection, for the payment id\n - OCR_LINE_DK_CREDITOR_ID: Run danish ocr line detection, for the creditor id\n - OCR_LINE_SE_PAYMENT_ID: Run swedish ocr line detection for the payment id\n - OCR_LINE_SE_BANKGIRO_CREDITOR_ID: Run swedish ocr line detection for the bankgiro creditor id\n - OCR_LINE_SE_PLUSGIRO_CREDITOR_ID: Run swedish ocr line detection for the plusgiro creditor id\n - OCR_LINE_NO_PAYMENT_ID: Run norwegian ocr line detection or the payment id\n - OCR_LINE_FI_PAYMENT_ID: Run finish ocr line detection or the payment id\n - OCR_LINE_NL_PAYMENT_ID: Run dutch ocr line detection for the payment id\n - OCR_LINE_BE_PAYMENT_ID: Run belgian ocr line detection for the payment id\n - TEXT: Return document text\n - IBAN: Run IBAN detection\n - LINES: Run LINES detection\n - PREVIEW: Run first page of PDF to PNG conversion\n - BANK_ACCOUNT_NUMBER: Run bank account number detection\n - BANK_REGISTRATION_NUMBER: Run bank registration number detection\n - BIC: Run business identifier code detection\n - DOCUMENT_NUMBER: Run document number detection\n - DOCUMENT_DATE: Run document date detection\n - ORDER_NUMBER: Run order number detection\n - SUPPLIER_NAME: Run supplier name detection\n - SUPPLIER_VAT_NUMBER: [EXPERIMENTAL] Run supplier VAT detection\n - SUPPLIER_ORGANISATION_NUMBER: [EXPERIMENTAL] Run supplier organisation number detection\n - SUPPLIER_ADDRESS: [EXPERIMENTAL] Run supplier address detection\n - CUSTOMER_NUMBER: [EXPERIMENTAL] Run customer identifier detection\n - RECEIVER_ORDER_NUMBER: Receiver order number\n - RECEIVER_ADDRESS: Receiver address\n - RECEIVER_COUNTRY_CODE: Receiver country code\n - RECEIVER_NAME: Receiver name\n - RECEIVER_VAT_NUMBER: Receiver VAT number\n - PURCHASE_LINES: Purchase Lines\n - PAGE_TEXTS: Page texts"
     },
     "v1FeedbackMetrics": {
       "type": "object",
@@ -2137,6 +2204,20 @@
           "items": {
             "type": "string"
           }
+        },
+        "purchaseLines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePurchaseLineCandidate"
+          }
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeAnswerCandidate"
+          }
         }
       }
     },
@@ -2273,6 +2354,20 @@
         },
         "receiverVatNumber": {
           "type": "string"
+        },
+        "purchaseLines": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePurchaseLineCandidate"
+          }
+        },
+        "answers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeAnswerCandidate"
+          }
         }
       }
     }

@@ -317,4 +317,31 @@ public interface PurchaseLineCandidateOrBuilder extends
    */
   com.google.protobuf.ByteString
       getUnitPriceBytes();
+
+  /**
+   * <pre>
+   * Model metadata
+   * </pre>
+   *
+   * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+   * @return Whether the modelMetadata field is set.
+   */
+  boolean hasModelMetadata();
+  /**
+   * <pre>
+   * Model metadata
+   * </pre>
+   *
+   * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+   * @return The modelMetadata.
+   */
+  ai.visma.ssn.type.ModelSpec getModelMetadata();
+  /**
+   * <pre>
+   * Model metadata
+   * </pre>
+   *
+   * <code>.ssn.type.ModelSpec model_metadata = 19 [json_name = "modelMetadata"];</code>
+   */
+  ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
 }

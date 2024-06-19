@@ -580,3 +580,55 @@ export namespace PurchaseLinesResponse {
   }
 }
 
+export class DocQARequest extends jspb.Message {
+  getTextAnnotation(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
+  setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): DocQARequest;
+  hasTextAnnotation(): boolean;
+  clearTextAnnotation(): DocQARequest;
+
+  getImage(): Uint8Array | string;
+  getImage_asU8(): Uint8Array;
+  getImage_asB64(): string;
+  setImage(value: Uint8Array | string): DocQARequest;
+
+  getQuestionsList(): Array<string>;
+  setQuestionsList(value: Array<string>): DocQARequest;
+  clearQuestionsList(): DocQARequest;
+  addQuestions(value: string, index?: number): DocQARequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DocQARequest.AsObject;
+  static toObject(includeInstance: boolean, msg: DocQARequest): DocQARequest.AsObject;
+  static serializeBinaryToWriter(message: DocQARequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DocQARequest;
+  static deserializeBinaryFromReader(message: DocQARequest, reader: jspb.BinaryReader): DocQARequest;
+}
+
+export namespace DocQARequest {
+  export type AsObject = {
+    textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
+    image: Uint8Array | string,
+    questionsList: Array<string>,
+  }
+}
+
+export class DocQAResponse extends jspb.Message {
+  getAnswersList(): Array<ssn_type_candidate_pb.AnswerCandidate>;
+  setAnswersList(value: Array<ssn_type_candidate_pb.AnswerCandidate>): DocQAResponse;
+  clearAnswersList(): DocQAResponse;
+  addAnswers(value?: ssn_type_candidate_pb.AnswerCandidate, index?: number): ssn_type_candidate_pb.AnswerCandidate;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DocQAResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: DocQAResponse): DocQAResponse.AsObject;
+  static serializeBinaryToWriter(message: DocQAResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DocQAResponse;
+  static deserializeBinaryFromReader(message: DocQAResponse, reader: jspb.BinaryReader): DocQAResponse;
+}
+
+export namespace DocQAResponse {
+  export type AsObject = {
+    answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
+  }
+}
+

@@ -23,27 +23,27 @@ public interface DocumentQuestionRequestOrBuilder extends
   ai.visma.ssn.annotator.v1.DocumentOrBuilder getDocumentOrBuilder();
 
   /**
-   * <code>repeated string question = 2 [json_name = "question"];</code>
-   * @return A list containing the question.
+   * <code>repeated string questions = 2 [json_name = "questions"];</code>
+   * @return A list containing the questions.
    */
   java.util.List<java.lang.String>
-      getQuestionList();
+      getQuestionsList();
   /**
-   * <code>repeated string question = 2 [json_name = "question"];</code>
-   * @return The count of question.
+   * <code>repeated string questions = 2 [json_name = "questions"];</code>
+   * @return The count of questions.
    */
-  int getQuestionCount();
+  int getQuestionsCount();
   /**
-   * <code>repeated string question = 2 [json_name = "question"];</code>
+   * <code>repeated string questions = 2 [json_name = "questions"];</code>
    * @param index The index of the element to return.
-   * @return The question at the given index.
+   * @return The questions at the given index.
    */
-  java.lang.String getQuestion(int index);
+  java.lang.String getQuestions(int index);
   /**
-   * <code>repeated string question = 2 [json_name = "question"];</code>
+   * <code>repeated string questions = 2 [json_name = "questions"];</code>
    * @param index The index of the value to return.
-   * @return The bytes of the question at the given index.
+   * @return The bytes of the questions at the given index.
    */
   com.google.protobuf.ByteString
-      getQuestionBytes(int index);
+      getQuestionsBytes(int index);
 }

@@ -218,3 +218,19 @@ class PurchaseLinesResponse(_message.Message):
     PURCHASE_LINES_FIELD_NUMBER: _ClassVar[int]
     purchase_lines: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PurchaseLineCandidate]
     def __init__(self, purchase_lines: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ...) -> None: ...
+
+class DocQARequest(_message.Message):
+    __slots__ = ["text_annotation", "image", "questions"]
+    TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
+    IMAGE_FIELD_NUMBER: _ClassVar[int]
+    QUESTIONS_FIELD_NUMBER: _ClassVar[int]
+    text_annotation: _text_annotation_pb2.TextAnnotation
+    image: bytes
+    questions: _containers.RepeatedScalarFieldContainer[str]
+    def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[bytes] = ..., questions: _Optional[_Iterable[str]] = ...) -> None: ...
+
+class DocQAResponse(_message.Message):
+    __slots__ = ["answers"]
+    ANSWERS_FIELD_NUMBER: _ClassVar[int]
+    answers: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.AnswerCandidate]
+    def __init__(self, answers: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ...) -> None: ...

@@ -606,4 +606,52 @@ public interface TrueValuesOrBuilder extends
    * <code>.google.protobuf.StringValue receiver_vat_number = 40 [json_name = "receiverVatNumber"];</code>
    */
   com.google.protobuf.StringValueOrBuilder getReceiverVatNumberOrBuilder();
+
+  /**
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> 
+      getPurchaseLinesList();
+  /**
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
+   */
+  ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLines(int index);
+  /**
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
+   */
+  int getPurchaseLinesCount();
+  /**
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> 
+      getPurchaseLinesOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_lines = 41 [json_name = "purchaseLines"];</code>
+   */
+  ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLinesOrBuilder(
+      int index);
+
+  /**
+   * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.AnswerCandidate> 
+      getAnswersList();
+  /**
+   * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
+   */
+  ai.visma.ssn.type.AnswerCandidate getAnswers(int index);
+  /**
+   * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
+   */
+  int getAnswersCount();
+  /**
+   * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.AnswerCandidateOrBuilder> 
+      getAnswersOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.AnswerCandidate answers = 42 [json_name = "answers"];</code>
+   */
+  ai.visma.ssn.type.AnswerCandidateOrBuilder getAnswersOrBuilder(
+      int index);
 }
