@@ -51,6 +51,7 @@ all:
 
 #	descriptor (binary) generated from the service code, only needed for customer-facing services
 	buf build proto -o gen/descriptor.bin \
+		--path proto/everything/transaction/v1/transaction.proto \
 		--path proto/ssn/annotator/v1/annotator.proto \
 		--path proto/ssn/access/v1/access.proto \
 		--path proto/ssn/dataservice/v1/dataservice.proto \
