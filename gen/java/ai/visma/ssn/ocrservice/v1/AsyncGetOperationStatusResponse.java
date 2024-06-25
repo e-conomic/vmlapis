@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private AsyncGetOperationStatusResponse() {
     operationName_ = "";
+    errorMessage_ = "";
   }
 
   @java.lang.Override
@@ -89,6 +90,56 @@ private static final long serialVersionUID = 0L;
     return done_;
   }
 
+  public static final int STATUS_CODE_FIELD_NUMBER = 3;
+  private int statusCode_ = 0;
+  /**
+   * <code>int32 status_code = 3 [json_name = "statusCode"];</code>
+   * @return The statusCode.
+   */
+  @java.lang.Override
+  public int getStatusCode() {
+    return statusCode_;
+  }
+
+  public static final int ERROR_MESSAGE_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object errorMessage_ = "";
+  /**
+   * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+   * @return The errorMessage.
+   */
+  @java.lang.Override
+  public java.lang.String getErrorMessage() {
+    java.lang.Object ref = errorMessage_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      errorMessage_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+   * @return The bytes for errorMessage.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getErrorMessageBytes() {
+    java.lang.Object ref = errorMessage_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      errorMessage_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -109,6 +160,12 @@ private static final long serialVersionUID = 0L;
     if (done_ != false) {
       output.writeBool(2, done_);
     }
+    if (statusCode_ != 0) {
+      output.writeInt32(3, statusCode_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorMessage_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, errorMessage_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -124,6 +181,13 @@ private static final long serialVersionUID = 0L;
     if (done_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(2, done_);
+    }
+    if (statusCode_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt32Size(3, statusCode_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(errorMessage_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, errorMessage_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -144,6 +208,10 @@ private static final long serialVersionUID = 0L;
         .equals(other.getOperationName())) return false;
     if (getDone()
         != other.getDone()) return false;
+    if (getStatusCode()
+        != other.getStatusCode()) return false;
+    if (!getErrorMessage()
+        .equals(other.getErrorMessage())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -160,6 +228,10 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + DONE_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getDone());
+    hash = (37 * hash) + STATUS_CODE_FIELD_NUMBER;
+    hash = (53 * hash) + getStatusCode();
+    hash = (37 * hash) + ERROR_MESSAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getErrorMessage().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -293,6 +365,8 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       operationName_ = "";
       done_ = false;
+      statusCode_ = 0;
+      errorMessage_ = "";
       return this;
     }
 
@@ -331,6 +405,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.done_ = done_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.statusCode_ = statusCode_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.errorMessage_ = errorMessage_;
       }
     }
 
@@ -386,6 +466,14 @@ private static final long serialVersionUID = 0L;
       if (other.getDone() != false) {
         setDone(other.getDone());
       }
+      if (other.getStatusCode() != 0) {
+        setStatusCode(other.getStatusCode());
+      }
+      if (!other.getErrorMessage().isEmpty()) {
+        errorMessage_ = other.errorMessage_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -422,6 +510,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 16
+            case 24: {
+              statusCode_ = input.readInt32();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
+            case 34: {
+              errorMessage_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -539,6 +637,110 @@ private static final long serialVersionUID = 0L;
     public Builder clearDone() {
       bitField0_ = (bitField0_ & ~0x00000002);
       done_ = false;
+      onChanged();
+      return this;
+    }
+
+    private int statusCode_ ;
+    /**
+     * <code>int32 status_code = 3 [json_name = "statusCode"];</code>
+     * @return The statusCode.
+     */
+    @java.lang.Override
+    public int getStatusCode() {
+      return statusCode_;
+    }
+    /**
+     * <code>int32 status_code = 3 [json_name = "statusCode"];</code>
+     * @param value The statusCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStatusCode(int value) {
+
+      statusCode_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int32 status_code = 3 [json_name = "statusCode"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStatusCode() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      statusCode_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object errorMessage_ = "";
+    /**
+     * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+     * @return The errorMessage.
+     */
+    public java.lang.String getErrorMessage() {
+      java.lang.Object ref = errorMessage_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        errorMessage_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+     * @return The bytes for errorMessage.
+     */
+    public com.google.protobuf.ByteString
+        getErrorMessageBytes() {
+      java.lang.Object ref = errorMessage_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        errorMessage_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+     * @param value The errorMessage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setErrorMessage(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      errorMessage_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearErrorMessage() {
+      errorMessage_ = getDefaultInstance().getErrorMessage();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+     * @param value The bytes for errorMessage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setErrorMessageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      errorMessage_ = value;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }

@@ -57,26 +57,6 @@ func (mr *MockOcrServiceClientMockRecorder) AsyncCreateOperation(ctx, in interfa
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncCreateOperation", reflect.TypeOf((*MockOcrServiceClient)(nil).AsyncCreateOperation), varargs...)
 }
 
-// AsyncGetOperationResult mocks base method.
-func (m *MockOcrServiceClient) AsyncGetOperationResult(ctx context.Context, in *ocrservice.AsyncGetOperationResultRequest, opts ...grpc.CallOption) (*ocrservice.AsyncGetOperationResultResponse, error) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{ctx, in}
-	for _, a := range opts {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "AsyncGetOperationResult", varargs...)
-	ret0, _ := ret[0].(*ocrservice.AsyncGetOperationResultResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// AsyncGetOperationResult indicates an expected call of AsyncGetOperationResult.
-func (mr *MockOcrServiceClientMockRecorder) AsyncGetOperationResult(ctx, in interface{}, opts ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{ctx, in}, opts...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncGetOperationResult", reflect.TypeOf((*MockOcrServiceClient)(nil).AsyncGetOperationResult), varargs...)
-}
-
 // AsyncGetOperationStatus mocks base method.
 func (m *MockOcrServiceClient) AsyncGetOperationStatus(ctx context.Context, in *ocrservice.AsyncGetOperationStatusRequest, opts ...grpc.CallOption) (ocrservice.OcrService_AsyncGetOperationStatusClient, error) {
 	m.ctrl.T.Helper()
@@ -439,21 +419,6 @@ func (m *MockOcrServiceServer) AsyncCreateOperation(arg0 context.Context, arg1 *
 func (mr *MockOcrServiceServerMockRecorder) AsyncCreateOperation(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncCreateOperation", reflect.TypeOf((*MockOcrServiceServer)(nil).AsyncCreateOperation), arg0, arg1)
-}
-
-// AsyncGetOperationResult mocks base method.
-func (m *MockOcrServiceServer) AsyncGetOperationResult(arg0 context.Context, arg1 *ocrservice.AsyncGetOperationResultRequest) (*ocrservice.AsyncGetOperationResultResponse, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "AsyncGetOperationResult", arg0, arg1)
-	ret0, _ := ret[0].(*ocrservice.AsyncGetOperationResultResponse)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// AsyncGetOperationResult indicates an expected call of AsyncGetOperationResult.
-func (mr *MockOcrServiceServerMockRecorder) AsyncGetOperationResult(arg0, arg1 interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncGetOperationResult", reflect.TypeOf((*MockOcrServiceServer)(nil).AsyncGetOperationResult), arg0, arg1)
 }
 
 // AsyncGetOperationStatus mocks base method.

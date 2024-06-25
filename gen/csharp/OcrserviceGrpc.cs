@@ -64,10 +64,6 @@ namespace Ssn.Ocrservice.V1 {
     static readonly grpc::Marshaller<global::Ssn.Ocrservice.V1.AsyncGetOperationStatusRequest> __Marshaller_ssn_ocrservice_v1_AsyncGetOperationStatusRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Ocrservice.V1.AsyncGetOperationStatusRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ssn.Ocrservice.V1.AsyncGetOperationStatusResponse> __Marshaller_ssn_ocrservice_v1_AsyncGetOperationStatusResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Ocrservice.V1.AsyncGetOperationStatusResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Ssn.Ocrservice.V1.AsyncGetOperationResultRequest> __Marshaller_ssn_ocrservice_v1_AsyncGetOperationResultRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Ocrservice.V1.AsyncGetOperationResultRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Ssn.Ocrservice.V1.AsyncGetOperationResultResponse> __Marshaller_ssn_ocrservice_v1_AsyncGetOperationResultResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Ocrservice.V1.AsyncGetOperationResultResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ssn.Ocrservice.V1.OcrScanImageRequest, global::Ssn.Ocrservice.V1.OcrScanImageResponse> __Method_OcrScanImage = new grpc::Method<global::Ssn.Ocrservice.V1.OcrScanImageRequest, global::Ssn.Ocrservice.V1.OcrScanImageResponse>(
@@ -109,14 +105,6 @@ namespace Ssn.Ocrservice.V1 {
         __Marshaller_ssn_ocrservice_v1_AsyncGetOperationStatusRequest,
         __Marshaller_ssn_ocrservice_v1_AsyncGetOperationStatusResponse);
 
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Ssn.Ocrservice.V1.AsyncGetOperationResultRequest, global::Ssn.Ocrservice.V1.AsyncGetOperationResultResponse> __Method_AsyncGetOperationResult = new grpc::Method<global::Ssn.Ocrservice.V1.AsyncGetOperationResultRequest, global::Ssn.Ocrservice.V1.AsyncGetOperationResultResponse>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "AsyncGetOperationResult",
-        __Marshaller_ssn_ocrservice_v1_AsyncGetOperationResultRequest,
-        __Marshaller_ssn_ocrservice_v1_AsyncGetOperationResultResponse);
-
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -153,12 +141,6 @@ namespace Ssn.Ocrservice.V1 {
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task AsyncGetOperationStatus(global::Ssn.Ocrservice.V1.AsyncGetOperationStatusRequest request, grpc::IServerStreamWriter<global::Ssn.Ocrservice.V1.AsyncGetOperationStatusResponse> responseStream, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Ssn.Ocrservice.V1.AsyncGetOperationResultResponse> AsyncGetOperationResult(global::Ssn.Ocrservice.V1.AsyncGetOperationResultRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -272,26 +254,6 @@ namespace Ssn.Ocrservice.V1 {
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_AsyncGetOperationStatus, null, options, request);
       }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Ssn.Ocrservice.V1.AsyncGetOperationResultResponse AsyncGetOperationResult(global::Ssn.Ocrservice.V1.AsyncGetOperationResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return AsyncGetOperationResult(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Ssn.Ocrservice.V1.AsyncGetOperationResultResponse AsyncGetOperationResult(global::Ssn.Ocrservice.V1.AsyncGetOperationResultRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_AsyncGetOperationResult, null, options, request);
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Ssn.Ocrservice.V1.AsyncGetOperationResultResponse> AsyncGetOperationResultAsync(global::Ssn.Ocrservice.V1.AsyncGetOperationResultRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return AsyncGetOperationResultAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Ssn.Ocrservice.V1.AsyncGetOperationResultResponse> AsyncGetOperationResultAsync(global::Ssn.Ocrservice.V1.AsyncGetOperationResultRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_AsyncGetOperationResult, null, options, request);
-      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override OcrServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -310,8 +272,7 @@ namespace Ssn.Ocrservice.V1 {
           .AddMethod(__Method_GetTextAnnotation, serviceImpl.GetTextAnnotation)
           .AddMethod(__Method_GetTextAnnotations, serviceImpl.GetTextAnnotations)
           .AddMethod(__Method_AsyncCreateOperation, serviceImpl.AsyncCreateOperation)
-          .AddMethod(__Method_AsyncGetOperationStatus, serviceImpl.AsyncGetOperationStatus)
-          .AddMethod(__Method_AsyncGetOperationResult, serviceImpl.AsyncGetOperationResult).Build();
+          .AddMethod(__Method_AsyncGetOperationStatus, serviceImpl.AsyncGetOperationStatus).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -326,7 +287,6 @@ namespace Ssn.Ocrservice.V1 {
       serviceBinder.AddMethod(__Method_GetTextAnnotations, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ssn.Ocrservice.V1.GetTextAnnotationRequest, global::Ssn.Ocrservice.V1.GetTextAnnotationResponse>(serviceImpl.GetTextAnnotations));
       serviceBinder.AddMethod(__Method_AsyncCreateOperation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Ocrservice.V1.AsyncCreateOperationRequest, global::Ssn.Ocrservice.V1.AsyncCreateOperationResponse>(serviceImpl.AsyncCreateOperation));
       serviceBinder.AddMethod(__Method_AsyncGetOperationStatus, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Ssn.Ocrservice.V1.AsyncGetOperationStatusRequest, global::Ssn.Ocrservice.V1.AsyncGetOperationStatusResponse>(serviceImpl.AsyncGetOperationStatus));
-      serviceBinder.AddMethod(__Method_AsyncGetOperationResult, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Ocrservice.V1.AsyncGetOperationResultRequest, global::Ssn.Ocrservice.V1.AsyncGetOperationResultResponse>(serviceImpl.AsyncGetOperationResult));
     }
 
   }

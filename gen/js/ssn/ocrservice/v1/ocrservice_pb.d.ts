@@ -56,10 +56,13 @@ export namespace GetTextAnnotationResponse {
 }
 
 export class AsyncCreateOperationRequest extends jspb.Message {
-  getDocument(): ssn_annotator_v1_annotator_pb.Document | undefined;
-  setDocument(value?: ssn_annotator_v1_annotator_pb.Document): AsyncCreateOperationRequest;
-  hasDocument(): boolean;
-  clearDocument(): AsyncCreateOperationRequest;
+  getInputPathsList(): Array<string>;
+  setInputPathsList(value: Array<string>): AsyncCreateOperationRequest;
+  clearInputPathsList(): AsyncCreateOperationRequest;
+  addInputPaths(value: string, index?: number): AsyncCreateOperationRequest;
+
+  getOutputPath(): string;
+  setOutputPath(value: string): AsyncCreateOperationRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AsyncCreateOperationRequest.AsObject;
@@ -71,7 +74,8 @@ export class AsyncCreateOperationRequest extends jspb.Message {
 
 export namespace AsyncCreateOperationRequest {
   export type AsObject = {
-    document?: ssn_annotator_v1_annotator_pb.Document.AsObject,
+    inputPathsList: Array<string>,
+    outputPath: string,
   }
 }
 
@@ -118,6 +122,12 @@ export class AsyncGetOperationStatusResponse extends jspb.Message {
   getDone(): boolean;
   setDone(value: boolean): AsyncGetOperationStatusResponse;
 
+  getStatusCode(): number;
+  setStatusCode(value: number): AsyncGetOperationStatusResponse;
+
+  getErrorMessage(): string;
+  setErrorMessage(value: string): AsyncGetOperationStatusResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AsyncGetOperationStatusResponse.AsObject;
   static toObject(includeInstance: boolean, msg: AsyncGetOperationStatusResponse): AsyncGetOperationStatusResponse.AsObject;
@@ -130,54 +140,8 @@ export namespace AsyncGetOperationStatusResponse {
   export type AsObject = {
     operationName: string,
     done: boolean,
-  }
-}
-
-export class AsyncGetOperationResultRequest extends jspb.Message {
-  getOperationName(): string;
-  setOperationName(value: string): AsyncGetOperationResultRequest;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): AsyncGetOperationResultRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: AsyncGetOperationResultRequest): AsyncGetOperationResultRequest.AsObject;
-  static serializeBinaryToWriter(message: AsyncGetOperationResultRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): AsyncGetOperationResultRequest;
-  static deserializeBinaryFromReader(message: AsyncGetOperationResultRequest, reader: jspb.BinaryReader): AsyncGetOperationResultRequest;
-}
-
-export namespace AsyncGetOperationResultRequest {
-  export type AsObject = {
-    operationName: string,
-  }
-}
-
-export class AsyncGetOperationResultResponse extends jspb.Message {
-  getError(): string;
-  setError(value: string): AsyncGetOperationResultResponse;
-
-  getTextAnnotationList(): Array<ssn_type_text_annotation_pb.TextAnnotation>;
-  setTextAnnotationList(value: Array<ssn_type_text_annotation_pb.TextAnnotation>): AsyncGetOperationResultResponse;
-  clearTextAnnotationList(): AsyncGetOperationResultResponse;
-  addTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation, index?: number): ssn_type_text_annotation_pb.TextAnnotation;
-
-  getImageList(): Array<google_protobuf_wrappers_pb.BytesValue>;
-  setImageList(value: Array<google_protobuf_wrappers_pb.BytesValue>): AsyncGetOperationResultResponse;
-  clearImageList(): AsyncGetOperationResultResponse;
-  addImage(value?: google_protobuf_wrappers_pb.BytesValue, index?: number): google_protobuf_wrappers_pb.BytesValue;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): AsyncGetOperationResultResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: AsyncGetOperationResultResponse): AsyncGetOperationResultResponse.AsObject;
-  static serializeBinaryToWriter(message: AsyncGetOperationResultResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): AsyncGetOperationResultResponse;
-  static deserializeBinaryFromReader(message: AsyncGetOperationResultResponse, reader: jspb.BinaryReader): AsyncGetOperationResultResponse;
-}
-
-export namespace AsyncGetOperationResultResponse {
-  export type AsObject = {
-    error: string,
-    textAnnotationList: Array<ssn_type_text_annotation_pb.TextAnnotation.AsObject>,
-    imageList: Array<google_protobuf_wrappers_pb.BytesValue.AsObject>,
+    statusCode: number,
+    errorMessage: string,
   }
 }
 

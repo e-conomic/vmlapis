@@ -24,4 +24,22 @@ public interface AsyncGetOperationStatusResponseOrBuilder extends
    * @return The done.
    */
   boolean getDone();
+
+  /**
+   * <code>int32 status_code = 3 [json_name = "statusCode"];</code>
+   * @return The statusCode.
+   */
+  int getStatusCode();
+
+  /**
+   * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+   * @return The errorMessage.
+   */
+  java.lang.String getErrorMessage();
+  /**
+   * <code>string error_message = 4 [json_name = "errorMessage"];</code>
+   * @return The bytes for errorMessage.
+   */
+  com.google.protobuf.ByteString
+      getErrorMessageBytes();
 }

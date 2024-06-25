@@ -8,17 +8,39 @@ public interface AsyncCreateOperationRequestOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
-   * @return Whether the document field is set.
+   * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+   * @return A list containing the inputPaths.
    */
-  boolean hasDocument();
+  java.util.List<java.lang.String>
+      getInputPathsList();
   /**
-   * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
-   * @return The document.
+   * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+   * @return The count of inputPaths.
    */
-  ai.visma.ssn.annotator.v1.Document getDocument();
+  int getInputPathsCount();
   /**
-   * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
+   * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+   * @param index The index of the element to return.
+   * @return The inputPaths at the given index.
    */
-  ai.visma.ssn.annotator.v1.DocumentOrBuilder getDocumentOrBuilder();
+  java.lang.String getInputPaths(int index);
+  /**
+   * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the inputPaths at the given index.
+   */
+  com.google.protobuf.ByteString
+      getInputPathsBytes(int index);
+
+  /**
+   * <code>string output_path = 2 [json_name = "outputPath"];</code>
+   * @return The outputPath.
+   */
+  java.lang.String getOutputPath();
+  /**
+   * <code>string output_path = 2 [json_name = "outputPath"];</code>
+   * @return The bytes for outputPath.
+   */
+  com.google.protobuf.ByteString
+      getOutputPathBytes();
 }

@@ -16,6 +16,9 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private AsyncCreateOperationRequest() {
+    inputPaths_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    outputPath_ = "";
   }
 
   @java.lang.Override
@@ -38,30 +41,80 @@ private static final long serialVersionUID = 0L;
             ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest.class, ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest.Builder.class);
   }
 
-  public static final int DOCUMENT_FIELD_NUMBER = 1;
-  private ai.visma.ssn.annotator.v1.Document document_;
+  public static final int INPUT_PATHS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList inputPaths_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
   /**
-   * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
-   * @return Whether the document field is set.
+   * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+   * @return A list containing the inputPaths.
    */
-  @java.lang.Override
-  public boolean hasDocument() {
-    return document_ != null;
+  public com.google.protobuf.ProtocolStringList
+      getInputPathsList() {
+    return inputPaths_;
   }
   /**
-   * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
-   * @return The document.
+   * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+   * @return The count of inputPaths.
    */
-  @java.lang.Override
-  public ai.visma.ssn.annotator.v1.Document getDocument() {
-    return document_ == null ? ai.visma.ssn.annotator.v1.Document.getDefaultInstance() : document_;
+  public int getInputPathsCount() {
+    return inputPaths_.size();
   }
   /**
-   * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
+   * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+   * @param index The index of the element to return.
+   * @return The inputPaths at the given index.
+   */
+  public java.lang.String getInputPaths(int index) {
+    return inputPaths_.get(index);
+  }
+  /**
+   * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the inputPaths at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getInputPathsBytes(int index) {
+    return inputPaths_.getByteString(index);
+  }
+
+  public static final int OUTPUT_PATH_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object outputPath_ = "";
+  /**
+   * <code>string output_path = 2 [json_name = "outputPath"];</code>
+   * @return The outputPath.
    */
   @java.lang.Override
-  public ai.visma.ssn.annotator.v1.DocumentOrBuilder getDocumentOrBuilder() {
-    return document_ == null ? ai.visma.ssn.annotator.v1.Document.getDefaultInstance() : document_;
+  public java.lang.String getOutputPath() {
+    java.lang.Object ref = outputPath_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      outputPath_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string output_path = 2 [json_name = "outputPath"];</code>
+   * @return The bytes for outputPath.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getOutputPathBytes() {
+    java.lang.Object ref = outputPath_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      outputPath_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -78,8 +131,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (document_ != null) {
-      output.writeMessage(1, getDocument());
+    for (int i = 0; i < inputPaths_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, inputPaths_.getRaw(i));
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputPath_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, outputPath_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -90,9 +146,16 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (document_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getDocument());
+    {
+      int dataSize = 0;
+      for (int i = 0; i < inputPaths_.size(); i++) {
+        dataSize += computeStringSizeNoTag(inputPaths_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getInputPathsList().size();
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputPath_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, outputPath_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -109,11 +172,10 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest other = (ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest) obj;
 
-    if (hasDocument() != other.hasDocument()) return false;
-    if (hasDocument()) {
-      if (!getDocument()
-          .equals(other.getDocument())) return false;
-    }
+    if (!getInputPathsList()
+        .equals(other.getInputPathsList())) return false;
+    if (!getOutputPath()
+        .equals(other.getOutputPath())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -125,10 +187,12 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasDocument()) {
-      hash = (37 * hash) + DOCUMENT_FIELD_NUMBER;
-      hash = (53 * hash) + getDocument().hashCode();
+    if (getInputPathsCount() > 0) {
+      hash = (37 * hash) + INPUT_PATHS_FIELD_NUMBER;
+      hash = (53 * hash) + getInputPathsList().hashCode();
     }
+    hash = (37 * hash) + OUTPUT_PATH_FIELD_NUMBER;
+    hash = (53 * hash) + getOutputPath().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -260,11 +324,9 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      document_ = null;
-      if (documentBuilder_ != null) {
-        documentBuilder_.dispose();
-        documentBuilder_ = null;
-      }
+      inputPaths_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
+      outputPath_ = "";
       return this;
     }
 
@@ -299,9 +361,11 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.document_ = documentBuilder_ == null
-            ? document_
-            : documentBuilder_.build();
+        inputPaths_.makeImmutable();
+        result.inputPaths_ = inputPaths_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.outputPath_ = outputPath_;
       }
     }
 
@@ -349,8 +413,20 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest other) {
       if (other == ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest.getDefaultInstance()) return this;
-      if (other.hasDocument()) {
-        mergeDocument(other.getDocument());
+      if (!other.inputPaths_.isEmpty()) {
+        if (inputPaths_.isEmpty()) {
+          inputPaths_ = other.inputPaths_;
+          bitField0_ |= 0x00000001;
+        } else {
+          ensureInputPathsIsMutable();
+          inputPaths_.addAll(other.inputPaths_);
+        }
+        onChanged();
+      }
+      if (!other.getOutputPath().isEmpty()) {
+        outputPath_ = other.outputPath_;
+        bitField0_ |= 0x00000002;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -379,12 +455,16 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              input.readMessage(
-                  getDocumentFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureInputPathsIsMutable();
+              inputPaths_.add(s);
               break;
             } // case 10
+            case 18: {
+              outputPath_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -402,123 +482,187 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private ai.visma.ssn.annotator.v1.Document document_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        ai.visma.ssn.annotator.v1.Document, ai.visma.ssn.annotator.v1.Document.Builder, ai.visma.ssn.annotator.v1.DocumentOrBuilder> documentBuilder_;
-    /**
-     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
-     * @return Whether the document field is set.
-     */
-    public boolean hasDocument() {
-      return ((bitField0_ & 0x00000001) != 0);
+    private com.google.protobuf.LazyStringArrayList inputPaths_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureInputPathsIsMutable() {
+      if (!inputPaths_.isModifiable()) {
+        inputPaths_ = new com.google.protobuf.LazyStringArrayList(inputPaths_);
+      }
+      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
-     * @return The document.
+     * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+     * @return A list containing the inputPaths.
      */
-    public ai.visma.ssn.annotator.v1.Document getDocument() {
-      if (documentBuilder_ == null) {
-        return document_ == null ? ai.visma.ssn.annotator.v1.Document.getDefaultInstance() : document_;
-      } else {
-        return documentBuilder_.getMessage();
-      }
+    public com.google.protobuf.ProtocolStringList
+        getInputPathsList() {
+      inputPaths_.makeImmutable();
+      return inputPaths_;
     }
     /**
-     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
+     * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+     * @return The count of inputPaths.
      */
-    public Builder setDocument(ai.visma.ssn.annotator.v1.Document value) {
-      if (documentBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        document_ = value;
-      } else {
-        documentBuilder_.setMessage(value);
-      }
+    public int getInputPathsCount() {
+      return inputPaths_.size();
+    }
+    /**
+     * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+     * @param index The index of the element to return.
+     * @return The inputPaths at the given index.
+     */
+    public java.lang.String getInputPaths(int index) {
+      return inputPaths_.get(index);
+    }
+    /**
+     * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the inputPaths at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getInputPathsBytes(int index) {
+      return inputPaths_.getByteString(index);
+    }
+    /**
+     * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+     * @param index The index to set the value at.
+     * @param value The inputPaths to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInputPaths(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureInputPathsIsMutable();
+      inputPaths_.set(index, value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
+     * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+     * @param value The inputPaths to add.
+     * @return This builder for chaining.
      */
-    public Builder setDocument(
-        ai.visma.ssn.annotator.v1.Document.Builder builderForValue) {
-      if (documentBuilder_ == null) {
-        document_ = builderForValue.build();
-      } else {
-        documentBuilder_.setMessage(builderForValue.build());
-      }
+    public Builder addInputPaths(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureInputPathsIsMutable();
+      inputPaths_.add(value);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
+     * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+     * @param values The inputPaths to add.
+     * @return This builder for chaining.
      */
-    public Builder mergeDocument(ai.visma.ssn.annotator.v1.Document value) {
-      if (documentBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          document_ != null &&
-          document_ != ai.visma.ssn.annotator.v1.Document.getDefaultInstance()) {
-          getDocumentBuilder().mergeFrom(value);
-        } else {
-          document_ = value;
-        }
-      } else {
-        documentBuilder_.mergeFrom(value);
-      }
+    public Builder addAllInputPaths(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureInputPathsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, inputPaths_);
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
+     * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+     * @return This builder for chaining.
      */
-    public Builder clearDocument() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      document_ = null;
-      if (documentBuilder_ != null) {
-        documentBuilder_.dispose();
-        documentBuilder_ = null;
-      }
+    public Builder clearInputPaths() {
+      inputPaths_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000001);;
       onChanged();
       return this;
     }
     /**
-     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
+     * <code>repeated string input_paths = 1 [json_name = "inputPaths"];</code>
+     * @param value The bytes of the inputPaths to add.
+     * @return This builder for chaining.
      */
-    public ai.visma.ssn.annotator.v1.Document.Builder getDocumentBuilder() {
+    public Builder addInputPathsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureInputPathsIsMutable();
+      inputPaths_.add(value);
       bitField0_ |= 0x00000001;
       onChanged();
-      return getDocumentFieldBuilder().getBuilder();
+      return this;
     }
+
+    private java.lang.Object outputPath_ = "";
     /**
-     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
+     * <code>string output_path = 2 [json_name = "outputPath"];</code>
+     * @return The outputPath.
      */
-    public ai.visma.ssn.annotator.v1.DocumentOrBuilder getDocumentOrBuilder() {
-      if (documentBuilder_ != null) {
-        return documentBuilder_.getMessageOrBuilder();
+    public java.lang.String getOutputPath() {
+      java.lang.Object ref = outputPath_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        outputPath_ = s;
+        return s;
       } else {
-        return document_ == null ?
-            ai.visma.ssn.annotator.v1.Document.getDefaultInstance() : document_;
+        return (java.lang.String) ref;
       }
     }
     /**
-     * <code>.ssn.annotator.v1.Document document = 1 [json_name = "document"];</code>
+     * <code>string output_path = 2 [json_name = "outputPath"];</code>
+     * @return The bytes for outputPath.
      */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        ai.visma.ssn.annotator.v1.Document, ai.visma.ssn.annotator.v1.Document.Builder, ai.visma.ssn.annotator.v1.DocumentOrBuilder> 
-        getDocumentFieldBuilder() {
-      if (documentBuilder_ == null) {
-        documentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            ai.visma.ssn.annotator.v1.Document, ai.visma.ssn.annotator.v1.Document.Builder, ai.visma.ssn.annotator.v1.DocumentOrBuilder>(
-                getDocument(),
-                getParentForChildren(),
-                isClean());
-        document_ = null;
+    public com.google.protobuf.ByteString
+        getOutputPathBytes() {
+      java.lang.Object ref = outputPath_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        outputPath_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
       }
-      return documentBuilder_;
+    }
+    /**
+     * <code>string output_path = 2 [json_name = "outputPath"];</code>
+     * @param value The outputPath to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOutputPath(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      outputPath_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string output_path = 2 [json_name = "outputPath"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearOutputPath() {
+      outputPath_ = getDefaultInstance().getOutputPath();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string output_path = 2 [json_name = "outputPath"];</code>
+     * @param value The bytes for outputPath to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOutputPathBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      outputPath_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

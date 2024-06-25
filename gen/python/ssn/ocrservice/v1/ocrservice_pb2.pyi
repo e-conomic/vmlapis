@@ -25,10 +25,12 @@ class GetTextAnnotationResponse(_message.Message):
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[_Union[_wrappers_pb2.BytesValue, _Mapping]] = ...) -> None: ...
 
 class AsyncCreateOperationRequest(_message.Message):
-    __slots__ = ["document"]
-    DOCUMENT_FIELD_NUMBER: _ClassVar[int]
-    document: _annotator_pb2.Document
-    def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ...) -> None: ...
+    __slots__ = ["input_paths", "output_path"]
+    INPUT_PATHS_FIELD_NUMBER: _ClassVar[int]
+    OUTPUT_PATH_FIELD_NUMBER: _ClassVar[int]
+    input_paths: _containers.RepeatedScalarFieldContainer[str]
+    output_path: str
+    def __init__(self, input_paths: _Optional[_Iterable[str]] = ..., output_path: _Optional[str] = ...) -> None: ...
 
 class AsyncCreateOperationResponse(_message.Message):
     __slots__ = ["operation_name"]
@@ -43,28 +45,16 @@ class AsyncGetOperationStatusRequest(_message.Message):
     def __init__(self, operation_name: _Optional[str] = ...) -> None: ...
 
 class AsyncGetOperationStatusResponse(_message.Message):
-    __slots__ = ["operation_name", "done"]
+    __slots__ = ["operation_name", "done", "status_code", "error_message"]
     OPERATION_NAME_FIELD_NUMBER: _ClassVar[int]
     DONE_FIELD_NUMBER: _ClassVar[int]
+    STATUS_CODE_FIELD_NUMBER: _ClassVar[int]
+    ERROR_MESSAGE_FIELD_NUMBER: _ClassVar[int]
     operation_name: str
     done: bool
-    def __init__(self, operation_name: _Optional[str] = ..., done: bool = ...) -> None: ...
-
-class AsyncGetOperationResultRequest(_message.Message):
-    __slots__ = ["operation_name"]
-    OPERATION_NAME_FIELD_NUMBER: _ClassVar[int]
-    operation_name: str
-    def __init__(self, operation_name: _Optional[str] = ...) -> None: ...
-
-class AsyncGetOperationResultResponse(_message.Message):
-    __slots__ = ["error", "text_annotation", "image"]
-    ERROR_FIELD_NUMBER: _ClassVar[int]
-    TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
-    IMAGE_FIELD_NUMBER: _ClassVar[int]
-    error: str
-    text_annotation: _containers.RepeatedCompositeFieldContainer[_text_annotation_pb2.TextAnnotation]
-    image: _containers.RepeatedCompositeFieldContainer[_wrappers_pb2.BytesValue]
-    def __init__(self, error: _Optional[str] = ..., text_annotation: _Optional[_Iterable[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]]] = ..., image: _Optional[_Iterable[_Union[_wrappers_pb2.BytesValue, _Mapping]]] = ...) -> None: ...
+    status_code: int
+    error_message: str
+    def __init__(self, operation_name: _Optional[str] = ..., done: bool = ..., status_code: _Optional[int] = ..., error_message: _Optional[str] = ...) -> None: ...
 
 class OcrScanImageRequest(_message.Message):
     __slots__ = ["data"]

@@ -33,54 +33,45 @@ namespace Ssn.Ocrservice.V1 {
             "dFRleHRBbm5vdGF0aW9uUmVzcG9uc2USQQoPdGV4dF9hbm5vdGF0aW9uGAIg",
             "ASgLMhguc3NuLnR5cGUuVGV4dEFubm90YXRpb25SDnRleHRBbm5vdGF0aW9u",
             "EjEKBWltYWdlGAMgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkJ5dGVzVmFsdWVS",
-            "BWltYWdlIlUKG0FzeW5jQ3JlYXRlT3BlcmF0aW9uUmVxdWVzdBI2Cghkb2N1",
-            "bWVudBgBIAEoCzIaLnNzbi5hbm5vdGF0b3IudjEuRG9jdW1lbnRSCGRvY3Vt",
-            "ZW50IkUKHEFzeW5jQ3JlYXRlT3BlcmF0aW9uUmVzcG9uc2USJQoOb3BlcmF0",
-            "aW9uX25hbWUYASABKAlSDW9wZXJhdGlvbk5hbWUiRwoeQXN5bmNHZXRPcGVy",
-            "YXRpb25TdGF0dXNSZXF1ZXN0EiUKDm9wZXJhdGlvbl9uYW1lGAEgASgJUg1v",
-            "cGVyYXRpb25OYW1lIlwKH0FzeW5jR2V0T3BlcmF0aW9uU3RhdHVzUmVzcG9u",
-            "c2USJQoOb3BlcmF0aW9uX25hbWUYASABKAlSDW9wZXJhdGlvbk5hbWUSEgoE",
-            "ZG9uZRgCIAEoCFIEZG9uZSJHCh5Bc3luY0dldE9wZXJhdGlvblJlc3VsdFJl",
-            "cXVlc3QSJQoOb3BlcmF0aW9uX25hbWUYASABKAlSDW9wZXJhdGlvbk5hbWUi",
-            "rQEKH0FzeW5jR2V0T3BlcmF0aW9uUmVzdWx0UmVzcG9uc2USFAoFZXJyb3IY",
-            "ASABKAlSBWVycm9yEkEKD3RleHRfYW5ub3RhdGlvbhgCIAMoCzIYLnNzbi50",
-            "eXBlLlRleHRBbm5vdGF0aW9uUg50ZXh0QW5ub3RhdGlvbhIxCgVpbWFnZRgD",
-            "IAMoCzIbLmdvb2dsZS5wcm90b2J1Zi5CeXRlc1ZhbHVlUgVpbWFnZSIpChNP",
-            "Y3JTY2FuSW1hZ2VSZXF1ZXN0EhIKBGRhdGEYASABKAxSBGRhdGEiMwoUT2Ny",
-            "U2NhbkltYWdlUmVzcG9uc2USGwoJdGVzc19ob2NyGAEgASgJUgh0ZXNzSG9j",
-            "cjLRBQoKT2NyU2VydmljZRJfCgxPY3JTY2FuSW1hZ2USJi5zc24ub2Nyc2Vy",
-            "dmljZS52MS5PY3JTY2FuSW1hZ2VSZXF1ZXN0Gicuc3NuLm9jcnNlcnZpY2Uu",
-            "djEuT2NyU2NhbkltYWdlUmVzcG9uc2USbgoRR2V0VGV4dEFubm90YXRpb24S",
-            "Ky5zc24ub2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3RhdGlvblJlcXVlc3Qa",
-            "LC5zc24ub2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3RhdGlvblJlc3BvbnNl",
-            "EnEKEkdldFRleHRBbm5vdGF0aW9ucxIrLnNzbi5vY3JzZXJ2aWNlLnYxLkdl",
-            "dFRleHRBbm5vdGF0aW9uUmVxdWVzdBosLnNzbi5vY3JzZXJ2aWNlLnYxLkdl",
-            "dFRleHRBbm5vdGF0aW9uUmVzcG9uc2UwARJ3ChRBc3luY0NyZWF0ZU9wZXJh",
-            "dGlvbhIuLnNzbi5vY3JzZXJ2aWNlLnYxLkFzeW5jQ3JlYXRlT3BlcmF0aW9u",
-            "UmVxdWVzdBovLnNzbi5vY3JzZXJ2aWNlLnYxLkFzeW5jQ3JlYXRlT3BlcmF0",
-            "aW9uUmVzcG9uc2USggEKF0FzeW5jR2V0T3BlcmF0aW9uU3RhdHVzEjEuc3Nu",
-            "Lm9jcnNlcnZpY2UudjEuQXN5bmNHZXRPcGVyYXRpb25TdGF0dXNSZXF1ZXN0",
-            "GjIuc3NuLm9jcnNlcnZpY2UudjEuQXN5bmNHZXRPcGVyYXRpb25TdGF0dXNS",
-            "ZXNwb25zZTABEoABChdBc3luY0dldE9wZXJhdGlvblJlc3VsdBIxLnNzbi5v",
-            "Y3JzZXJ2aWNlLnYxLkFzeW5jR2V0T3BlcmF0aW9uUmVzdWx0UmVxdWVzdBoy",
-            "LnNzbi5vY3JzZXJ2aWNlLnYxLkFzeW5jR2V0T3BlcmF0aW9uUmVzdWx0UmVz",
-            "cG9uc2VC1QEKGmFpLnZpc21hLnNzbi5vY3JzZXJ2aWNlLnYxQg9PY3JzZXJ2",
-            "aWNlUHJvdG9QAVpAZ2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4v",
-            "Z28vc3NuL29jcnNlcnZpY2UvdjE7b2Nyc2VydmljZaICA1NPWKoCEVNzbi5P",
-            "Y3JzZXJ2aWNlLlYxygIRU3NuXE9jcnNlcnZpY2VcVjHiAh1Tc25cT2Nyc2Vy",
-            "dmljZVxWMVxHUEJNZXRhZGF0YeoCE1Nzbjo6T2Nyc2VydmljZTo6VjFiBnBy",
-            "b3RvMw=="));
+            "BWltYWdlIl8KG0FzeW5jQ3JlYXRlT3BlcmF0aW9uUmVxdWVzdBIfCgtpbnB1",
+            "dF9wYXRocxgBIAMoCVIKaW5wdXRQYXRocxIfCgtvdXRwdXRfcGF0aBgCIAEo",
+            "CVIKb3V0cHV0UGF0aCJFChxBc3luY0NyZWF0ZU9wZXJhdGlvblJlc3BvbnNl",
+            "EiUKDm9wZXJhdGlvbl9uYW1lGAEgASgJUg1vcGVyYXRpb25OYW1lIkcKHkFz",
+            "eW5jR2V0T3BlcmF0aW9uU3RhdHVzUmVxdWVzdBIlCg5vcGVyYXRpb25fbmFt",
+            "ZRgBIAEoCVINb3BlcmF0aW9uTmFtZSKiAQofQXN5bmNHZXRPcGVyYXRpb25T",
+            "dGF0dXNSZXNwb25zZRIlCg5vcGVyYXRpb25fbmFtZRgBIAEoCVINb3BlcmF0",
+            "aW9uTmFtZRISCgRkb25lGAIgASgIUgRkb25lEh8KC3N0YXR1c19jb2RlGAMg",
+            "ASgFUgpzdGF0dXNDb2RlEiMKDWVycm9yX21lc3NhZ2UYBCABKAlSDGVycm9y",
+            "TWVzc2FnZSIpChNPY3JTY2FuSW1hZ2VSZXF1ZXN0EhIKBGRhdGEYASABKAxS",
+            "BGRhdGEiMwoUT2NyU2NhbkltYWdlUmVzcG9uc2USGwoJdGVzc19ob2NyGAEg",
+            "ASgJUgh0ZXNzSG9jcjLOBAoKT2NyU2VydmljZRJfCgxPY3JTY2FuSW1hZ2US",
+            "Ji5zc24ub2Nyc2VydmljZS52MS5PY3JTY2FuSW1hZ2VSZXF1ZXN0Gicuc3Nu",
+            "Lm9jcnNlcnZpY2UudjEuT2NyU2NhbkltYWdlUmVzcG9uc2USbgoRR2V0VGV4",
+            "dEFubm90YXRpb24SKy5zc24ub2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3Rh",
+            "dGlvblJlcXVlc3QaLC5zc24ub2Nyc2VydmljZS52MS5HZXRUZXh0QW5ub3Rh",
+            "dGlvblJlc3BvbnNlEnEKEkdldFRleHRBbm5vdGF0aW9ucxIrLnNzbi5vY3Jz",
+            "ZXJ2aWNlLnYxLkdldFRleHRBbm5vdGF0aW9uUmVxdWVzdBosLnNzbi5vY3Jz",
+            "ZXJ2aWNlLnYxLkdldFRleHRBbm5vdGF0aW9uUmVzcG9uc2UwARJ3ChRBc3lu",
+            "Y0NyZWF0ZU9wZXJhdGlvbhIuLnNzbi5vY3JzZXJ2aWNlLnYxLkFzeW5jQ3Jl",
+            "YXRlT3BlcmF0aW9uUmVxdWVzdBovLnNzbi5vY3JzZXJ2aWNlLnYxLkFzeW5j",
+            "Q3JlYXRlT3BlcmF0aW9uUmVzcG9uc2USggEKF0FzeW5jR2V0T3BlcmF0aW9u",
+            "U3RhdHVzEjEuc3NuLm9jcnNlcnZpY2UudjEuQXN5bmNHZXRPcGVyYXRpb25T",
+            "dGF0dXNSZXF1ZXN0GjIuc3NuLm9jcnNlcnZpY2UudjEuQXN5bmNHZXRPcGVy",
+            "YXRpb25TdGF0dXNSZXNwb25zZTABQtUBChphaS52aXNtYS5zc24ub2Nyc2Vy",
+            "dmljZS52MUIPT2Nyc2VydmljZVByb3RvUAFaQGdpdGh1Yi5jb20vZS1jb25v",
+            "bWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi9vY3JzZXJ2aWNlL3YxO29jcnNlcnZp",
+            "Y2WiAgNTT1iqAhFTc24uT2Nyc2VydmljZS5WMcoCEVNzblxPY3JzZXJ2aWNl",
+            "XFYx4gIdU3NuXE9jcnNlcnZpY2VcVjFcR1BCTWV0YWRhdGHqAhNTc246Ok9j",
+            "cnNlcnZpY2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationRequest), global::Ssn.Ocrservice.V1.GetTextAnnotationRequest.Parser, new[]{ "Document", "Preview" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.GetTextAnnotationResponse), global::Ssn.Ocrservice.V1.GetTextAnnotationResponse.Parser, new[]{ "TextAnnotation", "Image" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.AsyncCreateOperationRequest), global::Ssn.Ocrservice.V1.AsyncCreateOperationRequest.Parser, new[]{ "Document" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.AsyncCreateOperationRequest), global::Ssn.Ocrservice.V1.AsyncCreateOperationRequest.Parser, new[]{ "InputPaths", "OutputPath" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.AsyncCreateOperationResponse), global::Ssn.Ocrservice.V1.AsyncCreateOperationResponse.Parser, new[]{ "OperationName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.AsyncGetOperationStatusRequest), global::Ssn.Ocrservice.V1.AsyncGetOperationStatusRequest.Parser, new[]{ "OperationName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.AsyncGetOperationStatusResponse), global::Ssn.Ocrservice.V1.AsyncGetOperationStatusResponse.Parser, new[]{ "OperationName", "Done" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.AsyncGetOperationResultRequest), global::Ssn.Ocrservice.V1.AsyncGetOperationResultRequest.Parser, new[]{ "OperationName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.AsyncGetOperationResultResponse), global::Ssn.Ocrservice.V1.AsyncGetOperationResultResponse.Parser, new[]{ "Error", "TextAnnotation", "Image" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.AsyncGetOperationStatusResponse), global::Ssn.Ocrservice.V1.AsyncGetOperationStatusResponse.Parser, new[]{ "OperationName", "Done", "StatusCode", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageRequest), global::Ssn.Ocrservice.V1.OcrScanImageRequest.Parser, new[]{ "Data" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Ocrservice.V1.OcrScanImageResponse), global::Ssn.Ocrservice.V1.OcrScanImageResponse.Parser, new[]{ "TessHocr" }, null, null, null, null)
           }));
@@ -601,7 +592,8 @@ namespace Ssn.Ocrservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AsyncCreateOperationRequest(AsyncCreateOperationRequest other) : this() {
-      document_ = other.document_ != null ? other.document_.Clone() : null;
+      inputPaths_ = other.inputPaths_.Clone();
+      outputPath_ = other.outputPath_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -611,15 +603,26 @@ namespace Ssn.Ocrservice.V1 {
       return new AsyncCreateOperationRequest(this);
     }
 
-    /// <summary>Field number for the "document" field.</summary>
-    public const int DocumentFieldNumber = 1;
-    private global::Ssn.Annotator.V1.Document document_;
+    /// <summary>Field number for the "input_paths" field.</summary>
+    public const int InputPathsFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_inputPaths_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> inputPaths_ = new pbc::RepeatedField<string>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Annotator.V1.Document Document {
-      get { return document_; }
+    public pbc::RepeatedField<string> InputPaths {
+      get { return inputPaths_; }
+    }
+
+    /// <summary>Field number for the "output_path" field.</summary>
+    public const int OutputPathFieldNumber = 2;
+    private string outputPath_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OutputPath {
+      get { return outputPath_; }
       set {
-        document_ = value;
+        outputPath_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -638,7 +641,8 @@ namespace Ssn.Ocrservice.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Document, other.Document)) return false;
+      if(!inputPaths_.Equals(other.inputPaths_)) return false;
+      if (OutputPath != other.OutputPath) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -646,7 +650,8 @@ namespace Ssn.Ocrservice.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (document_ != null) hash ^= Document.GetHashCode();
+      hash ^= inputPaths_.GetHashCode();
+      if (OutputPath.Length != 0) hash ^= OutputPath.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -665,9 +670,10 @@ namespace Ssn.Ocrservice.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (document_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Document);
+      inputPaths_.WriteTo(output, _repeated_inputPaths_codec);
+      if (OutputPath.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(OutputPath);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -679,9 +685,10 @@ namespace Ssn.Ocrservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (document_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Document);
+      inputPaths_.WriteTo(ref output, _repeated_inputPaths_codec);
+      if (OutputPath.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(OutputPath);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -693,8 +700,9 @@ namespace Ssn.Ocrservice.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (document_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Document);
+      size += inputPaths_.CalculateSize(_repeated_inputPaths_codec);
+      if (OutputPath.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OutputPath);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -708,11 +716,9 @@ namespace Ssn.Ocrservice.V1 {
       if (other == null) {
         return;
       }
-      if (other.document_ != null) {
-        if (document_ == null) {
-          Document = new global::Ssn.Annotator.V1.Document();
-        }
-        Document.MergeFrom(other.Document);
+      inputPaths_.Add(other.inputPaths_);
+      if (other.OutputPath.Length != 0) {
+        OutputPath = other.OutputPath;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -730,10 +736,11 @@ namespace Ssn.Ocrservice.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (document_ == null) {
-              Document = new global::Ssn.Annotator.V1.Document();
-            }
-            input.ReadMessage(Document);
+            inputPaths_.AddEntriesFrom(input, _repeated_inputPaths_codec);
+            break;
+          }
+          case 18: {
+            OutputPath = input.ReadString();
             break;
           }
         }
@@ -752,10 +759,11 @@ namespace Ssn.Ocrservice.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (document_ == null) {
-              Document = new global::Ssn.Annotator.V1.Document();
-            }
-            input.ReadMessage(Document);
+            inputPaths_.AddEntriesFrom(ref input, _repeated_inputPaths_codec);
+            break;
+          }
+          case 18: {
+            OutputPath = input.ReadString();
             break;
           }
         }
@@ -1179,6 +1187,8 @@ namespace Ssn.Ocrservice.V1 {
     public AsyncGetOperationStatusResponse(AsyncGetOperationStatusResponse other) : this() {
       operationName_ = other.operationName_;
       done_ = other.done_;
+      statusCode_ = other.statusCode_;
+      errorMessage_ = other.errorMessage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1212,6 +1222,30 @@ namespace Ssn.Ocrservice.V1 {
       }
     }
 
+    /// <summary>Field number for the "status_code" field.</summary>
+    public const int StatusCodeFieldNumber = 3;
+    private int statusCode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int StatusCode {
+      get { return statusCode_; }
+      set {
+        statusCode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_message" field.</summary>
+    public const int ErrorMessageFieldNumber = 4;
+    private string errorMessage_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1229,6 +1263,8 @@ namespace Ssn.Ocrservice.V1 {
       }
       if (OperationName != other.OperationName) return false;
       if (Done != other.Done) return false;
+      if (StatusCode != other.StatusCode) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1238,6 +1274,8 @@ namespace Ssn.Ocrservice.V1 {
       int hash = 1;
       if (OperationName.Length != 0) hash ^= OperationName.GetHashCode();
       if (Done != false) hash ^= Done.GetHashCode();
+      if (StatusCode != 0) hash ^= StatusCode.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1264,6 +1302,14 @@ namespace Ssn.Ocrservice.V1 {
         output.WriteRawTag(16);
         output.WriteBool(Done);
       }
+      if (StatusCode != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(StatusCode);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ErrorMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1282,6 +1328,14 @@ namespace Ssn.Ocrservice.V1 {
         output.WriteRawTag(16);
         output.WriteBool(Done);
       }
+      if (StatusCode != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(StatusCode);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ErrorMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1297,6 +1351,12 @@ namespace Ssn.Ocrservice.V1 {
       }
       if (Done != false) {
         size += 1 + 1;
+      }
+      if (StatusCode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StatusCode);
+      }
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1316,6 +1376,12 @@ namespace Ssn.Ocrservice.V1 {
       if (other.Done != false) {
         Done = other.Done;
       }
+      if (other.StatusCode != 0) {
+        StatusCode = other.StatusCode;
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1339,6 +1405,14 @@ namespace Ssn.Ocrservice.V1 {
             Done = input.ReadBool();
             break;
           }
+          case 24: {
+            StatusCode = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1362,434 +1436,12 @@ namespace Ssn.Ocrservice.V1 {
             Done = input.ReadBool();
             break;
           }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class AsyncGetOperationResultRequest : pb::IMessage<AsyncGetOperationResultRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<AsyncGetOperationResultRequest> _parser = new pb::MessageParser<AsyncGetOperationResultRequest>(() => new AsyncGetOperationResultRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<AsyncGetOperationResultRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Ocrservice.V1.OcrserviceReflection.Descriptor.MessageTypes[6]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AsyncGetOperationResultRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AsyncGetOperationResultRequest(AsyncGetOperationResultRequest other) : this() {
-      operationName_ = other.operationName_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AsyncGetOperationResultRequest Clone() {
-      return new AsyncGetOperationResultRequest(this);
-    }
-
-    /// <summary>Field number for the "operation_name" field.</summary>
-    public const int OperationNameFieldNumber = 1;
-    private string operationName_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string OperationName {
-      get { return operationName_; }
-      set {
-        operationName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as AsyncGetOperationResultRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(AsyncGetOperationResultRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (OperationName != other.OperationName) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (OperationName.Length != 0) hash ^= OperationName.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (OperationName.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(OperationName);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (OperationName.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(OperationName);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (OperationName.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(OperationName);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(AsyncGetOperationResultRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.OperationName.Length != 0) {
-        OperationName = other.OperationName;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            OperationName = input.ReadString();
+          case 24: {
+            StatusCode = input.ReadInt32();
             break;
           }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            OperationName = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  public sealed partial class AsyncGetOperationResultResponse : pb::IMessage<AsyncGetOperationResultResponse>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<AsyncGetOperationResultResponse> _parser = new pb::MessageParser<AsyncGetOperationResultResponse>(() => new AsyncGetOperationResultResponse());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<AsyncGetOperationResultResponse> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Ocrservice.V1.OcrserviceReflection.Descriptor.MessageTypes[7]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AsyncGetOperationResultResponse() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AsyncGetOperationResultResponse(AsyncGetOperationResultResponse other) : this() {
-      error_ = other.error_;
-      textAnnotation_ = other.textAnnotation_.Clone();
-      image_ = other.image_.Clone();
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public AsyncGetOperationResultResponse Clone() {
-      return new AsyncGetOperationResultResponse(this);
-    }
-
-    /// <summary>Field number for the "error" field.</summary>
-    public const int ErrorFieldNumber = 1;
-    private string error_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Error {
-      get { return error_; }
-      set {
-        error_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "text_annotation" field.</summary>
-    public const int TextAnnotationFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Ssn.Type.TextAnnotation> _repeated_textAnnotation_codec
-        = pb::FieldCodec.ForMessage(18, global::Ssn.Type.TextAnnotation.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Type.TextAnnotation> textAnnotation_ = new pbc::RepeatedField<global::Ssn.Type.TextAnnotation>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Type.TextAnnotation> TextAnnotation {
-      get { return textAnnotation_; }
-    }
-
-    /// <summary>Field number for the "image" field.</summary>
-    public const int ImageFieldNumber = 3;
-    private static readonly pb::FieldCodec<pb::ByteString> _repeated_image_codec
-        = pb::FieldCodec.ForClassWrapper<pb::ByteString>(26);
-    private readonly pbc::RepeatedField<pb::ByteString> image_ = new pbc::RepeatedField<pb::ByteString>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<pb::ByteString> Image {
-      get { return image_; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as AsyncGetOperationResultResponse);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(AsyncGetOperationResultResponse other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Error != other.Error) return false;
-      if(!textAnnotation_.Equals(other.textAnnotation_)) return false;
-      if(!image_.Equals(other.image_)) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Error.Length != 0) hash ^= Error.GetHashCode();
-      hash ^= textAnnotation_.GetHashCode();
-      hash ^= image_.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Error.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Error);
-      }
-      textAnnotation_.WriteTo(output, _repeated_textAnnotation_codec);
-      image_.WriteTo(output, _repeated_image_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Error.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Error);
-      }
-      textAnnotation_.WriteTo(ref output, _repeated_textAnnotation_codec);
-      image_.WriteTo(ref output, _repeated_image_codec);
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Error.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Error);
-      }
-      size += textAnnotation_.CalculateSize(_repeated_textAnnotation_codec);
-      size += image_.CalculateSize(_repeated_image_codec);
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(AsyncGetOperationResultResponse other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Error.Length != 0) {
-        Error = other.Error;
-      }
-      textAnnotation_.Add(other.textAnnotation_);
-      image_.Add(other.image_);
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Error = input.ReadString();
-            break;
-          }
-          case 18: {
-            textAnnotation_.AddEntriesFrom(input, _repeated_textAnnotation_codec);
-            break;
-          }
-          case 26: {
-            image_.AddEntriesFrom(input, _repeated_image_codec);
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Error = input.ReadString();
-            break;
-          }
-          case 18: {
-            textAnnotation_.AddEntriesFrom(ref input, _repeated_textAnnotation_codec);
-            break;
-          }
-          case 26: {
-            image_.AddEntriesFrom(ref input, _repeated_image_codec);
+          case 34: {
+            ErrorMessage = input.ReadString();
             break;
           }
         }
@@ -1813,7 +1465,7 @@ namespace Ssn.Ocrservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Ocrservice.V1.OcrserviceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Ssn.Ocrservice.V1.OcrserviceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2002,7 +1654,7 @@ namespace Ssn.Ocrservice.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Ssn.Ocrservice.V1.OcrserviceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Ssn.Ocrservice.V1.OcrserviceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
