@@ -260,5 +260,122 @@ proto.ssn.ocrservice.v1.OcrServicePromiseClient.prototype.getTextAnnotations =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.ocrservice.v1.AsyncCreateOperationRequest,
+ *   !proto.ssn.ocrservice.v1.AsyncCreateOperationResponse>}
+ */
+const methodDescriptor_OcrService_AsyncCreateOperation = new grpc.web.MethodDescriptor(
+  '/ssn.ocrservice.v1.OcrService/AsyncCreateOperation',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.ocrservice.v1.AsyncCreateOperationRequest,
+  proto.ssn.ocrservice.v1.AsyncCreateOperationResponse,
+  /**
+   * @param {!proto.ssn.ocrservice.v1.AsyncCreateOperationRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.ocrservice.v1.AsyncCreateOperationResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.ocrservice.v1.AsyncCreateOperationRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.ocrservice.v1.AsyncCreateOperationResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.ocrservice.v1.AsyncCreateOperationResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.ocrservice.v1.OcrServiceClient.prototype.asyncCreateOperation =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.ocrservice.v1.OcrService/AsyncCreateOperation',
+      request,
+      metadata || {},
+      methodDescriptor_OcrService_AsyncCreateOperation,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.ocrservice.v1.AsyncCreateOperationRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.ocrservice.v1.AsyncCreateOperationResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.ocrservice.v1.OcrServicePromiseClient.prototype.asyncCreateOperation =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.ocrservice.v1.OcrService/AsyncCreateOperation',
+      request,
+      metadata || {},
+      methodDescriptor_OcrService_AsyncCreateOperation);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.ocrservice.v1.AsyncGetOperationStatusRequest,
+ *   !proto.ssn.ocrservice.v1.AsyncGetOperationStatusResponse>}
+ */
+const methodDescriptor_OcrService_AsyncGetOperationStatus = new grpc.web.MethodDescriptor(
+  '/ssn.ocrservice.v1.OcrService/AsyncGetOperationStatus',
+  grpc.web.MethodType.SERVER_STREAMING,
+  proto.ssn.ocrservice.v1.AsyncGetOperationStatusRequest,
+  proto.ssn.ocrservice.v1.AsyncGetOperationStatusResponse,
+  /**
+   * @param {!proto.ssn.ocrservice.v1.AsyncGetOperationStatusRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.ocrservice.v1.AsyncGetOperationStatusResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.ocrservice.v1.AsyncGetOperationStatusRequest} request The request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.ocrservice.v1.AsyncGetOperationStatusResponse>}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.ocrservice.v1.OcrServiceClient.prototype.asyncGetOperationStatus =
+    function(request, metadata) {
+  return this.client_.serverStreaming(this.hostname_ +
+      '/ssn.ocrservice.v1.OcrService/AsyncGetOperationStatus',
+      request,
+      metadata || {},
+      methodDescriptor_OcrService_AsyncGetOperationStatus);
+};
+
+
+/**
+ * @param {!proto.ssn.ocrservice.v1.AsyncGetOperationStatusRequest} request The request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.ocrservice.v1.AsyncGetOperationStatusResponse>}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.ocrservice.v1.OcrServicePromiseClient.prototype.asyncGetOperationStatus =
+    function(request, metadata) {
+  return this.client_.serverStreaming(this.hostname_ +
+      '/ssn.ocrservice.v1.OcrService/AsyncGetOperationStatus',
+      request,
+      metadata || {},
+      methodDescriptor_OcrService_AsyncGetOperationStatus);
+};
+
+
 module.exports = proto.ssn.ocrservice.v1;
 

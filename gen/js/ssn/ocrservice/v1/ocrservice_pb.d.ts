@@ -55,6 +55,96 @@ export namespace GetTextAnnotationResponse {
   }
 }
 
+export class AsyncCreateOperationRequest extends jspb.Message {
+  getInputPathsList(): Array<string>;
+  setInputPathsList(value: Array<string>): AsyncCreateOperationRequest;
+  clearInputPathsList(): AsyncCreateOperationRequest;
+  addInputPaths(value: string, index?: number): AsyncCreateOperationRequest;
+
+  getOutputPath(): string;
+  setOutputPath(value: string): AsyncCreateOperationRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AsyncCreateOperationRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: AsyncCreateOperationRequest): AsyncCreateOperationRequest.AsObject;
+  static serializeBinaryToWriter(message: AsyncCreateOperationRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AsyncCreateOperationRequest;
+  static deserializeBinaryFromReader(message: AsyncCreateOperationRequest, reader: jspb.BinaryReader): AsyncCreateOperationRequest;
+}
+
+export namespace AsyncCreateOperationRequest {
+  export type AsObject = {
+    inputPathsList: Array<string>,
+    outputPath: string,
+  }
+}
+
+export class AsyncCreateOperationResponse extends jspb.Message {
+  getOperationName(): string;
+  setOperationName(value: string): AsyncCreateOperationResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AsyncCreateOperationResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: AsyncCreateOperationResponse): AsyncCreateOperationResponse.AsObject;
+  static serializeBinaryToWriter(message: AsyncCreateOperationResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AsyncCreateOperationResponse;
+  static deserializeBinaryFromReader(message: AsyncCreateOperationResponse, reader: jspb.BinaryReader): AsyncCreateOperationResponse;
+}
+
+export namespace AsyncCreateOperationResponse {
+  export type AsObject = {
+    operationName: string,
+  }
+}
+
+export class AsyncGetOperationStatusRequest extends jspb.Message {
+  getOperationName(): string;
+  setOperationName(value: string): AsyncGetOperationStatusRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AsyncGetOperationStatusRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: AsyncGetOperationStatusRequest): AsyncGetOperationStatusRequest.AsObject;
+  static serializeBinaryToWriter(message: AsyncGetOperationStatusRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AsyncGetOperationStatusRequest;
+  static deserializeBinaryFromReader(message: AsyncGetOperationStatusRequest, reader: jspb.BinaryReader): AsyncGetOperationStatusRequest;
+}
+
+export namespace AsyncGetOperationStatusRequest {
+  export type AsObject = {
+    operationName: string,
+  }
+}
+
+export class AsyncGetOperationStatusResponse extends jspb.Message {
+  getOperationName(): string;
+  setOperationName(value: string): AsyncGetOperationStatusResponse;
+
+  getDone(): boolean;
+  setDone(value: boolean): AsyncGetOperationStatusResponse;
+
+  getStatusCode(): number;
+  setStatusCode(value: number): AsyncGetOperationStatusResponse;
+
+  getErrorMessage(): string;
+  setErrorMessage(value: string): AsyncGetOperationStatusResponse;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AsyncGetOperationStatusResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: AsyncGetOperationStatusResponse): AsyncGetOperationStatusResponse.AsObject;
+  static serializeBinaryToWriter(message: AsyncGetOperationStatusResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AsyncGetOperationStatusResponse;
+  static deserializeBinaryFromReader(message: AsyncGetOperationStatusResponse, reader: jspb.BinaryReader): AsyncGetOperationStatusResponse;
+}
+
+export namespace AsyncGetOperationStatusResponse {
+  export type AsObject = {
+    operationName: string,
+    done: boolean,
+    statusCode: number,
+    errorMessage: string,
+  }
+}
+
 export class OcrScanImageRequest extends jspb.Message {
   getData(): Uint8Array | string;
   getData_asU8(): Uint8Array;

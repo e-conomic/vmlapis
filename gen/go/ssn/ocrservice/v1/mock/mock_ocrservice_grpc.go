@@ -37,6 +37,46 @@ func (m *MockOcrServiceClient) EXPECT() *MockOcrServiceClientMockRecorder {
 	return m.recorder
 }
 
+// AsyncCreateOperation mocks base method.
+func (m *MockOcrServiceClient) AsyncCreateOperation(ctx context.Context, in *ocrservice.AsyncCreateOperationRequest, opts ...grpc.CallOption) (*ocrservice.AsyncCreateOperationResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "AsyncCreateOperation", varargs...)
+	ret0, _ := ret[0].(*ocrservice.AsyncCreateOperationResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AsyncCreateOperation indicates an expected call of AsyncCreateOperation.
+func (mr *MockOcrServiceClientMockRecorder) AsyncCreateOperation(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncCreateOperation", reflect.TypeOf((*MockOcrServiceClient)(nil).AsyncCreateOperation), varargs...)
+}
+
+// AsyncGetOperationStatus mocks base method.
+func (m *MockOcrServiceClient) AsyncGetOperationStatus(ctx context.Context, in *ocrservice.AsyncGetOperationStatusRequest, opts ...grpc.CallOption) (ocrservice.OcrService_AsyncGetOperationStatusClient, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "AsyncGetOperationStatus", varargs...)
+	ret0, _ := ret[0].(ocrservice.OcrService_AsyncGetOperationStatusClient)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AsyncGetOperationStatus indicates an expected call of AsyncGetOperationStatus.
+func (mr *MockOcrServiceClientMockRecorder) AsyncGetOperationStatus(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncGetOperationStatus", reflect.TypeOf((*MockOcrServiceClient)(nil).AsyncGetOperationStatus), varargs...)
+}
+
 // GetTextAnnotation mocks base method.
 func (m *MockOcrServiceClient) GetTextAnnotation(ctx context.Context, in *ocrservice.GetTextAnnotationRequest, opts ...grpc.CallOption) (*ocrservice.GetTextAnnotationResponse, error) {
 	m.ctrl.T.Helper()
@@ -220,6 +260,129 @@ func (mr *MockOcrService_GetTextAnnotationsClientMockRecorder) Trailer() *gomock
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Trailer", reflect.TypeOf((*MockOcrService_GetTextAnnotationsClient)(nil).Trailer))
 }
 
+// MockOcrService_AsyncGetOperationStatusClient is a mock of OcrService_AsyncGetOperationStatusClient interface.
+type MockOcrService_AsyncGetOperationStatusClient struct {
+	ctrl     *gomock.Controller
+	recorder *MockOcrService_AsyncGetOperationStatusClientMockRecorder
+}
+
+// MockOcrService_AsyncGetOperationStatusClientMockRecorder is the mock recorder for MockOcrService_AsyncGetOperationStatusClient.
+type MockOcrService_AsyncGetOperationStatusClientMockRecorder struct {
+	mock *MockOcrService_AsyncGetOperationStatusClient
+}
+
+// NewMockOcrService_AsyncGetOperationStatusClient creates a new mock instance.
+func NewMockOcrService_AsyncGetOperationStatusClient(ctrl *gomock.Controller) *MockOcrService_AsyncGetOperationStatusClient {
+	mock := &MockOcrService_AsyncGetOperationStatusClient{ctrl: ctrl}
+	mock.recorder = &MockOcrService_AsyncGetOperationStatusClientMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockOcrService_AsyncGetOperationStatusClient) EXPECT() *MockOcrService_AsyncGetOperationStatusClientMockRecorder {
+	return m.recorder
+}
+
+// CloseSend mocks base method.
+func (m *MockOcrService_AsyncGetOperationStatusClient) CloseSend() error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "CloseSend")
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// CloseSend indicates an expected call of CloseSend.
+func (mr *MockOcrService_AsyncGetOperationStatusClientMockRecorder) CloseSend() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "CloseSend", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusClient)(nil).CloseSend))
+}
+
+// Context mocks base method.
+func (m *MockOcrService_AsyncGetOperationStatusClient) Context() context.Context {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Context")
+	ret0, _ := ret[0].(context.Context)
+	return ret0
+}
+
+// Context indicates an expected call of Context.
+func (mr *MockOcrService_AsyncGetOperationStatusClientMockRecorder) Context() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Context", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusClient)(nil).Context))
+}
+
+// Header mocks base method.
+func (m *MockOcrService_AsyncGetOperationStatusClient) Header() (metadata.MD, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Header")
+	ret0, _ := ret[0].(metadata.MD)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// Header indicates an expected call of Header.
+func (mr *MockOcrService_AsyncGetOperationStatusClientMockRecorder) Header() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Header", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusClient)(nil).Header))
+}
+
+// Recv mocks base method.
+func (m *MockOcrService_AsyncGetOperationStatusClient) Recv() (*ocrservice.AsyncGetOperationStatusResponse, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Recv")
+	ret0, _ := ret[0].(*ocrservice.AsyncGetOperationStatusResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// Recv indicates an expected call of Recv.
+func (mr *MockOcrService_AsyncGetOperationStatusClientMockRecorder) Recv() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Recv", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusClient)(nil).Recv))
+}
+
+// RecvMsg mocks base method.
+func (m_2 *MockOcrService_AsyncGetOperationStatusClient) RecvMsg(m interface{}) error {
+	m_2.ctrl.T.Helper()
+	ret := m_2.ctrl.Call(m_2, "RecvMsg", m)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// RecvMsg indicates an expected call of RecvMsg.
+func (mr *MockOcrService_AsyncGetOperationStatusClientMockRecorder) RecvMsg(m interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RecvMsg", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusClient)(nil).RecvMsg), m)
+}
+
+// SendMsg mocks base method.
+func (m_2 *MockOcrService_AsyncGetOperationStatusClient) SendMsg(m interface{}) error {
+	m_2.ctrl.T.Helper()
+	ret := m_2.ctrl.Call(m_2, "SendMsg", m)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// SendMsg indicates an expected call of SendMsg.
+func (mr *MockOcrService_AsyncGetOperationStatusClientMockRecorder) SendMsg(m interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendMsg", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusClient)(nil).SendMsg), m)
+}
+
+// Trailer mocks base method.
+func (m *MockOcrService_AsyncGetOperationStatusClient) Trailer() metadata.MD {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Trailer")
+	ret0, _ := ret[0].(metadata.MD)
+	return ret0
+}
+
+// Trailer indicates an expected call of Trailer.
+func (mr *MockOcrService_AsyncGetOperationStatusClientMockRecorder) Trailer() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Trailer", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusClient)(nil).Trailer))
+}
+
 // MockOcrServiceServer is a mock of OcrServiceServer interface.
 type MockOcrServiceServer struct {
 	ctrl     *gomock.Controller
@@ -241,6 +404,35 @@ func NewMockOcrServiceServer(ctrl *gomock.Controller) *MockOcrServiceServer {
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockOcrServiceServer) EXPECT() *MockOcrServiceServerMockRecorder {
 	return m.recorder
+}
+
+// AsyncCreateOperation mocks base method.
+func (m *MockOcrServiceServer) AsyncCreateOperation(arg0 context.Context, arg1 *ocrservice.AsyncCreateOperationRequest) (*ocrservice.AsyncCreateOperationResponse, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AsyncCreateOperation", arg0, arg1)
+	ret0, _ := ret[0].(*ocrservice.AsyncCreateOperationResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// AsyncCreateOperation indicates an expected call of AsyncCreateOperation.
+func (mr *MockOcrServiceServerMockRecorder) AsyncCreateOperation(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncCreateOperation", reflect.TypeOf((*MockOcrServiceServer)(nil).AsyncCreateOperation), arg0, arg1)
+}
+
+// AsyncGetOperationStatus mocks base method.
+func (m *MockOcrServiceServer) AsyncGetOperationStatus(arg0 *ocrservice.AsyncGetOperationStatusRequest, arg1 ocrservice.OcrService_AsyncGetOperationStatusServer) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "AsyncGetOperationStatus", arg0, arg1)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// AsyncGetOperationStatus indicates an expected call of AsyncGetOperationStatus.
+func (mr *MockOcrServiceServerMockRecorder) AsyncGetOperationStatus(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "AsyncGetOperationStatus", reflect.TypeOf((*MockOcrServiceServer)(nil).AsyncGetOperationStatus), arg0, arg1)
 }
 
 // GetTextAnnotation mocks base method.
@@ -439,4 +631,123 @@ func (m *MockOcrService_GetTextAnnotationsServer) SetTrailer(arg0 metadata.MD) {
 func (mr *MockOcrService_GetTextAnnotationsServerMockRecorder) SetTrailer(arg0 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetTrailer", reflect.TypeOf((*MockOcrService_GetTextAnnotationsServer)(nil).SetTrailer), arg0)
+}
+
+// MockOcrService_AsyncGetOperationStatusServer is a mock of OcrService_AsyncGetOperationStatusServer interface.
+type MockOcrService_AsyncGetOperationStatusServer struct {
+	ctrl     *gomock.Controller
+	recorder *MockOcrService_AsyncGetOperationStatusServerMockRecorder
+}
+
+// MockOcrService_AsyncGetOperationStatusServerMockRecorder is the mock recorder for MockOcrService_AsyncGetOperationStatusServer.
+type MockOcrService_AsyncGetOperationStatusServerMockRecorder struct {
+	mock *MockOcrService_AsyncGetOperationStatusServer
+}
+
+// NewMockOcrService_AsyncGetOperationStatusServer creates a new mock instance.
+func NewMockOcrService_AsyncGetOperationStatusServer(ctrl *gomock.Controller) *MockOcrService_AsyncGetOperationStatusServer {
+	mock := &MockOcrService_AsyncGetOperationStatusServer{ctrl: ctrl}
+	mock.recorder = &MockOcrService_AsyncGetOperationStatusServerMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockOcrService_AsyncGetOperationStatusServer) EXPECT() *MockOcrService_AsyncGetOperationStatusServerMockRecorder {
+	return m.recorder
+}
+
+// Context mocks base method.
+func (m *MockOcrService_AsyncGetOperationStatusServer) Context() context.Context {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Context")
+	ret0, _ := ret[0].(context.Context)
+	return ret0
+}
+
+// Context indicates an expected call of Context.
+func (mr *MockOcrService_AsyncGetOperationStatusServerMockRecorder) Context() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Context", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusServer)(nil).Context))
+}
+
+// RecvMsg mocks base method.
+func (m_2 *MockOcrService_AsyncGetOperationStatusServer) RecvMsg(m interface{}) error {
+	m_2.ctrl.T.Helper()
+	ret := m_2.ctrl.Call(m_2, "RecvMsg", m)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// RecvMsg indicates an expected call of RecvMsg.
+func (mr *MockOcrService_AsyncGetOperationStatusServerMockRecorder) RecvMsg(m interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "RecvMsg", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusServer)(nil).RecvMsg), m)
+}
+
+// Send mocks base method.
+func (m *MockOcrService_AsyncGetOperationStatusServer) Send(arg0 *ocrservice.AsyncGetOperationStatusResponse) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "Send", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// Send indicates an expected call of Send.
+func (mr *MockOcrService_AsyncGetOperationStatusServerMockRecorder) Send(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Send", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusServer)(nil).Send), arg0)
+}
+
+// SendHeader mocks base method.
+func (m *MockOcrService_AsyncGetOperationStatusServer) SendHeader(arg0 metadata.MD) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SendHeader", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// SendHeader indicates an expected call of SendHeader.
+func (mr *MockOcrService_AsyncGetOperationStatusServerMockRecorder) SendHeader(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendHeader", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusServer)(nil).SendHeader), arg0)
+}
+
+// SendMsg mocks base method.
+func (m_2 *MockOcrService_AsyncGetOperationStatusServer) SendMsg(m interface{}) error {
+	m_2.ctrl.T.Helper()
+	ret := m_2.ctrl.Call(m_2, "SendMsg", m)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// SendMsg indicates an expected call of SendMsg.
+func (mr *MockOcrService_AsyncGetOperationStatusServerMockRecorder) SendMsg(m interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SendMsg", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusServer)(nil).SendMsg), m)
+}
+
+// SetHeader mocks base method.
+func (m *MockOcrService_AsyncGetOperationStatusServer) SetHeader(arg0 metadata.MD) error {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "SetHeader", arg0)
+	ret0, _ := ret[0].(error)
+	return ret0
+}
+
+// SetHeader indicates an expected call of SetHeader.
+func (mr *MockOcrService_AsyncGetOperationStatusServerMockRecorder) SetHeader(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetHeader", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusServer)(nil).SetHeader), arg0)
+}
+
+// SetTrailer mocks base method.
+func (m *MockOcrService_AsyncGetOperationStatusServer) SetTrailer(arg0 metadata.MD) {
+	m.ctrl.T.Helper()
+	m.ctrl.Call(m, "SetTrailer", arg0)
+}
+
+// SetTrailer indicates an expected call of SetTrailer.
+func (mr *MockOcrService_AsyncGetOperationStatusServerMockRecorder) SetTrailer(arg0 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "SetTrailer", reflect.TypeOf((*MockOcrService_AsyncGetOperationStatusServer)(nil).SetTrailer), arg0)
 }

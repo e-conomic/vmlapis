@@ -19,9 +19,11 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	OcrService_OcrScanImage_FullMethodName       = "/ssn.ocrservice.v1.OcrService/OcrScanImage"
-	OcrService_GetTextAnnotation_FullMethodName  = "/ssn.ocrservice.v1.OcrService/GetTextAnnotation"
-	OcrService_GetTextAnnotations_FullMethodName = "/ssn.ocrservice.v1.OcrService/GetTextAnnotations"
+	OcrService_OcrScanImage_FullMethodName            = "/ssn.ocrservice.v1.OcrService/OcrScanImage"
+	OcrService_GetTextAnnotation_FullMethodName       = "/ssn.ocrservice.v1.OcrService/GetTextAnnotation"
+	OcrService_GetTextAnnotations_FullMethodName      = "/ssn.ocrservice.v1.OcrService/GetTextAnnotations"
+	OcrService_AsyncCreateOperation_FullMethodName    = "/ssn.ocrservice.v1.OcrService/AsyncCreateOperation"
+	OcrService_AsyncGetOperationStatus_FullMethodName = "/ssn.ocrservice.v1.OcrService/AsyncGetOperationStatus"
 )
 
 // OcrServiceClient is the client API for OcrService service.
@@ -31,6 +33,8 @@ type OcrServiceClient interface {
 	OcrScanImage(ctx context.Context, in *OcrScanImageRequest, opts ...grpc.CallOption) (*OcrScanImageResponse, error)
 	GetTextAnnotation(ctx context.Context, in *GetTextAnnotationRequest, opts ...grpc.CallOption) (*GetTextAnnotationResponse, error)
 	GetTextAnnotations(ctx context.Context, in *GetTextAnnotationRequest, opts ...grpc.CallOption) (OcrService_GetTextAnnotationsClient, error)
+	AsyncCreateOperation(ctx context.Context, in *AsyncCreateOperationRequest, opts ...grpc.CallOption) (*AsyncCreateOperationResponse, error)
+	AsyncGetOperationStatus(ctx context.Context, in *AsyncGetOperationStatusRequest, opts ...grpc.CallOption) (OcrService_AsyncGetOperationStatusClient, error)
 }
 
 type ocrServiceClient struct {
@@ -91,6 +95,47 @@ func (x *ocrServiceGetTextAnnotationsClient) Recv() (*GetTextAnnotationResponse,
 	return m, nil
 }
 
+func (c *ocrServiceClient) AsyncCreateOperation(ctx context.Context, in *AsyncCreateOperationRequest, opts ...grpc.CallOption) (*AsyncCreateOperationResponse, error) {
+	out := new(AsyncCreateOperationResponse)
+	err := c.cc.Invoke(ctx, OcrService_AsyncCreateOperation_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *ocrServiceClient) AsyncGetOperationStatus(ctx context.Context, in *AsyncGetOperationStatusRequest, opts ...grpc.CallOption) (OcrService_AsyncGetOperationStatusClient, error) {
+	stream, err := c.cc.NewStream(ctx, &OcrService_ServiceDesc.Streams[1], OcrService_AsyncGetOperationStatus_FullMethodName, opts...)
+	if err != nil {
+		return nil, err
+	}
+	x := &ocrServiceAsyncGetOperationStatusClient{stream}
+	if err := x.ClientStream.SendMsg(in); err != nil {
+		return nil, err
+	}
+	if err := x.ClientStream.CloseSend(); err != nil {
+		return nil, err
+	}
+	return x, nil
+}
+
+type OcrService_AsyncGetOperationStatusClient interface {
+	Recv() (*AsyncGetOperationStatusResponse, error)
+	grpc.ClientStream
+}
+
+type ocrServiceAsyncGetOperationStatusClient struct {
+	grpc.ClientStream
+}
+
+func (x *ocrServiceAsyncGetOperationStatusClient) Recv() (*AsyncGetOperationStatusResponse, error) {
+	m := new(AsyncGetOperationStatusResponse)
+	if err := x.ClientStream.RecvMsg(m); err != nil {
+		return nil, err
+	}
+	return m, nil
+}
+
 // OcrServiceServer is the server API for OcrService service.
 // All implementations should embed UnimplementedOcrServiceServer
 // for forward compatibility
@@ -98,6 +143,8 @@ type OcrServiceServer interface {
 	OcrScanImage(context.Context, *OcrScanImageRequest) (*OcrScanImageResponse, error)
 	GetTextAnnotation(context.Context, *GetTextAnnotationRequest) (*GetTextAnnotationResponse, error)
 	GetTextAnnotations(*GetTextAnnotationRequest, OcrService_GetTextAnnotationsServer) error
+	AsyncCreateOperation(context.Context, *AsyncCreateOperationRequest) (*AsyncCreateOperationResponse, error)
+	AsyncGetOperationStatus(*AsyncGetOperationStatusRequest, OcrService_AsyncGetOperationStatusServer) error
 }
 
 // UnimplementedOcrServiceServer should be embedded to have forward compatible implementations.
@@ -112,6 +159,12 @@ func (UnimplementedOcrServiceServer) GetTextAnnotation(context.Context, *GetText
 }
 func (UnimplementedOcrServiceServer) GetTextAnnotations(*GetTextAnnotationRequest, OcrService_GetTextAnnotationsServer) error {
 	return status.Errorf(codes.Unimplemented, "method GetTextAnnotations not implemented")
+}
+func (UnimplementedOcrServiceServer) AsyncCreateOperation(context.Context, *AsyncCreateOperationRequest) (*AsyncCreateOperationResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method AsyncCreateOperation not implemented")
+}
+func (UnimplementedOcrServiceServer) AsyncGetOperationStatus(*AsyncGetOperationStatusRequest, OcrService_AsyncGetOperationStatusServer) error {
+	return status.Errorf(codes.Unimplemented, "method AsyncGetOperationStatus not implemented")
 }
 
 // UnsafeOcrServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -182,6 +235,45 @@ func (x *ocrServiceGetTextAnnotationsServer) Send(m *GetTextAnnotationResponse) 
 	return x.ServerStream.SendMsg(m)
 }
 
+func _OcrService_AsyncCreateOperation_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(AsyncCreateOperationRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(OcrServiceServer).AsyncCreateOperation(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: OcrService_AsyncCreateOperation_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(OcrServiceServer).AsyncCreateOperation(ctx, req.(*AsyncCreateOperationRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _OcrService_AsyncGetOperationStatus_Handler(srv interface{}, stream grpc.ServerStream) error {
+	m := new(AsyncGetOperationStatusRequest)
+	if err := stream.RecvMsg(m); err != nil {
+		return err
+	}
+	return srv.(OcrServiceServer).AsyncGetOperationStatus(m, &ocrServiceAsyncGetOperationStatusServer{stream})
+}
+
+type OcrService_AsyncGetOperationStatusServer interface {
+	Send(*AsyncGetOperationStatusResponse) error
+	grpc.ServerStream
+}
+
+type ocrServiceAsyncGetOperationStatusServer struct {
+	grpc.ServerStream
+}
+
+func (x *ocrServiceAsyncGetOperationStatusServer) Send(m *AsyncGetOperationStatusResponse) error {
+	return x.ServerStream.SendMsg(m)
+}
+
 // OcrService_ServiceDesc is the grpc.ServiceDesc for OcrService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -197,11 +289,20 @@ var OcrService_ServiceDesc = grpc.ServiceDesc{
 			MethodName: "GetTextAnnotation",
 			Handler:    _OcrService_GetTextAnnotation_Handler,
 		},
+		{
+			MethodName: "AsyncCreateOperation",
+			Handler:    _OcrService_AsyncCreateOperation_Handler,
+		},
 	},
 	Streams: []grpc.StreamDesc{
 		{
 			StreamName:    "GetTextAnnotations",
 			Handler:       _OcrService_GetTextAnnotations_Handler,
+			ServerStreams: true,
+		},
+		{
+			StreamName:    "AsyncGetOperationStatus",
+			Handler:       _OcrService_AsyncGetOperationStatus_Handler,
 			ServerStreams: true,
 		},
 	},
