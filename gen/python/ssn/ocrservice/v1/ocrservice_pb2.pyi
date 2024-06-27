@@ -25,12 +25,14 @@ class GetTextAnnotationResponse(_message.Message):
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[_Union[_wrappers_pb2.BytesValue, _Mapping]] = ...) -> None: ...
 
 class AsyncCreateOperationRequest(_message.Message):
-    __slots__ = ["input_paths", "output_path"]
+    __slots__ = ["input_paths", "output_path", "file_type"]
     INPUT_PATHS_FIELD_NUMBER: _ClassVar[int]
     OUTPUT_PATH_FIELD_NUMBER: _ClassVar[int]
+    FILE_TYPE_FIELD_NUMBER: _ClassVar[int]
     input_paths: _containers.RepeatedScalarFieldContainer[str]
     output_path: str
-    def __init__(self, input_paths: _Optional[_Iterable[str]] = ..., output_path: _Optional[str] = ...) -> None: ...
+    file_type: str
+    def __init__(self, input_paths: _Optional[_Iterable[str]] = ..., output_path: _Optional[str] = ..., file_type: _Optional[str] = ...) -> None: ...
 
 class AsyncCreateOperationResponse(_message.Message):
     __slots__ = ["operation_name"]

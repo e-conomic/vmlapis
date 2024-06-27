@@ -626,7 +626,8 @@ proto.ssn.ocrservice.v1.AsyncCreateOperationRequest.prototype.toObject = functio
 proto.ssn.ocrservice.v1.AsyncCreateOperationRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     inputPathsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f,
-    outputPath: jspb.Message.getFieldWithDefault(msg, 2, "")
+    outputPath: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    fileType: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -671,6 +672,10 @@ proto.ssn.ocrservice.v1.AsyncCreateOperationRequest.deserializeBinaryFromReader 
       var value = /** @type {string} */ (reader.readString());
       msg.setOutputPath(value);
       break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setFileType(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -711,6 +716,13 @@ proto.ssn.ocrservice.v1.AsyncCreateOperationRequest.serializeBinaryToWriter = fu
   if (f.length > 0) {
     writer.writeString(
       2,
+      f
+    );
+  }
+  f = message.getFileType();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
       f
     );
   }
@@ -769,6 +781,24 @@ proto.ssn.ocrservice.v1.AsyncCreateOperationRequest.prototype.getOutputPath = fu
  */
 proto.ssn.ocrservice.v1.AsyncCreateOperationRequest.prototype.setOutputPath = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional string file_type = 3;
+ * @return {string}
+ */
+proto.ssn.ocrservice.v1.AsyncCreateOperationRequest.prototype.getFileType = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.ocrservice.v1.AsyncCreateOperationRequest} returns this
+ */
+proto.ssn.ocrservice.v1.AsyncCreateOperationRequest.prototype.setFileType = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 
