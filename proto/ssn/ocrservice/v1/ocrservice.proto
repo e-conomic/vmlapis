@@ -31,6 +31,7 @@ message GetTextAnnotationResponse {
 message AsyncCreateOperationRequest {
   repeated string input_paths = 1;
   string output_path = 2;
+  string file_type = 3;
 }
 
 message AsyncCreateOperationResponse {
