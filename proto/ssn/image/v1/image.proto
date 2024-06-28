@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package ssn.imageservice.v1;
+
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/imageservice/v1;imageservice";
+option java_outer_classname = "ImageServiceProto";
+
+service ImageService {
+  rpc CreateImage(CreateImageRequest) returns (google.protobuf.Empty);
+}
+
+message CreateImageRequest {
+  repeated string input_paths = 1;
+  string output_path = 2;
+}
