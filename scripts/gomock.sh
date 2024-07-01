@@ -2,7 +2,7 @@
 
 FILES=(
     "gen/go/ssn/ocrservice/v1/ocrservice_grpc.pb.go"
-    "gen/go/ssn/ocrservice/v1/imageservice_grpc.pb.go"
+    "gen/go/ssn/imageservice/v1/imageservice_grpc.pb.go"
     "gen/go/ssn/mlservice/v2/mlservice_grpc.pb.go"
     "gen/go/ssn/pdfservice/v1/pdfservice_grpc.pb.go"
     "gen/go/ssn/annotator/v1/annotator_grpc.pb.go"

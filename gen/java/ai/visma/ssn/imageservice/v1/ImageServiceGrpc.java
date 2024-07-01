@@ -6,7 +6,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.56.1)",
-    comments = "Source: ssn/image/v1/image.proto")
+    comments = "Source: ssn/imageservice/v1/imageservice.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ImageServiceGrpc {
 
@@ -244,7 +244,7 @@ public final class ImageServiceGrpc {
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.FileDescriptor getFileDescriptor() {
-      return ai.visma.ssn.imageservice.v1.ImageProto.getDescriptor();
+      return ai.visma.ssn.imageservice.v1.ImageserviceProto.getDescriptor();
     }
 
     @java.lang.Override

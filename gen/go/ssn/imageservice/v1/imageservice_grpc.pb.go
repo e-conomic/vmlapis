@@ -2,7 +2,7 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             (unknown)
-// source: ssn/image/v1/image.proto
+// source: ssn/imageservice/v1/imageservice.proto
 
 package imageservice
 
@@ -104,5 +104,5 @@ var ImageService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "ssn/image/v1/image.proto",
+	Metadata: "ssn/imageservice/v1/imageservice.proto",
 }

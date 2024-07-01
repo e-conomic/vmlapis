@@ -1,4 +1,4 @@
-// source: ssn/image/v1/image.proto
+// source: ssn/imageservice/v1/imageservice.proto
 /**
  * @fileoverview
  * @enhanceable

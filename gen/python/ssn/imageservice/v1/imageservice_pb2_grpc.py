@@ -3,7 +3,7 @@
 import grpc
 
 from google.protobuf import empty_pb2 as google_dot_protobuf_dot_empty__pb2
-from vml_proto.ssn.image.v1 import image_pb2 as ssn_dot_image_dot_v1_dot_image__pb2
+from vml_proto.ssn.imageservice.v1 import imageservice_pb2 as ssn_dot_imageservice_dot_v1_dot_imageservice__pb2
 
 
 class ImageServiceStub(object):
@@ -17,7 +17,7 @@ class ImageServiceStub(object):
         """
         self.CreateImage = channel.unary_unary(
                 '/ssn.imageservice.v1.ImageService/CreateImage',
-                request_serializer=ssn_dot_image_dot_v1_dot_image__pb2.CreateImageRequest.SerializeToString,
+                request_serializer=ssn_dot_imageservice_dot_v1_dot_imageservice__pb2.CreateImageRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
 
@@ -36,7 +36,7 @@ def add_ImageServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'CreateImage': grpc.unary_unary_rpc_method_handler(
                     servicer.CreateImage,
-                    request_deserializer=ssn_dot_image_dot_v1_dot_image__pb2.CreateImageRequest.FromString,
+                    request_deserializer=ssn_dot_imageservice_dot_v1_dot_imageservice__pb2.CreateImageRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
     }
@@ -61,7 +61,7 @@ class ImageService(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/ssn.imageservice.v1.ImageService/CreateImage',
-            ssn_dot_image_dot_v1_dot_image__pb2.CreateImageRequest.SerializeToString,
+            ssn_dot_imageservice_dot_v1_dot_imageservice__pb2.CreateImageRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

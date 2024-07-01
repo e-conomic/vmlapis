@@ -1,7 +1,7 @@
 import * as grpcWeb from 'grpc-web';
 
 import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb';
-import * as ssn_image_v1_image_pb from '../../../ssn/image/v1/image_pb';
+import * as ssn_imageservice_v1_imageservice_pb from '../../../ssn/imageservice/v1/imageservice_pb';
 
 
 export class ImageServiceClient {
@@ -10,7 +10,7 @@ export class ImageServiceClient {
                options?: null | { [index: string]: any; });
 
   createImage(
-    request: ssn_image_v1_image_pb.CreateImageRequest,
+    request: ssn_imageservice_v1_imageservice_pb.CreateImageRequest,
     metadata: grpcWeb.Metadata | undefined,
     callback: (err: grpcWeb.RpcError,
                response: google_protobuf_empty_pb.Empty) => void
@@ -24,7 +24,7 @@ export class ImageServicePromiseClient {
                options?: null | { [index: string]: any; });
 
   createImage(
-    request: ssn_image_v1_image_pb.CreateImageRequest,
+    request: ssn_imageservice_v1_imageservice_pb.CreateImageRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<google_protobuf_empty_pb.Empty>;
 

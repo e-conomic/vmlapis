@@ -8,7 +8,7 @@
 // versions:
 // 	protoc-gen-grpc-web v1.4.2
 // 	protoc              v0.0.0
-// source: ssn/image/v1/image.proto
+// source: ssn/imageservice/v1/imageservice.proto
 
 
 /* eslint-disable */
@@ -24,7 +24,7 @@ var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb
 const proto = {};
 proto.ssn = {};
 proto.ssn.imageservice = {};
-proto.ssn.imageservice.v1 = require('./image_pb.js');
+proto.ssn.imageservice.v1 = require('./imageservice_pb.js');
 
 /**
  * @param {string} hostname
