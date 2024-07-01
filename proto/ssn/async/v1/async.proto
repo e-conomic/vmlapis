@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package everything.transaction.v1;
+package ssn.async.v1;
 
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
@@ -8,10 +8,10 @@ import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/candidate.proto";
 
-option go_package = "github.com/e-conomic/vmlapis/gen/go/everything/transaction/v1;transaction";
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/async/v1;transaction";
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
   info: {
-    title: "Everything API";
+    title: "Async API";
     version: "v1";
     description: "";
   };
@@ -20,7 +20,7 @@ option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
   produces: "application/json";
 };
 
-// api.{{env}}.everything.visma.ai
+// api.{{env}}.ssn.visma.ai
 // transaction = example (receipt, document, scanned invoice text, etc.)
 service TransactionService {
   /// --- MVP for async purchase lines ---
