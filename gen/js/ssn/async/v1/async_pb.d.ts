@@ -23,6 +23,9 @@ export class CreateTransactionRequest extends jspb.Message {
   clearFeaturesList(): CreateTransactionRequest;
   addFeatures(value: string, index?: number): CreateTransactionRequest;
 
+  getCustomerId(): string;
+  setCustomerId(value: string): CreateTransactionRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateTransactionRequest.AsObject;
   static toObject(includeInstance: boolean, msg: CreateTransactionRequest): CreateTransactionRequest.AsObject;
@@ -36,6 +39,7 @@ export namespace CreateTransactionRequest {
     document?: ssn_annotator_v1_annotator_pb.Document.AsObject,
     tagsList: Array<string>,
     featuresList: Array<string>,
+    customerId: string,
   }
 }
 

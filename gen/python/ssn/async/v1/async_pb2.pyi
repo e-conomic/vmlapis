@@ -11,14 +11,16 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class CreateTransactionRequest(_message.Message):
-    __slots__ = ["document", "tags", "features"]
+    __slots__ = ["document", "tags", "features", "customer_id"]
     DOCUMENT_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
     FEATURES_FIELD_NUMBER: _ClassVar[int]
+    CUSTOMER_ID_FIELD_NUMBER: _ClassVar[int]
     document: _annotator_pb2.Document
     tags: _containers.RepeatedScalarFieldContainer[str]
     features: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., features: _Optional[_Iterable[str]] = ...) -> None: ...
+    customer_id: str
+    def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., features: _Optional[_Iterable[str]] = ..., customer_id: _Optional[str] = ...) -> None: ...
 
 class CreateTransactionResponse(_message.Message):
     __slots__ = ["id"]
