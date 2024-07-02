@@ -70,7 +70,7 @@ message CreateTransactionRequest {
   // e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
   repeated string features = 3;
 
-  string customer_id = 4;
+  string custom_id = 4;
 }
 message CreateTransactionResponse {
   string id = 1;
