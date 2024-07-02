@@ -117,14 +117,14 @@ public interface CreateTransactionRequestOrBuilder extends
       getFeaturesBytes(int index);
 
   /**
-   * <code>string customer_id = 4 [json_name = "customerId"];</code>
-   * @return The customerId.
+   * <code>string custom_id = 4 [json_name = "customId"];</code>
+   * @return The customId.
    */
-  java.lang.String getCustomerId();
+  java.lang.String getCustomId();
   /**
-   * <code>string customer_id = 4 [json_name = "customerId"];</code>
-   * @return The bytes for customerId.
+   * <code>string custom_id = 4 [json_name = "customId"];</code>
+   * @return The bytes for customId.
    */
   com.google.protobuf.ByteString
-      getCustomerIdBytes();
+      getCustomIdBytes();
 }

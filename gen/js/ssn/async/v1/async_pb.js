@@ -294,7 +294,7 @@ proto.ssn.async.v1.CreateTransactionRequest.toObject = function(includeInstance,
     document: (f = msg.getDocument()) && ssn_annotator_v1_annotator_pb.Document.toObject(includeInstance, f),
     tagsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
     featuresList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
-    customerId: jspb.Message.getFieldWithDefault(msg, 4, "")
+    customId: jspb.Message.getFieldWithDefault(msg, 4, "")
   };
 
   if (includeInstance) {
@@ -346,7 +346,7 @@ proto.ssn.async.v1.CreateTransactionRequest.deserializeBinaryFromReader = functi
       break;
     case 4:
       var value = /** @type {string} */ (reader.readString());
-      msg.setCustomerId(value);
+      msg.setCustomId(value);
       break;
     default:
       reader.skipField();
@@ -399,7 +399,7 @@ proto.ssn.async.v1.CreateTransactionRequest.serializeBinaryToWriter = function(m
       f
     );
   }
-  f = message.getCustomerId();
+  f = message.getCustomId();
   if (f.length > 0) {
     writer.writeString(
       4,
@@ -521,10 +521,10 @@ proto.ssn.async.v1.CreateTransactionRequest.prototype.clearFeaturesList = functi
 
 
 /**
- * optional string customer_id = 4;
+ * optional string custom_id = 4;
  * @return {string}
  */
-proto.ssn.async.v1.CreateTransactionRequest.prototype.getCustomerId = function() {
+proto.ssn.async.v1.CreateTransactionRequest.prototype.getCustomId = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 4, ""));
 };
 
@@ -533,7 +533,7 @@ proto.ssn.async.v1.CreateTransactionRequest.prototype.getCustomerId = function()
  * @param {string} value
  * @return {!proto.ssn.async.v1.CreateTransactionRequest} returns this
  */
-proto.ssn.async.v1.CreateTransactionRequest.prototype.setCustomerId = function(value) {
+proto.ssn.async.v1.CreateTransactionRequest.prototype.setCustomId = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
 };
 

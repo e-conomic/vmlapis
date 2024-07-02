@@ -24,7 +24,7 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     features_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-    customerId_ = "";
+    customId_ = "";
   }
 
   @java.lang.Override
@@ -191,39 +191,39 @@ private static final long serialVersionUID = 0L;
     return features_.getByteString(index);
   }
 
-  public static final int CUSTOMER_ID_FIELD_NUMBER = 4;
+  public static final int CUSTOM_ID_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object customerId_ = "";
+  private volatile java.lang.Object customId_ = "";
   /**
-   * <code>string customer_id = 4 [json_name = "customerId"];</code>
-   * @return The customerId.
+   * <code>string custom_id = 4 [json_name = "customId"];</code>
+   * @return The customId.
    */
   @java.lang.Override
-  public java.lang.String getCustomerId() {
-    java.lang.Object ref = customerId_;
+  public java.lang.String getCustomId() {
+    java.lang.Object ref = customId_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      customerId_ = s;
+      customId_ = s;
       return s;
     }
   }
   /**
-   * <code>string customer_id = 4 [json_name = "customerId"];</code>
-   * @return The bytes for customerId.
+   * <code>string custom_id = 4 [json_name = "customId"];</code>
+   * @return The bytes for customId.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getCustomerIdBytes() {
-    java.lang.Object ref = customerId_;
+      getCustomIdBytes() {
+    java.lang.Object ref = customId_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      customerId_ = b;
+      customId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -253,8 +253,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < features_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, features_.getRaw(i));
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerId_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, customerId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 4, customId_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -285,8 +285,8 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getFeaturesList().size();
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customerId_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, customerId_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, customId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -312,8 +312,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTagsList())) return false;
     if (!getFeaturesList()
         .equals(other.getFeaturesList())) return false;
-    if (!getCustomerId()
-        .equals(other.getCustomerId())) return false;
+    if (!getCustomId()
+        .equals(other.getCustomId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -337,8 +337,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FEATURES_FIELD_NUMBER;
       hash = (53 * hash) + getFeaturesList().hashCode();
     }
-    hash = (37 * hash) + CUSTOMER_ID_FIELD_NUMBER;
-    hash = (53 * hash) + getCustomerId().hashCode();
+    hash = (37 * hash) + CUSTOM_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getCustomId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -483,7 +483,7 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.LazyStringArrayList.emptyList();
       features_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      customerId_ = "";
+      customId_ = "";
       return this;
     }
 
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
         result.features_ = features_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.customerId_ = customerId_;
+        result.customId_ = customId_;
       }
     }
 
@@ -602,8 +602,8 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (!other.getCustomerId().isEmpty()) {
-        customerId_ = other.customerId_;
+      if (!other.getCustomId().isEmpty()) {
+        customId_ = other.customId_;
         bitField0_ |= 0x00000008;
         onChanged();
       }
@@ -653,7 +653,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 26
             case 34: {
-              customerId_ = input.readStringRequireUtf8();
+              customId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000008;
               break;
             } // case 34
@@ -1123,73 +1123,73 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.lang.Object customerId_ = "";
+    private java.lang.Object customId_ = "";
     /**
-     * <code>string customer_id = 4 [json_name = "customerId"];</code>
-     * @return The customerId.
+     * <code>string custom_id = 4 [json_name = "customId"];</code>
+     * @return The customId.
      */
-    public java.lang.String getCustomerId() {
-      java.lang.Object ref = customerId_;
+    public java.lang.String getCustomId() {
+      java.lang.Object ref = customId_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        customerId_ = s;
+        customId_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string customer_id = 4 [json_name = "customerId"];</code>
-     * @return The bytes for customerId.
+     * <code>string custom_id = 4 [json_name = "customId"];</code>
+     * @return The bytes for customId.
      */
     public com.google.protobuf.ByteString
-        getCustomerIdBytes() {
-      java.lang.Object ref = customerId_;
+        getCustomIdBytes() {
+      java.lang.Object ref = customId_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        customerId_ = b;
+        customId_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string customer_id = 4 [json_name = "customerId"];</code>
-     * @param value The customerId to set.
+     * <code>string custom_id = 4 [json_name = "customId"];</code>
+     * @param value The customId to set.
      * @return This builder for chaining.
      */
-    public Builder setCustomerId(
+    public Builder setCustomId(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      customerId_ = value;
+      customId_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
     /**
-     * <code>string customer_id = 4 [json_name = "customerId"];</code>
+     * <code>string custom_id = 4 [json_name = "customId"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearCustomerId() {
-      customerId_ = getDefaultInstance().getCustomerId();
+    public Builder clearCustomId() {
+      customId_ = getDefaultInstance().getCustomId();
       bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
     /**
-     * <code>string customer_id = 4 [json_name = "customerId"];</code>
-     * @param value The bytes for customerId to set.
+     * <code>string custom_id = 4 [json_name = "customId"];</code>
+     * @param value The bytes for customId to set.
      * @return This builder for chaining.
      */
-    public Builder setCustomerIdBytes(
+    public Builder setCustomIdBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      customerId_ = value;
+      customId_ = value;
       bitField0_ |= 0x00000008;
       onChanged();
       return this;
