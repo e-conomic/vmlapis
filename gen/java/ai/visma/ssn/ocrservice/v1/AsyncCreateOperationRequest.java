@@ -19,6 +19,7 @@ private static final long serialVersionUID = 0L;
     inputPaths_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     outputPath_ = "";
+    fileType_ = "";
   }
 
   @java.lang.Override
@@ -117,6 +118,45 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int FILE_TYPE_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object fileType_ = "";
+  /**
+   * <code>string file_type = 3 [json_name = "fileType"];</code>
+   * @return The fileType.
+   */
+  @java.lang.Override
+  public java.lang.String getFileType() {
+    java.lang.Object ref = fileType_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      fileType_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string file_type = 3 [json_name = "fileType"];</code>
+   * @return The bytes for fileType.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getFileTypeBytes() {
+    java.lang.Object ref = fileType_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      fileType_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -136,6 +176,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputPath_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, outputPath_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileType_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 3, fileType_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -157,6 +200,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(outputPath_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, outputPath_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(fileType_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, fileType_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -176,6 +222,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getInputPathsList())) return false;
     if (!getOutputPath()
         .equals(other.getOutputPath())) return false;
+    if (!getFileType()
+        .equals(other.getFileType())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -193,6 +241,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + OUTPUT_PATH_FIELD_NUMBER;
     hash = (53 * hash) + getOutputPath().hashCode();
+    hash = (37 * hash) + FILE_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getFileType().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -327,6 +377,7 @@ private static final long serialVersionUID = 0L;
       inputPaths_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       outputPath_ = "";
+      fileType_ = "";
       return this;
     }
 
@@ -366,6 +417,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.outputPath_ = outputPath_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.fileType_ = fileType_;
       }
     }
 
@@ -428,6 +482,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (!other.getFileType().isEmpty()) {
+        fileType_ = other.fileType_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -465,6 +524,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              fileType_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -661,6 +725,78 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       outputPath_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object fileType_ = "";
+    /**
+     * <code>string file_type = 3 [json_name = "fileType"];</code>
+     * @return The fileType.
+     */
+    public java.lang.String getFileType() {
+      java.lang.Object ref = fileType_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        fileType_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string file_type = 3 [json_name = "fileType"];</code>
+     * @return The bytes for fileType.
+     */
+    public com.google.protobuf.ByteString
+        getFileTypeBytes() {
+      java.lang.Object ref = fileType_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        fileType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string file_type = 3 [json_name = "fileType"];</code>
+     * @param value The fileType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFileType(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      fileType_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string file_type = 3 [json_name = "fileType"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFileType() {
+      fileType_ = getDefaultInstance().getFileType();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string file_type = 3 [json_name = "fileType"];</code>
+     * @param value The bytes for fileType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFileTypeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      fileType_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

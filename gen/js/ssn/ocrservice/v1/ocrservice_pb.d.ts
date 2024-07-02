@@ -64,6 +64,9 @@ export class AsyncCreateOperationRequest extends jspb.Message {
   getOutputPath(): string;
   setOutputPath(value: string): AsyncCreateOperationRequest;
 
+  getFileType(): string;
+  setFileType(value: string): AsyncCreateOperationRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): AsyncCreateOperationRequest.AsObject;
   static toObject(includeInstance: boolean, msg: AsyncCreateOperationRequest): AsyncCreateOperationRequest.AsObject;
@@ -76,6 +79,7 @@ export namespace AsyncCreateOperationRequest {
   export type AsObject = {
     inputPathsList: Array<string>,
     outputPath: string,
+    fileType: string,
   }
 }
 

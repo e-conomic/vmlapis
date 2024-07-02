@@ -43,4 +43,16 @@ public interface AsyncCreateOperationRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getOutputPathBytes();
+
+  /**
+   * <code>string file_type = 3 [json_name = "fileType"];</code>
+   * @return The fileType.
+   */
+  java.lang.String getFileType();
+  /**
+   * <code>string file_type = 3 [json_name = "fileType"];</code>
+   * @return The bytes for fileType.
+   */
+  com.google.protobuf.ByteString
+      getFileTypeBytes();
 }
