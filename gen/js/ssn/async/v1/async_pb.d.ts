@@ -239,3 +239,23 @@ export namespace DeleteTransactionRequest {
   }
 }
 
+export class DeleteTagsRequest extends jspb.Message {
+  getTagsList(): Array<string>;
+  setTagsList(value: Array<string>): DeleteTagsRequest;
+  clearTagsList(): DeleteTagsRequest;
+  addTags(value: string, index?: number): DeleteTagsRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeleteTagsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: DeleteTagsRequest): DeleteTagsRequest.AsObject;
+  static serializeBinaryToWriter(message: DeleteTagsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeleteTagsRequest;
+  static deserializeBinaryFromReader(message: DeleteTagsRequest, reader: jspb.BinaryReader): DeleteTagsRequest;
+}
+
+export namespace DeleteTagsRequest {
+  export type AsObject = {
+    tagsList: Array<string>,
+  }
+}
+

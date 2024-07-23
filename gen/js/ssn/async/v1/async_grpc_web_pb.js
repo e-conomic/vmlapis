@@ -330,5 +330,66 @@ proto.ssn.async.v1.TransactionServicePromiseClient.prototype.deleteTransaction =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.async.v1.DeleteTagsRequest,
+ *   !proto.google.protobuf.Empty>}
+ */
+const methodDescriptor_TransactionService_DeleteTags = new grpc.web.MethodDescriptor(
+  '/ssn.async.v1.TransactionService/DeleteTags',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.async.v1.DeleteTagsRequest,
+  google_protobuf_empty_pb.Empty,
+  /**
+   * @param {!proto.ssn.async.v1.DeleteTagsRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_empty_pb.Empty.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.async.v1.DeleteTagsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.google.protobuf.Empty)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.async.v1.TransactionServiceClient.prototype.deleteTags =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.async.v1.TransactionService/DeleteTags',
+      request,
+      metadata || {},
+      methodDescriptor_TransactionService_DeleteTags,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.async.v1.DeleteTagsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.google.protobuf.Empty>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.async.v1.TransactionServicePromiseClient.prototype.deleteTags =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.async.v1.TransactionService/DeleteTags',
+      request,
+      metadata || {},
+      methodDescriptor_TransactionService_DeleteTags);
+};
+
+
 module.exports = proto.ssn.async.v1;
 

@@ -64,6 +64,11 @@ public final class AsyncProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_async_v1_DeleteTransactionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_async_v1_DeleteTagsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_async_v1_DeleteTagsRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -101,27 +106,31 @@ public final class AsyncProto {
       "sponse\022\016\n\002id\030\001 \001(\tR\002id\022\026\n\006status\030\002 \001(\tR\006" +
       "status\022#\n\rerror_message\030\003 \001(\tR\014errorMess" +
       "age\"*\n\030DeleteTransactionRequest\022\016\n\002id\030\001 " +
-      "\001(\tR\002id2\274\004\n\022TransactionService\022\201\001\n\021Creat" +
-      "eTransaction\022&.ssn.async.v1.CreateTransa" +
-      "ctionRequest\032\'.ssn.async.v1.CreateTransa" +
-      "ctionResponse\"\033\202\323\344\223\002\025\"\020/v1/transactions:" +
-      "\001*\022\227\001\n\025GetTransactionResults\022*.ssn.async" +
-      ".v1.GetTransactionResultsRequest\032+.ssn.a" +
-      "sync.v1.GetTransactionResultsResponse\"%\202" +
-      "\323\344\223\002\037\022\035/v1/transactions/{id}/results\022\223\001\n" +
-      "\024GetTransactionStatus\022).ssn.async.v1.Get" +
-      "TransactionStatusRequest\032*.ssn.async.v1." +
-      "GetTransactionStatusResponse\"$\202\323\344\223\002\036\022\034/v" +
-      "1/transactions/{id}/status\022r\n\021DeleteTran" +
-      "saction\022&.ssn.async.v1.DeleteTransaction" +
-      "Request\032\026.google.protobuf.Empty\"\035\202\323\344\223\002\027*" +
-      "\025/v1/transactions/{id}B\356\001\n\025ai.visma.ssn." +
-      "async.v1B\nAsyncProtoP\001Z<github.com/e-con" +
-      "omic/vmlapis/gen/go/ssn/async/v1;transac" +
-      "tion\242\002\003SAX\252\002\014Ssn.Async.V1\312\002\014Ssn\\Async\\V1" +
-      "\342\002\030Ssn\\Async\\V1\\GPBMetadata\352\002\016Ssn::Async" +
-      "::V1\222A8\022\017\n\tAsync API2\002v1*\001\0022\020application" +
-      "/json:\020application/jsonb\006proto3"
+      "\001(\tR\002id\"\'\n\021DeleteTagsRequest\022\022\n\004tags\030\001 \003" +
+      "(\tR\004tags2\225\005\n\022TransactionService\022\201\001\n\021Crea" +
+      "teTransaction\022&.ssn.async.v1.CreateTrans" +
+      "actionRequest\032\'.ssn.async.v1.CreateTrans" +
+      "actionResponse\"\033\202\323\344\223\002\025\"\020/v1/transactions" +
+      ":\001*\022\227\001\n\025GetTransactionResults\022*.ssn.asyn" +
+      "c.v1.GetTransactionResultsRequest\032+.ssn." +
+      "async.v1.GetTransactionResultsResponse\"%" +
+      "\202\323\344\223\002\037\022\035/v1/transactions/{id}/results\022\223\001" +
+      "\n\024GetTransactionStatus\022).ssn.async.v1.Ge" +
+      "tTransactionStatusRequest\032*.ssn.async.v1" +
+      ".GetTransactionStatusResponse\"$\202\323\344\223\002\036\022\034/" +
+      "v1/transactions/{id}/status\022r\n\021DeleteTra" +
+      "nsaction\022&.ssn.async.v1.DeleteTransactio" +
+      "nRequest\032\026.google.protobuf.Empty\"\035\202\323\344\223\002\027" +
+      "*\025/v1/transactions/{id}\022W\n\nDeleteTags\022\037." +
+      "ssn.async.v1.DeleteTagsRequest\032\026.google." +
+      "protobuf.Empty\"\020\202\323\344\223\002\n*\010/v1/tagsB\356\001\n\025ai." +
+      "visma.ssn.async.v1B\nAsyncProtoP\001Z<github" +
+      ".com/e-conomic/vmlapis/gen/go/ssn/async/" +
+      "v1;transaction\242\002\003SAX\252\002\014Ssn.Async.V1\312\002\014Ss" +
+      "n\\Async\\V1\342\002\030Ssn\\Async\\V1\\GPBMetadata\352\002\016" +
+      "Ssn::Async::V1\222A8\022\017\n\tAsync API2\002v1*\001\0022\020a" +
+      "pplication/json:\020application/jsonb\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -192,6 +201,12 @@ public final class AsyncProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_async_v1_DeleteTransactionRequest_descriptor,
         new java.lang.String[] { "Id", });
+    internal_static_ssn_async_v1_DeleteTagsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_ssn_async_v1_DeleteTagsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_async_v1_DeleteTagsRequest_descriptor,
+        new java.lang.String[] { "Tags", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);

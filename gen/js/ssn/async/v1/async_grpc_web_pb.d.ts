@@ -37,6 +37,13 @@ export class TransactionServiceClient {
                response: google_protobuf_empty_pb.Empty) => void
   ): grpcWeb.ClientReadableStream<google_protobuf_empty_pb.Empty>;
 
+  deleteTags(
+    request: ssn_async_v1_async_pb.DeleteTagsRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: google_protobuf_empty_pb.Empty) => void
+  ): grpcWeb.ClientReadableStream<google_protobuf_empty_pb.Empty>;
+
 }
 
 export class TransactionServicePromiseClient {
@@ -61,6 +68,11 @@ export class TransactionServicePromiseClient {
 
   deleteTransaction(
     request: ssn_async_v1_async_pb.DeleteTransactionRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<google_protobuf_empty_pb.Empty>;
+
+  deleteTags(
+    request: ssn_async_v1_async_pb.DeleteTagsRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<google_protobuf_empty_pb.Empty>;
 

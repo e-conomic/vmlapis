@@ -83,3 +83,9 @@ class DeleteTransactionRequest(_message.Message):
     ID_FIELD_NUMBER: _ClassVar[int]
     id: str
     def __init__(self, id: _Optional[str] = ...) -> None: ...
+
+class DeleteTagsRequest(_message.Message):
+    __slots__ = ["tags"]
+    TAGS_FIELD_NUMBER: _ClassVar[int]
+    tags: _containers.RepeatedScalarFieldContainer[str]
+    def __init__(self, tags: _Optional[_Iterable[str]] = ...) -> None: ...

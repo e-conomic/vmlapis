@@ -24,6 +24,7 @@ const (
 	TransactionService_GetTransactionResults_FullMethodName = "/ssn.async.v1.TransactionService/GetTransactionResults"
 	TransactionService_GetTransactionStatus_FullMethodName  = "/ssn.async.v1.TransactionService/GetTransactionStatus"
 	TransactionService_DeleteTransaction_FullMethodName     = "/ssn.async.v1.TransactionService/DeleteTransaction"
+	TransactionService_DeleteTags_FullMethodName            = "/ssn.async.v1.TransactionService/DeleteTags"
 )
 
 // TransactionServiceClient is the client API for TransactionService service.
@@ -35,6 +36,7 @@ type TransactionServiceClient interface {
 	GetTransactionResults(ctx context.Context, in *GetTransactionResultsRequest, opts ...grpc.CallOption) (*GetTransactionResultsResponse, error)
 	GetTransactionStatus(ctx context.Context, in *GetTransactionStatusRequest, opts ...grpc.CallOption) (*GetTransactionStatusResponse, error)
 	DeleteTransaction(ctx context.Context, in *DeleteTransactionRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
+	DeleteTags(ctx context.Context, in *DeleteTagsRequest, opts ...grpc.CallOption) (*emptypb.Empty, error)
 }
 
 type transactionServiceClient struct {
@@ -81,6 +83,15 @@ func (c *transactionServiceClient) DeleteTransaction(ctx context.Context, in *De
 	return out, nil
 }
 
+func (c *transactionServiceClient) DeleteTags(ctx context.Context, in *DeleteTagsRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+	out := new(emptypb.Empty)
+	err := c.cc.Invoke(ctx, TransactionService_DeleteTags_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // TransactionServiceServer is the server API for TransactionService service.
 // All implementations should embed UnimplementedTransactionServiceServer
 // for forward compatibility
@@ -90,6 +101,7 @@ type TransactionServiceServer interface {
 	GetTransactionResults(context.Context, *GetTransactionResultsRequest) (*GetTransactionResultsResponse, error)
 	GetTransactionStatus(context.Context, *GetTransactionStatusRequest) (*GetTransactionStatusResponse, error)
 	DeleteTransaction(context.Context, *DeleteTransactionRequest) (*emptypb.Empty, error)
+	DeleteTags(context.Context, *DeleteTagsRequest) (*emptypb.Empty, error)
 }
 
 // UnimplementedTransactionServiceServer should be embedded to have forward compatible implementations.
@@ -107,6 +119,9 @@ func (UnimplementedTransactionServiceServer) GetTransactionStatus(context.Contex
 }
 func (UnimplementedTransactionServiceServer) DeleteTransaction(context.Context, *DeleteTransactionRequest) (*emptypb.Empty, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method DeleteTransaction not implemented")
+}
+func (UnimplementedTransactionServiceServer) DeleteTags(context.Context, *DeleteTagsRequest) (*emptypb.Empty, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method DeleteTags not implemented")
 }
 
 // UnsafeTransactionServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -192,6 +207,24 @@ func _TransactionService_DeleteTransaction_Handler(srv interface{}, ctx context.
 	return interceptor(ctx, in, info, handler)
 }
 
+func _TransactionService_DeleteTags_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(DeleteTagsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TransactionServiceServer).DeleteTags(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: TransactionService_DeleteTags_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TransactionServiceServer).DeleteTags(ctx, req.(*DeleteTagsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // TransactionService_ServiceDesc is the grpc.ServiceDesc for TransactionService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -214,6 +247,10 @@ var TransactionService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "DeleteTransaction",
 			Handler:    _TransactionService_DeleteTransaction_Handler,
+		},
+		{
+			MethodName: "DeleteTags",
+			Handler:    _TransactionService_DeleteTags_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
