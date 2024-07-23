@@ -39,6 +39,9 @@ service TransactionService {
   rpc DeleteTransaction(DeleteTransactionRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {delete: "/v1/transactions/{id}"};
   }
+  rpc DeleteTags(DeleteTagsRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {delete: "/v1/tags"};
+  }
   /// --- MVP for async purchase lines ---
 
   // below are more ideas how the API could progress
@@ -56,9 +59,6 @@ service TransactionService {
   //   option (google.api.http) = {get: "/v1/transactions/{id}/status:watch"};
   // }
   // delete on tags
-  // rpc DeleteTags(DeleteTagsRequest) returns (google.protobuf.Empty) {
-  //   option (google.api.http) = {delete: "/v1/tags"};
-  // }
 }
 
 // --- post: "/v1/transactions" ---
@@ -130,3 +130,9 @@ message DeleteTransactionRequest {
   string id = 1;
 }
 // --- delete: "/v1/transactions/{id}" ---
+
+// --- delete: "/v1/tags" ---
+message DeleteTagsRequest {
+  repeated string tags = 1;
+}
+// --- delete: "/v1/tags" ---
