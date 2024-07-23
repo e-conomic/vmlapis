@@ -143,35 +143,35 @@ public final class TransactionServiceGrpc {
     return getDeleteTransactionMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.async.v1.DeleteTagsRequest,
-      com.google.protobuf.Empty> getDeleteTagsMethod;
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.async.v1.DeleteTagRequest,
+      com.google.protobuf.Empty> getDeleteTagMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "DeleteTags",
-      requestType = ai.visma.ssn.async.v1.DeleteTagsRequest.class,
+      fullMethodName = SERVICE_NAME + '/' + "DeleteTag",
+      requestType = ai.visma.ssn.async.v1.DeleteTagRequest.class,
       responseType = com.google.protobuf.Empty.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<ai.visma.ssn.async.v1.DeleteTagsRequest,
-      com.google.protobuf.Empty> getDeleteTagsMethod() {
-    io.grpc.MethodDescriptor<ai.visma.ssn.async.v1.DeleteTagsRequest, com.google.protobuf.Empty> getDeleteTagsMethod;
-    if ((getDeleteTagsMethod = TransactionServiceGrpc.getDeleteTagsMethod) == null) {
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.async.v1.DeleteTagRequest,
+      com.google.protobuf.Empty> getDeleteTagMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.async.v1.DeleteTagRequest, com.google.protobuf.Empty> getDeleteTagMethod;
+    if ((getDeleteTagMethod = TransactionServiceGrpc.getDeleteTagMethod) == null) {
       synchronized (TransactionServiceGrpc.class) {
-        if ((getDeleteTagsMethod = TransactionServiceGrpc.getDeleteTagsMethod) == null) {
-          TransactionServiceGrpc.getDeleteTagsMethod = getDeleteTagsMethod =
-              io.grpc.MethodDescriptor.<ai.visma.ssn.async.v1.DeleteTagsRequest, com.google.protobuf.Empty>newBuilder()
+        if ((getDeleteTagMethod = TransactionServiceGrpc.getDeleteTagMethod) == null) {
+          TransactionServiceGrpc.getDeleteTagMethod = getDeleteTagMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.async.v1.DeleteTagRequest, com.google.protobuf.Empty>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteTags"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteTag"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  ai.visma.ssn.async.v1.DeleteTagsRequest.getDefaultInstance()))
+                  ai.visma.ssn.async.v1.DeleteTagRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   com.google.protobuf.Empty.getDefaultInstance()))
-              .setSchemaDescriptor(new TransactionServiceMethodDescriptorSupplier("DeleteTags"))
+              .setSchemaDescriptor(new TransactionServiceMethodDescriptorSupplier("DeleteTag"))
               .build();
         }
       }
     }
-    return getDeleteTagsMethod;
+    return getDeleteTagMethod;
   }
 
   /**
@@ -259,9 +259,9 @@ public final class TransactionServiceGrpc {
 
     /**
      */
-    default void deleteTags(ai.visma.ssn.async.v1.DeleteTagsRequest request,
+    default void deleteTag(ai.visma.ssn.async.v1.DeleteTagRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTagsMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteTagMethod(), responseObserver);
     }
   }
 
@@ -337,10 +337,10 @@ public final class TransactionServiceGrpc {
 
     /**
      */
-    public void deleteTags(ai.visma.ssn.async.v1.DeleteTagsRequest request,
+    public void deleteTag(ai.visma.ssn.async.v1.DeleteTagRequest request,
         io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getDeleteTagsMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getDeleteTagMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -397,9 +397,9 @@ public final class TransactionServiceGrpc {
 
     /**
      */
-    public com.google.protobuf.Empty deleteTags(ai.visma.ssn.async.v1.DeleteTagsRequest request) {
+    public com.google.protobuf.Empty deleteTag(ai.visma.ssn.async.v1.DeleteTagRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getDeleteTagsMethod(), getCallOptions(), request);
+          getChannel(), getDeleteTagMethod(), getCallOptions(), request);
     }
   }
 
@@ -460,10 +460,10 @@ public final class TransactionServiceGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTags(
-        ai.visma.ssn.async.v1.DeleteTagsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> deleteTag(
+        ai.visma.ssn.async.v1.DeleteTagRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getDeleteTagsMethod(), getCallOptions()), request);
+          getChannel().newCall(getDeleteTagMethod(), getCallOptions()), request);
     }
   }
 
@@ -471,7 +471,7 @@ public final class TransactionServiceGrpc {
   private static final int METHODID_GET_TRANSACTION_RESULTS = 1;
   private static final int METHODID_GET_TRANSACTION_STATUS = 2;
   private static final int METHODID_DELETE_TRANSACTION = 3;
-  private static final int METHODID_DELETE_TAGS = 4;
+  private static final int METHODID_DELETE_TAG = 4;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -506,8 +506,8 @@ public final class TransactionServiceGrpc {
           serviceImpl.deleteTransaction((ai.visma.ssn.async.v1.DeleteTransactionRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
-        case METHODID_DELETE_TAGS:
-          serviceImpl.deleteTags((ai.visma.ssn.async.v1.DeleteTagsRequest) request,
+        case METHODID_DELETE_TAG:
+          serviceImpl.deleteTag((ai.visma.ssn.async.v1.DeleteTagRequest) request,
               (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
@@ -557,12 +557,12 @@ public final class TransactionServiceGrpc {
               com.google.protobuf.Empty>(
                 service, METHODID_DELETE_TRANSACTION)))
         .addMethod(
-          getDeleteTagsMethod(),
+          getDeleteTagMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
-              ai.visma.ssn.async.v1.DeleteTagsRequest,
+              ai.visma.ssn.async.v1.DeleteTagRequest,
               com.google.protobuf.Empty>(
-                service, METHODID_DELETE_TAGS)))
+                service, METHODID_DELETE_TAG)))
         .build();
   }
 
@@ -615,7 +615,7 @@ public final class TransactionServiceGrpc {
               .addMethod(getGetTransactionResultsMethod())
               .addMethod(getGetTransactionStatusMethod())
               .addMethod(getDeleteTransactionMethod())
-              .addMethod(getDeleteTagsMethod())
+              .addMethod(getDeleteTagMethod())
               .build();
         }
       }

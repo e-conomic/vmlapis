@@ -3,6 +3,7 @@ from google.protobuf import empty_pb2 as _empty_pb2
 from protoc_gen_openapiv2.options import annotations_pb2 as _annotations_pb2_1
 from ssn.annotator.v1 import annotator_pb2 as _annotator_pb2
 from ssn.type import candidate_pb2 as _candidate_pb2
+from validate import validate_pb2 as _validate_pb2
 from google.protobuf.internal import containers as _containers
 from google.protobuf import descriptor as _descriptor
 from google.protobuf import message as _message
@@ -84,8 +85,8 @@ class DeleteTransactionRequest(_message.Message):
     id: str
     def __init__(self, id: _Optional[str] = ...) -> None: ...
 
-class DeleteTagsRequest(_message.Message):
-    __slots__ = ["tags"]
-    TAGS_FIELD_NUMBER: _ClassVar[int]
-    tags: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, tags: _Optional[_Iterable[str]] = ...) -> None: ...
+class DeleteTagRequest(_message.Message):
+    __slots__ = ["tag_name"]
+    TAG_NAME_FIELD_NUMBER: _ClassVar[int]
+    tag_name: str
+    def __init__(self, tag_name: _Optional[str] = ...) -> None: ...

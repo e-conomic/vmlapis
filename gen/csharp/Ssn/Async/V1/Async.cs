@@ -28,51 +28,53 @@ namespace Ssn.Async.V1 {
             "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxobZ29vZ2xlL3Byb3RvYnVmL2Vt",
             "cHR5LnByb3RvGi5wcm90b2MtZ2VuLW9wZW5hcGl2Mi9vcHRpb25zL2Fubm90",
             "YXRpb25zLnByb3RvGiBzc24vYW5ub3RhdG9yL3YxL2Fubm90YXRvci5wcm90",
-            "bxoYc3NuL3R5cGUvY2FuZGlkYXRlLnByb3RvIoIBChhDcmVhdGVUcmFuc2Fj",
-            "dGlvblJlcXVlc3QSNgoIZG9jdW1lbnQYASABKAsyGi5zc24uYW5ub3RhdG9y",
-            "LnYxLkRvY3VtZW50Ughkb2N1bWVudBISCgR0YWdzGAIgAygJUgR0YWdzEhoK",
-            "CGZlYXR1cmVzGAMgAygJUghmZWF0dXJlcyIrChlDcmVhdGVUcmFuc2FjdGlv",
-            "blJlc3BvbnNlEg4KAmlkGAEgASgJUgJpZCIuChxHZXRUcmFuc2FjdGlvblJl",
-            "c3VsdHNSZXF1ZXN0Eg4KAmlkGAEgASgJUgJpZCJrCh1HZXRUcmFuc2FjdGlv",
-            "blJlc3VsdHNSZXNwb25zZRIOCgJpZBgBIAEoCVICaWQSOgoLYW5ub3RhdGlv",
-            "bnMYAiADKAsyGC5zc24uYXN5bmMudjEuQW5ub3RhdGlvblILYW5ub3RhdGlv",
-            "bnMiPgoJQ2FuZGlkYXRlEjEKCWNhbmRpZGF0ZRgBIAMoCzITLnNzbi50eXBl",
-            "LkNhbmRpZGF0ZVIJY2FuZGlkYXRlInAKFVB1cmNoYXNlTGluZUNhbmRpZGF0",
-            "ZRJXChdwdXJjaGFzZV9saW5lX2NhbmRpZGF0ZRgBIAMoCzIfLnNzbi50eXBl",
-            "LlB1cmNoYXNlTGluZUNhbmRpZGF0ZVIVcHVyY2hhc2VMaW5lQ2FuZGlkYXRl",
-            "IswBCgpBbm5vdGF0aW9uEhgKB2ZlYXR1cmUYASABKAlSB2ZlYXR1cmUSNwoJ",
-            "Y2FuZGlkYXRlGAIgASgLMhcuc3NuLmFzeW5jLnYxLkNhbmRpZGF0ZUgAUglj",
-            "YW5kaWRhdGUSXQoXcHVyY2hhc2VfbGluZV9jYW5kaWRhdGUYAyABKAsyIy5z",
-            "c24uYXN5bmMudjEuUHVyY2hhc2VMaW5lQ2FuZGlkYXRlSABSFXB1cmNoYXNl",
-            "TGluZUNhbmRpZGF0ZUIMCgpjYW5kaWRhdGVzIi0KG0dldFRyYW5zYWN0aW9u",
-            "U3RhdHVzUmVxdWVzdBIOCgJpZBgBIAEoCVICaWQiawocR2V0VHJhbnNhY3Rp",
-            "b25TdGF0dXNSZXNwb25zZRIOCgJpZBgBIAEoCVICaWQSFgoGc3RhdHVzGAIg",
-            "ASgJUgZzdGF0dXMSIwoNZXJyb3JfbWVzc2FnZRgDIAEoCVIMZXJyb3JNZXNz",
-            "YWdlIioKGERlbGV0ZVRyYW5zYWN0aW9uUmVxdWVzdBIOCgJpZBgBIAEoCVIC",
-            "aWQiJwoRRGVsZXRlVGFnc1JlcXVlc3QSEgoEdGFncxgBIAMoCVIEdGFnczKV",
-            "BQoSVHJhbnNhY3Rpb25TZXJ2aWNlEoEBChFDcmVhdGVUcmFuc2FjdGlvbhIm",
-            "LnNzbi5hc3luYy52MS5DcmVhdGVUcmFuc2FjdGlvblJlcXVlc3QaJy5zc24u",
-            "YXN5bmMudjEuQ3JlYXRlVHJhbnNhY3Rpb25SZXNwb25zZSIbgtPkkwIVOgEq",
-            "IhAvdjEvdHJhbnNhY3Rpb25zEpcBChVHZXRUcmFuc2FjdGlvblJlc3VsdHMS",
-            "Ki5zc24uYXN5bmMudjEuR2V0VHJhbnNhY3Rpb25SZXN1bHRzUmVxdWVzdBor",
-            "LnNzbi5hc3luYy52MS5HZXRUcmFuc2FjdGlvblJlc3VsdHNSZXNwb25zZSIl",
-            "gtPkkwIfEh0vdjEvdHJhbnNhY3Rpb25zL3tpZH0vcmVzdWx0cxKTAQoUR2V0",
-            "VHJhbnNhY3Rpb25TdGF0dXMSKS5zc24uYXN5bmMudjEuR2V0VHJhbnNhY3Rp",
-            "b25TdGF0dXNSZXF1ZXN0Giouc3NuLmFzeW5jLnYxLkdldFRyYW5zYWN0aW9u",
-            "U3RhdHVzUmVzcG9uc2UiJILT5JMCHhIcL3YxL3RyYW5zYWN0aW9ucy97aWR9",
-            "L3N0YXR1cxJyChFEZWxldGVUcmFuc2FjdGlvbhImLnNzbi5hc3luYy52MS5E",
-            "ZWxldGVUcmFuc2FjdGlvblJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkiHYLT5JMCFyoVL3YxL3RyYW5zYWN0aW9ucy97aWR9ElcKCkRlbGV0ZVRh",
-            "Z3MSHy5zc24uYXN5bmMudjEuRGVsZXRlVGFnc1JlcXVlc3QaFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkiEILT5JMCCioIL3YxL3RhZ3NC7gEKFWFpLnZpc21h",
-            "LnNzbi5hc3luYy52MUIKQXN5bmNQcm90b1ABWjxnaXRodWIuY29tL2UtY29u",
-            "b21pYy92bWxhcGlzL2dlbi9nby9zc24vYXN5bmMvdjE7dHJhbnNhY3Rpb26i",
-            "AgNTQViqAgxTc24uQXN5bmMuVjHKAgxTc25cQXN5bmNcVjHiAhhTc25cQXN5",
-            "bmNcVjFcR1BCTWV0YWRhdGHqAg5Tc246OkFzeW5jOjpWMZJBOBIPCglBc3lu",
-            "YyBBUEkyAnYxKgECMhBhcHBsaWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9q",
-            "c29uYgZwcm90bzM="));
+            "bxoYc3NuL3R5cGUvY2FuZGlkYXRlLnByb3RvGhd2YWxpZGF0ZS92YWxpZGF0",
+            "ZS5wcm90byKCAQoYQ3JlYXRlVHJhbnNhY3Rpb25SZXF1ZXN0EjYKCGRvY3Vt",
+            "ZW50GAEgASgLMhouc3NuLmFubm90YXRvci52MS5Eb2N1bWVudFIIZG9jdW1l",
+            "bnQSEgoEdGFncxgCIAMoCVIEdGFncxIaCghmZWF0dXJlcxgDIAMoCVIIZmVh",
+            "dHVyZXMiKwoZQ3JlYXRlVHJhbnNhY3Rpb25SZXNwb25zZRIOCgJpZBgBIAEo",
+            "CVICaWQiLgocR2V0VHJhbnNhY3Rpb25SZXN1bHRzUmVxdWVzdBIOCgJpZBgB",
+            "IAEoCVICaWQiawodR2V0VHJhbnNhY3Rpb25SZXN1bHRzUmVzcG9uc2USDgoC",
+            "aWQYASABKAlSAmlkEjoKC2Fubm90YXRpb25zGAIgAygLMhguc3NuLmFzeW5j",
+            "LnYxLkFubm90YXRpb25SC2Fubm90YXRpb25zIj4KCUNhbmRpZGF0ZRIxCglj",
+            "YW5kaWRhdGUYASADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSCWNhbmRpZGF0",
+            "ZSJwChVQdXJjaGFzZUxpbmVDYW5kaWRhdGUSVwoXcHVyY2hhc2VfbGluZV9j",
+            "YW5kaWRhdGUYASADKAsyHy5zc24udHlwZS5QdXJjaGFzZUxpbmVDYW5kaWRh",
+            "dGVSFXB1cmNoYXNlTGluZUNhbmRpZGF0ZSLMAQoKQW5ub3RhdGlvbhIYCgdm",
+            "ZWF0dXJlGAEgASgJUgdmZWF0dXJlEjcKCWNhbmRpZGF0ZRgCIAEoCzIXLnNz",
+            "bi5hc3luYy52MS5DYW5kaWRhdGVIAFIJY2FuZGlkYXRlEl0KF3B1cmNoYXNl",
+            "X2xpbmVfY2FuZGlkYXRlGAMgASgLMiMuc3NuLmFzeW5jLnYxLlB1cmNoYXNl",
+            "TGluZUNhbmRpZGF0ZUgAUhVwdXJjaGFzZUxpbmVDYW5kaWRhdGVCDAoKY2Fu",
+            "ZGlkYXRlcyItChtHZXRUcmFuc2FjdGlvblN0YXR1c1JlcXVlc3QSDgoCaWQY",
+            "ASABKAlSAmlkImsKHEdldFRyYW5zYWN0aW9uU3RhdHVzUmVzcG9uc2USDgoC",
+            "aWQYASABKAlSAmlkEhYKBnN0YXR1cxgCIAEoCVIGc3RhdHVzEiMKDWVycm9y",
+            "X21lc3NhZ2UYAyABKAlSDGVycm9yTWVzc2FnZSIqChhEZWxldGVUcmFuc2Fj",
+            "dGlvblJlcXVlc3QSDgoCaWQYASABKAlSAmlkIlcKEERlbGV0ZVRhZ1JlcXVl",
+            "c3QSQwoIdGFnX25hbWUYASABKAlCKPpCJXIjKIACMh5eW0EtWmEtejAtOS5d",
+            "W0EtWmEtejAtOV8uPi1dKiRSB3RhZ05hbWUyngUKElRyYW5zYWN0aW9uU2Vy",
+            "dmljZRKBAQoRQ3JlYXRlVHJhbnNhY3Rpb24SJi5zc24uYXN5bmMudjEuQ3Jl",
+            "YXRlVHJhbnNhY3Rpb25SZXF1ZXN0Gicuc3NuLmFzeW5jLnYxLkNyZWF0ZVRy",
+            "YW5zYWN0aW9uUmVzcG9uc2UiG4LT5JMCFToBKiIQL3YxL3RyYW5zYWN0aW9u",
+            "cxKXAQoVR2V0VHJhbnNhY3Rpb25SZXN1bHRzEiouc3NuLmFzeW5jLnYxLkdl",
+            "dFRyYW5zYWN0aW9uUmVzdWx0c1JlcXVlc3QaKy5zc24uYXN5bmMudjEuR2V0",
+            "VHJhbnNhY3Rpb25SZXN1bHRzUmVzcG9uc2UiJYLT5JMCHxIdL3YxL3RyYW5z",
+            "YWN0aW9ucy97aWR9L3Jlc3VsdHMSkwEKFEdldFRyYW5zYWN0aW9uU3RhdHVz",
+            "Eikuc3NuLmFzeW5jLnYxLkdldFRyYW5zYWN0aW9uU3RhdHVzUmVxdWVzdBoq",
+            "LnNzbi5hc3luYy52MS5HZXRUcmFuc2FjdGlvblN0YXR1c1Jlc3BvbnNlIiSC",
+            "0+STAh4SHC92MS90cmFuc2FjdGlvbnMve2lkfS9zdGF0dXMScgoRRGVsZXRl",
+            "VHJhbnNhY3Rpb24SJi5zc24uYXN5bmMudjEuRGVsZXRlVHJhbnNhY3Rpb25S",
+            "ZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5Ih2C0+STAhcqFS92MS90",
+            "cmFuc2FjdGlvbnMve2lkfRJgCglEZWxldGVUYWcSHi5zc24uYXN5bmMudjEu",
+            "RGVsZXRlVGFnUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIbgtPk",
+            "kwIVKhMvdjEvdGFncy97dGFnX25hbWV9Qu4BChVhaS52aXNtYS5zc24uYXN5",
+            "bmMudjFCCkFzeW5jUHJvdG9QAVo8Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1s",
+            "YXBpcy9nZW4vZ28vc3NuL2FzeW5jL3YxO3RyYW5zYWN0aW9uogIDU0FYqgIM",
+            "U3NuLkFzeW5jLlYxygIMU3NuXEFzeW5jXFYx4gIYU3NuXEFzeW5jXFYxXEdQ",
+            "Qk1ldGFkYXRh6gIOU3NuOjpBc3luYzo6VjGSQTgSDwoJQXN5bmMgQVBJMgJ2",
+            "MSoBAjIQYXBwbGljYXRpb24vanNvbjoQYXBwbGljYXRpb24vanNvbmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.CreateTransactionRequest), global::Ssn.Async.V1.CreateTransactionRequest.Parser, new[]{ "Document", "Tags", "Features" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.CreateTransactionResponse), global::Ssn.Async.V1.CreateTransactionResponse.Parser, new[]{ "Id" }, null, null, null, null),
@@ -84,7 +86,7 @@ namespace Ssn.Async.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionStatusRequest), global::Ssn.Async.V1.GetTransactionStatusRequest.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionStatusResponse), global::Ssn.Async.V1.GetTransactionStatusResponse.Parser, new[]{ "Id", "Status", "ErrorMessage" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.DeleteTransactionRequest), global::Ssn.Async.V1.DeleteTransactionRequest.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.DeleteTagsRequest), global::Ssn.Async.V1.DeleteTagsRequest.Parser, new[]{ "Tags" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.DeleteTagRequest), global::Ssn.Async.V1.DeleteTagRequest.Parser, new[]{ "TagName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2306,18 +2308,18 @@ namespace Ssn.Async.V1 {
   }
 
   /// <summary>
-  /// --- delete: "/v1/tags" ---
+  /// --- delete: "/v1/tags/{tag_name}" ---
   /// </summary>
-  public sealed partial class DeleteTagsRequest : pb::IMessage<DeleteTagsRequest>
+  public sealed partial class DeleteTagRequest : pb::IMessage<DeleteTagRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<DeleteTagsRequest> _parser = new pb::MessageParser<DeleteTagsRequest>(() => new DeleteTagsRequest());
+    private static readonly pb::MessageParser<DeleteTagRequest> _parser = new pb::MessageParser<DeleteTagRequest>(() => new DeleteTagRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<DeleteTagsRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<DeleteTagRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2333,7 +2335,7 @@ namespace Ssn.Async.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DeleteTagsRequest() {
+    public DeleteTagRequest() {
       OnConstruction();
     }
 
@@ -2341,44 +2343,48 @@ namespace Ssn.Async.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DeleteTagsRequest(DeleteTagsRequest other) : this() {
-      tags_ = other.tags_.Clone();
+    public DeleteTagRequest(DeleteTagRequest other) : this() {
+      tagName_ = other.tagName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DeleteTagsRequest Clone() {
-      return new DeleteTagsRequest(this);
+    public DeleteTagRequest Clone() {
+      return new DeleteTagRequest(this);
     }
 
-    /// <summary>Field number for the "tags" field.</summary>
-    public const int TagsFieldNumber = 1;
-    private static readonly pb::FieldCodec<string> _repeated_tags_codec
-        = pb::FieldCodec.ForString(10);
-    private readonly pbc::RepeatedField<string> tags_ = new pbc::RepeatedField<string>();
+    /// <summary>Field number for the "tag_name" field.</summary>
+    public const int TagNameFieldNumber = 1;
+    private string tagName_ = "";
+    /// <summary>
+    /// text-no-spaces
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> Tags {
-      get { return tags_; }
+    public string TagName {
+      get { return tagName_; }
+      set {
+        tagName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as DeleteTagsRequest);
+      return Equals(other as DeleteTagRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(DeleteTagsRequest other) {
+    public bool Equals(DeleteTagRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!tags_.Equals(other.tags_)) return false;
+      if (TagName != other.TagName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2386,7 +2392,7 @@ namespace Ssn.Async.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= tags_.GetHashCode();
+      if (TagName.Length != 0) hash ^= TagName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2405,7 +2411,10 @@ namespace Ssn.Async.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      tags_.WriteTo(output, _repeated_tags_codec);
+      if (TagName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TagName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2416,7 +2425,10 @@ namespace Ssn.Async.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      tags_.WriteTo(ref output, _repeated_tags_codec);
+      if (TagName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(TagName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2427,7 +2439,9 @@ namespace Ssn.Async.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += tags_.CalculateSize(_repeated_tags_codec);
+      if (TagName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TagName);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2436,11 +2450,13 @@ namespace Ssn.Async.V1 {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(DeleteTagsRequest other) {
+    public void MergeFrom(DeleteTagRequest other) {
       if (other == null) {
         return;
       }
-      tags_.Add(other.tags_);
+      if (other.TagName.Length != 0) {
+        TagName = other.TagName;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2457,7 +2473,7 @@ namespace Ssn.Async.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            tags_.AddEntriesFrom(input, _repeated_tags_codec);
+            TagName = input.ReadString();
             break;
           }
         }
@@ -2476,7 +2492,7 @@ namespace Ssn.Async.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            TagName = input.ReadString();
             break;
           }
         }

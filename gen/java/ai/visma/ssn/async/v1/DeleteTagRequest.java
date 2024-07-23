@@ -5,80 +5,89 @@ package ai.visma.ssn.async.v1;
 
 /**
  * <pre>
- * --- delete: "/v1/tags" ---
+ * --- delete: "/v1/tags/{tag_name}" ---
  * </pre>
  *
- * Protobuf type {@code ssn.async.v1.DeleteTagsRequest}
+ * Protobuf type {@code ssn.async.v1.DeleteTagRequest}
  */
-public final class DeleteTagsRequest extends
+public final class DeleteTagRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:ssn.async.v1.DeleteTagsRequest)
-    DeleteTagsRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:ssn.async.v1.DeleteTagRequest)
+    DeleteTagRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use DeleteTagsRequest.newBuilder() to construct.
-  private DeleteTagsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use DeleteTagRequest.newBuilder() to construct.
+  private DeleteTagRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private DeleteTagsRequest() {
-    tags_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+  private DeleteTagRequest() {
+    tagName_ = "";
   }
 
   @java.lang.Override
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new DeleteTagsRequest();
+    return new DeleteTagRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ai.visma.ssn.async.v1.AsyncProto.internal_static_ssn_async_v1_DeleteTagsRequest_descriptor;
+    return ai.visma.ssn.async.v1.AsyncProto.internal_static_ssn_async_v1_DeleteTagRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ai.visma.ssn.async.v1.AsyncProto.internal_static_ssn_async_v1_DeleteTagsRequest_fieldAccessorTable
+    return ai.visma.ssn.async.v1.AsyncProto.internal_static_ssn_async_v1_DeleteTagRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ai.visma.ssn.async.v1.DeleteTagsRequest.class, ai.visma.ssn.async.v1.DeleteTagsRequest.Builder.class);
+            ai.visma.ssn.async.v1.DeleteTagRequest.class, ai.visma.ssn.async.v1.DeleteTagRequest.Builder.class);
   }
 
-  public static final int TAGS_FIELD_NUMBER = 1;
+  public static final int TAG_NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList tags_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private volatile java.lang.Object tagName_ = "";
   /**
-   * <code>repeated string tags = 1 [json_name = "tags"];</code>
-   * @return A list containing the tags.
+   * <pre>
+   * text-no-spaces
+   * </pre>
+   *
+   * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
+   * @return The tagName.
    */
-  public com.google.protobuf.ProtocolStringList
-      getTagsList() {
-    return tags_;
+  @java.lang.Override
+  public java.lang.String getTagName() {
+    java.lang.Object ref = tagName_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      tagName_ = s;
+      return s;
+    }
   }
   /**
-   * <code>repeated string tags = 1 [json_name = "tags"];</code>
-   * @return The count of tags.
+   * <pre>
+   * text-no-spaces
+   * </pre>
+   *
+   * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
+   * @return The bytes for tagName.
    */
-  public int getTagsCount() {
-    return tags_.size();
-  }
-  /**
-   * <code>repeated string tags = 1 [json_name = "tags"];</code>
-   * @param index The index of the element to return.
-   * @return The tags at the given index.
-   */
-  public java.lang.String getTags(int index) {
-    return tags_.get(index);
-  }
-  /**
-   * <code>repeated string tags = 1 [json_name = "tags"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the tags at the given index.
-   */
+  @java.lang.Override
   public com.google.protobuf.ByteString
-      getTagsBytes(int index) {
-    return tags_.getByteString(index);
+      getTagNameBytes() {
+    java.lang.Object ref = tagName_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      tagName_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   private byte memoizedIsInitialized = -1;
@@ -95,8 +104,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < tags_.size(); i++) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tags_.getRaw(i));
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tagName_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 1, tagName_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -107,13 +116,8 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    {
-      int dataSize = 0;
-      for (int i = 0; i < tags_.size(); i++) {
-        dataSize += computeStringSizeNoTag(tags_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getTagsList().size();
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(tagName_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, tagName_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -125,13 +129,13 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ai.visma.ssn.async.v1.DeleteTagsRequest)) {
+    if (!(obj instanceof ai.visma.ssn.async.v1.DeleteTagRequest)) {
       return super.equals(obj);
     }
-    ai.visma.ssn.async.v1.DeleteTagsRequest other = (ai.visma.ssn.async.v1.DeleteTagsRequest) obj;
+    ai.visma.ssn.async.v1.DeleteTagRequest other = (ai.visma.ssn.async.v1.DeleteTagRequest) obj;
 
-    if (!getTagsList()
-        .equals(other.getTagsList())) return false;
+    if (!getTagName()
+        .equals(other.getTagName())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -143,53 +147,51 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getTagsCount() > 0) {
-      hash = (37 * hash) + TAGS_FIELD_NUMBER;
-      hash = (53 * hash) + getTagsList().hashCode();
-    }
+    hash = (37 * hash) + TAG_NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getTagName().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static ai.visma.ssn.async.v1.DeleteTagsRequest parseFrom(
+  public static ai.visma.ssn.async.v1.DeleteTagRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.async.v1.DeleteTagsRequest parseFrom(
+  public static ai.visma.ssn.async.v1.DeleteTagRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.async.v1.DeleteTagsRequest parseFrom(
+  public static ai.visma.ssn.async.v1.DeleteTagRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.async.v1.DeleteTagsRequest parseFrom(
+  public static ai.visma.ssn.async.v1.DeleteTagRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.async.v1.DeleteTagsRequest parseFrom(byte[] data)
+  public static ai.visma.ssn.async.v1.DeleteTagRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.async.v1.DeleteTagsRequest parseFrom(
+  public static ai.visma.ssn.async.v1.DeleteTagRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.async.v1.DeleteTagsRequest parseFrom(java.io.InputStream input)
+  public static ai.visma.ssn.async.v1.DeleteTagRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.async.v1.DeleteTagsRequest parseFrom(
+  public static ai.visma.ssn.async.v1.DeleteTagRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -197,26 +199,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ai.visma.ssn.async.v1.DeleteTagsRequest parseDelimitedFrom(java.io.InputStream input)
+  public static ai.visma.ssn.async.v1.DeleteTagRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ai.visma.ssn.async.v1.DeleteTagsRequest parseDelimitedFrom(
+  public static ai.visma.ssn.async.v1.DeleteTagRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ai.visma.ssn.async.v1.DeleteTagsRequest parseFrom(
+  public static ai.visma.ssn.async.v1.DeleteTagRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.async.v1.DeleteTagsRequest parseFrom(
+  public static ai.visma.ssn.async.v1.DeleteTagRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -229,7 +231,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ai.visma.ssn.async.v1.DeleteTagsRequest prototype) {
+  public static Builder newBuilder(ai.visma.ssn.async.v1.DeleteTagRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -246,29 +248,29 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * --- delete: "/v1/tags" ---
+   * --- delete: "/v1/tags/{tag_name}" ---
    * </pre>
    *
-   * Protobuf type {@code ssn.async.v1.DeleteTagsRequest}
+   * Protobuf type {@code ssn.async.v1.DeleteTagRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:ssn.async.v1.DeleteTagsRequest)
-      ai.visma.ssn.async.v1.DeleteTagsRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:ssn.async.v1.DeleteTagRequest)
+      ai.visma.ssn.async.v1.DeleteTagRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ai.visma.ssn.async.v1.AsyncProto.internal_static_ssn_async_v1_DeleteTagsRequest_descriptor;
+      return ai.visma.ssn.async.v1.AsyncProto.internal_static_ssn_async_v1_DeleteTagRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ai.visma.ssn.async.v1.AsyncProto.internal_static_ssn_async_v1_DeleteTagsRequest_fieldAccessorTable
+      return ai.visma.ssn.async.v1.AsyncProto.internal_static_ssn_async_v1_DeleteTagRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ai.visma.ssn.async.v1.DeleteTagsRequest.class, ai.visma.ssn.async.v1.DeleteTagsRequest.Builder.class);
+              ai.visma.ssn.async.v1.DeleteTagRequest.class, ai.visma.ssn.async.v1.DeleteTagRequest.Builder.class);
     }
 
-    // Construct using ai.visma.ssn.async.v1.DeleteTagsRequest.newBuilder()
+    // Construct using ai.visma.ssn.async.v1.DeleteTagRequest.newBuilder()
     private Builder() {
 
     }
@@ -282,25 +284,24 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      tags_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      tagName_ = "";
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ai.visma.ssn.async.v1.AsyncProto.internal_static_ssn_async_v1_DeleteTagsRequest_descriptor;
+      return ai.visma.ssn.async.v1.AsyncProto.internal_static_ssn_async_v1_DeleteTagRequest_descriptor;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.async.v1.DeleteTagsRequest getDefaultInstanceForType() {
-      return ai.visma.ssn.async.v1.DeleteTagsRequest.getDefaultInstance();
+    public ai.visma.ssn.async.v1.DeleteTagRequest getDefaultInstanceForType() {
+      return ai.visma.ssn.async.v1.DeleteTagRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ai.visma.ssn.async.v1.DeleteTagsRequest build() {
-      ai.visma.ssn.async.v1.DeleteTagsRequest result = buildPartial();
+    public ai.visma.ssn.async.v1.DeleteTagRequest build() {
+      ai.visma.ssn.async.v1.DeleteTagRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -308,18 +309,17 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.async.v1.DeleteTagsRequest buildPartial() {
-      ai.visma.ssn.async.v1.DeleteTagsRequest result = new ai.visma.ssn.async.v1.DeleteTagsRequest(this);
+    public ai.visma.ssn.async.v1.DeleteTagRequest buildPartial() {
+      ai.visma.ssn.async.v1.DeleteTagRequest result = new ai.visma.ssn.async.v1.DeleteTagRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(ai.visma.ssn.async.v1.DeleteTagsRequest result) {
+    private void buildPartial0(ai.visma.ssn.async.v1.DeleteTagRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        tags_.makeImmutable();
-        result.tags_ = tags_;
+        result.tagName_ = tagName_;
       }
     }
 
@@ -357,24 +357,19 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ai.visma.ssn.async.v1.DeleteTagsRequest) {
-        return mergeFrom((ai.visma.ssn.async.v1.DeleteTagsRequest)other);
+      if (other instanceof ai.visma.ssn.async.v1.DeleteTagRequest) {
+        return mergeFrom((ai.visma.ssn.async.v1.DeleteTagRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ai.visma.ssn.async.v1.DeleteTagsRequest other) {
-      if (other == ai.visma.ssn.async.v1.DeleteTagsRequest.getDefaultInstance()) return this;
-      if (!other.tags_.isEmpty()) {
-        if (tags_.isEmpty()) {
-          tags_ = other.tags_;
-          bitField0_ |= 0x00000001;
-        } else {
-          ensureTagsIsMutable();
-          tags_.addAll(other.tags_);
-        }
+    public Builder mergeFrom(ai.visma.ssn.async.v1.DeleteTagRequest other) {
+      if (other == ai.visma.ssn.async.v1.DeleteTagRequest.getDefaultInstance()) return this;
+      if (!other.getTagName().isEmpty()) {
+        tagName_ = other.tagName_;
+        bitField0_ |= 0x00000001;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -404,9 +399,8 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureTagsIsMutable();
-              tags_.add(s);
+              tagName_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
               break;
             } // case 10
             default: {
@@ -426,112 +420,93 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private com.google.protobuf.LazyStringArrayList tags_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureTagsIsMutable() {
-      if (!tags_.isModifiable()) {
-        tags_ = new com.google.protobuf.LazyStringArrayList(tags_);
+    private java.lang.Object tagName_ = "";
+    /**
+     * <pre>
+     * text-no-spaces
+     * </pre>
+     *
+     * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
+     * @return The tagName.
+     */
+    public java.lang.String getTagName() {
+      java.lang.Object ref = tagName_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tagName_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
       }
-      bitField0_ |= 0x00000001;
     }
     /**
-     * <code>repeated string tags = 1 [json_name = "tags"];</code>
-     * @return A list containing the tags.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getTagsList() {
-      tags_.makeImmutable();
-      return tags_;
-    }
-    /**
-     * <code>repeated string tags = 1 [json_name = "tags"];</code>
-     * @return The count of tags.
-     */
-    public int getTagsCount() {
-      return tags_.size();
-    }
-    /**
-     * <code>repeated string tags = 1 [json_name = "tags"];</code>
-     * @param index The index of the element to return.
-     * @return The tags at the given index.
-     */
-    public java.lang.String getTags(int index) {
-      return tags_.get(index);
-    }
-    /**
-     * <code>repeated string tags = 1 [json_name = "tags"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the tags at the given index.
+     * <pre>
+     * text-no-spaces
+     * </pre>
+     *
+     * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
+     * @return The bytes for tagName.
      */
     public com.google.protobuf.ByteString
-        getTagsBytes(int index) {
-      return tags_.getByteString(index);
+        getTagNameBytes() {
+      java.lang.Object ref = tagName_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tagName_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
     /**
-     * <code>repeated string tags = 1 [json_name = "tags"];</code>
-     * @param index The index to set the value at.
-     * @param value The tags to set.
+     * <pre>
+     * text-no-spaces
+     * </pre>
+     *
+     * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
+     * @param value The tagName to set.
      * @return This builder for chaining.
      */
-    public Builder setTags(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureTagsIsMutable();
-      tags_.set(index, value);
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string tags = 1 [json_name = "tags"];</code>
-     * @param value The tags to add.
-     * @return This builder for chaining.
-     */
-    public Builder addTags(
+    public Builder setTagName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      ensureTagsIsMutable();
-      tags_.add(value);
+      tagName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string tags = 1 [json_name = "tags"];</code>
-     * @param values The tags to add.
+     * <pre>
+     * text-no-spaces
+     * </pre>
+     *
+     * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
      * @return This builder for chaining.
      */
-    public Builder addAllTags(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureTagsIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, tags_);
-      bitField0_ |= 0x00000001;
+    public Builder clearTagName() {
+      tagName_ = getDefaultInstance().getTagName();
+      bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string tags = 1 [json_name = "tags"];</code>
+     * <pre>
+     * text-no-spaces
+     * </pre>
+     *
+     * <code>string tag_name = 1 [json_name = "tagName", (.validate.rules) = { ... }</code>
+     * @param value The bytes for tagName to set.
      * @return This builder for chaining.
      */
-    public Builder clearTags() {
-      tags_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000001);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string tags = 1 [json_name = "tags"];</code>
-     * @param value The bytes of the tags to add.
-     * @return This builder for chaining.
-     */
-    public Builder addTagsBytes(
+    public Builder setTagNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      ensureTagsIsMutable();
-      tags_.add(value);
+      tagName_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -549,23 +524,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:ssn.async.v1.DeleteTagsRequest)
+    // @@protoc_insertion_point(builder_scope:ssn.async.v1.DeleteTagRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:ssn.async.v1.DeleteTagsRequest)
-  private static final ai.visma.ssn.async.v1.DeleteTagsRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:ssn.async.v1.DeleteTagRequest)
+  private static final ai.visma.ssn.async.v1.DeleteTagRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ai.visma.ssn.async.v1.DeleteTagsRequest();
+    DEFAULT_INSTANCE = new ai.visma.ssn.async.v1.DeleteTagRequest();
   }
 
-  public static ai.visma.ssn.async.v1.DeleteTagsRequest getDefaultInstance() {
+  public static ai.visma.ssn.async.v1.DeleteTagRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<DeleteTagsRequest>
-      PARSER = new com.google.protobuf.AbstractParser<DeleteTagsRequest>() {
+  private static final com.google.protobuf.Parser<DeleteTagRequest>
+      PARSER = new com.google.protobuf.AbstractParser<DeleteTagRequest>() {
     @java.lang.Override
-    public DeleteTagsRequest parsePartialFrom(
+    public DeleteTagRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -584,17 +559,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<DeleteTagsRequest> parser() {
+  public static com.google.protobuf.Parser<DeleteTagRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<DeleteTagsRequest> getParserForType() {
+  public com.google.protobuf.Parser<DeleteTagRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public ai.visma.ssn.async.v1.DeleteTagsRequest getDefaultInstanceForType() {
+  public ai.visma.ssn.async.v1.DeleteTagRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

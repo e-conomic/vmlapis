@@ -31,12 +31,14 @@ var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator
 goog.object.extend(proto, ssn_annotator_v1_annotator_pb);
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js');
 goog.object.extend(proto, ssn_type_candidate_pb);
+var validate_validate_pb = require('../../../validate/validate_pb.js');
+goog.object.extend(proto, validate_validate_pb);
 goog.exportSymbol('proto.ssn.async.v1.Annotation', null, global);
 goog.exportSymbol('proto.ssn.async.v1.Annotation.CandidatesCase', null, global);
 goog.exportSymbol('proto.ssn.async.v1.Candidate', null, global);
 goog.exportSymbol('proto.ssn.async.v1.CreateTransactionRequest', null, global);
 goog.exportSymbol('proto.ssn.async.v1.CreateTransactionResponse', null, global);
-goog.exportSymbol('proto.ssn.async.v1.DeleteTagsRequest', null, global);
+goog.exportSymbol('proto.ssn.async.v1.DeleteTagRequest', null, global);
 goog.exportSymbol('proto.ssn.async.v1.DeleteTransactionRequest', null, global);
 goog.exportSymbol('proto.ssn.async.v1.GetTransactionResultsRequest', null, global);
 goog.exportSymbol('proto.ssn.async.v1.GetTransactionResultsResponse', null, global);
@@ -263,16 +265,16 @@ if (goog.DEBUG && !COMPILED) {
  * @extends {jspb.Message}
  * @constructor
  */
-proto.ssn.async.v1.DeleteTagsRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, proto.ssn.async.v1.DeleteTagsRequest.repeatedFields_, null);
+proto.ssn.async.v1.DeleteTagRequest = function(opt_data) {
+  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
 };
-goog.inherits(proto.ssn.async.v1.DeleteTagsRequest, jspb.Message);
+goog.inherits(proto.ssn.async.v1.DeleteTagRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
   /**
    * @public
    * @override
    */
-  proto.ssn.async.v1.DeleteTagsRequest.displayName = 'proto.ssn.async.v1.DeleteTagsRequest';
+  proto.ssn.async.v1.DeleteTagRequest.displayName = 'proto.ssn.async.v1.DeleteTagRequest';
 }
 
 /**
@@ -2009,13 +2011,6 @@ proto.ssn.async.v1.DeleteTransactionRequest.prototype.setId = function(value) {
 
 
 
-/**
- * List of repeated fields within this message type.
- * @private {!Array<number>}
- * @const
- */
-proto.ssn.async.v1.DeleteTagsRequest.repeatedFields_ = [1];
-
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -2031,8 +2026,8 @@ if (jspb.Message.GENERATE_TO_OBJECT) {
  *     http://goto/soy-param-migration
  * @return {!Object}
  */
-proto.ssn.async.v1.DeleteTagsRequest.prototype.toObject = function(opt_includeInstance) {
-  return proto.ssn.async.v1.DeleteTagsRequest.toObject(opt_includeInstance, this);
+proto.ssn.async.v1.DeleteTagRequest.prototype.toObject = function(opt_includeInstance) {
+  return proto.ssn.async.v1.DeleteTagRequest.toObject(opt_includeInstance, this);
 };
 
 
@@ -2041,13 +2036,13 @@ proto.ssn.async.v1.DeleteTagsRequest.prototype.toObject = function(opt_includeIn
  * @param {boolean|undefined} includeInstance Deprecated. Whether to include
  *     the JSPB instance for transitional soy proto support:
  *     http://goto/soy-param-migration
- * @param {!proto.ssn.async.v1.DeleteTagsRequest} msg The msg instance to transform.
+ * @param {!proto.ssn.async.v1.DeleteTagRequest} msg The msg instance to transform.
  * @return {!Object}
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ssn.async.v1.DeleteTagsRequest.toObject = function(includeInstance, msg) {
+proto.ssn.async.v1.DeleteTagRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
-    tagsList: (f = jspb.Message.getRepeatedField(msg, 1)) == null ? undefined : f
+    tagName: jspb.Message.getFieldWithDefault(msg, 1, "")
   };
 
   if (includeInstance) {
@@ -2061,23 +2056,23 @@ proto.ssn.async.v1.DeleteTagsRequest.toObject = function(includeInstance, msg) {
 /**
  * Deserializes binary data (in protobuf wire format).
  * @param {jspb.ByteSource} bytes The bytes to deserialize.
- * @return {!proto.ssn.async.v1.DeleteTagsRequest}
+ * @return {!proto.ssn.async.v1.DeleteTagRequest}
  */
-proto.ssn.async.v1.DeleteTagsRequest.deserializeBinary = function(bytes) {
+proto.ssn.async.v1.DeleteTagRequest.deserializeBinary = function(bytes) {
   var reader = new jspb.BinaryReader(bytes);
-  var msg = new proto.ssn.async.v1.DeleteTagsRequest;
-  return proto.ssn.async.v1.DeleteTagsRequest.deserializeBinaryFromReader(msg, reader);
+  var msg = new proto.ssn.async.v1.DeleteTagRequest;
+  return proto.ssn.async.v1.DeleteTagRequest.deserializeBinaryFromReader(msg, reader);
 };
 
 
 /**
  * Deserializes binary data (in protobuf wire format) from the
  * given reader into the given message object.
- * @param {!proto.ssn.async.v1.DeleteTagsRequest} msg The message object to deserialize into.
+ * @param {!proto.ssn.async.v1.DeleteTagRequest} msg The message object to deserialize into.
  * @param {!jspb.BinaryReader} reader The BinaryReader to use.
- * @return {!proto.ssn.async.v1.DeleteTagsRequest}
+ * @return {!proto.ssn.async.v1.DeleteTagRequest}
  */
-proto.ssn.async.v1.DeleteTagsRequest.deserializeBinaryFromReader = function(msg, reader) {
+proto.ssn.async.v1.DeleteTagRequest.deserializeBinaryFromReader = function(msg, reader) {
   while (reader.nextField()) {
     if (reader.isEndGroup()) {
       break;
@@ -2086,7 +2081,7 @@ proto.ssn.async.v1.DeleteTagsRequest.deserializeBinaryFromReader = function(msg,
     switch (field) {
     case 1:
       var value = /** @type {string} */ (reader.readString());
-      msg.addTags(value);
+      msg.setTagName(value);
       break;
     default:
       reader.skipField();
@@ -2101,9 +2096,9 @@ proto.ssn.async.v1.DeleteTagsRequest.deserializeBinaryFromReader = function(msg,
  * Serializes the message to binary data (in protobuf wire format).
  * @return {!Uint8Array}
  */
-proto.ssn.async.v1.DeleteTagsRequest.prototype.serializeBinary = function() {
+proto.ssn.async.v1.DeleteTagRequest.prototype.serializeBinary = function() {
   var writer = new jspb.BinaryWriter();
-  proto.ssn.async.v1.DeleteTagsRequest.serializeBinaryToWriter(this, writer);
+  proto.ssn.async.v1.DeleteTagRequest.serializeBinaryToWriter(this, writer);
   return writer.getResultBuffer();
 };
 
@@ -2111,15 +2106,15 @@ proto.ssn.async.v1.DeleteTagsRequest.prototype.serializeBinary = function() {
 /**
  * Serializes the given message to binary data (in protobuf wire
  * format), writing to the given BinaryWriter.
- * @param {!proto.ssn.async.v1.DeleteTagsRequest} message
+ * @param {!proto.ssn.async.v1.DeleteTagRequest} message
  * @param {!jspb.BinaryWriter} writer
  * @suppress {unusedLocalVariables} f is only used for nested messages
  */
-proto.ssn.async.v1.DeleteTagsRequest.serializeBinaryToWriter = function(message, writer) {
+proto.ssn.async.v1.DeleteTagRequest.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getTagsList();
+  f = message.getTagName();
   if (f.length > 0) {
-    writer.writeRepeatedString(
+    writer.writeString(
       1,
       f
     );
@@ -2128,39 +2123,20 @@ proto.ssn.async.v1.DeleteTagsRequest.serializeBinaryToWriter = function(message,
 
 
 /**
- * repeated string tags = 1;
- * @return {!Array<string>}
+ * optional string tag_name = 1;
+ * @return {string}
  */
-proto.ssn.async.v1.DeleteTagsRequest.prototype.getTagsList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 1));
-};
-
-
-/**
- * @param {!Array<string>} value
- * @return {!proto.ssn.async.v1.DeleteTagsRequest} returns this
- */
-proto.ssn.async.v1.DeleteTagsRequest.prototype.setTagsList = function(value) {
-  return jspb.Message.setField(this, 1, value || []);
+proto.ssn.async.v1.DeleteTagRequest.prototype.getTagName = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 1, ""));
 };
 
 
 /**
  * @param {string} value
- * @param {number=} opt_index
- * @return {!proto.ssn.async.v1.DeleteTagsRequest} returns this
+ * @return {!proto.ssn.async.v1.DeleteTagRequest} returns this
  */
-proto.ssn.async.v1.DeleteTagsRequest.prototype.addTags = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 1, value, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.ssn.async.v1.DeleteTagsRequest} returns this
- */
-proto.ssn.async.v1.DeleteTagsRequest.prototype.clearTagsList = function() {
-  return this.setTagsList([]);
+proto.ssn.async.v1.DeleteTagRequest.prototype.setTagName = function(value) {
+  return jspb.Message.setProto3StringField(this, 1, value);
 };
 
 
