@@ -5,6 +5,7 @@ import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb';
 import * as ssn_annotator_v1_annotator_pb from '../../../ssn/annotator/v1/annotator_pb';
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb';
+import * as validate_validate_pb from '../../../validate/validate_pb';
 
 
 export class CreateTransactionRequest extends jspb.Message {
@@ -236,6 +237,24 @@ export class DeleteTransactionRequest extends jspb.Message {
 export namespace DeleteTransactionRequest {
   export type AsObject = {
     id: string,
+  }
+}
+
+export class DeleteTagRequest extends jspb.Message {
+  getTagName(): string;
+  setTagName(value: string): DeleteTagRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DeleteTagRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: DeleteTagRequest): DeleteTagRequest.AsObject;
+  static serializeBinaryToWriter(message: DeleteTagRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DeleteTagRequest;
+  static deserializeBinaryFromReader(message: DeleteTagRequest, reader: jspb.BinaryReader): DeleteTagRequest;
+}
+
+export namespace DeleteTagRequest {
+  export type AsObject = {
+    tagName: string,
   }
 }
 

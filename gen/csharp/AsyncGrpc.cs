@@ -65,6 +65,8 @@ namespace Ssn.Async.V1 {
     static readonly grpc::Marshaller<global::Ssn.Async.V1.DeleteTransactionRequest> __Marshaller_ssn_async_v1_DeleteTransactionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Async.V1.DeleteTransactionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Ssn.Async.V1.DeleteTagRequest> __Marshaller_ssn_async_v1_DeleteTagRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Async.V1.DeleteTagRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ssn.Async.V1.CreateTransactionRequest, global::Ssn.Async.V1.CreateTransactionResponse> __Method_CreateTransaction = new grpc::Method<global::Ssn.Async.V1.CreateTransactionRequest, global::Ssn.Async.V1.CreateTransactionResponse>(
@@ -96,6 +98,14 @@ namespace Ssn.Async.V1 {
         __ServiceName,
         "DeleteTransaction",
         __Marshaller_ssn_async_v1_DeleteTransactionRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Ssn.Async.V1.DeleteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteTag = new grpc::Method<global::Ssn.Async.V1.DeleteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteTag",
+        __Marshaller_ssn_async_v1_DeleteTagRequest,
         __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
@@ -134,6 +144,12 @@ namespace Ssn.Async.V1 {
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTransaction(global::Ssn.Async.V1.DeleteTransactionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTag(global::Ssn.Async.V1.DeleteTagRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -275,6 +291,26 @@ namespace Ssn.Async.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTransaction, null, options, request);
       }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTag(global::Ssn.Async.V1.DeleteTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTag(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteTag(global::Ssn.Async.V1.DeleteTagRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteTag, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTagAsync(global::Ssn.Async.V1.DeleteTagRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTagAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteTagAsync(global::Ssn.Async.V1.DeleteTagRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteTag, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override TransactionServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -292,7 +328,8 @@ namespace Ssn.Async.V1 {
           .AddMethod(__Method_CreateTransaction, serviceImpl.CreateTransaction)
           .AddMethod(__Method_GetTransactionResults, serviceImpl.GetTransactionResults)
           .AddMethod(__Method_GetTransactionStatus, serviceImpl.GetTransactionStatus)
-          .AddMethod(__Method_DeleteTransaction, serviceImpl.DeleteTransaction).Build();
+          .AddMethod(__Method_DeleteTransaction, serviceImpl.DeleteTransaction)
+          .AddMethod(__Method_DeleteTag, serviceImpl.DeleteTag).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -306,6 +343,7 @@ namespace Ssn.Async.V1 {
       serviceBinder.AddMethod(__Method_GetTransactionResults, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Async.V1.GetTransactionResultsRequest, global::Ssn.Async.V1.GetTransactionResultsResponse>(serviceImpl.GetTransactionResults));
       serviceBinder.AddMethod(__Method_GetTransactionStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Async.V1.GetTransactionStatusRequest, global::Ssn.Async.V1.GetTransactionStatusResponse>(serviceImpl.GetTransactionStatus));
       serviceBinder.AddMethod(__Method_DeleteTransaction, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Async.V1.DeleteTransactionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTransaction));
+      serviceBinder.AddMethod(__Method_DeleteTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Async.V1.DeleteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTag));
     }
 
   }

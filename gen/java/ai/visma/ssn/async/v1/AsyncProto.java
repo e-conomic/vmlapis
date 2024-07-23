@@ -64,6 +64,11 @@ public final class AsyncProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_async_v1_DeleteTransactionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_async_v1_DeleteTagRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_async_v1_DeleteTagRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -78,50 +83,56 @@ public final class AsyncProto {
       "rotobuf/empty.proto\032.protoc-gen-openapiv" +
       "2/options/annotations.proto\032 ssn/annotat" +
       "or/v1/annotator.proto\032\030ssn/type/candidat" +
-      "e.proto\"\202\001\n\030CreateTransactionRequest\0226\n\010" +
-      "document\030\001 \001(\0132\032.ssn.annotator.v1.Docume" +
-      "ntR\010document\022\022\n\004tags\030\002 \003(\tR\004tags\022\032\n\010feat" +
-      "ures\030\003 \003(\tR\010features\"+\n\031CreateTransactio" +
-      "nResponse\022\016\n\002id\030\001 \001(\tR\002id\".\n\034GetTransact" +
-      "ionResultsRequest\022\016\n\002id\030\001 \001(\tR\002id\"k\n\035Get" +
-      "TransactionResultsResponse\022\016\n\002id\030\001 \001(\tR\002" +
-      "id\022:\n\013annotations\030\002 \003(\0132\030.ssn.async.v1.A" +
-      "nnotationR\013annotations\">\n\tCandidate\0221\n\tc" +
-      "andidate\030\001 \003(\0132\023.ssn.type.CandidateR\tcan" +
-      "didate\"p\n\025PurchaseLineCandidate\022W\n\027purch" +
-      "ase_line_candidate\030\001 \003(\0132\037.ssn.type.Purc" +
-      "haseLineCandidateR\025purchaseLineCandidate" +
-      "\"\314\001\n\nAnnotation\022\030\n\007feature\030\001 \001(\tR\007featur" +
-      "e\0227\n\tcandidate\030\002 \001(\0132\027.ssn.async.v1.Cand" +
-      "idateH\000R\tcandidate\022]\n\027purchase_line_cand" +
-      "idate\030\003 \001(\0132#.ssn.async.v1.PurchaseLineC" +
-      "andidateH\000R\025purchaseLineCandidateB\014\n\ncan" +
-      "didates\"-\n\033GetTransactionStatusRequest\022\016" +
-      "\n\002id\030\001 \001(\tR\002id\"k\n\034GetTransactionStatusRe" +
-      "sponse\022\016\n\002id\030\001 \001(\tR\002id\022\026\n\006status\030\002 \001(\tR\006" +
-      "status\022#\n\rerror_message\030\003 \001(\tR\014errorMess" +
-      "age\"*\n\030DeleteTransactionRequest\022\016\n\002id\030\001 " +
-      "\001(\tR\002id2\274\004\n\022TransactionService\022\201\001\n\021Creat" +
-      "eTransaction\022&.ssn.async.v1.CreateTransa" +
-      "ctionRequest\032\'.ssn.async.v1.CreateTransa" +
-      "ctionResponse\"\033\202\323\344\223\002\025\"\020/v1/transactions:" +
-      "\001*\022\227\001\n\025GetTransactionResults\022*.ssn.async" +
-      ".v1.GetTransactionResultsRequest\032+.ssn.a" +
-      "sync.v1.GetTransactionResultsResponse\"%\202" +
-      "\323\344\223\002\037\022\035/v1/transactions/{id}/results\022\223\001\n" +
-      "\024GetTransactionStatus\022).ssn.async.v1.Get" +
-      "TransactionStatusRequest\032*.ssn.async.v1." +
-      "GetTransactionStatusResponse\"$\202\323\344\223\002\036\022\034/v" +
-      "1/transactions/{id}/status\022r\n\021DeleteTran" +
-      "saction\022&.ssn.async.v1.DeleteTransaction" +
-      "Request\032\026.google.protobuf.Empty\"\035\202\323\344\223\002\027*" +
-      "\025/v1/transactions/{id}B\356\001\n\025ai.visma.ssn." +
-      "async.v1B\nAsyncProtoP\001Z<github.com/e-con" +
-      "omic/vmlapis/gen/go/ssn/async/v1;transac" +
-      "tion\242\002\003SAX\252\002\014Ssn.Async.V1\312\002\014Ssn\\Async\\V1" +
-      "\342\002\030Ssn\\Async\\V1\\GPBMetadata\352\002\016Ssn::Async" +
-      "::V1\222A8\022\017\n\tAsync API2\002v1*\001\0022\020application" +
-      "/json:\020application/jsonb\006proto3"
+      "e.proto\032\027validate/validate.proto\"\202\001\n\030Cre" +
+      "ateTransactionRequest\0226\n\010document\030\001 \001(\0132" +
+      "\032.ssn.annotator.v1.DocumentR\010document\022\022\n" +
+      "\004tags\030\002 \003(\tR\004tags\022\032\n\010features\030\003 \003(\tR\010fea" +
+      "tures\"+\n\031CreateTransactionResponse\022\016\n\002id" +
+      "\030\001 \001(\tR\002id\".\n\034GetTransactionResultsReque" +
+      "st\022\016\n\002id\030\001 \001(\tR\002id\"k\n\035GetTransactionResu" +
+      "ltsResponse\022\016\n\002id\030\001 \001(\tR\002id\022:\n\013annotatio" +
+      "ns\030\002 \003(\0132\030.ssn.async.v1.AnnotationR\013anno" +
+      "tations\">\n\tCandidate\0221\n\tcandidate\030\001 \003(\0132" +
+      "\023.ssn.type.CandidateR\tcandidate\"p\n\025Purch" +
+      "aseLineCandidate\022W\n\027purchase_line_candid" +
+      "ate\030\001 \003(\0132\037.ssn.type.PurchaseLineCandida" +
+      "teR\025purchaseLineCandidate\"\314\001\n\nAnnotation" +
+      "\022\030\n\007feature\030\001 \001(\tR\007feature\0227\n\tcandidate\030" +
+      "\002 \001(\0132\027.ssn.async.v1.CandidateH\000R\tcandid" +
+      "ate\022]\n\027purchase_line_candidate\030\003 \001(\0132#.s" +
+      "sn.async.v1.PurchaseLineCandidateH\000R\025pur" +
+      "chaseLineCandidateB\014\n\ncandidates\"-\n\033GetT" +
+      "ransactionStatusRequest\022\016\n\002id\030\001 \001(\tR\002id\"" +
+      "k\n\034GetTransactionStatusResponse\022\016\n\002id\030\001 " +
+      "\001(\tR\002id\022\026\n\006status\030\002 \001(\tR\006status\022#\n\rerror" +
+      "_message\030\003 \001(\tR\014errorMessage\"*\n\030DeleteTr" +
+      "ansactionRequest\022\016\n\002id\030\001 \001(\tR\002id\"W\n\020Dele" +
+      "teTagRequest\022C\n\010tag_name\030\001 \001(\tB(\372B%r#(\200\002" +
+      "2\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\007tagNam" +
+      "e2\236\005\n\022TransactionService\022\201\001\n\021CreateTrans" +
+      "action\022&.ssn.async.v1.CreateTransactionR" +
+      "equest\032\'.ssn.async.v1.CreateTransactionR" +
+      "esponse\"\033\202\323\344\223\002\025\"\020/v1/transactions:\001*\022\227\001\n" +
+      "\025GetTransactionResults\022*.ssn.async.v1.Ge" +
+      "tTransactionResultsRequest\032+.ssn.async.v" +
+      "1.GetTransactionResultsResponse\"%\202\323\344\223\002\037\022" +
+      "\035/v1/transactions/{id}/results\022\223\001\n\024GetTr" +
+      "ansactionStatus\022).ssn.async.v1.GetTransa" +
+      "ctionStatusRequest\032*.ssn.async.v1.GetTra" +
+      "nsactionStatusResponse\"$\202\323\344\223\002\036\022\034/v1/tran" +
+      "sactions/{id}/status\022r\n\021DeleteTransactio" +
+      "n\022&.ssn.async.v1.DeleteTransactionReques" +
+      "t\032\026.google.protobuf.Empty\"\035\202\323\344\223\002\027*\025/v1/t" +
+      "ransactions/{id}\022`\n\tDeleteTag\022\036.ssn.asyn" +
+      "c.v1.DeleteTagRequest\032\026.google.protobuf." +
+      "Empty\"\033\202\323\344\223\002\025*\023/v1/tags/{tag_name}B\356\001\n\025a" +
+      "i.visma.ssn.async.v1B\nAsyncProtoP\001Z<gith" +
+      "ub.com/e-conomic/vmlapis/gen/go/ssn/asyn" +
+      "c/v1;transaction\242\002\003SAX\252\002\014Ssn.Async.V1\312\002\014" +
+      "Ssn\\Async\\V1\342\002\030Ssn\\Async\\V1\\GPBMetadata\352" +
+      "\002\016Ssn::Async::V1\222A8\022\017\n\tAsync API2\002v1*\001\0022" +
+      "\020application/json:\020application/jsonb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -131,6 +142,7 @@ public final class AsyncProto {
           ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor(),
           ai.visma.ssn.annotator.v1.AnnotatorProto.getDescriptor(),
           ai.visma.ssn.type.CandidateProto.getDescriptor(),
+          ai.visma.validate.ValidateProto.getDescriptor(),
         });
     internal_static_ssn_async_v1_CreateTransactionRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -192,10 +204,17 @@ public final class AsyncProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_async_v1_DeleteTransactionRequest_descriptor,
         new java.lang.String[] { "Id", });
+    internal_static_ssn_async_v1_DeleteTagRequest_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_ssn_async_v1_DeleteTagRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_async_v1_DeleteTagRequest_descriptor,
+        new java.lang.String[] { "TagName", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.AnnotationsProto.http);
     registry.add(ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.openapiv2Swagger);
+    registry.add(ai.visma.validate.ValidateProto.rules);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.AnnotationsProto.getDescriptor();
@@ -203,6 +222,7 @@ public final class AsyncProto {
     ai.visma.grpc.gateway.protoc_gen_openapiv2.options.AnnotationsProto.getDescriptor();
     ai.visma.ssn.annotator.v1.AnnotatorProto.getDescriptor();
     ai.visma.ssn.type.CandidateProto.getDescriptor();
+    ai.visma.validate.ValidateProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)

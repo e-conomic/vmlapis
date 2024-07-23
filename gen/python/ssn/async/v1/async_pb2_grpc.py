@@ -37,6 +37,11 @@ class TransactionServiceStub(object):
                 request_serializer=ssn_dot_async_dot_v1_dot_async__pb2.DeleteTransactionRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
                 )
+        self.DeleteTag = channel.unary_unary(
+                '/ssn.async.v1.TransactionService/DeleteTag',
+                request_serializer=ssn_dot_async_dot_v1_dot_async__pb2.DeleteTagRequest.SerializeToString,
+                response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                )
 
 
 class TransactionServiceServicer(object):
@@ -69,6 +74,12 @@ class TransactionServiceServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def DeleteTag(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_TransactionServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -90,6 +101,11 @@ def add_TransactionServiceServicer_to_server(servicer, server):
             'DeleteTransaction': grpc.unary_unary_rpc_method_handler(
                     servicer.DeleteTransaction,
                     request_deserializer=ssn_dot_async_dot_v1_dot_async__pb2.DeleteTransactionRequest.FromString,
+                    response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            ),
+            'DeleteTag': grpc.unary_unary_rpc_method_handler(
+                    servicer.DeleteTag,
+                    request_deserializer=ssn_dot_async_dot_v1_dot_async__pb2.DeleteTagRequest.FromString,
                     response_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ),
     }
@@ -168,6 +184,23 @@ class TransactionService(object):
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/ssn.async.v1.TransactionService/DeleteTransaction',
             ssn_dot_async_dot_v1_dot_async__pb2.DeleteTransactionRequest.SerializeToString,
+            google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def DeleteTag(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ssn.async.v1.TransactionService/DeleteTag',
+            ssn_dot_async_dot_v1_dot_async__pb2.DeleteTagRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)

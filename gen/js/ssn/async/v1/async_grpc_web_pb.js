@@ -29,6 +29,8 @@ var protoc$gen$openapiv2_options_annotations_pb = require('../../../protoc-gen-o
 var ssn_annotator_v1_annotator_pb = require('../../../ssn/annotator/v1/annotator_pb.js')
 
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
+
+var validate_validate_pb = require('../../../validate/validate_pb.js')
 const proto = {};
 proto.ssn = {};
 proto.ssn.async = {};
@@ -327,6 +329,67 @@ proto.ssn.async.v1.TransactionServicePromiseClient.prototype.deleteTransaction =
       request,
       metadata || {},
       methodDescriptor_TransactionService_DeleteTransaction);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.async.v1.DeleteTagRequest,
+ *   !proto.google.protobuf.Empty>}
+ */
+const methodDescriptor_TransactionService_DeleteTag = new grpc.web.MethodDescriptor(
+  '/ssn.async.v1.TransactionService/DeleteTag',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.async.v1.DeleteTagRequest,
+  google_protobuf_empty_pb.Empty,
+  /**
+   * @param {!proto.ssn.async.v1.DeleteTagRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_empty_pb.Empty.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.async.v1.DeleteTagRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.google.protobuf.Empty)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.async.v1.TransactionServiceClient.prototype.deleteTag =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.async.v1.TransactionService/DeleteTag',
+      request,
+      metadata || {},
+      methodDescriptor_TransactionService_DeleteTag,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.async.v1.DeleteTagRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.google.protobuf.Empty>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.async.v1.TransactionServicePromiseClient.prototype.deleteTag =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.async.v1.TransactionService/DeleteTag',
+      request,
+      metadata || {},
+      methodDescriptor_TransactionService_DeleteTag);
 };
 
 

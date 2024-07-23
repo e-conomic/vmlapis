@@ -7,6 +7,7 @@ import "google/protobuf/empty.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/candidate.proto";
+import "validate/validate.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/async/v1;transaction";
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
@@ -39,6 +40,9 @@ service TransactionService {
   rpc DeleteTransaction(DeleteTransactionRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {delete: "/v1/transactions/{id}"};
   }
+  rpc DeleteTag(DeleteTagRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {delete: "/v1/tags/{tag_name}"};
+  }
   /// --- MVP for async purchase lines ---
 
   // below are more ideas how the API could progress
@@ -56,9 +60,6 @@ service TransactionService {
   //   option (google.api.http) = {get: "/v1/transactions/{id}/status:watch"};
   // }
   // delete on tags
-  // rpc DeleteTags(DeleteTagsRequest) returns (google.protobuf.Empty) {
-  //   option (google.api.http) = {delete: "/v1/tags"};
-  // }
 }
 
 // --- post: "/v1/transactions" ---
@@ -130,3 +131,12 @@ message DeleteTransactionRequest {
   string id = 1;
 }
 // --- delete: "/v1/transactions/{id}" ---
+
+// --- delete: "/v1/tags/{tag_name}" ---
+message DeleteTagRequest {
+  string tag_name = 1 [(validate.rules).string = {
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    max_bytes: 256
+  }]; // text-no-spaces
+}
+// --- delete: "/v1/tags/{tag_name}" ---
