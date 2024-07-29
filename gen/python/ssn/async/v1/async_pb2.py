@@ -19,7 +19,7 @@ from vml_proto.ssn.type import candidate_pb2 as ssn_dot_type_dot_candidate__pb2
 from validate import validate_pb2 as validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18ssn/async/v1/async.proto\x12\x0cssn.async.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a ssn/annotator/v1/annotator.proto\x1a\x18ssn/type/candidate.proto\x1a\x17validate/validate.proto\"\x82\x01\n\x18\x43reateTransactionRequest\x12\x36\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\x1a.ssn.annotator.v1.DocumentR\x08\x64ocument\x12\x12\n\x04tags\x18\x02 \x03(\tR\x04tags\x12\x1a\n\x08\x66\x65\x61tures\x18\x03 \x03(\tR\x08\x66\x65\x61tures\"+\n\x19\x43reateTransactionResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\".\n\x1cGetTransactionResultsRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"k\n\x1dGetTransactionResultsResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12:\n\x0b\x61nnotations\x18\x02 \x03(\x0b\x32\x18.ssn.async.v1.AnnotationR\x0b\x61nnotations\">\n\tCandidate\x12\x31\n\tcandidate\x18\x01 \x03(\x0b\x32\x13.ssn.type.CandidateR\tcandidate\"p\n\x15PurchaseLineCandidate\x12W\n\x17purchase_line_candidate\x18\x01 \x03(\x0b\x32\x1f.ssn.type.PurchaseLineCandidateR\x15purchaseLineCandidate\"\xcc\x01\n\nAnnotation\x12\x18\n\x07\x66\x65\x61ture\x18\x01 \x01(\tR\x07\x66\x65\x61ture\x12\x37\n\tcandidate\x18\x02 \x01(\x0b\x32\x17.ssn.async.v1.CandidateH\x00R\tcandidate\x12]\n\x17purchase_line_candidate\x18\x03 \x01(\x0b\x32#.ssn.async.v1.PurchaseLineCandidateH\x00R\x15purchaseLineCandidateB\x0c\n\ncandidates\"-\n\x1bGetTransactionStatusRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"k\n\x1cGetTransactionStatusResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x16\n\x06status\x18\x02 \x01(\tR\x06status\x12#\n\rerror_message\x18\x03 \x01(\tR\x0c\x65rrorMessage\"*\n\x18\x44\x65leteTransactionRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"W\n\x10\x44\x65leteTagRequest\x12\x43\n\x08tag_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x07tagName2\x9e\x05\n\x12TransactionService\x12\x81\x01\n\x11\x43reateTransaction\x12&.ssn.async.v1.CreateTransactionRequest\x1a\'.ssn.async.v1.CreateTransactionResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\"\x10/v1/transactions:\x01*\x12\x97\x01\n\x15GetTransactionResults\x12*.ssn.async.v1.GetTransactionResultsRequest\x1a+.ssn.async.v1.GetTransactionResultsResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/v1/transactions/{id}/results\x12\x93\x01\n\x14GetTransactionStatus\x12).ssn.async.v1.GetTransactionStatusRequest\x1a*.ssn.async.v1.GetTransactionStatusResponse\"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/v1/transactions/{id}/status\x12r\n\x11\x44\x65leteTransaction\x12&.ssn.async.v1.DeleteTransactionRequest\x1a\x16.google.protobuf.Empty\"\x1d\x82\xd3\xe4\x93\x02\x17*\x15/v1/transactions/{id}\x12`\n\tDeleteTag\x12\x1e.ssn.async.v1.DeleteTagRequest\x1a\x16.google.protobuf.Empty\"\x1b\x82\xd3\xe4\x93\x02\x15*\x13/v1/tags/{tag_name}ByZ<github.com/e-conomic/vmlapis/gen/go/ssn/async/v1;transaction\x92\x41\x38\x12\x0f\n\tAsync API2\x02v1*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x18ssn/async/v1/async.proto\x12\x0cssn.async.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a ssn/annotator/v1/annotator.proto\x1a\x18ssn/type/candidate.proto\x1a\x17validate/validate.proto\"\x82\x01\n\x18\x43reateTransactionRequest\x12\x36\n\x08\x64ocument\x18\x01 \x01(\x0b\x32\x1a.ssn.annotator.v1.DocumentR\x08\x64ocument\x12\x12\n\x04tags\x18\x02 \x03(\tR\x04tags\x12\x1a\n\x08\x66\x65\x61tures\x18\x03 \x03(\tR\x08\x66\x65\x61tures\"+\n\x19\x43reateTransactionResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\".\n\x1cGetTransactionResultsRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"\x90\x01\n\x1dGetTransactionResultsResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12:\n\x0b\x61nnotations\x18\x02 \x03(\x0b\x32\x18.ssn.async.v1.AnnotationR\x0b\x61nnotations\x12#\n\rerror_message\x18\x03 \x01(\tR\x0c\x65rrorMessage\">\n\tCandidate\x12\x31\n\tcandidate\x18\x01 \x03(\x0b\x32\x13.ssn.type.CandidateR\tcandidate\"p\n\x15PurchaseLineCandidate\x12W\n\x17purchase_line_candidate\x18\x01 \x03(\x0b\x32\x1f.ssn.type.PurchaseLineCandidateR\x15purchaseLineCandidate\"\xcc\x01\n\nAnnotation\x12\x18\n\x07\x66\x65\x61ture\x18\x01 \x01(\tR\x07\x66\x65\x61ture\x12\x37\n\tcandidate\x18\x02 \x01(\x0b\x32\x17.ssn.async.v1.CandidateH\x00R\tcandidate\x12]\n\x17purchase_line_candidate\x18\x03 \x01(\x0b\x32#.ssn.async.v1.PurchaseLineCandidateH\x00R\x15purchaseLineCandidateB\x0c\n\ncandidates\"-\n\x1bGetTransactionStatusRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"k\n\x1cGetTransactionStatusResponse\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\x12\x16\n\x06status\x18\x02 \x01(\tR\x06status\x12#\n\rerror_message\x18\x03 \x01(\tR\x0c\x65rrorMessage\"*\n\x18\x44\x65leteTransactionRequest\x12\x0e\n\x02id\x18\x01 \x01(\tR\x02id\"W\n\x10\x44\x65leteTagRequest\x12\x43\n\x08tag_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x07tagName2\x9e\x05\n\x12TransactionService\x12\x81\x01\n\x11\x43reateTransaction\x12&.ssn.async.v1.CreateTransactionRequest\x1a\'.ssn.async.v1.CreateTransactionResponse\"\x1b\x82\xd3\xe4\x93\x02\x15\"\x10/v1/transactions:\x01*\x12\x97\x01\n\x15GetTransactionResults\x12*.ssn.async.v1.GetTransactionResultsRequest\x1a+.ssn.async.v1.GetTransactionResultsResponse\"%\x82\xd3\xe4\x93\x02\x1f\x12\x1d/v1/transactions/{id}/results\x12\x93\x01\n\x14GetTransactionStatus\x12).ssn.async.v1.GetTransactionStatusRequest\x1a*.ssn.async.v1.GetTransactionStatusResponse\"$\x82\xd3\xe4\x93\x02\x1e\x12\x1c/v1/transactions/{id}/status\x12r\n\x11\x44\x65leteTransaction\x12&.ssn.async.v1.DeleteTransactionRequest\x1a\x16.google.protobuf.Empty\"\x1d\x82\xd3\xe4\x93\x02\x17*\x15/v1/transactions/{id}\x12`\n\tDeleteTag\x12\x1e.ssn.async.v1.DeleteTagRequest\x1a\x16.google.protobuf.Empty\"\x1b\x82\xd3\xe4\x93\x02\x15*\x13/v1/tags/{tag_name}ByZ<github.com/e-conomic/vmlapis/gen/go/ssn/async/v1;transaction\x92\x41\x38\x12\x0f\n\tAsync API2\x02v1*\x01\x02\x32\x10\x61pplication/json:\x10\x61pplication/jsonb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -46,22 +46,22 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _globals['_CREATETRANSACTIONRESPONSE']._serialized_end=410
   _globals['_GETTRANSACTIONRESULTSREQUEST']._serialized_start=412
   _globals['_GETTRANSACTIONRESULTSREQUEST']._serialized_end=458
-  _globals['_GETTRANSACTIONRESULTSRESPONSE']._serialized_start=460
-  _globals['_GETTRANSACTIONRESULTSRESPONSE']._serialized_end=567
-  _globals['_CANDIDATE']._serialized_start=569
-  _globals['_CANDIDATE']._serialized_end=631
-  _globals['_PURCHASELINECANDIDATE']._serialized_start=633
-  _globals['_PURCHASELINECANDIDATE']._serialized_end=745
-  _globals['_ANNOTATION']._serialized_start=748
-  _globals['_ANNOTATION']._serialized_end=952
-  _globals['_GETTRANSACTIONSTATUSREQUEST']._serialized_start=954
-  _globals['_GETTRANSACTIONSTATUSREQUEST']._serialized_end=999
-  _globals['_GETTRANSACTIONSTATUSRESPONSE']._serialized_start=1001
-  _globals['_GETTRANSACTIONSTATUSRESPONSE']._serialized_end=1108
-  _globals['_DELETETRANSACTIONREQUEST']._serialized_start=1110
-  _globals['_DELETETRANSACTIONREQUEST']._serialized_end=1152
-  _globals['_DELETETAGREQUEST']._serialized_start=1154
-  _globals['_DELETETAGREQUEST']._serialized_end=1241
-  _globals['_TRANSACTIONSERVICE']._serialized_start=1244
-  _globals['_TRANSACTIONSERVICE']._serialized_end=1914
+  _globals['_GETTRANSACTIONRESULTSRESPONSE']._serialized_start=461
+  _globals['_GETTRANSACTIONRESULTSRESPONSE']._serialized_end=605
+  _globals['_CANDIDATE']._serialized_start=607
+  _globals['_CANDIDATE']._serialized_end=669
+  _globals['_PURCHASELINECANDIDATE']._serialized_start=671
+  _globals['_PURCHASELINECANDIDATE']._serialized_end=783
+  _globals['_ANNOTATION']._serialized_start=786
+  _globals['_ANNOTATION']._serialized_end=990
+  _globals['_GETTRANSACTIONSTATUSREQUEST']._serialized_start=992
+  _globals['_GETTRANSACTIONSTATUSREQUEST']._serialized_end=1037
+  _globals['_GETTRANSACTIONSTATUSRESPONSE']._serialized_start=1039
+  _globals['_GETTRANSACTIONSTATUSRESPONSE']._serialized_end=1146
+  _globals['_DELETETRANSACTIONREQUEST']._serialized_start=1148
+  _globals['_DELETETRANSACTIONREQUEST']._serialized_end=1190
+  _globals['_DELETETAGREQUEST']._serialized_start=1192
+  _globals['_DELETETAGREQUEST']._serialized_end=1279
+  _globals['_TRANSACTIONSERVICE']._serialized_start=1282
+  _globals['_TRANSACTIONSERVICE']._serialized_end=1952
 # @@protoc_insertion_point(module_scope)

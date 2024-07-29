@@ -833,7 +833,8 @@ proto.ssn.async.v1.GetTransactionResultsResponse.toObject = function(includeInst
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
     annotationsList: jspb.Message.toObjectList(msg.getAnnotationsList(),
-    proto.ssn.async.v1.Annotation.toObject, includeInstance)
+    proto.ssn.async.v1.Annotation.toObject, includeInstance),
+    errorMessage: jspb.Message.getFieldWithDefault(msg, 3, "")
   };
 
   if (includeInstance) {
@@ -879,6 +880,10 @@ proto.ssn.async.v1.GetTransactionResultsResponse.deserializeBinaryFromReader = f
       reader.readMessage(value,proto.ssn.async.v1.Annotation.deserializeBinaryFromReader);
       msg.addAnnotations(value);
       break;
+    case 3:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setErrorMessage(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -921,6 +926,13 @@ proto.ssn.async.v1.GetTransactionResultsResponse.serializeBinaryToWriter = funct
       2,
       f,
       proto.ssn.async.v1.Annotation.serializeBinaryToWriter
+    );
+  }
+  f = message.getErrorMessage();
+  if (f.length > 0) {
+    writer.writeString(
+      3,
+      f
     );
   }
 };
@@ -979,6 +991,24 @@ proto.ssn.async.v1.GetTransactionResultsResponse.prototype.addAnnotations = func
  */
 proto.ssn.async.v1.GetTransactionResultsResponse.prototype.clearAnnotationsList = function() {
   return this.setAnnotationsList([]);
+};
+
+
+/**
+ * optional string error_message = 3;
+ * @return {string}
+ */
+proto.ssn.async.v1.GetTransactionResultsResponse.prototype.getErrorMessage = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 3, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.async.v1.GetTransactionResultsResponse} returns this
+ */
+proto.ssn.async.v1.GetTransactionResultsResponse.prototype.setErrorMessage = function(value) {
+  return jspb.Message.setProto3StringField(this, 3, value);
 };
 
 

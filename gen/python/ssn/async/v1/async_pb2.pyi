@@ -34,12 +34,14 @@ class GetTransactionResultsRequest(_message.Message):
     def __init__(self, id: _Optional[str] = ...) -> None: ...
 
 class GetTransactionResultsResponse(_message.Message):
-    __slots__ = ["id", "annotations"]
+    __slots__ = ["id", "annotations", "error_message"]
     ID_FIELD_NUMBER: _ClassVar[int]
     ANNOTATIONS_FIELD_NUMBER: _ClassVar[int]
+    ERROR_MESSAGE_FIELD_NUMBER: _ClassVar[int]
     id: str
     annotations: _containers.RepeatedCompositeFieldContainer[Annotation]
-    def __init__(self, id: _Optional[str] = ..., annotations: _Optional[_Iterable[_Union[Annotation, _Mapping]]] = ...) -> None: ...
+    error_message: str
+    def __init__(self, id: _Optional[str] = ..., annotations: _Optional[_Iterable[_Union[Annotation, _Mapping]]] = ..., error_message: _Optional[str] = ...) -> None: ...
 
 class Candidate(_message.Message):
     __slots__ = ["candidate"]
