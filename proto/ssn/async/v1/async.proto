@@ -89,6 +89,7 @@ message GetTransactionResultsResponse {
   // map: FEATURE NAME --> SSN CANDIDATES
   // empty when processing is still running
   repeated Annotation annotations = 2;
+  string error_message = 3;
 }
 
 // Wrappers for repeated Candidate
