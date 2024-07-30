@@ -17,4 +17,7 @@ message TargetMetrics {
 
   string target = 1;
   repeated Metric metrics = 2;
+  repeated float mcc = 3;
+  repeated float accuracy = 4;
+  repeated float balanced_accuracy = 5;
 }
