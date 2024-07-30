@@ -45,7 +45,7 @@ message InvoiceLine {
 message Supplier {
   // Id of the supplier; not nullable.
   string id = 1 [(validate.rules).string = {
-    pattern: "^[A-Za-z0-9]*$",
+    pattern: "^[A-Za-z0-9]*$"
     max_bytes: 64
   }];
 

@@ -19,7 +19,7 @@ message Entry {
   string dataset_name = 3 [(gen_bq_schema.bigquery).require = true];
   string dataset_type = 12 [(gen_bq_schema.bigquery).require = true];
   string dataset_id = 11 [(gen_bq_schema.bigquery) = {
-    require: true,
+    require: true
     description: "unique ID of dataset"
   }];
   repeated string tags = 4 [(gen_bq_schema.bigquery).description = "Tags defined by consumer, enriched by service if valetkey is used"];
@@ -28,7 +28,7 @@ message Entry {
   asgt.type.Model model = 9;
   repeated asgt.type.Prediction.Target prediction = 10;
   uint64 time_added = 8 [(gen_bq_schema.bigquery) = {
-    require: true,
+    require: true
     type_override: 'TIMESTAMP'
   }];
 }

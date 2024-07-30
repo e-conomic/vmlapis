@@ -705,6 +705,28 @@
             "type": "object",
             "$ref": "#/definitions/TargetMetricsMetric"
           }
+        },
+        "mcc": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          },
+          "title": "Matthews correlation coefficient"
+        },
+        "accuracy": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "balancedAccuracy": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
         }
       }
     },

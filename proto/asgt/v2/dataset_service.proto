@@ -95,20 +95,20 @@ service DatasetService {
 
 message GetDatasetRequest {
   string dataset_name = 1 [(validate.rules).string = {
-    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
   }]; // text-no-spaces
 }
 
 message CreateDatasetRequest {
   string dataset_name = 1 [(validate.rules).string = {
-    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
   }]; // text-no-spaces
   repeated string tags = 2 [
     (validate.rules).repeated.unique = true,
     (validate.rules).repeated.items.string = {
-      pattern: "^[A-Za-z0-9\\s_.>-]*$",
+      pattern: "^[A-Za-z0-9\\s_.>-]*$"
       max_bytes: 64
     }
   ]; // text-no-spaces
@@ -116,28 +116,28 @@ message CreateDatasetRequest {
 
 message CreateOrUpdateDatasetRequest {
   string dataset_name = 1 [(validate.rules).string = {
-    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
   }]; // text-no-spaces
 }
 
 message DeleteDatasetRequest {
   string dataset_name = 1 [(validate.rules).string = {
-    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
   }]; // text-no-spaces
 }
 
 message DeleteTagRequest {
   string tag_name = 1 [(validate.rules).string = {
-    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
   }]; // text-no-spaces
 }
 
 message CreateExampleRequest {
   string dataset_name = 1 [(validate.rules).string = {
-    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
   }]; // text-no-spaces
   asgt.v2.type.Example example = 2;
@@ -145,7 +145,7 @@ message CreateExampleRequest {
 
 message CreateOrUpdateExampleRequest {
   string dataset_name = 1 [(validate.rules).string = {
-    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
   }]; // text-no-spaces
   asgt.v2.type.Example example = 2;
@@ -153,7 +153,7 @@ message CreateOrUpdateExampleRequest {
 
 message BatchCreateExampleRequest {
   string dataset_name = 1 [(validate.rules).string = {
-    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
   }]; // text-no-spaces
   repeated asgt.v2.type.Example examples = 2;
@@ -161,7 +161,7 @@ message BatchCreateExampleRequest {
 
 message TruncateDatasetRequest {
   string dataset_name = 1 [(validate.rules).string = {
-    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
   }]; // text-no-spaces
 }
@@ -169,14 +169,14 @@ message TruncateDatasetRequest {
 message TrainingRequestOptions {
   // The number of trainings to return. Ranges from 1 to 100.
   int64 limit = 1 [(validate.rules).int64 = {
-    gt: 0,
+    gt: 0
     lte: 100
   }]; // mapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)
 }
 
 message GetDatasetTrainingsRequest {
   string dataset_name = 1 [(validate.rules).string = {
-    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
   }]; // text-no-spaces
   TrainingRequestOptions options = 2;

@@ -12,13 +12,13 @@ import "validate/validate.proto";
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/async/v1;transaction";
 option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
   info: {
-    title: "Async API";
-    version: "v1";
-    description: "";
-  };
-  schemes: HTTPS;
-  consumes: "application/json";
-  produces: "application/json";
+    title: "Async API"
+    version: "v1"
+    description: ""
+  }
+  schemes: HTTPS
+  consumes: "application/json"
+  produces: "application/json"
 };
 
 // api.{{env}}.ssn.visma.ai
@@ -136,7 +136,7 @@ message DeleteTransactionRequest {
 // --- delete: "/v1/tags/{tag_name}" ---
 message DeleteTagRequest {
   string tag_name = 1 [(validate.rules).string = {
-    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
   }]; // text-no-spaces
 }

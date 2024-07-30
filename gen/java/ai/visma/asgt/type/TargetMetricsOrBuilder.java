@@ -42,4 +42,67 @@ public interface TargetMetricsOrBuilder extends
    */
   ai.visma.asgt.type.TargetMetrics.MetricOrBuilder getMetricsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Matthews correlation coefficient
+   * </pre>
+   *
+   * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
+   * @return A list containing the mcc.
+   */
+  java.util.List<java.lang.Float> getMccList();
+  /**
+   * <pre>
+   * Matthews correlation coefficient
+   * </pre>
+   *
+   * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
+   * @return The count of mcc.
+   */
+  int getMccCount();
+  /**
+   * <pre>
+   * Matthews correlation coefficient
+   * </pre>
+   *
+   * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
+   * @param index The index of the element to return.
+   * @return The mcc at the given index.
+   */
+  float getMcc(int index);
+
+  /**
+   * <code>repeated float accuracy = 4 [json_name = "accuracy"];</code>
+   * @return A list containing the accuracy.
+   */
+  java.util.List<java.lang.Float> getAccuracyList();
+  /**
+   * <code>repeated float accuracy = 4 [json_name = "accuracy"];</code>
+   * @return The count of accuracy.
+   */
+  int getAccuracyCount();
+  /**
+   * <code>repeated float accuracy = 4 [json_name = "accuracy"];</code>
+   * @param index The index of the element to return.
+   * @return The accuracy at the given index.
+   */
+  float getAccuracy(int index);
+
+  /**
+   * <code>repeated float balanced_accuracy = 5 [json_name = "balancedAccuracy"];</code>
+   * @return A list containing the balancedAccuracy.
+   */
+  java.util.List<java.lang.Float> getBalancedAccuracyList();
+  /**
+   * <code>repeated float balanced_accuracy = 5 [json_name = "balancedAccuracy"];</code>
+   * @return The count of balancedAccuracy.
+   */
+  int getBalancedAccuracyCount();
+  /**
+   * <code>repeated float balanced_accuracy = 5 [json_name = "balancedAccuracy"];</code>
+   * @param index The index of the element to return.
+   * @return The balancedAccuracy at the given index.
+   */
+  float getBalancedAccuracy(int index);
 }
