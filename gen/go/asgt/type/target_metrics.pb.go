@@ -25,11 +25,12 @@ type TargetMetrics struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Target           string                  `protobuf:"bytes,1,opt,name=target,proto3" json:"target,omitempty"`
-	Metrics          []*TargetMetrics_Metric `protobuf:"bytes,2,rep,name=metrics,proto3" json:"metrics,omitempty"`
-	Mcc              []float32               `protobuf:"fixed32,3,rep,packed,name=mcc,proto3" json:"mcc,omitempty"`
-	Accuracy         []float32               `protobuf:"fixed32,4,rep,packed,name=accuracy,proto3" json:"accuracy,omitempty"`
-	BalancedAccuracy []float32               `protobuf:"fixed32,5,rep,packed,name=balanced_accuracy,json=balancedAccuracy,proto3" json:"balanced_accuracy,omitempty"`
+	Target  string                  `protobuf:"bytes,1,opt,name=target,proto3" json:"target,omitempty"`
+	Metrics []*TargetMetrics_Metric `protobuf:"bytes,2,rep,name=metrics,proto3" json:"metrics,omitempty"`
+	// Matthews correlation coefficient
+	Mcc              []float32 `protobuf:"fixed32,3,rep,packed,name=mcc,proto3" json:"mcc,omitempty"`
+	Accuracy         []float32 `protobuf:"fixed32,4,rep,packed,name=accuracy,proto3" json:"accuracy,omitempty"`
+	BalancedAccuracy []float32 `protobuf:"fixed32,5,rep,packed,name=balanced_accuracy,json=balancedAccuracy,proto3" json:"balanced_accuracy,omitempty"`
 }
 
 func (x *TargetMetrics) Reset() {

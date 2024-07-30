@@ -1041,6 +1041,10 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private com.google.protobuf.Internal.FloatList mcc_;
   /**
+   * <pre>
+   * Matthews correlation coefficient
+   * </pre>
+   *
    * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
    * @return A list containing the mcc.
    */
@@ -1050,6 +1054,10 @@ private static final long serialVersionUID = 0L;
     return mcc_;
   }
   /**
+   * <pre>
+   * Matthews correlation coefficient
+   * </pre>
+   *
    * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
    * @return The count of mcc.
    */
@@ -1057,6 +1065,10 @@ private static final long serialVersionUID = 0L;
     return mcc_.size();
   }
   /**
+   * <pre>
+   * Matthews correlation coefficient
+   * </pre>
+   *
    * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
    * @param index The index of the element to return.
    * @return The mcc at the given index.
@@ -2011,6 +2023,10 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
+     * <pre>
+     * Matthews correlation coefficient
+     * </pre>
+     *
      * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
      * @return A list containing the mcc.
      */
@@ -2020,6 +2036,10 @@ private static final long serialVersionUID = 0L;
                java.util.Collections.unmodifiableList(mcc_) : mcc_;
     }
     /**
+     * <pre>
+     * Matthews correlation coefficient
+     * </pre>
+     *
      * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
      * @return The count of mcc.
      */
@@ -2027,6 +2047,10 @@ private static final long serialVersionUID = 0L;
       return mcc_.size();
     }
     /**
+     * <pre>
+     * Matthews correlation coefficient
+     * </pre>
+     *
      * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
      * @param index The index of the element to return.
      * @return The mcc at the given index.
@@ -2035,6 +2059,10 @@ private static final long serialVersionUID = 0L;
       return mcc_.getFloat(index);
     }
     /**
+     * <pre>
+     * Matthews correlation coefficient
+     * </pre>
+     *
      * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
      * @param index The index to set the value at.
      * @param value The mcc to set.
@@ -2049,6 +2077,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Matthews correlation coefficient
+     * </pre>
+     *
      * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
      * @param value The mcc to add.
      * @return This builder for chaining.
@@ -2061,6 +2093,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Matthews correlation coefficient
+     * </pre>
+     *
      * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
      * @param values The mcc to add.
      * @return This builder for chaining.
@@ -2074,6 +2110,10 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
+     * <pre>
+     * Matthews correlation coefficient
+     * </pre>
+     *
      * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
      * @return This builder for chaining.
      */

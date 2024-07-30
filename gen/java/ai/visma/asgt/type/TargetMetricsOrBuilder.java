@@ -44,16 +44,28 @@ public interface TargetMetricsOrBuilder extends
       int index);
 
   /**
+   * <pre>
+   * Matthews correlation coefficient
+   * </pre>
+   *
    * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
    * @return A list containing the mcc.
    */
   java.util.List<java.lang.Float> getMccList();
   /**
+   * <pre>
+   * Matthews correlation coefficient
+   * </pre>
+   *
    * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
    * @return The count of mcc.
    */
   int getMccCount();
   /**
+   * <pre>
+   * Matthews correlation coefficient
+   * </pre>
+   *
    * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
    * @param index The index of the element to return.
    * @return The mcc at the given index.

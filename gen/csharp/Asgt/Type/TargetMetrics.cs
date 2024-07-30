@@ -125,6 +125,9 @@ namespace Asgt.Type {
     private static readonly pb::FieldCodec<float> _repeated_mcc_codec
         = pb::FieldCodec.ForFloat(26);
     private readonly pbc::RepeatedField<float> mcc_ = new pbc::RepeatedField<float>();
+    /// <summary>
+    /// Matthews correlation coefficient
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<float> Mcc {

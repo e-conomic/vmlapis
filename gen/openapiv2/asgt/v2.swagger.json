@@ -963,7 +963,8 @@
           "items": {
             "type": "number",
             "format": "float"
-          }
+          },
+          "title": "Matthews correlation coefficient"
         },
         "accuracy": {
           "type": "array",
