@@ -24,6 +24,9 @@ export class CreateTransactionRequest extends jspb.Message {
   clearFeaturesList(): CreateTransactionRequest;
   addFeatures(value: string, index?: number): CreateTransactionRequest;
 
+  getCustomId(): string;
+  setCustomId(value: string): CreateTransactionRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateTransactionRequest.AsObject;
   static toObject(includeInstance: boolean, msg: CreateTransactionRequest): CreateTransactionRequest.AsObject;
@@ -37,12 +40,16 @@ export namespace CreateTransactionRequest {
     document?: ssn_annotator_v1_annotator_pb.Document.AsObject,
     tagsList: Array<string>,
     featuresList: Array<string>,
+    customId: string,
   }
 }
 
 export class CreateTransactionResponse extends jspb.Message {
   getId(): string;
   setId(value: string): CreateTransactionResponse;
+
+  getCustomId(): string;
+  setCustomId(value: string): CreateTransactionResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateTransactionResponse.AsObject;
@@ -55,12 +62,16 @@ export class CreateTransactionResponse extends jspb.Message {
 export namespace CreateTransactionResponse {
   export type AsObject = {
     id: string,
+    customId: string,
   }
 }
 
 export class GetTransactionResultsRequest extends jspb.Message {
   getId(): string;
   setId(value: string): GetTransactionResultsRequest;
+
+  getCustomId(): string;
+  setCustomId(value: string): GetTransactionResultsRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetTransactionResultsRequest.AsObject;
@@ -73,6 +84,7 @@ export class GetTransactionResultsRequest extends jspb.Message {
 export namespace GetTransactionResultsRequest {
   export type AsObject = {
     id: string,
+    customId: string,
   }
 }
 
@@ -88,6 +100,9 @@ export class GetTransactionResultsResponse extends jspb.Message {
   getErrorMessage(): string;
   setErrorMessage(value: string): GetTransactionResultsResponse;
 
+  getCustomId(): string;
+  setCustomId(value: string): GetTransactionResultsResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetTransactionResultsResponse.AsObject;
   static toObject(includeInstance: boolean, msg: GetTransactionResultsResponse): GetTransactionResultsResponse.AsObject;
@@ -101,6 +116,7 @@ export namespace GetTransactionResultsResponse {
     id: string,
     annotationsList: Array<Annotation.AsObject>,
     errorMessage: string,
+    customId: string,
   }
 }
 
@@ -186,6 +202,9 @@ export class GetTransactionStatusRequest extends jspb.Message {
   getId(): string;
   setId(value: string): GetTransactionStatusRequest;
 
+  getCustomId(): string;
+  setCustomId(value: string): GetTransactionStatusRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetTransactionStatusRequest.AsObject;
   static toObject(includeInstance: boolean, msg: GetTransactionStatusRequest): GetTransactionStatusRequest.AsObject;
@@ -197,6 +216,7 @@ export class GetTransactionStatusRequest extends jspb.Message {
 export namespace GetTransactionStatusRequest {
   export type AsObject = {
     id: string,
+    customId: string,
   }
 }
 
@@ -209,6 +229,9 @@ export class GetTransactionStatusResponse extends jspb.Message {
 
   getErrorMessage(): string;
   setErrorMessage(value: string): GetTransactionStatusResponse;
+
+  getCustomId(): string;
+  setCustomId(value: string): GetTransactionStatusResponse;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetTransactionStatusResponse.AsObject;
@@ -223,12 +246,16 @@ export namespace GetTransactionStatusResponse {
     id: string,
     status: string,
     errorMessage: string,
+    customId: string,
   }
 }
 
 export class DeleteTransactionRequest extends jspb.Message {
   getId(): string;
   setId(value: string): DeleteTransactionRequest;
+
+  getCustomId(): string;
+  setCustomId(value: string): DeleteTransactionRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DeleteTransactionRequest.AsObject;
@@ -241,6 +268,7 @@ export class DeleteTransactionRequest extends jspb.Message {
 export namespace DeleteTransactionRequest {
   export type AsObject = {
     id: string,
+    customId: string,
   }
 }
 

@@ -17,6 +17,7 @@ private static final long serialVersionUID = 0L;
   }
   private CreateTransactionResponse() {
     id_ = "";
+    customId_ = "";
   }
 
   @java.lang.Override
@@ -43,11 +44,6 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings("serial")
   private volatile java.lang.Object id_ = "";
   /**
-   * <pre>
-   * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-   * but I think I'm more prone to separate them in /results endpoint
-   * </pre>
-   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
@@ -65,11 +61,6 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <pre>
-   * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-   * but I think I'm more prone to separate them in /results endpoint
-   * </pre>
-   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The bytes for id.
    */
@@ -82,6 +73,55 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
       id_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CUSTOM_ID_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object customId_ = "";
+  /**
+   * <pre>
+   * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
+   * but I think I'm more prone to separate them in /results endpoint
+   * </pre>
+   *
+   * <code>string custom_id = 2 [json_name = "customId"];</code>
+   * @return The customId.
+   */
+  @java.lang.Override
+  public java.lang.String getCustomId() {
+    java.lang.Object ref = customId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      customId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
+   * but I think I'm more prone to separate them in /results endpoint
+   * </pre>
+   *
+   * <code>string custom_id = 2 [json_name = "customId"];</code>
+   * @return The bytes for customId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCustomIdBytes() {
+    java.lang.Object ref = customId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      customId_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -105,6 +145,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, id_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customId_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 2, customId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -116,6 +159,9 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(id_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, id_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customId_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, customId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -134,6 +180,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getId()
         .equals(other.getId())) return false;
+    if (!getCustomId()
+        .equals(other.getCustomId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -147,6 +195,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + ID_FIELD_NUMBER;
     hash = (53 * hash) + getId().hashCode();
+    hash = (37 * hash) + CUSTOM_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getCustomId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -279,6 +329,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       id_ = "";
+      customId_ = "";
       return this;
     }
 
@@ -314,6 +365,9 @@ private static final long serialVersionUID = 0L;
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.id_ = id_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.customId_ = customId_;
       }
     }
 
@@ -366,6 +420,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
+      if (!other.getCustomId().isEmpty()) {
+        customId_ = other.customId_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -397,6 +456,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              customId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -416,11 +480,6 @@ private static final long serialVersionUID = 0L;
 
     private java.lang.Object id_ = "";
     /**
-     * <pre>
-     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-     * but I think I'm more prone to separate them in /results endpoint
-     * </pre>
-     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The id.
      */
@@ -437,11 +496,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-     * but I think I'm more prone to separate them in /results endpoint
-     * </pre>
-     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return The bytes for id.
      */
@@ -459,11 +513,6 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <pre>
-     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-     * but I think I'm more prone to separate them in /results endpoint
-     * </pre>
-     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The id to set.
      * @return This builder for chaining.
@@ -477,11 +526,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-     * but I think I'm more prone to separate them in /results endpoint
-     * </pre>
-     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @return This builder for chaining.
      */
@@ -492,11 +536,6 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <pre>
-     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-     * but I think I'm more prone to separate them in /results endpoint
-     * </pre>
-     *
      * <code>string id = 1 [json_name = "id"];</code>
      * @param value The bytes for id to set.
      * @return This builder for chaining.
@@ -507,6 +546,103 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       id_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object customId_ = "";
+    /**
+     * <pre>
+     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
+     * but I think I'm more prone to separate them in /results endpoint
+     * </pre>
+     *
+     * <code>string custom_id = 2 [json_name = "customId"];</code>
+     * @return The customId.
+     */
+    public java.lang.String getCustomId() {
+      java.lang.Object ref = customId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        customId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
+     * but I think I'm more prone to separate them in /results endpoint
+     * </pre>
+     *
+     * <code>string custom_id = 2 [json_name = "customId"];</code>
+     * @return The bytes for customId.
+     */
+    public com.google.protobuf.ByteString
+        getCustomIdBytes() {
+      java.lang.Object ref = customId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        customId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
+     * but I think I'm more prone to separate them in /results endpoint
+     * </pre>
+     *
+     * <code>string custom_id = 2 [json_name = "customId"];</code>
+     * @param value The customId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      customId_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
+     * but I think I'm more prone to separate them in /results endpoint
+     * </pre>
+     *
+     * <code>string custom_id = 2 [json_name = "customId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCustomId() {
+      customId_ = getDefaultInstance().getCustomId();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
+     * but I think I'm more prone to separate them in /results endpoint
+     * </pre>
+     *
+     * <code>string custom_id = 2 [json_name = "customId"];</code>
+     * @param value The bytes for customId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCustomIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      customId_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

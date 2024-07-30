@@ -12,36 +12,44 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class CreateTransactionRequest(_message.Message):
-    __slots__ = ["document", "tags", "features"]
+    __slots__ = ["document", "tags", "features", "custom_id"]
     DOCUMENT_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
     FEATURES_FIELD_NUMBER: _ClassVar[int]
+    CUSTOM_ID_FIELD_NUMBER: _ClassVar[int]
     document: _annotator_pb2.Document
     tags: _containers.RepeatedScalarFieldContainer[str]
     features: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., features: _Optional[_Iterable[str]] = ...) -> None: ...
+    custom_id: str
+    def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., features: _Optional[_Iterable[str]] = ..., custom_id: _Optional[str] = ...) -> None: ...
 
 class CreateTransactionResponse(_message.Message):
-    __slots__ = ["id"]
+    __slots__ = ["id", "custom_id"]
     ID_FIELD_NUMBER: _ClassVar[int]
+    CUSTOM_ID_FIELD_NUMBER: _ClassVar[int]
     id: str
-    def __init__(self, id: _Optional[str] = ...) -> None: ...
+    custom_id: str
+    def __init__(self, id: _Optional[str] = ..., custom_id: _Optional[str] = ...) -> None: ...
 
 class GetTransactionResultsRequest(_message.Message):
-    __slots__ = ["id"]
+    __slots__ = ["id", "custom_id"]
     ID_FIELD_NUMBER: _ClassVar[int]
+    CUSTOM_ID_FIELD_NUMBER: _ClassVar[int]
     id: str
-    def __init__(self, id: _Optional[str] = ...) -> None: ...
+    custom_id: str
+    def __init__(self, id: _Optional[str] = ..., custom_id: _Optional[str] = ...) -> None: ...
 
 class GetTransactionResultsResponse(_message.Message):
-    __slots__ = ["id", "annotations", "error_message"]
+    __slots__ = ["id", "annotations", "error_message", "custom_id"]
     ID_FIELD_NUMBER: _ClassVar[int]
     ANNOTATIONS_FIELD_NUMBER: _ClassVar[int]
     ERROR_MESSAGE_FIELD_NUMBER: _ClassVar[int]
+    CUSTOM_ID_FIELD_NUMBER: _ClassVar[int]
     id: str
     annotations: _containers.RepeatedCompositeFieldContainer[Annotation]
     error_message: str
-    def __init__(self, id: _Optional[str] = ..., annotations: _Optional[_Iterable[_Union[Annotation, _Mapping]]] = ..., error_message: _Optional[str] = ...) -> None: ...
+    custom_id: str
+    def __init__(self, id: _Optional[str] = ..., annotations: _Optional[_Iterable[_Union[Annotation, _Mapping]]] = ..., error_message: _Optional[str] = ..., custom_id: _Optional[str] = ...) -> None: ...
 
 class Candidate(_message.Message):
     __slots__ = ["candidate"]
@@ -66,26 +74,32 @@ class Annotation(_message.Message):
     def __init__(self, feature: _Optional[str] = ..., candidate: _Optional[_Union[Candidate, _Mapping]] = ..., purchase_line_candidate: _Optional[_Union[PurchaseLineCandidate, _Mapping]] = ...) -> None: ...
 
 class GetTransactionStatusRequest(_message.Message):
-    __slots__ = ["id"]
+    __slots__ = ["id", "custom_id"]
     ID_FIELD_NUMBER: _ClassVar[int]
+    CUSTOM_ID_FIELD_NUMBER: _ClassVar[int]
     id: str
-    def __init__(self, id: _Optional[str] = ...) -> None: ...
+    custom_id: str
+    def __init__(self, id: _Optional[str] = ..., custom_id: _Optional[str] = ...) -> None: ...
 
 class GetTransactionStatusResponse(_message.Message):
-    __slots__ = ["id", "status", "error_message"]
+    __slots__ = ["id", "status", "error_message", "custom_id"]
     ID_FIELD_NUMBER: _ClassVar[int]
     STATUS_FIELD_NUMBER: _ClassVar[int]
     ERROR_MESSAGE_FIELD_NUMBER: _ClassVar[int]
+    CUSTOM_ID_FIELD_NUMBER: _ClassVar[int]
     id: str
     status: str
     error_message: str
-    def __init__(self, id: _Optional[str] = ..., status: _Optional[str] = ..., error_message: _Optional[str] = ...) -> None: ...
+    custom_id: str
+    def __init__(self, id: _Optional[str] = ..., status: _Optional[str] = ..., error_message: _Optional[str] = ..., custom_id: _Optional[str] = ...) -> None: ...
 
 class DeleteTransactionRequest(_message.Message):
-    __slots__ = ["id"]
+    __slots__ = ["id", "custom_id"]
     ID_FIELD_NUMBER: _ClassVar[int]
+    CUSTOM_ID_FIELD_NUMBER: _ClassVar[int]
     id: str
-    def __init__(self, id: _Optional[str] = ...) -> None: ...
+    custom_id: str
+    def __init__(self, id: _Optional[str] = ..., custom_id: _Optional[str] = ...) -> None: ...
 
 class DeleteTagRequest(_message.Message):
     __slots__ = ["tag_name"]
