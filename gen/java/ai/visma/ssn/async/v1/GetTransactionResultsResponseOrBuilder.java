@@ -67,4 +67,16 @@ public interface GetTransactionResultsResponseOrBuilder extends
    */
   ai.visma.ssn.async.v1.AnnotationOrBuilder getAnnotationsOrBuilder(
       int index);
+
+  /**
+   * <code>string error_message = 3 [json_name = "errorMessage"];</code>
+   * @return The errorMessage.
+   */
+  java.lang.String getErrorMessage();
+  /**
+   * <code>string error_message = 3 [json_name = "errorMessage"];</code>
+   * @return The bytes for errorMessage.
+   */
+  com.google.protobuf.ByteString
+      getErrorMessageBytes();
 }

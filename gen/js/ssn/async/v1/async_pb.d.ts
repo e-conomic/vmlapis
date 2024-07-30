@@ -85,6 +85,9 @@ export class GetTransactionResultsResponse extends jspb.Message {
   clearAnnotationsList(): GetTransactionResultsResponse;
   addAnnotations(value?: Annotation, index?: number): Annotation;
 
+  getErrorMessage(): string;
+  setErrorMessage(value: string): GetTransactionResultsResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetTransactionResultsResponse.AsObject;
   static toObject(includeInstance: boolean, msg: GetTransactionResultsResponse): GetTransactionResultsResponse.AsObject;
@@ -97,6 +100,7 @@ export namespace GetTransactionResultsResponse {
   export type AsObject = {
     id: string,
     annotationsList: Array<Annotation.AsObject>,
+    errorMessage: string,
   }
 }
 
