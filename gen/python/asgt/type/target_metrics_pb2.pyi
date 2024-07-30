@@ -6,7 +6,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class TargetMetrics(_message.Message):
-    __slots__ = ["target", "metrics"]
+    __slots__ = ["target", "metrics", "mcc", "accuracy", "balanced_accuracy"]
     class Metric(_message.Message):
         __slots__ = ["precision", "confidence", "answer_rate", "true_positive", "true_negative", "false_positive", "false_negative"]
         PRECISION_FIELD_NUMBER: _ClassVar[int]
@@ -26,6 +26,12 @@ class TargetMetrics(_message.Message):
         def __init__(self, precision: _Optional[float] = ..., confidence: _Optional[float] = ..., answer_rate: _Optional[float] = ..., true_positive: _Optional[int] = ..., true_negative: _Optional[int] = ..., false_positive: _Optional[int] = ..., false_negative: _Optional[int] = ...) -> None: ...
     TARGET_FIELD_NUMBER: _ClassVar[int]
     METRICS_FIELD_NUMBER: _ClassVar[int]
+    MCC_FIELD_NUMBER: _ClassVar[int]
+    ACCURACY_FIELD_NUMBER: _ClassVar[int]
+    BALANCED_ACCURACY_FIELD_NUMBER: _ClassVar[int]
     target: str
     metrics: _containers.RepeatedCompositeFieldContainer[TargetMetrics.Metric]
-    def __init__(self, target: _Optional[str] = ..., metrics: _Optional[_Iterable[_Union[TargetMetrics.Metric, _Mapping]]] = ...) -> None: ...
+    mcc: _containers.RepeatedScalarFieldContainer[float]
+    accuracy: _containers.RepeatedScalarFieldContainer[float]
+    balanced_accuracy: _containers.RepeatedScalarFieldContainer[float]
+    def __init__(self, target: _Optional[str] = ..., metrics: _Optional[_Iterable[_Union[TargetMetrics.Metric, _Mapping]]] = ..., mcc: _Optional[_Iterable[float]] = ..., accuracy: _Optional[_Iterable[float]] = ..., balanced_accuracy: _Optional[_Iterable[float]] = ...) -> None: ...

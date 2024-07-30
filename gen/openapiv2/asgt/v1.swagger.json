@@ -705,6 +705,27 @@
             "type": "object",
             "$ref": "#/definitions/TargetMetricsMetric"
           }
+        },
+        "mcc": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "accuracy": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
+        },
+        "balancedAccuracy": {
+          "type": "array",
+          "items": {
+            "type": "number",
+            "format": "float"
+          }
         }
       }
     },

@@ -13,14 +13,14 @@ message Example {
   asgt.v2.type.Data data = 1;
 
   repeated asgt.v2.type.TargetValue target_values = 2 [(validate.rules).repeated = {
-    min_items: 1,
+    min_items: 1
     ignore_empty: false
   }];
 
   // Not implemented yet.
   // An optional id to provide individual corrections to examples, for example when a user updates their initial feedback.
   string id = 3 [(validate.rules).string = {
-    uuid: true,
+    uuid: true
     ignore_empty: true
   }];
 }

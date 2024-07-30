@@ -9,7 +9,7 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype";
 // Record mapping a target name to a value
 message TargetValue {
   string name = 1 [(validate.rules).string = {
-    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$",
+    pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"
     max_bytes: 256
   }];
   string value = 2;

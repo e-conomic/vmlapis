@@ -71,7 +71,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.type.TargetMetrics.repeatedFields_ = [2];
+proto.asgt.type.TargetMetrics.repeatedFields_ = [2,3,4,5];
 
 
 
@@ -106,7 +106,10 @@ proto.asgt.type.TargetMetrics.toObject = function(includeInstance, msg) {
   var f, obj = {
     target: jspb.Message.getFieldWithDefault(msg, 1, ""),
     metricsList: jspb.Message.toObjectList(msg.getMetricsList(),
-    proto.asgt.type.TargetMetrics.Metric.toObject, includeInstance)
+    proto.asgt.type.TargetMetrics.Metric.toObject, includeInstance),
+    mccList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 3)) == null ? undefined : f,
+    accuracyList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 4)) == null ? undefined : f,
+    balancedAccuracyList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 5)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -152,6 +155,24 @@ proto.asgt.type.TargetMetrics.deserializeBinaryFromReader = function(msg, reader
       reader.readMessage(value,proto.asgt.type.TargetMetrics.Metric.deserializeBinaryFromReader);
       msg.addMetrics(value);
       break;
+    case 3:
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedFloat() : [reader.readFloat()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addMcc(values[i]);
+      }
+      break;
+    case 4:
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedFloat() : [reader.readFloat()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addAccuracy(values[i]);
+      }
+      break;
+    case 5:
+      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedFloat() : [reader.readFloat()]);
+      for (var i = 0; i < values.length; i++) {
+        msg.addBalancedAccuracy(values[i]);
+      }
+      break;
     default:
       reader.skipField();
       break;
@@ -194,6 +215,27 @@ proto.asgt.type.TargetMetrics.serializeBinaryToWriter = function(message, writer
       2,
       f,
       proto.asgt.type.TargetMetrics.Metric.serializeBinaryToWriter
+    );
+  }
+  f = message.getMccList();
+  if (f.length > 0) {
+    writer.writePackedFloat(
+      3,
+      f
+    );
+  }
+  f = message.getAccuracyList();
+  if (f.length > 0) {
+    writer.writePackedFloat(
+      4,
+      f
+    );
+  }
+  f = message.getBalancedAccuracyList();
+  if (f.length > 0) {
+    writer.writePackedFloat(
+      5,
+      f
     );
   }
 };
@@ -562,6 +604,117 @@ proto.asgt.type.TargetMetrics.prototype.addMetrics = function(opt_value, opt_ind
  */
 proto.asgt.type.TargetMetrics.prototype.clearMetricsList = function() {
   return this.setMetricsList([]);
+};
+
+
+/**
+ * repeated float mcc = 3;
+ * @return {!Array<number>}
+ */
+proto.asgt.type.TargetMetrics.prototype.getMccList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 3));
+};
+
+
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.setMccList = function(value) {
+  return jspb.Message.setField(this, 3, value || []);
+};
+
+
+/**
+ * @param {number} value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.addMcc = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 3, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.clearMccList = function() {
+  return this.setMccList([]);
+};
+
+
+/**
+ * repeated float accuracy = 4;
+ * @return {!Array<number>}
+ */
+proto.asgt.type.TargetMetrics.prototype.getAccuracyList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 4));
+};
+
+
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.setAccuracyList = function(value) {
+  return jspb.Message.setField(this, 4, value || []);
+};
+
+
+/**
+ * @param {number} value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.addAccuracy = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 4, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.clearAccuracyList = function() {
+  return this.setAccuracyList([]);
+};
+
+
+/**
+ * repeated float balanced_accuracy = 5;
+ * @return {!Array<number>}
+ */
+proto.asgt.type.TargetMetrics.prototype.getBalancedAccuracyList = function() {
+  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 5));
+};
+
+
+/**
+ * @param {!Array<number>} value
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.setBalancedAccuracyList = function(value) {
+  return jspb.Message.setField(this, 5, value || []);
+};
+
+
+/**
+ * @param {number} value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.addBalancedAccuracy = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 5, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.type.TargetMetrics} returns this
+ */
+proto.asgt.type.TargetMetrics.prototype.clearBalancedAccuracyList = function() {
+  return this.setBalancedAccuracyList([]);
 };
 
 
