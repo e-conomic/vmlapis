@@ -70,9 +70,11 @@ message CreateTransactionRequest {
   repeated string tags = 2;
   // e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
   repeated string features = 3;
+  string custom_id = 4;
 }
 message CreateTransactionResponse {
   string id = 1;
+  string custom_id = 2;
   // CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
   // but I think I'm more prone to separate them in /results endpoint
 }
@@ -81,6 +83,7 @@ message CreateTransactionResponse {
 // --- get: "/v1/transactions/{id}/results" ---
 message GetTransactionResultsRequest {
   string id = 1;
+  string custom_id = 2;
   // GetTransactionResultsRequest message can potentially have a list of features to filter the response
   // e.g. repeated string features like in CreateTransactionRequest
 }
@@ -90,6 +93,7 @@ message GetTransactionResultsResponse {
   // empty when processing is still running
   repeated Annotation annotations = 2;
   string error_message = 3;
+  string custom_id = 4;
 }
 
 // Wrappers for repeated Candidate
@@ -114,6 +118,7 @@ message Annotation {
 // --- get: "/v1/transactions/{id}/status" ---
 message GetTransactionStatusRequest {
   string id = 1;
+  string custom_id = 2;
 }
 
 message GetTransactionStatusResponse {
@@ -124,12 +129,14 @@ message GetTransactionStatusResponse {
   // Only populated when status == "FAILED" or status == "PARTIAL"
   string error_message = 3;
   // maybe a timestamp on different status would be nice here
+  string custom_id = 4;
 }
 // --- get: "/v1/transactions/{id}/status" ---
 
 // --- delete: "/v1/transactions/{id}" ---
 message DeleteTransactionRequest {
   string id = 1;
+  string custom_id = 2;
 }
 // --- delete: "/v1/transactions/{id}" ---
 
