@@ -146,3 +146,8 @@ message DocQARequest {
 message DocQAResponse {
   repeated ssn.type.AnswerCandidate answers = 1;
 }
+
+message GeneralPredictResponse {
+  PredictResponse predict_response = 1;
+  repeated PurchaseLinesResponse purchase_lines_response = 2;
+}

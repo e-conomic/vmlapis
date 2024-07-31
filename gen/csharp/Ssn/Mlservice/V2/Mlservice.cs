@@ -148,18 +148,22 @@ namespace Ssn.Mlservice.V2 {
             "ZS5UZXh0QW5ub3RhdGlvblIOdGV4dEFubm90YXRpb24SFAoFaW1hZ2UYAiAB",
             "KAxSBWltYWdlEhwKCXF1ZXN0aW9ucxgDIAMoCVIJcXVlc3Rpb25zIkQKDURv",
             "Y1FBUmVzcG9uc2USMwoHYW5zd2VycxgBIAMoCzIZLnNzbi50eXBlLkFuc3dl",
-            "ckNhbmRpZGF0ZVIHYW5zd2VyczKYAgoJTWxTZXJ2aWNlElcKCkZlYXR1cmVH",
-            "ZW4SIy5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1cmVHZW5SZXF1ZXN0GiQuc3Nu",
-            "Lm1sc2VydmljZS52Mi5GZWF0dXJlR2VuUmVzcG9uc2USTgoHUHJlZGljdBIg",
-            "LnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJlcXVlc3QaIS5zc24ubWxzZXJ2",
-            "aWNlLnYyLlByZWRpY3RSZXNwb25zZRJiChFGZWF0dXJlR2VuUHJlZGljdBIq",
-            "LnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdlblByZWRpY3RSZXF1ZXN0GiEu",
-            "c3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVzcG9uc2VCzQEKGWFpLnZpc21h",
-            "LnNzbi5tbHNlcnZpY2UudjJCDk1sc2VydmljZVByb3RvUAFaPmdpdGh1Yi5j",
-            "b20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi9tbHNlcnZpY2UvdjI7",
-            "bWxzZXJ2aWNlogIDU01YqgIQU3NuLk1sc2VydmljZS5WMsoCEFNzblxNbHNl",
-            "cnZpY2VcVjLiAhxTc25cTWxzZXJ2aWNlXFYyXEdQQk1ldGFkYXRh6gISU3Nu",
-            "OjpNbHNlcnZpY2U6OlYyYgZwcm90bzM="));
+            "ckNhbmRpZGF0ZVIHYW5zd2VycyLHAQoWR2VuZXJhbFByZWRpY3RSZXNwb25z",
+            "ZRJMChBwcmVkaWN0X3Jlc3BvbnNlGAEgASgLMiEuc3NuLm1sc2VydmljZS52",
+            "Mi5QcmVkaWN0UmVzcG9uc2VSD3ByZWRpY3RSZXNwb25zZRJfChdwdXJjaGFz",
+            "ZV9saW5lc19yZXNwb25zZRgCIAMoCzInLnNzbi5tbHNlcnZpY2UudjIuUHVy",
+            "Y2hhc2VMaW5lc1Jlc3BvbnNlUhVwdXJjaGFzZUxpbmVzUmVzcG9uc2UymAIK",
+            "CU1sU2VydmljZRJXCgpGZWF0dXJlR2VuEiMuc3NuLm1sc2VydmljZS52Mi5G",
+            "ZWF0dXJlR2VuUmVxdWVzdBokLnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdl",
+            "blJlc3BvbnNlEk4KB1ByZWRpY3QSIC5zc24ubWxzZXJ2aWNlLnYyLlByZWRp",
+            "Y3RSZXF1ZXN0GiEuc3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVzcG9uc2US",
+            "YgoRRmVhdHVyZUdlblByZWRpY3QSKi5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1",
+            "cmVHZW5QcmVkaWN0UmVxdWVzdBohLnNzbi5tbHNlcnZpY2UudjIuUHJlZGlj",
+            "dFJlc3BvbnNlQs0BChlhaS52aXNtYS5zc24ubWxzZXJ2aWNlLnYyQg5NbHNl",
+            "cnZpY2VQcm90b1ABWj5naXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dl",
+            "bi9nby9zc24vbWxzZXJ2aWNlL3YyO21sc2VydmljZaICA1NNWKoCEFNzbi5N",
+            "bHNlcnZpY2UuVjLKAhBTc25cTWxzZXJ2aWNlXFYy4gIcU3NuXE1sc2Vydmlj",
+            "ZVxWMlxHUEJNZXRhZGF0YeoCElNzbjo6TWxzZXJ2aWNlOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -171,7 +175,8 @@ namespace Ssn.Mlservice.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PurchaseLinesRequest), global::Ssn.Mlservice.V2.PurchaseLinesRequest.Parser, new[]{ "TextAnnotation", "Image" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PurchaseLinesResponse), global::Ssn.Mlservice.V2.PurchaseLinesResponse.Parser, new[]{ "PurchaseLines" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.DocQARequest), global::Ssn.Mlservice.V2.DocQARequest.Parser, new[]{ "TextAnnotation", "Image", "Questions" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.DocQAResponse), global::Ssn.Mlservice.V2.DocQAResponse.Parser, new[]{ "Answers" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.DocQAResponse), global::Ssn.Mlservice.V2.DocQAResponse.Parser, new[]{ "Answers" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.GeneralPredictResponse), global::Ssn.Mlservice.V2.GeneralPredictResponse.Parser, new[]{ "PredictResponse", "PurchaseLinesResponse" }, null, null, null, null)
           }));
     }
     #endregion
@@ -4781,6 +4786,230 @@ namespace Ssn.Mlservice.V2 {
             break;
           case 10: {
             answers_.AddEntriesFrom(ref input, _repeated_answers_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class GeneralPredictResponse : pb::IMessage<GeneralPredictResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GeneralPredictResponse> _parser = new pb::MessageParser<GeneralPredictResponse>(() => new GeneralPredictResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GeneralPredictResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Mlservice.V2.MlserviceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GeneralPredictResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GeneralPredictResponse(GeneralPredictResponse other) : this() {
+      predictResponse_ = other.predictResponse_ != null ? other.predictResponse_.Clone() : null;
+      purchaseLinesResponse_ = other.purchaseLinesResponse_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GeneralPredictResponse Clone() {
+      return new GeneralPredictResponse(this);
+    }
+
+    /// <summary>Field number for the "predict_response" field.</summary>
+    public const int PredictResponseFieldNumber = 1;
+    private global::Ssn.Mlservice.V2.PredictResponse predictResponse_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ssn.Mlservice.V2.PredictResponse PredictResponse {
+      get { return predictResponse_; }
+      set {
+        predictResponse_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "purchase_lines_response" field.</summary>
+    public const int PurchaseLinesResponseFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Ssn.Mlservice.V2.PurchaseLinesResponse> _repeated_purchaseLinesResponse_codec
+        = pb::FieldCodec.ForMessage(18, global::Ssn.Mlservice.V2.PurchaseLinesResponse.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Mlservice.V2.PurchaseLinesResponse> purchaseLinesResponse_ = new pbc::RepeatedField<global::Ssn.Mlservice.V2.PurchaseLinesResponse>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Ssn.Mlservice.V2.PurchaseLinesResponse> PurchaseLinesResponse {
+      get { return purchaseLinesResponse_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GeneralPredictResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GeneralPredictResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(PredictResponse, other.PredictResponse)) return false;
+      if(!purchaseLinesResponse_.Equals(other.purchaseLinesResponse_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (predictResponse_ != null) hash ^= PredictResponse.GetHashCode();
+      hash ^= purchaseLinesResponse_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (predictResponse_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PredictResponse);
+      }
+      purchaseLinesResponse_.WriteTo(output, _repeated_purchaseLinesResponse_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (predictResponse_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(PredictResponse);
+      }
+      purchaseLinesResponse_.WriteTo(ref output, _repeated_purchaseLinesResponse_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (predictResponse_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PredictResponse);
+      }
+      size += purchaseLinesResponse_.CalculateSize(_repeated_purchaseLinesResponse_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GeneralPredictResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.predictResponse_ != null) {
+        if (predictResponse_ == null) {
+          PredictResponse = new global::Ssn.Mlservice.V2.PredictResponse();
+        }
+        PredictResponse.MergeFrom(other.PredictResponse);
+      }
+      purchaseLinesResponse_.Add(other.purchaseLinesResponse_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (predictResponse_ == null) {
+              PredictResponse = new global::Ssn.Mlservice.V2.PredictResponse();
+            }
+            input.ReadMessage(PredictResponse);
+            break;
+          }
+          case 18: {
+            purchaseLinesResponse_.AddEntriesFrom(input, _repeated_purchaseLinesResponse_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (predictResponse_ == null) {
+              PredictResponse = new global::Ssn.Mlservice.V2.PredictResponse();
+            }
+            input.ReadMessage(PredictResponse);
+            break;
+          }
+          case 18: {
+            purchaseLinesResponse_.AddEntriesFrom(ref input, _repeated_purchaseLinesResponse_codec);
             break;
           }
         }
