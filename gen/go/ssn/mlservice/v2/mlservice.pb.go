@@ -806,6 +806,61 @@ func (x *DocQAResponse) GetAnswers() []*_type.AnswerCandidate {
 	return nil
 }
 
+type GeneralPredictResponse struct {
+	state         protoimpl.MessageState
+	sizeCache     protoimpl.SizeCache
+	unknownFields protoimpl.UnknownFields
+
+	PredictResponse       *PredictResponse         `protobuf:"bytes,1,opt,name=predict_response,json=predictResponse,proto3" json:"predict_response,omitempty"`
+	PurchaseLinesResponse []*PurchaseLinesResponse `protobuf:"bytes,2,rep,name=purchase_lines_response,json=purchaseLinesResponse,proto3" json:"purchase_lines_response,omitempty"`
+}
+
+func (x *GeneralPredictResponse) Reset() {
+	*x = GeneralPredictResponse{}
+	if protoimpl.UnsafeEnabled {
+		mi := &file_ssn_mlservice_v2_mlservice_proto_msgTypes[9]
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		ms.StoreMessageInfo(mi)
+	}
+}
+
+func (x *GeneralPredictResponse) String() string {
+	return protoimpl.X.MessageStringOf(x)
+}
+
+func (*GeneralPredictResponse) ProtoMessage() {}
+
+func (x *GeneralPredictResponse) ProtoReflect() protoreflect.Message {
+	mi := &file_ssn_mlservice_v2_mlservice_proto_msgTypes[9]
+	if protoimpl.UnsafeEnabled && x != nil {
+		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
+		if ms.LoadMessageInfo() == nil {
+			ms.StoreMessageInfo(mi)
+		}
+		return ms
+	}
+	return mi.MessageOf(x)
+}
+
+// Deprecated: Use GeneralPredictResponse.ProtoReflect.Descriptor instead.
+func (*GeneralPredictResponse) Descriptor() ([]byte, []int) {
+	return file_ssn_mlservice_v2_mlservice_proto_rawDescGZIP(), []int{9}
+}
+
+func (x *GeneralPredictResponse) GetPredictResponse() *PredictResponse {
+	if x != nil {
+		return x.PredictResponse
+	}
+	return nil
+}
+
+func (x *GeneralPredictResponse) GetPurchaseLinesResponse() []*PurchaseLinesResponse {
+	if x != nil {
+		return x.PurchaseLinesResponse
+	}
+	return nil
+}
+
 type FeatureGenRequest_TruthLabels struct {
 	state         protoimpl.MessageState
 	sizeCache     protoimpl.SizeCache
@@ -857,7 +912,7 @@ type FeatureGenRequest_TruthLabels struct {
 func (x *FeatureGenRequest_TruthLabels) Reset() {
 	*x = FeatureGenRequest_TruthLabels{}
 	if protoimpl.UnsafeEnabled {
-		mi := &file_ssn_mlservice_v2_mlservice_proto_msgTypes[9]
+		mi := &file_ssn_mlservice_v2_mlservice_proto_msgTypes[10]
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		ms.StoreMessageInfo(mi)
 	}
@@ -870,7 +925,7 @@ func (x *FeatureGenRequest_TruthLabels) String() string {
 func (*FeatureGenRequest_TruthLabels) ProtoMessage() {}
 
 func (x *FeatureGenRequest_TruthLabels) ProtoReflect() protoreflect.Message {
-	mi := &file_ssn_mlservice_v2_mlservice_proto_msgTypes[9]
+	mi := &file_ssn_mlservice_v2_mlservice_proto_msgTypes[10]
 	if protoimpl.UnsafeEnabled && x != nil {
 		ms := protoimpl.X.MessageStateOf(protoimpl.Pointer(x))
 		if ms.LoadMessageInfo() == nil {
@@ -1518,39 +1573,51 @@ var file_ssn_mlservice_v2_mlservice_proto_rawDesc = []byte{
 	0x51, 0x41, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x33, 0x0a, 0x07, 0x61, 0x6e,
 	0x73, 0x77, 0x65, 0x72, 0x73, 0x18, 0x01, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x19, 0x2e, 0x73, 0x73,
 	0x6e, 0x2e, 0x74, 0x79, 0x70, 0x65, 0x2e, 0x41, 0x6e, 0x73, 0x77, 0x65, 0x72, 0x43, 0x61, 0x6e,
-	0x64, 0x69, 0x64, 0x61, 0x74, 0x65, 0x52, 0x07, 0x61, 0x6e, 0x73, 0x77, 0x65, 0x72, 0x73, 0x32,
-	0x98, 0x02, 0x0a, 0x09, 0x4d, 0x6c, 0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x57, 0x0a,
-	0x0a, 0x46, 0x65, 0x61, 0x74, 0x75, 0x72, 0x65, 0x47, 0x65, 0x6e, 0x12, 0x23, 0x2e, 0x73, 0x73,
-	0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x32, 0x2e, 0x46,
-	0x65, 0x61, 0x74, 0x75, 0x72, 0x65, 0x47, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74,
-	0x1a, 0x24, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
-	0x2e, 0x76, 0x32, 0x2e, 0x46, 0x65, 0x61, 0x74, 0x75, 0x72, 0x65, 0x47, 0x65, 0x6e, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x4e, 0x0a, 0x07, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63,
-	0x74, 0x12, 0x20, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
-	0x65, 0x2e, 0x76, 0x32, 0x2e, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63, 0x74, 0x52, 0x65, 0x71, 0x75,
-	0x65, 0x73, 0x74, 0x1a, 0x21, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76,
-	0x69, 0x63, 0x65, 0x2e, 0x76, 0x32, 0x2e, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63, 0x74, 0x52, 0x65,
-	0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x62, 0x0a, 0x11, 0x46, 0x65, 0x61, 0x74, 0x75, 0x72,
-	0x65, 0x47, 0x65, 0x6e, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63, 0x74, 0x12, 0x2a, 0x2e, 0x73, 0x73,
-	0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x32, 0x2e, 0x46,
-	0x65, 0x61, 0x74, 0x75, 0x72, 0x65, 0x47, 0x65, 0x6e, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63, 0x74,
-	0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x21, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x6d, 0x6c,
-	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x32, 0x2e, 0x50, 0x72, 0x65, 0x64, 0x69,
-	0x63, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x42, 0xcd, 0x01, 0x0a, 0x19, 0x61,
-	0x69, 0x2e, 0x76, 0x69, 0x73, 0x6d, 0x61, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65,
-	0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x32, 0x42, 0x0e, 0x4d, 0x6c, 0x73, 0x65, 0x72, 0x76,
-	0x69, 0x63, 0x65, 0x50, 0x72, 0x6f, 0x74, 0x6f, 0x50, 0x01, 0x5a, 0x3e, 0x67, 0x69, 0x74, 0x68,
-	0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d, 0x2f, 0x65, 0x2d, 0x63, 0x6f, 0x6e, 0x6f, 0x6d, 0x69, 0x63,
-	0x2f, 0x76, 0x6d, 0x6c, 0x61, 0x70, 0x69, 0x73, 0x2f, 0x67, 0x65, 0x6e, 0x2f, 0x67, 0x6f, 0x2f,
-	0x73, 0x73, 0x6e, 0x2f, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2f, 0x76, 0x32,
-	0x3b, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0xa2, 0x02, 0x03, 0x53, 0x4d, 0x58,
-	0xaa, 0x02, 0x10, 0x53, 0x73, 0x6e, 0x2e, 0x4d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
-	0x2e, 0x56, 0x32, 0xca, 0x02, 0x10, 0x53, 0x73, 0x6e, 0x5c, 0x4d, 0x6c, 0x73, 0x65, 0x72, 0x76,
-	0x69, 0x63, 0x65, 0x5c, 0x56, 0x32, 0xe2, 0x02, 0x1c, 0x53, 0x73, 0x6e, 0x5c, 0x4d, 0x6c, 0x73,
-	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x5c, 0x56, 0x32, 0x5c, 0x47, 0x50, 0x42, 0x4d, 0x65, 0x74,
-	0x61, 0x64, 0x61, 0x74, 0x61, 0xea, 0x02, 0x12, 0x53, 0x73, 0x6e, 0x3a, 0x3a, 0x4d, 0x6c, 0x73,
-	0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x3a, 0x3a, 0x56, 0x32, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74,
-	0x6f, 0x33,
+	0x64, 0x69, 0x64, 0x61, 0x74, 0x65, 0x52, 0x07, 0x61, 0x6e, 0x73, 0x77, 0x65, 0x72, 0x73, 0x22,
+	0xc7, 0x01, 0x0a, 0x16, 0x47, 0x65, 0x6e, 0x65, 0x72, 0x61, 0x6c, 0x50, 0x72, 0x65, 0x64, 0x69,
+	0x63, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x4c, 0x0a, 0x10, 0x70, 0x72,
+	0x65, 0x64, 0x69, 0x63, 0x74, 0x5f, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x18, 0x01,
+	0x20, 0x01, 0x28, 0x0b, 0x32, 0x21, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65, 0x72,
+	0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x32, 0x2e, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63, 0x74, 0x52,
+	0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x52, 0x0f, 0x70, 0x72, 0x65, 0x64, 0x69, 0x63, 0x74,
+	0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x12, 0x5f, 0x0a, 0x17, 0x70, 0x75, 0x72, 0x63,
+	0x68, 0x61, 0x73, 0x65, 0x5f, 0x6c, 0x69, 0x6e, 0x65, 0x73, 0x5f, 0x72, 0x65, 0x73, 0x70, 0x6f,
+	0x6e, 0x73, 0x65, 0x18, 0x02, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x27, 0x2e, 0x73, 0x73, 0x6e, 0x2e,
+	0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x32, 0x2e, 0x50, 0x75, 0x72,
+	0x63, 0x68, 0x61, 0x73, 0x65, 0x4c, 0x69, 0x6e, 0x65, 0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e,
+	0x73, 0x65, 0x52, 0x15, 0x70, 0x75, 0x72, 0x63, 0x68, 0x61, 0x73, 0x65, 0x4c, 0x69, 0x6e, 0x65,
+	0x73, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x32, 0x98, 0x02, 0x0a, 0x09, 0x4d, 0x6c,
+	0x53, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x12, 0x57, 0x0a, 0x0a, 0x46, 0x65, 0x61, 0x74, 0x75,
+	0x72, 0x65, 0x47, 0x65, 0x6e, 0x12, 0x23, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65,
+	0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x32, 0x2e, 0x46, 0x65, 0x61, 0x74, 0x75, 0x72, 0x65,
+	0x47, 0x65, 0x6e, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x24, 0x2e, 0x73, 0x73, 0x6e,
+	0x2e, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x32, 0x2e, 0x46, 0x65,
+	0x61, 0x74, 0x75, 0x72, 0x65, 0x47, 0x65, 0x6e, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x12, 0x4e, 0x0a, 0x07, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63, 0x74, 0x12, 0x20, 0x2e, 0x73, 0x73,
+	0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x32, 0x2e, 0x50,
+	0x72, 0x65, 0x64, 0x69, 0x63, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73, 0x74, 0x1a, 0x21, 0x2e,
+	0x73, 0x73, 0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x32,
+	0x2e, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63, 0x74, 0x52, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65,
+	0x12, 0x62, 0x0a, 0x11, 0x46, 0x65, 0x61, 0x74, 0x75, 0x72, 0x65, 0x47, 0x65, 0x6e, 0x50, 0x72,
+	0x65, 0x64, 0x69, 0x63, 0x74, 0x12, 0x2a, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65,
+	0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x76, 0x32, 0x2e, 0x46, 0x65, 0x61, 0x74, 0x75, 0x72, 0x65,
+	0x47, 0x65, 0x6e, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63, 0x74, 0x52, 0x65, 0x71, 0x75, 0x65, 0x73,
+	0x74, 0x1a, 0x21, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63,
+	0x65, 0x2e, 0x76, 0x32, 0x2e, 0x50, 0x72, 0x65, 0x64, 0x69, 0x63, 0x74, 0x52, 0x65, 0x73, 0x70,
+	0x6f, 0x6e, 0x73, 0x65, 0x42, 0xcd, 0x01, 0x0a, 0x19, 0x61, 0x69, 0x2e, 0x76, 0x69, 0x73, 0x6d,
+	0x61, 0x2e, 0x73, 0x73, 0x6e, 0x2e, 0x6d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e,
+	0x76, 0x32, 0x42, 0x0e, 0x4d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x50, 0x72, 0x6f,
+	0x74, 0x6f, 0x50, 0x01, 0x5a, 0x3e, 0x67, 0x69, 0x74, 0x68, 0x75, 0x62, 0x2e, 0x63, 0x6f, 0x6d,
+	0x2f, 0x65, 0x2d, 0x63, 0x6f, 0x6e, 0x6f, 0x6d, 0x69, 0x63, 0x2f, 0x76, 0x6d, 0x6c, 0x61, 0x70,
+	0x69, 0x73, 0x2f, 0x67, 0x65, 0x6e, 0x2f, 0x67, 0x6f, 0x2f, 0x73, 0x73, 0x6e, 0x2f, 0x6d, 0x6c,
+	0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2f, 0x76, 0x32, 0x3b, 0x6d, 0x6c, 0x73, 0x65, 0x72,
+	0x76, 0x69, 0x63, 0x65, 0xa2, 0x02, 0x03, 0x53, 0x4d, 0x58, 0xaa, 0x02, 0x10, 0x53, 0x73, 0x6e,
+	0x2e, 0x4d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x2e, 0x56, 0x32, 0xca, 0x02, 0x10,
+	0x53, 0x73, 0x6e, 0x5c, 0x4d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65, 0x5c, 0x56, 0x32,
+	0xe2, 0x02, 0x1c, 0x53, 0x73, 0x6e, 0x5c, 0x4d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
+	0x5c, 0x56, 0x32, 0x5c, 0x47, 0x50, 0x42, 0x4d, 0x65, 0x74, 0x61, 0x64, 0x61, 0x74, 0x61, 0xea,
+	0x02, 0x12, 0x53, 0x73, 0x6e, 0x3a, 0x3a, 0x4d, 0x6c, 0x73, 0x65, 0x72, 0x76, 0x69, 0x63, 0x65,
+	0x3a, 0x3a, 0x56, 0x32, 0x62, 0x06, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x33,
 }
 
 var (
@@ -1565,7 +1632,7 @@ func file_ssn_mlservice_v2_mlservice_proto_rawDescGZIP() []byte {
 	return file_ssn_mlservice_v2_mlservice_proto_rawDescData
 }
 
-var file_ssn_mlservice_v2_mlservice_proto_msgTypes = make([]protoimpl.MessageInfo, 10)
+var file_ssn_mlservice_v2_mlservice_proto_msgTypes = make([]protoimpl.MessageInfo, 11)
 var file_ssn_mlservice_v2_mlservice_proto_goTypes = []interface{}{
 	(*FeatureGenRequest)(nil),             // 0: ssn.mlservice.v2.FeatureGenRequest
 	(*FeatureGenResponse)(nil),            // 1: ssn.mlservice.v2.FeatureGenResponse
@@ -1576,78 +1643,81 @@ var file_ssn_mlservice_v2_mlservice_proto_goTypes = []interface{}{
 	(*PurchaseLinesResponse)(nil),         // 6: ssn.mlservice.v2.PurchaseLinesResponse
 	(*DocQARequest)(nil),                  // 7: ssn.mlservice.v2.DocQARequest
 	(*DocQAResponse)(nil),                 // 8: ssn.mlservice.v2.DocQAResponse
-	(*FeatureGenRequest_TruthLabels)(nil), // 9: ssn.mlservice.v2.FeatureGenRequest.TruthLabels
-	(*_type.TextAnnotation)(nil),          // 10: ssn.type.TextAnnotation
-	(*_type.Candidate)(nil),               // 11: ssn.type.Candidate
-	(*_type.LineCandidate)(nil),           // 12: ssn.type.LineCandidate
-	(*_type.PurchaseLineCandidate)(nil),   // 13: ssn.type.PurchaseLineCandidate
-	(*_type.AnswerCandidate)(nil),         // 14: ssn.type.AnswerCandidate
-	(*date.Date)(nil),                     // 15: google.type.Date
+	(*GeneralPredictResponse)(nil),        // 9: ssn.mlservice.v2.GeneralPredictResponse
+	(*FeatureGenRequest_TruthLabels)(nil), // 10: ssn.mlservice.v2.FeatureGenRequest.TruthLabels
+	(*_type.TextAnnotation)(nil),          // 11: ssn.type.TextAnnotation
+	(*_type.Candidate)(nil),               // 12: ssn.type.Candidate
+	(*_type.LineCandidate)(nil),           // 13: ssn.type.LineCandidate
+	(*_type.PurchaseLineCandidate)(nil),   // 14: ssn.type.PurchaseLineCandidate
+	(*_type.AnswerCandidate)(nil),         // 15: ssn.type.AnswerCandidate
+	(*date.Date)(nil),                     // 16: google.type.Date
 }
 var file_ssn_mlservice_v2_mlservice_proto_depIdxs = []int32{
-	9,  // 0: ssn.mlservice.v2.FeatureGenRequest.truth_labels:type_name -> ssn.mlservice.v2.FeatureGenRequest.TruthLabels
-	10, // 1: ssn.mlservice.v2.FeatureGenRequest.text_annotation:type_name -> ssn.type.TextAnnotation
-	11, // 2: ssn.mlservice.v2.PredictResponse.order_date:type_name -> ssn.type.Candidate
-	11, // 3: ssn.mlservice.v2.PredictResponse.payment_due_date:type_name -> ssn.type.Candidate
-	11, // 4: ssn.mlservice.v2.PredictResponse.currency:type_name -> ssn.type.Candidate
-	11, // 5: ssn.mlservice.v2.PredictResponse.total_vat:type_name -> ssn.type.Candidate
-	11, // 6: ssn.mlservice.v2.PredictResponse.total_incl_vat:type_name -> ssn.type.Candidate
-	11, // 7: ssn.mlservice.v2.PredictResponse.total_excl_vat:type_name -> ssn.type.Candidate
-	11, // 8: ssn.mlservice.v2.PredictResponse.supplier_corporate_id:type_name -> ssn.type.Candidate
-	11, // 9: ssn.mlservice.v2.PredictResponse.supplier_country_code:type_name -> ssn.type.Candidate
-	11, // 10: ssn.mlservice.v2.PredictResponse.document_type:type_name -> ssn.type.Candidate
-	11, // 11: ssn.mlservice.v2.PredictResponse.payment_method:type_name -> ssn.type.Candidate
-	11, // 12: ssn.mlservice.v2.PredictResponse.credit_card_number:type_name -> ssn.type.Candidate
-	11, // 13: ssn.mlservice.v2.PredictResponse.invoice_number:type_name -> ssn.type.Candidate
-	11, // 14: ssn.mlservice.v2.PredictResponse.ocr_line_dk_type:type_name -> ssn.type.Candidate
-	11, // 15: ssn.mlservice.v2.PredictResponse.ocr_line_dk_payment_id:type_name -> ssn.type.Candidate
-	11, // 16: ssn.mlservice.v2.PredictResponse.ocr_line_dk_creditor_id:type_name -> ssn.type.Candidate
-	11, // 17: ssn.mlservice.v2.PredictResponse.ocr_line_se_payment_id:type_name -> ssn.type.Candidate
-	11, // 18: ssn.mlservice.v2.PredictResponse.ocr_line_se_bankgiro_creditor_id:type_name -> ssn.type.Candidate
-	11, // 19: ssn.mlservice.v2.PredictResponse.ocr_line_se_plusgiro_creditor_id:type_name -> ssn.type.Candidate
-	11, // 20: ssn.mlservice.v2.PredictResponse.ocr_line_no_payment_id:type_name -> ssn.type.Candidate
-	11, // 21: ssn.mlservice.v2.PredictResponse.ocr_line_fi_payment_id:type_name -> ssn.type.Candidate
-	11, // 22: ssn.mlservice.v2.PredictResponse.ocr_line_nl_payment_id:type_name -> ssn.type.Candidate
-	11, // 23: ssn.mlservice.v2.PredictResponse.iban:type_name -> ssn.type.Candidate
-	12, // 24: ssn.mlservice.v2.PredictResponse.lines:type_name -> ssn.type.LineCandidate
-	11, // 25: ssn.mlservice.v2.PredictResponse.bank_account_number:type_name -> ssn.type.Candidate
-	11, // 26: ssn.mlservice.v2.PredictResponse.bank_registration_number:type_name -> ssn.type.Candidate
-	11, // 27: ssn.mlservice.v2.PredictResponse.bic:type_name -> ssn.type.Candidate
-	11, // 28: ssn.mlservice.v2.PredictResponse.document_number:type_name -> ssn.type.Candidate
-	11, // 29: ssn.mlservice.v2.PredictResponse.document_date:type_name -> ssn.type.Candidate
-	11, // 30: ssn.mlservice.v2.PredictResponse.order_number:type_name -> ssn.type.Candidate
-	11, // 31: ssn.mlservice.v2.PredictResponse.supplier_name:type_name -> ssn.type.Candidate
-	11, // 32: ssn.mlservice.v2.PredictResponse.supplier_vat_number:type_name -> ssn.type.Candidate
-	11, // 33: ssn.mlservice.v2.PredictResponse.supplier_organisation_number:type_name -> ssn.type.Candidate
-	11, // 34: ssn.mlservice.v2.PredictResponse.supplier_address:type_name -> ssn.type.Candidate
-	11, // 35: ssn.mlservice.v2.PredictResponse.credit_card_last_four:type_name -> ssn.type.Candidate
-	11, // 36: ssn.mlservice.v2.PredictResponse.customer_number:type_name -> ssn.type.Candidate
-	11, // 37: ssn.mlservice.v2.PredictResponse.receiver_order_number:type_name -> ssn.type.Candidate
-	11, // 38: ssn.mlservice.v2.PredictResponse.ocr_line_be_payment_id:type_name -> ssn.type.Candidate
-	11, // 39: ssn.mlservice.v2.PredictResponse.receiver_address:type_name -> ssn.type.Candidate
-	11, // 40: ssn.mlservice.v2.PredictResponse.receiver_country_code:type_name -> ssn.type.Candidate
-	11, // 41: ssn.mlservice.v2.PredictResponse.receiver_name:type_name -> ssn.type.Candidate
-	11, // 42: ssn.mlservice.v2.PredictResponse.receiver_vat_number:type_name -> ssn.type.Candidate
+	10, // 0: ssn.mlservice.v2.FeatureGenRequest.truth_labels:type_name -> ssn.mlservice.v2.FeatureGenRequest.TruthLabels
+	11, // 1: ssn.mlservice.v2.FeatureGenRequest.text_annotation:type_name -> ssn.type.TextAnnotation
+	12, // 2: ssn.mlservice.v2.PredictResponse.order_date:type_name -> ssn.type.Candidate
+	12, // 3: ssn.mlservice.v2.PredictResponse.payment_due_date:type_name -> ssn.type.Candidate
+	12, // 4: ssn.mlservice.v2.PredictResponse.currency:type_name -> ssn.type.Candidate
+	12, // 5: ssn.mlservice.v2.PredictResponse.total_vat:type_name -> ssn.type.Candidate
+	12, // 6: ssn.mlservice.v2.PredictResponse.total_incl_vat:type_name -> ssn.type.Candidate
+	12, // 7: ssn.mlservice.v2.PredictResponse.total_excl_vat:type_name -> ssn.type.Candidate
+	12, // 8: ssn.mlservice.v2.PredictResponse.supplier_corporate_id:type_name -> ssn.type.Candidate
+	12, // 9: ssn.mlservice.v2.PredictResponse.supplier_country_code:type_name -> ssn.type.Candidate
+	12, // 10: ssn.mlservice.v2.PredictResponse.document_type:type_name -> ssn.type.Candidate
+	12, // 11: ssn.mlservice.v2.PredictResponse.payment_method:type_name -> ssn.type.Candidate
+	12, // 12: ssn.mlservice.v2.PredictResponse.credit_card_number:type_name -> ssn.type.Candidate
+	12, // 13: ssn.mlservice.v2.PredictResponse.invoice_number:type_name -> ssn.type.Candidate
+	12, // 14: ssn.mlservice.v2.PredictResponse.ocr_line_dk_type:type_name -> ssn.type.Candidate
+	12, // 15: ssn.mlservice.v2.PredictResponse.ocr_line_dk_payment_id:type_name -> ssn.type.Candidate
+	12, // 16: ssn.mlservice.v2.PredictResponse.ocr_line_dk_creditor_id:type_name -> ssn.type.Candidate
+	12, // 17: ssn.mlservice.v2.PredictResponse.ocr_line_se_payment_id:type_name -> ssn.type.Candidate
+	12, // 18: ssn.mlservice.v2.PredictResponse.ocr_line_se_bankgiro_creditor_id:type_name -> ssn.type.Candidate
+	12, // 19: ssn.mlservice.v2.PredictResponse.ocr_line_se_plusgiro_creditor_id:type_name -> ssn.type.Candidate
+	12, // 20: ssn.mlservice.v2.PredictResponse.ocr_line_no_payment_id:type_name -> ssn.type.Candidate
+	12, // 21: ssn.mlservice.v2.PredictResponse.ocr_line_fi_payment_id:type_name -> ssn.type.Candidate
+	12, // 22: ssn.mlservice.v2.PredictResponse.ocr_line_nl_payment_id:type_name -> ssn.type.Candidate
+	12, // 23: ssn.mlservice.v2.PredictResponse.iban:type_name -> ssn.type.Candidate
+	13, // 24: ssn.mlservice.v2.PredictResponse.lines:type_name -> ssn.type.LineCandidate
+	12, // 25: ssn.mlservice.v2.PredictResponse.bank_account_number:type_name -> ssn.type.Candidate
+	12, // 26: ssn.mlservice.v2.PredictResponse.bank_registration_number:type_name -> ssn.type.Candidate
+	12, // 27: ssn.mlservice.v2.PredictResponse.bic:type_name -> ssn.type.Candidate
+	12, // 28: ssn.mlservice.v2.PredictResponse.document_number:type_name -> ssn.type.Candidate
+	12, // 29: ssn.mlservice.v2.PredictResponse.document_date:type_name -> ssn.type.Candidate
+	12, // 30: ssn.mlservice.v2.PredictResponse.order_number:type_name -> ssn.type.Candidate
+	12, // 31: ssn.mlservice.v2.PredictResponse.supplier_name:type_name -> ssn.type.Candidate
+	12, // 32: ssn.mlservice.v2.PredictResponse.supplier_vat_number:type_name -> ssn.type.Candidate
+	12, // 33: ssn.mlservice.v2.PredictResponse.supplier_organisation_number:type_name -> ssn.type.Candidate
+	12, // 34: ssn.mlservice.v2.PredictResponse.supplier_address:type_name -> ssn.type.Candidate
+	12, // 35: ssn.mlservice.v2.PredictResponse.credit_card_last_four:type_name -> ssn.type.Candidate
+	12, // 36: ssn.mlservice.v2.PredictResponse.customer_number:type_name -> ssn.type.Candidate
+	12, // 37: ssn.mlservice.v2.PredictResponse.receiver_order_number:type_name -> ssn.type.Candidate
+	12, // 38: ssn.mlservice.v2.PredictResponse.ocr_line_be_payment_id:type_name -> ssn.type.Candidate
+	12, // 39: ssn.mlservice.v2.PredictResponse.receiver_address:type_name -> ssn.type.Candidate
+	12, // 40: ssn.mlservice.v2.PredictResponse.receiver_country_code:type_name -> ssn.type.Candidate
+	12, // 41: ssn.mlservice.v2.PredictResponse.receiver_name:type_name -> ssn.type.Candidate
+	12, // 42: ssn.mlservice.v2.PredictResponse.receiver_vat_number:type_name -> ssn.type.Candidate
 	0,  // 43: ssn.mlservice.v2.FeatureGenPredictRequest.feature_gen_request:type_name -> ssn.mlservice.v2.FeatureGenRequest
 	2,  // 44: ssn.mlservice.v2.FeatureGenPredictRequest.predict_request:type_name -> ssn.mlservice.v2.PredictRequest
-	10, // 45: ssn.mlservice.v2.PurchaseLinesRequest.text_annotation:type_name -> ssn.type.TextAnnotation
-	13, // 46: ssn.mlservice.v2.PurchaseLinesResponse.purchase_lines:type_name -> ssn.type.PurchaseLineCandidate
-	10, // 47: ssn.mlservice.v2.DocQARequest.text_annotation:type_name -> ssn.type.TextAnnotation
-	14, // 48: ssn.mlservice.v2.DocQAResponse.answers:type_name -> ssn.type.AnswerCandidate
-	15, // 49: ssn.mlservice.v2.FeatureGenRequest.TruthLabels.order_date:type_name -> google.type.Date
-	15, // 50: ssn.mlservice.v2.FeatureGenRequest.TruthLabels.payment_due_date:type_name -> google.type.Date
-	15, // 51: ssn.mlservice.v2.FeatureGenRequest.TruthLabels.document_date:type_name -> google.type.Date
-	0,  // 52: ssn.mlservice.v2.MlService.FeatureGen:input_type -> ssn.mlservice.v2.FeatureGenRequest
-	2,  // 53: ssn.mlservice.v2.MlService.Predict:input_type -> ssn.mlservice.v2.PredictRequest
-	4,  // 54: ssn.mlservice.v2.MlService.FeatureGenPredict:input_type -> ssn.mlservice.v2.FeatureGenPredictRequest
-	1,  // 55: ssn.mlservice.v2.MlService.FeatureGen:output_type -> ssn.mlservice.v2.FeatureGenResponse
-	3,  // 56: ssn.mlservice.v2.MlService.Predict:output_type -> ssn.mlservice.v2.PredictResponse
-	3,  // 57: ssn.mlservice.v2.MlService.FeatureGenPredict:output_type -> ssn.mlservice.v2.PredictResponse
-	55, // [55:58] is the sub-list for method output_type
-	52, // [52:55] is the sub-list for method input_type
-	52, // [52:52] is the sub-list for extension type_name
-	52, // [52:52] is the sub-list for extension extendee
-	0,  // [0:52] is the sub-list for field type_name
+	11, // 45: ssn.mlservice.v2.PurchaseLinesRequest.text_annotation:type_name -> ssn.type.TextAnnotation
+	14, // 46: ssn.mlservice.v2.PurchaseLinesResponse.purchase_lines:type_name -> ssn.type.PurchaseLineCandidate
+	11, // 47: ssn.mlservice.v2.DocQARequest.text_annotation:type_name -> ssn.type.TextAnnotation
+	15, // 48: ssn.mlservice.v2.DocQAResponse.answers:type_name -> ssn.type.AnswerCandidate
+	3,  // 49: ssn.mlservice.v2.GeneralPredictResponse.predict_response:type_name -> ssn.mlservice.v2.PredictResponse
+	6,  // 50: ssn.mlservice.v2.GeneralPredictResponse.purchase_lines_response:type_name -> ssn.mlservice.v2.PurchaseLinesResponse
+	16, // 51: ssn.mlservice.v2.FeatureGenRequest.TruthLabels.order_date:type_name -> google.type.Date
+	16, // 52: ssn.mlservice.v2.FeatureGenRequest.TruthLabels.payment_due_date:type_name -> google.type.Date
+	16, // 53: ssn.mlservice.v2.FeatureGenRequest.TruthLabels.document_date:type_name -> google.type.Date
+	0,  // 54: ssn.mlservice.v2.MlService.FeatureGen:input_type -> ssn.mlservice.v2.FeatureGenRequest
+	2,  // 55: ssn.mlservice.v2.MlService.Predict:input_type -> ssn.mlservice.v2.PredictRequest
+	4,  // 56: ssn.mlservice.v2.MlService.FeatureGenPredict:input_type -> ssn.mlservice.v2.FeatureGenPredictRequest
+	1,  // 57: ssn.mlservice.v2.MlService.FeatureGen:output_type -> ssn.mlservice.v2.FeatureGenResponse
+	3,  // 58: ssn.mlservice.v2.MlService.Predict:output_type -> ssn.mlservice.v2.PredictResponse
+	3,  // 59: ssn.mlservice.v2.MlService.FeatureGenPredict:output_type -> ssn.mlservice.v2.PredictResponse
+	57, // [57:60] is the sub-list for method output_type
+	54, // [54:57] is the sub-list for method input_type
+	54, // [54:54] is the sub-list for extension type_name
+	54, // [54:54] is the sub-list for extension extendee
+	0,  // [0:54] is the sub-list for field type_name
 }
 
 func init() { file_ssn_mlservice_v2_mlservice_proto_init() }
@@ -1765,6 +1835,18 @@ func file_ssn_mlservice_v2_mlservice_proto_init() {
 			}
 		}
 		file_ssn_mlservice_v2_mlservice_proto_msgTypes[9].Exporter = func(v interface{}, i int) interface{} {
+			switch v := v.(*GeneralPredictResponse); i {
+			case 0:
+				return &v.state
+			case 1:
+				return &v.sizeCache
+			case 2:
+				return &v.unknownFields
+			default:
+				return nil
+			}
+		}
+		file_ssn_mlservice_v2_mlservice_proto_msgTypes[10].Exporter = func(v interface{}, i int) interface{} {
 			switch v := v.(*FeatureGenRequest_TruthLabels); i {
 			case 0:
 				return &v.state
@@ -1783,7 +1865,7 @@ func file_ssn_mlservice_v2_mlservice_proto_init() {
 			GoPackagePath: reflect.TypeOf(x{}).PkgPath(),
 			RawDescriptor: file_ssn_mlservice_v2_mlservice_proto_rawDesc,
 			NumEnums:      0,
-			NumMessages:   10,
+			NumMessages:   11,
 			NumExtensions: 0,
 			NumServices:   1,
 		},
