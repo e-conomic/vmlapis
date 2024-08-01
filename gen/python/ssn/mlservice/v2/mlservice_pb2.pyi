@@ -234,11 +234,3 @@ class DocQAResponse(_message.Message):
     ANSWERS_FIELD_NUMBER: _ClassVar[int]
     answers: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.AnswerCandidate]
     def __init__(self, answers: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ...) -> None: ...
-
-class GeneralPredictResponse(_message.Message):
-    __slots__ = ["predict_response", "purchase_lines_response"]
-    PREDICT_RESPONSE_FIELD_NUMBER: _ClassVar[int]
-    PURCHASE_LINES_RESPONSE_FIELD_NUMBER: _ClassVar[int]
-    predict_response: PredictResponse
-    purchase_lines_response: _containers.RepeatedCompositeFieldContainer[PurchaseLinesResponse]
-    def __init__(self, predict_response: _Optional[_Union[PredictResponse, _Mapping]] = ..., purchase_lines_response: _Optional[_Iterable[_Union[PurchaseLinesResponse, _Mapping]]] = ...) -> None: ...

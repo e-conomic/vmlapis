@@ -3,6 +3,7 @@ from google.protobuf import empty_pb2 as _empty_pb2
 from protoc_gen_openapiv2.options import annotations_pb2 as _annotations_pb2_1
 from ssn.annotator.v1 import annotator_pb2 as _annotator_pb2
 from ssn.type import candidate_pb2 as _candidate_pb2
+from ssn.type import text_annotation_pb2 as _text_annotation_pb2
 from validate import validate_pb2 as _validate_pb2
 from google.protobuf.internal import containers as _containers
 from google.protobuf import descriptor as _descriptor
@@ -63,15 +64,41 @@ class PurchaseLineCandidate(_message.Message):
     purchase_line_candidate: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PurchaseLineCandidate]
     def __init__(self, purchase_line_candidate: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ...) -> None: ...
 
+class LineCandidate(_message.Message):
+    __slots__ = ["line_candidates"]
+    LINE_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
+    line_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.LineCandidate]
+    def __init__(self, line_candidates: _Optional[_Iterable[_Union[_candidate_pb2.LineCandidate, _Mapping]]] = ...) -> None: ...
+
+class AnswerCandidate(_message.Message):
+    __slots__ = ["answers"]
+    ANSWERS_FIELD_NUMBER: _ClassVar[int]
+    answers: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.AnswerCandidate]
+    def __init__(self, answers: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ...) -> None: ...
+
 class Annotation(_message.Message):
-    __slots__ = ["feature", "candidate", "purchase_line_candidate"]
+    __slots__ = ["feature", "candidate", "purchase_line_candidate", "answer_candidates", "line_candidates", "feedback_id", "page_text", "preview", "text", "text_annotation"]
     FEATURE_FIELD_NUMBER: _ClassVar[int]
     CANDIDATE_FIELD_NUMBER: _ClassVar[int]
     PURCHASE_LINE_CANDIDATE_FIELD_NUMBER: _ClassVar[int]
+    ANSWER_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
+    LINE_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
+    FEEDBACK_ID_FIELD_NUMBER: _ClassVar[int]
+    PAGE_TEXT_FIELD_NUMBER: _ClassVar[int]
+    PREVIEW_FIELD_NUMBER: _ClassVar[int]
+    TEXT_FIELD_NUMBER: _ClassVar[int]
+    TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
     feature: str
     candidate: Candidate
     purchase_line_candidate: PurchaseLineCandidate
-    def __init__(self, feature: _Optional[str] = ..., candidate: _Optional[_Union[Candidate, _Mapping]] = ..., purchase_line_candidate: _Optional[_Union[PurchaseLineCandidate, _Mapping]] = ...) -> None: ...
+    answer_candidates: AnswerCandidate
+    line_candidates: LineCandidate
+    feedback_id: str
+    page_text: _candidate_pb2.PageText
+    preview: str
+    text: str
+    text_annotation: _text_annotation_pb2.TextAnnotation
+    def __init__(self, feature: _Optional[str] = ..., candidate: _Optional[_Union[Candidate, _Mapping]] = ..., purchase_line_candidate: _Optional[_Union[PurchaseLineCandidate, _Mapping]] = ..., answer_candidates: _Optional[_Union[AnswerCandidate, _Mapping]] = ..., line_candidates: _Optional[_Union[LineCandidate, _Mapping]] = ..., feedback_id: _Optional[str] = ..., page_text: _Optional[_Union[_candidate_pb2.PageText, _Mapping]] = ..., preview: _Optional[str] = ..., text: _Optional[str] = ..., text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ...) -> None: ...
 
 class GetTransactionStatusRequest(_message.Message):
     __slots__ = ["id", "custom_id"]

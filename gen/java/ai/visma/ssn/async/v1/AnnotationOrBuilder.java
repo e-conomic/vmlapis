@@ -69,5 +69,116 @@ public interface AnnotationOrBuilder extends
    */
   ai.visma.ssn.async.v1.PurchaseLineCandidateOrBuilder getPurchaseLineCandidateOrBuilder();
 
+  /**
+   * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+   * @return Whether the answerCandidates field is set.
+   */
+  boolean hasAnswerCandidates();
+  /**
+   * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+   * @return The answerCandidates.
+   */
+  ai.visma.ssn.async.v1.AnswerCandidate getAnswerCandidates();
+  /**
+   * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+   */
+  ai.visma.ssn.async.v1.AnswerCandidateOrBuilder getAnswerCandidatesOrBuilder();
+
+  /**
+   * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+   * @return Whether the lineCandidates field is set.
+   */
+  boolean hasLineCandidates();
+  /**
+   * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+   * @return The lineCandidates.
+   */
+  ai.visma.ssn.async.v1.LineCandidate getLineCandidates();
+  /**
+   * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+   */
+  ai.visma.ssn.async.v1.LineCandidateOrBuilder getLineCandidatesOrBuilder();
+
+  /**
+   * <code>string feedback_id = 6 [json_name = "feedbackId"];</code>
+   * @return Whether the feedbackId field is set.
+   */
+  boolean hasFeedbackId();
+  /**
+   * <code>string feedback_id = 6 [json_name = "feedbackId"];</code>
+   * @return The feedbackId.
+   */
+  java.lang.String getFeedbackId();
+  /**
+   * <code>string feedback_id = 6 [json_name = "feedbackId"];</code>
+   * @return The bytes for feedbackId.
+   */
+  com.google.protobuf.ByteString
+      getFeedbackIdBytes();
+
+  /**
+   * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+   * @return Whether the pageText field is set.
+   */
+  boolean hasPageText();
+  /**
+   * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+   * @return The pageText.
+   */
+  ai.visma.ssn.type.PageText getPageText();
+  /**
+   * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+   */
+  ai.visma.ssn.type.PageTextOrBuilder getPageTextOrBuilder();
+
+  /**
+   * <code>string preview = 8 [json_name = "preview"];</code>
+   * @return Whether the preview field is set.
+   */
+  boolean hasPreview();
+  /**
+   * <code>string preview = 8 [json_name = "preview"];</code>
+   * @return The preview.
+   */
+  java.lang.String getPreview();
+  /**
+   * <code>string preview = 8 [json_name = "preview"];</code>
+   * @return The bytes for preview.
+   */
+  com.google.protobuf.ByteString
+      getPreviewBytes();
+
+  /**
+   * <code>string text = 9 [json_name = "text"];</code>
+   * @return Whether the text field is set.
+   */
+  boolean hasText();
+  /**
+   * <code>string text = 9 [json_name = "text"];</code>
+   * @return The text.
+   */
+  java.lang.String getText();
+  /**
+   * <code>string text = 9 [json_name = "text"];</code>
+   * @return The bytes for text.
+   */
+  com.google.protobuf.ByteString
+      getTextBytes();
+
+  /**
+   * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+   * @return Whether the textAnnotation field is set.
+   */
+  boolean hasTextAnnotation();
+  /**
+   * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+   * @return The textAnnotation.
+   */
+  ai.visma.ssn.type.TextAnnotation getTextAnnotation();
+  /**
+   * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+   */
+  ai.visma.ssn.type.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
+
   ai.visma.ssn.async.v1.Annotation.CandidatesCase getCandidatesCase();
 }

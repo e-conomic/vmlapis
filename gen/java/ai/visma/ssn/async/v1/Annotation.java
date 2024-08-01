@@ -47,6 +47,13 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.AbstractMessage.InternalOneOfEnum {
     CANDIDATE(2),
     PURCHASE_LINE_CANDIDATE(3),
+    ANSWER_CANDIDATES(4),
+    LINE_CANDIDATES(5),
+    FEEDBACK_ID(6),
+    PAGE_TEXT(7),
+    PREVIEW(8),
+    TEXT(9),
+    TEXT_ANNOTATION(10),
     CANDIDATES_NOT_SET(0);
     private final int value;
     private CandidatesCase(int value) {
@@ -66,6 +73,13 @@ private static final long serialVersionUID = 0L;
       switch (value) {
         case 2: return CANDIDATE;
         case 3: return PURCHASE_LINE_CANDIDATE;
+        case 4: return ANSWER_CANDIDATES;
+        case 5: return LINE_CANDIDATES;
+        case 6: return FEEDBACK_ID;
+        case 7: return PAGE_TEXT;
+        case 8: return PREVIEW;
+        case 9: return TEXT;
+        case 10: return TEXT_ANNOTATION;
         case 0: return CANDIDATES_NOT_SET;
         default: return null;
       }
@@ -202,6 +216,286 @@ private static final long serialVersionUID = 0L;
     return ai.visma.ssn.async.v1.PurchaseLineCandidate.getDefaultInstance();
   }
 
+  public static final int ANSWER_CANDIDATES_FIELD_NUMBER = 4;
+  /**
+   * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+   * @return Whether the answerCandidates field is set.
+   */
+  @java.lang.Override
+  public boolean hasAnswerCandidates() {
+    return candidatesCase_ == 4;
+  }
+  /**
+   * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+   * @return The answerCandidates.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.async.v1.AnswerCandidate getAnswerCandidates() {
+    if (candidatesCase_ == 4) {
+       return (ai.visma.ssn.async.v1.AnswerCandidate) candidates_;
+    }
+    return ai.visma.ssn.async.v1.AnswerCandidate.getDefaultInstance();
+  }
+  /**
+   * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.async.v1.AnswerCandidateOrBuilder getAnswerCandidatesOrBuilder() {
+    if (candidatesCase_ == 4) {
+       return (ai.visma.ssn.async.v1.AnswerCandidate) candidates_;
+    }
+    return ai.visma.ssn.async.v1.AnswerCandidate.getDefaultInstance();
+  }
+
+  public static final int LINE_CANDIDATES_FIELD_NUMBER = 5;
+  /**
+   * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+   * @return Whether the lineCandidates field is set.
+   */
+  @java.lang.Override
+  public boolean hasLineCandidates() {
+    return candidatesCase_ == 5;
+  }
+  /**
+   * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+   * @return The lineCandidates.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.async.v1.LineCandidate getLineCandidates() {
+    if (candidatesCase_ == 5) {
+       return (ai.visma.ssn.async.v1.LineCandidate) candidates_;
+    }
+    return ai.visma.ssn.async.v1.LineCandidate.getDefaultInstance();
+  }
+  /**
+   * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.async.v1.LineCandidateOrBuilder getLineCandidatesOrBuilder() {
+    if (candidatesCase_ == 5) {
+       return (ai.visma.ssn.async.v1.LineCandidate) candidates_;
+    }
+    return ai.visma.ssn.async.v1.LineCandidate.getDefaultInstance();
+  }
+
+  public static final int FEEDBACK_ID_FIELD_NUMBER = 6;
+  /**
+   * <code>string feedback_id = 6 [json_name = "feedbackId"];</code>
+   * @return Whether the feedbackId field is set.
+   */
+  public boolean hasFeedbackId() {
+    return candidatesCase_ == 6;
+  }
+  /**
+   * <code>string feedback_id = 6 [json_name = "feedbackId"];</code>
+   * @return The feedbackId.
+   */
+  public java.lang.String getFeedbackId() {
+    java.lang.Object ref = "";
+    if (candidatesCase_ == 6) {
+      ref = candidates_;
+    }
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (candidatesCase_ == 6) {
+        candidates_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <code>string feedback_id = 6 [json_name = "feedbackId"];</code>
+   * @return The bytes for feedbackId.
+   */
+  public com.google.protobuf.ByteString
+      getFeedbackIdBytes() {
+    java.lang.Object ref = "";
+    if (candidatesCase_ == 6) {
+      ref = candidates_;
+    }
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      if (candidatesCase_ == 6) {
+        candidates_ = b;
+      }
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int PAGE_TEXT_FIELD_NUMBER = 7;
+  /**
+   * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+   * @return Whether the pageText field is set.
+   */
+  @java.lang.Override
+  public boolean hasPageText() {
+    return candidatesCase_ == 7;
+  }
+  /**
+   * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+   * @return The pageText.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.PageText getPageText() {
+    if (candidatesCase_ == 7) {
+       return (ai.visma.ssn.type.PageText) candidates_;
+    }
+    return ai.visma.ssn.type.PageText.getDefaultInstance();
+  }
+  /**
+   * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.PageTextOrBuilder getPageTextOrBuilder() {
+    if (candidatesCase_ == 7) {
+       return (ai.visma.ssn.type.PageText) candidates_;
+    }
+    return ai.visma.ssn.type.PageText.getDefaultInstance();
+  }
+
+  public static final int PREVIEW_FIELD_NUMBER = 8;
+  /**
+   * <code>string preview = 8 [json_name = "preview"];</code>
+   * @return Whether the preview field is set.
+   */
+  public boolean hasPreview() {
+    return candidatesCase_ == 8;
+  }
+  /**
+   * <code>string preview = 8 [json_name = "preview"];</code>
+   * @return The preview.
+   */
+  public java.lang.String getPreview() {
+    java.lang.Object ref = "";
+    if (candidatesCase_ == 8) {
+      ref = candidates_;
+    }
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (candidatesCase_ == 8) {
+        candidates_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <code>string preview = 8 [json_name = "preview"];</code>
+   * @return The bytes for preview.
+   */
+  public com.google.protobuf.ByteString
+      getPreviewBytes() {
+    java.lang.Object ref = "";
+    if (candidatesCase_ == 8) {
+      ref = candidates_;
+    }
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      if (candidatesCase_ == 8) {
+        candidates_ = b;
+      }
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TEXT_FIELD_NUMBER = 9;
+  /**
+   * <code>string text = 9 [json_name = "text"];</code>
+   * @return Whether the text field is set.
+   */
+  public boolean hasText() {
+    return candidatesCase_ == 9;
+  }
+  /**
+   * <code>string text = 9 [json_name = "text"];</code>
+   * @return The text.
+   */
+  public java.lang.String getText() {
+    java.lang.Object ref = "";
+    if (candidatesCase_ == 9) {
+      ref = candidates_;
+    }
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      if (candidatesCase_ == 9) {
+        candidates_ = s;
+      }
+      return s;
+    }
+  }
+  /**
+   * <code>string text = 9 [json_name = "text"];</code>
+   * @return The bytes for text.
+   */
+  public com.google.protobuf.ByteString
+      getTextBytes() {
+    java.lang.Object ref = "";
+    if (candidatesCase_ == 9) {
+      ref = candidates_;
+    }
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      if (candidatesCase_ == 9) {
+        candidates_ = b;
+      }
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TEXT_ANNOTATION_FIELD_NUMBER = 10;
+  /**
+   * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+   * @return Whether the textAnnotation field is set.
+   */
+  @java.lang.Override
+  public boolean hasTextAnnotation() {
+    return candidatesCase_ == 10;
+  }
+  /**
+   * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+   * @return The textAnnotation.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.TextAnnotation getTextAnnotation() {
+    if (candidatesCase_ == 10) {
+       return (ai.visma.ssn.type.TextAnnotation) candidates_;
+    }
+    return ai.visma.ssn.type.TextAnnotation.getDefaultInstance();
+  }
+  /**
+   * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
+    if (candidatesCase_ == 10) {
+       return (ai.visma.ssn.type.TextAnnotation) candidates_;
+    }
+    return ai.visma.ssn.type.TextAnnotation.getDefaultInstance();
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -225,6 +519,27 @@ private static final long serialVersionUID = 0L;
     if (candidatesCase_ == 3) {
       output.writeMessage(3, (ai.visma.ssn.async.v1.PurchaseLineCandidate) candidates_);
     }
+    if (candidatesCase_ == 4) {
+      output.writeMessage(4, (ai.visma.ssn.async.v1.AnswerCandidate) candidates_);
+    }
+    if (candidatesCase_ == 5) {
+      output.writeMessage(5, (ai.visma.ssn.async.v1.LineCandidate) candidates_);
+    }
+    if (candidatesCase_ == 6) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, candidates_);
+    }
+    if (candidatesCase_ == 7) {
+      output.writeMessage(7, (ai.visma.ssn.type.PageText) candidates_);
+    }
+    if (candidatesCase_ == 8) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 8, candidates_);
+    }
+    if (candidatesCase_ == 9) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 9, candidates_);
+    }
+    if (candidatesCase_ == 10) {
+      output.writeMessage(10, (ai.visma.ssn.type.TextAnnotation) candidates_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -244,6 +559,31 @@ private static final long serialVersionUID = 0L;
     if (candidatesCase_ == 3) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, (ai.visma.ssn.async.v1.PurchaseLineCandidate) candidates_);
+    }
+    if (candidatesCase_ == 4) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, (ai.visma.ssn.async.v1.AnswerCandidate) candidates_);
+    }
+    if (candidatesCase_ == 5) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, (ai.visma.ssn.async.v1.LineCandidate) candidates_);
+    }
+    if (candidatesCase_ == 6) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, candidates_);
+    }
+    if (candidatesCase_ == 7) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(7, (ai.visma.ssn.type.PageText) candidates_);
+    }
+    if (candidatesCase_ == 8) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(8, candidates_);
+    }
+    if (candidatesCase_ == 9) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(9, candidates_);
+    }
+    if (candidatesCase_ == 10) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, (ai.visma.ssn.type.TextAnnotation) candidates_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -272,6 +612,34 @@ private static final long serialVersionUID = 0L;
         if (!getPurchaseLineCandidate()
             .equals(other.getPurchaseLineCandidate())) return false;
         break;
+      case 4:
+        if (!getAnswerCandidates()
+            .equals(other.getAnswerCandidates())) return false;
+        break;
+      case 5:
+        if (!getLineCandidates()
+            .equals(other.getLineCandidates())) return false;
+        break;
+      case 6:
+        if (!getFeedbackId()
+            .equals(other.getFeedbackId())) return false;
+        break;
+      case 7:
+        if (!getPageText()
+            .equals(other.getPageText())) return false;
+        break;
+      case 8:
+        if (!getPreview()
+            .equals(other.getPreview())) return false;
+        break;
+      case 9:
+        if (!getText()
+            .equals(other.getText())) return false;
+        break;
+      case 10:
+        if (!getTextAnnotation()
+            .equals(other.getTextAnnotation())) return false;
+        break;
       case 0:
       default:
     }
@@ -296,6 +664,34 @@ private static final long serialVersionUID = 0L;
       case 3:
         hash = (37 * hash) + PURCHASE_LINE_CANDIDATE_FIELD_NUMBER;
         hash = (53 * hash) + getPurchaseLineCandidate().hashCode();
+        break;
+      case 4:
+        hash = (37 * hash) + ANSWER_CANDIDATES_FIELD_NUMBER;
+        hash = (53 * hash) + getAnswerCandidates().hashCode();
+        break;
+      case 5:
+        hash = (37 * hash) + LINE_CANDIDATES_FIELD_NUMBER;
+        hash = (53 * hash) + getLineCandidates().hashCode();
+        break;
+      case 6:
+        hash = (37 * hash) + FEEDBACK_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getFeedbackId().hashCode();
+        break;
+      case 7:
+        hash = (37 * hash) + PAGE_TEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getPageText().hashCode();
+        break;
+      case 8:
+        hash = (37 * hash) + PREVIEW_FIELD_NUMBER;
+        hash = (53 * hash) + getPreview().hashCode();
+        break;
+      case 9:
+        hash = (37 * hash) + TEXT_FIELD_NUMBER;
+        hash = (53 * hash) + getText().hashCode();
+        break;
+      case 10:
+        hash = (37 * hash) + TEXT_ANNOTATION_FIELD_NUMBER;
+        hash = (53 * hash) + getTextAnnotation().hashCode();
         break;
       case 0:
       default:
@@ -438,6 +834,18 @@ private static final long serialVersionUID = 0L;
       if (purchaseLineCandidateBuilder_ != null) {
         purchaseLineCandidateBuilder_.clear();
       }
+      if (answerCandidatesBuilder_ != null) {
+        answerCandidatesBuilder_.clear();
+      }
+      if (lineCandidatesBuilder_ != null) {
+        lineCandidatesBuilder_.clear();
+      }
+      if (pageTextBuilder_ != null) {
+        pageTextBuilder_.clear();
+      }
+      if (textAnnotationBuilder_ != null) {
+        textAnnotationBuilder_.clear();
+      }
       candidatesCase_ = 0;
       candidates_ = null;
       return this;
@@ -489,6 +897,22 @@ private static final long serialVersionUID = 0L;
       if (candidatesCase_ == 3 &&
           purchaseLineCandidateBuilder_ != null) {
         result.candidates_ = purchaseLineCandidateBuilder_.build();
+      }
+      if (candidatesCase_ == 4 &&
+          answerCandidatesBuilder_ != null) {
+        result.candidates_ = answerCandidatesBuilder_.build();
+      }
+      if (candidatesCase_ == 5 &&
+          lineCandidatesBuilder_ != null) {
+        result.candidates_ = lineCandidatesBuilder_.build();
+      }
+      if (candidatesCase_ == 7 &&
+          pageTextBuilder_ != null) {
+        result.candidates_ = pageTextBuilder_.build();
+      }
+      if (candidatesCase_ == 10 &&
+          textAnnotationBuilder_ != null) {
+        result.candidates_ = textAnnotationBuilder_.build();
       }
     }
 
@@ -550,6 +974,40 @@ private static final long serialVersionUID = 0L;
           mergePurchaseLineCandidate(other.getPurchaseLineCandidate());
           break;
         }
+        case ANSWER_CANDIDATES: {
+          mergeAnswerCandidates(other.getAnswerCandidates());
+          break;
+        }
+        case LINE_CANDIDATES: {
+          mergeLineCandidates(other.getLineCandidates());
+          break;
+        }
+        case FEEDBACK_ID: {
+          candidatesCase_ = 6;
+          candidates_ = other.candidates_;
+          onChanged();
+          break;
+        }
+        case PAGE_TEXT: {
+          mergePageText(other.getPageText());
+          break;
+        }
+        case PREVIEW: {
+          candidatesCase_ = 8;
+          candidates_ = other.candidates_;
+          onChanged();
+          break;
+        }
+        case TEXT: {
+          candidatesCase_ = 9;
+          candidates_ = other.candidates_;
+          onChanged();
+          break;
+        }
+        case TEXT_ANNOTATION: {
+          mergeTextAnnotation(other.getTextAnnotation());
+          break;
+        }
         case CANDIDATES_NOT_SET: {
           break;
         }
@@ -599,6 +1057,52 @@ private static final long serialVersionUID = 0L;
               candidatesCase_ = 3;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getAnswerCandidatesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              candidatesCase_ = 4;
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  getLineCandidatesFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              candidatesCase_ = 5;
+              break;
+            } // case 42
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              candidatesCase_ = 6;
+              candidates_ = s;
+              break;
+            } // case 50
+            case 58: {
+              input.readMessage(
+                  getPageTextFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              candidatesCase_ = 7;
+              break;
+            } // case 58
+            case 66: {
+              java.lang.String s = input.readStringRequireUtf8();
+              candidatesCase_ = 8;
+              candidates_ = s;
+              break;
+            } // case 66
+            case 74: {
+              java.lang.String s = input.readStringRequireUtf8();
+              candidatesCase_ = 9;
+              candidates_ = s;
+              break;
+            } // case 74
+            case 82: {
+              input.readMessage(
+                  getTextAnnotationFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              candidatesCase_ = 10;
+              break;
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1041,6 +1545,853 @@ private static final long serialVersionUID = 0L;
       candidatesCase_ = 3;
       onChanged();
       return purchaseLineCandidateBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.ssn.async.v1.AnswerCandidate, ai.visma.ssn.async.v1.AnswerCandidate.Builder, ai.visma.ssn.async.v1.AnswerCandidateOrBuilder> answerCandidatesBuilder_;
+    /**
+     * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+     * @return Whether the answerCandidates field is set.
+     */
+    @java.lang.Override
+    public boolean hasAnswerCandidates() {
+      return candidatesCase_ == 4;
+    }
+    /**
+     * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+     * @return The answerCandidates.
+     */
+    @java.lang.Override
+    public ai.visma.ssn.async.v1.AnswerCandidate getAnswerCandidates() {
+      if (answerCandidatesBuilder_ == null) {
+        if (candidatesCase_ == 4) {
+          return (ai.visma.ssn.async.v1.AnswerCandidate) candidates_;
+        }
+        return ai.visma.ssn.async.v1.AnswerCandidate.getDefaultInstance();
+      } else {
+        if (candidatesCase_ == 4) {
+          return answerCandidatesBuilder_.getMessage();
+        }
+        return ai.visma.ssn.async.v1.AnswerCandidate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+     */
+    public Builder setAnswerCandidates(ai.visma.ssn.async.v1.AnswerCandidate value) {
+      if (answerCandidatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        candidates_ = value;
+        onChanged();
+      } else {
+        answerCandidatesBuilder_.setMessage(value);
+      }
+      candidatesCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+     */
+    public Builder setAnswerCandidates(
+        ai.visma.ssn.async.v1.AnswerCandidate.Builder builderForValue) {
+      if (answerCandidatesBuilder_ == null) {
+        candidates_ = builderForValue.build();
+        onChanged();
+      } else {
+        answerCandidatesBuilder_.setMessage(builderForValue.build());
+      }
+      candidatesCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+     */
+    public Builder mergeAnswerCandidates(ai.visma.ssn.async.v1.AnswerCandidate value) {
+      if (answerCandidatesBuilder_ == null) {
+        if (candidatesCase_ == 4 &&
+            candidates_ != ai.visma.ssn.async.v1.AnswerCandidate.getDefaultInstance()) {
+          candidates_ = ai.visma.ssn.async.v1.AnswerCandidate.newBuilder((ai.visma.ssn.async.v1.AnswerCandidate) candidates_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          candidates_ = value;
+        }
+        onChanged();
+      } else {
+        if (candidatesCase_ == 4) {
+          answerCandidatesBuilder_.mergeFrom(value);
+        } else {
+          answerCandidatesBuilder_.setMessage(value);
+        }
+      }
+      candidatesCase_ = 4;
+      return this;
+    }
+    /**
+     * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+     */
+    public Builder clearAnswerCandidates() {
+      if (answerCandidatesBuilder_ == null) {
+        if (candidatesCase_ == 4) {
+          candidatesCase_ = 0;
+          candidates_ = null;
+          onChanged();
+        }
+      } else {
+        if (candidatesCase_ == 4) {
+          candidatesCase_ = 0;
+          candidates_ = null;
+        }
+        answerCandidatesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+     */
+    public ai.visma.ssn.async.v1.AnswerCandidate.Builder getAnswerCandidatesBuilder() {
+      return getAnswerCandidatesFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+     */
+    @java.lang.Override
+    public ai.visma.ssn.async.v1.AnswerCandidateOrBuilder getAnswerCandidatesOrBuilder() {
+      if ((candidatesCase_ == 4) && (answerCandidatesBuilder_ != null)) {
+        return answerCandidatesBuilder_.getMessageOrBuilder();
+      } else {
+        if (candidatesCase_ == 4) {
+          return (ai.visma.ssn.async.v1.AnswerCandidate) candidates_;
+        }
+        return ai.visma.ssn.async.v1.AnswerCandidate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.ssn.async.v1.AnswerCandidate, ai.visma.ssn.async.v1.AnswerCandidate.Builder, ai.visma.ssn.async.v1.AnswerCandidateOrBuilder> 
+        getAnswerCandidatesFieldBuilder() {
+      if (answerCandidatesBuilder_ == null) {
+        if (!(candidatesCase_ == 4)) {
+          candidates_ = ai.visma.ssn.async.v1.AnswerCandidate.getDefaultInstance();
+        }
+        answerCandidatesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            ai.visma.ssn.async.v1.AnswerCandidate, ai.visma.ssn.async.v1.AnswerCandidate.Builder, ai.visma.ssn.async.v1.AnswerCandidateOrBuilder>(
+                (ai.visma.ssn.async.v1.AnswerCandidate) candidates_,
+                getParentForChildren(),
+                isClean());
+        candidates_ = null;
+      }
+      candidatesCase_ = 4;
+      onChanged();
+      return answerCandidatesBuilder_;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.ssn.async.v1.LineCandidate, ai.visma.ssn.async.v1.LineCandidate.Builder, ai.visma.ssn.async.v1.LineCandidateOrBuilder> lineCandidatesBuilder_;
+    /**
+     * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+     * @return Whether the lineCandidates field is set.
+     */
+    @java.lang.Override
+    public boolean hasLineCandidates() {
+      return candidatesCase_ == 5;
+    }
+    /**
+     * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+     * @return The lineCandidates.
+     */
+    @java.lang.Override
+    public ai.visma.ssn.async.v1.LineCandidate getLineCandidates() {
+      if (lineCandidatesBuilder_ == null) {
+        if (candidatesCase_ == 5) {
+          return (ai.visma.ssn.async.v1.LineCandidate) candidates_;
+        }
+        return ai.visma.ssn.async.v1.LineCandidate.getDefaultInstance();
+      } else {
+        if (candidatesCase_ == 5) {
+          return lineCandidatesBuilder_.getMessage();
+        }
+        return ai.visma.ssn.async.v1.LineCandidate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+     */
+    public Builder setLineCandidates(ai.visma.ssn.async.v1.LineCandidate value) {
+      if (lineCandidatesBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        candidates_ = value;
+        onChanged();
+      } else {
+        lineCandidatesBuilder_.setMessage(value);
+      }
+      candidatesCase_ = 5;
+      return this;
+    }
+    /**
+     * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+     */
+    public Builder setLineCandidates(
+        ai.visma.ssn.async.v1.LineCandidate.Builder builderForValue) {
+      if (lineCandidatesBuilder_ == null) {
+        candidates_ = builderForValue.build();
+        onChanged();
+      } else {
+        lineCandidatesBuilder_.setMessage(builderForValue.build());
+      }
+      candidatesCase_ = 5;
+      return this;
+    }
+    /**
+     * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+     */
+    public Builder mergeLineCandidates(ai.visma.ssn.async.v1.LineCandidate value) {
+      if (lineCandidatesBuilder_ == null) {
+        if (candidatesCase_ == 5 &&
+            candidates_ != ai.visma.ssn.async.v1.LineCandidate.getDefaultInstance()) {
+          candidates_ = ai.visma.ssn.async.v1.LineCandidate.newBuilder((ai.visma.ssn.async.v1.LineCandidate) candidates_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          candidates_ = value;
+        }
+        onChanged();
+      } else {
+        if (candidatesCase_ == 5) {
+          lineCandidatesBuilder_.mergeFrom(value);
+        } else {
+          lineCandidatesBuilder_.setMessage(value);
+        }
+      }
+      candidatesCase_ = 5;
+      return this;
+    }
+    /**
+     * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+     */
+    public Builder clearLineCandidates() {
+      if (lineCandidatesBuilder_ == null) {
+        if (candidatesCase_ == 5) {
+          candidatesCase_ = 0;
+          candidates_ = null;
+          onChanged();
+        }
+      } else {
+        if (candidatesCase_ == 5) {
+          candidatesCase_ = 0;
+          candidates_ = null;
+        }
+        lineCandidatesBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+     */
+    public ai.visma.ssn.async.v1.LineCandidate.Builder getLineCandidatesBuilder() {
+      return getLineCandidatesFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+     */
+    @java.lang.Override
+    public ai.visma.ssn.async.v1.LineCandidateOrBuilder getLineCandidatesOrBuilder() {
+      if ((candidatesCase_ == 5) && (lineCandidatesBuilder_ != null)) {
+        return lineCandidatesBuilder_.getMessageOrBuilder();
+      } else {
+        if (candidatesCase_ == 5) {
+          return (ai.visma.ssn.async.v1.LineCandidate) candidates_;
+        }
+        return ai.visma.ssn.async.v1.LineCandidate.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.ssn.async.v1.LineCandidate, ai.visma.ssn.async.v1.LineCandidate.Builder, ai.visma.ssn.async.v1.LineCandidateOrBuilder> 
+        getLineCandidatesFieldBuilder() {
+      if (lineCandidatesBuilder_ == null) {
+        if (!(candidatesCase_ == 5)) {
+          candidates_ = ai.visma.ssn.async.v1.LineCandidate.getDefaultInstance();
+        }
+        lineCandidatesBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            ai.visma.ssn.async.v1.LineCandidate, ai.visma.ssn.async.v1.LineCandidate.Builder, ai.visma.ssn.async.v1.LineCandidateOrBuilder>(
+                (ai.visma.ssn.async.v1.LineCandidate) candidates_,
+                getParentForChildren(),
+                isClean());
+        candidates_ = null;
+      }
+      candidatesCase_ = 5;
+      onChanged();
+      return lineCandidatesBuilder_;
+    }
+
+    /**
+     * <code>string feedback_id = 6 [json_name = "feedbackId"];</code>
+     * @return Whether the feedbackId field is set.
+     */
+    @java.lang.Override
+    public boolean hasFeedbackId() {
+      return candidatesCase_ == 6;
+    }
+    /**
+     * <code>string feedback_id = 6 [json_name = "feedbackId"];</code>
+     * @return The feedbackId.
+     */
+    @java.lang.Override
+    public java.lang.String getFeedbackId() {
+      java.lang.Object ref = "";
+      if (candidatesCase_ == 6) {
+        ref = candidates_;
+      }
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (candidatesCase_ == 6) {
+          candidates_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string feedback_id = 6 [json_name = "feedbackId"];</code>
+     * @return The bytes for feedbackId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getFeedbackIdBytes() {
+      java.lang.Object ref = "";
+      if (candidatesCase_ == 6) {
+        ref = candidates_;
+      }
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (candidatesCase_ == 6) {
+          candidates_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string feedback_id = 6 [json_name = "feedbackId"];</code>
+     * @param value The feedbackId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFeedbackId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      candidatesCase_ = 6;
+      candidates_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string feedback_id = 6 [json_name = "feedbackId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearFeedbackId() {
+      if (candidatesCase_ == 6) {
+        candidatesCase_ = 0;
+        candidates_ = null;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>string feedback_id = 6 [json_name = "feedbackId"];</code>
+     * @param value The bytes for feedbackId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setFeedbackIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      candidatesCase_ = 6;
+      candidates_ = value;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.ssn.type.PageText, ai.visma.ssn.type.PageText.Builder, ai.visma.ssn.type.PageTextOrBuilder> pageTextBuilder_;
+    /**
+     * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+     * @return Whether the pageText field is set.
+     */
+    @java.lang.Override
+    public boolean hasPageText() {
+      return candidatesCase_ == 7;
+    }
+    /**
+     * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+     * @return The pageText.
+     */
+    @java.lang.Override
+    public ai.visma.ssn.type.PageText getPageText() {
+      if (pageTextBuilder_ == null) {
+        if (candidatesCase_ == 7) {
+          return (ai.visma.ssn.type.PageText) candidates_;
+        }
+        return ai.visma.ssn.type.PageText.getDefaultInstance();
+      } else {
+        if (candidatesCase_ == 7) {
+          return pageTextBuilder_.getMessage();
+        }
+        return ai.visma.ssn.type.PageText.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+     */
+    public Builder setPageText(ai.visma.ssn.type.PageText value) {
+      if (pageTextBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        candidates_ = value;
+        onChanged();
+      } else {
+        pageTextBuilder_.setMessage(value);
+      }
+      candidatesCase_ = 7;
+      return this;
+    }
+    /**
+     * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+     */
+    public Builder setPageText(
+        ai.visma.ssn.type.PageText.Builder builderForValue) {
+      if (pageTextBuilder_ == null) {
+        candidates_ = builderForValue.build();
+        onChanged();
+      } else {
+        pageTextBuilder_.setMessage(builderForValue.build());
+      }
+      candidatesCase_ = 7;
+      return this;
+    }
+    /**
+     * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+     */
+    public Builder mergePageText(ai.visma.ssn.type.PageText value) {
+      if (pageTextBuilder_ == null) {
+        if (candidatesCase_ == 7 &&
+            candidates_ != ai.visma.ssn.type.PageText.getDefaultInstance()) {
+          candidates_ = ai.visma.ssn.type.PageText.newBuilder((ai.visma.ssn.type.PageText) candidates_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          candidates_ = value;
+        }
+        onChanged();
+      } else {
+        if (candidatesCase_ == 7) {
+          pageTextBuilder_.mergeFrom(value);
+        } else {
+          pageTextBuilder_.setMessage(value);
+        }
+      }
+      candidatesCase_ = 7;
+      return this;
+    }
+    /**
+     * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+     */
+    public Builder clearPageText() {
+      if (pageTextBuilder_ == null) {
+        if (candidatesCase_ == 7) {
+          candidatesCase_ = 0;
+          candidates_ = null;
+          onChanged();
+        }
+      } else {
+        if (candidatesCase_ == 7) {
+          candidatesCase_ = 0;
+          candidates_ = null;
+        }
+        pageTextBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+     */
+    public ai.visma.ssn.type.PageText.Builder getPageTextBuilder() {
+      return getPageTextFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+     */
+    @java.lang.Override
+    public ai.visma.ssn.type.PageTextOrBuilder getPageTextOrBuilder() {
+      if ((candidatesCase_ == 7) && (pageTextBuilder_ != null)) {
+        return pageTextBuilder_.getMessageOrBuilder();
+      } else {
+        if (candidatesCase_ == 7) {
+          return (ai.visma.ssn.type.PageText) candidates_;
+        }
+        return ai.visma.ssn.type.PageText.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.ssn.type.PageText page_text = 7 [json_name = "pageText"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.ssn.type.PageText, ai.visma.ssn.type.PageText.Builder, ai.visma.ssn.type.PageTextOrBuilder> 
+        getPageTextFieldBuilder() {
+      if (pageTextBuilder_ == null) {
+        if (!(candidatesCase_ == 7)) {
+          candidates_ = ai.visma.ssn.type.PageText.getDefaultInstance();
+        }
+        pageTextBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            ai.visma.ssn.type.PageText, ai.visma.ssn.type.PageText.Builder, ai.visma.ssn.type.PageTextOrBuilder>(
+                (ai.visma.ssn.type.PageText) candidates_,
+                getParentForChildren(),
+                isClean());
+        candidates_ = null;
+      }
+      candidatesCase_ = 7;
+      onChanged();
+      return pageTextBuilder_;
+    }
+
+    /**
+     * <code>string preview = 8 [json_name = "preview"];</code>
+     * @return Whether the preview field is set.
+     */
+    @java.lang.Override
+    public boolean hasPreview() {
+      return candidatesCase_ == 8;
+    }
+    /**
+     * <code>string preview = 8 [json_name = "preview"];</code>
+     * @return The preview.
+     */
+    @java.lang.Override
+    public java.lang.String getPreview() {
+      java.lang.Object ref = "";
+      if (candidatesCase_ == 8) {
+        ref = candidates_;
+      }
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (candidatesCase_ == 8) {
+          candidates_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string preview = 8 [json_name = "preview"];</code>
+     * @return The bytes for preview.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPreviewBytes() {
+      java.lang.Object ref = "";
+      if (candidatesCase_ == 8) {
+        ref = candidates_;
+      }
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (candidatesCase_ == 8) {
+          candidates_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string preview = 8 [json_name = "preview"];</code>
+     * @param value The preview to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPreview(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      candidatesCase_ = 8;
+      candidates_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string preview = 8 [json_name = "preview"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPreview() {
+      if (candidatesCase_ == 8) {
+        candidatesCase_ = 0;
+        candidates_ = null;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>string preview = 8 [json_name = "preview"];</code>
+     * @param value The bytes for preview to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPreviewBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      candidatesCase_ = 8;
+      candidates_ = value;
+      onChanged();
+      return this;
+    }
+
+    /**
+     * <code>string text = 9 [json_name = "text"];</code>
+     * @return Whether the text field is set.
+     */
+    @java.lang.Override
+    public boolean hasText() {
+      return candidatesCase_ == 9;
+    }
+    /**
+     * <code>string text = 9 [json_name = "text"];</code>
+     * @return The text.
+     */
+    @java.lang.Override
+    public java.lang.String getText() {
+      java.lang.Object ref = "";
+      if (candidatesCase_ == 9) {
+        ref = candidates_;
+      }
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (candidatesCase_ == 9) {
+          candidates_ = s;
+        }
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string text = 9 [json_name = "text"];</code>
+     * @return The bytes for text.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getTextBytes() {
+      java.lang.Object ref = "";
+      if (candidatesCase_ == 9) {
+        ref = candidates_;
+      }
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        if (candidatesCase_ == 9) {
+          candidates_ = b;
+        }
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string text = 9 [json_name = "text"];</code>
+     * @param value The text to set.
+     * @return This builder for chaining.
+     */
+    public Builder setText(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      candidatesCase_ = 9;
+      candidates_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string text = 9 [json_name = "text"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearText() {
+      if (candidatesCase_ == 9) {
+        candidatesCase_ = 0;
+        candidates_ = null;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <code>string text = 9 [json_name = "text"];</code>
+     * @param value The bytes for text to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTextBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      candidatesCase_ = 9;
+      candidates_ = value;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.ssn.type.TextAnnotation, ai.visma.ssn.type.TextAnnotation.Builder, ai.visma.ssn.type.TextAnnotationOrBuilder> textAnnotationBuilder_;
+    /**
+     * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+     * @return Whether the textAnnotation field is set.
+     */
+    @java.lang.Override
+    public boolean hasTextAnnotation() {
+      return candidatesCase_ == 10;
+    }
+    /**
+     * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+     * @return The textAnnotation.
+     */
+    @java.lang.Override
+    public ai.visma.ssn.type.TextAnnotation getTextAnnotation() {
+      if (textAnnotationBuilder_ == null) {
+        if (candidatesCase_ == 10) {
+          return (ai.visma.ssn.type.TextAnnotation) candidates_;
+        }
+        return ai.visma.ssn.type.TextAnnotation.getDefaultInstance();
+      } else {
+        if (candidatesCase_ == 10) {
+          return textAnnotationBuilder_.getMessage();
+        }
+        return ai.visma.ssn.type.TextAnnotation.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+     */
+    public Builder setTextAnnotation(ai.visma.ssn.type.TextAnnotation value) {
+      if (textAnnotationBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        candidates_ = value;
+        onChanged();
+      } else {
+        textAnnotationBuilder_.setMessage(value);
+      }
+      candidatesCase_ = 10;
+      return this;
+    }
+    /**
+     * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+     */
+    public Builder setTextAnnotation(
+        ai.visma.ssn.type.TextAnnotation.Builder builderForValue) {
+      if (textAnnotationBuilder_ == null) {
+        candidates_ = builderForValue.build();
+        onChanged();
+      } else {
+        textAnnotationBuilder_.setMessage(builderForValue.build());
+      }
+      candidatesCase_ = 10;
+      return this;
+    }
+    /**
+     * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+     */
+    public Builder mergeTextAnnotation(ai.visma.ssn.type.TextAnnotation value) {
+      if (textAnnotationBuilder_ == null) {
+        if (candidatesCase_ == 10 &&
+            candidates_ != ai.visma.ssn.type.TextAnnotation.getDefaultInstance()) {
+          candidates_ = ai.visma.ssn.type.TextAnnotation.newBuilder((ai.visma.ssn.type.TextAnnotation) candidates_)
+              .mergeFrom(value).buildPartial();
+        } else {
+          candidates_ = value;
+        }
+        onChanged();
+      } else {
+        if (candidatesCase_ == 10) {
+          textAnnotationBuilder_.mergeFrom(value);
+        } else {
+          textAnnotationBuilder_.setMessage(value);
+        }
+      }
+      candidatesCase_ = 10;
+      return this;
+    }
+    /**
+     * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+     */
+    public Builder clearTextAnnotation() {
+      if (textAnnotationBuilder_ == null) {
+        if (candidatesCase_ == 10) {
+          candidatesCase_ = 0;
+          candidates_ = null;
+          onChanged();
+        }
+      } else {
+        if (candidatesCase_ == 10) {
+          candidatesCase_ = 0;
+          candidates_ = null;
+        }
+        textAnnotationBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+     */
+    public ai.visma.ssn.type.TextAnnotation.Builder getTextAnnotationBuilder() {
+      return getTextAnnotationFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+     */
+    @java.lang.Override
+    public ai.visma.ssn.type.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
+      if ((candidatesCase_ == 10) && (textAnnotationBuilder_ != null)) {
+        return textAnnotationBuilder_.getMessageOrBuilder();
+      } else {
+        if (candidatesCase_ == 10) {
+          return (ai.visma.ssn.type.TextAnnotation) candidates_;
+        }
+        return ai.visma.ssn.type.TextAnnotation.getDefaultInstance();
+      }
+    }
+    /**
+     * <code>.ssn.type.TextAnnotation text_annotation = 10 [json_name = "textAnnotation"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.ssn.type.TextAnnotation, ai.visma.ssn.type.TextAnnotation.Builder, ai.visma.ssn.type.TextAnnotationOrBuilder> 
+        getTextAnnotationFieldBuilder() {
+      if (textAnnotationBuilder_ == null) {
+        if (!(candidatesCase_ == 10)) {
+          candidates_ = ai.visma.ssn.type.TextAnnotation.getDefaultInstance();
+        }
+        textAnnotationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            ai.visma.ssn.type.TextAnnotation, ai.visma.ssn.type.TextAnnotation.Builder, ai.visma.ssn.type.TextAnnotationOrBuilder>(
+                (ai.visma.ssn.type.TextAnnotation) candidates_,
+                getParentForChildren(),
+                isClean());
+        candidates_ = null;
+      }
+      candidatesCase_ = 10;
+      onChanged();
+      return textAnnotationBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

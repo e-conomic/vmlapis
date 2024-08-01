@@ -64,11 +64,6 @@ public final class MlserviceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_mlservice_v2_DocQAResponse_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ssn_mlservice_v2_GeneralPredictResponse_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_ssn_mlservice_v2_GeneralPredictResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -217,25 +212,20 @@ public final class MlserviceProto {
       "n.type.TextAnnotationR\016textAnnotation\022\024\n" +
       "\005image\030\002 \001(\014R\005image\022\034\n\tquestions\030\003 \003(\tR\t" +
       "questions\"D\n\rDocQAResponse\0223\n\007answers\030\001 " +
-      "\003(\0132\031.ssn.type.AnswerCandidateR\007answers\"" +
-      "\307\001\n\026GeneralPredictResponse\022L\n\020predict_re" +
-      "sponse\030\001 \001(\0132!.ssn.mlservice.v2.PredictR" +
-      "esponseR\017predictResponse\022_\n\027purchase_lin" +
-      "es_response\030\002 \003(\0132\'.ssn.mlservice.v2.Pur" +
-      "chaseLinesResponseR\025purchaseLinesRespons" +
-      "e2\230\002\n\tMlService\022W\n\nFeatureGen\022#.ssn.mlse" +
-      "rvice.v2.FeatureGenRequest\032$.ssn.mlservi" +
-      "ce.v2.FeatureGenResponse\022N\n\007Predict\022 .ss" +
-      "n.mlservice.v2.PredictRequest\032!.ssn.mlse" +
-      "rvice.v2.PredictResponse\022b\n\021FeatureGenPr" +
-      "edict\022*.ssn.mlservice.v2.FeatureGenPredi" +
-      "ctRequest\032!.ssn.mlservice.v2.PredictResp" +
-      "onseB\315\001\n\031ai.visma.ssn.mlservice.v2B\016Mlse" +
-      "rviceProtoP\001Z>github.com/e-conomic/vmlap" +
-      "is/gen/go/ssn/mlservice/v2;mlservice\242\002\003S" +
-      "MX\252\002\020Ssn.Mlservice.V2\312\002\020Ssn\\Mlservice\\V2" +
-      "\342\002\034Ssn\\Mlservice\\V2\\GPBMetadata\352\002\022Ssn::M" +
-      "lservice::V2b\006proto3"
+      "\003(\0132\031.ssn.type.AnswerCandidateR\007answers2" +
+      "\230\002\n\tMlService\022W\n\nFeatureGen\022#.ssn.mlserv" +
+      "ice.v2.FeatureGenRequest\032$.ssn.mlservice" +
+      ".v2.FeatureGenResponse\022N\n\007Predict\022 .ssn." +
+      "mlservice.v2.PredictRequest\032!.ssn.mlserv" +
+      "ice.v2.PredictResponse\022b\n\021FeatureGenPred" +
+      "ict\022*.ssn.mlservice.v2.FeatureGenPredict" +
+      "Request\032!.ssn.mlservice.v2.PredictRespon" +
+      "seB\315\001\n\031ai.visma.ssn.mlservice.v2B\016Mlserv" +
+      "iceProtoP\001Z>github.com/e-conomic/vmlapis" +
+      "/gen/go/ssn/mlservice/v2;mlservice\242\002\003SMX" +
+      "\252\002\020Ssn.Mlservice.V2\312\002\020Ssn\\Mlservice\\V2\342\002" +
+      "\034Ssn\\Mlservice\\V2\\GPBMetadata\352\002\022Ssn::Mls" +
+      "ervice::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -304,12 +294,6 @@ public final class MlserviceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_DocQAResponse_descriptor,
         new java.lang.String[] { "Answers", });
-    internal_static_ssn_mlservice_v2_GeneralPredictResponse_descriptor =
-      getDescriptor().getMessageTypes().get(9);
-    internal_static_ssn_mlservice_v2_GeneralPredictResponse_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_ssn_mlservice_v2_GeneralPredictResponse_descriptor,
-        new java.lang.String[] { "PredictResponse", "PurchaseLinesResponse", });
     com.google.type.DateProto.getDescriptor();
     ai.visma.ssn.type.CandidateProto.getDescriptor();
     ai.visma.ssn.type.TextAnnotationProto.getDescriptor();

@@ -632,29 +632,3 @@ export namespace DocQAResponse {
   }
 }
 
-export class GeneralPredictResponse extends jspb.Message {
-  getPredictResponse(): PredictResponse | undefined;
-  setPredictResponse(value?: PredictResponse): GeneralPredictResponse;
-  hasPredictResponse(): boolean;
-  clearPredictResponse(): GeneralPredictResponse;
-
-  getPurchaseLinesResponseList(): Array<PurchaseLinesResponse>;
-  setPurchaseLinesResponseList(value: Array<PurchaseLinesResponse>): GeneralPredictResponse;
-  clearPurchaseLinesResponseList(): GeneralPredictResponse;
-  addPurchaseLinesResponse(value?: PurchaseLinesResponse, index?: number): PurchaseLinesResponse;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): GeneralPredictResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: GeneralPredictResponse): GeneralPredictResponse.AsObject;
-  static serializeBinaryToWriter(message: GeneralPredictResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): GeneralPredictResponse;
-  static deserializeBinaryFromReader(message: GeneralPredictResponse, reader: jspb.BinaryReader): GeneralPredictResponse;
-}
-
-export namespace GeneralPredictResponse {
-  export type AsObject = {
-    predictResponse?: PredictResponse.AsObject,
-    purchaseLinesResponseList: Array<PurchaseLinesResponse.AsObject>,
-  }
-}
-
