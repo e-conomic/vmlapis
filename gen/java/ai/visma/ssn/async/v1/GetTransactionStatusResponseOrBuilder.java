@@ -60,4 +60,24 @@ public interface GetTransactionStatusResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getErrorMessageBytes();
+
+  /**
+   * <pre>
+   * maybe a timestamp on different status would be nice here
+   * </pre>
+   *
+   * <code>string custom_id = 4 [json_name = "customId"];</code>
+   * @return The customId.
+   */
+  java.lang.String getCustomId();
+  /**
+   * <pre>
+   * maybe a timestamp on different status would be nice here
+   * </pre>
+   *
+   * <code>string custom_id = 4 [json_name = "customId"];</code>
+   * @return The bytes for customId.
+   */
+  com.google.protobuf.ByteString
+      getCustomIdBytes();
 }

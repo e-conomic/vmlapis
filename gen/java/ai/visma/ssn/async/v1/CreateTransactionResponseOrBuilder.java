@@ -8,24 +8,36 @@ public interface CreateTransactionResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <pre>
-   * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-   * but I think I'm more prone to separate them in /results endpoint
-   * </pre>
-   *
    * <code>string id = 1 [json_name = "id"];</code>
    * @return The id.
    */
   java.lang.String getId();
+  /**
+   * <code>string id = 1 [json_name = "id"];</code>
+   * @return The bytes for id.
+   */
+  com.google.protobuf.ByteString
+      getIdBytes();
+
   /**
    * <pre>
    * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
    * but I think I'm more prone to separate them in /results endpoint
    * </pre>
    *
-   * <code>string id = 1 [json_name = "id"];</code>
-   * @return The bytes for id.
+   * <code>string custom_id = 2 [json_name = "customId"];</code>
+   * @return The customId.
+   */
+  java.lang.String getCustomId();
+  /**
+   * <pre>
+   * CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
+   * but I think I'm more prone to separate them in /results endpoint
+   * </pre>
+   *
+   * <code>string custom_id = 2 [json_name = "customId"];</code>
+   * @return The bytes for customId.
    */
   com.google.protobuf.ByteString
-      getIdBytes();
+      getCustomIdBytes();
 }

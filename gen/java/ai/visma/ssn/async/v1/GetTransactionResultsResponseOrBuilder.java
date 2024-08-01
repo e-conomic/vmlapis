@@ -79,4 +79,16 @@ public interface GetTransactionResultsResponseOrBuilder extends
    */
   com.google.protobuf.ByteString
       getErrorMessageBytes();
+
+  /**
+   * <code>string custom_id = 4 [json_name = "customId"];</code>
+   * @return The customId.
+   */
+  java.lang.String getCustomId();
+  /**
+   * <code>string custom_id = 4 [json_name = "customId"];</code>
+   * @return The bytes for customId.
+   */
+  com.google.protobuf.ByteString
+      getCustomIdBytes();
 }

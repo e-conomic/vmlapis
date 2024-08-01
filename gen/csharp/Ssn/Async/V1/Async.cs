@@ -29,63 +29,68 @@ namespace Ssn.Async.V1 {
             "cHR5LnByb3RvGi5wcm90b2MtZ2VuLW9wZW5hcGl2Mi9vcHRpb25zL2Fubm90",
             "YXRpb25zLnByb3RvGiBzc24vYW5ub3RhdG9yL3YxL2Fubm90YXRvci5wcm90",
             "bxoYc3NuL3R5cGUvY2FuZGlkYXRlLnByb3RvGhd2YWxpZGF0ZS92YWxpZGF0",
-            "ZS5wcm90byKCAQoYQ3JlYXRlVHJhbnNhY3Rpb25SZXF1ZXN0EjYKCGRvY3Vt",
+            "ZS5wcm90byKfAQoYQ3JlYXRlVHJhbnNhY3Rpb25SZXF1ZXN0EjYKCGRvY3Vt",
             "ZW50GAEgASgLMhouc3NuLmFubm90YXRvci52MS5Eb2N1bWVudFIIZG9jdW1l",
             "bnQSEgoEdGFncxgCIAMoCVIEdGFncxIaCghmZWF0dXJlcxgDIAMoCVIIZmVh",
-            "dHVyZXMiKwoZQ3JlYXRlVHJhbnNhY3Rpb25SZXNwb25zZRIOCgJpZBgBIAEo",
-            "CVICaWQiLgocR2V0VHJhbnNhY3Rpb25SZXN1bHRzUmVxdWVzdBIOCgJpZBgB",
-            "IAEoCVICaWQikAEKHUdldFRyYW5zYWN0aW9uUmVzdWx0c1Jlc3BvbnNlEg4K",
-            "AmlkGAEgASgJUgJpZBI6Cgthbm5vdGF0aW9ucxgCIAMoCzIYLnNzbi5hc3lu",
-            "Yy52MS5Bbm5vdGF0aW9uUgthbm5vdGF0aW9ucxIjCg1lcnJvcl9tZXNzYWdl",
-            "GAMgASgJUgxlcnJvck1lc3NhZ2UiPgoJQ2FuZGlkYXRlEjEKCWNhbmRpZGF0",
-            "ZRgBIAMoCzITLnNzbi50eXBlLkNhbmRpZGF0ZVIJY2FuZGlkYXRlInAKFVB1",
-            "cmNoYXNlTGluZUNhbmRpZGF0ZRJXChdwdXJjaGFzZV9saW5lX2NhbmRpZGF0",
-            "ZRgBIAMoCzIfLnNzbi50eXBlLlB1cmNoYXNlTGluZUNhbmRpZGF0ZVIVcHVy",
-            "Y2hhc2VMaW5lQ2FuZGlkYXRlIswBCgpBbm5vdGF0aW9uEhgKB2ZlYXR1cmUY",
-            "ASABKAlSB2ZlYXR1cmUSNwoJY2FuZGlkYXRlGAIgASgLMhcuc3NuLmFzeW5j",
-            "LnYxLkNhbmRpZGF0ZUgAUgljYW5kaWRhdGUSXQoXcHVyY2hhc2VfbGluZV9j",
-            "YW5kaWRhdGUYAyABKAsyIy5zc24uYXN5bmMudjEuUHVyY2hhc2VMaW5lQ2Fu",
-            "ZGlkYXRlSABSFXB1cmNoYXNlTGluZUNhbmRpZGF0ZUIMCgpjYW5kaWRhdGVz",
-            "Ii0KG0dldFRyYW5zYWN0aW9uU3RhdHVzUmVxdWVzdBIOCgJpZBgBIAEoCVIC",
-            "aWQiawocR2V0VHJhbnNhY3Rpb25TdGF0dXNSZXNwb25zZRIOCgJpZBgBIAEo",
-            "CVICaWQSFgoGc3RhdHVzGAIgASgJUgZzdGF0dXMSIwoNZXJyb3JfbWVzc2Fn",
-            "ZRgDIAEoCVIMZXJyb3JNZXNzYWdlIioKGERlbGV0ZVRyYW5zYWN0aW9uUmVx",
-            "dWVzdBIOCgJpZBgBIAEoCVICaWQiVwoQRGVsZXRlVGFnUmVxdWVzdBJDCgh0",
-            "YWdfbmFtZRgBIAEoCUIo+kIlciMogAIyHl5bQS1aYS16MC05Ll1bQS1aYS16",
-            "MC05Xy4+LV0qJFIHdGFnTmFtZTKeBQoSVHJhbnNhY3Rpb25TZXJ2aWNlEoEB",
-            "ChFDcmVhdGVUcmFuc2FjdGlvbhImLnNzbi5hc3luYy52MS5DcmVhdGVUcmFu",
-            "c2FjdGlvblJlcXVlc3QaJy5zc24uYXN5bmMudjEuQ3JlYXRlVHJhbnNhY3Rp",
-            "b25SZXNwb25zZSIbgtPkkwIVOgEqIhAvdjEvdHJhbnNhY3Rpb25zEpcBChVH",
-            "ZXRUcmFuc2FjdGlvblJlc3VsdHMSKi5zc24uYXN5bmMudjEuR2V0VHJhbnNh",
-            "Y3Rpb25SZXN1bHRzUmVxdWVzdBorLnNzbi5hc3luYy52MS5HZXRUcmFuc2Fj",
-            "dGlvblJlc3VsdHNSZXNwb25zZSIlgtPkkwIfEh0vdjEvdHJhbnNhY3Rpb25z",
-            "L3tpZH0vcmVzdWx0cxKTAQoUR2V0VHJhbnNhY3Rpb25TdGF0dXMSKS5zc24u",
-            "YXN5bmMudjEuR2V0VHJhbnNhY3Rpb25TdGF0dXNSZXF1ZXN0Giouc3NuLmFz",
-            "eW5jLnYxLkdldFRyYW5zYWN0aW9uU3RhdHVzUmVzcG9uc2UiJILT5JMCHhIc",
-            "L3YxL3RyYW5zYWN0aW9ucy97aWR9L3N0YXR1cxJyChFEZWxldGVUcmFuc2Fj",
-            "dGlvbhImLnNzbi5hc3luYy52MS5EZWxldGVUcmFuc2FjdGlvblJlcXVlc3Qa",
-            "Fi5nb29nbGUucHJvdG9idWYuRW1wdHkiHYLT5JMCFyoVL3YxL3RyYW5zYWN0",
-            "aW9ucy97aWR9EmAKCURlbGV0ZVRhZxIeLnNzbi5hc3luYy52MS5EZWxldGVU",
-            "YWdSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IhuC0+STAhUqEy92",
-            "MS90YWdzL3t0YWdfbmFtZX1C7gEKFWFpLnZpc21hLnNzbi5hc3luYy52MUIK",
-            "QXN5bmNQcm90b1ABWjxnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dl",
-            "bi9nby9zc24vYXN5bmMvdjE7dHJhbnNhY3Rpb26iAgNTQViqAgxTc24uQXN5",
-            "bmMuVjHKAgxTc25cQXN5bmNcVjHiAhhTc25cQXN5bmNcVjFcR1BCTWV0YWRh",
-            "dGHqAg5Tc246OkFzeW5jOjpWMZJBOBIPCglBc3luYyBBUEkyAnYxKgECMhBh",
-            "cHBsaWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90bzM="));
+            "dHVyZXMSGwoJY3VzdG9tX2lkGAQgASgJUghjdXN0b21JZCJIChlDcmVhdGVU",
+            "cmFuc2FjdGlvblJlc3BvbnNlEg4KAmlkGAEgASgJUgJpZBIbCgljdXN0b21f",
+            "aWQYAiABKAlSCGN1c3RvbUlkIksKHEdldFRyYW5zYWN0aW9uUmVzdWx0c1Jl",
+            "cXVlc3QSDgoCaWQYASABKAlSAmlkEhsKCWN1c3RvbV9pZBgCIAEoCVIIY3Vz",
+            "dG9tSWQirQEKHUdldFRyYW5zYWN0aW9uUmVzdWx0c1Jlc3BvbnNlEg4KAmlk",
+            "GAEgASgJUgJpZBI6Cgthbm5vdGF0aW9ucxgCIAMoCzIYLnNzbi5hc3luYy52",
+            "MS5Bbm5vdGF0aW9uUgthbm5vdGF0aW9ucxIjCg1lcnJvcl9tZXNzYWdlGAMg",
+            "ASgJUgxlcnJvck1lc3NhZ2USGwoJY3VzdG9tX2lkGAQgASgJUghjdXN0b21J",
+            "ZCI+CglDYW5kaWRhdGUSMQoJY2FuZGlkYXRlGAEgAygLMhMuc3NuLnR5cGUu",
+            "Q2FuZGlkYXRlUgljYW5kaWRhdGUicAoVUHVyY2hhc2VMaW5lQ2FuZGlkYXRl",
+            "ElcKF3B1cmNoYXNlX2xpbmVfY2FuZGlkYXRlGAEgAygLMh8uc3NuLnR5cGUu",
+            "UHVyY2hhc2VMaW5lQ2FuZGlkYXRlUhVwdXJjaGFzZUxpbmVDYW5kaWRhdGUi",
+            "zAEKCkFubm90YXRpb24SGAoHZmVhdHVyZRgBIAEoCVIHZmVhdHVyZRI3Cglj",
+            "YW5kaWRhdGUYAiABKAsyFy5zc24uYXN5bmMudjEuQ2FuZGlkYXRlSABSCWNh",
+            "bmRpZGF0ZRJdChdwdXJjaGFzZV9saW5lX2NhbmRpZGF0ZRgDIAEoCzIjLnNz",
+            "bi5hc3luYy52MS5QdXJjaGFzZUxpbmVDYW5kaWRhdGVIAFIVcHVyY2hhc2VM",
+            "aW5lQ2FuZGlkYXRlQgwKCmNhbmRpZGF0ZXMiSgobR2V0VHJhbnNhY3Rpb25T",
+            "dGF0dXNSZXF1ZXN0Eg4KAmlkGAEgASgJUgJpZBIbCgljdXN0b21faWQYAiAB",
+            "KAlSCGN1c3RvbUlkIogBChxHZXRUcmFuc2FjdGlvblN0YXR1c1Jlc3BvbnNl",
+            "Eg4KAmlkGAEgASgJUgJpZBIWCgZzdGF0dXMYAiABKAlSBnN0YXR1cxIjCg1l",
+            "cnJvcl9tZXNzYWdlGAMgASgJUgxlcnJvck1lc3NhZ2USGwoJY3VzdG9tX2lk",
+            "GAQgASgJUghjdXN0b21JZCJHChhEZWxldGVUcmFuc2FjdGlvblJlcXVlc3QS",
+            "DgoCaWQYASABKAlSAmlkEhsKCWN1c3RvbV9pZBgCIAEoCVIIY3VzdG9tSWQi",
+            "VwoQRGVsZXRlVGFnUmVxdWVzdBJDCgh0YWdfbmFtZRgBIAEoCUIo+kIlciMo",
+            "gAIyHl5bQS1aYS16MC05Ll1bQS1aYS16MC05Xy4+LV0qJFIHdGFnTmFtZTKe",
+            "BQoSVHJhbnNhY3Rpb25TZXJ2aWNlEoEBChFDcmVhdGVUcmFuc2FjdGlvbhIm",
+            "LnNzbi5hc3luYy52MS5DcmVhdGVUcmFuc2FjdGlvblJlcXVlc3QaJy5zc24u",
+            "YXN5bmMudjEuQ3JlYXRlVHJhbnNhY3Rpb25SZXNwb25zZSIbgtPkkwIVOgEq",
+            "IhAvdjEvdHJhbnNhY3Rpb25zEpcBChVHZXRUcmFuc2FjdGlvblJlc3VsdHMS",
+            "Ki5zc24uYXN5bmMudjEuR2V0VHJhbnNhY3Rpb25SZXN1bHRzUmVxdWVzdBor",
+            "LnNzbi5hc3luYy52MS5HZXRUcmFuc2FjdGlvblJlc3VsdHNSZXNwb25zZSIl",
+            "gtPkkwIfEh0vdjEvdHJhbnNhY3Rpb25zL3tpZH0vcmVzdWx0cxKTAQoUR2V0",
+            "VHJhbnNhY3Rpb25TdGF0dXMSKS5zc24uYXN5bmMudjEuR2V0VHJhbnNhY3Rp",
+            "b25TdGF0dXNSZXF1ZXN0Giouc3NuLmFzeW5jLnYxLkdldFRyYW5zYWN0aW9u",
+            "U3RhdHVzUmVzcG9uc2UiJILT5JMCHhIcL3YxL3RyYW5zYWN0aW9ucy97aWR9",
+            "L3N0YXR1cxJyChFEZWxldGVUcmFuc2FjdGlvbhImLnNzbi5hc3luYy52MS5E",
+            "ZWxldGVUcmFuc2FjdGlvblJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkiHYLT5JMCFyoVL3YxL3RyYW5zYWN0aW9ucy97aWR9EmAKCURlbGV0ZVRh",
+            "ZxIeLnNzbi5hc3luYy52MS5EZWxldGVUYWdSZXF1ZXN0GhYuZ29vZ2xlLnBy",
+            "b3RvYnVmLkVtcHR5IhuC0+STAhUqEy92MS90YWdzL3t0YWdfbmFtZX1C7gEK",
+            "FWFpLnZpc21hLnNzbi5hc3luYy52MUIKQXN5bmNQcm90b1ABWjxnaXRodWIu",
+            "Y29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vYXN5bmMvdjE7dHJh",
+            "bnNhY3Rpb26iAgNTQViqAgxTc24uQXN5bmMuVjHKAgxTc25cQXN5bmNcVjHi",
+            "AhhTc25cQXN5bmNcVjFcR1BCTWV0YWRhdGHqAg5Tc246OkFzeW5jOjpWMZJB",
+            "OBIPCglBc3luYyBBUEkyAnYxKgECMhBhcHBsaWNhdGlvbi9qc29uOhBhcHBs",
+            "aWNhdGlvbi9qc29uYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.CreateTransactionRequest), global::Ssn.Async.V1.CreateTransactionRequest.Parser, new[]{ "Document", "Tags", "Features" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.CreateTransactionResponse), global::Ssn.Async.V1.CreateTransactionResponse.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionResultsRequest), global::Ssn.Async.V1.GetTransactionResultsRequest.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionResultsResponse), global::Ssn.Async.V1.GetTransactionResultsResponse.Parser, new[]{ "Id", "Annotations", "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.CreateTransactionRequest), global::Ssn.Async.V1.CreateTransactionRequest.Parser, new[]{ "Document", "Tags", "Features", "CustomId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.CreateTransactionResponse), global::Ssn.Async.V1.CreateTransactionResponse.Parser, new[]{ "Id", "CustomId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionResultsRequest), global::Ssn.Async.V1.GetTransactionResultsRequest.Parser, new[]{ "Id", "CustomId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionResultsResponse), global::Ssn.Async.V1.GetTransactionResultsResponse.Parser, new[]{ "Id", "Annotations", "ErrorMessage", "CustomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.Candidate), global::Ssn.Async.V1.Candidate.Parser, new[]{ "Candidate_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.PurchaseLineCandidate), global::Ssn.Async.V1.PurchaseLineCandidate.Parser, new[]{ "PurchaseLineCandidate_" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.Annotation), global::Ssn.Async.V1.Annotation.Parser, new[]{ "Feature", "Candidate", "PurchaseLineCandidate" }, new[]{ "Candidates" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionStatusRequest), global::Ssn.Async.V1.GetTransactionStatusRequest.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionStatusResponse), global::Ssn.Async.V1.GetTransactionStatusResponse.Parser, new[]{ "Id", "Status", "ErrorMessage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.DeleteTransactionRequest), global::Ssn.Async.V1.DeleteTransactionRequest.Parser, new[]{ "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionStatusRequest), global::Ssn.Async.V1.GetTransactionStatusRequest.Parser, new[]{ "Id", "CustomId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionStatusResponse), global::Ssn.Async.V1.GetTransactionStatusResponse.Parser, new[]{ "Id", "Status", "ErrorMessage", "CustomId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.DeleteTransactionRequest), global::Ssn.Async.V1.DeleteTransactionRequest.Parser, new[]{ "Id", "CustomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.DeleteTagRequest), global::Ssn.Async.V1.DeleteTagRequest.Parser, new[]{ "TagName" }, null, null, null, null)
           }));
     }
@@ -133,6 +138,7 @@ namespace Ssn.Async.V1 {
       document_ = other.document_ != null ? other.document_.Clone() : null;
       tags_ = other.tags_.Clone();
       features_ = other.features_.Clone();
+      customId_ = other.customId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -185,6 +191,18 @@ namespace Ssn.Async.V1 {
       get { return features_; }
     }
 
+    /// <summary>Field number for the "custom_id" field.</summary>
+    public const int CustomIdFieldNumber = 4;
+    private string customId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomId {
+      get { return customId_; }
+      set {
+        customId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -203,6 +221,7 @@ namespace Ssn.Async.V1 {
       if (!object.Equals(Document, other.Document)) return false;
       if(!tags_.Equals(other.tags_)) return false;
       if(!features_.Equals(other.features_)) return false;
+      if (CustomId != other.CustomId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -213,6 +232,7 @@ namespace Ssn.Async.V1 {
       if (document_ != null) hash ^= Document.GetHashCode();
       hash ^= tags_.GetHashCode();
       hash ^= features_.GetHashCode();
+      if (CustomId.Length != 0) hash ^= CustomId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -237,6 +257,10 @@ namespace Ssn.Async.V1 {
       }
       tags_.WriteTo(output, _repeated_tags_codec);
       features_.WriteTo(output, _repeated_features_codec);
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -253,6 +277,10 @@ namespace Ssn.Async.V1 {
       }
       tags_.WriteTo(ref output, _repeated_tags_codec);
       features_.WriteTo(ref output, _repeated_features_codec);
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -268,6 +296,9 @@ namespace Ssn.Async.V1 {
       }
       size += tags_.CalculateSize(_repeated_tags_codec);
       size += features_.CalculateSize(_repeated_features_codec);
+      if (CustomId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomId);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -288,6 +319,9 @@ namespace Ssn.Async.V1 {
       }
       tags_.Add(other.tags_);
       features_.Add(other.features_);
+      if (other.CustomId.Length != 0) {
+        CustomId = other.CustomId;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -318,6 +352,10 @@ namespace Ssn.Async.V1 {
             features_.AddEntriesFrom(input, _repeated_features_codec);
             break;
           }
+          case 34: {
+            CustomId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -346,6 +384,10 @@ namespace Ssn.Async.V1 {
           }
           case 26: {
             features_.AddEntriesFrom(ref input, _repeated_features_codec);
+            break;
+          }
+          case 34: {
+            CustomId = input.ReadString();
             break;
           }
         }
@@ -390,6 +432,7 @@ namespace Ssn.Async.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateTransactionResponse(CreateTransactionResponse other) : this() {
       id_ = other.id_;
+      customId_ = other.customId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -402,16 +445,28 @@ namespace Ssn.Async.V1 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
-    /// <summary>
-    /// CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
-    /// but I think I'm more prone to separate them in /results endpoint
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
         id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "custom_id" field.</summary>
+    public const int CustomIdFieldNumber = 2;
+    private string customId_ = "";
+    /// <summary>
+    /// CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)
+    /// but I think I'm more prone to separate them in /results endpoint
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomId {
+      get { return customId_; }
+      set {
+        customId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -431,6 +486,7 @@ namespace Ssn.Async.V1 {
         return true;
       }
       if (Id != other.Id) return false;
+      if (CustomId != other.CustomId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -439,6 +495,7 @@ namespace Ssn.Async.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (CustomId.Length != 0) hash ^= CustomId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -461,6 +518,10 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -475,6 +536,10 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -487,6 +552,9 @@ namespace Ssn.Async.V1 {
       int size = 0;
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (CustomId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -502,6 +570,9 @@ namespace Ssn.Async.V1 {
       }
       if (other.Id.Length != 0) {
         Id = other.Id;
+      }
+      if (other.CustomId.Length != 0) {
+        CustomId = other.CustomId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -522,6 +593,10 @@ namespace Ssn.Async.V1 {
             Id = input.ReadString();
             break;
           }
+          case 18: {
+            CustomId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -539,6 +614,10 @@ namespace Ssn.Async.V1 {
             break;
           case 10: {
             Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            CustomId = input.ReadString();
             break;
           }
         }
@@ -586,6 +665,7 @@ namespace Ssn.Async.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetTransactionResultsRequest(GetTransactionResultsRequest other) : this() {
       id_ = other.id_;
+      customId_ = other.customId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -598,16 +678,28 @@ namespace Ssn.Async.V1 {
     /// <summary>Field number for the "id" field.</summary>
     public const int IdFieldNumber = 1;
     private string id_ = "";
-    /// <summary>
-    /// GetTransactionResultsRequest message can potentially have a list of features to filter the response
-    /// e.g. repeated string features like in CreateTransactionRequest
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
         id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "custom_id" field.</summary>
+    public const int CustomIdFieldNumber = 2;
+    private string customId_ = "";
+    /// <summary>
+    /// GetTransactionResultsRequest message can potentially have a list of features to filter the response
+    /// e.g. repeated string features like in CreateTransactionRequest
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomId {
+      get { return customId_; }
+      set {
+        customId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -627,6 +719,7 @@ namespace Ssn.Async.V1 {
         return true;
       }
       if (Id != other.Id) return false;
+      if (CustomId != other.CustomId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -635,6 +728,7 @@ namespace Ssn.Async.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (CustomId.Length != 0) hash ^= CustomId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -657,6 +751,10 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -671,6 +769,10 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -683,6 +785,9 @@ namespace Ssn.Async.V1 {
       int size = 0;
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (CustomId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -698,6 +803,9 @@ namespace Ssn.Async.V1 {
       }
       if (other.Id.Length != 0) {
         Id = other.Id;
+      }
+      if (other.CustomId.Length != 0) {
+        CustomId = other.CustomId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -718,6 +826,10 @@ namespace Ssn.Async.V1 {
             Id = input.ReadString();
             break;
           }
+          case 18: {
+            CustomId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -735,6 +847,10 @@ namespace Ssn.Async.V1 {
             break;
           case 10: {
             Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            CustomId = input.ReadString();
             break;
           }
         }
@@ -781,6 +897,7 @@ namespace Ssn.Async.V1 {
       id_ = other.id_;
       annotations_ = other.annotations_.Clone();
       errorMessage_ = other.errorMessage_;
+      customId_ = other.customId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -829,6 +946,18 @@ namespace Ssn.Async.V1 {
       }
     }
 
+    /// <summary>Field number for the "custom_id" field.</summary>
+    public const int CustomIdFieldNumber = 4;
+    private string customId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomId {
+      get { return customId_; }
+      set {
+        customId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -847,6 +976,7 @@ namespace Ssn.Async.V1 {
       if (Id != other.Id) return false;
       if(!annotations_.Equals(other.annotations_)) return false;
       if (ErrorMessage != other.ErrorMessage) return false;
+      if (CustomId != other.CustomId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -857,6 +987,7 @@ namespace Ssn.Async.V1 {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       hash ^= annotations_.GetHashCode();
       if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (CustomId.Length != 0) hash ^= CustomId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -884,6 +1015,10 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(26);
         output.WriteString(ErrorMessage);
       }
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -903,6 +1038,10 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(26);
         output.WriteString(ErrorMessage);
       }
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -919,6 +1058,9 @@ namespace Ssn.Async.V1 {
       size += annotations_.CalculateSize(_repeated_annotations_codec);
       if (ErrorMessage.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      if (CustomId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -938,6 +1080,9 @@ namespace Ssn.Async.V1 {
       annotations_.Add(other.annotations_);
       if (other.ErrorMessage.Length != 0) {
         ErrorMessage = other.ErrorMessage;
+      }
+      if (other.CustomId.Length != 0) {
+        CustomId = other.CustomId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -966,6 +1111,10 @@ namespace Ssn.Async.V1 {
             ErrorMessage = input.ReadString();
             break;
           }
+          case 34: {
+            CustomId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -991,6 +1140,10 @@ namespace Ssn.Async.V1 {
           }
           case 26: {
             ErrorMessage = input.ReadString();
+            break;
+          }
+          case 34: {
+            CustomId = input.ReadString();
             break;
           }
         }
@@ -1728,6 +1881,7 @@ namespace Ssn.Async.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetTransactionStatusRequest(GetTransactionStatusRequest other) : this() {
       id_ = other.id_;
+      customId_ = other.customId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1749,6 +1903,18 @@ namespace Ssn.Async.V1 {
       }
     }
 
+    /// <summary>Field number for the "custom_id" field.</summary>
+    public const int CustomIdFieldNumber = 2;
+    private string customId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomId {
+      get { return customId_; }
+      set {
+        customId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1765,6 +1931,7 @@ namespace Ssn.Async.V1 {
         return true;
       }
       if (Id != other.Id) return false;
+      if (CustomId != other.CustomId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1773,6 +1940,7 @@ namespace Ssn.Async.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (CustomId.Length != 0) hash ^= CustomId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1795,6 +1963,10 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1809,6 +1981,10 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1821,6 +1997,9 @@ namespace Ssn.Async.V1 {
       int size = 0;
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (CustomId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1836,6 +2015,9 @@ namespace Ssn.Async.V1 {
       }
       if (other.Id.Length != 0) {
         Id = other.Id;
+      }
+      if (other.CustomId.Length != 0) {
+        CustomId = other.CustomId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1856,6 +2038,10 @@ namespace Ssn.Async.V1 {
             Id = input.ReadString();
             break;
           }
+          case 18: {
+            CustomId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1873,6 +2059,10 @@ namespace Ssn.Async.V1 {
             break;
           case 10: {
             Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            CustomId = input.ReadString();
             break;
           }
         }
@@ -1919,6 +2109,7 @@ namespace Ssn.Async.V1 {
       id_ = other.id_;
       status_ = other.status_;
       errorMessage_ = other.errorMessage_;
+      customId_ = other.customId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1971,6 +2162,21 @@ namespace Ssn.Async.V1 {
       }
     }
 
+    /// <summary>Field number for the "custom_id" field.</summary>
+    public const int CustomIdFieldNumber = 4;
+    private string customId_ = "";
+    /// <summary>
+    /// maybe a timestamp on different status would be nice here
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomId {
+      get { return customId_; }
+      set {
+        customId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1989,6 +2195,7 @@ namespace Ssn.Async.V1 {
       if (Id != other.Id) return false;
       if (Status != other.Status) return false;
       if (ErrorMessage != other.ErrorMessage) return false;
+      if (CustomId != other.CustomId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1999,6 +2206,7 @@ namespace Ssn.Async.V1 {
       if (Id.Length != 0) hash ^= Id.GetHashCode();
       if (Status.Length != 0) hash ^= Status.GetHashCode();
       if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+      if (CustomId.Length != 0) hash ^= CustomId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2029,6 +2237,10 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(26);
         output.WriteString(ErrorMessage);
       }
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2051,6 +2263,10 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(26);
         output.WriteString(ErrorMessage);
       }
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2069,6 +2285,9 @@ namespace Ssn.Async.V1 {
       }
       if (ErrorMessage.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+      }
+      if (CustomId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2090,6 +2309,9 @@ namespace Ssn.Async.V1 {
       }
       if (other.ErrorMessage.Length != 0) {
         ErrorMessage = other.ErrorMessage;
+      }
+      if (other.CustomId.Length != 0) {
+        CustomId = other.CustomId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2118,6 +2340,10 @@ namespace Ssn.Async.V1 {
             ErrorMessage = input.ReadString();
             break;
           }
+          case 34: {
+            CustomId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2143,6 +2369,10 @@ namespace Ssn.Async.V1 {
           }
           case 26: {
             ErrorMessage = input.ReadString();
+            break;
+          }
+          case 34: {
+            CustomId = input.ReadString();
             break;
           }
         }
@@ -2190,6 +2420,7 @@ namespace Ssn.Async.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteTransactionRequest(DeleteTransactionRequest other) : this() {
       id_ = other.id_;
+      customId_ = other.customId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2211,6 +2442,18 @@ namespace Ssn.Async.V1 {
       }
     }
 
+    /// <summary>Field number for the "custom_id" field.</summary>
+    public const int CustomIdFieldNumber = 2;
+    private string customId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CustomId {
+      get { return customId_; }
+      set {
+        customId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2227,6 +2470,7 @@ namespace Ssn.Async.V1 {
         return true;
       }
       if (Id != other.Id) return false;
+      if (CustomId != other.CustomId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2235,6 +2479,7 @@ namespace Ssn.Async.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (CustomId.Length != 0) hash ^= CustomId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2257,6 +2502,10 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2271,6 +2520,10 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(10);
         output.WriteString(Id);
       }
+      if (CustomId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(CustomId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2283,6 +2536,9 @@ namespace Ssn.Async.V1 {
       int size = 0;
       if (Id.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (CustomId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2298,6 +2554,9 @@ namespace Ssn.Async.V1 {
       }
       if (other.Id.Length != 0) {
         Id = other.Id;
+      }
+      if (other.CustomId.Length != 0) {
+        CustomId = other.CustomId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2318,6 +2577,10 @@ namespace Ssn.Async.V1 {
             Id = input.ReadString();
             break;
           }
+          case 18: {
+            CustomId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2335,6 +2598,10 @@ namespace Ssn.Async.V1 {
             break;
           case 10: {
             Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            CustomId = input.ReadString();
             break;
           }
         }

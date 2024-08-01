@@ -18,4 +18,16 @@ public interface GetTransactionStatusRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getIdBytes();
+
+  /**
+   * <code>string custom_id = 2 [json_name = "customId"];</code>
+   * @return The customId.
+   */
+  java.lang.String getCustomId();
+  /**
+   * <code>string custom_id = 2 [json_name = "customId"];</code>
+   * @return The bytes for customId.
+   */
+  com.google.protobuf.ByteString
+      getCustomIdBytes();
 }
