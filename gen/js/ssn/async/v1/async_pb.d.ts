@@ -5,6 +5,7 @@ import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty
 import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb';
 import * as ssn_annotator_v1_annotator_pb from '../../../ssn/annotator/v1/annotator_pb';
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb';
+import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb';
 import * as validate_validate_pb from '../../../validate/validate_pb';
 
 
@@ -160,6 +161,86 @@ export namespace PurchaseLineCandidate {
   }
 }
 
+export class LineCandidate extends jspb.Message {
+  getLineCandidatesList(): Array<ssn_type_candidate_pb.LineCandidate>;
+  setLineCandidatesList(value: Array<ssn_type_candidate_pb.LineCandidate>): LineCandidate;
+  clearLineCandidatesList(): LineCandidate;
+  addLineCandidates(value?: ssn_type_candidate_pb.LineCandidate, index?: number): ssn_type_candidate_pb.LineCandidate;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): LineCandidate.AsObject;
+  static toObject(includeInstance: boolean, msg: LineCandidate): LineCandidate.AsObject;
+  static serializeBinaryToWriter(message: LineCandidate, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): LineCandidate;
+  static deserializeBinaryFromReader(message: LineCandidate, reader: jspb.BinaryReader): LineCandidate;
+}
+
+export namespace LineCandidate {
+  export type AsObject = {
+    lineCandidatesList: Array<ssn_type_candidate_pb.LineCandidate.AsObject>,
+  }
+}
+
+export class AnswerCandidate extends jspb.Message {
+  getAnswersList(): Array<ssn_type_candidate_pb.AnswerCandidate>;
+  setAnswersList(value: Array<ssn_type_candidate_pb.AnswerCandidate>): AnswerCandidate;
+  clearAnswersList(): AnswerCandidate;
+  addAnswers(value?: ssn_type_candidate_pb.AnswerCandidate, index?: number): ssn_type_candidate_pb.AnswerCandidate;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): AnswerCandidate.AsObject;
+  static toObject(includeInstance: boolean, msg: AnswerCandidate): AnswerCandidate.AsObject;
+  static serializeBinaryToWriter(message: AnswerCandidate, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): AnswerCandidate;
+  static deserializeBinaryFromReader(message: AnswerCandidate, reader: jspb.BinaryReader): AnswerCandidate;
+}
+
+export namespace AnswerCandidate {
+  export type AsObject = {
+    answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
+  }
+}
+
+export class PageText extends jspb.Message {
+  getPageTextList(): Array<ssn_type_candidate_pb.PageText>;
+  setPageTextList(value: Array<ssn_type_candidate_pb.PageText>): PageText;
+  clearPageTextList(): PageText;
+  addPageText(value?: ssn_type_candidate_pb.PageText, index?: number): ssn_type_candidate_pb.PageText;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PageText.AsObject;
+  static toObject(includeInstance: boolean, msg: PageText): PageText.AsObject;
+  static serializeBinaryToWriter(message: PageText, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PageText;
+  static deserializeBinaryFromReader(message: PageText, reader: jspb.BinaryReader): PageText;
+}
+
+export namespace PageText {
+  export type AsObject = {
+    pageTextList: Array<ssn_type_candidate_pb.PageText.AsObject>,
+  }
+}
+
+export class TextAnnotation extends jspb.Message {
+  getTextAnnotationList(): Array<ssn_type_text_annotation_pb.TextAnnotation>;
+  setTextAnnotationList(value: Array<ssn_type_text_annotation_pb.TextAnnotation>): TextAnnotation;
+  clearTextAnnotationList(): TextAnnotation;
+  addTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation, index?: number): ssn_type_text_annotation_pb.TextAnnotation;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): TextAnnotation.AsObject;
+  static toObject(includeInstance: boolean, msg: TextAnnotation): TextAnnotation.AsObject;
+  static serializeBinaryToWriter(message: TextAnnotation, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): TextAnnotation;
+  static deserializeBinaryFromReader(message: TextAnnotation, reader: jspb.BinaryReader): TextAnnotation;
+}
+
+export namespace TextAnnotation {
+  export type AsObject = {
+    textAnnotationList: Array<ssn_type_text_annotation_pb.TextAnnotation.AsObject>,
+  }
+}
+
 export class Annotation extends jspb.Message {
   getFeature(): string;
   setFeature(value: string): Annotation;
@@ -173,6 +254,26 @@ export class Annotation extends jspb.Message {
   setPurchaseLineCandidate(value?: PurchaseLineCandidate): Annotation;
   hasPurchaseLineCandidate(): boolean;
   clearPurchaseLineCandidate(): Annotation;
+
+  getAnswerCandidates(): AnswerCandidate | undefined;
+  setAnswerCandidates(value?: AnswerCandidate): Annotation;
+  hasAnswerCandidates(): boolean;
+  clearAnswerCandidates(): Annotation;
+
+  getLineCandidates(): LineCandidate | undefined;
+  setLineCandidates(value?: LineCandidate): Annotation;
+  hasLineCandidates(): boolean;
+  clearLineCandidates(): Annotation;
+
+  getPageText(): PageText | undefined;
+  setPageText(value?: PageText): Annotation;
+  hasPageText(): boolean;
+  clearPageText(): Annotation;
+
+  getTextAnnotation(): TextAnnotation | undefined;
+  setTextAnnotation(value?: TextAnnotation): Annotation;
+  hasTextAnnotation(): boolean;
+  clearTextAnnotation(): Annotation;
 
   getCandidatesCase(): Annotation.CandidatesCase;
 
@@ -189,12 +290,20 @@ export namespace Annotation {
     feature: string,
     candidate?: Candidate.AsObject,
     purchaseLineCandidate?: PurchaseLineCandidate.AsObject,
+    answerCandidates?: AnswerCandidate.AsObject,
+    lineCandidates?: LineCandidate.AsObject,
+    pageText?: PageText.AsObject,
+    textAnnotation?: TextAnnotation.AsObject,
   }
 
   export enum CandidatesCase { 
     CANDIDATES_NOT_SET = 0,
     CANDIDATE = 2,
     PURCHASE_LINE_CANDIDATE = 3,
+    ANSWER_CANDIDATES = 4,
+    LINE_CANDIDATES = 5,
+    PAGE_TEXT = 6,
+    TEXT_ANNOTATION = 7,
   }
 }
 

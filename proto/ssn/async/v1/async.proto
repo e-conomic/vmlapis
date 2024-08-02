@@ -7,6 +7,7 @@ import "google/protobuf/empty.proto";
 import "protoc-gen-openapiv2/options/annotations.proto";
 import "ssn/annotator/v1/annotator.proto";
 import "ssn/type/candidate.proto";
+import "ssn/type/text_annotation.proto";
 import "validate/validate.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/async/v1;transaction";
@@ -106,11 +107,31 @@ message PurchaseLineCandidate {
   repeated ssn.type.PurchaseLineCandidate purchase_line_candidate = 1;
 }
 
+message LineCandidate {
+  repeated ssn.type.LineCandidate line_candidates = 1;
+}
+
+message AnswerCandidate {
+  repeated ssn.type.AnswerCandidate answers = 1;
+}
+
+message PageText {
+  repeated ssn.type.PageText page_text = 1;
+}
+
+message TextAnnotation {
+  repeated ssn.type.TextAnnotation text_annotation = 1;
+}
+
 message Annotation {
   string feature = 1; // feature name e.g. "TOTAL_INCL_VAT"
   oneof candidates {
     Candidate candidate = 2; // candidate contains a page number
     PurchaseLineCandidate purchase_line_candidate = 3;
+    AnswerCandidate answer_candidates = 4;
+    LineCandidate line_candidates = 5;
+    PageText page_text = 6;
+    TextAnnotation text_annotation = 7;
   }
 }
 // --- get: "/v1/transactions/{id}/results" ---
