@@ -71,7 +71,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.type.TargetMetrics.repeatedFields_ = [2,3,4,5];
+proto.asgt.type.TargetMetrics.repeatedFields_ = [2];
 
 
 
@@ -106,10 +106,7 @@ proto.asgt.type.TargetMetrics.toObject = function(includeInstance, msg) {
   var f, obj = {
     target: jspb.Message.getFieldWithDefault(msg, 1, ""),
     metricsList: jspb.Message.toObjectList(msg.getMetricsList(),
-    proto.asgt.type.TargetMetrics.Metric.toObject, includeInstance),
-    mccList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 3)) == null ? undefined : f,
-    accuracyList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 4)) == null ? undefined : f,
-    balancedAccuracyList: (f = jspb.Message.getRepeatedFloatingPointField(msg, 5)) == null ? undefined : f
+    proto.asgt.type.TargetMetrics.Metric.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -155,24 +152,6 @@ proto.asgt.type.TargetMetrics.deserializeBinaryFromReader = function(msg, reader
       reader.readMessage(value,proto.asgt.type.TargetMetrics.Metric.deserializeBinaryFromReader);
       msg.addMetrics(value);
       break;
-    case 3:
-      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedFloat() : [reader.readFloat()]);
-      for (var i = 0; i < values.length; i++) {
-        msg.addMcc(values[i]);
-      }
-      break;
-    case 4:
-      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedFloat() : [reader.readFloat()]);
-      for (var i = 0; i < values.length; i++) {
-        msg.addAccuracy(values[i]);
-      }
-      break;
-    case 5:
-      var values = /** @type {!Array<number>} */ (reader.isDelimited() ? reader.readPackedFloat() : [reader.readFloat()]);
-      for (var i = 0; i < values.length; i++) {
-        msg.addBalancedAccuracy(values[i]);
-      }
-      break;
     default:
       reader.skipField();
       break;
@@ -217,27 +196,6 @@ proto.asgt.type.TargetMetrics.serializeBinaryToWriter = function(message, writer
       proto.asgt.type.TargetMetrics.Metric.serializeBinaryToWriter
     );
   }
-  f = message.getMccList();
-  if (f.length > 0) {
-    writer.writePackedFloat(
-      3,
-      f
-    );
-  }
-  f = message.getAccuracyList();
-  if (f.length > 0) {
-    writer.writePackedFloat(
-      4,
-      f
-    );
-  }
-  f = message.getBalancedAccuracyList();
-  if (f.length > 0) {
-    writer.writePackedFloat(
-      5,
-      f
-    );
-  }
 };
 
 
@@ -279,7 +237,10 @@ proto.asgt.type.TargetMetrics.Metric.toObject = function(includeInstance, msg) {
     truePositive: jspb.Message.getFieldWithDefault(msg, 4, 0),
     trueNegative: jspb.Message.getFieldWithDefault(msg, 5, 0),
     falsePositive: jspb.Message.getFieldWithDefault(msg, 6, 0),
-    falseNegative: jspb.Message.getFieldWithDefault(msg, 7, 0)
+    falseNegative: jspb.Message.getFieldWithDefault(msg, 7, 0),
+    mcc: jspb.Message.getFloatingPointFieldWithDefault(msg, 8, 0.0),
+    accuracy: jspb.Message.getFloatingPointFieldWithDefault(msg, 9, 0.0),
+    balancedAccuracy: jspb.Message.getFloatingPointFieldWithDefault(msg, 10, 0.0)
   };
 
   if (includeInstance) {
@@ -343,6 +304,18 @@ proto.asgt.type.TargetMetrics.Metric.deserializeBinaryFromReader = function(msg,
     case 7:
       var value = /** @type {number} */ (reader.readInt32());
       msg.setFalseNegative(value);
+      break;
+    case 8:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setMcc(value);
+      break;
+    case 9:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setAccuracy(value);
+      break;
+    case 10:
+      var value = /** @type {number} */ (reader.readFloat());
+      msg.setBalancedAccuracy(value);
       break;
     default:
       reader.skipField();
@@ -419,6 +392,27 @@ proto.asgt.type.TargetMetrics.Metric.serializeBinaryToWriter = function(message,
   if (f !== 0) {
     writer.writeInt32(
       7,
+      f
+    );
+  }
+  f = message.getMcc();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      8,
+      f
+    );
+  }
+  f = message.getAccuracy();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      9,
+      f
+    );
+  }
+  f = message.getBalancedAccuracy();
+  if (f !== 0.0) {
+    writer.writeFloat(
+      10,
       f
     );
   }
@@ -552,6 +546,60 @@ proto.asgt.type.TargetMetrics.Metric.prototype.setFalseNegative = function(value
 
 
 /**
+ * optional float mcc = 8;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.getMcc = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 8, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics.Metric} returns this
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.setMcc = function(value) {
+  return jspb.Message.setProto3FloatField(this, 8, value);
+};
+
+
+/**
+ * optional float accuracy = 9;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.getAccuracy = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 9, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics.Metric} returns this
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.setAccuracy = function(value) {
+  return jspb.Message.setProto3FloatField(this, 9, value);
+};
+
+
+/**
+ * optional float balanced_accuracy = 10;
+ * @return {number}
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.getBalancedAccuracy = function() {
+  return /** @type {number} */ (jspb.Message.getFloatingPointFieldWithDefault(this, 10, 0.0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.asgt.type.TargetMetrics.Metric} returns this
+ */
+proto.asgt.type.TargetMetrics.Metric.prototype.setBalancedAccuracy = function(value) {
+  return jspb.Message.setProto3FloatField(this, 10, value);
+};
+
+
+/**
  * optional string target = 1;
  * @return {string}
  */
@@ -604,117 +652,6 @@ proto.asgt.type.TargetMetrics.prototype.addMetrics = function(opt_value, opt_ind
  */
 proto.asgt.type.TargetMetrics.prototype.clearMetricsList = function() {
   return this.setMetricsList([]);
-};
-
-
-/**
- * repeated float mcc = 3;
- * @return {!Array<number>}
- */
-proto.asgt.type.TargetMetrics.prototype.getMccList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 3));
-};
-
-
-/**
- * @param {!Array<number>} value
- * @return {!proto.asgt.type.TargetMetrics} returns this
- */
-proto.asgt.type.TargetMetrics.prototype.setMccList = function(value) {
-  return jspb.Message.setField(this, 3, value || []);
-};
-
-
-/**
- * @param {number} value
- * @param {number=} opt_index
- * @return {!proto.asgt.type.TargetMetrics} returns this
- */
-proto.asgt.type.TargetMetrics.prototype.addMcc = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 3, value, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.asgt.type.TargetMetrics} returns this
- */
-proto.asgt.type.TargetMetrics.prototype.clearMccList = function() {
-  return this.setMccList([]);
-};
-
-
-/**
- * repeated float accuracy = 4;
- * @return {!Array<number>}
- */
-proto.asgt.type.TargetMetrics.prototype.getAccuracyList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 4));
-};
-
-
-/**
- * @param {!Array<number>} value
- * @return {!proto.asgt.type.TargetMetrics} returns this
- */
-proto.asgt.type.TargetMetrics.prototype.setAccuracyList = function(value) {
-  return jspb.Message.setField(this, 4, value || []);
-};
-
-
-/**
- * @param {number} value
- * @param {number=} opt_index
- * @return {!proto.asgt.type.TargetMetrics} returns this
- */
-proto.asgt.type.TargetMetrics.prototype.addAccuracy = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 4, value, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.asgt.type.TargetMetrics} returns this
- */
-proto.asgt.type.TargetMetrics.prototype.clearAccuracyList = function() {
-  return this.setAccuracyList([]);
-};
-
-
-/**
- * repeated float balanced_accuracy = 5;
- * @return {!Array<number>}
- */
-proto.asgt.type.TargetMetrics.prototype.getBalancedAccuracyList = function() {
-  return /** @type {!Array<number>} */ (jspb.Message.getRepeatedFloatingPointField(this, 5));
-};
-
-
-/**
- * @param {!Array<number>} value
- * @return {!proto.asgt.type.TargetMetrics} returns this
- */
-proto.asgt.type.TargetMetrics.prototype.setBalancedAccuracyList = function(value) {
-  return jspb.Message.setField(this, 5, value || []);
-};
-
-
-/**
- * @param {number} value
- * @param {number=} opt_index
- * @return {!proto.asgt.type.TargetMetrics} returns this
- */
-proto.asgt.type.TargetMetrics.prototype.addBalancedAccuracy = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 5, value, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.asgt.type.TargetMetrics} returns this
- */
-proto.asgt.type.TargetMetrics.prototype.clearBalancedAccuracyList = function() {
-  return this.setBalancedAccuracyList([]);
 };
 
 

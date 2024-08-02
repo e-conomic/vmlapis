@@ -18,9 +18,6 @@ private static final long serialVersionUID = 0L;
   private TargetMetrics() {
     target_ = "";
     metrics_ = java.util.Collections.emptyList();
-    mcc_ = emptyFloatList();
-    accuracy_ = emptyFloatList();
-    balancedAccuracy_ = emptyFloatList();
   }
 
   @java.lang.Override
@@ -88,6 +85,28 @@ private static final long serialVersionUID = 0L;
      * @return The falseNegative.
      */
     int getFalseNegative();
+
+    /**
+     * <pre>
+     * Matthews correlation coefficient
+     * </pre>
+     *
+     * <code>float mcc = 8 [json_name = "mcc"];</code>
+     * @return The mcc.
+     */
+    float getMcc();
+
+    /**
+     * <code>float accuracy = 9 [json_name = "accuracy"];</code>
+     * @return The accuracy.
+     */
+    float getAccuracy();
+
+    /**
+     * <code>float balanced_accuracy = 10 [json_name = "balancedAccuracy"];</code>
+     * @return The balancedAccuracy.
+     */
+    float getBalancedAccuracy();
   }
   /**
    * Protobuf type {@code asgt.type.TargetMetrics.Metric}
@@ -201,6 +220,43 @@ private static final long serialVersionUID = 0L;
       return falseNegative_;
     }
 
+    public static final int MCC_FIELD_NUMBER = 8;
+    private float mcc_ = 0F;
+    /**
+     * <pre>
+     * Matthews correlation coefficient
+     * </pre>
+     *
+     * <code>float mcc = 8 [json_name = "mcc"];</code>
+     * @return The mcc.
+     */
+    @java.lang.Override
+    public float getMcc() {
+      return mcc_;
+    }
+
+    public static final int ACCURACY_FIELD_NUMBER = 9;
+    private float accuracy_ = 0F;
+    /**
+     * <code>float accuracy = 9 [json_name = "accuracy"];</code>
+     * @return The accuracy.
+     */
+    @java.lang.Override
+    public float getAccuracy() {
+      return accuracy_;
+    }
+
+    public static final int BALANCED_ACCURACY_FIELD_NUMBER = 10;
+    private float balancedAccuracy_ = 0F;
+    /**
+     * <code>float balanced_accuracy = 10 [json_name = "balancedAccuracy"];</code>
+     * @return The balancedAccuracy.
+     */
+    @java.lang.Override
+    public float getBalancedAccuracy() {
+      return balancedAccuracy_;
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -235,6 +291,15 @@ private static final long serialVersionUID = 0L;
       }
       if (falseNegative_ != 0) {
         output.writeInt32(7, falseNegative_);
+      }
+      if (java.lang.Float.floatToRawIntBits(mcc_) != 0) {
+        output.writeFloat(8, mcc_);
+      }
+      if (java.lang.Float.floatToRawIntBits(accuracy_) != 0) {
+        output.writeFloat(9, accuracy_);
+      }
+      if (java.lang.Float.floatToRawIntBits(balancedAccuracy_) != 0) {
+        output.writeFloat(10, balancedAccuracy_);
       }
       getUnknownFields().writeTo(output);
     }
@@ -273,6 +338,18 @@ private static final long serialVersionUID = 0L;
         size += com.google.protobuf.CodedOutputStream
           .computeInt32Size(7, falseNegative_);
       }
+      if (java.lang.Float.floatToRawIntBits(mcc_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(8, mcc_);
+      }
+      if (java.lang.Float.floatToRawIntBits(accuracy_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(9, accuracy_);
+      }
+      if (java.lang.Float.floatToRawIntBits(balancedAccuracy_) != 0) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeFloatSize(10, balancedAccuracy_);
+      }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
       return size;
@@ -305,6 +382,15 @@ private static final long serialVersionUID = 0L;
           != other.getFalsePositive()) return false;
       if (getFalseNegative()
           != other.getFalseNegative()) return false;
+      if (java.lang.Float.floatToIntBits(getMcc())
+          != java.lang.Float.floatToIntBits(
+              other.getMcc())) return false;
+      if (java.lang.Float.floatToIntBits(getAccuracy())
+          != java.lang.Float.floatToIntBits(
+              other.getAccuracy())) return false;
+      if (java.lang.Float.floatToIntBits(getBalancedAccuracy())
+          != java.lang.Float.floatToIntBits(
+              other.getBalancedAccuracy())) return false;
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -333,6 +419,15 @@ private static final long serialVersionUID = 0L;
       hash = (53 * hash) + getFalsePositive();
       hash = (37 * hash) + FALSE_NEGATIVE_FIELD_NUMBER;
       hash = (53 * hash) + getFalseNegative();
+      hash = (37 * hash) + MCC_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getMcc());
+      hash = (37 * hash) + ACCURACY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getAccuracy());
+      hash = (37 * hash) + BALANCED_ACCURACY_FIELD_NUMBER;
+      hash = (53 * hash) + java.lang.Float.floatToIntBits(
+          getBalancedAccuracy());
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -471,6 +566,9 @@ private static final long serialVersionUID = 0L;
         trueNegative_ = 0;
         falsePositive_ = 0;
         falseNegative_ = 0;
+        mcc_ = 0F;
+        accuracy_ = 0F;
+        balancedAccuracy_ = 0F;
         return this;
       }
 
@@ -524,6 +622,15 @@ private static final long serialVersionUID = 0L;
         }
         if (((from_bitField0_ & 0x00000040) != 0)) {
           result.falseNegative_ = falseNegative_;
+        }
+        if (((from_bitField0_ & 0x00000080) != 0)) {
+          result.mcc_ = mcc_;
+        }
+        if (((from_bitField0_ & 0x00000100) != 0)) {
+          result.accuracy_ = accuracy_;
+        }
+        if (((from_bitField0_ & 0x00000200) != 0)) {
+          result.balancedAccuracy_ = balancedAccuracy_;
         }
       }
 
@@ -592,6 +699,15 @@ private static final long serialVersionUID = 0L;
         if (other.getFalseNegative() != 0) {
           setFalseNegative(other.getFalseNegative());
         }
+        if (other.getMcc() != 0F) {
+          setMcc(other.getMcc());
+        }
+        if (other.getAccuracy() != 0F) {
+          setAccuracy(other.getAccuracy());
+        }
+        if (other.getBalancedAccuracy() != 0F) {
+          setBalancedAccuracy(other.getBalancedAccuracy());
+        }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
         return this;
@@ -653,6 +769,21 @@ private static final long serialVersionUID = 0L;
                 bitField0_ |= 0x00000040;
                 break;
               } // case 56
+              case 69: {
+                mcc_ = input.readFloat();
+                bitField0_ |= 0x00000080;
+                break;
+              } // case 69
+              case 77: {
+                accuracy_ = input.readFloat();
+                bitField0_ |= 0x00000100;
+                break;
+              } // case 77
+              case 85: {
+                balancedAccuracy_ = input.readFloat();
+                bitField0_ |= 0x00000200;
+                break;
+              } // case 85
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -893,6 +1024,114 @@ private static final long serialVersionUID = 0L;
         onChanged();
         return this;
       }
+
+      private float mcc_ ;
+      /**
+       * <pre>
+       * Matthews correlation coefficient
+       * </pre>
+       *
+       * <code>float mcc = 8 [json_name = "mcc"];</code>
+       * @return The mcc.
+       */
+      @java.lang.Override
+      public float getMcc() {
+        return mcc_;
+      }
+      /**
+       * <pre>
+       * Matthews correlation coefficient
+       * </pre>
+       *
+       * <code>float mcc = 8 [json_name = "mcc"];</code>
+       * @param value The mcc to set.
+       * @return This builder for chaining.
+       */
+      public Builder setMcc(float value) {
+
+        mcc_ = value;
+        bitField0_ |= 0x00000080;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * Matthews correlation coefficient
+       * </pre>
+       *
+       * <code>float mcc = 8 [json_name = "mcc"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearMcc() {
+        bitField0_ = (bitField0_ & ~0x00000080);
+        mcc_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float accuracy_ ;
+      /**
+       * <code>float accuracy = 9 [json_name = "accuracy"];</code>
+       * @return The accuracy.
+       */
+      @java.lang.Override
+      public float getAccuracy() {
+        return accuracy_;
+      }
+      /**
+       * <code>float accuracy = 9 [json_name = "accuracy"];</code>
+       * @param value The accuracy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setAccuracy(float value) {
+
+        accuracy_ = value;
+        bitField0_ |= 0x00000100;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float accuracy = 9 [json_name = "accuracy"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearAccuracy() {
+        bitField0_ = (bitField0_ & ~0x00000100);
+        accuracy_ = 0F;
+        onChanged();
+        return this;
+      }
+
+      private float balancedAccuracy_ ;
+      /**
+       * <code>float balanced_accuracy = 10 [json_name = "balancedAccuracy"];</code>
+       * @return The balancedAccuracy.
+       */
+      @java.lang.Override
+      public float getBalancedAccuracy() {
+        return balancedAccuracy_;
+      }
+      /**
+       * <code>float balanced_accuracy = 10 [json_name = "balancedAccuracy"];</code>
+       * @param value The balancedAccuracy to set.
+       * @return This builder for chaining.
+       */
+      public Builder setBalancedAccuracy(float value) {
+
+        balancedAccuracy_ = value;
+        bitField0_ |= 0x00000200;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>float balanced_accuracy = 10 [json_name = "balancedAccuracy"];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearBalancedAccuracy() {
+        bitField0_ = (bitField0_ & ~0x00000200);
+        balancedAccuracy_ = 0F;
+        onChanged();
+        return this;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -1037,105 +1276,6 @@ private static final long serialVersionUID = 0L;
     return metrics_.get(index);
   }
 
-  public static final int MCC_FIELD_NUMBER = 3;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList mcc_;
-  /**
-   * <pre>
-   * Matthews correlation coefficient
-   * </pre>
-   *
-   * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
-   * @return A list containing the mcc.
-   */
-  @java.lang.Override
-  public java.util.List<java.lang.Float>
-      getMccList() {
-    return mcc_;
-  }
-  /**
-   * <pre>
-   * Matthews correlation coefficient
-   * </pre>
-   *
-   * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
-   * @return The count of mcc.
-   */
-  public int getMccCount() {
-    return mcc_.size();
-  }
-  /**
-   * <pre>
-   * Matthews correlation coefficient
-   * </pre>
-   *
-   * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
-   * @param index The index of the element to return.
-   * @return The mcc at the given index.
-   */
-  public float getMcc(int index) {
-    return mcc_.getFloat(index);
-  }
-  private int mccMemoizedSerializedSize = -1;
-
-  public static final int ACCURACY_FIELD_NUMBER = 4;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList accuracy_;
-  /**
-   * <code>repeated float accuracy = 4 [json_name = "accuracy"];</code>
-   * @return A list containing the accuracy.
-   */
-  @java.lang.Override
-  public java.util.List<java.lang.Float>
-      getAccuracyList() {
-    return accuracy_;
-  }
-  /**
-   * <code>repeated float accuracy = 4 [json_name = "accuracy"];</code>
-   * @return The count of accuracy.
-   */
-  public int getAccuracyCount() {
-    return accuracy_.size();
-  }
-  /**
-   * <code>repeated float accuracy = 4 [json_name = "accuracy"];</code>
-   * @param index The index of the element to return.
-   * @return The accuracy at the given index.
-   */
-  public float getAccuracy(int index) {
-    return accuracy_.getFloat(index);
-  }
-  private int accuracyMemoizedSerializedSize = -1;
-
-  public static final int BALANCED_ACCURACY_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.Internal.FloatList balancedAccuracy_;
-  /**
-   * <code>repeated float balanced_accuracy = 5 [json_name = "balancedAccuracy"];</code>
-   * @return A list containing the balancedAccuracy.
-   */
-  @java.lang.Override
-  public java.util.List<java.lang.Float>
-      getBalancedAccuracyList() {
-    return balancedAccuracy_;
-  }
-  /**
-   * <code>repeated float balanced_accuracy = 5 [json_name = "balancedAccuracy"];</code>
-   * @return The count of balancedAccuracy.
-   */
-  public int getBalancedAccuracyCount() {
-    return balancedAccuracy_.size();
-  }
-  /**
-   * <code>repeated float balanced_accuracy = 5 [json_name = "balancedAccuracy"];</code>
-   * @param index The index of the element to return.
-   * @return The balancedAccuracy at the given index.
-   */
-  public float getBalancedAccuracy(int index) {
-    return balancedAccuracy_.getFloat(index);
-  }
-  private int balancedAccuracyMemoizedSerializedSize = -1;
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -1150,33 +1290,11 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    getSerializedSize();
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(target_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, target_);
     }
     for (int i = 0; i < metrics_.size(); i++) {
       output.writeMessage(2, metrics_.get(i));
-    }
-    if (getMccList().size() > 0) {
-      output.writeUInt32NoTag(26);
-      output.writeUInt32NoTag(mccMemoizedSerializedSize);
-    }
-    for (int i = 0; i < mcc_.size(); i++) {
-      output.writeFloatNoTag(mcc_.getFloat(i));
-    }
-    if (getAccuracyList().size() > 0) {
-      output.writeUInt32NoTag(34);
-      output.writeUInt32NoTag(accuracyMemoizedSerializedSize);
-    }
-    for (int i = 0; i < accuracy_.size(); i++) {
-      output.writeFloatNoTag(accuracy_.getFloat(i));
-    }
-    if (getBalancedAccuracyList().size() > 0) {
-      output.writeUInt32NoTag(42);
-      output.writeUInt32NoTag(balancedAccuracyMemoizedSerializedSize);
-    }
-    for (int i = 0; i < balancedAccuracy_.size(); i++) {
-      output.writeFloatNoTag(balancedAccuracy_.getFloat(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -1193,39 +1311,6 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < metrics_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, metrics_.get(i));
-    }
-    {
-      int dataSize = 0;
-      dataSize = 4 * getMccList().size();
-      size += dataSize;
-      if (!getMccList().isEmpty()) {
-        size += 1;
-        size += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(dataSize);
-      }
-      mccMemoizedSerializedSize = dataSize;
-    }
-    {
-      int dataSize = 0;
-      dataSize = 4 * getAccuracyList().size();
-      size += dataSize;
-      if (!getAccuracyList().isEmpty()) {
-        size += 1;
-        size += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(dataSize);
-      }
-      accuracyMemoizedSerializedSize = dataSize;
-    }
-    {
-      int dataSize = 0;
-      dataSize = 4 * getBalancedAccuracyList().size();
-      size += dataSize;
-      if (!getBalancedAccuracyList().isEmpty()) {
-        size += 1;
-        size += com.google.protobuf.CodedOutputStream
-            .computeInt32SizeNoTag(dataSize);
-      }
-      balancedAccuracyMemoizedSerializedSize = dataSize;
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -1246,12 +1331,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTarget())) return false;
     if (!getMetricsList()
         .equals(other.getMetricsList())) return false;
-    if (!getMccList()
-        .equals(other.getMccList())) return false;
-    if (!getAccuracyList()
-        .equals(other.getAccuracyList())) return false;
-    if (!getBalancedAccuracyList()
-        .equals(other.getBalancedAccuracyList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1268,18 +1347,6 @@ private static final long serialVersionUID = 0L;
     if (getMetricsCount() > 0) {
       hash = (37 * hash) + METRICS_FIELD_NUMBER;
       hash = (53 * hash) + getMetricsList().hashCode();
-    }
-    if (getMccCount() > 0) {
-      hash = (37 * hash) + MCC_FIELD_NUMBER;
-      hash = (53 * hash) + getMccList().hashCode();
-    }
-    if (getAccuracyCount() > 0) {
-      hash = (37 * hash) + ACCURACY_FIELD_NUMBER;
-      hash = (53 * hash) + getAccuracyList().hashCode();
-    }
-    if (getBalancedAccuracyCount() > 0) {
-      hash = (37 * hash) + BALANCED_ACCURACY_FIELD_NUMBER;
-      hash = (53 * hash) + getBalancedAccuracyList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -1420,9 +1487,6 @@ private static final long serialVersionUID = 0L;
         metricsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
-      mcc_ = emptyFloatList();
-      accuracy_ = emptyFloatList();
-      balancedAccuracy_ = emptyFloatList();
       return this;
     }
 
@@ -1465,21 +1529,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.metrics_ = metricsBuilder_.build();
       }
-      if (((bitField0_ & 0x00000004) != 0)) {
-        mcc_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000004);
-      }
-      result.mcc_ = mcc_;
-      if (((bitField0_ & 0x00000008) != 0)) {
-        accuracy_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000008);
-      }
-      result.accuracy_ = accuracy_;
-      if (((bitField0_ & 0x00000010) != 0)) {
-        balancedAccuracy_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000010);
-      }
-      result.balancedAccuracy_ = balancedAccuracy_;
     }
 
     private void buildPartial0(ai.visma.asgt.type.TargetMetrics result) {
@@ -1564,36 +1613,6 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (!other.mcc_.isEmpty()) {
-        if (mcc_.isEmpty()) {
-          mcc_ = other.mcc_;
-          bitField0_ = (bitField0_ & ~0x00000004);
-        } else {
-          ensureMccIsMutable();
-          mcc_.addAll(other.mcc_);
-        }
-        onChanged();
-      }
-      if (!other.accuracy_.isEmpty()) {
-        if (accuracy_.isEmpty()) {
-          accuracy_ = other.accuracy_;
-          bitField0_ = (bitField0_ & ~0x00000008);
-        } else {
-          ensureAccuracyIsMutable();
-          accuracy_.addAll(other.accuracy_);
-        }
-        onChanged();
-      }
-      if (!other.balancedAccuracy_.isEmpty()) {
-        if (balancedAccuracy_.isEmpty()) {
-          balancedAccuracy_ = other.balancedAccuracy_;
-          bitField0_ = (bitField0_ & ~0x00000010);
-        } else {
-          ensureBalancedAccuracyIsMutable();
-          balancedAccuracy_.addAll(other.balancedAccuracy_);
-        }
-        onChanged();
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1638,54 +1657,6 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 18
-            case 29: {
-              float v = input.readFloat();
-              ensureMccIsMutable();
-              mcc_.addFloat(v);
-              break;
-            } // case 29
-            case 26: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureMccIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                mcc_.addFloat(input.readFloat());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 26
-            case 37: {
-              float v = input.readFloat();
-              ensureAccuracyIsMutable();
-              accuracy_.addFloat(v);
-              break;
-            } // case 37
-            case 34: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureAccuracyIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                accuracy_.addFloat(input.readFloat());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 34
-            case 45: {
-              float v = input.readFloat();
-              ensureBalancedAccuracyIsMutable();
-              balancedAccuracy_.addFloat(v);
-              break;
-            } // case 45
-            case 42: {
-              int length = input.readRawVarint32();
-              int limit = input.pushLimit(length);
-              ensureBalancedAccuracyIsMutable();
-              while (input.getBytesUntilLimit() > 0) {
-                balancedAccuracy_.addFloat(input.readFloat());
-              }
-              input.popLimit(limit);
-              break;
-            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2013,277 +1984,6 @@ private static final long serialVersionUID = 0L;
         metrics_ = null;
       }
       return metricsBuilder_;
-    }
-
-    private com.google.protobuf.Internal.FloatList mcc_ = emptyFloatList();
-    private void ensureMccIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
-        mcc_ = mutableCopy(mcc_);
-        bitField0_ |= 0x00000004;
-      }
-    }
-    /**
-     * <pre>
-     * Matthews correlation coefficient
-     * </pre>
-     *
-     * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
-     * @return A list containing the mcc.
-     */
-    public java.util.List<java.lang.Float>
-        getMccList() {
-      return ((bitField0_ & 0x00000004) != 0) ?
-               java.util.Collections.unmodifiableList(mcc_) : mcc_;
-    }
-    /**
-     * <pre>
-     * Matthews correlation coefficient
-     * </pre>
-     *
-     * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
-     * @return The count of mcc.
-     */
-    public int getMccCount() {
-      return mcc_.size();
-    }
-    /**
-     * <pre>
-     * Matthews correlation coefficient
-     * </pre>
-     *
-     * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
-     * @param index The index of the element to return.
-     * @return The mcc at the given index.
-     */
-    public float getMcc(int index) {
-      return mcc_.getFloat(index);
-    }
-    /**
-     * <pre>
-     * Matthews correlation coefficient
-     * </pre>
-     *
-     * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
-     * @param index The index to set the value at.
-     * @param value The mcc to set.
-     * @return This builder for chaining.
-     */
-    public Builder setMcc(
-        int index, float value) {
-
-      ensureMccIsMutable();
-      mcc_.setFloat(index, value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Matthews correlation coefficient
-     * </pre>
-     *
-     * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
-     * @param value The mcc to add.
-     * @return This builder for chaining.
-     */
-    public Builder addMcc(float value) {
-
-      ensureMccIsMutable();
-      mcc_.addFloat(value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Matthews correlation coefficient
-     * </pre>
-     *
-     * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
-     * @param values The mcc to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllMcc(
-        java.lang.Iterable<? extends java.lang.Float> values) {
-      ensureMccIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, mcc_);
-      onChanged();
-      return this;
-    }
-    /**
-     * <pre>
-     * Matthews correlation coefficient
-     * </pre>
-     *
-     * <code>repeated float mcc = 3 [json_name = "mcc"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearMcc() {
-      mcc_ = emptyFloatList();
-      bitField0_ = (bitField0_ & ~0x00000004);
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.Internal.FloatList accuracy_ = emptyFloatList();
-    private void ensureAccuracyIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
-        accuracy_ = mutableCopy(accuracy_);
-        bitField0_ |= 0x00000008;
-      }
-    }
-    /**
-     * <code>repeated float accuracy = 4 [json_name = "accuracy"];</code>
-     * @return A list containing the accuracy.
-     */
-    public java.util.List<java.lang.Float>
-        getAccuracyList() {
-      return ((bitField0_ & 0x00000008) != 0) ?
-               java.util.Collections.unmodifiableList(accuracy_) : accuracy_;
-    }
-    /**
-     * <code>repeated float accuracy = 4 [json_name = "accuracy"];</code>
-     * @return The count of accuracy.
-     */
-    public int getAccuracyCount() {
-      return accuracy_.size();
-    }
-    /**
-     * <code>repeated float accuracy = 4 [json_name = "accuracy"];</code>
-     * @param index The index of the element to return.
-     * @return The accuracy at the given index.
-     */
-    public float getAccuracy(int index) {
-      return accuracy_.getFloat(index);
-    }
-    /**
-     * <code>repeated float accuracy = 4 [json_name = "accuracy"];</code>
-     * @param index The index to set the value at.
-     * @param value The accuracy to set.
-     * @return This builder for chaining.
-     */
-    public Builder setAccuracy(
-        int index, float value) {
-
-      ensureAccuracyIsMutable();
-      accuracy_.setFloat(index, value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated float accuracy = 4 [json_name = "accuracy"];</code>
-     * @param value The accuracy to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAccuracy(float value) {
-
-      ensureAccuracyIsMutable();
-      accuracy_.addFloat(value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated float accuracy = 4 [json_name = "accuracy"];</code>
-     * @param values The accuracy to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllAccuracy(
-        java.lang.Iterable<? extends java.lang.Float> values) {
-      ensureAccuracyIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, accuracy_);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated float accuracy = 4 [json_name = "accuracy"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearAccuracy() {
-      accuracy_ = emptyFloatList();
-      bitField0_ = (bitField0_ & ~0x00000008);
-      onChanged();
-      return this;
-    }
-
-    private com.google.protobuf.Internal.FloatList balancedAccuracy_ = emptyFloatList();
-    private void ensureBalancedAccuracyIsMutable() {
-      if (!((bitField0_ & 0x00000010) != 0)) {
-        balancedAccuracy_ = mutableCopy(balancedAccuracy_);
-        bitField0_ |= 0x00000010;
-      }
-    }
-    /**
-     * <code>repeated float balanced_accuracy = 5 [json_name = "balancedAccuracy"];</code>
-     * @return A list containing the balancedAccuracy.
-     */
-    public java.util.List<java.lang.Float>
-        getBalancedAccuracyList() {
-      return ((bitField0_ & 0x00000010) != 0) ?
-               java.util.Collections.unmodifiableList(balancedAccuracy_) : balancedAccuracy_;
-    }
-    /**
-     * <code>repeated float balanced_accuracy = 5 [json_name = "balancedAccuracy"];</code>
-     * @return The count of balancedAccuracy.
-     */
-    public int getBalancedAccuracyCount() {
-      return balancedAccuracy_.size();
-    }
-    /**
-     * <code>repeated float balanced_accuracy = 5 [json_name = "balancedAccuracy"];</code>
-     * @param index The index of the element to return.
-     * @return The balancedAccuracy at the given index.
-     */
-    public float getBalancedAccuracy(int index) {
-      return balancedAccuracy_.getFloat(index);
-    }
-    /**
-     * <code>repeated float balanced_accuracy = 5 [json_name = "balancedAccuracy"];</code>
-     * @param index The index to set the value at.
-     * @param value The balancedAccuracy to set.
-     * @return This builder for chaining.
-     */
-    public Builder setBalancedAccuracy(
-        int index, float value) {
-
-      ensureBalancedAccuracyIsMutable();
-      balancedAccuracy_.setFloat(index, value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated float balanced_accuracy = 5 [json_name = "balancedAccuracy"];</code>
-     * @param value The balancedAccuracy to add.
-     * @return This builder for chaining.
-     */
-    public Builder addBalancedAccuracy(float value) {
-
-      ensureBalancedAccuracyIsMutable();
-      balancedAccuracy_.addFloat(value);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated float balanced_accuracy = 5 [json_name = "balancedAccuracy"];</code>
-     * @param values The balancedAccuracy to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllBalancedAccuracy(
-        java.lang.Iterable<? extends java.lang.Float> values) {
-      ensureBalancedAccuracyIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, balancedAccuracy_);
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated float balanced_accuracy = 5 [json_name = "balancedAccuracy"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearBalancedAccuracy() {
-      balancedAccuracy_ = emptyFloatList();
-      bitField0_ = (bitField0_ & ~0x00000010);
-      onChanged();
-      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

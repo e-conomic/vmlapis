@@ -11,21 +11,6 @@ export class TargetMetrics extends jspb.Message {
   clearMetricsList(): TargetMetrics;
   addMetrics(value?: TargetMetrics.Metric, index?: number): TargetMetrics.Metric;
 
-  getMccList(): Array<number>;
-  setMccList(value: Array<number>): TargetMetrics;
-  clearMccList(): TargetMetrics;
-  addMcc(value: number, index?: number): TargetMetrics;
-
-  getAccuracyList(): Array<number>;
-  setAccuracyList(value: Array<number>): TargetMetrics;
-  clearAccuracyList(): TargetMetrics;
-  addAccuracy(value: number, index?: number): TargetMetrics;
-
-  getBalancedAccuracyList(): Array<number>;
-  setBalancedAccuracyList(value: Array<number>): TargetMetrics;
-  clearBalancedAccuracyList(): TargetMetrics;
-  addBalancedAccuracy(value: number, index?: number): TargetMetrics;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TargetMetrics.AsObject;
   static toObject(includeInstance: boolean, msg: TargetMetrics): TargetMetrics.AsObject;
@@ -38,9 +23,6 @@ export namespace TargetMetrics {
   export type AsObject = {
     target: string,
     metricsList: Array<TargetMetrics.Metric.AsObject>,
-    mccList: Array<number>,
-    accuracyList: Array<number>,
-    balancedAccuracyList: Array<number>,
   }
 
   export class Metric extends jspb.Message {
@@ -65,6 +47,15 @@ export namespace TargetMetrics {
     getFalseNegative(): number;
     setFalseNegative(value: number): Metric;
 
+    getMcc(): number;
+    setMcc(value: number): Metric;
+
+    getAccuracy(): number;
+    setAccuracy(value: number): Metric;
+
+    getBalancedAccuracy(): number;
+    setBalancedAccuracy(value: number): Metric;
+
     serializeBinary(): Uint8Array;
     toObject(includeInstance?: boolean): Metric.AsObject;
     static toObject(includeInstance: boolean, msg: Metric): Metric.AsObject;
@@ -82,6 +73,9 @@ export namespace TargetMetrics {
       trueNegative: number,
       falsePositive: number,
       falseNegative: number,
+      mcc: number,
+      accuracy: number,
+      balancedAccuracy: number,
     }
   }
 
