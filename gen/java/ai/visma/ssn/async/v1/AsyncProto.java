@@ -127,7 +127,7 @@ public final class AsyncProto {
       "wers\030\001 \003(\0132\031.ssn.type.AnswerCandidateR\007a" +
       "nswers\";\n\010PageText\022/\n\tpage_text\030\001 \003(\0132\022." +
       "ssn.type.PageTextR\010pageText\"S\n\016TextAnnot" +
-      "ation\022A\n\017text_annotation\030\001 \001(\0132\030.ssn.typ" +
+      "ation\022A\n\017text_annotation\030\001 \003(\0132\030.ssn.typ" +
       "e.TextAnnotationR\016textAnnotation\"\372\003\n\nAnn" +
       "otation\022\030\n\007feature\030\001 \001(\tR\007feature\0227\n\tcan" +
       "didate\030\002 \001(\0132\027.ssn.async.v1.CandidateH\000R" +

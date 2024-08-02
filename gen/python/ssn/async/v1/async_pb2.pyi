@@ -85,8 +85,8 @@ class PageText(_message.Message):
 class TextAnnotation(_message.Message):
     __slots__ = ["text_annotation"]
     TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
-    text_annotation: _text_annotation_pb2.TextAnnotation
-    def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ...) -> None: ...
+    text_annotation: _containers.RepeatedCompositeFieldContainer[_text_annotation_pb2.TextAnnotation]
+    def __init__(self, text_annotation: _Optional[_Iterable[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]]] = ...) -> None: ...
 
 class Annotation(_message.Message):
     __slots__ = ["feature", "candidate", "purchase_line_candidate", "answer_candidates", "line_candidates", "page_text", "value", "text_annotation"]

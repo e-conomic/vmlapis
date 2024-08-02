@@ -50,7 +50,7 @@ namespace Ssn.Async.V1 {
             "CgdhbnN3ZXJzGAEgAygLMhkuc3NuLnR5cGUuQW5zd2VyQ2FuZGlkYXRlUgdh",
             "bnN3ZXJzIjsKCFBhZ2VUZXh0Ei8KCXBhZ2VfdGV4dBgBIAMoCzISLnNzbi50",
             "eXBlLlBhZ2VUZXh0UghwYWdlVGV4dCJTCg5UZXh0QW5ub3RhdGlvbhJBCg90",
-            "ZXh0X2Fubm90YXRpb24YASABKAsyGC5zc24udHlwZS5UZXh0QW5ub3RhdGlv",
+            "ZXh0X2Fubm90YXRpb24YASADKAsyGC5zc24udHlwZS5UZXh0QW5ub3RhdGlv",
             "blIOdGV4dEFubm90YXRpb24i+gMKCkFubm90YXRpb24SGAoHZmVhdHVyZRgB",
             "IAEoCVIHZmVhdHVyZRI3CgljYW5kaWRhdGUYAiABKAsyFy5zc24uYXN5bmMu",
             "djEuQ2FuZGlkYXRlSABSCWNhbmRpZGF0ZRJdChdwdXJjaGFzZV9saW5lX2Nh",
@@ -2101,7 +2101,7 @@ namespace Ssn.Async.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextAnnotation(TextAnnotation other) : this() {
-      textAnnotation_ = other.textAnnotation_ != null ? other.textAnnotation_.Clone() : null;
+      textAnnotation_ = other.textAnnotation_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2113,14 +2113,13 @@ namespace Ssn.Async.V1 {
 
     /// <summary>Field number for the "text_annotation" field.</summary>
     public const int TextAnnotation_FieldNumber = 1;
-    private global::Ssn.Type.TextAnnotation textAnnotation_;
+    private static readonly pb::FieldCodec<global::Ssn.Type.TextAnnotation> _repeated_textAnnotation_codec
+        = pb::FieldCodec.ForMessage(10, global::Ssn.Type.TextAnnotation.Parser);
+    private readonly pbc::RepeatedField<global::Ssn.Type.TextAnnotation> textAnnotation_ = new pbc::RepeatedField<global::Ssn.Type.TextAnnotation>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Ssn.Type.TextAnnotation TextAnnotation_ {
+    public pbc::RepeatedField<global::Ssn.Type.TextAnnotation> TextAnnotation_ {
       get { return textAnnotation_; }
-      set {
-        textAnnotation_ = value;
-      }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2138,7 +2137,7 @@ namespace Ssn.Async.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(TextAnnotation_, other.TextAnnotation_)) return false;
+      if(!textAnnotation_.Equals(other.textAnnotation_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2146,7 +2145,7 @@ namespace Ssn.Async.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (textAnnotation_ != null) hash ^= TextAnnotation_.GetHashCode();
+      hash ^= textAnnotation_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2165,10 +2164,7 @@ namespace Ssn.Async.V1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (textAnnotation_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(TextAnnotation_);
-      }
+      textAnnotation_.WriteTo(output, _repeated_textAnnotation_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2179,10 +2175,7 @@ namespace Ssn.Async.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (textAnnotation_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(TextAnnotation_);
-      }
+      textAnnotation_.WriteTo(ref output, _repeated_textAnnotation_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2193,9 +2186,7 @@ namespace Ssn.Async.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (textAnnotation_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextAnnotation_);
-      }
+      size += textAnnotation_.CalculateSize(_repeated_textAnnotation_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2208,12 +2199,7 @@ namespace Ssn.Async.V1 {
       if (other == null) {
         return;
       }
-      if (other.textAnnotation_ != null) {
-        if (textAnnotation_ == null) {
-          TextAnnotation_ = new global::Ssn.Type.TextAnnotation();
-        }
-        TextAnnotation_.MergeFrom(other.TextAnnotation_);
-      }
+      textAnnotation_.Add(other.textAnnotation_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2230,10 +2216,7 @@ namespace Ssn.Async.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (textAnnotation_ == null) {
-              TextAnnotation_ = new global::Ssn.Type.TextAnnotation();
-            }
-            input.ReadMessage(TextAnnotation_);
+            textAnnotation_.AddEntriesFrom(input, _repeated_textAnnotation_codec);
             break;
           }
         }
@@ -2252,10 +2235,7 @@ namespace Ssn.Async.V1 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (textAnnotation_ == null) {
-              TextAnnotation_ = new global::Ssn.Type.TextAnnotation();
-            }
-            input.ReadMessage(TextAnnotation_);
+            textAnnotation_.AddEntriesFrom(ref input, _repeated_textAnnotation_codec);
             break;
           }
         }

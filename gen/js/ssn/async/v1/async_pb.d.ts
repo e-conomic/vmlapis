@@ -222,10 +222,10 @@ export namespace PageText {
 }
 
 export class TextAnnotation extends jspb.Message {
-  getTextAnnotation(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
-  setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): TextAnnotation;
-  hasTextAnnotation(): boolean;
-  clearTextAnnotation(): TextAnnotation;
+  getTextAnnotationList(): Array<ssn_type_text_annotation_pb.TextAnnotation>;
+  setTextAnnotationList(value: Array<ssn_type_text_annotation_pb.TextAnnotation>): TextAnnotation;
+  clearTextAnnotationList(): TextAnnotation;
+  addTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation, index?: number): ssn_type_text_annotation_pb.TextAnnotation;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TextAnnotation.AsObject;
@@ -237,7 +237,7 @@ export class TextAnnotation extends jspb.Message {
 
 export namespace TextAnnotation {
   export type AsObject = {
-    textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
+    textAnnotationList: Array<ssn_type_text_annotation_pb.TextAnnotation.AsObject>,
   }
 }
 

@@ -251,7 +251,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.ssn.async.v1.TextAnnotation = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ssn.async.v1.TextAnnotation.repeatedFields_, null);
 };
 goog.inherits(proto.ssn.async.v1.TextAnnotation, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -2023,6 +2023,13 @@ proto.ssn.async.v1.PageText.prototype.clearPageTextList = function() {
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.ssn.async.v1.TextAnnotation.repeatedFields_ = [1];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -2054,7 +2061,8 @@ proto.ssn.async.v1.TextAnnotation.prototype.toObject = function(opt_includeInsta
  */
 proto.ssn.async.v1.TextAnnotation.toObject = function(includeInstance, msg) {
   var f, obj = {
-    textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f)
+    textAnnotationList: jspb.Message.toObjectList(msg.getTextAnnotationList(),
+    ssn_type_text_annotation_pb.TextAnnotation.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -2094,7 +2102,7 @@ proto.ssn.async.v1.TextAnnotation.deserializeBinaryFromReader = function(msg, re
     case 1:
       var value = new ssn_type_text_annotation_pb.TextAnnotation;
       reader.readMessage(value,ssn_type_text_annotation_pb.TextAnnotation.deserializeBinaryFromReader);
-      msg.setTextAnnotation(value);
+      msg.addTextAnnotation(value);
       break;
     default:
       reader.skipField();
@@ -2125,9 +2133,9 @@ proto.ssn.async.v1.TextAnnotation.prototype.serializeBinary = function() {
  */
 proto.ssn.async.v1.TextAnnotation.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getTextAnnotation();
-  if (f != null) {
-    writer.writeMessage(
+  f = message.getTextAnnotationList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
       1,
       f,
       ssn_type_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
@@ -2137,39 +2145,40 @@ proto.ssn.async.v1.TextAnnotation.serializeBinaryToWriter = function(message, wr
 
 
 /**
- * optional ssn.type.TextAnnotation text_annotation = 1;
- * @return {?proto.ssn.type.TextAnnotation}
+ * repeated ssn.type.TextAnnotation text_annotation = 1;
+ * @return {!Array<!proto.ssn.type.TextAnnotation>}
  */
-proto.ssn.async.v1.TextAnnotation.prototype.getTextAnnotation = function() {
-  return /** @type{?proto.ssn.type.TextAnnotation} */ (
-    jspb.Message.getWrapperField(this, ssn_type_text_annotation_pb.TextAnnotation, 1));
+proto.ssn.async.v1.TextAnnotation.prototype.getTextAnnotationList = function() {
+  return /** @type{!Array<!proto.ssn.type.TextAnnotation>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_text_annotation_pb.TextAnnotation, 1));
 };
 
 
 /**
- * @param {?proto.ssn.type.TextAnnotation|undefined} value
+ * @param {!Array<!proto.ssn.type.TextAnnotation>} value
  * @return {!proto.ssn.async.v1.TextAnnotation} returns this
 */
-proto.ssn.async.v1.TextAnnotation.prototype.setTextAnnotation = function(value) {
-  return jspb.Message.setWrapperField(this, 1, value);
+proto.ssn.async.v1.TextAnnotation.prototype.setTextAnnotationList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
 
 /**
- * Clears the message field making it undefined.
+ * @param {!proto.ssn.type.TextAnnotation=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.TextAnnotation}
+ */
+proto.ssn.async.v1.TextAnnotation.prototype.addTextAnnotation = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ssn.type.TextAnnotation, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
  * @return {!proto.ssn.async.v1.TextAnnotation} returns this
  */
-proto.ssn.async.v1.TextAnnotation.prototype.clearTextAnnotation = function() {
-  return this.setTextAnnotation(undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.ssn.async.v1.TextAnnotation.prototype.hasTextAnnotation = function() {
-  return jspb.Message.getField(this, 1) != null;
+proto.ssn.async.v1.TextAnnotation.prototype.clearTextAnnotationList = function() {
+  return this.setTextAnnotationList([]);
 };
 
 
