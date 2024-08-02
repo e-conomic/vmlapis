@@ -100,19 +100,19 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.async.v1.LineCandidateOrBuilder getLineCandidatesOrBuilder();
 
   /**
-   * <code>.ssn.type.PageText page_text = 6 [json_name = "pageText"];</code>
+   * <code>.ssn.async.v1.PageText page_text = 6 [json_name = "pageText"];</code>
    * @return Whether the pageText field is set.
    */
   boolean hasPageText();
   /**
-   * <code>.ssn.type.PageText page_text = 6 [json_name = "pageText"];</code>
+   * <code>.ssn.async.v1.PageText page_text = 6 [json_name = "pageText"];</code>
    * @return The pageText.
    */
-  ai.visma.ssn.type.PageText getPageText();
+  ai.visma.ssn.async.v1.PageText getPageText();
   /**
-   * <code>.ssn.type.PageText page_text = 6 [json_name = "pageText"];</code>
+   * <code>.ssn.async.v1.PageText page_text = 6 [json_name = "pageText"];</code>
    */
-  ai.visma.ssn.type.PageTextOrBuilder getPageTextOrBuilder();
+  ai.visma.ssn.async.v1.PageTextOrBuilder getPageTextOrBuilder();
 
   /**
    * <code>string value = 7 [json_name = "value"];</code>
@@ -132,19 +132,19 @@ public interface AnnotationOrBuilder extends
       getValueBytes();
 
   /**
-   * <code>.ssn.type.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+   * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
    * @return Whether the textAnnotation field is set.
    */
   boolean hasTextAnnotation();
   /**
-   * <code>.ssn.type.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+   * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
    * @return The textAnnotation.
    */
-  ai.visma.ssn.type.TextAnnotation getTextAnnotation();
+  ai.visma.ssn.async.v1.TextAnnotation getTextAnnotation();
   /**
-   * <code>.ssn.type.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+   * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
    */
-  ai.visma.ssn.type.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
+  ai.visma.ssn.async.v1.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
 
   ai.visma.ssn.async.v1.Annotation.CandidatesCase getCandidatesCase();
 }

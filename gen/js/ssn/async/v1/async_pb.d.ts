@@ -201,6 +201,46 @@ export namespace AnswerCandidate {
   }
 }
 
+export class PageText extends jspb.Message {
+  getPageTextList(): Array<ssn_type_candidate_pb.PageText>;
+  setPageTextList(value: Array<ssn_type_candidate_pb.PageText>): PageText;
+  clearPageTextList(): PageText;
+  addPageText(value?: ssn_type_candidate_pb.PageText, index?: number): ssn_type_candidate_pb.PageText;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): PageText.AsObject;
+  static toObject(includeInstance: boolean, msg: PageText): PageText.AsObject;
+  static serializeBinaryToWriter(message: PageText, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): PageText;
+  static deserializeBinaryFromReader(message: PageText, reader: jspb.BinaryReader): PageText;
+}
+
+export namespace PageText {
+  export type AsObject = {
+    pageTextList: Array<ssn_type_candidate_pb.PageText.AsObject>,
+  }
+}
+
+export class TextAnnotation extends jspb.Message {
+  getTextAnnotation(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
+  setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): TextAnnotation;
+  hasTextAnnotation(): boolean;
+  clearTextAnnotation(): TextAnnotation;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): TextAnnotation.AsObject;
+  static toObject(includeInstance: boolean, msg: TextAnnotation): TextAnnotation.AsObject;
+  static serializeBinaryToWriter(message: TextAnnotation, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): TextAnnotation;
+  static deserializeBinaryFromReader(message: TextAnnotation, reader: jspb.BinaryReader): TextAnnotation;
+}
+
+export namespace TextAnnotation {
+  export type AsObject = {
+    textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
+  }
+}
+
 export class Annotation extends jspb.Message {
   getFeature(): string;
   setFeature(value: string): Annotation;
@@ -225,16 +265,16 @@ export class Annotation extends jspb.Message {
   hasLineCandidates(): boolean;
   clearLineCandidates(): Annotation;
 
-  getPageText(): ssn_type_candidate_pb.PageText | undefined;
-  setPageText(value?: ssn_type_candidate_pb.PageText): Annotation;
+  getPageText(): PageText | undefined;
+  setPageText(value?: PageText): Annotation;
   hasPageText(): boolean;
   clearPageText(): Annotation;
 
   getValue(): string;
   setValue(value: string): Annotation;
 
-  getTextAnnotation(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
-  setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): Annotation;
+  getTextAnnotation(): TextAnnotation | undefined;
+  setTextAnnotation(value?: TextAnnotation): Annotation;
   hasTextAnnotation(): boolean;
   clearTextAnnotation(): Annotation;
 
@@ -255,9 +295,9 @@ export namespace Annotation {
     purchaseLineCandidate?: PurchaseLineCandidate.AsObject,
     answerCandidates?: AnswerCandidate.AsObject,
     lineCandidates?: LineCandidate.AsObject,
-    pageText?: ssn_type_candidate_pb.PageText.AsObject,
+    pageText?: PageText.AsObject,
     value: string,
-    textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
+    textAnnotation?: TextAnnotation.AsObject,
   }
 
   export enum CandidatesCase { 
