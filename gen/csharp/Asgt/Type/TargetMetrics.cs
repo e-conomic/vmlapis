@@ -24,25 +24,26 @@ namespace Asgt.Type {
     static TargetMetricsReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Ch5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8SCWFzZ3QudHlwZSK/",
+            "Ch5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8SCWFzZ3QudHlwZSLR",
             "AwoNVGFyZ2V0TWV0cmljcxIWCgZ0YXJnZXQYASABKAlSBnRhcmdldBI5Cgdt",
             "ZXRyaWNzGAIgAygLMh8uYXNndC50eXBlLlRhcmdldE1ldHJpY3MuTWV0cmlj",
-            "UgdtZXRyaWNzEhAKA21jYxgDIAMoAlIDbWNjEhoKCGFjY3VyYWN5GAQgAygC",
-            "UghhY2N1cmFjeRIrChFiYWxhbmNlZF9hY2N1cmFjeRgFIAMoAlIQYmFsYW5j",
-            "ZWRBY2N1cmFjeRr/AQoGTWV0cmljEhwKCXByZWNpc2lvbhgBIAEoAlIJcHJl",
-            "Y2lzaW9uEh4KCmNvbmZpZGVuY2UYAiABKAJSCmNvbmZpZGVuY2USHwoLYW5z",
-            "d2VyX3JhdGUYAyABKAJSCmFuc3dlclJhdGUSIwoNdHJ1ZV9wb3NpdGl2ZRgE",
-            "IAEoBVIMdHJ1ZVBvc2l0aXZlEiMKDXRydWVfbmVnYXRpdmUYBSABKAVSDHRy",
-            "dWVOZWdhdGl2ZRIlCg5mYWxzZV9wb3NpdGl2ZRgGIAEoBVINZmFsc2VQb3Np",
-            "dGl2ZRIlCg5mYWxzZV9uZWdhdGl2ZRgHIAEoBVINZmFsc2VOZWdhdGl2ZUKl",
-            "AQoSYWkudmlzbWEuYXNndC50eXBlQhJUYXJnZXRNZXRyaWNzUHJvdG9QAVo2",
-            "Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC90eXBl",
-            "O2FzZ3R0eXBlogIDQVRYqgIJQXNndC5UeXBlygIJQXNndFxUeXBl4gIVQXNn",
-            "dFxUeXBlXEdQQk1ldGFkYXRh6gIKQXNndDo6VHlwZWIGcHJvdG8z"));
+            "UgdtZXRyaWNzGtoCCgZNZXRyaWMSHAoJcHJlY2lzaW9uGAEgASgCUglwcmVj",
+            "aXNpb24SHgoKY29uZmlkZW5jZRgCIAEoAlIKY29uZmlkZW5jZRIfCgthbnN3",
+            "ZXJfcmF0ZRgDIAEoAlIKYW5zd2VyUmF0ZRIjCg10cnVlX3Bvc2l0aXZlGAQg",
+            "ASgFUgx0cnVlUG9zaXRpdmUSIwoNdHJ1ZV9uZWdhdGl2ZRgFIAEoBVIMdHJ1",
+            "ZU5lZ2F0aXZlEiUKDmZhbHNlX3Bvc2l0aXZlGAYgASgFUg1mYWxzZVBvc2l0",
+            "aXZlEiUKDmZhbHNlX25lZ2F0aXZlGAcgASgFUg1mYWxzZU5lZ2F0aXZlEhAK",
+            "A21jYxgIIAEoAlIDbWNjEhoKCGFjY3VyYWN5GAkgASgCUghhY2N1cmFjeRIr",
+            "ChFiYWxhbmNlZF9hY2N1cmFjeRgKIAEoAlIQYmFsYW5jZWRBY2N1cmFjeUoE",
+            "CAMQBEoECAQQBUoECAUQBkKlAQoSYWkudmlzbWEuYXNndC50eXBlQhJUYXJn",
+            "ZXRNZXRyaWNzUHJvdG9QAVo2Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
+            "cy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlogIDQVRYqgIJQXNndC5UeXBl",
+            "ygIJQXNndFxUeXBl4gIVQXNndFxUeXBlXEdQQk1ldGFkYXRh6gIKQXNndDo6",
+            "VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics), global::Asgt.Type.TargetMetrics.Parser, new[]{ "Target", "Metrics", "Mcc", "Accuracy", "BalancedAccuracy" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.Metric), global::Asgt.Type.TargetMetrics.Types.Metric.Parser, new[]{ "Precision", "Confidence", "AnswerRate", "TruePositive", "TrueNegative", "FalsePositive", "FalseNegative" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics), global::Asgt.Type.TargetMetrics.Parser, new[]{ "Target", "Metrics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.TargetMetrics.Types.Metric), global::Asgt.Type.TargetMetrics.Types.Metric.Parser, new[]{ "Precision", "Confidence", "AnswerRate", "TruePositive", "TrueNegative", "FalsePositive", "FalseNegative", "Mcc", "Accuracy", "BalancedAccuracy" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -85,9 +86,6 @@ namespace Asgt.Type {
     public TargetMetrics(TargetMetrics other) : this() {
       target_ = other.target_;
       metrics_ = other.metrics_.Clone();
-      mcc_ = other.mcc_.Clone();
-      accuracy_ = other.accuracy_.Clone();
-      balancedAccuracy_ = other.balancedAccuracy_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -120,42 +118,6 @@ namespace Asgt.Type {
       get { return metrics_; }
     }
 
-    /// <summary>Field number for the "mcc" field.</summary>
-    public const int MccFieldNumber = 3;
-    private static readonly pb::FieldCodec<float> _repeated_mcc_codec
-        = pb::FieldCodec.ForFloat(26);
-    private readonly pbc::RepeatedField<float> mcc_ = new pbc::RepeatedField<float>();
-    /// <summary>
-    /// Matthews correlation coefficient
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<float> Mcc {
-      get { return mcc_; }
-    }
-
-    /// <summary>Field number for the "accuracy" field.</summary>
-    public const int AccuracyFieldNumber = 4;
-    private static readonly pb::FieldCodec<float> _repeated_accuracy_codec
-        = pb::FieldCodec.ForFloat(34);
-    private readonly pbc::RepeatedField<float> accuracy_ = new pbc::RepeatedField<float>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<float> Accuracy {
-      get { return accuracy_; }
-    }
-
-    /// <summary>Field number for the "balanced_accuracy" field.</summary>
-    public const int BalancedAccuracyFieldNumber = 5;
-    private static readonly pb::FieldCodec<float> _repeated_balancedAccuracy_codec
-        = pb::FieldCodec.ForFloat(42);
-    private readonly pbc::RepeatedField<float> balancedAccuracy_ = new pbc::RepeatedField<float>();
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<float> BalancedAccuracy {
-      get { return balancedAccuracy_; }
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -173,9 +135,6 @@ namespace Asgt.Type {
       }
       if (Target != other.Target) return false;
       if(!metrics_.Equals(other.metrics_)) return false;
-      if(!mcc_.Equals(other.mcc_)) return false;
-      if(!accuracy_.Equals(other.accuracy_)) return false;
-      if(!balancedAccuracy_.Equals(other.balancedAccuracy_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -185,9 +144,6 @@ namespace Asgt.Type {
       int hash = 1;
       if (Target.Length != 0) hash ^= Target.GetHashCode();
       hash ^= metrics_.GetHashCode();
-      hash ^= mcc_.GetHashCode();
-      hash ^= accuracy_.GetHashCode();
-      hash ^= balancedAccuracy_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -211,9 +167,6 @@ namespace Asgt.Type {
         output.WriteString(Target);
       }
       metrics_.WriteTo(output, _repeated_metrics_codec);
-      mcc_.WriteTo(output, _repeated_mcc_codec);
-      accuracy_.WriteTo(output, _repeated_accuracy_codec);
-      balancedAccuracy_.WriteTo(output, _repeated_balancedAccuracy_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -229,9 +182,6 @@ namespace Asgt.Type {
         output.WriteString(Target);
       }
       metrics_.WriteTo(ref output, _repeated_metrics_codec);
-      mcc_.WriteTo(ref output, _repeated_mcc_codec);
-      accuracy_.WriteTo(ref output, _repeated_accuracy_codec);
-      balancedAccuracy_.WriteTo(ref output, _repeated_balancedAccuracy_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -246,9 +196,6 @@ namespace Asgt.Type {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Target);
       }
       size += metrics_.CalculateSize(_repeated_metrics_codec);
-      size += mcc_.CalculateSize(_repeated_mcc_codec);
-      size += accuracy_.CalculateSize(_repeated_accuracy_codec);
-      size += balancedAccuracy_.CalculateSize(_repeated_balancedAccuracy_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -265,9 +212,6 @@ namespace Asgt.Type {
         Target = other.Target;
       }
       metrics_.Add(other.metrics_);
-      mcc_.Add(other.mcc_);
-      accuracy_.Add(other.accuracy_);
-      balancedAccuracy_.Add(other.balancedAccuracy_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -291,21 +235,6 @@ namespace Asgt.Type {
             metrics_.AddEntriesFrom(input, _repeated_metrics_codec);
             break;
           }
-          case 26:
-          case 29: {
-            mcc_.AddEntriesFrom(input, _repeated_mcc_codec);
-            break;
-          }
-          case 34:
-          case 37: {
-            accuracy_.AddEntriesFrom(input, _repeated_accuracy_codec);
-            break;
-          }
-          case 42:
-          case 45: {
-            balancedAccuracy_.AddEntriesFrom(input, _repeated_balancedAccuracy_codec);
-            break;
-          }
         }
       }
     #endif
@@ -327,21 +256,6 @@ namespace Asgt.Type {
           }
           case 18: {
             metrics_.AddEntriesFrom(ref input, _repeated_metrics_codec);
-            break;
-          }
-          case 26:
-          case 29: {
-            mcc_.AddEntriesFrom(ref input, _repeated_mcc_codec);
-            break;
-          }
-          case 34:
-          case 37: {
-            accuracy_.AddEntriesFrom(ref input, _repeated_accuracy_codec);
-            break;
-          }
-          case 42:
-          case 45: {
-            balancedAccuracy_.AddEntriesFrom(ref input, _repeated_balancedAccuracy_codec);
             break;
           }
         }
@@ -395,6 +309,9 @@ namespace Asgt.Type {
           trueNegative_ = other.trueNegative_;
           falsePositive_ = other.falsePositive_;
           falseNegative_ = other.falseNegative_;
+          mcc_ = other.mcc_;
+          accuracy_ = other.accuracy_;
+          balancedAccuracy_ = other.balancedAccuracy_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -488,6 +405,45 @@ namespace Asgt.Type {
           }
         }
 
+        /// <summary>Field number for the "mcc" field.</summary>
+        public const int MccFieldNumber = 8;
+        private float mcc_;
+        /// <summary>
+        /// Matthews correlation coefficient
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public float Mcc {
+          get { return mcc_; }
+          set {
+            mcc_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "accuracy" field.</summary>
+        public const int AccuracyFieldNumber = 9;
+        private float accuracy_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public float Accuracy {
+          get { return accuracy_; }
+          set {
+            accuracy_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "balanced_accuracy" field.</summary>
+        public const int BalancedAccuracyFieldNumber = 10;
+        private float balancedAccuracy_;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public float BalancedAccuracy {
+          get { return balancedAccuracy_; }
+          set {
+            balancedAccuracy_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -510,6 +466,9 @@ namespace Asgt.Type {
           if (TrueNegative != other.TrueNegative) return false;
           if (FalsePositive != other.FalsePositive) return false;
           if (FalseNegative != other.FalseNegative) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Mcc, other.Mcc)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(Accuracy, other.Accuracy)) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(BalancedAccuracy, other.BalancedAccuracy)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -524,6 +483,9 @@ namespace Asgt.Type {
           if (TrueNegative != 0) hash ^= TrueNegative.GetHashCode();
           if (FalsePositive != 0) hash ^= FalsePositive.GetHashCode();
           if (FalseNegative != 0) hash ^= FalseNegative.GetHashCode();
+          if (Mcc != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Mcc);
+          if (Accuracy != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Accuracy);
+          if (BalancedAccuracy != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(BalancedAccuracy);
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -570,6 +532,18 @@ namespace Asgt.Type {
             output.WriteRawTag(56);
             output.WriteInt32(FalseNegative);
           }
+          if (Mcc != 0F) {
+            output.WriteRawTag(69);
+            output.WriteFloat(Mcc);
+          }
+          if (Accuracy != 0F) {
+            output.WriteRawTag(77);
+            output.WriteFloat(Accuracy);
+          }
+          if (BalancedAccuracy != 0F) {
+            output.WriteRawTag(85);
+            output.WriteFloat(BalancedAccuracy);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -608,6 +582,18 @@ namespace Asgt.Type {
             output.WriteRawTag(56);
             output.WriteInt32(FalseNegative);
           }
+          if (Mcc != 0F) {
+            output.WriteRawTag(69);
+            output.WriteFloat(Mcc);
+          }
+          if (Accuracy != 0F) {
+            output.WriteRawTag(77);
+            output.WriteFloat(Accuracy);
+          }
+          if (BalancedAccuracy != 0F) {
+            output.WriteRawTag(85);
+            output.WriteFloat(BalancedAccuracy);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -638,6 +624,15 @@ namespace Asgt.Type {
           }
           if (FalseNegative != 0) {
             size += 1 + pb::CodedOutputStream.ComputeInt32Size(FalseNegative);
+          }
+          if (Mcc != 0F) {
+            size += 1 + 4;
+          }
+          if (Accuracy != 0F) {
+            size += 1 + 4;
+          }
+          if (BalancedAccuracy != 0F) {
+            size += 1 + 4;
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -671,6 +666,15 @@ namespace Asgt.Type {
           }
           if (other.FalseNegative != 0) {
             FalseNegative = other.FalseNegative;
+          }
+          if (other.Mcc != 0F) {
+            Mcc = other.Mcc;
+          }
+          if (other.Accuracy != 0F) {
+            Accuracy = other.Accuracy;
+          }
+          if (other.BalancedAccuracy != 0F) {
+            BalancedAccuracy = other.BalancedAccuracy;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -715,6 +719,18 @@ namespace Asgt.Type {
                 FalseNegative = input.ReadInt32();
                 break;
               }
+              case 69: {
+                Mcc = input.ReadFloat();
+                break;
+              }
+              case 77: {
+                Accuracy = input.ReadFloat();
+                break;
+              }
+              case 85: {
+                BalancedAccuracy = input.ReadFloat();
+                break;
+              }
             }
           }
         #endif
@@ -756,6 +772,18 @@ namespace Asgt.Type {
               }
               case 56: {
                 FalseNegative = input.ReadInt32();
+                break;
+              }
+              case 69: {
+                Mcc = input.ReadFloat();
+                break;
+              }
+              case 77: {
+                Accuracy = input.ReadFloat();
+                break;
+              }
+              case 85: {
+                BalancedAccuracy = input.ReadFloat();
                 break;
               }
             }
