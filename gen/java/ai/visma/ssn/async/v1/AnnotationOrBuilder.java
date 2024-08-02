@@ -69,5 +69,82 @@ public interface AnnotationOrBuilder extends
    */
   ai.visma.ssn.async.v1.PurchaseLineCandidateOrBuilder getPurchaseLineCandidateOrBuilder();
 
+  /**
+   * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+   * @return Whether the answerCandidates field is set.
+   */
+  boolean hasAnswerCandidates();
+  /**
+   * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+   * @return The answerCandidates.
+   */
+  ai.visma.ssn.async.v1.AnswerCandidate getAnswerCandidates();
+  /**
+   * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+   */
+  ai.visma.ssn.async.v1.AnswerCandidateOrBuilder getAnswerCandidatesOrBuilder();
+
+  /**
+   * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+   * @return Whether the lineCandidates field is set.
+   */
+  boolean hasLineCandidates();
+  /**
+   * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+   * @return The lineCandidates.
+   */
+  ai.visma.ssn.async.v1.LineCandidate getLineCandidates();
+  /**
+   * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
+   */
+  ai.visma.ssn.async.v1.LineCandidateOrBuilder getLineCandidatesOrBuilder();
+
+  /**
+   * <code>.ssn.type.PageText page_text = 6 [json_name = "pageText"];</code>
+   * @return Whether the pageText field is set.
+   */
+  boolean hasPageText();
+  /**
+   * <code>.ssn.type.PageText page_text = 6 [json_name = "pageText"];</code>
+   * @return The pageText.
+   */
+  ai.visma.ssn.type.PageText getPageText();
+  /**
+   * <code>.ssn.type.PageText page_text = 6 [json_name = "pageText"];</code>
+   */
+  ai.visma.ssn.type.PageTextOrBuilder getPageTextOrBuilder();
+
+  /**
+   * <code>string value = 7 [json_name = "value"];</code>
+   * @return Whether the value field is set.
+   */
+  boolean hasValue();
+  /**
+   * <code>string value = 7 [json_name = "value"];</code>
+   * @return The value.
+   */
+  java.lang.String getValue();
+  /**
+   * <code>string value = 7 [json_name = "value"];</code>
+   * @return The bytes for value.
+   */
+  com.google.protobuf.ByteString
+      getValueBytes();
+
+  /**
+   * <code>.ssn.type.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+   * @return Whether the textAnnotation field is set.
+   */
+  boolean hasTextAnnotation();
+  /**
+   * <code>.ssn.type.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+   * @return The textAnnotation.
+   */
+  ai.visma.ssn.type.TextAnnotation getTextAnnotation();
+  /**
+   * <code>.ssn.type.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+   */
+  ai.visma.ssn.type.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
+
   ai.visma.ssn.async.v1.Annotation.CandidatesCase getCandidatesCase();
 }
