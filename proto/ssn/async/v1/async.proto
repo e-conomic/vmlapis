@@ -120,7 +120,7 @@ message PageText {
 }
 
 message TextAnnotation {
-  ssn.type.TextAnnotation text_annotation = 1;
+  repeated ssn.type.TextAnnotation text_annotation = 1;
 }
 
 message Annotation {
