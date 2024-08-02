@@ -50,8 +50,7 @@ private static final long serialVersionUID = 0L;
     ANSWER_CANDIDATES(4),
     LINE_CANDIDATES(5),
     PAGE_TEXT(6),
-    VALUE(7),
-    TEXT_ANNOTATION(8),
+    TEXT_ANNOTATION(7),
     CANDIDATES_NOT_SET(0);
     private final int value;
     private CandidatesCase(int value) {
@@ -74,8 +73,7 @@ private static final long serialVersionUID = 0L;
         case 4: return ANSWER_CANDIDATES;
         case 5: return LINE_CANDIDATES;
         case 6: return PAGE_TEXT;
-        case 7: return VALUE;
-        case 8: return TEXT_ANNOTATION;
+        case 7: return TEXT_ANNOTATION;
         case 0: return CANDIDATES_NOT_SET;
         default: return null;
       }
@@ -305,84 +303,32 @@ private static final long serialVersionUID = 0L;
     return ai.visma.ssn.async.v1.PageText.getDefaultInstance();
   }
 
-  public static final int VALUE_FIELD_NUMBER = 7;
+  public static final int TEXT_ANNOTATION_FIELD_NUMBER = 7;
   /**
-   * <code>string value = 7 [json_name = "value"];</code>
-   * @return Whether the value field is set.
-   */
-  public boolean hasValue() {
-    return candidatesCase_ == 7;
-  }
-  /**
-   * <code>string value = 7 [json_name = "value"];</code>
-   * @return The value.
-   */
-  public java.lang.String getValue() {
-    java.lang.Object ref = "";
-    if (candidatesCase_ == 7) {
-      ref = candidates_;
-    }
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      if (candidatesCase_ == 7) {
-        candidates_ = s;
-      }
-      return s;
-    }
-  }
-  /**
-   * <code>string value = 7 [json_name = "value"];</code>
-   * @return The bytes for value.
-   */
-  public com.google.protobuf.ByteString
-      getValueBytes() {
-    java.lang.Object ref = "";
-    if (candidatesCase_ == 7) {
-      ref = candidates_;
-    }
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      if (candidatesCase_ == 7) {
-        candidates_ = b;
-      }
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
-  }
-
-  public static final int TEXT_ANNOTATION_FIELD_NUMBER = 8;
-  /**
-   * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+   * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
    * @return Whether the textAnnotation field is set.
    */
   @java.lang.Override
   public boolean hasTextAnnotation() {
-    return candidatesCase_ == 8;
+    return candidatesCase_ == 7;
   }
   /**
-   * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+   * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
    * @return The textAnnotation.
    */
   @java.lang.Override
   public ai.visma.ssn.async.v1.TextAnnotation getTextAnnotation() {
-    if (candidatesCase_ == 8) {
+    if (candidatesCase_ == 7) {
        return (ai.visma.ssn.async.v1.TextAnnotation) candidates_;
     }
     return ai.visma.ssn.async.v1.TextAnnotation.getDefaultInstance();
   }
   /**
-   * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+   * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
    */
   @java.lang.Override
   public ai.visma.ssn.async.v1.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
-    if (candidatesCase_ == 8) {
+    if (candidatesCase_ == 7) {
        return (ai.visma.ssn.async.v1.TextAnnotation) candidates_;
     }
     return ai.visma.ssn.async.v1.TextAnnotation.getDefaultInstance();
@@ -421,10 +367,7 @@ private static final long serialVersionUID = 0L;
       output.writeMessage(6, (ai.visma.ssn.async.v1.PageText) candidates_);
     }
     if (candidatesCase_ == 7) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, candidates_);
-    }
-    if (candidatesCase_ == 8) {
-      output.writeMessage(8, (ai.visma.ssn.async.v1.TextAnnotation) candidates_);
+      output.writeMessage(7, (ai.visma.ssn.async.v1.TextAnnotation) candidates_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -459,11 +402,8 @@ private static final long serialVersionUID = 0L;
         .computeMessageSize(6, (ai.visma.ssn.async.v1.PageText) candidates_);
     }
     if (candidatesCase_ == 7) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, candidates_);
-    }
-    if (candidatesCase_ == 8) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(8, (ai.visma.ssn.async.v1.TextAnnotation) candidates_);
+        .computeMessageSize(7, (ai.visma.ssn.async.v1.TextAnnotation) candidates_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -505,10 +445,6 @@ private static final long serialVersionUID = 0L;
             .equals(other.getPageText())) return false;
         break;
       case 7:
-        if (!getValue()
-            .equals(other.getValue())) return false;
-        break;
-      case 8:
         if (!getTextAnnotation()
             .equals(other.getTextAnnotation())) return false;
         break;
@@ -550,10 +486,6 @@ private static final long serialVersionUID = 0L;
         hash = (53 * hash) + getPageText().hashCode();
         break;
       case 7:
-        hash = (37 * hash) + VALUE_FIELD_NUMBER;
-        hash = (53 * hash) + getValue().hashCode();
-        break;
-      case 8:
         hash = (37 * hash) + TEXT_ANNOTATION_FIELD_NUMBER;
         hash = (53 * hash) + getTextAnnotation().hashCode();
         break;
@@ -774,7 +706,7 @@ private static final long serialVersionUID = 0L;
           pageTextBuilder_ != null) {
         result.candidates_ = pageTextBuilder_.build();
       }
-      if (candidatesCase_ == 8 &&
+      if (candidatesCase_ == 7 &&
           textAnnotationBuilder_ != null) {
         result.candidates_ = textAnnotationBuilder_.build();
       }
@@ -848,12 +780,6 @@ private static final long serialVersionUID = 0L;
         }
         case PAGE_TEXT: {
           mergePageText(other.getPageText());
-          break;
-        }
-        case VALUE: {
-          candidatesCase_ = 7;
-          candidates_ = other.candidates_;
-          onChanged();
           break;
         }
         case TEXT_ANNOTATION: {
@@ -931,18 +857,12 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 50
             case 58: {
-              java.lang.String s = input.readStringRequireUtf8();
-              candidatesCase_ = 7;
-              candidates_ = s;
-              break;
-            } // case 58
-            case 66: {
               input.readMessage(
                   getTextAnnotationFieldBuilder().getBuilder(),
                   extensionRegistry);
-              candidatesCase_ = 8;
+              candidatesCase_ = 7;
               break;
-            } // case 66
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1813,129 +1733,36 @@ private static final long serialVersionUID = 0L;
       return pageTextBuilder_;
     }
 
-    /**
-     * <code>string value = 7 [json_name = "value"];</code>
-     * @return Whether the value field is set.
-     */
-    @java.lang.Override
-    public boolean hasValue() {
-      return candidatesCase_ == 7;
-    }
-    /**
-     * <code>string value = 7 [json_name = "value"];</code>
-     * @return The value.
-     */
-    @java.lang.Override
-    public java.lang.String getValue() {
-      java.lang.Object ref = "";
-      if (candidatesCase_ == 7) {
-        ref = candidates_;
-      }
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        if (candidatesCase_ == 7) {
-          candidates_ = s;
-        }
-        return s;
-      } else {
-        return (java.lang.String) ref;
-      }
-    }
-    /**
-     * <code>string value = 7 [json_name = "value"];</code>
-     * @return The bytes for value.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getValueBytes() {
-      java.lang.Object ref = "";
-      if (candidatesCase_ == 7) {
-        ref = candidates_;
-      }
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        if (candidatesCase_ == 7) {
-          candidates_ = b;
-        }
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-    /**
-     * <code>string value = 7 [json_name = "value"];</code>
-     * @param value The value to set.
-     * @return This builder for chaining.
-     */
-    public Builder setValue(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      candidatesCase_ = 7;
-      candidates_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>string value = 7 [json_name = "value"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearValue() {
-      if (candidatesCase_ == 7) {
-        candidatesCase_ = 0;
-        candidates_ = null;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <code>string value = 7 [json_name = "value"];</code>
-     * @param value The bytes for value to set.
-     * @return This builder for chaining.
-     */
-    public Builder setValueBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      candidatesCase_ = 7;
-      candidates_ = value;
-      onChanged();
-      return this;
-    }
-
     private com.google.protobuf.SingleFieldBuilderV3<
         ai.visma.ssn.async.v1.TextAnnotation, ai.visma.ssn.async.v1.TextAnnotation.Builder, ai.visma.ssn.async.v1.TextAnnotationOrBuilder> textAnnotationBuilder_;
     /**
-     * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+     * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
      * @return Whether the textAnnotation field is set.
      */
     @java.lang.Override
     public boolean hasTextAnnotation() {
-      return candidatesCase_ == 8;
+      return candidatesCase_ == 7;
     }
     /**
-     * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+     * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
      * @return The textAnnotation.
      */
     @java.lang.Override
     public ai.visma.ssn.async.v1.TextAnnotation getTextAnnotation() {
       if (textAnnotationBuilder_ == null) {
-        if (candidatesCase_ == 8) {
+        if (candidatesCase_ == 7) {
           return (ai.visma.ssn.async.v1.TextAnnotation) candidates_;
         }
         return ai.visma.ssn.async.v1.TextAnnotation.getDefaultInstance();
       } else {
-        if (candidatesCase_ == 8) {
+        if (candidatesCase_ == 7) {
           return textAnnotationBuilder_.getMessage();
         }
         return ai.visma.ssn.async.v1.TextAnnotation.getDefaultInstance();
       }
     }
     /**
-     * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+     * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
      */
     public Builder setTextAnnotation(ai.visma.ssn.async.v1.TextAnnotation value) {
       if (textAnnotationBuilder_ == null) {
@@ -1947,11 +1774,11 @@ private static final long serialVersionUID = 0L;
       } else {
         textAnnotationBuilder_.setMessage(value);
       }
-      candidatesCase_ = 8;
+      candidatesCase_ = 7;
       return this;
     }
     /**
-     * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+     * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
      */
     public Builder setTextAnnotation(
         ai.visma.ssn.async.v1.TextAnnotation.Builder builderForValue) {
@@ -1961,15 +1788,15 @@ private static final long serialVersionUID = 0L;
       } else {
         textAnnotationBuilder_.setMessage(builderForValue.build());
       }
-      candidatesCase_ = 8;
+      candidatesCase_ = 7;
       return this;
     }
     /**
-     * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+     * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
      */
     public Builder mergeTextAnnotation(ai.visma.ssn.async.v1.TextAnnotation value) {
       if (textAnnotationBuilder_ == null) {
-        if (candidatesCase_ == 8 &&
+        if (candidatesCase_ == 7 &&
             candidates_ != ai.visma.ssn.async.v1.TextAnnotation.getDefaultInstance()) {
           candidates_ = ai.visma.ssn.async.v1.TextAnnotation.newBuilder((ai.visma.ssn.async.v1.TextAnnotation) candidates_)
               .mergeFrom(value).buildPartial();
@@ -1978,27 +1805,27 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       } else {
-        if (candidatesCase_ == 8) {
+        if (candidatesCase_ == 7) {
           textAnnotationBuilder_.mergeFrom(value);
         } else {
           textAnnotationBuilder_.setMessage(value);
         }
       }
-      candidatesCase_ = 8;
+      candidatesCase_ = 7;
       return this;
     }
     /**
-     * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+     * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
      */
     public Builder clearTextAnnotation() {
       if (textAnnotationBuilder_ == null) {
-        if (candidatesCase_ == 8) {
+        if (candidatesCase_ == 7) {
           candidatesCase_ = 0;
           candidates_ = null;
           onChanged();
         }
       } else {
-        if (candidatesCase_ == 8) {
+        if (candidatesCase_ == 7) {
           candidatesCase_ = 0;
           candidates_ = null;
         }
@@ -2007,33 +1834,33 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+     * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
      */
     public ai.visma.ssn.async.v1.TextAnnotation.Builder getTextAnnotationBuilder() {
       return getTextAnnotationFieldBuilder().getBuilder();
     }
     /**
-     * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+     * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
      */
     @java.lang.Override
     public ai.visma.ssn.async.v1.TextAnnotationOrBuilder getTextAnnotationOrBuilder() {
-      if ((candidatesCase_ == 8) && (textAnnotationBuilder_ != null)) {
+      if ((candidatesCase_ == 7) && (textAnnotationBuilder_ != null)) {
         return textAnnotationBuilder_.getMessageOrBuilder();
       } else {
-        if (candidatesCase_ == 8) {
+        if (candidatesCase_ == 7) {
           return (ai.visma.ssn.async.v1.TextAnnotation) candidates_;
         }
         return ai.visma.ssn.async.v1.TextAnnotation.getDefaultInstance();
       }
     }
     /**
-     * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+     * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         ai.visma.ssn.async.v1.TextAnnotation, ai.visma.ssn.async.v1.TextAnnotation.Builder, ai.visma.ssn.async.v1.TextAnnotationOrBuilder> 
         getTextAnnotationFieldBuilder() {
       if (textAnnotationBuilder_ == null) {
-        if (!(candidatesCase_ == 8)) {
+        if (!(candidatesCase_ == 7)) {
           candidates_ = ai.visma.ssn.async.v1.TextAnnotation.getDefaultInstance();
         }
         textAnnotationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
@@ -2043,7 +1870,7 @@ private static final long serialVersionUID = 0L;
                 isClean());
         candidates_ = null;
       }
-      candidatesCase_ = 8;
+      candidatesCase_ = 7;
       onChanged();
       return textAnnotationBuilder_;
     }

@@ -270,9 +270,6 @@ export class Annotation extends jspb.Message {
   hasPageText(): boolean;
   clearPageText(): Annotation;
 
-  getValue(): string;
-  setValue(value: string): Annotation;
-
   getTextAnnotation(): TextAnnotation | undefined;
   setTextAnnotation(value?: TextAnnotation): Annotation;
   hasTextAnnotation(): boolean;
@@ -296,7 +293,6 @@ export namespace Annotation {
     answerCandidates?: AnswerCandidate.AsObject,
     lineCandidates?: LineCandidate.AsObject,
     pageText?: PageText.AsObject,
-    value: string,
     textAnnotation?: TextAnnotation.AsObject,
   }
 
@@ -307,8 +303,7 @@ export namespace Annotation {
     ANSWER_CANDIDATES = 4,
     LINE_CANDIDATES = 5,
     PAGE_TEXT = 6,
-    VALUE = 7,
-    TEXT_ANNOTATION = 8,
+    TEXT_ANNOTATION = 7,
   }
 }
 

@@ -115,34 +115,17 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.async.v1.PageTextOrBuilder getPageTextOrBuilder();
 
   /**
-   * <code>string value = 7 [json_name = "value"];</code>
-   * @return Whether the value field is set.
-   */
-  boolean hasValue();
-  /**
-   * <code>string value = 7 [json_name = "value"];</code>
-   * @return The value.
-   */
-  java.lang.String getValue();
-  /**
-   * <code>string value = 7 [json_name = "value"];</code>
-   * @return The bytes for value.
-   */
-  com.google.protobuf.ByteString
-      getValueBytes();
-
-  /**
-   * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+   * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
    * @return Whether the textAnnotation field is set.
    */
   boolean hasTextAnnotation();
   /**
-   * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+   * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
    * @return The textAnnotation.
    */
   ai.visma.ssn.async.v1.TextAnnotation getTextAnnotation();
   /**
-   * <code>.ssn.async.v1.TextAnnotation text_annotation = 8 [json_name = "textAnnotation"];</code>
+   * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
    */
   ai.visma.ssn.async.v1.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
 

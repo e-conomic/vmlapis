@@ -2191,7 +2191,7 @@ proto.ssn.async.v1.TextAnnotation.prototype.clearTextAnnotationList = function()
  * @private {!Array<!Array<number>>}
  * @const
  */
-proto.ssn.async.v1.Annotation.oneofGroups_ = [[2,3,4,5,6,7,8]];
+proto.ssn.async.v1.Annotation.oneofGroups_ = [[2,3,4,5,6,7]];
 
 /**
  * @enum {number}
@@ -2203,8 +2203,7 @@ proto.ssn.async.v1.Annotation.CandidatesCase = {
   ANSWER_CANDIDATES: 4,
   LINE_CANDIDATES: 5,
   PAGE_TEXT: 6,
-  VALUE: 7,
-  TEXT_ANNOTATION: 8
+  TEXT_ANNOTATION: 7
 };
 
 /**
@@ -2251,7 +2250,6 @@ proto.ssn.async.v1.Annotation.toObject = function(includeInstance, msg) {
     answerCandidates: (f = msg.getAnswerCandidates()) && proto.ssn.async.v1.AnswerCandidate.toObject(includeInstance, f),
     lineCandidates: (f = msg.getLineCandidates()) && proto.ssn.async.v1.LineCandidate.toObject(includeInstance, f),
     pageText: (f = msg.getPageText()) && proto.ssn.async.v1.PageText.toObject(includeInstance, f),
-    value: jspb.Message.getFieldWithDefault(msg, 7, ""),
     textAnnotation: (f = msg.getTextAnnotation()) && proto.ssn.async.v1.TextAnnotation.toObject(includeInstance, f)
   };
 
@@ -2319,10 +2317,6 @@ proto.ssn.async.v1.Annotation.deserializeBinaryFromReader = function(msg, reader
       msg.setPageText(value);
       break;
     case 7:
-      var value = /** @type {string} */ (reader.readString());
-      msg.setValue(value);
-      break;
-    case 8:
       var value = new proto.ssn.async.v1.TextAnnotation;
       reader.readMessage(value,proto.ssn.async.v1.TextAnnotation.deserializeBinaryFromReader);
       msg.setTextAnnotation(value);
@@ -2403,17 +2397,10 @@ proto.ssn.async.v1.Annotation.serializeBinaryToWriter = function(message, writer
       proto.ssn.async.v1.PageText.serializeBinaryToWriter
     );
   }
-  f = /** @type {string} */ (jspb.Message.getField(message, 7));
-  if (f != null) {
-    writer.writeString(
-      7,
-      f
-    );
-  }
   f = message.getTextAnnotation();
   if (f != null) {
     writer.writeMessage(
-      8,
+      7,
       f,
       proto.ssn.async.v1.TextAnnotation.serializeBinaryToWriter
     );
@@ -2625,48 +2612,12 @@ proto.ssn.async.v1.Annotation.prototype.hasPageText = function() {
 
 
 /**
- * optional string value = 7;
- * @return {string}
- */
-proto.ssn.async.v1.Annotation.prototype.getValue = function() {
-  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 7, ""));
-};
-
-
-/**
- * @param {string} value
- * @return {!proto.ssn.async.v1.Annotation} returns this
- */
-proto.ssn.async.v1.Annotation.prototype.setValue = function(value) {
-  return jspb.Message.setOneofField(this, 7, proto.ssn.async.v1.Annotation.oneofGroups_[0], value);
-};
-
-
-/**
- * Clears the field making it undefined.
- * @return {!proto.ssn.async.v1.Annotation} returns this
- */
-proto.ssn.async.v1.Annotation.prototype.clearValue = function() {
-  return jspb.Message.setOneofField(this, 7, proto.ssn.async.v1.Annotation.oneofGroups_[0], undefined);
-};
-
-
-/**
- * Returns whether this field is set.
- * @return {boolean}
- */
-proto.ssn.async.v1.Annotation.prototype.hasValue = function() {
-  return jspb.Message.getField(this, 7) != null;
-};
-
-
-/**
- * optional TextAnnotation text_annotation = 8;
+ * optional TextAnnotation text_annotation = 7;
  * @return {?proto.ssn.async.v1.TextAnnotation}
  */
 proto.ssn.async.v1.Annotation.prototype.getTextAnnotation = function() {
   return /** @type{?proto.ssn.async.v1.TextAnnotation} */ (
-    jspb.Message.getWrapperField(this, proto.ssn.async.v1.TextAnnotation, 8));
+    jspb.Message.getWrapperField(this, proto.ssn.async.v1.TextAnnotation, 7));
 };
 
 
@@ -2675,7 +2626,7 @@ proto.ssn.async.v1.Annotation.prototype.getTextAnnotation = function() {
  * @return {!proto.ssn.async.v1.Annotation} returns this
 */
 proto.ssn.async.v1.Annotation.prototype.setTextAnnotation = function(value) {
-  return jspb.Message.setOneofWrapperField(this, 8, proto.ssn.async.v1.Annotation.oneofGroups_[0], value);
+  return jspb.Message.setOneofWrapperField(this, 7, proto.ssn.async.v1.Annotation.oneofGroups_[0], value);
 };
 
 
@@ -2693,7 +2644,7 @@ proto.ssn.async.v1.Annotation.prototype.clearTextAnnotation = function() {
  * @return {boolean}
  */
 proto.ssn.async.v1.Annotation.prototype.hasTextAnnotation = function() {
-  return jspb.Message.getField(this, 8) != null;
+  return jspb.Message.getField(this, 7) != null;
 };
 
 
