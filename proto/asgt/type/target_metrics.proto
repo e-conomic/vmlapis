@@ -13,12 +13,13 @@ message TargetMetrics {
     int32 true_negative = 5;
     int32 false_positive = 6;
     int32 false_negative = 7;
+    // Matthews correlation coefficient
+    float mcc = 8;
+    float accuracy = 9;
+    float balanced_accuracy = 10;
   }
 
   string target = 1;
   repeated Metric metrics = 2;
-  // Matthews correlation coefficient
-  repeated float mcc = 3;
-  repeated float accuracy = 4;
-  repeated float balanced_accuracy = 5;
+  reserved 3, 4, 5;
 }
