@@ -131,8 +131,7 @@ message Annotation {
     AnswerCandidate answer_candidates = 4;
     LineCandidate line_candidates = 5;
     PageText page_text = 6;
-    string value = 7;
-    TextAnnotation text_annotation = 8;
+    TextAnnotation text_annotation = 7;
   }
 }
 // --- get: "/v1/transactions/{id}/results" ---
