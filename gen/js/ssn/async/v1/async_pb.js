@@ -408,7 +408,8 @@ proto.ssn.async.v1.CreateTransactionRequest.toObject = function(includeInstance,
     document: (f = msg.getDocument()) && ssn_annotator_v1_annotator_pb.Document.toObject(includeInstance, f),
     tagsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
     featuresList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
-    customId: jspb.Message.getFieldWithDefault(msg, 4, "")
+    customId: jspb.Message.getFieldWithDefault(msg, 4, ""),
+    minConfidence: jspb.Message.getFieldWithDefault(msg, 5, 0)
   };
 
   if (includeInstance) {
@@ -461,6 +462,10 @@ proto.ssn.async.v1.CreateTransactionRequest.deserializeBinaryFromReader = functi
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.setCustomId(value);
+      break;
+    case 5:
+      var value = /** @type {!proto.ssn.type.Confidence.Level} */ (reader.readEnum());
+      msg.setMinConfidence(value);
       break;
     default:
       reader.skipField();
@@ -517,6 +522,13 @@ proto.ssn.async.v1.CreateTransactionRequest.serializeBinaryToWriter = function(m
   if (f.length > 0) {
     writer.writeString(
       4,
+      f
+    );
+  }
+  f = message.getMinConfidence();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      5,
       f
     );
   }
@@ -649,6 +661,24 @@ proto.ssn.async.v1.CreateTransactionRequest.prototype.getCustomId = function() {
  */
 proto.ssn.async.v1.CreateTransactionRequest.prototype.setCustomId = function(value) {
   return jspb.Message.setProto3StringField(this, 4, value);
+};
+
+
+/**
+ * optional ssn.type.Confidence.Level min_confidence = 5;
+ * @return {!proto.ssn.type.Confidence.Level}
+ */
+proto.ssn.async.v1.CreateTransactionRequest.prototype.getMinConfidence = function() {
+  return /** @type {!proto.ssn.type.Confidence.Level} */ (jspb.Message.getFieldWithDefault(this, 5, 0));
+};
+
+
+/**
+ * @param {!proto.ssn.type.Confidence.Level} value
+ * @return {!proto.ssn.async.v1.CreateTransactionRequest} returns this
+ */
+proto.ssn.async.v1.CreateTransactionRequest.prototype.setMinConfidence = function(value) {
+  return jspb.Message.setProto3EnumField(this, 5, value);
 };
 
 

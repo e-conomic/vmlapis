@@ -127,4 +127,15 @@ public interface CreateTransactionRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCustomIdBytes();
+
+  /**
+   * <code>.ssn.type.Confidence.Level min_confidence = 5 [json_name = "minConfidence"];</code>
+   * @return The enum numeric value on the wire for minConfidence.
+   */
+  int getMinConfidenceValue();
+  /**
+   * <code>.ssn.type.Confidence.Level min_confidence = 5 [json_name = "minConfidence"];</code>
+   * @return The minConfidence.
+   */
+  ai.visma.ssn.type.Confidence.Level getMinConfidence();
 }

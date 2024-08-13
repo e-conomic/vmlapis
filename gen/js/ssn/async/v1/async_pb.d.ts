@@ -28,6 +28,9 @@ export class CreateTransactionRequest extends jspb.Message {
   getCustomId(): string;
   setCustomId(value: string): CreateTransactionRequest;
 
+  getMinConfidence(): ssn_type_candidate_pb.Confidence.Level;
+  setMinConfidence(value: ssn_type_candidate_pb.Confidence.Level): CreateTransactionRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateTransactionRequest.AsObject;
   static toObject(includeInstance: boolean, msg: CreateTransactionRequest): CreateTransactionRequest.AsObject;
@@ -42,6 +45,7 @@ export namespace CreateTransactionRequest {
     tagsList: Array<string>,
     featuresList: Array<string>,
     customId: string,
+    minConfidence: ssn_type_candidate_pb.Confidence.Level,
   }
 }
 

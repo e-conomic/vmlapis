@@ -104,76 +104,78 @@ public final class AsyncProto {
       "2/options/annotations.proto\032 ssn/annotat" +
       "or/v1/annotator.proto\032\030ssn/type/candidat" +
       "e.proto\032\036ssn/type/text_annotation.proto\032" +
-      "\027validate/validate.proto\"\237\001\n\030CreateTrans" +
+      "\027validate/validate.proto\"\342\001\n\030CreateTrans" +
       "actionRequest\0226\n\010document\030\001 \001(\0132\032.ssn.an" +
       "notator.v1.DocumentR\010document\022\022\n\004tags\030\002 " +
       "\003(\tR\004tags\022\032\n\010features\030\003 \003(\tR\010features\022\033\n" +
-      "\tcustom_id\030\004 \001(\tR\010customId\"H\n\031CreateTran" +
-      "sactionResponse\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcusto" +
-      "m_id\030\002 \001(\tR\010customId\"K\n\034GetTransactionRe" +
-      "sultsRequest\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_i" +
-      "d\030\002 \001(\tR\010customId\"\255\001\n\035GetTransactionResu" +
-      "ltsResponse\022\016\n\002id\030\001 \001(\tR\002id\022:\n\013annotatio" +
-      "ns\030\002 \003(\0132\030.ssn.async.v1.AnnotationR\013anno" +
-      "tations\022#\n\rerror_message\030\003 \001(\tR\014errorMes" +
-      "sage\022\033\n\tcustom_id\030\004 \001(\tR\010customId\">\n\tCan" +
-      "didate\0221\n\tcandidate\030\001 \003(\0132\023.ssn.type.Can" +
-      "didateR\tcandidate\"p\n\025PurchaseLineCandida" +
-      "te\022W\n\027purchase_line_candidate\030\001 \003(\0132\037.ss" +
-      "n.type.PurchaseLineCandidateR\025purchaseLi" +
-      "neCandidate\"Q\n\rLineCandidate\022@\n\017line_can" +
-      "didates\030\001 \003(\0132\027.ssn.type.LineCandidateR\016" +
-      "lineCandidates\"F\n\017AnswerCandidate\0223\n\007ans" +
-      "wers\030\001 \003(\0132\031.ssn.type.AnswerCandidateR\007a" +
-      "nswers\";\n\010PageText\022/\n\tpage_text\030\001 \003(\0132\022." +
-      "ssn.type.PageTextR\010pageText\"S\n\016TextAnnot" +
-      "ation\022A\n\017text_annotation\030\001 \003(\0132\030.ssn.typ" +
-      "e.TextAnnotationR\016textAnnotation\"\342\003\n\nAnn" +
-      "otation\022\030\n\007feature\030\001 \001(\tR\007feature\0227\n\tcan" +
-      "didate\030\002 \001(\0132\027.ssn.async.v1.CandidateH\000R" +
-      "\tcandidate\022]\n\027purchase_line_candidate\030\003 " +
-      "\001(\0132#.ssn.async.v1.PurchaseLineCandidate" +
-      "H\000R\025purchaseLineCandidate\022L\n\021answer_cand" +
-      "idates\030\004 \001(\0132\035.ssn.async.v1.AnswerCandid" +
-      "ateH\000R\020answerCandidates\022F\n\017line_candidat" +
-      "es\030\005 \001(\0132\033.ssn.async.v1.LineCandidateH\000R" +
-      "\016lineCandidates\0225\n\tpage_text\030\006 \001(\0132\026.ssn" +
-      ".async.v1.PageTextH\000R\010pageText\022G\n\017text_a" +
-      "nnotation\030\007 \001(\0132\034.ssn.async.v1.TextAnnot" +
-      "ationH\000R\016textAnnotationB\014\n\ncandidates\"J\n" +
-      "\033GetTransactionStatusRequest\022\016\n\002id\030\001 \001(\t" +
-      "R\002id\022\033\n\tcustom_id\030\002 \001(\tR\010customId\"\210\001\n\034Ge" +
-      "tTransactionStatusResponse\022\016\n\002id\030\001 \001(\tR\002" +
-      "id\022\026\n\006status\030\002 \001(\tR\006status\022#\n\rerror_mess" +
-      "age\030\003 \001(\tR\014errorMessage\022\033\n\tcustom_id\030\004 \001" +
-      "(\tR\010customId\"G\n\030DeleteTransactionRequest" +
-      "\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR\010cus" +
-      "tomId\"W\n\020DeleteTagRequest\022C\n\010tag_name\030\001 " +
-      "\001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_." +
-      ">-]*$R\007tagName2\236\005\n\022TransactionService\022\201\001" +
-      "\n\021CreateTransaction\022&.ssn.async.v1.Creat" +
-      "eTransactionRequest\032\'.ssn.async.v1.Creat" +
-      "eTransactionResponse\"\033\202\323\344\223\002\025\"\020/v1/transa" +
-      "ctions:\001*\022\227\001\n\025GetTransactionResults\022*.ss" +
-      "n.async.v1.GetTransactionResultsRequest\032" +
-      "+.ssn.async.v1.GetTransactionResultsResp" +
-      "onse\"%\202\323\344\223\002\037\022\035/v1/transactions/{id}/resu" +
-      "lts\022\223\001\n\024GetTransactionStatus\022).ssn.async" +
-      ".v1.GetTransactionStatusRequest\032*.ssn.as" +
-      "ync.v1.GetTransactionStatusResponse\"$\202\323\344" +
-      "\223\002\036\022\034/v1/transactions/{id}/status\022r\n\021Del" +
-      "eteTransaction\022&.ssn.async.v1.DeleteTran" +
-      "sactionRequest\032\026.google.protobuf.Empty\"\035" +
-      "\202\323\344\223\002\027*\025/v1/transactions/{id}\022`\n\tDeleteT" +
-      "ag\022\036.ssn.async.v1.DeleteTagRequest\032\026.goo" +
-      "gle.protobuf.Empty\"\033\202\323\344\223\002\025*\023/v1/tags/{ta" +
-      "g_name}B\356\001\n\025ai.visma.ssn.async.v1B\nAsync" +
-      "ProtoP\001Z<github.com/e-conomic/vmlapis/ge" +
-      "n/go/ssn/async/v1;transaction\242\002\003SAX\252\002\014Ss" +
-      "n.Async.V1\312\002\014Ssn\\Async\\V1\342\002\030Ssn\\Async\\V1" +
-      "\\GPBMetadata\352\002\016Ssn::Async::V1\222A8\022\017\n\tAsyn" +
-      "c API2\002v1*\001\0022\020application/json:\020applicat" +
-      "ion/jsonb\006proto3"
+      "\tcustom_id\030\004 \001(\tR\010customId\022A\n\016min_confid" +
+      "ence\030\005 \001(\0162\032.ssn.type.Confidence.LevelR\r" +
+      "minConfidence\"H\n\031CreateTransactionRespon" +
+      "se\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR\010c" +
+      "ustomId\"K\n\034GetTransactionResultsRequest\022" +
+      "\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR\010cust" +
+      "omId\"\255\001\n\035GetTransactionResultsResponse\022\016" +
+      "\n\002id\030\001 \001(\tR\002id\022:\n\013annotations\030\002 \003(\0132\030.ss" +
+      "n.async.v1.AnnotationR\013annotations\022#\n\rer" +
+      "ror_message\030\003 \001(\tR\014errorMessage\022\033\n\tcusto" +
+      "m_id\030\004 \001(\tR\010customId\">\n\tCandidate\0221\n\tcan" +
+      "didate\030\001 \003(\0132\023.ssn.type.CandidateR\tcandi" +
+      "date\"p\n\025PurchaseLineCandidate\022W\n\027purchas" +
+      "e_line_candidate\030\001 \003(\0132\037.ssn.type.Purcha" +
+      "seLineCandidateR\025purchaseLineCandidate\"Q" +
+      "\n\rLineCandidate\022@\n\017line_candidates\030\001 \003(\013" +
+      "2\027.ssn.type.LineCandidateR\016lineCandidate" +
+      "s\"F\n\017AnswerCandidate\0223\n\007answers\030\001 \003(\0132\031." +
+      "ssn.type.AnswerCandidateR\007answers\";\n\010Pag" +
+      "eText\022/\n\tpage_text\030\001 \003(\0132\022.ssn.type.Page" +
+      "TextR\010pageText\"S\n\016TextAnnotation\022A\n\017text" +
+      "_annotation\030\001 \003(\0132\030.ssn.type.TextAnnotat" +
+      "ionR\016textAnnotation\"\342\003\n\nAnnotation\022\030\n\007fe" +
+      "ature\030\001 \001(\tR\007feature\0227\n\tcandidate\030\002 \001(\0132" +
+      "\027.ssn.async.v1.CandidateH\000R\tcandidate\022]\n" +
+      "\027purchase_line_candidate\030\003 \001(\0132#.ssn.asy" +
+      "nc.v1.PurchaseLineCandidateH\000R\025purchaseL" +
+      "ineCandidate\022L\n\021answer_candidates\030\004 \001(\0132" +
+      "\035.ssn.async.v1.AnswerCandidateH\000R\020answer" +
+      "Candidates\022F\n\017line_candidates\030\005 \001(\0132\033.ss" +
+      "n.async.v1.LineCandidateH\000R\016lineCandidat" +
+      "es\0225\n\tpage_text\030\006 \001(\0132\026.ssn.async.v1.Pag" +
+      "eTextH\000R\010pageText\022G\n\017text_annotation\030\007 \001" +
+      "(\0132\034.ssn.async.v1.TextAnnotationH\000R\016text" +
+      "AnnotationB\014\n\ncandidates\"J\n\033GetTransacti" +
+      "onStatusRequest\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcusto" +
+      "m_id\030\002 \001(\tR\010customId\"\210\001\n\034GetTransactionS" +
+      "tatusResponse\022\016\n\002id\030\001 \001(\tR\002id\022\026\n\006status\030" +
+      "\002 \001(\tR\006status\022#\n\rerror_message\030\003 \001(\tR\014er" +
+      "rorMessage\022\033\n\tcustom_id\030\004 \001(\tR\010customId\"" +
+      "G\n\030DeleteTransactionRequest\022\016\n\002id\030\001 \001(\tR" +
+      "\002id\022\033\n\tcustom_id\030\002 \001(\tR\010customId\"W\n\020Dele" +
+      "teTagRequest\022C\n\010tag_name\030\001 \001(\tB(\372B%r#(\200\002" +
+      "2\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\007tagNam" +
+      "e2\236\005\n\022TransactionService\022\201\001\n\021CreateTrans" +
+      "action\022&.ssn.async.v1.CreateTransactionR" +
+      "equest\032\'.ssn.async.v1.CreateTransactionR" +
+      "esponse\"\033\202\323\344\223\002\025\"\020/v1/transactions:\001*\022\227\001\n" +
+      "\025GetTransactionResults\022*.ssn.async.v1.Ge" +
+      "tTransactionResultsRequest\032+.ssn.async.v" +
+      "1.GetTransactionResultsResponse\"%\202\323\344\223\002\037\022" +
+      "\035/v1/transactions/{id}/results\022\223\001\n\024GetTr" +
+      "ansactionStatus\022).ssn.async.v1.GetTransa" +
+      "ctionStatusRequest\032*.ssn.async.v1.GetTra" +
+      "nsactionStatusResponse\"$\202\323\344\223\002\036\022\034/v1/tran" +
+      "sactions/{id}/status\022r\n\021DeleteTransactio" +
+      "n\022&.ssn.async.v1.DeleteTransactionReques" +
+      "t\032\026.google.protobuf.Empty\"\035\202\323\344\223\002\027*\025/v1/t" +
+      "ransactions/{id}\022`\n\tDeleteTag\022\036.ssn.asyn" +
+      "c.v1.DeleteTagRequest\032\026.google.protobuf." +
+      "Empty\"\033\202\323\344\223\002\025*\023/v1/tags/{tag_name}B\356\001\n\025a" +
+      "i.visma.ssn.async.v1B\nAsyncProtoP\001Z<gith" +
+      "ub.com/e-conomic/vmlapis/gen/go/ssn/asyn" +
+      "c/v1;transaction\242\002\003SAX\252\002\014Ssn.Async.V1\312\002\014" +
+      "Ssn\\Async\\V1\342\002\030Ssn\\Async\\V1\\GPBMetadata\352" +
+      "\002\016Ssn::Async::V1\222A8\022\017\n\tAsync API2\002v1*\001\0022" +
+      "\020application/json:\020application/jsonb\006pro" +
+      "to3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -191,7 +193,7 @@ public final class AsyncProto {
     internal_static_ssn_async_v1_CreateTransactionRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_async_v1_CreateTransactionRequest_descriptor,
-        new java.lang.String[] { "Document", "Tags", "Features", "CustomId", });
+        new java.lang.String[] { "Document", "Tags", "Features", "CustomId", "MinConfidence", });
     internal_static_ssn_async_v1_CreateTransactionResponse_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_ssn_async_v1_CreateTransactionResponse_fieldAccessorTable = new
