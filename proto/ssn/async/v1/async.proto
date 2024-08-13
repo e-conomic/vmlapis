@@ -111,16 +111,8 @@ message PurchaseLineCandidate {
   repeated ssn.type.PurchaseLineCandidate purchase_line_candidate = 1;
 }
 
-message LineCandidate {
-  repeated ssn.type.LineCandidate line_candidates = 1;
-}
-
 message AnswerCandidate {
   repeated ssn.type.AnswerCandidate answers = 1;
-}
-
-message PageText {
-  repeated ssn.type.PageText page_text = 1;
 }
 
 message Annotation {
