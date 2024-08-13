@@ -229,26 +229,6 @@ export namespace PageText {
   }
 }
 
-export class TextAnnotation extends jspb.Message {
-  getTextAnnotationList(): Array<ssn_type_text_annotation_pb.TextAnnotation>;
-  setTextAnnotationList(value: Array<ssn_type_text_annotation_pb.TextAnnotation>): TextAnnotation;
-  clearTextAnnotationList(): TextAnnotation;
-  addTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation, index?: number): ssn_type_text_annotation_pb.TextAnnotation;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): TextAnnotation.AsObject;
-  static toObject(includeInstance: boolean, msg: TextAnnotation): TextAnnotation.AsObject;
-  static serializeBinaryToWriter(message: TextAnnotation, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): TextAnnotation;
-  static deserializeBinaryFromReader(message: TextAnnotation, reader: jspb.BinaryReader): TextAnnotation;
-}
-
-export namespace TextAnnotation {
-  export type AsObject = {
-    textAnnotationList: Array<ssn_type_text_annotation_pb.TextAnnotation.AsObject>,
-  }
-}
-
 export class Annotation extends jspb.Message {
   getFeature(): string;
   setFeature(value: string): Annotation;
@@ -268,18 +248,8 @@ export class Annotation extends jspb.Message {
   hasAnswerCandidates(): boolean;
   clearAnswerCandidates(): Annotation;
 
-  getLineCandidates(): LineCandidate | undefined;
-  setLineCandidates(value?: LineCandidate): Annotation;
-  hasLineCandidates(): boolean;
-  clearLineCandidates(): Annotation;
-
-  getPageText(): PageText | undefined;
-  setPageText(value?: PageText): Annotation;
-  hasPageText(): boolean;
-  clearPageText(): Annotation;
-
-  getTextAnnotation(): TextAnnotation | undefined;
-  setTextAnnotation(value?: TextAnnotation): Annotation;
+  getTextAnnotation(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
+  setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): Annotation;
   hasTextAnnotation(): boolean;
   clearTextAnnotation(): Annotation;
 
@@ -299,9 +269,7 @@ export namespace Annotation {
     candidate?: Candidate.AsObject,
     purchaseLineCandidate?: PurchaseLineCandidate.AsObject,
     answerCandidates?: AnswerCandidate.AsObject,
-    lineCandidates?: LineCandidate.AsObject,
-    pageText?: PageText.AsObject,
-    textAnnotation?: TextAnnotation.AsObject,
+    textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
   }
 
   export enum CandidatesCase { 
@@ -309,9 +277,7 @@ export namespace Annotation {
     CANDIDATE = 2,
     PURCHASE_LINE_CANDIDATE = 3,
     ANSWER_CANDIDATES = 4,
-    LINE_CANDIDATES = 5,
-    PAGE_TEXT = 6,
-    TEXT_ANNOTATION = 7,
+    TEXT_ANNOTATION = 5,
   }
 }
 
