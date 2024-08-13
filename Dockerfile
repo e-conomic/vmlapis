@@ -6,6 +6,10 @@ ENV PATH=/usr/local/go/bin:${PATH}
 ENV GOPATH=/go
 ENV PATH=/go/bin:$PATH
 
+# https://buf.build/docs/bsr/authentication
+ARG BUF_TOKEN
+ENV BUF_TOKEN=${BUF_TOKEN}
+
 RUN mkdir -p ${GOPATH}/src ${GOPATH}/bin
 
 RUN apt-get update && \

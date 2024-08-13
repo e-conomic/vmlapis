@@ -845,7 +845,9 @@ proto.ssn.async.v1.GetTransactionResultsRequest.prototype.toObject = function(op
 proto.ssn.async.v1.GetTransactionResultsRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     id: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    customId: jspb.Message.getFieldWithDefault(msg, 2, "")
+    customId: jspb.Message.getFieldWithDefault(msg, 2, ""),
+    minConfidence: jspb.Message.getFieldWithDefault(msg, 3, 0),
+    maxResults: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
   if (includeInstance) {
@@ -890,6 +892,14 @@ proto.ssn.async.v1.GetTransactionResultsRequest.deserializeBinaryFromReader = fu
       var value = /** @type {string} */ (reader.readString());
       msg.setCustomId(value);
       break;
+    case 3:
+      var value = /** @type {!proto.ssn.type.Confidence.Level} */ (reader.readEnum());
+      msg.setMinConfidence(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setMaxResults(value);
+      break;
     default:
       reader.skipField();
       break;
@@ -933,6 +943,20 @@ proto.ssn.async.v1.GetTransactionResultsRequest.serializeBinaryToWriter = functi
       f
     );
   }
+  f = message.getMinConfidence();
+  if (f !== 0.0) {
+    writer.writeEnum(
+      3,
+      f
+    );
+  }
+  f = message.getMaxResults();
+  if (f !== 0) {
+    writer.writeInt32(
+      4,
+      f
+    );
+  }
 };
 
 
@@ -969,6 +993,42 @@ proto.ssn.async.v1.GetTransactionResultsRequest.prototype.getCustomId = function
  */
 proto.ssn.async.v1.GetTransactionResultsRequest.prototype.setCustomId = function(value) {
   return jspb.Message.setProto3StringField(this, 2, value);
+};
+
+
+/**
+ * optional ssn.type.Confidence.Level min_confidence = 3;
+ * @return {!proto.ssn.type.Confidence.Level}
+ */
+proto.ssn.async.v1.GetTransactionResultsRequest.prototype.getMinConfidence = function() {
+  return /** @type {!proto.ssn.type.Confidence.Level} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
+};
+
+
+/**
+ * @param {!proto.ssn.type.Confidence.Level} value
+ * @return {!proto.ssn.async.v1.GetTransactionResultsRequest} returns this
+ */
+proto.ssn.async.v1.GetTransactionResultsRequest.prototype.setMinConfidence = function(value) {
+  return jspb.Message.setProto3EnumField(this, 3, value);
+};
+
+
+/**
+ * optional int32 max_results = 4;
+ * @return {number}
+ */
+proto.ssn.async.v1.GetTransactionResultsRequest.prototype.getMaxResults = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ssn.async.v1.GetTransactionResultsRequest} returns this
+ */
+proto.ssn.async.v1.GetTransactionResultsRequest.prototype.setMaxResults = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
 };
 
 

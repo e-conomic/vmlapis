@@ -33,12 +33,16 @@ class CreateTransactionResponse(_message.Message):
     def __init__(self, id: _Optional[str] = ..., custom_id: _Optional[str] = ...) -> None: ...
 
 class GetTransactionResultsRequest(_message.Message):
-    __slots__ = ["id", "custom_id"]
+    __slots__ = ["id", "custom_id", "min_confidence", "max_results"]
     ID_FIELD_NUMBER: _ClassVar[int]
     CUSTOM_ID_FIELD_NUMBER: _ClassVar[int]
+    MIN_CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
+    MAX_RESULTS_FIELD_NUMBER: _ClassVar[int]
     id: str
     custom_id: str
-    def __init__(self, id: _Optional[str] = ..., custom_id: _Optional[str] = ...) -> None: ...
+    min_confidence: _candidate_pb2.Confidence.Level
+    max_results: int
+    def __init__(self, id: _Optional[str] = ..., custom_id: _Optional[str] = ..., min_confidence: _Optional[_Union[_candidate_pb2.Confidence.Level, str]] = ..., max_results: _Optional[int] = ...) -> None: ...
 
 class GetTransactionResultsResponse(_message.Message):
     __slots__ = ["id", "annotations", "error_message", "custom_id"]

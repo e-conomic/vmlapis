@@ -5,6 +5,8 @@
 - `cd` into the cloned `vmlapis` directory
 - Run docker on your computer
 - Have `buf` installed
+- Have `buf` [account](https://buf.build/signup)
+- Have buf token generated and set as environment variable named BUF_TOKEN `export BUF_TOKEN=<your_token>`
 
 ```bash
 brew install bufbuild/buf/buf
