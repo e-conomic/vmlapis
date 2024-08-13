@@ -25,7 +25,6 @@ private static final long serialVersionUID = 0L;
     features_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     customId_ = "";
-    minConfidence_ = 0;
   }
 
   @java.lang.Override
@@ -231,35 +230,6 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int MIN_CONFIDENCE_FIELD_NUMBER = 5;
-  private int minConfidence_ = 0;
-  /**
-   * <code>.ssn.type.Confidence.Level min_confidence = 5 [json_name = "minConfidence"];</code>
-   * @return The enum numeric value on the wire for minConfidence.
-   */
-  @java.lang.Override public int getMinConfidenceValue() {
-    return minConfidence_;
-  }
-  /**
-   * <code>.ssn.type.Confidence.Level min_confidence = 5 [json_name = "minConfidence"];</code>
-   * @return The minConfidence.
-   */
-  @java.lang.Override public ai.visma.ssn.type.Confidence.Level getMinConfidence() {
-    ai.visma.ssn.type.Confidence.Level result = ai.visma.ssn.type.Confidence.Level.forNumber(minConfidence_);
-    return result == null ? ai.visma.ssn.type.Confidence.Level.UNRECOGNIZED : result;
-  }
-
-  public static final int MAX_RESULTS_FIELD_NUMBER = 6;
-  private int maxResults_ = 0;
-  /**
-   * <code>int32 max_results = 6 [json_name = "maxResults"];</code>
-   * @return The maxResults.
-   */
-  @java.lang.Override
-  public int getMaxResults() {
-    return maxResults_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -285,12 +255,6 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 4, customId_);
-    }
-    if (minConfidence_ != ai.visma.ssn.type.Confidence.Level.UNKNOWN.getNumber()) {
-      output.writeEnum(5, minConfidence_);
-    }
-    if (maxResults_ != 0) {
-      output.writeInt32(6, maxResults_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -324,14 +288,6 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(customId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, customId_);
     }
-    if (minConfidence_ != ai.visma.ssn.type.Confidence.Level.UNKNOWN.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(5, minConfidence_);
-    }
-    if (maxResults_ != 0) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeInt32Size(6, maxResults_);
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -358,9 +314,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFeaturesList())) return false;
     if (!getCustomId()
         .equals(other.getCustomId())) return false;
-    if (minConfidence_ != other.minConfidence_) return false;
-    if (getMaxResults()
-        != other.getMaxResults()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -386,10 +339,6 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + CUSTOM_ID_FIELD_NUMBER;
     hash = (53 * hash) + getCustomId().hashCode();
-    hash = (37 * hash) + MIN_CONFIDENCE_FIELD_NUMBER;
-    hash = (53 * hash) + minConfidence_;
-    hash = (37 * hash) + MAX_RESULTS_FIELD_NUMBER;
-    hash = (53 * hash) + getMaxResults();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -535,8 +484,6 @@ private static final long serialVersionUID = 0L;
       features_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       customId_ = "";
-      minConfidence_ = 0;
-      maxResults_ = 0;
       return this;
     }
 
@@ -585,12 +532,6 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.customId_ = customId_;
-      }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.minConfidence_ = minConfidence_;
-      }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
-        result.maxResults_ = maxResults_;
       }
     }
 
@@ -666,12 +607,6 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (other.minConfidence_ != 0) {
-        setMinConfidenceValue(other.getMinConfidenceValue());
-      }
-      if (other.getMaxResults() != 0) {
-        setMaxResults(other.getMaxResults());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -722,16 +657,6 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 34
-            case 40: {
-              minConfidence_ = input.readEnum();
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 40
-            case 48: {
-              maxResults_ = input.readInt32();
-              bitField0_ |= 0x00000020;
-              break;
-            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1266,91 +1191,6 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       customId_ = value;
       bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
-    private int minConfidence_ = 0;
-    /**
-     * <code>.ssn.type.Confidence.Level min_confidence = 5 [json_name = "minConfidence"];</code>
-     * @return The enum numeric value on the wire for minConfidence.
-     */
-    @java.lang.Override public int getMinConfidenceValue() {
-      return minConfidence_;
-    }
-    /**
-     * <code>.ssn.type.Confidence.Level min_confidence = 5 [json_name = "minConfidence"];</code>
-     * @param value The enum numeric value on the wire for minConfidence to set.
-     * @return This builder for chaining.
-     */
-    public Builder setMinConfidenceValue(int value) {
-      minConfidence_ = value;
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ssn.type.Confidence.Level min_confidence = 5 [json_name = "minConfidence"];</code>
-     * @return The minConfidence.
-     */
-    @java.lang.Override
-    public ai.visma.ssn.type.Confidence.Level getMinConfidence() {
-      ai.visma.ssn.type.Confidence.Level result = ai.visma.ssn.type.Confidence.Level.forNumber(minConfidence_);
-      return result == null ? ai.visma.ssn.type.Confidence.Level.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.ssn.type.Confidence.Level min_confidence = 5 [json_name = "minConfidence"];</code>
-     * @param value The minConfidence to set.
-     * @return This builder for chaining.
-     */
-    public Builder setMinConfidence(ai.visma.ssn.type.Confidence.Level value) {
-      if (value == null) {
-        throw new NullPointerException();
-      }
-      bitField0_ |= 0x00000010;
-      minConfidence_ = value.getNumber();
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ssn.type.Confidence.Level min_confidence = 5 [json_name = "minConfidence"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearMinConfidence() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      minConfidence_ = 0;
-      onChanged();
-      return this;
-    }
-
-    private int maxResults_ ;
-    /**
-     * <code>int32 max_results = 6 [json_name = "maxResults"];</code>
-     * @return The maxResults.
-     */
-    @java.lang.Override
-    public int getMaxResults() {
-      return maxResults_;
-    }
-    /**
-     * <code>int32 max_results = 6 [json_name = "maxResults"];</code>
-     * @param value The maxResults to set.
-     * @return This builder for chaining.
-     */
-    public Builder setMaxResults(int value) {
-
-      maxResults_ = value;
-      bitField0_ |= 0x00000020;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>int32 max_results = 6 [json_name = "maxResults"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearMaxResults() {
-      bitField0_ = (bitField0_ & ~0x00000020);
-      maxResults_ = 0;
       onChanged();
       return this;
     }

@@ -72,8 +72,6 @@ message CreateTransactionRequest {
   // e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
   repeated string features = 3;
   string custom_id = 4;
-  ssn.type.Confidence.Level min_confidence = 5;
-  int32 max_results = 6;
 }
 
 message CreateTransactionResponse {
@@ -90,6 +88,8 @@ message GetTransactionResultsRequest {
   string custom_id = 2;
   // GetTransactionResultsRequest message can potentially have a list of features to filter the response
   // e.g. repeated string features like in CreateTransactionRequest
+  ssn.type.Confidence.Level min_confidence = 3;
+  int32 max_results = 4;
 }
 
 message GetTransactionResultsResponse {

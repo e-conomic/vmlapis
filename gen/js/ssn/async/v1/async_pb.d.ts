@@ -28,12 +28,6 @@ export class CreateTransactionRequest extends jspb.Message {
   getCustomId(): string;
   setCustomId(value: string): CreateTransactionRequest;
 
-  getMinConfidence(): ssn_type_candidate_pb.Confidence.Level;
-  setMinConfidence(value: ssn_type_candidate_pb.Confidence.Level): CreateTransactionRequest;
-
-  getMaxResults(): number;
-  setMaxResults(value: number): CreateTransactionRequest;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateTransactionRequest.AsObject;
   static toObject(includeInstance: boolean, msg: CreateTransactionRequest): CreateTransactionRequest.AsObject;
@@ -48,8 +42,6 @@ export namespace CreateTransactionRequest {
     tagsList: Array<string>,
     featuresList: Array<string>,
     customId: string,
-    minConfidence: ssn_type_candidate_pb.Confidence.Level,
-    maxResults: number,
   }
 }
 
@@ -82,6 +74,12 @@ export class GetTransactionResultsRequest extends jspb.Message {
   getCustomId(): string;
   setCustomId(value: string): GetTransactionResultsRequest;
 
+  getMinConfidence(): ssn_type_candidate_pb.Confidence.Level;
+  setMinConfidence(value: ssn_type_candidate_pb.Confidence.Level): GetTransactionResultsRequest;
+
+  getMaxResults(): number;
+  setMaxResults(value: number): GetTransactionResultsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetTransactionResultsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: GetTransactionResultsRequest): GetTransactionResultsRequest.AsObject;
@@ -94,6 +92,8 @@ export namespace GetTransactionResultsRequest {
   export type AsObject = {
     id: string,
     customId: string,
+    minConfidence: ssn_type_candidate_pb.Confidence.Level,
+    maxResults: number,
   }
 }
 
