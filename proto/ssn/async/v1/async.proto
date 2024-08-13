@@ -72,7 +72,9 @@ message CreateTransactionRequest {
   // e.g. "TOTAL_INCL_VAT", "PURCHASE_LINES"
   repeated string features = 3;
   string custom_id = 4;
+  ssn.type.Confidence.Level min_confidence = 5;
 }
+
 message CreateTransactionResponse {
   string id = 1;
   string custom_id = 2;
@@ -88,6 +90,7 @@ message GetTransactionResultsRequest {
   // GetTransactionResultsRequest message can potentially have a list of features to filter the response
   // e.g. repeated string features like in CreateTransactionRequest
 }
+
 message GetTransactionResultsResponse {
   string id = 1;
   // map: FEATURE NAME --> SSN CANDIDATES
