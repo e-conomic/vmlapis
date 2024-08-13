@@ -73,6 +73,7 @@ message CreateTransactionRequest {
   repeated string features = 3;
   string custom_id = 4;
   ssn.type.Confidence.Level min_confidence = 5;
+  int32 max_results = 6;
 }
 
 message CreateTransactionResponse {
