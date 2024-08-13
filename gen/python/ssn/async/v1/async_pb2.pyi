@@ -13,18 +13,20 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class CreateTransactionRequest(_message.Message):
-    __slots__ = ["document", "tags", "features", "custom_id", "min_confidence"]
+    __slots__ = ["document", "tags", "features", "custom_id", "min_confidence", "max_results"]
     DOCUMENT_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
     FEATURES_FIELD_NUMBER: _ClassVar[int]
     CUSTOM_ID_FIELD_NUMBER: _ClassVar[int]
     MIN_CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
+    MAX_RESULTS_FIELD_NUMBER: _ClassVar[int]
     document: _annotator_pb2.Document
     tags: _containers.RepeatedScalarFieldContainer[str]
     features: _containers.RepeatedScalarFieldContainer[str]
     custom_id: str
     min_confidence: _candidate_pb2.Confidence.Level
-    def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., features: _Optional[_Iterable[str]] = ..., custom_id: _Optional[str] = ..., min_confidence: _Optional[_Union[_candidate_pb2.Confidence.Level, str]] = ...) -> None: ...
+    max_results: int
+    def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ..., features: _Optional[_Iterable[str]] = ..., custom_id: _Optional[str] = ..., min_confidence: _Optional[_Union[_candidate_pb2.Confidence.Level, str]] = ..., max_results: _Optional[int] = ...) -> None: ...
 
 class CreateTransactionResponse(_message.Message):
     __slots__ = ["id", "custom_id"]

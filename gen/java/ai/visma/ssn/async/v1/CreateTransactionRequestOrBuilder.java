@@ -138,4 +138,10 @@ public interface CreateTransactionRequestOrBuilder extends
    * @return The minConfidence.
    */
   ai.visma.ssn.type.Confidence.Level getMinConfidence();
+
+  /**
+   * <code>int32 max_results = 6 [json_name = "maxResults"];</code>
+   * @return The maxResults.
+   */
+  int getMaxResults();
 }

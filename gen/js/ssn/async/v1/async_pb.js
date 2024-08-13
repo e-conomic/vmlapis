@@ -409,7 +409,8 @@ proto.ssn.async.v1.CreateTransactionRequest.toObject = function(includeInstance,
     tagsList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
     featuresList: (f = jspb.Message.getRepeatedField(msg, 3)) == null ? undefined : f,
     customId: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    minConfidence: jspb.Message.getFieldWithDefault(msg, 5, 0)
+    minConfidence: jspb.Message.getFieldWithDefault(msg, 5, 0),
+    maxResults: jspb.Message.getFieldWithDefault(msg, 6, 0)
   };
 
   if (includeInstance) {
@@ -466,6 +467,10 @@ proto.ssn.async.v1.CreateTransactionRequest.deserializeBinaryFromReader = functi
     case 5:
       var value = /** @type {!proto.ssn.type.Confidence.Level} */ (reader.readEnum());
       msg.setMinConfidence(value);
+      break;
+    case 6:
+      var value = /** @type {number} */ (reader.readInt32());
+      msg.setMaxResults(value);
       break;
     default:
       reader.skipField();
@@ -529,6 +534,13 @@ proto.ssn.async.v1.CreateTransactionRequest.serializeBinaryToWriter = function(m
   if (f !== 0.0) {
     writer.writeEnum(
       5,
+      f
+    );
+  }
+  f = message.getMaxResults();
+  if (f !== 0) {
+    writer.writeInt32(
+      6,
       f
     );
   }
@@ -679,6 +691,24 @@ proto.ssn.async.v1.CreateTransactionRequest.prototype.getMinConfidence = functio
  */
 proto.ssn.async.v1.CreateTransactionRequest.prototype.setMinConfidence = function(value) {
   return jspb.Message.setProto3EnumField(this, 5, value);
+};
+
+
+/**
+ * optional int32 max_results = 6;
+ * @return {number}
+ */
+proto.ssn.async.v1.CreateTransactionRequest.prototype.getMaxResults = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 6, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ssn.async.v1.CreateTransactionRequest} returns this
+ */
+proto.ssn.async.v1.CreateTransactionRequest.prototype.setMaxResults = function(value) {
+  return jspb.Message.setProto3IntField(this, 6, value);
 };
 
 
