@@ -29,7 +29,7 @@ public interface AnnotationOrBuilder extends
 
   /**
    * <pre>
-   * candidate contains a page number
+   * ssn candidates
    * </pre>
    *
    * <code>.ssn.async.v1.Candidate candidate = 2 [json_name = "candidate"];</code>
@@ -38,7 +38,7 @@ public interface AnnotationOrBuilder extends
   boolean hasCandidate();
   /**
    * <pre>
-   * candidate contains a page number
+   * ssn candidates
    * </pre>
    *
    * <code>.ssn.async.v1.Candidate candidate = 2 [json_name = "candidate"];</code>
@@ -47,7 +47,7 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.async.v1.Candidate getCandidate();
   /**
    * <pre>
-   * candidate contains a page number
+   * ssn candidates
    * </pre>
    *
    * <code>.ssn.async.v1.Candidate candidate = 2 [json_name = "candidate"];</code>
@@ -55,79 +55,85 @@ public interface AnnotationOrBuilder extends
   ai.visma.ssn.async.v1.CandidateOrBuilder getCandidateOrBuilder();
 
   /**
+   * <pre>
+   * purchase line candidates
+   * </pre>
+   *
    * <code>.ssn.async.v1.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
    * @return Whether the purchaseLineCandidate field is set.
    */
   boolean hasPurchaseLineCandidate();
   /**
+   * <pre>
+   * purchase line candidates
+   * </pre>
+   *
    * <code>.ssn.async.v1.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
    * @return The purchaseLineCandidate.
    */
   ai.visma.ssn.async.v1.PurchaseLineCandidate getPurchaseLineCandidate();
   /**
+   * <pre>
+   * purchase line candidates
+   * </pre>
+   *
    * <code>.ssn.async.v1.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
    */
   ai.visma.ssn.async.v1.PurchaseLineCandidateOrBuilder getPurchaseLineCandidateOrBuilder();
 
   /**
+   * <pre>
+   * qa candidates
+   * </pre>
+   *
    * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
    * @return Whether the answerCandidates field is set.
    */
   boolean hasAnswerCandidates();
   /**
+   * <pre>
+   * qa candidates
+   * </pre>
+   *
    * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
    * @return The answerCandidates.
    */
   ai.visma.ssn.async.v1.AnswerCandidate getAnswerCandidates();
   /**
+   * <pre>
+   * qa candidates
+   * </pre>
+   *
    * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
    */
   ai.visma.ssn.async.v1.AnswerCandidateOrBuilder getAnswerCandidatesOrBuilder();
 
   /**
-   * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
-   * @return Whether the lineCandidates field is set.
-   */
-  boolean hasLineCandidates();
-  /**
-   * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
-   * @return The lineCandidates.
-   */
-  ai.visma.ssn.async.v1.LineCandidate getLineCandidates();
-  /**
-   * <code>.ssn.async.v1.LineCandidate line_candidates = 5 [json_name = "lineCandidates"];</code>
-   */
-  ai.visma.ssn.async.v1.LineCandidateOrBuilder getLineCandidatesOrBuilder();
-
-  /**
-   * <code>.ssn.async.v1.PageText page_text = 6 [json_name = "pageText"];</code>
-   * @return Whether the pageText field is set.
-   */
-  boolean hasPageText();
-  /**
-   * <code>.ssn.async.v1.PageText page_text = 6 [json_name = "pageText"];</code>
-   * @return The pageText.
-   */
-  ai.visma.ssn.async.v1.PageText getPageText();
-  /**
-   * <code>.ssn.async.v1.PageText page_text = 6 [json_name = "pageText"];</code>
-   */
-  ai.visma.ssn.async.v1.PageTextOrBuilder getPageTextOrBuilder();
-
-  /**
-   * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
+   * <pre>
+   * text annotation
+   * </pre>
+   *
+   * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
    * @return Whether the textAnnotation field is set.
    */
   boolean hasTextAnnotation();
   /**
-   * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
+   * <pre>
+   * text annotation
+   * </pre>
+   *
+   * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
    * @return The textAnnotation.
    */
-  ai.visma.ssn.async.v1.TextAnnotation getTextAnnotation();
+  ai.visma.ssn.type.TextAnnotation getTextAnnotation();
   /**
-   * <code>.ssn.async.v1.TextAnnotation text_annotation = 7 [json_name = "textAnnotation"];</code>
+   * <pre>
+   * text annotation
+   * </pre>
+   *
+   * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
    */
-  ai.visma.ssn.async.v1.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
+  ai.visma.ssn.type.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
 
   ai.visma.ssn.async.v1.Annotation.CandidatesCase getCandidatesCase();
 }
