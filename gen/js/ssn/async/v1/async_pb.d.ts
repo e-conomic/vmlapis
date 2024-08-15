@@ -133,15 +133,15 @@ export class Annotation extends jspb.Message {
   getFeature(): string;
   setFeature(value: string): Annotation;
 
-  getCandidateList(): Array<ssn_type_candidate_pb.Candidate>;
-  setCandidateList(value: Array<ssn_type_candidate_pb.Candidate>): Annotation;
-  clearCandidateList(): Annotation;
-  addCandidate(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
+  getCandidatesList(): Array<ssn_type_candidate_pb.Candidate>;
+  setCandidatesList(value: Array<ssn_type_candidate_pb.Candidate>): Annotation;
+  clearCandidatesList(): Annotation;
+  addCandidates(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
-  getPurchaseLineCandidateList(): Array<ssn_type_candidate_pb.PurchaseLineCandidate>;
-  setPurchaseLineCandidateList(value: Array<ssn_type_candidate_pb.PurchaseLineCandidate>): Annotation;
-  clearPurchaseLineCandidateList(): Annotation;
-  addPurchaseLineCandidate(value?: ssn_type_candidate_pb.PurchaseLineCandidate, index?: number): ssn_type_candidate_pb.PurchaseLineCandidate;
+  getPurchaseLineCandidatesList(): Array<ssn_type_candidate_pb.PurchaseLineCandidate>;
+  setPurchaseLineCandidatesList(value: Array<ssn_type_candidate_pb.PurchaseLineCandidate>): Annotation;
+  clearPurchaseLineCandidatesList(): Annotation;
+  addPurchaseLineCandidates(value?: ssn_type_candidate_pb.PurchaseLineCandidate, index?: number): ssn_type_candidate_pb.PurchaseLineCandidate;
 
   getAnswerCandidatesList(): Array<ssn_type_candidate_pb.AnswerCandidate>;
   setAnswerCandidatesList(value: Array<ssn_type_candidate_pb.AnswerCandidate>): Annotation;
@@ -164,8 +164,8 @@ export class Annotation extends jspb.Message {
 export namespace Annotation {
   export type AsObject = {
     feature: string,
-    candidateList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-    purchaseLineCandidateList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
+    candidatesList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    purchaseLineCandidatesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
     answerCandidatesList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
     textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
   }

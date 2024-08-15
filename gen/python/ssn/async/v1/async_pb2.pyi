@@ -57,18 +57,18 @@ class GetTransactionResultsResponse(_message.Message):
     def __init__(self, id: _Optional[str] = ..., annotations: _Optional[_Iterable[_Union[Annotation, _Mapping]]] = ..., error_message: _Optional[str] = ..., custom_id: _Optional[str] = ...) -> None: ...
 
 class Annotation(_message.Message):
-    __slots__ = ["feature", "candidate", "purchase_line_candidate", "answer_candidates", "text_annotation"]
+    __slots__ = ["feature", "candidates", "purchase_line_candidates", "answer_candidates", "text_annotation"]
     FEATURE_FIELD_NUMBER: _ClassVar[int]
-    CANDIDATE_FIELD_NUMBER: _ClassVar[int]
-    PURCHASE_LINE_CANDIDATE_FIELD_NUMBER: _ClassVar[int]
+    CANDIDATES_FIELD_NUMBER: _ClassVar[int]
+    PURCHASE_LINE_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
     ANSWER_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
     TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
     feature: str
-    candidate: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.Candidate]
-    purchase_line_candidate: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PurchaseLineCandidate]
+    candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.Candidate]
+    purchase_line_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PurchaseLineCandidate]
     answer_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.AnswerCandidate]
     text_annotation: _text_annotation_pb2.TextAnnotation
-    def __init__(self, feature: _Optional[str] = ..., candidate: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., purchase_line_candidate: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ..., answer_candidates: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ..., text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ...) -> None: ...
+    def __init__(self, feature: _Optional[str] = ..., candidates: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., purchase_line_candidates: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ..., answer_candidates: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ..., text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ...) -> None: ...
 
 class GetTransactionStatusRequest(_message.Message):
     __slots__ = ["id", "custom_id"]

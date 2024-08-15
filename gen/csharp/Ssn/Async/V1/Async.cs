@@ -43,42 +43,43 @@ namespace Ssn.Async.V1 {
             "IAEoCVICaWQSOgoLYW5ub3RhdGlvbnMYAiADKAsyGC5zc24uYXN5bmMudjEu",
             "QW5ub3RhdGlvblILYW5ub3RhdGlvbnMSIwoNZXJyb3JfbWVzc2FnZRgDIAEo",
             "CVIMZXJyb3JNZXNzYWdlEhsKCWN1c3RvbV9pZBgEIAEoCVIIY3VzdG9tSWQi",
-            "vQIKCkFubm90YXRpb24SGAoHZmVhdHVyZRgBIAEoCVIHZmVhdHVyZRIxCglj",
-            "YW5kaWRhdGUYAiADKAsyEy5zc24udHlwZS5DYW5kaWRhdGVSCWNhbmRpZGF0",
-            "ZRJXChdwdXJjaGFzZV9saW5lX2NhbmRpZGF0ZRgDIAMoCzIfLnNzbi50eXBl",
-            "LlB1cmNoYXNlTGluZUNhbmRpZGF0ZVIVcHVyY2hhc2VMaW5lQ2FuZGlkYXRl",
-            "EkYKEWFuc3dlcl9jYW5kaWRhdGVzGAQgAygLMhkuc3NuLnR5cGUuQW5zd2Vy",
-            "Q2FuZGlkYXRlUhBhbnN3ZXJDYW5kaWRhdGVzEkEKD3RleHRfYW5ub3RhdGlv",
-            "bhgFIAEoCzIYLnNzbi50eXBlLlRleHRBbm5vdGF0aW9uUg50ZXh0QW5ub3Rh",
-            "dGlvbiJKChtHZXRUcmFuc2FjdGlvblN0YXR1c1JlcXVlc3QSDgoCaWQYASAB",
-            "KAlSAmlkEhsKCWN1c3RvbV9pZBgCIAEoCVIIY3VzdG9tSWQiiAEKHEdldFRy",
-            "YW5zYWN0aW9uU3RhdHVzUmVzcG9uc2USDgoCaWQYASABKAlSAmlkEhYKBnN0",
-            "YXR1cxgCIAEoCVIGc3RhdHVzEiMKDWVycm9yX21lc3NhZ2UYAyABKAlSDGVy",
-            "cm9yTWVzc2FnZRIbCgljdXN0b21faWQYBCABKAlSCGN1c3RvbUlkIkcKGERl",
-            "bGV0ZVRyYW5zYWN0aW9uUmVxdWVzdBIOCgJpZBgBIAEoCVICaWQSGwoJY3Vz",
-            "dG9tX2lkGAIgASgJUghjdXN0b21JZCJXChBEZWxldGVUYWdSZXF1ZXN0EkMK",
-            "CHRhZ19uYW1lGAEgASgJQij6QiVyIyiAAjIeXltBLVphLXowLTkuXVtBLVph",
-            "LXowLTlfLj4tXSokUgd0YWdOYW1lMp4FChJUcmFuc2FjdGlvblNlcnZpY2US",
-            "gQEKEUNyZWF0ZVRyYW5zYWN0aW9uEiYuc3NuLmFzeW5jLnYxLkNyZWF0ZVRy",
-            "YW5zYWN0aW9uUmVxdWVzdBonLnNzbi5hc3luYy52MS5DcmVhdGVUcmFuc2Fj",
-            "dGlvblJlc3BvbnNlIhuC0+STAhU6ASoiEC92MS90cmFuc2FjdGlvbnMSlwEK",
-            "FUdldFRyYW5zYWN0aW9uUmVzdWx0cxIqLnNzbi5hc3luYy52MS5HZXRUcmFu",
-            "c2FjdGlvblJlc3VsdHNSZXF1ZXN0Gisuc3NuLmFzeW5jLnYxLkdldFRyYW5z",
-            "YWN0aW9uUmVzdWx0c1Jlc3BvbnNlIiWC0+STAh8SHS92MS90cmFuc2FjdGlv",
-            "bnMve2lkfS9yZXN1bHRzEpMBChRHZXRUcmFuc2FjdGlvblN0YXR1cxIpLnNz",
-            "bi5hc3luYy52MS5HZXRUcmFuc2FjdGlvblN0YXR1c1JlcXVlc3QaKi5zc24u",
-            "YXN5bmMudjEuR2V0VHJhbnNhY3Rpb25TdGF0dXNSZXNwb25zZSIkgtPkkwIe",
-            "EhwvdjEvdHJhbnNhY3Rpb25zL3tpZH0vc3RhdHVzEnIKEURlbGV0ZVRyYW5z",
-            "YWN0aW9uEiYuc3NuLmFzeW5jLnYxLkRlbGV0ZVRyYW5zYWN0aW9uUmVxdWVz",
-            "dBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIdgtPkkwIXKhUvdjEvdHJhbnNh",
-            "Y3Rpb25zL3tpZH0SYAoJRGVsZXRlVGFnEh4uc3NuLmFzeW5jLnYxLkRlbGV0",
-            "ZVRhZ1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiG4LT5JMCFSoT",
-            "L3YxL3RhZ3Mve3RhZ19uYW1lfULuAQoVYWkudmlzbWEuc3NuLmFzeW5jLnYx",
-            "QgpBc3luY1Byb3RvUAFaPGdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMv",
-            "Z2VuL2dvL3Nzbi9hc3luYy92MTt0cmFuc2FjdGlvbqICA1NBWKoCDFNzbi5B",
-            "c3luYy5WMcoCDFNzblxBc3luY1xWMeICGFNzblxBc3luY1xWMVxHUEJNZXRh",
-            "ZGF0YeoCDlNzbjo6QXN5bmM6OlYxkkE4Eg8KCUFzeW5jIEFQSTICdjEqAQIy",
-            "EGFwcGxpY2F0aW9uL2pzb246EGFwcGxpY2F0aW9uL2pzb25iBnByb3RvMw=="));
+            "wQIKCkFubm90YXRpb24SGAoHZmVhdHVyZRgBIAEoCVIHZmVhdHVyZRIzCgpj",
+            "YW5kaWRhdGVzGAIgAygLMhMuc3NuLnR5cGUuQ2FuZGlkYXRlUgpjYW5kaWRh",
+            "dGVzElkKGHB1cmNoYXNlX2xpbmVfY2FuZGlkYXRlcxgDIAMoCzIfLnNzbi50",
+            "eXBlLlB1cmNoYXNlTGluZUNhbmRpZGF0ZVIWcHVyY2hhc2VMaW5lQ2FuZGlk",
+            "YXRlcxJGChFhbnN3ZXJfY2FuZGlkYXRlcxgEIAMoCzIZLnNzbi50eXBlLkFu",
+            "c3dlckNhbmRpZGF0ZVIQYW5zd2VyQ2FuZGlkYXRlcxJBCg90ZXh0X2Fubm90",
+            "YXRpb24YBSABKAsyGC5zc24udHlwZS5UZXh0QW5ub3RhdGlvblIOdGV4dEFu",
+            "bm90YXRpb24iSgobR2V0VHJhbnNhY3Rpb25TdGF0dXNSZXF1ZXN0Eg4KAmlk",
+            "GAEgASgJUgJpZBIbCgljdXN0b21faWQYAiABKAlSCGN1c3RvbUlkIogBChxH",
+            "ZXRUcmFuc2FjdGlvblN0YXR1c1Jlc3BvbnNlEg4KAmlkGAEgASgJUgJpZBIW",
+            "CgZzdGF0dXMYAiABKAlSBnN0YXR1cxIjCg1lcnJvcl9tZXNzYWdlGAMgASgJ",
+            "UgxlcnJvck1lc3NhZ2USGwoJY3VzdG9tX2lkGAQgASgJUghjdXN0b21JZCJH",
+            "ChhEZWxldGVUcmFuc2FjdGlvblJlcXVlc3QSDgoCaWQYASABKAlSAmlkEhsK",
+            "CWN1c3RvbV9pZBgCIAEoCVIIY3VzdG9tSWQiVwoQRGVsZXRlVGFnUmVxdWVz",
+            "dBJDCgh0YWdfbmFtZRgBIAEoCUIo+kIlciMogAIyHl5bQS1aYS16MC05Ll1b",
+            "QS1aYS16MC05Xy4+LV0qJFIHdGFnTmFtZTKeBQoSVHJhbnNhY3Rpb25TZXJ2",
+            "aWNlEoEBChFDcmVhdGVUcmFuc2FjdGlvbhImLnNzbi5hc3luYy52MS5DcmVh",
+            "dGVUcmFuc2FjdGlvblJlcXVlc3QaJy5zc24uYXN5bmMudjEuQ3JlYXRlVHJh",
+            "bnNhY3Rpb25SZXNwb25zZSIbgtPkkwIVOgEqIhAvdjEvdHJhbnNhY3Rpb25z",
+            "EpcBChVHZXRUcmFuc2FjdGlvblJlc3VsdHMSKi5zc24uYXN5bmMudjEuR2V0",
+            "VHJhbnNhY3Rpb25SZXN1bHRzUmVxdWVzdBorLnNzbi5hc3luYy52MS5HZXRU",
+            "cmFuc2FjdGlvblJlc3VsdHNSZXNwb25zZSIlgtPkkwIfEh0vdjEvdHJhbnNh",
+            "Y3Rpb25zL3tpZH0vcmVzdWx0cxKTAQoUR2V0VHJhbnNhY3Rpb25TdGF0dXMS",
+            "KS5zc24uYXN5bmMudjEuR2V0VHJhbnNhY3Rpb25TdGF0dXNSZXF1ZXN0Giou",
+            "c3NuLmFzeW5jLnYxLkdldFRyYW5zYWN0aW9uU3RhdHVzUmVzcG9uc2UiJILT",
+            "5JMCHhIcL3YxL3RyYW5zYWN0aW9ucy97aWR9L3N0YXR1cxJyChFEZWxldGVU",
+            "cmFuc2FjdGlvbhImLnNzbi5hc3luYy52MS5EZWxldGVUcmFuc2FjdGlvblJl",
+            "cXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiHYLT5JMCFyoVL3YxL3Ry",
+            "YW5zYWN0aW9ucy97aWR9EmAKCURlbGV0ZVRhZxIeLnNzbi5hc3luYy52MS5E",
+            "ZWxldGVUYWdSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IhuC0+ST",
+            "AhUqEy92MS90YWdzL3t0YWdfbmFtZX1C7gEKFWFpLnZpc21hLnNzbi5hc3lu",
+            "Yy52MUIKQXN5bmNQcm90b1ABWjxnaXRodWIuY29tL2UtY29ub21pYy92bWxh",
+            "cGlzL2dlbi9nby9zc24vYXN5bmMvdjE7dHJhbnNhY3Rpb26iAgNTQViqAgxT",
+            "c24uQXN5bmMuVjHKAgxTc25cQXN5bmNcVjHiAhhTc25cQXN5bmNcVjFcR1BC",
+            "TWV0YWRhdGHqAg5Tc246OkFzeW5jOjpWMZJBOBIPCglBc3luYyBBUEkyAnYx",
+            "KgECMhBhcHBsaWNhdGlvbi9qc29uOhBhcHBsaWNhdGlvbi9qc29uYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grpc.Gateway.ProtocGenOpenapiv2.Options.AnnotationsReflection.Descriptor, global::Ssn.Annotator.V1.AnnotatorReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -86,7 +87,7 @@ namespace Ssn.Async.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.CreateTransactionResponse), global::Ssn.Async.V1.CreateTransactionResponse.Parser, new[]{ "Id", "CustomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionResultsRequest), global::Ssn.Async.V1.GetTransactionResultsRequest.Parser, new[]{ "Id", "CustomId", "MinConfidence", "MaxResults" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionResultsResponse), global::Ssn.Async.V1.GetTransactionResultsResponse.Parser, new[]{ "Id", "Annotations", "ErrorMessage", "CustomId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.Annotation), global::Ssn.Async.V1.Annotation.Parser, new[]{ "Feature", "Candidate", "PurchaseLineCandidate", "AnswerCandidates", "TextAnnotation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.Annotation), global::Ssn.Async.V1.Annotation.Parser, new[]{ "Feature", "Candidates", "PurchaseLineCandidates", "AnswerCandidates", "TextAnnotation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionStatusRequest), global::Ssn.Async.V1.GetTransactionStatusRequest.Parser, new[]{ "Id", "CustomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.GetTransactionStatusResponse), global::Ssn.Async.V1.GetTransactionStatusResponse.Parser, new[]{ "Id", "Status", "ErrorMessage", "CustomId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Async.V1.DeleteTransactionRequest), global::Ssn.Async.V1.DeleteTransactionRequest.Parser, new[]{ "Id", "CustomId" }, null, null, null, null),
@@ -1261,8 +1262,8 @@ namespace Ssn.Async.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Annotation(Annotation other) : this() {
       feature_ = other.feature_;
-      candidate_ = other.candidate_.Clone();
-      purchaseLineCandidate_ = other.purchaseLineCandidate_.Clone();
+      candidates_ = other.candidates_.Clone();
+      purchaseLineCandidates_ = other.purchaseLineCandidates_.Clone();
       answerCandidates_ = other.answerCandidates_.Clone();
       textAnnotation_ = other.textAnnotation_ != null ? other.textAnnotation_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1289,32 +1290,32 @@ namespace Ssn.Async.V1 {
       }
     }
 
-    /// <summary>Field number for the "candidate" field.</summary>
-    public const int CandidateFieldNumber = 2;
-    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_candidate_codec
+    /// <summary>Field number for the "candidates" field.</summary>
+    public const int CandidatesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Ssn.Type.Candidate> _repeated_candidates_codec
         = pb::FieldCodec.ForMessage(18, global::Ssn.Type.Candidate.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> candidate_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
+    private readonly pbc::RepeatedField<global::Ssn.Type.Candidate> candidates_ = new pbc::RepeatedField<global::Ssn.Type.Candidate>();
     /// <summary>
     /// ssn candidates
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Type.Candidate> Candidate {
-      get { return candidate_; }
+    public pbc::RepeatedField<global::Ssn.Type.Candidate> Candidates {
+      get { return candidates_; }
     }
 
-    /// <summary>Field number for the "purchase_line_candidate" field.</summary>
-    public const int PurchaseLineCandidateFieldNumber = 3;
-    private static readonly pb::FieldCodec<global::Ssn.Type.PurchaseLineCandidate> _repeated_purchaseLineCandidate_codec
+    /// <summary>Field number for the "purchase_line_candidates" field.</summary>
+    public const int PurchaseLineCandidatesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Ssn.Type.PurchaseLineCandidate> _repeated_purchaseLineCandidates_codec
         = pb::FieldCodec.ForMessage(26, global::Ssn.Type.PurchaseLineCandidate.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Type.PurchaseLineCandidate> purchaseLineCandidate_ = new pbc::RepeatedField<global::Ssn.Type.PurchaseLineCandidate>();
+    private readonly pbc::RepeatedField<global::Ssn.Type.PurchaseLineCandidate> purchaseLineCandidates_ = new pbc::RepeatedField<global::Ssn.Type.PurchaseLineCandidate>();
     /// <summary>
     /// purchase line candidates
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Type.PurchaseLineCandidate> PurchaseLineCandidate {
-      get { return purchaseLineCandidate_; }
+    public pbc::RepeatedField<global::Ssn.Type.PurchaseLineCandidate> PurchaseLineCandidates {
+      get { return purchaseLineCandidates_; }
     }
 
     /// <summary>Field number for the "answer_candidates" field.</summary>
@@ -1362,8 +1363,8 @@ namespace Ssn.Async.V1 {
         return true;
       }
       if (Feature != other.Feature) return false;
-      if(!candidate_.Equals(other.candidate_)) return false;
-      if(!purchaseLineCandidate_.Equals(other.purchaseLineCandidate_)) return false;
+      if(!candidates_.Equals(other.candidates_)) return false;
+      if(!purchaseLineCandidates_.Equals(other.purchaseLineCandidates_)) return false;
       if(!answerCandidates_.Equals(other.answerCandidates_)) return false;
       if (!object.Equals(TextAnnotation, other.TextAnnotation)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1374,8 +1375,8 @@ namespace Ssn.Async.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Feature.Length != 0) hash ^= Feature.GetHashCode();
-      hash ^= candidate_.GetHashCode();
-      hash ^= purchaseLineCandidate_.GetHashCode();
+      hash ^= candidates_.GetHashCode();
+      hash ^= purchaseLineCandidates_.GetHashCode();
       hash ^= answerCandidates_.GetHashCode();
       if (textAnnotation_ != null) hash ^= TextAnnotation.GetHashCode();
       if (_unknownFields != null) {
@@ -1400,8 +1401,8 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(10);
         output.WriteString(Feature);
       }
-      candidate_.WriteTo(output, _repeated_candidate_codec);
-      purchaseLineCandidate_.WriteTo(output, _repeated_purchaseLineCandidate_codec);
+      candidates_.WriteTo(output, _repeated_candidates_codec);
+      purchaseLineCandidates_.WriteTo(output, _repeated_purchaseLineCandidates_codec);
       answerCandidates_.WriteTo(output, _repeated_answerCandidates_codec);
       if (textAnnotation_ != null) {
         output.WriteRawTag(42);
@@ -1421,8 +1422,8 @@ namespace Ssn.Async.V1 {
         output.WriteRawTag(10);
         output.WriteString(Feature);
       }
-      candidate_.WriteTo(ref output, _repeated_candidate_codec);
-      purchaseLineCandidate_.WriteTo(ref output, _repeated_purchaseLineCandidate_codec);
+      candidates_.WriteTo(ref output, _repeated_candidates_codec);
+      purchaseLineCandidates_.WriteTo(ref output, _repeated_purchaseLineCandidates_codec);
       answerCandidates_.WriteTo(ref output, _repeated_answerCandidates_codec);
       if (textAnnotation_ != null) {
         output.WriteRawTag(42);
@@ -1441,8 +1442,8 @@ namespace Ssn.Async.V1 {
       if (Feature.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Feature);
       }
-      size += candidate_.CalculateSize(_repeated_candidate_codec);
-      size += purchaseLineCandidate_.CalculateSize(_repeated_purchaseLineCandidate_codec);
+      size += candidates_.CalculateSize(_repeated_candidates_codec);
+      size += purchaseLineCandidates_.CalculateSize(_repeated_purchaseLineCandidates_codec);
       size += answerCandidates_.CalculateSize(_repeated_answerCandidates_codec);
       if (textAnnotation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextAnnotation);
@@ -1462,8 +1463,8 @@ namespace Ssn.Async.V1 {
       if (other.Feature.Length != 0) {
         Feature = other.Feature;
       }
-      candidate_.Add(other.candidate_);
-      purchaseLineCandidate_.Add(other.purchaseLineCandidate_);
+      candidates_.Add(other.candidates_);
+      purchaseLineCandidates_.Add(other.purchaseLineCandidates_);
       answerCandidates_.Add(other.answerCandidates_);
       if (other.textAnnotation_ != null) {
         if (textAnnotation_ == null) {
@@ -1491,11 +1492,11 @@ namespace Ssn.Async.V1 {
             break;
           }
           case 18: {
-            candidate_.AddEntriesFrom(input, _repeated_candidate_codec);
+            candidates_.AddEntriesFrom(input, _repeated_candidates_codec);
             break;
           }
           case 26: {
-            purchaseLineCandidate_.AddEntriesFrom(input, _repeated_purchaseLineCandidate_codec);
+            purchaseLineCandidates_.AddEntriesFrom(input, _repeated_purchaseLineCandidates_codec);
             break;
           }
           case 34: {
@@ -1529,11 +1530,11 @@ namespace Ssn.Async.V1 {
             break;
           }
           case 18: {
-            candidate_.AddEntriesFrom(ref input, _repeated_candidate_codec);
+            candidates_.AddEntriesFrom(ref input, _repeated_candidates_codec);
             break;
           }
           case 26: {
-            purchaseLineCandidate_.AddEntriesFrom(ref input, _repeated_purchaseLineCandidate_codec);
+            purchaseLineCandidates_.AddEntriesFrom(ref input, _repeated_purchaseLineCandidates_codec);
             break;
           }
           case 34: {

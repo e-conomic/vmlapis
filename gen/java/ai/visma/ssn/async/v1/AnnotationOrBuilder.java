@@ -32,43 +32,43 @@ public interface AnnotationOrBuilder extends
    * ssn candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
    */
   java.util.List<ai.visma.ssn.type.Candidate> 
-      getCandidateList();
+      getCandidatesList();
   /**
    * <pre>
    * ssn candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
    */
-  ai.visma.ssn.type.Candidate getCandidate(int index);
+  ai.visma.ssn.type.Candidate getCandidates(int index);
   /**
    * <pre>
    * ssn candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
    */
-  int getCandidateCount();
+  int getCandidatesCount();
   /**
    * <pre>
    * ssn candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getCandidateOrBuilderList();
+      getCandidatesOrBuilderList();
   /**
    * <pre>
    * ssn candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
    */
-  ai.visma.ssn.type.CandidateOrBuilder getCandidateOrBuilder(
+  ai.visma.ssn.type.CandidateOrBuilder getCandidatesOrBuilder(
       int index);
 
   /**
@@ -76,43 +76,43 @@ public interface AnnotationOrBuilder extends
    * purchase line candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
    */
   java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> 
-      getPurchaseLineCandidateList();
+      getPurchaseLineCandidatesList();
   /**
    * <pre>
    * purchase line candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
    */
-  ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLineCandidate(int index);
+  ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLineCandidates(int index);
   /**
    * <pre>
    * purchase line candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
    */
-  int getPurchaseLineCandidateCount();
+  int getPurchaseLineCandidatesCount();
   /**
    * <pre>
    * purchase line candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> 
-      getPurchaseLineCandidateOrBuilderList();
+      getPurchaseLineCandidatesOrBuilderList();
   /**
    * <pre>
    * purchase line candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
    */
-  ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLineCandidateOrBuilder(
+  ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLineCandidatesOrBuilder(
       int index);
 
   /**

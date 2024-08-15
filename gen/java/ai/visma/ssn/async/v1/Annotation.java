@@ -17,8 +17,8 @@ private static final long serialVersionUID = 0L;
   }
   private Annotation() {
     feature_ = "";
-    candidate_ = java.util.Collections.emptyList();
-    purchaseLineCandidate_ = java.util.Collections.emptyList();
+    candidates_ = java.util.Collections.emptyList();
+    purchaseLineCandidates_ = java.util.Collections.emptyList();
     answerCandidates_ = java.util.Collections.emptyList();
   }
 
@@ -89,126 +89,126 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int CANDIDATE_FIELD_NUMBER = 2;
+  public static final int CANDIDATES_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.type.Candidate> candidate_;
+  private java.util.List<ai.visma.ssn.type.Candidate> candidates_;
   /**
    * <pre>
    * ssn candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.Candidate> getCandidateList() {
-    return candidate_;
+  public java.util.List<ai.visma.ssn.type.Candidate> getCandidatesList() {
+    return candidates_;
   }
   /**
    * <pre>
    * ssn candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-      getCandidateOrBuilderList() {
-    return candidate_;
+      getCandidatesOrBuilderList() {
+    return candidates_;
   }
   /**
    * <pre>
    * ssn candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
-  public int getCandidateCount() {
-    return candidate_.size();
+  public int getCandidatesCount() {
+    return candidates_.size();
   }
   /**
    * <pre>
    * ssn candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.Candidate getCandidate(int index) {
-    return candidate_.get(index);
+  public ai.visma.ssn.type.Candidate getCandidates(int index) {
+    return candidates_.get(index);
   }
   /**
    * <pre>
    * ssn candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.CandidateOrBuilder getCandidateOrBuilder(
+  public ai.visma.ssn.type.CandidateOrBuilder getCandidatesOrBuilder(
       int index) {
-    return candidate_.get(index);
+    return candidates_.get(index);
   }
 
-  public static final int PURCHASE_LINE_CANDIDATE_FIELD_NUMBER = 3;
+  public static final int PURCHASE_LINE_CANDIDATES_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> purchaseLineCandidate_;
+  private java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> purchaseLineCandidates_;
   /**
    * <pre>
    * purchase line candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> getPurchaseLineCandidateList() {
-    return purchaseLineCandidate_;
+  public java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> getPurchaseLineCandidatesList() {
+    return purchaseLineCandidates_;
   }
   /**
    * <pre>
    * purchase line candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> 
-      getPurchaseLineCandidateOrBuilderList() {
-    return purchaseLineCandidate_;
+      getPurchaseLineCandidatesOrBuilderList() {
+    return purchaseLineCandidates_;
   }
   /**
    * <pre>
    * purchase line candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
    */
   @java.lang.Override
-  public int getPurchaseLineCandidateCount() {
-    return purchaseLineCandidate_.size();
+  public int getPurchaseLineCandidatesCount() {
+    return purchaseLineCandidates_.size();
   }
   /**
    * <pre>
    * purchase line candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLineCandidate(int index) {
-    return purchaseLineCandidate_.get(index);
+  public ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLineCandidates(int index) {
+    return purchaseLineCandidates_.get(index);
   }
   /**
    * <pre>
    * purchase line candidates
    * </pre>
    *
-   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLineCandidateOrBuilder(
+  public ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLineCandidatesOrBuilder(
       int index) {
-    return purchaseLineCandidate_.get(index);
+    return purchaseLineCandidates_.get(index);
   }
 
   public static final int ANSWER_CANDIDATES_FIELD_NUMBER = 4;
@@ -327,11 +327,11 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feature_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, feature_);
     }
-    for (int i = 0; i < candidate_.size(); i++) {
-      output.writeMessage(2, candidate_.get(i));
+    for (int i = 0; i < candidates_.size(); i++) {
+      output.writeMessage(2, candidates_.get(i));
     }
-    for (int i = 0; i < purchaseLineCandidate_.size(); i++) {
-      output.writeMessage(3, purchaseLineCandidate_.get(i));
+    for (int i = 0; i < purchaseLineCandidates_.size(); i++) {
+      output.writeMessage(3, purchaseLineCandidates_.get(i));
     }
     for (int i = 0; i < answerCandidates_.size(); i++) {
       output.writeMessage(4, answerCandidates_.get(i));
@@ -351,13 +351,13 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(feature_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, feature_);
     }
-    for (int i = 0; i < candidate_.size(); i++) {
+    for (int i = 0; i < candidates_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, candidate_.get(i));
+        .computeMessageSize(2, candidates_.get(i));
     }
-    for (int i = 0; i < purchaseLineCandidate_.size(); i++) {
+    for (int i = 0; i < purchaseLineCandidates_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, purchaseLineCandidate_.get(i));
+        .computeMessageSize(3, purchaseLineCandidates_.get(i));
     }
     for (int i = 0; i < answerCandidates_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
@@ -384,10 +384,10 @@ private static final long serialVersionUID = 0L;
 
     if (!getFeature()
         .equals(other.getFeature())) return false;
-    if (!getCandidateList()
-        .equals(other.getCandidateList())) return false;
-    if (!getPurchaseLineCandidateList()
-        .equals(other.getPurchaseLineCandidateList())) return false;
+    if (!getCandidatesList()
+        .equals(other.getCandidatesList())) return false;
+    if (!getPurchaseLineCandidatesList()
+        .equals(other.getPurchaseLineCandidatesList())) return false;
     if (!getAnswerCandidatesList()
         .equals(other.getAnswerCandidatesList())) return false;
     if (hasTextAnnotation() != other.hasTextAnnotation()) return false;
@@ -408,13 +408,13 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + FEATURE_FIELD_NUMBER;
     hash = (53 * hash) + getFeature().hashCode();
-    if (getCandidateCount() > 0) {
-      hash = (37 * hash) + CANDIDATE_FIELD_NUMBER;
-      hash = (53 * hash) + getCandidateList().hashCode();
+    if (getCandidatesCount() > 0) {
+      hash = (37 * hash) + CANDIDATES_FIELD_NUMBER;
+      hash = (53 * hash) + getCandidatesList().hashCode();
     }
-    if (getPurchaseLineCandidateCount() > 0) {
-      hash = (37 * hash) + PURCHASE_LINE_CANDIDATE_FIELD_NUMBER;
-      hash = (53 * hash) + getPurchaseLineCandidateList().hashCode();
+    if (getPurchaseLineCandidatesCount() > 0) {
+      hash = (37 * hash) + PURCHASE_LINE_CANDIDATES_FIELD_NUMBER;
+      hash = (53 * hash) + getPurchaseLineCandidatesList().hashCode();
     }
     if (getAnswerCandidatesCount() > 0) {
       hash = (37 * hash) + ANSWER_CANDIDATES_FIELD_NUMBER;
@@ -556,18 +556,18 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       feature_ = "";
-      if (candidateBuilder_ == null) {
-        candidate_ = java.util.Collections.emptyList();
+      if (candidatesBuilder_ == null) {
+        candidates_ = java.util.Collections.emptyList();
       } else {
-        candidate_ = null;
-        candidateBuilder_.clear();
+        candidates_ = null;
+        candidatesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000002);
-      if (purchaseLineCandidateBuilder_ == null) {
-        purchaseLineCandidate_ = java.util.Collections.emptyList();
+      if (purchaseLineCandidatesBuilder_ == null) {
+        purchaseLineCandidates_ = java.util.Collections.emptyList();
       } else {
-        purchaseLineCandidate_ = null;
-        purchaseLineCandidateBuilder_.clear();
+        purchaseLineCandidates_ = null;
+        purchaseLineCandidatesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000004);
       if (answerCandidatesBuilder_ == null) {
@@ -615,23 +615,23 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(ai.visma.ssn.async.v1.Annotation result) {
-      if (candidateBuilder_ == null) {
+      if (candidatesBuilder_ == null) {
         if (((bitField0_ & 0x00000002) != 0)) {
-          candidate_ = java.util.Collections.unmodifiableList(candidate_);
+          candidates_ = java.util.Collections.unmodifiableList(candidates_);
           bitField0_ = (bitField0_ & ~0x00000002);
         }
-        result.candidate_ = candidate_;
+        result.candidates_ = candidates_;
       } else {
-        result.candidate_ = candidateBuilder_.build();
+        result.candidates_ = candidatesBuilder_.build();
       }
-      if (purchaseLineCandidateBuilder_ == null) {
+      if (purchaseLineCandidatesBuilder_ == null) {
         if (((bitField0_ & 0x00000004) != 0)) {
-          purchaseLineCandidate_ = java.util.Collections.unmodifiableList(purchaseLineCandidate_);
+          purchaseLineCandidates_ = java.util.Collections.unmodifiableList(purchaseLineCandidates_);
           bitField0_ = (bitField0_ & ~0x00000004);
         }
-        result.purchaseLineCandidate_ = purchaseLineCandidate_;
+        result.purchaseLineCandidates_ = purchaseLineCandidates_;
       } else {
-        result.purchaseLineCandidate_ = purchaseLineCandidateBuilder_.build();
+        result.purchaseLineCandidates_ = purchaseLineCandidatesBuilder_.build();
       }
       if (answerCandidatesBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0)) {
@@ -705,55 +705,55 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000001;
         onChanged();
       }
-      if (candidateBuilder_ == null) {
-        if (!other.candidate_.isEmpty()) {
-          if (candidate_.isEmpty()) {
-            candidate_ = other.candidate_;
+      if (candidatesBuilder_ == null) {
+        if (!other.candidates_.isEmpty()) {
+          if (candidates_.isEmpty()) {
+            candidates_ = other.candidates_;
             bitField0_ = (bitField0_ & ~0x00000002);
           } else {
-            ensureCandidateIsMutable();
-            candidate_.addAll(other.candidate_);
+            ensureCandidatesIsMutable();
+            candidates_.addAll(other.candidates_);
           }
           onChanged();
         }
       } else {
-        if (!other.candidate_.isEmpty()) {
-          if (candidateBuilder_.isEmpty()) {
-            candidateBuilder_.dispose();
-            candidateBuilder_ = null;
-            candidate_ = other.candidate_;
+        if (!other.candidates_.isEmpty()) {
+          if (candidatesBuilder_.isEmpty()) {
+            candidatesBuilder_.dispose();
+            candidatesBuilder_ = null;
+            candidates_ = other.candidates_;
             bitField0_ = (bitField0_ & ~0x00000002);
-            candidateBuilder_ = 
+            candidatesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getCandidateFieldBuilder() : null;
+                 getCandidatesFieldBuilder() : null;
           } else {
-            candidateBuilder_.addAllMessages(other.candidate_);
+            candidatesBuilder_.addAllMessages(other.candidates_);
           }
         }
       }
-      if (purchaseLineCandidateBuilder_ == null) {
-        if (!other.purchaseLineCandidate_.isEmpty()) {
-          if (purchaseLineCandidate_.isEmpty()) {
-            purchaseLineCandidate_ = other.purchaseLineCandidate_;
+      if (purchaseLineCandidatesBuilder_ == null) {
+        if (!other.purchaseLineCandidates_.isEmpty()) {
+          if (purchaseLineCandidates_.isEmpty()) {
+            purchaseLineCandidates_ = other.purchaseLineCandidates_;
             bitField0_ = (bitField0_ & ~0x00000004);
           } else {
-            ensurePurchaseLineCandidateIsMutable();
-            purchaseLineCandidate_.addAll(other.purchaseLineCandidate_);
+            ensurePurchaseLineCandidatesIsMutable();
+            purchaseLineCandidates_.addAll(other.purchaseLineCandidates_);
           }
           onChanged();
         }
       } else {
-        if (!other.purchaseLineCandidate_.isEmpty()) {
-          if (purchaseLineCandidateBuilder_.isEmpty()) {
-            purchaseLineCandidateBuilder_.dispose();
-            purchaseLineCandidateBuilder_ = null;
-            purchaseLineCandidate_ = other.purchaseLineCandidate_;
+        if (!other.purchaseLineCandidates_.isEmpty()) {
+          if (purchaseLineCandidatesBuilder_.isEmpty()) {
+            purchaseLineCandidatesBuilder_.dispose();
+            purchaseLineCandidatesBuilder_ = null;
+            purchaseLineCandidates_ = other.purchaseLineCandidates_;
             bitField0_ = (bitField0_ & ~0x00000004);
-            purchaseLineCandidateBuilder_ = 
+            purchaseLineCandidatesBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getPurchaseLineCandidateFieldBuilder() : null;
+                 getPurchaseLineCandidatesFieldBuilder() : null;
           } else {
-            purchaseLineCandidateBuilder_.addAllMessages(other.purchaseLineCandidate_);
+            purchaseLineCandidatesBuilder_.addAllMessages(other.purchaseLineCandidates_);
           }
         }
       }
@@ -822,11 +822,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       ai.visma.ssn.type.Candidate.parser(),
                       extensionRegistry);
-              if (candidateBuilder_ == null) {
-                ensureCandidateIsMutable();
-                candidate_.add(m);
+              if (candidatesBuilder_ == null) {
+                ensureCandidatesIsMutable();
+                candidates_.add(m);
               } else {
-                candidateBuilder_.addMessage(m);
+                candidatesBuilder_.addMessage(m);
               }
               break;
             } // case 18
@@ -835,11 +835,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       ai.visma.ssn.type.PurchaseLineCandidate.parser(),
                       extensionRegistry);
-              if (purchaseLineCandidateBuilder_ == null) {
-                ensurePurchaseLineCandidateIsMutable();
-                purchaseLineCandidate_.add(m);
+              if (purchaseLineCandidatesBuilder_ == null) {
+                ensurePurchaseLineCandidatesIsMutable();
+                purchaseLineCandidates_.add(m);
               } else {
-                purchaseLineCandidateBuilder_.addMessage(m);
+                purchaseLineCandidatesBuilder_.addMessage(m);
               }
               break;
             } // case 26
@@ -972,30 +972,30 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private java.util.List<ai.visma.ssn.type.Candidate> candidate_ =
+    private java.util.List<ai.visma.ssn.type.Candidate> candidates_ =
       java.util.Collections.emptyList();
-    private void ensureCandidateIsMutable() {
+    private void ensureCandidatesIsMutable() {
       if (!((bitField0_ & 0x00000002) != 0)) {
-        candidate_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(candidate_);
+        candidates_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(candidates_);
         bitField0_ |= 0x00000002;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> candidateBuilder_;
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> candidatesBuilder_;
 
     /**
      * <pre>
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public java.util.List<ai.visma.ssn.type.Candidate> getCandidateList() {
-      if (candidateBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(candidate_);
+    public java.util.List<ai.visma.ssn.type.Candidate> getCandidatesList() {
+      if (candidatesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(candidates_);
       } else {
-        return candidateBuilder_.getMessageList();
+        return candidatesBuilder_.getMessageList();
       }
     }
     /**
@@ -1003,13 +1003,13 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public int getCandidateCount() {
-      if (candidateBuilder_ == null) {
-        return candidate_.size();
+    public int getCandidatesCount() {
+      if (candidatesBuilder_ == null) {
+        return candidates_.size();
       } else {
-        return candidateBuilder_.getCount();
+        return candidatesBuilder_.getCount();
       }
     }
     /**
@@ -1017,13 +1017,13 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public ai.visma.ssn.type.Candidate getCandidate(int index) {
-      if (candidateBuilder_ == null) {
-        return candidate_.get(index);
+    public ai.visma.ssn.type.Candidate getCandidates(int index) {
+      if (candidatesBuilder_ == null) {
+        return candidates_.get(index);
       } else {
-        return candidateBuilder_.getMessage(index);
+        return candidatesBuilder_.getMessage(index);
       }
     }
     /**
@@ -1031,19 +1031,19 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public Builder setCandidate(
+    public Builder setCandidates(
         int index, ai.visma.ssn.type.Candidate value) {
-      if (candidateBuilder_ == null) {
+      if (candidatesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureCandidateIsMutable();
-        candidate_.set(index, value);
+        ensureCandidatesIsMutable();
+        candidates_.set(index, value);
         onChanged();
       } else {
-        candidateBuilder_.setMessage(index, value);
+        candidatesBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -1052,16 +1052,16 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public Builder setCandidate(
+    public Builder setCandidates(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (candidateBuilder_ == null) {
-        ensureCandidateIsMutable();
-        candidate_.set(index, builderForValue.build());
+      if (candidatesBuilder_ == null) {
+        ensureCandidatesIsMutable();
+        candidates_.set(index, builderForValue.build());
         onChanged();
       } else {
-        candidateBuilder_.setMessage(index, builderForValue.build());
+        candidatesBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1070,18 +1070,18 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public Builder addCandidate(ai.visma.ssn.type.Candidate value) {
-      if (candidateBuilder_ == null) {
+    public Builder addCandidates(ai.visma.ssn.type.Candidate value) {
+      if (candidatesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureCandidateIsMutable();
-        candidate_.add(value);
+        ensureCandidatesIsMutable();
+        candidates_.add(value);
         onChanged();
       } else {
-        candidateBuilder_.addMessage(value);
+        candidatesBuilder_.addMessage(value);
       }
       return this;
     }
@@ -1090,19 +1090,19 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public Builder addCandidate(
+    public Builder addCandidates(
         int index, ai.visma.ssn.type.Candidate value) {
-      if (candidateBuilder_ == null) {
+      if (candidatesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureCandidateIsMutable();
-        candidate_.add(index, value);
+        ensureCandidatesIsMutable();
+        candidates_.add(index, value);
         onChanged();
       } else {
-        candidateBuilder_.addMessage(index, value);
+        candidatesBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -1111,16 +1111,16 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public Builder addCandidate(
+    public Builder addCandidates(
         ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (candidateBuilder_ == null) {
-        ensureCandidateIsMutable();
-        candidate_.add(builderForValue.build());
+      if (candidatesBuilder_ == null) {
+        ensureCandidatesIsMutable();
+        candidates_.add(builderForValue.build());
         onChanged();
       } else {
-        candidateBuilder_.addMessage(builderForValue.build());
+        candidatesBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -1129,16 +1129,16 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public Builder addCandidate(
+    public Builder addCandidates(
         int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
-      if (candidateBuilder_ == null) {
-        ensureCandidateIsMutable();
-        candidate_.add(index, builderForValue.build());
+      if (candidatesBuilder_ == null) {
+        ensureCandidatesIsMutable();
+        candidates_.add(index, builderForValue.build());
         onChanged();
       } else {
-        candidateBuilder_.addMessage(index, builderForValue.build());
+        candidatesBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1147,17 +1147,17 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public Builder addAllCandidate(
+    public Builder addAllCandidates(
         java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
-      if (candidateBuilder_ == null) {
-        ensureCandidateIsMutable();
+      if (candidatesBuilder_ == null) {
+        ensureCandidatesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, candidate_);
+            values, candidates_);
         onChanged();
       } else {
-        candidateBuilder_.addAllMessages(values);
+        candidatesBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -1166,15 +1166,15 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public Builder clearCandidate() {
-      if (candidateBuilder_ == null) {
-        candidate_ = java.util.Collections.emptyList();
+    public Builder clearCandidates() {
+      if (candidatesBuilder_ == null) {
+        candidates_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000002);
         onChanged();
       } else {
-        candidateBuilder_.clear();
+        candidatesBuilder_.clear();
       }
       return this;
     }
@@ -1183,15 +1183,15 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public Builder removeCandidate(int index) {
-      if (candidateBuilder_ == null) {
-        ensureCandidateIsMutable();
-        candidate_.remove(index);
+    public Builder removeCandidates(int index) {
+      if (candidatesBuilder_ == null) {
+        ensureCandidatesIsMutable();
+        candidates_.remove(index);
         onChanged();
       } else {
-        candidateBuilder_.remove(index);
+        candidatesBuilder_.remove(index);
       }
       return this;
     }
@@ -1200,24 +1200,24 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder getCandidateBuilder(
+    public ai.visma.ssn.type.Candidate.Builder getCandidatesBuilder(
         int index) {
-      return getCandidateFieldBuilder().getBuilder(index);
+      return getCandidatesFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public ai.visma.ssn.type.CandidateOrBuilder getCandidateOrBuilder(
+    public ai.visma.ssn.type.CandidateOrBuilder getCandidatesOrBuilder(
         int index) {
-      if (candidateBuilder_ == null) {
-        return candidate_.get(index);  } else {
-        return candidateBuilder_.getMessageOrBuilder(index);
+      if (candidatesBuilder_ == null) {
+        return candidates_.get(index);  } else {
+        return candidatesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -1225,14 +1225,14 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
-         getCandidateOrBuilderList() {
-      if (candidateBuilder_ != null) {
-        return candidateBuilder_.getMessageOrBuilderList();
+         getCandidatesOrBuilderList() {
+      if (candidatesBuilder_ != null) {
+        return candidatesBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(candidate_);
+        return java.util.Collections.unmodifiableList(candidates_);
       }
     }
     /**
@@ -1240,10 +1240,10 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addCandidateBuilder() {
-      return getCandidateFieldBuilder().addBuilder(
+    public ai.visma.ssn.type.Candidate.Builder addCandidatesBuilder() {
+      return getCandidatesFieldBuilder().addBuilder(
           ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
@@ -1251,11 +1251,11 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
-    public ai.visma.ssn.type.Candidate.Builder addCandidateBuilder(
+    public ai.visma.ssn.type.Candidate.Builder addCandidatesBuilder(
         int index) {
-      return getCandidateFieldBuilder().addBuilder(
+      return getCandidatesFieldBuilder().addBuilder(
           index, ai.visma.ssn.type.Candidate.getDefaultInstance());
     }
     /**
@@ -1263,51 +1263,51 @@ private static final long serialVersionUID = 0L;
      * ssn candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.Candidate candidate = 2 [json_name = "candidate"];</code>
+     * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
      */
     public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
-         getCandidateBuilderList() {
-      return getCandidateFieldBuilder().getBuilderList();
+         getCandidatesBuilderList() {
+      return getCandidatesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
-        getCandidateFieldBuilder() {
-      if (candidateBuilder_ == null) {
-        candidateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getCandidatesFieldBuilder() {
+      if (candidatesBuilder_ == null) {
+        candidatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
-                candidate_,
+                candidates_,
                 ((bitField0_ & 0x00000002) != 0),
                 getParentForChildren(),
                 isClean());
-        candidate_ = null;
+        candidates_ = null;
       }
-      return candidateBuilder_;
+      return candidatesBuilder_;
     }
 
-    private java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> purchaseLineCandidate_ =
+    private java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> purchaseLineCandidates_ =
       java.util.Collections.emptyList();
-    private void ensurePurchaseLineCandidateIsMutable() {
+    private void ensurePurchaseLineCandidatesIsMutable() {
       if (!((bitField0_ & 0x00000004) != 0)) {
-        purchaseLineCandidate_ = new java.util.ArrayList<ai.visma.ssn.type.PurchaseLineCandidate>(purchaseLineCandidate_);
+        purchaseLineCandidates_ = new java.util.ArrayList<ai.visma.ssn.type.PurchaseLineCandidate>(purchaseLineCandidates_);
         bitField0_ |= 0x00000004;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        ai.visma.ssn.type.PurchaseLineCandidate, ai.visma.ssn.type.PurchaseLineCandidate.Builder, ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> purchaseLineCandidateBuilder_;
+        ai.visma.ssn.type.PurchaseLineCandidate, ai.visma.ssn.type.PurchaseLineCandidate.Builder, ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> purchaseLineCandidatesBuilder_;
 
     /**
      * <pre>
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> getPurchaseLineCandidateList() {
-      if (purchaseLineCandidateBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(purchaseLineCandidate_);
+    public java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> getPurchaseLineCandidatesList() {
+      if (purchaseLineCandidatesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(purchaseLineCandidates_);
       } else {
-        return purchaseLineCandidateBuilder_.getMessageList();
+        return purchaseLineCandidatesBuilder_.getMessageList();
       }
     }
     /**
@@ -1315,13 +1315,13 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public int getPurchaseLineCandidateCount() {
-      if (purchaseLineCandidateBuilder_ == null) {
-        return purchaseLineCandidate_.size();
+    public int getPurchaseLineCandidatesCount() {
+      if (purchaseLineCandidatesBuilder_ == null) {
+        return purchaseLineCandidates_.size();
       } else {
-        return purchaseLineCandidateBuilder_.getCount();
+        return purchaseLineCandidatesBuilder_.getCount();
       }
     }
     /**
@@ -1329,13 +1329,13 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLineCandidate(int index) {
-      if (purchaseLineCandidateBuilder_ == null) {
-        return purchaseLineCandidate_.get(index);
+    public ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLineCandidates(int index) {
+      if (purchaseLineCandidatesBuilder_ == null) {
+        return purchaseLineCandidates_.get(index);
       } else {
-        return purchaseLineCandidateBuilder_.getMessage(index);
+        return purchaseLineCandidatesBuilder_.getMessage(index);
       }
     }
     /**
@@ -1343,19 +1343,19 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public Builder setPurchaseLineCandidate(
+    public Builder setPurchaseLineCandidates(
         int index, ai.visma.ssn.type.PurchaseLineCandidate value) {
-      if (purchaseLineCandidateBuilder_ == null) {
+      if (purchaseLineCandidatesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensurePurchaseLineCandidateIsMutable();
-        purchaseLineCandidate_.set(index, value);
+        ensurePurchaseLineCandidatesIsMutable();
+        purchaseLineCandidates_.set(index, value);
         onChanged();
       } else {
-        purchaseLineCandidateBuilder_.setMessage(index, value);
+        purchaseLineCandidatesBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -1364,16 +1364,16 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public Builder setPurchaseLineCandidate(
+    public Builder setPurchaseLineCandidates(
         int index, ai.visma.ssn.type.PurchaseLineCandidate.Builder builderForValue) {
-      if (purchaseLineCandidateBuilder_ == null) {
-        ensurePurchaseLineCandidateIsMutable();
-        purchaseLineCandidate_.set(index, builderForValue.build());
+      if (purchaseLineCandidatesBuilder_ == null) {
+        ensurePurchaseLineCandidatesIsMutable();
+        purchaseLineCandidates_.set(index, builderForValue.build());
         onChanged();
       } else {
-        purchaseLineCandidateBuilder_.setMessage(index, builderForValue.build());
+        purchaseLineCandidatesBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1382,18 +1382,18 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public Builder addPurchaseLineCandidate(ai.visma.ssn.type.PurchaseLineCandidate value) {
-      if (purchaseLineCandidateBuilder_ == null) {
+    public Builder addPurchaseLineCandidates(ai.visma.ssn.type.PurchaseLineCandidate value) {
+      if (purchaseLineCandidatesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensurePurchaseLineCandidateIsMutable();
-        purchaseLineCandidate_.add(value);
+        ensurePurchaseLineCandidatesIsMutable();
+        purchaseLineCandidates_.add(value);
         onChanged();
       } else {
-        purchaseLineCandidateBuilder_.addMessage(value);
+        purchaseLineCandidatesBuilder_.addMessage(value);
       }
       return this;
     }
@@ -1402,19 +1402,19 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public Builder addPurchaseLineCandidate(
+    public Builder addPurchaseLineCandidates(
         int index, ai.visma.ssn.type.PurchaseLineCandidate value) {
-      if (purchaseLineCandidateBuilder_ == null) {
+      if (purchaseLineCandidatesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensurePurchaseLineCandidateIsMutable();
-        purchaseLineCandidate_.add(index, value);
+        ensurePurchaseLineCandidatesIsMutable();
+        purchaseLineCandidates_.add(index, value);
         onChanged();
       } else {
-        purchaseLineCandidateBuilder_.addMessage(index, value);
+        purchaseLineCandidatesBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -1423,16 +1423,16 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public Builder addPurchaseLineCandidate(
+    public Builder addPurchaseLineCandidates(
         ai.visma.ssn.type.PurchaseLineCandidate.Builder builderForValue) {
-      if (purchaseLineCandidateBuilder_ == null) {
-        ensurePurchaseLineCandidateIsMutable();
-        purchaseLineCandidate_.add(builderForValue.build());
+      if (purchaseLineCandidatesBuilder_ == null) {
+        ensurePurchaseLineCandidatesIsMutable();
+        purchaseLineCandidates_.add(builderForValue.build());
         onChanged();
       } else {
-        purchaseLineCandidateBuilder_.addMessage(builderForValue.build());
+        purchaseLineCandidatesBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -1441,16 +1441,16 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public Builder addPurchaseLineCandidate(
+    public Builder addPurchaseLineCandidates(
         int index, ai.visma.ssn.type.PurchaseLineCandidate.Builder builderForValue) {
-      if (purchaseLineCandidateBuilder_ == null) {
-        ensurePurchaseLineCandidateIsMutable();
-        purchaseLineCandidate_.add(index, builderForValue.build());
+      if (purchaseLineCandidatesBuilder_ == null) {
+        ensurePurchaseLineCandidatesIsMutable();
+        purchaseLineCandidates_.add(index, builderForValue.build());
         onChanged();
       } else {
-        purchaseLineCandidateBuilder_.addMessage(index, builderForValue.build());
+        purchaseLineCandidatesBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -1459,17 +1459,17 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public Builder addAllPurchaseLineCandidate(
+    public Builder addAllPurchaseLineCandidates(
         java.lang.Iterable<? extends ai.visma.ssn.type.PurchaseLineCandidate> values) {
-      if (purchaseLineCandidateBuilder_ == null) {
-        ensurePurchaseLineCandidateIsMutable();
+      if (purchaseLineCandidatesBuilder_ == null) {
+        ensurePurchaseLineCandidatesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, purchaseLineCandidate_);
+            values, purchaseLineCandidates_);
         onChanged();
       } else {
-        purchaseLineCandidateBuilder_.addAllMessages(values);
+        purchaseLineCandidatesBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -1478,15 +1478,15 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public Builder clearPurchaseLineCandidate() {
-      if (purchaseLineCandidateBuilder_ == null) {
-        purchaseLineCandidate_ = java.util.Collections.emptyList();
+    public Builder clearPurchaseLineCandidates() {
+      if (purchaseLineCandidatesBuilder_ == null) {
+        purchaseLineCandidates_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000004);
         onChanged();
       } else {
-        purchaseLineCandidateBuilder_.clear();
+        purchaseLineCandidatesBuilder_.clear();
       }
       return this;
     }
@@ -1495,15 +1495,15 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public Builder removePurchaseLineCandidate(int index) {
-      if (purchaseLineCandidateBuilder_ == null) {
-        ensurePurchaseLineCandidateIsMutable();
-        purchaseLineCandidate_.remove(index);
+    public Builder removePurchaseLineCandidates(int index) {
+      if (purchaseLineCandidatesBuilder_ == null) {
+        ensurePurchaseLineCandidatesIsMutable();
+        purchaseLineCandidates_.remove(index);
         onChanged();
       } else {
-        purchaseLineCandidateBuilder_.remove(index);
+        purchaseLineCandidatesBuilder_.remove(index);
       }
       return this;
     }
@@ -1512,24 +1512,24 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public ai.visma.ssn.type.PurchaseLineCandidate.Builder getPurchaseLineCandidateBuilder(
+    public ai.visma.ssn.type.PurchaseLineCandidate.Builder getPurchaseLineCandidatesBuilder(
         int index) {
-      return getPurchaseLineCandidateFieldBuilder().getBuilder(index);
+      return getPurchaseLineCandidatesFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLineCandidateOrBuilder(
+    public ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLineCandidatesOrBuilder(
         int index) {
-      if (purchaseLineCandidateBuilder_ == null) {
-        return purchaseLineCandidate_.get(index);  } else {
-        return purchaseLineCandidateBuilder_.getMessageOrBuilder(index);
+      if (purchaseLineCandidatesBuilder_ == null) {
+        return purchaseLineCandidates_.get(index);  } else {
+        return purchaseLineCandidatesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -1537,14 +1537,14 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> 
-         getPurchaseLineCandidateOrBuilderList() {
-      if (purchaseLineCandidateBuilder_ != null) {
-        return purchaseLineCandidateBuilder_.getMessageOrBuilderList();
+         getPurchaseLineCandidatesOrBuilderList() {
+      if (purchaseLineCandidatesBuilder_ != null) {
+        return purchaseLineCandidatesBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(purchaseLineCandidate_);
+        return java.util.Collections.unmodifiableList(purchaseLineCandidates_);
       }
     }
     /**
@@ -1552,10 +1552,10 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public ai.visma.ssn.type.PurchaseLineCandidate.Builder addPurchaseLineCandidateBuilder() {
-      return getPurchaseLineCandidateFieldBuilder().addBuilder(
+    public ai.visma.ssn.type.PurchaseLineCandidate.Builder addPurchaseLineCandidatesBuilder() {
+      return getPurchaseLineCandidatesFieldBuilder().addBuilder(
           ai.visma.ssn.type.PurchaseLineCandidate.getDefaultInstance());
     }
     /**
@@ -1563,11 +1563,11 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
-    public ai.visma.ssn.type.PurchaseLineCandidate.Builder addPurchaseLineCandidateBuilder(
+    public ai.visma.ssn.type.PurchaseLineCandidate.Builder addPurchaseLineCandidatesBuilder(
         int index) {
-      return getPurchaseLineCandidateFieldBuilder().addBuilder(
+      return getPurchaseLineCandidatesFieldBuilder().addBuilder(
           index, ai.visma.ssn.type.PurchaseLineCandidate.getDefaultInstance());
     }
     /**
@@ -1575,25 +1575,25 @@ private static final long serialVersionUID = 0L;
      * purchase line candidates
      * </pre>
      *
-     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+     * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
      */
     public java.util.List<ai.visma.ssn.type.PurchaseLineCandidate.Builder> 
-         getPurchaseLineCandidateBuilderList() {
-      return getPurchaseLineCandidateFieldBuilder().getBuilderList();
+         getPurchaseLineCandidatesBuilderList() {
+      return getPurchaseLineCandidatesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         ai.visma.ssn.type.PurchaseLineCandidate, ai.visma.ssn.type.PurchaseLineCandidate.Builder, ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> 
-        getPurchaseLineCandidateFieldBuilder() {
-      if (purchaseLineCandidateBuilder_ == null) {
-        purchaseLineCandidateBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getPurchaseLineCandidatesFieldBuilder() {
+      if (purchaseLineCandidatesBuilder_ == null) {
+        purchaseLineCandidatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             ai.visma.ssn.type.PurchaseLineCandidate, ai.visma.ssn.type.PurchaseLineCandidate.Builder, ai.visma.ssn.type.PurchaseLineCandidateOrBuilder>(
-                purchaseLineCandidate_,
+                purchaseLineCandidates_,
                 ((bitField0_ & 0x00000004) != 0),
                 getParentForChildren(),
                 isClean());
-        purchaseLineCandidate_ = null;
+        purchaseLineCandidates_ = null;
       }
-      return purchaseLineCandidateBuilder_;
+      return purchaseLineCandidatesBuilder_;
     }
 
     private java.util.List<ai.visma.ssn.type.AnswerCandidate> answerCandidates_ =

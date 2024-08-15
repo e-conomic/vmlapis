@@ -1189,9 +1189,9 @@ proto.ssn.async.v1.Annotation.prototype.toObject = function(opt_includeInstance)
 proto.ssn.async.v1.Annotation.toObject = function(includeInstance, msg) {
   var f, obj = {
     feature: jspb.Message.getFieldWithDefault(msg, 1, ""),
-    candidateList: jspb.Message.toObjectList(msg.getCandidateList(),
+    candidatesList: jspb.Message.toObjectList(msg.getCandidatesList(),
     ssn_type_candidate_pb.Candidate.toObject, includeInstance),
-    purchaseLineCandidateList: jspb.Message.toObjectList(msg.getPurchaseLineCandidateList(),
+    purchaseLineCandidatesList: jspb.Message.toObjectList(msg.getPurchaseLineCandidatesList(),
     ssn_type_candidate_pb.PurchaseLineCandidate.toObject, includeInstance),
     answerCandidatesList: jspb.Message.toObjectList(msg.getAnswerCandidatesList(),
     ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance),
@@ -1239,12 +1239,12 @@ proto.ssn.async.v1.Annotation.deserializeBinaryFromReader = function(msg, reader
     case 2:
       var value = new ssn_type_candidate_pb.Candidate;
       reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
-      msg.addCandidate(value);
+      msg.addCandidates(value);
       break;
     case 3:
       var value = new ssn_type_candidate_pb.PurchaseLineCandidate;
       reader.readMessage(value,ssn_type_candidate_pb.PurchaseLineCandidate.deserializeBinaryFromReader);
-      msg.addPurchaseLineCandidate(value);
+      msg.addPurchaseLineCandidates(value);
       break;
     case 4:
       var value = new ssn_type_candidate_pb.AnswerCandidate;
@@ -1292,7 +1292,7 @@ proto.ssn.async.v1.Annotation.serializeBinaryToWriter = function(message, writer
       f
     );
   }
-  f = message.getCandidateList();
+  f = message.getCandidatesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       2,
@@ -1300,7 +1300,7 @@ proto.ssn.async.v1.Annotation.serializeBinaryToWriter = function(message, writer
       ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
-  f = message.getPurchaseLineCandidateList();
+  f = message.getPurchaseLineCandidatesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       3,
@@ -1346,10 +1346,10 @@ proto.ssn.async.v1.Annotation.prototype.setFeature = function(value) {
 
 
 /**
- * repeated ssn.type.Candidate candidate = 2;
+ * repeated ssn.type.Candidate candidates = 2;
  * @return {!Array<!proto.ssn.type.Candidate>}
  */
-proto.ssn.async.v1.Annotation.prototype.getCandidateList = function() {
+proto.ssn.async.v1.Annotation.prototype.getCandidatesList = function() {
   return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
     jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 2));
 };
@@ -1359,7 +1359,7 @@ proto.ssn.async.v1.Annotation.prototype.getCandidateList = function() {
  * @param {!Array<!proto.ssn.type.Candidate>} value
  * @return {!proto.ssn.async.v1.Annotation} returns this
 */
-proto.ssn.async.v1.Annotation.prototype.setCandidateList = function(value) {
+proto.ssn.async.v1.Annotation.prototype.setCandidatesList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 2, value);
 };
 
@@ -1369,7 +1369,7 @@ proto.ssn.async.v1.Annotation.prototype.setCandidateList = function(value) {
  * @param {number=} opt_index
  * @return {!proto.ssn.type.Candidate}
  */
-proto.ssn.async.v1.Annotation.prototype.addCandidate = function(opt_value, opt_index) {
+proto.ssn.async.v1.Annotation.prototype.addCandidates = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 2, opt_value, proto.ssn.type.Candidate, opt_index);
 };
 
@@ -1378,16 +1378,16 @@ proto.ssn.async.v1.Annotation.prototype.addCandidate = function(opt_value, opt_i
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.async.v1.Annotation} returns this
  */
-proto.ssn.async.v1.Annotation.prototype.clearCandidateList = function() {
-  return this.setCandidateList([]);
+proto.ssn.async.v1.Annotation.prototype.clearCandidatesList = function() {
+  return this.setCandidatesList([]);
 };
 
 
 /**
- * repeated ssn.type.PurchaseLineCandidate purchase_line_candidate = 3;
+ * repeated ssn.type.PurchaseLineCandidate purchase_line_candidates = 3;
  * @return {!Array<!proto.ssn.type.PurchaseLineCandidate>}
  */
-proto.ssn.async.v1.Annotation.prototype.getPurchaseLineCandidateList = function() {
+proto.ssn.async.v1.Annotation.prototype.getPurchaseLineCandidatesList = function() {
   return /** @type{!Array<!proto.ssn.type.PurchaseLineCandidate>} */ (
     jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.PurchaseLineCandidate, 3));
 };
@@ -1397,7 +1397,7 @@ proto.ssn.async.v1.Annotation.prototype.getPurchaseLineCandidateList = function(
  * @param {!Array<!proto.ssn.type.PurchaseLineCandidate>} value
  * @return {!proto.ssn.async.v1.Annotation} returns this
 */
-proto.ssn.async.v1.Annotation.prototype.setPurchaseLineCandidateList = function(value) {
+proto.ssn.async.v1.Annotation.prototype.setPurchaseLineCandidatesList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
 
@@ -1407,7 +1407,7 @@ proto.ssn.async.v1.Annotation.prototype.setPurchaseLineCandidateList = function(
  * @param {number=} opt_index
  * @return {!proto.ssn.type.PurchaseLineCandidate}
  */
-proto.ssn.async.v1.Annotation.prototype.addPurchaseLineCandidate = function(opt_value, opt_index) {
+proto.ssn.async.v1.Annotation.prototype.addPurchaseLineCandidates = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.ssn.type.PurchaseLineCandidate, opt_index);
 };
 
@@ -1416,8 +1416,8 @@ proto.ssn.async.v1.Annotation.prototype.addPurchaseLineCandidate = function(opt_
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.async.v1.Annotation} returns this
  */
-proto.ssn.async.v1.Annotation.prototype.clearPurchaseLineCandidateList = function() {
-  return this.setPurchaseLineCandidateList([]);
+proto.ssn.async.v1.Annotation.prototype.clearPurchaseLineCandidatesList = function() {
+  return this.setPurchaseLineCandidatesList([]);
 };
 
 
