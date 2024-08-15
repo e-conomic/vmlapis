@@ -129,131 +129,29 @@ export namespace GetTransactionResultsResponse {
   }
 }
 
-export class Candidate extends jspb.Message {
-  getCandidateList(): Array<ssn_type_candidate_pb.Candidate>;
-  setCandidateList(value: Array<ssn_type_candidate_pb.Candidate>): Candidate;
-  clearCandidateList(): Candidate;
-  addCandidate(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): Candidate.AsObject;
-  static toObject(includeInstance: boolean, msg: Candidate): Candidate.AsObject;
-  static serializeBinaryToWriter(message: Candidate, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): Candidate;
-  static deserializeBinaryFromReader(message: Candidate, reader: jspb.BinaryReader): Candidate;
-}
-
-export namespace Candidate {
-  export type AsObject = {
-    candidateList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
-  }
-}
-
-export class PurchaseLineCandidate extends jspb.Message {
-  getPurchaseLineCandidateList(): Array<ssn_type_candidate_pb.PurchaseLineCandidate>;
-  setPurchaseLineCandidateList(value: Array<ssn_type_candidate_pb.PurchaseLineCandidate>): PurchaseLineCandidate;
-  clearPurchaseLineCandidateList(): PurchaseLineCandidate;
-  addPurchaseLineCandidate(value?: ssn_type_candidate_pb.PurchaseLineCandidate, index?: number): ssn_type_candidate_pb.PurchaseLineCandidate;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): PurchaseLineCandidate.AsObject;
-  static toObject(includeInstance: boolean, msg: PurchaseLineCandidate): PurchaseLineCandidate.AsObject;
-  static serializeBinaryToWriter(message: PurchaseLineCandidate, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): PurchaseLineCandidate;
-  static deserializeBinaryFromReader(message: PurchaseLineCandidate, reader: jspb.BinaryReader): PurchaseLineCandidate;
-}
-
-export namespace PurchaseLineCandidate {
-  export type AsObject = {
-    purchaseLineCandidateList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
-  }
-}
-
-export class LineCandidate extends jspb.Message {
-  getLineCandidatesList(): Array<ssn_type_candidate_pb.LineCandidate>;
-  setLineCandidatesList(value: Array<ssn_type_candidate_pb.LineCandidate>): LineCandidate;
-  clearLineCandidatesList(): LineCandidate;
-  addLineCandidates(value?: ssn_type_candidate_pb.LineCandidate, index?: number): ssn_type_candidate_pb.LineCandidate;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): LineCandidate.AsObject;
-  static toObject(includeInstance: boolean, msg: LineCandidate): LineCandidate.AsObject;
-  static serializeBinaryToWriter(message: LineCandidate, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): LineCandidate;
-  static deserializeBinaryFromReader(message: LineCandidate, reader: jspb.BinaryReader): LineCandidate;
-}
-
-export namespace LineCandidate {
-  export type AsObject = {
-    lineCandidatesList: Array<ssn_type_candidate_pb.LineCandidate.AsObject>,
-  }
-}
-
-export class AnswerCandidate extends jspb.Message {
-  getAnswersList(): Array<ssn_type_candidate_pb.AnswerCandidate>;
-  setAnswersList(value: Array<ssn_type_candidate_pb.AnswerCandidate>): AnswerCandidate;
-  clearAnswersList(): AnswerCandidate;
-  addAnswers(value?: ssn_type_candidate_pb.AnswerCandidate, index?: number): ssn_type_candidate_pb.AnswerCandidate;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): AnswerCandidate.AsObject;
-  static toObject(includeInstance: boolean, msg: AnswerCandidate): AnswerCandidate.AsObject;
-  static serializeBinaryToWriter(message: AnswerCandidate, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): AnswerCandidate;
-  static deserializeBinaryFromReader(message: AnswerCandidate, reader: jspb.BinaryReader): AnswerCandidate;
-}
-
-export namespace AnswerCandidate {
-  export type AsObject = {
-    answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
-  }
-}
-
-export class PageText extends jspb.Message {
-  getPageTextList(): Array<ssn_type_candidate_pb.PageText>;
-  setPageTextList(value: Array<ssn_type_candidate_pb.PageText>): PageText;
-  clearPageTextList(): PageText;
-  addPageText(value?: ssn_type_candidate_pb.PageText, index?: number): ssn_type_candidate_pb.PageText;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): PageText.AsObject;
-  static toObject(includeInstance: boolean, msg: PageText): PageText.AsObject;
-  static serializeBinaryToWriter(message: PageText, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): PageText;
-  static deserializeBinaryFromReader(message: PageText, reader: jspb.BinaryReader): PageText;
-}
-
-export namespace PageText {
-  export type AsObject = {
-    pageTextList: Array<ssn_type_candidate_pb.PageText.AsObject>,
-  }
-}
-
 export class Annotation extends jspb.Message {
   getFeature(): string;
   setFeature(value: string): Annotation;
 
-  getCandidate(): Candidate | undefined;
-  setCandidate(value?: Candidate): Annotation;
-  hasCandidate(): boolean;
-  clearCandidate(): Annotation;
+  getCandidatesList(): Array<ssn_type_candidate_pb.Candidate>;
+  setCandidatesList(value: Array<ssn_type_candidate_pb.Candidate>): Annotation;
+  clearCandidatesList(): Annotation;
+  addCandidates(value?: ssn_type_candidate_pb.Candidate, index?: number): ssn_type_candidate_pb.Candidate;
 
-  getPurchaseLineCandidate(): PurchaseLineCandidate | undefined;
-  setPurchaseLineCandidate(value?: PurchaseLineCandidate): Annotation;
-  hasPurchaseLineCandidate(): boolean;
-  clearPurchaseLineCandidate(): Annotation;
+  getPurchaseLineCandidatesList(): Array<ssn_type_candidate_pb.PurchaseLineCandidate>;
+  setPurchaseLineCandidatesList(value: Array<ssn_type_candidate_pb.PurchaseLineCandidate>): Annotation;
+  clearPurchaseLineCandidatesList(): Annotation;
+  addPurchaseLineCandidates(value?: ssn_type_candidate_pb.PurchaseLineCandidate, index?: number): ssn_type_candidate_pb.PurchaseLineCandidate;
 
-  getAnswerCandidates(): AnswerCandidate | undefined;
-  setAnswerCandidates(value?: AnswerCandidate): Annotation;
-  hasAnswerCandidates(): boolean;
-  clearAnswerCandidates(): Annotation;
+  getAnswerCandidatesList(): Array<ssn_type_candidate_pb.AnswerCandidate>;
+  setAnswerCandidatesList(value: Array<ssn_type_candidate_pb.AnswerCandidate>): Annotation;
+  clearAnswerCandidatesList(): Annotation;
+  addAnswerCandidates(value?: ssn_type_candidate_pb.AnswerCandidate, index?: number): ssn_type_candidate_pb.AnswerCandidate;
 
   getTextAnnotation(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
   setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): Annotation;
   hasTextAnnotation(): boolean;
   clearTextAnnotation(): Annotation;
-
-  getCandidatesCase(): Annotation.CandidatesCase;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Annotation.AsObject;
@@ -266,18 +164,10 @@ export class Annotation extends jspb.Message {
 export namespace Annotation {
   export type AsObject = {
     feature: string,
-    candidate?: Candidate.AsObject,
-    purchaseLineCandidate?: PurchaseLineCandidate.AsObject,
-    answerCandidates?: AnswerCandidate.AsObject,
+    candidatesList: Array<ssn_type_candidate_pb.Candidate.AsObject>,
+    purchaseLineCandidatesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
+    answerCandidatesList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
     textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
-  }
-
-  export enum CandidatesCase { 
-    CANDIDATES_NOT_SET = 0,
-    CANDIDATE = 2,
-    PURCHASE_LINE_CANDIDATE = 3,
-    ANSWER_CANDIDATES = 4,
-    TEXT_ANNOTATION = 5,
   }
 }
 

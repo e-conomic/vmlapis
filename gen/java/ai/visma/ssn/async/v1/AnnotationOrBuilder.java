@@ -32,81 +32,132 @@ public interface AnnotationOrBuilder extends
    * ssn candidates
    * </pre>
    *
-   * <code>.ssn.async.v1.Candidate candidate = 2 [json_name = "candidate"];</code>
-   * @return Whether the candidate field is set.
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
    */
-  boolean hasCandidate();
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getCandidatesList();
   /**
    * <pre>
    * ssn candidates
    * </pre>
    *
-   * <code>.ssn.async.v1.Candidate candidate = 2 [json_name = "candidate"];</code>
-   * @return The candidate.
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
    */
-  ai.visma.ssn.async.v1.Candidate getCandidate();
+  ai.visma.ssn.type.Candidate getCandidates(int index);
   /**
    * <pre>
    * ssn candidates
    * </pre>
    *
-   * <code>.ssn.async.v1.Candidate candidate = 2 [json_name = "candidate"];</code>
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
    */
-  ai.visma.ssn.async.v1.CandidateOrBuilder getCandidateOrBuilder();
+  int getCandidatesCount();
+  /**
+   * <pre>
+   * ssn candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getCandidatesOrBuilderList();
+  /**
+   * <pre>
+   * ssn candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate candidates = 2 [json_name = "candidates"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getCandidatesOrBuilder(
+      int index);
 
   /**
    * <pre>
    * purchase line candidates
    * </pre>
    *
-   * <code>.ssn.async.v1.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
-   * @return Whether the purchaseLineCandidate field is set.
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
    */
-  boolean hasPurchaseLineCandidate();
+  java.util.List<ai.visma.ssn.type.PurchaseLineCandidate> 
+      getPurchaseLineCandidatesList();
   /**
    * <pre>
    * purchase line candidates
    * </pre>
    *
-   * <code>.ssn.async.v1.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
-   * @return The purchaseLineCandidate.
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
    */
-  ai.visma.ssn.async.v1.PurchaseLineCandidate getPurchaseLineCandidate();
+  ai.visma.ssn.type.PurchaseLineCandidate getPurchaseLineCandidates(int index);
   /**
    * <pre>
    * purchase line candidates
    * </pre>
    *
-   * <code>.ssn.async.v1.PurchaseLineCandidate purchase_line_candidate = 3 [json_name = "purchaseLineCandidate"];</code>
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
    */
-  ai.visma.ssn.async.v1.PurchaseLineCandidateOrBuilder getPurchaseLineCandidateOrBuilder();
+  int getPurchaseLineCandidatesCount();
+  /**
+   * <pre>
+   * purchase line candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.PurchaseLineCandidateOrBuilder> 
+      getPurchaseLineCandidatesOrBuilderList();
+  /**
+   * <pre>
+   * purchase line candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PurchaseLineCandidate purchase_line_candidates = 3 [json_name = "purchaseLineCandidates"];</code>
+   */
+  ai.visma.ssn.type.PurchaseLineCandidateOrBuilder getPurchaseLineCandidatesOrBuilder(
+      int index);
 
   /**
    * <pre>
    * qa candidates
    * </pre>
    *
-   * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
-   * @return Whether the answerCandidates field is set.
+   * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
    */
-  boolean hasAnswerCandidates();
+  java.util.List<ai.visma.ssn.type.AnswerCandidate> 
+      getAnswerCandidatesList();
   /**
    * <pre>
    * qa candidates
    * </pre>
    *
-   * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
-   * @return The answerCandidates.
+   * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
    */
-  ai.visma.ssn.async.v1.AnswerCandidate getAnswerCandidates();
+  ai.visma.ssn.type.AnswerCandidate getAnswerCandidates(int index);
   /**
    * <pre>
    * qa candidates
    * </pre>
    *
-   * <code>.ssn.async.v1.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+   * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
    */
-  ai.visma.ssn.async.v1.AnswerCandidateOrBuilder getAnswerCandidatesOrBuilder();
+  int getAnswerCandidatesCount();
+  /**
+   * <pre>
+   * qa candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.AnswerCandidateOrBuilder> 
+      getAnswerCandidatesOrBuilderList();
+  /**
+   * <pre>
+   * qa candidates
+   * </pre>
+   *
+   * <code>repeated .ssn.type.AnswerCandidate answer_candidates = 4 [json_name = "answerCandidates"];</code>
+   */
+  ai.visma.ssn.type.AnswerCandidateOrBuilder getAnswerCandidatesOrBuilder(
+      int index);
 
   /**
    * <pre>
@@ -134,6 +185,4 @@ public interface AnnotationOrBuilder extends
    * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
    */
   ai.visma.ssn.type.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
-
-  ai.visma.ssn.async.v1.Annotation.CandidatesCase getCandidatesCase();
 }

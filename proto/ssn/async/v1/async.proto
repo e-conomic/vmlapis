@@ -101,28 +101,12 @@ message GetTransactionResultsResponse {
   string custom_id = 4;
 }
 
-// Wrappers for repeated Candidate
-message Candidate {
-  repeated ssn.type.Candidate candidate = 1;
-}
-
-// Wrappers for repeated PurchaseLineCandidate
-message PurchaseLineCandidate {
-  repeated ssn.type.PurchaseLineCandidate purchase_line_candidate = 1;
-}
-
-message AnswerCandidate {
-  repeated ssn.type.AnswerCandidate answers = 1;
-}
-
 message Annotation {
   string feature = 1; // feature name e.g. "TOTAL_INCL_VAT"
-  oneof candidates {
-    Candidate candidate = 2; // ssn candidates
-    PurchaseLineCandidate purchase_line_candidate = 3; // purchase line candidates
-    AnswerCandidate answer_candidates = 4; // qa candidates
-    ssn.type.TextAnnotation text_annotation = 5; // text annotation
-  }
+  repeated ssn.type.Candidate candidates = 2; // ssn candidates
+  repeated ssn.type.PurchaseLineCandidate purchase_line_candidates = 3; // purchase line candidates
+  repeated ssn.type.AnswerCandidate answer_candidates = 4; // qa candidates
+  ssn.type.TextAnnotation text_annotation = 5; // text annotation
 }
 // --- get: "/v1/transactions/{id}/results" ---
 
