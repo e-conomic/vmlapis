@@ -106,30 +106,34 @@ public final class AsyncProto {
       "eteTransactionRequest\022\016\n\002id\030\001 \001(\tR\002id\022\033\n" +
       "\tcustom_id\030\002 \001(\tR\010customId\"W\n\020DeleteTagR" +
       "equest\022C\n\010tag_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-" +
-      "Za-z0-9.][A-Za-z0-9_.>-]*$R\007tagName2\236\005\n\022" +
+      "Za-z0-9.][A-Za-z0-9_.>-]*$R\007tagName2\243\006\n\022" +
       "TransactionService\022\201\001\n\021CreateTransaction" +
       "\022&.ssn.async.v1.CreateTransactionRequest" +
       "\032\'.ssn.async.v1.CreateTransactionRespons" +
-      "e\"\033\202\323\344\223\002\025\"\020/v1/transactions:\001*\022\227\001\n\025GetTr" +
+      "e\"\033\202\323\344\223\002\025\"\020/v1/transactions:\001*\022\306\001\n\025GetTr" +
       "ansactionResults\022*.ssn.async.v1.GetTrans" +
       "actionResultsRequest\032+.ssn.async.v1.GetT" +
-      "ransactionResultsResponse\"%\202\323\344\223\002\037\022\035/v1/t" +
-      "ransactions/{id}/results\022\223\001\n\024GetTransact" +
-      "ionStatus\022).ssn.async.v1.GetTransactionS" +
-      "tatusRequest\032*.ssn.async.v1.GetTransacti" +
-      "onStatusResponse\"$\202\323\344\223\002\036\022\034/v1/transactio" +
-      "ns/{id}/status\022r\n\021DeleteTransaction\022&.ss" +
-      "n.async.v1.DeleteTransactionRequest\032\026.go" +
-      "ogle.protobuf.Empty\"\035\202\323\344\223\002\027*\025/v1/transac" +
-      "tions/{id}\022`\n\tDeleteTag\022\036.ssn.async.v1.D" +
-      "eleteTagRequest\032\026.google.protobuf.Empty\"" +
-      "\033\202\323\344\223\002\025*\023/v1/tags/{tag_name}B\356\001\n\025ai.vism" +
-      "a.ssn.async.v1B\nAsyncProtoP\001Z<github.com" +
-      "/e-conomic/vmlapis/gen/go/ssn/async/v1;t" +
-      "ransaction\242\002\003SAX\252\002\014Ssn.Async.V1\312\002\014Ssn\\As" +
-      "ync\\V1\342\002\030Ssn\\Async\\V1\\GPBMetadata\352\002\016Ssn:" +
-      ":Async::V1\222A8\022\017\n\tAsync API2\002v1*\001\0022\020appli" +
-      "cation/json:\020application/jsonb\006proto3"
+      "ransactionResultsResponse\"T\202\323\344\223\002N\022\035/v1/t" +
+      "ransactions/{id}/resultsZ-\022+/v1/transact" +
+      "ions/custom/{custom_id}/results\022\301\001\n\024GetT" +
+      "ransactionStatus\022).ssn.async.v1.GetTrans" +
+      "actionStatusRequest\032*.ssn.async.v1.GetTr" +
+      "ansactionStatusResponse\"R\202\323\344\223\002L\022\034/v1/tra" +
+      "nsactions/{id}/statusZ,\022*/v1/transaction" +
+      "s/custom/{custom_id}/status\022\231\001\n\021DeleteTr" +
+      "ansaction\022&.ssn.async.v1.DeleteTransacti" +
+      "onRequest\032\026.google.protobuf.Empty\"D\202\323\344\223\002" +
+      ">*\025/v1/transactions/{id}Z%*#/v1/transact" +
+      "ions/custom/{custom_id}\022`\n\tDeleteTag\022\036.s" +
+      "sn.async.v1.DeleteTagRequest\032\026.google.pr" +
+      "otobuf.Empty\"\033\202\323\344\223\002\025*\023/v1/tags/{tag_name" +
+      "}B\356\001\n\025ai.visma.ssn.async.v1B\nAsyncProtoP" +
+      "\001Z<github.com/e-conomic/vmlapis/gen/go/s" +
+      "sn/async/v1;transaction\242\002\003SAX\252\002\014Ssn.Asyn" +
+      "c.V1\312\002\014Ssn\\Async\\V1\342\002\030Ssn\\Async\\V1\\GPBMe" +
+      "tadata\352\002\016Ssn::Async::V1\222A8\022\017\n\tAsync API2" +
+      "\002v1*\001\0022\020application/json:\020application/js" +
+      "onb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

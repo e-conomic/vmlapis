@@ -35,25 +35,19 @@ service TransactionService {
   rpc GetTransactionResults(GetTransactionResultsRequest) returns (GetTransactionResultsResponse) {
     option (google.api.http) = {
       get: "/v1/transactions/{id}/results"
-      additional_bindings {
-        get: "/v1/transactions/custom/{custom_id}/results"
-      }
+      additional_bindings {get: "/v1/transactions/custom/{custom_id}/results"}
     };
   }
   rpc GetTransactionStatus(GetTransactionStatusRequest) returns (GetTransactionStatusResponse) {
     option (google.api.http) = {
       get: "/v1/transactions/{id}/status"
-      additional_bindings {
-        get: "/v1/transactions/custom/{custom_id}/status"
-      }
+      additional_bindings {get: "/v1/transactions/custom/{custom_id}/status"}
     };
   }
   rpc DeleteTransaction(DeleteTransactionRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v1/transactions/{id}"
-      additional_bindings {
-        delete: "/v1/transactions/custom/{custom_id}"
-      }
+      additional_bindings {delete: "/v1/transactions/custom/{custom_id}"}
     };
   }
   rpc DeleteTag(DeleteTagRequest) returns (google.protobuf.Empty) {
