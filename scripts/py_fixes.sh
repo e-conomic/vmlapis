@@ -5,6 +5,8 @@ shopt -s globstar
 sed -i 's/from asgt/from vml_proto.asgt/' gen/python/**/*.py
 # replace for ssn modules
 sed -i 's/from ssn/from vml_proto.ssn/' gen/python/**/*.py
+# replace for validate modules
+sed -i 's/from validate/from vml_proto.validate/' gen/python/**/*.py
 # replace for gen_bq_schema modules
 sed -i 's/from gen_bq_schema/from vml_proto.gen_bq_schema/' gen/python/**/*.py
 # replace for google modules
