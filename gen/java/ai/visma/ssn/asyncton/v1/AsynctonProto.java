@@ -89,7 +89,7 @@ public final class AsynctonProto {
       "e\022\016\n\002id\030\001 \001(\tR\002id\022=\n\013annotations\030\002 \003(\0132\033" +
       ".ssn.asyncton.v1.AnnotationR\013annotations" +
       "\022#\n\rerror_message\030\003 \001(\tR\014errorMessage\022\033\n" +
-      "\tcustom_id\030\004 \001(\tR\010customId\"\301\002\n\nAnnotatio" +
+      "\tcustom_id\030\004 \001(\tR\010customId\"\364\002\n\nAnnotatio" +
       "n\022\030\n\007feature\030\001 \001(\tR\007feature\0223\n\ncandidate" +
       "s\030\002 \003(\0132\023.ssn.type.CandidateR\ncandidates" +
       "\022Y\n\030purchase_line_candidates\030\003 \003(\0132\037.ssn" +
@@ -97,43 +97,44 @@ public final class AsynctonProto {
       "eCandidates\022F\n\021answer_candidates\030\004 \003(\0132\031" +
       ".ssn.type.AnswerCandidateR\020answerCandida" +
       "tes\022A\n\017text_annotation\030\005 \001(\0132\030.ssn.type." +
-      "TextAnnotationR\016textAnnotation\"J\n\033GetTra" +
-      "nsactionStatusRequest\022\016\n\002id\030\001 \001(\tR\002id\022\033\n" +
-      "\tcustom_id\030\002 \001(\tR\010customId\"\210\001\n\034GetTransa" +
-      "ctionStatusResponse\022\016\n\002id\030\001 \001(\tR\002id\022\026\n\006s" +
-      "tatus\030\002 \001(\tR\006status\022#\n\rerror_message\030\003 \001" +
-      "(\tR\014errorMessage\022\033\n\tcustom_id\030\004 \001(\tR\010cus" +
-      "tomId\"G\n\030DeleteTransactionRequest\022\016\n\002id\030" +
-      "\001 \001(\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR\010customId\"W" +
-      "\n\020DeleteTagRequest\022C\n\010tag_name\030\001 \001(\tB(\372B" +
-      "%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\007" +
-      "tagName2\202\006\n\022TransactionService\022\207\001\n\021Creat" +
-      "eTransaction\022).ssn.asyncton.v1.CreateTra" +
-      "nsactionRequest\032*.ssn.asyncton.v1.Create" +
-      "TransactionResponse\"\033\202\323\344\223\002\025\"\020/v1/transac" +
-      "tions:\001*\022\271\001\n\025GetTransactionResults\022-.ssn" +
-      ".asyncton.v1.GetTransactionResultsReques" +
-      "t\032..ssn.asyncton.v1.GetTransactionResult" +
-      "sResponse\"A\202\323\344\223\002;\022\035/v1/transactions/{id}" +
-      "/resultsZ\032\022\030/v1/transactions/results\022\264\001\n" +
-      "\024GetTransactionStatus\022,.ssn.asyncton.v1." +
-      "GetTransactionStatusRequest\032-.ssn.asynct" +
-      "on.v1.GetTransactionStatusResponse\"?\202\323\344\223" +
-      "\0029\022\034/v1/transactions/{id}/statusZ\031\022\027/v1/" +
-      "transactions/status\022\211\001\n\021DeleteTransactio" +
-      "n\022).ssn.asyncton.v1.DeleteTransactionReq" +
-      "uest\032\026.google.protobuf.Empty\"1\202\323\344\223\002+*\025/v" +
-      "1/transactions/{id}Z\022*\020/v1/transactions\022" +
-      "c\n\tDeleteTag\022!.ssn.asyncton.v1.DeleteTag" +
-      "Request\032\026.google.protobuf.Empty\"\033\202\323\344\223\002\025*" +
-      "\023/v1/tags/{tag_name}B\203\002\n\030ai.visma.ssn.as" +
-      "yncton.v1B\rAsynctonProtoP\001Z?github.com/e" +
-      "-conomic/vmlapis/gen/go/ssn/asyncton/v1;" +
-      "transaction\242\002\003SAX\252\002\017Ssn.Asyncton.V1\312\002\017Ss" +
-      "n\\Asyncton\\V1\342\002\033Ssn\\Asyncton\\V1\\GPBMetad" +
-      "ata\352\002\021Ssn::Asyncton::V1\222A8\022\017\n\tAsync API2" +
-      "\002v1*\001\0022\020application/json:\020application/js" +
-      "onb\006proto3"
+      "TextAnnotationR\016textAnnotation\0221\n\npage_t" +
+      "exts\030\006 \003(\0132\022.ssn.type.PageTextR\tpageText" +
+      "s\"J\n\033GetTransactionStatusRequest\022\016\n\002id\030\001" +
+      " \001(\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR\010customId\"\210\001" +
+      "\n\034GetTransactionStatusResponse\022\016\n\002id\030\001 \001" +
+      "(\tR\002id\022\026\n\006status\030\002 \001(\tR\006status\022#\n\rerror_" +
+      "message\030\003 \001(\tR\014errorMessage\022\033\n\tcustom_id" +
+      "\030\004 \001(\tR\010customId\"G\n\030DeleteTransactionReq" +
+      "uest\022\016\n\002id\030\001 \001(\tR\002id\022\033\n\tcustom_id\030\002 \001(\tR" +
+      "\010customId\"W\n\020DeleteTagRequest\022C\n\010tag_nam" +
+      "e\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0" +
+      "-9_.>-]*$R\007tagName2\202\006\n\022TransactionServic" +
+      "e\022\207\001\n\021CreateTransaction\022).ssn.asyncton.v" +
+      "1.CreateTransactionRequest\032*.ssn.asyncto" +
+      "n.v1.CreateTransactionResponse\"\033\202\323\344\223\002\025\"\020" +
+      "/v1/transactions:\001*\022\271\001\n\025GetTransactionRe" +
+      "sults\022-.ssn.asyncton.v1.GetTransactionRe" +
+      "sultsRequest\032..ssn.asyncton.v1.GetTransa" +
+      "ctionResultsResponse\"A\202\323\344\223\002;\022\035/v1/transa" +
+      "ctions/{id}/resultsZ\032\022\030/v1/transactions/" +
+      "results\022\264\001\n\024GetTransactionStatus\022,.ssn.a" +
+      "syncton.v1.GetTransactionStatusRequest\032-" +
+      ".ssn.asyncton.v1.GetTransactionStatusRes" +
+      "ponse\"?\202\323\344\223\0029\022\034/v1/transactions/{id}/sta" +
+      "tusZ\031\022\027/v1/transactions/status\022\211\001\n\021Delet" +
+      "eTransaction\022).ssn.asyncton.v1.DeleteTra" +
+      "nsactionRequest\032\026.google.protobuf.Empty\"" +
+      "1\202\323\344\223\002+*\025/v1/transactions/{id}Z\022*\020/v1/tr" +
+      "ansactions\022c\n\tDeleteTag\022!.ssn.asyncton.v" +
+      "1.DeleteTagRequest\032\026.google.protobuf.Emp" +
+      "ty\"\033\202\323\344\223\002\025*\023/v1/tags/{tag_name}B\203\002\n\030ai.v" +
+      "isma.ssn.asyncton.v1B\rAsynctonProtoP\001Z?g" +
+      "ithub.com/e-conomic/vmlapis/gen/go/ssn/a" +
+      "syncton/v1;transaction\242\002\003SAX\252\002\017Ssn.Async" +
+      "ton.V1\312\002\017Ssn\\Asyncton\\V1\342\002\033Ssn\\Asyncton\\" +
+      "V1\\GPBMetadata\352\002\021Ssn::Asyncton::V1\222A8\022\017\n" +
+      "\tAsync API2\002v1*\001\0022\020application/json:\020app" +
+      "lication/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -175,7 +176,7 @@ public final class AsynctonProto {
     internal_static_ssn_asyncton_v1_Annotation_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_asyncton_v1_Annotation_descriptor,
-        new java.lang.String[] { "Feature", "Candidates", "PurchaseLineCandidates", "AnswerCandidates", "TextAnnotation", });
+        new java.lang.String[] { "Feature", "Candidates", "PurchaseLineCandidates", "AnswerCandidates", "TextAnnotation", "PageTexts", });
     internal_static_ssn_asyncton_v1_GetTransactionStatusRequest_descriptor =
       getDescriptor().getMessageTypes().get(5);
     internal_static_ssn_asyncton_v1_GetTransactionStatusRequest_fieldAccessorTable = new
