@@ -1155,7 +1155,7 @@ proto.ssn.asyncton.v1.GetTransactionResultsResponse.prototype.setCustomId = func
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.asyncton.v1.Annotation.repeatedFields_ = [2,3,4];
+proto.ssn.asyncton.v1.Annotation.repeatedFields_ = [2,3,4,6];
 
 
 
@@ -1195,7 +1195,9 @@ proto.ssn.asyncton.v1.Annotation.toObject = function(includeInstance, msg) {
     ssn_type_candidate_pb.PurchaseLineCandidate.toObject, includeInstance),
     answerCandidatesList: jspb.Message.toObjectList(msg.getAnswerCandidatesList(),
     ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance),
-    textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f)
+    textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
+    pageTextsList: jspb.Message.toObjectList(msg.getPageTextsList(),
+    ssn_type_candidate_pb.PageText.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1255,6 +1257,11 @@ proto.ssn.asyncton.v1.Annotation.deserializeBinaryFromReader = function(msg, rea
       var value = new ssn_type_text_annotation_pb.TextAnnotation;
       reader.readMessage(value,ssn_type_text_annotation_pb.TextAnnotation.deserializeBinaryFromReader);
       msg.setTextAnnotation(value);
+      break;
+    case 6:
+      var value = new ssn_type_candidate_pb.PageText;
+      reader.readMessage(value,ssn_type_candidate_pb.PageText.deserializeBinaryFromReader);
+      msg.addPageTexts(value);
       break;
     default:
       reader.skipField();
@@ -1322,6 +1329,14 @@ proto.ssn.asyncton.v1.Annotation.serializeBinaryToWriter = function(message, wri
       5,
       f,
       ssn_type_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
+    );
+  }
+  f = message.getPageTextsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      6,
+      f,
+      ssn_type_candidate_pb.PageText.serializeBinaryToWriter
     );
   }
 };
@@ -1493,6 +1508,44 @@ proto.ssn.asyncton.v1.Annotation.prototype.clearTextAnnotation = function() {
  */
 proto.ssn.asyncton.v1.Annotation.prototype.hasTextAnnotation = function() {
   return jspb.Message.getField(this, 5) != null;
+};
+
+
+/**
+ * repeated ssn.type.PageText page_texts = 6;
+ * @return {!Array<!proto.ssn.type.PageText>}
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.getPageTextsList = function() {
+  return /** @type{!Array<!proto.ssn.type.PageText>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.PageText, 6));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.PageText>} value
+ * @return {!proto.ssn.asyncton.v1.Annotation} returns this
+*/
+proto.ssn.asyncton.v1.Annotation.prototype.setPageTextsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 6, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.PageText=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.PageText}
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.addPageTexts = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 6, opt_value, proto.ssn.type.PageText, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.asyncton.v1.Annotation} returns this
+ */
+proto.ssn.asyncton.v1.Annotation.prototype.clearPageTextsList = function() {
+  return this.setPageTextsList([]);
 };
 
 

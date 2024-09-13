@@ -20,6 +20,7 @@ private static final long serialVersionUID = 0L;
     candidates_ = java.util.Collections.emptyList();
     purchaseLineCandidates_ = java.util.Collections.emptyList();
     answerCandidates_ = java.util.Collections.emptyList();
+    pageTexts_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -310,6 +311,67 @@ private static final long serialVersionUID = 0L;
     return textAnnotation_ == null ? ai.visma.ssn.type.TextAnnotation.getDefaultInstance() : textAnnotation_;
   }
 
+  public static final int PAGE_TEXTS_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.PageText> pageTexts_;
+  /**
+   * <pre>
+   * page texts
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.PageText> getPageTextsList() {
+    return pageTexts_;
+  }
+  /**
+   * <pre>
+   * page texts
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.PageTextOrBuilder> 
+      getPageTextsOrBuilderList() {
+    return pageTexts_;
+  }
+  /**
+   * <pre>
+   * page texts
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+   */
+  @java.lang.Override
+  public int getPageTextsCount() {
+    return pageTexts_.size();
+  }
+  /**
+   * <pre>
+   * page texts
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.PageText getPageTexts(int index) {
+    return pageTexts_.get(index);
+  }
+  /**
+   * <pre>
+   * page texts
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.PageTextOrBuilder getPageTextsOrBuilder(
+      int index) {
+    return pageTexts_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -339,6 +401,9 @@ private static final long serialVersionUID = 0L;
     if (textAnnotation_ != null) {
       output.writeMessage(5, getTextAnnotation());
     }
+    for (int i = 0; i < pageTexts_.size(); i++) {
+      output.writeMessage(6, pageTexts_.get(i));
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -366,6 +431,10 @@ private static final long serialVersionUID = 0L;
     if (textAnnotation_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(5, getTextAnnotation());
+    }
+    for (int i = 0; i < pageTexts_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(6, pageTexts_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -395,6 +464,8 @@ private static final long serialVersionUID = 0L;
       if (!getTextAnnotation()
           .equals(other.getTextAnnotation())) return false;
     }
+    if (!getPageTextsList()
+        .equals(other.getPageTextsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -423,6 +494,10 @@ private static final long serialVersionUID = 0L;
     if (hasTextAnnotation()) {
       hash = (37 * hash) + TEXT_ANNOTATION_FIELD_NUMBER;
       hash = (53 * hash) + getTextAnnotation().hashCode();
+    }
+    if (getPageTextsCount() > 0) {
+      hash = (37 * hash) + PAGE_TEXTS_FIELD_NUMBER;
+      hash = (53 * hash) + getPageTextsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -582,6 +657,13 @@ private static final long serialVersionUID = 0L;
         textAnnotationBuilder_.dispose();
         textAnnotationBuilder_ = null;
       }
+      if (pageTextsBuilder_ == null) {
+        pageTexts_ = java.util.Collections.emptyList();
+      } else {
+        pageTexts_ = null;
+        pageTextsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000020);
       return this;
     }
 
@@ -641,6 +723,15 @@ private static final long serialVersionUID = 0L;
         result.answerCandidates_ = answerCandidates_;
       } else {
         result.answerCandidates_ = answerCandidatesBuilder_.build();
+      }
+      if (pageTextsBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0)) {
+          pageTexts_ = java.util.Collections.unmodifiableList(pageTexts_);
+          bitField0_ = (bitField0_ & ~0x00000020);
+        }
+        result.pageTexts_ = pageTexts_;
+      } else {
+        result.pageTexts_ = pageTextsBuilder_.build();
       }
     }
 
@@ -786,6 +877,32 @@ private static final long serialVersionUID = 0L;
       if (other.hasTextAnnotation()) {
         mergeTextAnnotation(other.getTextAnnotation());
       }
+      if (pageTextsBuilder_ == null) {
+        if (!other.pageTexts_.isEmpty()) {
+          if (pageTexts_.isEmpty()) {
+            pageTexts_ = other.pageTexts_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+          } else {
+            ensurePageTextsIsMutable();
+            pageTexts_.addAll(other.pageTexts_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.pageTexts_.isEmpty()) {
+          if (pageTextsBuilder_.isEmpty()) {
+            pageTextsBuilder_.dispose();
+            pageTextsBuilder_ = null;
+            pageTexts_ = other.pageTexts_;
+            bitField0_ = (bitField0_ & ~0x00000020);
+            pageTextsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getPageTextsFieldBuilder() : null;
+          } else {
+            pageTextsBuilder_.addAllMessages(other.pageTexts_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -863,6 +980,19 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 50: {
+              ai.visma.ssn.type.PageText m =
+                  input.readMessage(
+                      ai.visma.ssn.type.PageText.parser(),
+                      extensionRegistry);
+              if (pageTextsBuilder_ == null) {
+                ensurePageTextsIsMutable();
+                pageTexts_.add(m);
+              } else {
+                pageTextsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2061,6 +2191,318 @@ private static final long serialVersionUID = 0L;
         textAnnotation_ = null;
       }
       return textAnnotationBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.PageText> pageTexts_ =
+      java.util.Collections.emptyList();
+    private void ensurePageTextsIsMutable() {
+      if (!((bitField0_ & 0x00000020) != 0)) {
+        pageTexts_ = new java.util.ArrayList<ai.visma.ssn.type.PageText>(pageTexts_);
+        bitField0_ |= 0x00000020;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.PageText, ai.visma.ssn.type.PageText.Builder, ai.visma.ssn.type.PageTextOrBuilder> pageTextsBuilder_;
+
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.PageText> getPageTextsList() {
+      if (pageTextsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(pageTexts_);
+      } else {
+        return pageTextsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public int getPageTextsCount() {
+      if (pageTextsBuilder_ == null) {
+        return pageTexts_.size();
+      } else {
+        return pageTextsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public ai.visma.ssn.type.PageText getPageTexts(int index) {
+      if (pageTextsBuilder_ == null) {
+        return pageTexts_.get(index);
+      } else {
+        return pageTextsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public Builder setPageTexts(
+        int index, ai.visma.ssn.type.PageText value) {
+      if (pageTextsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePageTextsIsMutable();
+        pageTexts_.set(index, value);
+        onChanged();
+      } else {
+        pageTextsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public Builder setPageTexts(
+        int index, ai.visma.ssn.type.PageText.Builder builderForValue) {
+      if (pageTextsBuilder_ == null) {
+        ensurePageTextsIsMutable();
+        pageTexts_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        pageTextsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public Builder addPageTexts(ai.visma.ssn.type.PageText value) {
+      if (pageTextsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePageTextsIsMutable();
+        pageTexts_.add(value);
+        onChanged();
+      } else {
+        pageTextsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public Builder addPageTexts(
+        int index, ai.visma.ssn.type.PageText value) {
+      if (pageTextsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensurePageTextsIsMutable();
+        pageTexts_.add(index, value);
+        onChanged();
+      } else {
+        pageTextsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public Builder addPageTexts(
+        ai.visma.ssn.type.PageText.Builder builderForValue) {
+      if (pageTextsBuilder_ == null) {
+        ensurePageTextsIsMutable();
+        pageTexts_.add(builderForValue.build());
+        onChanged();
+      } else {
+        pageTextsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public Builder addPageTexts(
+        int index, ai.visma.ssn.type.PageText.Builder builderForValue) {
+      if (pageTextsBuilder_ == null) {
+        ensurePageTextsIsMutable();
+        pageTexts_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        pageTextsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public Builder addAllPageTexts(
+        java.lang.Iterable<? extends ai.visma.ssn.type.PageText> values) {
+      if (pageTextsBuilder_ == null) {
+        ensurePageTextsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, pageTexts_);
+        onChanged();
+      } else {
+        pageTextsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public Builder clearPageTexts() {
+      if (pageTextsBuilder_ == null) {
+        pageTexts_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+      } else {
+        pageTextsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public Builder removePageTexts(int index) {
+      if (pageTextsBuilder_ == null) {
+        ensurePageTextsIsMutable();
+        pageTexts_.remove(index);
+        onChanged();
+      } else {
+        pageTextsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public ai.visma.ssn.type.PageText.Builder getPageTextsBuilder(
+        int index) {
+      return getPageTextsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public ai.visma.ssn.type.PageTextOrBuilder getPageTextsOrBuilder(
+        int index) {
+      if (pageTextsBuilder_ == null) {
+        return pageTexts_.get(index);  } else {
+        return pageTextsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.PageTextOrBuilder> 
+         getPageTextsOrBuilderList() {
+      if (pageTextsBuilder_ != null) {
+        return pageTextsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(pageTexts_);
+      }
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public ai.visma.ssn.type.PageText.Builder addPageTextsBuilder() {
+      return getPageTextsFieldBuilder().addBuilder(
+          ai.visma.ssn.type.PageText.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public ai.visma.ssn.type.PageText.Builder addPageTextsBuilder(
+        int index) {
+      return getPageTextsFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.PageText.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * page texts
+     * </pre>
+     *
+     * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.PageText.Builder> 
+         getPageTextsBuilderList() {
+      return getPageTextsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.PageText, ai.visma.ssn.type.PageText.Builder, ai.visma.ssn.type.PageTextOrBuilder> 
+        getPageTextsFieldBuilder() {
+      if (pageTextsBuilder_ == null) {
+        pageTextsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.ssn.type.PageText, ai.visma.ssn.type.PageText.Builder, ai.visma.ssn.type.PageTextOrBuilder>(
+                pageTexts_,
+                ((bitField0_ & 0x00000020) != 0),
+                getParentForChildren(),
+                isClean());
+        pageTexts_ = null;
+      }
+      return pageTextsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
