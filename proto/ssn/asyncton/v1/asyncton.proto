@@ -107,6 +107,7 @@ message Annotation {
   repeated ssn.type.PurchaseLineCandidate purchase_line_candidates = 3; // purchase line candidates
   repeated ssn.type.AnswerCandidate answer_candidates = 4; // qa candidates
   ssn.type.TextAnnotation text_annotation = 5; // text annotation
+  repeated ssn.type.PageText page_texts = 6; // page texts
 }
 // --- get: "/v1/transactions/{id}/results" ---
 
