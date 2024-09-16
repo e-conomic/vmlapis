@@ -185,4 +185,48 @@ public interface AnnotationOrBuilder extends
    * <code>.ssn.type.TextAnnotation text_annotation = 5 [json_name = "textAnnotation"];</code>
    */
   ai.visma.ssn.type.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
+
+  /**
+   * <pre>
+   * page texts
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.PageText> 
+      getPageTextsList();
+  /**
+   * <pre>
+   * page texts
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+   */
+  ai.visma.ssn.type.PageText getPageTexts(int index);
+  /**
+   * <pre>
+   * page texts
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+   */
+  int getPageTextsCount();
+  /**
+   * <pre>
+   * page texts
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.PageTextOrBuilder> 
+      getPageTextsOrBuilderList();
+  /**
+   * <pre>
+   * page texts
+   * </pre>
+   *
+   * <code>repeated .ssn.type.PageText page_texts = 6 [json_name = "pageTexts"];</code>
+   */
+  ai.visma.ssn.type.PageTextOrBuilder getPageTextsOrBuilder(
+      int index);
 }

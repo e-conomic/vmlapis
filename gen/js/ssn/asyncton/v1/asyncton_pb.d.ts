@@ -153,6 +153,11 @@ export class Annotation extends jspb.Message {
   hasTextAnnotation(): boolean;
   clearTextAnnotation(): Annotation;
 
+  getPageTextsList(): Array<ssn_type_candidate_pb.PageText>;
+  setPageTextsList(value: Array<ssn_type_candidate_pb.PageText>): Annotation;
+  clearPageTextsList(): Annotation;
+  addPageTexts(value?: ssn_type_candidate_pb.PageText, index?: number): ssn_type_candidate_pb.PageText;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Annotation.AsObject;
   static toObject(includeInstance: boolean, msg: Annotation): Annotation.AsObject;
@@ -168,6 +173,7 @@ export namespace Annotation {
     purchaseLineCandidatesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
     answerCandidatesList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
     textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
+    pageTextsList: Array<ssn_type_candidate_pb.PageText.AsObject>,
   }
 }
 
