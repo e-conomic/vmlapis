@@ -31,7 +31,6 @@ const (
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type TransactionServiceClient interface {
-	// / --- MVP for async purchase lines ---
 	CreateTransaction(ctx context.Context, in *CreateTransactionRequest, opts ...grpc.CallOption) (*CreateTransactionResponse, error)
 	GetTransactionResults(ctx context.Context, in *GetTransactionResultsRequest, opts ...grpc.CallOption) (*GetTransactionResultsResponse, error)
 	GetTransactionStatus(ctx context.Context, in *GetTransactionStatusRequest, opts ...grpc.CallOption) (*GetTransactionStatusResponse, error)
@@ -96,7 +95,6 @@ func (c *transactionServiceClient) DeleteTag(ctx context.Context, in *DeleteTagR
 // All implementations should embed UnimplementedTransactionServiceServer
 // for forward compatibility
 type TransactionServiceServer interface {
-	// / --- MVP for async purchase lines ---
 	CreateTransaction(context.Context, *CreateTransactionRequest) (*CreateTransactionResponse, error)
 	GetTransactionResults(context.Context, *GetTransactionResultsRequest) (*GetTransactionResultsResponse, error)
 	GetTransactionStatus(context.Context, *GetTransactionStatusRequest) (*GetTransactionStatusResponse, error)

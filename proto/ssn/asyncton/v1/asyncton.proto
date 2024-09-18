@@ -25,7 +25,6 @@ option (grpc.gateway.protoc_gen_openapiv2.options.openapiv2_swagger) = {
 // api.{{env}}.ssn.visma.ai
 // transaction = example (receipt, document, scanned invoice text, etc.)
 service TransactionService {
-  /// --- MVP for async purchase lines ---
   rpc CreateTransaction(CreateTransactionRequest) returns (CreateTransactionResponse) {
     option (google.api.http) = {
       post: "/v1/transactions"
@@ -53,7 +52,6 @@ service TransactionService {
   rpc DeleteTag(DeleteTagRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {delete: "/v1/tags/{tag_name}"};
   }
-  /// --- MVP for async purchase lines ---
 
   // below are more ideas how the API could progress
   // ---------------------
@@ -69,7 +67,6 @@ service TransactionService {
   // rpc WatchTransactionStatus(WatchTransactionStatusRequest) returns (stream WatchTransactionStatusResponse) {
   //   option (google.api.http) = {get: "/v1/transactions/{id}/status:watch"};
   // }
-  // delete on tags
 }
 
 // --- post: "/v1/transactions" ---

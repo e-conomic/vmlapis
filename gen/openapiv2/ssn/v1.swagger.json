@@ -224,7 +224,6 @@
         ]
       },
       "post": {
-        "summary": "/ --- MVP for async purchase lines ---",
         "operationId": "TransactionService_CreateTransaction",
         "responses": {
           "200": {

@@ -227,9 +227,6 @@ public final class TransactionServiceGrpc {
   public interface AsyncService {
 
     /**
-     * <pre>
-     *&#47; --- MVP for async purchase lines ---
-     * </pre>
      */
     default void createTransaction(ai.visma.ssn.asyncton.v1.CreateTransactionRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.CreateTransactionResponse> responseObserver) {
@@ -301,9 +298,6 @@ public final class TransactionServiceGrpc {
     }
 
     /**
-     * <pre>
-     *&#47; --- MVP for async purchase lines ---
-     * </pre>
      */
     public void createTransaction(ai.visma.ssn.asyncton.v1.CreateTransactionRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.asyncton.v1.CreateTransactionResponse> responseObserver) {
@@ -365,9 +359,6 @@ public final class TransactionServiceGrpc {
     }
 
     /**
-     * <pre>
-     *&#47; --- MVP for async purchase lines ---
-     * </pre>
      */
     public ai.visma.ssn.asyncton.v1.CreateTransactionResponse createTransaction(ai.visma.ssn.asyncton.v1.CreateTransactionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
@@ -424,9 +415,6 @@ public final class TransactionServiceGrpc {
     }
 
     /**
-     * <pre>
-     *&#47; --- MVP for async purchase lines ---
-     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.asyncton.v1.CreateTransactionResponse> createTransaction(
         ai.visma.ssn.asyncton.v1.CreateTransactionRequest request) {
