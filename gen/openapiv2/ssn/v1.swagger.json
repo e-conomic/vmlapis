@@ -9,6 +9,9 @@
       "name": "DocumentAnnotator"
     },
     {
+      "name": "TransactionService"
+    },
+    {
       "name": "DataService"
     }
   ],
@@ -151,6 +154,332 @@
           "DataService"
         ]
       }
+    },
+    "/v1/tags/{tagName}": {
+      "delete": {
+        "operationId": "TransactionService_DeleteTag",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "tagName",
+            "description": "text-no-spaces",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
+    },
+    "/v1/transactions": {
+      "delete": {
+        "operationId": "TransactionService_DeleteTransaction2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      },
+      "post": {
+        "operationId": "TransactionService_CreateTransaction",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1CreateTransactionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1CreateTransactionRequest"
+            }
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
+    },
+    "/v1/transactions/results": {
+      "get": {
+        "operationId": "TransactionService_GetTransactionResults2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetTransactionResultsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "minConfidence",
+            "description": "GetTransactionResultsRequest message can potentially have a list of features to filter the response\ne.g. repeated string features like in CreateTransactionRequest",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "UNKNOWN",
+              "VERY_LOW",
+              "LOW",
+              "MID",
+              "HIGH",
+              "VERY_HIGH"
+            ],
+            "default": "UNKNOWN"
+          },
+          {
+            "name": "maxResults",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
+    },
+    "/v1/transactions/status": {
+      "get": {
+        "operationId": "TransactionService_GetTransactionStatus2",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetTransactionStatusResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
+    },
+    "/v1/transactions/{id}": {
+      "delete": {
+        "operationId": "TransactionService_DeleteTransaction",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
+    },
+    "/v1/transactions/{id}/results": {
+      "get": {
+        "operationId": "TransactionService_GetTransactionResults",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetTransactionResultsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "name": "minConfidence",
+            "description": "GetTransactionResultsRequest message can potentially have a list of features to filter the response\ne.g. repeated string features like in CreateTransactionRequest",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "enum": [
+              "UNKNOWN",
+              "VERY_LOW",
+              "LOW",
+              "MID",
+              "HIGH",
+              "VERY_HIGH"
+            ],
+            "default": "UNKNOWN"
+          },
+          {
+            "name": "maxResults",
+            "in": "query",
+            "required": false,
+            "type": "integer",
+            "format": "int32"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
+    },
+    "/v1/transactions/{id}/status": {
+      "get": {
+        "operationId": "TransactionService_GetTransactionStatus",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1GetTransactionStatusResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "customId",
+            "in": "query",
+            "required": false,
+            "type": "string"
+          }
+        ],
+        "tags": [
+          "TransactionService"
+        ]
+      }
     }
   },
   "definitions": {
@@ -238,6 +567,51 @@
         }
       },
       "description": "Additional information detected on the structural component."
+    },
+    "asynctonv1Annotation": {
+      "type": "object",
+      "properties": {
+        "feature": {
+          "type": "string",
+          "title": "feature name e.g. \"TOTAL_INCL_VAT\""
+        },
+        "candidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
+          "title": "ssn candidates"
+        },
+        "purchaseLineCandidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePurchaseLineCandidate"
+          },
+          "title": "purchase line candidates"
+        },
+        "answerCandidates": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeAnswerCandidate"
+          },
+          "title": "qa candidates"
+        },
+        "textAnnotation": {
+          "$ref": "#/definitions/typeTextAnnotation",
+          "title": "text annotation"
+        },
+        "pageTexts": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typePageText"
+          },
+          "title": "page texts"
+        }
+      }
     },
     "protobufAny": {
       "type": "object",
@@ -828,6 +1202,45 @@
         }
       }
     },
+    "v1CreateTransactionRequest": {
+      "type": "object",
+      "properties": {
+        "document": {
+          "$ref": "#/definitions/ssnannotatorv1Document",
+          "title": "we could have an ID here, in case they wanted to provide their own"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Let's enforce the tags"
+        },
+        "features": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "e.g. \"TOTAL_INCL_VAT\", \"PURCHASE_LINES\""
+        },
+        "customId": {
+          "type": "string"
+        }
+      },
+      "title": "--- post: \"/v1/transactions\" ---"
+    },
+    "v1CreateTransactionResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "customId": {
+          "type": "string",
+          "title": "CreateTransactionResponse message can potentially contain results from synchronous features (e.g. current SSN prediciton)\n but I think I'm more prone to separate them in /results endpoint"
+        }
+      }
+    },
     "v1DeleteRequest": {
       "type": "object",
       "properties": {
@@ -1383,6 +1796,48 @@
           "items": {
             "type": "string"
           }
+        }
+      }
+    },
+    "v1GetTransactionResultsResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "annotations": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/asynctonv1Annotation"
+          },
+          "title": "map: FEATURE NAME --\u003e SSN CANDIDATES\nempty when processing is still running"
+        },
+        "errorMessage": {
+          "type": "string"
+        },
+        "customId": {
+          "type": "string"
+        }
+      }
+    },
+    "v1GetTransactionStatusResponse": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "status": {
+          "type": "string",
+          "title": "e.g. \"RUNNING\", \"SUCCESSFUL\", \"PARTIAL\", \"FAILED\"\n\"PARTIAL\" is when some features failed - e.g. SSN succeeded but purchase lines failed"
+        },
+        "errorMessage": {
+          "type": "string",
+          "title": "Only populated when status == \"FAILED\" or status == \"PARTIAL\""
+        },
+        "customId": {
+          "type": "string",
+          "title": "maybe a timestamp on different status would be nice here"
         }
       }
     },

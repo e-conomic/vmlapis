@@ -118,12 +118,6 @@ namespace Ssn.Asyncton.V1 {
     [grpc::BindServiceMethod(typeof(TransactionService), "BindService")]
     public abstract partial class TransactionServiceBase
     {
-      /// <summary>
-      //// --- MVP for async purchase lines ---
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Asyncton.V1.CreateTransactionResponse> CreateTransaction(global::Ssn.Asyncton.V1.CreateTransactionRequest request, grpc::ServerCallContext context)
       {
@@ -183,49 +177,21 @@ namespace Ssn.Asyncton.V1 {
       {
       }
 
-      /// <summary>
-      //// --- MVP for async purchase lines ---
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Asyncton.V1.CreateTransactionResponse CreateTransaction(global::Ssn.Asyncton.V1.CreateTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTransaction(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      /// <summary>
-      //// --- MVP for async purchase lines ---
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Asyncton.V1.CreateTransactionResponse CreateTransaction(global::Ssn.Asyncton.V1.CreateTransactionRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_CreateTransaction, null, options, request);
       }
-      /// <summary>
-      //// --- MVP for async purchase lines ---
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.CreateTransactionResponse> CreateTransactionAsync(global::Ssn.Asyncton.V1.CreateTransactionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return CreateTransactionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      /// <summary>
-      //// --- MVP for async purchase lines ---
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Asyncton.V1.CreateTransactionResponse> CreateTransactionAsync(global::Ssn.Asyncton.V1.CreateTransactionRequest request, grpc::CallOptions options)
       {
