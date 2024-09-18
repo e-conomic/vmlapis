@@ -46,7 +46,7 @@ all:
 
 #	openapiv2 (documentation and swagger) for ssn 
 	sed "s/{_FILE_NAME}/ssn\/v1.json/g" buf.gen.openapiv2.yaml > buf.gen.openapiv2.ssn.v1.yaml
-	buf generate proto --template buf.gen.openapiv2.ssn.v1.yaml --path proto/ssn/annotator --path proto/ssn/dataservice  --verbose
+	buf generate proto --template buf.gen.openapiv2.ssn.v1.yaml --path proto/ssn/annotator --path proto/ssn/dataservice --path proto/ssn/asyncton  --verbose
 	rm buf.gen.openapiv2.ssn.v1.yaml
 
 #	descriptor (binary) generated from the service code, only needed for customer-facing services
