@@ -110,4 +110,28 @@ public interface ModelOrBuilder extends
    */
   ai.visma.asgt.type.ModelFileOrBuilder getModelFilesOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .asgt.type.Confidence confidence_thresholds = 11 [json_name = "confidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  java.util.List<ai.visma.asgt.type.Confidence> 
+      getConfidenceThresholdsList();
+  /**
+   * <code>repeated .asgt.type.Confidence confidence_thresholds = 11 [json_name = "confidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  ai.visma.asgt.type.Confidence getConfidenceThresholds(int index);
+  /**
+   * <code>repeated .asgt.type.Confidence confidence_thresholds = 11 [json_name = "confidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  int getConfidenceThresholdsCount();
+  /**
+   * <code>repeated .asgt.type.Confidence confidence_thresholds = 11 [json_name = "confidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.asgt.type.ConfidenceOrBuilder> 
+      getConfidenceThresholdsOrBuilderList();
+  /**
+   * <code>repeated .asgt.type.Confidence confidence_thresholds = 11 [json_name = "confidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  ai.visma.asgt.type.ConfidenceOrBuilder getConfidenceThresholdsOrBuilder(
+      int index);
 }

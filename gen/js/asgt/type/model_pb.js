@@ -23,6 +23,8 @@ var global =
 
 var asgt_type_model_file_pb = require('../../asgt/type/model_file_pb.js');
 goog.object.extend(proto, asgt_type_model_file_pb);
+var asgt_type_prediction_pb = require('../../asgt/type/prediction_pb.js');
+goog.object.extend(proto, asgt_type_prediction_pb);
 var asgt_type_target_metrics_pb = require('../../asgt/type/target_metrics_pb.js');
 goog.object.extend(proto, asgt_type_target_metrics_pb);
 var gen_bq_schema_bq_field_pb = require('../../gen_bq_schema/bq_field_pb.js');
@@ -58,7 +60,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.type.Model.repeatedFields_ = [7,10];
+proto.asgt.type.Model.repeatedFields_ = [7,10,11];
 
 
 
@@ -100,7 +102,9 @@ proto.asgt.type.Model.toObject = function(includeInstance, msg) {
     inputType: jspb.Message.getFieldWithDefault(msg, 8, 0),
     datasetType: jspb.Message.getFieldWithDefault(msg, 9, ""),
     modelFilesList: jspb.Message.toObjectList(msg.getModelFilesList(),
-    asgt_type_model_file_pb.ModelFile.toObject, includeInstance)
+    asgt_type_model_file_pb.ModelFile.toObject, includeInstance),
+    confidenceThresholdsList: jspb.Message.toObjectList(msg.getConfidenceThresholdsList(),
+    asgt_type_prediction_pb.Confidence.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -171,6 +175,11 @@ proto.asgt.type.Model.deserializeBinaryFromReader = function(msg, reader) {
       var value = new asgt_type_model_file_pb.ModelFile;
       reader.readMessage(value,asgt_type_model_file_pb.ModelFile.deserializeBinaryFromReader);
       msg.addModelFiles(value);
+      break;
+    case 11:
+      var value = new asgt_type_prediction_pb.Confidence;
+      reader.readMessage(value,asgt_type_prediction_pb.Confidence.deserializeBinaryFromReader);
+      msg.addConfidenceThresholds(value);
       break;
     default:
       reader.skipField();
@@ -258,6 +267,14 @@ proto.asgt.type.Model.serializeBinaryToWriter = function(message, writer) {
       10,
       f,
       asgt_type_model_file_pb.ModelFile.serializeBinaryToWriter
+    );
+  }
+  f = message.getConfidenceThresholdsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      11,
+      f,
+      asgt_type_prediction_pb.Confidence.serializeBinaryToWriter
     );
   }
 };
@@ -471,6 +488,44 @@ proto.asgt.type.Model.prototype.addModelFiles = function(opt_value, opt_index) {
  */
 proto.asgt.type.Model.prototype.clearModelFilesList = function() {
   return this.setModelFilesList([]);
+};
+
+
+/**
+ * repeated Confidence confidence_thresholds = 11;
+ * @return {!Array<!proto.asgt.type.Confidence>}
+ */
+proto.asgt.type.Model.prototype.getConfidenceThresholdsList = function() {
+  return /** @type{!Array<!proto.asgt.type.Confidence>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_type_prediction_pb.Confidence, 11));
+};
+
+
+/**
+ * @param {!Array<!proto.asgt.type.Confidence>} value
+ * @return {!proto.asgt.type.Model} returns this
+*/
+proto.asgt.type.Model.prototype.setConfidenceThresholdsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 11, value);
+};
+
+
+/**
+ * @param {!proto.asgt.type.Confidence=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.Confidence}
+ */
+proto.asgt.type.Model.prototype.addConfidenceThresholds = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 11, opt_value, proto.asgt.type.Confidence, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.type.Model} returns this
+ */
+proto.asgt.type.Model.prototype.clearConfidenceThresholdsList = function() {
+  return this.setConfidenceThresholdsList([]);
 };
 
 

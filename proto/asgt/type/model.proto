@@ -3,6 +3,7 @@ syntax = "proto3";
 package asgt.type;
 
 import "asgt/type/model_file.proto";
+import "asgt/type/prediction.proto";
 import "asgt/type/target_metrics.proto";
 import "gen_bq_schema/bq_field.proto";
 import "google/protobuf/timestamp.proto";
@@ -23,4 +24,5 @@ message Model {
   InputType input_type = 8;
   string dataset_type = 9;
   repeated asgt.type.ModelFile model_files = 10 [(gen_bq_schema.bigquery).ignore = true];
+  repeated asgt.type.Confidence confidence_thresholds = 11 [(gen_bq_schema.bigquery).ignore = true];
 }

@@ -1,6 +1,7 @@
 import * as jspb from 'google-protobuf'
 
 import * as asgt_type_model_file_pb from '../../asgt/type/model_file_pb';
+import * as asgt_type_prediction_pb from '../../asgt/type/prediction_pb';
 import * as asgt_type_target_metrics_pb from '../../asgt/type/target_metrics_pb';
 import * as gen_bq_schema_bq_field_pb from '../../gen_bq_schema/bq_field_pb';
 import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb';
@@ -37,6 +38,11 @@ export class Model extends jspb.Message {
   clearModelFilesList(): Model;
   addModelFiles(value?: asgt_type_model_file_pb.ModelFile, index?: number): asgt_type_model_file_pb.ModelFile;
 
+  getConfidenceThresholdsList(): Array<asgt_type_prediction_pb.Confidence>;
+  setConfidenceThresholdsList(value: Array<asgt_type_prediction_pb.Confidence>): Model;
+  clearConfidenceThresholdsList(): Model;
+  addConfidenceThresholds(value?: asgt_type_prediction_pb.Confidence, index?: number): asgt_type_prediction_pb.Confidence;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Model.AsObject;
   static toObject(includeInstance: boolean, msg: Model): Model.AsObject;
@@ -55,6 +61,7 @@ export namespace Model {
     inputType: Model.InputType,
     datasetType: string,
     modelFilesList: Array<asgt_type_model_file_pb.ModelFile.AsObject>,
+    confidenceThresholdsList: Array<asgt_type_prediction_pb.Confidence.AsObject>,
   }
 
   export enum InputType { 
