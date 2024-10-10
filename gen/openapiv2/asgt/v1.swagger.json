@@ -638,6 +638,13 @@
             "type": "object",
             "$ref": "#/definitions/typeModelFile"
           }
+        },
+        "confidenceThresholds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/asgttypeConfidence"
+          }
         }
       }
     },
