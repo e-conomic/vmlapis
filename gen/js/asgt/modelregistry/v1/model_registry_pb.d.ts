@@ -3,6 +3,7 @@ import * as jspb from 'google-protobuf'
 import * as asgt_type_dataset_pb from '../../../asgt/type/dataset_pb';
 import * as asgt_type_dataset_statistics_pb from '../../../asgt/type/dataset_statistics_pb';
 import * as asgt_type_model_pb from '../../../asgt/type/model_pb';
+import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb';
 import * as asgt_type_revision_pb from '../../../asgt/type/revision_pb';
 import * as asgt_type_target_metrics_pb from '../../../asgt/type/target_metrics_pb';
 import * as asgt_type_train_statistics_pb from '../../../asgt/type/train_statistics_pb';
@@ -44,6 +45,11 @@ export class RegisterModelRequest extends jspb.Message {
   hasDatasetStatistics(): boolean;
   clearDatasetStatistics(): RegisterModelRequest;
 
+  getConfidenceThresholdsList(): Array<asgt_type_prediction_pb.Confidence>;
+  setConfidenceThresholdsList(value: Array<asgt_type_prediction_pb.Confidence>): RegisterModelRequest;
+  clearConfidenceThresholdsList(): RegisterModelRequest;
+  addConfidenceThresholds(value?: asgt_type_prediction_pb.Confidence, index?: number): asgt_type_prediction_pb.Confidence;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RegisterModelRequest.AsObject;
   static toObject(includeInstance: boolean, msg: RegisterModelRequest): RegisterModelRequest.AsObject;
@@ -62,6 +68,7 @@ export namespace RegisterModelRequest {
     inputType: asgt_type_model_pb.Model.InputType,
     trainStatistics?: asgt_type_train_statistics_pb.TrainStatistics.AsObject,
     datasetStatistics?: asgt_type_dataset_statistics_pb.DatasetStatistics.AsObject,
+    confidenceThresholdsList: Array<asgt_type_prediction_pb.Confidence.AsObject>,
   }
 }
 

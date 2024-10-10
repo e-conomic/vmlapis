@@ -1,6 +1,7 @@
 from asgt.type import dataset_pb2 as _dataset_pb2
 from asgt.type import dataset_statistics_pb2 as _dataset_statistics_pb2
 from asgt.type import model_pb2 as _model_pb2
+from asgt.type import prediction_pb2 as _prediction_pb2
 from asgt.type import revision_pb2 as _revision_pb2
 from asgt.type import target_metrics_pb2 as _target_metrics_pb2
 from asgt.type import train_statistics_pb2 as _train_statistics_pb2
@@ -13,7 +14,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class RegisterModelRequest(_message.Message):
-    __slots__ = ["dataset", "revision", "model_version", "metrics", "target_metrics", "input_type", "train_statistics", "dataset_statistics"]
+    __slots__ = ["dataset", "revision", "model_version", "metrics", "target_metrics", "input_type", "train_statistics", "dataset_statistics", "confidence_thresholds"]
     class MetricsEntry(_message.Message):
         __slots__ = ["key", "value"]
         KEY_FIELD_NUMBER: _ClassVar[int]
@@ -29,6 +30,7 @@ class RegisterModelRequest(_message.Message):
     INPUT_TYPE_FIELD_NUMBER: _ClassVar[int]
     TRAIN_STATISTICS_FIELD_NUMBER: _ClassVar[int]
     DATASET_STATISTICS_FIELD_NUMBER: _ClassVar[int]
+    CONFIDENCE_THRESHOLDS_FIELD_NUMBER: _ClassVar[int]
     dataset: _dataset_pb2.Dataset
     revision: _revision_pb2.Revision
     model_version: int
@@ -37,7 +39,8 @@ class RegisterModelRequest(_message.Message):
     input_type: _model_pb2.Model.InputType
     train_statistics: _train_statistics_pb2.TrainStatistics
     dataset_statistics: _dataset_statistics_pb2.DatasetStatistics
-    def __init__(self, dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ..., revision: _Optional[_Union[_revision_pb2.Revision, _Mapping]] = ..., model_version: _Optional[int] = ..., metrics: _Optional[_Mapping[str, int]] = ..., target_metrics: _Optional[_Iterable[_Union[_target_metrics_pb2.TargetMetrics, _Mapping]]] = ..., input_type: _Optional[_Union[_model_pb2.Model.InputType, str]] = ..., train_statistics: _Optional[_Union[_train_statistics_pb2.TrainStatistics, _Mapping]] = ..., dataset_statistics: _Optional[_Union[_dataset_statistics_pb2.DatasetStatistics, _Mapping]] = ...) -> None: ...
+    confidence_thresholds: _containers.RepeatedCompositeFieldContainer[_prediction_pb2.Confidence]
+    def __init__(self, dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ..., revision: _Optional[_Union[_revision_pb2.Revision, _Mapping]] = ..., model_version: _Optional[int] = ..., metrics: _Optional[_Mapping[str, int]] = ..., target_metrics: _Optional[_Iterable[_Union[_target_metrics_pb2.TargetMetrics, _Mapping]]] = ..., input_type: _Optional[_Union[_model_pb2.Model.InputType, str]] = ..., train_statistics: _Optional[_Union[_train_statistics_pb2.TrainStatistics, _Mapping]] = ..., dataset_statistics: _Optional[_Union[_dataset_statistics_pb2.DatasetStatistics, _Mapping]] = ..., confidence_thresholds: _Optional[_Iterable[_Union[_prediction_pb2.Confidence, _Mapping]]] = ...) -> None: ...
 
 class GetCurrentModelRequest(_message.Message):
     __slots__ = ["dataset"]
