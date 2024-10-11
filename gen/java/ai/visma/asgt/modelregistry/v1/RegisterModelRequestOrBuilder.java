@@ -139,4 +139,28 @@ public interface RegisterModelRequestOrBuilder extends
    * <code>.asgt.type.DatasetStatistics dataset_statistics = 8 [json_name = "datasetStatistics"];</code>
    */
   ai.visma.asgt.type.DatasetStatisticsOrBuilder getDatasetStatisticsOrBuilder();
+
+  /**
+   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   */
+  java.util.List<ai.visma.asgt.type.Confidence> 
+      getConfidenceThresholdsList();
+  /**
+   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   */
+  ai.visma.asgt.type.Confidence getConfidenceThresholds(int index);
+  /**
+   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   */
+  int getConfidenceThresholdsCount();
+  /**
+   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   */
+  java.util.List<? extends ai.visma.asgt.type.ConfidenceOrBuilder> 
+      getConfidenceThresholdsOrBuilderList();
+  /**
+   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   */
+  ai.visma.asgt.type.ConfidenceOrBuilder getConfidenceThresholdsOrBuilder(
+      int index);
 }

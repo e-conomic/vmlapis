@@ -27,6 +27,8 @@ var asgt_type_dataset_statistics_pb = require('../../../asgt/type/dataset_statis
 goog.object.extend(proto, asgt_type_dataset_statistics_pb);
 var asgt_type_model_pb = require('../../../asgt/type/model_pb.js');
 goog.object.extend(proto, asgt_type_model_pb);
+var asgt_type_prediction_pb = require('../../../asgt/type/prediction_pb.js');
+goog.object.extend(proto, asgt_type_prediction_pb);
 var asgt_type_revision_pb = require('../../../asgt/type/revision_pb.js');
 goog.object.extend(proto, asgt_type_revision_pb);
 var asgt_type_target_metrics_pb = require('../../../asgt/type/target_metrics_pb.js');
@@ -107,7 +109,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.modelregistry.v1.RegisterModelRequest.repeatedFields_ = [5];
+proto.asgt.modelregistry.v1.RegisterModelRequest.repeatedFields_ = [5,9];
 
 
 
@@ -148,7 +150,9 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.toObject = function(includeInst
     asgt_type_target_metrics_pb.TargetMetrics.toObject, includeInstance),
     inputType: jspb.Message.getFieldWithDefault(msg, 6, 0),
     trainStatistics: (f = msg.getTrainStatistics()) && asgt_type_train_statistics_pb.TrainStatistics.toObject(includeInstance, f),
-    datasetStatistics: (f = msg.getDatasetStatistics()) && asgt_type_dataset_statistics_pb.DatasetStatistics.toObject(includeInstance, f)
+    datasetStatistics: (f = msg.getDatasetStatistics()) && asgt_type_dataset_statistics_pb.DatasetStatistics.toObject(includeInstance, f),
+    confidenceThresholdsList: jspb.Message.toObjectList(msg.getConfidenceThresholdsList(),
+    asgt_type_prediction_pb.Confidence.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -223,6 +227,11 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.deserializeBinaryFromReader = f
       var value = new asgt_type_dataset_statistics_pb.DatasetStatistics;
       reader.readMessage(value,asgt_type_dataset_statistics_pb.DatasetStatistics.deserializeBinaryFromReader);
       msg.setDatasetStatistics(value);
+      break;
+    case 9:
+      var value = new asgt_type_prediction_pb.Confidence;
+      reader.readMessage(value,asgt_type_prediction_pb.Confidence.deserializeBinaryFromReader);
+      msg.addConfidenceThresholds(value);
       break;
     default:
       reader.skipField();
@@ -309,6 +318,14 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.serializeBinaryToWriter = funct
       8,
       f,
       asgt_type_dataset_statistics_pb.DatasetStatistics.serializeBinaryToWriter
+    );
+  }
+  f = message.getConfidenceThresholdsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      9,
+      f,
+      asgt_type_prediction_pb.Confidence.serializeBinaryToWriter
     );
   }
 };
@@ -556,6 +573,44 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.clearDatasetStatistic
  */
 proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.hasDatasetStatistics = function() {
   return jspb.Message.getField(this, 8) != null;
+};
+
+
+/**
+ * repeated asgt.type.Confidence confidence_thresholds = 9;
+ * @return {!Array<!proto.asgt.type.Confidence>}
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getConfidenceThresholdsList = function() {
+  return /** @type{!Array<!proto.asgt.type.Confidence>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_type_prediction_pb.Confidence, 9));
+};
+
+
+/**
+ * @param {!Array<!proto.asgt.type.Confidence>} value
+ * @return {!proto.asgt.modelregistry.v1.RegisterModelRequest} returns this
+*/
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setConfidenceThresholdsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 9, value);
+};
+
+
+/**
+ * @param {!proto.asgt.type.Confidence=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.Confidence}
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.addConfidenceThresholds = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 9, opt_value, proto.asgt.type.Confidence, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.modelregistry.v1.RegisterModelRequest} returns this
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.clearConfidenceThresholdsList = function() {
+  return this.setConfidenceThresholdsList([]);
 };
 
 
