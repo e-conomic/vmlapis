@@ -15,7 +15,7 @@ message Model {
     FEATURE_TENSORS = 0;
     EXAMPLE_TENSOR = 1;
   }
-  reserved 1 to 2;
+  reserved 1 to 2, 11;
   int64 version = 3 [(gen_bq_schema.bigquery).require = true];
   google.protobuf.Timestamp created_at = 4;
   int32 dataset_size = 5 [(gen_bq_schema.bigquery).ignore = true];
@@ -24,5 +24,9 @@ message Model {
   InputType input_type = 8;
   string dataset_type = 9;
   repeated asgt.type.ModelFile model_files = 10 [(gen_bq_schema.bigquery).ignore = true];
-  repeated asgt.type.Confidence confidence_thresholds = 11 [(gen_bq_schema.bigquery).ignore = true];
+  map<string, ConfidenceThresholds> target_to_confidence_thresholds = 12 [(gen_bq_schema.bigquery).ignore = true];
+}
+
+message ConfidenceThresholds {
+  repeated asgt.type.Confidence confidence_thresholds = 2;
 }

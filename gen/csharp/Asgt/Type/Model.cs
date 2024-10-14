@@ -28,7 +28,7 @@ namespace Asgt.Type {
             "L21vZGVsX2ZpbGUucHJvdG8aGmFzZ3QvdHlwZS9wcmVkaWN0aW9uLnByb3Rv",
             "Gh5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8aHGdlbl9icV9zY2hl",
             "bWEvYnFfZmllbGQucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8isgQKBU1vZGVsEh8KB3ZlcnNpb24YAyABKANCBeo/AggBUgd2ZXJz",
+            "cHJvdG8i2gUKBU1vZGVsEh8KB3ZlcnNpb24YAyABKANCBeo/AggBUgd2ZXJz",
             "aW9uEjkKCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
             "ZXN0YW1wUgljcmVhdGVkQXQSKAoMZGF0YXNldF9zaXplGAUgASgFQgXqPwIY",
             "AVILZGF0YXNldFNpemUSKgoNdHJhaW5pbmdfc2l6ZRgGIAEoBUIF6j8CGAFS",
@@ -37,18 +37,25 @@ namespace Asgt.Type {
             "cxI5CgppbnB1dF90eXBlGAggASgOMhouYXNndC50eXBlLk1vZGVsLklucHV0",
             "VHlwZVIJaW5wdXRUeXBlEiEKDGRhdGFzZXRfdHlwZRgJIAEoCVILZGF0YXNl",
             "dFR5cGUSPAoLbW9kZWxfZmlsZXMYCiADKAsyFC5hc2d0LnR5cGUuTW9kZWxG",
-            "aWxlQgXqPwIYAVIKbW9kZWxGaWxlcxJRChVjb25maWRlbmNlX3RocmVzaG9s",
-            "ZHMYCyADKAsyFS5hc2d0LnR5cGUuQ29uZmlkZW5jZUIF6j8CGAFSFGNvbmZp",
-            "ZGVuY2VUaHJlc2hvbGRzIjQKCUlucHV0VHlwZRITCg9GRUFUVVJFX1RFTlNP",
-            "UlMQABISCg5FWEFNUExFX1RFTlNPUhABSgQIARADQp0BChJhaS52aXNtYS5h",
-            "c2d0LnR5cGVCCk1vZGVsUHJvdG9QAVo2Z2l0aHViLmNvbS9lLWNvbm9taWMv",
-            "dm1sYXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlogIDQVRYqgIJQXNn",
-            "dC5UeXBlygIJQXNndFxUeXBl4gIVQXNndFxUeXBlXEdQQk1ldGFkYXRh6gIK",
-            "QXNndDo6VHlwZWIGcHJvdG8z"));
+            "aWxlQgXqPwIYAVIKbW9kZWxGaWxlcxKAAQofdGFyZ2V0X3RvX2NvbmZpZGVu",
+            "Y2VfdGhyZXNob2xkcxgMIAMoCzIyLmFzZ3QudHlwZS5Nb2RlbC5UYXJnZXRU",
+            "b0NvbmZpZGVuY2VUaHJlc2hvbGRzRW50cnlCBeo/AhgBUhx0YXJnZXRUb0Nv",
+            "bmZpZGVuY2VUaHJlc2hvbGRzGnAKIVRhcmdldFRvQ29uZmlkZW5jZVRocmVz",
+            "aG9sZHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRI1CgV2YWx1ZRgCIAEoCzIf",
+            "LmFzZ3QudHlwZS5Db25maWRlbmNlVGhyZXNob2xkc1IFdmFsdWU6AjgBIjQK",
+            "CUlucHV0VHlwZRITCg9GRUFUVVJFX1RFTlNPUlMQABISCg5FWEFNUExFX1RF",
+            "TlNPUhABSgQIARADSgQICxAMImIKFENvbmZpZGVuY2VUaHJlc2hvbGRzEkoK",
+            "FWNvbmZpZGVuY2VfdGhyZXNob2xkcxgCIAMoCzIVLmFzZ3QudHlwZS5Db25m",
+            "aWRlbmNlUhRjb25maWRlbmNlVGhyZXNob2xkc0KdAQoSYWkudmlzbWEuYXNn",
+            "dC50eXBlQgpNb2RlbFByb3RvUAFaNmdpdGh1Yi5jb20vZS1jb25vbWljL3Zt",
+            "bGFwaXMvZ2VuL2dvL2FzZ3QvdHlwZTthc2d0dHlwZaICA0FUWKoCCUFzZ3Qu",
+            "VHlwZcoCCUFzZ3RcVHlwZeICFUFzZ3RcVHlwZVxHUEJNZXRhZGF0YeoCCkFz",
+            "Z3Q6OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.ModelFileReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType", "ModelFiles", "ConfidenceThresholds" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType", "ModelFiles", "TargetToConfidenceThresholds" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.ConfidenceThresholds), global::Asgt.Type.ConfidenceThresholds.Parser, new[]{ "ConfidenceThresholds_" }, null, null, null, null)
           }));
     }
     #endregion
@@ -97,7 +104,7 @@ namespace Asgt.Type {
       inputType_ = other.inputType_;
       datasetType_ = other.datasetType_;
       modelFiles_ = other.modelFiles_.Clone();
-      confidenceThresholds_ = other.confidenceThresholds_.Clone();
+      targetToConfidenceThresholds_ = other.targetToConfidenceThresholds_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -201,15 +208,15 @@ namespace Asgt.Type {
       get { return modelFiles_; }
     }
 
-    /// <summary>Field number for the "confidence_thresholds" field.</summary>
-    public const int ConfidenceThresholdsFieldNumber = 11;
-    private static readonly pb::FieldCodec<global::Asgt.Type.Confidence> _repeated_confidenceThresholds_codec
-        = pb::FieldCodec.ForMessage(90, global::Asgt.Type.Confidence.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.Confidence> confidenceThresholds_ = new pbc::RepeatedField<global::Asgt.Type.Confidence>();
+    /// <summary>Field number for the "target_to_confidence_thresholds" field.</summary>
+    public const int TargetToConfidenceThresholdsFieldNumber = 12;
+    private static readonly pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds>.Codec _map_targetToConfidenceThresholds_codec
+        = new pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Asgt.Type.ConfidenceThresholds.Parser), 98);
+    private readonly pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds> targetToConfidenceThresholds_ = new pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Asgt.Type.Confidence> ConfidenceThresholds {
-      get { return confidenceThresholds_; }
+    public pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds> TargetToConfidenceThresholds {
+      get { return targetToConfidenceThresholds_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -235,7 +242,7 @@ namespace Asgt.Type {
       if (InputType != other.InputType) return false;
       if (DatasetType != other.DatasetType) return false;
       if(!modelFiles_.Equals(other.modelFiles_)) return false;
-      if(!confidenceThresholds_.Equals(other.confidenceThresholds_)) return false;
+      if (!TargetToConfidenceThresholds.Equals(other.TargetToConfidenceThresholds)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -251,7 +258,7 @@ namespace Asgt.Type {
       if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) hash ^= InputType.GetHashCode();
       if (DatasetType.Length != 0) hash ^= DatasetType.GetHashCode();
       hash ^= modelFiles_.GetHashCode();
-      hash ^= confidenceThresholds_.GetHashCode();
+      hash ^= TargetToConfidenceThresholds.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -296,7 +303,7 @@ namespace Asgt.Type {
         output.WriteString(DatasetType);
       }
       modelFiles_.WriteTo(output, _repeated_modelFiles_codec);
-      confidenceThresholds_.WriteTo(output, _repeated_confidenceThresholds_codec);
+      targetToConfidenceThresholds_.WriteTo(output, _map_targetToConfidenceThresholds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -333,7 +340,7 @@ namespace Asgt.Type {
         output.WriteString(DatasetType);
       }
       modelFiles_.WriteTo(ref output, _repeated_modelFiles_codec);
-      confidenceThresholds_.WriteTo(ref output, _repeated_confidenceThresholds_codec);
+      targetToConfidenceThresholds_.WriteTo(ref output, _map_targetToConfidenceThresholds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -364,7 +371,7 @@ namespace Asgt.Type {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DatasetType);
       }
       size += modelFiles_.CalculateSize(_repeated_modelFiles_codec);
-      size += confidenceThresholds_.CalculateSize(_repeated_confidenceThresholds_codec);
+      size += targetToConfidenceThresholds_.CalculateSize(_map_targetToConfidenceThresholds_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -400,7 +407,7 @@ namespace Asgt.Type {
         DatasetType = other.DatasetType;
       }
       modelFiles_.Add(other.modelFiles_);
-      confidenceThresholds_.Add(other.confidenceThresholds_);
+      targetToConfidenceThresholds_.MergeFrom(other.targetToConfidenceThresholds_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -451,8 +458,8 @@ namespace Asgt.Type {
             modelFiles_.AddEntriesFrom(input, _repeated_modelFiles_codec);
             break;
           }
-          case 90: {
-            confidenceThresholds_.AddEntriesFrom(input, _repeated_confidenceThresholds_codec);
+          case 98: {
+            targetToConfidenceThresholds_.AddEntriesFrom(input, _map_targetToConfidenceThresholds_codec);
             break;
           }
         }
@@ -505,8 +512,8 @@ namespace Asgt.Type {
             modelFiles_.AddEntriesFrom(ref input, _repeated_modelFiles_codec);
             break;
           }
-          case 90: {
-            confidenceThresholds_.AddEntriesFrom(ref input, _repeated_confidenceThresholds_codec);
+          case 98: {
+            targetToConfidenceThresholds_.AddEntriesFrom(ref input, _map_targetToConfidenceThresholds_codec);
             break;
           }
         }
@@ -526,6 +533,184 @@ namespace Asgt.Type {
 
     }
     #endregion
+
+  }
+
+  public sealed partial class ConfidenceThresholds : pb::IMessage<ConfidenceThresholds>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ConfidenceThresholds> _parser = new pb::MessageParser<ConfidenceThresholds>(() => new ConfidenceThresholds());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ConfidenceThresholds> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.Type.ModelReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConfidenceThresholds() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConfidenceThresholds(ConfidenceThresholds other) : this() {
+      confidenceThresholds_ = other.confidenceThresholds_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConfidenceThresholds Clone() {
+      return new ConfidenceThresholds(this);
+    }
+
+    /// <summary>Field number for the "confidence_thresholds" field.</summary>
+    public const int ConfidenceThresholds_FieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Asgt.Type.Confidence> _repeated_confidenceThresholds_codec
+        = pb::FieldCodec.ForMessage(18, global::Asgt.Type.Confidence.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.Confidence> confidenceThresholds_ = new pbc::RepeatedField<global::Asgt.Type.Confidence>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Asgt.Type.Confidence> ConfidenceThresholds_ {
+      get { return confidenceThresholds_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ConfidenceThresholds);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ConfidenceThresholds other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!confidenceThresholds_.Equals(other.confidenceThresholds_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= confidenceThresholds_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      confidenceThresholds_.WriteTo(output, _repeated_confidenceThresholds_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      confidenceThresholds_.WriteTo(ref output, _repeated_confidenceThresholds_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += confidenceThresholds_.CalculateSize(_repeated_confidenceThresholds_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ConfidenceThresholds other) {
+      if (other == null) {
+        return;
+      }
+      confidenceThresholds_.Add(other.confidenceThresholds_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            confidenceThresholds_.AddEntriesFrom(input, _repeated_confidenceThresholds_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            confidenceThresholds_.AddEntriesFrom(ref input, _repeated_confidenceThresholds_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

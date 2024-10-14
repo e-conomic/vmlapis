@@ -30,7 +30,7 @@ namespace Asgt.Modelregistry.V1 {
             "dHlwZS9tb2RlbC5wcm90bxoaYXNndC90eXBlL3ByZWRpY3Rpb24ucHJvdG8a",
             "GGFzZ3QvdHlwZS9yZXZpc2lvbi5wcm90bxoeYXNndC90eXBlL3RhcmdldF9t",
             "ZXRyaWNzLnByb3RvGiBhc2d0L3R5cGUvdHJhaW5fc3RhdGlzdGljcy5wcm90",
-            "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvIoYFChRSZWdpc3Rlck1v",
+            "bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvIskGChRSZWdpc3Rlck1v",
             "ZGVsUmVxdWVzdBIsCgdkYXRhc2V0GAEgASgLMhIuYXNndC50eXBlLkRhdGFz",
             "ZXRSB2RhdGFzZXQSLwoIcmV2aXNpb24YAiABKAsyEy5hc2d0LnR5cGUuUmV2",
             "aXNpb25SCHJldmlzaW9uEiMKDW1vZGVsX3ZlcnNpb24YAyABKANSDG1vZGVs",
@@ -42,30 +42,34 @@ namespace Asgt.Modelregistry.V1 {
             "c3RhdGlzdGljcxgHIAEoCzIaLmFzZ3QudHlwZS5UcmFpblN0YXRpc3RpY3NS",
             "D3RyYWluU3RhdGlzdGljcxJLChJkYXRhc2V0X3N0YXRpc3RpY3MYCCABKAsy",
             "HC5hc2d0LnR5cGUuRGF0YXNldFN0YXRpc3RpY3NSEWRhdGFzZXRTdGF0aXN0",
-            "aWNzEkoKFWNvbmZpZGVuY2VfdGhyZXNob2xkcxgJIAMoCzIVLmFzZ3QudHlw",
-            "ZS5Db25maWRlbmNlUhRjb25maWRlbmNlVGhyZXNob2xkcxo6CgxNZXRyaWNz",
-            "RW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAVSBXZhbHVl",
-            "OgI4ASJGChZHZXRDdXJyZW50TW9kZWxSZXF1ZXN0EiwKB2RhdGFzZXQYASAB",
-            "KAsyEi5hc2d0LnR5cGUuRGF0YXNldFIHZGF0YXNldCJBChdHZXRDdXJyZW50",
-            "TW9kZWxSZXNwb25zZRImCgVtb2RlbBgBIAEoCzIQLmFzZ3QudHlwZS5Nb2Rl",
-            "bFIFbW9kZWwyzQIKDU1vZGVsUmVnaXN0cnkSVAoNUmVnaXN0ZXJNb2RlbBIr",
-            "LmFzZ3QubW9kZWxyZWdpc3RyeS52MS5SZWdpc3Rlck1vZGVsUmVxdWVzdBoW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJwCg9HZXRDdXJyZW50TW9kZWwSLS5h",
-            "c2d0Lm1vZGVscmVnaXN0cnkudjEuR2V0Q3VycmVudE1vZGVsUmVxdWVzdBou",
-            "LmFzZ3QubW9kZWxyZWdpc3RyeS52MS5HZXRDdXJyZW50TW9kZWxSZXNwb25z",
-            "ZRJ0ChNHZXRDdXJyZW50RnVsbE1vZGVsEi0uYXNndC5tb2RlbHJlZ2lzdHJ5",
-            "LnYxLkdldEN1cnJlbnRNb2RlbFJlcXVlc3QaLi5hc2d0Lm1vZGVscmVnaXN0",
-            "cnkudjEuR2V0Q3VycmVudE1vZGVsUmVzcG9uc2VC8wEKHmFpLnZpc21hLmFz",
-            "Z3QubW9kZWxyZWdpc3RyeS52MUISTW9kZWxSZWdpc3RyeVByb3RvUAFaR2dp",
-            "dGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2FzZ3QvbW9kZWxy",
-            "ZWdpc3RyeS92MTttb2RlbHJlZ2lzdHJ5ogIDQU1YqgIVQXNndC5Nb2RlbHJl",
-            "Z2lzdHJ5LlYxygIVQXNndFxNb2RlbHJlZ2lzdHJ5XFYx4gIhQXNndFxNb2Rl",
-            "bHJlZ2lzdHJ5XFYxXEdQQk1ldGFkYXRh6gIXQXNndDo6TW9kZWxyZWdpc3Ry",
-            "eTo6VjFiBnByb3RvMw=="));
+            "aWNzEpQBCh90YXJnZXRfdG9fY29uZmlkZW5jZV90aHJlc2hvbGRzGAogAygL",
+            "Mk0uYXNndC5tb2RlbHJlZ2lzdHJ5LnYxLlJlZ2lzdGVyTW9kZWxSZXF1ZXN0",
+            "LlRhcmdldFRvQ29uZmlkZW5jZVRocmVzaG9sZHNFbnRyeVIcdGFyZ2V0VG9D",
+            "b25maWRlbmNlVGhyZXNob2xkcxo6CgxNZXRyaWNzRW50cnkSEAoDa2V5GAEg",
+            "ASgJUgNrZXkSFAoFdmFsdWUYAiABKAVSBXZhbHVlOgI4ARpwCiFUYXJnZXRU",
+            "b0NvbmZpZGVuY2VUaHJlc2hvbGRzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkS",
+            "NQoFdmFsdWUYAiABKAsyHy5hc2d0LnR5cGUuQ29uZmlkZW5jZVRocmVzaG9s",
+            "ZHNSBXZhbHVlOgI4AUoECAkQCiJGChZHZXRDdXJyZW50TW9kZWxSZXF1ZXN0",
+            "EiwKB2RhdGFzZXQYASABKAsyEi5hc2d0LnR5cGUuRGF0YXNldFIHZGF0YXNl",
+            "dCJBChdHZXRDdXJyZW50TW9kZWxSZXNwb25zZRImCgVtb2RlbBgBIAEoCzIQ",
+            "LmFzZ3QudHlwZS5Nb2RlbFIFbW9kZWwyzQIKDU1vZGVsUmVnaXN0cnkSVAoN",
+            "UmVnaXN0ZXJNb2RlbBIrLmFzZ3QubW9kZWxyZWdpc3RyeS52MS5SZWdpc3Rl",
+            "ck1vZGVsUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRJwCg9HZXRD",
+            "dXJyZW50TW9kZWwSLS5hc2d0Lm1vZGVscmVnaXN0cnkudjEuR2V0Q3VycmVu",
+            "dE1vZGVsUmVxdWVzdBouLmFzZ3QubW9kZWxyZWdpc3RyeS52MS5HZXRDdXJy",
+            "ZW50TW9kZWxSZXNwb25zZRJ0ChNHZXRDdXJyZW50RnVsbE1vZGVsEi0uYXNn",
+            "dC5tb2RlbHJlZ2lzdHJ5LnYxLkdldEN1cnJlbnRNb2RlbFJlcXVlc3QaLi5h",
+            "c2d0Lm1vZGVscmVnaXN0cnkudjEuR2V0Q3VycmVudE1vZGVsUmVzcG9uc2VC",
+            "8wEKHmFpLnZpc21hLmFzZ3QubW9kZWxyZWdpc3RyeS52MUISTW9kZWxSZWdp",
+            "c3RyeVByb3RvUAFaR2dpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMvZ2Vu",
+            "L2dvL2FzZ3QvbW9kZWxyZWdpc3RyeS92MTttb2RlbHJlZ2lzdHJ5ogIDQU1Y",
+            "qgIVQXNndC5Nb2RlbHJlZ2lzdHJ5LlYxygIVQXNndFxNb2RlbHJlZ2lzdHJ5",
+            "XFYx4gIhQXNndFxNb2RlbHJlZ2lzdHJ5XFYxXEdQQk1ldGFkYXRh6gIXQXNn",
+            "dDo6TW9kZWxyZWdpc3RyeTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DatasetReflection.Descriptor, global::Asgt.Type.DatasetStatisticsReflection.Descriptor, global::Asgt.Type.ModelReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.RevisionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::Asgt.Type.TrainStatisticsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType", "TrainStatistics", "DatasetStatistics", "ConfidenceThresholds" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.RegisterModelRequest), global::Asgt.Modelregistry.V1.RegisterModelRequest.Parser, new[]{ "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType", "TrainStatistics", "DatasetStatistics", "TargetToConfidenceThresholds" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelRequest), global::Asgt.Modelregistry.V1.GetCurrentModelRequest.Parser, new[]{ "Dataset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Modelregistry.V1.GetCurrentModelResponse), global::Asgt.Modelregistry.V1.GetCurrentModelResponse.Parser, new[]{ "Model" }, null, null, null, null)
           }));
@@ -116,7 +120,7 @@ namespace Asgt.Modelregistry.V1 {
       inputType_ = other.inputType_;
       trainStatistics_ = other.trainStatistics_ != null ? other.trainStatistics_.Clone() : null;
       datasetStatistics_ = other.datasetStatistics_ != null ? other.datasetStatistics_.Clone() : null;
-      confidenceThresholds_ = other.confidenceThresholds_.Clone();
+      targetToConfidenceThresholds_ = other.targetToConfidenceThresholds_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -220,15 +224,15 @@ namespace Asgt.Modelregistry.V1 {
       }
     }
 
-    /// <summary>Field number for the "confidence_thresholds" field.</summary>
-    public const int ConfidenceThresholdsFieldNumber = 9;
-    private static readonly pb::FieldCodec<global::Asgt.Type.Confidence> _repeated_confidenceThresholds_codec
-        = pb::FieldCodec.ForMessage(74, global::Asgt.Type.Confidence.Parser);
-    private readonly pbc::RepeatedField<global::Asgt.Type.Confidence> confidenceThresholds_ = new pbc::RepeatedField<global::Asgt.Type.Confidence>();
+    /// <summary>Field number for the "target_to_confidence_thresholds" field.</summary>
+    public const int TargetToConfidenceThresholdsFieldNumber = 10;
+    private static readonly pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds>.Codec _map_targetToConfidenceThresholds_codec
+        = new pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Asgt.Type.ConfidenceThresholds.Parser), 82);
+    private readonly pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds> targetToConfidenceThresholds_ = new pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Asgt.Type.Confidence> ConfidenceThresholds {
-      get { return confidenceThresholds_; }
+    public pbc::MapField<string, global::Asgt.Type.ConfidenceThresholds> TargetToConfidenceThresholds {
+      get { return targetToConfidenceThresholds_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -254,7 +258,7 @@ namespace Asgt.Modelregistry.V1 {
       if (InputType != other.InputType) return false;
       if (!object.Equals(TrainStatistics, other.TrainStatistics)) return false;
       if (!object.Equals(DatasetStatistics, other.DatasetStatistics)) return false;
-      if(!confidenceThresholds_.Equals(other.confidenceThresholds_)) return false;
+      if (!TargetToConfidenceThresholds.Equals(other.TargetToConfidenceThresholds)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -270,7 +274,7 @@ namespace Asgt.Modelregistry.V1 {
       if (InputType != global::Asgt.Type.Model.Types.InputType.FeatureTensors) hash ^= InputType.GetHashCode();
       if (trainStatistics_ != null) hash ^= TrainStatistics.GetHashCode();
       if (datasetStatistics_ != null) hash ^= DatasetStatistics.GetHashCode();
-      hash ^= confidenceThresholds_.GetHashCode();
+      hash ^= TargetToConfidenceThresholds.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -315,7 +319,7 @@ namespace Asgt.Modelregistry.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(DatasetStatistics);
       }
-      confidenceThresholds_.WriteTo(output, _repeated_confidenceThresholds_codec);
+      targetToConfidenceThresholds_.WriteTo(output, _map_targetToConfidenceThresholds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -352,7 +356,7 @@ namespace Asgt.Modelregistry.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(DatasetStatistics);
       }
-      confidenceThresholds_.WriteTo(ref output, _repeated_confidenceThresholds_codec);
+      targetToConfidenceThresholds_.WriteTo(ref output, _map_targetToConfidenceThresholds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -383,7 +387,7 @@ namespace Asgt.Modelregistry.V1 {
       if (datasetStatistics_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DatasetStatistics);
       }
-      size += confidenceThresholds_.CalculateSize(_repeated_confidenceThresholds_codec);
+      size += targetToConfidenceThresholds_.CalculateSize(_map_targetToConfidenceThresholds_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -428,7 +432,7 @@ namespace Asgt.Modelregistry.V1 {
         }
         DatasetStatistics.MergeFrom(other.DatasetStatistics);
       }
-      confidenceThresholds_.Add(other.confidenceThresholds_);
+      targetToConfidenceThresholds_.MergeFrom(other.targetToConfidenceThresholds_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -488,8 +492,8 @@ namespace Asgt.Modelregistry.V1 {
             input.ReadMessage(DatasetStatistics);
             break;
           }
-          case 74: {
-            confidenceThresholds_.AddEntriesFrom(input, _repeated_confidenceThresholds_codec);
+          case 82: {
+            targetToConfidenceThresholds_.AddEntriesFrom(input, _map_targetToConfidenceThresholds_codec);
             break;
           }
         }
@@ -551,8 +555,8 @@ namespace Asgt.Modelregistry.V1 {
             input.ReadMessage(DatasetStatistics);
             break;
           }
-          case 74: {
-            confidenceThresholds_.AddEntriesFrom(ref input, _repeated_confidenceThresholds_codec);
+          case 82: {
+            targetToConfidenceThresholds_.AddEntriesFrom(ref input, _map_targetToConfidenceThresholds_codec);
             break;
           }
         }

@@ -742,6 +742,18 @@
       },
       "title": "Common types"
     },
+    "typeConfidenceThresholds": {
+      "type": "object",
+      "properties": {
+        "confidenceThresholds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeConfidence"
+          }
+        }
+      }
+    },
     "typeData": {
       "type": "object",
       "properties": {
@@ -906,11 +918,10 @@
             "$ref": "#/definitions/typeModelFile"
           }
         },
-        "confidenceThresholds": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/typeConfidence"
+        "targetToConfidenceThresholds": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/typeConfidenceThresholds"
           }
         }
       }

@@ -18,7 +18,6 @@ private static final long serialVersionUID = 0L;
   private RegisterModelRequest() {
     targetMetrics_ = java.util.Collections.emptyList();
     inputType_ = 0;
-    confidenceThresholds_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -40,6 +39,8 @@ private static final long serialVersionUID = 0L;
     switch (number) {
       case 4:
         return internalGetMetrics();
+      case 10:
+        return internalGetTargetToConfidenceThresholds();
       default:
         throw new RuntimeException(
             "Invalid map field number: " + number);
@@ -304,45 +305,83 @@ private static final long serialVersionUID = 0L;
     return datasetStatistics_ == null ? ai.visma.asgt.type.DatasetStatistics.getDefaultInstance() : datasetStatistics_;
   }
 
-  public static final int CONFIDENCE_THRESHOLDS_FIELD_NUMBER = 9;
+  public static final int TARGET_TO_CONFIDENCE_THRESHOLDS_FIELD_NUMBER = 10;
+  private static final class TargetToConfidenceThresholdsDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>newDefaultInstance(
+                ai.visma.asgt.modelregistry.v1.ModelRegistryProto.internal_static_asgt_modelregistry_v1_RegisterModelRequest_TargetToConfidenceThresholdsEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                ai.visma.asgt.type.ConfidenceThresholds.getDefaultInstance());
+  }
   @SuppressWarnings("serial")
-  private java.util.List<ai.visma.asgt.type.Confidence> confidenceThresholds_;
-  /**
-   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-   */
-  @java.lang.Override
-  public java.util.List<ai.visma.asgt.type.Confidence> getConfidenceThresholdsList() {
-    return confidenceThresholds_;
+  private com.google.protobuf.MapField<
+      java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> targetToConfidenceThresholds_;
+  private com.google.protobuf.MapField<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+  internalGetTargetToConfidenceThresholds() {
+    if (targetToConfidenceThresholds_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          TargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry);
+    }
+    return targetToConfidenceThresholds_;
+  }
+  public int getTargetToConfidenceThresholdsCount() {
+    return internalGetTargetToConfidenceThresholds().getMap().size();
   }
   /**
-   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends ai.visma.asgt.type.ConfidenceOrBuilder> 
-      getConfidenceThresholdsOrBuilderList() {
-    return confidenceThresholds_;
+  public boolean containsTargetToConfidenceThresholds(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetTargetToConfidenceThresholds().getMap().containsKey(key);
   }
   /**
-   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   * Use {@link #getTargetToConfidenceThresholdsMap()} instead.
    */
   @java.lang.Override
-  public int getConfidenceThresholdsCount() {
-    return confidenceThresholds_.size();
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> getTargetToConfidenceThresholds() {
+    return getTargetToConfidenceThresholdsMap();
   }
   /**
-   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
    */
   @java.lang.Override
-  public ai.visma.asgt.type.Confidence getConfidenceThresholds(int index) {
-    return confidenceThresholds_.get(index);
+  public java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> getTargetToConfidenceThresholdsMap() {
+    return internalGetTargetToConfidenceThresholds().getMap();
   }
   /**
-   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
    */
   @java.lang.Override
-  public ai.visma.asgt.type.ConfidenceOrBuilder getConfidenceThresholdsOrBuilder(
-      int index) {
-    return confidenceThresholds_.get(index);
+  public /* nullable */
+ai.visma.asgt.type.ConfidenceThresholds getTargetToConfidenceThresholdsOrDefault(
+      java.lang.String key,
+      /* nullable */
+ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> map =
+        internalGetTargetToConfidenceThresholds().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.asgt.type.ConfidenceThresholds getTargetToConfidenceThresholdsOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> map =
+        internalGetTargetToConfidenceThresholds().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -386,9 +425,12 @@ private static final long serialVersionUID = 0L;
     if (datasetStatistics_ != null) {
       output.writeMessage(8, getDatasetStatistics());
     }
-    for (int i = 0; i < confidenceThresholds_.size(); i++) {
-      output.writeMessage(9, confidenceThresholds_.get(i));
-    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetTargetToConfidenceThresholds(),
+        TargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry,
+        10);
     getUnknownFields().writeTo(output);
   }
 
@@ -436,9 +478,15 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(8, getDatasetStatistics());
     }
-    for (int i = 0; i < confidenceThresholds_.size(); i++) {
+    for (java.util.Map.Entry<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> entry
+         : internalGetTargetToConfidenceThresholds().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+      targetToConfidenceThresholds__ = TargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(9, confidenceThresholds_.get(i));
+          .computeMessageSize(10, targetToConfidenceThresholds__);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -482,8 +530,8 @@ private static final long serialVersionUID = 0L;
       if (!getDatasetStatistics()
           .equals(other.getDatasetStatistics())) return false;
     }
-    if (!getConfidenceThresholdsList()
-        .equals(other.getConfidenceThresholdsList())) return false;
+    if (!internalGetTargetToConfidenceThresholds().equals(
+        other.internalGetTargetToConfidenceThresholds())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -524,9 +572,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DATASET_STATISTICS_FIELD_NUMBER;
       hash = (53 * hash) + getDatasetStatistics().hashCode();
     }
-    if (getConfidenceThresholdsCount() > 0) {
-      hash = (37 * hash) + CONFIDENCE_THRESHOLDS_FIELD_NUMBER;
-      hash = (53 * hash) + getConfidenceThresholdsList().hashCode();
+    if (!internalGetTargetToConfidenceThresholds().getMap().isEmpty()) {
+      hash = (37 * hash) + TARGET_TO_CONFIDENCE_THRESHOLDS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetTargetToConfidenceThresholds().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -643,6 +691,8 @@ private static final long serialVersionUID = 0L;
       switch (number) {
         case 4:
           return internalGetMetrics();
+        case 10:
+          return internalGetTargetToConfidenceThresholds();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -654,6 +704,8 @@ private static final long serialVersionUID = 0L;
       switch (number) {
         case 4:
           return internalGetMutableMetrics();
+        case 10:
+          return internalGetMutableTargetToConfidenceThresholds();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -711,13 +763,7 @@ private static final long serialVersionUID = 0L;
         datasetStatisticsBuilder_.dispose();
         datasetStatisticsBuilder_ = null;
       }
-      if (confidenceThresholdsBuilder_ == null) {
-        confidenceThresholds_ = java.util.Collections.emptyList();
-      } else {
-        confidenceThresholds_ = null;
-        confidenceThresholdsBuilder_.clear();
-      }
-      bitField0_ = (bitField0_ & ~0x00000100);
+      internalGetMutableTargetToConfidenceThresholds().clear();
       return this;
     }
 
@@ -760,15 +806,6 @@ private static final long serialVersionUID = 0L;
       } else {
         result.targetMetrics_ = targetMetricsBuilder_.build();
       }
-      if (confidenceThresholdsBuilder_ == null) {
-        if (((bitField0_ & 0x00000100) != 0)) {
-          confidenceThresholds_ = java.util.Collections.unmodifiableList(confidenceThresholds_);
-          bitField0_ = (bitField0_ & ~0x00000100);
-        }
-        result.confidenceThresholds_ = confidenceThresholds_;
-      } else {
-        result.confidenceThresholds_ = confidenceThresholdsBuilder_.build();
-      }
     }
 
     private void buildPartial0(ai.visma.asgt.modelregistry.v1.RegisterModelRequest result) {
@@ -802,6 +839,10 @@ private static final long serialVersionUID = 0L;
         result.datasetStatistics_ = datasetStatisticsBuilder_ == null
             ? datasetStatistics_
             : datasetStatisticsBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.targetToConfidenceThresholds_ = internalGetTargetToConfidenceThresholds();
+        result.targetToConfidenceThresholds_.makeImmutable();
       }
     }
 
@@ -896,32 +937,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasDatasetStatistics()) {
         mergeDatasetStatistics(other.getDatasetStatistics());
       }
-      if (confidenceThresholdsBuilder_ == null) {
-        if (!other.confidenceThresholds_.isEmpty()) {
-          if (confidenceThresholds_.isEmpty()) {
-            confidenceThresholds_ = other.confidenceThresholds_;
-            bitField0_ = (bitField0_ & ~0x00000100);
-          } else {
-            ensureConfidenceThresholdsIsMutable();
-            confidenceThresholds_.addAll(other.confidenceThresholds_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.confidenceThresholds_.isEmpty()) {
-          if (confidenceThresholdsBuilder_.isEmpty()) {
-            confidenceThresholdsBuilder_.dispose();
-            confidenceThresholdsBuilder_ = null;
-            confidenceThresholds_ = other.confidenceThresholds_;
-            bitField0_ = (bitField0_ & ~0x00000100);
-            confidenceThresholdsBuilder_ = 
-              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getConfidenceThresholdsFieldBuilder() : null;
-          } else {
-            confidenceThresholdsBuilder_.addAllMessages(other.confidenceThresholds_);
-          }
-        }
-      }
+      internalGetMutableTargetToConfidenceThresholds().mergeFrom(
+          other.internalGetTargetToConfidenceThresholds());
+      bitField0_ |= 0x00000100;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1008,19 +1026,15 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000080;
               break;
             } // case 66
-            case 74: {
-              ai.visma.asgt.type.Confidence m =
-                  input.readMessage(
-                      ai.visma.asgt.type.Confidence.parser(),
-                      extensionRegistry);
-              if (confidenceThresholdsBuilder_ == null) {
-                ensureConfidenceThresholdsIsMutable();
-                confidenceThresholds_.add(m);
-              } else {
-                confidenceThresholdsBuilder_.addMessage(m);
-              }
+            case 82: {
+              com.google.protobuf.MapEntry<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+              targetToConfidenceThresholds__ = input.readMessage(
+                  TargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableTargetToConfidenceThresholds().getMutableMap().put(
+                  targetToConfidenceThresholds__.getKey(), targetToConfidenceThresholds__.getValue());
+              bitField0_ |= 0x00000100;
               break;
-            } // case 74
+            } // case 82
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1964,244 +1978,131 @@ private static final long serialVersionUID = 0L;
       return datasetStatisticsBuilder_;
     }
 
-    private java.util.List<ai.visma.asgt.type.Confidence> confidenceThresholds_ =
-      java.util.Collections.emptyList();
-    private void ensureConfidenceThresholdsIsMutable() {
-      if (!((bitField0_ & 0x00000100) != 0)) {
-        confidenceThresholds_ = new java.util.ArrayList<ai.visma.asgt.type.Confidence>(confidenceThresholds_);
-        bitField0_ |= 0x00000100;
-       }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        ai.visma.asgt.type.Confidence, ai.visma.asgt.type.Confidence.Builder, ai.visma.asgt.type.ConfidenceOrBuilder> confidenceThresholdsBuilder_;
-
-    /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-     */
-    public java.util.List<ai.visma.asgt.type.Confidence> getConfidenceThresholdsList() {
-      if (confidenceThresholdsBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(confidenceThresholds_);
-      } else {
-        return confidenceThresholdsBuilder_.getMessageList();
+    private com.google.protobuf.MapField<
+        java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> targetToConfidenceThresholds_;
+    private com.google.protobuf.MapField<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+        internalGetTargetToConfidenceThresholds() {
+      if (targetToConfidenceThresholds_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            TargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry);
       }
+      return targetToConfidenceThresholds_;
     }
-    /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-     */
-    public int getConfidenceThresholdsCount() {
-      if (confidenceThresholdsBuilder_ == null) {
-        return confidenceThresholds_.size();
-      } else {
-        return confidenceThresholdsBuilder_.getCount();
+    private com.google.protobuf.MapField<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+        internalGetMutableTargetToConfidenceThresholds() {
+      if (targetToConfidenceThresholds_ == null) {
+        targetToConfidenceThresholds_ = com.google.protobuf.MapField.newMapField(
+            TargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry);
       }
+      if (!targetToConfidenceThresholds_.isMutable()) {
+        targetToConfidenceThresholds_ = targetToConfidenceThresholds_.copy();
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return targetToConfidenceThresholds_;
+    }
+    public int getTargetToConfidenceThresholdsCount() {
+      return internalGetTargetToConfidenceThresholds().getMap().size();
     }
     /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
      */
-    public ai.visma.asgt.type.Confidence getConfidenceThresholds(int index) {
-      if (confidenceThresholdsBuilder_ == null) {
-        return confidenceThresholds_.get(index);
-      } else {
-        return confidenceThresholdsBuilder_.getMessage(index);
-      }
+    @java.lang.Override
+    public boolean containsTargetToConfidenceThresholds(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetTargetToConfidenceThresholds().getMap().containsKey(key);
     }
     /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+     * Use {@link #getTargetToConfidenceThresholdsMap()} instead.
      */
-    public Builder setConfidenceThresholds(
-        int index, ai.visma.asgt.type.Confidence value) {
-      if (confidenceThresholdsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureConfidenceThresholdsIsMutable();
-        confidenceThresholds_.set(index, value);
-        onChanged();
-      } else {
-        confidenceThresholdsBuilder_.setMessage(index, value);
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> getTargetToConfidenceThresholds() {
+      return getTargetToConfidenceThresholdsMap();
+    }
+    /**
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> getTargetToConfidenceThresholdsMap() {
+      return internalGetTargetToConfidenceThresholds().getMap();
+    }
+    /**
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+ai.visma.asgt.type.ConfidenceThresholds getTargetToConfidenceThresholdsOrDefault(
+        java.lang.String key,
+        /* nullable */
+ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> map =
+          internalGetTargetToConfidenceThresholds().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
+     */
+    @java.lang.Override
+    public ai.visma.asgt.type.ConfidenceThresholds getTargetToConfidenceThresholdsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> map =
+          internalGetTargetToConfidenceThresholds().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
       }
+      return map.get(key);
+    }
+    public Builder clearTargetToConfidenceThresholds() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      internalGetMutableTargetToConfidenceThresholds().getMutableMap()
+          .clear();
       return this;
     }
     /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
      */
-    public Builder setConfidenceThresholds(
-        int index, ai.visma.asgt.type.Confidence.Builder builderForValue) {
-      if (confidenceThresholdsBuilder_ == null) {
-        ensureConfidenceThresholdsIsMutable();
-        confidenceThresholds_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        confidenceThresholdsBuilder_.setMessage(index, builderForValue.build());
-      }
+    public Builder removeTargetToConfidenceThresholds(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableTargetToConfidenceThresholds().getMutableMap()
+          .remove(key);
       return this;
     }
     /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+     * Use alternate mutation accessors instead.
      */
-    public Builder addConfidenceThresholds(ai.visma.asgt.type.Confidence value) {
-      if (confidenceThresholdsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureConfidenceThresholdsIsMutable();
-        confidenceThresholds_.add(value);
-        onChanged();
-      } else {
-        confidenceThresholdsBuilder_.addMessage(value);
-      }
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+        getMutableTargetToConfidenceThresholds() {
+      bitField0_ |= 0x00000100;
+      return internalGetMutableTargetToConfidenceThresholds().getMutableMap();
+    }
+    /**
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
+     */
+    public Builder putTargetToConfidenceThresholds(
+        java.lang.String key,
+        ai.visma.asgt.type.ConfidenceThresholds value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableTargetToConfidenceThresholds().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000100;
       return this;
     }
     /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
      */
-    public Builder addConfidenceThresholds(
-        int index, ai.visma.asgt.type.Confidence value) {
-      if (confidenceThresholdsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureConfidenceThresholdsIsMutable();
-        confidenceThresholds_.add(index, value);
-        onChanged();
-      } else {
-        confidenceThresholdsBuilder_.addMessage(index, value);
-      }
+    public Builder putAllTargetToConfidenceThresholds(
+        java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> values) {
+      internalGetMutableTargetToConfidenceThresholds().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000100;
       return this;
-    }
-    /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-     */
-    public Builder addConfidenceThresholds(
-        ai.visma.asgt.type.Confidence.Builder builderForValue) {
-      if (confidenceThresholdsBuilder_ == null) {
-        ensureConfidenceThresholdsIsMutable();
-        confidenceThresholds_.add(builderForValue.build());
-        onChanged();
-      } else {
-        confidenceThresholdsBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-     */
-    public Builder addConfidenceThresholds(
-        int index, ai.visma.asgt.type.Confidence.Builder builderForValue) {
-      if (confidenceThresholdsBuilder_ == null) {
-        ensureConfidenceThresholdsIsMutable();
-        confidenceThresholds_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        confidenceThresholdsBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-     */
-    public Builder addAllConfidenceThresholds(
-        java.lang.Iterable<? extends ai.visma.asgt.type.Confidence> values) {
-      if (confidenceThresholdsBuilder_ == null) {
-        ensureConfidenceThresholdsIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, confidenceThresholds_);
-        onChanged();
-      } else {
-        confidenceThresholdsBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-     */
-    public Builder clearConfidenceThresholds() {
-      if (confidenceThresholdsBuilder_ == null) {
-        confidenceThresholds_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000100);
-        onChanged();
-      } else {
-        confidenceThresholdsBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-     */
-    public Builder removeConfidenceThresholds(int index) {
-      if (confidenceThresholdsBuilder_ == null) {
-        ensureConfidenceThresholdsIsMutable();
-        confidenceThresholds_.remove(index);
-        onChanged();
-      } else {
-        confidenceThresholdsBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-     */
-    public ai.visma.asgt.type.Confidence.Builder getConfidenceThresholdsBuilder(
-        int index) {
-      return getConfidenceThresholdsFieldBuilder().getBuilder(index);
-    }
-    /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-     */
-    public ai.visma.asgt.type.ConfidenceOrBuilder getConfidenceThresholdsOrBuilder(
-        int index) {
-      if (confidenceThresholdsBuilder_ == null) {
-        return confidenceThresholds_.get(index);  } else {
-        return confidenceThresholdsBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-     */
-    public java.util.List<? extends ai.visma.asgt.type.ConfidenceOrBuilder> 
-         getConfidenceThresholdsOrBuilderList() {
-      if (confidenceThresholdsBuilder_ != null) {
-        return confidenceThresholdsBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(confidenceThresholds_);
-      }
-    }
-    /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-     */
-    public ai.visma.asgt.type.Confidence.Builder addConfidenceThresholdsBuilder() {
-      return getConfidenceThresholdsFieldBuilder().addBuilder(
-          ai.visma.asgt.type.Confidence.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-     */
-    public ai.visma.asgt.type.Confidence.Builder addConfidenceThresholdsBuilder(
-        int index) {
-      return getConfidenceThresholdsFieldBuilder().addBuilder(
-          index, ai.visma.asgt.type.Confidence.getDefaultInstance());
-    }
-    /**
-     * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
-     */
-    public java.util.List<ai.visma.asgt.type.Confidence.Builder> 
-         getConfidenceThresholdsBuilderList() {
-      return getConfidenceThresholdsFieldBuilder().getBuilderList();
-    }
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-        ai.visma.asgt.type.Confidence, ai.visma.asgt.type.Confidence.Builder, ai.visma.asgt.type.ConfidenceOrBuilder> 
-        getConfidenceThresholdsFieldBuilder() {
-      if (confidenceThresholdsBuilder_ == null) {
-        confidenceThresholdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
-            ai.visma.asgt.type.Confidence, ai.visma.asgt.type.Confidence.Builder, ai.visma.asgt.type.ConfidenceOrBuilder>(
-                confidenceThresholds_,
-                ((bitField0_ & 0x00000100) != 0),
-                getParentForChildren(),
-                isClean());
-        confidenceThresholds_ = null;
-      }
-      return confidenceThresholdsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
