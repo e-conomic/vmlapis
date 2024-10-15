@@ -4,6 +4,30 @@ import * as gen_bq_schema_bq_field_pb from '../../gen_bq_schema/bq_field_pb';
 import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb';
 
 
+export class TargetConfidence extends jspb.Message {
+  getTargetName(): string;
+  setTargetName(value: string): TargetConfidence;
+
+  getConfidenceList(): Array<Confidence>;
+  setConfidenceList(value: Array<Confidence>): TargetConfidence;
+  clearConfidenceList(): TargetConfidence;
+  addConfidence(value?: Confidence, index?: number): Confidence;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): TargetConfidence.AsObject;
+  static toObject(includeInstance: boolean, msg: TargetConfidence): TargetConfidence.AsObject;
+  static serializeBinaryToWriter(message: TargetConfidence, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): TargetConfidence;
+  static deserializeBinaryFromReader(message: TargetConfidence, reader: jspb.BinaryReader): TargetConfidence;
+}
+
+export namespace TargetConfidence {
+  export type AsObject = {
+    targetName: string,
+    confidenceList: Array<Confidence.AsObject>,
+  }
+}
+
 export class Confidence extends jspb.Message {
   getLevel(): Confidence.Level;
   setLevel(value: Confidence.Level): Confidence;

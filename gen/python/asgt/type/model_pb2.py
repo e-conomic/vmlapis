@@ -18,7 +18,7 @@ from vml_proto.gen_bq_schema import bq_field_pb2 as gen__bq__schema_dot_bq__fiel
 from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15\x61sgt/type/model.proto\x12\tasgt.type\x1a\x1a\x61sgt/type/model_file.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1e\x61sgt/type/target_metrics.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xb2\x04\n\x05Model\x12\x1f\n\x07version\x18\x03 \x01(\x03\x42\x05\xea?\x02\x08\x01R\x07version\x12\x39\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tcreatedAt\x12(\n\x0c\x64\x61taset_size\x18\x05 \x01(\x05\x42\x05\xea?\x02\x18\x01R\x0b\x64\x61tasetSize\x12*\n\rtraining_size\x18\x06 \x01(\x05\x42\x05\xea?\x02\x18\x01R\x0ctrainingSize\x12L\n\x11\x63onfidence_scores\x18\x07 \x03(\x0b\x32\x18.asgt.type.TargetMetricsB\x05\xea?\x02\x18\x01R\x10\x63onfidenceScores\x12\x39\n\ninput_type\x18\x08 \x01(\x0e\x32\x1a.asgt.type.Model.InputTypeR\tinputType\x12!\n\x0c\x64\x61taset_type\x18\t \x01(\tR\x0b\x64\x61tasetType\x12<\n\x0bmodel_files\x18\n \x03(\x0b\x32\x14.asgt.type.ModelFileB\x05\xea?\x02\x18\x01R\nmodelFiles\x12Q\n\x15\x63onfidence_thresholds\x18\x0b \x03(\x0b\x32\x15.asgt.type.ConfidenceB\x05\xea?\x02\x18\x01R\x14\x63onfidenceThresholds\"4\n\tInputType\x12\x13\n\x0f\x46\x45\x41TURE_TENSORS\x10\x00\x12\x12\n\x0e\x45XAMPLE_TENSOR\x10\x01J\x04\x08\x01\x10\x03\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x15\x61sgt/type/model.proto\x12\tasgt.type\x1a\x1a\x61sgt/type/model_file.proto\x1a\x1a\x61sgt/type/prediction.proto\x1a\x1e\x61sgt/type/target_metrics.proto\x1a\x1cgen_bq_schema/bq_field.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\x92\x05\n\x05Model\x12\x1f\n\x07version\x18\x03 \x01(\x03\x42\x05\xea?\x02\x08\x01R\x07version\x12\x39\n\ncreated_at\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampR\tcreatedAt\x12(\n\x0c\x64\x61taset_size\x18\x05 \x01(\x05\x42\x05\xea?\x02\x18\x01R\x0b\x64\x61tasetSize\x12*\n\rtraining_size\x18\x06 \x01(\x05\x42\x05\xea?\x02\x18\x01R\x0ctrainingSize\x12L\n\x11\x63onfidence_scores\x18\x07 \x03(\x0b\x32\x18.asgt.type.TargetMetricsB\x05\xea?\x02\x18\x01R\x10\x63onfidenceScores\x12\x39\n\ninput_type\x18\x08 \x01(\x0e\x32\x1a.asgt.type.Model.InputTypeR\tinputType\x12!\n\x0c\x64\x61taset_type\x18\t \x01(\tR\x0b\x64\x61tasetType\x12<\n\x0bmodel_files\x18\n \x03(\x0b\x32\x14.asgt.type.ModelFileB\x05\xea?\x02\x18\x01R\nmodelFiles\x12Q\n\x15\x63onfidence_thresholds\x18\x0b \x03(\x0b\x32\x15.asgt.type.ConfidenceB\x05\xea?\x02\x18\x01R\x14\x63onfidenceThresholds\x12^\n\x1ctarget_confidence_thresholds\x18\x0c \x03(\x0b\x32\x15.asgt.type.ConfidenceB\x05\xea?\x02\x18\x01R\x1atargetConfidenceThresholds\"4\n\tInputType\x12\x13\n\x0f\x46\x45\x41TURE_TENSORS\x10\x00\x12\x12\n\x0e\x45XAMPLE_TENSOR\x10\x01J\x04\x08\x01\x10\x03\x42\x38Z6github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttypeb\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -39,8 +39,10 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _MODEL.fields_by_name['model_files']._serialized_options = b'\352?\002\030\001'
   _MODEL.fields_by_name['confidence_thresholds']._options = None
   _MODEL.fields_by_name['confidence_thresholds']._serialized_options = b'\352?\002\030\001'
+  _MODEL.fields_by_name['target_confidence_thresholds']._options = None
+  _MODEL.fields_by_name['target_confidence_thresholds']._serialized_options = b'\352?\002\030\001'
   _globals['_MODEL']._serialized_start=188
-  _globals['_MODEL']._serialized_end=750
-  _globals['_MODEL_INPUTTYPE']._serialized_start=692
-  _globals['_MODEL_INPUTTYPE']._serialized_end=744
+  _globals['_MODEL']._serialized_end=846
+  _globals['_MODEL_INPUTTYPE']._serialized_start=788
+  _globals['_MODEL_INPUTTYPE']._serialized_end=840
 # @@protoc_insertion_point(module_scope)

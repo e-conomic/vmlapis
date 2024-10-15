@@ -134,4 +134,28 @@ public interface ModelOrBuilder extends
    */
   ai.visma.asgt.type.ConfidenceOrBuilder getConfidenceThresholdsOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  java.util.List<ai.visma.asgt.type.Confidence> 
+      getTargetConfidenceThresholdsList();
+  /**
+   * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  ai.visma.asgt.type.Confidence getTargetConfidenceThresholds(int index);
+  /**
+   * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  int getTargetConfidenceThresholdsCount();
+  /**
+   * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  java.util.List<? extends ai.visma.asgt.type.ConfidenceOrBuilder> 
+      getTargetConfidenceThresholdsOrBuilderList();
+  /**
+   * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  ai.visma.asgt.type.ConfidenceOrBuilder getTargetConfidenceThresholdsOrBuilder(
+      int index);
 }

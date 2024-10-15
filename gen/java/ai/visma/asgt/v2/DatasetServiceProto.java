@@ -25,6 +25,11 @@ public final class DatasetServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_asgt_v2_CreateDatasetRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_v2_DuplicateDatasetRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_asgt_v2_DuplicateDatasetRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_asgt_v2_CreateOrUpdateDatasetRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -100,77 +105,80 @@ public final class DatasetServiceProto {
       "ateDatasetRequest\022K\n\014dataset_name\030\001 \001(\tB" +
       "(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*" +
       "$R\013datasetName\0228\n\004tags\030\002 \003(\tB$\372B!\222\001\036\030\001\"\032" +
-      "r\030(@2\024^[A-Za-z0-9\\s_.>-]*$R\004tags\"k\n\034Crea" +
-      "teOrUpdateDatasetRequest\022K\n\014dataset_name" +
-      "\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-" +
-      "9_.>-]*$R\013datasetName\"c\n\024DeleteDatasetRe" +
+      "r\030(@2\024^[A-Za-z0-9\\s_.>-]*$R\004tags\"\202\001\n\027Dup" +
+      "licateDatasetRequest\022!\n\014dataset_name\030\001 \001" +
+      "(\tR\013datasetName\022!\n\014dataset_type\030\002 \001(\tR\013d" +
+      "atasetType\022!\n\014project_name\030\003 \001(\tR\013projec" +
+      "tName\"k\n\034CreateOrUpdateDatasetRequest\022K\n" +
+      "\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0" +
+      "-9.][A-Za-z0-9_.>-]*$R\013datasetName\"c\n\024De" +
+      "leteDatasetRequest\022K\n\014dataset_name\030\001 \001(\t" +
+      "B(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]" +
+      "*$R\013datasetName\"W\n\020DeleteTagRequest\022C\n\010t" +
+      "ag_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A" +
+      "-Za-z0-9_.>-]*$R\007tagName\"\224\001\n\024CreateExamp" +
+      "leRequest\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200" +
+      "\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013datas" +
+      "etName\022/\n\007example\030\002 \001(\0132\025.asgt.v2.type.E" +
+      "xampleR\007example\"\234\001\n\034CreateOrUpdateExampl" +
+      "eRequest\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\002" +
+      "2\036^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013datase" +
+      "tName\022/\n\007example\030\002 \001(\0132\025.asgt.v2.type.Ex" +
+      "ampleR\007example\"\233\001\n\031BatchCreateExampleReq" +
+      "uest\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[" +
+      "A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013datasetNam" +
+      "e\0221\n\010examples\030\002 \003(\0132\025.asgt.v2.type.Examp" +
+      "leR\010examples\"e\n\026TruncateDatasetRequest\022K" +
+      "\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z" +
+      "0-9.][A-Za-z0-9_.>-]*$R\013datasetName\"9\n\026T" +
+      "rainingRequestOptions\022\037\n\005limit\030\001 \001(\003B\t\372B" +
+      "\006\"\004\030d \000R\005limit\"\244\001\n\032GetDatasetTrainingsRe" +
       "quest\022K\n\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^" +
       "[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\013datasetNa" +
-      "me\"W\n\020DeleteTagRequest\022C\n\010tag_name\030\001 \001(\t" +
-      "B(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0-9_.>-]" +
-      "*$R\007tagName\"\224\001\n\024CreateExampleRequest\022K\n\014" +
-      "dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-" +
-      "9.][A-Za-z0-9_.>-]*$R\013datasetName\022/\n\007exa" +
-      "mple\030\002 \001(\0132\025.asgt.v2.type.ExampleR\007examp" +
-      "le\"\234\001\n\034CreateOrUpdateExampleRequest\022K\n\014d" +
-      "ataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9" +
-      ".][A-Za-z0-9_.>-]*$R\013datasetName\022/\n\007exam" +
-      "ple\030\002 \001(\0132\025.asgt.v2.type.ExampleR\007exampl" +
-      "e\"\233\001\n\031BatchCreateExampleRequest\022K\n\014datas" +
-      "et_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A" +
-      "-Za-z0-9_.>-]*$R\013datasetName\0221\n\010examples" +
-      "\030\002 \003(\0132\025.asgt.v2.type.ExampleR\010examples\"" +
-      "e\n\026TruncateDatasetRequest\022K\n\014dataset_nam" +
-      "e\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][A-Za-z0" +
-      "-9_.>-]*$R\013datasetName\"9\n\026TrainingReques" +
-      "tOptions\022\037\n\005limit\030\001 \001(\003B\t\372B\006\"\004\030d \000R\005limi" +
-      "t\"\244\001\n\032GetDatasetTrainingsRequest\022K\n\014data" +
-      "set_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9.][" +
-      "A-Za-z0-9_.>-]*$R\013datasetName\0229\n\007options" +
-      "\030\002 \001(\0132\037.asgt.v2.TrainingRequestOptionsR" +
-      "\007options\"P\n\023GetTrainingsRequest\0229\n\007optio" +
-      "ns\030\001 \001(\0132\037.asgt.v2.TrainingRequestOption" +
-      "sR\007options\"I\n\021TrainingsResponse\0224\n\ttrain" +
-      "ings\030\001 \003(\0132\026.asgt.v2.type.TrainingR\ttrai" +
-      "nings2\343\n\n\016DatasetService\022a\n\nGetDataset\022\032" +
-      ".asgt.v2.GetDatasetRequest\032\022.asgt.type.D" +
-      "ataset\"#\202\323\344\223\002\035\022\033/v2/datasets/{dataset_na" +
-      "me}\022_\n\rCreateDataset\022\035.asgt.v2.CreateDat" +
-      "asetRequest\032\026.google.protobuf.Empty\"\027\202\323\344" +
-      "\223\002\021\"\014/v2/datasets:\001*\022{\n\025CreateOrUpdateDa" +
-      "taset\022%.asgt.v2.CreateOrUpdateDatasetReq" +
-      "uest\032\026.google.protobuf.Empty\"#\202\323\344\223\002\035\032\033/v" +
-      "2/datasets/{dataset_name}\022g\n\rDeleteDatas" +
-      "et\022\035.asgt.v2.DeleteDatasetRequest\032\022.asgt" +
-      ".type.Dataset\"#\202\323\344\223\002\035*\033/v2/datasets/{dat" +
-      "aset_name}\022[\n\tDeleteTag\022\031.asgt.v2.Delete" +
-      "TagRequest\032\026.google.protobuf.Empty\"\033\202\323\344\223" +
-      "\002\025*\023/v2/tags/{tag_name}\022w\n\rCreateExample" +
-      "\022\035.asgt.v2.CreateExampleRequest\032\026.google" +
-      ".protobuf.Empty\"/\202\323\344\223\002)\"$/v2/datasets/{d" +
-      "ataset_name}/examples:\001*\022\224\001\n\025CreateOrUpd" +
-      "ateExample\022%.asgt.v2.CreateOrUpdateExamp" +
-      "leRequest\032\026.google.protobuf.Empty\"<\202\323\344\223\002" +
-      "6\0321/v2/datasets/{dataset_name}/examples/" +
-      "{example.id}:\001*\022\215\001\n\022BatchCreateExample\022\"" +
-      ".asgt.v2.BatchCreateExampleRequest\032\026.goo" +
-      "gle.protobuf.Empty\";\202\323\344\223\0025\"0/v2/datasets" +
-      "/{dataset_name}/examples:batchCreate:\001*\022" +
-      "x\n\017TruncateDataset\022\037.asgt.v2.TruncateDat" +
-      "asetRequest\032\026.google.protobuf.Empty\",\202\323\344" +
-      "\223\002&*$/v2/datasets/{dataset_name}/example" +
-      "s\022\205\001\n\023GetDatasetTrainings\022#.asgt.v2.GetD" +
-      "atasetTrainingsRequest\032\032.asgt.v2.Trainin" +
-      "gsResponse\"-\202\323\344\223\002\'\022%/v2/datasets/{datase" +
-      "t_name}/trainings\022_\n\014GetTrainings\022\034.asgt" +
-      ".v2.GetTrainingsRequest\032\032.asgt.v2.Traini" +
-      "ngsResponse\"\025\202\323\344\223\002\017\022\r/v2/trainings\032G\222AD\022" +
-      "BManage datasets and examples used for t" +
-      "raining AutoSuggest models.B\221\001\n\020ai.visma" +
-      ".asgt.v2B\023DatasetServiceProtoP\001Z+github." +
-      "com/e-conomic/vmlapis/gen/go/asgt/v2\242\002\003A" +
-      "XX\252\002\007Asgt.V2\312\002\007Asgt\\V2\342\002\023Asgt\\V2\\GPBMeta" +
-      "data\352\002\010Asgt::V2b\006proto3"
+      "me\0229\n\007options\030\002 \001(\0132\037.asgt.v2.TrainingRe" +
+      "questOptionsR\007options\"P\n\023GetTrainingsReq" +
+      "uest\0229\n\007options\030\001 \001(\0132\037.asgt.v2.Training" +
+      "RequestOptionsR\007options\"I\n\021TrainingsResp" +
+      "onse\0224\n\ttrainings\030\001 \003(\0132\026.asgt.v2.type.T" +
+      "rainingR\ttrainings2\343\n\n\016DatasetService\022a\n" +
+      "\nGetDataset\022\032.asgt.v2.GetDatasetRequest\032" +
+      "\022.asgt.type.Dataset\"#\202\323\344\223\002\035\022\033/v2/dataset" +
+      "s/{dataset_name}\022_\n\rCreateDataset\022\035.asgt" +
+      ".v2.CreateDatasetRequest\032\026.google.protob" +
+      "uf.Empty\"\027\202\323\344\223\002\021\"\014/v2/datasets:\001*\022{\n\025Cre" +
+      "ateOrUpdateDataset\022%.asgt.v2.CreateOrUpd" +
+      "ateDatasetRequest\032\026.google.protobuf.Empt" +
+      "y\"#\202\323\344\223\002\035\032\033/v2/datasets/{dataset_name}\022g" +
+      "\n\rDeleteDataset\022\035.asgt.v2.DeleteDatasetR" +
+      "equest\032\022.asgt.type.Dataset\"#\202\323\344\223\002\035*\033/v2/" +
+      "datasets/{dataset_name}\022[\n\tDeleteTag\022\031.a" +
+      "sgt.v2.DeleteTagRequest\032\026.google.protobu" +
+      "f.Empty\"\033\202\323\344\223\002\025*\023/v2/tags/{tag_name}\022w\n\r" +
+      "CreateExample\022\035.asgt.v2.CreateExampleReq" +
+      "uest\032\026.google.protobuf.Empty\"/\202\323\344\223\002)\"$/v" +
+      "2/datasets/{dataset_name}/examples:\001*\022\224\001" +
+      "\n\025CreateOrUpdateExample\022%.asgt.v2.Create" +
+      "OrUpdateExampleRequest\032\026.google.protobuf" +
+      ".Empty\"<\202\323\344\223\0026\0321/v2/datasets/{dataset_na" +
+      "me}/examples/{example.id}:\001*\022\215\001\n\022BatchCr" +
+      "eateExample\022\".asgt.v2.BatchCreateExample" +
+      "Request\032\026.google.protobuf.Empty\";\202\323\344\223\0025\"" +
+      "0/v2/datasets/{dataset_name}/examples:ba" +
+      "tchCreate:\001*\022x\n\017TruncateDataset\022\037.asgt.v" +
+      "2.TruncateDatasetRequest\032\026.google.protob" +
+      "uf.Empty\",\202\323\344\223\002&*$/v2/datasets/{dataset_" +
+      "name}/examples\022\205\001\n\023GetDatasetTrainings\022#" +
+      ".asgt.v2.GetDatasetTrainingsRequest\032\032.as" +
+      "gt.v2.TrainingsResponse\"-\202\323\344\223\002\'\022%/v2/dat" +
+      "asets/{dataset_name}/trainings\022_\n\014GetTra" +
+      "inings\022\034.asgt.v2.GetTrainingsRequest\032\032.a" +
+      "sgt.v2.TrainingsResponse\"\025\202\323\344\223\002\017\022\r/v2/tr" +
+      "ainings\032G\222AD\022BManage datasets and exampl" +
+      "es used for training AutoSuggest models." +
+      "B\221\001\n\020ai.visma.asgt.v2B\023DatasetServicePro" +
+      "toP\001Z+github.com/e-conomic/vmlapis/gen/g" +
+      "o/asgt/v2\242\002\003AXX\252\002\007Asgt.V2\312\002\007Asgt\\V2\342\002\023As" +
+      "gt\\V2\\GPBMetadata\352\002\010Asgt::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -195,68 +203,74 @@ public final class DatasetServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_CreateDatasetRequest_descriptor,
         new java.lang.String[] { "DatasetName", "Tags", });
-    internal_static_asgt_v2_CreateOrUpdateDatasetRequest_descriptor =
+    internal_static_asgt_v2_DuplicateDatasetRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
+    internal_static_asgt_v2_DuplicateDatasetRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_asgt_v2_DuplicateDatasetRequest_descriptor,
+        new java.lang.String[] { "DatasetName", "DatasetType", "ProjectName", });
+    internal_static_asgt_v2_CreateOrUpdateDatasetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
     internal_static_asgt_v2_CreateOrUpdateDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_CreateOrUpdateDatasetRequest_descriptor,
         new java.lang.String[] { "DatasetName", });
     internal_static_asgt_v2_DeleteDatasetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_asgt_v2_DeleteDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_DeleteDatasetRequest_descriptor,
         new java.lang.String[] { "DatasetName", });
     internal_static_asgt_v2_DeleteTagRequest_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(5);
     internal_static_asgt_v2_DeleteTagRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_DeleteTagRequest_descriptor,
         new java.lang.String[] { "TagName", });
     internal_static_asgt_v2_CreateExampleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_asgt_v2_CreateExampleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_CreateExampleRequest_descriptor,
         new java.lang.String[] { "DatasetName", "Example", });
     internal_static_asgt_v2_CreateOrUpdateExampleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_asgt_v2_CreateOrUpdateExampleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_CreateOrUpdateExampleRequest_descriptor,
         new java.lang.String[] { "DatasetName", "Example", });
     internal_static_asgt_v2_BatchCreateExampleRequest_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_asgt_v2_BatchCreateExampleRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_BatchCreateExampleRequest_descriptor,
         new java.lang.String[] { "DatasetName", "Examples", });
     internal_static_asgt_v2_TruncateDatasetRequest_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_asgt_v2_TruncateDatasetRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_TruncateDatasetRequest_descriptor,
         new java.lang.String[] { "DatasetName", });
     internal_static_asgt_v2_TrainingRequestOptions_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_asgt_v2_TrainingRequestOptions_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_TrainingRequestOptions_descriptor,
         new java.lang.String[] { "Limit", });
     internal_static_asgt_v2_GetDatasetTrainingsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_asgt_v2_GetDatasetTrainingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_GetDatasetTrainingsRequest_descriptor,
         new java.lang.String[] { "DatasetName", "Options", });
     internal_static_asgt_v2_GetTrainingsRequest_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_asgt_v2_GetTrainingsRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_GetTrainingsRequest_descriptor,
         new java.lang.String[] { "Options", });
     internal_static_asgt_v2_TrainingsResponse_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_asgt_v2_TrainingsResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_v2_TrainingsResponse_descriptor,

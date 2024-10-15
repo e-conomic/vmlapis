@@ -28,7 +28,7 @@ namespace Asgt.Type {
             "L21vZGVsX2ZpbGUucHJvdG8aGmFzZ3QvdHlwZS9wcmVkaWN0aW9uLnByb3Rv",
             "Gh5hc2d0L3R5cGUvdGFyZ2V0X21ldHJpY3MucHJvdG8aHGdlbl9icV9zY2hl",
             "bWEvYnFfZmllbGQucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8isgQKBU1vZGVsEh8KB3ZlcnNpb24YAyABKANCBeo/AggBUgd2ZXJz",
+            "cHJvdG8ikgUKBU1vZGVsEh8KB3ZlcnNpb24YAyABKANCBeo/AggBUgd2ZXJz",
             "aW9uEjkKCmNyZWF0ZWRfYXQYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
             "ZXN0YW1wUgljcmVhdGVkQXQSKAoMZGF0YXNldF9zaXplGAUgASgFQgXqPwIY",
             "AVILZGF0YXNldFNpemUSKgoNdHJhaW5pbmdfc2l6ZRgGIAEoBUIF6j8CGAFS",
@@ -39,16 +39,18 @@ namespace Asgt.Type {
             "dFR5cGUSPAoLbW9kZWxfZmlsZXMYCiADKAsyFC5hc2d0LnR5cGUuTW9kZWxG",
             "aWxlQgXqPwIYAVIKbW9kZWxGaWxlcxJRChVjb25maWRlbmNlX3RocmVzaG9s",
             "ZHMYCyADKAsyFS5hc2d0LnR5cGUuQ29uZmlkZW5jZUIF6j8CGAFSFGNvbmZp",
-            "ZGVuY2VUaHJlc2hvbGRzIjQKCUlucHV0VHlwZRITCg9GRUFUVVJFX1RFTlNP",
-            "UlMQABISCg5FWEFNUExFX1RFTlNPUhABSgQIARADQp0BChJhaS52aXNtYS5h",
-            "c2d0LnR5cGVCCk1vZGVsUHJvdG9QAVo2Z2l0aHViLmNvbS9lLWNvbm9taWMv",
-            "dm1sYXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlogIDQVRYqgIJQXNn",
-            "dC5UeXBlygIJQXNndFxUeXBl4gIVQXNndFxUeXBlXEdQQk1ldGFkYXRh6gIK",
-            "QXNndDo6VHlwZWIGcHJvdG8z"));
+            "ZGVuY2VUaHJlc2hvbGRzEl4KHHRhcmdldF9jb25maWRlbmNlX3RocmVzaG9s",
+            "ZHMYDCADKAsyFS5hc2d0LnR5cGUuQ29uZmlkZW5jZUIF6j8CGAFSGnRhcmdl",
+            "dENvbmZpZGVuY2VUaHJlc2hvbGRzIjQKCUlucHV0VHlwZRITCg9GRUFUVVJF",
+            "X1RFTlNPUlMQABISCg5FWEFNUExFX1RFTlNPUhABSgQIARADQp0BChJhaS52",
+            "aXNtYS5hc2d0LnR5cGVCCk1vZGVsUHJvdG9QAVo2Z2l0aHViLmNvbS9lLWNv",
+            "bm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC90eXBlO2FzZ3R0eXBlogIDQVRY",
+            "qgIJQXNndC5UeXBlygIJQXNndFxUeXBl4gIVQXNndFxUeXBlXEdQQk1ldGFk",
+            "YXRh6gIKQXNndDo6VHlwZWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.ModelFileReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Asgt.Type.TargetMetricsReflection.Descriptor, global::GenBqSchema.BqFieldReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType", "ModelFiles", "ConfidenceThresholds" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Type.Model), global::Asgt.Type.Model.Parser, new[]{ "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType", "ModelFiles", "ConfidenceThresholds", "TargetConfidenceThresholds" }, null, new[]{ typeof(global::Asgt.Type.Model.Types.InputType) }, null, null)
           }));
     }
     #endregion
@@ -98,6 +100,7 @@ namespace Asgt.Type {
       datasetType_ = other.datasetType_;
       modelFiles_ = other.modelFiles_.Clone();
       confidenceThresholds_ = other.confidenceThresholds_.Clone();
+      targetConfidenceThresholds_ = other.targetConfidenceThresholds_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -212,6 +215,17 @@ namespace Asgt.Type {
       get { return confidenceThresholds_; }
     }
 
+    /// <summary>Field number for the "target_confidence_thresholds" field.</summary>
+    public const int TargetConfidenceThresholdsFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::Asgt.Type.Confidence> _repeated_targetConfidenceThresholds_codec
+        = pb::FieldCodec.ForMessage(98, global::Asgt.Type.Confidence.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Type.Confidence> targetConfidenceThresholds_ = new pbc::RepeatedField<global::Asgt.Type.Confidence>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Asgt.Type.Confidence> TargetConfidenceThresholds {
+      get { return targetConfidenceThresholds_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -236,6 +250,7 @@ namespace Asgt.Type {
       if (DatasetType != other.DatasetType) return false;
       if(!modelFiles_.Equals(other.modelFiles_)) return false;
       if(!confidenceThresholds_.Equals(other.confidenceThresholds_)) return false;
+      if(!targetConfidenceThresholds_.Equals(other.targetConfidenceThresholds_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -252,6 +267,7 @@ namespace Asgt.Type {
       if (DatasetType.Length != 0) hash ^= DatasetType.GetHashCode();
       hash ^= modelFiles_.GetHashCode();
       hash ^= confidenceThresholds_.GetHashCode();
+      hash ^= targetConfidenceThresholds_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -297,6 +313,7 @@ namespace Asgt.Type {
       }
       modelFiles_.WriteTo(output, _repeated_modelFiles_codec);
       confidenceThresholds_.WriteTo(output, _repeated_confidenceThresholds_codec);
+      targetConfidenceThresholds_.WriteTo(output, _repeated_targetConfidenceThresholds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -334,6 +351,7 @@ namespace Asgt.Type {
       }
       modelFiles_.WriteTo(ref output, _repeated_modelFiles_codec);
       confidenceThresholds_.WriteTo(ref output, _repeated_confidenceThresholds_codec);
+      targetConfidenceThresholds_.WriteTo(ref output, _repeated_targetConfidenceThresholds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -365,6 +383,7 @@ namespace Asgt.Type {
       }
       size += modelFiles_.CalculateSize(_repeated_modelFiles_codec);
       size += confidenceThresholds_.CalculateSize(_repeated_confidenceThresholds_codec);
+      size += targetConfidenceThresholds_.CalculateSize(_repeated_targetConfidenceThresholds_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -401,6 +420,7 @@ namespace Asgt.Type {
       }
       modelFiles_.Add(other.modelFiles_);
       confidenceThresholds_.Add(other.confidenceThresholds_);
+      targetConfidenceThresholds_.Add(other.targetConfidenceThresholds_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -455,6 +475,10 @@ namespace Asgt.Type {
             confidenceThresholds_.AddEntriesFrom(input, _repeated_confidenceThresholds_codec);
             break;
           }
+          case 98: {
+            targetConfidenceThresholds_.AddEntriesFrom(input, _repeated_targetConfidenceThresholds_codec);
+            break;
+          }
         }
       }
     #endif
@@ -507,6 +531,10 @@ namespace Asgt.Type {
           }
           case 90: {
             confidenceThresholds_.AddEntriesFrom(ref input, _repeated_confidenceThresholds_codec);
+            break;
+          }
+          case 98: {
+            targetConfidenceThresholds_.AddEntriesFrom(ref input, _repeated_targetConfidenceThresholds_codec);
             break;
           }
         }

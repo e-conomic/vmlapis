@@ -60,7 +60,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.asgt.type.Model.repeatedFields_ = [7,10,11];
+proto.asgt.type.Model.repeatedFields_ = [7,10,11,12];
 
 
 
@@ -104,6 +104,8 @@ proto.asgt.type.Model.toObject = function(includeInstance, msg) {
     modelFilesList: jspb.Message.toObjectList(msg.getModelFilesList(),
     asgt_type_model_file_pb.ModelFile.toObject, includeInstance),
     confidenceThresholdsList: jspb.Message.toObjectList(msg.getConfidenceThresholdsList(),
+    asgt_type_prediction_pb.Confidence.toObject, includeInstance),
+    targetConfidenceThresholdsList: jspb.Message.toObjectList(msg.getTargetConfidenceThresholdsList(),
     asgt_type_prediction_pb.Confidence.toObject, includeInstance)
   };
 
@@ -180,6 +182,11 @@ proto.asgt.type.Model.deserializeBinaryFromReader = function(msg, reader) {
       var value = new asgt_type_prediction_pb.Confidence;
       reader.readMessage(value,asgt_type_prediction_pb.Confidence.deserializeBinaryFromReader);
       msg.addConfidenceThresholds(value);
+      break;
+    case 12:
+      var value = new asgt_type_prediction_pb.Confidence;
+      reader.readMessage(value,asgt_type_prediction_pb.Confidence.deserializeBinaryFromReader);
+      msg.addTargetConfidenceThresholds(value);
       break;
     default:
       reader.skipField();
@@ -273,6 +280,14 @@ proto.asgt.type.Model.serializeBinaryToWriter = function(message, writer) {
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       11,
+      f,
+      asgt_type_prediction_pb.Confidence.serializeBinaryToWriter
+    );
+  }
+  f = message.getTargetConfidenceThresholdsList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      12,
       f,
       asgt_type_prediction_pb.Confidence.serializeBinaryToWriter
     );
@@ -526,6 +541,44 @@ proto.asgt.type.Model.prototype.addConfidenceThresholds = function(opt_value, op
  */
 proto.asgt.type.Model.prototype.clearConfidenceThresholdsList = function() {
   return this.setConfidenceThresholdsList([]);
+};
+
+
+/**
+ * repeated Confidence target_confidence_thresholds = 12;
+ * @return {!Array<!proto.asgt.type.Confidence>}
+ */
+proto.asgt.type.Model.prototype.getTargetConfidenceThresholdsList = function() {
+  return /** @type{!Array<!proto.asgt.type.Confidence>} */ (
+    jspb.Message.getRepeatedWrapperField(this, asgt_type_prediction_pb.Confidence, 12));
+};
+
+
+/**
+ * @param {!Array<!proto.asgt.type.Confidence>} value
+ * @return {!proto.asgt.type.Model} returns this
+*/
+proto.asgt.type.Model.prototype.setTargetConfidenceThresholdsList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 12, value);
+};
+
+
+/**
+ * @param {!proto.asgt.type.Confidence=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.asgt.type.Confidence}
+ */
+proto.asgt.type.Model.prototype.addTargetConfidenceThresholds = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 12, opt_value, proto.asgt.type.Confidence, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.asgt.type.Model} returns this
+ */
+proto.asgt.type.Model.prototype.clearTargetConfidenceThresholdsList = function() {
+  return this.setTargetConfidenceThresholdsList([]);
 };
 
 

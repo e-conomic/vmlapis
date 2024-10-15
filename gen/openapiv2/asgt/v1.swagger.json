@@ -645,6 +645,13 @@
             "type": "object",
             "$ref": "#/definitions/asgttypeConfidence"
           }
+        },
+        "targetConfidenceThresholds": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/asgttypeConfidence"
+          }
         }
       }
     },

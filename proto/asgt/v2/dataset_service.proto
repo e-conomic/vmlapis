@@ -114,6 +114,12 @@ message CreateDatasetRequest {
   ]; // text-no-spaces
 }
 
+message DuplicateDatasetRequest {
+  string dataset_name = 1;
+  string dataset_type = 2;
+  string project_name = 3;
+}
+
 message CreateOrUpdateDatasetRequest {
   string dataset_name = 1 [(validate.rules).string = {
     pattern: "^[A-Za-z0-9.][A-Za-z0-9_.>-]*$"

@@ -51,6 +51,32 @@ export namespace CreateDatasetRequest {
   }
 }
 
+export class DuplicateDatasetRequest extends jspb.Message {
+  getDatasetName(): string;
+  setDatasetName(value: string): DuplicateDatasetRequest;
+
+  getDatasetType(): string;
+  setDatasetType(value: string): DuplicateDatasetRequest;
+
+  getProjectName(): string;
+  setProjectName(value: string): DuplicateDatasetRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DuplicateDatasetRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: DuplicateDatasetRequest): DuplicateDatasetRequest.AsObject;
+  static serializeBinaryToWriter(message: DuplicateDatasetRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DuplicateDatasetRequest;
+  static deserializeBinaryFromReader(message: DuplicateDatasetRequest, reader: jspb.BinaryReader): DuplicateDatasetRequest;
+}
+
+export namespace DuplicateDatasetRequest {
+  export type AsObject = {
+    datasetName: string,
+    datasetType: string,
+    projectName: string,
+  }
+}
+
 export class CreateOrUpdateDatasetRequest extends jspb.Message {
   getDatasetName(): string;
   setDatasetName(value: string): CreateOrUpdateDatasetRequest;

@@ -73,15 +73,16 @@ type Model struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Version              int64                  `protobuf:"varint,3,opt,name=version,proto3" json:"version,omitempty"`
-	CreatedAt            *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
-	DatasetSize          int32                  `protobuf:"varint,5,opt,name=dataset_size,json=datasetSize,proto3" json:"dataset_size,omitempty"`
-	TrainingSize         int32                  `protobuf:"varint,6,opt,name=training_size,json=trainingSize,proto3" json:"training_size,omitempty"`
-	ConfidenceScores     []*TargetMetrics       `protobuf:"bytes,7,rep,name=confidence_scores,json=confidenceScores,proto3" json:"confidence_scores,omitempty"`
-	InputType            Model_InputType        `protobuf:"varint,8,opt,name=input_type,json=inputType,proto3,enum=asgt.type.Model_InputType" json:"input_type,omitempty"`
-	DatasetType          string                 `protobuf:"bytes,9,opt,name=dataset_type,json=datasetType,proto3" json:"dataset_type,omitempty"`
-	ModelFiles           []*ModelFile           `protobuf:"bytes,10,rep,name=model_files,json=modelFiles,proto3" json:"model_files,omitempty"`
-	ConfidenceThresholds []*Confidence          `protobuf:"bytes,11,rep,name=confidence_thresholds,json=confidenceThresholds,proto3" json:"confidence_thresholds,omitempty"`
+	Version                    int64                  `protobuf:"varint,3,opt,name=version,proto3" json:"version,omitempty"`
+	CreatedAt                  *timestamppb.Timestamp `protobuf:"bytes,4,opt,name=created_at,json=createdAt,proto3" json:"created_at,omitempty"`
+	DatasetSize                int32                  `protobuf:"varint,5,opt,name=dataset_size,json=datasetSize,proto3" json:"dataset_size,omitempty"`
+	TrainingSize               int32                  `protobuf:"varint,6,opt,name=training_size,json=trainingSize,proto3" json:"training_size,omitempty"`
+	ConfidenceScores           []*TargetMetrics       `protobuf:"bytes,7,rep,name=confidence_scores,json=confidenceScores,proto3" json:"confidence_scores,omitempty"`
+	InputType                  Model_InputType        `protobuf:"varint,8,opt,name=input_type,json=inputType,proto3,enum=asgt.type.Model_InputType" json:"input_type,omitempty"`
+	DatasetType                string                 `protobuf:"bytes,9,opt,name=dataset_type,json=datasetType,proto3" json:"dataset_type,omitempty"`
+	ModelFiles                 []*ModelFile           `protobuf:"bytes,10,rep,name=model_files,json=modelFiles,proto3" json:"model_files,omitempty"`
+	ConfidenceThresholds       []*Confidence          `protobuf:"bytes,11,rep,name=confidence_thresholds,json=confidenceThresholds,proto3" json:"confidence_thresholds,omitempty"`
+	TargetConfidenceThresholds []*Confidence          `protobuf:"bytes,12,rep,name=target_confidence_thresholds,json=targetConfidenceThresholds,proto3" json:"target_confidence_thresholds,omitempty"`
 }
 
 func (x *Model) Reset() {
@@ -179,6 +180,13 @@ func (x *Model) GetConfidenceThresholds() []*Confidence {
 	return nil
 }
 
+func (x *Model) GetTargetConfidenceThresholds() []*Confidence {
+	if x != nil {
+		return x.TargetConfidenceThresholds
+	}
+	return nil
+}
+
 var File_asgt_type_model_proto protoreflect.FileDescriptor
 
 var file_asgt_type_model_proto_rawDesc = []byte{
@@ -193,7 +201,7 @@ var file_asgt_type_model_proto_rawDesc = []byte{
 	0x62, 0x71, 0x5f, 0x73, 0x63, 0x68, 0x65, 0x6d, 0x61, 0x2f, 0x62, 0x71, 0x5f, 0x66, 0x69, 0x65,
 	0x6c, 0x64, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x1a, 0x1f, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65,
 	0x2f, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2f, 0x74, 0x69, 0x6d, 0x65, 0x73, 0x74,
-	0x61, 0x6d, 0x70, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0xb2, 0x04, 0x0a, 0x05, 0x4d, 0x6f,
+	0x61, 0x6d, 0x70, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x22, 0x92, 0x05, 0x0a, 0x05, 0x4d, 0x6f,
 	0x64, 0x65, 0x6c, 0x12, 0x1f, 0x0a, 0x07, 0x76, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e, 0x18, 0x03,
 	0x20, 0x01, 0x28, 0x03, 0x42, 0x05, 0xea, 0x3f, 0x02, 0x08, 0x01, 0x52, 0x07, 0x76, 0x65, 0x72,
 	0x73, 0x69, 0x6f, 0x6e, 0x12, 0x39, 0x0a, 0x0a, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x64, 0x5f,
@@ -224,6 +232,12 @@ var file_asgt_type_model_proto_rawDesc = []byte{
 	0x72, 0x65, 0x73, 0x68, 0x6f, 0x6c, 0x64, 0x73, 0x18, 0x0b, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x15,
 	0x2e, 0x61, 0x73, 0x67, 0x74, 0x2e, 0x74, 0x79, 0x70, 0x65, 0x2e, 0x43, 0x6f, 0x6e, 0x66, 0x69,
 	0x64, 0x65, 0x6e, 0x63, 0x65, 0x42, 0x05, 0xea, 0x3f, 0x02, 0x18, 0x01, 0x52, 0x14, 0x63, 0x6f,
+	0x6e, 0x66, 0x69, 0x64, 0x65, 0x6e, 0x63, 0x65, 0x54, 0x68, 0x72, 0x65, 0x73, 0x68, 0x6f, 0x6c,
+	0x64, 0x73, 0x12, 0x5e, 0x0a, 0x1c, 0x74, 0x61, 0x72, 0x67, 0x65, 0x74, 0x5f, 0x63, 0x6f, 0x6e,
+	0x66, 0x69, 0x64, 0x65, 0x6e, 0x63, 0x65, 0x5f, 0x74, 0x68, 0x72, 0x65, 0x73, 0x68, 0x6f, 0x6c,
+	0x64, 0x73, 0x18, 0x0c, 0x20, 0x03, 0x28, 0x0b, 0x32, 0x15, 0x2e, 0x61, 0x73, 0x67, 0x74, 0x2e,
+	0x74, 0x79, 0x70, 0x65, 0x2e, 0x43, 0x6f, 0x6e, 0x66, 0x69, 0x64, 0x65, 0x6e, 0x63, 0x65, 0x42,
+	0x05, 0xea, 0x3f, 0x02, 0x18, 0x01, 0x52, 0x1a, 0x74, 0x61, 0x72, 0x67, 0x65, 0x74, 0x43, 0x6f,
 	0x6e, 0x66, 0x69, 0x64, 0x65, 0x6e, 0x63, 0x65, 0x54, 0x68, 0x72, 0x65, 0x73, 0x68, 0x6f, 0x6c,
 	0x64, 0x73, 0x22, 0x34, 0x0a, 0x09, 0x49, 0x6e, 0x70, 0x75, 0x74, 0x54, 0x79, 0x70, 0x65, 0x12,
 	0x13, 0x0a, 0x0f, 0x46, 0x45, 0x41, 0x54, 0x55, 0x52, 0x45, 0x5f, 0x54, 0x45, 0x4e, 0x53, 0x4f,
@@ -270,11 +284,12 @@ var file_asgt_type_model_proto_depIdxs = []int32{
 	0, // 2: asgt.type.Model.input_type:type_name -> asgt.type.Model.InputType
 	4, // 3: asgt.type.Model.model_files:type_name -> asgt.type.ModelFile
 	5, // 4: asgt.type.Model.confidence_thresholds:type_name -> asgt.type.Confidence
-	5, // [5:5] is the sub-list for method output_type
-	5, // [5:5] is the sub-list for method input_type
-	5, // [5:5] is the sub-list for extension type_name
-	5, // [5:5] is the sub-list for extension extendee
-	0, // [0:5] is the sub-list for field type_name
+	5, // 5: asgt.type.Model.target_confidence_thresholds:type_name -> asgt.type.Confidence
+	6, // [6:6] is the sub-list for method output_type
+	6, // [6:6] is the sub-list for method input_type
+	6, // [6:6] is the sub-list for extension type_name
+	6, // [6:6] is the sub-list for extension extendee
+	0, // [0:6] is the sub-list for field type_name
 }
 
 func init() { file_asgt_type_model_proto_init() }

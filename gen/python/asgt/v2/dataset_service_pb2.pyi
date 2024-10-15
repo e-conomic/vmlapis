@@ -26,6 +26,16 @@ class CreateDatasetRequest(_message.Message):
     tags: _containers.RepeatedScalarFieldContainer[str]
     def __init__(self, dataset_name: _Optional[str] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
 
+class DuplicateDatasetRequest(_message.Message):
+    __slots__ = ["dataset_name", "dataset_type", "project_name"]
+    DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
+    DATASET_TYPE_FIELD_NUMBER: _ClassVar[int]
+    PROJECT_NAME_FIELD_NUMBER: _ClassVar[int]
+    dataset_name: str
+    dataset_type: str
+    project_name: str
+    def __init__(self, dataset_name: _Optional[str] = ..., dataset_type: _Optional[str] = ..., project_name: _Optional[str] = ...) -> None: ...
+
 class CreateOrUpdateDatasetRequest(_message.Message):
     __slots__ = ["dataset_name"]
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]

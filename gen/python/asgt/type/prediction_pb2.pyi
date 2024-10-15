@@ -8,6 +8,14 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 
 DESCRIPTOR: _descriptor.FileDescriptor
 
+class TargetConfidence(_message.Message):
+    __slots__ = ["target_name", "confidence"]
+    TARGET_NAME_FIELD_NUMBER: _ClassVar[int]
+    CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
+    target_name: str
+    confidence: _containers.RepeatedCompositeFieldContainer[Confidence]
+    def __init__(self, target_name: _Optional[str] = ..., confidence: _Optional[_Iterable[_Union[Confidence, _Mapping]]] = ...) -> None: ...
+
 class Confidence(_message.Message):
     __slots__ = ["level", "value"]
     class Level(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):

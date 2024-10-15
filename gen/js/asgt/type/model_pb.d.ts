@@ -43,6 +43,11 @@ export class Model extends jspb.Message {
   clearConfidenceThresholdsList(): Model;
   addConfidenceThresholds(value?: asgt_type_prediction_pb.Confidence, index?: number): asgt_type_prediction_pb.Confidence;
 
+  getTargetConfidenceThresholdsList(): Array<asgt_type_prediction_pb.Confidence>;
+  setTargetConfidenceThresholdsList(value: Array<asgt_type_prediction_pb.Confidence>): Model;
+  clearTargetConfidenceThresholdsList(): Model;
+  addTargetConfidenceThresholds(value?: asgt_type_prediction_pb.Confidence, index?: number): asgt_type_prediction_pb.Confidence;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Model.AsObject;
   static toObject(includeInstance: boolean, msg: Model): Model.AsObject;
@@ -62,6 +67,7 @@ export namespace Model {
     datasetType: string,
     modelFilesList: Array<asgt_type_model_file_pb.ModelFile.AsObject>,
     confidenceThresholdsList: Array<asgt_type_prediction_pb.Confidence.AsObject>,
+    targetConfidenceThresholdsList: Array<asgt_type_prediction_pb.Confidence.AsObject>,
   }
 
   export enum InputType { 

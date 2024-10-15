@@ -7,6 +7,11 @@ import "google/protobuf/wrappers.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/type;asgttype";
 
+message TargetConfidence {
+  string target_name = 1;
+  repeated Confidence confidence = 2;
+}
+
 // Common types
 message Confidence {
   enum Level {

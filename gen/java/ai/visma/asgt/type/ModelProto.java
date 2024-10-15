@@ -32,7 +32,7 @@ public final class ModelProto {
       "/type/model_file.proto\032\032asgt/type/predic" +
       "tion.proto\032\036asgt/type/target_metrics.pro" +
       "to\032\034gen_bq_schema/bq_field.proto\032\037google" +
-      "/protobuf/timestamp.proto\"\262\004\n\005Model\022\037\n\007v" +
+      "/protobuf/timestamp.proto\"\222\005\n\005Model\022\037\n\007v" +
       "ersion\030\003 \001(\003B\005\352?\002\010\001R\007version\0229\n\ncreated_" +
       "at\030\004 \001(\0132\032.google.protobuf.TimestampR\tcr" +
       "eatedAt\022(\n\014dataset_size\030\005 \001(\005B\005\352?\002\030\001R\013da" +
@@ -45,12 +45,15 @@ public final class ModelProto {
       "\030\n \003(\0132\024.asgt.type.ModelFileB\005\352?\002\030\001R\nmod" +
       "elFiles\022Q\n\025confidence_thresholds\030\013 \003(\0132\025" +
       ".asgt.type.ConfidenceB\005\352?\002\030\001R\024confidence" +
-      "Thresholds\"4\n\tInputType\022\023\n\017FEATURE_TENSO" +
-      "RS\020\000\022\022\n\016EXAMPLE_TENSOR\020\001J\004\010\001\020\003B\235\001\n\022ai.vi" +
-      "sma.asgt.typeB\nModelProtoP\001Z6github.com/" +
-      "e-conomic/vmlapis/gen/go/asgt/type;asgtt" +
-      "ype\242\002\003ATX\252\002\tAsgt.Type\312\002\tAsgt\\Type\342\002\025Asgt" +
-      "\\Type\\GPBMetadata\352\002\nAsgt::Typeb\006proto3"
+      "Thresholds\022^\n\034target_confidence_threshol" +
+      "ds\030\014 \003(\0132\025.asgt.type.ConfidenceB\005\352?\002\030\001R\032" +
+      "targetConfidenceThresholds\"4\n\tInputType\022" +
+      "\023\n\017FEATURE_TENSORS\020\000\022\022\n\016EXAMPLE_TENSOR\020\001" +
+      "J\004\010\001\020\003B\235\001\n\022ai.visma.asgt.typeB\nModelProt" +
+      "oP\001Z6github.com/e-conomic/vmlapis/gen/go" +
+      "/asgt/type;asgttype\242\002\003ATX\252\002\tAsgt.Type\312\002\t" +
+      "Asgt\\Type\342\002\025Asgt\\Type\\GPBMetadata\352\002\nAsgt" +
+      "::Typeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -66,7 +69,7 @@ public final class ModelProto {
     internal_static_asgt_type_Model_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_type_Model_descriptor,
-        new java.lang.String[] { "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType", "ModelFiles", "ConfidenceThresholds", });
+        new java.lang.String[] { "Version", "CreatedAt", "DatasetSize", "TrainingSize", "ConfidenceScores", "InputType", "DatasetType", "ModelFiles", "ConfidenceThresholds", "TargetConfidenceThresholds", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(ai.visma.gen_bq_schema.BqFieldProto.bigquery);

@@ -21,6 +21,7 @@ private static final long serialVersionUID = 0L;
     datasetType_ = "";
     modelFiles_ = java.util.Collections.emptyList();
     confidenceThresholds_ = java.util.Collections.emptyList();
+    targetConfidenceThresholds_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -390,6 +391,47 @@ private static final long serialVersionUID = 0L;
     return confidenceThresholds_.get(index);
   }
 
+  public static final int TARGET_CONFIDENCE_THRESHOLDS_FIELD_NUMBER = 12;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.asgt.type.Confidence> targetConfidenceThresholds_;
+  /**
+   * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.asgt.type.Confidence> getTargetConfidenceThresholdsList() {
+    return targetConfidenceThresholds_;
+  }
+  /**
+   * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.asgt.type.ConfidenceOrBuilder> 
+      getTargetConfidenceThresholdsOrBuilderList() {
+    return targetConfidenceThresholds_;
+  }
+  /**
+   * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  @java.lang.Override
+  public int getTargetConfidenceThresholdsCount() {
+    return targetConfidenceThresholds_.size();
+  }
+  /**
+   * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.asgt.type.Confidence getTargetConfidenceThresholds(int index) {
+    return targetConfidenceThresholds_.get(index);
+  }
+  /**
+   * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+   */
+  @java.lang.Override
+  public ai.visma.asgt.type.ConfidenceOrBuilder getTargetConfidenceThresholdsOrBuilder(
+      int index) {
+    return targetConfidenceThresholds_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -430,6 +472,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < confidenceThresholds_.size(); i++) {
       output.writeMessage(11, confidenceThresholds_.get(i));
+    }
+    for (int i = 0; i < targetConfidenceThresholds_.size(); i++) {
+      output.writeMessage(12, targetConfidenceThresholds_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -475,6 +520,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(11, confidenceThresholds_.get(i));
     }
+    for (int i = 0; i < targetConfidenceThresholds_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(12, targetConfidenceThresholds_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -510,6 +559,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getModelFilesList())) return false;
     if (!getConfidenceThresholdsList()
         .equals(other.getConfidenceThresholdsList())) return false;
+    if (!getTargetConfidenceThresholdsList()
+        .equals(other.getTargetConfidenceThresholdsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -547,6 +598,10 @@ private static final long serialVersionUID = 0L;
     if (getConfidenceThresholdsCount() > 0) {
       hash = (37 * hash) + CONFIDENCE_THRESHOLDS_FIELD_NUMBER;
       hash = (53 * hash) + getConfidenceThresholdsList().hashCode();
+    }
+    if (getTargetConfidenceThresholdsCount() > 0) {
+      hash = (37 * hash) + TARGET_CONFIDENCE_THRESHOLDS_FIELD_NUMBER;
+      hash = (53 * hash) + getTargetConfidenceThresholdsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -710,6 +765,13 @@ private static final long serialVersionUID = 0L;
         confidenceThresholdsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000100);
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        targetConfidenceThresholds_ = java.util.Collections.emptyList();
+      } else {
+        targetConfidenceThresholds_ = null;
+        targetConfidenceThresholdsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000200);
       return this;
     }
 
@@ -769,6 +831,15 @@ private static final long serialVersionUID = 0L;
         result.confidenceThresholds_ = confidenceThresholds_;
       } else {
         result.confidenceThresholds_ = confidenceThresholdsBuilder_.build();
+      }
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        if (((bitField0_ & 0x00000200) != 0)) {
+          targetConfidenceThresholds_ = java.util.Collections.unmodifiableList(targetConfidenceThresholds_);
+          bitField0_ = (bitField0_ & ~0x00000200);
+        }
+        result.targetConfidenceThresholds_ = targetConfidenceThresholds_;
+      } else {
+        result.targetConfidenceThresholds_ = targetConfidenceThresholdsBuilder_.build();
       }
     }
 
@@ -938,6 +1009,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        if (!other.targetConfidenceThresholds_.isEmpty()) {
+          if (targetConfidenceThresholds_.isEmpty()) {
+            targetConfidenceThresholds_ = other.targetConfidenceThresholds_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+          } else {
+            ensureTargetConfidenceThresholdsIsMutable();
+            targetConfidenceThresholds_.addAll(other.targetConfidenceThresholds_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.targetConfidenceThresholds_.isEmpty()) {
+          if (targetConfidenceThresholdsBuilder_.isEmpty()) {
+            targetConfidenceThresholdsBuilder_.dispose();
+            targetConfidenceThresholdsBuilder_ = null;
+            targetConfidenceThresholds_ = other.targetConfidenceThresholds_;
+            bitField0_ = (bitField0_ & ~0x00000200);
+            targetConfidenceThresholdsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getTargetConfidenceThresholdsFieldBuilder() : null;
+          } else {
+            targetConfidenceThresholdsBuilder_.addAllMessages(other.targetConfidenceThresholds_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1035,6 +1132,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 90
+            case 98: {
+              ai.visma.asgt.type.Confidence m =
+                  input.readMessage(
+                      ai.visma.asgt.type.Confidence.parser(),
+                      extensionRegistry);
+              if (targetConfidenceThresholdsBuilder_ == null) {
+                ensureTargetConfidenceThresholdsIsMutable();
+                targetConfidenceThresholds_.add(m);
+              } else {
+                targetConfidenceThresholdsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2110,6 +2220,246 @@ private static final long serialVersionUID = 0L;
         confidenceThresholds_ = null;
       }
       return confidenceThresholdsBuilder_;
+    }
+
+    private java.util.List<ai.visma.asgt.type.Confidence> targetConfidenceThresholds_ =
+      java.util.Collections.emptyList();
+    private void ensureTargetConfidenceThresholdsIsMutable() {
+      if (!((bitField0_ & 0x00000200) != 0)) {
+        targetConfidenceThresholds_ = new java.util.ArrayList<ai.visma.asgt.type.Confidence>(targetConfidenceThresholds_);
+        bitField0_ |= 0x00000200;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.asgt.type.Confidence, ai.visma.asgt.type.Confidence.Builder, ai.visma.asgt.type.ConfidenceOrBuilder> targetConfidenceThresholdsBuilder_;
+
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public java.util.List<ai.visma.asgt.type.Confidence> getTargetConfidenceThresholdsList() {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(targetConfidenceThresholds_);
+      } else {
+        return targetConfidenceThresholdsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public int getTargetConfidenceThresholdsCount() {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        return targetConfidenceThresholds_.size();
+      } else {
+        return targetConfidenceThresholdsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public ai.visma.asgt.type.Confidence getTargetConfidenceThresholds(int index) {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        return targetConfidenceThresholds_.get(index);
+      } else {
+        return targetConfidenceThresholdsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder setTargetConfidenceThresholds(
+        int index, ai.visma.asgt.type.Confidence value) {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTargetConfidenceThresholdsIsMutable();
+        targetConfidenceThresholds_.set(index, value);
+        onChanged();
+      } else {
+        targetConfidenceThresholdsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder setTargetConfidenceThresholds(
+        int index, ai.visma.asgt.type.Confidence.Builder builderForValue) {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        ensureTargetConfidenceThresholdsIsMutable();
+        targetConfidenceThresholds_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        targetConfidenceThresholdsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder addTargetConfidenceThresholds(ai.visma.asgt.type.Confidence value) {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTargetConfidenceThresholdsIsMutable();
+        targetConfidenceThresholds_.add(value);
+        onChanged();
+      } else {
+        targetConfidenceThresholdsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder addTargetConfidenceThresholds(
+        int index, ai.visma.asgt.type.Confidence value) {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureTargetConfidenceThresholdsIsMutable();
+        targetConfidenceThresholds_.add(index, value);
+        onChanged();
+      } else {
+        targetConfidenceThresholdsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder addTargetConfidenceThresholds(
+        ai.visma.asgt.type.Confidence.Builder builderForValue) {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        ensureTargetConfidenceThresholdsIsMutable();
+        targetConfidenceThresholds_.add(builderForValue.build());
+        onChanged();
+      } else {
+        targetConfidenceThresholdsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder addTargetConfidenceThresholds(
+        int index, ai.visma.asgt.type.Confidence.Builder builderForValue) {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        ensureTargetConfidenceThresholdsIsMutable();
+        targetConfidenceThresholds_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        targetConfidenceThresholdsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder addAllTargetConfidenceThresholds(
+        java.lang.Iterable<? extends ai.visma.asgt.type.Confidence> values) {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        ensureTargetConfidenceThresholdsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, targetConfidenceThresholds_);
+        onChanged();
+      } else {
+        targetConfidenceThresholdsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder clearTargetConfidenceThresholds() {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        targetConfidenceThresholds_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000200);
+        onChanged();
+      } else {
+        targetConfidenceThresholdsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public Builder removeTargetConfidenceThresholds(int index) {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        ensureTargetConfidenceThresholdsIsMutable();
+        targetConfidenceThresholds_.remove(index);
+        onChanged();
+      } else {
+        targetConfidenceThresholdsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public ai.visma.asgt.type.Confidence.Builder getTargetConfidenceThresholdsBuilder(
+        int index) {
+      return getTargetConfidenceThresholdsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public ai.visma.asgt.type.ConfidenceOrBuilder getTargetConfidenceThresholdsOrBuilder(
+        int index) {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        return targetConfidenceThresholds_.get(index);  } else {
+        return targetConfidenceThresholdsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public java.util.List<? extends ai.visma.asgt.type.ConfidenceOrBuilder> 
+         getTargetConfidenceThresholdsOrBuilderList() {
+      if (targetConfidenceThresholdsBuilder_ != null) {
+        return targetConfidenceThresholdsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(targetConfidenceThresholds_);
+      }
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public ai.visma.asgt.type.Confidence.Builder addTargetConfidenceThresholdsBuilder() {
+      return getTargetConfidenceThresholdsFieldBuilder().addBuilder(
+          ai.visma.asgt.type.Confidence.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public ai.visma.asgt.type.Confidence.Builder addTargetConfidenceThresholdsBuilder(
+        int index) {
+      return getTargetConfidenceThresholdsFieldBuilder().addBuilder(
+          index, ai.visma.asgt.type.Confidence.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .asgt.type.Confidence target_confidence_thresholds = 12 [json_name = "targetConfidenceThresholds", (.gen_bq_schema.bigquery) = { ... }</code>
+     */
+    public java.util.List<ai.visma.asgt.type.Confidence.Builder> 
+         getTargetConfidenceThresholdsBuilderList() {
+      return getTargetConfidenceThresholdsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.asgt.type.Confidence, ai.visma.asgt.type.Confidence.Builder, ai.visma.asgt.type.ConfidenceOrBuilder> 
+        getTargetConfidenceThresholdsFieldBuilder() {
+      if (targetConfidenceThresholdsBuilder_ == null) {
+        targetConfidenceThresholdsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.asgt.type.Confidence, ai.visma.asgt.type.Confidence.Builder, ai.visma.asgt.type.ConfidenceOrBuilder>(
+                targetConfidenceThresholds_,
+                ((bitField0_ & 0x00000200) != 0),
+                getParentForChildren(),
+                isClean());
+        targetConfidenceThresholds_ = null;
+      }
+      return targetConfidenceThresholdsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
