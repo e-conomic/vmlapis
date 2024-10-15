@@ -45,10 +45,8 @@ export class RegisterModelRequest extends jspb.Message {
   hasDatasetStatistics(): boolean;
   clearDatasetStatistics(): RegisterModelRequest;
 
-  getConfidenceThresholdsList(): Array<asgt_type_prediction_pb.Confidence>;
-  setConfidenceThresholdsList(value: Array<asgt_type_prediction_pb.Confidence>): RegisterModelRequest;
-  clearConfidenceThresholdsList(): RegisterModelRequest;
-  addConfidenceThresholds(value?: asgt_type_prediction_pb.Confidence, index?: number): asgt_type_prediction_pb.Confidence;
+  getTargetToConfidenceThresholdsMap(): jspb.Map<string, asgt_type_model_pb.ConfidenceThresholds>;
+  clearTargetToConfidenceThresholdsMap(): RegisterModelRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RegisterModelRequest.AsObject;
@@ -68,7 +66,7 @@ export namespace RegisterModelRequest {
     inputType: asgt_type_model_pb.Model.InputType,
     trainStatistics?: asgt_type_train_statistics_pb.TrainStatistics.AsObject,
     datasetStatistics?: asgt_type_dataset_statistics_pb.DatasetStatistics.AsObject,
-    confidenceThresholdsList: Array<asgt_type_prediction_pb.Confidence.AsObject>,
+    targetToConfidenceThresholdsMap: Array<[string, asgt_type_model_pb.ConfidenceThresholds.AsObject]>,
   }
 }
 

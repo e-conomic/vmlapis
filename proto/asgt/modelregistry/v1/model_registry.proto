@@ -26,6 +26,7 @@ service ModelRegistry {
 }
 
 message RegisterModelRequest {
+  reserved 9;
   asgt.type.Dataset dataset = 1;
   asgt.type.Revision revision = 2;
   int64 model_version = 3;
@@ -34,7 +35,7 @@ message RegisterModelRequest {
   asgt.type.Model.InputType input_type = 6;
   asgt.type.TrainStatistics train_statistics = 7;
   asgt.type.DatasetStatistics dataset_statistics = 8;
-  repeated asgt.type.Confidence confidence_thresholds = 9;
+  map<string, asgt.type.ConfidenceThresholds> target_to_confidence_thresholds = 10;
 }
 
 //message DeleteModelRequest {

@@ -141,26 +141,36 @@ public interface RegisterModelRequestOrBuilder extends
   ai.visma.asgt.type.DatasetStatisticsOrBuilder getDatasetStatisticsOrBuilder();
 
   /**
-   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
    */
-  java.util.List<ai.visma.asgt.type.Confidence> 
-      getConfidenceThresholdsList();
+  int getTargetToConfidenceThresholdsCount();
   /**
-   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
    */
-  ai.visma.asgt.type.Confidence getConfidenceThresholds(int index);
+  boolean containsTargetToConfidenceThresholds(
+      java.lang.String key);
   /**
-   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   * Use {@link #getTargetToConfidenceThresholdsMap()} instead.
    */
-  int getConfidenceThresholdsCount();
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+  getTargetToConfidenceThresholds();
   /**
-   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
    */
-  java.util.List<? extends ai.visma.asgt.type.ConfidenceOrBuilder> 
-      getConfidenceThresholdsOrBuilderList();
+  java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+  getTargetToConfidenceThresholdsMap();
   /**
-   * <code>repeated .asgt.type.Confidence confidence_thresholds = 9 [json_name = "confidenceThresholds"];</code>
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
    */
-  ai.visma.asgt.type.ConfidenceOrBuilder getConfidenceThresholdsOrBuilder(
-      int index);
+  /* nullable */
+ai.visma.asgt.type.ConfidenceThresholds getTargetToConfidenceThresholdsOrDefault(
+      java.lang.String key,
+      /* nullable */
+ai.visma.asgt.type.ConfidenceThresholds defaultValue);
+  /**
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; target_to_confidence_thresholds = 10 [json_name = "targetToConfidenceThresholds"];</code>
+   */
+  ai.visma.asgt.type.ConfidenceThresholds getTargetToConfidenceThresholdsOrThrow(
+      java.lang.String key);
 }
