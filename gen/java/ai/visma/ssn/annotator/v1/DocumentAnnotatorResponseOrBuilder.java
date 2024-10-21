@@ -2192,4 +2192,48 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    */
   ai.visma.ssn.type.PageTextOrBuilder getPageTextsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.VatLevelCandidate> 
+      getVatLevelsList();
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+   */
+  ai.visma.ssn.type.VatLevelCandidate getVatLevels(int index);
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+   */
+  int getVatLevelsCount();
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.VatLevelCandidateOrBuilder> 
+      getVatLevelsOrBuilderList();
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+   */
+  ai.visma.ssn.type.VatLevelCandidateOrBuilder getVatLevelsOrBuilder(
+      int index);
 }

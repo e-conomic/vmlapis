@@ -132,3 +132,13 @@ class PageText(_message.Message):
     page_ref: int
     text: str
     def __init__(self, page_ref: _Optional[int] = ..., text: _Optional[str] = ...) -> None: ...
+
+class VatLevelCandidate(_message.Message):
+    __slots__ = ["vat_level_percentage", "vat_level_amount", "model_metadata"]
+    VAT_LEVEL_PERCENTAGE_FIELD_NUMBER: _ClassVar[int]
+    VAT_LEVEL_AMOUNT_FIELD_NUMBER: _ClassVar[int]
+    MODEL_METADATA_FIELD_NUMBER: _ClassVar[int]
+    vat_level_percentage: str
+    vat_level_amount: str
+    model_metadata: ModelSpec
+    def __init__(self, vat_level_percentage: _Optional[str] = ..., vat_level_amount: _Optional[str] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ...) -> None: ...

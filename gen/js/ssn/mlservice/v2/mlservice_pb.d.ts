@@ -632,3 +632,53 @@ export namespace DocQAResponse {
   }
 }
 
+export class VatLevelsRequest extends jspb.Message {
+  getTextAnnotation(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
+  setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): VatLevelsRequest;
+  hasTextAnnotation(): boolean;
+  clearTextAnnotation(): VatLevelsRequest;
+
+  getImage(): Uint8Array | string;
+  getImage_asU8(): Uint8Array;
+  getImage_asB64(): string;
+  setImage(value: Uint8Array | string): VatLevelsRequest;
+
+  getCountryCode(): string;
+  setCountryCode(value: string): VatLevelsRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): VatLevelsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: VatLevelsRequest): VatLevelsRequest.AsObject;
+  static serializeBinaryToWriter(message: VatLevelsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VatLevelsRequest;
+  static deserializeBinaryFromReader(message: VatLevelsRequest, reader: jspb.BinaryReader): VatLevelsRequest;
+}
+
+export namespace VatLevelsRequest {
+  export type AsObject = {
+    textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
+    image: Uint8Array | string,
+    countryCode: string,
+  }
+}
+
+export class VatLevelsResponse extends jspb.Message {
+  getVatLevelsList(): Array<ssn_type_candidate_pb.VatLevelCandidate>;
+  setVatLevelsList(value: Array<ssn_type_candidate_pb.VatLevelCandidate>): VatLevelsResponse;
+  clearVatLevelsList(): VatLevelsResponse;
+  addVatLevels(value?: ssn_type_candidate_pb.VatLevelCandidate, index?: number): ssn_type_candidate_pb.VatLevelCandidate;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): VatLevelsResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: VatLevelsResponse): VatLevelsResponse.AsObject;
+  static serializeBinaryToWriter(message: VatLevelsResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VatLevelsResponse;
+  static deserializeBinaryFromReader(message: VatLevelsResponse, reader: jspb.BinaryReader): VatLevelsResponse;
+}
+
+export namespace VatLevelsResponse {
+  export type AsObject = {
+    vatLevelsList: Array<ssn_type_candidate_pb.VatLevelCandidate.AsObject>,
+  }
+}
+

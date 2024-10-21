@@ -62,6 +62,7 @@ private static final long serialVersionUID = 0L;
     purchaseLines_ = java.util.Collections.emptyList();
     answers_ = java.util.Collections.emptyList();
     pageTexts_ = java.util.Collections.emptyList();
+    vatLevels_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -3093,6 +3094,67 @@ private static final long serialVersionUID = 0L;
     return pageTexts_.get(index);
   }
 
+  public static final int VAT_LEVELS_FIELD_NUMBER = 48;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ssn.type.VatLevelCandidate> vatLevels_;
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<ai.visma.ssn.type.VatLevelCandidate> getVatLevelsList() {
+    return vatLevels_;
+  }
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends ai.visma.ssn.type.VatLevelCandidateOrBuilder> 
+      getVatLevelsOrBuilderList() {
+    return vatLevels_;
+  }
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+   */
+  @java.lang.Override
+  public int getVatLevelsCount() {
+    return vatLevels_.size();
+  }
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.VatLevelCandidate getVatLevels(int index) {
+    return vatLevels_.get(index);
+  }
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.VatLevelCandidateOrBuilder getVatLevelsOrBuilder(
+      int index) {
+    return vatLevels_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3247,6 +3309,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < pageTexts_.size(); i++) {
       output.writeMessage(47, pageTexts_.get(i));
+    }
+    for (int i = 0; i < vatLevels_.size(); i++) {
+      output.writeMessage(48, vatLevels_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -3442,6 +3507,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(47, pageTexts_.get(i));
     }
+    for (int i = 0; i < vatLevels_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(48, vatLevels_.get(i));
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3554,6 +3623,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAnswersList())) return false;
     if (!getPageTextsList()
         .equals(other.getPageTextsList())) return false;
+    if (!getVatLevelsList()
+        .equals(other.getVatLevelsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3746,6 +3817,10 @@ private static final long serialVersionUID = 0L;
     if (getPageTextsCount() > 0) {
       hash = (37 * hash) + PAGE_TEXTS_FIELD_NUMBER;
       hash = (53 * hash) + getPageTextsList().hashCode();
+    }
+    if (getVatLevelsCount() > 0) {
+      hash = (37 * hash) + VAT_LEVELS_FIELD_NUMBER;
+      hash = (53 * hash) + getVatLevelsList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -4188,6 +4263,13 @@ private static final long serialVersionUID = 0L;
         pageTextsBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00004000);
+      if (vatLevelsBuilder_ == null) {
+        vatLevels_ = java.util.Collections.emptyList();
+      } else {
+        vatLevels_ = null;
+        vatLevelsBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00008000);
       return this;
     }
 
@@ -4608,6 +4690,15 @@ private static final long serialVersionUID = 0L;
         result.pageTexts_ = pageTexts_;
       } else {
         result.pageTexts_ = pageTextsBuilder_.build();
+      }
+      if (vatLevelsBuilder_ == null) {
+        if (((bitField1_ & 0x00008000) != 0)) {
+          vatLevels_ = java.util.Collections.unmodifiableList(vatLevels_);
+          bitField1_ = (bitField1_ & ~0x00008000);
+        }
+        result.vatLevels_ = vatLevels_;
+      } else {
+        result.vatLevels_ = vatLevelsBuilder_.build();
       }
     }
 
@@ -5813,6 +5904,32 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (vatLevelsBuilder_ == null) {
+        if (!other.vatLevels_.isEmpty()) {
+          if (vatLevels_.isEmpty()) {
+            vatLevels_ = other.vatLevels_;
+            bitField1_ = (bitField1_ & ~0x00008000);
+          } else {
+            ensureVatLevelsIsMutable();
+            vatLevels_.addAll(other.vatLevels_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.vatLevels_.isEmpty()) {
+          if (vatLevelsBuilder_.isEmpty()) {
+            vatLevelsBuilder_.dispose();
+            vatLevelsBuilder_ = null;
+            vatLevels_ = other.vatLevels_;
+            bitField1_ = (bitField1_ & ~0x00008000);
+            vatLevelsBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getVatLevelsFieldBuilder() : null;
+          } else {
+            vatLevelsBuilder_.addAllMessages(other.vatLevels_);
+          }
+        }
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -6420,6 +6537,19 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 378
+            case 386: {
+              ai.visma.ssn.type.VatLevelCandidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.VatLevelCandidate.parser(),
+                      extensionRegistry);
+              if (vatLevelsBuilder_ == null) {
+                ensureVatLevelsIsMutable();
+                vatLevels_.add(m);
+              } else {
+                vatLevelsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 386
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -21026,6 +21156,318 @@ private static final long serialVersionUID = 0L;
         pageTexts_ = null;
       }
       return pageTextsBuilder_;
+    }
+
+    private java.util.List<ai.visma.ssn.type.VatLevelCandidate> vatLevels_ =
+      java.util.Collections.emptyList();
+    private void ensureVatLevelsIsMutable() {
+      if (!((bitField1_ & 0x00008000) != 0)) {
+        vatLevels_ = new java.util.ArrayList<ai.visma.ssn.type.VatLevelCandidate>(vatLevels_);
+        bitField1_ |= 0x00008000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.VatLevelCandidate, ai.visma.ssn.type.VatLevelCandidate.Builder, ai.visma.ssn.type.VatLevelCandidateOrBuilder> vatLevelsBuilder_;
+
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.VatLevelCandidate> getVatLevelsList() {
+      if (vatLevelsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(vatLevels_);
+      } else {
+        return vatLevelsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public int getVatLevelsCount() {
+      if (vatLevelsBuilder_ == null) {
+        return vatLevels_.size();
+      } else {
+        return vatLevelsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public ai.visma.ssn.type.VatLevelCandidate getVatLevels(int index) {
+      if (vatLevelsBuilder_ == null) {
+        return vatLevels_.get(index);
+      } else {
+        return vatLevelsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public Builder setVatLevels(
+        int index, ai.visma.ssn.type.VatLevelCandidate value) {
+      if (vatLevelsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatLevelsIsMutable();
+        vatLevels_.set(index, value);
+        onChanged();
+      } else {
+        vatLevelsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public Builder setVatLevels(
+        int index, ai.visma.ssn.type.VatLevelCandidate.Builder builderForValue) {
+      if (vatLevelsBuilder_ == null) {
+        ensureVatLevelsIsMutable();
+        vatLevels_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        vatLevelsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public Builder addVatLevels(ai.visma.ssn.type.VatLevelCandidate value) {
+      if (vatLevelsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatLevelsIsMutable();
+        vatLevels_.add(value);
+        onChanged();
+      } else {
+        vatLevelsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public Builder addVatLevels(
+        int index, ai.visma.ssn.type.VatLevelCandidate value) {
+      if (vatLevelsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureVatLevelsIsMutable();
+        vatLevels_.add(index, value);
+        onChanged();
+      } else {
+        vatLevelsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public Builder addVatLevels(
+        ai.visma.ssn.type.VatLevelCandidate.Builder builderForValue) {
+      if (vatLevelsBuilder_ == null) {
+        ensureVatLevelsIsMutable();
+        vatLevels_.add(builderForValue.build());
+        onChanged();
+      } else {
+        vatLevelsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public Builder addVatLevels(
+        int index, ai.visma.ssn.type.VatLevelCandidate.Builder builderForValue) {
+      if (vatLevelsBuilder_ == null) {
+        ensureVatLevelsIsMutable();
+        vatLevels_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        vatLevelsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public Builder addAllVatLevels(
+        java.lang.Iterable<? extends ai.visma.ssn.type.VatLevelCandidate> values) {
+      if (vatLevelsBuilder_ == null) {
+        ensureVatLevelsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, vatLevels_);
+        onChanged();
+      } else {
+        vatLevelsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public Builder clearVatLevels() {
+      if (vatLevelsBuilder_ == null) {
+        vatLevels_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00008000);
+        onChanged();
+      } else {
+        vatLevelsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public Builder removeVatLevels(int index) {
+      if (vatLevelsBuilder_ == null) {
+        ensureVatLevelsIsMutable();
+        vatLevels_.remove(index);
+        onChanged();
+      } else {
+        vatLevelsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public ai.visma.ssn.type.VatLevelCandidate.Builder getVatLevelsBuilder(
+        int index) {
+      return getVatLevelsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public ai.visma.ssn.type.VatLevelCandidateOrBuilder getVatLevelsOrBuilder(
+        int index) {
+      if (vatLevelsBuilder_ == null) {
+        return vatLevels_.get(index);  } else {
+        return vatLevelsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.VatLevelCandidateOrBuilder> 
+         getVatLevelsOrBuilderList() {
+      if (vatLevelsBuilder_ != null) {
+        return vatLevelsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(vatLevels_);
+      }
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public ai.visma.ssn.type.VatLevelCandidate.Builder addVatLevelsBuilder() {
+      return getVatLevelsFieldBuilder().addBuilder(
+          ai.visma.ssn.type.VatLevelCandidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public ai.visma.ssn.type.VatLevelCandidate.Builder addVatLevelsBuilder(
+        int index) {
+      return getVatLevelsFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.VatLevelCandidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Vat levels for the document, each vat level has vat level percentage and vat level amount
+     * </pre>
+     *
+     * <code>repeated .ssn.type.VatLevelCandidate vat_levels = 48 [json_name = "vatLevels"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.VatLevelCandidate.Builder> 
+         getVatLevelsBuilderList() {
+      return getVatLevelsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.VatLevelCandidate, ai.visma.ssn.type.VatLevelCandidate.Builder, ai.visma.ssn.type.VatLevelCandidateOrBuilder> 
+        getVatLevelsFieldBuilder() {
+      if (vatLevelsBuilder_ == null) {
+        vatLevelsBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.ssn.type.VatLevelCandidate, ai.visma.ssn.type.VatLevelCandidate.Builder, ai.visma.ssn.type.VatLevelCandidateOrBuilder>(
+                vatLevels_,
+                ((bitField1_ & 0x00008000) != 0),
+                getParentForChildren(),
+                isClean());
+        vatLevels_ = null;
+      }
+      return vatLevelsBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

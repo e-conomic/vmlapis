@@ -285,3 +285,31 @@ export namespace PageText {
   }
 }
 
+export class VatLevelCandidate extends jspb.Message {
+  getVatLevelPercentage(): string;
+  setVatLevelPercentage(value: string): VatLevelCandidate;
+
+  getVatLevelAmount(): string;
+  setVatLevelAmount(value: string): VatLevelCandidate;
+
+  getModelMetadata(): ModelSpec | undefined;
+  setModelMetadata(value?: ModelSpec): VatLevelCandidate;
+  hasModelMetadata(): boolean;
+  clearModelMetadata(): VatLevelCandidate;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): VatLevelCandidate.AsObject;
+  static toObject(includeInstance: boolean, msg: VatLevelCandidate): VatLevelCandidate.AsObject;
+  static serializeBinaryToWriter(message: VatLevelCandidate, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VatLevelCandidate;
+  static deserializeBinaryFromReader(message: VatLevelCandidate, reader: jspb.BinaryReader): VatLevelCandidate;
+}
+
+export namespace VatLevelCandidate {
+  export type AsObject = {
+    vatLevelPercentage: string,
+    vatLevelAmount: string,
+    modelMetadata?: ModelSpec.AsObject,
+  }
+}
+

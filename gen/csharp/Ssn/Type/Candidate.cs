@@ -62,11 +62,15 @@ namespace Ssn.Type {
             "ZW5jZVIKY29uZmlkZW5jZRI6Cg5tb2RlbF9tZXRhZGF0YRgHIAEoCzITLnNz",
             "bi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdlX3JlZhgI",
             "IAEoDVIHcGFnZVJlZiI5CghQYWdlVGV4dBIZCghwYWdlX3JlZhgBIAEoDVIH",
-            "cGFnZVJlZhISCgR0ZXh0GAIgASgJUgR0ZXh0QpoBChFhaS52aXNtYS5zc24u",
-            "dHlwZUIOQ2FuZGlkYXRlUHJvdG9QAVo0Z2l0aHViLmNvbS9lLWNvbm9taWMv",
-            "dm1sYXBpcy9nZW4vZ28vc3NuL3R5cGU7c3NudHlwZaICA1NUWKoCCFNzbi5U",
-            "eXBlygIIU3NuXFR5cGXiAhRTc25cVHlwZVxHUEJNZXRhZGF0YeoCCVNzbjo6",
-            "VHlwZWIGcHJvdG8z"));
+            "cGFnZVJlZhISCgR0ZXh0GAIgASgJUgR0ZXh0IqsBChFWYXRMZXZlbENhbmRp",
+            "ZGF0ZRIwChR2YXRfbGV2ZWxfcGVyY2VudGFnZRgBIAEoCVISdmF0TGV2ZWxQ",
+            "ZXJjZW50YWdlEigKEHZhdF9sZXZlbF9hbW91bnQYAiABKAlSDnZhdExldmVs",
+            "QW1vdW50EjoKDm1vZGVsX21ldGFkYXRhGAMgASgLMhMuc3NuLnR5cGUuTW9k",
+            "ZWxTcGVjUg1tb2RlbE1ldGFkYXRhQpoBChFhaS52aXNtYS5zc24udHlwZUIO",
+            "Q2FuZGlkYXRlUHJvdG9QAVo0Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
+            "cy9nZW4vZ28vc3NuL3R5cGU7c3NudHlwZaICA1NUWKoCCFNzbi5UeXBlygII",
+            "U3NuXFR5cGXiAhRTc25cVHlwZVxHUEJNZXRhZGF0YeoCCVNzbjo6VHlwZWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -76,7 +80,8 @@ namespace Ssn.Type {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.LineCandidate), global::Ssn.Type.LineCandidate.Parser, new[]{ "Text", "Amount", "PageRef" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.AnswerCandidate), global::Ssn.Type.AnswerCandidate.Parser, new[]{ "Question", "Answer", "Confidence", "ModelMetadata", "PageRef" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PageText), global::Ssn.Type.PageText.Parser, new[]{ "PageRef", "Text" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PageText), global::Ssn.Type.PageText.Parser, new[]{ "PageRef", "Text" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatLevelCandidate), global::Ssn.Type.VatLevelCandidate.Parser, new[]{ "VatLevelPercentage", "VatLevelAmount", "ModelMetadata" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2785,6 +2790,287 @@ namespace Ssn.Type {
           }
           case 18: {
             Text = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  public sealed partial class VatLevelCandidate : pb::IMessage<VatLevelCandidate>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<VatLevelCandidate> _parser = new pb::MessageParser<VatLevelCandidate>(() => new VatLevelCandidate());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<VatLevelCandidate> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Ssn.Type.CandidateReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VatLevelCandidate() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VatLevelCandidate(VatLevelCandidate other) : this() {
+      vatLevelPercentage_ = other.vatLevelPercentage_;
+      vatLevelAmount_ = other.vatLevelAmount_;
+      modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public VatLevelCandidate Clone() {
+      return new VatLevelCandidate(this);
+    }
+
+    /// <summary>Field number for the "vat_level_percentage" field.</summary>
+    public const int VatLevelPercentageFieldNumber = 1;
+    private string vatLevelPercentage_ = "";
+    /// <summary>
+    /// The vat level in percentage
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VatLevelPercentage {
+      get { return vatLevelPercentage_; }
+      set {
+        vatLevelPercentage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "vat_level_amount" field.</summary>
+    public const int VatLevelAmountFieldNumber = 2;
+    private string vatLevelAmount_ = "";
+    /// <summary>
+    /// The vat level in amount
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string VatLevelAmount {
+      get { return vatLevelAmount_; }
+      set {
+        vatLevelAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "model_metadata" field.</summary>
+    public const int ModelMetadataFieldNumber = 3;
+    private global::Ssn.Type.ModelSpec modelMetadata_;
+    /// <summary>
+    /// Model metadata
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Ssn.Type.ModelSpec ModelMetadata {
+      get { return modelMetadata_; }
+      set {
+        modelMetadata_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as VatLevelCandidate);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(VatLevelCandidate other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (VatLevelPercentage != other.VatLevelPercentage) return false;
+      if (VatLevelAmount != other.VatLevelAmount) return false;
+      if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (VatLevelPercentage.Length != 0) hash ^= VatLevelPercentage.GetHashCode();
+      if (VatLevelAmount.Length != 0) hash ^= VatLevelAmount.GetHashCode();
+      if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (VatLevelPercentage.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VatLevelPercentage);
+      }
+      if (VatLevelAmount.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VatLevelAmount);
+      }
+      if (modelMetadata_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ModelMetadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (VatLevelPercentage.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(VatLevelPercentage);
+      }
+      if (VatLevelAmount.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(VatLevelAmount);
+      }
+      if (modelMetadata_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ModelMetadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (VatLevelPercentage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VatLevelPercentage);
+      }
+      if (VatLevelAmount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(VatLevelAmount);
+      }
+      if (modelMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(VatLevelCandidate other) {
+      if (other == null) {
+        return;
+      }
+      if (other.VatLevelPercentage.Length != 0) {
+        VatLevelPercentage = other.VatLevelPercentage;
+      }
+      if (other.VatLevelAmount.Length != 0) {
+        VatLevelAmount = other.VatLevelAmount;
+      }
+      if (other.modelMetadata_ != null) {
+        if (modelMetadata_ == null) {
+          ModelMetadata = new global::Ssn.Type.ModelSpec();
+        }
+        ModelMetadata.MergeFrom(other.ModelMetadata);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            VatLevelPercentage = input.ReadString();
+            break;
+          }
+          case 18: {
+            VatLevelAmount = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (modelMetadata_ == null) {
+              ModelMetadata = new global::Ssn.Type.ModelSpec();
+            }
+            input.ReadMessage(ModelMetadata);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            VatLevelPercentage = input.ReadString();
+            break;
+          }
+          case 18: {
+            VatLevelAmount = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (modelMetadata_ == null) {
+              ModelMetadata = new global::Ssn.Type.ModelSpec();
+            }
+            input.ReadMessage(ModelMetadata);
             break;
           }
         }
