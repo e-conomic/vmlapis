@@ -371,7 +371,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   RECEIVER_NAME: 42,
   RECEIVER_VAT_NUMBER: 43,
   PURCHASE_LINES: 44,
-  PAGE_TEXTS: 45
+  PAGE_TEXTS: 45,
+  VAT_DISTRIBUTION: 46
 };
 
 /**
@@ -822,7 +823,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearQuestionsList = f
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48];
 
 
 
@@ -944,7 +945,9 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     answersList: jspb.Message.toObjectList(msg.getAnswersList(),
     ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance),
     pageTextsList: jspb.Message.toObjectList(msg.getPageTextsList(),
-    ssn_type_candidate_pb.PageText.toObject, includeInstance)
+    ssn_type_candidate_pb.PageText.toObject, includeInstance),
+    vatDistributionCandidatesList: jspb.Message.toObjectList(msg.getVatDistributionCandidatesList(),
+    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1212,6 +1215,11 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_candidate_pb.PageText;
       reader.readMessage(value,ssn_type_candidate_pb.PageText.deserializeBinaryFromReader);
       msg.addPageTexts(value);
+      break;
+    case 48:
+      var value = new ssn_type_candidate_pb.VatDistributionCandidate;
+      reader.readMessage(value,ssn_type_candidate_pb.VatDistributionCandidate.deserializeBinaryFromReader);
+      msg.addVatDistributionCandidates(value);
       break;
     default:
       reader.skipField();
@@ -1613,6 +1621,14 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       47,
       f,
       ssn_type_candidate_pb.PageText.serializeBinaryToWriter
+    );
+  }
+  f = message.getVatDistributionCandidatesList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      48,
+      f,
+      ssn_type_candidate_pb.VatDistributionCandidate.serializeBinaryToWriter
     );
   }
 };
@@ -3340,6 +3356,44 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addPageTexts = functi
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearPageTextsList = function() {
   return this.setPageTextsList([]);
+};
+
+
+/**
+ * repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 48;
+ * @return {!Array<!proto.ssn.type.VatDistributionCandidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getVatDistributionCandidatesList = function() {
+  return /** @type{!Array<!proto.ssn.type.VatDistributionCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatDistributionCandidate, 48));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.VatDistributionCandidate>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setVatDistributionCandidatesList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 48, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.VatDistributionCandidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.VatDistributionCandidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addVatDistributionCandidates = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 48, opt_value, proto.ssn.type.VatDistributionCandidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearVatDistributionCandidatesList = function() {
+  return this.setVatDistributionCandidatesList([]);
 };
 
 

@@ -285,3 +285,31 @@ export namespace PageText {
   }
 }
 
+export class VatDistributionCandidate extends jspb.Message {
+  getPercentage(): string;
+  setPercentage(value: string): VatDistributionCandidate;
+
+  getAmount(): string;
+  setAmount(value: string): VatDistributionCandidate;
+
+  getModelMetadata(): ModelSpec | undefined;
+  setModelMetadata(value?: ModelSpec): VatDistributionCandidate;
+  hasModelMetadata(): boolean;
+  clearModelMetadata(): VatDistributionCandidate;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): VatDistributionCandidate.AsObject;
+  static toObject(includeInstance: boolean, msg: VatDistributionCandidate): VatDistributionCandidate.AsObject;
+  static serializeBinaryToWriter(message: VatDistributionCandidate, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VatDistributionCandidate;
+  static deserializeBinaryFromReader(message: VatDistributionCandidate, reader: jspb.BinaryReader): VatDistributionCandidate;
+}
+
+export namespace VatDistributionCandidate {
+  export type AsObject = {
+    percentage: string,
+    amount: string,
+    modelMetadata?: ModelSpec.AsObject,
+  }
+}
+

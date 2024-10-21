@@ -234,3 +234,19 @@ class DocQAResponse(_message.Message):
     ANSWERS_FIELD_NUMBER: _ClassVar[int]
     answers: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.AnswerCandidate]
     def __init__(self, answers: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ...) -> None: ...
+
+class VatDistributionRequest(_message.Message):
+    __slots__ = ["text_annotation", "image", "country_code"]
+    TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
+    IMAGE_FIELD_NUMBER: _ClassVar[int]
+    COUNTRY_CODE_FIELD_NUMBER: _ClassVar[int]
+    text_annotation: _text_annotation_pb2.TextAnnotation
+    image: bytes
+    country_code: str
+    def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[bytes] = ..., country_code: _Optional[str] = ...) -> None: ...
+
+class VatDistributionResponse(_message.Message):
+    __slots__ = ["vat_distribution_candidates"]
+    VAT_DISTRIBUTION_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
+    vat_distribution_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.VatDistributionCandidate]
+    def __init__(self, vat_distribution_candidates: _Optional[_Iterable[_Union[_candidate_pb2.VatDistributionCandidate, _Mapping]]] = ...) -> None: ...

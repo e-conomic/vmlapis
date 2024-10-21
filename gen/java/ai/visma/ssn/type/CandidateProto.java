@@ -49,6 +49,11 @@ public final class CandidateProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_type_PageText_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_type_VatDistributionCandidate_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_type_VatDistributionCandidate_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -101,11 +106,15 @@ public final class CandidateProto {
       "_metadata\030\007 \001(\0132\023.ssn.type.ModelSpecR\rmo" +
       "delMetadata\022\031\n\010page_ref\030\010 \001(\rR\007pageRef\"9" +
       "\n\010PageText\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\022\022\n" +
-      "\004text\030\002 \001(\tR\004textB\232\001\n\021ai.visma.ssn.typeB" +
-      "\016CandidateProtoP\001Z4github.com/e-conomic/" +
-      "vmlapis/gen/go/ssn/type;ssntype\242\002\003STX\252\002\010" +
-      "Ssn.Type\312\002\010Ssn\\Type\342\002\024Ssn\\Type\\GPBMetada" +
-      "ta\352\002\tSsn::Typeb\006proto3"
+      "\004text\030\002 \001(\tR\004text\"\216\001\n\030VatDistributionCan" +
+      "didate\022\036\n\npercentage\030\001 \001(\tR\npercentage\022\026" +
+      "\n\006amount\030\002 \001(\tR\006amount\022:\n\016model_metadata" +
+      "\030\003 \001(\0132\023.ssn.type.ModelSpecR\rmodelMetada" +
+      "taB\232\001\n\021ai.visma.ssn.typeB\016CandidateProto" +
+      "P\001Z4github.com/e-conomic/vmlapis/gen/go/" +
+      "ssn/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\" +
+      "Type\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Typeb" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -155,6 +164,12 @@ public final class CandidateProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_type_PageText_descriptor,
         new java.lang.String[] { "PageRef", "Text", });
+    internal_static_ssn_type_VatDistributionCandidate_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_ssn_type_VatDistributionCandidate_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_type_VatDistributionCandidate_descriptor,
+        new java.lang.String[] { "Percentage", "Amount", "ModelMetadata", });
     com.google.protobuf.WrappersProto.getDescriptor();
     ai.visma.ssn.type.GeometryProto.getDescriptor();
   }

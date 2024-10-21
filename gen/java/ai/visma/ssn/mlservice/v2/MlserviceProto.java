@@ -64,6 +64,16 @@ public final class MlserviceProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_mlservice_v2_DocQAResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_mlservice_v2_VatDistributionRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_mlservice_v2_VatDistributionRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_mlservice_v2_VatDistributionResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_mlservice_v2_VatDistributionResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -212,20 +222,27 @@ public final class MlserviceProto {
       "n.type.TextAnnotationR\016textAnnotation\022\024\n" +
       "\005image\030\002 \001(\014R\005image\022\034\n\tquestions\030\003 \003(\tR\t" +
       "questions\"D\n\rDocQAResponse\0223\n\007answers\030\001 " +
-      "\003(\0132\031.ssn.type.AnswerCandidateR\007answers2" +
-      "\230\002\n\tMlService\022W\n\nFeatureGen\022#.ssn.mlserv" +
-      "ice.v2.FeatureGenRequest\032$.ssn.mlservice" +
-      ".v2.FeatureGenResponse\022N\n\007Predict\022 .ssn." +
-      "mlservice.v2.PredictRequest\032!.ssn.mlserv" +
-      "ice.v2.PredictResponse\022b\n\021FeatureGenPred" +
-      "ict\022*.ssn.mlservice.v2.FeatureGenPredict" +
-      "Request\032!.ssn.mlservice.v2.PredictRespon" +
-      "seB\315\001\n\031ai.visma.ssn.mlservice.v2B\016Mlserv" +
-      "iceProtoP\001Z>github.com/e-conomic/vmlapis" +
-      "/gen/go/ssn/mlservice/v2;mlservice\242\002\003SMX" +
-      "\252\002\020Ssn.Mlservice.V2\312\002\020Ssn\\Mlservice\\V2\342\002" +
-      "\034Ssn\\Mlservice\\V2\\GPBMetadata\352\002\022Ssn::Mls" +
-      "ervice::V2b\006proto3"
+      "\003(\0132\031.ssn.type.AnswerCandidateR\007answers\"" +
+      "\224\001\n\026VatDistributionRequest\022A\n\017text_annot" +
+      "ation\030\001 \001(\0132\030.ssn.type.TextAnnotationR\016t" +
+      "extAnnotation\022\024\n\005image\030\002 \001(\014R\005image\022!\n\014c" +
+      "ountry_code\030\003 \001(\tR\013countryCode\"}\n\027VatDis" +
+      "tributionResponse\022b\n\033vat_distribution_ca" +
+      "ndidates\030\001 \003(\0132\".ssn.type.VatDistributio" +
+      "nCandidateR\031vatDistributionCandidates2\230\002" +
+      "\n\tMlService\022W\n\nFeatureGen\022#.ssn.mlservic" +
+      "e.v2.FeatureGenRequest\032$.ssn.mlservice.v" +
+      "2.FeatureGenResponse\022N\n\007Predict\022 .ssn.ml" +
+      "service.v2.PredictRequest\032!.ssn.mlservic" +
+      "e.v2.PredictResponse\022b\n\021FeatureGenPredic" +
+      "t\022*.ssn.mlservice.v2.FeatureGenPredictRe" +
+      "quest\032!.ssn.mlservice.v2.PredictResponse" +
+      "B\315\001\n\031ai.visma.ssn.mlservice.v2B\016Mlservic" +
+      "eProtoP\001Z>github.com/e-conomic/vmlapis/g" +
+      "en/go/ssn/mlservice/v2;mlservice\242\002\003SMX\252\002" +
+      "\020Ssn.Mlservice.V2\312\002\020Ssn\\Mlservice\\V2\342\002\034S" +
+      "sn\\Mlservice\\V2\\GPBMetadata\352\002\022Ssn::Mlser" +
+      "vice::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -294,6 +311,18 @@ public final class MlserviceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_DocQAResponse_descriptor,
         new java.lang.String[] { "Answers", });
+    internal_static_ssn_mlservice_v2_VatDistributionRequest_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_ssn_mlservice_v2_VatDistributionRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_mlservice_v2_VatDistributionRequest_descriptor,
+        new java.lang.String[] { "TextAnnotation", "Image", "CountryCode", });
+    internal_static_ssn_mlservice_v2_VatDistributionResponse_descriptor =
+      getDescriptor().getMessageTypes().get(10);
+    internal_static_ssn_mlservice_v2_VatDistributionResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_mlservice_v2_VatDistributionResponse_descriptor,
+        new java.lang.String[] { "VatDistributionCandidates", });
     com.google.type.DateProto.getDescriptor();
     ai.visma.ssn.type.CandidateProto.getDescriptor();
     ai.visma.ssn.type.TextAnnotationProto.getDescriptor();

@@ -146,3 +146,13 @@ message DocQARequest {
 message DocQAResponse {
   repeated ssn.type.AnswerCandidate answers = 1;
 }
+
+message VatDistributionRequest {
+  ssn.type.TextAnnotation text_annotation = 1;
+  bytes image = 2;
+  string country_code = 3;
+}
+
+message VatDistributionResponse {
+  repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 1;
+}

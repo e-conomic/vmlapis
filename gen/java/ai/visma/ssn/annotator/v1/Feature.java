@@ -414,6 +414,14 @@ private static final long serialVersionUID = 0L;
      * <code>PAGE_TEXTS = 45;</code>
      */
     PAGE_TEXTS(45),
+    /**
+     * <pre>
+     * VAT distribution
+     * </pre>
+     *
+     * <code>VAT_DISTRIBUTION = 46;</code>
+     */
+    VAT_DISTRIBUTION(46),
     UNRECOGNIZED(-1),
     ;
 
@@ -786,6 +794,14 @@ private static final long serialVersionUID = 0L;
      * <code>PAGE_TEXTS = 45;</code>
      */
     public static final int PAGE_TEXTS_VALUE = 45;
+    /**
+     * <pre>
+     * VAT distribution
+     * </pre>
+     *
+     * <code>VAT_DISTRIBUTION = 46;</code>
+     */
+    public static final int VAT_DISTRIBUTION_VALUE = 46;
 
 
     public final int getNumber() {
@@ -858,6 +874,7 @@ private static final long serialVersionUID = 0L;
         case 43: return RECEIVER_VAT_NUMBER;
         case 44: return PURCHASE_LINES;
         case 45: return PAGE_TEXTS;
+        case 46: return VAT_DISTRIBUTION;
         default: return null;
       }
     }

@@ -2192,4 +2192,48 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    */
   ai.visma.ssn.type.PageTextOrBuilder getPageTextsOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.VatDistributionCandidate> 
+      getVatDistributionCandidatesList();
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   */
+  ai.visma.ssn.type.VatDistributionCandidate getVatDistributionCandidates(int index);
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   */
+  int getVatDistributionCandidatesCount();
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.VatDistributionCandidateOrBuilder> 
+      getVatDistributionCandidatesOrBuilderList();
+  /**
+   * <pre>
+   * Vat levels for the document, each vat level has vat level percentage and vat level amount
+   * </pre>
+   *
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   */
+  ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionCandidatesOrBuilder(
+      int index);
 }

@@ -632,3 +632,53 @@ export namespace DocQAResponse {
   }
 }
 
+export class VatDistributionRequest extends jspb.Message {
+  getTextAnnotation(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
+  setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): VatDistributionRequest;
+  hasTextAnnotation(): boolean;
+  clearTextAnnotation(): VatDistributionRequest;
+
+  getImage(): Uint8Array | string;
+  getImage_asU8(): Uint8Array;
+  getImage_asB64(): string;
+  setImage(value: Uint8Array | string): VatDistributionRequest;
+
+  getCountryCode(): string;
+  setCountryCode(value: string): VatDistributionRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): VatDistributionRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: VatDistributionRequest): VatDistributionRequest.AsObject;
+  static serializeBinaryToWriter(message: VatDistributionRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VatDistributionRequest;
+  static deserializeBinaryFromReader(message: VatDistributionRequest, reader: jspb.BinaryReader): VatDistributionRequest;
+}
+
+export namespace VatDistributionRequest {
+  export type AsObject = {
+    textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
+    image: Uint8Array | string,
+    countryCode: string,
+  }
+}
+
+export class VatDistributionResponse extends jspb.Message {
+  getVatDistributionCandidatesList(): Array<ssn_type_candidate_pb.VatDistributionCandidate>;
+  setVatDistributionCandidatesList(value: Array<ssn_type_candidate_pb.VatDistributionCandidate>): VatDistributionResponse;
+  clearVatDistributionCandidatesList(): VatDistributionResponse;
+  addVatDistributionCandidates(value?: ssn_type_candidate_pb.VatDistributionCandidate, index?: number): ssn_type_candidate_pb.VatDistributionCandidate;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): VatDistributionResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: VatDistributionResponse): VatDistributionResponse.AsObject;
+  static serializeBinaryToWriter(message: VatDistributionResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VatDistributionResponse;
+  static deserializeBinaryFromReader(message: VatDistributionResponse, reader: jspb.BinaryReader): VatDistributionResponse;
+}
+
+export namespace VatDistributionResponse {
+  export type AsObject = {
+    vatDistributionCandidatesList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
+  }
+}
+
