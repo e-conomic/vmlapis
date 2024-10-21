@@ -285,30 +285,30 @@ export namespace PageText {
   }
 }
 
-export class VatLevelCandidate extends jspb.Message {
-  getVatLevelPercentage(): string;
-  setVatLevelPercentage(value: string): VatLevelCandidate;
+export class VatDistributionCandidate extends jspb.Message {
+  getPercentage(): string;
+  setPercentage(value: string): VatDistributionCandidate;
 
-  getVatLevelAmount(): string;
-  setVatLevelAmount(value: string): VatLevelCandidate;
+  getAmount(): string;
+  setAmount(value: string): VatDistributionCandidate;
 
   getModelMetadata(): ModelSpec | undefined;
-  setModelMetadata(value?: ModelSpec): VatLevelCandidate;
+  setModelMetadata(value?: ModelSpec): VatDistributionCandidate;
   hasModelMetadata(): boolean;
-  clearModelMetadata(): VatLevelCandidate;
+  clearModelMetadata(): VatDistributionCandidate;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): VatLevelCandidate.AsObject;
-  static toObject(includeInstance: boolean, msg: VatLevelCandidate): VatLevelCandidate.AsObject;
-  static serializeBinaryToWriter(message: VatLevelCandidate, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): VatLevelCandidate;
-  static deserializeBinaryFromReader(message: VatLevelCandidate, reader: jspb.BinaryReader): VatLevelCandidate;
+  toObject(includeInstance?: boolean): VatDistributionCandidate.AsObject;
+  static toObject(includeInstance: boolean, msg: VatDistributionCandidate): VatDistributionCandidate.AsObject;
+  static serializeBinaryToWriter(message: VatDistributionCandidate, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VatDistributionCandidate;
+  static deserializeBinaryFromReader(message: VatDistributionCandidate, reader: jspb.BinaryReader): VatDistributionCandidate;
 }
 
-export namespace VatLevelCandidate {
+export namespace VatDistributionCandidate {
   export type AsObject = {
-    vatLevelPercentage: string,
-    vatLevelAmount: string,
+    percentage: string,
+    amount: string,
     modelMetadata?: ModelSpec.AsObject,
   }
 }

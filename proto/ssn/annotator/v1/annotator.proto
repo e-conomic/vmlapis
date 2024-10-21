@@ -130,8 +130,8 @@ message Feature {
     PURCHASE_LINES = 44;
     // Page texts
     PAGE_TEXTS = 45;
-    // VAT levels
-    VAT_LEVELS = 46;
+    // VAT distribution
+    VAT_DISTRIBUTION = 46;
   }
   // The feature type.
   Type type = 1;
@@ -290,7 +290,7 @@ message DocumentAnnotatorResponse {
   // The page texts of the document
   repeated ssn.type.PageText page_texts = 47;
   // Vat levels for the document, each vat level has vat level percentage and vat level amount
-  repeated ssn.type.VatLevelCandidate vat_levels = 48;
+  repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 48;
 }
 
 message Document {

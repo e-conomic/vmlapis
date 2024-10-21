@@ -372,7 +372,7 @@ proto.ssn.annotator.v1.Feature.Type = {
   RECEIVER_VAT_NUMBER: 43,
   PURCHASE_LINES: 44,
   PAGE_TEXTS: 45,
-  VAT_LEVELS: 46
+  VAT_DISTRIBUTION: 46
 };
 
 /**
@@ -946,8 +946,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance),
     pageTextsList: jspb.Message.toObjectList(msg.getPageTextsList(),
     ssn_type_candidate_pb.PageText.toObject, includeInstance),
-    vatLevelsList: jspb.Message.toObjectList(msg.getVatLevelsList(),
-    ssn_type_candidate_pb.VatLevelCandidate.toObject, includeInstance)
+    vatDistributionCandidatesList: jspb.Message.toObjectList(msg.getVatDistributionCandidatesList(),
+    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1217,9 +1217,9 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       msg.addPageTexts(value);
       break;
     case 48:
-      var value = new ssn_type_candidate_pb.VatLevelCandidate;
-      reader.readMessage(value,ssn_type_candidate_pb.VatLevelCandidate.deserializeBinaryFromReader);
-      msg.addVatLevels(value);
+      var value = new ssn_type_candidate_pb.VatDistributionCandidate;
+      reader.readMessage(value,ssn_type_candidate_pb.VatDistributionCandidate.deserializeBinaryFromReader);
+      msg.addVatDistributionCandidates(value);
       break;
     default:
       reader.skipField();
@@ -1623,12 +1623,12 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       ssn_type_candidate_pb.PageText.serializeBinaryToWriter
     );
   }
-  f = message.getVatLevelsList();
+  f = message.getVatDistributionCandidatesList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       48,
       f,
-      ssn_type_candidate_pb.VatLevelCandidate.serializeBinaryToWriter
+      ssn_type_candidate_pb.VatDistributionCandidate.serializeBinaryToWriter
     );
   }
 };
@@ -3360,31 +3360,31 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearPageTextsList = 
 
 
 /**
- * repeated ssn.type.VatLevelCandidate vat_levels = 48;
- * @return {!Array<!proto.ssn.type.VatLevelCandidate>}
+ * repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 48;
+ * @return {!Array<!proto.ssn.type.VatDistributionCandidate>}
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getVatLevelsList = function() {
-  return /** @type{!Array<!proto.ssn.type.VatLevelCandidate>} */ (
-    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatLevelCandidate, 48));
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getVatDistributionCandidatesList = function() {
+  return /** @type{!Array<!proto.ssn.type.VatDistributionCandidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatDistributionCandidate, 48));
 };
 
 
 /**
- * @param {!Array<!proto.ssn.type.VatLevelCandidate>} value
+ * @param {!Array<!proto.ssn.type.VatDistributionCandidate>} value
  * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
 */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setVatLevelsList = function(value) {
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setVatDistributionCandidatesList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 48, value);
 };
 
 
 /**
- * @param {!proto.ssn.type.VatLevelCandidate=} opt_value
+ * @param {!proto.ssn.type.VatDistributionCandidate=} opt_value
  * @param {number=} opt_index
- * @return {!proto.ssn.type.VatLevelCandidate}
+ * @return {!proto.ssn.type.VatDistributionCandidate}
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addVatLevels = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 48, opt_value, proto.ssn.type.VatLevelCandidate, opt_index);
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addVatDistributionCandidates = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 48, opt_value, proto.ssn.type.VatDistributionCandidate, opt_index);
 };
 
 
@@ -3392,8 +3392,8 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addVatLevels = functi
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearVatLevelsList = function() {
-  return this.setVatLevelsList([]);
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearVatDistributionCandidatesList = function() {
+  return this.setVatDistributionCandidatesList([]);
 };
 
 

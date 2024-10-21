@@ -143,11 +143,11 @@ message PageText {
   string text = 2;
 }
 
-message VatLevelCandidate {
-  // The vat level in percentage
-  string vat_level_percentage = 1;
-  // The vat level in amount
-  string vat_level_amount = 2;
+message VatDistributionCandidate {
+  // The vat distribution candidate percentage
+  string percentage = 1;
+  // The vat distribution candidate amount
+  string amount = 2;
   // Model metadata
   ModelSpec model_metadata = 3;
 }

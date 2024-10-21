@@ -3,49 +3,49 @@
 
 package ai.visma.ssn.type;
 
-public interface VatLevelCandidateOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:ssn.type.VatLevelCandidate)
+public interface VatDistributionCandidateOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:ssn.type.VatDistributionCandidate)
     com.google.protobuf.MessageOrBuilder {
 
   /**
    * <pre>
-   * The vat level in percentage
+   * The vat distribution candidate percentage
    * </pre>
    *
-   * <code>string vat_level_percentage = 1 [json_name = "vatLevelPercentage"];</code>
-   * @return The vatLevelPercentage.
+   * <code>string percentage = 1 [json_name = "percentage"];</code>
+   * @return The percentage.
    */
-  java.lang.String getVatLevelPercentage();
+  java.lang.String getPercentage();
   /**
    * <pre>
-   * The vat level in percentage
+   * The vat distribution candidate percentage
    * </pre>
    *
-   * <code>string vat_level_percentage = 1 [json_name = "vatLevelPercentage"];</code>
-   * @return The bytes for vatLevelPercentage.
+   * <code>string percentage = 1 [json_name = "percentage"];</code>
+   * @return The bytes for percentage.
    */
   com.google.protobuf.ByteString
-      getVatLevelPercentageBytes();
+      getPercentageBytes();
 
   /**
    * <pre>
-   * The vat level in amount
+   * The vat distribution candidate amount
    * </pre>
    *
-   * <code>string vat_level_amount = 2 [json_name = "vatLevelAmount"];</code>
-   * @return The vatLevelAmount.
+   * <code>string amount = 2 [json_name = "amount"];</code>
+   * @return The amount.
    */
-  java.lang.String getVatLevelAmount();
+  java.lang.String getAmount();
   /**
    * <pre>
-   * The vat level in amount
+   * The vat distribution candidate amount
    * </pre>
    *
-   * <code>string vat_level_amount = 2 [json_name = "vatLevelAmount"];</code>
-   * @return The bytes for vatLevelAmount.
+   * <code>string amount = 2 [json_name = "amount"];</code>
+   * @return The bytes for amount.
    */
   com.google.protobuf.ByteString
-      getVatLevelAmountBytes();
+      getAmountBytes();
 
   /**
    * <pre>

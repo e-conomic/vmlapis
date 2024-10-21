@@ -3,8 +3,8 @@
 
 package ai.visma.ssn.mlservice.v2;
 
-public interface VatLevelsRequestOrBuilder extends
-    // @@protoc_insertion_point(interface_extends:ssn.mlservice.v2.VatLevelsRequest)
+public interface VatDistributionRequestOrBuilder extends
+    // @@protoc_insertion_point(interface_extends:ssn.mlservice.v2.VatDistributionRequest)
     com.google.protobuf.MessageOrBuilder {
 
   /**

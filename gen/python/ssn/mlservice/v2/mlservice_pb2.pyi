@@ -235,7 +235,7 @@ class DocQAResponse(_message.Message):
     answers: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.AnswerCandidate]
     def __init__(self, answers: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ...) -> None: ...
 
-class VatLevelsRequest(_message.Message):
+class VatDistributionRequest(_message.Message):
     __slots__ = ["text_annotation", "image", "country_code"]
     TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
     IMAGE_FIELD_NUMBER: _ClassVar[int]
@@ -245,8 +245,8 @@ class VatLevelsRequest(_message.Message):
     country_code: str
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[bytes] = ..., country_code: _Optional[str] = ...) -> None: ...
 
-class VatLevelsResponse(_message.Message):
-    __slots__ = ["vat_levels"]
-    VAT_LEVELS_FIELD_NUMBER: _ClassVar[int]
-    vat_levels: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.VatLevelCandidate]
-    def __init__(self, vat_levels: _Optional[_Iterable[_Union[_candidate_pb2.VatLevelCandidate, _Mapping]]] = ...) -> None: ...
+class VatDistributionResponse(_message.Message):
+    __slots__ = ["vat_distribution_candidates"]
+    VAT_DISTRIBUTION_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
+    vat_distribution_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.VatDistributionCandidate]
+    def __init__(self, vat_distribution_candidates: _Optional[_Iterable[_Union[_candidate_pb2.VatDistributionCandidate, _Mapping]]] = ...) -> None: ...

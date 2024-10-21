@@ -632,29 +632,29 @@ export namespace DocQAResponse {
   }
 }
 
-export class VatLevelsRequest extends jspb.Message {
+export class VatDistributionRequest extends jspb.Message {
   getTextAnnotation(): ssn_type_text_annotation_pb.TextAnnotation | undefined;
-  setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): VatLevelsRequest;
+  setTextAnnotation(value?: ssn_type_text_annotation_pb.TextAnnotation): VatDistributionRequest;
   hasTextAnnotation(): boolean;
-  clearTextAnnotation(): VatLevelsRequest;
+  clearTextAnnotation(): VatDistributionRequest;
 
   getImage(): Uint8Array | string;
   getImage_asU8(): Uint8Array;
   getImage_asB64(): string;
-  setImage(value: Uint8Array | string): VatLevelsRequest;
+  setImage(value: Uint8Array | string): VatDistributionRequest;
 
   getCountryCode(): string;
-  setCountryCode(value: string): VatLevelsRequest;
+  setCountryCode(value: string): VatDistributionRequest;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): VatLevelsRequest.AsObject;
-  static toObject(includeInstance: boolean, msg: VatLevelsRequest): VatLevelsRequest.AsObject;
-  static serializeBinaryToWriter(message: VatLevelsRequest, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): VatLevelsRequest;
-  static deserializeBinaryFromReader(message: VatLevelsRequest, reader: jspb.BinaryReader): VatLevelsRequest;
+  toObject(includeInstance?: boolean): VatDistributionRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: VatDistributionRequest): VatDistributionRequest.AsObject;
+  static serializeBinaryToWriter(message: VatDistributionRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VatDistributionRequest;
+  static deserializeBinaryFromReader(message: VatDistributionRequest, reader: jspb.BinaryReader): VatDistributionRequest;
 }
 
-export namespace VatLevelsRequest {
+export namespace VatDistributionRequest {
   export type AsObject = {
     textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
     image: Uint8Array | string,
@@ -662,23 +662,23 @@ export namespace VatLevelsRequest {
   }
 }
 
-export class VatLevelsResponse extends jspb.Message {
-  getVatLevelsList(): Array<ssn_type_candidate_pb.VatLevelCandidate>;
-  setVatLevelsList(value: Array<ssn_type_candidate_pb.VatLevelCandidate>): VatLevelsResponse;
-  clearVatLevelsList(): VatLevelsResponse;
-  addVatLevels(value?: ssn_type_candidate_pb.VatLevelCandidate, index?: number): ssn_type_candidate_pb.VatLevelCandidate;
+export class VatDistributionResponse extends jspb.Message {
+  getVatDistributionCandidatesList(): Array<ssn_type_candidate_pb.VatDistributionCandidate>;
+  setVatDistributionCandidatesList(value: Array<ssn_type_candidate_pb.VatDistributionCandidate>): VatDistributionResponse;
+  clearVatDistributionCandidatesList(): VatDistributionResponse;
+  addVatDistributionCandidates(value?: ssn_type_candidate_pb.VatDistributionCandidate, index?: number): ssn_type_candidate_pb.VatDistributionCandidate;
 
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): VatLevelsResponse.AsObject;
-  static toObject(includeInstance: boolean, msg: VatLevelsResponse): VatLevelsResponse.AsObject;
-  static serializeBinaryToWriter(message: VatLevelsResponse, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): VatLevelsResponse;
-  static deserializeBinaryFromReader(message: VatLevelsResponse, reader: jspb.BinaryReader): VatLevelsResponse;
+  toObject(includeInstance?: boolean): VatDistributionResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: VatDistributionResponse): VatDistributionResponse.AsObject;
+  static serializeBinaryToWriter(message: VatDistributionResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): VatDistributionResponse;
+  static deserializeBinaryFromReader(message: VatDistributionResponse, reader: jspb.BinaryReader): VatDistributionResponse;
 }
 
-export namespace VatLevelsResponse {
+export namespace VatDistributionResponse {
   export type AsObject = {
-    vatLevelsList: Array<ssn_type_candidate_pb.VatLevelCandidate.AsObject>,
+    vatDistributionCandidatesList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
   }
 }
 

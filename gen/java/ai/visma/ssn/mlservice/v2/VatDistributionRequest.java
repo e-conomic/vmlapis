@@ -4,18 +4,18 @@
 package ai.visma.ssn.mlservice.v2;
 
 /**
- * Protobuf type {@code ssn.mlservice.v2.VatLevelsRequest}
+ * Protobuf type {@code ssn.mlservice.v2.VatDistributionRequest}
  */
-public final class VatLevelsRequest extends
+public final class VatDistributionRequest extends
     com.google.protobuf.GeneratedMessageV3 implements
-    // @@protoc_insertion_point(message_implements:ssn.mlservice.v2.VatLevelsRequest)
-    VatLevelsRequestOrBuilder {
+    // @@protoc_insertion_point(message_implements:ssn.mlservice.v2.VatDistributionRequest)
+    VatDistributionRequestOrBuilder {
 private static final long serialVersionUID = 0L;
-  // Use VatLevelsRequest.newBuilder() to construct.
-  private VatLevelsRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+  // Use VatDistributionRequest.newBuilder() to construct.
+  private VatDistributionRequest(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
     super(builder);
   }
-  private VatLevelsRequest() {
+  private VatDistributionRequest() {
     image_ = com.google.protobuf.ByteString.EMPTY;
     countryCode_ = "";
   }
@@ -24,20 +24,20 @@ private static final long serialVersionUID = 0L;
   @SuppressWarnings({"unused"})
   protected java.lang.Object newInstance(
       UnusedPrivateParameter unused) {
-    return new VatLevelsRequest();
+    return new VatDistributionRequest();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ai.visma.ssn.mlservice.v2.MlserviceProto.internal_static_ssn_mlservice_v2_VatLevelsRequest_descriptor;
+    return ai.visma.ssn.mlservice.v2.MlserviceProto.internal_static_ssn_mlservice_v2_VatDistributionRequest_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ai.visma.ssn.mlservice.v2.MlserviceProto.internal_static_ssn_mlservice_v2_VatLevelsRequest_fieldAccessorTable
+    return ai.visma.ssn.mlservice.v2.MlserviceProto.internal_static_ssn_mlservice_v2_VatDistributionRequest_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ai.visma.ssn.mlservice.v2.VatLevelsRequest.class, ai.visma.ssn.mlservice.v2.VatLevelsRequest.Builder.class);
+            ai.visma.ssn.mlservice.v2.VatDistributionRequest.class, ai.visma.ssn.mlservice.v2.VatDistributionRequest.Builder.class);
   }
 
   public static final int TEXT_ANNOTATION_FIELD_NUMBER = 1;
@@ -169,10 +169,10 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ai.visma.ssn.mlservice.v2.VatLevelsRequest)) {
+    if (!(obj instanceof ai.visma.ssn.mlservice.v2.VatDistributionRequest)) {
       return super.equals(obj);
     }
-    ai.visma.ssn.mlservice.v2.VatLevelsRequest other = (ai.visma.ssn.mlservice.v2.VatLevelsRequest) obj;
+    ai.visma.ssn.mlservice.v2.VatDistributionRequest other = (ai.visma.ssn.mlservice.v2.VatDistributionRequest) obj;
 
     if (hasTextAnnotation() != other.hasTextAnnotation()) return false;
     if (hasTextAnnotation()) {
@@ -207,44 +207,44 @@ private static final long serialVersionUID = 0L;
     return hash;
   }
 
-  public static ai.visma.ssn.mlservice.v2.VatLevelsRequest parseFrom(
+  public static ai.visma.ssn.mlservice.v2.VatDistributionRequest parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.mlservice.v2.VatLevelsRequest parseFrom(
+  public static ai.visma.ssn.mlservice.v2.VatDistributionRequest parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.mlservice.v2.VatLevelsRequest parseFrom(
+  public static ai.visma.ssn.mlservice.v2.VatDistributionRequest parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.mlservice.v2.VatLevelsRequest parseFrom(
+  public static ai.visma.ssn.mlservice.v2.VatDistributionRequest parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.mlservice.v2.VatLevelsRequest parseFrom(byte[] data)
+  public static ai.visma.ssn.mlservice.v2.VatDistributionRequest parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ssn.mlservice.v2.VatLevelsRequest parseFrom(
+  public static ai.visma.ssn.mlservice.v2.VatDistributionRequest parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ssn.mlservice.v2.VatLevelsRequest parseFrom(java.io.InputStream input)
+  public static ai.visma.ssn.mlservice.v2.VatDistributionRequest parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.mlservice.v2.VatLevelsRequest parseFrom(
+  public static ai.visma.ssn.mlservice.v2.VatDistributionRequest parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -252,26 +252,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ai.visma.ssn.mlservice.v2.VatLevelsRequest parseDelimitedFrom(java.io.InputStream input)
+  public static ai.visma.ssn.mlservice.v2.VatDistributionRequest parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ai.visma.ssn.mlservice.v2.VatLevelsRequest parseDelimitedFrom(
+  public static ai.visma.ssn.mlservice.v2.VatDistributionRequest parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ai.visma.ssn.mlservice.v2.VatLevelsRequest parseFrom(
+  public static ai.visma.ssn.mlservice.v2.VatDistributionRequest parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessageV3
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ssn.mlservice.v2.VatLevelsRequest parseFrom(
+  public static ai.visma.ssn.mlservice.v2.VatDistributionRequest parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -284,7 +284,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ai.visma.ssn.mlservice.v2.VatLevelsRequest prototype) {
+  public static Builder newBuilder(ai.visma.ssn.mlservice.v2.VatDistributionRequest prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -300,26 +300,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code ssn.mlservice.v2.VatLevelsRequest}
+   * Protobuf type {@code ssn.mlservice.v2.VatDistributionRequest}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:ssn.mlservice.v2.VatLevelsRequest)
-      ai.visma.ssn.mlservice.v2.VatLevelsRequestOrBuilder {
+      // @@protoc_insertion_point(builder_implements:ssn.mlservice.v2.VatDistributionRequest)
+      ai.visma.ssn.mlservice.v2.VatDistributionRequestOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ai.visma.ssn.mlservice.v2.MlserviceProto.internal_static_ssn_mlservice_v2_VatLevelsRequest_descriptor;
+      return ai.visma.ssn.mlservice.v2.MlserviceProto.internal_static_ssn_mlservice_v2_VatDistributionRequest_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ai.visma.ssn.mlservice.v2.MlserviceProto.internal_static_ssn_mlservice_v2_VatLevelsRequest_fieldAccessorTable
+      return ai.visma.ssn.mlservice.v2.MlserviceProto.internal_static_ssn_mlservice_v2_VatDistributionRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ai.visma.ssn.mlservice.v2.VatLevelsRequest.class, ai.visma.ssn.mlservice.v2.VatLevelsRequest.Builder.class);
+              ai.visma.ssn.mlservice.v2.VatDistributionRequest.class, ai.visma.ssn.mlservice.v2.VatDistributionRequest.Builder.class);
     }
 
-    // Construct using ai.visma.ssn.mlservice.v2.VatLevelsRequest.newBuilder()
+    // Construct using ai.visma.ssn.mlservice.v2.VatDistributionRequest.newBuilder()
     private Builder() {
 
     }
@@ -346,17 +346,17 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ai.visma.ssn.mlservice.v2.MlserviceProto.internal_static_ssn_mlservice_v2_VatLevelsRequest_descriptor;
+      return ai.visma.ssn.mlservice.v2.MlserviceProto.internal_static_ssn_mlservice_v2_VatDistributionRequest_descriptor;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.mlservice.v2.VatLevelsRequest getDefaultInstanceForType() {
-      return ai.visma.ssn.mlservice.v2.VatLevelsRequest.getDefaultInstance();
+    public ai.visma.ssn.mlservice.v2.VatDistributionRequest getDefaultInstanceForType() {
+      return ai.visma.ssn.mlservice.v2.VatDistributionRequest.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ai.visma.ssn.mlservice.v2.VatLevelsRequest build() {
-      ai.visma.ssn.mlservice.v2.VatLevelsRequest result = buildPartial();
+    public ai.visma.ssn.mlservice.v2.VatDistributionRequest build() {
+      ai.visma.ssn.mlservice.v2.VatDistributionRequest result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -364,14 +364,14 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ai.visma.ssn.mlservice.v2.VatLevelsRequest buildPartial() {
-      ai.visma.ssn.mlservice.v2.VatLevelsRequest result = new ai.visma.ssn.mlservice.v2.VatLevelsRequest(this);
+    public ai.visma.ssn.mlservice.v2.VatDistributionRequest buildPartial() {
+      ai.visma.ssn.mlservice.v2.VatDistributionRequest result = new ai.visma.ssn.mlservice.v2.VatDistributionRequest(this);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartial0(ai.visma.ssn.mlservice.v2.VatLevelsRequest result) {
+    private void buildPartial0(ai.visma.ssn.mlservice.v2.VatDistributionRequest result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.textAnnotation_ = textAnnotationBuilder_ == null
@@ -420,16 +420,16 @@ private static final long serialVersionUID = 0L;
     }
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ai.visma.ssn.mlservice.v2.VatLevelsRequest) {
-        return mergeFrom((ai.visma.ssn.mlservice.v2.VatLevelsRequest)other);
+      if (other instanceof ai.visma.ssn.mlservice.v2.VatDistributionRequest) {
+        return mergeFrom((ai.visma.ssn.mlservice.v2.VatDistributionRequest)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ai.visma.ssn.mlservice.v2.VatLevelsRequest other) {
-      if (other == ai.visma.ssn.mlservice.v2.VatLevelsRequest.getDefaultInstance()) return this;
+    public Builder mergeFrom(ai.visma.ssn.mlservice.v2.VatDistributionRequest other) {
+      if (other == ai.visma.ssn.mlservice.v2.VatDistributionRequest.getDefaultInstance()) return this;
       if (other.hasTextAnnotation()) {
         mergeTextAnnotation(other.getTextAnnotation());
       }
@@ -736,23 +736,23 @@ private static final long serialVersionUID = 0L;
     }
 
 
-    // @@protoc_insertion_point(builder_scope:ssn.mlservice.v2.VatLevelsRequest)
+    // @@protoc_insertion_point(builder_scope:ssn.mlservice.v2.VatDistributionRequest)
   }
 
-  // @@protoc_insertion_point(class_scope:ssn.mlservice.v2.VatLevelsRequest)
-  private static final ai.visma.ssn.mlservice.v2.VatLevelsRequest DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:ssn.mlservice.v2.VatDistributionRequest)
+  private static final ai.visma.ssn.mlservice.v2.VatDistributionRequest DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ai.visma.ssn.mlservice.v2.VatLevelsRequest();
+    DEFAULT_INSTANCE = new ai.visma.ssn.mlservice.v2.VatDistributionRequest();
   }
 
-  public static ai.visma.ssn.mlservice.v2.VatLevelsRequest getDefaultInstance() {
+  public static ai.visma.ssn.mlservice.v2.VatDistributionRequest getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<VatLevelsRequest>
-      PARSER = new com.google.protobuf.AbstractParser<VatLevelsRequest>() {
+  private static final com.google.protobuf.Parser<VatDistributionRequest>
+      PARSER = new com.google.protobuf.AbstractParser<VatDistributionRequest>() {
     @java.lang.Override
-    public VatLevelsRequest parsePartialFrom(
+    public VatDistributionRequest parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -771,17 +771,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<VatLevelsRequest> parser() {
+  public static com.google.protobuf.Parser<VatDistributionRequest> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<VatLevelsRequest> getParserForType() {
+  public com.google.protobuf.Parser<VatDistributionRequest> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public ai.visma.ssn.mlservice.v2.VatLevelsRequest getDefaultInstanceForType() {
+  public ai.visma.ssn.mlservice.v2.VatDistributionRequest getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 

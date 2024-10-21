@@ -79,7 +79,7 @@ export namespace Feature {
     RECEIVER_VAT_NUMBER = 43,
     PURCHASE_LINES = 44,
     PAGE_TEXTS = 45,
-    VAT_LEVELS = 46,
+    VAT_DISTRIBUTION = 46,
   }
 }
 
@@ -361,10 +361,10 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearPageTextsList(): DocumentAnnotatorResponse;
   addPageTexts(value?: ssn_type_candidate_pb.PageText, index?: number): ssn_type_candidate_pb.PageText;
 
-  getVatLevelsList(): Array<ssn_type_candidate_pb.VatLevelCandidate>;
-  setVatLevelsList(value: Array<ssn_type_candidate_pb.VatLevelCandidate>): DocumentAnnotatorResponse;
-  clearVatLevelsList(): DocumentAnnotatorResponse;
-  addVatLevels(value?: ssn_type_candidate_pb.VatLevelCandidate, index?: number): ssn_type_candidate_pb.VatLevelCandidate;
+  getVatDistributionCandidatesList(): Array<ssn_type_candidate_pb.VatDistributionCandidate>;
+  setVatDistributionCandidatesList(value: Array<ssn_type_candidate_pb.VatDistributionCandidate>): DocumentAnnotatorResponse;
+  clearVatDistributionCandidatesList(): DocumentAnnotatorResponse;
+  addVatDistributionCandidates(value?: ssn_type_candidate_pb.VatDistributionCandidate, index?: number): ssn_type_candidate_pb.VatDistributionCandidate;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
@@ -423,7 +423,7 @@ export namespace DocumentAnnotatorResponse {
     purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
     answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
     pageTextsList: Array<ssn_type_candidate_pb.PageText.AsObject>,
-    vatLevelsList: Array<ssn_type_candidate_pb.VatLevelCandidate.AsObject>,
+    vatDistributionCandidatesList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
   }
 }
 

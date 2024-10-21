@@ -62,15 +62,14 @@ namespace Ssn.Type {
             "ZW5jZVIKY29uZmlkZW5jZRI6Cg5tb2RlbF9tZXRhZGF0YRgHIAEoCzITLnNz",
             "bi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdlX3JlZhgI",
             "IAEoDVIHcGFnZVJlZiI5CghQYWdlVGV4dBIZCghwYWdlX3JlZhgBIAEoDVIH",
-            "cGFnZVJlZhISCgR0ZXh0GAIgASgJUgR0ZXh0IqsBChFWYXRMZXZlbENhbmRp",
-            "ZGF0ZRIwChR2YXRfbGV2ZWxfcGVyY2VudGFnZRgBIAEoCVISdmF0TGV2ZWxQ",
-            "ZXJjZW50YWdlEigKEHZhdF9sZXZlbF9hbW91bnQYAiABKAlSDnZhdExldmVs",
-            "QW1vdW50EjoKDm1vZGVsX21ldGFkYXRhGAMgASgLMhMuc3NuLnR5cGUuTW9k",
-            "ZWxTcGVjUg1tb2RlbE1ldGFkYXRhQpoBChFhaS52aXNtYS5zc24udHlwZUIO",
-            "Q2FuZGlkYXRlUHJvdG9QAVo0Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBp",
-            "cy9nZW4vZ28vc3NuL3R5cGU7c3NudHlwZaICA1NUWKoCCFNzbi5UeXBlygII",
-            "U3NuXFR5cGXiAhRTc25cVHlwZVxHUEJNZXRhZGF0YeoCCVNzbjo6VHlwZWIG",
-            "cHJvdG8z"));
+            "cGFnZVJlZhISCgR0ZXh0GAIgASgJUgR0ZXh0Io4BChhWYXREaXN0cmlidXRp",
+            "b25DYW5kaWRhdGUSHgoKcGVyY2VudGFnZRgBIAEoCVIKcGVyY2VudGFnZRIW",
+            "CgZhbW91bnQYAiABKAlSBmFtb3VudBI6Cg5tb2RlbF9tZXRhZGF0YRgDIAEo",
+            "CzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YUKaAQoRYWku",
+            "dmlzbWEuc3NuLnR5cGVCDkNhbmRpZGF0ZVByb3RvUAFaNGdpdGh1Yi5jb20v",
+            "ZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNT",
+            "VFiqAghTc24uVHlwZcoCCFNzblxUeXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRh",
+            "dGHqAglTc246OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -81,7 +80,7 @@ namespace Ssn.Type {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.AnswerCandidate), global::Ssn.Type.AnswerCandidate.Parser, new[]{ "Question", "Answer", "Confidence", "ModelMetadata", "PageRef" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PageText), global::Ssn.Type.PageText.Parser, new[]{ "PageRef", "Text" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatLevelCandidate), global::Ssn.Type.VatLevelCandidate.Parser, new[]{ "VatLevelPercentage", "VatLevelAmount", "ModelMetadata" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistributionCandidate), global::Ssn.Type.VatDistributionCandidate.Parser, new[]{ "Percentage", "Amount", "ModelMetadata" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2799,16 +2798,16 @@ namespace Ssn.Type {
 
   }
 
-  public sealed partial class VatLevelCandidate : pb::IMessage<VatLevelCandidate>
+  public sealed partial class VatDistributionCandidate : pb::IMessage<VatDistributionCandidate>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<VatLevelCandidate> _parser = new pb::MessageParser<VatLevelCandidate>(() => new VatLevelCandidate());
+    private static readonly pb::MessageParser<VatDistributionCandidate> _parser = new pb::MessageParser<VatDistributionCandidate>(() => new VatDistributionCandidate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<VatLevelCandidate> Parser { get { return _parser; } }
+    public static pb::MessageParser<VatDistributionCandidate> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2824,7 +2823,7 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public VatLevelCandidate() {
+    public VatDistributionCandidate() {
       OnConstruction();
     }
 
@@ -2832,46 +2831,46 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public VatLevelCandidate(VatLevelCandidate other) : this() {
-      vatLevelPercentage_ = other.vatLevelPercentage_;
-      vatLevelAmount_ = other.vatLevelAmount_;
+    public VatDistributionCandidate(VatDistributionCandidate other) : this() {
+      percentage_ = other.percentage_;
+      amount_ = other.amount_;
       modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public VatLevelCandidate Clone() {
-      return new VatLevelCandidate(this);
+    public VatDistributionCandidate Clone() {
+      return new VatDistributionCandidate(this);
     }
 
-    /// <summary>Field number for the "vat_level_percentage" field.</summary>
-    public const int VatLevelPercentageFieldNumber = 1;
-    private string vatLevelPercentage_ = "";
+    /// <summary>Field number for the "percentage" field.</summary>
+    public const int PercentageFieldNumber = 1;
+    private string percentage_ = "";
     /// <summary>
-    /// The vat level in percentage
+    /// The vat distribution candidate percentage
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string VatLevelPercentage {
-      get { return vatLevelPercentage_; }
+    public string Percentage {
+      get { return percentage_; }
       set {
-        vatLevelPercentage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        percentage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
-    /// <summary>Field number for the "vat_level_amount" field.</summary>
-    public const int VatLevelAmountFieldNumber = 2;
-    private string vatLevelAmount_ = "";
+    /// <summary>Field number for the "amount" field.</summary>
+    public const int AmountFieldNumber = 2;
+    private string amount_ = "";
     /// <summary>
-    /// The vat level in amount
+    /// The vat distribution candidate amount
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string VatLevelAmount {
-      get { return vatLevelAmount_; }
+    public string Amount {
+      get { return amount_; }
       set {
-        vatLevelAmount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        amount_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -2893,20 +2892,20 @@ namespace Ssn.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as VatLevelCandidate);
+      return Equals(other as VatDistributionCandidate);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(VatLevelCandidate other) {
+    public bool Equals(VatDistributionCandidate other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (VatLevelPercentage != other.VatLevelPercentage) return false;
-      if (VatLevelAmount != other.VatLevelAmount) return false;
+      if (Percentage != other.Percentage) return false;
+      if (Amount != other.Amount) return false;
       if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2915,8 +2914,8 @@ namespace Ssn.Type {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (VatLevelPercentage.Length != 0) hash ^= VatLevelPercentage.GetHashCode();
-      if (VatLevelAmount.Length != 0) hash ^= VatLevelAmount.GetHashCode();
+      if (Percentage.Length != 0) hash ^= Percentage.GetHashCode();
+      if (Amount.Length != 0) hash ^= Amount.GetHashCode();
       if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2936,13 +2935,13 @@ namespace Ssn.Type {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (VatLevelPercentage.Length != 0) {
+      if (Percentage.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(VatLevelPercentage);
+        output.WriteString(Percentage);
       }
-      if (VatLevelAmount.Length != 0) {
+      if (Amount.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(VatLevelAmount);
+        output.WriteString(Amount);
       }
       if (modelMetadata_ != null) {
         output.WriteRawTag(26);
@@ -2958,13 +2957,13 @@ namespace Ssn.Type {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (VatLevelPercentage.Length != 0) {
+      if (Percentage.Length != 0) {
         output.WriteRawTag(10);
-        output.WriteString(VatLevelPercentage);
+        output.WriteString(Percentage);
       }
-      if (VatLevelAmount.Length != 0) {
+      if (Amount.Length != 0) {
         output.WriteRawTag(18);
-        output.WriteString(VatLevelAmount);
+        output.WriteString(Amount);
       }
       if (modelMetadata_ != null) {
         output.WriteRawTag(26);
@@ -2980,11 +2979,11 @@ namespace Ssn.Type {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (VatLevelPercentage.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(VatLevelPercentage);
+      if (Percentage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Percentage);
       }
-      if (VatLevelAmount.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(VatLevelAmount);
+      if (Amount.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Amount);
       }
       if (modelMetadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
@@ -2997,15 +2996,15 @@ namespace Ssn.Type {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(VatLevelCandidate other) {
+    public void MergeFrom(VatDistributionCandidate other) {
       if (other == null) {
         return;
       }
-      if (other.VatLevelPercentage.Length != 0) {
-        VatLevelPercentage = other.VatLevelPercentage;
+      if (other.Percentage.Length != 0) {
+        Percentage = other.Percentage;
       }
-      if (other.VatLevelAmount.Length != 0) {
-        VatLevelAmount = other.VatLevelAmount;
+      if (other.Amount.Length != 0) {
+        Amount = other.Amount;
       }
       if (other.modelMetadata_ != null) {
         if (modelMetadata_ == null) {
@@ -3029,11 +3028,11 @@ namespace Ssn.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            VatLevelPercentage = input.ReadString();
+            Percentage = input.ReadString();
             break;
           }
           case 18: {
-            VatLevelAmount = input.ReadString();
+            Amount = input.ReadString();
             break;
           }
           case 26: {
@@ -3059,11 +3058,11 @@ namespace Ssn.Type {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            VatLevelPercentage = input.ReadString();
+            Percentage = input.ReadString();
             break;
           }
           case 18: {
-            VatLevelAmount = input.ReadString();
+            Amount = input.ReadString();
             break;
           }
           case 26: {
