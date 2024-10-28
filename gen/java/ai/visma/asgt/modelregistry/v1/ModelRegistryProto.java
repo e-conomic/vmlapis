@@ -55,7 +55,7 @@ public final class ModelRegistryProto {
       "pe/prediction.proto\032\030asgt/type/revision." +
       "proto\032\036asgt/type/target_metrics.proto\032 a" +
       "sgt/type/train_statistics.proto\032\033google/" +
-      "protobuf/empty.proto\"\311\006\n\024RegisterModelRe" +
+      "protobuf/empty.proto\"\360\006\n\024RegisterModelRe" +
       "quest\022,\n\007dataset\030\001 \001(\0132\022.asgt.type.Datas" +
       "etR\007dataset\022/\n\010revision\030\002 \001(\0132\023.asgt.typ" +
       "e.RevisionR\010revision\022#\n\rmodel_version\030\003 " +
@@ -72,29 +72,30 @@ public final class ModelRegistryProto {
       "hresholds\030\n \003(\0132M.asgt.modelregistry.v1." +
       "RegisterModelRequest.TargetToConfidenceT" +
       "hresholdsEntryR\034targetToConfidenceThresh" +
-      "olds\032:\n\014MetricsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024" +
-      "\n\005value\030\002 \001(\005R\005value:\0028\001\032p\n!TargetToConf" +
-      "idenceThresholdsEntry\022\020\n\003key\030\001 \001(\tR\003key\022" +
-      "5\n\005value\030\002 \001(\0132\037.asgt.type.ConfidenceThr" +
-      "esholdsR\005value:\0028\001J\004\010\t\020\n\"F\n\026GetCurrentMo" +
-      "delRequest\022,\n\007dataset\030\001 \001(\0132\022.asgt.type." +
-      "DatasetR\007dataset\"A\n\027GetCurrentModelRespo" +
-      "nse\022&\n\005model\030\001 \001(\0132\020.asgt.type.ModelR\005mo" +
-      "del2\315\002\n\rModelRegistry\022T\n\rRegisterModel\022+" +
-      ".asgt.modelregistry.v1.RegisterModelRequ" +
-      "est\032\026.google.protobuf.Empty\022p\n\017GetCurren" +
-      "tModel\022-.asgt.modelregistry.v1.GetCurren" +
-      "tModelRequest\032..asgt.modelregistry.v1.Ge" +
-      "tCurrentModelResponse\022t\n\023GetCurrentFullM" +
-      "odel\022-.asgt.modelregistry.v1.GetCurrentM" +
-      "odelRequest\032..asgt.modelregistry.v1.GetC" +
-      "urrentModelResponseB\363\001\n\036ai.visma.asgt.mo" +
-      "delregistry.v1B\022ModelRegistryProtoP\001ZGgi" +
-      "thub.com/e-conomic/vmlapis/gen/go/asgt/m" +
-      "odelregistry/v1;modelregistry\242\002\003AMX\252\002\025As" +
-      "gt.Modelregistry.V1\312\002\025Asgt\\Modelregistry" +
-      "\\V1\342\002!Asgt\\Modelregistry\\V1\\GPBMetadata\352" +
-      "\002\027Asgt::Modelregistry::V1b\006proto3"
+      "olds\022%\n\016metric_version\030\013 \001(\tR\rmetricVers" +
+      "ion\032:\n\014MetricsEntry\022\020\n\003key\030\001 \001(\tR\003key\022\024\n" +
+      "\005value\030\002 \001(\005R\005value:\0028\001\032p\n!TargetToConfi" +
+      "denceThresholdsEntry\022\020\n\003key\030\001 \001(\tR\003key\0225" +
+      "\n\005value\030\002 \001(\0132\037.asgt.type.ConfidenceThre" +
+      "sholdsR\005value:\0028\001J\004\010\t\020\n\"F\n\026GetCurrentMod" +
+      "elRequest\022,\n\007dataset\030\001 \001(\0132\022.asgt.type.D" +
+      "atasetR\007dataset\"A\n\027GetCurrentModelRespon" +
+      "se\022&\n\005model\030\001 \001(\0132\020.asgt.type.ModelR\005mod" +
+      "el2\315\002\n\rModelRegistry\022T\n\rRegisterModel\022+." +
+      "asgt.modelregistry.v1.RegisterModelReque" +
+      "st\032\026.google.protobuf.Empty\022p\n\017GetCurrent" +
+      "Model\022-.asgt.modelregistry.v1.GetCurrent" +
+      "ModelRequest\032..asgt.modelregistry.v1.Get" +
+      "CurrentModelResponse\022t\n\023GetCurrentFullMo" +
+      "del\022-.asgt.modelregistry.v1.GetCurrentMo" +
+      "delRequest\032..asgt.modelregistry.v1.GetCu" +
+      "rrentModelResponseB\363\001\n\036ai.visma.asgt.mod" +
+      "elregistry.v1B\022ModelRegistryProtoP\001ZGgit" +
+      "hub.com/e-conomic/vmlapis/gen/go/asgt/mo" +
+      "delregistry/v1;modelregistry\242\002\003AMX\252\002\025Asg" +
+      "t.Modelregistry.V1\312\002\025Asgt\\Modelregistry\\" +
+      "V1\342\002!Asgt\\Modelregistry\\V1\\GPBMetadata\352\002" +
+      "\027Asgt::Modelregistry::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -113,7 +114,7 @@ public final class ModelRegistryProto {
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor,
-        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType", "TrainStatistics", "DatasetStatistics", "TargetToConfidenceThresholds", });
+        new java.lang.String[] { "Dataset", "Revision", "ModelVersion", "Metrics", "TargetMetrics", "InputType", "TrainStatistics", "DatasetStatistics", "TargetToConfidenceThresholds", "MetricVersion", });
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_MetricsEntry_descriptor =
       internal_static_asgt_modelregistry_v1_RegisterModelRequest_descriptor.getNestedTypes().get(0);
     internal_static_asgt_modelregistry_v1_RegisterModelRequest_MetricsEntry_fieldAccessorTable = new
