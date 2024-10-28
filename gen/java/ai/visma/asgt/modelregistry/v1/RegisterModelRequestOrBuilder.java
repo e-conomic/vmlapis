@@ -173,4 +173,16 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue);
    */
   ai.visma.asgt.type.ConfidenceThresholds getTargetToConfidenceThresholdsOrThrow(
       java.lang.String key);
+
+  /**
+   * <code>string metric_version = 11 [json_name = "metricVersion"];</code>
+   * @return The metricVersion.
+   */
+  java.lang.String getMetricVersion();
+  /**
+   * <code>string metric_version = 11 [json_name = "metricVersion"];</code>
+   * @return The bytes for metricVersion.
+   */
+  com.google.protobuf.ByteString
+      getMetricVersionBytes();
 }

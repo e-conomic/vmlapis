@@ -18,6 +18,7 @@ private static final long serialVersionUID = 0L;
   private RegisterModelRequest() {
     targetMetrics_ = java.util.Collections.emptyList();
     inputType_ = 0;
+    metricVersion_ = "";
   }
 
   @java.lang.Override
@@ -384,6 +385,45 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     return map.get(key);
   }
 
+  public static final int METRIC_VERSION_FIELD_NUMBER = 11;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object metricVersion_ = "";
+  /**
+   * <code>string metric_version = 11 [json_name = "metricVersion"];</code>
+   * @return The metricVersion.
+   */
+  @java.lang.Override
+  public java.lang.String getMetricVersion() {
+    java.lang.Object ref = metricVersion_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      metricVersion_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string metric_version = 11 [json_name = "metricVersion"];</code>
+   * @return The bytes for metricVersion.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getMetricVersionBytes() {
+    java.lang.Object ref = metricVersion_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      metricVersion_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -431,6 +471,9 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
         internalGetTargetToConfidenceThresholds(),
         TargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry,
         10);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metricVersion_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 11, metricVersion_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -488,6 +531,9 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, targetToConfidenceThresholds__);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metricVersion_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, metricVersion_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -532,6 +578,8 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     }
     if (!internalGetTargetToConfidenceThresholds().equals(
         other.internalGetTargetToConfidenceThresholds())) return false;
+    if (!getMetricVersion()
+        .equals(other.getMetricVersion())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -576,6 +624,8 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       hash = (37 * hash) + TARGET_TO_CONFIDENCE_THRESHOLDS_FIELD_NUMBER;
       hash = (53 * hash) + internalGetTargetToConfidenceThresholds().hashCode();
     }
+    hash = (37 * hash) + METRIC_VERSION_FIELD_NUMBER;
+    hash = (53 * hash) + getMetricVersion().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -764,6 +814,7 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
         datasetStatisticsBuilder_ = null;
       }
       internalGetMutableTargetToConfidenceThresholds().clear();
+      metricVersion_ = "";
       return this;
     }
 
@@ -843,6 +894,9 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       if (((from_bitField0_ & 0x00000100) != 0)) {
         result.targetToConfidenceThresholds_ = internalGetTargetToConfidenceThresholds();
         result.targetToConfidenceThresholds_.makeImmutable();
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.metricVersion_ = metricVersion_;
       }
     }
 
@@ -940,6 +994,11 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       internalGetMutableTargetToConfidenceThresholds().mergeFrom(
           other.internalGetTargetToConfidenceThresholds());
       bitField0_ |= 0x00000100;
+      if (!other.getMetricVersion().isEmpty()) {
+        metricVersion_ = other.metricVersion_;
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1035,6 +1094,11 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
               bitField0_ |= 0x00000100;
               break;
             } // case 82
+            case 90: {
+              metricVersion_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2102,6 +2166,78 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       internalGetMutableTargetToConfidenceThresholds().getMutableMap()
           .putAll(values);
       bitField0_ |= 0x00000100;
+      return this;
+    }
+
+    private java.lang.Object metricVersion_ = "";
+    /**
+     * <code>string metric_version = 11 [json_name = "metricVersion"];</code>
+     * @return The metricVersion.
+     */
+    public java.lang.String getMetricVersion() {
+      java.lang.Object ref = metricVersion_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        metricVersion_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string metric_version = 11 [json_name = "metricVersion"];</code>
+     * @return The bytes for metricVersion.
+     */
+    public com.google.protobuf.ByteString
+        getMetricVersionBytes() {
+      java.lang.Object ref = metricVersion_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        metricVersion_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string metric_version = 11 [json_name = "metricVersion"];</code>
+     * @param value The metricVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMetricVersion(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      metricVersion_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string metric_version = 11 [json_name = "metricVersion"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMetricVersion() {
+      metricVersion_ = getDefaultInstance().getMetricVersion();
+      bitField0_ = (bitField0_ & ~0x00000200);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string metric_version = 11 [json_name = "metricVersion"];</code>
+     * @param value The bytes for metricVersion to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMetricVersionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      metricVersion_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
       return this;
     }
     @java.lang.Override
