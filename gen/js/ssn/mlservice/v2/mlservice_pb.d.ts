@@ -638,13 +638,13 @@ export class VatDistributionRequest extends jspb.Message {
   hasTextAnnotation(): boolean;
   clearTextAnnotation(): VatDistributionRequest;
 
-  getImage(): Uint8Array | string;
-  getImage_asU8(): Uint8Array;
-  getImage_asB64(): string;
-  setImage(value: Uint8Array | string): VatDistributionRequest;
-
   getCountryCode(): string;
   setCountryCode(value: string): VatDistributionRequest;
+
+  getImagesList(): Array<Uint8Array | string>;
+  setImagesList(value: Array<Uint8Array | string>): VatDistributionRequest;
+  clearImagesList(): VatDistributionRequest;
+  addImages(value: Uint8Array | string, index?: number): VatDistributionRequest;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): VatDistributionRequest.AsObject;
@@ -657,8 +657,8 @@ export class VatDistributionRequest extends jspb.Message {
 export namespace VatDistributionRequest {
   export type AsObject = {
     textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
-    image: Uint8Array | string,
     countryCode: string,
+    imagesList: Array<Uint8Array | string>,
   }
 }
 

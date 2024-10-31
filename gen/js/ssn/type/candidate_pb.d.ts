@@ -297,6 +297,9 @@ export class VatDistributionCandidate extends jspb.Message {
   hasModelMetadata(): boolean;
   clearModelMetadata(): VatDistributionCandidate;
 
+  getPageRef(): number;
+  setPageRef(value: number): VatDistributionCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): VatDistributionCandidate.AsObject;
   static toObject(includeInstance: boolean, msg: VatDistributionCandidate): VatDistributionCandidate.AsObject;
@@ -310,6 +313,7 @@ export namespace VatDistributionCandidate {
     percentage: string,
     amount: string,
     modelMetadata?: ModelSpec.AsObject,
+    pageRef: number,
   }
 }
 

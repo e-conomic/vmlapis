@@ -260,7 +260,7 @@ if (goog.DEBUG && !COMPILED) {
  * @constructor
  */
 proto.ssn.mlservice.v2.VatDistributionRequest = function(opt_data) {
-  jspb.Message.initialize(this, opt_data, 0, -1, null, null);
+  jspb.Message.initialize(this, opt_data, 0, -1, proto.ssn.mlservice.v2.VatDistributionRequest.repeatedFields_, null);
 };
 goog.inherits(proto.ssn.mlservice.v2.VatDistributionRequest, jspb.Message);
 if (goog.DEBUG && !COMPILED) {
@@ -5386,6 +5386,13 @@ proto.ssn.mlservice.v2.DocQAResponse.prototype.clearAnswersList = function() {
 
 
 
+/**
+ * List of repeated fields within this message type.
+ * @private {!Array<number>}
+ * @const
+ */
+proto.ssn.mlservice.v2.VatDistributionRequest.repeatedFields_ = [4];
+
 
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
@@ -5418,8 +5425,8 @@ proto.ssn.mlservice.v2.VatDistributionRequest.prototype.toObject = function(opt_
 proto.ssn.mlservice.v2.VatDistributionRequest.toObject = function(includeInstance, msg) {
   var f, obj = {
     textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
-    image: msg.getImage_asB64(),
-    countryCode: jspb.Message.getFieldWithDefault(msg, 3, "")
+    countryCode: jspb.Message.getFieldWithDefault(msg, 3, ""),
+    imagesList: msg.getImagesList_asB64()
   };
 
   if (includeInstance) {
@@ -5461,13 +5468,13 @@ proto.ssn.mlservice.v2.VatDistributionRequest.deserializeBinaryFromReader = func
       reader.readMessage(value,ssn_type_text_annotation_pb.TextAnnotation.deserializeBinaryFromReader);
       msg.setTextAnnotation(value);
       break;
-    case 2:
-      var value = /** @type {!Uint8Array} */ (reader.readBytes());
-      msg.setImage(value);
-      break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
       msg.setCountryCode(value);
+      break;
+    case 4:
+      var value = /** @type {!Uint8Array} */ (reader.readBytes());
+      msg.addImages(value);
       break;
     default:
       reader.skipField();
@@ -5506,17 +5513,17 @@ proto.ssn.mlservice.v2.VatDistributionRequest.serializeBinaryToWriter = function
       ssn_type_text_annotation_pb.TextAnnotation.serializeBinaryToWriter
     );
   }
-  f = message.getImage_asU8();
-  if (f.length > 0) {
-    writer.writeBytes(
-      2,
-      f
-    );
-  }
   f = message.getCountryCode();
   if (f.length > 0) {
     writer.writeString(
       3,
+      f
+    );
+  }
+  f = message.getImagesList_asU8();
+  if (f.length > 0) {
+    writer.writeRepeatedBytes(
+      4,
       f
     );
   }
@@ -5561,48 +5568,6 @@ proto.ssn.mlservice.v2.VatDistributionRequest.prototype.hasTextAnnotation = func
 
 
 /**
- * optional bytes image = 2;
- * @return {!(string|Uint8Array)}
- */
-proto.ssn.mlservice.v2.VatDistributionRequest.prototype.getImage = function() {
-  return /** @type {!(string|Uint8Array)} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
-};
-
-
-/**
- * optional bytes image = 2;
- * This is a type-conversion wrapper around `getImage()`
- * @return {string}
- */
-proto.ssn.mlservice.v2.VatDistributionRequest.prototype.getImage_asB64 = function() {
-  return /** @type {string} */ (jspb.Message.bytesAsB64(
-      this.getImage()));
-};
-
-
-/**
- * optional bytes image = 2;
- * Note that Uint8Array is not supported on all browsers.
- * @see http://caniuse.com/Uint8Array
- * This is a type-conversion wrapper around `getImage()`
- * @return {!Uint8Array}
- */
-proto.ssn.mlservice.v2.VatDistributionRequest.prototype.getImage_asU8 = function() {
-  return /** @type {!Uint8Array} */ (jspb.Message.bytesAsU8(
-      this.getImage()));
-};
-
-
-/**
- * @param {!(string|Uint8Array)} value
- * @return {!proto.ssn.mlservice.v2.VatDistributionRequest} returns this
- */
-proto.ssn.mlservice.v2.VatDistributionRequest.prototype.setImage = function(value) {
-  return jspb.Message.setProto3BytesField(this, 2, value);
-};
-
-
-/**
  * optional string country_code = 3;
  * @return {string}
  */
@@ -5617,6 +5582,67 @@ proto.ssn.mlservice.v2.VatDistributionRequest.prototype.getCountryCode = functio
  */
 proto.ssn.mlservice.v2.VatDistributionRequest.prototype.setCountryCode = function(value) {
   return jspb.Message.setProto3StringField(this, 3, value);
+};
+
+
+/**
+ * repeated bytes images = 4;
+ * @return {!(Array<!Uint8Array>|Array<string>)}
+ */
+proto.ssn.mlservice.v2.VatDistributionRequest.prototype.getImagesList = function() {
+  return /** @type {!(Array<!Uint8Array>|Array<string>)} */ (jspb.Message.getRepeatedField(this, 4));
+};
+
+
+/**
+ * repeated bytes images = 4;
+ * This is a type-conversion wrapper around `getImagesList()`
+ * @return {!Array<string>}
+ */
+proto.ssn.mlservice.v2.VatDistributionRequest.prototype.getImagesList_asB64 = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.bytesListAsB64(
+      this.getImagesList()));
+};
+
+
+/**
+ * repeated bytes images = 4;
+ * Note that Uint8Array is not supported on all browsers.
+ * @see http://caniuse.com/Uint8Array
+ * This is a type-conversion wrapper around `getImagesList()`
+ * @return {!Array<!Uint8Array>}
+ */
+proto.ssn.mlservice.v2.VatDistributionRequest.prototype.getImagesList_asU8 = function() {
+  return /** @type {!Array<!Uint8Array>} */ (jspb.Message.bytesListAsU8(
+      this.getImagesList()));
+};
+
+
+/**
+ * @param {!(Array<!Uint8Array>|Array<string>)} value
+ * @return {!proto.ssn.mlservice.v2.VatDistributionRequest} returns this
+ */
+proto.ssn.mlservice.v2.VatDistributionRequest.prototype.setImagesList = function(value) {
+  return jspb.Message.setField(this, 4, value || []);
+};
+
+
+/**
+ * @param {!(string|Uint8Array)} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.mlservice.v2.VatDistributionRequest} returns this
+ */
+proto.ssn.mlservice.v2.VatDistributionRequest.prototype.addImages = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 4, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.mlservice.v2.VatDistributionRequest} returns this
+ */
+proto.ssn.mlservice.v2.VatDistributionRequest.prototype.clearImagesList = function() {
+  return this.setImagesList([]);
 };
 
 

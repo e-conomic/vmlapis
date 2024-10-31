@@ -36,4 +36,19 @@ public interface GetTextAnnotationResponseOrBuilder extends
    * <code>.google.protobuf.BytesValue image = 3 [json_name = "image"];</code>
    */
   com.google.protobuf.BytesValueOrBuilder getImageOrBuilder();
+
+  /**
+   * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+   * @return Whether the lastImage field is set.
+   */
+  boolean hasLastImage();
+  /**
+   * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+   * @return The lastImage.
+   */
+  com.google.protobuf.BytesValue getLastImage();
+  /**
+   * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+   */
+  com.google.protobuf.BytesValueOrBuilder getLastImageOrBuilder();
 }

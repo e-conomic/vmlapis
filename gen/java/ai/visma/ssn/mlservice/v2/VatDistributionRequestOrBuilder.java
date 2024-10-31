@@ -23,12 +23,6 @@ public interface VatDistributionRequestOrBuilder extends
   ai.visma.ssn.type.TextAnnotationOrBuilder getTextAnnotationOrBuilder();
 
   /**
-   * <code>bytes image = 2 [json_name = "image"];</code>
-   * @return The image.
-   */
-  com.google.protobuf.ByteString getImage();
-
-  /**
    * <code>string country_code = 3 [json_name = "countryCode"];</code>
    * @return The countryCode.
    */
@@ -39,4 +33,21 @@ public interface VatDistributionRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getCountryCodeBytes();
+
+  /**
+   * <code>repeated bytes images = 4 [json_name = "images"];</code>
+   * @return A list containing the images.
+   */
+  java.util.List<com.google.protobuf.ByteString> getImagesList();
+  /**
+   * <code>repeated bytes images = 4 [json_name = "images"];</code>
+   * @return The count of images.
+   */
+  int getImagesCount();
+  /**
+   * <code>repeated bytes images = 4 [json_name = "images"];</code>
+   * @param index The index of the element to return.
+   * @return The images at the given index.
+   */
+  com.google.protobuf.ByteString getImages(int index);
 }

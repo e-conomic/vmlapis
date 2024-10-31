@@ -148,9 +148,10 @@ message DocQAResponse {
 }
 
 message VatDistributionRequest {
+  reserved 2;
   ssn.type.TextAnnotation text_annotation = 1;
-  bytes image = 2;
   string country_code = 3;
+  repeated bytes images = 4;
 }
 
 message VatDistributionResponse {

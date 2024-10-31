@@ -172,6 +172,21 @@ private static final long serialVersionUID = 0L;
     return modelMetadata_ == null ? ai.visma.ssn.type.ModelSpec.getDefaultInstance() : modelMetadata_;
   }
 
+  public static final int PAGE_REF_FIELD_NUMBER = 4;
+  private int pageRef_ = 0;
+  /**
+   * <pre>
+   * A reference to the page where the candidate was found.
+   * </pre>
+   *
+   * <code>uint32 page_ref = 4 [json_name = "pageRef"];</code>
+   * @return The pageRef.
+   */
+  @java.lang.Override
+  public int getPageRef() {
+    return pageRef_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -195,6 +210,9 @@ private static final long serialVersionUID = 0L;
     if (modelMetadata_ != null) {
       output.writeMessage(3, getModelMetadata());
     }
+    if (pageRef_ != 0) {
+      output.writeUInt32(4, pageRef_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -213,6 +231,10 @@ private static final long serialVersionUID = 0L;
     if (modelMetadata_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getModelMetadata());
+    }
+    if (pageRef_ != 0) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeUInt32Size(4, pageRef_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -238,6 +260,8 @@ private static final long serialVersionUID = 0L;
       if (!getModelMetadata()
           .equals(other.getModelMetadata())) return false;
     }
+    if (getPageRef()
+        != other.getPageRef()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -257,6 +281,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + MODEL_METADATA_FIELD_NUMBER;
       hash = (53 * hash) + getModelMetadata().hashCode();
     }
+    hash = (37 * hash) + PAGE_REF_FIELD_NUMBER;
+    hash = (53 * hash) + getPageRef();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -395,6 +421,7 @@ private static final long serialVersionUID = 0L;
         modelMetadataBuilder_.dispose();
         modelMetadataBuilder_ = null;
       }
+      pageRef_ = 0;
       return this;
     }
 
@@ -438,6 +465,9 @@ private static final long serialVersionUID = 0L;
         result.modelMetadata_ = modelMetadataBuilder_ == null
             ? modelMetadata_
             : modelMetadataBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.pageRef_ = pageRef_;
       }
     }
 
@@ -498,6 +528,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasModelMetadata()) {
         mergeModelMetadata(other.getModelMetadata());
       }
+      if (other.getPageRef() != 0) {
+        setPageRef(other.getPageRef());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -541,6 +574,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              pageRef_ = input.readUInt32();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -895,6 +933,50 @@ private static final long serialVersionUID = 0L;
         modelMetadata_ = null;
       }
       return modelMetadataBuilder_;
+    }
+
+    private int pageRef_ ;
+    /**
+     * <pre>
+     * A reference to the page where the candidate was found.
+     * </pre>
+     *
+     * <code>uint32 page_ref = 4 [json_name = "pageRef"];</code>
+     * @return The pageRef.
+     */
+    @java.lang.Override
+    public int getPageRef() {
+      return pageRef_;
+    }
+    /**
+     * <pre>
+     * A reference to the page where the candidate was found.
+     * </pre>
+     *
+     * <code>uint32 page_ref = 4 [json_name = "pageRef"];</code>
+     * @param value The pageRef to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPageRef(int value) {
+
+      pageRef_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * A reference to the page where the candidate was found.
+     * </pre>
+     *
+     * <code>uint32 page_ref = 4 [json_name = "pageRef"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPageRef() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      pageRef_ = 0;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

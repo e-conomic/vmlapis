@@ -27,4 +27,10 @@ public interface GetTextAnnotationRequestOrBuilder extends
    * @return The preview.
    */
   boolean getPreview();
+
+  /**
+   * <code>bool preview_last = 4 [json_name = "previewLast"];</code>
+   * @return The previewLast.
+   */
+  boolean getPreviewLast();
 }

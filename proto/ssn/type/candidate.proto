@@ -150,4 +150,6 @@ message VatDistributionCandidate {
   string amount = 2;
   // Model metadata
   ModelSpec model_metadata = 3;
+  // A reference to the page where the candidate was found.
+  uint32 page_ref = 4;
 }

@@ -75,6 +75,17 @@ private static final long serialVersionUID = 0L;
     return preview_;
   }
 
+  public static final int PREVIEW_LAST_FIELD_NUMBER = 4;
+  private boolean previewLast_ = false;
+  /**
+   * <code>bool preview_last = 4 [json_name = "previewLast"];</code>
+   * @return The previewLast.
+   */
+  @java.lang.Override
+  public boolean getPreviewLast() {
+    return previewLast_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -95,6 +106,9 @@ private static final long serialVersionUID = 0L;
     if (preview_ != false) {
       output.writeBool(3, preview_);
     }
+    if (previewLast_ != false) {
+      output.writeBool(4, previewLast_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -111,6 +125,10 @@ private static final long serialVersionUID = 0L;
     if (preview_ != false) {
       size += com.google.protobuf.CodedOutputStream
         .computeBoolSize(3, preview_);
+    }
+    if (previewLast_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(4, previewLast_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -134,6 +152,8 @@ private static final long serialVersionUID = 0L;
     }
     if (getPreview()
         != other.getPreview()) return false;
+    if (getPreviewLast()
+        != other.getPreviewLast()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -152,6 +172,9 @@ private static final long serialVersionUID = 0L;
     hash = (37 * hash) + PREVIEW_FIELD_NUMBER;
     hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
         getPreview());
+    hash = (37 * hash) + PREVIEW_LAST_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getPreviewLast());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -289,6 +312,7 @@ private static final long serialVersionUID = 0L;
         documentBuilder_ = null;
       }
       preview_ = false;
+      previewLast_ = false;
       return this;
     }
 
@@ -329,6 +353,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.preview_ = preview_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.previewLast_ = previewLast_;
       }
     }
 
@@ -382,6 +409,9 @@ private static final long serialVersionUID = 0L;
       if (other.getPreview() != false) {
         setPreview(other.getPreview());
       }
+      if (other.getPreviewLast() != false) {
+        setPreviewLast(other.getPreviewLast());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -420,6 +450,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 24
+            case 32: {
+              previewLast_ = input.readBool();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 32
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -584,6 +619,38 @@ private static final long serialVersionUID = 0L;
     public Builder clearPreview() {
       bitField0_ = (bitField0_ & ~0x00000002);
       preview_ = false;
+      onChanged();
+      return this;
+    }
+
+    private boolean previewLast_ ;
+    /**
+     * <code>bool preview_last = 4 [json_name = "previewLast"];</code>
+     * @return The previewLast.
+     */
+    @java.lang.Override
+    public boolean getPreviewLast() {
+      return previewLast_;
+    }
+    /**
+     * <code>bool preview_last = 4 [json_name = "previewLast"];</code>
+     * @param value The previewLast to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPreviewLast(boolean value) {
+
+      previewLast_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>bool preview_last = 4 [json_name = "previewLast"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPreviewLast() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      previewLast_ = false;
       onChanged();
       return this;
     }
