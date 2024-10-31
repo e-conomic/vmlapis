@@ -62,14 +62,15 @@ namespace Ssn.Type {
             "ZW5jZVIKY29uZmlkZW5jZRI6Cg5tb2RlbF9tZXRhZGF0YRgHIAEoCzITLnNz",
             "bi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdlX3JlZhgI",
             "IAEoDVIHcGFnZVJlZiI5CghQYWdlVGV4dBIZCghwYWdlX3JlZhgBIAEoDVIH",
-            "cGFnZVJlZhISCgR0ZXh0GAIgASgJUgR0ZXh0Io4BChhWYXREaXN0cmlidXRp",
+            "cGFnZVJlZhISCgR0ZXh0GAIgASgJUgR0ZXh0IqkBChhWYXREaXN0cmlidXRp",
             "b25DYW5kaWRhdGUSHgoKcGVyY2VudGFnZRgBIAEoCVIKcGVyY2VudGFnZRIW",
             "CgZhbW91bnQYAiABKAlSBmFtb3VudBI6Cg5tb2RlbF9tZXRhZGF0YRgDIAEo",
-            "CzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YUKaAQoRYWku",
-            "dmlzbWEuc3NuLnR5cGVCDkNhbmRpZGF0ZVByb3RvUAFaNGdpdGh1Yi5jb20v",
-            "ZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNT",
-            "VFiqAghTc24uVHlwZcoCCFNzblxUeXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRh",
-            "dGHqAglTc246OlR5cGViBnByb3RvMw=="));
+            "CzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdl",
+            "X3JlZhgEIAEoDVIHcGFnZVJlZkKaAQoRYWkudmlzbWEuc3NuLnR5cGVCDkNh",
+            "bmRpZGF0ZVByb3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWljL3ZtbGFwaXMv",
+            "Z2VuL2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNTVFiqAghTc24uVHlwZcoCCFNz",
+            "blxUeXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRhdGHqAglTc246OlR5cGViBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -80,7 +81,7 @@ namespace Ssn.Type {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.AnswerCandidate), global::Ssn.Type.AnswerCandidate.Parser, new[]{ "Question", "Answer", "Confidence", "ModelMetadata", "PageRef" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PageText), global::Ssn.Type.PageText.Parser, new[]{ "PageRef", "Text" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistributionCandidate), global::Ssn.Type.VatDistributionCandidate.Parser, new[]{ "Percentage", "Amount", "ModelMetadata" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistributionCandidate), global::Ssn.Type.VatDistributionCandidate.Parser, new[]{ "Percentage", "Amount", "ModelMetadata", "PageRef" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2835,6 +2836,7 @@ namespace Ssn.Type {
       percentage_ = other.percentage_;
       amount_ = other.amount_;
       modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
+      pageRef_ = other.pageRef_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2889,6 +2891,21 @@ namespace Ssn.Type {
       }
     }
 
+    /// <summary>Field number for the "page_ref" field.</summary>
+    public const int PageRefFieldNumber = 4;
+    private uint pageRef_;
+    /// <summary>
+    /// A reference to the page where the candidate was found.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public uint PageRef {
+      get { return pageRef_; }
+      set {
+        pageRef_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2907,6 +2924,7 @@ namespace Ssn.Type {
       if (Percentage != other.Percentage) return false;
       if (Amount != other.Amount) return false;
       if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
+      if (PageRef != other.PageRef) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2917,6 +2935,7 @@ namespace Ssn.Type {
       if (Percentage.Length != 0) hash ^= Percentage.GetHashCode();
       if (Amount.Length != 0) hash ^= Amount.GetHashCode();
       if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
+      if (PageRef != 0) hash ^= PageRef.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2947,6 +2966,10 @@ namespace Ssn.Type {
         output.WriteRawTag(26);
         output.WriteMessage(ModelMetadata);
       }
+      if (PageRef != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(PageRef);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2969,6 +2992,10 @@ namespace Ssn.Type {
         output.WriteRawTag(26);
         output.WriteMessage(ModelMetadata);
       }
+      if (PageRef != 0) {
+        output.WriteRawTag(32);
+        output.WriteUInt32(PageRef);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2987,6 +3014,9 @@ namespace Ssn.Type {
       }
       if (modelMetadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ModelMetadata);
+      }
+      if (PageRef != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PageRef);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3011,6 +3041,9 @@ namespace Ssn.Type {
           ModelMetadata = new global::Ssn.Type.ModelSpec();
         }
         ModelMetadata.MergeFrom(other.ModelMetadata);
+      }
+      if (other.PageRef != 0) {
+        PageRef = other.PageRef;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3042,6 +3075,10 @@ namespace Ssn.Type {
             input.ReadMessage(ModelMetadata);
             break;
           }
+          case 32: {
+            PageRef = input.ReadUInt32();
+            break;
+          }
         }
       }
     #endif
@@ -3070,6 +3107,10 @@ namespace Ssn.Type {
               ModelMetadata = new global::Ssn.Type.ModelSpec();
             }
             input.ReadMessage(ModelMetadata);
+            break;
+          }
+          case 32: {
+            PageRef = input.ReadUInt32();
             break;
           }
         }

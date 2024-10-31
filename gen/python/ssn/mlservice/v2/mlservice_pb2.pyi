@@ -236,14 +236,14 @@ class DocQAResponse(_message.Message):
     def __init__(self, answers: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ...) -> None: ...
 
 class VatDistributionRequest(_message.Message):
-    __slots__ = ["text_annotation", "image", "country_code"]
+    __slots__ = ["text_annotation", "country_code", "images"]
     TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
-    IMAGE_FIELD_NUMBER: _ClassVar[int]
     COUNTRY_CODE_FIELD_NUMBER: _ClassVar[int]
+    IMAGES_FIELD_NUMBER: _ClassVar[int]
     text_annotation: _text_annotation_pb2.TextAnnotation
-    image: bytes
     country_code: str
-    def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[bytes] = ..., country_code: _Optional[str] = ...) -> None: ...
+    images: _containers.RepeatedScalarFieldContainer[bytes]
+    def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., country_code: _Optional[str] = ..., images: _Optional[_Iterable[bytes]] = ...) -> None: ...
 
 class VatDistributionResponse(_message.Message):
     __slots__ = ["vat_distribution_candidates"]

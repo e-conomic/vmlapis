@@ -134,11 +134,13 @@ class PageText(_message.Message):
     def __init__(self, page_ref: _Optional[int] = ..., text: _Optional[str] = ...) -> None: ...
 
 class VatDistributionCandidate(_message.Message):
-    __slots__ = ["percentage", "amount", "model_metadata"]
+    __slots__ = ["percentage", "amount", "model_metadata", "page_ref"]
     PERCENTAGE_FIELD_NUMBER: _ClassVar[int]
     AMOUNT_FIELD_NUMBER: _ClassVar[int]
     MODEL_METADATA_FIELD_NUMBER: _ClassVar[int]
+    PAGE_REF_FIELD_NUMBER: _ClassVar[int]
     percentage: str
     amount: str
     model_metadata: ModelSpec
-    def __init__(self, percentage: _Optional[str] = ..., amount: _Optional[str] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ...) -> None: ...
+    page_ref: int
+    def __init__(self, percentage: _Optional[str] = ..., amount: _Optional[str] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., page_ref: _Optional[int] = ...) -> None: ...

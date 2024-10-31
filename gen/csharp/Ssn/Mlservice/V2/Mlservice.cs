@@ -148,24 +148,24 @@ namespace Ssn.Mlservice.V2 {
             "ZS5UZXh0QW5ub3RhdGlvblIOdGV4dEFubm90YXRpb24SFAoFaW1hZ2UYAiAB",
             "KAxSBWltYWdlEhwKCXF1ZXN0aW9ucxgDIAMoCVIJcXVlc3Rpb25zIkQKDURv",
             "Y1FBUmVzcG9uc2USMwoHYW5zd2VycxgBIAMoCzIZLnNzbi50eXBlLkFuc3dl",
-            "ckNhbmRpZGF0ZVIHYW5zd2VycyKUAQoWVmF0RGlzdHJpYnV0aW9uUmVxdWVz",
+            "ckNhbmRpZGF0ZVIHYW5zd2VycyKcAQoWVmF0RGlzdHJpYnV0aW9uUmVxdWVz",
             "dBJBCg90ZXh0X2Fubm90YXRpb24YASABKAsyGC5zc24udHlwZS5UZXh0QW5u",
-            "b3RhdGlvblIOdGV4dEFubm90YXRpb24SFAoFaW1hZ2UYAiABKAxSBWltYWdl",
-            "EiEKDGNvdW50cnlfY29kZRgDIAEoCVILY291bnRyeUNvZGUifQoXVmF0RGlz",
-            "dHJpYnV0aW9uUmVzcG9uc2USYgobdmF0X2Rpc3RyaWJ1dGlvbl9jYW5kaWRh",
-            "dGVzGAEgAygLMiIuc3NuLnR5cGUuVmF0RGlzdHJpYnV0aW9uQ2FuZGlkYXRl",
-            "Uhl2YXREaXN0cmlidXRpb25DYW5kaWRhdGVzMpgCCglNbFNlcnZpY2USVwoK",
-            "RmVhdHVyZUdlbhIjLnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdlblJlcXVl",
-            "c3QaJC5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1cmVHZW5SZXNwb25zZRJOCgdQ",
-            "cmVkaWN0EiAuc3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVxdWVzdBohLnNz",
-            "bi5tbHNlcnZpY2UudjIuUHJlZGljdFJlc3BvbnNlEmIKEUZlYXR1cmVHZW5Q",
-            "cmVkaWN0Eiouc3NuLm1sc2VydmljZS52Mi5GZWF0dXJlR2VuUHJlZGljdFJl",
-            "cXVlc3QaIS5zc24ubWxzZXJ2aWNlLnYyLlByZWRpY3RSZXNwb25zZULNAQoZ",
-            "YWkudmlzbWEuc3NuLm1sc2VydmljZS52MkIOTWxzZXJ2aWNlUHJvdG9QAVo+",
-            "Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL21sc2Vy",
-            "dmljZS92MjttbHNlcnZpY2WiAgNTTViqAhBTc24uTWxzZXJ2aWNlLlYyygIQ",
-            "U3NuXE1sc2VydmljZVxWMuICHFNzblxNbHNlcnZpY2VcVjJcR1BCTWV0YWRh",
-            "dGHqAhJTc246Ok1sc2VydmljZTo6VjJiBnByb3RvMw=="));
+            "b3RhdGlvblIOdGV4dEFubm90YXRpb24SIQoMY291bnRyeV9jb2RlGAMgASgJ",
+            "Ugtjb3VudHJ5Q29kZRIWCgZpbWFnZXMYBCADKAxSBmltYWdlc0oECAIQAyJ9",
+            "ChdWYXREaXN0cmlidXRpb25SZXNwb25zZRJiCht2YXRfZGlzdHJpYnV0aW9u",
+            "X2NhbmRpZGF0ZXMYASADKAsyIi5zc24udHlwZS5WYXREaXN0cmlidXRpb25D",
+            "YW5kaWRhdGVSGXZhdERpc3RyaWJ1dGlvbkNhbmRpZGF0ZXMymAIKCU1sU2Vy",
+            "dmljZRJXCgpGZWF0dXJlR2VuEiMuc3NuLm1sc2VydmljZS52Mi5GZWF0dXJl",
+            "R2VuUmVxdWVzdBokLnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdlblJlc3Bv",
+            "bnNlEk4KB1ByZWRpY3QSIC5zc24ubWxzZXJ2aWNlLnYyLlByZWRpY3RSZXF1",
+            "ZXN0GiEuc3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVzcG9uc2USYgoRRmVh",
+            "dHVyZUdlblByZWRpY3QSKi5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1cmVHZW5Q",
+            "cmVkaWN0UmVxdWVzdBohLnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJlc3Bv",
+            "bnNlQs0BChlhaS52aXNtYS5zc24ubWxzZXJ2aWNlLnYyQg5NbHNlcnZpY2VQ",
+            "cm90b1ABWj5naXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9z",
+            "c24vbWxzZXJ2aWNlL3YyO21sc2VydmljZaICA1NNWKoCEFNzbi5NbHNlcnZp",
+            "Y2UuVjLKAhBTc25cTWxzZXJ2aWNlXFYy4gIcU3NuXE1sc2VydmljZVxWMlxH",
+            "UEJNZXRhZGF0YeoCElNzbjo6TWxzZXJ2aWNlOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -178,7 +178,7 @@ namespace Ssn.Mlservice.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.PurchaseLinesResponse), global::Ssn.Mlservice.V2.PurchaseLinesResponse.Parser, new[]{ "PurchaseLines" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.DocQARequest), global::Ssn.Mlservice.V2.DocQARequest.Parser, new[]{ "TextAnnotation", "Image", "Questions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.DocQAResponse), global::Ssn.Mlservice.V2.DocQAResponse.Parser, new[]{ "Answers" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.VatDistributionRequest), global::Ssn.Mlservice.V2.VatDistributionRequest.Parser, new[]{ "TextAnnotation", "Image", "CountryCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.VatDistributionRequest), global::Ssn.Mlservice.V2.VatDistributionRequest.Parser, new[]{ "TextAnnotation", "CountryCode", "Images" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.VatDistributionResponse), global::Ssn.Mlservice.V2.VatDistributionResponse.Parser, new[]{ "VatDistributionCandidates" }, null, null, null, null)
           }));
     }
@@ -4833,8 +4833,8 @@ namespace Ssn.Mlservice.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VatDistributionRequest(VatDistributionRequest other) : this() {
       textAnnotation_ = other.textAnnotation_ != null ? other.textAnnotation_.Clone() : null;
-      image_ = other.image_;
       countryCode_ = other.countryCode_;
+      images_ = other.images_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4856,18 +4856,6 @@ namespace Ssn.Mlservice.V2 {
       }
     }
 
-    /// <summary>Field number for the "image" field.</summary>
-    public const int ImageFieldNumber = 2;
-    private pb::ByteString image_ = pb::ByteString.Empty;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pb::ByteString Image {
-      get { return image_; }
-      set {
-        image_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
     /// <summary>Field number for the "country_code" field.</summary>
     public const int CountryCodeFieldNumber = 3;
     private string countryCode_ = "";
@@ -4878,6 +4866,17 @@ namespace Ssn.Mlservice.V2 {
       set {
         countryCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "images" field.</summary>
+    public const int ImagesFieldNumber = 4;
+    private static readonly pb::FieldCodec<pb::ByteString> _repeated_images_codec
+        = pb::FieldCodec.ForBytes(34);
+    private readonly pbc::RepeatedField<pb::ByteString> images_ = new pbc::RepeatedField<pb::ByteString>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<pb::ByteString> Images {
+      get { return images_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4896,8 +4895,8 @@ namespace Ssn.Mlservice.V2 {
         return true;
       }
       if (!object.Equals(TextAnnotation, other.TextAnnotation)) return false;
-      if (Image != other.Image) return false;
       if (CountryCode != other.CountryCode) return false;
+      if(!images_.Equals(other.images_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4906,8 +4905,8 @@ namespace Ssn.Mlservice.V2 {
     public override int GetHashCode() {
       int hash = 1;
       if (textAnnotation_ != null) hash ^= TextAnnotation.GetHashCode();
-      if (Image.Length != 0) hash ^= Image.GetHashCode();
       if (CountryCode.Length != 0) hash ^= CountryCode.GetHashCode();
+      hash ^= images_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4930,14 +4929,11 @@ namespace Ssn.Mlservice.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(TextAnnotation);
       }
-      if (Image.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteBytes(Image);
-      }
       if (CountryCode.Length != 0) {
         output.WriteRawTag(26);
         output.WriteString(CountryCode);
       }
+      images_.WriteTo(output, _repeated_images_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4952,14 +4948,11 @@ namespace Ssn.Mlservice.V2 {
         output.WriteRawTag(10);
         output.WriteMessage(TextAnnotation);
       }
-      if (Image.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteBytes(Image);
-      }
       if (CountryCode.Length != 0) {
         output.WriteRawTag(26);
         output.WriteString(CountryCode);
       }
+      images_.WriteTo(ref output, _repeated_images_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4973,12 +4966,10 @@ namespace Ssn.Mlservice.V2 {
       if (textAnnotation_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextAnnotation);
       }
-      if (Image.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Image);
-      }
       if (CountryCode.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CountryCode);
       }
+      size += images_.CalculateSize(_repeated_images_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4997,12 +4988,10 @@ namespace Ssn.Mlservice.V2 {
         }
         TextAnnotation.MergeFrom(other.TextAnnotation);
       }
-      if (other.Image.Length != 0) {
-        Image = other.Image;
-      }
       if (other.CountryCode.Length != 0) {
         CountryCode = other.CountryCode;
       }
+      images_.Add(other.images_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5025,12 +5014,12 @@ namespace Ssn.Mlservice.V2 {
             input.ReadMessage(TextAnnotation);
             break;
           }
-          case 18: {
-            Image = input.ReadBytes();
-            break;
-          }
           case 26: {
             CountryCode = input.ReadString();
+            break;
+          }
+          case 34: {
+            images_.AddEntriesFrom(input, _repeated_images_codec);
             break;
           }
         }
@@ -5055,12 +5044,12 @@ namespace Ssn.Mlservice.V2 {
             input.ReadMessage(TextAnnotation);
             break;
           }
-          case 18: {
-            Image = input.ReadBytes();
-            break;
-          }
           case 26: {
             CountryCode = input.ReadString();
+            break;
+          }
+          case 34: {
+            images_.AddEntriesFrom(ref input, _repeated_images_codec);
             break;
           }
         }

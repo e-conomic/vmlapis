@@ -1117,6 +1117,11 @@
         "modelMetadata": {
           "$ref": "#/definitions/typeModelSpec",
           "title": "Model metadata"
+        },
+        "pageRef": {
+          "type": "integer",
+          "format": "int64",
+          "description": "A reference to the page where the candidate was found."
         }
       }
     },

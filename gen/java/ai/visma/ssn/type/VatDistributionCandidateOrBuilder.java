@@ -73,4 +73,14 @@ public interface VatDistributionCandidateOrBuilder extends
    * <code>.ssn.type.ModelSpec model_metadata = 3 [json_name = "modelMetadata"];</code>
    */
   ai.visma.ssn.type.ModelSpecOrBuilder getModelMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * A reference to the page where the candidate was found.
+   * </pre>
+   *
+   * <code>uint32 page_ref = 4 [json_name = "pageRef"];</code>
+   * @return The pageRef.
+   */
+  int getPageRef();
 }

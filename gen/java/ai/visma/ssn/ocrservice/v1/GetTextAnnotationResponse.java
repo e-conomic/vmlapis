@@ -90,6 +90,32 @@ private static final long serialVersionUID = 0L;
     return image_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : image_;
   }
 
+  public static final int LAST_IMAGE_FIELD_NUMBER = 4;
+  private com.google.protobuf.BytesValue lastImage_;
+  /**
+   * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+   * @return Whether the lastImage field is set.
+   */
+  @java.lang.Override
+  public boolean hasLastImage() {
+    return lastImage_ != null;
+  }
+  /**
+   * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+   * @return The lastImage.
+   */
+  @java.lang.Override
+  public com.google.protobuf.BytesValue getLastImage() {
+    return lastImage_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : lastImage_;
+  }
+  /**
+   * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.BytesValueOrBuilder getLastImageOrBuilder() {
+    return lastImage_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : lastImage_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -110,6 +136,9 @@ private static final long serialVersionUID = 0L;
     if (image_ != null) {
       output.writeMessage(3, getImage());
     }
+    if (lastImage_ != null) {
+      output.writeMessage(4, getLastImage());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -126,6 +155,10 @@ private static final long serialVersionUID = 0L;
     if (image_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getImage());
+    }
+    if (lastImage_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, getLastImage());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -152,6 +185,11 @@ private static final long serialVersionUID = 0L;
       if (!getImage()
           .equals(other.getImage())) return false;
     }
+    if (hasLastImage() != other.hasLastImage()) return false;
+    if (hasLastImage()) {
+      if (!getLastImage()
+          .equals(other.getLastImage())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -170,6 +208,10 @@ private static final long serialVersionUID = 0L;
     if (hasImage()) {
       hash = (37 * hash) + IMAGE_FIELD_NUMBER;
       hash = (53 * hash) + getImage().hashCode();
+    }
+    if (hasLastImage()) {
+      hash = (37 * hash) + LAST_IMAGE_FIELD_NUMBER;
+      hash = (53 * hash) + getLastImage().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -312,6 +354,11 @@ private static final long serialVersionUID = 0L;
         imageBuilder_.dispose();
         imageBuilder_ = null;
       }
+      lastImage_ = null;
+      if (lastImageBuilder_ != null) {
+        lastImageBuilder_.dispose();
+        lastImageBuilder_ = null;
+      }
       return this;
     }
 
@@ -354,6 +401,11 @@ private static final long serialVersionUID = 0L;
         result.image_ = imageBuilder_ == null
             ? image_
             : imageBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.lastImage_ = lastImageBuilder_ == null
+            ? lastImage_
+            : lastImageBuilder_.build();
       }
     }
 
@@ -407,6 +459,9 @@ private static final long serialVersionUID = 0L;
       if (other.hasImage()) {
         mergeImage(other.getImage());
       }
+      if (other.hasLastImage()) {
+        mergeLastImage(other.getLastImage());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -447,6 +502,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 26
+            case 34: {
+              input.readMessage(
+                  getLastImageFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -700,6 +762,125 @@ private static final long serialVersionUID = 0L;
         image_ = null;
       }
       return imageBuilder_;
+    }
+
+    private com.google.protobuf.BytesValue lastImage_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> lastImageBuilder_;
+    /**
+     * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+     * @return Whether the lastImage field is set.
+     */
+    public boolean hasLastImage() {
+      return ((bitField0_ & 0x00000004) != 0);
+    }
+    /**
+     * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+     * @return The lastImage.
+     */
+    public com.google.protobuf.BytesValue getLastImage() {
+      if (lastImageBuilder_ == null) {
+        return lastImage_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : lastImage_;
+      } else {
+        return lastImageBuilder_.getMessage();
+      }
+    }
+    /**
+     * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+     */
+    public Builder setLastImage(com.google.protobuf.BytesValue value) {
+      if (lastImageBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        lastImage_ = value;
+      } else {
+        lastImageBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+     */
+    public Builder setLastImage(
+        com.google.protobuf.BytesValue.Builder builderForValue) {
+      if (lastImageBuilder_ == null) {
+        lastImage_ = builderForValue.build();
+      } else {
+        lastImageBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+     */
+    public Builder mergeLastImage(com.google.protobuf.BytesValue value) {
+      if (lastImageBuilder_ == null) {
+        if (((bitField0_ & 0x00000004) != 0) &&
+          lastImage_ != null &&
+          lastImage_ != com.google.protobuf.BytesValue.getDefaultInstance()) {
+          getLastImageBuilder().mergeFrom(value);
+        } else {
+          lastImage_ = value;
+        }
+      } else {
+        lastImageBuilder_.mergeFrom(value);
+      }
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+     */
+    public Builder clearLastImage() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      lastImage_ = null;
+      if (lastImageBuilder_ != null) {
+        lastImageBuilder_.dispose();
+        lastImageBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+     */
+    public com.google.protobuf.BytesValue.Builder getLastImageBuilder() {
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return getLastImageFieldBuilder().getBuilder();
+    }
+    /**
+     * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+     */
+    public com.google.protobuf.BytesValueOrBuilder getLastImageOrBuilder() {
+      if (lastImageBuilder_ != null) {
+        return lastImageBuilder_.getMessageOrBuilder();
+      } else {
+        return lastImage_ == null ?
+            com.google.protobuf.BytesValue.getDefaultInstance() : lastImage_;
+      }
+    }
+    /**
+     * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder> 
+        getLastImageFieldBuilder() {
+      if (lastImageBuilder_ == null) {
+        lastImageBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            com.google.protobuf.BytesValue, com.google.protobuf.BytesValue.Builder, com.google.protobuf.BytesValueOrBuilder>(
+                getLastImage(),
+                getParentForChildren(),
+                isClean());
+        lastImage_ = null;
+      }
+      return lastImageBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

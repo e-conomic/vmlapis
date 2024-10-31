@@ -16,8 +16,8 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private VatDistributionRequest() {
-    image_ = com.google.protobuf.ByteString.EMPTY;
     countryCode_ = "";
+    images_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -66,17 +66,6 @@ private static final long serialVersionUID = 0L;
     return textAnnotation_ == null ? ai.visma.ssn.type.TextAnnotation.getDefaultInstance() : textAnnotation_;
   }
 
-  public static final int IMAGE_FIELD_NUMBER = 2;
-  private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
-  /**
-   * <code>bytes image = 2 [json_name = "image"];</code>
-   * @return The image.
-   */
-  @java.lang.Override
-  public com.google.protobuf.ByteString getImage() {
-    return image_;
-  }
-
   public static final int COUNTRY_CODE_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object countryCode_ = "";
@@ -116,6 +105,34 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int IMAGES_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private java.util.List<com.google.protobuf.ByteString> images_;
+  /**
+   * <code>repeated bytes images = 4 [json_name = "images"];</code>
+   * @return A list containing the images.
+   */
+  @java.lang.Override
+  public java.util.List<com.google.protobuf.ByteString>
+      getImagesList() {
+    return images_;
+  }
+  /**
+   * <code>repeated bytes images = 4 [json_name = "images"];</code>
+   * @return The count of images.
+   */
+  public int getImagesCount() {
+    return images_.size();
+  }
+  /**
+   * <code>repeated bytes images = 4 [json_name = "images"];</code>
+   * @param index The index of the element to return.
+   * @return The images at the given index.
+   */
+  public com.google.protobuf.ByteString getImages(int index) {
+    return images_.get(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -133,11 +150,11 @@ private static final long serialVersionUID = 0L;
     if (textAnnotation_ != null) {
       output.writeMessage(1, getTextAnnotation());
     }
-    if (!image_.isEmpty()) {
-      output.writeBytes(2, image_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, countryCode_);
+    }
+    for (int i = 0; i < images_.size(); i++) {
+      output.writeBytes(4, images_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -152,12 +169,17 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, getTextAnnotation());
     }
-    if (!image_.isEmpty()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeBytesSize(2, image_);
-    }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(countryCode_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, countryCode_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < images_.size(); i++) {
+        dataSize += com.google.protobuf.CodedOutputStream
+          .computeBytesSizeNoTag(images_.get(i));
+      }
+      size += dataSize;
+      size += 1 * getImagesList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -179,10 +201,10 @@ private static final long serialVersionUID = 0L;
       if (!getTextAnnotation()
           .equals(other.getTextAnnotation())) return false;
     }
-    if (!getImage()
-        .equals(other.getImage())) return false;
     if (!getCountryCode()
         .equals(other.getCountryCode())) return false;
+    if (!getImagesList()
+        .equals(other.getImagesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -198,10 +220,12 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + TEXT_ANNOTATION_FIELD_NUMBER;
       hash = (53 * hash) + getTextAnnotation().hashCode();
     }
-    hash = (37 * hash) + IMAGE_FIELD_NUMBER;
-    hash = (53 * hash) + getImage().hashCode();
     hash = (37 * hash) + COUNTRY_CODE_FIELD_NUMBER;
     hash = (53 * hash) + getCountryCode().hashCode();
+    if (getImagesCount() > 0) {
+      hash = (37 * hash) + IMAGES_FIELD_NUMBER;
+      hash = (53 * hash) + getImagesList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -338,8 +362,8 @@ private static final long serialVersionUID = 0L;
         textAnnotationBuilder_.dispose();
         textAnnotationBuilder_ = null;
       }
-      image_ = com.google.protobuf.ByteString.EMPTY;
       countryCode_ = "";
+      images_ = java.util.Collections.emptyList();
       return this;
     }
 
@@ -366,9 +390,18 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public ai.visma.ssn.mlservice.v2.VatDistributionRequest buildPartial() {
       ai.visma.ssn.mlservice.v2.VatDistributionRequest result = new ai.visma.ssn.mlservice.v2.VatDistributionRequest(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(ai.visma.ssn.mlservice.v2.VatDistributionRequest result) {
+      if (((bitField0_ & 0x00000004) != 0)) {
+        images_ = java.util.Collections.unmodifiableList(images_);
+        bitField0_ = (bitField0_ & ~0x00000004);
+      }
+      result.images_ = images_;
     }
 
     private void buildPartial0(ai.visma.ssn.mlservice.v2.VatDistributionRequest result) {
@@ -379,9 +412,6 @@ private static final long serialVersionUID = 0L;
             : textAnnotationBuilder_.build();
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.image_ = image_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
         result.countryCode_ = countryCode_;
       }
     }
@@ -433,12 +463,19 @@ private static final long serialVersionUID = 0L;
       if (other.hasTextAnnotation()) {
         mergeTextAnnotation(other.getTextAnnotation());
       }
-      if (other.getImage() != com.google.protobuf.ByteString.EMPTY) {
-        setImage(other.getImage());
-      }
       if (!other.getCountryCode().isEmpty()) {
         countryCode_ = other.countryCode_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (!other.images_.isEmpty()) {
+        if (images_.isEmpty()) {
+          images_ = other.images_;
+          bitField0_ = (bitField0_ & ~0x00000004);
+        } else {
+          ensureImagesIsMutable();
+          images_.addAll(other.images_);
+        }
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -474,16 +511,17 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
-            case 18: {
-              image_ = input.readBytes();
-              bitField0_ |= 0x00000002;
-              break;
-            } // case 18
             case 26: {
               countryCode_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000002;
               break;
             } // case 26
+            case 34: {
+              com.google.protobuf.ByteString v = input.readBytes();
+              ensureImagesIsMutable();
+              images_.add(v);
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -620,38 +658,6 @@ private static final long serialVersionUID = 0L;
       return textAnnotationBuilder_;
     }
 
-    private com.google.protobuf.ByteString image_ = com.google.protobuf.ByteString.EMPTY;
-    /**
-     * <code>bytes image = 2 [json_name = "image"];</code>
-     * @return The image.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString getImage() {
-      return image_;
-    }
-    /**
-     * <code>bytes image = 2 [json_name = "image"];</code>
-     * @param value The image to set.
-     * @return This builder for chaining.
-     */
-    public Builder setImage(com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      image_ = value;
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>bytes image = 2 [json_name = "image"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearImage() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      image_ = getDefaultInstance().getImage();
-      onChanged();
-      return this;
-    }
-
     private java.lang.Object countryCode_ = "";
     /**
      * <code>string country_code = 3 [json_name = "countryCode"];</code>
@@ -695,7 +701,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       countryCode_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
@@ -705,7 +711,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearCountryCode() {
       countryCode_ = getDefaultInstance().getCountryCode();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -719,7 +725,88 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       countryCode_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<com.google.protobuf.ByteString> images_ = java.util.Collections.emptyList();
+    private void ensureImagesIsMutable() {
+      if (!((bitField0_ & 0x00000004) != 0)) {
+        images_ = new java.util.ArrayList<com.google.protobuf.ByteString>(images_);
+        bitField0_ |= 0x00000004;
+      }
+    }
+    /**
+     * <code>repeated bytes images = 4 [json_name = "images"];</code>
+     * @return A list containing the images.
+     */
+    public java.util.List<com.google.protobuf.ByteString>
+        getImagesList() {
+      return ((bitField0_ & 0x00000004) != 0) ?
+               java.util.Collections.unmodifiableList(images_) : images_;
+    }
+    /**
+     * <code>repeated bytes images = 4 [json_name = "images"];</code>
+     * @return The count of images.
+     */
+    public int getImagesCount() {
+      return images_.size();
+    }
+    /**
+     * <code>repeated bytes images = 4 [json_name = "images"];</code>
+     * @param index The index of the element to return.
+     * @return The images at the given index.
+     */
+    public com.google.protobuf.ByteString getImages(int index) {
+      return images_.get(index);
+    }
+    /**
+     * <code>repeated bytes images = 4 [json_name = "images"];</code>
+     * @param index The index to set the value at.
+     * @param value The images to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImages(
+        int index, com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureImagesIsMutable();
+      images_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated bytes images = 4 [json_name = "images"];</code>
+     * @param value The images to add.
+     * @return This builder for chaining.
+     */
+    public Builder addImages(com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureImagesIsMutable();
+      images_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated bytes images = 4 [json_name = "images"];</code>
+     * @param values The images to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllImages(
+        java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+      ensureImagesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, images_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated bytes images = 4 [json_name = "images"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearImages() {
+      images_ = java.util.Collections.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);
       onChanged();
       return this;
     }

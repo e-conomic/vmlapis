@@ -2266,7 +2266,8 @@ proto.ssn.type.VatDistributionCandidate.toObject = function(includeInstance, msg
   var f, obj = {
     percentage: jspb.Message.getFieldWithDefault(msg, 1, ""),
     amount: jspb.Message.getFieldWithDefault(msg, 2, ""),
-    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f)
+    modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f),
+    pageRef: jspb.Message.getFieldWithDefault(msg, 4, 0)
   };
 
   if (includeInstance) {
@@ -2315,6 +2316,10 @@ proto.ssn.type.VatDistributionCandidate.deserializeBinaryFromReader = function(m
       var value = new proto.ssn.type.ModelSpec;
       reader.readMessage(value,proto.ssn.type.ModelSpec.deserializeBinaryFromReader);
       msg.setModelMetadata(value);
+      break;
+    case 4:
+      var value = /** @type {number} */ (reader.readUint32());
+      msg.setPageRef(value);
       break;
     default:
       reader.skipField();
@@ -2365,6 +2370,13 @@ proto.ssn.type.VatDistributionCandidate.serializeBinaryToWriter = function(messa
       3,
       f,
       proto.ssn.type.ModelSpec.serializeBinaryToWriter
+    );
+  }
+  f = message.getPageRef();
+  if (f !== 0) {
+    writer.writeUint32(
+      4,
+      f
     );
   }
 };
@@ -2440,6 +2452,24 @@ proto.ssn.type.VatDistributionCandidate.prototype.clearModelMetadata = function(
  */
 proto.ssn.type.VatDistributionCandidate.prototype.hasModelMetadata = function() {
   return jspb.Message.getField(this, 3) != null;
+};
+
+
+/**
+ * optional uint32 page_ref = 4;
+ * @return {number}
+ */
+proto.ssn.type.VatDistributionCandidate.prototype.getPageRef = function() {
+  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 4, 0));
+};
+
+
+/**
+ * @param {number} value
+ * @return {!proto.ssn.type.VatDistributionCandidate} returns this
+ */
+proto.ssn.type.VatDistributionCandidate.prototype.setPageRef = function(value) {
+  return jspb.Message.setProto3IntField(this, 4, value);
 };
 
 
