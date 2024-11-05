@@ -397,6 +397,46 @@
         ]
       }
     },
+    "/v2/datasets/{datasetName}/models": {
+      "get": {
+        "summary": "Get the specified number of the most recent dataset's trained models.\nNumber of requested models has to be larger than 0 but no larger than 100.",
+        "operationId": "DatasetService_GetDatasetModels",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v2ModelsResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "datasetName",
+            "description": "text-no-spaces",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "options.limit",
+            "description": "The number of models to return. Ranges from 1 to 100.\n\nmapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)",
+            "in": "query",
+            "required": false,
+            "type": "string",
+            "format": "int64"
+          }
+        ],
+        "tags": [
+          "DatasetService"
+        ]
+      }
+    },
     "/v2/datasets/{datasetName}/trainings": {
       "get": {
         "summary": "Get the specified number of the most recent dataset's trainings.\nNumber of requested trainings has to be larger than 0 but no larger than 100.",
@@ -699,6 +739,74 @@
         }
       }
     },
+    "asgttypeModel": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "type": "string",
+          "format": "int64"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "datasetSize": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "trainingSize": {
+          "type": "integer",
+          "format": "int32"
+        },
+        "confidenceScores": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeTargetMetrics"
+          }
+        },
+        "inputType": {
+          "$ref": "#/definitions/ModelInputType"
+        },
+        "datasetType": {
+          "type": "string"
+        },
+        "modelFiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeModelFile"
+          }
+        },
+        "targetToConfidenceThresholds": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/typeConfidenceThresholds"
+          }
+        }
+      }
+    },
+    "asgtv2typeModel": {
+      "type": "object",
+      "properties": {
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "title": "Creation time of the model"
+        },
+        "dataset": {
+          "$ref": "#/definitions/typeDataset",
+          "description": "Specifies dataset the model belongs to."
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "title": "Targets the model was trained on"
+        }
+      }
+    },
     "protobufAny": {
       "type": "object",
       "properties": {
@@ -879,53 +987,6 @@
       },
       "description": "Used in electronic-invoice-line requests."
     },
-    "typeModel": {
-      "type": "object",
-      "properties": {
-        "version": {
-          "type": "string",
-          "format": "int64"
-        },
-        "createdAt": {
-          "type": "string",
-          "format": "date-time"
-        },
-        "datasetSize": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "trainingSize": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "confidenceScores": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/typeTargetMetrics"
-          }
-        },
-        "inputType": {
-          "$ref": "#/definitions/ModelInputType"
-        },
-        "datasetType": {
-          "type": "string"
-        },
-        "modelFiles": {
-          "type": "array",
-          "items": {
-            "type": "object",
-            "$ref": "#/definitions/typeModelFile"
-          }
-        },
-        "targetToConfidenceThresholds": {
-          "type": "object",
-          "additionalProperties": {
-            "$ref": "#/definitions/typeConfidenceThresholds"
-          }
-        }
-      }
-    },
     "typeModelFile": {
       "type": "object",
       "properties": {
@@ -1064,7 +1125,7 @@
           }
         },
         "model": {
-          "$ref": "#/definitions/typeModel"
+          "$ref": "#/definitions/asgttypeModel"
         }
       }
     },
@@ -1081,6 +1142,28 @@
             "type": "string"
           },
           "title": "text-no-spaces"
+        }
+      }
+    },
+    "v2ModelRequestOptions": {
+      "type": "object",
+      "properties": {
+        "limit": {
+          "type": "string",
+          "format": "int64",
+          "description": "The number of models to return. Ranges from 1 to 100.\n\nmapped to URL query parameter `options.limit`, should be between 0 and 100 (100 inclusive)"
+        }
+      }
+    },
+    "v2ModelsResponse": {
+      "type": "object",
+      "properties": {
+        "models": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/asgtv2typeModel"
+          }
         }
       }
     },
@@ -1108,7 +1191,7 @@
           "$ref": "#/definitions/typePrediction"
         },
         "model": {
-          "$ref": "#/definitions/typeModel"
+          "$ref": "#/definitions/asgttypeModel"
         }
       }
     },
