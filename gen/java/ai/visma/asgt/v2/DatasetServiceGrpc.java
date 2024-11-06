@@ -325,6 +325,37 @@ public final class DatasetServiceGrpc {
     return getGetDatasetTrainingsMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.v2.GetDatasetModelsRequest,
+      ai.visma.asgt.v2.ModelsResponse> getGetDatasetModelsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetDatasetModels",
+      requestType = ai.visma.asgt.v2.GetDatasetModelsRequest.class,
+      responseType = ai.visma.asgt.v2.ModelsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.asgt.v2.GetDatasetModelsRequest,
+      ai.visma.asgt.v2.ModelsResponse> getGetDatasetModelsMethod() {
+    io.grpc.MethodDescriptor<ai.visma.asgt.v2.GetDatasetModelsRequest, ai.visma.asgt.v2.ModelsResponse> getGetDatasetModelsMethod;
+    if ((getGetDatasetModelsMethod = DatasetServiceGrpc.getGetDatasetModelsMethod) == null) {
+      synchronized (DatasetServiceGrpc.class) {
+        if ((getGetDatasetModelsMethod = DatasetServiceGrpc.getGetDatasetModelsMethod) == null) {
+          DatasetServiceGrpc.getGetDatasetModelsMethod = getGetDatasetModelsMethod =
+              io.grpc.MethodDescriptor.<ai.visma.asgt.v2.GetDatasetModelsRequest, ai.visma.asgt.v2.ModelsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetDatasetModels"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.v2.GetDatasetModelsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.v2.ModelsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new DatasetServiceMethodDescriptorSupplier("GetDatasetModels"))
+              .build();
+        }
+      }
+    }
+    return getGetDatasetModelsMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.v2.GetTrainingsRequest,
       ai.visma.asgt.v2.TrainingsResponse> getGetTrainingsMethod;
 
@@ -515,6 +546,17 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
+     * Get the specified number of the most recent dataset's trained models.
+     * Number of requested models has to be larger than 0 but no larger than 100.
+     * </pre>
+     */
+    default void getDatasetModels(ai.visma.asgt.v2.GetDatasetModelsRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.asgt.v2.ModelsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetDatasetModelsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Get the specified number of the most recent trainings accross all consumer's datasets.
      * Number of requested trainings has to be larger than 0 but no larger than 100.
      * </pre>
@@ -673,6 +715,18 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
+     * Get the specified number of the most recent dataset's trained models.
+     * Number of requested models has to be larger than 0 but no larger than 100.
+     * </pre>
+     */
+    public void getDatasetModels(ai.visma.asgt.v2.GetDatasetModelsRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.asgt.v2.ModelsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetDatasetModelsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Get the specified number of the most recent trainings accross all consumer's datasets.
      * Number of requested trainings has to be larger than 0 but no larger than 100.
      * </pre>
@@ -807,6 +861,17 @@ public final class DatasetServiceGrpc {
     public ai.visma.asgt.v2.TrainingsResponse getDatasetTrainings(ai.visma.asgt.v2.GetDatasetTrainingsRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetDatasetTrainingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get the specified number of the most recent dataset's trained models.
+     * Number of requested models has to be larger than 0 but no larger than 100.
+     * </pre>
+     */
+    public ai.visma.asgt.v2.ModelsResponse getDatasetModels(ai.visma.asgt.v2.GetDatasetModelsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDatasetModelsMethod(), getCallOptions(), request);
     }
 
     /**
@@ -958,6 +1023,18 @@ public final class DatasetServiceGrpc {
 
     /**
      * <pre>
+     * Get the specified number of the most recent dataset's trained models.
+     * Number of requested models has to be larger than 0 but no larger than 100.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.v2.ModelsResponse> getDatasetModels(
+        ai.visma.asgt.v2.GetDatasetModelsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetDatasetModelsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Get the specified number of the most recent trainings accross all consumer's datasets.
      * Number of requested trainings has to be larger than 0 but no larger than 100.
      * </pre>
@@ -979,7 +1056,8 @@ public final class DatasetServiceGrpc {
   private static final int METHODID_BATCH_CREATE_EXAMPLE = 7;
   private static final int METHODID_TRUNCATE_DATASET = 8;
   private static final int METHODID_GET_DATASET_TRAININGS = 9;
-  private static final int METHODID_GET_TRAININGS = 10;
+  private static final int METHODID_GET_DATASET_MODELS = 10;
+  private static final int METHODID_GET_TRAININGS = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1037,6 +1115,10 @@ public final class DatasetServiceGrpc {
         case METHODID_GET_DATASET_TRAININGS:
           serviceImpl.getDatasetTrainings((ai.visma.asgt.v2.GetDatasetTrainingsRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.asgt.v2.TrainingsResponse>) responseObserver);
+          break;
+        case METHODID_GET_DATASET_MODELS:
+          serviceImpl.getDatasetModels((ai.visma.asgt.v2.GetDatasetModelsRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.asgt.v2.ModelsResponse>) responseObserver);
           break;
         case METHODID_GET_TRAININGS:
           serviceImpl.getTrainings((ai.visma.asgt.v2.GetTrainingsRequest) request,
@@ -1131,6 +1213,13 @@ public final class DatasetServiceGrpc {
               ai.visma.asgt.v2.TrainingsResponse>(
                 service, METHODID_GET_DATASET_TRAININGS)))
         .addMethod(
+          getGetDatasetModelsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.v2.GetDatasetModelsRequest,
+              ai.visma.asgt.v2.ModelsResponse>(
+                service, METHODID_GET_DATASET_MODELS)))
+        .addMethod(
           getGetTrainingsMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1195,6 +1284,7 @@ public final class DatasetServiceGrpc {
               .addMethod(getBatchCreateExampleMethod())
               .addMethod(getTruncateDatasetMethod())
               .addMethod(getGetDatasetTrainingsMethod())
+              .addMethod(getGetDatasetModelsMethod())
               .addMethod(getGetTrainingsMethod())
               .build();
         }

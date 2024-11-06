@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package asgt.v2.type;
+
+import "asgt/type/dataset.proto";
+import "google/protobuf/timestamp.proto";
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/v2/type;asgttype";
+
+message Model {
+  // Creation time of the model
+  google.protobuf.Timestamp created_at = 1;
+  // Specifies dataset the model belongs to.
+  asgt.type.Dataset dataset = 2;
+  // Targets the model was trained on
+  repeated string targets = 3;
+}

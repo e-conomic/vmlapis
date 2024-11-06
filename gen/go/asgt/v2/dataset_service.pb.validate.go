@@ -1418,6 +1418,119 @@ var _ interface {
 	ErrorName() string
 } = TrainingRequestOptionsValidationError{}
 
+// Validate checks the field values on ModelRequestOptions with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *ModelRequestOptions) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on ModelRequestOptions with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// ModelRequestOptionsMultiError, or nil if none found.
+func (m *ModelRequestOptions) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *ModelRequestOptions) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	if val := m.GetLimit(); val <= 0 || val > 100 {
+		err := ModelRequestOptionsValidationError{
+			field:  "Limit",
+			reason: "value must be inside range (0, 100]",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return ModelRequestOptionsMultiError(errors)
+	}
+
+	return nil
+}
+
+// ModelRequestOptionsMultiError is an error wrapping multiple validation
+// errors returned by ModelRequestOptions.ValidateAll() if the designated
+// constraints aren't met.
+type ModelRequestOptionsMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m ModelRequestOptionsMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m ModelRequestOptionsMultiError) AllErrors() []error { return m }
+
+// ModelRequestOptionsValidationError is the validation error returned by
+// ModelRequestOptions.Validate if the designated constraints aren't met.
+type ModelRequestOptionsValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ModelRequestOptionsValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ModelRequestOptionsValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ModelRequestOptionsValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ModelRequestOptionsValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ModelRequestOptionsValidationError) ErrorName() string {
+	return "ModelRequestOptionsValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e ModelRequestOptionsValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sModelRequestOptions.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ModelRequestOptionsValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ModelRequestOptionsValidationError{}
+
 // Validate checks the field values on GetDatasetTrainingsRequest with the
 // rules defined in the proto definition for this message. If any rules are
 // violated, the first error encountered is returned, or nil if there are no violations.
@@ -1572,6 +1685,161 @@ var _ interface {
 } = GetDatasetTrainingsRequestValidationError{}
 
 var _GetDatasetTrainingsRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
+
+// Validate checks the field values on GetDatasetModelsRequest with the rules
+// defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *GetDatasetModelsRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on GetDatasetModelsRequest with the
+// rules defined in the proto definition for this message. If any rules are
+// violated, the result is a list of violation errors wrapped in
+// GetDatasetModelsRequestMultiError, or nil if none found.
+func (m *GetDatasetModelsRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *GetDatasetModelsRequest) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	if len(m.GetDatasetName()) > 256 {
+		err := GetDatasetModelsRequestValidationError{
+			field:  "DatasetName",
+			reason: "value length must be at most 256 bytes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if !_GetDatasetModelsRequest_DatasetName_Pattern.MatchString(m.GetDatasetName()) {
+		err := GetDatasetModelsRequestValidationError{
+			field:  "DatasetName",
+			reason: "value does not match regex pattern \"^[A-Za-z0-9.][A-Za-z0-9_.>-]*$\"",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if all {
+		switch v := interface{}(m.GetOptions()).(type) {
+		case interface{ ValidateAll() error }:
+			if err := v.ValidateAll(); err != nil {
+				errors = append(errors, GetDatasetModelsRequestValidationError{
+					field:  "Options",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		case interface{ Validate() error }:
+			if err := v.Validate(); err != nil {
+				errors = append(errors, GetDatasetModelsRequestValidationError{
+					field:  "Options",
+					reason: "embedded message failed validation",
+					cause:  err,
+				})
+			}
+		}
+	} else if v, ok := interface{}(m.GetOptions()).(interface{ Validate() error }); ok {
+		if err := v.Validate(); err != nil {
+			return GetDatasetModelsRequestValidationError{
+				field:  "Options",
+				reason: "embedded message failed validation",
+				cause:  err,
+			}
+		}
+	}
+
+	if len(errors) > 0 {
+		return GetDatasetModelsRequestMultiError(errors)
+	}
+
+	return nil
+}
+
+// GetDatasetModelsRequestMultiError is an error wrapping multiple validation
+// errors returned by GetDatasetModelsRequest.ValidateAll() if the designated
+// constraints aren't met.
+type GetDatasetModelsRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m GetDatasetModelsRequestMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m GetDatasetModelsRequestMultiError) AllErrors() []error { return m }
+
+// GetDatasetModelsRequestValidationError is the validation error returned by
+// GetDatasetModelsRequest.Validate if the designated constraints aren't met.
+type GetDatasetModelsRequestValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e GetDatasetModelsRequestValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e GetDatasetModelsRequestValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e GetDatasetModelsRequestValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e GetDatasetModelsRequestValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e GetDatasetModelsRequestValidationError) ErrorName() string {
+	return "GetDatasetModelsRequestValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e GetDatasetModelsRequestValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sGetDatasetModelsRequest.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = GetDatasetModelsRequestValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = GetDatasetModelsRequestValidationError{}
+
+var _GetDatasetModelsRequest_DatasetName_Pattern = regexp.MustCompile("^[A-Za-z0-9.][A-Za-z0-9_.>-]*$")
 
 // Validate checks the field values on GetTrainingsRequest with the rules
 // defined in the proto definition for this message. If any rules are
@@ -1839,3 +2107,137 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = TrainingsResponseValidationError{}
+
+// Validate checks the field values on ModelsResponse with the rules defined in
+// the proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
+func (m *ModelsResponse) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on ModelsResponse with the rules defined
+// in the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in ModelsResponseMultiError,
+// or nil if none found.
+func (m *ModelsResponse) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *ModelsResponse) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	for idx, item := range m.GetModels() {
+		_, _ = idx, item
+
+		if all {
+			switch v := interface{}(item).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, ModelsResponseValidationError{
+						field:  fmt.Sprintf("Models[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, ModelsResponseValidationError{
+						field:  fmt.Sprintf("Models[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return ModelsResponseValidationError{
+					field:  fmt.Sprintf("Models[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	if len(errors) > 0 {
+		return ModelsResponseMultiError(errors)
+	}
+
+	return nil
+}
+
+// ModelsResponseMultiError is an error wrapping multiple validation errors
+// returned by ModelsResponse.ValidateAll() if the designated constraints
+// aren't met.
+type ModelsResponseMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m ModelsResponseMultiError) Error() string {
+	var msgs []string
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m ModelsResponseMultiError) AllErrors() []error { return m }
+
+// ModelsResponseValidationError is the validation error returned by
+// ModelsResponse.Validate if the designated constraints aren't met.
+type ModelsResponseValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ModelsResponseValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ModelsResponseValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ModelsResponseValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ModelsResponseValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ModelsResponseValidationError) ErrorName() string { return "ModelsResponseValidationError" }
+
+// Error satisfies the builtin error interface
+func (e ModelsResponseValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sModelsResponse.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ModelsResponseValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ModelsResponseValidationError{}

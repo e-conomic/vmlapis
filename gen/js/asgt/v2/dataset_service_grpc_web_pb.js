@@ -24,6 +24,8 @@ var asgt_type_dataset_pb = require('../../asgt/type/dataset_pb.js')
 
 var asgt_v2_type_example_pb = require('../../asgt/v2/type/example_pb.js')
 
+var asgt_v2_type_model_pb = require('../../asgt/v2/type/model_pb.js')
+
 var asgt_v2_type_training_pb = require('../../asgt/v2/type/training_pb.js')
 
 var google_api_annotations_pb = require('../../google/api/annotations_pb.js')
@@ -696,6 +698,67 @@ proto.asgt.v2.DatasetServicePromiseClient.prototype.getDatasetTrainings =
       request,
       metadata || {},
       methodDescriptor_DatasetService_GetDatasetTrainings);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.v2.GetDatasetModelsRequest,
+ *   !proto.asgt.v2.ModelsResponse>}
+ */
+const methodDescriptor_DatasetService_GetDatasetModels = new grpc.web.MethodDescriptor(
+  '/asgt.v2.DatasetService/GetDatasetModels',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.v2.GetDatasetModelsRequest,
+  proto.asgt.v2.ModelsResponse,
+  /**
+   * @param {!proto.asgt.v2.GetDatasetModelsRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.asgt.v2.ModelsResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.v2.GetDatasetModelsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.asgt.v2.ModelsResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.v2.ModelsResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.v2.DatasetServiceClient.prototype.getDatasetModels =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.v2.DatasetService/GetDatasetModels',
+      request,
+      metadata || {},
+      methodDescriptor_DatasetService_GetDatasetModels,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.v2.GetDatasetModelsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.asgt.v2.ModelsResponse>}
+ *     Promise that resolves to the response
+ */
+proto.asgt.v2.DatasetServicePromiseClient.prototype.getDatasetModels =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.v2.DatasetService/GetDatasetModels',
+      request,
+      metadata || {},
+      methodDescriptor_DatasetService_GetDatasetModels);
 };
 
 

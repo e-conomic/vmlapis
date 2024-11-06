@@ -2,6 +2,7 @@ import * as jspb from 'google-protobuf'
 
 import * as asgt_type_dataset_pb from '../../asgt/type/dataset_pb';
 import * as asgt_v2_type_example_pb from '../../asgt/v2/type/example_pb';
+import * as asgt_v2_type_model_pb from '../../asgt/v2/type/model_pb';
 import * as asgt_v2_type_training_pb from '../../asgt/v2/type/training_pb';
 import * as google_api_annotations_pb from '../../google/api/annotations_pb';
 import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb';
@@ -213,6 +214,24 @@ export namespace TrainingRequestOptions {
   }
 }
 
+export class ModelRequestOptions extends jspb.Message {
+  getLimit(): number;
+  setLimit(value: number): ModelRequestOptions;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ModelRequestOptions.AsObject;
+  static toObject(includeInstance: boolean, msg: ModelRequestOptions): ModelRequestOptions.AsObject;
+  static serializeBinaryToWriter(message: ModelRequestOptions, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ModelRequestOptions;
+  static deserializeBinaryFromReader(message: ModelRequestOptions, reader: jspb.BinaryReader): ModelRequestOptions;
+}
+
+export namespace ModelRequestOptions {
+  export type AsObject = {
+    limit: number,
+  }
+}
+
 export class GetDatasetTrainingsRequest extends jspb.Message {
   getDatasetName(): string;
   setDatasetName(value: string): GetDatasetTrainingsRequest;
@@ -234,6 +253,30 @@ export namespace GetDatasetTrainingsRequest {
   export type AsObject = {
     datasetName: string,
     options?: TrainingRequestOptions.AsObject,
+  }
+}
+
+export class GetDatasetModelsRequest extends jspb.Message {
+  getDatasetName(): string;
+  setDatasetName(value: string): GetDatasetModelsRequest;
+
+  getOptions(): ModelRequestOptions | undefined;
+  setOptions(value?: ModelRequestOptions): GetDatasetModelsRequest;
+  hasOptions(): boolean;
+  clearOptions(): GetDatasetModelsRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): GetDatasetModelsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: GetDatasetModelsRequest): GetDatasetModelsRequest.AsObject;
+  static serializeBinaryToWriter(message: GetDatasetModelsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): GetDatasetModelsRequest;
+  static deserializeBinaryFromReader(message: GetDatasetModelsRequest, reader: jspb.BinaryReader): GetDatasetModelsRequest;
+}
+
+export namespace GetDatasetModelsRequest {
+  export type AsObject = {
+    datasetName: string,
+    options?: ModelRequestOptions.AsObject,
   }
 }
 
@@ -274,6 +317,26 @@ export class TrainingsResponse extends jspb.Message {
 export namespace TrainingsResponse {
   export type AsObject = {
     trainingsList: Array<asgt_v2_type_training_pb.Training.AsObject>,
+  }
+}
+
+export class ModelsResponse extends jspb.Message {
+  getModelsList(): Array<asgt_v2_type_model_pb.Model>;
+  setModelsList(value: Array<asgt_v2_type_model_pb.Model>): ModelsResponse;
+  clearModelsList(): ModelsResponse;
+  addModels(value?: asgt_v2_type_model_pb.Model, index?: number): asgt_v2_type_model_pb.Model;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ModelsResponse.AsObject;
+  static toObject(includeInstance: boolean, msg: ModelsResponse): ModelsResponse.AsObject;
+  static serializeBinaryToWriter(message: ModelsResponse, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ModelsResponse;
+  static deserializeBinaryFromReader(message: ModelsResponse, reader: jspb.BinaryReader): ModelsResponse;
+}
+
+export namespace ModelsResponse {
+  export type AsObject = {
+    modelsList: Array<asgt_v2_type_model_pb.Model.AsObject>,
   }
 }
 

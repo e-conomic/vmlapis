@@ -1,5 +1,6 @@
 from asgt.type import dataset_pb2 as _dataset_pb2
 from asgt.v2.type import example_pb2 as _example_pb2
+from asgt.v2.type import model_pb2 as _model_pb2
 from asgt.v2.type import training_pb2 as _training_pb2
 from google.api import annotations_pb2 as _annotations_pb2
 from google.protobuf import empty_pb2 as _empty_pb2
@@ -80,6 +81,12 @@ class TrainingRequestOptions(_message.Message):
     limit: int
     def __init__(self, limit: _Optional[int] = ...) -> None: ...
 
+class ModelRequestOptions(_message.Message):
+    __slots__ = ["limit"]
+    LIMIT_FIELD_NUMBER: _ClassVar[int]
+    limit: int
+    def __init__(self, limit: _Optional[int] = ...) -> None: ...
+
 class GetDatasetTrainingsRequest(_message.Message):
     __slots__ = ["dataset_name", "options"]
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
@@ -87,6 +94,14 @@ class GetDatasetTrainingsRequest(_message.Message):
     dataset_name: str
     options: TrainingRequestOptions
     def __init__(self, dataset_name: _Optional[str] = ..., options: _Optional[_Union[TrainingRequestOptions, _Mapping]] = ...) -> None: ...
+
+class GetDatasetModelsRequest(_message.Message):
+    __slots__ = ["dataset_name", "options"]
+    DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
+    OPTIONS_FIELD_NUMBER: _ClassVar[int]
+    dataset_name: str
+    options: ModelRequestOptions
+    def __init__(self, dataset_name: _Optional[str] = ..., options: _Optional[_Union[ModelRequestOptions, _Mapping]] = ...) -> None: ...
 
 class GetTrainingsRequest(_message.Message):
     __slots__ = ["options"]
@@ -99,3 +114,9 @@ class TrainingsResponse(_message.Message):
     TRAININGS_FIELD_NUMBER: _ClassVar[int]
     trainings: _containers.RepeatedCompositeFieldContainer[_training_pb2.Training]
     def __init__(self, trainings: _Optional[_Iterable[_Union[_training_pb2.Training, _Mapping]]] = ...) -> None: ...
+
+class ModelsResponse(_message.Message):
+    __slots__ = ["models"]
+    MODELS_FIELD_NUMBER: _ClassVar[int]
+    models: _containers.RepeatedCompositeFieldContainer[_model_pb2.Model]
+    def __init__(self, models: _Optional[_Iterable[_Union[_model_pb2.Model, _Mapping]]] = ...) -> None: ...
