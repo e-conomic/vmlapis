@@ -20,6 +20,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     tags_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    countryCodes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -138,6 +140,43 @@ private static final long serialVersionUID = 0L;
     return tags_.getByteString(index);
   }
 
+  public static final int COUNTRY_CODES_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList countryCodes_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+   * @return A list containing the countryCodes.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getCountryCodesList() {
+    return countryCodes_;
+  }
+  /**
+   * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+   * @return The count of countryCodes.
+   */
+  public int getCountryCodesCount() {
+    return countryCodes_.size();
+  }
+  /**
+   * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+   * @param index The index of the element to return.
+   * @return The countryCodes at the given index.
+   */
+  public java.lang.String getCountryCodes(int index) {
+    return countryCodes_.get(index);
+  }
+  /**
+   * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the countryCodes at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getCountryCodesBytes(int index) {
+    return countryCodes_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -163,6 +202,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < tags_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, tags_.getRaw(i));
+    }
+    for (int i = 0; i < countryCodes_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, countryCodes_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -197,6 +239,14 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getTagsList().size();
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < countryCodes_.size(); i++) {
+        dataSize += computeStringSizeNoTag(countryCodes_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getCountryCodesList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -220,6 +270,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getFieldsList())) return false;
     if (!getTagsList()
         .equals(other.getTagsList())) return false;
+    if (!getCountryCodesList()
+        .equals(other.getCountryCodesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -244,6 +296,10 @@ private static final long serialVersionUID = 0L;
     if (getTagsCount() > 0) {
       hash = (37 * hash) + TAGS_FIELD_NUMBER;
       hash = (53 * hash) + getTagsList().hashCode();
+    }
+    if (getCountryCodesCount() > 0) {
+      hash = (37 * hash) + COUNTRY_CODES_FIELD_NUMBER;
+      hash = (53 * hash) + getCountryCodesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -382,6 +438,8 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.LazyStringArrayList.emptyList();
       tags_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      countryCodes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -428,6 +486,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         tags_.makeImmutable();
         result.tags_ = tags_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        countryCodes_.makeImmutable();
+        result.countryCodes_ = countryCodes_;
       }
     }
 
@@ -501,6 +563,16 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (!other.countryCodes_.isEmpty()) {
+        if (countryCodes_.isEmpty()) {
+          countryCodes_ = other.countryCodes_;
+          bitField0_ |= 0x00000010;
+        } else {
+          ensureCountryCodesIsMutable();
+          countryCodes_.addAll(other.countryCodes_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -549,6 +621,12 @@ private static final long serialVersionUID = 0L;
               tags_.add(s);
               break;
             } // case 42
+            case 50: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureCountryCodesIsMutable();
+              countryCodes_.add(s);
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -848,6 +926,117 @@ private static final long serialVersionUID = 0L;
       ensureTagsIsMutable();
       tags_.add(value);
       bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList countryCodes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureCountryCodesIsMutable() {
+      if (!countryCodes_.isModifiable()) {
+        countryCodes_ = new com.google.protobuf.LazyStringArrayList(countryCodes_);
+      }
+      bitField0_ |= 0x00000010;
+    }
+    /**
+     * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+     * @return A list containing the countryCodes.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getCountryCodesList() {
+      countryCodes_.makeImmutable();
+      return countryCodes_;
+    }
+    /**
+     * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+     * @return The count of countryCodes.
+     */
+    public int getCountryCodesCount() {
+      return countryCodes_.size();
+    }
+    /**
+     * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+     * @param index The index of the element to return.
+     * @return The countryCodes at the given index.
+     */
+    public java.lang.String getCountryCodes(int index) {
+      return countryCodes_.get(index);
+    }
+    /**
+     * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the countryCodes at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getCountryCodesBytes(int index) {
+      return countryCodes_.getByteString(index);
+    }
+    /**
+     * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+     * @param index The index to set the value at.
+     * @param value The countryCodes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCountryCodes(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureCountryCodesIsMutable();
+      countryCodes_.set(index, value);
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+     * @param value The countryCodes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addCountryCodes(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureCountryCodesIsMutable();
+      countryCodes_.add(value);
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+     * @param values The countryCodes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllCountryCodes(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureCountryCodesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, countryCodes_);
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCountryCodes() {
+      countryCodes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000010);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+     * @param value The bytes of the countryCodes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addCountryCodesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureCountryCodesIsMutable();
+      countryCodes_.add(value);
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }

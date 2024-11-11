@@ -68,4 +68,29 @@ public interface MetricsRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTagsBytes(int index);
+
+  /**
+   * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+   * @return A list containing the countryCodes.
+   */
+  java.util.List<java.lang.String>
+      getCountryCodesList();
+  /**
+   * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+   * @return The count of countryCodes.
+   */
+  int getCountryCodesCount();
+  /**
+   * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+   * @param index The index of the element to return.
+   * @return The countryCodes at the given index.
+   */
+  java.lang.String getCountryCodes(int index);
+  /**
+   * <code>repeated string country_codes = 6 [json_name = "countryCodes"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the countryCodes at the given index.
+   */
+  com.google.protobuf.ByteString
+      getCountryCodesBytes(int index);
 }
