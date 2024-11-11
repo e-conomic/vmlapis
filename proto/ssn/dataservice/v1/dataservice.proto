@@ -274,6 +274,7 @@ message MetricsRequest {
   int64 end_time = 3;
   repeated string fields = 4;
   repeated string tags = 5;
+  repeated string country_codes = 6;
 }
 
 message FeedbackMetrics {
