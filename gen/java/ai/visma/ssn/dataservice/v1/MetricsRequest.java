@@ -22,6 +22,8 @@ private static final long serialVersionUID = 0L;
         com.google.protobuf.LazyStringArrayList.emptyList();
     countryCodes_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    documentTypes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   @java.lang.Override
@@ -177,6 +179,43 @@ private static final long serialVersionUID = 0L;
     return countryCodes_.getByteString(index);
   }
 
+  public static final int DOCUMENT_TYPES_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList documentTypes_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string document_types = 7 [json_name = "documentTypes"];</code>
+   * @return A list containing the documentTypes.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getDocumentTypesList() {
+    return documentTypes_;
+  }
+  /**
+   * <code>repeated string document_types = 7 [json_name = "documentTypes"];</code>
+   * @return The count of documentTypes.
+   */
+  public int getDocumentTypesCount() {
+    return documentTypes_.size();
+  }
+  /**
+   * <code>repeated string document_types = 7 [json_name = "documentTypes"];</code>
+   * @param index The index of the element to return.
+   * @return The documentTypes at the given index.
+   */
+  public java.lang.String getDocumentTypes(int index) {
+    return documentTypes_.get(index);
+  }
+  /**
+   * <code>repeated string document_types = 7 [json_name = "documentTypes"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the documentTypes at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getDocumentTypesBytes(int index) {
+    return documentTypes_.getByteString(index);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -205,6 +244,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < countryCodes_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 6, countryCodes_.getRaw(i));
+    }
+    for (int i = 0; i < documentTypes_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 7, documentTypes_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -247,6 +289,14 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getCountryCodesList().size();
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < documentTypes_.size(); i++) {
+        dataSize += computeStringSizeNoTag(documentTypes_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getDocumentTypesList().size();
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -272,6 +322,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getTagsList())) return false;
     if (!getCountryCodesList()
         .equals(other.getCountryCodesList())) return false;
+    if (!getDocumentTypesList()
+        .equals(other.getDocumentTypesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -300,6 +352,10 @@ private static final long serialVersionUID = 0L;
     if (getCountryCodesCount() > 0) {
       hash = (37 * hash) + COUNTRY_CODES_FIELD_NUMBER;
       hash = (53 * hash) + getCountryCodesList().hashCode();
+    }
+    if (getDocumentTypesCount() > 0) {
+      hash = (37 * hash) + DOCUMENT_TYPES_FIELD_NUMBER;
+      hash = (53 * hash) + getDocumentTypesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -440,6 +496,8 @@ private static final long serialVersionUID = 0L;
           com.google.protobuf.LazyStringArrayList.emptyList();
       countryCodes_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
+      documentTypes_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -490,6 +548,10 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         countryCodes_.makeImmutable();
         result.countryCodes_ = countryCodes_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        documentTypes_.makeImmutable();
+        result.documentTypes_ = documentTypes_;
       }
     }
 
@@ -573,6 +635,16 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
+      if (!other.documentTypes_.isEmpty()) {
+        if (documentTypes_.isEmpty()) {
+          documentTypes_ = other.documentTypes_;
+          bitField0_ |= 0x00000020;
+        } else {
+          ensureDocumentTypesIsMutable();
+          documentTypes_.addAll(other.documentTypes_);
+        }
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -627,6 +699,12 @@ private static final long serialVersionUID = 0L;
               countryCodes_.add(s);
               break;
             } // case 50
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureDocumentTypesIsMutable();
+              documentTypes_.add(s);
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1037,6 +1115,117 @@ private static final long serialVersionUID = 0L;
       ensureCountryCodesIsMutable();
       countryCodes_.add(value);
       bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList documentTypes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureDocumentTypesIsMutable() {
+      if (!documentTypes_.isModifiable()) {
+        documentTypes_ = new com.google.protobuf.LazyStringArrayList(documentTypes_);
+      }
+      bitField0_ |= 0x00000020;
+    }
+    /**
+     * <code>repeated string document_types = 7 [json_name = "documentTypes"];</code>
+     * @return A list containing the documentTypes.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getDocumentTypesList() {
+      documentTypes_.makeImmutable();
+      return documentTypes_;
+    }
+    /**
+     * <code>repeated string document_types = 7 [json_name = "documentTypes"];</code>
+     * @return The count of documentTypes.
+     */
+    public int getDocumentTypesCount() {
+      return documentTypes_.size();
+    }
+    /**
+     * <code>repeated string document_types = 7 [json_name = "documentTypes"];</code>
+     * @param index The index of the element to return.
+     * @return The documentTypes at the given index.
+     */
+    public java.lang.String getDocumentTypes(int index) {
+      return documentTypes_.get(index);
+    }
+    /**
+     * <code>repeated string document_types = 7 [json_name = "documentTypes"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the documentTypes at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getDocumentTypesBytes(int index) {
+      return documentTypes_.getByteString(index);
+    }
+    /**
+     * <code>repeated string document_types = 7 [json_name = "documentTypes"];</code>
+     * @param index The index to set the value at.
+     * @param value The documentTypes to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDocumentTypes(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureDocumentTypesIsMutable();
+      documentTypes_.set(index, value);
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string document_types = 7 [json_name = "documentTypes"];</code>
+     * @param value The documentTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addDocumentTypes(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureDocumentTypesIsMutable();
+      documentTypes_.add(value);
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string document_types = 7 [json_name = "documentTypes"];</code>
+     * @param values The documentTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllDocumentTypes(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureDocumentTypesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, documentTypes_);
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string document_types = 7 [json_name = "documentTypes"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDocumentTypes() {
+      documentTypes_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000020);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string document_types = 7 [json_name = "documentTypes"];</code>
+     * @param value The bytes of the documentTypes to add.
+     * @return This builder for chaining.
+     */
+    public Builder addDocumentTypesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureDocumentTypesIsMutable();
+      documentTypes_.add(value);
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

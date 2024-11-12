@@ -1311,6 +1311,11 @@ export class MetricsRequest extends jspb.Message {
   clearCountryCodesList(): MetricsRequest;
   addCountryCodes(value: string, index?: number): MetricsRequest;
 
+  getDocumentTypesList(): Array<string>;
+  setDocumentTypesList(value: Array<string>): MetricsRequest;
+  clearDocumentTypesList(): MetricsRequest;
+  addDocumentTypes(value: string, index?: number): MetricsRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): MetricsRequest.AsObject;
   static toObject(includeInstance: boolean, msg: MetricsRequest): MetricsRequest.AsObject;
@@ -1326,6 +1331,7 @@ export namespace MetricsRequest {
     fieldsList: Array<string>,
     tagsList: Array<string>,
     countryCodesList: Array<string>,
+    documentTypesList: Array<string>,
   }
 }
 

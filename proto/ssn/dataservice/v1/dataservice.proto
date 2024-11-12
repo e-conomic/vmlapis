@@ -275,6 +275,7 @@ message MetricsRequest {
   repeated string fields = 4;
   repeated string tags = 5;
   repeated string country_codes = 6;
+  repeated string document_types = 7;
 }
 
 message FeedbackMetrics {
