@@ -155,5 +155,5 @@ message VatDistributionRequest {
 }
 
 message VatDistributionResponse {
-  repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 1;
+  repeated ssn.type.VatDistributionCandidate vat_distribution = 1;
 }
