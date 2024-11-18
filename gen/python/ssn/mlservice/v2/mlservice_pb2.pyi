@@ -246,7 +246,7 @@ class VatDistributionRequest(_message.Message):
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., country_code: _Optional[str] = ..., images: _Optional[_Iterable[bytes]] = ...) -> None: ...
 
 class VatDistributionResponse(_message.Message):
-    __slots__ = ["vat_distribution_candidates"]
-    VAT_DISTRIBUTION_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
-    vat_distribution_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.VatDistributionCandidate]
-    def __init__(self, vat_distribution_candidates: _Optional[_Iterable[_Union[_candidate_pb2.VatDistributionCandidate, _Mapping]]] = ...) -> None: ...
+    __slots__ = ["vat_distribution"]
+    VAT_DISTRIBUTION_FIELD_NUMBER: _ClassVar[int]
+    vat_distribution: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.VatDistributionCandidate]
+    def __init__(self, vat_distribution: _Optional[_Iterable[_Union[_candidate_pb2.VatDistributionCandidate, _Mapping]]] = ...) -> None: ...

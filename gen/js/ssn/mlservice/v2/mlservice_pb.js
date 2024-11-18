@@ -5685,7 +5685,7 @@ proto.ssn.mlservice.v2.VatDistributionResponse.prototype.toObject = function(opt
  */
 proto.ssn.mlservice.v2.VatDistributionResponse.toObject = function(includeInstance, msg) {
   var f, obj = {
-    vatDistributionCandidatesList: jspb.Message.toObjectList(msg.getVatDistributionCandidatesList(),
+    vatDistributionList: jspb.Message.toObjectList(msg.getVatDistributionList(),
     ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance)
   };
 
@@ -5726,7 +5726,7 @@ proto.ssn.mlservice.v2.VatDistributionResponse.deserializeBinaryFromReader = fun
     case 1:
       var value = new ssn_type_candidate_pb.VatDistributionCandidate;
       reader.readMessage(value,ssn_type_candidate_pb.VatDistributionCandidate.deserializeBinaryFromReader);
-      msg.addVatDistributionCandidates(value);
+      msg.addVatDistribution(value);
       break;
     default:
       reader.skipField();
@@ -5757,7 +5757,7 @@ proto.ssn.mlservice.v2.VatDistributionResponse.prototype.serializeBinary = funct
  */
 proto.ssn.mlservice.v2.VatDistributionResponse.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
-  f = message.getVatDistributionCandidatesList();
+  f = message.getVatDistributionList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       1,
@@ -5769,10 +5769,10 @@ proto.ssn.mlservice.v2.VatDistributionResponse.serializeBinaryToWriter = functio
 
 
 /**
- * repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 1;
+ * repeated ssn.type.VatDistributionCandidate vat_distribution = 1;
  * @return {!Array<!proto.ssn.type.VatDistributionCandidate>}
  */
-proto.ssn.mlservice.v2.VatDistributionResponse.prototype.getVatDistributionCandidatesList = function() {
+proto.ssn.mlservice.v2.VatDistributionResponse.prototype.getVatDistributionList = function() {
   return /** @type{!Array<!proto.ssn.type.VatDistributionCandidate>} */ (
     jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatDistributionCandidate, 1));
 };
@@ -5782,7 +5782,7 @@ proto.ssn.mlservice.v2.VatDistributionResponse.prototype.getVatDistributionCandi
  * @param {!Array<!proto.ssn.type.VatDistributionCandidate>} value
  * @return {!proto.ssn.mlservice.v2.VatDistributionResponse} returns this
 */
-proto.ssn.mlservice.v2.VatDistributionResponse.prototype.setVatDistributionCandidatesList = function(value) {
+proto.ssn.mlservice.v2.VatDistributionResponse.prototype.setVatDistributionList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 1, value);
 };
 
@@ -5792,7 +5792,7 @@ proto.ssn.mlservice.v2.VatDistributionResponse.prototype.setVatDistributionCandi
  * @param {number=} opt_index
  * @return {!proto.ssn.type.VatDistributionCandidate}
  */
-proto.ssn.mlservice.v2.VatDistributionResponse.prototype.addVatDistributionCandidates = function(opt_value, opt_index) {
+proto.ssn.mlservice.v2.VatDistributionResponse.prototype.addVatDistribution = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 1, opt_value, proto.ssn.type.VatDistributionCandidate, opt_index);
 };
 
@@ -5801,8 +5801,8 @@ proto.ssn.mlservice.v2.VatDistributionResponse.prototype.addVatDistributionCandi
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.mlservice.v2.VatDistributionResponse} returns this
  */
-proto.ssn.mlservice.v2.VatDistributionResponse.prototype.clearVatDistributionCandidatesList = function() {
-  return this.setVatDistributionCandidatesList([]);
+proto.ssn.mlservice.v2.VatDistributionResponse.prototype.clearVatDistributionList = function() {
+  return this.setVatDistributionList([]);
 };
 
 
