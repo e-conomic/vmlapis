@@ -8,26 +8,26 @@ public interface VatDistributionResponseOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 1 [json_name = "vatDistribution"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 1 [json_name = "vatDistributionCandidates"];</code>
    */
   java.util.List<ai.visma.ssn.type.VatDistributionCandidate> 
-      getVatDistributionList();
+      getVatDistributionCandidatesList();
   /**
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 1 [json_name = "vatDistribution"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 1 [json_name = "vatDistributionCandidates"];</code>
    */
-  ai.visma.ssn.type.VatDistributionCandidate getVatDistribution(int index);
+  ai.visma.ssn.type.VatDistributionCandidate getVatDistributionCandidates(int index);
   /**
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 1 [json_name = "vatDistribution"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 1 [json_name = "vatDistributionCandidates"];</code>
    */
-  int getVatDistributionCount();
+  int getVatDistributionCandidatesCount();
   /**
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 1 [json_name = "vatDistribution"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 1 [json_name = "vatDistributionCandidates"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.VatDistributionCandidateOrBuilder> 
-      getVatDistributionOrBuilderList();
+      getVatDistributionCandidatesOrBuilderList();
   /**
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 1 [json_name = "vatDistribution"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 1 [json_name = "vatDistributionCandidates"];</code>
    */
-  ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionOrBuilder(
+  ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionCandidatesOrBuilder(
       int index);
 }
