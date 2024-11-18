@@ -1672,7 +1672,7 @@
           },
           "title": "The page texts of the document"
         },
-        "vatDistributionCandidates": {
+        "vatDistribution": {
           "type": "array",
           "items": {
             "type": "object",

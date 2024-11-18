@@ -62,7 +62,7 @@ private static final long serialVersionUID = 0L;
     purchaseLines_ = java.util.Collections.emptyList();
     answers_ = java.util.Collections.emptyList();
     pageTexts_ = java.util.Collections.emptyList();
-    vatDistributionCandidates_ = java.util.Collections.emptyList();
+    vatDistribution_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -3094,65 +3094,65 @@ private static final long serialVersionUID = 0L;
     return pageTexts_.get(index);
   }
 
-  public static final int VAT_DISTRIBUTION_CANDIDATES_FIELD_NUMBER = 48;
+  public static final int VAT_DISTRIBUTION_FIELD_NUMBER = 48;
   @SuppressWarnings("serial")
-  private java.util.List<ai.visma.ssn.type.VatDistributionCandidate> vatDistributionCandidates_;
+  private java.util.List<ai.visma.ssn.type.VatDistributionCandidate> vatDistribution_;
   /**
    * <pre>
    * Vat levels for the document, each vat level has vat level percentage and vat level amount
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
    */
   @java.lang.Override
-  public java.util.List<ai.visma.ssn.type.VatDistributionCandidate> getVatDistributionCandidatesList() {
-    return vatDistributionCandidates_;
+  public java.util.List<ai.visma.ssn.type.VatDistributionCandidate> getVatDistributionList() {
+    return vatDistribution_;
   }
   /**
    * <pre>
    * Vat levels for the document, each vat level has vat level percentage and vat level amount
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ssn.type.VatDistributionCandidateOrBuilder> 
-      getVatDistributionCandidatesOrBuilderList() {
-    return vatDistributionCandidates_;
+      getVatDistributionOrBuilderList() {
+    return vatDistribution_;
   }
   /**
    * <pre>
    * Vat levels for the document, each vat level has vat level percentage and vat level amount
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
    */
   @java.lang.Override
-  public int getVatDistributionCandidatesCount() {
-    return vatDistributionCandidates_.size();
+  public int getVatDistributionCount() {
+    return vatDistribution_.size();
   }
   /**
    * <pre>
    * Vat levels for the document, each vat level has vat level percentage and vat level amount
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.VatDistributionCandidate getVatDistributionCandidates(int index) {
-    return vatDistributionCandidates_.get(index);
+  public ai.visma.ssn.type.VatDistributionCandidate getVatDistribution(int index) {
+    return vatDistribution_.get(index);
   }
   /**
    * <pre>
    * Vat levels for the document, each vat level has vat level percentage and vat level amount
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
    */
   @java.lang.Override
-  public ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionCandidatesOrBuilder(
+  public ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionOrBuilder(
       int index) {
-    return vatDistributionCandidates_.get(index);
+    return vatDistribution_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -3310,8 +3310,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < pageTexts_.size(); i++) {
       output.writeMessage(47, pageTexts_.get(i));
     }
-    for (int i = 0; i < vatDistributionCandidates_.size(); i++) {
-      output.writeMessage(48, vatDistributionCandidates_.get(i));
+    for (int i = 0; i < vatDistribution_.size(); i++) {
+      output.writeMessage(48, vatDistribution_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -3507,9 +3507,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(47, pageTexts_.get(i));
     }
-    for (int i = 0; i < vatDistributionCandidates_.size(); i++) {
+    for (int i = 0; i < vatDistribution_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(48, vatDistributionCandidates_.get(i));
+        .computeMessageSize(48, vatDistribution_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -3623,8 +3623,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getAnswersList())) return false;
     if (!getPageTextsList()
         .equals(other.getPageTextsList())) return false;
-    if (!getVatDistributionCandidatesList()
-        .equals(other.getVatDistributionCandidatesList())) return false;
+    if (!getVatDistributionList()
+        .equals(other.getVatDistributionList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3818,9 +3818,9 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + PAGE_TEXTS_FIELD_NUMBER;
       hash = (53 * hash) + getPageTextsList().hashCode();
     }
-    if (getVatDistributionCandidatesCount() > 0) {
-      hash = (37 * hash) + VAT_DISTRIBUTION_CANDIDATES_FIELD_NUMBER;
-      hash = (53 * hash) + getVatDistributionCandidatesList().hashCode();
+    if (getVatDistributionCount() > 0) {
+      hash = (37 * hash) + VAT_DISTRIBUTION_FIELD_NUMBER;
+      hash = (53 * hash) + getVatDistributionList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -4263,11 +4263,11 @@ private static final long serialVersionUID = 0L;
         pageTextsBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00004000);
-      if (vatDistributionCandidatesBuilder_ == null) {
-        vatDistributionCandidates_ = java.util.Collections.emptyList();
+      if (vatDistributionBuilder_ == null) {
+        vatDistribution_ = java.util.Collections.emptyList();
       } else {
-        vatDistributionCandidates_ = null;
-        vatDistributionCandidatesBuilder_.clear();
+        vatDistribution_ = null;
+        vatDistributionBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00008000);
       return this;
@@ -4691,14 +4691,14 @@ private static final long serialVersionUID = 0L;
       } else {
         result.pageTexts_ = pageTextsBuilder_.build();
       }
-      if (vatDistributionCandidatesBuilder_ == null) {
+      if (vatDistributionBuilder_ == null) {
         if (((bitField1_ & 0x00008000) != 0)) {
-          vatDistributionCandidates_ = java.util.Collections.unmodifiableList(vatDistributionCandidates_);
+          vatDistribution_ = java.util.Collections.unmodifiableList(vatDistribution_);
           bitField1_ = (bitField1_ & ~0x00008000);
         }
-        result.vatDistributionCandidates_ = vatDistributionCandidates_;
+        result.vatDistribution_ = vatDistribution_;
       } else {
-        result.vatDistributionCandidates_ = vatDistributionCandidatesBuilder_.build();
+        result.vatDistribution_ = vatDistributionBuilder_.build();
       }
     }
 
@@ -5904,29 +5904,29 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (vatDistributionCandidatesBuilder_ == null) {
-        if (!other.vatDistributionCandidates_.isEmpty()) {
-          if (vatDistributionCandidates_.isEmpty()) {
-            vatDistributionCandidates_ = other.vatDistributionCandidates_;
+      if (vatDistributionBuilder_ == null) {
+        if (!other.vatDistribution_.isEmpty()) {
+          if (vatDistribution_.isEmpty()) {
+            vatDistribution_ = other.vatDistribution_;
             bitField1_ = (bitField1_ & ~0x00008000);
           } else {
-            ensureVatDistributionCandidatesIsMutable();
-            vatDistributionCandidates_.addAll(other.vatDistributionCandidates_);
+            ensureVatDistributionIsMutable();
+            vatDistribution_.addAll(other.vatDistribution_);
           }
           onChanged();
         }
       } else {
-        if (!other.vatDistributionCandidates_.isEmpty()) {
-          if (vatDistributionCandidatesBuilder_.isEmpty()) {
-            vatDistributionCandidatesBuilder_.dispose();
-            vatDistributionCandidatesBuilder_ = null;
-            vatDistributionCandidates_ = other.vatDistributionCandidates_;
+        if (!other.vatDistribution_.isEmpty()) {
+          if (vatDistributionBuilder_.isEmpty()) {
+            vatDistributionBuilder_.dispose();
+            vatDistributionBuilder_ = null;
+            vatDistribution_ = other.vatDistribution_;
             bitField1_ = (bitField1_ & ~0x00008000);
-            vatDistributionCandidatesBuilder_ = 
+            vatDistributionBuilder_ = 
               com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
-                 getVatDistributionCandidatesFieldBuilder() : null;
+                 getVatDistributionFieldBuilder() : null;
           } else {
-            vatDistributionCandidatesBuilder_.addAllMessages(other.vatDistributionCandidates_);
+            vatDistributionBuilder_.addAllMessages(other.vatDistribution_);
           }
         }
       }
@@ -6542,11 +6542,11 @@ private static final long serialVersionUID = 0L;
                   input.readMessage(
                       ai.visma.ssn.type.VatDistributionCandidate.parser(),
                       extensionRegistry);
-              if (vatDistributionCandidatesBuilder_ == null) {
-                ensureVatDistributionCandidatesIsMutable();
-                vatDistributionCandidates_.add(m);
+              if (vatDistributionBuilder_ == null) {
+                ensureVatDistributionIsMutable();
+                vatDistribution_.add(m);
               } else {
-                vatDistributionCandidatesBuilder_.addMessage(m);
+                vatDistributionBuilder_.addMessage(m);
               }
               break;
             } // case 386
@@ -21158,30 +21158,30 @@ private static final long serialVersionUID = 0L;
       return pageTextsBuilder_;
     }
 
-    private java.util.List<ai.visma.ssn.type.VatDistributionCandidate> vatDistributionCandidates_ =
+    private java.util.List<ai.visma.ssn.type.VatDistributionCandidate> vatDistribution_ =
       java.util.Collections.emptyList();
-    private void ensureVatDistributionCandidatesIsMutable() {
+    private void ensureVatDistributionIsMutable() {
       if (!((bitField1_ & 0x00008000) != 0)) {
-        vatDistributionCandidates_ = new java.util.ArrayList<ai.visma.ssn.type.VatDistributionCandidate>(vatDistributionCandidates_);
+        vatDistribution_ = new java.util.ArrayList<ai.visma.ssn.type.VatDistributionCandidate>(vatDistribution_);
         bitField1_ |= 0x00008000;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilderV3<
-        ai.visma.ssn.type.VatDistributionCandidate, ai.visma.ssn.type.VatDistributionCandidate.Builder, ai.visma.ssn.type.VatDistributionCandidateOrBuilder> vatDistributionCandidatesBuilder_;
+        ai.visma.ssn.type.VatDistributionCandidate, ai.visma.ssn.type.VatDistributionCandidate.Builder, ai.visma.ssn.type.VatDistributionCandidateOrBuilder> vatDistributionBuilder_;
 
     /**
      * <pre>
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public java.util.List<ai.visma.ssn.type.VatDistributionCandidate> getVatDistributionCandidatesList() {
-      if (vatDistributionCandidatesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(vatDistributionCandidates_);
+    public java.util.List<ai.visma.ssn.type.VatDistributionCandidate> getVatDistributionList() {
+      if (vatDistributionBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(vatDistribution_);
       } else {
-        return vatDistributionCandidatesBuilder_.getMessageList();
+        return vatDistributionBuilder_.getMessageList();
       }
     }
     /**
@@ -21189,13 +21189,13 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public int getVatDistributionCandidatesCount() {
-      if (vatDistributionCandidatesBuilder_ == null) {
-        return vatDistributionCandidates_.size();
+    public int getVatDistributionCount() {
+      if (vatDistributionBuilder_ == null) {
+        return vatDistribution_.size();
       } else {
-        return vatDistributionCandidatesBuilder_.getCount();
+        return vatDistributionBuilder_.getCount();
       }
     }
     /**
@@ -21203,13 +21203,13 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public ai.visma.ssn.type.VatDistributionCandidate getVatDistributionCandidates(int index) {
-      if (vatDistributionCandidatesBuilder_ == null) {
-        return vatDistributionCandidates_.get(index);
+    public ai.visma.ssn.type.VatDistributionCandidate getVatDistribution(int index) {
+      if (vatDistributionBuilder_ == null) {
+        return vatDistribution_.get(index);
       } else {
-        return vatDistributionCandidatesBuilder_.getMessage(index);
+        return vatDistributionBuilder_.getMessage(index);
       }
     }
     /**
@@ -21217,19 +21217,19 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public Builder setVatDistributionCandidates(
+    public Builder setVatDistribution(
         int index, ai.visma.ssn.type.VatDistributionCandidate value) {
-      if (vatDistributionCandidatesBuilder_ == null) {
+      if (vatDistributionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureVatDistributionCandidatesIsMutable();
-        vatDistributionCandidates_.set(index, value);
+        ensureVatDistributionIsMutable();
+        vatDistribution_.set(index, value);
         onChanged();
       } else {
-        vatDistributionCandidatesBuilder_.setMessage(index, value);
+        vatDistributionBuilder_.setMessage(index, value);
       }
       return this;
     }
@@ -21238,16 +21238,16 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public Builder setVatDistributionCandidates(
+    public Builder setVatDistribution(
         int index, ai.visma.ssn.type.VatDistributionCandidate.Builder builderForValue) {
-      if (vatDistributionCandidatesBuilder_ == null) {
-        ensureVatDistributionCandidatesIsMutable();
-        vatDistributionCandidates_.set(index, builderForValue.build());
+      if (vatDistributionBuilder_ == null) {
+        ensureVatDistributionIsMutable();
+        vatDistribution_.set(index, builderForValue.build());
         onChanged();
       } else {
-        vatDistributionCandidatesBuilder_.setMessage(index, builderForValue.build());
+        vatDistributionBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -21256,18 +21256,18 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public Builder addVatDistributionCandidates(ai.visma.ssn.type.VatDistributionCandidate value) {
-      if (vatDistributionCandidatesBuilder_ == null) {
+    public Builder addVatDistribution(ai.visma.ssn.type.VatDistributionCandidate value) {
+      if (vatDistributionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureVatDistributionCandidatesIsMutable();
-        vatDistributionCandidates_.add(value);
+        ensureVatDistributionIsMutable();
+        vatDistribution_.add(value);
         onChanged();
       } else {
-        vatDistributionCandidatesBuilder_.addMessage(value);
+        vatDistributionBuilder_.addMessage(value);
       }
       return this;
     }
@@ -21276,19 +21276,19 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public Builder addVatDistributionCandidates(
+    public Builder addVatDistribution(
         int index, ai.visma.ssn.type.VatDistributionCandidate value) {
-      if (vatDistributionCandidatesBuilder_ == null) {
+      if (vatDistributionBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureVatDistributionCandidatesIsMutable();
-        vatDistributionCandidates_.add(index, value);
+        ensureVatDistributionIsMutable();
+        vatDistribution_.add(index, value);
         onChanged();
       } else {
-        vatDistributionCandidatesBuilder_.addMessage(index, value);
+        vatDistributionBuilder_.addMessage(index, value);
       }
       return this;
     }
@@ -21297,16 +21297,16 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public Builder addVatDistributionCandidates(
+    public Builder addVatDistribution(
         ai.visma.ssn.type.VatDistributionCandidate.Builder builderForValue) {
-      if (vatDistributionCandidatesBuilder_ == null) {
-        ensureVatDistributionCandidatesIsMutable();
-        vatDistributionCandidates_.add(builderForValue.build());
+      if (vatDistributionBuilder_ == null) {
+        ensureVatDistributionIsMutable();
+        vatDistribution_.add(builderForValue.build());
         onChanged();
       } else {
-        vatDistributionCandidatesBuilder_.addMessage(builderForValue.build());
+        vatDistributionBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
@@ -21315,16 +21315,16 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public Builder addVatDistributionCandidates(
+    public Builder addVatDistribution(
         int index, ai.visma.ssn.type.VatDistributionCandidate.Builder builderForValue) {
-      if (vatDistributionCandidatesBuilder_ == null) {
-        ensureVatDistributionCandidatesIsMutable();
-        vatDistributionCandidates_.add(index, builderForValue.build());
+      if (vatDistributionBuilder_ == null) {
+        ensureVatDistributionIsMutable();
+        vatDistribution_.add(index, builderForValue.build());
         onChanged();
       } else {
-        vatDistributionCandidatesBuilder_.addMessage(index, builderForValue.build());
+        vatDistributionBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
@@ -21333,17 +21333,17 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public Builder addAllVatDistributionCandidates(
+    public Builder addAllVatDistribution(
         java.lang.Iterable<? extends ai.visma.ssn.type.VatDistributionCandidate> values) {
-      if (vatDistributionCandidatesBuilder_ == null) {
-        ensureVatDistributionCandidatesIsMutable();
+      if (vatDistributionBuilder_ == null) {
+        ensureVatDistributionIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, vatDistributionCandidates_);
+            values, vatDistribution_);
         onChanged();
       } else {
-        vatDistributionCandidatesBuilder_.addAllMessages(values);
+        vatDistributionBuilder_.addAllMessages(values);
       }
       return this;
     }
@@ -21352,15 +21352,15 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public Builder clearVatDistributionCandidates() {
-      if (vatDistributionCandidatesBuilder_ == null) {
-        vatDistributionCandidates_ = java.util.Collections.emptyList();
+    public Builder clearVatDistribution() {
+      if (vatDistributionBuilder_ == null) {
+        vatDistribution_ = java.util.Collections.emptyList();
         bitField1_ = (bitField1_ & ~0x00008000);
         onChanged();
       } else {
-        vatDistributionCandidatesBuilder_.clear();
+        vatDistributionBuilder_.clear();
       }
       return this;
     }
@@ -21369,15 +21369,15 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public Builder removeVatDistributionCandidates(int index) {
-      if (vatDistributionCandidatesBuilder_ == null) {
-        ensureVatDistributionCandidatesIsMutable();
-        vatDistributionCandidates_.remove(index);
+    public Builder removeVatDistribution(int index) {
+      if (vatDistributionBuilder_ == null) {
+        ensureVatDistributionIsMutable();
+        vatDistribution_.remove(index);
         onChanged();
       } else {
-        vatDistributionCandidatesBuilder_.remove(index);
+        vatDistributionBuilder_.remove(index);
       }
       return this;
     }
@@ -21386,24 +21386,24 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public ai.visma.ssn.type.VatDistributionCandidate.Builder getVatDistributionCandidatesBuilder(
+    public ai.visma.ssn.type.VatDistributionCandidate.Builder getVatDistributionBuilder(
         int index) {
-      return getVatDistributionCandidatesFieldBuilder().getBuilder(index);
+      return getVatDistributionFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionCandidatesOrBuilder(
+    public ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionOrBuilder(
         int index) {
-      if (vatDistributionCandidatesBuilder_ == null) {
-        return vatDistributionCandidates_.get(index);  } else {
-        return vatDistributionCandidatesBuilder_.getMessageOrBuilder(index);
+      if (vatDistributionBuilder_ == null) {
+        return vatDistribution_.get(index);  } else {
+        return vatDistributionBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
@@ -21411,14 +21411,14 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
     public java.util.List<? extends ai.visma.ssn.type.VatDistributionCandidateOrBuilder> 
-         getVatDistributionCandidatesOrBuilderList() {
-      if (vatDistributionCandidatesBuilder_ != null) {
-        return vatDistributionCandidatesBuilder_.getMessageOrBuilderList();
+         getVatDistributionOrBuilderList() {
+      if (vatDistributionBuilder_ != null) {
+        return vatDistributionBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(vatDistributionCandidates_);
+        return java.util.Collections.unmodifiableList(vatDistribution_);
       }
     }
     /**
@@ -21426,10 +21426,10 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public ai.visma.ssn.type.VatDistributionCandidate.Builder addVatDistributionCandidatesBuilder() {
-      return getVatDistributionCandidatesFieldBuilder().addBuilder(
+    public ai.visma.ssn.type.VatDistributionCandidate.Builder addVatDistributionBuilder() {
+      return getVatDistributionFieldBuilder().addBuilder(
           ai.visma.ssn.type.VatDistributionCandidate.getDefaultInstance());
     }
     /**
@@ -21437,11 +21437,11 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
-    public ai.visma.ssn.type.VatDistributionCandidate.Builder addVatDistributionCandidatesBuilder(
+    public ai.visma.ssn.type.VatDistributionCandidate.Builder addVatDistributionBuilder(
         int index) {
-      return getVatDistributionCandidatesFieldBuilder().addBuilder(
+      return getVatDistributionFieldBuilder().addBuilder(
           index, ai.visma.ssn.type.VatDistributionCandidate.getDefaultInstance());
     }
     /**
@@ -21449,25 +21449,25 @@ private static final long serialVersionUID = 0L;
      * Vat levels for the document, each vat level has vat level percentage and vat level amount
      * </pre>
      *
-     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+     * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
      */
     public java.util.List<ai.visma.ssn.type.VatDistributionCandidate.Builder> 
-         getVatDistributionCandidatesBuilderList() {
-      return getVatDistributionCandidatesFieldBuilder().getBuilderList();
+         getVatDistributionBuilderList() {
+      return getVatDistributionFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilderV3<
         ai.visma.ssn.type.VatDistributionCandidate, ai.visma.ssn.type.VatDistributionCandidate.Builder, ai.visma.ssn.type.VatDistributionCandidateOrBuilder> 
-        getVatDistributionCandidatesFieldBuilder() {
-      if (vatDistributionCandidatesBuilder_ == null) {
-        vatDistributionCandidatesBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+        getVatDistributionFieldBuilder() {
+      if (vatDistributionBuilder_ == null) {
+        vatDistributionBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
             ai.visma.ssn.type.VatDistributionCandidate, ai.visma.ssn.type.VatDistributionCandidate.Builder, ai.visma.ssn.type.VatDistributionCandidateOrBuilder>(
-                vatDistributionCandidates_,
+                vatDistribution_,
                 ((bitField1_ & 0x00008000) != 0),
                 getParentForChildren(),
                 isClean());
-        vatDistributionCandidates_ = null;
+        vatDistribution_ = null;
       }
-      return vatDistributionCandidatesBuilder_;
+      return vatDistributionBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
