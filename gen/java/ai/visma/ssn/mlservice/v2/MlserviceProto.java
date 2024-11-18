@@ -226,23 +226,23 @@ public final class MlserviceProto {
       "\234\001\n\026VatDistributionRequest\022A\n\017text_annot" +
       "ation\030\001 \001(\0132\030.ssn.type.TextAnnotationR\016t" +
       "extAnnotation\022!\n\014country_code\030\003 \001(\tR\013cou" +
-      "ntryCode\022\026\n\006images\030\004 \003(\014R\006imagesJ\004\010\002\020\003\"h" +
-      "\n\027VatDistributionResponse\022M\n\020vat_distrib" +
-      "ution\030\001 \003(\0132\".ssn.type.VatDistributionCa" +
-      "ndidateR\017vatDistribution2\230\002\n\tMlService\022W" +
-      "\n\nFeatureGen\022#.ssn.mlservice.v2.FeatureG" +
-      "enRequest\032$.ssn.mlservice.v2.FeatureGenR" +
-      "esponse\022N\n\007Predict\022 .ssn.mlservice.v2.Pr" +
-      "edictRequest\032!.ssn.mlservice.v2.PredictR" +
-      "esponse\022b\n\021FeatureGenPredict\022*.ssn.mlser" +
-      "vice.v2.FeatureGenPredictRequest\032!.ssn.m" +
-      "lservice.v2.PredictResponseB\315\001\n\031ai.visma" +
-      ".ssn.mlservice.v2B\016MlserviceProtoP\001Z>git" +
-      "hub.com/e-conomic/vmlapis/gen/go/ssn/mls" +
-      "ervice/v2;mlservice\242\002\003SMX\252\002\020Ssn.Mlservic" +
-      "e.V2\312\002\020Ssn\\Mlservice\\V2\342\002\034Ssn\\Mlservice\\" +
-      "V2\\GPBMetadata\352\002\022Ssn::Mlservice::V2b\006pro" +
-      "to3"
+      "ntryCode\022\026\n\006images\030\004 \003(\014R\006imagesJ\004\010\002\020\003\"}" +
+      "\n\027VatDistributionResponse\022b\n\033vat_distrib" +
+      "ution_candidates\030\001 \003(\0132\".ssn.type.VatDis" +
+      "tributionCandidateR\031vatDistributionCandi" +
+      "dates2\230\002\n\tMlService\022W\n\nFeatureGen\022#.ssn." +
+      "mlservice.v2.FeatureGenRequest\032$.ssn.mls" +
+      "ervice.v2.FeatureGenResponse\022N\n\007Predict\022" +
+      " .ssn.mlservice.v2.PredictRequest\032!.ssn." +
+      "mlservice.v2.PredictResponse\022b\n\021FeatureG" +
+      "enPredict\022*.ssn.mlservice.v2.FeatureGenP" +
+      "redictRequest\032!.ssn.mlservice.v2.Predict" +
+      "ResponseB\315\001\n\031ai.visma.ssn.mlservice.v2B\016" +
+      "MlserviceProtoP\001Z>github.com/e-conomic/v" +
+      "mlapis/gen/go/ssn/mlservice/v2;mlservice" +
+      "\242\002\003SMX\252\002\020Ssn.Mlservice.V2\312\002\020Ssn\\Mlservic" +
+      "e\\V2\342\002\034Ssn\\Mlservice\\V2\\GPBMetadata\352\002\022Ss" +
+      "n::Mlservice::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -322,7 +322,7 @@ public final class MlserviceProto {
     internal_static_ssn_mlservice_v2_VatDistributionResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_mlservice_v2_VatDistributionResponse_descriptor,
-        new java.lang.String[] { "VatDistribution", });
+        new java.lang.String[] { "VatDistributionCandidates", });
     com.google.type.DateProto.getDescriptor();
     ai.visma.ssn.type.CandidateProto.getDescriptor();
     ai.visma.ssn.type.TextAnnotationProto.getDescriptor();

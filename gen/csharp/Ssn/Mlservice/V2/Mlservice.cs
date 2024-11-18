@@ -151,21 +151,21 @@ namespace Ssn.Mlservice.V2 {
             "ckNhbmRpZGF0ZVIHYW5zd2VycyKcAQoWVmF0RGlzdHJpYnV0aW9uUmVxdWVz",
             "dBJBCg90ZXh0X2Fubm90YXRpb24YASABKAsyGC5zc24udHlwZS5UZXh0QW5u",
             "b3RhdGlvblIOdGV4dEFubm90YXRpb24SIQoMY291bnRyeV9jb2RlGAMgASgJ",
-            "Ugtjb3VudHJ5Q29kZRIWCgZpbWFnZXMYBCADKAxSBmltYWdlc0oECAIQAyJo",
-            "ChdWYXREaXN0cmlidXRpb25SZXNwb25zZRJNChB2YXRfZGlzdHJpYnV0aW9u",
-            "GAEgAygLMiIuc3NuLnR5cGUuVmF0RGlzdHJpYnV0aW9uQ2FuZGlkYXRlUg92",
-            "YXREaXN0cmlidXRpb24ymAIKCU1sU2VydmljZRJXCgpGZWF0dXJlR2VuEiMu",
-            "c3NuLm1sc2VydmljZS52Mi5GZWF0dXJlR2VuUmVxdWVzdBokLnNzbi5tbHNl",
-            "cnZpY2UudjIuRmVhdHVyZUdlblJlc3BvbnNlEk4KB1ByZWRpY3QSIC5zc24u",
-            "bWxzZXJ2aWNlLnYyLlByZWRpY3RSZXF1ZXN0GiEuc3NuLm1sc2VydmljZS52",
-            "Mi5QcmVkaWN0UmVzcG9uc2USYgoRRmVhdHVyZUdlblByZWRpY3QSKi5zc24u",
-            "bWxzZXJ2aWNlLnYyLkZlYXR1cmVHZW5QcmVkaWN0UmVxdWVzdBohLnNzbi5t",
-            "bHNlcnZpY2UudjIuUHJlZGljdFJlc3BvbnNlQs0BChlhaS52aXNtYS5zc24u",
-            "bWxzZXJ2aWNlLnYyQg5NbHNlcnZpY2VQcm90b1ABWj5naXRodWIuY29tL2Ut",
-            "Y29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vbWxzZXJ2aWNlL3YyO21sc2Vy",
-            "dmljZaICA1NNWKoCEFNzbi5NbHNlcnZpY2UuVjLKAhBTc25cTWxzZXJ2aWNl",
-            "XFYy4gIcU3NuXE1sc2VydmljZVxWMlxHUEJNZXRhZGF0YeoCElNzbjo6TWxz",
-            "ZXJ2aWNlOjpWMmIGcHJvdG8z"));
+            "Ugtjb3VudHJ5Q29kZRIWCgZpbWFnZXMYBCADKAxSBmltYWdlc0oECAIQAyJ9",
+            "ChdWYXREaXN0cmlidXRpb25SZXNwb25zZRJiCht2YXRfZGlzdHJpYnV0aW9u",
+            "X2NhbmRpZGF0ZXMYASADKAsyIi5zc24udHlwZS5WYXREaXN0cmlidXRpb25D",
+            "YW5kaWRhdGVSGXZhdERpc3RyaWJ1dGlvbkNhbmRpZGF0ZXMymAIKCU1sU2Vy",
+            "dmljZRJXCgpGZWF0dXJlR2VuEiMuc3NuLm1sc2VydmljZS52Mi5GZWF0dXJl",
+            "R2VuUmVxdWVzdBokLnNzbi5tbHNlcnZpY2UudjIuRmVhdHVyZUdlblJlc3Bv",
+            "bnNlEk4KB1ByZWRpY3QSIC5zc24ubWxzZXJ2aWNlLnYyLlByZWRpY3RSZXF1",
+            "ZXN0GiEuc3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVzcG9uc2USYgoRRmVh",
+            "dHVyZUdlblByZWRpY3QSKi5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1cmVHZW5Q",
+            "cmVkaWN0UmVxdWVzdBohLnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJlc3Bv",
+            "bnNlQs0BChlhaS52aXNtYS5zc24ubWxzZXJ2aWNlLnYyQg5NbHNlcnZpY2VQ",
+            "cm90b1ABWj5naXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9z",
+            "c24vbWxzZXJ2aWNlL3YyO21sc2VydmljZaICA1NNWKoCEFNzbi5NbHNlcnZp",
+            "Y2UuVjLKAhBTc25cTWxzZXJ2aWNlXFYy4gIcU3NuXE1sc2VydmljZVxWMlxH",
+            "UEJNZXRhZGF0YeoCElNzbjo6TWxzZXJ2aWNlOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -179,7 +179,7 @@ namespace Ssn.Mlservice.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.DocQARequest), global::Ssn.Mlservice.V2.DocQARequest.Parser, new[]{ "TextAnnotation", "Image", "Questions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.DocQAResponse), global::Ssn.Mlservice.V2.DocQAResponse.Parser, new[]{ "Answers" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.VatDistributionRequest), global::Ssn.Mlservice.V2.VatDistributionRequest.Parser, new[]{ "TextAnnotation", "CountryCode", "Images" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.VatDistributionResponse), global::Ssn.Mlservice.V2.VatDistributionResponse.Parser, new[]{ "VatDistribution" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Mlservice.V2.VatDistributionResponse), global::Ssn.Mlservice.V2.VatDistributionResponse.Parser, new[]{ "VatDistributionCandidates" }, null, null, null, null)
           }));
     }
     #endregion
@@ -5093,7 +5093,7 @@ namespace Ssn.Mlservice.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VatDistributionResponse(VatDistributionResponse other) : this() {
-      vatDistribution_ = other.vatDistribution_.Clone();
+      vatDistributionCandidates_ = other.vatDistributionCandidates_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5103,15 +5103,15 @@ namespace Ssn.Mlservice.V2 {
       return new VatDistributionResponse(this);
     }
 
-    /// <summary>Field number for the "vat_distribution" field.</summary>
-    public const int VatDistributionFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Ssn.Type.VatDistributionCandidate> _repeated_vatDistribution_codec
+    /// <summary>Field number for the "vat_distribution_candidates" field.</summary>
+    public const int VatDistributionCandidatesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Ssn.Type.VatDistributionCandidate> _repeated_vatDistributionCandidates_codec
         = pb::FieldCodec.ForMessage(10, global::Ssn.Type.VatDistributionCandidate.Parser);
-    private readonly pbc::RepeatedField<global::Ssn.Type.VatDistributionCandidate> vatDistribution_ = new pbc::RepeatedField<global::Ssn.Type.VatDistributionCandidate>();
+    private readonly pbc::RepeatedField<global::Ssn.Type.VatDistributionCandidate> vatDistributionCandidates_ = new pbc::RepeatedField<global::Ssn.Type.VatDistributionCandidate>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Ssn.Type.VatDistributionCandidate> VatDistribution {
-      get { return vatDistribution_; }
+    public pbc::RepeatedField<global::Ssn.Type.VatDistributionCandidate> VatDistributionCandidates {
+      get { return vatDistributionCandidates_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5129,7 +5129,7 @@ namespace Ssn.Mlservice.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if(!vatDistribution_.Equals(other.vatDistribution_)) return false;
+      if(!vatDistributionCandidates_.Equals(other.vatDistributionCandidates_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5137,7 +5137,7 @@ namespace Ssn.Mlservice.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      hash ^= vatDistribution_.GetHashCode();
+      hash ^= vatDistributionCandidates_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5156,7 +5156,7 @@ namespace Ssn.Mlservice.V2 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      vatDistribution_.WriteTo(output, _repeated_vatDistribution_codec);
+      vatDistributionCandidates_.WriteTo(output, _repeated_vatDistributionCandidates_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5167,7 +5167,7 @@ namespace Ssn.Mlservice.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      vatDistribution_.WriteTo(ref output, _repeated_vatDistribution_codec);
+      vatDistributionCandidates_.WriteTo(ref output, _repeated_vatDistributionCandidates_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5178,7 +5178,7 @@ namespace Ssn.Mlservice.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      size += vatDistribution_.CalculateSize(_repeated_vatDistribution_codec);
+      size += vatDistributionCandidates_.CalculateSize(_repeated_vatDistributionCandidates_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -5191,7 +5191,7 @@ namespace Ssn.Mlservice.V2 {
       if (other == null) {
         return;
       }
-      vatDistribution_.Add(other.vatDistribution_);
+      vatDistributionCandidates_.Add(other.vatDistributionCandidates_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5208,7 +5208,7 @@ namespace Ssn.Mlservice.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            vatDistribution_.AddEntriesFrom(input, _repeated_vatDistribution_codec);
+            vatDistributionCandidates_.AddEntriesFrom(input, _repeated_vatDistributionCandidates_codec);
             break;
           }
         }
@@ -5227,7 +5227,7 @@ namespace Ssn.Mlservice.V2 {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            vatDistribution_.AddEntriesFrom(ref input, _repeated_vatDistribution_codec);
+            vatDistributionCandidates_.AddEntriesFrom(ref input, _repeated_vatDistributionCandidates_codec);
             break;
           }
         }

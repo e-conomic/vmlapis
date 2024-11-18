@@ -663,10 +663,10 @@ export namespace VatDistributionRequest {
 }
 
 export class VatDistributionResponse extends jspb.Message {
-  getVatDistributionList(): Array<ssn_type_candidate_pb.VatDistributionCandidate>;
-  setVatDistributionList(value: Array<ssn_type_candidate_pb.VatDistributionCandidate>): VatDistributionResponse;
-  clearVatDistributionList(): VatDistributionResponse;
-  addVatDistribution(value?: ssn_type_candidate_pb.VatDistributionCandidate, index?: number): ssn_type_candidate_pb.VatDistributionCandidate;
+  getVatDistributionCandidatesList(): Array<ssn_type_candidate_pb.VatDistributionCandidate>;
+  setVatDistributionCandidatesList(value: Array<ssn_type_candidate_pb.VatDistributionCandidate>): VatDistributionResponse;
+  clearVatDistributionCandidatesList(): VatDistributionResponse;
+  addVatDistributionCandidates(value?: ssn_type_candidate_pb.VatDistributionCandidate, index?: number): ssn_type_candidate_pb.VatDistributionCandidate;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): VatDistributionResponse.AsObject;
@@ -678,7 +678,7 @@ export class VatDistributionResponse extends jspb.Message {
 
 export namespace VatDistributionResponse {
   export type AsObject = {
-    vatDistributionList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
+    vatDistributionCandidatesList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
   }
 }
 
