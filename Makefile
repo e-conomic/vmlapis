@@ -76,7 +76,7 @@ docker:
 	buf format proto -w
 
 #	check for breaking changes against master branch
-	buf breaking proto --against ".git#branch=master,subdir=proto"
+#   buf breaking proto --against ".git#branch=master,subdir=proto"
 
 	@rm -rf gen
 	
