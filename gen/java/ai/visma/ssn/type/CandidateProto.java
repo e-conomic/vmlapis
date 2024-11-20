@@ -54,6 +54,11 @@ public final class CandidateProto {
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_ssn_type_VatDistributionCandidate_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_ssn_type_DocumentMetadata_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_ssn_type_DocumentMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -110,11 +115,13 @@ public final class CandidateProto {
       "didate\022\036\n\npercentage\030\001 \001(\tR\npercentage\022\026" +
       "\n\006amount\030\002 \001(\tR\006amount\022:\n\016model_metadata" +
       "\030\003 \001(\0132\023.ssn.type.ModelSpecR\rmodelMetada" +
-      "ta\022\031\n\010page_ref\030\004 \001(\rR\007pageRefB\232\001\n\021ai.vis" +
-      "ma.ssn.typeB\016CandidateProtoP\001Z4github.co" +
-      "m/e-conomic/vmlapis/gen/go/ssn/type;ssnt" +
-      "ype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Type\342\002\024Ssn\\Ty" +
-      "pe\\GPBMetadata\352\002\tSsn::Typeb\006proto3"
+      "ta\022\031\n\010page_ref\030\004 \001(\rR\007pageRef\"1\n\020Documen" +
+      "tMetadata\022\035\n\npage_count\030\001 \001(\rR\tpageCount" +
+      "B\232\001\n\021ai.visma.ssn.typeB\016CandidateProtoP\001" +
+      "Z4github.com/e-conomic/vmlapis/gen/go/ss" +
+      "n/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Ty" +
+      "pe\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Typeb\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -170,6 +177,12 @@ public final class CandidateProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_type_VatDistributionCandidate_descriptor,
         new java.lang.String[] { "Percentage", "Amount", "ModelMetadata", "PageRef", });
+    internal_static_ssn_type_DocumentMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_ssn_type_DocumentMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_ssn_type_DocumentMetadata_descriptor,
+        new java.lang.String[] { "PageCount", });
     com.google.protobuf.WrappersProto.getDescriptor();
     ai.visma.ssn.type.GeometryProto.getDescriptor();
   }

@@ -366,6 +366,11 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   clearVatDistributionList(): DocumentAnnotatorResponse;
   addVatDistribution(value?: ssn_type_candidate_pb.VatDistributionCandidate, index?: number): ssn_type_candidate_pb.VatDistributionCandidate;
 
+  getDocumentMetadata(): ssn_type_candidate_pb.DocumentMetadata | undefined;
+  setDocumentMetadata(value?: ssn_type_candidate_pb.DocumentMetadata): DocumentAnnotatorResponse;
+  hasDocumentMetadata(): boolean;
+  clearDocumentMetadata(): DocumentAnnotatorResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -424,6 +429,7 @@ export namespace DocumentAnnotatorResponse {
     answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
     pageTextsList: Array<ssn_type_candidate_pb.PageText.AsObject>,
     vatDistributionList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
+    documentMetadata?: ssn_type_candidate_pb.DocumentMetadata.AsObject,
   }
 }
 
