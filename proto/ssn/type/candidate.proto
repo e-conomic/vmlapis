@@ -123,6 +123,7 @@ message PurchaseLineCandidate {
   // Model metadata
   ModelSpec model_metadata = 19;
 }
+
 message AnswerCandidate {
   // Question asked in the request
   string question = 1;
@@ -152,4 +153,9 @@ message VatDistributionCandidate {
   ModelSpec model_metadata = 3;
   // A reference to the page where the candidate was found.
   uint32 page_ref = 4;
+}
+
+message DocumentMetadata {
+  // Number of pages in the document
+  uint32 page_count = 1;
 }
