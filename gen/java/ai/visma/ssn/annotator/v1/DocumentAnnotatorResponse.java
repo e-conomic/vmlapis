@@ -3155,6 +3155,44 @@ private static final long serialVersionUID = 0L;
     return vatDistribution_.get(index);
   }
 
+  public static final int DOCUMENT_METADATA_FIELD_NUMBER = 49;
+  private ai.visma.ssn.type.DocumentMetadata documentMetadata_;
+  /**
+   * <pre>
+   * Extra information about the document like number of pages
+   * </pre>
+   *
+   * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+   * @return Whether the documentMetadata field is set.
+   */
+  @java.lang.Override
+  public boolean hasDocumentMetadata() {
+    return documentMetadata_ != null;
+  }
+  /**
+   * <pre>
+   * Extra information about the document like number of pages
+   * </pre>
+   *
+   * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+   * @return The documentMetadata.
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.DocumentMetadata getDocumentMetadata() {
+    return documentMetadata_ == null ? ai.visma.ssn.type.DocumentMetadata.getDefaultInstance() : documentMetadata_;
+  }
+  /**
+   * <pre>
+   * Extra information about the document like number of pages
+   * </pre>
+   *
+   * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.DocumentMetadataOrBuilder getDocumentMetadataOrBuilder() {
+    return documentMetadata_ == null ? ai.visma.ssn.type.DocumentMetadata.getDefaultInstance() : documentMetadata_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -3312,6 +3350,9 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < vatDistribution_.size(); i++) {
       output.writeMessage(48, vatDistribution_.get(i));
+    }
+    if (documentMetadata_ != null) {
+      output.writeMessage(49, getDocumentMetadata());
     }
     getUnknownFields().writeTo(output);
   }
@@ -3511,6 +3552,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(48, vatDistribution_.get(i));
     }
+    if (documentMetadata_ != null) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(49, getDocumentMetadata());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -3625,6 +3670,11 @@ private static final long serialVersionUID = 0L;
         .equals(other.getPageTextsList())) return false;
     if (!getVatDistributionList()
         .equals(other.getVatDistributionList())) return false;
+    if (hasDocumentMetadata() != other.hasDocumentMetadata()) return false;
+    if (hasDocumentMetadata()) {
+      if (!getDocumentMetadata()
+          .equals(other.getDocumentMetadata())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3821,6 +3871,10 @@ private static final long serialVersionUID = 0L;
     if (getVatDistributionCount() > 0) {
       hash = (37 * hash) + VAT_DISTRIBUTION_FIELD_NUMBER;
       hash = (53 * hash) + getVatDistributionList().hashCode();
+    }
+    if (hasDocumentMetadata()) {
+      hash = (37 * hash) + DOCUMENT_METADATA_FIELD_NUMBER;
+      hash = (53 * hash) + getDocumentMetadata().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -4270,6 +4324,11 @@ private static final long serialVersionUID = 0L;
         vatDistributionBuilder_.clear();
       }
       bitField1_ = (bitField1_ & ~0x00008000);
+      documentMetadata_ = null;
+      if (documentMetadataBuilder_ != null) {
+        documentMetadataBuilder_.dispose();
+        documentMetadataBuilder_ = null;
+      }
       return this;
     }
 
@@ -4722,6 +4781,11 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial1(ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse result) {
       int from_bitField1_ = bitField1_;
+      if (((from_bitField1_ & 0x00010000) != 0)) {
+        result.documentMetadata_ = documentMetadataBuilder_ == null
+            ? documentMetadata_
+            : documentMetadataBuilder_.build();
+      }
     }
 
     @java.lang.Override
@@ -5930,6 +5994,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
+      if (other.hasDocumentMetadata()) {
+        mergeDocumentMetadata(other.getDocumentMetadata());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -6550,6 +6617,13 @@ private static final long serialVersionUID = 0L;
               }
               break;
             } // case 386
+            case 394: {
+              input.readMessage(
+                  getDocumentMetadataFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField1_ |= 0x00010000;
+              break;
+            } // case 394
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -21468,6 +21542,161 @@ private static final long serialVersionUID = 0L;
         vatDistribution_ = null;
       }
       return vatDistributionBuilder_;
+    }
+
+    private ai.visma.ssn.type.DocumentMetadata documentMetadata_;
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.ssn.type.DocumentMetadata, ai.visma.ssn.type.DocumentMetadata.Builder, ai.visma.ssn.type.DocumentMetadataOrBuilder> documentMetadataBuilder_;
+    /**
+     * <pre>
+     * Extra information about the document like number of pages
+     * </pre>
+     *
+     * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+     * @return Whether the documentMetadata field is set.
+     */
+    public boolean hasDocumentMetadata() {
+      return ((bitField1_ & 0x00010000) != 0);
+    }
+    /**
+     * <pre>
+     * Extra information about the document like number of pages
+     * </pre>
+     *
+     * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+     * @return The documentMetadata.
+     */
+    public ai.visma.ssn.type.DocumentMetadata getDocumentMetadata() {
+      if (documentMetadataBuilder_ == null) {
+        return documentMetadata_ == null ? ai.visma.ssn.type.DocumentMetadata.getDefaultInstance() : documentMetadata_;
+      } else {
+        return documentMetadataBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Extra information about the document like number of pages
+     * </pre>
+     *
+     * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+     */
+    public Builder setDocumentMetadata(ai.visma.ssn.type.DocumentMetadata value) {
+      if (documentMetadataBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        documentMetadata_ = value;
+      } else {
+        documentMetadataBuilder_.setMessage(value);
+      }
+      bitField1_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Extra information about the document like number of pages
+     * </pre>
+     *
+     * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+     */
+    public Builder setDocumentMetadata(
+        ai.visma.ssn.type.DocumentMetadata.Builder builderForValue) {
+      if (documentMetadataBuilder_ == null) {
+        documentMetadata_ = builderForValue.build();
+      } else {
+        documentMetadataBuilder_.setMessage(builderForValue.build());
+      }
+      bitField1_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Extra information about the document like number of pages
+     * </pre>
+     *
+     * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+     */
+    public Builder mergeDocumentMetadata(ai.visma.ssn.type.DocumentMetadata value) {
+      if (documentMetadataBuilder_ == null) {
+        if (((bitField1_ & 0x00010000) != 0) &&
+          documentMetadata_ != null &&
+          documentMetadata_ != ai.visma.ssn.type.DocumentMetadata.getDefaultInstance()) {
+          getDocumentMetadataBuilder().mergeFrom(value);
+        } else {
+          documentMetadata_ = value;
+        }
+      } else {
+        documentMetadataBuilder_.mergeFrom(value);
+      }
+      bitField1_ |= 0x00010000;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Extra information about the document like number of pages
+     * </pre>
+     *
+     * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+     */
+    public Builder clearDocumentMetadata() {
+      bitField1_ = (bitField1_ & ~0x00010000);
+      documentMetadata_ = null;
+      if (documentMetadataBuilder_ != null) {
+        documentMetadataBuilder_.dispose();
+        documentMetadataBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Extra information about the document like number of pages
+     * </pre>
+     *
+     * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+     */
+    public ai.visma.ssn.type.DocumentMetadata.Builder getDocumentMetadataBuilder() {
+      bitField1_ |= 0x00010000;
+      onChanged();
+      return getDocumentMetadataFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Extra information about the document like number of pages
+     * </pre>
+     *
+     * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+     */
+    public ai.visma.ssn.type.DocumentMetadataOrBuilder getDocumentMetadataOrBuilder() {
+      if (documentMetadataBuilder_ != null) {
+        return documentMetadataBuilder_.getMessageOrBuilder();
+      } else {
+        return documentMetadata_ == null ?
+            ai.visma.ssn.type.DocumentMetadata.getDefaultInstance() : documentMetadata_;
+      }
+    }
+    /**
+     * <pre>
+     * Extra information about the document like number of pages
+     * </pre>
+     *
+     * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilderV3<
+        ai.visma.ssn.type.DocumentMetadata, ai.visma.ssn.type.DocumentMetadata.Builder, ai.visma.ssn.type.DocumentMetadataOrBuilder> 
+        getDocumentMetadataFieldBuilder() {
+      if (documentMetadataBuilder_ == null) {
+        documentMetadataBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+            ai.visma.ssn.type.DocumentMetadata, ai.visma.ssn.type.DocumentMetadata.Builder, ai.visma.ssn.type.DocumentMetadataOrBuilder>(
+                getDocumentMetadata(),
+                getParentForChildren(),
+                isClean());
+        documentMetadata_ = null;
+      }
+      return documentMetadataBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

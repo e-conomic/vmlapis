@@ -291,6 +291,8 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.PageText page_texts = 47;
   // Vat levels for the document, each vat level has vat level percentage and vat level amount
   repeated ssn.type.VatDistributionCandidate vat_distribution = 48;
+  // Extra information about the document like number of pages
+  ssn.type.DocumentMetadata document_metadata = 49;
 }
 
 message Document {

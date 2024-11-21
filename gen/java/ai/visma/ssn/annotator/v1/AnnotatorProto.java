@@ -99,7 +99,7 @@ public final class AnnotatorProto {
       "\030\002 \003(\0132\031.ssn.annotator.v1.FeatureR\010featu" +
       "res\022\022\n\004tags\030\003 \003(\tR\004tags\022\"\n\004tier\030\004 \001(\0162\016." +
       "ssn.type.TierR\004tier\022\032\n\010segments\030\005 \003(\tR\010s" +
-      "egments\022\034\n\tquestions\030\006 \003(\tR\tquestions\"\343\027" +
+      "egments\022\034\n\tquestions\030\006 \003(\tR\tquestions\"\254\030" +
       "\n\031DocumentAnnotatorResponse\0222\n\norder_dat" +
       "e\030\001 \003(\0132\023.ssn.type.CandidateR\torderDate\022" +
       "=\n\020payment_due_date\030\002 \003(\0132\023.ssn.type.Can" +
@@ -176,30 +176,32 @@ public final class AnnotatorProto {
       "e_texts\030/ \003(\0132\022.ssn.type.PageTextR\tpageT" +
       "exts\022M\n\020vat_distribution\0300 \003(\0132\".ssn.typ" +
       "e.VatDistributionCandidateR\017vatDistribut" +
-      "ion\"^\n\010Document\022\030\n\007content\030\001 \001(\014R\007conten" +
-      "t\0228\n\006source\030\002 \001(\0132 .ssn.annotator.v1.Doc" +
-      "umentSourceR\006source\"+\n\016DocumentSource\022\031\n" +
-      "\010http_uri\030\001 \001(\tR\007httpUri\"o\n\027DocumentQues" +
-      "tionRequest\0226\n\010document\030\001 \001(\0132\032.ssn.anno" +
-      "tator.v1.DocumentR\010document\022\034\n\tquestions" +
-      "\030\002 \003(\tR\tquestions\"U\n\030DocumentQuestionRes" +
-      "ponse\0223\n\007answers\030\002 \003(\0132\031.ssn.type.Answer" +
-      "CandidateR\007answersJ\004\010\001\020\0022\275\002\n\021DocumentAnn" +
-      "otator\022\215\001\n\020AnnotateDocument\022*.ssn.annota" +
-      "tor.v1.DocumentAnnotatorRequest\032+.ssn.an" +
-      "notator.v1.DocumentAnnotatorResponse\" \202\323" +
-      "\344\223\002\032\"\025/v1/document:annotate:\001*\022\227\001\n\026Answe" +
-      "rDocumentQuestion\022).ssn.annotator.v1.Doc" +
-      "umentQuestionRequest\032*.ssn.annotator.v1." +
-      "DocumentQuestionResponse\"&\202\323\344\223\002 \"\033/v1/do" +
-      "cument:answerquestion:\001*B\210\002\n\031ai.visma.ss" +
-      "n.annotator.v1B\016AnnotatorProtoP\001Z>github" +
-      ".com/e-conomic/vmlapis/gen/go/ssn/annota" +
-      "tor/v1;annotator\242\002\003SAX\252\002\020Ssn.Annotator.V" +
-      "1\312\002\020Ssn\\Annotator\\V1\342\002\034Ssn\\Annotator\\V1\\" +
-      "GPBMetadata\352\002\022Ssn::Annotator::V1\222A8\022\017\n\tS" +
-      "martScan2\002v1*\001\0022\020application/json:\020appli" +
-      "cation/jsonb\006proto3"
+      "ion\022G\n\021document_metadata\0301 \001(\0132\032.ssn.typ" +
+      "e.DocumentMetadataR\020documentMetadata\"^\n\010" +
+      "Document\022\030\n\007content\030\001 \001(\014R\007content\0228\n\006so" +
+      "urce\030\002 \001(\0132 .ssn.annotator.v1.DocumentSo" +
+      "urceR\006source\"+\n\016DocumentSource\022\031\n\010http_u" +
+      "ri\030\001 \001(\tR\007httpUri\"o\n\027DocumentQuestionReq" +
+      "uest\0226\n\010document\030\001 \001(\0132\032.ssn.annotator.v" +
+      "1.DocumentR\010document\022\034\n\tquestions\030\002 \003(\tR" +
+      "\tquestions\"U\n\030DocumentQuestionResponse\0223" +
+      "\n\007answers\030\002 \003(\0132\031.ssn.type.AnswerCandida" +
+      "teR\007answersJ\004\010\001\020\0022\275\002\n\021DocumentAnnotator\022" +
+      "\215\001\n\020AnnotateDocument\022*.ssn.annotator.v1." +
+      "DocumentAnnotatorRequest\032+.ssn.annotator" +
+      ".v1.DocumentAnnotatorResponse\" \202\323\344\223\002\032\"\025/" +
+      "v1/document:annotate:\001*\022\227\001\n\026AnswerDocume" +
+      "ntQuestion\022).ssn.annotator.v1.DocumentQu" +
+      "estionRequest\032*.ssn.annotator.v1.Documen" +
+      "tQuestionResponse\"&\202\323\344\223\002 \"\033/v1/document:" +
+      "answerquestion:\001*B\210\002\n\031ai.visma.ssn.annot" +
+      "ator.v1B\016AnnotatorProtoP\001Z>github.com/e-" +
+      "conomic/vmlapis/gen/go/ssn/annotator/v1;" +
+      "annotator\242\002\003SAX\252\002\020Ssn.Annotator.V1\312\002\020Ssn" +
+      "\\Annotator\\V1\342\002\034Ssn\\Annotator\\V1\\GPBMeta" +
+      "data\352\002\022Ssn::Annotator::V1\222A8\022\017\n\tSmartSca" +
+      "n2\002v1*\001\0022\020application/json:\020application/" +
+      "jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -227,7 +229,7 @@ public final class AnnotatorProto {
     internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_annotator_v1_DocumentAnnotatorResponse_descriptor,
-        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "OcrLineBePaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", "ReceiverOrderNumber", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", "PurchaseLines", "Answers", "PageTexts", "VatDistribution", });
+        new java.lang.String[] { "OrderDate", "PaymentDueDate", "Currency", "TotalVat", "TotalInclVat", "TotalExclVat", "SupplierCorporateId", "SupplierCountryCode", "DocumentType", "PaymentMethod", "CreditCardLastFour", "InvoiceNumber", "TextAnnotation", "OcrLineDkType", "OcrLineDkPaymentId", "OcrLineDkCreditorId", "OcrLineSePaymentId", "OcrLineSeBankgiroCreditorId", "OcrLineSePlusgiroCreditorId", "OcrLineNoPaymentId", "OcrLineFiPaymentId", "OcrLineNlPaymentId", "OcrLineBePaymentId", "Text", "FeedbackId", "Iban", "Lines", "Preview", "BankAccountNumber", "BankRegistrationNumber", "Bic", "DocumentNumber", "DocumentDate", "OrderNumber", "SupplierName", "SupplierVatNumber", "SupplierOrganisationNumber", "SupplierAddress", "CustomerNumber", "ReceiverOrderNumber", "ReceiverAddress", "ReceiverCountryCode", "ReceiverName", "ReceiverVatNumber", "PurchaseLines", "Answers", "PageTexts", "VatDistribution", "DocumentMetadata", });
     internal_static_ssn_annotator_v1_Document_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_ssn_annotator_v1_Document_fieldAccessorTable = new
