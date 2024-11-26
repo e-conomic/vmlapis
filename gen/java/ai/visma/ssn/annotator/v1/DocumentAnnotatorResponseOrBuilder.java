@@ -2198,42 +2198,69 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * Vat levels for the document, each vat level has vat level percentage and vat level amount
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
    */
   java.util.List<ai.visma.ssn.type.VatDistributionCandidate> 
-      getVatDistributionCandidatesList();
+      getVatDistributionList();
   /**
    * <pre>
    * Vat levels for the document, each vat level has vat level percentage and vat level amount
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
    */
-  ai.visma.ssn.type.VatDistributionCandidate getVatDistributionCandidates(int index);
+  ai.visma.ssn.type.VatDistributionCandidate getVatDistribution(int index);
   /**
    * <pre>
    * Vat levels for the document, each vat level has vat level percentage and vat level amount
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
    */
-  int getVatDistributionCandidatesCount();
+  int getVatDistributionCount();
   /**
    * <pre>
    * Vat levels for the document, each vat level has vat level percentage and vat level amount
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
    */
   java.util.List<? extends ai.visma.ssn.type.VatDistributionCandidateOrBuilder> 
-      getVatDistributionCandidatesOrBuilderList();
+      getVatDistributionOrBuilderList();
   /**
    * <pre>
    * Vat levels for the document, each vat level has vat level percentage and vat level amount
    * </pre>
    *
-   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution_candidates = 48 [json_name = "vatDistributionCandidates"];</code>
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 48 [json_name = "vatDistribution"];</code>
    */
-  ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionCandidatesOrBuilder(
+  ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionOrBuilder(
       int index);
+
+  /**
+   * <pre>
+   * Extra information about the document like number of pages
+   * </pre>
+   *
+   * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+   * @return Whether the documentMetadata field is set.
+   */
+  boolean hasDocumentMetadata();
+  /**
+   * <pre>
+   * Extra information about the document like number of pages
+   * </pre>
+   *
+   * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+   * @return The documentMetadata.
+   */
+  ai.visma.ssn.type.DocumentMetadata getDocumentMetadata();
+  /**
+   * <pre>
+   * Extra information about the document like number of pages
+   * </pre>
+   *
+   * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
+   */
+  ai.visma.ssn.type.DocumentMetadataOrBuilder getDocumentMetadataOrBuilder();
 }

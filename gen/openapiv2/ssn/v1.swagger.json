@@ -855,6 +855,16 @@
       "description": "* A full date, with non-zero year, month, and day values\n* A month and day value, with a zero year, such as an anniversary\n* A year on its own, with zero month and day values\n* A year and month value, with a zero day, such as a credit card expiration\ndate\n\nRelated types are [google.type.TimeOfDay][google.type.TimeOfDay] and\n`google.protobuf.Timestamp`.",
       "title": "Represents a whole or partial calendar date, such as a birthday. The time of\nday and time zone are either specified elsewhere or are insignificant. The\ndate is relative to the Gregorian Calendar. This can represent one of the\nfollowing:"
     },
+    "typeDocumentMetadata": {
+      "type": "object",
+      "properties": {
+        "pageCount": {
+          "type": "integer",
+          "format": "int64",
+          "title": "Number of pages in the document"
+        }
+      }
+    },
     "typeLineCandidate": {
       "type": "object",
       "properties": {
@@ -1672,13 +1682,17 @@
           },
           "title": "The page texts of the document"
         },
-        "vatDistributionCandidates": {
+        "vatDistribution": {
           "type": "array",
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeVatDistributionCandidate"
           },
           "title": "Vat levels for the document, each vat level has vat level percentage and vat level amount"
+        },
+        "documentMetadata": {
+          "$ref": "#/definitions/typeDocumentMetadata",
+          "title": "Extra information about the document like number of pages"
         }
       }
     },

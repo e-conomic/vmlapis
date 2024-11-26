@@ -317,3 +317,21 @@ export namespace VatDistributionCandidate {
   }
 }
 
+export class DocumentMetadata extends jspb.Message {
+  getPageCount(): number;
+  setPageCount(value: number): DocumentMetadata;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): DocumentMetadata.AsObject;
+  static toObject(includeInstance: boolean, msg: DocumentMetadata): DocumentMetadata.AsObject;
+  static serializeBinaryToWriter(message: DocumentMetadata, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): DocumentMetadata;
+  static deserializeBinaryFromReader(message: DocumentMetadata, reader: jspb.BinaryReader): DocumentMetadata;
+}
+
+export namespace DocumentMetadata {
+  export type AsObject = {
+    pageCount: number,
+  }
+}
+
