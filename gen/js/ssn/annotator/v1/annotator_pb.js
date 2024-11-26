@@ -946,8 +946,9 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     ssn_type_candidate_pb.AnswerCandidate.toObject, includeInstance),
     pageTextsList: jspb.Message.toObjectList(msg.getPageTextsList(),
     ssn_type_candidate_pb.PageText.toObject, includeInstance),
-    vatDistributionCandidatesList: jspb.Message.toObjectList(msg.getVatDistributionCandidatesList(),
-    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance)
+    vatDistributionList: jspb.Message.toObjectList(msg.getVatDistributionList(),
+    ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance),
+    documentMetadata: (f = msg.getDocumentMetadata()) && ssn_type_candidate_pb.DocumentMetadata.toObject(includeInstance, f)
   };
 
   if (includeInstance) {
@@ -1219,7 +1220,12 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
     case 48:
       var value = new ssn_type_candidate_pb.VatDistributionCandidate;
       reader.readMessage(value,ssn_type_candidate_pb.VatDistributionCandidate.deserializeBinaryFromReader);
-      msg.addVatDistributionCandidates(value);
+      msg.addVatDistribution(value);
+      break;
+    case 49:
+      var value = new ssn_type_candidate_pb.DocumentMetadata;
+      reader.readMessage(value,ssn_type_candidate_pb.DocumentMetadata.deserializeBinaryFromReader);
+      msg.setDocumentMetadata(value);
       break;
     default:
       reader.skipField();
@@ -1623,12 +1629,20 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       ssn_type_candidate_pb.PageText.serializeBinaryToWriter
     );
   }
-  f = message.getVatDistributionCandidatesList();
+  f = message.getVatDistributionList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
       48,
       f,
       ssn_type_candidate_pb.VatDistributionCandidate.serializeBinaryToWriter
+    );
+  }
+  f = message.getDocumentMetadata();
+  if (f != null) {
+    writer.writeMessage(
+      49,
+      f,
+      ssn_type_candidate_pb.DocumentMetadata.serializeBinaryToWriter
     );
   }
 };
@@ -3360,10 +3374,10 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearPageTextsList = 
 
 
 /**
- * repeated ssn.type.VatDistributionCandidate vat_distribution_candidates = 48;
+ * repeated ssn.type.VatDistributionCandidate vat_distribution = 48;
  * @return {!Array<!proto.ssn.type.VatDistributionCandidate>}
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getVatDistributionCandidatesList = function() {
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getVatDistributionList = function() {
   return /** @type{!Array<!proto.ssn.type.VatDistributionCandidate>} */ (
     jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.VatDistributionCandidate, 48));
 };
@@ -3373,7 +3387,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getVatDistributionCan
  * @param {!Array<!proto.ssn.type.VatDistributionCandidate>} value
  * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
 */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setVatDistributionCandidatesList = function(value) {
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setVatDistributionList = function(value) {
   return jspb.Message.setRepeatedWrapperField(this, 48, value);
 };
 
@@ -3383,7 +3397,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setVatDistributionCan
  * @param {number=} opt_index
  * @return {!proto.ssn.type.VatDistributionCandidate}
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addVatDistributionCandidates = function(opt_value, opt_index) {
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addVatDistribution = function(opt_value, opt_index) {
   return jspb.Message.addToRepeatedWrapperField(this, 48, opt_value, proto.ssn.type.VatDistributionCandidate, opt_index);
 };
 
@@ -3392,8 +3406,45 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addVatDistributionCan
  * Clears the list making it empty but non-null.
  * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearVatDistributionCandidatesList = function() {
-  return this.setVatDistributionCandidatesList([]);
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearVatDistributionList = function() {
+  return this.setVatDistributionList([]);
+};
+
+
+/**
+ * optional ssn.type.DocumentMetadata document_metadata = 49;
+ * @return {?proto.ssn.type.DocumentMetadata}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getDocumentMetadata = function() {
+  return /** @type{?proto.ssn.type.DocumentMetadata} */ (
+    jspb.Message.getWrapperField(this, ssn_type_candidate_pb.DocumentMetadata, 49));
+};
+
+
+/**
+ * @param {?proto.ssn.type.DocumentMetadata|undefined} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setDocumentMetadata = function(value) {
+  return jspb.Message.setWrapperField(this, 49, value);
+};
+
+
+/**
+ * Clears the message field making it undefined.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearDocumentMetadata = function() {
+  return this.setDocumentMetadata(undefined);
+};
+
+
+/**
+ * Returns whether this field is set.
+ * @return {boolean}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.hasDocumentMetadata = function() {
+  return jspb.Message.getField(this, 49) != null;
 };
 
 

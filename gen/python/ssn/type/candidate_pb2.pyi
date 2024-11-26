@@ -144,3 +144,9 @@ class VatDistributionCandidate(_message.Message):
     model_metadata: ModelSpec
     page_ref: int
     def __init__(self, percentage: _Optional[str] = ..., amount: _Optional[str] = ..., model_metadata: _Optional[_Union[ModelSpec, _Mapping]] = ..., page_ref: _Optional[int] = ...) -> None: ...
+
+class DocumentMetadata(_message.Message):
+    __slots__ = ["page_count"]
+    PAGE_COUNT_FIELD_NUMBER: _ClassVar[int]
+    page_count: int
+    def __init__(self, page_count: _Optional[int] = ...) -> None: ...
