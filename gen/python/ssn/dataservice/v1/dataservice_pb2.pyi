@@ -439,16 +439,20 @@ class FeedbackRequest(_message.Message):
     def __init__(self, id: _Optional[str] = ..., true_values: _Optional[_Union[TrueValues, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class MetricsRequest(_message.Message):
-    __slots__ = ["start_time", "end_time", "fields", "tags"]
+    __slots__ = ["start_time", "end_time", "fields", "tags", "country_codes", "document_types"]
     START_TIME_FIELD_NUMBER: _ClassVar[int]
     END_TIME_FIELD_NUMBER: _ClassVar[int]
     FIELDS_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
+    COUNTRY_CODES_FIELD_NUMBER: _ClassVar[int]
+    DOCUMENT_TYPES_FIELD_NUMBER: _ClassVar[int]
     start_time: int
     end_time: int
     fields: _containers.RepeatedScalarFieldContainer[str]
     tags: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, start_time: _Optional[int] = ..., end_time: _Optional[int] = ..., fields: _Optional[_Iterable[str]] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
+    country_codes: _containers.RepeatedScalarFieldContainer[str]
+    document_types: _containers.RepeatedScalarFieldContainer[str]
+    def __init__(self, start_time: _Optional[int] = ..., end_time: _Optional[int] = ..., fields: _Optional[_Iterable[str]] = ..., tags: _Optional[_Iterable[str]] = ..., country_codes: _Optional[_Iterable[str]] = ..., document_types: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class FeedbackMetrics(_message.Message):
     __slots__ = ["document_count", "feedback_count", "overall_correctness", "field_correctness"]

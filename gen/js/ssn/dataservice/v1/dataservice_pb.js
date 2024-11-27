@@ -11336,7 +11336,7 @@ proto.ssn.dataservice.v1.FeedbackRequest.prototype.clearTagsList = function() {
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.dataservice.v1.MetricsRequest.repeatedFields_ = [4,5];
+proto.ssn.dataservice.v1.MetricsRequest.repeatedFields_ = [4,5,6,7];
 
 
 
@@ -11372,7 +11372,9 @@ proto.ssn.dataservice.v1.MetricsRequest.toObject = function(includeInstance, msg
     startTime: jspb.Message.getFieldWithDefault(msg, 2, 0),
     endTime: jspb.Message.getFieldWithDefault(msg, 3, 0),
     fieldsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
-    tagsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f
+    tagsList: (f = jspb.Message.getRepeatedField(msg, 5)) == null ? undefined : f,
+    countryCodesList: (f = jspb.Message.getRepeatedField(msg, 6)) == null ? undefined : f,
+    documentTypesList: (f = jspb.Message.getRepeatedField(msg, 7)) == null ? undefined : f
   };
 
   if (includeInstance) {
@@ -11424,6 +11426,14 @@ proto.ssn.dataservice.v1.MetricsRequest.deserializeBinaryFromReader = function(m
     case 5:
       var value = /** @type {string} */ (reader.readString());
       msg.addTags(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addCountryCodes(value);
+      break;
+    case 7:
+      var value = /** @type {string} */ (reader.readString());
+      msg.addDocumentTypes(value);
       break;
     default:
       reader.skipField();
@@ -11479,6 +11489,20 @@ proto.ssn.dataservice.v1.MetricsRequest.serializeBinaryToWriter = function(messa
   if (f.length > 0) {
     writer.writeRepeatedString(
       5,
+      f
+    );
+  }
+  f = message.getCountryCodesList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      6,
+      f
+    );
+  }
+  f = message.getDocumentTypesList();
+  if (f.length > 0) {
+    writer.writeRepeatedString(
+      7,
       f
     );
   }
@@ -11592,6 +11616,80 @@ proto.ssn.dataservice.v1.MetricsRequest.prototype.addTags = function(value, opt_
  */
 proto.ssn.dataservice.v1.MetricsRequest.prototype.clearTagsList = function() {
   return this.setTagsList([]);
+};
+
+
+/**
+ * repeated string country_codes = 6;
+ * @return {!Array<string>}
+ */
+proto.ssn.dataservice.v1.MetricsRequest.prototype.getCountryCodesList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 6));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.dataservice.v1.MetricsRequest} returns this
+ */
+proto.ssn.dataservice.v1.MetricsRequest.prototype.setCountryCodesList = function(value) {
+  return jspb.Message.setField(this, 6, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.dataservice.v1.MetricsRequest} returns this
+ */
+proto.ssn.dataservice.v1.MetricsRequest.prototype.addCountryCodes = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 6, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.MetricsRequest} returns this
+ */
+proto.ssn.dataservice.v1.MetricsRequest.prototype.clearCountryCodesList = function() {
+  return this.setCountryCodesList([]);
+};
+
+
+/**
+ * repeated string document_types = 7;
+ * @return {!Array<string>}
+ */
+proto.ssn.dataservice.v1.MetricsRequest.prototype.getDocumentTypesList = function() {
+  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 7));
+};
+
+
+/**
+ * @param {!Array<string>} value
+ * @return {!proto.ssn.dataservice.v1.MetricsRequest} returns this
+ */
+proto.ssn.dataservice.v1.MetricsRequest.prototype.setDocumentTypesList = function(value) {
+  return jspb.Message.setField(this, 7, value || []);
+};
+
+
+/**
+ * @param {string} value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.dataservice.v1.MetricsRequest} returns this
+ */
+proto.ssn.dataservice.v1.MetricsRequest.prototype.addDocumentTypes = function(value, opt_index) {
+  return jspb.Message.addToRepeatedField(this, 7, value, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.dataservice.v1.MetricsRequest} returns this
+ */
+proto.ssn.dataservice.v1.MetricsRequest.prototype.clearDocumentTypesList = function() {
+  return this.setDocumentTypesList([]);
 };
 
 

@@ -328,45 +328,47 @@ namespace Ssn.Dataservice.V1 {
             "LnR5cGUuVGllclIEdGllchIaCghzZWdtZW50cxgJIAMoCVIIc2VnbWVudHMi",
             "dgoPRmVlZGJhY2tSZXF1ZXN0Eg4KAmlkGAEgASgJUgJpZBI/Cgt0cnVlX3Zh",
             "bHVlcxgCIAEoCzIeLnNzbi5kYXRhc2VydmljZS52MS5UcnVlVmFsdWVzUgp0",
-            "cnVlVmFsdWVzEhIKBHRhZ3MYAyADKAlSBHRhZ3MidgoOTWV0cmljc1JlcXVl",
-            "c3QSHQoKc3RhcnRfdGltZRgCIAEoA1IJc3RhcnRUaW1lEhkKCGVuZF90aW1l",
-            "GAMgASgDUgdlbmRUaW1lEhYKBmZpZWxkcxgEIAMoCVIGZmllbGRzEhIKBHRh",
-            "Z3MYBSADKAlSBHRhZ3Mi/wEKD0ZlZWRiYWNrTWV0cmljcxIlCg5kb2N1bWVu",
-            "dF9jb3VudBgBIAEoBVINZG9jdW1lbnRDb3VudBIlCg5mZWVkYmFja19jb3Vu",
-            "dBgCIAEoBVINZmVlZGJhY2tDb3VudBJQChNvdmVyYWxsX2NvcnJlY3RuZXNz",
-            "GAMgASgLMh8uc3NuLmRhdGFzZXJ2aWNlLnYxLkNvcnJlY3RuZXNzUhJvdmVy",
-            "YWxsQ29ycmVjdG5lc3MSTAoRZmllbGRfY29ycmVjdG5lc3MYBCADKAsyHy5z",
-            "c24uZGF0YXNlcnZpY2UudjEuQ29ycmVjdG5lc3NSEGZpZWxkQ29ycmVjdG5l",
-            "c3MizAEKC0NvcnJlY3RuZXNzEhQKBWZpZWxkGAEgASgJUgVmaWVsZBItChJj",
-            "b3JyZWN0X3BlcmNlbnRhZ2UYAiABKAJSEWNvcnJlY3RQZXJjZW50YWdlEjMK",
-            "FWluY29tcGxldGVfcGVyY2VudGFnZRgDIAEoAlIUaW5jb21wbGV0ZVBlcmNl",
-            "bnRhZ2USKQoQZXJyb3JfcGVyY2VudGFnZRgEIAEoAlIPZXJyb3JQZXJjZW50",
-            "YWdlEhgKB3N1cHBvcnQYBSABKAVSB3N1cHBvcnQiIwoNRGVsZXRlUmVxdWVz",
-            "dBISCgR0YWdzGAEgAygJUgR0YWdzIkQKDUNhbGxzUGVyTW9udGgSFAoFY2Fs",
-            "bHMYASABKANSBWNhbGxzEh0KCm1vbnRoX25hbWUYAiABKAlSCW1vbnRoTmFt",
-            "ZSJiChVDYWxsc1Blck1vbnRoUmVzcG9uc2USSQoPY2FsbHNfcGVyX21vbnRo",
-            "GAEgAygLMiEuc3NuLmRhdGFzZXJ2aWNlLnYxLkNhbGxzUGVyTW9udGhSDWNh",
-            "bGxzUGVyTW9udGgytQUKC0RhdGFTZXJ2aWNlEmcKDkNyZWF0ZURvY3VtZW50",
-            "Eikuc3NuLmRhdGFzZXJ2aWNlLnYxLkNyZWF0ZURvY3VtZW50UmVxdWVzdBoq",
-            "LnNzbi5kYXRhc2VydmljZS52MS5DcmVhdGVEb2N1bWVudFJlc3BvbnNlEmEK",
-            "DFJlYWREb2N1bWVudBInLnNzbi5kYXRhc2VydmljZS52MS5SZWFkRG9jdW1l",
-            "bnRSZXF1ZXN0Giguc3NuLmRhdGFzZXJ2aWNlLnYxLlJlYWREb2N1bWVudFJl",
-            "c3BvbnNlElUKD1ByZXBhcmVGZWVkYmFjaxIqLnNzbi5kYXRhc2VydmljZS52",
-            "MS5QcmVwYXJlRmVlZGJhY2tSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
-            "cHR5EmcKCEZlZWRiYWNrEiMuc3NuLmRhdGFzZXJ2aWNlLnYxLkZlZWRiYWNr",
-            "UmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIegtPkkwIYOgEqIhMv",
-            "djEvZmVlZGJhY2s6Y3JlYXRlElsKEENhbGN1bGF0ZU1ldHJpY3MSIi5zc24u",
-            "ZGF0YXNlcnZpY2UudjEuTWV0cmljc1JlcXVlc3QaIy5zc24uZGF0YXNlcnZp",
-            "Y2UudjEuRmVlZGJhY2tNZXRyaWNzEmMKBkRlbGV0ZRIhLnNzbi5kYXRhc2Vy",
-            "dmljZS52MS5EZWxldGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
-            "Ih6C0+STAhg6ASoiEy92MS9mZWVkYmFjazpkZWxldGUSWAoTQ2FsbHNQZXJN",
-            "b250aE1ldHJpYxIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eRopLnNzbi5kYXRh",
-            "c2VydmljZS52MS5DYWxsc1Blck1vbnRoUmVzcG9uc2VC3QEKG2FpLnZpc21h",
-            "LnNzbi5kYXRhc2VydmljZS52MUIQRGF0YXNlcnZpY2VQcm90b1ABWkJnaXRo",
-            "dWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9zc24vZGF0YXNlcnZp",
-            "Y2UvdjE7ZGF0YXNlcnZpY2WiAgNTRFiqAhJTc24uRGF0YXNlcnZpY2UuVjHK",
-            "AhJTc25cRGF0YXNlcnZpY2VcVjHiAh5Tc25cRGF0YXNlcnZpY2VcVjFcR1BC",
-            "TWV0YWRhdGHqAhRTc246OkRhdGFzZXJ2aWNlOjpWMWIGcHJvdG8z"));
+            "cnVlVmFsdWVzEhIKBHRhZ3MYAyADKAlSBHRhZ3MiwgEKDk1ldHJpY3NSZXF1",
+            "ZXN0Eh0KCnN0YXJ0X3RpbWUYAiABKANSCXN0YXJ0VGltZRIZCghlbmRfdGlt",
+            "ZRgDIAEoA1IHZW5kVGltZRIWCgZmaWVsZHMYBCADKAlSBmZpZWxkcxISCgR0",
+            "YWdzGAUgAygJUgR0YWdzEiMKDWNvdW50cnlfY29kZXMYBiADKAlSDGNvdW50",
+            "cnlDb2RlcxIlCg5kb2N1bWVudF90eXBlcxgHIAMoCVINZG9jdW1lbnRUeXBl",
+            "cyL/AQoPRmVlZGJhY2tNZXRyaWNzEiUKDmRvY3VtZW50X2NvdW50GAEgASgF",
+            "Ug1kb2N1bWVudENvdW50EiUKDmZlZWRiYWNrX2NvdW50GAIgASgFUg1mZWVk",
+            "YmFja0NvdW50ElAKE292ZXJhbGxfY29ycmVjdG5lc3MYAyABKAsyHy5zc24u",
+            "ZGF0YXNlcnZpY2UudjEuQ29ycmVjdG5lc3NSEm92ZXJhbGxDb3JyZWN0bmVz",
+            "cxJMChFmaWVsZF9jb3JyZWN0bmVzcxgEIAMoCzIfLnNzbi5kYXRhc2Vydmlj",
+            "ZS52MS5Db3JyZWN0bmVzc1IQZmllbGRDb3JyZWN0bmVzcyLMAQoLQ29ycmVj",
+            "dG5lc3MSFAoFZmllbGQYASABKAlSBWZpZWxkEi0KEmNvcnJlY3RfcGVyY2Vu",
+            "dGFnZRgCIAEoAlIRY29ycmVjdFBlcmNlbnRhZ2USMwoVaW5jb21wbGV0ZV9w",
+            "ZXJjZW50YWdlGAMgASgCUhRpbmNvbXBsZXRlUGVyY2VudGFnZRIpChBlcnJv",
+            "cl9wZXJjZW50YWdlGAQgASgCUg9lcnJvclBlcmNlbnRhZ2USGAoHc3VwcG9y",
+            "dBgFIAEoBVIHc3VwcG9ydCIjCg1EZWxldGVSZXF1ZXN0EhIKBHRhZ3MYASAD",
+            "KAlSBHRhZ3MiRAoNQ2FsbHNQZXJNb250aBIUCgVjYWxscxgBIAEoA1IFY2Fs",
+            "bHMSHQoKbW9udGhfbmFtZRgCIAEoCVIJbW9udGhOYW1lImIKFUNhbGxzUGVy",
+            "TW9udGhSZXNwb25zZRJJCg9jYWxsc19wZXJfbW9udGgYASADKAsyIS5zc24u",
+            "ZGF0YXNlcnZpY2UudjEuQ2FsbHNQZXJNb250aFINY2FsbHNQZXJNb250aDK1",
+            "BQoLRGF0YVNlcnZpY2USZwoOQ3JlYXRlRG9jdW1lbnQSKS5zc24uZGF0YXNl",
+            "cnZpY2UudjEuQ3JlYXRlRG9jdW1lbnRSZXF1ZXN0Giouc3NuLmRhdGFzZXJ2",
+            "aWNlLnYxLkNyZWF0ZURvY3VtZW50UmVzcG9uc2USYQoMUmVhZERvY3VtZW50",
+            "Eicuc3NuLmRhdGFzZXJ2aWNlLnYxLlJlYWREb2N1bWVudFJlcXVlc3QaKC5z",
+            "c24uZGF0YXNlcnZpY2UudjEuUmVhZERvY3VtZW50UmVzcG9uc2USVQoPUHJl",
+            "cGFyZUZlZWRiYWNrEiouc3NuLmRhdGFzZXJ2aWNlLnYxLlByZXBhcmVGZWVk",
+            "YmFja1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkSZwoIRmVlZGJh",
+            "Y2sSIy5zc24uZGF0YXNlcnZpY2UudjEuRmVlZGJhY2tSZXF1ZXN0GhYuZ29v",
+            "Z2xlLnByb3RvYnVmLkVtcHR5Ih6C0+STAhg6ASoiEy92MS9mZWVkYmFjazpj",
+            "cmVhdGUSWwoQQ2FsY3VsYXRlTWV0cmljcxIiLnNzbi5kYXRhc2VydmljZS52",
+            "MS5NZXRyaWNzUmVxdWVzdBojLnNzbi5kYXRhc2VydmljZS52MS5GZWVkYmFj",
+            "a01ldHJpY3MSYwoGRGVsZXRlEiEuc3NuLmRhdGFzZXJ2aWNlLnYxLkRlbGV0",
+            "ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiHoLT5JMCGDoBKiIT",
+            "L3YxL2ZlZWRiYWNrOmRlbGV0ZRJYChNDYWxsc1Blck1vbnRoTWV0cmljEhYu",
+            "Z29vZ2xlLnByb3RvYnVmLkVtcHR5Gikuc3NuLmRhdGFzZXJ2aWNlLnYxLkNh",
+            "bGxzUGVyTW9udGhSZXNwb25zZULdAQobYWkudmlzbWEuc3NuLmRhdGFzZXJ2",
+            "aWNlLnYxQhBEYXRhc2VydmljZVByb3RvUAFaQmdpdGh1Yi5jb20vZS1jb25v",
+            "bWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi9kYXRhc2VydmljZS92MTtkYXRhc2Vy",
+            "dmljZaICA1NEWKoCElNzbi5EYXRhc2VydmljZS5WMcoCElNzblxEYXRhc2Vy",
+            "dmljZVxWMeICHlNzblxEYXRhc2VydmljZVxWMVxHUEJNZXRhZGF0YeoCFFNz",
+            "bjo6RGF0YXNlcnZpY2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::GenBqSchema.BqFieldReflection.Descriptor, global::GenBqSchema.BqTableReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, global::Ssn.Type.TierReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -381,7 +383,7 @@ namespace Ssn.Dataservice.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.ReadDocumentResponse), global::Ssn.Dataservice.V1.ReadDocumentResponse.Parser, new[]{ "Document" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.PrepareFeedbackRequest), global::Ssn.Dataservice.V1.PrepareFeedbackRequest.Parser, new[]{ "Id", "Ta", "DocumentBytes", "Predictions", "Tags", "Confidences", "PredictionMetadata", "Tier", "Segments" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackRequest), global::Ssn.Dataservice.V1.FeedbackRequest.Parser, new[]{ "Id", "TrueValues", "Tags" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.MetricsRequest), global::Ssn.Dataservice.V1.MetricsRequest.Parser, new[]{ "StartTime", "EndTime", "Fields", "Tags" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.MetricsRequest), global::Ssn.Dataservice.V1.MetricsRequest.Parser, new[]{ "StartTime", "EndTime", "Fields", "Tags", "CountryCodes", "DocumentTypes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.FeedbackMetrics), global::Ssn.Dataservice.V1.FeedbackMetrics.Parser, new[]{ "DocumentCount", "FeedbackCount", "OverallCorrectness", "FieldCorrectness" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.Correctness), global::Ssn.Dataservice.V1.Correctness.Parser, new[]{ "Field", "CorrectPercentage", "IncompletePercentage", "ErrorPercentage", "Support" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Dataservice.V1.DeleteRequest), global::Ssn.Dataservice.V1.DeleteRequest.Parser, new[]{ "Tags" }, null, null, null, null),
@@ -8156,6 +8158,8 @@ namespace Ssn.Dataservice.V1 {
       endTime_ = other.endTime_;
       fields_ = other.fields_.Clone();
       tags_ = other.tags_.Clone();
+      countryCodes_ = other.countryCodes_.Clone();
+      documentTypes_ = other.documentTypes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8211,6 +8215,28 @@ namespace Ssn.Dataservice.V1 {
       get { return tags_; }
     }
 
+    /// <summary>Field number for the "country_codes" field.</summary>
+    public const int CountryCodesFieldNumber = 6;
+    private static readonly pb::FieldCodec<string> _repeated_countryCodes_codec
+        = pb::FieldCodec.ForString(50);
+    private readonly pbc::RepeatedField<string> countryCodes_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CountryCodes {
+      get { return countryCodes_; }
+    }
+
+    /// <summary>Field number for the "document_types" field.</summary>
+    public const int DocumentTypesFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_documentTypes_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> documentTypes_ = new pbc::RepeatedField<string>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DocumentTypes {
+      get { return documentTypes_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8230,6 +8256,8 @@ namespace Ssn.Dataservice.V1 {
       if (EndTime != other.EndTime) return false;
       if(!fields_.Equals(other.fields_)) return false;
       if(!tags_.Equals(other.tags_)) return false;
+      if(!countryCodes_.Equals(other.countryCodes_)) return false;
+      if(!documentTypes_.Equals(other.documentTypes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8241,6 +8269,8 @@ namespace Ssn.Dataservice.V1 {
       if (EndTime != 0L) hash ^= EndTime.GetHashCode();
       hash ^= fields_.GetHashCode();
       hash ^= tags_.GetHashCode();
+      hash ^= countryCodes_.GetHashCode();
+      hash ^= documentTypes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8269,6 +8299,8 @@ namespace Ssn.Dataservice.V1 {
       }
       fields_.WriteTo(output, _repeated_fields_codec);
       tags_.WriteTo(output, _repeated_tags_codec);
+      countryCodes_.WriteTo(output, _repeated_countryCodes_codec);
+      documentTypes_.WriteTo(output, _repeated_documentTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8289,6 +8321,8 @@ namespace Ssn.Dataservice.V1 {
       }
       fields_.WriteTo(ref output, _repeated_fields_codec);
       tags_.WriteTo(ref output, _repeated_tags_codec);
+      countryCodes_.WriteTo(ref output, _repeated_countryCodes_codec);
+      documentTypes_.WriteTo(ref output, _repeated_documentTypes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8307,6 +8341,8 @@ namespace Ssn.Dataservice.V1 {
       }
       size += fields_.CalculateSize(_repeated_fields_codec);
       size += tags_.CalculateSize(_repeated_tags_codec);
+      size += countryCodes_.CalculateSize(_repeated_countryCodes_codec);
+      size += documentTypes_.CalculateSize(_repeated_documentTypes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -8327,6 +8363,8 @@ namespace Ssn.Dataservice.V1 {
       }
       fields_.Add(other.fields_);
       tags_.Add(other.tags_);
+      countryCodes_.Add(other.countryCodes_);
+      documentTypes_.Add(other.documentTypes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8358,6 +8396,14 @@ namespace Ssn.Dataservice.V1 {
             tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }
+          case 50: {
+            countryCodes_.AddEntriesFrom(input, _repeated_countryCodes_codec);
+            break;
+          }
+          case 58: {
+            documentTypes_.AddEntriesFrom(input, _repeated_documentTypes_codec);
+            break;
+          }
         }
       }
     #endif
@@ -8387,6 +8433,14 @@ namespace Ssn.Dataservice.V1 {
           }
           case 42: {
             tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
+            break;
+          }
+          case 50: {
+            countryCodes_.AddEntriesFrom(ref input, _repeated_countryCodes_codec);
+            break;
+          }
+          case 58: {
+            documentTypes_.AddEntriesFrom(ref input, _repeated_documentTypes_codec);
             break;
           }
         }
