@@ -101,6 +101,7 @@ message TrueValues {
 
   repeated ssn.type.PurchaseLineCandidate purchase_lines = 41;
   repeated ssn.type.AnswerCandidate answers = 42;
+  repeated ssn.type.VatDistributionCandidate vat_distribution = 43;
 }
 
 message PredictionValues {
@@ -147,6 +148,7 @@ message PredictionValues {
 
   repeated ssn.type.PurchaseLineCandidate purchase_lines = 41;
   repeated ssn.type.AnswerCandidate answers = 42;
+  repeated ssn.type.VatDistributionCandidate vat_distribution = 43;
 }
 
 message PredictionConfidences {

@@ -1014,4 +1014,28 @@ public interface PredictionValuesOrBuilder extends
    */
   ai.visma.ssn.type.AnswerCandidateOrBuilder getAnswersOrBuilder(
       int index);
+
+  /**
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.VatDistributionCandidate> 
+      getVatDistributionList();
+  /**
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
+   */
+  ai.visma.ssn.type.VatDistributionCandidate getVatDistribution(int index);
+  /**
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
+   */
+  int getVatDistributionCount();
+  /**
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.VatDistributionCandidateOrBuilder> 
+      getVatDistributionOrBuilderList();
+  /**
+   * <code>repeated .ssn.type.VatDistributionCandidate vat_distribution = 43 [json_name = "vatDistribution"];</code>
+   */
+  ai.visma.ssn.type.VatDistributionCandidateOrBuilder getVatDistributionOrBuilder(
+      int index);
 }

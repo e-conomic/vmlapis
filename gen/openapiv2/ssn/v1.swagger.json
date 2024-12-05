@@ -2718,6 +2718,13 @@
             "type": "object",
             "$ref": "#/definitions/typeAnswerCandidate"
           }
+        },
+        "vatDistribution": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeVatDistributionCandidate"
+          }
         }
       }
     },
@@ -2867,6 +2874,13 @@
           "items": {
             "type": "object",
             "$ref": "#/definitions/typeAnswerCandidate"
+          }
+        },
+        "vatDistribution": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeVatDistributionCandidate"
           }
         }
       }
