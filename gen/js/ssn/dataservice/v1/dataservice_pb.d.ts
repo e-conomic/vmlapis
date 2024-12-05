@@ -290,6 +290,11 @@ export class TrueValues extends jspb.Message {
   clearAnswersList(): TrueValues;
   addAnswers(value?: ssn_type_candidate_pb.AnswerCandidate, index?: number): ssn_type_candidate_pb.AnswerCandidate;
 
+  getVatDistributionList(): Array<ssn_type_candidate_pb.VatDistributionCandidate>;
+  setVatDistributionList(value: Array<ssn_type_candidate_pb.VatDistributionCandidate>): TrueValues;
+  clearVatDistributionList(): TrueValues;
+  addVatDistribution(value?: ssn_type_candidate_pb.VatDistributionCandidate, index?: number): ssn_type_candidate_pb.VatDistributionCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): TrueValues.AsObject;
   static toObject(includeInstance: boolean, msg: TrueValues): TrueValues.AsObject;
@@ -342,6 +347,7 @@ export namespace TrueValues {
     receiverVatNumber?: google_protobuf_wrappers_pb.StringValue.AsObject,
     purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
     answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
+    vatDistributionList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
   }
 }
 
@@ -556,6 +562,11 @@ export class PredictionValues extends jspb.Message {
   clearAnswersList(): PredictionValues;
   addAnswers(value?: ssn_type_candidate_pb.AnswerCandidate, index?: number): ssn_type_candidate_pb.AnswerCandidate;
 
+  getVatDistributionList(): Array<ssn_type_candidate_pb.VatDistributionCandidate>;
+  setVatDistributionList(value: Array<ssn_type_candidate_pb.VatDistributionCandidate>): PredictionValues;
+  clearVatDistributionList(): PredictionValues;
+  addVatDistribution(value?: ssn_type_candidate_pb.VatDistributionCandidate, index?: number): ssn_type_candidate_pb.VatDistributionCandidate;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): PredictionValues.AsObject;
   static toObject(includeInstance: boolean, msg: PredictionValues): PredictionValues.AsObject;
@@ -608,6 +619,7 @@ export namespace PredictionValues {
     receiverVatNumberList: Array<google_protobuf_wrappers_pb.StringValue.AsObject>,
     purchaseLinesList: Array<ssn_type_candidate_pb.PurchaseLineCandidate.AsObject>,
     answersList: Array<ssn_type_candidate_pb.AnswerCandidate.AsObject>,
+    vatDistributionList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
   }
 }
 
