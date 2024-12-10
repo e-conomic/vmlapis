@@ -12,6 +12,7 @@ _sym_db = _symbol_database.Default()
 
 
 from vml_proto.asgt.type import dataset_pb2 as asgt_dot_type_dot_dataset__pb2
+from vml_proto.asgt.type import retention_policy_pb2 as asgt_dot_type_dot_retention__policy__pb2
 from vml_proto.asgt.v2.type import example_pb2 as asgt_dot_v2_dot_type_dot_example__pb2
 from vml_proto.asgt.v2.type import model_pb2 as asgt_dot_v2_dot_type_dot_model__pb2
 from vml_proto.asgt.v2.type import training_pb2 as asgt_dot_v2_dot_type_dot_training__pb2
@@ -21,7 +22,7 @@ from vml_proto.protoc_gen_openapiv2.options import annotations_pb2 as protoc__ge
 from vml_proto.validate import validate_pb2 as validate_dot_validate__pb2
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x61sgt/v2/dataset_service.proto\x12\x07\x61sgt.v2\x1a\x17\x61sgt/type/dataset.proto\x1a\x1a\x61sgt/v2/type/example.proto\x1a\x18\x61sgt/v2/type/model.proto\x1a\x1b\x61sgt/v2/type/training.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"`\n\x11GetDatasetRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\"\x9d\x01\n\x14\x43reateDatasetRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12\x38\n\x04tags\x18\x02 \x03(\tB$\xfa\x42!\x92\x01\x1e\x18\x01\"\x1ar\x18(@2\x14^[A-Za-z0-9\\s_.>-]*$R\x04tags\"k\n\x1c\x43reateOrUpdateDatasetRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\"c\n\x14\x44\x65leteDatasetRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\"W\n\x10\x44\x65leteTagRequest\x12\x43\n\x08tag_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x07tagName\"\x94\x01\n\x14\x43reateExampleRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12/\n\x07\x65xample\x18\x02 \x01(\x0b\x32\x15.asgt.v2.type.ExampleR\x07\x65xample\"\x9c\x01\n\x1c\x43reateOrUpdateExampleRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12/\n\x07\x65xample\x18\x02 \x01(\x0b\x32\x15.asgt.v2.type.ExampleR\x07\x65xample\"\x9b\x01\n\x19\x42\x61tchCreateExampleRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12\x31\n\x08\x65xamples\x18\x02 \x03(\x0b\x32\x15.asgt.v2.type.ExampleR\x08\x65xamples\"e\n\x16TruncateDatasetRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\"9\n\x16TrainingRequestOptions\x12\x1f\n\x05limit\x18\x01 \x01(\x03\x42\t\xfa\x42\x06\"\x04\x18\x64 \x00R\x05limit\"6\n\x13ModelRequestOptions\x12\x1f\n\x05limit\x18\x01 \x01(\x03\x42\t\xfa\x42\x06\"\x04\x18\x64 \x00R\x05limit\"\xa4\x01\n\x1aGetDatasetTrainingsRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12\x39\n\x07options\x18\x02 \x01(\x0b\x32\x1f.asgt.v2.TrainingRequestOptionsR\x07options\"\x9e\x01\n\x17GetDatasetModelsRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12\x36\n\x07options\x18\x02 \x01(\x0b\x32\x1c.asgt.v2.ModelRequestOptionsR\x07options\"P\n\x13GetTrainingsRequest\x12\x39\n\x07options\x18\x01 \x01(\x0b\x32\x1f.asgt.v2.TrainingRequestOptionsR\x07options\"I\n\x11TrainingsResponse\x12\x34\n\ttrainings\x18\x01 \x03(\x0b\x32\x16.asgt.v2.type.TrainingR\ttrainings\"=\n\x0eModelsResponse\x12+\n\x06models\x18\x01 \x03(\x0b\x32\x13.asgt.v2.type.ModelR\x06models2\xde\x0b\n\x0e\x44\x61tasetService\x12\x61\n\nGetDataset\x12\x1a.asgt.v2.GetDatasetRequest\x1a\x12.asgt.type.Dataset\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/v2/datasets/{dataset_name}\x12_\n\rCreateDataset\x12\x1d.asgt.v2.CreateDatasetRequest\x1a\x16.google.protobuf.Empty\"\x17\x82\xd3\xe4\x93\x02\x11\"\x0c/v2/datasets:\x01*\x12{\n\x15\x43reateOrUpdateDataset\x12%.asgt.v2.CreateOrUpdateDatasetRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\x1a\x1b/v2/datasets/{dataset_name}\x12g\n\rDeleteDataset\x12\x1d.asgt.v2.DeleteDatasetRequest\x1a\x12.asgt.type.Dataset\"#\x82\xd3\xe4\x93\x02\x1d*\x1b/v2/datasets/{dataset_name}\x12[\n\tDeleteTag\x12\x19.asgt.v2.DeleteTagRequest\x1a\x16.google.protobuf.Empty\"\x1b\x82\xd3\xe4\x93\x02\x15*\x13/v2/tags/{tag_name}\x12w\n\rCreateExample\x12\x1d.asgt.v2.CreateExampleRequest\x1a\x16.google.protobuf.Empty\"/\x82\xd3\xe4\x93\x02)\"$/v2/datasets/{dataset_name}/examples:\x01*\x12\x94\x01\n\x15\x43reateOrUpdateExample\x12%.asgt.v2.CreateOrUpdateExampleRequest\x1a\x16.google.protobuf.Empty\"<\x82\xd3\xe4\x93\x02\x36\x1a\x31/v2/datasets/{dataset_name}/examples/{example.id}:\x01*\x12\x8d\x01\n\x12\x42\x61tchCreateExample\x12\".asgt.v2.BatchCreateExampleRequest\x1a\x16.google.protobuf.Empty\";\x82\xd3\xe4\x93\x02\x35\"0/v2/datasets/{dataset_name}/examples:batchCreate:\x01*\x12x\n\x0fTruncateDataset\x12\x1f.asgt.v2.TruncateDatasetRequest\x1a\x16.google.protobuf.Empty\",\x82\xd3\xe4\x93\x02&*$/v2/datasets/{dataset_name}/examples\x12\x85\x01\n\x13GetDatasetTrainings\x12#.asgt.v2.GetDatasetTrainingsRequest\x1a\x1a.asgt.v2.TrainingsResponse\"-\x82\xd3\xe4\x93\x02\'\x12%/v2/datasets/{dataset_name}/trainings\x12y\n\x10GetDatasetModels\x12 .asgt.v2.GetDatasetModelsRequest\x1a\x17.asgt.v2.ModelsResponse\"*\x82\xd3\xe4\x93\x02$\x12\"/v2/datasets/{dataset_name}/models\x12_\n\x0cGetTrainings\x12\x1c.asgt.v2.GetTrainingsRequest\x1a\x1a.asgt.v2.TrainingsResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/v2/trainings\x1aG\x92\x41\x44\x12\x42Manage datasets and examples used for training AutoSuggest models.B-Z+github.com/e-conomic/vmlapis/gen/go/asgt/v2b\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x1d\x61sgt/v2/dataset_service.proto\x12\x07\x61sgt.v2\x1a\x17\x61sgt/type/dataset.proto\x1a asgt/type/retention_policy.proto\x1a\x1a\x61sgt/v2/type/example.proto\x1a\x18\x61sgt/v2/type/model.proto\x1a\x1b\x61sgt/v2/type/training.proto\x1a\x1cgoogle/api/annotations.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a.protoc-gen-openapiv2/options/annotations.proto\x1a\x17validate/validate.proto\"`\n\x11GetDatasetRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\"\xe4\x01\n\x14\x43reateDatasetRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12\x38\n\x04tags\x18\x02 \x03(\tB$\xfa\x42!\x92\x01\x1e\x18\x01\"\x1ar\x18(@2\x14^[A-Za-z0-9\\s_.>-]*$R\x04tags\x12\x45\n\x10retention_policy\x18\x05 \x01(\x0b\x32\x1a.asgt.type.RetentionPolicyR\x0fretentionPolicy\"k\n\x1c\x43reateOrUpdateDatasetRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\"c\n\x14\x44\x65leteDatasetRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\"W\n\x10\x44\x65leteTagRequest\x12\x43\n\x08tag_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x07tagName\"\x94\x01\n\x14\x43reateExampleRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12/\n\x07\x65xample\x18\x02 \x01(\x0b\x32\x15.asgt.v2.type.ExampleR\x07\x65xample\"\x9c\x01\n\x1c\x43reateOrUpdateExampleRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12/\n\x07\x65xample\x18\x02 \x01(\x0b\x32\x15.asgt.v2.type.ExampleR\x07\x65xample\"\x9b\x01\n\x19\x42\x61tchCreateExampleRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12\x31\n\x08\x65xamples\x18\x02 \x03(\x0b\x32\x15.asgt.v2.type.ExampleR\x08\x65xamples\"e\n\x16TruncateDatasetRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\"9\n\x16TrainingRequestOptions\x12\x1f\n\x05limit\x18\x01 \x01(\x03\x42\t\xfa\x42\x06\"\x04\x18\x64 \x00R\x05limit\"6\n\x13ModelRequestOptions\x12\x1f\n\x05limit\x18\x01 \x01(\x03\x42\t\xfa\x42\x06\"\x04\x18\x64 \x00R\x05limit\"\xa4\x01\n\x1aGetDatasetTrainingsRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12\x39\n\x07options\x18\x02 \x01(\x0b\x32\x1f.asgt.v2.TrainingRequestOptionsR\x07options\"\x9e\x01\n\x17GetDatasetModelsRequest\x12K\n\x0c\x64\x61taset_name\x18\x01 \x01(\tB(\xfa\x42%r#(\x80\x02\x32\x1e^[A-Za-z0-9.][A-Za-z0-9_.>-]*$R\x0b\x64\x61tasetName\x12\x36\n\x07options\x18\x02 \x01(\x0b\x32\x1c.asgt.v2.ModelRequestOptionsR\x07options\"P\n\x13GetTrainingsRequest\x12\x39\n\x07options\x18\x01 \x01(\x0b\x32\x1f.asgt.v2.TrainingRequestOptionsR\x07options\"I\n\x11TrainingsResponse\x12\x34\n\ttrainings\x18\x01 \x03(\x0b\x32\x16.asgt.v2.type.TrainingR\ttrainings\"=\n\x0eModelsResponse\x12+\n\x06models\x18\x01 \x03(\x0b\x32\x13.asgt.v2.type.ModelR\x06models2\xde\x0b\n\x0e\x44\x61tasetService\x12\x61\n\nGetDataset\x12\x1a.asgt.v2.GetDatasetRequest\x1a\x12.asgt.type.Dataset\"#\x82\xd3\xe4\x93\x02\x1d\x12\x1b/v2/datasets/{dataset_name}\x12_\n\rCreateDataset\x12\x1d.asgt.v2.CreateDatasetRequest\x1a\x16.google.protobuf.Empty\"\x17\x82\xd3\xe4\x93\x02\x11\"\x0c/v2/datasets:\x01*\x12{\n\x15\x43reateOrUpdateDataset\x12%.asgt.v2.CreateOrUpdateDatasetRequest\x1a\x16.google.protobuf.Empty\"#\x82\xd3\xe4\x93\x02\x1d\x1a\x1b/v2/datasets/{dataset_name}\x12g\n\rDeleteDataset\x12\x1d.asgt.v2.DeleteDatasetRequest\x1a\x12.asgt.type.Dataset\"#\x82\xd3\xe4\x93\x02\x1d*\x1b/v2/datasets/{dataset_name}\x12[\n\tDeleteTag\x12\x19.asgt.v2.DeleteTagRequest\x1a\x16.google.protobuf.Empty\"\x1b\x82\xd3\xe4\x93\x02\x15*\x13/v2/tags/{tag_name}\x12w\n\rCreateExample\x12\x1d.asgt.v2.CreateExampleRequest\x1a\x16.google.protobuf.Empty\"/\x82\xd3\xe4\x93\x02)\"$/v2/datasets/{dataset_name}/examples:\x01*\x12\x94\x01\n\x15\x43reateOrUpdateExample\x12%.asgt.v2.CreateOrUpdateExampleRequest\x1a\x16.google.protobuf.Empty\"<\x82\xd3\xe4\x93\x02\x36\x1a\x31/v2/datasets/{dataset_name}/examples/{example.id}:\x01*\x12\x8d\x01\n\x12\x42\x61tchCreateExample\x12\".asgt.v2.BatchCreateExampleRequest\x1a\x16.google.protobuf.Empty\";\x82\xd3\xe4\x93\x02\x35\"0/v2/datasets/{dataset_name}/examples:batchCreate:\x01*\x12x\n\x0fTruncateDataset\x12\x1f.asgt.v2.TruncateDatasetRequest\x1a\x16.google.protobuf.Empty\",\x82\xd3\xe4\x93\x02&*$/v2/datasets/{dataset_name}/examples\x12\x85\x01\n\x13GetDatasetTrainings\x12#.asgt.v2.GetDatasetTrainingsRequest\x1a\x1a.asgt.v2.TrainingsResponse\"-\x82\xd3\xe4\x93\x02\'\x12%/v2/datasets/{dataset_name}/trainings\x12y\n\x10GetDatasetModels\x12 .asgt.v2.GetDatasetModelsRequest\x1a\x17.asgt.v2.ModelsResponse\"*\x82\xd3\xe4\x93\x02$\x12\"/v2/datasets/{dataset_name}/models\x12_\n\x0cGetTrainings\x12\x1c.asgt.v2.GetTrainingsRequest\x1a\x1a.asgt.v2.TrainingsResponse\"\x15\x82\xd3\xe4\x93\x02\x0f\x12\r/v2/trainings\x1aG\x92\x41\x44\x12\x42Manage datasets and examples used for training AutoSuggest models.B-Z+github.com/e-conomic/vmlapis/gen/go/asgt/v2b\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -84,38 +85,38 @@ if _descriptor._USE_C_DESCRIPTORS == False:
   _DATASETSERVICE.methods_by_name['GetDatasetModels']._serialized_options = b'\202\323\344\223\002$\022\"/v2/datasets/{dataset_name}/models'
   _DATASETSERVICE.methods_by_name['GetTrainings']._options = None
   _DATASETSERVICE.methods_by_name['GetTrainings']._serialized_options = b'\202\323\344\223\002\017\022\r/v2/trainings'
-  _globals['_GETDATASETREQUEST']._serialized_start=282
-  _globals['_GETDATASETREQUEST']._serialized_end=378
-  _globals['_CREATEDATASETREQUEST']._serialized_start=381
-  _globals['_CREATEDATASETREQUEST']._serialized_end=538
-  _globals['_CREATEORUPDATEDATASETREQUEST']._serialized_start=540
-  _globals['_CREATEORUPDATEDATASETREQUEST']._serialized_end=647
-  _globals['_DELETEDATASETREQUEST']._serialized_start=649
-  _globals['_DELETEDATASETREQUEST']._serialized_end=748
-  _globals['_DELETETAGREQUEST']._serialized_start=750
-  _globals['_DELETETAGREQUEST']._serialized_end=837
-  _globals['_CREATEEXAMPLEREQUEST']._serialized_start=840
-  _globals['_CREATEEXAMPLEREQUEST']._serialized_end=988
-  _globals['_CREATEORUPDATEEXAMPLEREQUEST']._serialized_start=991
-  _globals['_CREATEORUPDATEEXAMPLEREQUEST']._serialized_end=1147
-  _globals['_BATCHCREATEEXAMPLEREQUEST']._serialized_start=1150
-  _globals['_BATCHCREATEEXAMPLEREQUEST']._serialized_end=1305
-  _globals['_TRUNCATEDATASETREQUEST']._serialized_start=1307
-  _globals['_TRUNCATEDATASETREQUEST']._serialized_end=1408
-  _globals['_TRAININGREQUESTOPTIONS']._serialized_start=1410
-  _globals['_TRAININGREQUESTOPTIONS']._serialized_end=1467
-  _globals['_MODELREQUESTOPTIONS']._serialized_start=1469
-  _globals['_MODELREQUESTOPTIONS']._serialized_end=1523
-  _globals['_GETDATASETTRAININGSREQUEST']._serialized_start=1526
-  _globals['_GETDATASETTRAININGSREQUEST']._serialized_end=1690
-  _globals['_GETDATASETMODELSREQUEST']._serialized_start=1693
-  _globals['_GETDATASETMODELSREQUEST']._serialized_end=1851
-  _globals['_GETTRAININGSREQUEST']._serialized_start=1853
-  _globals['_GETTRAININGSREQUEST']._serialized_end=1933
-  _globals['_TRAININGSRESPONSE']._serialized_start=1935
-  _globals['_TRAININGSRESPONSE']._serialized_end=2008
-  _globals['_MODELSRESPONSE']._serialized_start=2010
-  _globals['_MODELSRESPONSE']._serialized_end=2071
-  _globals['_DATASETSERVICE']._serialized_start=2074
-  _globals['_DATASETSERVICE']._serialized_end=3576
+  _globals['_GETDATASETREQUEST']._serialized_start=316
+  _globals['_GETDATASETREQUEST']._serialized_end=412
+  _globals['_CREATEDATASETREQUEST']._serialized_start=415
+  _globals['_CREATEDATASETREQUEST']._serialized_end=643
+  _globals['_CREATEORUPDATEDATASETREQUEST']._serialized_start=645
+  _globals['_CREATEORUPDATEDATASETREQUEST']._serialized_end=752
+  _globals['_DELETEDATASETREQUEST']._serialized_start=754
+  _globals['_DELETEDATASETREQUEST']._serialized_end=853
+  _globals['_DELETETAGREQUEST']._serialized_start=855
+  _globals['_DELETETAGREQUEST']._serialized_end=942
+  _globals['_CREATEEXAMPLEREQUEST']._serialized_start=945
+  _globals['_CREATEEXAMPLEREQUEST']._serialized_end=1093
+  _globals['_CREATEORUPDATEEXAMPLEREQUEST']._serialized_start=1096
+  _globals['_CREATEORUPDATEEXAMPLEREQUEST']._serialized_end=1252
+  _globals['_BATCHCREATEEXAMPLEREQUEST']._serialized_start=1255
+  _globals['_BATCHCREATEEXAMPLEREQUEST']._serialized_end=1410
+  _globals['_TRUNCATEDATASETREQUEST']._serialized_start=1412
+  _globals['_TRUNCATEDATASETREQUEST']._serialized_end=1513
+  _globals['_TRAININGREQUESTOPTIONS']._serialized_start=1515
+  _globals['_TRAININGREQUESTOPTIONS']._serialized_end=1572
+  _globals['_MODELREQUESTOPTIONS']._serialized_start=1574
+  _globals['_MODELREQUESTOPTIONS']._serialized_end=1628
+  _globals['_GETDATASETTRAININGSREQUEST']._serialized_start=1631
+  _globals['_GETDATASETTRAININGSREQUEST']._serialized_end=1795
+  _globals['_GETDATASETMODELSREQUEST']._serialized_start=1798
+  _globals['_GETDATASETMODELSREQUEST']._serialized_end=1956
+  _globals['_GETTRAININGSREQUEST']._serialized_start=1958
+  _globals['_GETTRAININGSREQUEST']._serialized_end=2038
+  _globals['_TRAININGSRESPONSE']._serialized_start=2040
+  _globals['_TRAININGSRESPONSE']._serialized_end=2113
+  _globals['_MODELSRESPONSE']._serialized_start=2115
+  _globals['_MODELSRESPONSE']._serialized_end=2176
+  _globals['_DATASETSERVICE']._serialized_start=2179
+  _globals['_DATASETSERVICE']._serialized_end=3681
 # @@protoc_insertion_point(module_scope)
