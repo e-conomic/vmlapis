@@ -19,6 +19,11 @@ class JesterStub(object):
                 request_serializer=asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionRequest.SerializeToString,
                 response_deserializer=asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionResponse.FromString,
                 )
+        self.InternalSuggest = channel.unary_unary(
+                '/asgt.jester.v1.Jester/InternalSuggest',
+                request_serializer=asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionRequest.SerializeToString,
+                response_deserializer=asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionResponse.FromString,
+                )
 
 
 class JesterServicer(object):
@@ -30,11 +35,22 @@ class JesterServicer(object):
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def InternalSuggest(self, request, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_JesterServicer_to_server(servicer, server):
     rpc_method_handlers = {
             'Suggest': grpc.unary_unary_rpc_method_handler(
                     servicer.Suggest,
+                    request_deserializer=asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionRequest.FromString,
+                    response_serializer=asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionResponse.SerializeToString,
+            ),
+            'InternalSuggest': grpc.unary_unary_rpc_method_handler(
+                    servicer.InternalSuggest,
                     request_deserializer=asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionRequest.FromString,
                     response_serializer=asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionResponse.SerializeToString,
             ),
@@ -60,6 +76,23 @@ class Jester(object):
             timeout=None,
             metadata=None):
         return grpc.experimental.unary_unary(request, target, '/asgt.jester.v1.Jester/Suggest',
+            asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionRequest.SerializeToString,
+            asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionResponse.FromString,
+            options, channel_credentials,
+            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def InternalSuggest(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/asgt.jester.v1.Jester/InternalSuggest',
             asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionRequest.SerializeToString,
             asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionResponse.FromString,
             options, channel_credentials,

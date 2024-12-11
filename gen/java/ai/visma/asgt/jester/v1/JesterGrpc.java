@@ -46,6 +46,37 @@ public final class JesterGrpc {
     return getSuggestMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.jester.v1.SuggestionRequest,
+      ai.visma.asgt.jester.v1.SuggestionResponse> getInternalSuggestMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "InternalSuggest",
+      requestType = ai.visma.asgt.jester.v1.SuggestionRequest.class,
+      responseType = ai.visma.asgt.jester.v1.SuggestionResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.asgt.jester.v1.SuggestionRequest,
+      ai.visma.asgt.jester.v1.SuggestionResponse> getInternalSuggestMethod() {
+    io.grpc.MethodDescriptor<ai.visma.asgt.jester.v1.SuggestionRequest, ai.visma.asgt.jester.v1.SuggestionResponse> getInternalSuggestMethod;
+    if ((getInternalSuggestMethod = JesterGrpc.getInternalSuggestMethod) == null) {
+      synchronized (JesterGrpc.class) {
+        if ((getInternalSuggestMethod = JesterGrpc.getInternalSuggestMethod) == null) {
+          JesterGrpc.getInternalSuggestMethod = getInternalSuggestMethod =
+              io.grpc.MethodDescriptor.<ai.visma.asgt.jester.v1.SuggestionRequest, ai.visma.asgt.jester.v1.SuggestionResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "InternalSuggest"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.jester.v1.SuggestionRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.jester.v1.SuggestionResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new JesterMethodDescriptorSupplier("InternalSuggest"))
+              .build();
+        }
+      }
+    }
+    return getInternalSuggestMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -100,6 +131,13 @@ public final class JesterGrpc {
         io.grpc.stub.StreamObserver<ai.visma.asgt.jester.v1.SuggestionResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSuggestMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void internalSuggest(ai.visma.asgt.jester.v1.SuggestionRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.asgt.jester.v1.SuggestionResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInternalSuggestMethod(), responseObserver);
+    }
   }
 
   /**
@@ -136,6 +174,14 @@ public final class JesterGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getSuggestMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void internalSuggest(ai.visma.asgt.jester.v1.SuggestionRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.asgt.jester.v1.SuggestionResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getInternalSuggestMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -159,6 +205,13 @@ public final class JesterGrpc {
     public ai.visma.asgt.jester.v1.SuggestionResponse suggest(ai.visma.asgt.jester.v1.SuggestionRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getSuggestMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.asgt.jester.v1.SuggestionResponse internalSuggest(ai.visma.asgt.jester.v1.SuggestionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getInternalSuggestMethod(), getCallOptions(), request);
     }
   }
 
@@ -185,9 +238,18 @@ public final class JesterGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getSuggestMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.jester.v1.SuggestionResponse> internalSuggest(
+        ai.visma.asgt.jester.v1.SuggestionRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getInternalSuggestMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_SUGGEST = 0;
+  private static final int METHODID_INTERNAL_SUGGEST = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -208,6 +270,10 @@ public final class JesterGrpc {
       switch (methodId) {
         case METHODID_SUGGEST:
           serviceImpl.suggest((ai.visma.asgt.jester.v1.SuggestionRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.asgt.jester.v1.SuggestionResponse>) responseObserver);
+          break;
+        case METHODID_INTERNAL_SUGGEST:
+          serviceImpl.internalSuggest((ai.visma.asgt.jester.v1.SuggestionRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.asgt.jester.v1.SuggestionResponse>) responseObserver);
           break;
         default:
@@ -235,6 +301,13 @@ public final class JesterGrpc {
               ai.visma.asgt.jester.v1.SuggestionRequest,
               ai.visma.asgt.jester.v1.SuggestionResponse>(
                 service, METHODID_SUGGEST)))
+        .addMethod(
+          getInternalSuggestMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.jester.v1.SuggestionRequest,
+              ai.visma.asgt.jester.v1.SuggestionResponse>(
+                service, METHODID_INTERNAL_SUGGEST)))
         .build();
   }
 
@@ -284,6 +357,7 @@ public final class JesterGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new JesterFileDescriptorSupplier())
               .addMethod(getSuggestMethod())
+              .addMethod(getInternalSuggestMethod())
               .build();
         }
       }

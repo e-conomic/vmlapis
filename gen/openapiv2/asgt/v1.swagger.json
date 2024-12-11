@@ -22,6 +22,68 @@
     "application/json"
   ],
   "paths": {
+    "/v1/{type_1}/{name}:suggest": {
+      "post": {
+        "operationId": "Jester_InternalSuggest",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/v1SuggestionResponse"
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "type_1",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "inputs": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "$ref": "#/definitions/typeData"
+                  }
+                },
+                "options": {
+                  "$ref": "#/definitions/v1SuggestionOptions"
+                },
+                "tags": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "tags": [
+          "Jester"
+        ]
+      }
+    },
     "/v1/{type}/{name}:append": {
       "post": {
         "operationId": "DataService_AppendData",

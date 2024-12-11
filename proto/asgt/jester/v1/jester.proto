@@ -27,6 +27,12 @@ service Jester {
       body: "*"
     };
   }
+  rpc InternalSuggest(SuggestionRequest) returns (SuggestionResponse) {
+    option (google.api.http) = {
+      post: "/v1/{type}/{name}:suggest"
+      body: "*"
+    };
+  }
 }
 
 // AutoSuggest
