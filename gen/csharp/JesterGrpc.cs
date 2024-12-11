@@ -58,6 +58,14 @@ namespace Asgt.Jester.V1 {
         __Marshaller_asgt_jester_v1_SuggestionRequest,
         __Marshaller_asgt_jester_v1_SuggestionResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Asgt.Jester.V1.SuggestionRequest, global::Asgt.Jester.V1.SuggestionResponse> __Method_InternalSuggest = new grpc::Method<global::Asgt.Jester.V1.SuggestionRequest, global::Asgt.Jester.V1.SuggestionResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "InternalSuggest",
+        __Marshaller_asgt_jester_v1_SuggestionRequest,
+        __Marshaller_asgt_jester_v1_SuggestionResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -70,6 +78,12 @@ namespace Asgt.Jester.V1 {
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Asgt.Jester.V1.SuggestionResponse> Suggest(global::Asgt.Jester.V1.SuggestionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Asgt.Jester.V1.SuggestionResponse> InternalSuggest(global::Asgt.Jester.V1.SuggestionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -123,6 +137,26 @@ namespace Asgt.Jester.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_Suggest, null, options, request);
       }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Asgt.Jester.V1.SuggestionResponse InternalSuggest(global::Asgt.Jester.V1.SuggestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InternalSuggest(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Asgt.Jester.V1.SuggestionResponse InternalSuggest(global::Asgt.Jester.V1.SuggestionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_InternalSuggest, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Asgt.Jester.V1.SuggestionResponse> InternalSuggestAsync(global::Asgt.Jester.V1.SuggestionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return InternalSuggestAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Asgt.Jester.V1.SuggestionResponse> InternalSuggestAsync(global::Asgt.Jester.V1.SuggestionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_InternalSuggest, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override JesterClient NewInstance(ClientBaseConfiguration configuration)
@@ -137,7 +171,8 @@ namespace Asgt.Jester.V1 {
     public static grpc::ServerServiceDefinition BindService(JesterBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_Suggest, serviceImpl.Suggest).Build();
+          .AddMethod(__Method_Suggest, serviceImpl.Suggest)
+          .AddMethod(__Method_InternalSuggest, serviceImpl.InternalSuggest).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -148,6 +183,7 @@ namespace Asgt.Jester.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, JesterBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_Suggest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Jester.V1.SuggestionRequest, global::Asgt.Jester.V1.SuggestionResponse>(serviceImpl.Suggest));
+      serviceBinder.AddMethod(__Method_InternalSuggest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Jester.V1.SuggestionRequest, global::Asgt.Jester.V1.SuggestionResponse>(serviceImpl.InternalSuggest));
     }
 
   }
