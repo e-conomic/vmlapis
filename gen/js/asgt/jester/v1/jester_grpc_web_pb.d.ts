@@ -15,6 +15,13 @@ export class JesterClient {
                response: asgt_jester_v1_jester_pb.SuggestionResponse) => void
   ): grpcWeb.ClientReadableStream<asgt_jester_v1_jester_pb.SuggestionResponse>;
 
+  internalSuggest(
+    request: asgt_jester_v1_jester_pb.SuggestionRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: asgt_jester_v1_jester_pb.SuggestionResponse) => void
+  ): grpcWeb.ClientReadableStream<asgt_jester_v1_jester_pb.SuggestionResponse>;
+
 }
 
 export class JesterPromiseClient {
@@ -23,6 +30,11 @@ export class JesterPromiseClient {
                options?: null | { [index: string]: any; });
 
   suggest(
+    request: asgt_jester_v1_jester_pb.SuggestionRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<asgt_jester_v1_jester_pb.SuggestionResponse>;
+
+  internalSuggest(
     request: asgt_jester_v1_jester_pb.SuggestionRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<asgt_jester_v1_jester_pb.SuggestionResponse>;

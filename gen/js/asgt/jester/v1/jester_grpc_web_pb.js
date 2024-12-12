@@ -147,5 +147,66 @@ proto.asgt.jester.v1.JesterPromiseClient.prototype.suggest =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.jester.v1.SuggestionRequest,
+ *   !proto.asgt.jester.v1.SuggestionResponse>}
+ */
+const methodDescriptor_Jester_InternalSuggest = new grpc.web.MethodDescriptor(
+  '/asgt.jester.v1.Jester/InternalSuggest',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.jester.v1.SuggestionRequest,
+  proto.asgt.jester.v1.SuggestionResponse,
+  /**
+   * @param {!proto.asgt.jester.v1.SuggestionRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.asgt.jester.v1.SuggestionResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.jester.v1.SuggestionRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.asgt.jester.v1.SuggestionResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.jester.v1.SuggestionResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.jester.v1.JesterClient.prototype.internalSuggest =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.jester.v1.Jester/InternalSuggest',
+      request,
+      metadata || {},
+      methodDescriptor_Jester_InternalSuggest,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.jester.v1.SuggestionRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.asgt.jester.v1.SuggestionResponse>}
+ *     Promise that resolves to the response
+ */
+proto.asgt.jester.v1.JesterPromiseClient.prototype.internalSuggest =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.jester.v1.Jester/InternalSuggest',
+      request,
+      metadata || {},
+      methodDescriptor_Jester_InternalSuggest);
+};
+
+
 module.exports = proto.asgt.jester.v1;
 
