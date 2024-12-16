@@ -1,6 +1,7 @@
 import * as jspb from 'google-protobuf'
 
 import * as asgt_type_dataset_pb from '../../asgt/type/dataset_pb';
+import * as asgt_type_retention_policy_pb from '../../asgt/type/retention_policy_pb';
 import * as asgt_v2_type_example_pb from '../../asgt/v2/type/example_pb';
 import * as asgt_v2_type_model_pb from '../../asgt/v2/type/model_pb';
 import * as asgt_v2_type_training_pb from '../../asgt/v2/type/training_pb';
@@ -37,6 +38,11 @@ export class CreateDatasetRequest extends jspb.Message {
   clearTagsList(): CreateDatasetRequest;
   addTags(value: string, index?: number): CreateDatasetRequest;
 
+  getRetentionPolicy(): asgt_type_retention_policy_pb.RetentionPolicy | undefined;
+  setRetentionPolicy(value?: asgt_type_retention_policy_pb.RetentionPolicy): CreateDatasetRequest;
+  hasRetentionPolicy(): boolean;
+  clearRetentionPolicy(): CreateDatasetRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): CreateDatasetRequest.AsObject;
   static toObject(includeInstance: boolean, msg: CreateDatasetRequest): CreateDatasetRequest.AsObject;
@@ -49,6 +55,7 @@ export namespace CreateDatasetRequest {
   export type AsObject = {
     datasetName: string,
     tagsList: Array<string>,
+    retentionPolicy?: asgt_type_retention_policy_pb.RetentionPolicy.AsObject,
   }
 }
 
