@@ -1693,6 +1693,10 @@
         "documentMetadata": {
           "$ref": "#/definitions/typeDocumentMetadata",
           "title": "Extra information about the document like number of pages"
+        },
+        "textLanguage": {
+          "type": "string",
+          "title": "Information about the text language detected from OCR"
         }
       }
     },

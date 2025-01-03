@@ -2263,4 +2263,24 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
    */
   ai.visma.ssn.type.DocumentMetadataOrBuilder getDocumentMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Information about the text language detected from OCR
+   * </pre>
+   *
+   * <code>string text_language = 50 [json_name = "textLanguage"];</code>
+   * @return The textLanguage.
+   */
+  java.lang.String getTextLanguage();
+  /**
+   * <pre>
+   * Information about the text language detected from OCR
+   * </pre>
+   *
+   * <code>string text_language = 50 [json_name = "textLanguage"];</code>
+   * @return The bytes for textLanguage.
+   */
+  com.google.protobuf.ByteString
+      getTextLanguageBytes();
 }

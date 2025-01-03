@@ -371,6 +371,9 @@ export class DocumentAnnotatorResponse extends jspb.Message {
   hasDocumentMetadata(): boolean;
   clearDocumentMetadata(): DocumentAnnotatorResponse;
 
+  getTextLanguage(): string;
+  setTextLanguage(value: string): DocumentAnnotatorResponse;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): DocumentAnnotatorResponse.AsObject;
   static toObject(includeInstance: boolean, msg: DocumentAnnotatorResponse): DocumentAnnotatorResponse.AsObject;
@@ -430,6 +433,7 @@ export namespace DocumentAnnotatorResponse {
     pageTextsList: Array<ssn_type_candidate_pb.PageText.AsObject>,
     vatDistributionList: Array<ssn_type_candidate_pb.VatDistributionCandidate.AsObject>,
     documentMetadata?: ssn_type_candidate_pb.DocumentMetadata.AsObject,
+    textLanguage: string,
   }
 }
 

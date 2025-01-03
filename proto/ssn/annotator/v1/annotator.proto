@@ -293,6 +293,8 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.VatDistributionCandidate vat_distribution = 48;
   // Extra information about the document like number of pages
   ssn.type.DocumentMetadata document_metadata = 49;
+  // Information about the text language detected from OCR
+  string text_language = 50;
 }
 
 message Document {
