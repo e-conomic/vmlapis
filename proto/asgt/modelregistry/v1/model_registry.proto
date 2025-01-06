@@ -36,8 +36,8 @@ message RegisterModelRequest {
   asgt.type.TrainStatistics train_statistics = 7;
   asgt.type.DatasetStatistics dataset_statistics = 8;
   map<string, asgt.type.ConfidenceThresholds> target_to_confidence_thresholds = 10;
-  map<string, asgt.type.ConfidenceThresholds> tail_target_to_confidence_thresholds = 11;
   string metric_version = 11;
+  map<string, asgt.type.ConfidenceThresholds> tail_target_to_confidence_thresholds = 12;
 }
 
 //message DeleteModelRequest {
