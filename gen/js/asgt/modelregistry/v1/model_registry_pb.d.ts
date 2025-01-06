@@ -51,6 +51,9 @@ export class RegisterModelRequest extends jspb.Message {
   getMetricVersion(): string;
   setMetricVersion(value: string): RegisterModelRequest;
 
+  getTailTargetToConfidenceThresholdsMap(): jspb.Map<string, asgt_type_model_pb.ConfidenceThresholds>;
+  clearTailTargetToConfidenceThresholdsMap(): RegisterModelRequest;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): RegisterModelRequest.AsObject;
   static toObject(includeInstance: boolean, msg: RegisterModelRequest): RegisterModelRequest.AsObject;
@@ -71,6 +74,7 @@ export namespace RegisterModelRequest {
     datasetStatistics?: asgt_type_dataset_statistics_pb.DatasetStatistics.AsObject,
     targetToConfidenceThresholdsMap: Array<[string, asgt_type_model_pb.ConfidenceThresholds.AsObject]>,
     metricVersion: string,
+    tailTargetToConfidenceThresholdsMap: Array<[string, asgt_type_model_pb.ConfidenceThresholds.AsObject]>,
   }
 }
 

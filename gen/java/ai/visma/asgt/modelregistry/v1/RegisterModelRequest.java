@@ -42,6 +42,8 @@ private static final long serialVersionUID = 0L;
         return internalGetMetrics();
       case 10:
         return internalGetTargetToConfidenceThresholds();
+      case 12:
+        return internalGetTailTargetToConfidenceThresholds();
       default:
         throw new RuntimeException(
             "Invalid map field number: " + number);
@@ -424,6 +426,85 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     }
   }
 
+  public static final int TAIL_TARGET_TO_CONFIDENCE_THRESHOLDS_FIELD_NUMBER = 12;
+  private static final class TailTargetToConfidenceThresholdsDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>newDefaultInstance(
+                ai.visma.asgt.modelregistry.v1.ModelRegistryProto.internal_static_asgt_modelregistry_v1_RegisterModelRequest_TailTargetToConfidenceThresholdsEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.MESSAGE,
+                ai.visma.asgt.type.ConfidenceThresholds.getDefaultInstance());
+  }
+  @SuppressWarnings("serial")
+  private com.google.protobuf.MapField<
+      java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> tailTargetToConfidenceThresholds_;
+  private com.google.protobuf.MapField<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+  internalGetTailTargetToConfidenceThresholds() {
+    if (tailTargetToConfidenceThresholds_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          TailTargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry);
+    }
+    return tailTargetToConfidenceThresholds_;
+  }
+  public int getTailTargetToConfidenceThresholdsCount() {
+    return internalGetTailTargetToConfidenceThresholds().getMap().size();
+  }
+  /**
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+   */
+  @java.lang.Override
+  public boolean containsTailTargetToConfidenceThresholds(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    return internalGetTailTargetToConfidenceThresholds().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getTailTargetToConfidenceThresholdsMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> getTailTargetToConfidenceThresholds() {
+    return getTailTargetToConfidenceThresholdsMap();
+  }
+  /**
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+   */
+  @java.lang.Override
+  public java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> getTailTargetToConfidenceThresholdsMap() {
+    return internalGetTailTargetToConfidenceThresholds().getMap();
+  }
+  /**
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+   */
+  @java.lang.Override
+  public /* nullable */
+ai.visma.asgt.type.ConfidenceThresholds getTailTargetToConfidenceThresholdsOrDefault(
+      java.lang.String key,
+      /* nullable */
+ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> map =
+        internalGetTailTargetToConfidenceThresholds().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.asgt.type.ConfidenceThresholds getTailTargetToConfidenceThresholdsOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new NullPointerException("map key"); }
+    java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> map =
+        internalGetTailTargetToConfidenceThresholds().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -474,6 +555,12 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metricVersion_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 11, metricVersion_);
     }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetTailTargetToConfidenceThresholds(),
+        TailTargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry,
+        12);
     getUnknownFields().writeTo(output);
   }
 
@@ -534,6 +621,16 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(metricVersion_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(11, metricVersion_);
     }
+    for (java.util.Map.Entry<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> entry
+         : internalGetTailTargetToConfidenceThresholds().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+      tailTargetToConfidenceThresholds__ = TailTargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(12, tailTargetToConfidenceThresholds__);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -580,6 +677,8 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
         other.internalGetTargetToConfidenceThresholds())) return false;
     if (!getMetricVersion()
         .equals(other.getMetricVersion())) return false;
+    if (!internalGetTailTargetToConfidenceThresholds().equals(
+        other.internalGetTailTargetToConfidenceThresholds())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -626,6 +725,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
     }
     hash = (37 * hash) + METRIC_VERSION_FIELD_NUMBER;
     hash = (53 * hash) + getMetricVersion().hashCode();
+    if (!internalGetTailTargetToConfidenceThresholds().getMap().isEmpty()) {
+      hash = (37 * hash) + TAIL_TARGET_TO_CONFIDENCE_THRESHOLDS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetTailTargetToConfidenceThresholds().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -743,6 +846,8 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
           return internalGetMetrics();
         case 10:
           return internalGetTargetToConfidenceThresholds();
+        case 12:
+          return internalGetTailTargetToConfidenceThresholds();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -756,6 +861,8 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
           return internalGetMutableMetrics();
         case 10:
           return internalGetMutableTargetToConfidenceThresholds();
+        case 12:
+          return internalGetMutableTailTargetToConfidenceThresholds();
         default:
           throw new RuntimeException(
               "Invalid map field number: " + number);
@@ -815,6 +922,7 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
       internalGetMutableTargetToConfidenceThresholds().clear();
       metricVersion_ = "";
+      internalGetMutableTailTargetToConfidenceThresholds().clear();
       return this;
     }
 
@@ -897,6 +1005,10 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
         result.metricVersion_ = metricVersion_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
+        result.tailTargetToConfidenceThresholds_ = internalGetTailTargetToConfidenceThresholds();
+        result.tailTargetToConfidenceThresholds_.makeImmutable();
       }
     }
 
@@ -999,6 +1111,9 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
         bitField0_ |= 0x00000200;
         onChanged();
       }
+      internalGetMutableTailTargetToConfidenceThresholds().mergeFrom(
+          other.internalGetTailTargetToConfidenceThresholds());
+      bitField0_ |= 0x00000400;
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -1099,6 +1214,15 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
               bitField0_ |= 0x00000200;
               break;
             } // case 90
+            case 98: {
+              com.google.protobuf.MapEntry<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+              tailTargetToConfidenceThresholds__ = input.readMessage(
+                  TailTargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+              internalGetMutableTailTargetToConfidenceThresholds().getMutableMap().put(
+                  tailTargetToConfidenceThresholds__.getKey(), tailTargetToConfidenceThresholds__.getValue());
+              bitField0_ |= 0x00000400;
+              break;
+            } // case 98
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2238,6 +2362,133 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
       metricVersion_ = value;
       bitField0_ |= 0x00000200;
       onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> tailTargetToConfidenceThresholds_;
+    private com.google.protobuf.MapField<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+        internalGetTailTargetToConfidenceThresholds() {
+      if (tailTargetToConfidenceThresholds_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            TailTargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry);
+      }
+      return tailTargetToConfidenceThresholds_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+        internalGetMutableTailTargetToConfidenceThresholds() {
+      if (tailTargetToConfidenceThresholds_ == null) {
+        tailTargetToConfidenceThresholds_ = com.google.protobuf.MapField.newMapField(
+            TailTargetToConfidenceThresholdsDefaultEntryHolder.defaultEntry);
+      }
+      if (!tailTargetToConfidenceThresholds_.isMutable()) {
+        tailTargetToConfidenceThresholds_ = tailTargetToConfidenceThresholds_.copy();
+      }
+      bitField0_ |= 0x00000400;
+      onChanged();
+      return tailTargetToConfidenceThresholds_;
+    }
+    public int getTailTargetToConfidenceThresholdsCount() {
+      return internalGetTailTargetToConfidenceThresholds().getMap().size();
+    }
+    /**
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+     */
+    @java.lang.Override
+    public boolean containsTailTargetToConfidenceThresholds(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      return internalGetTailTargetToConfidenceThresholds().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getTailTargetToConfidenceThresholdsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> getTailTargetToConfidenceThresholds() {
+      return getTailTargetToConfidenceThresholdsMap();
+    }
+    /**
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+     */
+    @java.lang.Override
+    public java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> getTailTargetToConfidenceThresholdsMap() {
+      return internalGetTailTargetToConfidenceThresholds().getMap();
+    }
+    /**
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+     */
+    @java.lang.Override
+    public /* nullable */
+ai.visma.asgt.type.ConfidenceThresholds getTailTargetToConfidenceThresholdsOrDefault(
+        java.lang.String key,
+        /* nullable */
+ai.visma.asgt.type.ConfidenceThresholds defaultValue) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> map =
+          internalGetTailTargetToConfidenceThresholds().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+     */
+    @java.lang.Override
+    public ai.visma.asgt.type.ConfidenceThresholds getTailTargetToConfidenceThresholdsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> map =
+          internalGetTailTargetToConfidenceThresholds().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+    public Builder clearTailTargetToConfidenceThresholds() {
+      bitField0_ = (bitField0_ & ~0x00000400);
+      internalGetMutableTailTargetToConfidenceThresholds().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+     */
+    public Builder removeTailTargetToConfidenceThresholds(
+        java.lang.String key) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      internalGetMutableTailTargetToConfidenceThresholds().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+        getMutableTailTargetToConfidenceThresholds() {
+      bitField0_ |= 0x00000400;
+      return internalGetMutableTailTargetToConfidenceThresholds().getMutableMap();
+    }
+    /**
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+     */
+    public Builder putTailTargetToConfidenceThresholds(
+        java.lang.String key,
+        ai.visma.asgt.type.ConfidenceThresholds value) {
+      if (key == null) { throw new NullPointerException("map key"); }
+      if (value == null) { throw new NullPointerException("map value"); }
+      internalGetMutableTailTargetToConfidenceThresholds().getMutableMap()
+          .put(key, value);
+      bitField0_ |= 0x00000400;
+      return this;
+    }
+    /**
+     * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+     */
+    public Builder putAllTailTargetToConfidenceThresholds(
+        java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds> values) {
+      internalGetMutableTailTargetToConfidenceThresholds().getMutableMap()
+          .putAll(values);
+      bitField0_ |= 0x00000400;
       return this;
     }
     @java.lang.Override

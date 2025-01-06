@@ -152,7 +152,8 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.toObject = function(includeInst
     trainStatistics: (f = msg.getTrainStatistics()) && asgt_type_train_statistics_pb.TrainStatistics.toObject(includeInstance, f),
     datasetStatistics: (f = msg.getDatasetStatistics()) && asgt_type_dataset_statistics_pb.DatasetStatistics.toObject(includeInstance, f),
     targetToConfidenceThresholdsMap: (f = msg.getTargetToConfidenceThresholdsMap()) ? f.toObject(includeInstance, proto.asgt.type.ConfidenceThresholds.toObject) : [],
-    metricVersion: jspb.Message.getFieldWithDefault(msg, 11, "")
+    metricVersion: jspb.Message.getFieldWithDefault(msg, 11, ""),
+    tailTargetToConfidenceThresholdsMap: (f = msg.getTailTargetToConfidenceThresholdsMap()) ? f.toObject(includeInstance, proto.asgt.type.ConfidenceThresholds.toObject) : []
   };
 
   if (includeInstance) {
@@ -237,6 +238,12 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.deserializeBinaryFromReader = f
     case 11:
       var value = /** @type {string} */ (reader.readString());
       msg.setMetricVersion(value);
+      break;
+    case 12:
+      var value = msg.getTailTargetToConfidenceThresholdsMap();
+      reader.readMessage(value, function(message, reader) {
+        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readMessage, proto.asgt.type.ConfidenceThresholds.deserializeBinaryFromReader, "", new proto.asgt.type.ConfidenceThresholds());
+         });
       break;
     default:
       reader.skipField();
@@ -335,6 +342,10 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.serializeBinaryToWriter = funct
       11,
       f
     );
+  }
+  f = message.getTailTargetToConfidenceThresholdsMap(true);
+  if (f && f.getLength() > 0) {
+    f.serializeBinary(12, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeMessage, proto.asgt.type.ConfidenceThresholds.serializeBinaryToWriter);
   }
 };
 
@@ -622,6 +633,29 @@ proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getMetricVersion = fu
  */
 proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.setMetricVersion = function(value) {
   return jspb.Message.setProto3StringField(this, 11, value);
+};
+
+
+/**
+ * map<string, asgt.type.ConfidenceThresholds> tail_target_to_confidence_thresholds = 12;
+ * @param {boolean=} opt_noLazyCreate Do not create the map if
+ * empty, instead returning `undefined`
+ * @return {!jspb.Map<string,!proto.asgt.type.ConfidenceThresholds>}
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.getTailTargetToConfidenceThresholdsMap = function(opt_noLazyCreate) {
+  return /** @type {!jspb.Map<string,!proto.asgt.type.ConfidenceThresholds>} */ (
+      jspb.Message.getMapField(this, 12, opt_noLazyCreate,
+      proto.asgt.type.ConfidenceThresholds));
+};
+
+
+/**
+ * Clears values from the map. The map will be non-null.
+ * @return {!proto.asgt.modelregistry.v1.RegisterModelRequest} returns this
+ */
+proto.asgt.modelregistry.v1.RegisterModelRequest.prototype.clearTailTargetToConfidenceThresholdsMap = function() {
+  this.getTailTargetToConfidenceThresholdsMap().clear();
+  return this;
 };
 
 
