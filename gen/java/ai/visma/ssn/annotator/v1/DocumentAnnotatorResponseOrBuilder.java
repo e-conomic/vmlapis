@@ -2269,18 +2269,18 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * Information about the text language detected from OCR
    * </pre>
    *
-   * <code>string text_language = 50 [json_name = "textLanguage"];</code>
-   * @return The textLanguage.
+   * <code>string language_code = 50 [json_name = "languageCode"];</code>
+   * @return The languageCode.
    */
-  java.lang.String getTextLanguage();
+  java.lang.String getLanguageCode();
   /**
    * <pre>
    * Information about the text language detected from OCR
    * </pre>
    *
-   * <code>string text_language = 50 [json_name = "textLanguage"];</code>
-   * @return The bytes for textLanguage.
+   * <code>string language_code = 50 [json_name = "languageCode"];</code>
+   * @return The bytes for languageCode.
    */
   com.google.protobuf.ByteString
-      getTextLanguageBytes();
+      getLanguageCodeBytes();
 }

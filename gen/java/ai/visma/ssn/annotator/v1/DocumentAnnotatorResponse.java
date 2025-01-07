@@ -63,7 +63,7 @@ private static final long serialVersionUID = 0L;
     answers_ = java.util.Collections.emptyList();
     pageTexts_ = java.util.Collections.emptyList();
     vatDistribution_ = java.util.Collections.emptyList();
-    textLanguage_ = "";
+    languageCode_ = "";
   }
 
   @java.lang.Override
@@ -3194,27 +3194,27 @@ private static final long serialVersionUID = 0L;
     return documentMetadata_ == null ? ai.visma.ssn.type.DocumentMetadata.getDefaultInstance() : documentMetadata_;
   }
 
-  public static final int TEXT_LANGUAGE_FIELD_NUMBER = 50;
+  public static final int LANGUAGE_CODE_FIELD_NUMBER = 50;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object textLanguage_ = "";
+  private volatile java.lang.Object languageCode_ = "";
   /**
    * <pre>
    * Information about the text language detected from OCR
    * </pre>
    *
-   * <code>string text_language = 50 [json_name = "textLanguage"];</code>
-   * @return The textLanguage.
+   * <code>string language_code = 50 [json_name = "languageCode"];</code>
+   * @return The languageCode.
    */
   @java.lang.Override
-  public java.lang.String getTextLanguage() {
-    java.lang.Object ref = textLanguage_;
+  public java.lang.String getLanguageCode() {
+    java.lang.Object ref = languageCode_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      textLanguage_ = s;
+      languageCode_ = s;
       return s;
     }
   }
@@ -3223,18 +3223,18 @@ private static final long serialVersionUID = 0L;
    * Information about the text language detected from OCR
    * </pre>
    *
-   * <code>string text_language = 50 [json_name = "textLanguage"];</code>
-   * @return The bytes for textLanguage.
+   * <code>string language_code = 50 [json_name = "languageCode"];</code>
+   * @return The bytes for languageCode.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getTextLanguageBytes() {
-    java.lang.Object ref = textLanguage_;
+      getLanguageCodeBytes() {
+    java.lang.Object ref = languageCode_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      textLanguage_ = b;
+      languageCode_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -3402,8 +3402,8 @@ private static final long serialVersionUID = 0L;
     if (documentMetadata_ != null) {
       output.writeMessage(49, getDocumentMetadata());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(textLanguage_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 50, textLanguage_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 50, languageCode_);
     }
     getUnknownFields().writeTo(output);
   }
@@ -3607,8 +3607,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(49, getDocumentMetadata());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(textLanguage_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(50, textLanguage_);
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(50, languageCode_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -3729,8 +3729,8 @@ private static final long serialVersionUID = 0L;
       if (!getDocumentMetadata()
           .equals(other.getDocumentMetadata())) return false;
     }
-    if (!getTextLanguage()
-        .equals(other.getTextLanguage())) return false;
+    if (!getLanguageCode()
+        .equals(other.getLanguageCode())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3932,8 +3932,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DOCUMENT_METADATA_FIELD_NUMBER;
       hash = (53 * hash) + getDocumentMetadata().hashCode();
     }
-    hash = (37 * hash) + TEXT_LANGUAGE_FIELD_NUMBER;
-    hash = (53 * hash) + getTextLanguage().hashCode();
+    hash = (37 * hash) + LANGUAGE_CODE_FIELD_NUMBER;
+    hash = (53 * hash) + getLanguageCode().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -4387,7 +4387,7 @@ private static final long serialVersionUID = 0L;
         documentMetadataBuilder_.dispose();
         documentMetadataBuilder_ = null;
       }
-      textLanguage_ = "";
+      languageCode_ = "";
       return this;
     }
 
@@ -4846,7 +4846,7 @@ private static final long serialVersionUID = 0L;
             : documentMetadataBuilder_.build();
       }
       if (((from_bitField1_ & 0x00020000) != 0)) {
-        result.textLanguage_ = textLanguage_;
+        result.languageCode_ = languageCode_;
       }
     }
 
@@ -6059,8 +6059,8 @@ private static final long serialVersionUID = 0L;
       if (other.hasDocumentMetadata()) {
         mergeDocumentMetadata(other.getDocumentMetadata());
       }
-      if (!other.getTextLanguage().isEmpty()) {
-        textLanguage_ = other.textLanguage_;
+      if (!other.getLanguageCode().isEmpty()) {
+        languageCode_ = other.languageCode_;
         bitField1_ |= 0x00020000;
         onChanged();
       }
@@ -6692,7 +6692,7 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 394
             case 402: {
-              textLanguage_ = input.readStringRequireUtf8();
+              languageCode_ = input.readStringRequireUtf8();
               bitField1_ |= 0x00020000;
               break;
             } // case 402
@@ -21771,22 +21771,22 @@ private static final long serialVersionUID = 0L;
       return documentMetadataBuilder_;
     }
 
-    private java.lang.Object textLanguage_ = "";
+    private java.lang.Object languageCode_ = "";
     /**
      * <pre>
      * Information about the text language detected from OCR
      * </pre>
      *
-     * <code>string text_language = 50 [json_name = "textLanguage"];</code>
-     * @return The textLanguage.
+     * <code>string language_code = 50 [json_name = "languageCode"];</code>
+     * @return The languageCode.
      */
-    public java.lang.String getTextLanguage() {
-      java.lang.Object ref = textLanguage_;
+    public java.lang.String getLanguageCode() {
+      java.lang.Object ref = languageCode_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        textLanguage_ = s;
+        languageCode_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
@@ -21797,17 +21797,17 @@ private static final long serialVersionUID = 0L;
      * Information about the text language detected from OCR
      * </pre>
      *
-     * <code>string text_language = 50 [json_name = "textLanguage"];</code>
-     * @return The bytes for textLanguage.
+     * <code>string language_code = 50 [json_name = "languageCode"];</code>
+     * @return The bytes for languageCode.
      */
     public com.google.protobuf.ByteString
-        getTextLanguageBytes() {
-      java.lang.Object ref = textLanguage_;
+        getLanguageCodeBytes() {
+      java.lang.Object ref = languageCode_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        textLanguage_ = b;
+        languageCode_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
@@ -21818,14 +21818,14 @@ private static final long serialVersionUID = 0L;
      * Information about the text language detected from OCR
      * </pre>
      *
-     * <code>string text_language = 50 [json_name = "textLanguage"];</code>
-     * @param value The textLanguage to set.
+     * <code>string language_code = 50 [json_name = "languageCode"];</code>
+     * @param value The languageCode to set.
      * @return This builder for chaining.
      */
-    public Builder setTextLanguage(
+    public Builder setLanguageCode(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      textLanguage_ = value;
+      languageCode_ = value;
       bitField1_ |= 0x00020000;
       onChanged();
       return this;
@@ -21835,11 +21835,11 @@ private static final long serialVersionUID = 0L;
      * Information about the text language detected from OCR
      * </pre>
      *
-     * <code>string text_language = 50 [json_name = "textLanguage"];</code>
+     * <code>string language_code = 50 [json_name = "languageCode"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearTextLanguage() {
-      textLanguage_ = getDefaultInstance().getTextLanguage();
+    public Builder clearLanguageCode() {
+      languageCode_ = getDefaultInstance().getLanguageCode();
       bitField1_ = (bitField1_ & ~0x00020000);
       onChanged();
       return this;
@@ -21849,15 +21849,15 @@ private static final long serialVersionUID = 0L;
      * Information about the text language detected from OCR
      * </pre>
      *
-     * <code>string text_language = 50 [json_name = "textLanguage"];</code>
-     * @param value The bytes for textLanguage to set.
+     * <code>string language_code = 50 [json_name = "languageCode"];</code>
+     * @param value The bytes for languageCode to set.
      * @return This builder for chaining.
      */
-    public Builder setTextLanguageBytes(
+    public Builder setLanguageCodeBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      textLanguage_ = value;
+      languageCode_ = value;
       bitField1_ |= 0x00020000;
       onChanged();
       return this;

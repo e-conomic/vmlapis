@@ -372,7 +372,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   RECEIVER_VAT_NUMBER: 43,
   PURCHASE_LINES: 44,
   PAGE_TEXTS: 45,
-  VAT_DISTRIBUTION: 46
+  VAT_DISTRIBUTION: 46,
+  LANGUAGE_CODE: 47
 };
 
 /**
@@ -949,7 +950,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     vatDistributionList: jspb.Message.toObjectList(msg.getVatDistributionList(),
     ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance),
     documentMetadata: (f = msg.getDocumentMetadata()) && ssn_type_candidate_pb.DocumentMetadata.toObject(includeInstance, f),
-    textLanguage: jspb.Message.getFieldWithDefault(msg, 50, "")
+    languageCode: jspb.Message.getFieldWithDefault(msg, 50, "")
   };
 
   if (includeInstance) {
@@ -1230,7 +1231,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       break;
     case 50:
       var value = /** @type {string} */ (reader.readString());
-      msg.setTextLanguage(value);
+      msg.setLanguageCode(value);
       break;
     default:
       reader.skipField();
@@ -1650,7 +1651,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       ssn_type_candidate_pb.DocumentMetadata.serializeBinaryToWriter
     );
   }
-  f = message.getTextLanguage();
+  f = message.getLanguageCode();
   if (f.length > 0) {
     writer.writeString(
       50,
@@ -3461,10 +3462,10 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.hasDocumentMetadata =
 
 
 /**
- * optional string text_language = 50;
+ * optional string language_code = 50;
  * @return {string}
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getTextLanguage = function() {
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getLanguageCode = function() {
   return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 50, ""));
 };
 
@@ -3473,7 +3474,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getTextLanguage = fun
  * @param {string} value
  * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setTextLanguage = function(value) {
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setLanguageCode = function(value) {
   return jspb.Message.setProto3StringField(this, 50, value);
 };
 

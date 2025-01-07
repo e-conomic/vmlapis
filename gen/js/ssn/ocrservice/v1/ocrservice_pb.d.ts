@@ -49,9 +49,6 @@ export class GetTextAnnotationResponse extends jspb.Message {
   hasLastImage(): boolean;
   clearLastImage(): GetTextAnnotationResponse;
 
-  getLanguageCode(): string;
-  setLanguageCode(value: string): GetTextAnnotationResponse;
-
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): GetTextAnnotationResponse.AsObject;
   static toObject(includeInstance: boolean, msg: GetTextAnnotationResponse): GetTextAnnotationResponse.AsObject;
@@ -65,7 +62,6 @@ export namespace GetTextAnnotationResponse {
     textAnnotation?: ssn_type_text_annotation_pb.TextAnnotation.AsObject,
     image?: google_protobuf_wrappers_pb.BytesValue.AsObject,
     lastImage?: google_protobuf_wrappers_pb.BytesValue.AsObject,
-    languageCode: string,
   }
 }
 

@@ -28,7 +28,6 @@ message GetTextAnnotationResponse {
   ssn.type.TextAnnotation text_annotation = 2;
   google.protobuf.BytesValue image = 3;
   google.protobuf.BytesValue last_image = 4;
-  string language_code = 5;
 }
 
 message AsyncCreateOperationRequest {

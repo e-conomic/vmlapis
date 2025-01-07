@@ -19,16 +19,14 @@ class GetTextAnnotationRequest(_message.Message):
     def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., preview: bool = ..., preview_last: bool = ...) -> None: ...
 
 class GetTextAnnotationResponse(_message.Message):
-    __slots__ = ["text_annotation", "image", "last_image", "language_code"]
+    __slots__ = ["text_annotation", "image", "last_image"]
     TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
     IMAGE_FIELD_NUMBER: _ClassVar[int]
     LAST_IMAGE_FIELD_NUMBER: _ClassVar[int]
-    LANGUAGE_CODE_FIELD_NUMBER: _ClassVar[int]
     text_annotation: _text_annotation_pb2.TextAnnotation
     image: _wrappers_pb2.BytesValue
     last_image: _wrappers_pb2.BytesValue
-    language_code: str
-    def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[_Union[_wrappers_pb2.BytesValue, _Mapping]] = ..., last_image: _Optional[_Union[_wrappers_pb2.BytesValue, _Mapping]] = ..., language_code: _Optional[str] = ...) -> None: ...
+    def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[_Union[_wrappers_pb2.BytesValue, _Mapping]] = ..., last_image: _Optional[_Union[_wrappers_pb2.BytesValue, _Mapping]] = ...) -> None: ...
 
 class AsyncCreateOperationRequest(_message.Message):
     __slots__ = ["input_paths", "output_path"]
