@@ -51,4 +51,16 @@ public interface GetTextAnnotationResponseOrBuilder extends
    * <code>.google.protobuf.BytesValue last_image = 4 [json_name = "lastImage"];</code>
    */
   com.google.protobuf.BytesValueOrBuilder getLastImageOrBuilder();
+
+  /**
+   * <code>string language_code = 5 [json_name = "languageCode"];</code>
+   * @return The languageCode.
+   */
+  java.lang.String getLanguageCode();
+  /**
+   * <code>string language_code = 5 [json_name = "languageCode"];</code>
+   * @return The bytes for languageCode.
+   */
+  com.google.protobuf.ByteString
+      getLanguageCodeBytes();
 }

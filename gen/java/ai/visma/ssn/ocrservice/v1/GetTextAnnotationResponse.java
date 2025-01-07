@@ -16,6 +16,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private GetTextAnnotationResponse() {
+    languageCode_ = "";
   }
 
   @java.lang.Override
@@ -116,6 +117,45 @@ private static final long serialVersionUID = 0L;
     return lastImage_ == null ? com.google.protobuf.BytesValue.getDefaultInstance() : lastImage_;
   }
 
+  public static final int LANGUAGE_CODE_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object languageCode_ = "";
+  /**
+   * <code>string language_code = 5 [json_name = "languageCode"];</code>
+   * @return The languageCode.
+   */
+  @java.lang.Override
+  public java.lang.String getLanguageCode() {
+    java.lang.Object ref = languageCode_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      languageCode_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string language_code = 5 [json_name = "languageCode"];</code>
+   * @return The bytes for languageCode.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getLanguageCodeBytes() {
+    java.lang.Object ref = languageCode_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      languageCode_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -139,6 +179,9 @@ private static final long serialVersionUID = 0L;
     if (lastImage_ != null) {
       output.writeMessage(4, getLastImage());
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, languageCode_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -159,6 +202,9 @@ private static final long serialVersionUID = 0L;
     if (lastImage_ != null) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(4, getLastImage());
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, languageCode_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -190,6 +236,8 @@ private static final long serialVersionUID = 0L;
       if (!getLastImage()
           .equals(other.getLastImage())) return false;
     }
+    if (!getLanguageCode()
+        .equals(other.getLanguageCode())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -213,6 +261,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + LAST_IMAGE_FIELD_NUMBER;
       hash = (53 * hash) + getLastImage().hashCode();
     }
+    hash = (37 * hash) + LANGUAGE_CODE_FIELD_NUMBER;
+    hash = (53 * hash) + getLanguageCode().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -359,6 +409,7 @@ private static final long serialVersionUID = 0L;
         lastImageBuilder_.dispose();
         lastImageBuilder_ = null;
       }
+      languageCode_ = "";
       return this;
     }
 
@@ -406,6 +457,9 @@ private static final long serialVersionUID = 0L;
         result.lastImage_ = lastImageBuilder_ == null
             ? lastImage_
             : lastImageBuilder_.build();
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.languageCode_ = languageCode_;
       }
     }
 
@@ -462,6 +516,11 @@ private static final long serialVersionUID = 0L;
       if (other.hasLastImage()) {
         mergeLastImage(other.getLastImage());
       }
+      if (!other.getLanguageCode().isEmpty()) {
+        languageCode_ = other.languageCode_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -509,6 +568,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 34
+            case 42: {
+              languageCode_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -881,6 +945,78 @@ private static final long serialVersionUID = 0L;
         lastImage_ = null;
       }
       return lastImageBuilder_;
+    }
+
+    private java.lang.Object languageCode_ = "";
+    /**
+     * <code>string language_code = 5 [json_name = "languageCode"];</code>
+     * @return The languageCode.
+     */
+    public java.lang.String getLanguageCode() {
+      java.lang.Object ref = languageCode_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        languageCode_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string language_code = 5 [json_name = "languageCode"];</code>
+     * @return The bytes for languageCode.
+     */
+    public com.google.protobuf.ByteString
+        getLanguageCodeBytes() {
+      java.lang.Object ref = languageCode_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        languageCode_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string language_code = 5 [json_name = "languageCode"];</code>
+     * @param value The languageCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLanguageCode(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      languageCode_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string language_code = 5 [json_name = "languageCode"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLanguageCode() {
+      languageCode_ = getDefaultInstance().getLanguageCode();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string language_code = 5 [json_name = "languageCode"];</code>
+     * @param value The bytes for languageCode to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLanguageCodeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      languageCode_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

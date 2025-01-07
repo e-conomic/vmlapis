@@ -448,7 +448,8 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.toObject = function(includeIns
   var f, obj = {
     textAnnotation: (f = msg.getTextAnnotation()) && ssn_type_text_annotation_pb.TextAnnotation.toObject(includeInstance, f),
     image: (f = msg.getImage()) && google_protobuf_wrappers_pb.BytesValue.toObject(includeInstance, f),
-    lastImage: (f = msg.getLastImage()) && google_protobuf_wrappers_pb.BytesValue.toObject(includeInstance, f)
+    lastImage: (f = msg.getLastImage()) && google_protobuf_wrappers_pb.BytesValue.toObject(includeInstance, f),
+    languageCode: jspb.Message.getFieldWithDefault(msg, 5, "")
   };
 
   if (includeInstance) {
@@ -499,6 +500,10 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.deserializeBinaryFromReader = 
       var value = new google_protobuf_wrappers_pb.BytesValue;
       reader.readMessage(value,google_protobuf_wrappers_pb.BytesValue.deserializeBinaryFromReader);
       msg.setLastImage(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setLanguageCode(value);
       break;
     default:
       reader.skipField();
@@ -551,6 +556,13 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.serializeBinaryToWriter = func
       4,
       f,
       google_protobuf_wrappers_pb.BytesValue.serializeBinaryToWriter
+    );
+  }
+  f = message.getLanguageCode();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
     );
   }
 };
@@ -664,6 +676,24 @@ proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.clearLastImage = fun
  */
 proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.hasLastImage = function() {
   return jspb.Message.getField(this, 4) != null;
+};
+
+
+/**
+ * optional string language_code = 5;
+ * @return {string}
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.getLanguageCode = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.ocrservice.v1.GetTextAnnotationResponse} returns this
+ */
+proto.ssn.ocrservice.v1.GetTextAnnotationResponse.prototype.setLanguageCode = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 

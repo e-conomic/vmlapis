@@ -70,45 +70,46 @@ public final class OcrserviceProto {
       "tTextAnnotationRequest\0226\n\010document\030\002 \001(\013" +
       "2\032.ssn.annotator.v1.DocumentR\010document\022\030" +
       "\n\007preview\030\003 \001(\010R\007preview\022!\n\014preview_last" +
-      "\030\004 \001(\010R\013previewLast\"\315\001\n\031GetTextAnnotatio" +
+      "\030\004 \001(\010R\013previewLast\"\362\001\n\031GetTextAnnotatio" +
       "nResponse\022A\n\017text_annotation\030\002 \001(\0132\030.ssn" +
       ".type.TextAnnotationR\016textAnnotation\0221\n\005" +
       "image\030\003 \001(\0132\033.google.protobuf.BytesValue" +
       "R\005image\022:\n\nlast_image\030\004 \001(\0132\033.google.pro" +
-      "tobuf.BytesValueR\tlastImage\"_\n\033AsyncCrea" +
-      "teOperationRequest\022\037\n\013input_paths\030\001 \003(\tR" +
-      "\ninputPaths\022\037\n\013output_path\030\002 \001(\tR\noutput" +
-      "Path\"E\n\034AsyncCreateOperationResponse\022%\n\016" +
-      "operation_name\030\001 \001(\tR\roperationName\"G\n\036A" +
-      "syncGetOperationStatusRequest\022%\n\016operati" +
-      "on_name\030\001 \001(\tR\roperationName\"\242\001\n\037AsyncGe" +
-      "tOperationStatusResponse\022%\n\016operation_na" +
-      "me\030\001 \001(\tR\roperationName\022\022\n\004done\030\002 \001(\010R\004d" +
-      "one\022\037\n\013status_code\030\003 \001(\005R\nstatusCode\022#\n\r" +
-      "error_message\030\004 \001(\tR\014errorMessage\")\n\023Ocr" +
-      "ScanImageRequest\022\022\n\004data\030\001 \001(\014R\004data\"3\n\024" +
-      "OcrScanImageResponse\022\033\n\ttess_hocr\030\001 \001(\tR" +
-      "\010tessHocr2\316\004\n\nOcrService\022_\n\014OcrScanImage" +
-      "\022&.ssn.ocrservice.v1.OcrScanImageRequest" +
-      "\032\'.ssn.ocrservice.v1.OcrScanImageRespons" +
-      "e\022n\n\021GetTextAnnotation\022+.ssn.ocrservice." +
-      "v1.GetTextAnnotationRequest\032,.ssn.ocrser" +
-      "vice.v1.GetTextAnnotationResponse\022q\n\022Get" +
-      "TextAnnotations\022+.ssn.ocrservice.v1.GetT" +
-      "extAnnotationRequest\032,.ssn.ocrservice.v1" +
-      ".GetTextAnnotationResponse0\001\022w\n\024AsyncCre" +
-      "ateOperation\022..ssn.ocrservice.v1.AsyncCr" +
-      "eateOperationRequest\032/.ssn.ocrservice.v1" +
-      ".AsyncCreateOperationResponse\022\202\001\n\027AsyncG" +
-      "etOperationStatus\0221.ssn.ocrservice.v1.As" +
-      "yncGetOperationStatusRequest\0322.ssn.ocrse" +
-      "rvice.v1.AsyncGetOperationStatusResponse" +
-      "0\001B\325\001\n\032ai.visma.ssn.ocrservice.v1B\017Ocrse" +
-      "rviceProtoP\001Z@github.com/e-conomic/vmlap" +
-      "is/gen/go/ssn/ocrservice/v1;ocrservice\242\002" +
-      "\003SOX\252\002\021Ssn.Ocrservice.V1\312\002\021Ssn\\Ocrservic" +
-      "e\\V1\342\002\035Ssn\\Ocrservice\\V1\\GPBMetadata\352\002\023S" +
-      "sn::Ocrservice::V1b\006proto3"
+      "tobuf.BytesValueR\tlastImage\022#\n\rlanguage_" +
+      "code\030\005 \001(\tR\014languageCode\"_\n\033AsyncCreateO" +
+      "perationRequest\022\037\n\013input_paths\030\001 \003(\tR\nin" +
+      "putPaths\022\037\n\013output_path\030\002 \001(\tR\noutputPat" +
+      "h\"E\n\034AsyncCreateOperationResponse\022%\n\016ope" +
+      "ration_name\030\001 \001(\tR\roperationName\"G\n\036Asyn" +
+      "cGetOperationStatusRequest\022%\n\016operation_" +
+      "name\030\001 \001(\tR\roperationName\"\242\001\n\037AsyncGetOp" +
+      "erationStatusResponse\022%\n\016operation_name\030" +
+      "\001 \001(\tR\roperationName\022\022\n\004done\030\002 \001(\010R\004done" +
+      "\022\037\n\013status_code\030\003 \001(\005R\nstatusCode\022#\n\rerr" +
+      "or_message\030\004 \001(\tR\014errorMessage\")\n\023OcrSca" +
+      "nImageRequest\022\022\n\004data\030\001 \001(\014R\004data\"3\n\024Ocr" +
+      "ScanImageResponse\022\033\n\ttess_hocr\030\001 \001(\tR\010te" +
+      "ssHocr2\316\004\n\nOcrService\022_\n\014OcrScanImage\022&." +
+      "ssn.ocrservice.v1.OcrScanImageRequest\032\'." +
+      "ssn.ocrservice.v1.OcrScanImageResponse\022n" +
+      "\n\021GetTextAnnotation\022+.ssn.ocrservice.v1." +
+      "GetTextAnnotationRequest\032,.ssn.ocrservic" +
+      "e.v1.GetTextAnnotationResponse\022q\n\022GetTex" +
+      "tAnnotations\022+.ssn.ocrservice.v1.GetText" +
+      "AnnotationRequest\032,.ssn.ocrservice.v1.Ge" +
+      "tTextAnnotationResponse0\001\022w\n\024AsyncCreate" +
+      "Operation\022..ssn.ocrservice.v1.AsyncCreat" +
+      "eOperationRequest\032/.ssn.ocrservice.v1.As" +
+      "yncCreateOperationResponse\022\202\001\n\027AsyncGetO" +
+      "perationStatus\0221.ssn.ocrservice.v1.Async" +
+      "GetOperationStatusRequest\0322.ssn.ocrservi" +
+      "ce.v1.AsyncGetOperationStatusResponse0\001B" +
+      "\325\001\n\032ai.visma.ssn.ocrservice.v1B\017Ocrservi" +
+      "ceProtoP\001Z@github.com/e-conomic/vmlapis/" +
+      "gen/go/ssn/ocrservice/v1;ocrservice\242\002\003SO" +
+      "X\252\002\021Ssn.Ocrservice.V1\312\002\021Ssn\\Ocrservice\\V" +
+      "1\342\002\035Ssn\\Ocrservice\\V1\\GPBMetadata\352\002\023Ssn:" +
+      ":Ocrservice::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -128,7 +129,7 @@ public final class OcrserviceProto {
     internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_ocrservice_v1_GetTextAnnotationResponse_descriptor,
-        new java.lang.String[] { "TextAnnotation", "Image", "LastImage", });
+        new java.lang.String[] { "TextAnnotation", "Image", "LastImage", "LanguageCode", });
     internal_static_ssn_ocrservice_v1_AsyncCreateOperationRequest_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_ssn_ocrservice_v1_AsyncCreateOperationRequest_fieldAccessorTable = new
