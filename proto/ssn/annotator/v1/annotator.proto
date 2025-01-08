@@ -296,7 +296,7 @@ message DocumentAnnotatorResponse {
   // Extra information about the document like number of pages
   ssn.type.DocumentMetadata document_metadata = 49;
   // Information about the text language detected from OCR
-  string language_code = 50;
+  repeated ssn.type.Candidate language_code = 50;
 }
 
 message Document {

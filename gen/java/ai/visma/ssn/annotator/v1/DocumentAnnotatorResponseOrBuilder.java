@@ -2269,18 +2269,42 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * Information about the text language detected from OCR
    * </pre>
    *
-   * <code>string language_code = 50 [json_name = "languageCode"];</code>
-   * @return The languageCode.
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
    */
-  java.lang.String getLanguageCode();
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getLanguageCodeList();
   /**
    * <pre>
    * Information about the text language detected from OCR
    * </pre>
    *
-   * <code>string language_code = 50 [json_name = "languageCode"];</code>
-   * @return The bytes for languageCode.
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
    */
-  com.google.protobuf.ByteString
-      getLanguageCodeBytes();
+  ai.visma.ssn.type.Candidate getLanguageCode(int index);
+  /**
+   * <pre>
+   * Information about the text language detected from OCR
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+   */
+  int getLanguageCodeCount();
+  /**
+   * <pre>
+   * Information about the text language detected from OCR
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getLanguageCodeOrBuilderList();
+  /**
+   * <pre>
+   * Information about the text language detected from OCR
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getLanguageCodeOrBuilder(
+      int index);
 }

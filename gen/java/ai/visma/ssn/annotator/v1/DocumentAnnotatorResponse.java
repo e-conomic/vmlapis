@@ -63,7 +63,7 @@ private static final long serialVersionUID = 0L;
     answers_ = java.util.Collections.emptyList();
     pageTexts_ = java.util.Collections.emptyList();
     vatDistribution_ = java.util.Collections.emptyList();
-    languageCode_ = "";
+    languageCode_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -3196,49 +3196,63 @@ private static final long serialVersionUID = 0L;
 
   public static final int LANGUAGE_CODE_FIELD_NUMBER = 50;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object languageCode_ = "";
+  private java.util.List<ai.visma.ssn.type.Candidate> languageCode_;
   /**
    * <pre>
    * Information about the text language detected from OCR
    * </pre>
    *
-   * <code>string language_code = 50 [json_name = "languageCode"];</code>
-   * @return The languageCode.
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
    */
   @java.lang.Override
-  public java.lang.String getLanguageCode() {
-    java.lang.Object ref = languageCode_;
-    if (ref instanceof java.lang.String) {
-      return (java.lang.String) ref;
-    } else {
-      com.google.protobuf.ByteString bs = 
-          (com.google.protobuf.ByteString) ref;
-      java.lang.String s = bs.toStringUtf8();
-      languageCode_ = s;
-      return s;
-    }
+  public java.util.List<ai.visma.ssn.type.Candidate> getLanguageCodeList() {
+    return languageCode_;
   }
   /**
    * <pre>
    * Information about the text language detected from OCR
    * </pre>
    *
-   * <code>string language_code = 50 [json_name = "languageCode"];</code>
-   * @return The bytes for languageCode.
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
    */
   @java.lang.Override
-  public com.google.protobuf.ByteString
-      getLanguageCodeBytes() {
-    java.lang.Object ref = languageCode_;
-    if (ref instanceof java.lang.String) {
-      com.google.protobuf.ByteString b = 
-          com.google.protobuf.ByteString.copyFromUtf8(
-              (java.lang.String) ref);
-      languageCode_ = b;
-      return b;
-    } else {
-      return (com.google.protobuf.ByteString) ref;
-    }
+  public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getLanguageCodeOrBuilderList() {
+    return languageCode_;
+  }
+  /**
+   * <pre>
+   * Information about the text language detected from OCR
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+   */
+  @java.lang.Override
+  public int getLanguageCodeCount() {
+    return languageCode_.size();
+  }
+  /**
+   * <pre>
+   * Information about the text language detected from OCR
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.Candidate getLanguageCode(int index) {
+    return languageCode_.get(index);
+  }
+  /**
+   * <pre>
+   * Information about the text language detected from OCR
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+   */
+  @java.lang.Override
+  public ai.visma.ssn.type.CandidateOrBuilder getLanguageCodeOrBuilder(
+      int index) {
+    return languageCode_.get(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -3402,8 +3416,8 @@ private static final long serialVersionUID = 0L;
     if (documentMetadata_ != null) {
       output.writeMessage(49, getDocumentMetadata());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
-      com.google.protobuf.GeneratedMessageV3.writeString(output, 50, languageCode_);
+    for (int i = 0; i < languageCode_.size(); i++) {
+      output.writeMessage(50, languageCode_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -3607,8 +3621,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(49, getDocumentMetadata());
     }
-    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(languageCode_)) {
-      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(50, languageCode_);
+    for (int i = 0; i < languageCode_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(50, languageCode_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -3729,8 +3744,8 @@ private static final long serialVersionUID = 0L;
       if (!getDocumentMetadata()
           .equals(other.getDocumentMetadata())) return false;
     }
-    if (!getLanguageCode()
-        .equals(other.getLanguageCode())) return false;
+    if (!getLanguageCodeList()
+        .equals(other.getLanguageCodeList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -3932,8 +3947,10 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + DOCUMENT_METADATA_FIELD_NUMBER;
       hash = (53 * hash) + getDocumentMetadata().hashCode();
     }
-    hash = (37 * hash) + LANGUAGE_CODE_FIELD_NUMBER;
-    hash = (53 * hash) + getLanguageCode().hashCode();
+    if (getLanguageCodeCount() > 0) {
+      hash = (37 * hash) + LANGUAGE_CODE_FIELD_NUMBER;
+      hash = (53 * hash) + getLanguageCodeList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -4387,7 +4404,13 @@ private static final long serialVersionUID = 0L;
         documentMetadataBuilder_.dispose();
         documentMetadataBuilder_ = null;
       }
-      languageCode_ = "";
+      if (languageCodeBuilder_ == null) {
+        languageCode_ = java.util.Collections.emptyList();
+      } else {
+        languageCode_ = null;
+        languageCodeBuilder_.clear();
+      }
+      bitField1_ = (bitField1_ & ~0x00020000);
       return this;
     }
 
@@ -4818,6 +4841,15 @@ private static final long serialVersionUID = 0L;
       } else {
         result.vatDistribution_ = vatDistributionBuilder_.build();
       }
+      if (languageCodeBuilder_ == null) {
+        if (((bitField1_ & 0x00020000) != 0)) {
+          languageCode_ = java.util.Collections.unmodifiableList(languageCode_);
+          bitField1_ = (bitField1_ & ~0x00020000);
+        }
+        result.languageCode_ = languageCode_;
+      } else {
+        result.languageCode_ = languageCodeBuilder_.build();
+      }
     }
 
     private void buildPartial0(ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse result) {
@@ -4844,9 +4876,6 @@ private static final long serialVersionUID = 0L;
         result.documentMetadata_ = documentMetadataBuilder_ == null
             ? documentMetadata_
             : documentMetadataBuilder_.build();
-      }
-      if (((from_bitField1_ & 0x00020000) != 0)) {
-        result.languageCode_ = languageCode_;
       }
     }
 
@@ -6059,10 +6088,31 @@ private static final long serialVersionUID = 0L;
       if (other.hasDocumentMetadata()) {
         mergeDocumentMetadata(other.getDocumentMetadata());
       }
-      if (!other.getLanguageCode().isEmpty()) {
-        languageCode_ = other.languageCode_;
-        bitField1_ |= 0x00020000;
-        onChanged();
+      if (languageCodeBuilder_ == null) {
+        if (!other.languageCode_.isEmpty()) {
+          if (languageCode_.isEmpty()) {
+            languageCode_ = other.languageCode_;
+            bitField1_ = (bitField1_ & ~0x00020000);
+          } else {
+            ensureLanguageCodeIsMutable();
+            languageCode_.addAll(other.languageCode_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.languageCode_.isEmpty()) {
+          if (languageCodeBuilder_.isEmpty()) {
+            languageCodeBuilder_.dispose();
+            languageCodeBuilder_ = null;
+            languageCode_ = other.languageCode_;
+            bitField1_ = (bitField1_ & ~0x00020000);
+            languageCodeBuilder_ = 
+              com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders ?
+                 getLanguageCodeFieldBuilder() : null;
+          } else {
+            languageCodeBuilder_.addAllMessages(other.languageCode_);
+          }
+        }
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -6692,8 +6742,16 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 394
             case 402: {
-              languageCode_ = input.readStringRequireUtf8();
-              bitField1_ |= 0x00020000;
+              ai.visma.ssn.type.Candidate m =
+                  input.readMessage(
+                      ai.visma.ssn.type.Candidate.parser(),
+                      extensionRegistry);
+              if (languageCodeBuilder_ == null) {
+                ensureLanguageCodeIsMutable();
+                languageCode_.add(m);
+              } else {
+                languageCodeBuilder_.addMessage(m);
+              }
               break;
             } // case 402
             default: {
@@ -21771,25 +21829,30 @@ private static final long serialVersionUID = 0L;
       return documentMetadataBuilder_;
     }
 
-    private java.lang.Object languageCode_ = "";
+    private java.util.List<ai.visma.ssn.type.Candidate> languageCode_ =
+      java.util.Collections.emptyList();
+    private void ensureLanguageCodeIsMutable() {
+      if (!((bitField1_ & 0x00020000) != 0)) {
+        languageCode_ = new java.util.ArrayList<ai.visma.ssn.type.Candidate>(languageCode_);
+        bitField1_ |= 0x00020000;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> languageCodeBuilder_;
+
     /**
      * <pre>
      * Information about the text language detected from OCR
      * </pre>
      *
-     * <code>string language_code = 50 [json_name = "languageCode"];</code>
-     * @return The languageCode.
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
      */
-    public java.lang.String getLanguageCode() {
-      java.lang.Object ref = languageCode_;
-      if (!(ref instanceof java.lang.String)) {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        languageCode_ = s;
-        return s;
+    public java.util.List<ai.visma.ssn.type.Candidate> getLanguageCodeList() {
+      if (languageCodeBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(languageCode_);
       } else {
-        return (java.lang.String) ref;
+        return languageCodeBuilder_.getMessageList();
       }
     }
     /**
@@ -21797,20 +21860,13 @@ private static final long serialVersionUID = 0L;
      * Information about the text language detected from OCR
      * </pre>
      *
-     * <code>string language_code = 50 [json_name = "languageCode"];</code>
-     * @return The bytes for languageCode.
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
      */
-    public com.google.protobuf.ByteString
-        getLanguageCodeBytes() {
-      java.lang.Object ref = languageCode_;
-      if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        languageCode_ = b;
-        return b;
+    public int getLanguageCodeCount() {
+      if (languageCodeBuilder_ == null) {
+        return languageCode_.size();
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return languageCodeBuilder_.getCount();
       }
     }
     /**
@@ -21818,16 +21874,34 @@ private static final long serialVersionUID = 0L;
      * Information about the text language detected from OCR
      * </pre>
      *
-     * <code>string language_code = 50 [json_name = "languageCode"];</code>
-     * @param value The languageCode to set.
-     * @return This builder for chaining.
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+     */
+    public ai.visma.ssn.type.Candidate getLanguageCode(int index) {
+      if (languageCodeBuilder_ == null) {
+        return languageCode_.get(index);
+      } else {
+        return languageCodeBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * Information about the text language detected from OCR
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
      */
     public Builder setLanguageCode(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      languageCode_ = value;
-      bitField1_ |= 0x00020000;
-      onChanged();
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (languageCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLanguageCodeIsMutable();
+        languageCode_.set(index, value);
+        onChanged();
+      } else {
+        languageCodeBuilder_.setMessage(index, value);
+      }
       return this;
     }
     /**
@@ -21835,13 +21909,130 @@ private static final long serialVersionUID = 0L;
      * Information about the text language detected from OCR
      * </pre>
      *
-     * <code>string language_code = 50 [json_name = "languageCode"];</code>
-     * @return This builder for chaining.
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+     */
+    public Builder setLanguageCode(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (languageCodeBuilder_ == null) {
+        ensureLanguageCodeIsMutable();
+        languageCode_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        languageCodeBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Information about the text language detected from OCR
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+     */
+    public Builder addLanguageCode(ai.visma.ssn.type.Candidate value) {
+      if (languageCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLanguageCodeIsMutable();
+        languageCode_.add(value);
+        onChanged();
+      } else {
+        languageCodeBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Information about the text language detected from OCR
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+     */
+    public Builder addLanguageCode(
+        int index, ai.visma.ssn.type.Candidate value) {
+      if (languageCodeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureLanguageCodeIsMutable();
+        languageCode_.add(index, value);
+        onChanged();
+      } else {
+        languageCodeBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Information about the text language detected from OCR
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+     */
+    public Builder addLanguageCode(
+        ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (languageCodeBuilder_ == null) {
+        ensureLanguageCodeIsMutable();
+        languageCode_.add(builderForValue.build());
+        onChanged();
+      } else {
+        languageCodeBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Information about the text language detected from OCR
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+     */
+    public Builder addLanguageCode(
+        int index, ai.visma.ssn.type.Candidate.Builder builderForValue) {
+      if (languageCodeBuilder_ == null) {
+        ensureLanguageCodeIsMutable();
+        languageCode_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        languageCodeBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Information about the text language detected from OCR
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+     */
+    public Builder addAllLanguageCode(
+        java.lang.Iterable<? extends ai.visma.ssn.type.Candidate> values) {
+      if (languageCodeBuilder_ == null) {
+        ensureLanguageCodeIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, languageCode_);
+        onChanged();
+      } else {
+        languageCodeBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Information about the text language detected from OCR
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
      */
     public Builder clearLanguageCode() {
-      languageCode_ = getDefaultInstance().getLanguageCode();
-      bitField1_ = (bitField1_ & ~0x00020000);
-      onChanged();
+      if (languageCodeBuilder_ == null) {
+        languageCode_ = java.util.Collections.emptyList();
+        bitField1_ = (bitField1_ & ~0x00020000);
+        onChanged();
+      } else {
+        languageCodeBuilder_.clear();
+      }
       return this;
     }
     /**
@@ -21849,18 +22040,105 @@ private static final long serialVersionUID = 0L;
      * Information about the text language detected from OCR
      * </pre>
      *
-     * <code>string language_code = 50 [json_name = "languageCode"];</code>
-     * @param value The bytes for languageCode to set.
-     * @return This builder for chaining.
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
      */
-    public Builder setLanguageCodeBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      languageCode_ = value;
-      bitField1_ |= 0x00020000;
-      onChanged();
+    public Builder removeLanguageCode(int index) {
+      if (languageCodeBuilder_ == null) {
+        ensureLanguageCodeIsMutable();
+        languageCode_.remove(index);
+        onChanged();
+      } else {
+        languageCodeBuilder_.remove(index);
+      }
       return this;
+    }
+    /**
+     * <pre>
+     * Information about the text language detected from OCR
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder getLanguageCodeBuilder(
+        int index) {
+      return getLanguageCodeFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * Information about the text language detected from OCR
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+     */
+    public ai.visma.ssn.type.CandidateOrBuilder getLanguageCodeOrBuilder(
+        int index) {
+      if (languageCodeBuilder_ == null) {
+        return languageCode_.get(index);  } else {
+        return languageCodeBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * Information about the text language detected from OCR
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+     */
+    public java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+         getLanguageCodeOrBuilderList() {
+      if (languageCodeBuilder_ != null) {
+        return languageCodeBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(languageCode_);
+      }
+    }
+    /**
+     * <pre>
+     * Information about the text language detected from OCR
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addLanguageCodeBuilder() {
+      return getLanguageCodeFieldBuilder().addBuilder(
+          ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Information about the text language detected from OCR
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+     */
+    public ai.visma.ssn.type.Candidate.Builder addLanguageCodeBuilder(
+        int index) {
+      return getLanguageCodeFieldBuilder().addBuilder(
+          index, ai.visma.ssn.type.Candidate.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * Information about the text language detected from OCR
+     * </pre>
+     *
+     * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+     */
+    public java.util.List<ai.visma.ssn.type.Candidate.Builder> 
+         getLanguageCodeBuilderList() {
+      return getLanguageCodeFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilderV3<
+        ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder> 
+        getLanguageCodeFieldBuilder() {
+      if (languageCodeBuilder_ == null) {
+        languageCodeBuilder_ = new com.google.protobuf.RepeatedFieldBuilderV3<
+            ai.visma.ssn.type.Candidate, ai.visma.ssn.type.Candidate.Builder, ai.visma.ssn.type.CandidateOrBuilder>(
+                languageCode_,
+                ((bitField1_ & 0x00020000) != 0),
+                getParentForChildren(),
+                isClean());
+        languageCode_ = null;
+      }
+      return languageCodeBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(

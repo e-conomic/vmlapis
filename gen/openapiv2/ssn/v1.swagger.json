@@ -1695,7 +1695,11 @@
           "title": "Extra information about the document like number of pages"
         },
         "languageCode": {
-          "type": "string",
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeCandidate"
+          },
           "title": "Information about the text language detected from OCR"
         }
       }

@@ -100,7 +100,7 @@ public final class AnnotatorProto {
       "r.v1.FeatureR\010features\022\022\n\004tags\030\003 \003(\tR\004ta" +
       "gs\022\"\n\004tier\030\004 \001(\0162\016.ssn.type.TierR\004tier\022\032" +
       "\n\010segments\030\005 \003(\tR\010segments\022\034\n\tquestions\030" +
-      "\006 \003(\tR\tquestions\"\321\030\n\031DocumentAnnotatorRe" +
+      "\006 \003(\tR\tquestions\"\346\030\n\031DocumentAnnotatorRe" +
       "sponse\0222\n\norder_date\030\001 \003(\0132\023.ssn.type.Ca" +
       "ndidateR\torderDate\022=\n\020payment_due_date\030\002" +
       " \003(\0132\023.ssn.type.CandidateR\016paymentDueDat" +
@@ -178,31 +178,32 @@ public final class AnnotatorProto {
       "ion\0300 \003(\0132\".ssn.type.VatDistributionCand" +
       "idateR\017vatDistribution\022G\n\021document_metad" +
       "ata\0301 \001(\0132\032.ssn.type.DocumentMetadataR\020d" +
-      "ocumentMetadata\022#\n\rlanguage_code\0302 \001(\tR\014" +
-      "languageCode\"^\n\010Document\022\030\n\007content\030\001 \001(" +
-      "\014R\007content\0228\n\006source\030\002 \001(\0132 .ssn.annotat" +
-      "or.v1.DocumentSourceR\006source\"+\n\016Document" +
-      "Source\022\031\n\010http_uri\030\001 \001(\tR\007httpUri\"o\n\027Doc" +
-      "umentQuestionRequest\0226\n\010document\030\001 \001(\0132\032" +
-      ".ssn.annotator.v1.DocumentR\010document\022\034\n\t" +
-      "questions\030\002 \003(\tR\tquestions\"U\n\030DocumentQu" +
-      "estionResponse\0223\n\007answers\030\002 \003(\0132\031.ssn.ty" +
-      "pe.AnswerCandidateR\007answersJ\004\010\001\020\0022\275\002\n\021Do" +
-      "cumentAnnotator\022\215\001\n\020AnnotateDocument\022*.s" +
-      "sn.annotator.v1.DocumentAnnotatorRequest" +
-      "\032+.ssn.annotator.v1.DocumentAnnotatorRes" +
-      "ponse\" \202\323\344\223\002\032\"\025/v1/document:annotate:\001*\022" +
-      "\227\001\n\026AnswerDocumentQuestion\022).ssn.annotat" +
-      "or.v1.DocumentQuestionRequest\032*.ssn.anno" +
-      "tator.v1.DocumentQuestionResponse\"&\202\323\344\223\002" +
-      " \"\033/v1/document:answerquestion:\001*B\210\002\n\031ai" +
-      ".visma.ssn.annotator.v1B\016AnnotatorProtoP" +
-      "\001Z>github.com/e-conomic/vmlapis/gen/go/s" +
-      "sn/annotator/v1;annotator\242\002\003SAX\252\002\020Ssn.An" +
-      "notator.V1\312\002\020Ssn\\Annotator\\V1\342\002\034Ssn\\Anno" +
-      "tator\\V1\\GPBMetadata\352\002\022Ssn::Annotator::V" +
-      "1\222A8\022\017\n\tSmartScan2\002v1*\001\0022\020application/js" +
-      "on:\020application/jsonb\006proto3"
+      "ocumentMetadata\0228\n\rlanguage_code\0302 \003(\0132\023" +
+      ".ssn.type.CandidateR\014languageCode\"^\n\010Doc" +
+      "ument\022\030\n\007content\030\001 \001(\014R\007content\0228\n\006sourc" +
+      "e\030\002 \001(\0132 .ssn.annotator.v1.DocumentSourc" +
+      "eR\006source\"+\n\016DocumentSource\022\031\n\010http_uri\030" +
+      "\001 \001(\tR\007httpUri\"o\n\027DocumentQuestionReques" +
+      "t\0226\n\010document\030\001 \001(\0132\032.ssn.annotator.v1.D" +
+      "ocumentR\010document\022\034\n\tquestions\030\002 \003(\tR\tqu" +
+      "estions\"U\n\030DocumentQuestionResponse\0223\n\007a" +
+      "nswers\030\002 \003(\0132\031.ssn.type.AnswerCandidateR" +
+      "\007answersJ\004\010\001\020\0022\275\002\n\021DocumentAnnotator\022\215\001\n" +
+      "\020AnnotateDocument\022*.ssn.annotator.v1.Doc" +
+      "umentAnnotatorRequest\032+.ssn.annotator.v1" +
+      ".DocumentAnnotatorResponse\" \202\323\344\223\002\032\"\025/v1/" +
+      "document:annotate:\001*\022\227\001\n\026AnswerDocumentQ" +
+      "uestion\022).ssn.annotator.v1.DocumentQuest" +
+      "ionRequest\032*.ssn.annotator.v1.DocumentQu" +
+      "estionResponse\"&\202\323\344\223\002 \"\033/v1/document:ans" +
+      "werquestion:\001*B\210\002\n\031ai.visma.ssn.annotato" +
+      "r.v1B\016AnnotatorProtoP\001Z>github.com/e-con" +
+      "omic/vmlapis/gen/go/ssn/annotator/v1;ann" +
+      "otator\242\002\003SAX\252\002\020Ssn.Annotator.V1\312\002\020Ssn\\An" +
+      "notator\\V1\342\002\034Ssn\\Annotator\\V1\\GPBMetadat" +
+      "a\352\002\022Ssn::Annotator::V1\222A8\022\017\n\tSmartScan2\002" +
+      "v1*\001\0022\020application/json:\020application/jso" +
+      "nb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
