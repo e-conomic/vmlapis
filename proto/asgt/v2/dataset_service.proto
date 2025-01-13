@@ -3,7 +3,6 @@ syntax = "proto3";
 package asgt.v2;
 
 import "asgt/type/dataset.proto";
-import "asgt/type/retention_policy.proto";
 import "asgt/v2/type/example.proto";
 import "asgt/v2/type/model.proto";
 import "asgt/v2/type/training.proto";
@@ -120,7 +119,6 @@ message CreateDatasetRequest {
       max_bytes: 64
     }
   ]; // text-no-spaces
-  asgt.type.RetentionPolicy retention_policy = 5;
 }
 
 message CreateOrUpdateDatasetRequest {

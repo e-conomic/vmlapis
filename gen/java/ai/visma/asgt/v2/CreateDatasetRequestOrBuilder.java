@@ -67,19 +67,4 @@ public interface CreateDatasetRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTagsBytes(int index);
-
-  /**
-   * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-   * @return Whether the retentionPolicy field is set.
-   */
-  boolean hasRetentionPolicy();
-  /**
-   * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-   * @return The retentionPolicy.
-   */
-  ai.visma.asgt.type.RetentionPolicy getRetentionPolicy();
-  /**
-   * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-   */
-  ai.visma.asgt.type.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder();
 }

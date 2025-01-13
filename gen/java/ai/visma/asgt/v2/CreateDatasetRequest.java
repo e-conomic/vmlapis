@@ -141,32 +141,6 @@ private static final long serialVersionUID = 0L;
     return tags_.getByteString(index);
   }
 
-  public static final int RETENTION_POLICY_FIELD_NUMBER = 5;
-  private ai.visma.asgt.type.RetentionPolicy retentionPolicy_;
-  /**
-   * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-   * @return Whether the retentionPolicy field is set.
-   */
-  @java.lang.Override
-  public boolean hasRetentionPolicy() {
-    return retentionPolicy_ != null;
-  }
-  /**
-   * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-   * @return The retentionPolicy.
-   */
-  @java.lang.Override
-  public ai.visma.asgt.type.RetentionPolicy getRetentionPolicy() {
-    return retentionPolicy_ == null ? ai.visma.asgt.type.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
-  }
-  /**
-   * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.asgt.type.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
-    return retentionPolicy_ == null ? ai.visma.asgt.type.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
-  }
-
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -186,9 +160,6 @@ private static final long serialVersionUID = 0L;
     }
     for (int i = 0; i < tags_.size(); i++) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tags_.getRaw(i));
-    }
-    if (retentionPolicy_ != null) {
-      output.writeMessage(5, getRetentionPolicy());
     }
     getUnknownFields().writeTo(output);
   }
@@ -210,10 +181,6 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getTagsList().size();
     }
-    if (retentionPolicy_ != null) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getRetentionPolicy());
-    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -233,11 +200,6 @@ private static final long serialVersionUID = 0L;
         .equals(other.getDatasetName())) return false;
     if (!getTagsList()
         .equals(other.getTagsList())) return false;
-    if (hasRetentionPolicy() != other.hasRetentionPolicy()) return false;
-    if (hasRetentionPolicy()) {
-      if (!getRetentionPolicy()
-          .equals(other.getRetentionPolicy())) return false;
-    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -254,10 +216,6 @@ private static final long serialVersionUID = 0L;
     if (getTagsCount() > 0) {
       hash = (37 * hash) + TAGS_FIELD_NUMBER;
       hash = (53 * hash) + getTagsList().hashCode();
-    }
-    if (hasRetentionPolicy()) {
-      hash = (37 * hash) + RETENTION_POLICY_FIELD_NUMBER;
-      hash = (53 * hash) + getRetentionPolicy().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
@@ -393,11 +351,6 @@ private static final long serialVersionUID = 0L;
       datasetName_ = "";
       tags_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
-      retentionPolicy_ = null;
-      if (retentionPolicyBuilder_ != null) {
-        retentionPolicyBuilder_.dispose();
-        retentionPolicyBuilder_ = null;
-      }
       return this;
     }
 
@@ -437,11 +390,6 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         tags_.makeImmutable();
         result.tags_ = tags_;
-      }
-      if (((from_bitField0_ & 0x00000004) != 0)) {
-        result.retentionPolicy_ = retentionPolicyBuilder_ == null
-            ? retentionPolicy_
-            : retentionPolicyBuilder_.build();
       }
     }
 
@@ -504,9 +452,6 @@ private static final long serialVersionUID = 0L;
         }
         onChanged();
       }
-      if (other.hasRetentionPolicy()) {
-        mergeRetentionPolicy(other.getRetentionPolicy());
-      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -544,13 +489,6 @@ private static final long serialVersionUID = 0L;
               tags_.add(s);
               break;
             } // case 18
-            case 42: {
-              input.readMessage(
-                  getRetentionPolicyFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000004;
-              break;
-            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -805,125 +743,6 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
-    }
-
-    private ai.visma.asgt.type.RetentionPolicy retentionPolicy_;
-    private com.google.protobuf.SingleFieldBuilderV3<
-        ai.visma.asgt.type.RetentionPolicy, ai.visma.asgt.type.RetentionPolicy.Builder, ai.visma.asgt.type.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
-    /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-     * @return Whether the retentionPolicy field is set.
-     */
-    public boolean hasRetentionPolicy() {
-      return ((bitField0_ & 0x00000004) != 0);
-    }
-    /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-     * @return The retentionPolicy.
-     */
-    public ai.visma.asgt.type.RetentionPolicy getRetentionPolicy() {
-      if (retentionPolicyBuilder_ == null) {
-        return retentionPolicy_ == null ? ai.visma.asgt.type.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
-      } else {
-        return retentionPolicyBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-     */
-    public Builder setRetentionPolicy(ai.visma.asgt.type.RetentionPolicy value) {
-      if (retentionPolicyBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        retentionPolicy_ = value;
-      } else {
-        retentionPolicyBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-     */
-    public Builder setRetentionPolicy(
-        ai.visma.asgt.type.RetentionPolicy.Builder builderForValue) {
-      if (retentionPolicyBuilder_ == null) {
-        retentionPolicy_ = builderForValue.build();
-      } else {
-        retentionPolicyBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-     */
-    public Builder mergeRetentionPolicy(ai.visma.asgt.type.RetentionPolicy value) {
-      if (retentionPolicyBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0) &&
-          retentionPolicy_ != null &&
-          retentionPolicy_ != ai.visma.asgt.type.RetentionPolicy.getDefaultInstance()) {
-          getRetentionPolicyBuilder().mergeFrom(value);
-        } else {
-          retentionPolicy_ = value;
-        }
-      } else {
-        retentionPolicyBuilder_.mergeFrom(value);
-      }
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-     */
-    public Builder clearRetentionPolicy() {
-      bitField0_ = (bitField0_ & ~0x00000004);
-      retentionPolicy_ = null;
-      if (retentionPolicyBuilder_ != null) {
-        retentionPolicyBuilder_.dispose();
-        retentionPolicyBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-     */
-    public ai.visma.asgt.type.RetentionPolicy.Builder getRetentionPolicyBuilder() {
-      bitField0_ |= 0x00000004;
-      onChanged();
-      return getRetentionPolicyFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-     */
-    public ai.visma.asgt.type.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
-      if (retentionPolicyBuilder_ != null) {
-        return retentionPolicyBuilder_.getMessageOrBuilder();
-      } else {
-        return retentionPolicy_ == null ?
-            ai.visma.asgt.type.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
-      }
-    }
-    /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilderV3<
-        ai.visma.asgt.type.RetentionPolicy, ai.visma.asgt.type.RetentionPolicy.Builder, ai.visma.asgt.type.RetentionPolicyOrBuilder> 
-        getRetentionPolicyFieldBuilder() {
-      if (retentionPolicyBuilder_ == null) {
-        retentionPolicyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-            ai.visma.asgt.type.RetentionPolicy, ai.visma.asgt.type.RetentionPolicy.Builder, ai.visma.asgt.type.RetentionPolicyOrBuilder>(
-                getRetentionPolicy(),
-                getParentForChildren(),
-                isClean());
-        retentionPolicy_ = null;
-      }
-      return retentionPolicyBuilder_;
     }
     @java.lang.Override
     public final Builder setUnknownFields(
