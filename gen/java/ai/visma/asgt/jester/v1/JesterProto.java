@@ -53,20 +53,19 @@ public final class JesterProto {
       " \001(\tR\004name\022\022\n\004type\030\002 \001(\tR\004type\022\'\n\006inputs" +
       "\030\003 \003(\0132\017.asgt.type.DataR\006inputs\022;\n\007optio" +
       "ns\030\004 \001(\0132!.asgt.jester.v1.SuggestionOpti" +
-      "onsR\007options\022\022\n\004tags\030\005 \003(\tR\004tags2\200\002\n\006Jes" +
+      "onsR\007options\022\022\n\004tags\030\005 \003(\tR\004tags2\332\001\n\006Jes" +
       "ter\022v\n\007Suggest\022!.asgt.jester.v1.Suggesti" +
       "onRequest\032\".asgt.jester.v1.SuggestionRes" +
       "ponse\"$\202\323\344\223\002\036\"\031/v1/{type}/{name}:suggest" +
-      ":\001*\022~\n\017InternalSuggest\022!.asgt.jester.v1." +
+      ":\001*\022X\n\017InternalSuggest\022!.asgt.jester.v1." +
       "SuggestionRequest\032\".asgt.jester.v1.Sugge" +
-      "stionResponse\"$\202\323\344\223\002\036\"\031/v1/{type}/{name}" +
-      ":suggest:\001*B\370\001\n\027ai.visma.asgt.jester.v1B" +
-      "\013JesterProtoP\001Z9github.com/e-conomic/vml" +
-      "apis/gen/go/asgt/jester/v1;jester\242\002\003AJX\252" +
-      "\002\016Asgt.Jester.V1\312\002\016Asgt\\Jester\\V1\342\002\032Asgt" +
-      "\\Jester\\V1\\GPBMetadata\352\002\020Asgt::Jester::V" +
-      "1\222A:\022\021\n\013AutoSuggest2\002v1*\001\0022\020application/" +
-      "json:\020application/jsonb\006proto3"
+      "stionResponseB\370\001\n\027ai.visma.asgt.jester.v" +
+      "1B\013JesterProtoP\001Z9github.com/e-conomic/v" +
+      "mlapis/gen/go/asgt/jester/v1;jester\242\002\003AJ" +
+      "X\252\002\016Asgt.Jester.V1\312\002\016Asgt\\Jester\\V1\342\002\032As" +
+      "gt\\Jester\\V1\\GPBMetadata\352\002\020Asgt::Jester:" +
+      ":V1\222A:\022\021\n\013AutoSuggest2\002v1*\001\0022\020applicatio" +
+      "n/json:\020application/jsonb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
