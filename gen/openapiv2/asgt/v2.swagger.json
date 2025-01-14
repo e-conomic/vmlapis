@@ -1142,6 +1142,9 @@
             "type": "string"
           },
           "title": "text-no-spaces"
+        },
+        "retentionPolicy": {
+          "$ref": "#/definitions/typeRetentionPolicy"
         }
       }
     },

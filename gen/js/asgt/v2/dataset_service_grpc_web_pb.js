@@ -22,6 +22,8 @@ grpc.web = require('grpc-web');
 
 var asgt_type_dataset_pb = require('../../asgt/type/dataset_pb.js')
 
+var asgt_type_retention_policy_pb = require('../../asgt/type/retention_policy_pb.js')
+
 var asgt_v2_type_example_pb = require('../../asgt/v2/type/example_pb.js')
 
 var asgt_v2_type_model_pb = require('../../asgt/v2/type/model_pb.js')

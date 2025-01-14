@@ -1,4 +1,5 @@
 from asgt.type import dataset_pb2 as _dataset_pb2
+from asgt.type import retention_policy_pb2 as _retention_policy_pb2
 from asgt.v2.type import example_pb2 as _example_pb2
 from asgt.v2.type import model_pb2 as _model_pb2
 from asgt.v2.type import training_pb2 as _training_pb2
@@ -20,12 +21,14 @@ class GetDatasetRequest(_message.Message):
     def __init__(self, dataset_name: _Optional[str] = ...) -> None: ...
 
 class CreateDatasetRequest(_message.Message):
-    __slots__ = ["dataset_name", "tags"]
+    __slots__ = ["dataset_name", "tags", "retention_policy"]
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
+    RETENTION_POLICY_FIELD_NUMBER: _ClassVar[int]
     dataset_name: str
     tags: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, dataset_name: _Optional[str] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
+    retention_policy: _retention_policy_pb2.RetentionPolicy
+    def __init__(self, dataset_name: _Optional[str] = ..., tags: _Optional[_Iterable[str]] = ..., retention_policy: _Optional[_Union[_retention_policy_pb2.RetentionPolicy, _Mapping]] = ...) -> None: ...
 
 class CreateOrUpdateDatasetRequest(_message.Message):
     __slots__ = ["dataset_name"]
