@@ -372,7 +372,8 @@ proto.ssn.annotator.v1.Feature.Type = {
   RECEIVER_VAT_NUMBER: 43,
   PURCHASE_LINES: 44,
   PAGE_TEXTS: 45,
-  VAT_DISTRIBUTION: 46
+  VAT_DISTRIBUTION: 46,
+  LANGUAGE_CODE: 47
 };
 
 /**
@@ -823,7 +824,7 @@ proto.ssn.annotator.v1.DocumentAnnotatorRequest.prototype.clearQuestionsList = f
  * @private {!Array<number>}
  * @const
  */
-proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48];
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.repeatedFields_ = [1,2,3,4,5,6,7,8,9,10,11,12,14,15,16,17,18,19,20,21,22,40,25,26,28,29,30,31,32,33,34,35,36,37,38,39,41,42,43,44,45,46,47,48,50];
 
 
 
@@ -948,7 +949,9 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.toObject = function(includeInst
     ssn_type_candidate_pb.PageText.toObject, includeInstance),
     vatDistributionList: jspb.Message.toObjectList(msg.getVatDistributionList(),
     ssn_type_candidate_pb.VatDistributionCandidate.toObject, includeInstance),
-    documentMetadata: (f = msg.getDocumentMetadata()) && ssn_type_candidate_pb.DocumentMetadata.toObject(includeInstance, f)
+    documentMetadata: (f = msg.getDocumentMetadata()) && ssn_type_candidate_pb.DocumentMetadata.toObject(includeInstance, f),
+    languageCodeList: jspb.Message.toObjectList(msg.getLanguageCodeList(),
+    ssn_type_candidate_pb.Candidate.toObject, includeInstance)
   };
 
   if (includeInstance) {
@@ -1226,6 +1229,11 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.deserializeBinaryFromReader = f
       var value = new ssn_type_candidate_pb.DocumentMetadata;
       reader.readMessage(value,ssn_type_candidate_pb.DocumentMetadata.deserializeBinaryFromReader);
       msg.setDocumentMetadata(value);
+      break;
+    case 50:
+      var value = new ssn_type_candidate_pb.Candidate;
+      reader.readMessage(value,ssn_type_candidate_pb.Candidate.deserializeBinaryFromReader);
+      msg.addLanguageCode(value);
       break;
     default:
       reader.skipField();
@@ -1643,6 +1651,14 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.serializeBinaryToWriter = funct
       49,
       f,
       ssn_type_candidate_pb.DocumentMetadata.serializeBinaryToWriter
+    );
+  }
+  f = message.getLanguageCodeList();
+  if (f.length > 0) {
+    writer.writeRepeatedMessage(
+      50,
+      f,
+      ssn_type_candidate_pb.Candidate.serializeBinaryToWriter
     );
   }
 };
@@ -3445,6 +3461,44 @@ proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearDocumentMetadata
  */
 proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.hasDocumentMetadata = function() {
   return jspb.Message.getField(this, 49) != null;
+};
+
+
+/**
+ * repeated ssn.type.Candidate language_code = 50;
+ * @return {!Array<!proto.ssn.type.Candidate>}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.getLanguageCodeList = function() {
+  return /** @type{!Array<!proto.ssn.type.Candidate>} */ (
+    jspb.Message.getRepeatedWrapperField(this, ssn_type_candidate_pb.Candidate, 50));
+};
+
+
+/**
+ * @param {!Array<!proto.ssn.type.Candidate>} value
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+*/
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.setLanguageCodeList = function(value) {
+  return jspb.Message.setRepeatedWrapperField(this, 50, value);
+};
+
+
+/**
+ * @param {!proto.ssn.type.Candidate=} opt_value
+ * @param {number=} opt_index
+ * @return {!proto.ssn.type.Candidate}
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.addLanguageCode = function(opt_value, opt_index) {
+  return jspb.Message.addToRepeatedWrapperField(this, 50, opt_value, proto.ssn.type.Candidate, opt_index);
+};
+
+
+/**
+ * Clears the list making it empty but non-null.
+ * @return {!proto.ssn.annotator.v1.DocumentAnnotatorResponse} returns this
+ */
+proto.ssn.annotator.v1.DocumentAnnotatorResponse.prototype.clearLanguageCodeList = function() {
+  return this.setLanguageCodeList([]);
 };
 
 

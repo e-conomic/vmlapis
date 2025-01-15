@@ -422,6 +422,14 @@ private static final long serialVersionUID = 0L;
      * <code>VAT_DISTRIBUTION = 46;</code>
      */
     VAT_DISTRIBUTION(46),
+    /**
+     * <pre>
+     * Langauge code
+     * </pre>
+     *
+     * <code>LANGUAGE_CODE = 47;</code>
+     */
+    LANGUAGE_CODE(47),
     UNRECOGNIZED(-1),
     ;
 
@@ -802,6 +810,14 @@ private static final long serialVersionUID = 0L;
      * <code>VAT_DISTRIBUTION = 46;</code>
      */
     public static final int VAT_DISTRIBUTION_VALUE = 46;
+    /**
+     * <pre>
+     * Langauge code
+     * </pre>
+     *
+     * <code>LANGUAGE_CODE = 47;</code>
+     */
+    public static final int LANGUAGE_CODE_VALUE = 47;
 
 
     public final int getNumber() {
@@ -875,6 +891,7 @@ private static final long serialVersionUID = 0L;
         case 44: return PURCHASE_LINES;
         case 45: return PAGE_TEXTS;
         case 46: return VAT_DISTRIBUTION;
+        case 47: return LANGUAGE_CODE;
         default: return null;
       }
     }

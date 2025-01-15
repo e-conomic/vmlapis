@@ -132,6 +132,8 @@ message Feature {
     PAGE_TEXTS = 45;
     // VAT distribution
     VAT_DISTRIBUTION = 46;
+    // Langauge code
+    LANGUAGE_CODE = 47;
   }
   // The feature type.
   Type type = 1;
@@ -293,6 +295,8 @@ message DocumentAnnotatorResponse {
   repeated ssn.type.VatDistributionCandidate vat_distribution = 48;
   // Extra information about the document like number of pages
   ssn.type.DocumentMetadata document_metadata = 49;
+  // Information about the text language detected from OCR
+  repeated ssn.type.Candidate language_code = 50;
 }
 
 message Document {

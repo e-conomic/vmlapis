@@ -2263,4 +2263,48 @@ public interface DocumentAnnotatorResponseOrBuilder extends
    * <code>.ssn.type.DocumentMetadata document_metadata = 49 [json_name = "documentMetadata"];</code>
    */
   ai.visma.ssn.type.DocumentMetadataOrBuilder getDocumentMetadataOrBuilder();
+
+  /**
+   * <pre>
+   * Information about the text language detected from OCR
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+   */
+  java.util.List<ai.visma.ssn.type.Candidate> 
+      getLanguageCodeList();
+  /**
+   * <pre>
+   * Information about the text language detected from OCR
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+   */
+  ai.visma.ssn.type.Candidate getLanguageCode(int index);
+  /**
+   * <pre>
+   * Information about the text language detected from OCR
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+   */
+  int getLanguageCodeCount();
+  /**
+   * <pre>
+   * Information about the text language detected from OCR
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+   */
+  java.util.List<? extends ai.visma.ssn.type.CandidateOrBuilder> 
+      getLanguageCodeOrBuilderList();
+  /**
+   * <pre>
+   * Information about the text language detected from OCR
+   * </pre>
+   *
+   * <code>repeated .ssn.type.Candidate language_code = 50 [json_name = "languageCode"];</code>
+   */
+  ai.visma.ssn.type.CandidateOrBuilder getLanguageCodeOrBuilder(
+      int index);
 }
