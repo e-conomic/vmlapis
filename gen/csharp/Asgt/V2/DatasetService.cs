@@ -37,7 +37,7 @@ namespace Asgt.V2 {
             "YW1lGAEgASgJQij6QiVyIyiAAjIeXltBLVphLXowLTkuXVtBLVphLXowLTlf",
             "Lj4tXSokUgtkYXRhc2V0TmFtZRI4CgR0YWdzGAIgAygJQiT6QiGSAR4YASIa",
             "chgoQDIUXltBLVphLXowLTlcc18uPi1dKiRSBHRhZ3MSRQoQcmV0ZW50aW9u",
-            "X3BvbGljeRgFIAEoCzIaLmFzZ3QudHlwZS5SZXRlbnRpb25Qb2xpY3lSD3Jl",
+            "X3BvbGljeRgDIAEoCzIaLmFzZ3QudHlwZS5SZXRlbnRpb25Qb2xpY3lSD3Jl",
             "dGVudGlvblBvbGljeSJrChxDcmVhdGVPclVwZGF0ZURhdGFzZXRSZXF1ZXN0",
             "EksKDGRhdGFzZXRfbmFtZRgBIAEoCUIo+kIlciMogAIyHl5bQS1aYS16MC05",
             "Ll1bQS1aYS16MC05Xy4+LV0qJFILZGF0YXNldE5hbWUiYwoURGVsZXRlRGF0",
@@ -403,7 +403,7 @@ namespace Asgt.V2 {
     }
 
     /// <summary>Field number for the "retention_policy" field.</summary>
-    public const int RetentionPolicyFieldNumber = 5;
+    public const int RetentionPolicyFieldNumber = 3;
     private global::Asgt.Type.RetentionPolicy retentionPolicy_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -466,7 +466,7 @@ namespace Asgt.V2 {
       }
       tags_.WriteTo(output, _repeated_tags_codec);
       if (retentionPolicy_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(26);
         output.WriteMessage(RetentionPolicy);
       }
       if (_unknownFields != null) {
@@ -485,7 +485,7 @@ namespace Asgt.V2 {
       }
       tags_.WriteTo(ref output, _repeated_tags_codec);
       if (retentionPolicy_ != null) {
-        output.WriteRawTag(42);
+        output.WriteRawTag(26);
         output.WriteMessage(RetentionPolicy);
       }
       if (_unknownFields != null) {
@@ -550,7 +550,7 @@ namespace Asgt.V2 {
             tags_.AddEntriesFrom(input, _repeated_tags_codec);
             break;
           }
-          case 42: {
+          case 26: {
             if (retentionPolicy_ == null) {
               RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
             }
@@ -580,7 +580,7 @@ namespace Asgt.V2 {
             tags_.AddEntriesFrom(ref input, _repeated_tags_codec);
             break;
           }
-          case 42: {
+          case 26: {
             if (retentionPolicy_ == null) {
               RetentionPolicy = new global::Asgt.Type.RetentionPolicy();
             }

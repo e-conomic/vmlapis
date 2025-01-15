@@ -117,7 +117,7 @@ public final class DatasetServiceProto {
       "\014dataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0" +
       "-9.][A-Za-z0-9_.>-]*$R\013datasetName\0228\n\004ta" +
       "gs\030\002 \003(\tB$\372B!\222\001\036\030\001\"\032r\030(@2\024^[A-Za-z0-9\\s_" +
-      ".>-]*$R\004tags\022E\n\020retention_policy\030\005 \001(\0132\032" +
+      ".>-]*$R\004tags\022E\n\020retention_policy\030\003 \001(\0132\032" +
       ".asgt.type.RetentionPolicyR\017retentionPol" +
       "icy\"k\n\034CreateOrUpdateDatasetRequest\022K\n\014d" +
       "ataset_name\030\001 \001(\tB(\372B%r#(\200\0022\036^[A-Za-z0-9" +

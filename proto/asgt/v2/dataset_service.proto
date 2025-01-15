@@ -120,7 +120,7 @@ message CreateDatasetRequest {
       max_bytes: 64
     }
   ]; // text-no-spaces
-  asgt.type.RetentionPolicy retention_policy = 5;
+  asgt.type.RetentionPolicy retention_policy = 3;
 }
 
 message CreateOrUpdateDatasetRequest {

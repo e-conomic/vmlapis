@@ -141,10 +141,10 @@ private static final long serialVersionUID = 0L;
     return tags_.getByteString(index);
   }
 
-  public static final int RETENTION_POLICY_FIELD_NUMBER = 5;
+  public static final int RETENTION_POLICY_FIELD_NUMBER = 3;
   private ai.visma.asgt.type.RetentionPolicy retentionPolicy_;
   /**
-   * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
+   * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
    * @return Whether the retentionPolicy field is set.
    */
   @java.lang.Override
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
     return retentionPolicy_ != null;
   }
   /**
-   * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
+   * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
    * @return The retentionPolicy.
    */
   @java.lang.Override
@@ -160,7 +160,7 @@ private static final long serialVersionUID = 0L;
     return retentionPolicy_ == null ? ai.visma.asgt.type.RetentionPolicy.getDefaultInstance() : retentionPolicy_;
   }
   /**
-   * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
+   * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
    */
   @java.lang.Override
   public ai.visma.asgt.type.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
@@ -188,7 +188,7 @@ private static final long serialVersionUID = 0L;
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, tags_.getRaw(i));
     }
     if (retentionPolicy_ != null) {
-      output.writeMessage(5, getRetentionPolicy());
+      output.writeMessage(3, getRetentionPolicy());
     }
     getUnknownFields().writeTo(output);
   }
@@ -212,7 +212,7 @@ private static final long serialVersionUID = 0L;
     }
     if (retentionPolicy_ != null) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getRetentionPolicy());
+        .computeMessageSize(3, getRetentionPolicy());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -544,13 +544,13 @@ private static final long serialVersionUID = 0L;
               tags_.add(s);
               break;
             } // case 18
-            case 42: {
+            case 26: {
               input.readMessage(
                   getRetentionPolicyFieldBuilder().getBuilder(),
                   extensionRegistry);
               bitField0_ |= 0x00000004;
               break;
-            } // case 42
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -811,14 +811,14 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.SingleFieldBuilderV3<
         ai.visma.asgt.type.RetentionPolicy, ai.visma.asgt.type.RetentionPolicy.Builder, ai.visma.asgt.type.RetentionPolicyOrBuilder> retentionPolicyBuilder_;
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      * @return Whether the retentionPolicy field is set.
      */
     public boolean hasRetentionPolicy() {
       return ((bitField0_ & 0x00000004) != 0);
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      * @return The retentionPolicy.
      */
     public ai.visma.asgt.type.RetentionPolicy getRetentionPolicy() {
@@ -829,7 +829,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      */
     public Builder setRetentionPolicy(ai.visma.asgt.type.RetentionPolicy value) {
       if (retentionPolicyBuilder_ == null) {
@@ -845,7 +845,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      */
     public Builder setRetentionPolicy(
         ai.visma.asgt.type.RetentionPolicy.Builder builderForValue) {
@@ -859,7 +859,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      */
     public Builder mergeRetentionPolicy(ai.visma.asgt.type.RetentionPolicy value) {
       if (retentionPolicyBuilder_ == null) {
@@ -878,7 +878,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      */
     public Builder clearRetentionPolicy() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -891,7 +891,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      */
     public ai.visma.asgt.type.RetentionPolicy.Builder getRetentionPolicyBuilder() {
       bitField0_ |= 0x00000004;
@@ -899,7 +899,7 @@ private static final long serialVersionUID = 0L;
       return getRetentionPolicyFieldBuilder().getBuilder();
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      */
     public ai.visma.asgt.type.RetentionPolicyOrBuilder getRetentionPolicyOrBuilder() {
       if (retentionPolicyBuilder_ != null) {
@@ -910,7 +910,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>.asgt.type.RetentionPolicy retention_policy = 5 [json_name = "retentionPolicy"];</code>
+     * <code>.asgt.type.RetentionPolicy retention_policy = 3 [json_name = "retentionPolicy"];</code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
         ai.visma.asgt.type.RetentionPolicy, ai.visma.asgt.type.RetentionPolicy.Builder, ai.visma.asgt.type.RetentionPolicyOrBuilder> 
