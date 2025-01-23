@@ -1132,6 +1132,14 @@
           "type": "integer",
           "format": "int64",
           "description": "A reference to the page where the candidate was found."
+        },
+        "exclVat": {
+          "type": "string",
+          "title": "The vat distribution candidate excl vat"
+        },
+        "inclVat": {
+          "type": "string",
+          "title": "The vat distribution candidate incl vat"
         }
       }
     },

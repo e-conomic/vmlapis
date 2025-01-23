@@ -153,6 +153,10 @@ message VatDistributionCandidate {
   ModelSpec model_metadata = 3;
   // A reference to the page where the candidate was found.
   uint32 page_ref = 4;
+  // The vat distribution candidate excl vat
+  string excl_vat = 5;
+  // The vat distribution candidate incl vat
+  string incl_vat = 6;
 }
 
 message DocumentMetadata {

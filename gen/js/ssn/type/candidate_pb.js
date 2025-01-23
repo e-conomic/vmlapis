@@ -2289,7 +2289,9 @@ proto.ssn.type.VatDistributionCandidate.toObject = function(includeInstance, msg
     percentage: jspb.Message.getFieldWithDefault(msg, 1, ""),
     amount: jspb.Message.getFieldWithDefault(msg, 2, ""),
     modelMetadata: (f = msg.getModelMetadata()) && proto.ssn.type.ModelSpec.toObject(includeInstance, f),
-    pageRef: jspb.Message.getFieldWithDefault(msg, 4, 0)
+    pageRef: jspb.Message.getFieldWithDefault(msg, 4, 0),
+    exclVat: jspb.Message.getFieldWithDefault(msg, 5, ""),
+    inclVat: jspb.Message.getFieldWithDefault(msg, 6, "")
   };
 
   if (includeInstance) {
@@ -2342,6 +2344,14 @@ proto.ssn.type.VatDistributionCandidate.deserializeBinaryFromReader = function(m
     case 4:
       var value = /** @type {number} */ (reader.readUint32());
       msg.setPageRef(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setExclVat(value);
+      break;
+    case 6:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setInclVat(value);
       break;
     default:
       reader.skipField();
@@ -2398,6 +2408,20 @@ proto.ssn.type.VatDistributionCandidate.serializeBinaryToWriter = function(messa
   if (f !== 0) {
     writer.writeUint32(
       4,
+      f
+    );
+  }
+  f = message.getExclVat();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
+  }
+  f = message.getInclVat();
+  if (f.length > 0) {
+    writer.writeString(
+      6,
       f
     );
   }
@@ -2492,6 +2516,42 @@ proto.ssn.type.VatDistributionCandidate.prototype.getPageRef = function() {
  */
 proto.ssn.type.VatDistributionCandidate.prototype.setPageRef = function(value) {
   return jspb.Message.setProto3IntField(this, 4, value);
+};
+
+
+/**
+ * optional string excl_vat = 5;
+ * @return {string}
+ */
+proto.ssn.type.VatDistributionCandidate.prototype.getExclVat = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.type.VatDistributionCandidate} returns this
+ */
+proto.ssn.type.VatDistributionCandidate.prototype.setExclVat = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
+};
+
+
+/**
+ * optional string incl_vat = 6;
+ * @return {string}
+ */
+proto.ssn.type.VatDistributionCandidate.prototype.getInclVat = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 6, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ssn.type.VatDistributionCandidate} returns this
+ */
+proto.ssn.type.VatDistributionCandidate.prototype.setInclVat = function(value) {
+  return jspb.Message.setProto3StringField(this, 6, value);
 };
 
 

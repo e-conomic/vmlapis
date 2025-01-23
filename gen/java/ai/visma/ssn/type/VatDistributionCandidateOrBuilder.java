@@ -83,4 +83,44 @@ public interface VatDistributionCandidateOrBuilder extends
    * @return The pageRef.
    */
   int getPageRef();
+
+  /**
+   * <pre>
+   * The vat distribution candidate excl vat
+   * </pre>
+   *
+   * <code>string excl_vat = 5 [json_name = "exclVat"];</code>
+   * @return The exclVat.
+   */
+  java.lang.String getExclVat();
+  /**
+   * <pre>
+   * The vat distribution candidate excl vat
+   * </pre>
+   *
+   * <code>string excl_vat = 5 [json_name = "exclVat"];</code>
+   * @return The bytes for exclVat.
+   */
+  com.google.protobuf.ByteString
+      getExclVatBytes();
+
+  /**
+   * <pre>
+   * The vat distribution candidate incl vat
+   * </pre>
+   *
+   * <code>string incl_vat = 6 [json_name = "inclVat"];</code>
+   * @return The inclVat.
+   */
+  java.lang.String getInclVat();
+  /**
+   * <pre>
+   * The vat distribution candidate incl vat
+   * </pre>
+   *
+   * <code>string incl_vat = 6 [json_name = "inclVat"];</code>
+   * @return The bytes for inclVat.
+   */
+  com.google.protobuf.ByteString
+      getInclVatBytes();
 }
