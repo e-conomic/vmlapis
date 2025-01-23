@@ -18,6 +18,8 @@ private static final long serialVersionUID = 0L;
   private VatDistributionCandidate() {
     percentage_ = "";
     amount_ = "";
+    exclVat_ = "";
+    inclVat_ = "";
   }
 
   @java.lang.Override
@@ -187,6 +189,100 @@ private static final long serialVersionUID = 0L;
     return pageRef_;
   }
 
+  public static final int EXCL_VAT_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object exclVat_ = "";
+  /**
+   * <pre>
+   * The vat distribution candidate excl vat
+   * </pre>
+   *
+   * <code>string excl_vat = 5 [json_name = "exclVat"];</code>
+   * @return The exclVat.
+   */
+  @java.lang.Override
+  public java.lang.String getExclVat() {
+    java.lang.Object ref = exclVat_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      exclVat_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The vat distribution candidate excl vat
+   * </pre>
+   *
+   * <code>string excl_vat = 5 [json_name = "exclVat"];</code>
+   * @return The bytes for exclVat.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getExclVatBytes() {
+    java.lang.Object ref = exclVat_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      exclVat_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int INCL_VAT_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object inclVat_ = "";
+  /**
+   * <pre>
+   * The vat distribution candidate incl vat
+   * </pre>
+   *
+   * <code>string incl_vat = 6 [json_name = "inclVat"];</code>
+   * @return The inclVat.
+   */
+  @java.lang.Override
+  public java.lang.String getInclVat() {
+    java.lang.Object ref = inclVat_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      inclVat_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The vat distribution candidate incl vat
+   * </pre>
+   *
+   * <code>string incl_vat = 6 [json_name = "inclVat"];</code>
+   * @return The bytes for inclVat.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getInclVatBytes() {
+    java.lang.Object ref = inclVat_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      inclVat_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -213,6 +309,12 @@ private static final long serialVersionUID = 0L;
     if (pageRef_ != 0) {
       output.writeUInt32(4, pageRef_);
     }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exclVat_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 5, exclVat_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inclVat_)) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 6, inclVat_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -235,6 +337,12 @@ private static final long serialVersionUID = 0L;
     if (pageRef_ != 0) {
       size += com.google.protobuf.CodedOutputStream
         .computeUInt32Size(4, pageRef_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(exclVat_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, exclVat_);
+    }
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(inclVat_)) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(6, inclVat_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -262,6 +370,10 @@ private static final long serialVersionUID = 0L;
     }
     if (getPageRef()
         != other.getPageRef()) return false;
+    if (!getExclVat()
+        .equals(other.getExclVat())) return false;
+    if (!getInclVat()
+        .equals(other.getInclVat())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -283,6 +395,10 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + PAGE_REF_FIELD_NUMBER;
     hash = (53 * hash) + getPageRef();
+    hash = (37 * hash) + EXCL_VAT_FIELD_NUMBER;
+    hash = (53 * hash) + getExclVat().hashCode();
+    hash = (37 * hash) + INCL_VAT_FIELD_NUMBER;
+    hash = (53 * hash) + getInclVat().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -422,6 +538,8 @@ private static final long serialVersionUID = 0L;
         modelMetadataBuilder_ = null;
       }
       pageRef_ = 0;
+      exclVat_ = "";
+      inclVat_ = "";
       return this;
     }
 
@@ -468,6 +586,12 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.pageRef_ = pageRef_;
+      }
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.exclVat_ = exclVat_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.inclVat_ = inclVat_;
       }
     }
 
@@ -531,6 +655,16 @@ private static final long serialVersionUID = 0L;
       if (other.getPageRef() != 0) {
         setPageRef(other.getPageRef());
       }
+      if (!other.getExclVat().isEmpty()) {
+        exclVat_ = other.exclVat_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (!other.getInclVat().isEmpty()) {
+        inclVat_ = other.inclVat_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -579,6 +713,16 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000008;
               break;
             } // case 32
+            case 42: {
+              exclVat_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              inclVat_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -975,6 +1119,190 @@ private static final long serialVersionUID = 0L;
     public Builder clearPageRef() {
       bitField0_ = (bitField0_ & ~0x00000008);
       pageRef_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object exclVat_ = "";
+    /**
+     * <pre>
+     * The vat distribution candidate excl vat
+     * </pre>
+     *
+     * <code>string excl_vat = 5 [json_name = "exclVat"];</code>
+     * @return The exclVat.
+     */
+    public java.lang.String getExclVat() {
+      java.lang.Object ref = exclVat_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        exclVat_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The vat distribution candidate excl vat
+     * </pre>
+     *
+     * <code>string excl_vat = 5 [json_name = "exclVat"];</code>
+     * @return The bytes for exclVat.
+     */
+    public com.google.protobuf.ByteString
+        getExclVatBytes() {
+      java.lang.Object ref = exclVat_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        exclVat_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The vat distribution candidate excl vat
+     * </pre>
+     *
+     * <code>string excl_vat = 5 [json_name = "exclVat"];</code>
+     * @param value The exclVat to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExclVat(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      exclVat_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The vat distribution candidate excl vat
+     * </pre>
+     *
+     * <code>string excl_vat = 5 [json_name = "exclVat"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearExclVat() {
+      exclVat_ = getDefaultInstance().getExclVat();
+      bitField0_ = (bitField0_ & ~0x00000010);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The vat distribution candidate excl vat
+     * </pre>
+     *
+     * <code>string excl_vat = 5 [json_name = "exclVat"];</code>
+     * @param value The bytes for exclVat to set.
+     * @return This builder for chaining.
+     */
+    public Builder setExclVatBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      exclVat_ = value;
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object inclVat_ = "";
+    /**
+     * <pre>
+     * The vat distribution candidate incl vat
+     * </pre>
+     *
+     * <code>string incl_vat = 6 [json_name = "inclVat"];</code>
+     * @return The inclVat.
+     */
+    public java.lang.String getInclVat() {
+      java.lang.Object ref = inclVat_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        inclVat_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The vat distribution candidate incl vat
+     * </pre>
+     *
+     * <code>string incl_vat = 6 [json_name = "inclVat"];</code>
+     * @return The bytes for inclVat.
+     */
+    public com.google.protobuf.ByteString
+        getInclVatBytes() {
+      java.lang.Object ref = inclVat_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        inclVat_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The vat distribution candidate incl vat
+     * </pre>
+     *
+     * <code>string incl_vat = 6 [json_name = "inclVat"];</code>
+     * @param value The inclVat to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInclVat(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      inclVat_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The vat distribution candidate incl vat
+     * </pre>
+     *
+     * <code>string incl_vat = 6 [json_name = "inclVat"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearInclVat() {
+      inclVat_ = getDefaultInstance().getInclVat();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The vat distribution candidate incl vat
+     * </pre>
+     *
+     * <code>string incl_vat = 6 [json_name = "inclVat"];</code>
+     * @param value The bytes for inclVat to set.
+     * @return This builder for chaining.
+     */
+    public Builder setInclVatBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      inclVat_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

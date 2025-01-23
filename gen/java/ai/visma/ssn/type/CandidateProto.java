@@ -111,17 +111,18 @@ public final class CandidateProto {
       "_metadata\030\007 \001(\0132\023.ssn.type.ModelSpecR\rmo" +
       "delMetadata\022\031\n\010page_ref\030\010 \001(\rR\007pageRef\"9" +
       "\n\010PageText\022\031\n\010page_ref\030\001 \001(\rR\007pageRef\022\022\n" +
-      "\004text\030\002 \001(\tR\004text\"\251\001\n\030VatDistributionCan" +
+      "\004text\030\002 \001(\tR\004text\"\337\001\n\030VatDistributionCan" +
       "didate\022\036\n\npercentage\030\001 \001(\tR\npercentage\022\026" +
       "\n\006amount\030\002 \001(\tR\006amount\022:\n\016model_metadata" +
       "\030\003 \001(\0132\023.ssn.type.ModelSpecR\rmodelMetada" +
-      "ta\022\031\n\010page_ref\030\004 \001(\rR\007pageRef\"1\n\020Documen" +
-      "tMetadata\022\035\n\npage_count\030\001 \001(\rR\tpageCount" +
-      "B\232\001\n\021ai.visma.ssn.typeB\016CandidateProtoP\001" +
-      "Z4github.com/e-conomic/vmlapis/gen/go/ss" +
-      "n/type;ssntype\242\002\003STX\252\002\010Ssn.Type\312\002\010Ssn\\Ty" +
-      "pe\342\002\024Ssn\\Type\\GPBMetadata\352\002\tSsn::Typeb\006p" +
-      "roto3"
+      "ta\022\031\n\010page_ref\030\004 \001(\rR\007pageRef\022\031\n\010excl_va" +
+      "t\030\005 \001(\tR\007exclVat\022\031\n\010incl_vat\030\006 \001(\tR\007incl" +
+      "Vat\"1\n\020DocumentMetadata\022\035\n\npage_count\030\001 " +
+      "\001(\rR\tpageCountB\232\001\n\021ai.visma.ssn.typeB\016Ca" +
+      "ndidateProtoP\001Z4github.com/e-conomic/vml" +
+      "apis/gen/go/ssn/type;ssntype\242\002\003STX\252\002\010Ssn" +
+      ".Type\312\002\010Ssn\\Type\342\002\024Ssn\\Type\\GPBMetadata\352" +
+      "\002\tSsn::Typeb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -176,7 +177,7 @@ public final class CandidateProto {
     internal_static_ssn_type_VatDistributionCandidate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_ssn_type_VatDistributionCandidate_descriptor,
-        new java.lang.String[] { "Percentage", "Amount", "ModelMetadata", "PageRef", });
+        new java.lang.String[] { "Percentage", "Amount", "ModelMetadata", "PageRef", "ExclVat", "InclVat", });
     internal_static_ssn_type_DocumentMetadata_descriptor =
       getDescriptor().getMessageTypes().get(8);
     internal_static_ssn_type_DocumentMetadata_fieldAccessorTable = new

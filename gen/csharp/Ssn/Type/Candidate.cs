@@ -62,16 +62,17 @@ namespace Ssn.Type {
             "ZW5jZVIKY29uZmlkZW5jZRI6Cg5tb2RlbF9tZXRhZGF0YRgHIAEoCzITLnNz",
             "bi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdlX3JlZhgI",
             "IAEoDVIHcGFnZVJlZiI5CghQYWdlVGV4dBIZCghwYWdlX3JlZhgBIAEoDVIH",
-            "cGFnZVJlZhISCgR0ZXh0GAIgASgJUgR0ZXh0IqkBChhWYXREaXN0cmlidXRp",
+            "cGFnZVJlZhISCgR0ZXh0GAIgASgJUgR0ZXh0It8BChhWYXREaXN0cmlidXRp",
             "b25DYW5kaWRhdGUSHgoKcGVyY2VudGFnZRgBIAEoCVIKcGVyY2VudGFnZRIW",
             "CgZhbW91bnQYAiABKAlSBmFtb3VudBI6Cg5tb2RlbF9tZXRhZGF0YRgDIAEo",
             "CzITLnNzbi50eXBlLk1vZGVsU3BlY1INbW9kZWxNZXRhZGF0YRIZCghwYWdl",
-            "X3JlZhgEIAEoDVIHcGFnZVJlZiIxChBEb2N1bWVudE1ldGFkYXRhEh0KCnBh",
-            "Z2VfY291bnQYASABKA1SCXBhZ2VDb3VudEKaAQoRYWkudmlzbWEuc3NuLnR5",
-            "cGVCDkNhbmRpZGF0ZVByb3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWljL3Zt",
-            "bGFwaXMvZ2VuL2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNTVFiqAghTc24uVHlw",
-            "ZcoCCFNzblxUeXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRhdGHqAglTc246OlR5",
-            "cGViBnByb3RvMw=="));
+            "X3JlZhgEIAEoDVIHcGFnZVJlZhIZCghleGNsX3ZhdBgFIAEoCVIHZXhjbFZh",
+            "dBIZCghpbmNsX3ZhdBgGIAEoCVIHaW5jbFZhdCIxChBEb2N1bWVudE1ldGFk",
+            "YXRhEh0KCnBhZ2VfY291bnQYASABKA1SCXBhZ2VDb3VudEKaAQoRYWkudmlz",
+            "bWEuc3NuLnR5cGVCDkNhbmRpZGF0ZVByb3RvUAFaNGdpdGh1Yi5jb20vZS1j",
+            "b25vbWljL3ZtbGFwaXMvZ2VuL2dvL3Nzbi90eXBlO3NzbnR5cGWiAgNTVFiq",
+            "AghTc24uVHlwZcoCCFNzblxUeXBl4gIUU3NuXFR5cGVcR1BCTWV0YWRhdGHq",
+            "AglTc246OlR5cGViBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Ssn.Type.GeometryReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -82,7 +83,7 @@ namespace Ssn.Type {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PurchaseLineCandidate), global::Ssn.Type.PurchaseLineCandidate.Parser, new[]{ "PageRef", "Code", "Description", "Quantity", "ItemNumber", "Unit", "TotalDiscount", "PercentageDiscount", "TotalInclVat", "TotalExclVat", "TotalVat", "PercentageVat", "UnitPriceInclVat", "UnitPriceExclVat", "Total", "UnitPrice", "ModelMetadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.AnswerCandidate), global::Ssn.Type.AnswerCandidate.Parser, new[]{ "Question", "Answer", "Confidence", "ModelMetadata", "PageRef" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.PageText), global::Ssn.Type.PageText.Parser, new[]{ "PageRef", "Text" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistributionCandidate), global::Ssn.Type.VatDistributionCandidate.Parser, new[]{ "Percentage", "Amount", "ModelMetadata", "PageRef" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.VatDistributionCandidate), global::Ssn.Type.VatDistributionCandidate.Parser, new[]{ "Percentage", "Amount", "ModelMetadata", "PageRef", "ExclVat", "InclVat" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ssn.Type.DocumentMetadata), global::Ssn.Type.DocumentMetadata.Parser, new[]{ "PageCount" }, null, null, null, null)
           }));
     }
@@ -2839,6 +2840,8 @@ namespace Ssn.Type {
       amount_ = other.amount_;
       modelMetadata_ = other.modelMetadata_ != null ? other.modelMetadata_.Clone() : null;
       pageRef_ = other.pageRef_;
+      exclVat_ = other.exclVat_;
+      inclVat_ = other.inclVat_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2908,6 +2911,36 @@ namespace Ssn.Type {
       }
     }
 
+    /// <summary>Field number for the "excl_vat" field.</summary>
+    public const int ExclVatFieldNumber = 5;
+    private string exclVat_ = "";
+    /// <summary>
+    /// The vat distribution candidate excl vat
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ExclVat {
+      get { return exclVat_; }
+      set {
+        exclVat_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "incl_vat" field.</summary>
+    public const int InclVatFieldNumber = 6;
+    private string inclVat_ = "";
+    /// <summary>
+    /// The vat distribution candidate incl vat
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string InclVat {
+      get { return inclVat_; }
+      set {
+        inclVat_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2927,6 +2960,8 @@ namespace Ssn.Type {
       if (Amount != other.Amount) return false;
       if (!object.Equals(ModelMetadata, other.ModelMetadata)) return false;
       if (PageRef != other.PageRef) return false;
+      if (ExclVat != other.ExclVat) return false;
+      if (InclVat != other.InclVat) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2938,6 +2973,8 @@ namespace Ssn.Type {
       if (Amount.Length != 0) hash ^= Amount.GetHashCode();
       if (modelMetadata_ != null) hash ^= ModelMetadata.GetHashCode();
       if (PageRef != 0) hash ^= PageRef.GetHashCode();
+      if (ExclVat.Length != 0) hash ^= ExclVat.GetHashCode();
+      if (InclVat.Length != 0) hash ^= InclVat.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2972,6 +3009,14 @@ namespace Ssn.Type {
         output.WriteRawTag(32);
         output.WriteUInt32(PageRef);
       }
+      if (ExclVat.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ExclVat);
+      }
+      if (InclVat.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(InclVat);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2998,6 +3043,14 @@ namespace Ssn.Type {
         output.WriteRawTag(32);
         output.WriteUInt32(PageRef);
       }
+      if (ExclVat.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(ExclVat);
+      }
+      if (InclVat.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(InclVat);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3019,6 +3072,12 @@ namespace Ssn.Type {
       }
       if (PageRef != 0) {
         size += 1 + pb::CodedOutputStream.ComputeUInt32Size(PageRef);
+      }
+      if (ExclVat.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExclVat);
+      }
+      if (InclVat.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(InclVat);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3046,6 +3105,12 @@ namespace Ssn.Type {
       }
       if (other.PageRef != 0) {
         PageRef = other.PageRef;
+      }
+      if (other.ExclVat.Length != 0) {
+        ExclVat = other.ExclVat;
+      }
+      if (other.InclVat.Length != 0) {
+        InclVat = other.InclVat;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3081,6 +3146,14 @@ namespace Ssn.Type {
             PageRef = input.ReadUInt32();
             break;
           }
+          case 42: {
+            ExclVat = input.ReadString();
+            break;
+          }
+          case 50: {
+            InclVat = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -3113,6 +3186,14 @@ namespace Ssn.Type {
           }
           case 32: {
             PageRef = input.ReadUInt32();
+            break;
+          }
+          case 42: {
+            ExclVat = input.ReadString();
+            break;
+          }
+          case 50: {
+            InclVat = input.ReadString();
             break;
           }
         }
