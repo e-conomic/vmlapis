@@ -185,4 +185,38 @@ ai.visma.asgt.type.ConfidenceThresholds defaultValue);
    */
   com.google.protobuf.ByteString
       getMetricVersionBytes();
+
+  /**
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+   */
+  int getTailTargetToConfidenceThresholdsCount();
+  /**
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+   */
+  boolean containsTailTargetToConfidenceThresholds(
+      java.lang.String key);
+  /**
+   * Use {@link #getTailTargetToConfidenceThresholdsMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+  getTailTargetToConfidenceThresholds();
+  /**
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+   */
+  java.util.Map<java.lang.String, ai.visma.asgt.type.ConfidenceThresholds>
+  getTailTargetToConfidenceThresholdsMap();
+  /**
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+   */
+  /* nullable */
+ai.visma.asgt.type.ConfidenceThresholds getTailTargetToConfidenceThresholdsOrDefault(
+      java.lang.String key,
+      /* nullable */
+ai.visma.asgt.type.ConfidenceThresholds defaultValue);
+  /**
+   * <code>map&lt;string, .asgt.type.ConfidenceThresholds&gt; tail_target_to_confidence_thresholds = 12 [json_name = "tailTargetToConfidenceThresholds"];</code>
+   */
+  ai.visma.asgt.type.ConfidenceThresholds getTailTargetToConfidenceThresholdsOrThrow(
+      java.lang.String key);
 }

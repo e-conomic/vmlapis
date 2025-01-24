@@ -81,7 +81,7 @@ docker:
 	@rm -rf gen
 	
 #	run the code generation in docker and copy files to local directory in the end
-	docker build --progress plain --build-arg BUF_TOKEN=$$BUF_TOKEN -t vmlapis .
+	docker build --platform=linux/amd64 --progress plain --build-arg BUF_TOKEN=$$BUF_TOKEN -t vmlapis .
 	DOCKERID=$$(docker create vmlapis) ;\
 	docker cp $$DOCKERID:/app/gen ./ ;\
 	docker rm $$DOCKERID

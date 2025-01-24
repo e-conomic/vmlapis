@@ -14,7 +14,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class RegisterModelRequest(_message.Message):
-    __slots__ = ["dataset", "revision", "model_version", "metrics", "target_metrics", "input_type", "train_statistics", "dataset_statistics", "target_to_confidence_thresholds", "metric_version"]
+    __slots__ = ["dataset", "revision", "model_version", "metrics", "target_metrics", "input_type", "train_statistics", "dataset_statistics", "target_to_confidence_thresholds", "metric_version", "tail_target_to_confidence_thresholds"]
     class MetricsEntry(_message.Message):
         __slots__ = ["key", "value"]
         KEY_FIELD_NUMBER: _ClassVar[int]
@@ -23,6 +23,13 @@ class RegisterModelRequest(_message.Message):
         value: int
         def __init__(self, key: _Optional[str] = ..., value: _Optional[int] = ...) -> None: ...
     class TargetToConfidenceThresholdsEntry(_message.Message):
+        __slots__ = ["key", "value"]
+        KEY_FIELD_NUMBER: _ClassVar[int]
+        VALUE_FIELD_NUMBER: _ClassVar[int]
+        key: str
+        value: _model_pb2.ConfidenceThresholds
+        def __init__(self, key: _Optional[str] = ..., value: _Optional[_Union[_model_pb2.ConfidenceThresholds, _Mapping]] = ...) -> None: ...
+    class TailTargetToConfidenceThresholdsEntry(_message.Message):
         __slots__ = ["key", "value"]
         KEY_FIELD_NUMBER: _ClassVar[int]
         VALUE_FIELD_NUMBER: _ClassVar[int]
@@ -39,6 +46,7 @@ class RegisterModelRequest(_message.Message):
     DATASET_STATISTICS_FIELD_NUMBER: _ClassVar[int]
     TARGET_TO_CONFIDENCE_THRESHOLDS_FIELD_NUMBER: _ClassVar[int]
     METRIC_VERSION_FIELD_NUMBER: _ClassVar[int]
+    TAIL_TARGET_TO_CONFIDENCE_THRESHOLDS_FIELD_NUMBER: _ClassVar[int]
     dataset: _dataset_pb2.Dataset
     revision: _revision_pb2.Revision
     model_version: int
@@ -49,7 +57,8 @@ class RegisterModelRequest(_message.Message):
     dataset_statistics: _dataset_statistics_pb2.DatasetStatistics
     target_to_confidence_thresholds: _containers.MessageMap[str, _model_pb2.ConfidenceThresholds]
     metric_version: str
-    def __init__(self, dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ..., revision: _Optional[_Union[_revision_pb2.Revision, _Mapping]] = ..., model_version: _Optional[int] = ..., metrics: _Optional[_Mapping[str, int]] = ..., target_metrics: _Optional[_Iterable[_Union[_target_metrics_pb2.TargetMetrics, _Mapping]]] = ..., input_type: _Optional[_Union[_model_pb2.Model.InputType, str]] = ..., train_statistics: _Optional[_Union[_train_statistics_pb2.TrainStatistics, _Mapping]] = ..., dataset_statistics: _Optional[_Union[_dataset_statistics_pb2.DatasetStatistics, _Mapping]] = ..., target_to_confidence_thresholds: _Optional[_Mapping[str, _model_pb2.ConfidenceThresholds]] = ..., metric_version: _Optional[str] = ...) -> None: ...
+    tail_target_to_confidence_thresholds: _containers.MessageMap[str, _model_pb2.ConfidenceThresholds]
+    def __init__(self, dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ..., revision: _Optional[_Union[_revision_pb2.Revision, _Mapping]] = ..., model_version: _Optional[int] = ..., metrics: _Optional[_Mapping[str, int]] = ..., target_metrics: _Optional[_Iterable[_Union[_target_metrics_pb2.TargetMetrics, _Mapping]]] = ..., input_type: _Optional[_Union[_model_pb2.Model.InputType, str]] = ..., train_statistics: _Optional[_Union[_train_statistics_pb2.TrainStatistics, _Mapping]] = ..., dataset_statistics: _Optional[_Union[_dataset_statistics_pb2.DatasetStatistics, _Mapping]] = ..., target_to_confidence_thresholds: _Optional[_Mapping[str, _model_pb2.ConfidenceThresholds]] = ..., metric_version: _Optional[str] = ..., tail_target_to_confidence_thresholds: _Optional[_Mapping[str, _model_pb2.ConfidenceThresholds]] = ...) -> None: ...
 
 class GetCurrentModelRequest(_message.Message):
     __slots__ = ["dataset"]
