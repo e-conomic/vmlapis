@@ -6,6 +6,7 @@ import "gen_bq_schema/bq_field.proto";
 import "gen_bq_schema/bq_table.proto";
 import "google/api/annotations.proto";
 import "google/protobuf/empty.proto";
+import "google/protobuf/struct.proto";
 import "google/protobuf/wrappers.proto";
 import "google/type/date.proto";
 import "ssn/type/candidate.proto";
@@ -35,6 +36,12 @@ service DataService {
     };
   }
   rpc CallsPerMonthMetric(google.protobuf.Empty) returns (CallsPerMonthResponse);
+  rpc InserOrUpdateFeedback(InsertOrUpdateFeedbackRequest) returns (google.protobuf.Empty) {
+    option (google.api.http) = {
+      post: "/v1/feedback:insertOrUpdate"
+      body: "*"
+    };
+  }
 }
 
 message Document {
@@ -306,4 +313,10 @@ message CallsPerMonth {
 
 message CallsPerMonthResponse {
   repeated CallsPerMonth calls_per_month = 1;
+}
+
+message InsertOrUpdateFeedbackRequest {
+  string id = 1;
+  repeated string tags = 2;
+  google.protobuf.Struct true_values = 3;
 }

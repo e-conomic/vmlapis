@@ -2,6 +2,7 @@ from gen_bq_schema import bq_field_pb2 as _bq_field_pb2
 from gen_bq_schema import bq_table_pb2 as _bq_table_pb2
 from google.api import annotations_pb2 as _annotations_pb2
 from google.protobuf import empty_pb2 as _empty_pb2
+from google.protobuf import struct_pb2 as _struct_pb2
 from google.protobuf import wrappers_pb2 as _wrappers_pb2
 from google.type import date_pb2 as _date_pb2
 from ssn.type import candidate_pb2 as _candidate_pb2
@@ -503,3 +504,13 @@ class CallsPerMonthResponse(_message.Message):
     CALLS_PER_MONTH_FIELD_NUMBER: _ClassVar[int]
     calls_per_month: _containers.RepeatedCompositeFieldContainer[CallsPerMonth]
     def __init__(self, calls_per_month: _Optional[_Iterable[_Union[CallsPerMonth, _Mapping]]] = ...) -> None: ...
+
+class InsertOrUpdateFeedbackRequest(_message.Message):
+    __slots__ = ["id", "tags", "feedback"]
+    ID_FIELD_NUMBER: _ClassVar[int]
+    TAGS_FIELD_NUMBER: _ClassVar[int]
+    FEEDBACK_FIELD_NUMBER: _ClassVar[int]
+    id: str
+    tags: _containers.RepeatedScalarFieldContainer[str]
+    feedback: _struct_pb2.Struct
+    def __init__(self, id: _Optional[str] = ..., tags: _Optional[_Iterable[str]] = ..., feedback: _Optional[_Union[_struct_pb2.Struct, _Mapping]] = ...) -> None: ...

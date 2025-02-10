@@ -1,0 +1,122 @@
+syntax = "proto3";
+
+package ssn.type;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/type;ssntype";
+
+message DocumentAnnotation {
+  // orderDate
+  // ISO 8601 date string, ie. a string of the format "YYYY-MM-DD"
+  // Example: "2019-12-31"
+  StandardField order_date = 1;
+  // paymentDueDate
+  // ISO 8601 date, ie. a string of the format "YYYY-MM-DD"
+  // Example: "2019-12-31"
+  StandardField payment_due_date = 2;
+  // currency
+  // ISO 4217 string, ie. a 3-letter capitalized string
+  // Example: "NOK"
+  StandardField currency = 3;
+  // totalVat
+  // A string that parses as a two-decimal number
+  // Example: "10.0" or "11.11"
+  StandardField total_vat = 4;
+  // totalInclVat
+  // A string that parses as a two-decimal number
+  // Example: "10.0" or "11.11"
+  StandardField total_incl_vat = 5;
+  // totalExclVat
+  // A string that parses as a two-decimal number
+  // Example: "10.0" or "11.11"
+  StandardField total_excl_vat = 6;
+  // supplierCountryCode
+  // ISO 3166-1 alpha-2 string, ei. a two-letter capitalized string
+  // Example: "NO"
+  StandardField supplier_country_code = 8;
+  // documentType
+  // Either "Receipt" or "Invoice"
+  StandardField document_type = 9;
+  // paymentMethod
+  // Either "Cash" or "CreditCard"
+  StandardField payment_method = 10;
+  // creditCardNumber
+  // Four digits
+  // Example: "0012"
+  StandardField credit_card_last_four = 11;
+  // example: "71"
+  StandardField ocr_line_dk_type = 14;
+  // example: "000002879094031"
+  StandardField ocr_line_dk_payment_id = 15;
+  //example: "86570807"
+  StandardField ocr_line_dk_creditor_id = 16;
+  // example: "050765098"
+  StandardField ocr_line_se_payment_id = 17;
+  // example: "2654507"
+  StandardField ocr_line_se_bankgiro_creditor_id = 18;
+  // example: "5000872"
+  StandardField ocr_line_se_plusgiro_creditor_id = 19;
+  // example: "12345678903"
+  StandardField ocr_line_no_payment_id = 20;
+  // example: "0817937867870002"
+  StandardField ocr_line_fi_payment_id = 21;
+  // example: "00000159220010146012"
+  StandardField ocr_line_nl_payment_id = 22;
+  StandardField ocr_line_be_payment_id = 40;
+  // The first two letters are a country code. The next two digits are
+  // check digits for the ISO 7064 Mod 97, 10 checksum
+  // example: "DK50 0040 0440 1162 43", "NO8330001234567"
+  StandardField iban = 25;
+  // Country specific bank account number
+  StandardField bank_account_number = 28;
+  // Country specific bank registration number
+  StandardField bank_registration_number = 29;
+  // Returns business identifier code
+  StandardField bic = 30;
+  // Represents identifier of the document
+  StandardField document_number = 31;
+  // Returns document date
+  StandardField document_date = 32;
+  // Represents the identifier that supplier assigned to the order
+  StandardField order_number = 33;
+  // Returns supplier name
+  StandardField supplier_name = 34;
+  // [EXPERIMENTAL]
+  // Returns supplier VAT number
+  StandardField supplier_vat_number = 35;
+  // [EXPERIMENTAL]
+  // Returns the business ID or organisation number of the supplier
+  StandardField supplier_organisation_number = 36;
+  // [EXPERIMENTAL]
+  // Returns supplier address
+  StandardField supplier_address = 37;
+  // [EXPERIMENTAL]
+  // Returns customer identifier/number
+  StandardField customer_number = 38;
+  // Equivalent of order number for receiver
+  StandardField receiver_order_number = 39;
+  // Equivalent of address for receiver
+  StandardField receiver_address = 41;
+  // Equivalent of country code for receiver
+  StandardField receiver_country_code = 42;
+  // Equivalent of supplier name for receiver
+  StandardField receiver_name = 43;
+  // Equivalent of VAT number for receiver
+  StandardField receiver_vat_number = 44;
+  // Answer Candidates for the questions asked in th request about the document
+  // Each Answer is question and answer pair with page number and confidence
+  StandardField page_texts = 47;
+  // Order Reference
+  StandardField order_reference = 51;
+}
+
+message StandardField {
+  uint32 page_ref = 1;
+  string value = 2;
+  annotator type = 3;
+  enum annotator {
+    UNKNOWN = 0;
+    OCR = 1;
+    ML = 2;
+    RULE = 3;
+  }
+}

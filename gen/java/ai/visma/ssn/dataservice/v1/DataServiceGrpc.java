@@ -232,6 +232,37 @@ public final class DataServiceGrpc {
     return getCallsPerMonthMetricMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest,
+      com.google.protobuf.Empty> getInserOrUpdateFeedbackMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "InserOrUpdateFeedback",
+      requestType = ai.visma.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest.class,
+      responseType = com.google.protobuf.Empty.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest,
+      com.google.protobuf.Empty> getInserOrUpdateFeedbackMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest, com.google.protobuf.Empty> getInserOrUpdateFeedbackMethod;
+    if ((getInserOrUpdateFeedbackMethod = DataServiceGrpc.getInserOrUpdateFeedbackMethod) == null) {
+      synchronized (DataServiceGrpc.class) {
+        if ((getInserOrUpdateFeedbackMethod = DataServiceGrpc.getInserOrUpdateFeedbackMethod) == null) {
+          DataServiceGrpc.getInserOrUpdateFeedbackMethod = getInserOrUpdateFeedbackMethod =
+              io.grpc.MethodDescriptor.<ai.visma.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest, com.google.protobuf.Empty>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "InserOrUpdateFeedback"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.protobuf.Empty.getDefaultInstance()))
+              .setSchemaDescriptor(new DataServiceMethodDescriptorSupplier("InserOrUpdateFeedback"))
+              .build();
+        }
+      }
+    }
+    return getInserOrUpdateFeedbackMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -331,6 +362,13 @@ public final class DataServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.CallsPerMonthResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCallsPerMonthMetricMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void inserOrUpdateFeedback(ai.visma.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInserOrUpdateFeedbackMethod(), responseObserver);
+    }
   }
 
   /**
@@ -418,6 +456,14 @@ public final class DataServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCallsPerMonthMetricMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void inserOrUpdateFeedback(ai.visma.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest request,
+        io.grpc.stub.StreamObserver<com.google.protobuf.Empty> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getInserOrUpdateFeedbackMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -486,6 +532,13 @@ public final class DataServiceGrpc {
     public ai.visma.ssn.dataservice.v1.CallsPerMonthResponse callsPerMonthMetric(com.google.protobuf.Empty request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCallsPerMonthMetricMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty inserOrUpdateFeedback(ai.visma.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getInserOrUpdateFeedbackMethod(), getCallOptions(), request);
     }
   }
 
@@ -563,6 +616,14 @@ public final class DataServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCallsPerMonthMetricMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.Empty> inserOrUpdateFeedback(
+        ai.visma.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getInserOrUpdateFeedbackMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_DOCUMENT = 0;
@@ -572,6 +633,7 @@ public final class DataServiceGrpc {
   private static final int METHODID_CALCULATE_METRICS = 4;
   private static final int METHODID_DELETE = 5;
   private static final int METHODID_CALLS_PER_MONTH_METRIC = 6;
+  private static final int METHODID_INSER_OR_UPDATE_FEEDBACK = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -617,6 +679,10 @@ public final class DataServiceGrpc {
         case METHODID_CALLS_PER_MONTH_METRIC:
           serviceImpl.callsPerMonthMetric((com.google.protobuf.Empty) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.dataservice.v1.CallsPerMonthResponse>) responseObserver);
+          break;
+        case METHODID_INSER_OR_UPDATE_FEEDBACK:
+          serviceImpl.inserOrUpdateFeedback((ai.visma.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.protobuf.Empty>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -685,6 +751,13 @@ public final class DataServiceGrpc {
               com.google.protobuf.Empty,
               ai.visma.ssn.dataservice.v1.CallsPerMonthResponse>(
                 service, METHODID_CALLS_PER_MONTH_METRIC)))
+        .addMethod(
+          getInserOrUpdateFeedbackMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest,
+              com.google.protobuf.Empty>(
+                service, METHODID_INSER_OR_UPDATE_FEEDBACK)))
         .build();
   }
 
@@ -740,6 +813,7 @@ public final class DataServiceGrpc {
               .addMethod(getCalculateMetricsMethod())
               .addMethod(getDeleteMethod())
               .addMethod(getCallsPerMonthMetricMethod())
+              .addMethod(getInserOrUpdateFeedbackMethod())
               .build();
         }
       }

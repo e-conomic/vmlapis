@@ -4,6 +4,7 @@ import * as gen_bq_schema_bq_field_pb from '../../../gen_bq_schema/bq_field_pb';
 import * as gen_bq_schema_bq_table_pb from '../../../gen_bq_schema/bq_table_pb';
 import * as google_api_annotations_pb from '../../../google/api/annotations_pb';
 import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb';
+import * as google_protobuf_struct_pb from 'google-protobuf/google/protobuf/struct_pb';
 import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb';
 import * as google_type_date_pb from '../../../google/type/date_pb';
 import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb';
@@ -1474,6 +1475,36 @@ export class CallsPerMonthResponse extends jspb.Message {
 export namespace CallsPerMonthResponse {
   export type AsObject = {
     callsPerMonthList: Array<CallsPerMonth.AsObject>,
+  }
+}
+
+export class InsertOrUpdateFeedbackRequest extends jspb.Message {
+  getId(): string;
+  setId(value: string): InsertOrUpdateFeedbackRequest;
+
+  getTagsList(): Array<string>;
+  setTagsList(value: Array<string>): InsertOrUpdateFeedbackRequest;
+  clearTagsList(): InsertOrUpdateFeedbackRequest;
+  addTags(value: string, index?: number): InsertOrUpdateFeedbackRequest;
+
+  getFeedback(): google_protobuf_struct_pb.Struct | undefined;
+  setFeedback(value?: google_protobuf_struct_pb.Struct): InsertOrUpdateFeedbackRequest;
+  hasFeedback(): boolean;
+  clearFeedback(): InsertOrUpdateFeedbackRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): InsertOrUpdateFeedbackRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: InsertOrUpdateFeedbackRequest): InsertOrUpdateFeedbackRequest.AsObject;
+  static serializeBinaryToWriter(message: InsertOrUpdateFeedbackRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): InsertOrUpdateFeedbackRequest;
+  static deserializeBinaryFromReader(message: InsertOrUpdateFeedbackRequest, reader: jspb.BinaryReader): InsertOrUpdateFeedbackRequest;
+}
+
+export namespace InsertOrUpdateFeedbackRequest {
+  export type AsObject = {
+    id: string,
+    tagsList: Array<string>,
+    feedback?: google_protobuf_struct_pb.Struct.AsObject,
   }
 }
 

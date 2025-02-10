@@ -137,6 +137,26 @@ func (mr *MockDataServiceClientMockRecorder) Feedback(ctx, in interface{}, opts 
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Feedback", reflect.TypeOf((*MockDataServiceClient)(nil).Feedback), varargs...)
 }
 
+// InserOrUpdateFeedback mocks base method.
+func (m *MockDataServiceClient) InserOrUpdateFeedback(ctx context.Context, in *dataservice.InsertOrUpdateFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "InserOrUpdateFeedback", varargs...)
+	ret0, _ := ret[0].(*emptypb.Empty)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// InserOrUpdateFeedback indicates an expected call of InserOrUpdateFeedback.
+func (mr *MockDataServiceClientMockRecorder) InserOrUpdateFeedback(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InserOrUpdateFeedback", reflect.TypeOf((*MockDataServiceClient)(nil).InserOrUpdateFeedback), varargs...)
+}
+
 // PrepareFeedback mocks base method.
 func (m *MockDataServiceClient) PrepareFeedback(ctx context.Context, in *dataservice.PrepareFeedbackRequest, opts ...grpc.CallOption) (*emptypb.Empty, error) {
 	m.ctrl.T.Helper()
@@ -273,6 +293,21 @@ func (m *MockDataServiceServer) Feedback(arg0 context.Context, arg1 *dataservice
 func (mr *MockDataServiceServerMockRecorder) Feedback(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Feedback", reflect.TypeOf((*MockDataServiceServer)(nil).Feedback), arg0, arg1)
+}
+
+// InserOrUpdateFeedback mocks base method.
+func (m *MockDataServiceServer) InserOrUpdateFeedback(arg0 context.Context, arg1 *dataservice.InsertOrUpdateFeedbackRequest) (*emptypb.Empty, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "InserOrUpdateFeedback", arg0, arg1)
+	ret0, _ := ret[0].(*emptypb.Empty)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// InserOrUpdateFeedback indicates an expected call of InserOrUpdateFeedback.
+func (mr *MockDataServiceServerMockRecorder) InserOrUpdateFeedback(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InserOrUpdateFeedback", reflect.TypeOf((*MockDataServiceServer)(nil).InserOrUpdateFeedback), arg0, arg1)
 }
 
 // PrepareFeedback mocks base method.

@@ -155,6 +155,39 @@
         ]
       }
     },
+    "/v1/feedback:insertOrUpdate": {
+      "post": {
+        "operationId": "DataService_InserOrUpdateFeedback",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          },
+          "default": {
+            "description": "An unexpected error response.",
+            "schema": {
+              "$ref": "#/definitions/rpcStatus"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/v1InsertOrUpdateFeedbackRequest"
+            }
+          }
+        ],
+        "tags": [
+          "DataService"
+        ]
+      }
+    },
     "/v1/tags/{tagName}": {
       "delete": {
         "operationId": "TransactionService_DeleteTag",
@@ -621,6 +654,14 @@
         }
       },
       "additionalProperties": {}
+    },
+    "protobufNullValue": {
+      "type": "string",
+      "enum": [
+        "NULL_VALUE"
+      ],
+      "default": "NULL_VALUE",
+      "description": "`NullValue` is a singleton enumeration to represent the null value for the\n`Value` type union.\n\n The JSON representation for `NullValue` is JSON `null`.\n\n - NULL_VALUE: Null value."
     },
     "rpcStatus": {
       "type": "object",
@@ -1900,6 +1941,23 @@
         "customId": {
           "type": "string",
           "title": "maybe a timestamp on different status would be nice here"
+        }
+      }
+    },
+    "v1InsertOrUpdateFeedbackRequest": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "feedback": {
+          "type": "object"
         }
       }
     },

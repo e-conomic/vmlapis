@@ -28,6 +28,8 @@ var google_api_annotations_pb = require('../../../google/api/annotations_pb.js')
 
 var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js')
 
+var google_protobuf_struct_pb = require('google-protobuf/google/protobuf/struct_pb.js')
+
 var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js')
 
 var google_type_date_pb = require('../../../google/type/date_pb.js')
@@ -518,6 +520,67 @@ proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.callsPerMonthMetric 
       request,
       metadata || {},
       methodDescriptor_DataService_CallsPerMonthMetric);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest,
+ *   !proto.google.protobuf.Empty>}
+ */
+const methodDescriptor_DataService_InserOrUpdateFeedback = new grpc.web.MethodDescriptor(
+  '/ssn.dataservice.v1.DataService/InserOrUpdateFeedback',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest,
+  google_protobuf_empty_pb.Empty,
+  /**
+   * @param {!proto.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_empty_pb.Empty.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.google.protobuf.Empty)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.Empty>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.dataservice.v1.DataServiceClient.prototype.inserOrUpdateFeedback =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/InserOrUpdateFeedback',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_InserOrUpdateFeedback,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.dataservice.v1.InsertOrUpdateFeedbackRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.google.protobuf.Empty>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.dataservice.v1.DataServicePromiseClient.prototype.inserOrUpdateFeedback =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.dataservice.v1.DataService/InserOrUpdateFeedback',
+      request,
+      metadata || {},
+      methodDescriptor_DataService_InserOrUpdateFeedback);
 };
 
 
