@@ -19,17 +19,17 @@ class ModelRegistryStub(object):
                 '/asgt.modelregistry.v1.ModelRegistry/RegisterModel',
                 request_serializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.RegisterModelRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.GetCurrentModel = channel.unary_unary(
                 '/asgt.modelregistry.v1.ModelRegistry/GetCurrentModel',
                 request_serializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.SerializeToString,
                 response_deserializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.FromString,
-                )
+                _registered_method=True)
         self.GetCurrentFullModel = channel.unary_unary(
                 '/asgt.modelregistry.v1.ModelRegistry/GetCurrentFullModel',
                 request_serializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.SerializeToString,
                 response_deserializer=asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class ModelRegistryServicer(object):
@@ -76,6 +76,7 @@ def add_ModelRegistryServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'asgt.modelregistry.v1.ModelRegistry', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('asgt.modelregistry.v1.ModelRegistry', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -93,11 +94,21 @@ class ModelRegistry(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.modelregistry.v1.ModelRegistry/RegisterModel',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.modelregistry.v1.ModelRegistry/RegisterModel',
             asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.RegisterModelRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def GetCurrentModel(request,
@@ -110,11 +121,21 @@ class ModelRegistry(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.modelregistry.v1.ModelRegistry/GetCurrentModel',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.modelregistry.v1.ModelRegistry/GetCurrentModel',
             asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.SerializeToString,
             asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def GetCurrentFullModel(request,
@@ -127,8 +148,18 @@ class ModelRegistry(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.modelregistry.v1.ModelRegistry/GetCurrentFullModel',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.modelregistry.v1.ModelRegistry/GetCurrentFullModel',
             asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelRequest.SerializeToString,
             asgt_dot_modelregistry_dot_v1_dot_model__registry__pb2.GetCurrentModelResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

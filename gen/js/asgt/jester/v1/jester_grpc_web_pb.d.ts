@@ -1,6 +1,6 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as asgt_jester_v1_jester_pb from '../../../asgt/jester/v1/jester_pb';
+import * as asgt_jester_v1_jester_pb from '../../../asgt/jester/v1/jester_pb'; // proto import: "asgt/jester/v1/jester.proto"
 
 
 export class JesterClient {

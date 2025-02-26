@@ -8,18 +8,18 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class TextAnnotation(_message.Message):
-    __slots__ = ["pages", "text"]
+    __slots__ = ("pages", "text")
     class DetectedLanguage(_message.Message):
-        __slots__ = ["language_code", "confidence"]
+        __slots__ = ("language_code", "confidence")
         LANGUAGE_CODE_FIELD_NUMBER: _ClassVar[int]
         CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
         language_code: str
         confidence: float
         def __init__(self, language_code: _Optional[str] = ..., confidence: _Optional[float] = ...) -> None: ...
     class DetectedBreak(_message.Message):
-        __slots__ = ["type", "is_prefix"]
+        __slots__ = ("type", "is_prefix")
         class BreakType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-            __slots__ = []
+            __slots__ = ()
             UNKNOWN: _ClassVar[TextAnnotation.DetectedBreak.BreakType]
             SPACE: _ClassVar[TextAnnotation.DetectedBreak.BreakType]
             SURE_SPACE: _ClassVar[TextAnnotation.DetectedBreak.BreakType]
@@ -38,7 +38,7 @@ class TextAnnotation(_message.Message):
         is_prefix: bool
         def __init__(self, type: _Optional[_Union[TextAnnotation.DetectedBreak.BreakType, str]] = ..., is_prefix: bool = ...) -> None: ...
     class TextProperty(_message.Message):
-        __slots__ = ["detected_languages", "detected_break"]
+        __slots__ = ("detected_languages", "detected_break")
         DETECTED_LANGUAGES_FIELD_NUMBER: _ClassVar[int]
         DETECTED_BREAK_FIELD_NUMBER: _ClassVar[int]
         detected_languages: _containers.RepeatedCompositeFieldContainer[TextAnnotation.DetectedLanguage]
@@ -51,7 +51,7 @@ class TextAnnotation(_message.Message):
     def __init__(self, pages: _Optional[_Iterable[_Union[Page, _Mapping]]] = ..., text: _Optional[str] = ...) -> None: ...
 
 class Page(_message.Message):
-    __slots__ = ["property", "width", "height", "blocks", "confidence"]
+    __slots__ = ("property", "width", "height", "blocks", "confidence")
     PROPERTY_FIELD_NUMBER: _ClassVar[int]
     WIDTH_FIELD_NUMBER: _ClassVar[int]
     HEIGHT_FIELD_NUMBER: _ClassVar[int]
@@ -65,9 +65,9 @@ class Page(_message.Message):
     def __init__(self, property: _Optional[_Union[TextAnnotation.TextProperty, _Mapping]] = ..., width: _Optional[int] = ..., height: _Optional[int] = ..., blocks: _Optional[_Iterable[_Union[Block, _Mapping]]] = ..., confidence: _Optional[float] = ...) -> None: ...
 
 class Block(_message.Message):
-    __slots__ = ["property", "bounding_box", "paragraphs", "block_type", "confidence"]
+    __slots__ = ("property", "bounding_box", "paragraphs", "block_type", "confidence")
     class BlockType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-        __slots__ = []
+        __slots__ = ()
         UNKNOWN: _ClassVar[Block.BlockType]
         TEXT: _ClassVar[Block.BlockType]
         TABLE: _ClassVar[Block.BlockType]
@@ -93,7 +93,7 @@ class Block(_message.Message):
     def __init__(self, property: _Optional[_Union[TextAnnotation.TextProperty, _Mapping]] = ..., bounding_box: _Optional[_Union[_geometry_pb2.BoundingPoly, _Mapping]] = ..., paragraphs: _Optional[_Iterable[_Union[Paragraph, _Mapping]]] = ..., block_type: _Optional[_Union[Block.BlockType, str]] = ..., confidence: _Optional[float] = ...) -> None: ...
 
 class Paragraph(_message.Message):
-    __slots__ = ["property", "bounding_box", "words", "confidence"]
+    __slots__ = ("property", "bounding_box", "words", "confidence")
     PROPERTY_FIELD_NUMBER: _ClassVar[int]
     BOUNDING_BOX_FIELD_NUMBER: _ClassVar[int]
     WORDS_FIELD_NUMBER: _ClassVar[int]
@@ -105,7 +105,7 @@ class Paragraph(_message.Message):
     def __init__(self, property: _Optional[_Union[TextAnnotation.TextProperty, _Mapping]] = ..., bounding_box: _Optional[_Union[_geometry_pb2.BoundingPoly, _Mapping]] = ..., words: _Optional[_Iterable[_Union[Word, _Mapping]]] = ..., confidence: _Optional[float] = ...) -> None: ...
 
 class Word(_message.Message):
-    __slots__ = ["property", "bounding_box", "symbols", "confidence"]
+    __slots__ = ("property", "bounding_box", "symbols", "confidence")
     PROPERTY_FIELD_NUMBER: _ClassVar[int]
     BOUNDING_BOX_FIELD_NUMBER: _ClassVar[int]
     SYMBOLS_FIELD_NUMBER: _ClassVar[int]
@@ -117,7 +117,7 @@ class Word(_message.Message):
     def __init__(self, property: _Optional[_Union[TextAnnotation.TextProperty, _Mapping]] = ..., bounding_box: _Optional[_Union[_geometry_pb2.BoundingPoly, _Mapping]] = ..., symbols: _Optional[_Iterable[_Union[Symbol, _Mapping]]] = ..., confidence: _Optional[float] = ...) -> None: ...
 
 class Symbol(_message.Message):
-    __slots__ = ["property", "bounding_box", "text", "confidence"]
+    __slots__ = ("property", "bounding_box", "text", "confidence")
     PROPERTY_FIELD_NUMBER: _ClassVar[int]
     BOUNDING_BOX_FIELD_NUMBER: _ClassVar[int]
     TEXT_FIELD_NUMBER: _ClassVar[int]

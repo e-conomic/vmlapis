@@ -1,11 +1,11 @@
 import * as jspb from 'google-protobuf'
 
-import * as asgt_type_data_pb from '../../../asgt/type/data_pb';
-import * as asgt_type_model_pb from '../../../asgt/type/model_pb';
-import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb';
-import * as asgt_type_target_value_pb from '../../../asgt/type/target_value_pb';
-import * as gen_bq_schema_bq_field_pb from '../../../gen_bq_schema/bq_field_pb';
-import * as gen_bq_schema_bq_table_pb from '../../../gen_bq_schema/bq_table_pb';
+import * as asgt_type_data_pb from '../../../asgt/type/data_pb'; // proto import: "asgt/type/data.proto"
+import * as asgt_type_model_pb from '../../../asgt/type/model_pb'; // proto import: "asgt/type/model.proto"
+import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb'; // proto import: "asgt/type/prediction.proto"
+import * as asgt_type_target_value_pb from '../../../asgt/type/target_value_pb'; // proto import: "asgt/type/target_value.proto"
+import * as gen_bq_schema_bq_field_pb from '../../../gen_bq_schema/bq_field_pb'; // proto import: "gen_bq_schema/bq_field.proto"
+import * as gen_bq_schema_bq_table_pb from '../../../gen_bq_schema/bq_table_pb'; // proto import: "gen_bq_schema/bq_table.proto"
 
 
 export class Entry extends jspb.Message {

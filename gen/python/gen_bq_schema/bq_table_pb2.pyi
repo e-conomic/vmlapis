@@ -8,7 +8,7 @@ BIGQUERY_OPTS_FIELD_NUMBER: _ClassVar[int]
 bigquery_opts: _descriptor.FieldDescriptor
 
 class BigQueryMessageOptions(_message.Message):
-    __slots__ = ["table_name", "use_json_names"]
+    __slots__ = ("table_name", "use_json_names")
     TABLE_NAME_FIELD_NUMBER: _ClassVar[int]
     USE_JSON_NAMES_FIELD_NUMBER: _ClassVar[int]
     table_name: str

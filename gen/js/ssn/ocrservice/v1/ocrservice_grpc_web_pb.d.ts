@@ -1,6 +1,6 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as ssn_ocrservice_v1_ocrservice_pb from '../../../ssn/ocrservice/v1/ocrservice_pb';
+import * as ssn_ocrservice_v1_ocrservice_pb from '../../../ssn/ocrservice/v1/ocrservice_pb'; // proto import: "ssn/ocrservice/v1/ocrservice.proto"
 
 
 export class OcrServiceClient {

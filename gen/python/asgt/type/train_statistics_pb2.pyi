@@ -7,7 +7,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class TargetStat(_message.Message):
-    __slots__ = ["class_name", "relative_dataset_proportion", "absolute_dataset_proportion"]
+    __slots__ = ("class_name", "relative_dataset_proportion", "absolute_dataset_proportion")
     CLASS_NAME_FIELD_NUMBER: _ClassVar[int]
     RELATIVE_DATASET_PROPORTION_FIELD_NUMBER: _ClassVar[int]
     ABSOLUTE_DATASET_PROPORTION_FIELD_NUMBER: _ClassVar[int]
@@ -17,15 +17,15 @@ class TargetStat(_message.Message):
     def __init__(self, class_name: _Optional[str] = ..., relative_dataset_proportion: _Optional[float] = ..., absolute_dataset_proportion: _Optional[int] = ...) -> None: ...
 
 class TargetStats(_message.Message):
-    __slots__ = ["target_stats"]
+    __slots__ = ("target_stats",)
     TARGET_STATS_FIELD_NUMBER: _ClassVar[int]
     target_stats: _containers.RepeatedCompositeFieldContainer[TargetStat]
     def __init__(self, target_stats: _Optional[_Iterable[_Union[TargetStat, _Mapping]]] = ...) -> None: ...
 
 class FeatureStat(_message.Message):
-    __slots__ = ["feature_name", "feature_type", "information_gain"]
+    __slots__ = ("feature_name", "feature_type", "information_gain")
     class Type(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-        __slots__ = []
+        __slots__ = ()
         INT: _ClassVar[FeatureStat.Type]
         FLOAT: _ClassVar[FeatureStat.Type]
         STRING: _ClassVar[FeatureStat.Type]
@@ -45,22 +45,22 @@ class FeatureStat(_message.Message):
     def __init__(self, feature_name: _Optional[str] = ..., feature_type: _Optional[_Union[FeatureStat.Type, str]] = ..., information_gain: _Optional[float] = ...) -> None: ...
 
 class FeatureStats(_message.Message):
-    __slots__ = ["feature_stats"]
+    __slots__ = ("feature_stats",)
     FEATURE_STATS_FIELD_NUMBER: _ClassVar[int]
     feature_stats: _containers.RepeatedCompositeFieldContainer[FeatureStat]
     def __init__(self, feature_stats: _Optional[_Iterable[_Union[FeatureStat, _Mapping]]] = ...) -> None: ...
 
 class TrainStatistics(_message.Message):
-    __slots__ = ["target_stats_by_target", "feature_stats_by_target", "similarity_index"]
+    __slots__ = ("target_stats_by_target", "feature_stats_by_target", "similarity_index")
     class TargetStatsByTargetEntry(_message.Message):
-        __slots__ = ["key", "value"]
+        __slots__ = ("key", "value")
         KEY_FIELD_NUMBER: _ClassVar[int]
         VALUE_FIELD_NUMBER: _ClassVar[int]
         key: str
         value: TargetStats
         def __init__(self, key: _Optional[str] = ..., value: _Optional[_Union[TargetStats, _Mapping]] = ...) -> None: ...
     class FeatureStatsByTargetEntry(_message.Message):
-        __slots__ = ["key", "value"]
+        __slots__ = ("key", "value")
         KEY_FIELD_NUMBER: _ClassVar[int]
         VALUE_FIELD_NUMBER: _ClassVar[int]
         key: str

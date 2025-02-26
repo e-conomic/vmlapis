@@ -15,7 +15,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class CalculateMetricsRequest(_message.Message):
-    __slots__ = ["start_time", "end_time", "tags"]
+    __slots__ = ("start_time", "end_time", "tags")
     START_TIME_FIELD_NUMBER: _ClassVar[int]
     END_TIME_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
@@ -25,9 +25,9 @@ class CalculateMetricsRequest(_message.Message):
     def __init__(self, start_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., end_time: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class CalculateMetricsResponse(_message.Message):
-    __slots__ = ["metrics"]
+    __slots__ = ("metrics",)
     class MetricRow(_message.Message):
-        __slots__ = ["target", "confidence", "correct", "incorrect"]
+        __slots__ = ("target", "confidence", "correct", "incorrect")
         TARGET_FIELD_NUMBER: _ClassVar[int]
         CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
         CORRECT_FIELD_NUMBER: _ClassVar[int]
@@ -42,7 +42,7 @@ class CalculateMetricsResponse(_message.Message):
     def __init__(self, metrics: _Optional[_Iterable[_Union[CalculateMetricsResponse.MetricRow, _Mapping]]] = ...) -> None: ...
 
 class CreateRequest(_message.Message):
-    __slots__ = ["name", "type", "tags", "targets", "samples", "retention_policy"]
+    __slots__ = ("name", "type", "tags", "targets", "samples", "retention_policy")
     NAME_FIELD_NUMBER: _ClassVar[int]
     TYPE_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
@@ -58,7 +58,7 @@ class CreateRequest(_message.Message):
     def __init__(self, name: _Optional[str] = ..., type: _Optional[str] = ..., tags: _Optional[_Iterable[str]] = ..., targets: _Optional[_Iterable[str]] = ..., samples: _Optional[_Iterable[_Union[_sample_pb2.Sample, _Mapping]]] = ..., retention_policy: _Optional[_Union[_retention_policy_pb2.RetentionPolicy, _Mapping]] = ...) -> None: ...
 
 class AppendDataRequest(_message.Message):
-    __slots__ = ["name", "type", "samples"]
+    __slots__ = ("name", "type", "samples")
     NAME_FIELD_NUMBER: _ClassVar[int]
     TYPE_FIELD_NUMBER: _ClassVar[int]
     SAMPLES_FIELD_NUMBER: _ClassVar[int]
@@ -68,7 +68,7 @@ class AppendDataRequest(_message.Message):
     def __init__(self, name: _Optional[str] = ..., type: _Optional[str] = ..., samples: _Optional[_Iterable[_Union[_sample_pb2.Sample, _Mapping]]] = ...) -> None: ...
 
 class DeleteRequest(_message.Message):
-    __slots__ = ["type", "name", "tag"]
+    __slots__ = ("type", "name", "tag")
     TYPE_FIELD_NUMBER: _ClassVar[int]
     NAME_FIELD_NUMBER: _ClassVar[int]
     TAG_FIELD_NUMBER: _ClassVar[int]
@@ -78,7 +78,7 @@ class DeleteRequest(_message.Message):
     def __init__(self, type: _Optional[str] = ..., name: _Optional[str] = ..., tag: _Optional[str] = ...) -> None: ...
 
 class GetInfoRequest(_message.Message):
-    __slots__ = ["name", "type"]
+    __slots__ = ("name", "type")
     NAME_FIELD_NUMBER: _ClassVar[int]
     TYPE_FIELD_NUMBER: _ClassVar[int]
     name: str
@@ -86,7 +86,7 @@ class GetInfoRequest(_message.Message):
     def __init__(self, name: _Optional[str] = ..., type: _Optional[str] = ...) -> None: ...
 
 class UpdateDatasetRequest(_message.Message):
-    __slots__ = ["name", "type", "retention_policy"]
+    __slots__ = ("name", "type", "retention_policy")
     NAME_FIELD_NUMBER: _ClassVar[int]
     TYPE_FIELD_NUMBER: _ClassVar[int]
     RETENTION_POLICY_FIELD_NUMBER: _ClassVar[int]
@@ -96,7 +96,7 @@ class UpdateDatasetRequest(_message.Message):
     def __init__(self, name: _Optional[str] = ..., type: _Optional[str] = ..., retention_policy: _Optional[_Union[_retention_policy_pb2.RetentionPolicy, _Mapping]] = ...) -> None: ...
 
 class GetInfoResponse(_message.Message):
-    __slots__ = ["dataset", "model"]
+    __slots__ = ("dataset", "model")
     DATASET_FIELD_NUMBER: _ClassVar[int]
     MODEL_FIELD_NUMBER: _ClassVar[int]
     dataset: _dataset_pb2.Dataset
@@ -104,7 +104,7 @@ class GetInfoResponse(_message.Message):
     def __init__(self, dataset: _Optional[_Union[_dataset_pb2.Dataset, _Mapping]] = ..., model: _Optional[_Union[_model_pb2.Model, _Mapping]] = ...) -> None: ...
 
 class RegisterQueryStatsRequest(_message.Message):
-    __slots__ = ["dataset", "model_type", "batch_size", "tags"]
+    __slots__ = ("dataset", "model_type", "batch_size", "tags")
     DATASET_FIELD_NUMBER: _ClassVar[int]
     MODEL_TYPE_FIELD_NUMBER: _ClassVar[int]
     BATCH_SIZE_FIELD_NUMBER: _ClassVar[int]

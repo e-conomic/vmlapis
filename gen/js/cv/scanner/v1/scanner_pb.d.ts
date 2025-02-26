@@ -1,9 +1,9 @@
 import * as jspb from 'google-protobuf'
 
-import * as google_api_annotations_pb from '../../../google/api/annotations_pb';
-import * as google_api_http_pb from '../../../google/api/http_pb';
-import * as ssn_annotator_v1_annotator_pb from '../../../ssn/annotator/v1/annotator_pb';
-import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb';
+import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
+import * as google_api_http_pb from '../../../google/api/http_pb'; // proto import: "google/api/http.proto"
+import * as ssn_annotator_v1_annotator_pb from '../../../ssn/annotator/v1/annotator_pb'; // proto import: "ssn/annotator/v1/annotator.proto"
+import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
 
 
 export class ScanCVRequest extends jspb.Message {

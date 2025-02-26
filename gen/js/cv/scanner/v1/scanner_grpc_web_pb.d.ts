@@ -1,6 +1,6 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as cv_scanner_v1_scanner_pb from '../../../cv/scanner/v1/scanner_pb';
+import * as cv_scanner_v1_scanner_pb from '../../../cv/scanner/v1/scanner_pb'; // proto import: "cv/scanner/v1/scanner.proto"
 
 
 export class ScannerClient {

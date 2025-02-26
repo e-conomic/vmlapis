@@ -1,11 +1,11 @@
 import * as jspb from 'google-protobuf'
 
-import * as asgt_type_model_pb from '../../asgt/type/model_pb';
-import * as asgt_type_prediction_pb from '../../asgt/type/prediction_pb';
-import * as asgt_v2_type_data_pb from '../../asgt/v2/type/data_pb';
-import * as google_api_annotations_pb from '../../google/api/annotations_pb';
-import * as protoc$gen$openapiv2_options_annotations_pb from '../../protoc-gen-openapiv2/options/annotations_pb';
-import * as validate_validate_pb from '../../validate/validate_pb';
+import * as asgt_type_model_pb from '../../asgt/type/model_pb'; // proto import: "asgt/type/model.proto"
+import * as asgt_type_prediction_pb from '../../asgt/type/prediction_pb'; // proto import: "asgt/type/prediction.proto"
+import * as asgt_v2_type_data_pb from '../../asgt/v2/type/data_pb'; // proto import: "asgt/v2/type/data.proto"
+import * as google_api_annotations_pb from '../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
+import * as protoc$gen$openapiv2_options_annotations_pb from '../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
+import * as validate_validate_pb from '../../validate/validate_pb'; // proto import: "validate/validate.proto"
 
 
 export class SuggestOptions extends jspb.Message {

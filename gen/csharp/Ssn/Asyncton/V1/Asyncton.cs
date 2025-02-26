@@ -63,18 +63,18 @@ namespace Ssn.Asyncton.V1 {
             "BgoSVHJhbnNhY3Rpb25TZXJ2aWNlEocBChFDcmVhdGVUcmFuc2FjdGlvbhIp",
             "LnNzbi5hc3luY3Rvbi52MS5DcmVhdGVUcmFuc2FjdGlvblJlcXVlc3QaKi5z",
             "c24uYXN5bmN0b24udjEuQ3JlYXRlVHJhbnNhY3Rpb25SZXNwb25zZSIbgtPk",
-            "kwIVOgEqIhAvdjEvdHJhbnNhY3Rpb25zErkBChVHZXRUcmFuc2FjdGlvblJl",
+            "kwIVIhAvdjEvdHJhbnNhY3Rpb25zOgEqErkBChVHZXRUcmFuc2FjdGlvblJl",
             "c3VsdHMSLS5zc24uYXN5bmN0b24udjEuR2V0VHJhbnNhY3Rpb25SZXN1bHRz",
             "UmVxdWVzdBouLnNzbi5hc3luY3Rvbi52MS5HZXRUcmFuc2FjdGlvblJlc3Vs",
-            "dHNSZXNwb25zZSJBgtPkkwI7WhoSGC92MS90cmFuc2FjdGlvbnMvcmVzdWx0",
-            "cxIdL3YxL3RyYW5zYWN0aW9ucy97aWR9L3Jlc3VsdHMStAEKFEdldFRyYW5z",
+            "dHNSZXNwb25zZSJBgtPkkwI7Eh0vdjEvdHJhbnNhY3Rpb25zL3tpZH0vcmVz",
+            "dWx0c1oaEhgvdjEvdHJhbnNhY3Rpb25zL3Jlc3VsdHMStAEKFEdldFRyYW5z",
             "YWN0aW9uU3RhdHVzEiwuc3NuLmFzeW5jdG9uLnYxLkdldFRyYW5zYWN0aW9u",
             "U3RhdHVzUmVxdWVzdBotLnNzbi5hc3luY3Rvbi52MS5HZXRUcmFuc2FjdGlv",
-            "blN0YXR1c1Jlc3BvbnNlIj+C0+STAjlaGRIXL3YxL3RyYW5zYWN0aW9ucy9z",
-            "dGF0dXMSHC92MS90cmFuc2FjdGlvbnMve2lkfS9zdGF0dXMSiQEKEURlbGV0",
+            "blN0YXR1c1Jlc3BvbnNlIj+C0+STAjkSHC92MS90cmFuc2FjdGlvbnMve2lk",
+            "fS9zdGF0dXNaGRIXL3YxL3RyYW5zYWN0aW9ucy9zdGF0dXMSiQEKEURlbGV0",
             "ZVRyYW5zYWN0aW9uEikuc3NuLmFzeW5jdG9uLnYxLkRlbGV0ZVRyYW5zYWN0",
-            "aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIxgtPkkwIrWhIq",
-            "EC92MS90cmFuc2FjdGlvbnMqFS92MS90cmFuc2FjdGlvbnMve2lkfRJjCglE",
+            "aW9uUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIxgtPkkwIrKhUv",
+            "djEvdHJhbnNhY3Rpb25zL3tpZH1aEioQL3YxL3RyYW5zYWN0aW9ucxJjCglE",
             "ZWxldGVUYWcSIS5zc24uYXN5bmN0b24udjEuRGVsZXRlVGFnUmVxdWVzdBoW",
             "Lmdvb2dsZS5wcm90b2J1Zi5FbXB0eSIbgtPkkwIVKhMvdjEvdGFncy97dGFn",
             "X25hbWV9QoMCChhhaS52aXNtYS5zc24uYXN5bmN0b24udjFCDUFzeW5jdG9u",
@@ -105,6 +105,7 @@ namespace Ssn.Asyncton.V1 {
   /// <summary>
   /// --- post: "/v1/transactions" ---
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTransactionRequest : pb::IMessage<CreateTransactionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -337,7 +338,11 @@ namespace Ssn.Asyncton.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -371,7 +376,11 @@ namespace Ssn.Asyncton.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -401,6 +410,7 @@ namespace Ssn.Asyncton.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTransactionResponse : pb::IMessage<CreateTransactionResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -589,7 +599,11 @@ namespace Ssn.Asyncton.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -612,7 +626,11 @@ namespace Ssn.Asyncton.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -634,6 +652,7 @@ namespace Ssn.Asyncton.V1 {
   /// <summary>
   /// --- get: "/v1/transactions/{id}/results" ---
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTransactionResultsRequest : pb::IMessage<GetTransactionResultsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -880,7 +899,11 @@ namespace Ssn.Asyncton.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -911,7 +934,11 @@ namespace Ssn.Asyncton.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -938,6 +965,7 @@ namespace Ssn.Asyncton.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTransactionResultsResponse : pb::IMessage<GetTransactionResultsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1173,7 +1201,11 @@ namespace Ssn.Asyncton.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1204,7 +1236,11 @@ namespace Ssn.Asyncton.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1231,6 +1267,7 @@ namespace Ssn.Asyncton.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Annotation : pb::IMessage<Annotation>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1508,7 +1545,11 @@ namespace Ssn.Asyncton.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1550,7 +1591,11 @@ namespace Ssn.Asyncton.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1591,6 +1636,7 @@ namespace Ssn.Asyncton.V1 {
   /// <summary>
   /// --- get: "/v1/transactions/{id}/status" ---
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTransactionStatusRequest : pb::IMessage<GetTransactionStatusRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1775,7 +1821,11 @@ namespace Ssn.Asyncton.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1798,7 +1848,11 @@ namespace Ssn.Asyncton.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1817,6 +1871,7 @@ namespace Ssn.Asyncton.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetTransactionStatusResponse : pb::IMessage<GetTransactionStatusResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2069,7 +2124,11 @@ namespace Ssn.Asyncton.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -2100,7 +2159,11 @@ namespace Ssn.Asyncton.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -2130,6 +2193,7 @@ namespace Ssn.Asyncton.V1 {
   /// <summary>
   /// --- delete: "/v1/transactions/{id}" ---
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteTransactionRequest : pb::IMessage<DeleteTransactionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2314,7 +2378,11 @@ namespace Ssn.Asyncton.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -2337,7 +2405,11 @@ namespace Ssn.Asyncton.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -2359,6 +2431,7 @@ namespace Ssn.Asyncton.V1 {
   /// <summary>
   /// --- delete: "/v1/tags/{tag_name}" ---
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteTagRequest : pb::IMessage<DeleteTagRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -2517,7 +2590,11 @@ namespace Ssn.Asyncton.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -2536,7 +2613,11 @@ namespace Ssn.Asyncton.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;

@@ -58,16 +58,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "samples": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "$ref": "#/definitions/typeSample"
-                  }
-                }
-              }
+              "$ref": "#/definitions/DataServiceAppendDataBody"
             }
           }
         ],
@@ -147,25 +138,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "inputs": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "$ref": "#/definitions/typeData"
-                  }
-                },
-                "options": {
-                  "$ref": "#/definitions/v1SuggestionOptions"
-                },
-                "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                }
-              }
+              "$ref": "#/definitions/JesterSuggestBody"
             }
           }
         ],
@@ -210,12 +183,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "retentionPolicy": {
-                  "$ref": "#/definitions/typeRetentionPolicy"
-                }
-              }
+              "$ref": "#/definitions/DataServiceUpdateDatasetBody"
             }
           }
         ],
@@ -254,34 +222,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string"
-                },
-                "tags": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "targets": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "samples": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "$ref": "#/definitions/typeSample"
-                  }
-                },
-                "retentionPolicy": {
-                  "$ref": "#/definitions/typeRetentionPolicy"
-                }
-              }
+              "$ref": "#/definitions/DataServiceCreateDatasetBody"
             }
           }
         ],
@@ -320,15 +261,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "type": "string"
-                },
-                "tag": {
-                  "type": "string"
-                }
-              }
+              "$ref": "#/definitions/DataServiceDeleteDataBody"
             }
           }
         ],
@@ -356,6 +289,88 @@
         "incorrect": {
           "type": "integer",
           "format": "int32"
+        }
+      }
+    },
+    "DataServiceAppendDataBody": {
+      "type": "object",
+      "properties": {
+        "samples": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeSample"
+          }
+        }
+      }
+    },
+    "DataServiceCreateDatasetBody": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "samples": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeSample"
+          }
+        },
+        "retentionPolicy": {
+          "$ref": "#/definitions/typeRetentionPolicy"
+        }
+      }
+    },
+    "DataServiceDeleteDataBody": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "tag": {
+          "type": "string"
+        }
+      }
+    },
+    "DataServiceUpdateDatasetBody": {
+      "type": "object",
+      "properties": {
+        "retentionPolicy": {
+          "$ref": "#/definitions/typeRetentionPolicy"
+        }
+      }
+    },
+    "JesterSuggestBody": {
+      "type": "object",
+      "properties": {
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeData"
+          }
+        },
+        "options": {
+          "$ref": "#/definitions/v1SuggestionOptions"
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },

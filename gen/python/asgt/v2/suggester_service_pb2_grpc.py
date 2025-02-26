@@ -18,17 +18,17 @@ class SuggesterServiceStub(object):
                 '/asgt.v2.SuggesterService/Suggest',
                 request_serializer=asgt_dot_v2_dot_suggester__service__pb2.SuggestRequest.SerializeToString,
                 response_deserializer=asgt_dot_v2_dot_suggester__service__pb2.SuggestResponse.FromString,
-                )
+                _registered_method=True)
         self.BatchSuggest = channel.unary_unary(
                 '/asgt.v2.SuggesterService/BatchSuggest',
                 request_serializer=asgt_dot_v2_dot_suggester__service__pb2.BatchSuggestRequest.SerializeToString,
                 response_deserializer=asgt_dot_v2_dot_suggester__service__pb2.BatchSuggestResponse.FromString,
-                )
+                _registered_method=True)
         self.ModelBatchSuggest = channel.unary_unary(
                 '/asgt.v2.SuggesterService/ModelBatchSuggest',
                 request_serializer=asgt_dot_v2_dot_suggester__service__pb2.BatchSuggestRequest.SerializeToString,
                 response_deserializer=asgt_dot_v2_dot_suggester__service__pb2.BatchSuggestResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class SuggesterServiceServicer(object):
@@ -78,6 +78,7 @@ def add_SuggesterServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'asgt.v2.SuggesterService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('asgt.v2.SuggesterService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -95,11 +96,21 @@ class SuggesterService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.SuggesterService/Suggest',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.SuggesterService/Suggest',
             asgt_dot_v2_dot_suggester__service__pb2.SuggestRequest.SerializeToString,
             asgt_dot_v2_dot_suggester__service__pb2.SuggestResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def BatchSuggest(request,
@@ -112,11 +123,21 @@ class SuggesterService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.SuggesterService/BatchSuggest',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.SuggesterService/BatchSuggest',
             asgt_dot_v2_dot_suggester__service__pb2.BatchSuggestRequest.SerializeToString,
             asgt_dot_v2_dot_suggester__service__pb2.BatchSuggestResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def ModelBatchSuggest(request,
@@ -129,8 +150,18 @@ class SuggesterService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.SuggesterService/ModelBatchSuggest',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.SuggesterService/ModelBatchSuggest',
             asgt_dot_v2_dot_suggester__service__pb2.BatchSuggestRequest.SerializeToString,
             asgt_dot_v2_dot_suggester__service__pb2.BatchSuggestResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

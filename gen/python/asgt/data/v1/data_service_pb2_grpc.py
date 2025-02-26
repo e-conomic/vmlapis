@@ -20,42 +20,42 @@ class DataServiceStub(object):
                 '/asgt.dataservice.v1.DataService/CreateDataset',
                 request_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CreateRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.AppendData = channel.unary_unary(
                 '/asgt.dataservice.v1.DataService/AppendData',
                 request_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.AppendDataRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.DeleteData = channel.unary_unary(
                 '/asgt.dataservice.v1.DataService/DeleteData',
                 request_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.DeleteRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.GetInfo = channel.unary_unary(
                 '/asgt.dataservice.v1.DataService/GetInfo',
                 request_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.GetInfoRequest.SerializeToString,
                 response_deserializer=asgt_dot_data_dot_v1_dot_data__service__pb2.GetInfoResponse.FromString,
-                )
+                _registered_method=True)
         self.UpdateDataset = channel.unary_unary(
                 '/asgt.dataservice.v1.DataService/UpdateDataset',
                 request_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.UpdateDatasetRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.RegisterQueryStats = channel.unary_unary(
                 '/asgt.dataservice.v1.DataService/RegisterQueryStats',
                 request_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.RegisterQueryStatsRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.CallsPerMonthMetric = channel.unary_unary(
                 '/asgt.dataservice.v1.DataService/CallsPerMonthMetric',
                 request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
                 response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
-                )
+                _registered_method=True)
         self.CalculateMetrics = channel.unary_unary(
                 '/asgt.dataservice.v1.DataService/CalculateMetrics',
                 request_serializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsRequest.SerializeToString,
                 response_deserializer=asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class DataServiceServicer(object):
@@ -156,6 +156,7 @@ def add_DataServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'asgt.dataservice.v1.DataService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('asgt.dataservice.v1.DataService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -173,11 +174,21 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.dataservice.v1.DataService/CreateDataset',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.dataservice.v1.DataService/CreateDataset',
             asgt_dot_data_dot_v1_dot_data__service__pb2.CreateRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def AppendData(request,
@@ -190,11 +201,21 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.dataservice.v1.DataService/AppendData',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.dataservice.v1.DataService/AppendData',
             asgt_dot_data_dot_v1_dot_data__service__pb2.AppendDataRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def DeleteData(request,
@@ -207,11 +228,21 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.dataservice.v1.DataService/DeleteData',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.dataservice.v1.DataService/DeleteData',
             asgt_dot_data_dot_v1_dot_data__service__pb2.DeleteRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def GetInfo(request,
@@ -224,11 +255,21 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.dataservice.v1.DataService/GetInfo',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.dataservice.v1.DataService/GetInfo',
             asgt_dot_data_dot_v1_dot_data__service__pb2.GetInfoRequest.SerializeToString,
             asgt_dot_data_dot_v1_dot_data__service__pb2.GetInfoResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def UpdateDataset(request,
@@ -241,11 +282,21 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.dataservice.v1.DataService/UpdateDataset',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.dataservice.v1.DataService/UpdateDataset',
             asgt_dot_data_dot_v1_dot_data__service__pb2.UpdateDatasetRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def RegisterQueryStats(request,
@@ -258,11 +309,21 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.dataservice.v1.DataService/RegisterQueryStats',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.dataservice.v1.DataService/RegisterQueryStats',
             asgt_dot_data_dot_v1_dot_data__service__pb2.RegisterQueryStatsRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def CallsPerMonthMetric(request,
@@ -275,11 +336,21 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.dataservice.v1.DataService/CallsPerMonthMetric',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.dataservice.v1.DataService/CallsPerMonthMetric',
             google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def CalculateMetrics(request,
@@ -292,8 +363,18 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.dataservice.v1.DataService/CalculateMetrics',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.dataservice.v1.DataService/CalculateMetrics',
             asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsRequest.SerializeToString,
             asgt_dot_data_dot_v1_dot_data__service__pb2.CalculateMetricsResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

@@ -9,9 +9,9 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Confidence(_message.Message):
-    __slots__ = ["level", "value"]
+    __slots__ = ("level", "value")
     class Level(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-        __slots__ = []
+        __slots__ = ()
         UNKNOWN: _ClassVar[Confidence.Level]
         VERY_LOW: _ClassVar[Confidence.Level]
         LOW: _ClassVar[Confidence.Level]
@@ -31,11 +31,11 @@ class Confidence(_message.Message):
     def __init__(self, level: _Optional[_Union[Confidence.Level, str]] = ..., value: _Optional[_Union[_wrappers_pb2.FloatValue, _Mapping]] = ...) -> None: ...
 
 class Prediction(_message.Message):
-    __slots__ = ["targets"]
+    __slots__ = ("targets",)
     class Target(_message.Message):
-        __slots__ = ["name", "candidates"]
+        __slots__ = ("name", "candidates")
         class Candidate(_message.Message):
-            __slots__ = ["value", "confidence"]
+            __slots__ = ("value", "confidence")
             VALUE_FIELD_NUMBER: _ClassVar[int]
             CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
             value: str

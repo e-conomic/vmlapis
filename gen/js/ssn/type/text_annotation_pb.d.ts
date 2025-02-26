@@ -1,6 +1,6 @@
 import * as jspb from 'google-protobuf'
 
-import * as ssn_type_geometry_pb from '../../ssn/type/geometry_pb';
+import * as ssn_type_geometry_pb from '../../ssn/type/geometry_pb'; // proto import: "ssn/type/geometry.proto"
 
 
 export class TextAnnotation extends jspb.Message {

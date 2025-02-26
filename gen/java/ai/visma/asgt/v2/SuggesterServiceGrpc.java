@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: asgt/v2/suggester_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class SuggesterServiceGrpc {
 
   private SuggesterServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "asgt.v2.SuggesterService";
+  public static final java.lang.String SERVICE_NAME = "asgt.v2.SuggesterService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.v2.SuggestRequest,
@@ -120,6 +120,21 @@ public final class SuggesterServiceGrpc {
         }
       };
     return SuggesterServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static SuggesterServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<SuggesterServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<SuggesterServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public SuggesterServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new SuggesterServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return SuggesterServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -252,6 +267,54 @@ public final class SuggesterServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service SuggesterService.
+   */
+  public static final class SuggesterServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<SuggesterServiceBlockingV2Stub> {
+    private SuggesterServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected SuggesterServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new SuggesterServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Suggest target values for some input using a dataset, returning an empty result if no model exists.
+     * </pre>
+     */
+    public ai.visma.asgt.v2.SuggestResponse suggest(ai.visma.asgt.v2.SuggestRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSuggestMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * BatchSuggest target values for multiple inputs using a dataset, returning an empty result if no model exists.
+     * </pre>
+     */
+    public ai.visma.asgt.v2.BatchSuggestResponse batchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBatchSuggestMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Suggest target values for multiple inputs using the most recently trained model in a dataset.
+     * Returns 404 if a dataset exists, but no model has been trained. This matches the behavior of the v1 API.
+     * </pre>
+     */
+    public ai.visma.asgt.v2.BatchSuggestResponse modelBatchSuggest(ai.visma.asgt.v2.BatchSuggestRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getModelBatchSuggestMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service SuggesterService.
    */
   public static final class SuggesterServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<SuggesterServiceBlockingStub> {
@@ -447,9 +510,9 @@ public final class SuggesterServiceGrpc {
   private static final class SuggesterServiceMethodDescriptorSupplier
       extends SuggesterServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    SuggesterServiceMethodDescriptorSupplier(String methodName) {
+    SuggesterServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

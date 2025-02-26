@@ -1,6 +1,6 @@
 import * as jspb from 'google-protobuf'
 
-import * as google_protobuf_descriptor_pb from 'google-protobuf/google/protobuf/descriptor_pb';
+import * as google_protobuf_descriptor_pb from 'google-protobuf/google/protobuf/descriptor_pb'; // proto import: "google/protobuf/descriptor.proto"
 
 
 export class BigQueryMessageOptions extends jspb.Message {

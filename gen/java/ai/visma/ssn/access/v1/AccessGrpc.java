@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: ssn/access/v1/access.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class AccessGrpc {
 
   private AccessGrpc() {}
 
-  public static final String SERVICE_NAME = "ssn.access.v1.Access";
+  public static final java.lang.String SERVICE_NAME = "ssn.access.v1.Access";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.access.v1.ValetKeyRequest,
@@ -58,6 +58,21 @@ public final class AccessGrpc {
         }
       };
     return AccessStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static AccessBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<AccessBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<AccessBlockingV2Stub>() {
+        @java.lang.Override
+        public AccessBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new AccessBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return AccessBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -140,6 +155,30 @@ public final class AccessGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Access.
+   */
+  public static final class AccessBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<AccessBlockingV2Stub> {
+    private AccessBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected AccessBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new AccessBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.access.v1.ValetKeyResponse generateValetKey(ai.visma.ssn.access.v1.ValetKeyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGenerateValetKeyMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Access.
    */
   public static final class AccessBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<AccessBlockingStub> {
@@ -261,9 +300,9 @@ public final class AccessGrpc {
   private static final class AccessMethodDescriptorSupplier
       extends AccessBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    AccessMethodDescriptorSupplier(String methodName) {
+    AccessMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

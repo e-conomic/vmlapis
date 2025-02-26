@@ -1,6 +1,6 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as ssn_annotator_v1_annotator_pb from '../../../ssn/annotator/v1/annotator_pb';
+import * as ssn_annotator_v1_annotator_pb from '../../../ssn/annotator/v1/annotator_pb'; // proto import: "ssn/annotator/v1/annotator.proto"
 
 
 export class DocumentAnnotatorClient {

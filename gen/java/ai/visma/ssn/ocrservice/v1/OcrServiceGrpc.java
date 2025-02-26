@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: ssn/ocrservice/v1/ocrservice.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class OcrServiceGrpc {
 
   private OcrServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "ssn.ocrservice.v1.OcrService";
+  public static final java.lang.String SERVICE_NAME = "ssn.ocrservice.v1.OcrService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.ocrservice.v1.OcrScanImageRequest,
@@ -188,6 +188,21 @@ public final class OcrServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static OcrServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<OcrServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<OcrServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public OcrServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new OcrServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return OcrServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static OcrServiceBlockingStub newBlockingStub(
@@ -336,6 +351,65 @@ public final class OcrServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service OcrService.
+   * <pre>
+   * Interface exported by the server.
+   * </pre>
+   */
+  public static final class OcrServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<OcrServiceBlockingV2Stub> {
+    private OcrServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected OcrServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new OcrServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.ocrservice.v1.OcrScanImageResponse ocrScanImage(ai.visma.ssn.ocrservice.v1.OcrScanImageRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getOcrScanImageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse getTextAnnotation(ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTextAnnotationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, ai.visma.ssn.ocrservice.v1.GetTextAnnotationResponse>
+        getTextAnnotations(ai.visma.ssn.ocrservice.v1.GetTextAnnotationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getGetTextAnnotationsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.ocrservice.v1.AsyncCreateOperationResponse asyncCreateOperation(ai.visma.ssn.ocrservice.v1.AsyncCreateOperationRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAsyncCreateOperationMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusResponse>
+        asyncGetOperationStatus(ai.visma.ssn.ocrservice.v1.AsyncGetOperationStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getAsyncGetOperationStatusMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service OcrService.
    * <pre>
    * Interface exported by the server.
    * </pre>
@@ -557,9 +631,9 @@ public final class OcrServiceGrpc {
   private static final class OcrServiceMethodDescriptorSupplier
       extends OcrServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    OcrServiceMethodDescriptorSupplier(String methodName) {
+    OcrServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

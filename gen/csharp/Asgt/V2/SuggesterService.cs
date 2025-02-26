@@ -48,14 +48,14 @@ namespace Asgt.V2 {
             "dGlvblILcHJlZGljdGlvbnMSJgoFbW9kZWwYAiABKAsyEC5hc2d0LnR5cGUu",
             "TW9kZWxSBW1vZGVsMrsDChBTdWdnZXN0ZXJTZXJ2aWNlEmwKB1N1Z2dlc3QS",
             "Fy5hc2d0LnYyLlN1Z2dlc3RSZXF1ZXN0GhguYXNndC52Mi5TdWdnZXN0UmVz",
-            "cG9uc2UiLoLT5JMCKDoBKiIjL3YyL2RhdGFzZXRzL3tkYXRhc2V0X25hbWV9",
-            "OnN1Z2dlc3QSgAEKDEJhdGNoU3VnZ2VzdBIcLmFzZ3QudjIuQmF0Y2hTdWdn",
+            "cG9uc2UiLoLT5JMCKCIjL3YyL2RhdGFzZXRzL3tkYXRhc2V0X25hbWV9OnN1",
+            "Z2dlc3Q6ASoSgAEKDEJhdGNoU3VnZ2VzdBIcLmFzZ3QudjIuQmF0Y2hTdWdn",
             "ZXN0UmVxdWVzdBodLmFzZ3QudjIuQmF0Y2hTdWdnZXN0UmVzcG9uc2UiM4LT",
-            "5JMCLToBKiIoL3YyL2RhdGFzZXRzL3tkYXRhc2V0X25hbWV9OmJhdGNoU3Vn",
-            "Z2VzdBKLAQoRTW9kZWxCYXRjaFN1Z2dlc3QSHC5hc2d0LnYyLkJhdGNoU3Vn",
+            "5JMCLSIoL3YyL2RhdGFzZXRzL3tkYXRhc2V0X25hbWV9OmJhdGNoU3VnZ2Vz",
+            "dDoBKhKLAQoRTW9kZWxCYXRjaFN1Z2dlc3QSHC5hc2d0LnYyLkJhdGNoU3Vn",
             "Z2VzdFJlcXVlc3QaHS5hc2d0LnYyLkJhdGNoU3VnZ2VzdFJlc3BvbnNlIjmC",
-            "0+STAjM6ASoiLi92Mi9kYXRhc2V0cy97ZGF0YXNldF9uYW1lfS9tb2RlbDpi",
-            "YXRjaFN1Z2dlc3QaKJJBJRIjTWFrZSBwcmVkaWN0aW9ucyBhZ2FpbnN0IGEg",
+            "0+STAjMiLi92Mi9kYXRhc2V0cy97ZGF0YXNldF9uYW1lfS9tb2RlbDpiYXRj",
+            "aFN1Z2dlc3Q6ASoaKJJBJRIjTWFrZSBwcmVkaWN0aW9ucyBhZ2FpbnN0IGEg",
             "ZGF0YXNldC5C0AEKEGFpLnZpc21hLmFzZ3QudjJCFVN1Z2dlc3RlclNlcnZp",
             "Y2VQcm90b1ABWitnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9n",
             "by9hc2d0L3YyogIDQVhYqgIHQXNndC5WMsoCB0FzZ3RcVjLiAhNBc2d0XFYy",
@@ -76,6 +76,7 @@ namespace Asgt.V2 {
 
   }
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SuggestOptions : pb::IMessage<SuggestOptions>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -266,7 +267,11 @@ namespace Asgt.V2 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -289,7 +294,11 @@ namespace Asgt.V2 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -308,6 +317,7 @@ namespace Asgt.V2 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SuggestRequest : pb::IMessage<SuggestRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -533,7 +543,11 @@ namespace Asgt.V2 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -566,7 +580,11 @@ namespace Asgt.V2 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -595,6 +613,7 @@ namespace Asgt.V2 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SuggestResponse : pb::IMessage<SuggestResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -785,7 +804,11 @@ namespace Asgt.V2 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -814,7 +837,11 @@ namespace Asgt.V2 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -839,6 +866,7 @@ namespace Asgt.V2 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchSuggestRequest : pb::IMessage<BatchSuggestRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1050,7 +1078,11 @@ namespace Asgt.V2 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1080,7 +1112,11 @@ namespace Asgt.V2 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1106,6 +1142,7 @@ namespace Asgt.V2 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class BatchSuggestResponse : pb::IMessage<BatchSuggestResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1282,7 +1319,11 @@ namespace Asgt.V2 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1308,7 +1349,11 @@ namespace Asgt.V2 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;

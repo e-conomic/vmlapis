@@ -12,15 +12,15 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Model(_message.Message):
-    __slots__ = ["version", "created_at", "dataset_size", "training_size", "confidence_scores", "input_type", "dataset_type", "model_files", "target_to_confidence_thresholds"]
+    __slots__ = ("version", "created_at", "dataset_size", "training_size", "confidence_scores", "input_type", "dataset_type", "model_files", "target_to_confidence_thresholds")
     class InputType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-        __slots__ = []
+        __slots__ = ()
         FEATURE_TENSORS: _ClassVar[Model.InputType]
         EXAMPLE_TENSOR: _ClassVar[Model.InputType]
     FEATURE_TENSORS: Model.InputType
     EXAMPLE_TENSOR: Model.InputType
     class TargetToConfidenceThresholdsEntry(_message.Message):
-        __slots__ = ["key", "value"]
+        __slots__ = ("key", "value")
         KEY_FIELD_NUMBER: _ClassVar[int]
         VALUE_FIELD_NUMBER: _ClassVar[int]
         key: str
@@ -47,7 +47,7 @@ class Model(_message.Message):
     def __init__(self, version: _Optional[int] = ..., created_at: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., dataset_size: _Optional[int] = ..., training_size: _Optional[int] = ..., confidence_scores: _Optional[_Iterable[_Union[_target_metrics_pb2.TargetMetrics, _Mapping]]] = ..., input_type: _Optional[_Union[Model.InputType, str]] = ..., dataset_type: _Optional[str] = ..., model_files: _Optional[_Iterable[_Union[_model_file_pb2.ModelFile, _Mapping]]] = ..., target_to_confidence_thresholds: _Optional[_Mapping[str, ConfidenceThresholds]] = ...) -> None: ...
 
 class ConfidenceThresholds(_message.Message):
-    __slots__ = ["confidence_thresholds"]
+    __slots__ = ("confidence_thresholds",)
     CONFIDENCE_THRESHOLDS_FIELD_NUMBER: _ClassVar[int]
     confidence_thresholds: _containers.RepeatedCompositeFieldContainer[_prediction_pb2.Confidence]
     def __init__(self, confidence_thresholds: _Optional[_Iterable[_Union[_prediction_pb2.Confidence, _Mapping]]] = ...) -> None: ...

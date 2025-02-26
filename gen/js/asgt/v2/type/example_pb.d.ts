@@ -1,8 +1,8 @@
 import * as jspb from 'google-protobuf'
 
-import * as asgt_v2_type_data_pb from '../../../asgt/v2/type/data_pb';
-import * as asgt_v2_type_target_value_pb from '../../../asgt/v2/type/target_value_pb';
-import * as validate_validate_pb from '../../../validate/validate_pb';
+import * as asgt_v2_type_data_pb from '../../../asgt/v2/type/data_pb'; // proto import: "asgt/v2/type/data.proto"
+import * as asgt_v2_type_target_value_pb from '../../../asgt/v2/type/target_value_pb'; // proto import: "asgt/v2/type/target_value.proto"
+import * as validate_validate_pb from '../../../validate/validate_pb'; // proto import: "validate/validate.proto"
 
 
 export class Example extends jspb.Message {

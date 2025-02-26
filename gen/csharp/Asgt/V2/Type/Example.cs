@@ -30,7 +30,7 @@ namespace Asgt.V2.Type {
             "bGUSJgoEZGF0YRgBIAEoCzISLmFzZ3QudjIudHlwZS5EYXRhUgRkYXRhEkoK",
             "DXRhcmdldF92YWx1ZXMYAiADKAsyGS5hc2d0LnYyLnR5cGUuVGFyZ2V0VmFs",
             "dWVCCvpCB5IBBAgBKABSDHRhcmdldFZhbHVlcxIbCgJpZBgDIAEoCUIL+kII",
-            "cgbQAQGwAQFSAmlkQrIBChVhaS52aXNtYS5hc2d0LnYyLnR5cGVCDEV4YW1w",
+            "cgawAQHQAQFSAmlkQrIBChVhaS52aXNtYS5hc2d0LnYyLnR5cGVCDEV4YW1w",
             "bGVQcm90b1ABWjlnaXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9n",
             "by9hc2d0L3YyL3R5cGU7YXNndHR5cGWiAgNBVlSqAgxBc2d0LlYyLlR5cGXK",
             "AgxBc2d0XFYyXFR5cGXiAhhBc2d0XFYyXFR5cGVcR1BCTWV0YWRhdGHqAg5B",
@@ -48,6 +48,7 @@ namespace Asgt.V2.Type {
   /// <summary>
   /// A pair of example data and example target values
   /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Example : pb::IMessage<Example>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -257,7 +258,11 @@ namespace Asgt.V2.Type {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -287,7 +292,11 @@ namespace Asgt.V2.Type {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;

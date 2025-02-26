@@ -6,9 +6,9 @@ from typing import ClassVar as _ClassVar, Optional as _Optional, Union as _Union
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class RasterizePdfRequest(_message.Message):
-    __slots__ = ["data", "dpi", "format", "color", "pages"]
+    __slots__ = ("data", "dpi", "format", "color", "pages")
     class Format(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-        __slots__ = []
+        __slots__ = ()
         PNG: _ClassVar[RasterizePdfRequest.Format]
         JPEG: _ClassVar[RasterizePdfRequest.Format]
         WEBP: _ClassVar[RasterizePdfRequest.Format]
@@ -16,13 +16,13 @@ class RasterizePdfRequest(_message.Message):
     JPEG: RasterizePdfRequest.Format
     WEBP: RasterizePdfRequest.Format
     class ColorSpace(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-        __slots__ = []
+        __slots__ = ()
         GRAY: _ClassVar[RasterizePdfRequest.ColorSpace]
         COLOR: _ClassVar[RasterizePdfRequest.ColorSpace]
     GRAY: RasterizePdfRequest.ColorSpace
     COLOR: RasterizePdfRequest.ColorSpace
     class PageOption(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-        __slots__ = []
+        __slots__ = ()
         FIRST_LAST: _ClassVar[RasterizePdfRequest.PageOption]
         FIRST: _ClassVar[RasterizePdfRequest.PageOption]
         LAST: _ClassVar[RasterizePdfRequest.PageOption]
@@ -46,7 +46,7 @@ class RasterizePdfRequest(_message.Message):
     def __init__(self, data: _Optional[bytes] = ..., dpi: _Optional[int] = ..., format: _Optional[_Union[RasterizePdfRequest.Format, str]] = ..., color: _Optional[_Union[RasterizePdfRequest.ColorSpace, str]] = ..., pages: _Optional[_Union[RasterizePdfRequest.PageOption, str]] = ...) -> None: ...
 
 class RasterizePdfResponse(_message.Message):
-    __slots__ = ["index", "data", "width", "height", "scale"]
+    __slots__ = ("index", "data", "width", "height", "scale")
     INDEX_FIELD_NUMBER: _ClassVar[int]
     DATA_FIELD_NUMBER: _ClassVar[int]
     WIDTH_FIELD_NUMBER: _ClassVar[int]

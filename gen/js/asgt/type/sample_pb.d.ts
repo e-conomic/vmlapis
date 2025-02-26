@@ -1,7 +1,7 @@
 import * as jspb from 'google-protobuf'
 
-import * as asgt_type_data_pb from '../../asgt/type/data_pb';
-import * as asgt_type_target_value_pb from '../../asgt/type/target_value_pb';
+import * as asgt_type_data_pb from '../../asgt/type/data_pb'; // proto import: "asgt/type/data.proto"
+import * as asgt_type_target_value_pb from '../../asgt/type/target_value_pb'; // proto import: "asgt/type/target_value.proto"
 
 
 export class Sample extends jspb.Message {

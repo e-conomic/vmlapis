@@ -20,62 +20,62 @@ class DatasetServiceStub(object):
                 '/asgt.v2.DatasetService/GetDataset',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.GetDatasetRequest.SerializeToString,
                 response_deserializer=asgt_dot_type_dot_dataset__pb2.Dataset.FromString,
-                )
+                _registered_method=True)
         self.CreateDataset = channel.unary_unary(
                 '/asgt.v2.DatasetService/CreateDataset',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.CreateDatasetRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.CreateOrUpdateDataset = channel.unary_unary(
                 '/asgt.v2.DatasetService/CreateOrUpdateDataset',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.CreateOrUpdateDatasetRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.DeleteDataset = channel.unary_unary(
                 '/asgt.v2.DatasetService/DeleteDataset',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.DeleteDatasetRequest.SerializeToString,
                 response_deserializer=asgt_dot_type_dot_dataset__pb2.Dataset.FromString,
-                )
+                _registered_method=True)
         self.DeleteTag = channel.unary_unary(
                 '/asgt.v2.DatasetService/DeleteTag',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.DeleteTagRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.CreateExample = channel.unary_unary(
                 '/asgt.v2.DatasetService/CreateExample',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.CreateExampleRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.CreateOrUpdateExample = channel.unary_unary(
                 '/asgt.v2.DatasetService/CreateOrUpdateExample',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.CreateOrUpdateExampleRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.BatchCreateExample = channel.unary_unary(
                 '/asgt.v2.DatasetService/BatchCreateExample',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.BatchCreateExampleRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.TruncateDataset = channel.unary_unary(
                 '/asgt.v2.DatasetService/TruncateDataset',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.TruncateDatasetRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.GetDatasetTrainings = channel.unary_unary(
                 '/asgt.v2.DatasetService/GetDatasetTrainings',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.GetDatasetTrainingsRequest.SerializeToString,
                 response_deserializer=asgt_dot_v2_dot_dataset__service__pb2.TrainingsResponse.FromString,
-                )
+                _registered_method=True)
         self.GetDatasetModels = channel.unary_unary(
                 '/asgt.v2.DatasetService/GetDatasetModels',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.GetDatasetModelsRequest.SerializeToString,
                 response_deserializer=asgt_dot_v2_dot_dataset__service__pb2.ModelsResponse.FromString,
-                )
+                _registered_method=True)
         self.GetTrainings = channel.unary_unary(
                 '/asgt.v2.DatasetService/GetTrainings',
                 request_serializer=asgt_dot_v2_dot_dataset__service__pb2.GetTrainingsRequest.SerializeToString,
                 response_deserializer=asgt_dot_v2_dot_dataset__service__pb2.TrainingsResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class DatasetServiceServicer(object):
@@ -243,6 +243,7 @@ def add_DatasetServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'asgt.v2.DatasetService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('asgt.v2.DatasetService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -260,11 +261,21 @@ class DatasetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/GetDataset',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.DatasetService/GetDataset',
             asgt_dot_v2_dot_dataset__service__pb2.GetDatasetRequest.SerializeToString,
             asgt_dot_type_dot_dataset__pb2.Dataset.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def CreateDataset(request,
@@ -277,11 +288,21 @@ class DatasetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/CreateDataset',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.DatasetService/CreateDataset',
             asgt_dot_v2_dot_dataset__service__pb2.CreateDatasetRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def CreateOrUpdateDataset(request,
@@ -294,11 +315,21 @@ class DatasetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/CreateOrUpdateDataset',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.DatasetService/CreateOrUpdateDataset',
             asgt_dot_v2_dot_dataset__service__pb2.CreateOrUpdateDatasetRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def DeleteDataset(request,
@@ -311,11 +342,21 @@ class DatasetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/DeleteDataset',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.DatasetService/DeleteDataset',
             asgt_dot_v2_dot_dataset__service__pb2.DeleteDatasetRequest.SerializeToString,
             asgt_dot_type_dot_dataset__pb2.Dataset.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def DeleteTag(request,
@@ -328,11 +369,21 @@ class DatasetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/DeleteTag',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.DatasetService/DeleteTag',
             asgt_dot_v2_dot_dataset__service__pb2.DeleteTagRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def CreateExample(request,
@@ -345,11 +396,21 @@ class DatasetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/CreateExample',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.DatasetService/CreateExample',
             asgt_dot_v2_dot_dataset__service__pb2.CreateExampleRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def CreateOrUpdateExample(request,
@@ -362,11 +423,21 @@ class DatasetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/CreateOrUpdateExample',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.DatasetService/CreateOrUpdateExample',
             asgt_dot_v2_dot_dataset__service__pb2.CreateOrUpdateExampleRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def BatchCreateExample(request,
@@ -379,11 +450,21 @@ class DatasetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/BatchCreateExample',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.DatasetService/BatchCreateExample',
             asgt_dot_v2_dot_dataset__service__pb2.BatchCreateExampleRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def TruncateDataset(request,
@@ -396,11 +477,21 @@ class DatasetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/TruncateDataset',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.DatasetService/TruncateDataset',
             asgt_dot_v2_dot_dataset__service__pb2.TruncateDatasetRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def GetDatasetTrainings(request,
@@ -413,11 +504,21 @@ class DatasetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/GetDatasetTrainings',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.DatasetService/GetDatasetTrainings',
             asgt_dot_v2_dot_dataset__service__pb2.GetDatasetTrainingsRequest.SerializeToString,
             asgt_dot_v2_dot_dataset__service__pb2.TrainingsResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def GetDatasetModels(request,
@@ -430,11 +531,21 @@ class DatasetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/GetDatasetModels',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.DatasetService/GetDatasetModels',
             asgt_dot_v2_dot_dataset__service__pb2.GetDatasetModelsRequest.SerializeToString,
             asgt_dot_v2_dot_dataset__service__pb2.ModelsResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def GetTrainings(request,
@@ -447,8 +558,18 @@ class DatasetService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.v2.DatasetService/GetTrainings',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.v2.DatasetService/GetTrainings',
             asgt_dot_v2_dot_dataset__service__pb2.GetTrainingsRequest.SerializeToString,
             asgt_dot_v2_dot_dataset__service__pb2.TrainingsResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

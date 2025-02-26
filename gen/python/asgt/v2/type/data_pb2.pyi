@@ -7,13 +7,13 @@ from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Opti
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Invoice(_message.Message):
-    __slots__ = ["text"]
+    __slots__ = ("text",)
     TEXT_FIELD_NUMBER: _ClassVar[int]
     text: str
     def __init__(self, text: _Optional[str] = ...) -> None: ...
 
 class Transaction(_message.Message):
-    __slots__ = ["text", "amount"]
+    __slots__ = ("text", "amount")
     TEXT_FIELD_NUMBER: _ClassVar[int]
     AMOUNT_FIELD_NUMBER: _ClassVar[int]
     text: str
@@ -21,7 +21,7 @@ class Transaction(_message.Message):
     def __init__(self, text: _Optional[str] = ..., amount: _Optional[float] = ...) -> None: ...
 
 class InvoiceLine(_message.Message):
-    __slots__ = ["item_id", "text", "issue_date", "supplier", "customer_ref", "amount"]
+    __slots__ = ("item_id", "text", "issue_date", "supplier", "customer_ref", "amount")
     ITEM_ID_FIELD_NUMBER: _ClassVar[int]
     TEXT_FIELD_NUMBER: _ClassVar[int]
     ISSUE_DATE_FIELD_NUMBER: _ClassVar[int]
@@ -37,7 +37,7 @@ class InvoiceLine(_message.Message):
     def __init__(self, item_id: _Optional[str] = ..., text: _Optional[str] = ..., issue_date: _Optional[_Union[_timestamp_pb2.Timestamp, _Mapping]] = ..., supplier: _Optional[_Union[Supplier, _Mapping]] = ..., customer_ref: _Optional[str] = ..., amount: _Optional[float] = ...) -> None: ...
 
 class Supplier(_message.Message):
-    __slots__ = ["id", "name", "global_id"]
+    __slots__ = ("id", "name", "global_id")
     ID_FIELD_NUMBER: _ClassVar[int]
     NAME_FIELD_NUMBER: _ClassVar[int]
     GLOBAL_ID_FIELD_NUMBER: _ClassVar[int]
@@ -47,7 +47,7 @@ class Supplier(_message.Message):
     def __init__(self, id: _Optional[str] = ..., name: _Optional[str] = ..., global_id: _Optional[str] = ...) -> None: ...
 
 class Data(_message.Message):
-    __slots__ = ["transaction", "invoice", "invoice_line"]
+    __slots__ = ("transaction", "invoice", "invoice_line")
     TRANSACTION_FIELD_NUMBER: _ClassVar[int]
     INVOICE_FIELD_NUMBER: _ClassVar[int]
     INVOICE_LINE_FIELD_NUMBER: _ClassVar[int]

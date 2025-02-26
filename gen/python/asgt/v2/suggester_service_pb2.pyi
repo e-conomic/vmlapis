@@ -12,7 +12,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class SuggestOptions(_message.Message):
-    __slots__ = ["suggest_limit", "min_confidence"]
+    __slots__ = ("suggest_limit", "min_confidence")
     SUGGEST_LIMIT_FIELD_NUMBER: _ClassVar[int]
     MIN_CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
     suggest_limit: int
@@ -20,7 +20,7 @@ class SuggestOptions(_message.Message):
     def __init__(self, suggest_limit: _Optional[int] = ..., min_confidence: _Optional[_Union[_prediction_pb2.Confidence.Level, str]] = ...) -> None: ...
 
 class SuggestRequest(_message.Message):
-    __slots__ = ["dataset_name", "input", "options"]
+    __slots__ = ("dataset_name", "input", "options")
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     INPUT_FIELD_NUMBER: _ClassVar[int]
     OPTIONS_FIELD_NUMBER: _ClassVar[int]
@@ -30,7 +30,7 @@ class SuggestRequest(_message.Message):
     def __init__(self, dataset_name: _Optional[str] = ..., input: _Optional[_Union[_data_pb2.Data, _Mapping]] = ..., options: _Optional[_Union[SuggestOptions, _Mapping]] = ...) -> None: ...
 
 class SuggestResponse(_message.Message):
-    __slots__ = ["prediction", "model"]
+    __slots__ = ("prediction", "model")
     PREDICTION_FIELD_NUMBER: _ClassVar[int]
     MODEL_FIELD_NUMBER: _ClassVar[int]
     prediction: _prediction_pb2.Prediction
@@ -38,7 +38,7 @@ class SuggestResponse(_message.Message):
     def __init__(self, prediction: _Optional[_Union[_prediction_pb2.Prediction, _Mapping]] = ..., model: _Optional[_Union[_model_pb2.Model, _Mapping]] = ...) -> None: ...
 
 class BatchSuggestRequest(_message.Message):
-    __slots__ = ["dataset_name", "inputs", "options"]
+    __slots__ = ("dataset_name", "inputs", "options")
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     INPUTS_FIELD_NUMBER: _ClassVar[int]
     OPTIONS_FIELD_NUMBER: _ClassVar[int]
@@ -48,7 +48,7 @@ class BatchSuggestRequest(_message.Message):
     def __init__(self, dataset_name: _Optional[str] = ..., inputs: _Optional[_Iterable[_Union[_data_pb2.Data, _Mapping]]] = ..., options: _Optional[_Union[SuggestOptions, _Mapping]] = ...) -> None: ...
 
 class BatchSuggestResponse(_message.Message):
-    __slots__ = ["predictions", "model"]
+    __slots__ = ("predictions", "model")
     PREDICTIONS_FIELD_NUMBER: _ClassVar[int]
     MODEL_FIELD_NUMBER: _ClassVar[int]
     predictions: _containers.RepeatedCompositeFieldContainer[_prediction_pb2.Prediction]

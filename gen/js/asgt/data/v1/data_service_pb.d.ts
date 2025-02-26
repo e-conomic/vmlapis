@@ -1,14 +1,14 @@
 import * as jspb from 'google-protobuf'
 
-import * as asgt_type_dataset_pb from '../../../asgt/type/dataset_pb';
-import * as asgt_type_model_pb from '../../../asgt/type/model_pb';
-import * as asgt_type_retention_policy_pb from '../../../asgt/type/retention_policy_pb';
-import * as asgt_type_sample_pb from '../../../asgt/type/sample_pb';
-import * as google_api_annotations_pb from '../../../google/api/annotations_pb';
-import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb';
-import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb';
-import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb';
-import * as ssn_dataservice_v1_dataservice_pb from '../../../ssn/dataservice/v1/dataservice_pb';
+import * as asgt_type_dataset_pb from '../../../asgt/type/dataset_pb'; // proto import: "asgt/type/dataset.proto"
+import * as asgt_type_model_pb from '../../../asgt/type/model_pb'; // proto import: "asgt/type/model.proto"
+import * as asgt_type_retention_policy_pb from '../../../asgt/type/retention_policy_pb'; // proto import: "asgt/type/retention_policy.proto"
+import * as asgt_type_sample_pb from '../../../asgt/type/sample_pb'; // proto import: "asgt/type/sample.proto"
+import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
+import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb'; // proto import: "google/protobuf/empty.proto"
+import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb'; // proto import: "google/protobuf/timestamp.proto"
+import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
+import * as ssn_dataservice_v1_dataservice_pb from '../../../ssn/dataservice/v1/dataservice_pb'; // proto import: "ssn/dataservice/v1/dataservice.proto"
 
 
 export class CalculateMetricsRequest extends jspb.Message {

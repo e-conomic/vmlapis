@@ -8,7 +8,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Dataset(_message.Message):
-    __slots__ = ["consumer", "name", "type", "tags", "targets", "retention_policy", "created_at", "updated_at", "size", "truncated_at"]
+    __slots__ = ("consumer", "name", "type", "tags", "targets", "retention_policy", "created_at", "updated_at", "size", "truncated_at")
     CONSUMER_FIELD_NUMBER: _ClassVar[int]
     NAME_FIELD_NUMBER: _ClassVar[int]
     TYPE_FIELD_NUMBER: _ClassVar[int]

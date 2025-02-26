@@ -1,8 +1,8 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as asgt_type_dataset_pb from '../../asgt/type/dataset_pb';
-import * as asgt_v2_dataset_service_pb from '../../asgt/v2/dataset_service_pb';
-import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb';
+import * as asgt_type_dataset_pb from '../../asgt/type/dataset_pb'; // proto import: "asgt/type/dataset.proto"
+import * as asgt_v2_dataset_service_pb from '../../asgt/v2/dataset_service_pb'; // proto import: "asgt/v2/dataset_service.proto"
+import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb'; // proto import: "google/protobuf/empty.proto"
 
 
 export class DatasetServiceClient {

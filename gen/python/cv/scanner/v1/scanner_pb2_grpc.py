@@ -18,7 +18,7 @@ class ScannerStub(object):
                 '/cv.scanner.v1.Scanner/ScanCV',
                 request_serializer=cv_dot_scanner_dot_v1_dot_scanner__pb2.ScanCVRequest.SerializeToString,
                 response_deserializer=cv_dot_scanner_dot_v1_dot_scanner__pb2.ScanCVResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class ScannerServicer(object):
@@ -42,6 +42,7 @@ def add_ScannerServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'cv.scanner.v1.Scanner', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('cv.scanner.v1.Scanner', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -59,8 +60,18 @@ class Scanner(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/cv.scanner.v1.Scanner/ScanCV',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/cv.scanner.v1.Scanner/ScanCV',
             cv_dot_scanner_dot_v1_dot_scanner__pb2.ScanCVRequest.SerializeToString,
             cv_dot_scanner_dot_v1_dot_scanner__pb2.ScanCVResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

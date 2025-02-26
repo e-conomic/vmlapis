@@ -15,13 +15,13 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class GetDatasetRequest(_message.Message):
-    __slots__ = ["dataset_name"]
+    __slots__ = ("dataset_name",)
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     dataset_name: str
     def __init__(self, dataset_name: _Optional[str] = ...) -> None: ...
 
 class CreateDatasetRequest(_message.Message):
-    __slots__ = ["dataset_name", "tags", "retention_policy"]
+    __slots__ = ("dataset_name", "tags", "retention_policy")
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
     RETENTION_POLICY_FIELD_NUMBER: _ClassVar[int]
@@ -31,25 +31,25 @@ class CreateDatasetRequest(_message.Message):
     def __init__(self, dataset_name: _Optional[str] = ..., tags: _Optional[_Iterable[str]] = ..., retention_policy: _Optional[_Union[_retention_policy_pb2.RetentionPolicy, _Mapping]] = ...) -> None: ...
 
 class CreateOrUpdateDatasetRequest(_message.Message):
-    __slots__ = ["dataset_name"]
+    __slots__ = ("dataset_name",)
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     dataset_name: str
     def __init__(self, dataset_name: _Optional[str] = ...) -> None: ...
 
 class DeleteDatasetRequest(_message.Message):
-    __slots__ = ["dataset_name"]
+    __slots__ = ("dataset_name",)
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     dataset_name: str
     def __init__(self, dataset_name: _Optional[str] = ...) -> None: ...
 
 class DeleteTagRequest(_message.Message):
-    __slots__ = ["tag_name"]
+    __slots__ = ("tag_name",)
     TAG_NAME_FIELD_NUMBER: _ClassVar[int]
     tag_name: str
     def __init__(self, tag_name: _Optional[str] = ...) -> None: ...
 
 class CreateExampleRequest(_message.Message):
-    __slots__ = ["dataset_name", "example"]
+    __slots__ = ("dataset_name", "example")
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     EXAMPLE_FIELD_NUMBER: _ClassVar[int]
     dataset_name: str
@@ -57,7 +57,7 @@ class CreateExampleRequest(_message.Message):
     def __init__(self, dataset_name: _Optional[str] = ..., example: _Optional[_Union[_example_pb2.Example, _Mapping]] = ...) -> None: ...
 
 class CreateOrUpdateExampleRequest(_message.Message):
-    __slots__ = ["dataset_name", "example"]
+    __slots__ = ("dataset_name", "example")
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     EXAMPLE_FIELD_NUMBER: _ClassVar[int]
     dataset_name: str
@@ -65,7 +65,7 @@ class CreateOrUpdateExampleRequest(_message.Message):
     def __init__(self, dataset_name: _Optional[str] = ..., example: _Optional[_Union[_example_pb2.Example, _Mapping]] = ...) -> None: ...
 
 class BatchCreateExampleRequest(_message.Message):
-    __slots__ = ["dataset_name", "examples"]
+    __slots__ = ("dataset_name", "examples")
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     EXAMPLES_FIELD_NUMBER: _ClassVar[int]
     dataset_name: str
@@ -73,25 +73,25 @@ class BatchCreateExampleRequest(_message.Message):
     def __init__(self, dataset_name: _Optional[str] = ..., examples: _Optional[_Iterable[_Union[_example_pb2.Example, _Mapping]]] = ...) -> None: ...
 
 class TruncateDatasetRequest(_message.Message):
-    __slots__ = ["dataset_name"]
+    __slots__ = ("dataset_name",)
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     dataset_name: str
     def __init__(self, dataset_name: _Optional[str] = ...) -> None: ...
 
 class TrainingRequestOptions(_message.Message):
-    __slots__ = ["limit"]
+    __slots__ = ("limit",)
     LIMIT_FIELD_NUMBER: _ClassVar[int]
     limit: int
     def __init__(self, limit: _Optional[int] = ...) -> None: ...
 
 class ModelRequestOptions(_message.Message):
-    __slots__ = ["limit"]
+    __slots__ = ("limit",)
     LIMIT_FIELD_NUMBER: _ClassVar[int]
     limit: int
     def __init__(self, limit: _Optional[int] = ...) -> None: ...
 
 class GetDatasetTrainingsRequest(_message.Message):
-    __slots__ = ["dataset_name", "options"]
+    __slots__ = ("dataset_name", "options")
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     OPTIONS_FIELD_NUMBER: _ClassVar[int]
     dataset_name: str
@@ -99,7 +99,7 @@ class GetDatasetTrainingsRequest(_message.Message):
     def __init__(self, dataset_name: _Optional[str] = ..., options: _Optional[_Union[TrainingRequestOptions, _Mapping]] = ...) -> None: ...
 
 class GetDatasetModelsRequest(_message.Message):
-    __slots__ = ["dataset_name", "options"]
+    __slots__ = ("dataset_name", "options")
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]
     OPTIONS_FIELD_NUMBER: _ClassVar[int]
     dataset_name: str
@@ -107,19 +107,19 @@ class GetDatasetModelsRequest(_message.Message):
     def __init__(self, dataset_name: _Optional[str] = ..., options: _Optional[_Union[ModelRequestOptions, _Mapping]] = ...) -> None: ...
 
 class GetTrainingsRequest(_message.Message):
-    __slots__ = ["options"]
+    __slots__ = ("options",)
     OPTIONS_FIELD_NUMBER: _ClassVar[int]
     options: TrainingRequestOptions
     def __init__(self, options: _Optional[_Union[TrainingRequestOptions, _Mapping]] = ...) -> None: ...
 
 class TrainingsResponse(_message.Message):
-    __slots__ = ["trainings"]
+    __slots__ = ("trainings",)
     TRAININGS_FIELD_NUMBER: _ClassVar[int]
     trainings: _containers.RepeatedCompositeFieldContainer[_training_pb2.Training]
     def __init__(self, trainings: _Optional[_Iterable[_Union[_training_pb2.Training, _Mapping]]] = ...) -> None: ...
 
 class ModelsResponse(_message.Message):
-    __slots__ = ["models"]
+    __slots__ = ("models",)
     MODELS_FIELD_NUMBER: _ClassVar[int]
     models: _containers.RepeatedCompositeFieldContainer[_model_pb2.Model]
     def __init__(self, models: _Optional[_Iterable[_Union[_model_pb2.Model, _Mapping]]] = ...) -> None: ...

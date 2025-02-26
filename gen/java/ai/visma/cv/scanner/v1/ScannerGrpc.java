@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: cv/scanner/v1/scanner.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class ScannerGrpc {
 
   private ScannerGrpc() {}
 
-  public static final String SERVICE_NAME = "cv.scanner.v1.Scanner";
+  public static final java.lang.String SERVICE_NAME = "cv.scanner.v1.Scanner";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<ai.visma.cv.scanner.v1.ScanCVRequest,
@@ -58,6 +58,21 @@ public final class ScannerGrpc {
         }
       };
     return ScannerStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static ScannerBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<ScannerBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<ScannerBlockingV2Stub>() {
+        @java.lang.Override
+        public ScannerBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new ScannerBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return ScannerBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -140,6 +155,30 @@ public final class ScannerGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Scanner.
+   */
+  public static final class ScannerBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<ScannerBlockingV2Stub> {
+    private ScannerBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected ScannerBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new ScannerBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public ai.visma.cv.scanner.v1.ScanCVResponse scanCV(ai.visma.cv.scanner.v1.ScanCVRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getScanCVMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Scanner.
    */
   public static final class ScannerBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<ScannerBlockingStub> {
@@ -261,9 +300,9 @@ public final class ScannerGrpc {
   private static final class ScannerMethodDescriptorSupplier
       extends ScannerBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    ScannerMethodDescriptorSupplier(String methodName) {
+    ScannerMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

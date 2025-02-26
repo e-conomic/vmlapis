@@ -1,10 +1,10 @@
 import * as jspb from 'google-protobuf'
 
-import * as asgt_type_data_pb from '../../../asgt/type/data_pb';
-import * as asgt_type_model_pb from '../../../asgt/type/model_pb';
-import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb';
-import * as google_api_annotations_pb from '../../../google/api/annotations_pb';
-import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb';
+import * as asgt_type_data_pb from '../../../asgt/type/data_pb'; // proto import: "asgt/type/data.proto"
+import * as asgt_type_model_pb from '../../../asgt/type/model_pb'; // proto import: "asgt/type/model.proto"
+import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb'; // proto import: "asgt/type/prediction.proto"
+import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
+import * as protoc$gen$openapiv2_options_annotations_pb from '../../../protoc-gen-openapiv2/options/annotations_pb'; // proto import: "protoc-gen-openapiv2/options/annotations.proto"
 
 
 export class SuggestionResponse extends jspb.Message {

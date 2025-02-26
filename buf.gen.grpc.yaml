@@ -15,12 +15,12 @@ plugins:
     opt:
       - paths=source_relative
       - require_unimplemented_servers=false
-  - plugin: buf.build/grpc/python:v1.56.2
+  - plugin: buf.build/grpc/python:v1.70.1
     out: gen/python
-  - plugin: buf.build/grpc/web:v1.4.2
+  - plugin: buf.build/grpc/web:v1.5.0
     out: gen/js
     opt: import_style=commonjs+dts,mode=grpcwebtext
-  - plugin: buf.build/grpc/java:v1.56.1
+  - plugin: buf.build/grpc/java:v1.70.0
     out: gen/java
-  - plugin: buf.build/grpc/csharp:v1.56.2
+  - plugin: buf.build/grpc/csharp:v1.70.1
     out: gen/csharp

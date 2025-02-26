@@ -1,10 +1,10 @@
 import * as jspb from 'google-protobuf'
 
-import * as asgt_type_model_file_pb from '../../asgt/type/model_file_pb';
-import * as asgt_type_prediction_pb from '../../asgt/type/prediction_pb';
-import * as asgt_type_target_metrics_pb from '../../asgt/type/target_metrics_pb';
-import * as gen_bq_schema_bq_field_pb from '../../gen_bq_schema/bq_field_pb';
-import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb';
+import * as asgt_type_model_file_pb from '../../asgt/type/model_file_pb'; // proto import: "asgt/type/model_file.proto"
+import * as asgt_type_prediction_pb from '../../asgt/type/prediction_pb'; // proto import: "asgt/type/prediction.proto"
+import * as asgt_type_target_metrics_pb from '../../asgt/type/target_metrics_pb'; // proto import: "asgt/type/target_metrics.proto"
+import * as gen_bq_schema_bq_field_pb from '../../gen_bq_schema/bq_field_pb'; // proto import: "gen_bq_schema/bq_field.proto"
+import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb'; // proto import: "google/protobuf/timestamp.proto"
 
 
 export class Model extends jspb.Message {

@@ -7,9 +7,9 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class TrainModelEvent(_message.Message):
-    __slots__ = ["dataset", "model_version", "status", "status_message", "artifacts"]
+    __slots__ = ("dataset", "model_version", "status", "status_message", "artifacts")
     class Artifact(_message.Message):
-        __slots__ = ["type", "path"]
+        __slots__ = ("type", "path")
         TYPE_FIELD_NUMBER: _ClassVar[int]
         PATH_FIELD_NUMBER: _ClassVar[int]
         type: str

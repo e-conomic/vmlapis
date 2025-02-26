@@ -12,7 +12,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Entry(_message.Message):
-    __slots__ = ["id", "consumer", "dataset_name", "dataset_type", "dataset_id", "tags", "data", "target_values", "model", "prediction", "time_added"]
+    __slots__ = ("id", "consumer", "dataset_name", "dataset_type", "dataset_id", "tags", "data", "target_values", "model", "prediction", "time_added")
     ID_FIELD_NUMBER: _ClassVar[int]
     CONSUMER_FIELD_NUMBER: _ClassVar[int]
     DATASET_NAME_FIELD_NUMBER: _ClassVar[int]

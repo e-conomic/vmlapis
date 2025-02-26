@@ -5,7 +5,7 @@ from typing import ClassVar as _ClassVar, Optional as _Optional
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class DatasetStatistics(_message.Message):
-    __slots__ = ["lexical_diversity_split_on_space", "lexical_diversity_split_on_special", "percent_empty_strings", "percent_pure_numbers_remove_spaces", "percent_pure_numbers_remove_special", "percent_special_characters", "percent_digits", "percent_letters", "percent_duplicates_in_dataset"]
+    __slots__ = ("lexical_diversity_split_on_space", "lexical_diversity_split_on_special", "percent_empty_strings", "percent_pure_numbers_remove_spaces", "percent_pure_numbers_remove_special", "percent_special_characters", "percent_digits", "percent_letters", "percent_duplicates_in_dataset")
     LEXICAL_DIVERSITY_SPLIT_ON_SPACE_FIELD_NUMBER: _ClassVar[int]
     LEXICAL_DIVERSITY_SPLIT_ON_SPECIAL_FIELD_NUMBER: _ClassVar[int]
     PERCENT_EMPTY_STRINGS_FIELD_NUMBER: _ClassVar[int]

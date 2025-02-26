@@ -1,8 +1,8 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as asgt_data_v1_data_service_pb from '../../../asgt/data/v1/data_service_pb';
-import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb';
-import * as ssn_dataservice_v1_dataservice_pb from '../../../ssn/dataservice/v1/dataservice_pb';
+import * as asgt_data_v1_data_service_pb from '../../../asgt/data/v1/data_service_pb'; // proto import: "asgt/data/v1/data_service.proto"
+import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb'; // proto import: "google/protobuf/empty.proto"
+import * as ssn_dataservice_v1_dataservice_pb from '../../../ssn/dataservice/v1/dataservice_pb'; // proto import: "ssn/dataservice/v1/dataservice.proto"
 
 
 export class DataServiceClient {

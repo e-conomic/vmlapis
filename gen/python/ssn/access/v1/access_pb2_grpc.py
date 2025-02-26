@@ -18,7 +18,7 @@ class AccessStub(object):
                 '/ssn.access.v1.Access/GenerateValetKey',
                 request_serializer=ssn_dot_access_dot_v1_dot_access__pb2.ValetKeyRequest.SerializeToString,
                 response_deserializer=ssn_dot_access_dot_v1_dot_access__pb2.ValetKeyResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class AccessServicer(object):
@@ -42,6 +42,7 @@ def add_AccessServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'ssn.access.v1.Access', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('ssn.access.v1.Access', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -59,8 +60,18 @@ class Access(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.access.v1.Access/GenerateValetKey',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.access.v1.Access/GenerateValetKey',
             ssn_dot_access_dot_v1_dot_access__pb2.ValetKeyRequest.SerializeToString,
             ssn_dot_access_dot_v1_dot_access__pb2.ValetKeyResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
