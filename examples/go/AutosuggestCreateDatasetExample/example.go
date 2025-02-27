@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+
 	"github.com/e-conomic/vmlapis/gen/go/asgt/data/v1"
 	asgttype "github.com/e-conomic/vmlapis/gen/go/asgt/type"
 	"google.golang.org/grpc"
@@ -16,7 +17,7 @@ func main() {
 
 func CreateDataset(datasetName, datasetType string) {
 	// create connection
-	conn, err := grpc.Dial("api.stag.asgt.visma.ai:443", grpc.WithTransportCredentials(credentials.NewTLS(nil)))
+	conn, err := grpc.NewClient("api.stag.asgt.visma.ai:443", grpc.WithTransportCredentials(credentials.NewTLS(nil)))
 	if err != nil {
 		fmt.Println(err)
 		return

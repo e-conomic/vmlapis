@@ -3,12 +3,13 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
+
 	"github.com/e-conomic/vmlapis/gen/go/ssn/annotator/v1"
 	ssntype "github.com/e-conomic/vmlapis/gen/go/ssn/type"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/metadata"
-	"os"
 )
 
 func main() {
@@ -17,7 +18,7 @@ func main() {
 
 func AnnotateDocument() {
 	// create connection
-	conn, err := grpc.Dial("api.stag.ssn.visma.ai:443", grpc.WithTransportCredentials(credentials.NewTLS(nil)))
+	conn, err := grpc.NewClient("api.stag.ssn.visma.ai:443", grpc.WithTransportCredentials(credentials.NewTLS(nil)))
 	if err != nil {
 		fmt.Println(err)
 		return
