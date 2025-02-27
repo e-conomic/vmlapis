@@ -3,7 +3,7 @@ module example
 go 1.24
 
 require (
-	github.com/e-conomic/vmlapis v1.6.0
+	github.com/e-conomic/vmlapis v1.6.2
 	google.golang.org/grpc v1.70.0
 )
 

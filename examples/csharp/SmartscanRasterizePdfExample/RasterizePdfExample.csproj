@@ -9,6 +9,6 @@
 
     <ItemGroup>
       <PackageReference Include="Grpc.Net.Client" Version="2.67.0" />
-      <PackageReference Include="vmlapis" Version="1.6.0" />
+      <PackageReference Include="vmlapis" Version="1.6.2" />
     </ItemGroup>
 </Project>

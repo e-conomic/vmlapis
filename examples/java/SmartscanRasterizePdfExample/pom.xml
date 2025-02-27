@@ -11,7 +11,7 @@
     <dependency>
       <groupId>ai.visma</groupId>
       <artifactId>vml-apis</artifactId>
-      <version>1.0.10</version>
+      <version>1.6.2</version>
     </dependency>
   </dependencies>
 
