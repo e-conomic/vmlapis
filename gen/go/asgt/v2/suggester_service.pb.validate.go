@@ -88,7 +88,7 @@ type SuggestOptionsMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m SuggestOptionsMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -268,7 +268,7 @@ type SuggestRequestMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m SuggestRequestMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -428,7 +428,7 @@ type SuggestResponseMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m SuggestResponseMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -613,7 +613,7 @@ type BatchSuggestRequestMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m BatchSuggestRequestMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
@@ -780,7 +780,7 @@ type BatchSuggestResponseMultiError []error
 
 // Error returns a concatenation of all the error messages it wraps.
 func (m BatchSuggestResponseMultiError) Error() string {
-	var msgs []string
+	msgs := make([]string, 0, len(m))
 	for _, err := range m {
 		msgs = append(msgs, err.Error())
 	}
