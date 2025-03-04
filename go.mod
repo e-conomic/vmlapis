@@ -1,6 +1,6 @@
 module github.com/e-conomic/vmlapis
 
-go 1.22
+go 1.20
 
 require (
 	github.com/envoyproxy/protoc-gen-validate v0.10.1
