@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: asgt/jester/v1/jester.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class JesterGrpc {
 
   private JesterGrpc() {}
 
-  public static final String SERVICE_NAME = "asgt.jester.v1.Jester";
+  public static final java.lang.String SERVICE_NAME = "asgt.jester.v1.Jester";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.jester.v1.SuggestionRequest,
@@ -89,6 +89,21 @@ public final class JesterGrpc {
         }
       };
     return JesterStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static JesterBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<JesterBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<JesterBlockingV2Stub>() {
+        @java.lang.Override
+        public JesterBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new JesterBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return JesterBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -186,6 +201,37 @@ public final class JesterGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service Jester.
+   */
+  public static final class JesterBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<JesterBlockingV2Stub> {
+    private JesterBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected JesterBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new JesterBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public ai.visma.asgt.jester.v1.SuggestionResponse suggest(ai.visma.asgt.jester.v1.SuggestionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSuggestMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.asgt.jester.v1.SuggestionResponse internalSuggest(ai.visma.asgt.jester.v1.SuggestionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getInternalSuggestMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service Jester.
    */
   public static final class JesterBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<JesterBlockingStub> {
@@ -334,9 +380,9 @@ public final class JesterGrpc {
   private static final class JesterMethodDescriptorSupplier
       extends JesterBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    JesterMethodDescriptorSupplier(String methodName) {
+    JesterMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

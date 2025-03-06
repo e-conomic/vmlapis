@@ -1,6 +1,6 @@
 import * as jspb from 'google-protobuf'
 
-import * as validate_validate_pb from '../../../validate/validate_pb';
+import * as validate_validate_pb from '../../../validate/validate_pb'; // proto import: "validate/validate.proto"
 
 
 export class TargetValue extends jspb.Message {

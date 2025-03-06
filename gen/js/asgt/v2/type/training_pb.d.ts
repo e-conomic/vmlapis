@@ -1,7 +1,7 @@
 import * as jspb from 'google-protobuf'
 
-import * as asgt_type_dataset_pb from '../../../asgt/type/dataset_pb';
-import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb';
+import * as asgt_type_dataset_pb from '../../../asgt/type/dataset_pb'; // proto import: "asgt/type/dataset.proto"
+import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb'; // proto import: "google/protobuf/timestamp.proto"
 
 
 export class Training extends jspb.Message {

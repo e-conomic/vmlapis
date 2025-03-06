@@ -68,7 +68,7 @@ namespace Cv.Scanner.V1 {
             "T0ZfRURVQ0FUSU9OEBESCgoGREVHUkVFEBISEQoNQVZFUkFHRV9HUkFERRAT",
             "EggKBE5BTUUQFBIJCgVMRVZFTBAVMm8KB1NjYW5uZXISZAoGU2NhbkNWEhwu",
             "Y3Yuc2Nhbm5lci52MS5TY2FuQ1ZSZXF1ZXN0Gh0uY3Yuc2Nhbm5lci52MS5T",
-            "Y2FuQ1ZSZXNwb25zZSIdgtPkkwIXOgEqIhIvdjEvc2Nhbm5lcjpzY2FuY3ZC",
+            "Y2FuQ1ZSZXNwb25zZSIdgtPkkwIXIhIvdjEvc2Nhbm5lcjpzY2FuY3Y6ASpC",
             "sgEKFmFpLnZpc21hLmN2LnNjYW5uZXIudjFCDFNjYW5uZXJQcm90b1ABWjRn",
             "aXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9jdi9zY2FubmVy",
             "L3YxO2N2ogIDQ1NYqgINQ3YuU2Nhbm5lci5WMcoCDUN2XFNjYW5uZXJcVjHi",
@@ -86,6 +86,7 @@ namespace Cv.Scanner.V1 {
 
   }
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ScanCVRequest : pb::IMessage<ScanCVRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -280,7 +281,11 @@ namespace Cv.Scanner.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -310,7 +315,11 @@ namespace Cv.Scanner.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -336,6 +345,7 @@ namespace Cv.Scanner.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ScanCVResponse : pb::IMessage<ScanCVResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -858,7 +868,11 @@ namespace Cv.Scanner.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -961,7 +975,11 @@ namespace Cv.Scanner.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -1060,6 +1078,7 @@ namespace Cv.Scanner.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Feature : pb::IMessage<Feature>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1247,7 +1266,11 @@ namespace Cv.Scanner.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -1270,7 +1293,11 @@ namespace Cv.Scanner.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;

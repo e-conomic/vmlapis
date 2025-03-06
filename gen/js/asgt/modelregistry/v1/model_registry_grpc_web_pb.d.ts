@@ -1,7 +1,7 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as asgt_modelregistry_v1_model_registry_pb from '../../../asgt/modelregistry/v1/model_registry_pb';
-import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb';
+import * as asgt_modelregistry_v1_model_registry_pb from '../../../asgt/modelregistry/v1/model_registry_pb'; // proto import: "asgt/modelregistry/v1/model_registry.proto"
+import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb'; // proto import: "google/protobuf/empty.proto"
 
 
 export class ModelRegistryClient {

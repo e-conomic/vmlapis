@@ -1,7 +1,7 @@
 import * as jspb from 'google-protobuf'
 
-import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb';
-import * as ssn_type_geometry_pb from '../../ssn/type/geometry_pb';
+import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
+import * as ssn_type_geometry_pb from '../../ssn/type/geometry_pb'; // proto import: "ssn/type/geometry.proto"
 
 
 export class Confidence extends jspb.Message {

@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: asgt/v2/dataset_service.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DatasetServiceGrpc {
 
   private DatasetServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "asgt.v2.DatasetService";
+  public static final java.lang.String SERVICE_NAME = "asgt.v2.DatasetService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.v2.GetDatasetRequest,
@@ -402,6 +402,21 @@ public final class DatasetServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static DatasetServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<DatasetServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DatasetServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public DatasetServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DatasetServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return DatasetServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static DatasetServiceBlockingStub newBlockingStub(
@@ -740,6 +755,154 @@ public final class DatasetServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service DatasetService.
+   */
+  public static final class DatasetServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<DatasetServiceBlockingV2Stub> {
+    private DatasetServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected DatasetServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new DatasetServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     * <pre>
+     * Get the basic information about a dataset.
+     * </pre>
+     */
+    public ai.visma.asgt.type.Dataset getDataset(ai.visma.asgt.v2.GetDatasetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDatasetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Create a new dataset. Since no examples are provided in this operation, the training won't be scheduled
+     * until CreateExample or BatchCreateExample is called after the creation of the dataset.
+     * </pre>
+     */
+    public com.google.protobuf.Empty createDataset(ai.visma.asgt.v2.CreateDatasetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateDatasetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Not implemented yet.
+     *Creates a new dataset. If a dataset with such name already exsits, it will be updated with the
+     * provided data.
+     * </pre>
+     */
+    public com.google.protobuf.Empty createOrUpdateDataset(ai.visma.asgt.v2.CreateOrUpdateDatasetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateOrUpdateDatasetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete a dataset with the specified name.
+     * </pre>
+     */
+    public ai.visma.asgt.type.Dataset deleteDataset(ai.visma.asgt.v2.DeleteDatasetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteDatasetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Delete all datasets (and their examples) containing the specified tag.
+     * The datasets' names are not considered in this request - only the tag names is.
+     * </pre>
+     */
+    public com.google.protobuf.Empty deleteTag(ai.visma.asgt.v2.DeleteTagRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteTagMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Uploads a new single example.
+     * </pre>
+     */
+    public com.google.protobuf.Empty createExample(ai.visma.asgt.v2.CreateExampleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateExampleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Not implemented yet.
+     * Uploads or updates a new single example.
+     * If the specified example already exists, the example
+     * is updated with the provided values according to provided ID.
+     * </pre>
+     */
+    public com.google.protobuf.Empty createOrUpdateExample(ai.visma.asgt.v2.CreateOrUpdateExampleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateOrUpdateExampleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Upload multiple examples at once. This matches the behavior of the v1 API's append operation.
+     * </pre>
+     */
+    public com.google.protobuf.Empty batchCreateExample(ai.visma.asgt.v2.BatchCreateExampleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBatchCreateExampleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Truncate a dataset. Use this operation to remove examples in a dataset used for future training without
+     * removing existing models.
+     * </pre>
+     */
+    public com.google.protobuf.Empty truncateDataset(ai.visma.asgt.v2.TruncateDatasetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTruncateDatasetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get the specified number of the most recent dataset's trainings.
+     * Number of requested trainings has to be larger than 0 but no larger than 100.
+     * </pre>
+     */
+    public ai.visma.asgt.v2.TrainingsResponse getDatasetTrainings(ai.visma.asgt.v2.GetDatasetTrainingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDatasetTrainingsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get the specified number of the most recent dataset's trained models.
+     * Number of requested models has to be larger than 0 but no larger than 100.
+     * </pre>
+     */
+    public ai.visma.asgt.v2.ModelsResponse getDatasetModels(ai.visma.asgt.v2.GetDatasetModelsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetDatasetModelsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Get the specified number of the most recent trainings accross all consumer's datasets.
+     * Number of requested trainings has to be larger than 0 but no larger than 100.
+     * </pre>
+     */
+    public ai.visma.asgt.v2.TrainingsResponse getTrainings(ai.visma.asgt.v2.GetTrainingsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTrainingsMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service DatasetService.
    */
   public static final class DatasetServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<DatasetServiceBlockingStub> {
@@ -1252,9 +1415,9 @@ public final class DatasetServiceGrpc {
   private static final class DatasetServiceMethodDescriptorSupplier
       extends DatasetServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    DatasetServiceMethodDescriptorSupplier(String methodName) {
+    DatasetServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

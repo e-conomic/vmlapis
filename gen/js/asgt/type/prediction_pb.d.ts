@@ -1,7 +1,7 @@
 import * as jspb from 'google-protobuf'
 
-import * as gen_bq_schema_bq_field_pb from '../../gen_bq_schema/bq_field_pb';
-import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb';
+import * as gen_bq_schema_bq_field_pb from '../../gen_bq_schema/bq_field_pb'; // proto import: "gen_bq_schema/bq_field.proto"
+import * as google_protobuf_wrappers_pb from 'google-protobuf/google/protobuf/wrappers_pb'; // proto import: "google/protobuf/wrappers.proto"
 
 
 export class Confidence extends jspb.Message {

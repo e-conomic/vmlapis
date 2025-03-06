@@ -8,14 +8,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: ssn/mlservice/v2/mlservice.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class MlServiceGrpc {
 
   private MlServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "ssn.mlservice.v2.MlService";
+  public static final java.lang.String SERVICE_NAME = "ssn.mlservice.v2.MlService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.mlservice.v2.FeatureGenRequest,
@@ -123,6 +123,21 @@ public final class MlServiceGrpc {
         }
       };
     return MlServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static MlServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<MlServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<MlServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public MlServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new MlServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return MlServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -250,6 +265,50 @@ public final class MlServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service MlService.
+   * <pre>
+   * Feature Generation Service
+   * </pre>
+   */
+  public static final class MlServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<MlServiceBlockingV2Stub> {
+    private MlServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected MlServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new MlServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.mlservice.v2.FeatureGenResponse featureGen(ai.visma.ssn.mlservice.v2.FeatureGenRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFeatureGenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.mlservice.v2.PredictResponse predict(ai.visma.ssn.mlservice.v2.PredictRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPredictMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Convinienve method
+     * </pre>
+     */
+    public ai.visma.ssn.mlservice.v2.PredictResponse featureGenPredict(ai.visma.ssn.mlservice.v2.FeatureGenPredictRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFeatureGenPredictMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service MlService.
    * <pre>
    * Feature Generation Service
    * </pre>
@@ -437,9 +496,9 @@ public final class MlServiceGrpc {
   private static final class MlServiceMethodDescriptorSupplier
       extends MlServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    MlServiceMethodDescriptorSupplier(String methodName) {
+    MlServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

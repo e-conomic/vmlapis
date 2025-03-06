@@ -1,7 +1,7 @@
 import * as jspb from 'google-protobuf'
 
-import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb';
-import * as validate_validate_pb from '../../../validate/validate_pb';
+import * as google_protobuf_timestamp_pb from 'google-protobuf/google/protobuf/timestamp_pb'; // proto import: "google/protobuf/timestamp.proto"
+import * as validate_validate_pb from '../../../validate/validate_pb'; // proto import: "validate/validate.proto"
 
 
 export class Invoice extends jspb.Message {

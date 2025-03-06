@@ -1,6 +1,6 @@
 import * as jspb from 'google-protobuf'
 
-import * as google_api_annotations_pb from '../../../google/api/annotations_pb';
+import * as google_api_annotations_pb from '../../../google/api/annotations_pb'; // proto import: "google/api/annotations.proto"
 
 
 export class ValetKeyRequest extends jspb.Message {

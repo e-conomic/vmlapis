@@ -8,7 +8,7 @@ BIGQUERY_FIELD_NUMBER: _ClassVar[int]
 bigquery: _descriptor.FieldDescriptor
 
 class BigQueryFieldOptions(_message.Message):
-    __slots__ = ["require", "type_override", "ignore", "description", "name"]
+    __slots__ = ("require", "type_override", "ignore", "description", "name")
     REQUIRE_FIELD_NUMBER: _ClassVar[int]
     TYPE_OVERRIDE_FIELD_NUMBER: _ClassVar[int]
     IGNORE_FIELD_NUMBER: _ClassVar[int]

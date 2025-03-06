@@ -9,7 +9,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class GetTextAnnotationRequest(_message.Message):
-    __slots__ = ["document", "preview", "preview_last"]
+    __slots__ = ("document", "preview", "preview_last")
     DOCUMENT_FIELD_NUMBER: _ClassVar[int]
     PREVIEW_FIELD_NUMBER: _ClassVar[int]
     PREVIEW_LAST_FIELD_NUMBER: _ClassVar[int]
@@ -19,7 +19,7 @@ class GetTextAnnotationRequest(_message.Message):
     def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., preview: bool = ..., preview_last: bool = ...) -> None: ...
 
 class GetTextAnnotationResponse(_message.Message):
-    __slots__ = ["text_annotation", "image", "last_image"]
+    __slots__ = ("text_annotation", "image", "last_image")
     TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
     IMAGE_FIELD_NUMBER: _ClassVar[int]
     LAST_IMAGE_FIELD_NUMBER: _ClassVar[int]
@@ -29,7 +29,7 @@ class GetTextAnnotationResponse(_message.Message):
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[_Union[_wrappers_pb2.BytesValue, _Mapping]] = ..., last_image: _Optional[_Union[_wrappers_pb2.BytesValue, _Mapping]] = ...) -> None: ...
 
 class AsyncCreateOperationRequest(_message.Message):
-    __slots__ = ["input_paths", "output_path"]
+    __slots__ = ("input_paths", "output_path")
     INPUT_PATHS_FIELD_NUMBER: _ClassVar[int]
     OUTPUT_PATH_FIELD_NUMBER: _ClassVar[int]
     input_paths: _containers.RepeatedScalarFieldContainer[str]
@@ -37,19 +37,19 @@ class AsyncCreateOperationRequest(_message.Message):
     def __init__(self, input_paths: _Optional[_Iterable[str]] = ..., output_path: _Optional[str] = ...) -> None: ...
 
 class AsyncCreateOperationResponse(_message.Message):
-    __slots__ = ["operation_name"]
+    __slots__ = ("operation_name",)
     OPERATION_NAME_FIELD_NUMBER: _ClassVar[int]
     operation_name: str
     def __init__(self, operation_name: _Optional[str] = ...) -> None: ...
 
 class AsyncGetOperationStatusRequest(_message.Message):
-    __slots__ = ["operation_name"]
+    __slots__ = ("operation_name",)
     OPERATION_NAME_FIELD_NUMBER: _ClassVar[int]
     operation_name: str
     def __init__(self, operation_name: _Optional[str] = ...) -> None: ...
 
 class AsyncGetOperationStatusResponse(_message.Message):
-    __slots__ = ["operation_name", "done", "status_code", "error_message"]
+    __slots__ = ("operation_name", "done", "status_code", "error_message")
     OPERATION_NAME_FIELD_NUMBER: _ClassVar[int]
     DONE_FIELD_NUMBER: _ClassVar[int]
     STATUS_CODE_FIELD_NUMBER: _ClassVar[int]
@@ -61,13 +61,13 @@ class AsyncGetOperationStatusResponse(_message.Message):
     def __init__(self, operation_name: _Optional[str] = ..., done: bool = ..., status_code: _Optional[int] = ..., error_message: _Optional[str] = ...) -> None: ...
 
 class OcrScanImageRequest(_message.Message):
-    __slots__ = ["data"]
+    __slots__ = ("data",)
     DATA_FIELD_NUMBER: _ClassVar[int]
     data: bytes
     def __init__(self, data: _Optional[bytes] = ...) -> None: ...
 
 class OcrScanImageResponse(_message.Message):
-    __slots__ = ["tess_hocr"]
+    __slots__ = ("tess_hocr",)
     TESS_HOCR_FIELD_NUMBER: _ClassVar[int]
     tess_hocr: str
     def __init__(self, tess_hocr: _Optional[str] = ...) -> None: ...

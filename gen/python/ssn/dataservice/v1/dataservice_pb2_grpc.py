@@ -19,37 +19,37 @@ class DataServiceStub(object):
                 '/ssn.dataservice.v1.DataService/CreateDocument',
                 request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CreateDocumentRequest.SerializeToString,
                 response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CreateDocumentResponse.FromString,
-                )
+                _registered_method=True)
         self.ReadDocument = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/ReadDocument',
                 request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.ReadDocumentRequest.SerializeToString,
                 response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.ReadDocumentResponse.FromString,
-                )
+                _registered_method=True)
         self.PrepareFeedback = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/PrepareFeedback',
                 request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PrepareFeedbackRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.Feedback = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/Feedback',
                 request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.CalculateMetrics = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/CalculateMetrics',
                 request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.MetricsRequest.SerializeToString,
                 response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetrics.FromString,
-                )
+                _registered_method=True)
         self.Delete = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/Delete',
                 request_serializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.DeleteRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.CallsPerMonthMetric = channel.unary_unary(
                 '/ssn.dataservice.v1.DataService/CallsPerMonthMetric',
                 request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
                 response_deserializer=ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class DataServiceServicer(object):
@@ -140,6 +140,7 @@ def add_DataServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'ssn.dataservice.v1.DataService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('ssn.dataservice.v1.DataService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -157,11 +158,21 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.dataservice.v1.DataService/CreateDocument',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.dataservice.v1.DataService/CreateDocument',
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CreateDocumentRequest.SerializeToString,
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CreateDocumentResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def ReadDocument(request,
@@ -174,11 +185,21 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.dataservice.v1.DataService/ReadDocument',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.dataservice.v1.DataService/ReadDocument',
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.ReadDocumentRequest.SerializeToString,
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.ReadDocumentResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def PrepareFeedback(request,
@@ -191,11 +212,21 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.dataservice.v1.DataService/PrepareFeedback',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.dataservice.v1.DataService/PrepareFeedback',
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.PrepareFeedbackRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def Feedback(request,
@@ -208,11 +239,21 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.dataservice.v1.DataService/Feedback',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.dataservice.v1.DataService/Feedback',
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def CalculateMetrics(request,
@@ -225,11 +266,21 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.dataservice.v1.DataService/CalculateMetrics',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.dataservice.v1.DataService/CalculateMetrics',
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.MetricsRequest.SerializeToString,
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.FeedbackMetrics.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def Delete(request,
@@ -242,11 +293,21 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.dataservice.v1.DataService/Delete',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.dataservice.v1.DataService/Delete',
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.DeleteRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def CallsPerMonthMetric(request,
@@ -259,8 +320,18 @@ class DataService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.dataservice.v1.DataService/CallsPerMonthMetric',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.dataservice.v1.DataService/CallsPerMonthMetric',
             google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
             ssn_dot_dataservice_dot_v1_dot_dataservice__pb2.CallsPerMonthResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

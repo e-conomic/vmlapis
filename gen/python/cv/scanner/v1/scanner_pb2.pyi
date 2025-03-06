@@ -11,7 +11,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class ScanCVRequest(_message.Message):
-    __slots__ = ["document", "features", "tags"]
+    __slots__ = ("document", "features", "tags")
     DOCUMENT_FIELD_NUMBER: _ClassVar[int]
     FEATURES_FIELD_NUMBER: _ClassVar[int]
     TAGS_FIELD_NUMBER: _ClassVar[int]
@@ -21,7 +21,7 @@ class ScanCVRequest(_message.Message):
     def __init__(self, document: _Optional[_Union[_annotator_pb2.Document, _Mapping]] = ..., features: _Optional[_Iterable[_Union[Feature, _Mapping]]] = ..., tags: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class ScanCVResponse(_message.Message):
-    __slots__ = ["first_name", "last_name", "date_of_birth", "phone", "email", "country", "nationality", "postal_code", "postal_area", "municipality", "county", "address", "employer_name", "position_title", "date", "institution_name", "institution_type", "area_of_education", "degree", "average_grade", "name", "level"]
+    __slots__ = ("first_name", "last_name", "date_of_birth", "phone", "email", "country", "nationality", "postal_code", "postal_area", "municipality", "county", "address", "employer_name", "position_title", "date", "institution_name", "institution_type", "area_of_education", "degree", "average_grade", "name", "level")
     FIRST_NAME_FIELD_NUMBER: _ClassVar[int]
     LAST_NAME_FIELD_NUMBER: _ClassVar[int]
     DATE_OF_BIRTH_FIELD_NUMBER: _ClassVar[int]
@@ -69,9 +69,9 @@ class ScanCVResponse(_message.Message):
     def __init__(self, first_name: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., last_name: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., date_of_birth: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., phone: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., email: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., country: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., nationality: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., postal_code: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., postal_area: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., municipality: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., county: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., address: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., employer_name: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., position_title: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., date: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., institution_name: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., institution_type: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., area_of_education: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., degree: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., average_grade: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., name: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., level: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ...) -> None: ...
 
 class Feature(_message.Message):
-    __slots__ = ["type", "max_results"]
+    __slots__ = ("type", "max_results")
     class Type(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-        __slots__ = []
+        __slots__ = ()
         FIRST_NAME: _ClassVar[Feature.Type]
         LAST_NAME: _ClassVar[Feature.Type]
         DATE_OF_BIRTH: _ClassVar[Feature.Type]

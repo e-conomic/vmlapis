@@ -1,6 +1,6 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as ssn_mlservice_v2_mlservice_pb from '../../../ssn/mlservice/v2/mlservice_pb';
+import * as ssn_mlservice_v2_mlservice_pb from '../../../ssn/mlservice/v2/mlservice_pb'; // proto import: "ssn/mlservice/v2/mlservice.proto"
 
 
 export class MlServiceClient {

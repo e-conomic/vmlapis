@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: ssn/annotator/v1/annotator.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DocumentAnnotatorGrpc {
 
   private DocumentAnnotatorGrpc() {}
 
-  public static final String SERVICE_NAME = "ssn.annotator.v1.DocumentAnnotator";
+  public static final java.lang.String SERVICE_NAME = "ssn.annotator.v1.DocumentAnnotator";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest,
@@ -89,6 +89,21 @@ public final class DocumentAnnotatorGrpc {
         }
       };
     return DocumentAnnotatorStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static DocumentAnnotatorBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<DocumentAnnotatorBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DocumentAnnotatorBlockingV2Stub>() {
+        @java.lang.Override
+        public DocumentAnnotatorBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DocumentAnnotatorBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return DocumentAnnotatorBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -186,6 +201,37 @@ public final class DocumentAnnotatorGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service DocumentAnnotator.
+   */
+  public static final class DocumentAnnotatorBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<DocumentAnnotatorBlockingV2Stub> {
+    private DocumentAnnotatorBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected DocumentAnnotatorBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new DocumentAnnotatorBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.annotator.v1.DocumentAnnotatorResponse annotateDocument(ai.visma.ssn.annotator.v1.DocumentAnnotatorRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAnnotateDocumentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.annotator.v1.DocumentQuestionResponse answerDocumentQuestion(ai.visma.ssn.annotator.v1.DocumentQuestionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAnswerDocumentQuestionMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service DocumentAnnotator.
    */
   public static final class DocumentAnnotatorBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<DocumentAnnotatorBlockingStub> {
@@ -334,9 +380,9 @@ public final class DocumentAnnotatorGrpc {
   private static final class DocumentAnnotatorMethodDescriptorSupplier
       extends DocumentAnnotatorBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    DocumentAnnotatorMethodDescriptorSupplier(String methodName) {
+    DocumentAnnotatorMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

@@ -6,9 +6,9 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class TargetMetrics(_message.Message):
-    __slots__ = ["target", "metrics"]
+    __slots__ = ("target", "metrics")
     class Metric(_message.Message):
-        __slots__ = ["precision", "confidence", "answer_rate", "true_positive", "true_negative", "false_positive", "false_negative", "mcc", "accuracy", "balanced_accuracy"]
+        __slots__ = ("precision", "confidence", "answer_rate", "true_positive", "true_negative", "false_positive", "false_negative", "mcc", "accuracy", "balanced_accuracy")
         PRECISION_FIELD_NUMBER: _ClassVar[int]
         CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
         ANSWER_RATE_FIELD_NUMBER: _ClassVar[int]

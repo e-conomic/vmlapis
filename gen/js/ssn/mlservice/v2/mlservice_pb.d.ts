@@ -1,8 +1,8 @@
 import * as jspb from 'google-protobuf'
 
-import * as google_type_date_pb from '../../../google/type/date_pb';
-import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb';
-import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb';
+import * as google_type_date_pb from '../../../google/type/date_pb'; // proto import: "google/type/date.proto"
+import * as ssn_type_candidate_pb from '../../../ssn/type/candidate_pb'; // proto import: "ssn/type/candidate.proto"
+import * as ssn_type_text_annotation_pb from '../../../ssn/type/text_annotation_pb'; // proto import: "ssn/type/text_annotation.proto"
 
 
 export class FeatureGenRequest extends jspb.Message {

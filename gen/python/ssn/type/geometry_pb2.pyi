@@ -6,7 +6,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Vertex(_message.Message):
-    __slots__ = ["x", "y"]
+    __slots__ = ("x", "y")
     X_FIELD_NUMBER: _ClassVar[int]
     Y_FIELD_NUMBER: _ClassVar[int]
     x: int
@@ -14,7 +14,7 @@ class Vertex(_message.Message):
     def __init__(self, x: _Optional[int] = ..., y: _Optional[int] = ...) -> None: ...
 
 class NormalizedVertex(_message.Message):
-    __slots__ = ["x", "y"]
+    __slots__ = ("x", "y")
     X_FIELD_NUMBER: _ClassVar[int]
     Y_FIELD_NUMBER: _ClassVar[int]
     x: float
@@ -22,7 +22,7 @@ class NormalizedVertex(_message.Message):
     def __init__(self, x: _Optional[float] = ..., y: _Optional[float] = ...) -> None: ...
 
 class BoundingPoly(_message.Message):
-    __slots__ = ["vertices", "normalized_vertices"]
+    __slots__ = ("vertices", "normalized_vertices")
     VERTICES_FIELD_NUMBER: _ClassVar[int]
     NORMALIZED_VERTICES_FIELD_NUMBER: _ClassVar[int]
     vertices: _containers.RepeatedCompositeFieldContainer[Vertex]

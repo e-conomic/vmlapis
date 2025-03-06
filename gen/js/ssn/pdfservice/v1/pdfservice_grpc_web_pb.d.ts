@@ -1,6 +1,6 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as ssn_pdfservice_v1_pdfservice_pb from '../../../ssn/pdfservice/v1/pdfservice_pb';
+import * as ssn_pdfservice_v1_pdfservice_pb from '../../../ssn/pdfservice/v1/pdfservice_pb'; // proto import: "ssn/pdfservice/v1/pdfservice.proto"
 
 
 export class PdfServiceClient {

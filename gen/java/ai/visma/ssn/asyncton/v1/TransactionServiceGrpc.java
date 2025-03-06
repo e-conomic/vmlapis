@@ -9,14 +9,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
  * </pre>
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: ssn/asyncton/v1/asyncton.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class TransactionServiceGrpc {
 
   private TransactionServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "ssn.asyncton.v1.TransactionService";
+  public static final java.lang.String SERVICE_NAME = "ssn.asyncton.v1.TransactionService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.asyncton.v1.CreateTransactionRequest,
@@ -189,6 +189,21 @@ public final class TransactionServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static TransactionServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<TransactionServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<TransactionServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public TransactionServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new TransactionServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return TransactionServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static TransactionServiceBlockingStub newBlockingStub(
@@ -340,6 +355,62 @@ public final class TransactionServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service TransactionService.
+   * <pre>
+   * api.{{env}}.ssn.visma.ai
+   * transaction = example (receipt, document, scanned invoice text, etc.)
+   * </pre>
+   */
+  public static final class TransactionServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<TransactionServiceBlockingV2Stub> {
+    private TransactionServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected TransactionServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new TransactionServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.asyncton.v1.CreateTransactionResponse createTransaction(ai.visma.ssn.asyncton.v1.CreateTransactionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateTransactionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.asyncton.v1.GetTransactionResultsResponse getTransactionResults(ai.visma.ssn.asyncton.v1.GetTransactionResultsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTransactionResultsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.asyncton.v1.GetTransactionStatusResponse getTransactionStatus(ai.visma.ssn.asyncton.v1.GetTransactionStatusRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetTransactionStatusMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty deleteTransaction(ai.visma.ssn.asyncton.v1.DeleteTransactionRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteTransactionMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty deleteTag(ai.visma.ssn.asyncton.v1.DeleteTagRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteTagMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service TransactionService.
    * <pre>
    * api.{{env}}.ssn.visma.ai
    * transaction = example (receipt, document, scanned invoice text, etc.)
@@ -577,9 +648,9 @@ public final class TransactionServiceGrpc {
   private static final class TransactionServiceMethodDescriptorSupplier
       extends TransactionServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    TransactionServiceMethodDescriptorSupplier(String methodName) {
+    TransactionServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

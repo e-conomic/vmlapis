@@ -1,6 +1,6 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as ssn_access_v1_access_pb from '../../../ssn/access/v1/access_pb';
+import * as ssn_access_v1_access_pb from '../../../ssn/access/v1/access_pb'; // proto import: "ssn/access/v1/access.proto"
 
 
 export class AccessClient {

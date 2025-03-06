@@ -18,12 +18,12 @@ class JesterStub(object):
                 '/asgt.jester.v1.Jester/Suggest',
                 request_serializer=asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionRequest.SerializeToString,
                 response_deserializer=asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionResponse.FromString,
-                )
+                _registered_method=True)
         self.InternalSuggest = channel.unary_unary(
                 '/asgt.jester.v1.Jester/InternalSuggest',
                 request_serializer=asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionRequest.SerializeToString,
                 response_deserializer=asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class JesterServicer(object):
@@ -58,6 +58,7 @@ def add_JesterServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'asgt.jester.v1.Jester', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('asgt.jester.v1.Jester', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -75,11 +76,21 @@ class Jester(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.jester.v1.Jester/Suggest',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.jester.v1.Jester/Suggest',
             asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionRequest.SerializeToString,
             asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def InternalSuggest(request,
@@ -92,8 +103,18 @@ class Jester(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/asgt.jester.v1.Jester/InternalSuggest',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/asgt.jester.v1.Jester/InternalSuggest',
             asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionRequest.SerializeToString,
             asgt_dot_jester_dot_v1_dot_jester__pb2.SuggestionResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

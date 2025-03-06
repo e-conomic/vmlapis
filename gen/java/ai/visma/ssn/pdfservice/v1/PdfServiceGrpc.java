@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: ssn/pdfservice/v1/pdfservice.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class PdfServiceGrpc {
 
   private PdfServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "ssn.pdfservice.v1.PdfService";
+  public static final java.lang.String SERVICE_NAME = "ssn.pdfservice.v1.PdfService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.pdfservice.v1.RasterizePdfRequest,
@@ -89,6 +89,21 @@ public final class PdfServiceGrpc {
         }
       };
     return PdfServiceStub.newStub(factory, channel);
+  }
+
+  /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static PdfServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<PdfServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<PdfServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public PdfServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new PdfServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return PdfServiceBlockingV2Stub.newStub(factory, channel);
   }
 
   /**
@@ -186,6 +201,41 @@ public final class PdfServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service PdfService.
+   */
+  public static final class PdfServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<PdfServiceBlockingV2Stub> {
+    private PdfServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected PdfServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new PdfServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, ai.visma.ssn.pdfservice.v1.RasterizePdfResponse>
+        internalRasterizePdf(ai.visma.ssn.pdfservice.v1.RasterizePdfRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getInternalRasterizePdfMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    @io.grpc.ExperimentalApi("https://github.com/grpc/grpc-java/issues/10918")
+    public io.grpc.stub.BlockingClientCall<?, ai.visma.ssn.pdfservice.v1.RasterizePdfResponse>
+        rasterizePdf(ai.visma.ssn.pdfservice.v1.RasterizePdfRequest request) {
+      return io.grpc.stub.ClientCalls.blockingV2ServerStreamingCall(
+          getChannel(), getRasterizePdfMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service PdfService.
    */
   public static final class PdfServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<PdfServiceBlockingStub> {
@@ -320,9 +370,9 @@ public final class PdfServiceGrpc {
   private static final class PdfServiceMethodDescriptorSupplier
       extends PdfServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    PdfServiceMethodDescriptorSupplier(String methodName) {
+    PdfServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

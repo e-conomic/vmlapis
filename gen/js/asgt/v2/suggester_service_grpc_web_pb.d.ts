@@ -1,6 +1,6 @@
 import * as grpcWeb from 'grpc-web';
 
-import * as asgt_v2_suggester_service_pb from '../../asgt/v2/suggester_service_pb';
+import * as asgt_v2_suggester_service_pb from '../../asgt/v2/suggester_service_pb'; // proto import: "asgt/v2/suggester_service.proto"
 
 
 export class SuggesterServiceClient {

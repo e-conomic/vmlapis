@@ -30,7 +30,7 @@ namespace Ssn.Access.V1 {
             "ZXRLZXlSZXNwb25zZRIOCgJpZBgBIAEoCVICaWQSFAoFdG9rZW4YAiABKAlS",
             "BXRva2VuMn0KBkFjY2VzcxJzChBHZW5lcmF0ZVZhbGV0S2V5Eh4uc3NuLmFj",
             "Y2Vzcy52MS5WYWxldEtleVJlcXVlc3QaHy5zc24uYWNjZXNzLnYxLlZhbGV0",
-            "S2V5UmVzcG9uc2UiHoLT5JMCGDoBKiITL3YxL2FjY2Vzcy92YWxldGtleUK1",
+            "S2V5UmVzcG9uc2UiHoLT5JMCGCITL3YxL2FjY2Vzcy92YWxldGtleToBKkK1",
             "AQoWYWkudmlzbWEuc3NuLmFjY2Vzcy52MUILQWNjZXNzUHJvdG9QAVo4Z2l0",
             "aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vc3NuL2FjY2Vzcy92",
             "MTthY2Nlc3OiAgNTQViqAg1Tc24uQWNjZXNzLlYxygINU3NuXEFjY2Vzc1xW",
@@ -47,6 +47,7 @@ namespace Ssn.Access.V1 {
 
   }
   #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValetKeyRequest : pb::IMessage<ValetKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -240,7 +241,11 @@ namespace Ssn.Access.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -263,7 +268,11 @@ namespace Ssn.Access.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
@@ -282,6 +291,7 @@ namespace Ssn.Access.V1 {
 
   }
 
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ValetKeyResponse : pb::IMessage<ValetKeyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -472,7 +482,11 @@ namespace Ssn.Access.V1 {
     #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
@@ -495,7 +509,11 @@ namespace Ssn.Access.V1 {
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
-        switch(tag) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;

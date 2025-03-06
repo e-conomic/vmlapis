@@ -21,27 +21,27 @@ class TransactionServiceStub(object):
                 '/ssn.asyncton.v1.TransactionService/CreateTransaction',
                 request_serializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.CreateTransactionRequest.SerializeToString,
                 response_deserializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.CreateTransactionResponse.FromString,
-                )
+                _registered_method=True)
         self.GetTransactionResults = channel.unary_unary(
                 '/ssn.asyncton.v1.TransactionService/GetTransactionResults',
                 request_serializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.GetTransactionResultsRequest.SerializeToString,
                 response_deserializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.GetTransactionResultsResponse.FromString,
-                )
+                _registered_method=True)
         self.GetTransactionStatus = channel.unary_unary(
                 '/ssn.asyncton.v1.TransactionService/GetTransactionStatus',
                 request_serializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.GetTransactionStatusRequest.SerializeToString,
                 response_deserializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.GetTransactionStatusResponse.FromString,
-                )
+                _registered_method=True)
         self.DeleteTransaction = channel.unary_unary(
                 '/ssn.asyncton.v1.TransactionService/DeleteTransaction',
                 request_serializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.DeleteTransactionRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
         self.DeleteTag = channel.unary_unary(
                 '/ssn.asyncton.v1.TransactionService/DeleteTag',
                 request_serializer=ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.DeleteTagRequest.SerializeToString,
                 response_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-                )
+                _registered_method=True)
 
 
 class TransactionServiceServicer(object):
@@ -111,6 +111,7 @@ def add_TransactionServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'ssn.asyncton.v1.TransactionService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('ssn.asyncton.v1.TransactionService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -130,11 +131,21 @@ class TransactionService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.asyncton.v1.TransactionService/CreateTransaction',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.asyncton.v1.TransactionService/CreateTransaction',
             ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.CreateTransactionRequest.SerializeToString,
             ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.CreateTransactionResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def GetTransactionResults(request,
@@ -147,11 +158,21 @@ class TransactionService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.asyncton.v1.TransactionService/GetTransactionResults',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.asyncton.v1.TransactionService/GetTransactionResults',
             ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.GetTransactionResultsRequest.SerializeToString,
             ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.GetTransactionResultsResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def GetTransactionStatus(request,
@@ -164,11 +185,21 @@ class TransactionService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.asyncton.v1.TransactionService/GetTransactionStatus',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.asyncton.v1.TransactionService/GetTransactionStatus',
             ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.GetTransactionStatusRequest.SerializeToString,
             ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.GetTransactionStatusResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def DeleteTransaction(request,
@@ -181,11 +212,21 @@ class TransactionService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.asyncton.v1.TransactionService/DeleteTransaction',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.asyncton.v1.TransactionService/DeleteTransaction',
             ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.DeleteTransactionRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def DeleteTag(request,
@@ -198,8 +239,18 @@ class TransactionService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.asyncton.v1.TransactionService/DeleteTag',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.asyncton.v1.TransactionService/DeleteTag',
             ssn_dot_asyncton_dot_v1_dot_asyncton__pb2.DeleteTagRequest.SerializeToString,
             google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

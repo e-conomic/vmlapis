@@ -3,11 +3,12 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
+
 	"github.com/e-conomic/vmlapis/gen/go/ssn/pdfservice/v1"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/metadata"
-	"os"
 )
 
 func main() {
@@ -16,7 +17,7 @@ func main() {
 
 func RasterizePdf() {
 	// create connection
-	conn, err := grpc.Dial("api.stag.ssn.visma.ai:443", grpc.WithTransportCredentials(credentials.NewTLS(nil)))
+	conn, err := grpc.NewClient("api.stag.ssn.visma.ai:443", grpc.WithTransportCredentials(credentials.NewTLS(nil)))
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -46,6 +47,10 @@ func RasterizePdf() {
 
 	// make async call
 	call, err := client.RasterizePdf(ctx, request)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
 	response, err := call.Recv()
 	if err != nil {
 		return

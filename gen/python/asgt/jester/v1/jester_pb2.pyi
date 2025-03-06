@@ -11,7 +11,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class SuggestionResponse(_message.Message):
-    __slots__ = ["predictions", "model"]
+    __slots__ = ("predictions", "model")
     PREDICTIONS_FIELD_NUMBER: _ClassVar[int]
     MODEL_FIELD_NUMBER: _ClassVar[int]
     predictions: _containers.RepeatedCompositeFieldContainer[_prediction_pb2.Prediction]
@@ -19,7 +19,7 @@ class SuggestionResponse(_message.Message):
     def __init__(self, predictions: _Optional[_Iterable[_Union[_prediction_pb2.Prediction, _Mapping]]] = ..., model: _Optional[_Union[_model_pb2.Model, _Mapping]] = ...) -> None: ...
 
 class SuggestionOptions(_message.Message):
-    __slots__ = ["suggestion_limit", "min_confidence"]
+    __slots__ = ("suggestion_limit", "min_confidence")
     SUGGESTION_LIMIT_FIELD_NUMBER: _ClassVar[int]
     MIN_CONFIDENCE_FIELD_NUMBER: _ClassVar[int]
     suggestion_limit: int
@@ -27,7 +27,7 @@ class SuggestionOptions(_message.Message):
     def __init__(self, suggestion_limit: _Optional[int] = ..., min_confidence: _Optional[_Union[_prediction_pb2.Confidence.Level, str]] = ...) -> None: ...
 
 class SuggestionRequest(_message.Message):
-    __slots__ = ["name", "type", "inputs", "options", "tags"]
+    __slots__ = ("name", "type", "inputs", "options", "tags")
     NAME_FIELD_NUMBER: _ClassVar[int]
     TYPE_FIELD_NUMBER: _ClassVar[int]
     INPUTS_FIELD_NUMBER: _ClassVar[int]

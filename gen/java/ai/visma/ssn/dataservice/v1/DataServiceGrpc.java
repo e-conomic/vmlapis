@@ -5,14 +5,14 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.56.1)",
+    value = "by gRPC proto compiler (version 1.70.0)",
     comments = "Source: ssn/dataservice/v1/dataservice.proto")
 @io.grpc.stub.annotations.GrpcGenerated
 public final class DataServiceGrpc {
 
   private DataServiceGrpc() {}
 
-  public static final String SERVICE_NAME = "ssn.dataservice.v1.DataService";
+  public static final java.lang.String SERVICE_NAME = "ssn.dataservice.v1.DataService";
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.dataservice.v1.CreateDocumentRequest,
@@ -247,6 +247,21 @@ public final class DataServiceGrpc {
   }
 
   /**
+   * Creates a new blocking-style stub that supports all types of calls on the service
+   */
+  public static DataServiceBlockingV2Stub newBlockingV2Stub(
+      io.grpc.Channel channel) {
+    io.grpc.stub.AbstractStub.StubFactory<DataServiceBlockingV2Stub> factory =
+      new io.grpc.stub.AbstractStub.StubFactory<DataServiceBlockingV2Stub>() {
+        @java.lang.Override
+        public DataServiceBlockingV2Stub newStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+          return new DataServiceBlockingV2Stub(channel, callOptions);
+        }
+      };
+    return DataServiceBlockingV2Stub.newStub(factory, channel);
+  }
+
+  /**
    * Creates a new blocking-style stub that supports unary and streaming output calls on the service
    */
   public static DataServiceBlockingStub newBlockingStub(
@@ -422,6 +437,75 @@ public final class DataServiceGrpc {
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service DataService.
+   */
+  public static final class DataServiceBlockingV2Stub
+      extends io.grpc.stub.AbstractBlockingStub<DataServiceBlockingV2Stub> {
+    private DataServiceBlockingV2Stub(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      super(channel, callOptions);
+    }
+
+    @java.lang.Override
+    protected DataServiceBlockingV2Stub build(
+        io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
+      return new DataServiceBlockingV2Stub(channel, callOptions);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.dataservice.v1.CreateDocumentResponse createDocument(ai.visma.ssn.dataservice.v1.CreateDocumentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateDocumentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.dataservice.v1.ReadDocumentResponse readDocument(ai.visma.ssn.dataservice.v1.ReadDocumentRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getReadDocumentMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * For feedback
+     * </pre>
+     */
+    public com.google.protobuf.Empty prepareFeedback(ai.visma.ssn.dataservice.v1.PrepareFeedbackRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getPrepareFeedbackMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty feedback(ai.visma.ssn.dataservice.v1.FeedbackRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getFeedbackMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.dataservice.v1.FeedbackMetrics calculateMetrics(ai.visma.ssn.dataservice.v1.MetricsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCalculateMetricsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.google.protobuf.Empty delete(ai.visma.ssn.dataservice.v1.DeleteRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.ssn.dataservice.v1.CallsPerMonthResponse callsPerMonthMetric(com.google.protobuf.Empty request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCallsPerMonthMetricMethod(), getCallOptions(), request);
+    }
+  }
+
+  /**
+   * A stub to allow clients to do limited synchronous rpc calls to service DataService.
    */
   public static final class DataServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<DataServiceBlockingStub> {
@@ -711,9 +795,9 @@ public final class DataServiceGrpc {
   private static final class DataServiceMethodDescriptorSupplier
       extends DataServiceBaseDescriptorSupplier
       implements io.grpc.protobuf.ProtoMethodDescriptorSupplier {
-    private final String methodName;
+    private final java.lang.String methodName;
 
-    DataServiceMethodDescriptorSupplier(String methodName) {
+    DataServiceMethodDescriptorSupplier(java.lang.String methodName) {
       this.methodName = methodName;
     }
 

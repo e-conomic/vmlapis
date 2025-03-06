@@ -551,9 +551,18 @@ func (m *Data) validate(all bool) error {
 
 	var errors []error
 
-	switch m.DataStructure.(type) {
-
+	switch v := m.DataStructure.(type) {
 	case *Data_Transaction:
+		if v == nil {
+			err := DataValidationError{
+				field:  "DataStructure",
+				reason: "oneof value cannot be a typed-nil",
+			}
+			if !all {
+				return err
+			}
+			errors = append(errors, err)
+		}
 
 		if all {
 			switch v := interface{}(m.GetTransaction()).(type) {
@@ -585,6 +594,16 @@ func (m *Data) validate(all bool) error {
 		}
 
 	case *Data_Invoice:
+		if v == nil {
+			err := DataValidationError{
+				field:  "DataStructure",
+				reason: "oneof value cannot be a typed-nil",
+			}
+			if !all {
+				return err
+			}
+			errors = append(errors, err)
+		}
 
 		if all {
 			switch v := interface{}(m.GetInvoice()).(type) {
@@ -616,6 +635,16 @@ func (m *Data) validate(all bool) error {
 		}
 
 	case *Data_InvoiceLine:
+		if v == nil {
+			err := DataValidationError{
+				field:  "DataStructure",
+				reason: "oneof value cannot be a typed-nil",
+			}
+			if !all {
+				return err
+			}
+			errors = append(errors, err)
+		}
 
 		if all {
 			switch v := interface{}(m.GetInvoiceLine()).(type) {
@@ -646,6 +675,8 @@ func (m *Data) validate(all bool) error {
 			}
 		}
 
+	default:
+		_ = v // ensures v is used
 	}
 
 	if len(errors) > 0 {

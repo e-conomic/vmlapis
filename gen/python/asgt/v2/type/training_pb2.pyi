@@ -7,7 +7,7 @@ from typing import ClassVar as _ClassVar, Mapping as _Mapping, Optional as _Opti
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Training(_message.Message):
-    __slots__ = ["created_at", "status", "training_status", "training_status_message", "finish_time", "dataset", "schedule_time"]
+    __slots__ = ("created_at", "status", "training_status", "training_status_message", "finish_time", "dataset", "schedule_time")
     CREATED_AT_FIELD_NUMBER: _ClassVar[int]
     STATUS_FIELD_NUMBER: _ClassVar[int]
     TRAINING_STATUS_FIELD_NUMBER: _ClassVar[int]

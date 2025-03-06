@@ -8,7 +8,7 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class Sample(_message.Message):
-    __slots__ = ["data", "target_values"]
+    __slots__ = ("data", "target_values")
     DATA_FIELD_NUMBER: _ClassVar[int]
     TARGET_VALUES_FIELD_NUMBER: _ClassVar[int]
     data: _data_pb2.Data

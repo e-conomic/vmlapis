@@ -9,9 +9,9 @@ from typing import ClassVar as _ClassVar, Iterable as _Iterable, Mapping as _Map
 DESCRIPTOR: _descriptor.FileDescriptor
 
 class FeatureGenRequest(_message.Message):
-    __slots__ = ["truth_labels", "text_annotation", "id"]
+    __slots__ = ("truth_labels", "text_annotation", "id")
     class TruthLabels(_message.Message):
-        __slots__ = ["total_incl_vat", "total_vat", "total_excl_vat", "order_date", "payment_due_date", "document_type", "currency", "credit_card_number", "payment_method", "ocr_line_dk_type", "ocr_line_dk_payment_id", "ocr_line_dk_creditor_id", "ocr_line_se_payment_id", "ocr_line_se_bankgiro_creditor_id", "ocr_line_se_plusgiro_creditor_id", "ocr_line_no_payment_id", "ocr_line_fi_payment_id", "ocr_line_nl_payment_id", "supplier_corporate_id", "supplier_country_code", "invoice_number", "iban", "bank_account_number", "bank_registration_number", "supplier_name", "bic", "document_number", "document_date", "order_number", "supplier_vat_number", "supplier_organisation_number", "supplier_address", "credit_card_last_four", "customer_number", "receiver_order_number", "ocr_line_be_payment_id", "receiver_address", "receiver_country_code", "receiver_name", "receiver_vat_number"]
+        __slots__ = ("total_incl_vat", "total_vat", "total_excl_vat", "order_date", "payment_due_date", "document_type", "currency", "credit_card_number", "payment_method", "ocr_line_dk_type", "ocr_line_dk_payment_id", "ocr_line_dk_creditor_id", "ocr_line_se_payment_id", "ocr_line_se_bankgiro_creditor_id", "ocr_line_se_plusgiro_creditor_id", "ocr_line_no_payment_id", "ocr_line_fi_payment_id", "ocr_line_nl_payment_id", "supplier_corporate_id", "supplier_country_code", "invoice_number", "iban", "bank_account_number", "bank_registration_number", "supplier_name", "bic", "document_number", "document_date", "order_number", "supplier_vat_number", "supplier_organisation_number", "supplier_address", "credit_card_last_four", "customer_number", "receiver_order_number", "ocr_line_be_payment_id", "receiver_address", "receiver_country_code", "receiver_name", "receiver_vat_number")
         TOTAL_INCL_VAT_FIELD_NUMBER: _ClassVar[int]
         TOTAL_VAT_FIELD_NUMBER: _ClassVar[int]
         TOTAL_EXCL_VAT_FIELD_NUMBER: _ClassVar[int]
@@ -102,17 +102,17 @@ class FeatureGenRequest(_message.Message):
     def __init__(self, truth_labels: _Optional[_Union[FeatureGenRequest.TruthLabels, _Mapping]] = ..., text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., id: _Optional[str] = ...) -> None: ...
 
 class FeatureGenResponse(_message.Message):
-    __slots__ = []
+    __slots__ = ()
     def __init__(self) -> None: ...
 
 class PredictRequest(_message.Message):
-    __slots__ = ["top_n_most_confident"]
+    __slots__ = ("top_n_most_confident",)
     TOP_N_MOST_CONFIDENT_FIELD_NUMBER: _ClassVar[int]
     top_n_most_confident: int
     def __init__(self, top_n_most_confident: _Optional[int] = ...) -> None: ...
 
 class PredictResponse(_message.Message):
-    __slots__ = ["order_date", "payment_due_date", "currency", "total_vat", "total_incl_vat", "total_excl_vat", "supplier_corporate_id", "supplier_country_code", "document_type", "payment_method", "credit_card_number", "invoice_number", "ocr_line_dk_type", "ocr_line_dk_payment_id", "ocr_line_dk_creditor_id", "ocr_line_se_payment_id", "ocr_line_se_bankgiro_creditor_id", "ocr_line_se_plusgiro_creditor_id", "ocr_line_no_payment_id", "ocr_line_fi_payment_id", "ocr_line_nl_payment_id", "iban", "lines", "bank_account_number", "bank_registration_number", "bic", "document_number", "document_date", "order_number", "supplier_name", "supplier_vat_number", "supplier_organisation_number", "supplier_address", "credit_card_last_four", "customer_number", "receiver_order_number", "ocr_line_be_payment_id", "receiver_address", "receiver_country_code", "receiver_name", "receiver_vat_number"]
+    __slots__ = ("order_date", "payment_due_date", "currency", "total_vat", "total_incl_vat", "total_excl_vat", "supplier_corporate_id", "supplier_country_code", "document_type", "payment_method", "credit_card_number", "invoice_number", "ocr_line_dk_type", "ocr_line_dk_payment_id", "ocr_line_dk_creditor_id", "ocr_line_se_payment_id", "ocr_line_se_bankgiro_creditor_id", "ocr_line_se_plusgiro_creditor_id", "ocr_line_no_payment_id", "ocr_line_fi_payment_id", "ocr_line_nl_payment_id", "iban", "lines", "bank_account_number", "bank_registration_number", "bic", "document_number", "document_date", "order_number", "supplier_name", "supplier_vat_number", "supplier_organisation_number", "supplier_address", "credit_card_last_four", "customer_number", "receiver_order_number", "ocr_line_be_payment_id", "receiver_address", "receiver_country_code", "receiver_name", "receiver_vat_number")
     ORDER_DATE_FIELD_NUMBER: _ClassVar[int]
     PAYMENT_DUE_DATE_FIELD_NUMBER: _ClassVar[int]
     CURRENCY_FIELD_NUMBER: _ClassVar[int]
@@ -198,7 +198,7 @@ class PredictResponse(_message.Message):
     def __init__(self, order_date: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., payment_due_date: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., currency: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., total_vat: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., total_incl_vat: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., total_excl_vat: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., supplier_corporate_id: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., supplier_country_code: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., document_type: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., payment_method: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., credit_card_number: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., invoice_number: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., ocr_line_dk_type: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., ocr_line_dk_payment_id: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., ocr_line_dk_creditor_id: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., ocr_line_se_payment_id: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., ocr_line_se_bankgiro_creditor_id: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., ocr_line_se_plusgiro_creditor_id: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., ocr_line_no_payment_id: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., ocr_line_fi_payment_id: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., ocr_line_nl_payment_id: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., iban: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., lines: _Optional[_Iterable[_Union[_candidate_pb2.LineCandidate, _Mapping]]] = ..., bank_account_number: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., bank_registration_number: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., bic: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., document_number: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., document_date: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., order_number: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., supplier_name: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., supplier_vat_number: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., supplier_organisation_number: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., supplier_address: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., credit_card_last_four: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., customer_number: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., receiver_order_number: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., ocr_line_be_payment_id: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., receiver_address: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., receiver_country_code: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., receiver_name: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ..., receiver_vat_number: _Optional[_Iterable[_Union[_candidate_pb2.Candidate, _Mapping]]] = ...) -> None: ...
 
 class FeatureGenPredictRequest(_message.Message):
-    __slots__ = ["feature_gen_request", "predict_request"]
+    __slots__ = ("feature_gen_request", "predict_request")
     FEATURE_GEN_REQUEST_FIELD_NUMBER: _ClassVar[int]
     PREDICT_REQUEST_FIELD_NUMBER: _ClassVar[int]
     feature_gen_request: FeatureGenRequest
@@ -206,7 +206,7 @@ class FeatureGenPredictRequest(_message.Message):
     def __init__(self, feature_gen_request: _Optional[_Union[FeatureGenRequest, _Mapping]] = ..., predict_request: _Optional[_Union[PredictRequest, _Mapping]] = ...) -> None: ...
 
 class PurchaseLinesRequest(_message.Message):
-    __slots__ = ["text_annotation", "image"]
+    __slots__ = ("text_annotation", "image")
     TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
     IMAGE_FIELD_NUMBER: _ClassVar[int]
     text_annotation: _text_annotation_pb2.TextAnnotation
@@ -214,13 +214,13 @@ class PurchaseLinesRequest(_message.Message):
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[bytes] = ...) -> None: ...
 
 class PurchaseLinesResponse(_message.Message):
-    __slots__ = ["purchase_lines"]
+    __slots__ = ("purchase_lines",)
     PURCHASE_LINES_FIELD_NUMBER: _ClassVar[int]
     purchase_lines: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.PurchaseLineCandidate]
     def __init__(self, purchase_lines: _Optional[_Iterable[_Union[_candidate_pb2.PurchaseLineCandidate, _Mapping]]] = ...) -> None: ...
 
 class DocQARequest(_message.Message):
-    __slots__ = ["text_annotation", "image", "questions"]
+    __slots__ = ("text_annotation", "image", "questions")
     TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
     IMAGE_FIELD_NUMBER: _ClassVar[int]
     QUESTIONS_FIELD_NUMBER: _ClassVar[int]
@@ -230,13 +230,13 @@ class DocQARequest(_message.Message):
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., image: _Optional[bytes] = ..., questions: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class DocQAResponse(_message.Message):
-    __slots__ = ["answers"]
+    __slots__ = ("answers",)
     ANSWERS_FIELD_NUMBER: _ClassVar[int]
     answers: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.AnswerCandidate]
     def __init__(self, answers: _Optional[_Iterable[_Union[_candidate_pb2.AnswerCandidate, _Mapping]]] = ...) -> None: ...
 
 class VatDistributionRequest(_message.Message):
-    __slots__ = ["text_annotation", "country_code", "images"]
+    __slots__ = ("text_annotation", "country_code", "images")
     TEXT_ANNOTATION_FIELD_NUMBER: _ClassVar[int]
     COUNTRY_CODE_FIELD_NUMBER: _ClassVar[int]
     IMAGES_FIELD_NUMBER: _ClassVar[int]
@@ -246,7 +246,7 @@ class VatDistributionRequest(_message.Message):
     def __init__(self, text_annotation: _Optional[_Union[_text_annotation_pb2.TextAnnotation, _Mapping]] = ..., country_code: _Optional[str] = ..., images: _Optional[_Iterable[bytes]] = ...) -> None: ...
 
 class VatDistributionResponse(_message.Message):
-    __slots__ = ["vat_distribution_candidates"]
+    __slots__ = ("vat_distribution_candidates",)
     VAT_DISTRIBUTION_CANDIDATES_FIELD_NUMBER: _ClassVar[int]
     vat_distribution_candidates: _containers.RepeatedCompositeFieldContainer[_candidate_pb2.VatDistributionCandidate]
     def __init__(self, vat_distribution_candidates: _Optional[_Iterable[_Union[_candidate_pb2.VatDistributionCandidate, _Mapping]]] = ...) -> None: ...

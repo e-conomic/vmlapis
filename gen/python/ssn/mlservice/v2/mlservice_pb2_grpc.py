@@ -19,17 +19,17 @@ class MlServiceStub(object):
                 '/ssn.mlservice.v2.MlService/FeatureGen',
                 request_serializer=ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.FeatureGenRequest.SerializeToString,
                 response_deserializer=ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.FeatureGenResponse.FromString,
-                )
+                _registered_method=True)
         self.Predict = channel.unary_unary(
                 '/ssn.mlservice.v2.MlService/Predict',
                 request_serializer=ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PredictRequest.SerializeToString,
                 response_deserializer=ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PredictResponse.FromString,
-                )
+                _registered_method=True)
         self.FeatureGenPredict = channel.unary_unary(
                 '/ssn.mlservice.v2.MlService/FeatureGenPredict',
                 request_serializer=ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.FeatureGenPredictRequest.SerializeToString,
                 response_deserializer=ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PredictResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class MlServiceServicer(object):
@@ -77,6 +77,7 @@ def add_MlServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'ssn.mlservice.v2.MlService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('ssn.mlservice.v2.MlService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -95,11 +96,21 @@ class MlService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.mlservice.v2.MlService/FeatureGen',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.mlservice.v2.MlService/FeatureGen',
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.FeatureGenRequest.SerializeToString,
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.FeatureGenResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def Predict(request,
@@ -112,11 +123,21 @@ class MlService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.mlservice.v2.MlService/Predict',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.mlservice.v2.MlService/Predict',
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PredictRequest.SerializeToString,
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PredictResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def FeatureGenPredict(request,
@@ -129,8 +150,18 @@ class MlService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.mlservice.v2.MlService/FeatureGenPredict',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.mlservice.v2.MlService/FeatureGenPredict',
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.FeatureGenPredictRequest.SerializeToString,
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PredictResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

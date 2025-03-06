@@ -19,27 +19,27 @@ class OcrServiceStub(object):
                 '/ssn.ocrservice.v1.OcrService/OcrScanImage',
                 request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.OcrScanImageRequest.SerializeToString,
                 response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.OcrScanImageResponse.FromString,
-                )
+                _registered_method=True)
         self.GetTextAnnotation = channel.unary_unary(
                 '/ssn.ocrservice.v1.OcrService/GetTextAnnotation',
                 request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.SerializeToString,
                 response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.FromString,
-                )
+                _registered_method=True)
         self.GetTextAnnotations = channel.unary_stream(
                 '/ssn.ocrservice.v1.OcrService/GetTextAnnotations',
                 request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.SerializeToString,
                 response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.FromString,
-                )
+                _registered_method=True)
         self.AsyncCreateOperation = channel.unary_unary(
                 '/ssn.ocrservice.v1.OcrService/AsyncCreateOperation',
                 request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncCreateOperationRequest.SerializeToString,
                 response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncCreateOperationResponse.FromString,
-                )
+                _registered_method=True)
         self.AsyncGetOperationStatus = channel.unary_stream(
                 '/ssn.ocrservice.v1.OcrService/AsyncGetOperationStatus',
                 request_serializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncGetOperationStatusRequest.SerializeToString,
                 response_deserializer=ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncGetOperationStatusResponse.FromString,
-                )
+                _registered_method=True)
 
 
 class OcrServiceServicer(object):
@@ -108,6 +108,7 @@ def add_OcrServiceServicer_to_server(servicer, server):
     generic_handler = grpc.method_handlers_generic_handler(
             'ssn.ocrservice.v1.OcrService', rpc_method_handlers)
     server.add_generic_rpc_handlers((generic_handler,))
+    server.add_registered_method_handlers('ssn.ocrservice.v1.OcrService', rpc_method_handlers)
 
 
  # This class is part of an EXPERIMENTAL API.
@@ -126,11 +127,21 @@ class OcrService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.ocrservice.v1.OcrService/OcrScanImage',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.ocrservice.v1.OcrService/OcrScanImage',
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.OcrScanImageRequest.SerializeToString,
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.OcrScanImageResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def GetTextAnnotation(request,
@@ -143,11 +154,21 @@ class OcrService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.ocrservice.v1.OcrService/GetTextAnnotation',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.ocrservice.v1.OcrService/GetTextAnnotation',
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.SerializeToString,
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def GetTextAnnotations(request,
@@ -160,11 +181,21 @@ class OcrService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/ssn.ocrservice.v1.OcrService/GetTextAnnotations',
+        return grpc.experimental.unary_stream(
+            request,
+            target,
+            '/ssn.ocrservice.v1.OcrService/GetTextAnnotations',
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationRequest.SerializeToString,
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.GetTextAnnotationResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def AsyncCreateOperation(request,
@@ -177,11 +208,21 @@ class OcrService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/ssn.ocrservice.v1.OcrService/AsyncCreateOperation',
+        return grpc.experimental.unary_unary(
+            request,
+            target,
+            '/ssn.ocrservice.v1.OcrService/AsyncCreateOperation',
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncCreateOperationRequest.SerializeToString,
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncCreateOperationResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
 
     @staticmethod
     def AsyncGetOperationStatus(request,
@@ -194,8 +235,18 @@ class OcrService(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_stream(request, target, '/ssn.ocrservice.v1.OcrService/AsyncGetOperationStatus',
+        return grpc.experimental.unary_stream(
+            request,
+            target,
+            '/ssn.ocrservice.v1.OcrService/AsyncGetOperationStatus',
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncGetOperationStatusRequest.SerializeToString,
             ssn_dot_ocrservice_dot_v1_dot_ocrservice__pb2.AsyncGetOperationStatusResponse.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)

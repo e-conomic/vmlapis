@@ -1,13 +1,13 @@
 import * as jspb from 'google-protobuf'
 
-import * as asgt_type_dataset_pb from '../../../asgt/type/dataset_pb';
-import * as asgt_type_dataset_statistics_pb from '../../../asgt/type/dataset_statistics_pb';
-import * as asgt_type_model_pb from '../../../asgt/type/model_pb';
-import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb';
-import * as asgt_type_revision_pb from '../../../asgt/type/revision_pb';
-import * as asgt_type_target_metrics_pb from '../../../asgt/type/target_metrics_pb';
-import * as asgt_type_train_statistics_pb from '../../../asgt/type/train_statistics_pb';
-import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb';
+import * as asgt_type_dataset_pb from '../../../asgt/type/dataset_pb'; // proto import: "asgt/type/dataset.proto"
+import * as asgt_type_dataset_statistics_pb from '../../../asgt/type/dataset_statistics_pb'; // proto import: "asgt/type/dataset_statistics.proto"
+import * as asgt_type_model_pb from '../../../asgt/type/model_pb'; // proto import: "asgt/type/model.proto"
+import * as asgt_type_prediction_pb from '../../../asgt/type/prediction_pb'; // proto import: "asgt/type/prediction.proto"
+import * as asgt_type_revision_pb from '../../../asgt/type/revision_pb'; // proto import: "asgt/type/revision.proto"
+import * as asgt_type_target_metrics_pb from '../../../asgt/type/target_metrics_pb'; // proto import: "asgt/type/target_metrics.proto"
+import * as asgt_type_train_statistics_pb from '../../../asgt/type/train_statistics_pb'; // proto import: "asgt/type/train_statistics.proto"
+import * as google_protobuf_empty_pb from 'google-protobuf/google/protobuf/empty_pb'; // proto import: "google/protobuf/empty.proto"
 
 
 export class RegisterModelRequest extends jspb.Message {

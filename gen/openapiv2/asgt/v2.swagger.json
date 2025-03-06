@@ -214,12 +214,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "example": {
-                  "$ref": "#/definitions/typeExample"
-                }
-              }
+              "$ref": "#/definitions/DatasetServiceCreateExampleBody"
             }
           }
         ],
@@ -267,25 +262,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "example": {
-                  "type": "object",
-                  "properties": {
-                    "data": {
-                      "$ref": "#/definitions/typeData"
-                    },
-                    "targetValues": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "$ref": "#/definitions/typeTargetValue"
-                      }
-                    }
-                  },
-                  "title": "A pair of example data and example target values"
-                }
-              }
+              "$ref": "#/definitions/DatasetServiceCreateOrUpdateExampleBody"
             }
           }
         ],
@@ -326,16 +303,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "examples": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "$ref": "#/definitions/typeExample"
-                  }
-                }
-              }
+              "$ref": "#/definitions/DatasetServiceBatchCreateExampleBody"
             }
           }
         ],
@@ -375,20 +343,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "inputs": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "$ref": "#/definitions/typeData"
-                  },
-                  "title": "Input data to use for prediction"
-                },
-                "options": {
-                  "$ref": "#/definitions/v2SuggestOptions"
-                }
-              }
+              "$ref": "#/definitions/SuggesterServiceModelBatchSuggestBody"
             }
           }
         ],
@@ -508,20 +463,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "inputs": {
-                  "type": "array",
-                  "items": {
-                    "type": "object",
-                    "$ref": "#/definitions/typeData"
-                  },
-                  "title": "Input data to use for prediction"
-                },
-                "options": {
-                  "$ref": "#/definitions/v2SuggestOptions"
-                }
-              }
+              "$ref": "#/definitions/SuggesterServiceBatchSuggestBody"
             }
           }
         ],
@@ -561,16 +503,7 @@
             "in": "body",
             "required": true,
             "schema": {
-              "type": "object",
-              "properties": {
-                "input": {
-                  "$ref": "#/definitions/typeData",
-                  "title": "Input data to use for prediction"
-                },
-                "options": {
-                  "$ref": "#/definitions/v2SuggestOptions"
-                }
-              }
+              "$ref": "#/definitions/SuggesterServiceSuggestBody"
             }
           }
         ],
@@ -659,6 +592,47 @@
       ],
       "default": "UNKNOWN"
     },
+    "DatasetServiceBatchCreateExampleBody": {
+      "type": "object",
+      "properties": {
+        "examples": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeExample"
+          }
+        }
+      }
+    },
+    "DatasetServiceCreateExampleBody": {
+      "type": "object",
+      "properties": {
+        "example": {
+          "$ref": "#/definitions/typeExample"
+        }
+      }
+    },
+    "DatasetServiceCreateOrUpdateExampleBody": {
+      "type": "object",
+      "properties": {
+        "example": {
+          "type": "object",
+          "properties": {
+            "data": {
+              "$ref": "#/definitions/typeData"
+            },
+            "targetValues": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "$ref": "#/definitions/typeTargetValue"
+              }
+            }
+          },
+          "title": "A pair of example data and example target values"
+        }
+      }
+    },
     "ModelInputType": {
       "type": "string",
       "enum": [
@@ -679,6 +653,50 @@
             "type": "object",
             "$ref": "#/definitions/TargetCandidate"
           }
+        }
+      }
+    },
+    "SuggesterServiceBatchSuggestBody": {
+      "type": "object",
+      "properties": {
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeData"
+          },
+          "title": "Input data to use for prediction"
+        },
+        "options": {
+          "$ref": "#/definitions/v2SuggestOptions"
+        }
+      }
+    },
+    "SuggesterServiceModelBatchSuggestBody": {
+      "type": "object",
+      "properties": {
+        "inputs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "$ref": "#/definitions/typeData"
+          },
+          "title": "Input data to use for prediction"
+        },
+        "options": {
+          "$ref": "#/definitions/v2SuggestOptions"
+        }
+      }
+    },
+    "SuggesterServiceSuggestBody": {
+      "type": "object",
+      "properties": {
+        "input": {
+          "$ref": "#/definitions/typeData",
+          "title": "Input data to use for prediction"
+        },
+        "options": {
+          "$ref": "#/definitions/v2SuggestOptions"
         }
       }
     },
