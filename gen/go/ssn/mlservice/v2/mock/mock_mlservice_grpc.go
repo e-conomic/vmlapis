@@ -11,6 +11,8 @@ import (
 	v2 "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v2"
 	gomock "github.com/golang/mock/gomock"
 	grpc "google.golang.org/grpc"
+	emptypb "google.golang.org/protobuf/types/known/emptypb"
+	wrapperspb "google.golang.org/protobuf/types/known/wrapperspb"
 )
 
 // MockMlServiceClient is a mock of MlServiceClient interface.
@@ -197,4 +199,155 @@ func (m *MockUnsafeMlServiceServer) mustEmbedUnimplementedMlServiceServer() {
 func (mr *MockUnsafeMlServiceServerMockRecorder) mustEmbedUnimplementedMlServiceServer() *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedMlServiceServer", reflect.TypeOf((*MockUnsafeMlServiceServer)(nil).mustEmbedUnimplementedMlServiceServer))
+}
+
+// MockPurchaseLinesClient is a mock of PurchaseLinesClient interface.
+type MockPurchaseLinesClient struct {
+	ctrl     *gomock.Controller
+	recorder *MockPurchaseLinesClientMockRecorder
+}
+
+// MockPurchaseLinesClientMockRecorder is the mock recorder for MockPurchaseLinesClient.
+type MockPurchaseLinesClientMockRecorder struct {
+	mock *MockPurchaseLinesClient
+}
+
+// NewMockPurchaseLinesClient creates a new mock instance.
+func NewMockPurchaseLinesClient(ctrl *gomock.Controller) *MockPurchaseLinesClient {
+	mock := &MockPurchaseLinesClient{ctrl: ctrl}
+	mock.recorder = &MockPurchaseLinesClientMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockPurchaseLinesClient) EXPECT() *MockPurchaseLinesClientMockRecorder {
+	return m.recorder
+}
+
+// HealthCheck mocks base method.
+func (m *MockPurchaseLinesClient) HealthCheck(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.StringValue, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "HealthCheck", varargs...)
+	ret0, _ := ret[0].(*wrapperspb.StringValue)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// HealthCheck indicates an expected call of HealthCheck.
+func (mr *MockPurchaseLinesClientMockRecorder) HealthCheck(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "HealthCheck", reflect.TypeOf((*MockPurchaseLinesClient)(nil).HealthCheck), varargs...)
+}
+
+// InferPurchaseLines mocks base method.
+func (m *MockPurchaseLinesClient) InferPurchaseLines(ctx context.Context, in *v2.PurchaseLinesRequest, opts ...grpc.CallOption) (*v2.PurchaseLinesResponse, error) {
+	m.ctrl.T.Helper()
+	varargs := []interface{}{ctx, in}
+	for _, a := range opts {
+		varargs = append(varargs, a)
+	}
+	ret := m.ctrl.Call(m, "InferPurchaseLines", varargs...)
+	ret0, _ := ret[0].(*v2.PurchaseLinesResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// InferPurchaseLines indicates an expected call of InferPurchaseLines.
+func (mr *MockPurchaseLinesClientMockRecorder) InferPurchaseLines(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	varargs := append([]interface{}{ctx, in}, opts...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InferPurchaseLines", reflect.TypeOf((*MockPurchaseLinesClient)(nil).InferPurchaseLines), varargs...)
+}
+
+// MockPurchaseLinesServer is a mock of PurchaseLinesServer interface.
+type MockPurchaseLinesServer struct {
+	ctrl     *gomock.Controller
+	recorder *MockPurchaseLinesServerMockRecorder
+}
+
+// MockPurchaseLinesServerMockRecorder is the mock recorder for MockPurchaseLinesServer.
+type MockPurchaseLinesServerMockRecorder struct {
+	mock *MockPurchaseLinesServer
+}
+
+// NewMockPurchaseLinesServer creates a new mock instance.
+func NewMockPurchaseLinesServer(ctrl *gomock.Controller) *MockPurchaseLinesServer {
+	mock := &MockPurchaseLinesServer{ctrl: ctrl}
+	mock.recorder = &MockPurchaseLinesServerMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockPurchaseLinesServer) EXPECT() *MockPurchaseLinesServerMockRecorder {
+	return m.recorder
+}
+
+// HealthCheck mocks base method.
+func (m *MockPurchaseLinesServer) HealthCheck(arg0 context.Context, arg1 *emptypb.Empty) (*wrapperspb.StringValue, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "HealthCheck", arg0, arg1)
+	ret0, _ := ret[0].(*wrapperspb.StringValue)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// HealthCheck indicates an expected call of HealthCheck.
+func (mr *MockPurchaseLinesServerMockRecorder) HealthCheck(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "HealthCheck", reflect.TypeOf((*MockPurchaseLinesServer)(nil).HealthCheck), arg0, arg1)
+}
+
+// InferPurchaseLines mocks base method.
+func (m *MockPurchaseLinesServer) InferPurchaseLines(arg0 context.Context, arg1 *v2.PurchaseLinesRequest) (*v2.PurchaseLinesResponse, error) {
+	m.ctrl.T.Helper()
+	ret := m.ctrl.Call(m, "InferPurchaseLines", arg0, arg1)
+	ret0, _ := ret[0].(*v2.PurchaseLinesResponse)
+	ret1, _ := ret[1].(error)
+	return ret0, ret1
+}
+
+// InferPurchaseLines indicates an expected call of InferPurchaseLines.
+func (mr *MockPurchaseLinesServerMockRecorder) InferPurchaseLines(arg0, arg1 interface{}) *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InferPurchaseLines", reflect.TypeOf((*MockPurchaseLinesServer)(nil).InferPurchaseLines), arg0, arg1)
+}
+
+// MockUnsafePurchaseLinesServer is a mock of UnsafePurchaseLinesServer interface.
+type MockUnsafePurchaseLinesServer struct {
+	ctrl     *gomock.Controller
+	recorder *MockUnsafePurchaseLinesServerMockRecorder
+}
+
+// MockUnsafePurchaseLinesServerMockRecorder is the mock recorder for MockUnsafePurchaseLinesServer.
+type MockUnsafePurchaseLinesServerMockRecorder struct {
+	mock *MockUnsafePurchaseLinesServer
+}
+
+// NewMockUnsafePurchaseLinesServer creates a new mock instance.
+func NewMockUnsafePurchaseLinesServer(ctrl *gomock.Controller) *MockUnsafePurchaseLinesServer {
+	mock := &MockUnsafePurchaseLinesServer{ctrl: ctrl}
+	mock.recorder = &MockUnsafePurchaseLinesServerMockRecorder{mock}
+	return mock
+}
+
+// EXPECT returns an object that allows the caller to indicate expected use.
+func (m *MockUnsafePurchaseLinesServer) EXPECT() *MockUnsafePurchaseLinesServerMockRecorder {
+	return m.recorder
+}
+
+// mustEmbedUnimplementedPurchaseLinesServer mocks base method.
+func (m *MockUnsafePurchaseLinesServer) mustEmbedUnimplementedPurchaseLinesServer() {
+	m.ctrl.T.Helper()
+	m.ctrl.Call(m, "mustEmbedUnimplementedPurchaseLinesServer")
+}
+
+// mustEmbedUnimplementedPurchaseLinesServer indicates an expected call of mustEmbedUnimplementedPurchaseLinesServer.
+func (mr *MockUnsafePurchaseLinesServerMockRecorder) mustEmbedUnimplementedPurchaseLinesServer() *gomock.Call {
+	mr.mock.ctrl.T.Helper()
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "mustEmbedUnimplementedPurchaseLinesServer", reflect.TypeOf((*MockUnsafePurchaseLinesServer)(nil).mustEmbedUnimplementedPurchaseLinesServer))
 }

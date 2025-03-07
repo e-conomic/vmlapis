@@ -20,6 +20,10 @@ const grpc = {};
 grpc.web = require('grpc-web');
 
 
+var google_protobuf_empty_pb = require('google-protobuf/google/protobuf/empty_pb.js')
+
+var google_protobuf_wrappers_pb = require('google-protobuf/google/protobuf/wrappers_pb.js')
+
 var google_type_date_pb = require('../../../google/type/date_pb.js')
 
 var ssn_type_candidate_pb = require('../../../ssn/type/candidate_pb.js')
@@ -262,6 +266,180 @@ proto.ssn.mlservice.v2.MlServicePromiseClient.prototype.featureGenPredict =
       request,
       metadata || {},
       methodDescriptor_MlService_FeatureGenPredict);
+};
+
+
+/**
+ * @param {string} hostname
+ * @param {?Object} credentials
+ * @param {?grpc.web.ClientOptions} options
+ * @constructor
+ * @struct
+ * @final
+ */
+proto.ssn.mlservice.v2.PurchaseLinesClient =
+    function(hostname, credentials, options) {
+  if (!options) options = {};
+  options.format = 'text';
+
+  /**
+   * @private @const {!grpc.web.GrpcWebClientBase} The client
+   */
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
+
+  /**
+   * @private @const {string} The hostname
+   */
+  this.hostname_ = hostname.replace(/\/+$/, '');
+
+};
+
+
+/**
+ * @param {string} hostname
+ * @param {?Object} credentials
+ * @param {?grpc.web.ClientOptions} options
+ * @constructor
+ * @struct
+ * @final
+ */
+proto.ssn.mlservice.v2.PurchaseLinesPromiseClient =
+    function(hostname, credentials, options) {
+  if (!options) options = {};
+  options.format = 'text';
+
+  /**
+   * @private @const {!grpc.web.GrpcWebClientBase} The client
+   */
+  this.client_ = new grpc.web.GrpcWebClientBase(options);
+
+  /**
+   * @private @const {string} The hostname
+   */
+  this.hostname_ = hostname.replace(/\/+$/, '');
+
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.ssn.mlservice.v2.PurchaseLinesRequest,
+ *   !proto.ssn.mlservice.v2.PurchaseLinesResponse>}
+ */
+const methodDescriptor_PurchaseLines_InferPurchaseLines = new grpc.web.MethodDescriptor(
+  '/ssn.mlservice.v2.PurchaseLines/InferPurchaseLines',
+  grpc.web.MethodType.UNARY,
+  proto.ssn.mlservice.v2.PurchaseLinesRequest,
+  proto.ssn.mlservice.v2.PurchaseLinesResponse,
+  /**
+   * @param {!proto.ssn.mlservice.v2.PurchaseLinesRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.ssn.mlservice.v2.PurchaseLinesResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.ssn.mlservice.v2.PurchaseLinesRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.ssn.mlservice.v2.PurchaseLinesResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.ssn.mlservice.v2.PurchaseLinesResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.mlservice.v2.PurchaseLinesClient.prototype.inferPurchaseLines =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.mlservice.v2.PurchaseLines/InferPurchaseLines',
+      request,
+      metadata || {},
+      methodDescriptor_PurchaseLines_InferPurchaseLines,
+      callback);
+};
+
+
+/**
+ * @param {!proto.ssn.mlservice.v2.PurchaseLinesRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.ssn.mlservice.v2.PurchaseLinesResponse>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.mlservice.v2.PurchaseLinesPromiseClient.prototype.inferPurchaseLines =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.mlservice.v2.PurchaseLines/InferPurchaseLines',
+      request,
+      metadata || {},
+      methodDescriptor_PurchaseLines_InferPurchaseLines);
+};
+
+
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.google.protobuf.Empty,
+ *   !proto.google.protobuf.StringValue>}
+ */
+const methodDescriptor_PurchaseLines_HealthCheck = new grpc.web.MethodDescriptor(
+  '/ssn.mlservice.v2.PurchaseLines/HealthCheck',
+  grpc.web.MethodType.UNARY,
+  google_protobuf_empty_pb.Empty,
+  google_protobuf_wrappers_pb.StringValue,
+  /**
+   * @param {!proto.google.protobuf.Empty} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  google_protobuf_wrappers_pb.StringValue.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.google.protobuf.Empty} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.google.protobuf.StringValue)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.google.protobuf.StringValue>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.ssn.mlservice.v2.PurchaseLinesClient.prototype.healthCheck =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/ssn.mlservice.v2.PurchaseLines/HealthCheck',
+      request,
+      metadata || {},
+      methodDescriptor_PurchaseLines_HealthCheck,
+      callback);
+};
+
+
+/**
+ * @param {!proto.google.protobuf.Empty} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.google.protobuf.StringValue>}
+ *     Promise that resolves to the response
+ */
+proto.ssn.mlservice.v2.PurchaseLinesPromiseClient.prototype.healthCheck =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/ssn.mlservice.v2.PurchaseLines/HealthCheck',
+      request,
+      metadata || {},
+      methodDescriptor_PurchaseLines_HealthCheck);
 };
 
 
