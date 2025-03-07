@@ -5,6 +5,8 @@ package ssn.mlservice.v2;
 import "google/type/date.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
+import "google/protobuf/empty.proto";
+import "google/protobuf/wrappers.proto";
 
 option go_package = "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v2;mlservice";
 option java_outer_classname = "MlServiceProtos";
@@ -16,6 +18,15 @@ service MlService {
   // Convinienve method
   rpc FeatureGenPredict(FeatureGenPredictRequest) returns (PredictResponse);
 }
+
+// Purchase Lines Service
+service PurchaseLines {
+  // Infers purchase lines from document images and text
+  rpc InferPurchaseLines(PurchaseLinesRequest) returns (PurchaseLinesResponse);
+  // Legacy health check method
+  rpc HealthCheck(google.protobuf.Empty) returns (google.protobuf.StringValue);
+}
+
 
 message FeatureGenRequest {
   message TruthLabels {
