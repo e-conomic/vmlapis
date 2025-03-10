@@ -222,24 +222,24 @@ func (m *MockPurchaseLinesClient) EXPECT() *MockPurchaseLinesClientMockRecorder 
 	return m.recorder
 }
 
-// InferPurchaseLines mocks base method.
-func (m *MockPurchaseLinesClient) InferPurchaseLines(ctx context.Context, in *v2.PurchaseLinesRequest, opts ...grpc.CallOption) (*v2.PurchaseLinesResponse, error) {
+// Predict mocks base method.
+func (m *MockPurchaseLinesClient) Predict(ctx context.Context, in *v2.PurchaseLinesRequest, opts ...grpc.CallOption) (*v2.PurchaseLinesResponse, error) {
 	m.ctrl.T.Helper()
 	varargs := []interface{}{ctx, in}
 	for _, a := range opts {
 		varargs = append(varargs, a)
 	}
-	ret := m.ctrl.Call(m, "InferPurchaseLines", varargs...)
+	ret := m.ctrl.Call(m, "Predict", varargs...)
 	ret0, _ := ret[0].(*v2.PurchaseLinesResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
-// InferPurchaseLines indicates an expected call of InferPurchaseLines.
-func (mr *MockPurchaseLinesClientMockRecorder) InferPurchaseLines(ctx, in interface{}, opts ...interface{}) *gomock.Call {
+// Predict indicates an expected call of Predict.
+func (mr *MockPurchaseLinesClientMockRecorder) Predict(ctx, in interface{}, opts ...interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
 	varargs := append([]interface{}{ctx, in}, opts...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InferPurchaseLines", reflect.TypeOf((*MockPurchaseLinesClient)(nil).InferPurchaseLines), varargs...)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Predict", reflect.TypeOf((*MockPurchaseLinesClient)(nil).Predict), varargs...)
 }
 
 // MockPurchaseLinesServer is a mock of PurchaseLinesServer interface.
@@ -265,19 +265,19 @@ func (m *MockPurchaseLinesServer) EXPECT() *MockPurchaseLinesServerMockRecorder 
 	return m.recorder
 }
 
-// InferPurchaseLines mocks base method.
-func (m *MockPurchaseLinesServer) InferPurchaseLines(arg0 context.Context, arg1 *v2.PurchaseLinesRequest) (*v2.PurchaseLinesResponse, error) {
+// Predict mocks base method.
+func (m *MockPurchaseLinesServer) Predict(arg0 context.Context, arg1 *v2.PurchaseLinesRequest) (*v2.PurchaseLinesResponse, error) {
 	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "InferPurchaseLines", arg0, arg1)
+	ret := m.ctrl.Call(m, "Predict", arg0, arg1)
 	ret0, _ := ret[0].(*v2.PurchaseLinesResponse)
 	ret1, _ := ret[1].(error)
 	return ret0, ret1
 }
 
-// InferPurchaseLines indicates an expected call of InferPurchaseLines.
-func (mr *MockPurchaseLinesServerMockRecorder) InferPurchaseLines(arg0, arg1 interface{}) *gomock.Call {
+// Predict indicates an expected call of Predict.
+func (mr *MockPurchaseLinesServerMockRecorder) Predict(arg0, arg1 interface{}) *gomock.Call {
 	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "InferPurchaseLines", reflect.TypeOf((*MockPurchaseLinesServer)(nil).InferPurchaseLines), arg0, arg1)
+	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "Predict", reflect.TypeOf((*MockPurchaseLinesServer)(nil).Predict), arg0, arg1)
 }
 
 // MockUnsafePurchaseLinesServer is a mock of UnsafePurchaseLinesServer interface.

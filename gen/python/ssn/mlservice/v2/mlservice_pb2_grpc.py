@@ -176,8 +176,8 @@ class PurchaseLinesStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.InferPurchaseLines = channel.unary_unary(
-                '/ssn.mlservice.v2.PurchaseLines/InferPurchaseLines',
+        self.Predict = channel.unary_unary(
+                '/ssn.mlservice.v2.PurchaseLines/Predict',
                 request_serializer=ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PurchaseLinesRequest.SerializeToString,
                 response_deserializer=ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PurchaseLinesResponse.FromString,
                 _registered_method=True)
@@ -186,7 +186,7 @@ class PurchaseLinesStub(object):
 class PurchaseLinesServicer(object):
     """Missing associated documentation comment in .proto file."""
 
-    def InferPurchaseLines(self, request, context):
+    def Predict(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -195,8 +195,8 @@ class PurchaseLinesServicer(object):
 
 def add_PurchaseLinesServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'InferPurchaseLines': grpc.unary_unary_rpc_method_handler(
-                    servicer.InferPurchaseLines,
+            'Predict': grpc.unary_unary_rpc_method_handler(
+                    servicer.Predict,
                     request_deserializer=ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PurchaseLinesRequest.FromString,
                     response_serializer=ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PurchaseLinesResponse.SerializeToString,
             ),
@@ -212,7 +212,7 @@ class PurchaseLines(object):
     """Missing associated documentation comment in .proto file."""
 
     @staticmethod
-    def InferPurchaseLines(request,
+    def Predict(request,
             target,
             options=(),
             channel_credentials=None,
@@ -225,7 +225,7 @@ class PurchaseLines(object):
         return grpc.experimental.unary_unary(
             request,
             target,
-            '/ssn.mlservice.v2.PurchaseLines/InferPurchaseLines',
+            '/ssn.mlservice.v2.PurchaseLines/Predict',
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PurchaseLinesRequest.SerializeToString,
             ssn_dot_mlservice_dot_v2_dot_mlservice__pb2.PurchaseLinesResponse.FromString,
             options,

@@ -309,10 +309,10 @@ namespace Ssn.Mlservice.V2 {
     static readonly grpc::Marshaller<global::Ssn.Mlservice.V2.PurchaseLinesResponse> __Marshaller_ssn_mlservice_v2_PurchaseLinesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Mlservice.V2.PurchaseLinesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Ssn.Mlservice.V2.PurchaseLinesRequest, global::Ssn.Mlservice.V2.PurchaseLinesResponse> __Method_InferPurchaseLines = new grpc::Method<global::Ssn.Mlservice.V2.PurchaseLinesRequest, global::Ssn.Mlservice.V2.PurchaseLinesResponse>(
+    static readonly grpc::Method<global::Ssn.Mlservice.V2.PurchaseLinesRequest, global::Ssn.Mlservice.V2.PurchaseLinesResponse> __Method_Predict = new grpc::Method<global::Ssn.Mlservice.V2.PurchaseLinesRequest, global::Ssn.Mlservice.V2.PurchaseLinesResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "InferPurchaseLines",
+        "Predict",
         __Marshaller_ssn_mlservice_v2_PurchaseLinesRequest,
         __Marshaller_ssn_mlservice_v2_PurchaseLinesResponse);
 
@@ -327,7 +327,7 @@ namespace Ssn.Mlservice.V2 {
     public abstract partial class PurchaseLinesBase
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Ssn.Mlservice.V2.PurchaseLinesResponse> InferPurchaseLines(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Ssn.Mlservice.V2.PurchaseLinesResponse> Predict(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -362,24 +362,24 @@ namespace Ssn.Mlservice.V2 {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Ssn.Mlservice.V2.PurchaseLinesResponse InferPurchaseLines(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Ssn.Mlservice.V2.PurchaseLinesResponse Predict(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return InferPurchaseLines(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return Predict(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Ssn.Mlservice.V2.PurchaseLinesResponse InferPurchaseLines(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::CallOptions options)
+      public virtual global::Ssn.Mlservice.V2.PurchaseLinesResponse Predict(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.BlockingUnaryCall(__Method_InferPurchaseLines, null, options, request);
+        return CallInvoker.BlockingUnaryCall(__Method_Predict, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Ssn.Mlservice.V2.PurchaseLinesResponse> InferPurchaseLinesAsync(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Mlservice.V2.PurchaseLinesResponse> PredictAsync(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
-        return InferPurchaseLinesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+        return PredictAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Ssn.Mlservice.V2.PurchaseLinesResponse> InferPurchaseLinesAsync(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Ssn.Mlservice.V2.PurchaseLinesResponse> PredictAsync(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::CallOptions options)
       {
-        return CallInvoker.AsyncUnaryCall(__Method_InferPurchaseLines, null, options, request);
+        return CallInvoker.AsyncUnaryCall(__Method_Predict, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -395,7 +395,7 @@ namespace Ssn.Mlservice.V2 {
     public static grpc::ServerServiceDefinition BindService(PurchaseLinesBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_InferPurchaseLines, serviceImpl.InferPurchaseLines).Build();
+          .AddMethod(__Method_Predict, serviceImpl.Predict).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -405,7 +405,7 @@ namespace Ssn.Mlservice.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, PurchaseLinesBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_InferPurchaseLines, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Mlservice.V2.PurchaseLinesRequest, global::Ssn.Mlservice.V2.PurchaseLinesResponse>(serviceImpl.InferPurchaseLines));
+      serviceBinder.AddMethod(__Method_Predict, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Mlservice.V2.PurchaseLinesRequest, global::Ssn.Mlservice.V2.PurchaseLinesResponse>(serviceImpl.Predict));
     }
 
   }

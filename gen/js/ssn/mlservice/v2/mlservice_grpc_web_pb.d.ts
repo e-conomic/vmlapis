@@ -36,7 +36,7 @@ export class PurchaseLinesClient {
                credentials?: null | { [index: string]: string; },
                options?: null | { [index: string]: any; });
 
-  inferPurchaseLines(
+  predict(
     request: ssn_mlservice_v2_mlservice_pb.PurchaseLinesRequest,
     metadata: grpcWeb.Metadata | undefined,
     callback: (err: grpcWeb.RpcError,
@@ -72,7 +72,7 @@ export class PurchaseLinesPromiseClient {
                credentials?: null | { [index: string]: string; },
                options?: null | { [index: string]: any; });
 
-  inferPurchaseLines(
+  predict(
     request: ssn_mlservice_v2_mlservice_pb.PurchaseLinesRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<ssn_mlservice_v2_mlservice_pb.PurchaseLinesResponse>;

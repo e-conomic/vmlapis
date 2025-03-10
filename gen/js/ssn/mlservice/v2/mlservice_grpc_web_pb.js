@@ -327,8 +327,8 @@ proto.ssn.mlservice.v2.PurchaseLinesPromiseClient =
  *   !proto.ssn.mlservice.v2.PurchaseLinesRequest,
  *   !proto.ssn.mlservice.v2.PurchaseLinesResponse>}
  */
-const methodDescriptor_PurchaseLines_InferPurchaseLines = new grpc.web.MethodDescriptor(
-  '/ssn.mlservice.v2.PurchaseLines/InferPurchaseLines',
+const methodDescriptor_PurchaseLines_Predict = new grpc.web.MethodDescriptor(
+  '/ssn.mlservice.v2.PurchaseLines/Predict',
   grpc.web.MethodType.UNARY,
   proto.ssn.mlservice.v2.PurchaseLinesRequest,
   proto.ssn.mlservice.v2.PurchaseLinesResponse,
@@ -353,13 +353,13 @@ const methodDescriptor_PurchaseLines_InferPurchaseLines = new grpc.web.MethodDes
  * @return {!grpc.web.ClientReadableStream<!proto.ssn.mlservice.v2.PurchaseLinesResponse>|undefined}
  *     The XHR Node Readable Stream
  */
-proto.ssn.mlservice.v2.PurchaseLinesClient.prototype.inferPurchaseLines =
+proto.ssn.mlservice.v2.PurchaseLinesClient.prototype.predict =
     function(request, metadata, callback) {
   return this.client_.rpcCall(this.hostname_ +
-      '/ssn.mlservice.v2.PurchaseLines/InferPurchaseLines',
+      '/ssn.mlservice.v2.PurchaseLines/Predict',
       request,
       metadata || {},
-      methodDescriptor_PurchaseLines_InferPurchaseLines,
+      methodDescriptor_PurchaseLines_Predict,
       callback);
 };
 
@@ -372,13 +372,13 @@ proto.ssn.mlservice.v2.PurchaseLinesClient.prototype.inferPurchaseLines =
  * @return {!Promise<!proto.ssn.mlservice.v2.PurchaseLinesResponse>}
  *     Promise that resolves to the response
  */
-proto.ssn.mlservice.v2.PurchaseLinesPromiseClient.prototype.inferPurchaseLines =
+proto.ssn.mlservice.v2.PurchaseLinesPromiseClient.prototype.predict =
     function(request, metadata) {
   return this.client_.unaryCall(this.hostname_ +
-      '/ssn.mlservice.v2.PurchaseLines/InferPurchaseLines',
+      '/ssn.mlservice.v2.PurchaseLines/Predict',
       request,
       metadata || {},
-      methodDescriptor_PurchaseLines_InferPurchaseLines);
+      methodDescriptor_PurchaseLines_Predict);
 };
 
 

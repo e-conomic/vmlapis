@@ -16,34 +16,34 @@ public final class PurchaseLinesGrpc {
 
   // Static method descriptors that strictly reflect the proto.
   private static volatile io.grpc.MethodDescriptor<ai.visma.ssn.mlservice.v2.PurchaseLinesRequest,
-      ai.visma.ssn.mlservice.v2.PurchaseLinesResponse> getInferPurchaseLinesMethod;
+      ai.visma.ssn.mlservice.v2.PurchaseLinesResponse> getPredictMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "InferPurchaseLines",
+      fullMethodName = SERVICE_NAME + '/' + "Predict",
       requestType = ai.visma.ssn.mlservice.v2.PurchaseLinesRequest.class,
       responseType = ai.visma.ssn.mlservice.v2.PurchaseLinesResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
   public static io.grpc.MethodDescriptor<ai.visma.ssn.mlservice.v2.PurchaseLinesRequest,
-      ai.visma.ssn.mlservice.v2.PurchaseLinesResponse> getInferPurchaseLinesMethod() {
-    io.grpc.MethodDescriptor<ai.visma.ssn.mlservice.v2.PurchaseLinesRequest, ai.visma.ssn.mlservice.v2.PurchaseLinesResponse> getInferPurchaseLinesMethod;
-    if ((getInferPurchaseLinesMethod = PurchaseLinesGrpc.getInferPurchaseLinesMethod) == null) {
+      ai.visma.ssn.mlservice.v2.PurchaseLinesResponse> getPredictMethod() {
+    io.grpc.MethodDescriptor<ai.visma.ssn.mlservice.v2.PurchaseLinesRequest, ai.visma.ssn.mlservice.v2.PurchaseLinesResponse> getPredictMethod;
+    if ((getPredictMethod = PurchaseLinesGrpc.getPredictMethod) == null) {
       synchronized (PurchaseLinesGrpc.class) {
-        if ((getInferPurchaseLinesMethod = PurchaseLinesGrpc.getInferPurchaseLinesMethod) == null) {
-          PurchaseLinesGrpc.getInferPurchaseLinesMethod = getInferPurchaseLinesMethod =
+        if ((getPredictMethod = PurchaseLinesGrpc.getPredictMethod) == null) {
+          PurchaseLinesGrpc.getPredictMethod = getPredictMethod =
               io.grpc.MethodDescriptor.<ai.visma.ssn.mlservice.v2.PurchaseLinesRequest, ai.visma.ssn.mlservice.v2.PurchaseLinesResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "InferPurchaseLines"))
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "Predict"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   ai.visma.ssn.mlservice.v2.PurchaseLinesRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
                   ai.visma.ssn.mlservice.v2.PurchaseLinesResponse.getDefaultInstance()))
-              .setSchemaDescriptor(new PurchaseLinesMethodDescriptorSupplier("InferPurchaseLines"))
+              .setSchemaDescriptor(new PurchaseLinesMethodDescriptorSupplier("Predict"))
               .build();
         }
       }
     }
-    return getInferPurchaseLinesMethod;
+    return getPredictMethod;
   }
 
   /**
@@ -111,9 +111,9 @@ public final class PurchaseLinesGrpc {
 
     /**
      */
-    default void inferPurchaseLines(ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request,
+    default void predict(ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.mlservice.v2.PurchaseLinesResponse> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInferPurchaseLinesMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getPredictMethod(), responseObserver);
     }
   }
 
@@ -146,10 +146,10 @@ public final class PurchaseLinesGrpc {
 
     /**
      */
-    public void inferPurchaseLines(ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request,
+    public void predict(ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.mlservice.v2.PurchaseLinesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getInferPurchaseLinesMethod(), getCallOptions()), request, responseObserver);
+          getChannel().newCall(getPredictMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -171,9 +171,9 @@ public final class PurchaseLinesGrpc {
 
     /**
      */
-    public ai.visma.ssn.mlservice.v2.PurchaseLinesResponse inferPurchaseLines(ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request) {
+    public ai.visma.ssn.mlservice.v2.PurchaseLinesResponse predict(ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getInferPurchaseLinesMethod(), getCallOptions(), request);
+          getChannel(), getPredictMethod(), getCallOptions(), request);
     }
   }
 
@@ -195,9 +195,9 @@ public final class PurchaseLinesGrpc {
 
     /**
      */
-    public ai.visma.ssn.mlservice.v2.PurchaseLinesResponse inferPurchaseLines(ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request) {
+    public ai.visma.ssn.mlservice.v2.PurchaseLinesResponse predict(ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getInferPurchaseLinesMethod(), getCallOptions(), request);
+          getChannel(), getPredictMethod(), getCallOptions(), request);
     }
   }
 
@@ -219,14 +219,14 @@ public final class PurchaseLinesGrpc {
 
     /**
      */
-    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.mlservice.v2.PurchaseLinesResponse> inferPurchaseLines(
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.mlservice.v2.PurchaseLinesResponse> predict(
         ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getInferPurchaseLinesMethod(), getCallOptions()), request);
+          getChannel().newCall(getPredictMethod(), getCallOptions()), request);
     }
   }
 
-  private static final int METHODID_INFER_PURCHASE_LINES = 0;
+  private static final int METHODID_PREDICT = 0;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -245,8 +245,8 @@ public final class PurchaseLinesGrpc {
     @java.lang.SuppressWarnings("unchecked")
     public void invoke(Req request, io.grpc.stub.StreamObserver<Resp> responseObserver) {
       switch (methodId) {
-        case METHODID_INFER_PURCHASE_LINES:
-          serviceImpl.inferPurchaseLines((ai.visma.ssn.mlservice.v2.PurchaseLinesRequest) request,
+        case METHODID_PREDICT:
+          serviceImpl.predict((ai.visma.ssn.mlservice.v2.PurchaseLinesRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.mlservice.v2.PurchaseLinesResponse>) responseObserver);
           break;
         default:
@@ -268,12 +268,12 @@ public final class PurchaseLinesGrpc {
   public static final io.grpc.ServerServiceDefinition bindService(AsyncService service) {
     return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
         .addMethod(
-          getInferPurchaseLinesMethod(),
+          getPredictMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               ai.visma.ssn.mlservice.v2.PurchaseLinesRequest,
               ai.visma.ssn.mlservice.v2.PurchaseLinesResponse>(
-                service, METHODID_INFER_PURCHASE_LINES)))
+                service, METHODID_PREDICT)))
         .build();
   }
 
@@ -322,7 +322,7 @@ public final class PurchaseLinesGrpc {
         if (result == null) {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new PurchaseLinesFileDescriptorSupplier())
-              .addMethod(getInferPurchaseLinesMethod())
+              .addMethod(getPredictMethod())
               .build();
         }
       }

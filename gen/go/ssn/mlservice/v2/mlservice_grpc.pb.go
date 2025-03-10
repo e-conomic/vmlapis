@@ -183,14 +183,14 @@ var MlService_ServiceDesc = grpc.ServiceDesc{
 }
 
 const (
-	PurchaseLines_InferPurchaseLines_FullMethodName = "/ssn.mlservice.v2.PurchaseLines/InferPurchaseLines"
+	PurchaseLines_Predict_FullMethodName = "/ssn.mlservice.v2.PurchaseLines/Predict"
 )
 
 // PurchaseLinesClient is the client API for PurchaseLines service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type PurchaseLinesClient interface {
-	InferPurchaseLines(ctx context.Context, in *PurchaseLinesRequest, opts ...grpc.CallOption) (*PurchaseLinesResponse, error)
+	Predict(ctx context.Context, in *PurchaseLinesRequest, opts ...grpc.CallOption) (*PurchaseLinesResponse, error)
 }
 
 type purchaseLinesClient struct {
@@ -201,9 +201,9 @@ func NewPurchaseLinesClient(cc grpc.ClientConnInterface) PurchaseLinesClient {
 	return &purchaseLinesClient{cc}
 }
 
-func (c *purchaseLinesClient) InferPurchaseLines(ctx context.Context, in *PurchaseLinesRequest, opts ...grpc.CallOption) (*PurchaseLinesResponse, error) {
+func (c *purchaseLinesClient) Predict(ctx context.Context, in *PurchaseLinesRequest, opts ...grpc.CallOption) (*PurchaseLinesResponse, error) {
 	out := new(PurchaseLinesResponse)
-	err := c.cc.Invoke(ctx, PurchaseLines_InferPurchaseLines_FullMethodName, in, out, opts...)
+	err := c.cc.Invoke(ctx, PurchaseLines_Predict_FullMethodName, in, out, opts...)
 	if err != nil {
 		return nil, err
 	}
@@ -214,15 +214,15 @@ func (c *purchaseLinesClient) InferPurchaseLines(ctx context.Context, in *Purcha
 // All implementations should embed UnimplementedPurchaseLinesServer
 // for forward compatibility
 type PurchaseLinesServer interface {
-	InferPurchaseLines(context.Context, *PurchaseLinesRequest) (*PurchaseLinesResponse, error)
+	Predict(context.Context, *PurchaseLinesRequest) (*PurchaseLinesResponse, error)
 }
 
 // UnimplementedPurchaseLinesServer should be embedded to have forward compatible implementations.
 type UnimplementedPurchaseLinesServer struct {
 }
 
-func (UnimplementedPurchaseLinesServer) InferPurchaseLines(context.Context, *PurchaseLinesRequest) (*PurchaseLinesResponse, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method InferPurchaseLines not implemented")
+func (UnimplementedPurchaseLinesServer) Predict(context.Context, *PurchaseLinesRequest) (*PurchaseLinesResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Predict not implemented")
 }
 
 // UnsafePurchaseLinesServer may be embedded to opt out of forward compatibility for this service.
@@ -236,20 +236,20 @@ func RegisterPurchaseLinesServer(s grpc.ServiceRegistrar, srv PurchaseLinesServe
 	s.RegisterService(&PurchaseLines_ServiceDesc, srv)
 }
 
-func _PurchaseLines_InferPurchaseLines_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+func _PurchaseLines_Predict_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
 	in := new(PurchaseLinesRequest)
 	if err := dec(in); err != nil {
 		return nil, err
 	}
 	if interceptor == nil {
-		return srv.(PurchaseLinesServer).InferPurchaseLines(ctx, in)
+		return srv.(PurchaseLinesServer).Predict(ctx, in)
 	}
 	info := &grpc.UnaryServerInfo{
 		Server:     srv,
-		FullMethod: PurchaseLines_InferPurchaseLines_FullMethodName,
+		FullMethod: PurchaseLines_Predict_FullMethodName,
 	}
 	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PurchaseLinesServer).InferPurchaseLines(ctx, req.(*PurchaseLinesRequest))
+		return srv.(PurchaseLinesServer).Predict(ctx, req.(*PurchaseLinesRequest))
 	}
 	return interceptor(ctx, in, info, handler)
 }
@@ -262,8 +262,8 @@ var PurchaseLines_ServiceDesc = grpc.ServiceDesc{
 	HandlerType: (*PurchaseLinesServer)(nil),
 	Methods: []grpc.MethodDesc{
 		{
-			MethodName: "InferPurchaseLines",
-			Handler:    _PurchaseLines_InferPurchaseLines_Handler,
+			MethodName: "Predict",
+			Handler:    _PurchaseLines_Predict_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -249,16 +249,15 @@ public final class MlserviceProto {
       "PredictRequest\032!.ssn.mlservice.v2.Predic" +
       "tResponse\022b\n\021FeatureGenPredict\022*.ssn.mls" +
       "ervice.v2.FeatureGenPredictRequest\032!.ssn" +
-      ".mlservice.v2.PredictResponse2v\n\rPurchas" +
-      "eLines\022e\n\022InferPurchaseLines\022&.ssn.mlser" +
-      "vice.v2.PurchaseLinesRequest\032\'.ssn.mlser" +
-      "vice.v2.PurchaseLinesResponseB\315\001\n\031ai.vis" +
-      "ma.ssn.mlservice.v2B\016MlserviceProtoP\001Z>g" +
-      "ithub.com/e-conomic/vmlapis/gen/go/ssn/m" +
-      "lservice/v2;mlservice\242\002\003SMX\252\002\020Ssn.Mlserv" +
-      "ice.V2\312\002\020Ssn\\Mlservice\\V2\342\002\034Ssn\\Mlservic" +
-      "e\\V2\\GPBMetadata\352\002\022Ssn::Mlservice::V2b\006p" +
-      "roto3"
+      ".mlservice.v2.PredictResponse2k\n\rPurchas" +
+      "eLines\022Z\n\007Predict\022&.ssn.mlservice.v2.Pur" +
+      "chaseLinesRequest\032\'.ssn.mlservice.v2.Pur" +
+      "chaseLinesResponseB\315\001\n\031ai.visma.ssn.mlse" +
+      "rvice.v2B\016MlserviceProtoP\001Z>github.com/e" +
+      "-conomic/vmlapis/gen/go/ssn/mlservice/v2" +
+      ";mlservice\242\002\003SMX\252\002\020Ssn.Mlservice.V2\312\002\020Ss" +
+      "n\\Mlservice\\V2\342\002\034Ssn\\Mlservice\\V2\\GPBMet" +
+      "adata\352\002\022Ssn::Mlservice::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
