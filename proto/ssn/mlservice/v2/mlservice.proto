@@ -17,10 +17,6 @@ service MlService {
   rpc FeatureGenPredict(FeatureGenPredictRequest) returns (PredictResponse);
 }
 
-service PurchaseLines {
-  rpc Predict(PurchaseLinesRequest) returns (PurchaseLinesResponse);
-}
-
 message FeatureGenRequest {
   message TruthLabels {
     double total_incl_vat = 1;
