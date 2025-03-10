@@ -266,9 +266,6 @@ namespace Ssn.Mlservice.V2 {
     }
 
   }
-  /// <summary>
-  /// Purchase Lines Service
-  /// </summary>
   public static partial class PurchaseLines
   {
     static readonly string __ServiceName = "ssn.mlservice.v2.PurchaseLines";
@@ -310,10 +307,6 @@ namespace Ssn.Mlservice.V2 {
     static readonly grpc::Marshaller<global::Ssn.Mlservice.V2.PurchaseLinesRequest> __Marshaller_ssn_mlservice_v2_PurchaseLinesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Mlservice.V2.PurchaseLinesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Ssn.Mlservice.V2.PurchaseLinesResponse> __Marshaller_ssn_mlservice_v2_PurchaseLinesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Ssn.Mlservice.V2.PurchaseLinesResponse.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.StringValue> __Marshaller_google_protobuf_StringValue = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.StringValue.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Ssn.Mlservice.V2.PurchaseLinesRequest, global::Ssn.Mlservice.V2.PurchaseLinesResponse> __Method_InferPurchaseLines = new grpc::Method<global::Ssn.Mlservice.V2.PurchaseLinesRequest, global::Ssn.Mlservice.V2.PurchaseLinesResponse>(
@@ -322,14 +315,6 @@ namespace Ssn.Mlservice.V2 {
         "InferPurchaseLines",
         __Marshaller_ssn_mlservice_v2_PurchaseLinesRequest,
         __Marshaller_ssn_mlservice_v2_PurchaseLinesResponse);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::Google.Protobuf.WellKnownTypes.StringValue> __Method_HealthCheck = new grpc::Method<global::Google.Protobuf.WellKnownTypes.Empty, global::Google.Protobuf.WellKnownTypes.StringValue>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "HealthCheck",
-        __Marshaller_google_protobuf_Empty,
-        __Marshaller_google_protobuf_StringValue);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -341,26 +326,8 @@ namespace Ssn.Mlservice.V2 {
     [grpc::BindServiceMethod(typeof(PurchaseLines), "BindService")]
     public abstract partial class PurchaseLinesBase
     {
-      /// <summary>
-      /// Infers purchase lines from document images and text
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Ssn.Mlservice.V2.PurchaseLinesResponse> InferPurchaseLines(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Legacy health check method
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.StringValue> HealthCheck(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -394,101 +361,25 @@ namespace Ssn.Mlservice.V2 {
       {
       }
 
-      /// <summary>
-      /// Infers purchase lines from document images and text
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Mlservice.V2.PurchaseLinesResponse InferPurchaseLines(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return InferPurchaseLines(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      /// <summary>
-      /// Infers purchase lines from document images and text
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::Ssn.Mlservice.V2.PurchaseLinesResponse InferPurchaseLines(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_InferPurchaseLines, null, options, request);
       }
-      /// <summary>
-      /// Infers purchase lines from document images and text
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Mlservice.V2.PurchaseLinesResponse> InferPurchaseLinesAsync(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return InferPurchaseLinesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
-      /// <summary>
-      /// Infers purchase lines from document images and text
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual grpc::AsyncUnaryCall<global::Ssn.Mlservice.V2.PurchaseLinesResponse> InferPurchaseLinesAsync(global::Ssn.Mlservice.V2.PurchaseLinesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_InferPurchaseLines, null, options, request);
-      }
-      /// <summary>
-      /// Legacy health check method
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.StringValue HealthCheck(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return HealthCheck(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Legacy health check method
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Protobuf.WellKnownTypes.StringValue HealthCheck(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_HealthCheck, null, options, request);
-      }
-      /// <summary>
-      /// Legacy health check method
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.StringValue> HealthCheckAsync(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return HealthCheckAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Legacy health check method
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.StringValue> HealthCheckAsync(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_HealthCheck, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -504,8 +395,7 @@ namespace Ssn.Mlservice.V2 {
     public static grpc::ServerServiceDefinition BindService(PurchaseLinesBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_InferPurchaseLines, serviceImpl.InferPurchaseLines)
-          .AddMethod(__Method_HealthCheck, serviceImpl.HealthCheck).Build();
+          .AddMethod(__Method_InferPurchaseLines, serviceImpl.InferPurchaseLines).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -516,7 +406,6 @@ namespace Ssn.Mlservice.V2 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, PurchaseLinesBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_InferPurchaseLines, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Ssn.Mlservice.V2.PurchaseLinesRequest, global::Ssn.Mlservice.V2.PurchaseLinesResponse>(serviceImpl.InferPurchaseLines));
-      serviceBinder.AddMethod(__Method_HealthCheck, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::Google.Protobuf.WellKnownTypes.StringValue>(serviceImpl.HealthCheck));
     }
 
   }

@@ -11,8 +11,6 @@ import (
 	v2 "github.com/e-conomic/vmlapis/gen/go/ssn/mlservice/v2"
 	gomock "github.com/golang/mock/gomock"
 	grpc "google.golang.org/grpc"
-	emptypb "google.golang.org/protobuf/types/known/emptypb"
-	wrapperspb "google.golang.org/protobuf/types/known/wrapperspb"
 )
 
 // MockMlServiceClient is a mock of MlServiceClient interface.
@@ -224,26 +222,6 @@ func (m *MockPurchaseLinesClient) EXPECT() *MockPurchaseLinesClientMockRecorder 
 	return m.recorder
 }
 
-// HealthCheck mocks base method.
-func (m *MockPurchaseLinesClient) HealthCheck(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.StringValue, error) {
-	m.ctrl.T.Helper()
-	varargs := []interface{}{ctx, in}
-	for _, a := range opts {
-		varargs = append(varargs, a)
-	}
-	ret := m.ctrl.Call(m, "HealthCheck", varargs...)
-	ret0, _ := ret[0].(*wrapperspb.StringValue)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// HealthCheck indicates an expected call of HealthCheck.
-func (mr *MockPurchaseLinesClientMockRecorder) HealthCheck(ctx, in interface{}, opts ...interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	varargs := append([]interface{}{ctx, in}, opts...)
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "HealthCheck", reflect.TypeOf((*MockPurchaseLinesClient)(nil).HealthCheck), varargs...)
-}
-
 // InferPurchaseLines mocks base method.
 func (m *MockPurchaseLinesClient) InferPurchaseLines(ctx context.Context, in *v2.PurchaseLinesRequest, opts ...grpc.CallOption) (*v2.PurchaseLinesResponse, error) {
 	m.ctrl.T.Helper()
@@ -285,21 +263,6 @@ func NewMockPurchaseLinesServer(ctrl *gomock.Controller) *MockPurchaseLinesServe
 // EXPECT returns an object that allows the caller to indicate expected use.
 func (m *MockPurchaseLinesServer) EXPECT() *MockPurchaseLinesServerMockRecorder {
 	return m.recorder
-}
-
-// HealthCheck mocks base method.
-func (m *MockPurchaseLinesServer) HealthCheck(arg0 context.Context, arg1 *emptypb.Empty) (*wrapperspb.StringValue, error) {
-	m.ctrl.T.Helper()
-	ret := m.ctrl.Call(m, "HealthCheck", arg0, arg1)
-	ret0, _ := ret[0].(*wrapperspb.StringValue)
-	ret1, _ := ret[1].(error)
-	return ret0, ret1
-}
-
-// HealthCheck indicates an expected call of HealthCheck.
-func (mr *MockPurchaseLinesServerMockRecorder) HealthCheck(arg0, arg1 interface{}) *gomock.Call {
-	mr.mock.ctrl.T.Helper()
-	return mr.mock.ctrl.RecordCallWithMethodType(mr.mock, "HealthCheck", reflect.TypeOf((*MockPurchaseLinesServer)(nil).HealthCheck), arg0, arg1)
 }
 
 // InferPurchaseLines mocks base method.

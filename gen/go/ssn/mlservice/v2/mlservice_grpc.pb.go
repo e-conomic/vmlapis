@@ -11,8 +11,6 @@ import (
 	grpc "google.golang.org/grpc"
 	codes "google.golang.org/grpc/codes"
 	status "google.golang.org/grpc/status"
-	emptypb "google.golang.org/protobuf/types/known/emptypb"
-	wrapperspb "google.golang.org/protobuf/types/known/wrapperspb"
 )
 
 // This is a compile-time assertion to ensure that this generated file
@@ -186,17 +184,13 @@ var MlService_ServiceDesc = grpc.ServiceDesc{
 
 const (
 	PurchaseLines_InferPurchaseLines_FullMethodName = "/ssn.mlservice.v2.PurchaseLines/InferPurchaseLines"
-	PurchaseLines_HealthCheck_FullMethodName        = "/ssn.mlservice.v2.PurchaseLines/HealthCheck"
 )
 
 // PurchaseLinesClient is the client API for PurchaseLines service.
 //
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type PurchaseLinesClient interface {
-	// Infers purchase lines from document images and text
 	InferPurchaseLines(ctx context.Context, in *PurchaseLinesRequest, opts ...grpc.CallOption) (*PurchaseLinesResponse, error)
-	// Legacy health check method
-	HealthCheck(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.StringValue, error)
 }
 
 type purchaseLinesClient struct {
@@ -216,23 +210,11 @@ func (c *purchaseLinesClient) InferPurchaseLines(ctx context.Context, in *Purcha
 	return out, nil
 }
 
-func (c *purchaseLinesClient) HealthCheck(ctx context.Context, in *emptypb.Empty, opts ...grpc.CallOption) (*wrapperspb.StringValue, error) {
-	out := new(wrapperspb.StringValue)
-	err := c.cc.Invoke(ctx, PurchaseLines_HealthCheck_FullMethodName, in, out, opts...)
-	if err != nil {
-		return nil, err
-	}
-	return out, nil
-}
-
 // PurchaseLinesServer is the server API for PurchaseLines service.
 // All implementations should embed UnimplementedPurchaseLinesServer
 // for forward compatibility
 type PurchaseLinesServer interface {
-	// Infers purchase lines from document images and text
 	InferPurchaseLines(context.Context, *PurchaseLinesRequest) (*PurchaseLinesResponse, error)
-	// Legacy health check method
-	HealthCheck(context.Context, *emptypb.Empty) (*wrapperspb.StringValue, error)
 }
 
 // UnimplementedPurchaseLinesServer should be embedded to have forward compatible implementations.
@@ -241,9 +223,6 @@ type UnimplementedPurchaseLinesServer struct {
 
 func (UnimplementedPurchaseLinesServer) InferPurchaseLines(context.Context, *PurchaseLinesRequest) (*PurchaseLinesResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method InferPurchaseLines not implemented")
-}
-func (UnimplementedPurchaseLinesServer) HealthCheck(context.Context, *emptypb.Empty) (*wrapperspb.StringValue, error) {
-	return nil, status.Errorf(codes.Unimplemented, "method HealthCheck not implemented")
 }
 
 // UnsafePurchaseLinesServer may be embedded to opt out of forward compatibility for this service.
@@ -275,24 +254,6 @@ func _PurchaseLines_InferPurchaseLines_Handler(srv interface{}, ctx context.Cont
 	return interceptor(ctx, in, info, handler)
 }
 
-func _PurchaseLines_HealthCheck_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
-	in := new(emptypb.Empty)
-	if err := dec(in); err != nil {
-		return nil, err
-	}
-	if interceptor == nil {
-		return srv.(PurchaseLinesServer).HealthCheck(ctx, in)
-	}
-	info := &grpc.UnaryServerInfo{
-		Server:     srv,
-		FullMethod: PurchaseLines_HealthCheck_FullMethodName,
-	}
-	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
-		return srv.(PurchaseLinesServer).HealthCheck(ctx, req.(*emptypb.Empty))
-	}
-	return interceptor(ctx, in, info, handler)
-}
-
 // PurchaseLines_ServiceDesc is the grpc.ServiceDesc for PurchaseLines service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -303,10 +264,6 @@ var PurchaseLines_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "InferPurchaseLines",
 			Handler:    _PurchaseLines_InferPurchaseLines_Handler,
-		},
-		{
-			MethodName: "HealthCheck",
-			Handler:    _PurchaseLines_HealthCheck_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

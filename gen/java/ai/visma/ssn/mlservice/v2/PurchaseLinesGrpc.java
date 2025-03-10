@@ -3,9 +3,6 @@ package ai.visma.ssn.mlservice.v2;
 import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
- * <pre>
- * Purchase Lines Service
- * </pre>
  */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler (version 1.70.0)",
@@ -47,37 +44,6 @@ public final class PurchaseLinesGrpc {
       }
     }
     return getInferPurchaseLinesMethod;
-  }
-
-  private static volatile io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.google.protobuf.StringValue> getHealthCheckMethod;
-
-  @io.grpc.stub.annotations.RpcMethod(
-      fullMethodName = SERVICE_NAME + '/' + "HealthCheck",
-      requestType = com.google.protobuf.Empty.class,
-      responseType = com.google.protobuf.StringValue.class,
-      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<com.google.protobuf.Empty,
-      com.google.protobuf.StringValue> getHealthCheckMethod() {
-    io.grpc.MethodDescriptor<com.google.protobuf.Empty, com.google.protobuf.StringValue> getHealthCheckMethod;
-    if ((getHealthCheckMethod = PurchaseLinesGrpc.getHealthCheckMethod) == null) {
-      synchronized (PurchaseLinesGrpc.class) {
-        if ((getHealthCheckMethod = PurchaseLinesGrpc.getHealthCheckMethod) == null) {
-          PurchaseLinesGrpc.getHealthCheckMethod = getHealthCheckMethod =
-              io.grpc.MethodDescriptor.<com.google.protobuf.Empty, com.google.protobuf.StringValue>newBuilder()
-              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
-              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "HealthCheck"))
-              .setSampledToLocalTracing(true)
-              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.Empty.getDefaultInstance()))
-              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  com.google.protobuf.StringValue.getDefaultInstance()))
-              .setSchemaDescriptor(new PurchaseLinesMethodDescriptorSupplier("HealthCheck"))
-              .build();
-        }
-      }
-    }
-    return getHealthCheckMethod;
   }
 
   /**
@@ -140,38 +106,19 @@ public final class PurchaseLinesGrpc {
   }
 
   /**
-   * <pre>
-   * Purchase Lines Service
-   * </pre>
    */
   public interface AsyncService {
 
     /**
-     * <pre>
-     * Infers purchase lines from document images and text
-     * </pre>
      */
     default void inferPurchaseLines(ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.mlservice.v2.PurchaseLinesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getInferPurchaseLinesMethod(), responseObserver);
     }
-
-    /**
-     * <pre>
-     * Legacy health check method
-     * </pre>
-     */
-    default void healthCheck(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.StringValue> responseObserver) {
-      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getHealthCheckMethod(), responseObserver);
-    }
   }
 
   /**
    * Base class for the server implementation of the service PurchaseLines.
-   * <pre>
-   * Purchase Lines Service
-   * </pre>
    */
   public static abstract class PurchaseLinesImplBase
       implements io.grpc.BindableService, AsyncService {
@@ -183,9 +130,6 @@ public final class PurchaseLinesGrpc {
 
   /**
    * A stub to allow clients to do asynchronous rpc calls to service PurchaseLines.
-   * <pre>
-   * Purchase Lines Service
-   * </pre>
    */
   public static final class PurchaseLinesStub
       extends io.grpc.stub.AbstractAsyncStub<PurchaseLinesStub> {
@@ -201,33 +145,16 @@ public final class PurchaseLinesGrpc {
     }
 
     /**
-     * <pre>
-     * Infers purchase lines from document images and text
-     * </pre>
      */
     public void inferPurchaseLines(ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request,
         io.grpc.stub.StreamObserver<ai.visma.ssn.mlservice.v2.PurchaseLinesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getInferPurchaseLinesMethod(), getCallOptions()), request, responseObserver);
     }
-
-    /**
-     * <pre>
-     * Legacy health check method
-     * </pre>
-     */
-    public void healthCheck(com.google.protobuf.Empty request,
-        io.grpc.stub.StreamObserver<com.google.protobuf.StringValue> responseObserver) {
-      io.grpc.stub.ClientCalls.asyncUnaryCall(
-          getChannel().newCall(getHealthCheckMethod(), getCallOptions()), request, responseObserver);
-    }
   }
 
   /**
    * A stub to allow clients to do synchronous rpc calls to service PurchaseLines.
-   * <pre>
-   * Purchase Lines Service
-   * </pre>
    */
   public static final class PurchaseLinesBlockingV2Stub
       extends io.grpc.stub.AbstractBlockingStub<PurchaseLinesBlockingV2Stub> {
@@ -243,31 +170,15 @@ public final class PurchaseLinesGrpc {
     }
 
     /**
-     * <pre>
-     * Infers purchase lines from document images and text
-     * </pre>
      */
     public ai.visma.ssn.mlservice.v2.PurchaseLinesResponse inferPurchaseLines(ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getInferPurchaseLinesMethod(), getCallOptions(), request);
     }
-
-    /**
-     * <pre>
-     * Legacy health check method
-     * </pre>
-     */
-    public com.google.protobuf.StringValue healthCheck(com.google.protobuf.Empty request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getHealthCheckMethod(), getCallOptions(), request);
-    }
   }
 
   /**
    * A stub to allow clients to do limited synchronous rpc calls to service PurchaseLines.
-   * <pre>
-   * Purchase Lines Service
-   * </pre>
    */
   public static final class PurchaseLinesBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<PurchaseLinesBlockingStub> {
@@ -283,31 +194,15 @@ public final class PurchaseLinesGrpc {
     }
 
     /**
-     * <pre>
-     * Infers purchase lines from document images and text
-     * </pre>
      */
     public ai.visma.ssn.mlservice.v2.PurchaseLinesResponse inferPurchaseLines(ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getInferPurchaseLinesMethod(), getCallOptions(), request);
     }
-
-    /**
-     * <pre>
-     * Legacy health check method
-     * </pre>
-     */
-    public com.google.protobuf.StringValue healthCheck(com.google.protobuf.Empty request) {
-      return io.grpc.stub.ClientCalls.blockingUnaryCall(
-          getChannel(), getHealthCheckMethod(), getCallOptions(), request);
-    }
   }
 
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service PurchaseLines.
-   * <pre>
-   * Purchase Lines Service
-   * </pre>
    */
   public static final class PurchaseLinesFutureStub
       extends io.grpc.stub.AbstractFutureStub<PurchaseLinesFutureStub> {
@@ -323,30 +218,15 @@ public final class PurchaseLinesGrpc {
     }
 
     /**
-     * <pre>
-     * Infers purchase lines from document images and text
-     * </pre>
      */
     public com.google.common.util.concurrent.ListenableFuture<ai.visma.ssn.mlservice.v2.PurchaseLinesResponse> inferPurchaseLines(
         ai.visma.ssn.mlservice.v2.PurchaseLinesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getInferPurchaseLinesMethod(), getCallOptions()), request);
     }
-
-    /**
-     * <pre>
-     * Legacy health check method
-     * </pre>
-     */
-    public com.google.common.util.concurrent.ListenableFuture<com.google.protobuf.StringValue> healthCheck(
-        com.google.protobuf.Empty request) {
-      return io.grpc.stub.ClientCalls.futureUnaryCall(
-          getChannel().newCall(getHealthCheckMethod(), getCallOptions()), request);
-    }
   }
 
   private static final int METHODID_INFER_PURCHASE_LINES = 0;
-  private static final int METHODID_HEALTH_CHECK = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -368,10 +248,6 @@ public final class PurchaseLinesGrpc {
         case METHODID_INFER_PURCHASE_LINES:
           serviceImpl.inferPurchaseLines((ai.visma.ssn.mlservice.v2.PurchaseLinesRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.ssn.mlservice.v2.PurchaseLinesResponse>) responseObserver);
-          break;
-        case METHODID_HEALTH_CHECK:
-          serviceImpl.healthCheck((com.google.protobuf.Empty) request,
-              (io.grpc.stub.StreamObserver<com.google.protobuf.StringValue>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -398,13 +274,6 @@ public final class PurchaseLinesGrpc {
               ai.visma.ssn.mlservice.v2.PurchaseLinesRequest,
               ai.visma.ssn.mlservice.v2.PurchaseLinesResponse>(
                 service, METHODID_INFER_PURCHASE_LINES)))
-        .addMethod(
-          getHealthCheckMethod(),
-          io.grpc.stub.ServerCalls.asyncUnaryCall(
-            new MethodHandlers<
-              com.google.protobuf.Empty,
-              com.google.protobuf.StringValue>(
-                service, METHODID_HEALTH_CHECK)))
         .build();
   }
 
@@ -454,7 +323,6 @@ public final class PurchaseLinesGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new PurchaseLinesFileDescriptorSupplier())
               .addMethod(getInferPurchaseLinesMethod())
-              .addMethod(getHealthCheckMethod())
               .build();
         }
       }
