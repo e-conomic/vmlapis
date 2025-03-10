@@ -20,7 +20,7 @@ service MlService {
 }
 
 service PurchaseLines {
-  rpc InferPurchaseLines(PurchaseLinesRequest) returns (PurchaseLinesResponse);
+  rpc Predict(PurchaseLinesRequest) returns (PurchaseLinesResponse);
 }
 
 message FeatureGenRequest {
