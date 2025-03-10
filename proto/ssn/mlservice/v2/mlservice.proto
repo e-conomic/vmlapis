@@ -2,8 +2,6 @@ syntax = "proto3";
 
 package ssn.mlservice.v2;
 
-import "google/protobuf/empty.proto";
-import "google/protobuf/wrappers.proto";
 import "google/type/date.proto";
 import "ssn/type/candidate.proto";
 import "ssn/type/text_annotation.proto";
