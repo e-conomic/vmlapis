@@ -19,12 +19,8 @@ service MlService {
   rpc FeatureGenPredict(FeatureGenPredictRequest) returns (PredictResponse);
 }
 
-// Purchase Lines Service
 service PurchaseLines {
-  // Infers purchase lines from document images and text
   rpc InferPurchaseLines(PurchaseLinesRequest) returns (PurchaseLinesResponse);
-  // Legacy health check method
-  rpc HealthCheck(google.protobuf.Empty) returns (google.protobuf.StringValue);
 }
 
 message FeatureGenRequest {
