@@ -248,15 +248,12 @@ public final class MlserviceProto {
       "mlservice.v2.PredictResponse\022b\n\021FeatureG" +
       "enPredict\022*.ssn.mlservice.v2.FeatureGenP" +
       "redictRequest\032!.ssn.mlservice.v2.Predict" +
-      "Response2k\n\rPurchaseLines\022Z\n\007Predict\022&.s" +
-      "sn.mlservice.v2.PurchaseLinesRequest\032\'.s" +
-      "sn.mlservice.v2.PurchaseLinesResponseB\315\001" +
-      "\n\031ai.visma.ssn.mlservice.v2B\016MlservicePr" +
-      "otoP\001Z>github.com/e-conomic/vmlapis/gen/" +
-      "go/ssn/mlservice/v2;mlservice\242\002\003SMX\252\002\020Ss" +
-      "n.Mlservice.V2\312\002\020Ssn\\Mlservice\\V2\342\002\034Ssn\\" +
-      "Mlservice\\V2\\GPBMetadata\352\002\022Ssn::Mlservic" +
-      "e::V2b\006proto3"
+      "ResponseB\315\001\n\031ai.visma.ssn.mlservice.v2B\016" +
+      "MlserviceProtoP\001Z>github.com/e-conomic/v" +
+      "mlapis/gen/go/ssn/mlservice/v2;mlservice" +
+      "\242\002\003SMX\252\002\020Ssn.Mlservice.V2\312\002\020Ssn\\Mlservic" +
+      "e\\V2\342\002\034Ssn\\Mlservice\\V2\\GPBMetadata\352\002\022Ss" +
+      "n::Mlservice::V2b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

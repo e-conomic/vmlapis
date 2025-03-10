@@ -161,14 +161,11 @@ namespace Ssn.Mlservice.V2 {
             "ZXN0GiEuc3NuLm1sc2VydmljZS52Mi5QcmVkaWN0UmVzcG9uc2USYgoRRmVh",
             "dHVyZUdlblByZWRpY3QSKi5zc24ubWxzZXJ2aWNlLnYyLkZlYXR1cmVHZW5Q",
             "cmVkaWN0UmVxdWVzdBohLnNzbi5tbHNlcnZpY2UudjIuUHJlZGljdFJlc3Bv",
-            "bnNlMmsKDVB1cmNoYXNlTGluZXMSWgoHUHJlZGljdBImLnNzbi5tbHNlcnZp",
-            "Y2UudjIuUHVyY2hhc2VMaW5lc1JlcXVlc3QaJy5zc24ubWxzZXJ2aWNlLnYy",
-            "LlB1cmNoYXNlTGluZXNSZXNwb25zZULNAQoZYWkudmlzbWEuc3NuLm1sc2Vy",
-            "dmljZS52MkIOTWxzZXJ2aWNlUHJvdG9QAVo+Z2l0aHViLmNvbS9lLWNvbm9t",
-            "aWMvdm1sYXBpcy9nZW4vZ28vc3NuL21sc2VydmljZS92MjttbHNlcnZpY2Wi",
-            "AgNTTViqAhBTc24uTWxzZXJ2aWNlLlYyygIQU3NuXE1sc2VydmljZVxWMuIC",
-            "HFNzblxNbHNlcnZpY2VcVjJcR1BCTWV0YWRhdGHqAhJTc246Ok1sc2Vydmlj",
-            "ZTo6VjJiBnByb3RvMw=="));
+            "bnNlQs0BChlhaS52aXNtYS5zc24ubWxzZXJ2aWNlLnYyQg5NbHNlcnZpY2VQ",
+            "cm90b1ABWj5naXRodWIuY29tL2UtY29ub21pYy92bWxhcGlzL2dlbi9nby9z",
+            "c24vbWxzZXJ2aWNlL3YyO21sc2VydmljZaICA1NNWKoCEFNzbi5NbHNlcnZp",
+            "Y2UuVjLKAhBTc25cTWxzZXJ2aWNlXFYy4gIcU3NuXE1sc2VydmljZVxWMlxH",
+            "UEJNZXRhZGF0YeoCElNzbjo6TWxzZXJ2aWNlOjpWMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Type.DateReflection.Descriptor, global::Ssn.Type.CandidateReflection.Descriptor, global::Ssn.Type.TextAnnotationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

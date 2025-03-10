@@ -31,20 +31,6 @@ export class MlServiceClient {
 
 }
 
-export class PurchaseLinesClient {
-  constructor (hostname: string,
-               credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: any; });
-
-  predict(
-    request: ssn_mlservice_v2_mlservice_pb.PurchaseLinesRequest,
-    metadata: grpcWeb.Metadata | undefined,
-    callback: (err: grpcWeb.RpcError,
-               response: ssn_mlservice_v2_mlservice_pb.PurchaseLinesResponse) => void
-  ): grpcWeb.ClientReadableStream<ssn_mlservice_v2_mlservice_pb.PurchaseLinesResponse>;
-
-}
-
 export class MlServicePromiseClient {
   constructor (hostname: string,
                credentials?: null | { [index: string]: string; },
@@ -64,18 +50,6 @@ export class MlServicePromiseClient {
     request: ssn_mlservice_v2_mlservice_pb.FeatureGenPredictRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<ssn_mlservice_v2_mlservice_pb.PredictResponse>;
-
-}
-
-export class PurchaseLinesPromiseClient {
-  constructor (hostname: string,
-               credentials?: null | { [index: string]: string; },
-               options?: null | { [index: string]: any; });
-
-  predict(
-    request: ssn_mlservice_v2_mlservice_pb.PurchaseLinesRequest,
-    metadata?: grpcWeb.Metadata
-  ): Promise<ssn_mlservice_v2_mlservice_pb.PurchaseLinesResponse>;
 
 }
 
