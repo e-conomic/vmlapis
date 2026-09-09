@@ -22,14 +22,6 @@ public enum SourceKind
    * <code>SOURCE_KIND_DERIVED = 2;</code>
    */
   SOURCE_KIND_DERIVED(2),
-  /**
-   * <code>SOURCE_KIND_LOOKUP = 3;</code>
-   */
-  SOURCE_KIND_LOOKUP(3),
-  /**
-   * <code>SOURCE_KIND_INFERRED = 4;</code>
-   */
-  SOURCE_KIND_INFERRED(4),
   UNRECOGNIZED(-1),
   ;
 
@@ -54,14 +46,6 @@ public enum SourceKind
    * <code>SOURCE_KIND_DERIVED = 2;</code>
    */
   public static final int SOURCE_KIND_DERIVED_VALUE = 2;
-  /**
-   * <code>SOURCE_KIND_LOOKUP = 3;</code>
-   */
-  public static final int SOURCE_KIND_LOOKUP_VALUE = 3;
-  /**
-   * <code>SOURCE_KIND_INFERRED = 4;</code>
-   */
-  public static final int SOURCE_KIND_INFERRED_VALUE = 4;
 
 
   public final int getNumber() {
@@ -91,8 +75,6 @@ public enum SourceKind
       case 0: return SOURCE_KIND_UNSPECIFIED;
       case 1: return SOURCE_KIND_CASE;
       case 2: return SOURCE_KIND_DERIVED;
-      case 3: return SOURCE_KIND_LOOKUP;
-      case 4: return SOURCE_KIND_INFERRED;
       default: return null;
     }
   }

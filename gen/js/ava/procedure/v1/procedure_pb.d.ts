@@ -3,15 +3,15 @@ import * as jspb from 'google-protobuf'
 
 
 export class Procedure extends jspb.Message {
-  getInputs(): InputContract | undefined;
-  setInputs(value?: InputContract): Procedure;
-  hasInputs(): boolean;
-  clearInputs(): Procedure;
+  getFactsList(): Array<Fact>;
+  setFactsList(value: Array<Fact>): Procedure;
+  clearFactsList(): Procedure;
+  addFacts(value?: Fact, index?: number): Fact;
 
-  getOutputs(): OutputContract | undefined;
-  setOutputs(value?: OutputContract): Procedure;
-  hasOutputs(): boolean;
-  clearOutputs(): Procedure;
+  getProducesList(): Array<string>;
+  setProducesList(value: Array<string>): Procedure;
+  clearProducesList(): Procedure;
+  addProduces(value: string, index?: number): Procedure;
 
   getRootStepId(): string;
   setRootStepId(value: string): Procedure;
@@ -31,68 +31,54 @@ export class Procedure extends jspb.Message {
 
 export namespace Procedure {
   export type AsObject = {
-    inputs?: InputContract.AsObject,
-    outputs?: OutputContract.AsObject,
+    factsList: Array<Fact.AsObject>,
+    producesList: Array<string>,
     rootStepId: string,
     stepsList: Array<Step.AsObject>,
   }
 }
 
-export class InputContract extends jspb.Message {
-  getFactsList(): Array<FactBinding>;
-  setFactsList(value: Array<FactBinding>): InputContract;
-  clearFactsList(): InputContract;
-  addFacts(value?: FactBinding, index?: number): FactBinding;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): InputContract.AsObject;
-  static toObject(includeInstance: boolean, msg: InputContract): InputContract.AsObject;
-  static serializeBinaryToWriter(message: InputContract, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): InputContract;
-  static deserializeBinaryFromReader(message: InputContract, reader: jspb.BinaryReader): InputContract;
-}
-
-export namespace InputContract {
-  export type AsObject = {
-    factsList: Array<FactBinding.AsObject>,
-  }
-}
-
-export class FactBinding extends jspb.Message {
-  getFactName(): string;
-  setFactName(value: string): FactBinding;
+export class Fact extends jspb.Message {
+  getName(): string;
+  setName(value: string): Fact;
 
   getType(): FactType;
-  setType(value: FactType): FactBinding;
+  setType(value: FactType): Fact;
+
+  getPermittedList(): Array<string>;
+  setPermittedList(value: Array<string>): Fact;
+  clearPermittedList(): Fact;
+  addPermitted(value: string, index?: number): Fact;
 
   getSourcesList(): Array<FactSource>;
-  setSourcesList(value: Array<FactSource>): FactBinding;
-  clearSourcesList(): FactBinding;
+  setSourcesList(value: Array<FactSource>): Fact;
+  clearSourcesList(): Fact;
   addSources(value?: FactSource, index?: number): FactSource;
 
-  getValuesList(): Array<string>;
-  setValuesList(value: Array<string>): FactBinding;
-  clearValuesList(): FactBinding;
-  addValues(value: string, index?: number): FactBinding;
-
   serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): FactBinding.AsObject;
-  static toObject(includeInstance: boolean, msg: FactBinding): FactBinding.AsObject;
-  static serializeBinaryToWriter(message: FactBinding, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): FactBinding;
-  static deserializeBinaryFromReader(message: FactBinding, reader: jspb.BinaryReader): FactBinding;
+  toObject(includeInstance?: boolean): Fact.AsObject;
+  static toObject(includeInstance: boolean, msg: Fact): Fact.AsObject;
+  static serializeBinaryToWriter(message: Fact, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): Fact;
+  static deserializeBinaryFromReader(message: Fact, reader: jspb.BinaryReader): Fact;
 }
 
-export namespace FactBinding {
+export namespace Fact {
   export type AsObject = {
-    factName: string,
+    name: string,
     type: FactType,
+    permittedList: Array<string>,
     sourcesList: Array<FactSource.AsObject>,
-    valuesList: Array<string>,
   }
 }
 
 export class FactSource extends jspb.Message {
+  getKind(): SourceKind;
+  setKind(value: SourceKind): FactSource;
+
+  getName(): string;
+  setName(value: string): FactSource;
+
   getField(): string;
   setField(value: string): FactSource;
 
@@ -100,15 +86,6 @@ export class FactSource extends jspb.Message {
   setArgsList(value: Array<string>): FactSource;
   clearArgsList(): FactSource;
   addArgs(value: string, index?: number): FactSource;
-
-  getKind(): SourceKind;
-  setKind(value: SourceKind): FactSource;
-
-  getName(): string;
-  setName(value: string): FactSource;
-
-  getGroup(): string;
-  setGroup(value: string): FactSource;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FactSource.AsObject;
@@ -120,31 +97,10 @@ export class FactSource extends jspb.Message {
 
 export namespace FactSource {
   export type AsObject = {
-    field: string,
-    argsList: Array<string>,
     kind: SourceKind,
     name: string,
-    group: string,
-  }
-}
-
-export class OutputContract extends jspb.Message {
-  getProducesList(): Array<string>;
-  setProducesList(value: Array<string>): OutputContract;
-  clearProducesList(): OutputContract;
-  addProduces(value: string, index?: number): OutputContract;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): OutputContract.AsObject;
-  static toObject(includeInstance: boolean, msg: OutputContract): OutputContract.AsObject;
-  static serializeBinaryToWriter(message: OutputContract, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): OutputContract;
-  static deserializeBinaryFromReader(message: OutputContract, reader: jspb.BinaryReader): OutputContract;
-}
-
-export namespace OutputContract {
-  export type AsObject = {
-    producesList: Array<string>,
+    field: string,
+    argsList: Array<string>,
   }
 }
 
@@ -161,18 +117,18 @@ export class Step extends jspb.Message {
   getGuidance(): string;
   setGuidance(value: string): Step;
 
-  getJudgment(): Judgment | undefined;
-  setJudgment(value?: Judgment): Step;
-  hasJudgment(): boolean;
-  clearJudgment(): Step;
-
   getBranchesList(): Array<Branch>;
   setBranchesList(value: Array<Branch>): Step;
   clearBranchesList(): Step;
   addBranches(value?: Branch, index?: number): Branch;
 
-  getOrigin(): Origin;
-  setOrigin(value: Origin): Step;
+  getPromptRef(): string;
+  setPromptRef(value: string): Step;
+
+  getReadsList(): Array<string>;
+  setReadsList(value: Array<string>): Step;
+  clearReadsList(): Step;
+  addReads(value: string, index?: number): Step;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Step.AsObject;
@@ -188,36 +144,8 @@ export namespace Step {
     kind: StepKind,
     question: string,
     guidance: string,
-    judgment?: Judgment.AsObject,
     branchesList: Array<Branch.AsObject>,
-    origin: Origin,
-  }
-}
-
-export class Judgment extends jspb.Message {
-  getPromptRef(): string;
-  setPromptRef(value: string): Judgment;
-
-  getRequiresSpan(): boolean;
-  setRequiresSpan(value: boolean): Judgment;
-
-  getReadsList(): Array<string>;
-  setReadsList(value: Array<string>): Judgment;
-  clearReadsList(): Judgment;
-  addReads(value: string, index?: number): Judgment;
-
-  serializeBinary(): Uint8Array;
-  toObject(includeInstance?: boolean): Judgment.AsObject;
-  static toObject(includeInstance: boolean, msg: Judgment): Judgment.AsObject;
-  static serializeBinaryToWriter(message: Judgment, writer: jspb.BinaryWriter): void;
-  static deserializeBinary(bytes: Uint8Array): Judgment;
-  static deserializeBinaryFromReader(message: Judgment, reader: jspb.BinaryReader): Judgment;
-}
-
-export namespace Judgment {
-  export type AsObject = {
     promptRef: string,
-    requiresSpan: boolean,
     readsList: Array<string>,
   }
 }
@@ -272,25 +200,18 @@ export enum SourceKind {
   SOURCE_KIND_UNSPECIFIED = 0,
   SOURCE_KIND_CASE = 1,
   SOURCE_KIND_DERIVED = 2,
-  SOURCE_KIND_LOOKUP = 3,
-  SOURCE_KIND_INFERRED = 4,
 }
 export enum FactType { 
   FACT_TYPE_UNSPECIFIED = 0,
   FACT_TYPE_STRING = 1,
+  FACT_TYPE_FLOAT = 2,
   FACT_TYPE_DATE = 3,
   FACT_TYPE_BOOL = 4,
   FACT_TYPE_INT = 5,
-  FACT_TYPE_FLOAT = 6,
-  FACT_TYPE_ENUM = 7,
+  FACT_TYPE_ENUM = 6,
 }
 export enum StepKind { 
   STEP_KIND_UNSPECIFIED = 0,
   STEP_KIND_TEST = 1,
   STEP_KIND_JUDGMENT = 2,
-}
-export enum Origin { 
-  ORIGIN_UNSPECIFIED = 0,
-  ORIGIN_MINED = 1,
-  ORIGIN_HUMAN = 2,
 }

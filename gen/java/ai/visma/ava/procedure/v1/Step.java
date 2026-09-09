@@ -32,7 +32,9 @@ private static final long serialVersionUID = 0L;
     question_ = "";
     guidance_ = "";
     branches_ = java.util.Collections.emptyList();
-    origin_ = 0;
+    promptRef_ = "";
+    reads_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -48,7 +50,6 @@ private static final long serialVersionUID = 0L;
             ai.visma.ava.procedure.v1.Step.class, ai.visma.ava.procedure.v1.Step.Builder.class);
   }
 
-  private int bitField0_;
   public static final int STEP_ID_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object stepId_ = "";
@@ -184,44 +185,18 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int JUDGMENT_FIELD_NUMBER = 5;
-  private ai.visma.ava.procedure.v1.Judgment judgment_;
-  /**
-   * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
-   * @return Whether the judgment field is set.
-   */
-  @java.lang.Override
-  public boolean hasJudgment() {
-    return ((bitField0_ & 0x00000001) != 0);
-  }
-  /**
-   * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
-   * @return The judgment.
-   */
-  @java.lang.Override
-  public ai.visma.ava.procedure.v1.Judgment getJudgment() {
-    return judgment_ == null ? ai.visma.ava.procedure.v1.Judgment.getDefaultInstance() : judgment_;
-  }
-  /**
-   * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
-   */
-  @java.lang.Override
-  public ai.visma.ava.procedure.v1.JudgmentOrBuilder getJudgmentOrBuilder() {
-    return judgment_ == null ? ai.visma.ava.procedure.v1.Judgment.getDefaultInstance() : judgment_;
-  }
-
-  public static final int BRANCHES_FIELD_NUMBER = 6;
+  public static final int BRANCHES_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ava.procedure.v1.Branch> branches_;
   /**
-   * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+   * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
    */
   @java.lang.Override
   public java.util.List<ai.visma.ava.procedure.v1.Branch> getBranchesList() {
     return branches_;
   }
   /**
-   * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+   * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ava.procedure.v1.BranchOrBuilder> 
@@ -229,21 +204,21 @@ private static final long serialVersionUID = 0L;
     return branches_;
   }
   /**
-   * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+   * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
    */
   @java.lang.Override
   public int getBranchesCount() {
     return branches_.size();
   }
   /**
-   * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+   * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
    */
   @java.lang.Override
   public ai.visma.ava.procedure.v1.Branch getBranches(int index) {
     return branches_.get(index);
   }
   /**
-   * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+   * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
    */
   @java.lang.Override
   public ai.visma.ava.procedure.v1.BranchOrBuilder getBranchesOrBuilder(
@@ -251,22 +226,80 @@ private static final long serialVersionUID = 0L;
     return branches_.get(index);
   }
 
-  public static final int ORIGIN_FIELD_NUMBER = 7;
-  private int origin_ = 0;
+  public static final int PROMPT_REF_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object promptRef_ = "";
   /**
-   * <code>.ava.procedure.v1.Origin origin = 7 [json_name = "origin"];</code>
-   * @return The enum numeric value on the wire for origin.
+   * <code>string prompt_ref = 6 [json_name = "promptRef"];</code>
+   * @return The promptRef.
    */
-  @java.lang.Override public int getOriginValue() {
-    return origin_;
+  @java.lang.Override
+  public java.lang.String getPromptRef() {
+    java.lang.Object ref = promptRef_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      promptRef_ = s;
+      return s;
+    }
   }
   /**
-   * <code>.ava.procedure.v1.Origin origin = 7 [json_name = "origin"];</code>
-   * @return The origin.
+   * <code>string prompt_ref = 6 [json_name = "promptRef"];</code>
+   * @return The bytes for promptRef.
    */
-  @java.lang.Override public ai.visma.ava.procedure.v1.Origin getOrigin() {
-    ai.visma.ava.procedure.v1.Origin result = ai.visma.ava.procedure.v1.Origin.forNumber(origin_);
-    return result == null ? ai.visma.ava.procedure.v1.Origin.UNRECOGNIZED : result;
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPromptRefBytes() {
+    java.lang.Object ref = promptRef_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      promptRef_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int READS_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList reads_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string reads = 7 [json_name = "reads"];</code>
+   * @return A list containing the reads.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getReadsList() {
+    return reads_;
+  }
+  /**
+   * <code>repeated string reads = 7 [json_name = "reads"];</code>
+   * @return The count of reads.
+   */
+  public int getReadsCount() {
+    return reads_.size();
+  }
+  /**
+   * <code>repeated string reads = 7 [json_name = "reads"];</code>
+   * @param index The index of the element to return.
+   * @return The reads at the given index.
+   */
+  public java.lang.String getReads(int index) {
+    return reads_.get(index);
+  }
+  /**
+   * <code>repeated string reads = 7 [json_name = "reads"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the reads at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getReadsBytes(int index) {
+    return reads_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -295,14 +328,14 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(guidance_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 4, guidance_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(5, getJudgment());
-    }
     for (int i = 0; i < branches_.size(); i++) {
-      output.writeMessage(6, branches_.get(i));
+      output.writeMessage(5, branches_.get(i));
     }
-    if (origin_ != ai.visma.ava.procedure.v1.Origin.ORIGIN_UNSPECIFIED.getNumber()) {
-      output.writeEnum(7, origin_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(promptRef_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 6, promptRef_);
+    }
+    for (int i = 0; i < reads_.size(); i++) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 7, reads_.getRaw(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -326,17 +359,20 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(guidance_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(4, guidance_);
     }
-    if (((bitField0_ & 0x00000001) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, getJudgment());
-    }
     for (int i = 0; i < branches_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(6, branches_.get(i));
+        .computeMessageSize(5, branches_.get(i));
     }
-    if (origin_ != ai.visma.ava.procedure.v1.Origin.ORIGIN_UNSPECIFIED.getNumber()) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeEnumSize(7, origin_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(promptRef_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(6, promptRef_);
+    }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < reads_.size(); i++) {
+        dataSize += computeStringSizeNoTag(reads_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getReadsList().size();
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -360,14 +396,12 @@ private static final long serialVersionUID = 0L;
         .equals(other.getQuestion())) return false;
     if (!getGuidance()
         .equals(other.getGuidance())) return false;
-    if (hasJudgment() != other.hasJudgment()) return false;
-    if (hasJudgment()) {
-      if (!getJudgment()
-          .equals(other.getJudgment())) return false;
-    }
     if (!getBranchesList()
         .equals(other.getBranchesList())) return false;
-    if (origin_ != other.origin_) return false;
+    if (!getPromptRef()
+        .equals(other.getPromptRef())) return false;
+    if (!getReadsList()
+        .equals(other.getReadsList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -387,16 +421,16 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getQuestion().hashCode();
     hash = (37 * hash) + GUIDANCE_FIELD_NUMBER;
     hash = (53 * hash) + getGuidance().hashCode();
-    if (hasJudgment()) {
-      hash = (37 * hash) + JUDGMENT_FIELD_NUMBER;
-      hash = (53 * hash) + getJudgment().hashCode();
-    }
     if (getBranchesCount() > 0) {
       hash = (37 * hash) + BRANCHES_FIELD_NUMBER;
       hash = (53 * hash) + getBranchesList().hashCode();
     }
-    hash = (37 * hash) + ORIGIN_FIELD_NUMBER;
-    hash = (53 * hash) + origin_;
+    hash = (37 * hash) + PROMPT_REF_FIELD_NUMBER;
+    hash = (53 * hash) + getPromptRef().hashCode();
+    if (getReadsCount() > 0) {
+      hash = (37 * hash) + READS_FIELD_NUMBER;
+      hash = (53 * hash) + getReadsList().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -516,20 +550,13 @@ private static final long serialVersionUID = 0L;
 
     // Construct using ai.visma.ava.procedure.v1.Step.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage
-              .alwaysUseFieldBuilders) {
-        getJudgmentFieldBuilder();
-        getBranchesFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
@@ -539,19 +566,16 @@ private static final long serialVersionUID = 0L;
       kind_ = 0;
       question_ = "";
       guidance_ = "";
-      judgment_ = null;
-      if (judgmentBuilder_ != null) {
-        judgmentBuilder_.dispose();
-        judgmentBuilder_ = null;
-      }
       if (branchesBuilder_ == null) {
         branches_ = java.util.Collections.emptyList();
       } else {
         branches_ = null;
         branchesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000020);
-      origin_ = 0;
+      bitField0_ = (bitField0_ & ~0x00000010);
+      promptRef_ = "";
+      reads_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       return this;
     }
 
@@ -586,9 +610,9 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartialRepeatedFields(ai.visma.ava.procedure.v1.Step result) {
       if (branchesBuilder_ == null) {
-        if (((bitField0_ & 0x00000020) != 0)) {
+        if (((bitField0_ & 0x00000010) != 0)) {
           branches_ = java.util.Collections.unmodifiableList(branches_);
-          bitField0_ = (bitField0_ & ~0x00000020);
+          bitField0_ = (bitField0_ & ~0x00000010);
         }
         result.branches_ = branches_;
       } else {
@@ -610,17 +634,13 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000008) != 0)) {
         result.guidance_ = guidance_;
       }
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.judgment_ = judgmentBuilder_ == null
-            ? judgment_
-            : judgmentBuilder_.build();
-        to_bitField0_ |= 0x00000001;
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.promptRef_ = promptRef_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
-        result.origin_ = origin_;
+        reads_.makeImmutable();
+        result.reads_ = reads_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -653,14 +673,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      if (other.hasJudgment()) {
-        mergeJudgment(other.getJudgment());
-      }
       if (branchesBuilder_ == null) {
         if (!other.branches_.isEmpty()) {
           if (branches_.isEmpty()) {
             branches_ = other.branches_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000010);
           } else {
             ensureBranchesIsMutable();
             branches_.addAll(other.branches_);
@@ -673,7 +690,7 @@ private static final long serialVersionUID = 0L;
             branchesBuilder_.dispose();
             branchesBuilder_ = null;
             branches_ = other.branches_;
-            bitField0_ = (bitField0_ & ~0x00000020);
+            bitField0_ = (bitField0_ & ~0x00000010);
             branchesBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                  getBranchesFieldBuilder() : null;
@@ -682,8 +699,20 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (other.origin_ != 0) {
-        setOriginValue(other.getOriginValue());
+      if (!other.getPromptRef().isEmpty()) {
+        promptRef_ = other.promptRef_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      if (!other.reads_.isEmpty()) {
+        if (reads_.isEmpty()) {
+          reads_ = other.reads_;
+          bitField0_ |= 0x00000040;
+        } else {
+          ensureReadsIsMutable();
+          reads_.addAll(other.reads_);
+        }
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -732,13 +761,6 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 34
             case 42: {
-              input.readMessage(
-                  getJudgmentFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000010;
-              break;
-            } // case 42
-            case 50: {
               ai.visma.ava.procedure.v1.Branch m =
                   input.readMessage(
                       ai.visma.ava.procedure.v1.Branch.parser(),
@@ -750,12 +772,18 @@ private static final long serialVersionUID = 0L;
                 branchesBuilder_.addMessage(m);
               }
               break;
-            } // case 50
-            case 56: {
-              origin_ = input.readEnum();
-              bitField0_ |= 0x00000040;
+            } // case 42
+            case 50: {
+              promptRef_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
               break;
-            } // case 56
+            } // case 50
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureReadsIsMutable();
+              reads_.add(s);
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1042,133 +1070,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
-    private ai.visma.ava.procedure.v1.Judgment judgment_;
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ava.procedure.v1.Judgment, ai.visma.ava.procedure.v1.Judgment.Builder, ai.visma.ava.procedure.v1.JudgmentOrBuilder> judgmentBuilder_;
-    /**
-     * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
-     * @return Whether the judgment field is set.
-     */
-    public boolean hasJudgment() {
-      return ((bitField0_ & 0x00000010) != 0);
-    }
-    /**
-     * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
-     * @return The judgment.
-     */
-    public ai.visma.ava.procedure.v1.Judgment getJudgment() {
-      if (judgmentBuilder_ == null) {
-        return judgment_ == null ? ai.visma.ava.procedure.v1.Judgment.getDefaultInstance() : judgment_;
-      } else {
-        return judgmentBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
-     */
-    public Builder setJudgment(ai.visma.ava.procedure.v1.Judgment value) {
-      if (judgmentBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        judgment_ = value;
-      } else {
-        judgmentBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
-     */
-    public Builder setJudgment(
-        ai.visma.ava.procedure.v1.Judgment.Builder builderForValue) {
-      if (judgmentBuilder_ == null) {
-        judgment_ = builderForValue.build();
-      } else {
-        judgmentBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
-     */
-    public Builder mergeJudgment(ai.visma.ava.procedure.v1.Judgment value) {
-      if (judgmentBuilder_ == null) {
-        if (((bitField0_ & 0x00000010) != 0) &&
-          judgment_ != null &&
-          judgment_ != ai.visma.ava.procedure.v1.Judgment.getDefaultInstance()) {
-          getJudgmentBuilder().mergeFrom(value);
-        } else {
-          judgment_ = value;
-        }
-      } else {
-        judgmentBuilder_.mergeFrom(value);
-      }
-      if (judgment_ != null) {
-        bitField0_ |= 0x00000010;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
-     */
-    public Builder clearJudgment() {
-      bitField0_ = (bitField0_ & ~0x00000010);
-      judgment_ = null;
-      if (judgmentBuilder_ != null) {
-        judgmentBuilder_.dispose();
-        judgmentBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
-     */
-    public ai.visma.ava.procedure.v1.Judgment.Builder getJudgmentBuilder() {
-      bitField0_ |= 0x00000010;
-      onChanged();
-      return getJudgmentFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
-     */
-    public ai.visma.ava.procedure.v1.JudgmentOrBuilder getJudgmentOrBuilder() {
-      if (judgmentBuilder_ != null) {
-        return judgmentBuilder_.getMessageOrBuilder();
-      } else {
-        return judgment_ == null ?
-            ai.visma.ava.procedure.v1.Judgment.getDefaultInstance() : judgment_;
-      }
-    }
-    /**
-     * <code>.ava.procedure.v1.Judgment judgment = 5 [json_name = "judgment"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ava.procedure.v1.Judgment, ai.visma.ava.procedure.v1.Judgment.Builder, ai.visma.ava.procedure.v1.JudgmentOrBuilder> 
-        getJudgmentFieldBuilder() {
-      if (judgmentBuilder_ == null) {
-        judgmentBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ava.procedure.v1.Judgment, ai.visma.ava.procedure.v1.Judgment.Builder, ai.visma.ava.procedure.v1.JudgmentOrBuilder>(
-                getJudgment(),
-                getParentForChildren(),
-                isClean());
-        judgment_ = null;
-      }
-      return judgmentBuilder_;
-    }
-
     private java.util.List<ai.visma.ava.procedure.v1.Branch> branches_ =
       java.util.Collections.emptyList();
     private void ensureBranchesIsMutable() {
-      if (!((bitField0_ & 0x00000020) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         branches_ = new java.util.ArrayList<ai.visma.ava.procedure.v1.Branch>(branches_);
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000010;
        }
     }
 
@@ -1176,7 +1083,7 @@ private static final long serialVersionUID = 0L;
         ai.visma.ava.procedure.v1.Branch, ai.visma.ava.procedure.v1.Branch.Builder, ai.visma.ava.procedure.v1.BranchOrBuilder> branchesBuilder_;
 
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public java.util.List<ai.visma.ava.procedure.v1.Branch> getBranchesList() {
       if (branchesBuilder_ == null) {
@@ -1186,7 +1093,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public int getBranchesCount() {
       if (branchesBuilder_ == null) {
@@ -1196,7 +1103,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public ai.visma.ava.procedure.v1.Branch getBranches(int index) {
       if (branchesBuilder_ == null) {
@@ -1206,7 +1113,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public Builder setBranches(
         int index, ai.visma.ava.procedure.v1.Branch value) {
@@ -1223,7 +1130,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public Builder setBranches(
         int index, ai.visma.ava.procedure.v1.Branch.Builder builderForValue) {
@@ -1237,7 +1144,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public Builder addBranches(ai.visma.ava.procedure.v1.Branch value) {
       if (branchesBuilder_ == null) {
@@ -1253,7 +1160,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public Builder addBranches(
         int index, ai.visma.ava.procedure.v1.Branch value) {
@@ -1270,7 +1177,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public Builder addBranches(
         ai.visma.ava.procedure.v1.Branch.Builder builderForValue) {
@@ -1284,7 +1191,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public Builder addBranches(
         int index, ai.visma.ava.procedure.v1.Branch.Builder builderForValue) {
@@ -1298,7 +1205,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public Builder addAllBranches(
         java.lang.Iterable<? extends ai.visma.ava.procedure.v1.Branch> values) {
@@ -1313,12 +1220,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public Builder clearBranches() {
       if (branchesBuilder_ == null) {
         branches_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000020);
+        bitField0_ = (bitField0_ & ~0x00000010);
         onChanged();
       } else {
         branchesBuilder_.clear();
@@ -1326,7 +1233,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public Builder removeBranches(int index) {
       if (branchesBuilder_ == null) {
@@ -1339,14 +1246,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public ai.visma.ava.procedure.v1.Branch.Builder getBranchesBuilder(
         int index) {
       return getBranchesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public ai.visma.ava.procedure.v1.BranchOrBuilder getBranchesOrBuilder(
         int index) {
@@ -1356,7 +1263,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public java.util.List<? extends ai.visma.ava.procedure.v1.BranchOrBuilder> 
          getBranchesOrBuilderList() {
@@ -1367,14 +1274,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public ai.visma.ava.procedure.v1.Branch.Builder addBranchesBuilder() {
       return getBranchesFieldBuilder().addBuilder(
           ai.visma.ava.procedure.v1.Branch.getDefaultInstance());
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public ai.visma.ava.procedure.v1.Branch.Builder addBranchesBuilder(
         int index) {
@@ -1382,7 +1289,7 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.ava.procedure.v1.Branch.getDefaultInstance());
     }
     /**
-     * <code>repeated .ava.procedure.v1.Branch branches = 6 [json_name = "branches"];</code>
+     * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
      */
     public java.util.List<ai.visma.ava.procedure.v1.Branch.Builder> 
          getBranchesBuilderList() {
@@ -1395,7 +1302,7 @@ private static final long serialVersionUID = 0L;
         branchesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
             ai.visma.ava.procedure.v1.Branch, ai.visma.ava.procedure.v1.Branch.Builder, ai.visma.ava.procedure.v1.BranchOrBuilder>(
                 branches_,
-                ((bitField0_ & 0x00000020) != 0),
+                ((bitField0_ & 0x00000010) != 0),
                 getParentForChildren(),
                 isClean());
         branches_ = null;
@@ -1403,55 +1310,185 @@ private static final long serialVersionUID = 0L;
       return branchesBuilder_;
     }
 
-    private int origin_ = 0;
+    private java.lang.Object promptRef_ = "";
     /**
-     * <code>.ava.procedure.v1.Origin origin = 7 [json_name = "origin"];</code>
-     * @return The enum numeric value on the wire for origin.
+     * <code>string prompt_ref = 6 [json_name = "promptRef"];</code>
+     * @return The promptRef.
      */
-    @java.lang.Override public int getOriginValue() {
-      return origin_;
+    public java.lang.String getPromptRef() {
+      java.lang.Object ref = promptRef_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        promptRef_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
     }
     /**
-     * <code>.ava.procedure.v1.Origin origin = 7 [json_name = "origin"];</code>
-     * @param value The enum numeric value on the wire for origin to set.
+     * <code>string prompt_ref = 6 [json_name = "promptRef"];</code>
+     * @return The bytes for promptRef.
+     */
+    public com.google.protobuf.ByteString
+        getPromptRefBytes() {
+      java.lang.Object ref = promptRef_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        promptRef_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string prompt_ref = 6 [json_name = "promptRef"];</code>
+     * @param value The promptRef to set.
      * @return This builder for chaining.
      */
-    public Builder setOriginValue(int value) {
-      origin_ = value;
-      bitField0_ |= 0x00000040;
+    public Builder setPromptRef(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      promptRef_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
     /**
-     * <code>.ava.procedure.v1.Origin origin = 7 [json_name = "origin"];</code>
-     * @return The origin.
-     */
-    @java.lang.Override
-    public ai.visma.ava.procedure.v1.Origin getOrigin() {
-      ai.visma.ava.procedure.v1.Origin result = ai.visma.ava.procedure.v1.Origin.forNumber(origin_);
-      return result == null ? ai.visma.ava.procedure.v1.Origin.UNRECOGNIZED : result;
-    }
-    /**
-     * <code>.ava.procedure.v1.Origin origin = 7 [json_name = "origin"];</code>
-     * @param value The origin to set.
+     * <code>string prompt_ref = 6 [json_name = "promptRef"];</code>
      * @return This builder for chaining.
      */
-    public Builder setOrigin(ai.visma.ava.procedure.v1.Origin value) {
-      if (value == null) {
-        throw new NullPointerException();
+    public Builder clearPromptRef() {
+      promptRef_ = getDefaultInstance().getPromptRef();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string prompt_ref = 6 [json_name = "promptRef"];</code>
+     * @param value The bytes for promptRef to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPromptRefBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      promptRef_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.LazyStringArrayList reads_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureReadsIsMutable() {
+      if (!reads_.isModifiable()) {
+        reads_ = new com.google.protobuf.LazyStringArrayList(reads_);
       }
       bitField0_ |= 0x00000040;
-      origin_ = value.getNumber();
+    }
+    /**
+     * <code>repeated string reads = 7 [json_name = "reads"];</code>
+     * @return A list containing the reads.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getReadsList() {
+      reads_.makeImmutable();
+      return reads_;
+    }
+    /**
+     * <code>repeated string reads = 7 [json_name = "reads"];</code>
+     * @return The count of reads.
+     */
+    public int getReadsCount() {
+      return reads_.size();
+    }
+    /**
+     * <code>repeated string reads = 7 [json_name = "reads"];</code>
+     * @param index The index of the element to return.
+     * @return The reads at the given index.
+     */
+    public java.lang.String getReads(int index) {
+      return reads_.get(index);
+    }
+    /**
+     * <code>repeated string reads = 7 [json_name = "reads"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the reads at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getReadsBytes(int index) {
+      return reads_.getByteString(index);
+    }
+    /**
+     * <code>repeated string reads = 7 [json_name = "reads"];</code>
+     * @param index The index to set the value at.
+     * @param value The reads to set.
+     * @return This builder for chaining.
+     */
+    public Builder setReads(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureReadsIsMutable();
+      reads_.set(index, value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
     /**
-     * <code>.ava.procedure.v1.Origin origin = 7 [json_name = "origin"];</code>
+     * <code>repeated string reads = 7 [json_name = "reads"];</code>
+     * @param value The reads to add.
      * @return This builder for chaining.
      */
-    public Builder clearOrigin() {
-      bitField0_ = (bitField0_ & ~0x00000040);
-      origin_ = 0;
+    public Builder addReads(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureReadsIsMutable();
+      reads_.add(value);
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string reads = 7 [json_name = "reads"];</code>
+     * @param values The reads to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllReads(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureReadsIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, reads_);
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string reads = 7 [json_name = "reads"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearReads() {
+      reads_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000040);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string reads = 7 [json_name = "reads"];</code>
+     * @param value The bytes of the reads to add.
+     * @return This builder for chaining.
+     */
+    public Builder addReadsBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureReadsIsMutable();
+      reads_.add(value);
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

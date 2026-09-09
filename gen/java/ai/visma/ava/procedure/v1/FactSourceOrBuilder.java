@@ -10,74 +10,62 @@ public interface FactSourceOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>string field = 2 [json_name = "field"];</code>
-   * @return The field.
-   */
-  java.lang.String getField();
-  /**
-   * <code>string field = 2 [json_name = "field"];</code>
-   * @return The bytes for field.
-   */
-  com.google.protobuf.ByteString
-      getFieldBytes();
-
-  /**
-   * <code>repeated string args = 3 [json_name = "args"];</code>
-   * @return A list containing the args.
-   */
-  java.util.List<java.lang.String>
-      getArgsList();
-  /**
-   * <code>repeated string args = 3 [json_name = "args"];</code>
-   * @return The count of args.
-   */
-  int getArgsCount();
-  /**
-   * <code>repeated string args = 3 [json_name = "args"];</code>
-   * @param index The index of the element to return.
-   * @return The args at the given index.
-   */
-  java.lang.String getArgs(int index);
-  /**
-   * <code>repeated string args = 3 [json_name = "args"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the args at the given index.
-   */
-  com.google.protobuf.ByteString
-      getArgsBytes(int index);
-
-  /**
-   * <code>.ava.procedure.v1.SourceKind kind = 4 [json_name = "kind"];</code>
+   * <code>.ava.procedure.v1.SourceKind kind = 1 [json_name = "kind"];</code>
    * @return The enum numeric value on the wire for kind.
    */
   int getKindValue();
   /**
-   * <code>.ava.procedure.v1.SourceKind kind = 4 [json_name = "kind"];</code>
+   * <code>.ava.procedure.v1.SourceKind kind = 1 [json_name = "kind"];</code>
    * @return The kind.
    */
   ai.visma.ava.procedure.v1.SourceKind getKind();
 
   /**
-   * <code>string name = 5 [json_name = "name"];</code>
+   * <code>string name = 2 [json_name = "name"];</code>
    * @return The name.
    */
   java.lang.String getName();
   /**
-   * <code>string name = 5 [json_name = "name"];</code>
+   * <code>string name = 2 [json_name = "name"];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
       getNameBytes();
 
   /**
-   * <code>string group = 6 [json_name = "group"];</code>
-   * @return The group.
+   * <code>string field = 3 [json_name = "field"];</code>
+   * @return The field.
    */
-  java.lang.String getGroup();
+  java.lang.String getField();
   /**
-   * <code>string group = 6 [json_name = "group"];</code>
-   * @return The bytes for group.
+   * <code>string field = 3 [json_name = "field"];</code>
+   * @return The bytes for field.
    */
   com.google.protobuf.ByteString
-      getGroupBytes();
+      getFieldBytes();
+
+  /**
+   * <code>repeated string args = 4 [json_name = "args"];</code>
+   * @return A list containing the args.
+   */
+  java.util.List<java.lang.String>
+      getArgsList();
+  /**
+   * <code>repeated string args = 4 [json_name = "args"];</code>
+   * @return The count of args.
+   */
+  int getArgsCount();
+  /**
+   * <code>repeated string args = 4 [json_name = "args"];</code>
+   * @param index The index of the element to return.
+   * @return The args at the given index.
+   */
+  java.lang.String getArgs(int index);
+  /**
+   * <code>repeated string args = 4 [json_name = "args"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the args at the given index.
+   */
+  com.google.protobuf.ByteString
+      getArgsBytes(int index);
 }

@@ -10,67 +10,86 @@ public interface ProcedureOrBuilder extends
     com.google.protobuf.MessageOrBuilder {
 
   /**
-   * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
-   * @return Whether the inputs field is set.
+   * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
    */
-  boolean hasInputs();
+  java.util.List<ai.visma.ava.procedure.v1.Fact> 
+      getFactsList();
   /**
-   * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
-   * @return The inputs.
+   * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
    */
-  ai.visma.ava.procedure.v1.InputContract getInputs();
+  ai.visma.ava.procedure.v1.Fact getFacts(int index);
   /**
-   * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
+   * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
    */
-  ai.visma.ava.procedure.v1.InputContractOrBuilder getInputsOrBuilder();
+  int getFactsCount();
+  /**
+   * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+   */
+  java.util.List<? extends ai.visma.ava.procedure.v1.FactOrBuilder> 
+      getFactsOrBuilderList();
+  /**
+   * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+   */
+  ai.visma.ava.procedure.v1.FactOrBuilder getFactsOrBuilder(
+      int index);
 
   /**
-   * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
-   * @return Whether the outputs field is set.
+   * <code>repeated string produces = 2 [json_name = "produces"];</code>
+   * @return A list containing the produces.
    */
-  boolean hasOutputs();
+  java.util.List<java.lang.String>
+      getProducesList();
   /**
-   * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
-   * @return The outputs.
+   * <code>repeated string produces = 2 [json_name = "produces"];</code>
+   * @return The count of produces.
    */
-  ai.visma.ava.procedure.v1.OutputContract getOutputs();
+  int getProducesCount();
   /**
-   * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
+   * <code>repeated string produces = 2 [json_name = "produces"];</code>
+   * @param index The index of the element to return.
+   * @return The produces at the given index.
    */
-  ai.visma.ava.procedure.v1.OutputContractOrBuilder getOutputsOrBuilder();
+  java.lang.String getProduces(int index);
+  /**
+   * <code>repeated string produces = 2 [json_name = "produces"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the produces at the given index.
+   */
+  com.google.protobuf.ByteString
+      getProducesBytes(int index);
 
   /**
-   * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
+   * <code>string root_step_id = 3 [json_name = "rootStepId"];</code>
    * @return The rootStepId.
    */
   java.lang.String getRootStepId();
   /**
-   * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
+   * <code>string root_step_id = 3 [json_name = "rootStepId"];</code>
    * @return The bytes for rootStepId.
    */
   com.google.protobuf.ByteString
       getRootStepIdBytes();
 
   /**
-   * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+   * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
    */
   java.util.List<ai.visma.ava.procedure.v1.Step> 
       getStepsList();
   /**
-   * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+   * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
    */
   ai.visma.ava.procedure.v1.Step getSteps(int index);
   /**
-   * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+   * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
    */
   int getStepsCount();
   /**
-   * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+   * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
    */
   java.util.List<? extends ai.visma.ava.procedure.v1.StepOrBuilder> 
       getStepsOrBuilderList();
   /**
-   * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+   * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
    */
   ai.visma.ava.procedure.v1.StepOrBuilder getStepsOrBuilder(
       int index);

@@ -31,35 +31,20 @@ public final class ProcedureProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ava_procedure_v1_Procedure_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ava_procedure_v1_InputContract_descriptor;
+    internal_static_ava_procedure_v1_Fact_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ava_procedure_v1_InputContract_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ava_procedure_v1_FactBinding_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ava_procedure_v1_FactBinding_fieldAccessorTable;
+      internal_static_ava_procedure_v1_Fact_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ava_procedure_v1_FactSource_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ava_procedure_v1_FactSource_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ava_procedure_v1_OutputContract_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ava_procedure_v1_OutputContract_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ava_procedure_v1_Step_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ava_procedure_v1_Step_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ava_procedure_v1_Judgment_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ava_procedure_v1_Judgment_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
     internal_static_ava_procedure_v1_Branch_descriptor;
   static final 
@@ -80,60 +65,46 @@ public final class ProcedureProto {
   static {
     java.lang.String[] descriptorData = {
       "\n ava/procedure/v1/procedure.proto\022\020ava." +
-      "procedure.v1\"\340\001\n\tProcedure\0227\n\006inputs\030\001 \001" +
-      "(\0132\037.ava.procedure.v1.InputContractR\006inp" +
-      "uts\022:\n\007outputs\030\002 \001(\0132 .ava.procedure.v1." +
-      "OutputContractR\007outputs\022 \n\014root_step_id\030" +
-      "\004 \001(\tR\nrootStepId\022,\n\005steps\030\005 \003(\0132\026.ava.p" +
-      "rocedure.v1.StepR\005stepsJ\004\010\003\020\004R\010selector\"" +
-      "D\n\rInputContract\0223\n\005facts\030\001 \003(\0132\035.ava.pr" +
-      "ocedure.v1.FactBindingR\005facts\"\301\001\n\013FactBi" +
-      "nding\022\033\n\tfact_name\030\001 \001(\tR\010factName\022.\n\004ty" +
-      "pe\030\002 \001(\0162\032.ava.procedure.v1.FactTypeR\004ty" +
-      "pe\0226\n\007sources\030\003 \003(\0132\034.ava.procedure.v1.F" +
-      "actSourceR\007sources\022\026\n\006values\030\005 \003(\tR\006valu" +
-      "esJ\004\010\004\020\005R\017on_disagreement\"\236\001\n\nFactSource" +
-      "\022\024\n\005field\030\002 \001(\tR\005field\022\022\n\004args\030\003 \003(\tR\004ar" +
-      "gs\0220\n\004kind\030\004 \001(\0162\034.ava.procedure.v1.Sour" +
-      "ceKindR\004kind\022\022\n\004name\030\005 \001(\tR\004name\022\024\n\005grou" +
-      "p\030\006 \001(\tR\005groupJ\004\010\001\020\002R\004from\",\n\016OutputCont" +
-      "ract\022\032\n\010produces\030\001 \003(\tR\010produces\"\247\002\n\004Ste" +
-      "p\022\027\n\007step_id\030\001 \001(\tR\006stepId\022.\n\004kind\030\002 \001(\016" +
-      "2\032.ava.procedure.v1.StepKindR\004kind\022\032\n\010qu" +
-      "estion\030\003 \001(\tR\010question\022\032\n\010guidance\030\004 \001(\t" +
-      "R\010guidance\0226\n\010judgment\030\005 \001(\0132\032.ava.proce" +
-      "dure.v1.JudgmentR\010judgment\0224\n\010branches\030\006" +
-      " \003(\0132\030.ava.procedure.v1.BranchR\010branches" +
-      "\0220\n\006origin\030\007 \001(\0162\030.ava.procedure.v1.Orig" +
-      "inR\006origin\"d\n\010Judgment\022\035\n\nprompt_ref\030\001 \001" +
-      "(\tR\tpromptRef\022#\n\rrequires_span\030\002 \001(\010R\014re" +
-      "quiresSpan\022\024\n\005reads\030\003 \003(\tR\005reads\"\303\002\n\006Bra" +
-      "nch\022\033\n\tbranch_id\030\001 \001(\tR\010branchId\022\024\n\005labe" +
-      "l\030\002 \001(\tR\005label\022\034\n\tcriterion\030\003 \001(\tR\tcrite" +
-      "rion\022\022\n\004when\030\004 \001(\tR\004when\0226\n\004sets\030\005 \003(\0132\"" +
-      ".ava.procedure.v1.Branch.SetsEntryR\004sets" +
-      "\022 \n\014next_step_id\030\006 \001(\tR\nnextStepId\022#\n\ris" +
-      "_escalation\030\007 \001(\010R\014isEscalation\022\034\n\tratio" +
-      "nale\030\010 \001(\tR\trationale\0327\n\tSetsEntry\022\020\n\003ke" +
-      "y\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001*\212" +
-      "\001\n\nSourceKind\022\033\n\027SOURCE_KIND_UNSPECIFIED" +
-      "\020\000\022\024\n\020SOURCE_KIND_CASE\020\001\022\027\n\023SOURCE_KIND_" +
-      "DERIVED\020\002\022\026\n\022SOURCE_KIND_LOOKUP\020\003\022\030\n\024SOU" +
-      "RCE_KIND_INFERRED\020\004*\266\001\n\010FactType\022\031\n\025FACT" +
-      "_TYPE_UNSPECIFIED\020\000\022\024\n\020FACT_TYPE_STRING\020" +
-      "\001\022\022\n\016FACT_TYPE_DATE\020\003\022\022\n\016FACT_TYPE_BOOL\020" +
-      "\004\022\021\n\rFACT_TYPE_INT\020\005\022\023\n\017FACT_TYPE_FLOAT\020" +
-      "\006\022\022\n\016FACT_TYPE_ENUM\020\007\"\004\010\002\020\002*\017FACT_TYPE_M" +
-      "ONEY*Q\n\010StepKind\022\031\n\025STEP_KIND_UNSPECIFIE" +
-      "D\020\000\022\022\n\016STEP_KIND_TEST\020\001\022\026\n\022STEP_KIND_JUD" +
-      "GMENT\020\002*D\n\006Origin\022\026\n\022ORIGIN_UNSPECIFIED\020" +
-      "\000\022\020\n\014ORIGIN_MINED\020\001\022\020\n\014ORIGIN_HUMAN\020\002B\303\001" +
-      "\n\031ai.visma.ava.procedure.v1B\016ProcedurePr" +
-      "otoP\001Z4github.com/e-conomic/vmlapis/gen/" +
-      "go/ava/procedure/v1\242\002\003APX\252\002\020Ava.Procedur" +
-      "e.V1\312\002\020Ava\\Procedure\\V1\342\002\034Ava\\Procedure\\" +
-      "V1\\GPBMetadata\352\002\022Ava::Procedure::V1b\006pro" +
-      "to3"
+      "procedure.v1\"\245\001\n\tProcedure\022,\n\005facts\030\001 \003(" +
+      "\0132\026.ava.procedure.v1.FactR\005facts\022\032\n\010prod" +
+      "uces\030\002 \003(\tR\010produces\022 \n\014root_step_id\030\003 \001" +
+      "(\tR\nrootStepId\022,\n\005steps\030\004 \003(\0132\026.ava.proc" +
+      "edure.v1.StepR\005steps\"\240\001\n\004Fact\022\022\n\004name\030\001 " +
+      "\001(\tR\004name\022.\n\004type\030\002 \001(\0162\032.ava.procedure." +
+      "v1.FactTypeR\004type\022\034\n\tpermitted\030\003 \003(\tR\tpe" +
+      "rmitted\0226\n\007sources\030\004 \003(\0132\034.ava.procedure" +
+      ".v1.FactSourceR\007sources\"|\n\nFactSource\0220\n" +
+      "\004kind\030\001 \001(\0162\034.ava.procedure.v1.SourceKin" +
+      "dR\004kind\022\022\n\004name\030\002 \001(\tR\004name\022\024\n\005field\030\003 \001" +
+      "(\tR\005field\022\022\n\004args\030\004 \003(\tR\004args\"\362\001\n\004Step\022\027" +
+      "\n\007step_id\030\001 \001(\tR\006stepId\022.\n\004kind\030\002 \001(\0162\032." +
+      "ava.procedure.v1.StepKindR\004kind\022\032\n\010quest" +
+      "ion\030\003 \001(\tR\010question\022\032\n\010guidance\030\004 \001(\tR\010g" +
+      "uidance\0224\n\010branches\030\005 \003(\0132\030.ava.procedur" +
+      "e.v1.BranchR\010branches\022\035\n\nprompt_ref\030\006 \001(" +
+      "\tR\tpromptRef\022\024\n\005reads\030\007 \003(\tR\005reads\"\303\002\n\006B" +
+      "ranch\022\033\n\tbranch_id\030\001 \001(\tR\010branchId\022\024\n\005la" +
+      "bel\030\002 \001(\tR\005label\022\034\n\tcriterion\030\003 \001(\tR\tcri" +
+      "terion\022\022\n\004when\030\004 \001(\tR\004when\0226\n\004sets\030\005 \003(\013" +
+      "2\".ava.procedure.v1.Branch.SetsEntryR\004se" +
+      "ts\022 \n\014next_step_id\030\006 \001(\tR\nnextStepId\022#\n\r" +
+      "is_escalation\030\007 \001(\010R\014isEscalation\022\034\n\trat" +
+      "ionale\030\010 \001(\tR\trationale\0327\n\tSetsEntry\022\020\n\003" +
+      "key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001" +
+      "*X\n\nSourceKind\022\033\n\027SOURCE_KIND_UNSPECIFIE" +
+      "D\020\000\022\024\n\020SOURCE_KIND_CASE\020\001\022\027\n\023SOURCE_KIND" +
+      "_DERIVED\020\002*\237\001\n\010FactType\022\031\n\025FACT_TYPE_UNS" +
+      "PECIFIED\020\000\022\024\n\020FACT_TYPE_STRING\020\001\022\023\n\017FACT" +
+      "_TYPE_FLOAT\020\002\022\022\n\016FACT_TYPE_DATE\020\003\022\022\n\016FAC" +
+      "T_TYPE_BOOL\020\004\022\021\n\rFACT_TYPE_INT\020\005\022\022\n\016FACT" +
+      "_TYPE_ENUM\020\006*Q\n\010StepKind\022\031\n\025STEP_KIND_UN" +
+      "SPECIFIED\020\000\022\022\n\016STEP_KIND_TEST\020\001\022\026\n\022STEP_" +
+      "KIND_JUDGMENT\020\002B\303\001\n\031ai.visma.ava.procedu" +
+      "re.v1B\016ProcedureProtoP\001Z4github.com/e-co" +
+      "nomic/vmlapis/gen/go/ava/procedure/v1\242\002\003" +
+      "APX\252\002\020Ava.Procedure.V1\312\002\020Ava\\Procedure\\V" +
+      "1\342\002\034Ava\\Procedure\\V1\\GPBMetadata\352\002\022Ava::" +
+      "Procedure::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -144,45 +115,27 @@ public final class ProcedureProto {
     internal_static_ava_procedure_v1_Procedure_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ava_procedure_v1_Procedure_descriptor,
-        new java.lang.String[] { "Inputs", "Outputs", "RootStepId", "Steps", });
-    internal_static_ava_procedure_v1_InputContract_descriptor =
+        new java.lang.String[] { "Facts", "Produces", "RootStepId", "Steps", });
+    internal_static_ava_procedure_v1_Fact_descriptor =
       getDescriptor().getMessageTypes().get(1);
-    internal_static_ava_procedure_v1_InputContract_fieldAccessorTable = new
+    internal_static_ava_procedure_v1_Fact_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_ava_procedure_v1_InputContract_descriptor,
-        new java.lang.String[] { "Facts", });
-    internal_static_ava_procedure_v1_FactBinding_descriptor =
-      getDescriptor().getMessageTypes().get(2);
-    internal_static_ava_procedure_v1_FactBinding_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_ava_procedure_v1_FactBinding_descriptor,
-        new java.lang.String[] { "FactName", "Type", "Sources", "Values", });
+        internal_static_ava_procedure_v1_Fact_descriptor,
+        new java.lang.String[] { "Name", "Type", "Permitted", "Sources", });
     internal_static_ava_procedure_v1_FactSource_descriptor =
-      getDescriptor().getMessageTypes().get(3);
+      getDescriptor().getMessageTypes().get(2);
     internal_static_ava_procedure_v1_FactSource_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ava_procedure_v1_FactSource_descriptor,
-        new java.lang.String[] { "Field", "Args", "Kind", "Name", "Group", });
-    internal_static_ava_procedure_v1_OutputContract_descriptor =
-      getDescriptor().getMessageTypes().get(4);
-    internal_static_ava_procedure_v1_OutputContract_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_ava_procedure_v1_OutputContract_descriptor,
-        new java.lang.String[] { "Produces", });
+        new java.lang.String[] { "Kind", "Name", "Field", "Args", });
     internal_static_ava_procedure_v1_Step_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(3);
     internal_static_ava_procedure_v1_Step_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ava_procedure_v1_Step_descriptor,
-        new java.lang.String[] { "StepId", "Kind", "Question", "Guidance", "Judgment", "Branches", "Origin", });
-    internal_static_ava_procedure_v1_Judgment_descriptor =
-      getDescriptor().getMessageTypes().get(6);
-    internal_static_ava_procedure_v1_Judgment_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_ava_procedure_v1_Judgment_descriptor,
-        new java.lang.String[] { "PromptRef", "RequiresSpan", "Reads", });
+        new java.lang.String[] { "StepId", "Kind", "Question", "Guidance", "Branches", "PromptRef", "Reads", });
     internal_static_ava_procedure_v1_Branch_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(4);
     internal_static_ava_procedure_v1_Branch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ava_procedure_v1_Branch_descriptor,

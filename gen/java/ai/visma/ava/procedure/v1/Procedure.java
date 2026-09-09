@@ -27,6 +27,9 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private Procedure() {
+    facts_ = java.util.Collections.emptyList();
+    produces_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
     rootStepId_ = "";
     steps_ = java.util.Collections.emptyList();
   }
@@ -44,64 +47,89 @@ private static final long serialVersionUID = 0L;
             ai.visma.ava.procedure.v1.Procedure.class, ai.visma.ava.procedure.v1.Procedure.Builder.class);
   }
 
-  private int bitField0_;
-  public static final int INPUTS_FIELD_NUMBER = 1;
-  private ai.visma.ava.procedure.v1.InputContract inputs_;
+  public static final int FACTS_FIELD_NUMBER = 1;
+  @SuppressWarnings("serial")
+  private java.util.List<ai.visma.ava.procedure.v1.Fact> facts_;
   /**
-   * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
-   * @return Whether the inputs field is set.
+   * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
    */
   @java.lang.Override
-  public boolean hasInputs() {
-    return ((bitField0_ & 0x00000001) != 0);
+  public java.util.List<ai.visma.ava.procedure.v1.Fact> getFactsList() {
+    return facts_;
   }
   /**
-   * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
-   * @return The inputs.
+   * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
    */
   @java.lang.Override
-  public ai.visma.ava.procedure.v1.InputContract getInputs() {
-    return inputs_ == null ? ai.visma.ava.procedure.v1.InputContract.getDefaultInstance() : inputs_;
+  public java.util.List<? extends ai.visma.ava.procedure.v1.FactOrBuilder> 
+      getFactsOrBuilderList() {
+    return facts_;
   }
   /**
-   * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
+   * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
    */
   @java.lang.Override
-  public ai.visma.ava.procedure.v1.InputContractOrBuilder getInputsOrBuilder() {
-    return inputs_ == null ? ai.visma.ava.procedure.v1.InputContract.getDefaultInstance() : inputs_;
-  }
-
-  public static final int OUTPUTS_FIELD_NUMBER = 2;
-  private ai.visma.ava.procedure.v1.OutputContract outputs_;
-  /**
-   * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
-   * @return Whether the outputs field is set.
-   */
-  @java.lang.Override
-  public boolean hasOutputs() {
-    return ((bitField0_ & 0x00000002) != 0);
+  public int getFactsCount() {
+    return facts_.size();
   }
   /**
-   * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
-   * @return The outputs.
+   * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
    */
   @java.lang.Override
-  public ai.visma.ava.procedure.v1.OutputContract getOutputs() {
-    return outputs_ == null ? ai.visma.ava.procedure.v1.OutputContract.getDefaultInstance() : outputs_;
+  public ai.visma.ava.procedure.v1.Fact getFacts(int index) {
+    return facts_.get(index);
   }
   /**
-   * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
+   * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
    */
   @java.lang.Override
-  public ai.visma.ava.procedure.v1.OutputContractOrBuilder getOutputsOrBuilder() {
-    return outputs_ == null ? ai.visma.ava.procedure.v1.OutputContract.getDefaultInstance() : outputs_;
+  public ai.visma.ava.procedure.v1.FactOrBuilder getFactsOrBuilder(
+      int index) {
+    return facts_.get(index);
   }
 
-  public static final int ROOT_STEP_ID_FIELD_NUMBER = 4;
+  public static final int PRODUCES_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList produces_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string produces = 2 [json_name = "produces"];</code>
+   * @return A list containing the produces.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getProducesList() {
+    return produces_;
+  }
+  /**
+   * <code>repeated string produces = 2 [json_name = "produces"];</code>
+   * @return The count of produces.
+   */
+  public int getProducesCount() {
+    return produces_.size();
+  }
+  /**
+   * <code>repeated string produces = 2 [json_name = "produces"];</code>
+   * @param index The index of the element to return.
+   * @return The produces at the given index.
+   */
+  public java.lang.String getProduces(int index) {
+    return produces_.get(index);
+  }
+  /**
+   * <code>repeated string produces = 2 [json_name = "produces"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the produces at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getProducesBytes(int index) {
+    return produces_.getByteString(index);
+  }
+
+  public static final int ROOT_STEP_ID_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object rootStepId_ = "";
   /**
-   * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
+   * <code>string root_step_id = 3 [json_name = "rootStepId"];</code>
    * @return The rootStepId.
    */
   @java.lang.Override
@@ -118,7 +146,7 @@ private static final long serialVersionUID = 0L;
     }
   }
   /**
-   * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
+   * <code>string root_step_id = 3 [json_name = "rootStepId"];</code>
    * @return The bytes for rootStepId.
    */
   @java.lang.Override
@@ -136,18 +164,18 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int STEPS_FIELD_NUMBER = 5;
+  public static final int STEPS_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ava.procedure.v1.Step> steps_;
   /**
-   * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+   * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
    */
   @java.lang.Override
   public java.util.List<ai.visma.ava.procedure.v1.Step> getStepsList() {
     return steps_;
   }
   /**
-   * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+   * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ava.procedure.v1.StepOrBuilder> 
@@ -155,21 +183,21 @@ private static final long serialVersionUID = 0L;
     return steps_;
   }
   /**
-   * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+   * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
    */
   @java.lang.Override
   public int getStepsCount() {
     return steps_.size();
   }
   /**
-   * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+   * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
    */
   @java.lang.Override
   public ai.visma.ava.procedure.v1.Step getSteps(int index) {
     return steps_.get(index);
   }
   /**
-   * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+   * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
    */
   @java.lang.Override
   public ai.visma.ava.procedure.v1.StepOrBuilder getStepsOrBuilder(
@@ -191,17 +219,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (((bitField0_ & 0x00000001) != 0)) {
-      output.writeMessage(1, getInputs());
+    for (int i = 0; i < facts_.size(); i++) {
+      output.writeMessage(1, facts_.get(i));
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      output.writeMessage(2, getOutputs());
+    for (int i = 0; i < produces_.size(); i++) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, produces_.getRaw(i));
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(rootStepId_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 4, rootStepId_);
+      com.google.protobuf.GeneratedMessage.writeString(output, 3, rootStepId_);
     }
     for (int i = 0; i < steps_.size(); i++) {
-      output.writeMessage(5, steps_.get(i));
+      output.writeMessage(4, steps_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -212,20 +240,24 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (((bitField0_ & 0x00000001) != 0)) {
+    for (int i = 0; i < facts_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, getInputs());
+        .computeMessageSize(1, facts_.get(i));
     }
-    if (((bitField0_ & 0x00000002) != 0)) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(2, getOutputs());
+    {
+      int dataSize = 0;
+      for (int i = 0; i < produces_.size(); i++) {
+        dataSize += computeStringSizeNoTag(produces_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getProducesList().size();
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(rootStepId_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, rootStepId_);
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, rootStepId_);
     }
     for (int i = 0; i < steps_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(5, steps_.get(i));
+        .computeMessageSize(4, steps_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -242,16 +274,10 @@ private static final long serialVersionUID = 0L;
     }
     ai.visma.ava.procedure.v1.Procedure other = (ai.visma.ava.procedure.v1.Procedure) obj;
 
-    if (hasInputs() != other.hasInputs()) return false;
-    if (hasInputs()) {
-      if (!getInputs()
-          .equals(other.getInputs())) return false;
-    }
-    if (hasOutputs() != other.hasOutputs()) return false;
-    if (hasOutputs()) {
-      if (!getOutputs()
-          .equals(other.getOutputs())) return false;
-    }
+    if (!getFactsList()
+        .equals(other.getFactsList())) return false;
+    if (!getProducesList()
+        .equals(other.getProducesList())) return false;
     if (!getRootStepId()
         .equals(other.getRootStepId())) return false;
     if (!getStepsList()
@@ -267,13 +293,13 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (hasInputs()) {
-      hash = (37 * hash) + INPUTS_FIELD_NUMBER;
-      hash = (53 * hash) + getInputs().hashCode();
+    if (getFactsCount() > 0) {
+      hash = (37 * hash) + FACTS_FIELD_NUMBER;
+      hash = (53 * hash) + getFactsList().hashCode();
     }
-    if (hasOutputs()) {
-      hash = (37 * hash) + OUTPUTS_FIELD_NUMBER;
-      hash = (53 * hash) + getOutputs().hashCode();
+    if (getProducesCount() > 0) {
+      hash = (37 * hash) + PRODUCES_FIELD_NUMBER;
+      hash = (53 * hash) + getProducesList().hashCode();
     }
     hash = (37 * hash) + ROOT_STEP_ID_FIELD_NUMBER;
     hash = (53 * hash) + getRootStepId().hashCode();
@@ -400,36 +426,27 @@ private static final long serialVersionUID = 0L;
 
     // Construct using ai.visma.ava.procedure.v1.Procedure.newBuilder()
     private Builder() {
-      maybeForceBuilderInitialization();
+
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-      maybeForceBuilderInitialization();
-    }
-    private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessage
-              .alwaysUseFieldBuilders) {
-        getInputsFieldBuilder();
-        getOutputsFieldBuilder();
-        getStepsFieldBuilder();
-      }
+
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      inputs_ = null;
-      if (inputsBuilder_ != null) {
-        inputsBuilder_.dispose();
-        inputsBuilder_ = null;
+      if (factsBuilder_ == null) {
+        facts_ = java.util.Collections.emptyList();
+      } else {
+        facts_ = null;
+        factsBuilder_.clear();
       }
-      outputs_ = null;
-      if (outputsBuilder_ != null) {
-        outputsBuilder_.dispose();
-        outputsBuilder_ = null;
-      }
+      bitField0_ = (bitField0_ & ~0x00000001);
+      produces_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       rootStepId_ = "";
       if (stepsBuilder_ == null) {
         steps_ = java.util.Collections.emptyList();
@@ -471,6 +488,15 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(ai.visma.ava.procedure.v1.Procedure result) {
+      if (factsBuilder_ == null) {
+        if (((bitField0_ & 0x00000001) != 0)) {
+          facts_ = java.util.Collections.unmodifiableList(facts_);
+          bitField0_ = (bitField0_ & ~0x00000001);
+        }
+        result.facts_ = facts_;
+      } else {
+        result.facts_ = factsBuilder_.build();
+      }
       if (stepsBuilder_ == null) {
         if (((bitField0_ & 0x00000008) != 0)) {
           steps_ = java.util.Collections.unmodifiableList(steps_);
@@ -484,23 +510,13 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(ai.visma.ava.procedure.v1.Procedure result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
-      if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.inputs_ = inputsBuilder_ == null
-            ? inputs_
-            : inputsBuilder_.build();
-        to_bitField0_ |= 0x00000001;
-      }
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        result.outputs_ = outputsBuilder_ == null
-            ? outputs_
-            : outputsBuilder_.build();
-        to_bitField0_ |= 0x00000002;
+        produces_.makeImmutable();
+        result.produces_ = produces_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.rootStepId_ = rootStepId_;
       }
-      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -515,11 +531,41 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(ai.visma.ava.procedure.v1.Procedure other) {
       if (other == ai.visma.ava.procedure.v1.Procedure.getDefaultInstance()) return this;
-      if (other.hasInputs()) {
-        mergeInputs(other.getInputs());
+      if (factsBuilder_ == null) {
+        if (!other.facts_.isEmpty()) {
+          if (facts_.isEmpty()) {
+            facts_ = other.facts_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+          } else {
+            ensureFactsIsMutable();
+            facts_.addAll(other.facts_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.facts_.isEmpty()) {
+          if (factsBuilder_.isEmpty()) {
+            factsBuilder_.dispose();
+            factsBuilder_ = null;
+            facts_ = other.facts_;
+            bitField0_ = (bitField0_ & ~0x00000001);
+            factsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 getFactsFieldBuilder() : null;
+          } else {
+            factsBuilder_.addAllMessages(other.facts_);
+          }
+        }
       }
-      if (other.hasOutputs()) {
-        mergeOutputs(other.getOutputs());
+      if (!other.produces_.isEmpty()) {
+        if (produces_.isEmpty()) {
+          produces_ = other.produces_;
+          bitField0_ |= 0x00000002;
+        } else {
+          ensureProducesIsMutable();
+          produces_.addAll(other.produces_);
+        }
+        onChanged();
       }
       if (!other.getRootStepId().isEmpty()) {
         rootStepId_ = other.rootStepId_;
@@ -579,25 +625,30 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              input.readMessage(
-                  getInputsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000001;
+              ai.visma.ava.procedure.v1.Fact m =
+                  input.readMessage(
+                      ai.visma.ava.procedure.v1.Fact.parser(),
+                      extensionRegistry);
+              if (factsBuilder_ == null) {
+                ensureFactsIsMutable();
+                facts_.add(m);
+              } else {
+                factsBuilder_.addMessage(m);
+              }
               break;
             } // case 10
             case 18: {
-              input.readMessage(
-                  getOutputsFieldBuilder().getBuilder(),
-                  extensionRegistry);
-              bitField0_ |= 0x00000002;
+              java.lang.String s = input.readStringRequireUtf8();
+              ensureProducesIsMutable();
+              produces_.add(s);
               break;
             } // case 18
-            case 34: {
+            case 26: {
               rootStepId_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000004;
               break;
-            } // case 34
-            case 42: {
+            } // case 26
+            case 34: {
               ai.visma.ava.procedure.v1.Step m =
                   input.readMessage(
                       ai.visma.ava.procedure.v1.Step.parser(),
@@ -609,7 +660,7 @@ private static final long serialVersionUID = 0L;
                 stepsBuilder_.addMessage(m);
               }
               break;
-            } // case 42
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -627,251 +678,360 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private ai.visma.ava.procedure.v1.InputContract inputs_;
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ava.procedure.v1.InputContract, ai.visma.ava.procedure.v1.InputContract.Builder, ai.visma.ava.procedure.v1.InputContractOrBuilder> inputsBuilder_;
-    /**
-     * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
-     * @return Whether the inputs field is set.
-     */
-    public boolean hasInputs() {
-      return ((bitField0_ & 0x00000001) != 0);
-    }
-    /**
-     * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
-     * @return The inputs.
-     */
-    public ai.visma.ava.procedure.v1.InputContract getInputs() {
-      if (inputsBuilder_ == null) {
-        return inputs_ == null ? ai.visma.ava.procedure.v1.InputContract.getDefaultInstance() : inputs_;
-      } else {
-        return inputsBuilder_.getMessage();
-      }
-    }
-    /**
-     * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
-     */
-    public Builder setInputs(ai.visma.ava.procedure.v1.InputContract value) {
-      if (inputsBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        inputs_ = value;
-      } else {
-        inputsBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
-     */
-    public Builder setInputs(
-        ai.visma.ava.procedure.v1.InputContract.Builder builderForValue) {
-      if (inputsBuilder_ == null) {
-        inputs_ = builderForValue.build();
-      } else {
-        inputsBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
-     */
-    public Builder mergeInputs(ai.visma.ava.procedure.v1.InputContract value) {
-      if (inputsBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
-          inputs_ != null &&
-          inputs_ != ai.visma.ava.procedure.v1.InputContract.getDefaultInstance()) {
-          getInputsBuilder().mergeFrom(value);
-        } else {
-          inputs_ = value;
-        }
-      } else {
-        inputsBuilder_.mergeFrom(value);
-      }
-      if (inputs_ != null) {
+    private java.util.List<ai.visma.ava.procedure.v1.Fact> facts_ =
+      java.util.Collections.emptyList();
+    private void ensureFactsIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        facts_ = new java.util.ArrayList<ai.visma.ava.procedure.v1.Fact>(facts_);
         bitField0_ |= 0x00000001;
-        onChanged();
-      }
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
-     */
-    public Builder clearInputs() {
-      bitField0_ = (bitField0_ & ~0x00000001);
-      inputs_ = null;
-      if (inputsBuilder_ != null) {
-        inputsBuilder_.dispose();
-        inputsBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
-     */
-    public ai.visma.ava.procedure.v1.InputContract.Builder getInputsBuilder() {
-      bitField0_ |= 0x00000001;
-      onChanged();
-      return getInputsFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
-     */
-    public ai.visma.ava.procedure.v1.InputContractOrBuilder getInputsOrBuilder() {
-      if (inputsBuilder_ != null) {
-        return inputsBuilder_.getMessageOrBuilder();
-      } else {
-        return inputs_ == null ?
-            ai.visma.ava.procedure.v1.InputContract.getDefaultInstance() : inputs_;
-      }
-    }
-    /**
-     * <code>.ava.procedure.v1.InputContract inputs = 1 [json_name = "inputs"];</code>
-     */
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ava.procedure.v1.InputContract, ai.visma.ava.procedure.v1.InputContract.Builder, ai.visma.ava.procedure.v1.InputContractOrBuilder> 
-        getInputsFieldBuilder() {
-      if (inputsBuilder_ == null) {
-        inputsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ava.procedure.v1.InputContract, ai.visma.ava.procedure.v1.InputContract.Builder, ai.visma.ava.procedure.v1.InputContractOrBuilder>(
-                getInputs(),
-                getParentForChildren(),
-                isClean());
-        inputs_ = null;
-      }
-      return inputsBuilder_;
+       }
     }
 
-    private ai.visma.ava.procedure.v1.OutputContract outputs_;
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ava.procedure.v1.OutputContract, ai.visma.ava.procedure.v1.OutputContract.Builder, ai.visma.ava.procedure.v1.OutputContractOrBuilder> outputsBuilder_;
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ava.procedure.v1.Fact, ai.visma.ava.procedure.v1.Fact.Builder, ai.visma.ava.procedure.v1.FactOrBuilder> factsBuilder_;
+
     /**
-     * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
-     * @return Whether the outputs field is set.
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
      */
-    public boolean hasOutputs() {
-      return ((bitField0_ & 0x00000002) != 0);
-    }
-    /**
-     * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
-     * @return The outputs.
-     */
-    public ai.visma.ava.procedure.v1.OutputContract getOutputs() {
-      if (outputsBuilder_ == null) {
-        return outputs_ == null ? ai.visma.ava.procedure.v1.OutputContract.getDefaultInstance() : outputs_;
+    public java.util.List<ai.visma.ava.procedure.v1.Fact> getFactsList() {
+      if (factsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(facts_);
       } else {
-        return outputsBuilder_.getMessage();
+        return factsBuilder_.getMessageList();
       }
     }
     /**
-     * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
      */
-    public Builder setOutputs(ai.visma.ava.procedure.v1.OutputContract value) {
-      if (outputsBuilder_ == null) {
+    public int getFactsCount() {
+      if (factsBuilder_ == null) {
+        return facts_.size();
+      } else {
+        return factsBuilder_.getCount();
+      }
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public ai.visma.ava.procedure.v1.Fact getFacts(int index) {
+      if (factsBuilder_ == null) {
+        return facts_.get(index);
+      } else {
+        return factsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public Builder setFacts(
+        int index, ai.visma.ava.procedure.v1.Fact value) {
+      if (factsBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        outputs_ = value;
-      } else {
-        outputsBuilder_.setMessage(value);
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
-     */
-    public Builder setOutputs(
-        ai.visma.ava.procedure.v1.OutputContract.Builder builderForValue) {
-      if (outputsBuilder_ == null) {
-        outputs_ = builderForValue.build();
-      } else {
-        outputsBuilder_.setMessage(builderForValue.build());
-      }
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
-     */
-    public Builder mergeOutputs(ai.visma.ava.procedure.v1.OutputContract value) {
-      if (outputsBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
-          outputs_ != null &&
-          outputs_ != ai.visma.ava.procedure.v1.OutputContract.getDefaultInstance()) {
-          getOutputsBuilder().mergeFrom(value);
-        } else {
-          outputs_ = value;
-        }
-      } else {
-        outputsBuilder_.mergeFrom(value);
-      }
-      if (outputs_ != null) {
-        bitField0_ |= 0x00000002;
+        ensureFactsIsMutable();
+        facts_.set(index, value);
         onChanged();
-      }
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
-     */
-    public Builder clearOutputs() {
-      bitField0_ = (bitField0_ & ~0x00000002);
-      outputs_ = null;
-      if (outputsBuilder_ != null) {
-        outputsBuilder_.dispose();
-        outputsBuilder_ = null;
-      }
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
-     */
-    public ai.visma.ava.procedure.v1.OutputContract.Builder getOutputsBuilder() {
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return getOutputsFieldBuilder().getBuilder();
-    }
-    /**
-     * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
-     */
-    public ai.visma.ava.procedure.v1.OutputContractOrBuilder getOutputsOrBuilder() {
-      if (outputsBuilder_ != null) {
-        return outputsBuilder_.getMessageOrBuilder();
       } else {
-        return outputs_ == null ?
-            ai.visma.ava.procedure.v1.OutputContract.getDefaultInstance() : outputs_;
+        factsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public Builder setFacts(
+        int index, ai.visma.ava.procedure.v1.Fact.Builder builderForValue) {
+      if (factsBuilder_ == null) {
+        ensureFactsIsMutable();
+        facts_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        factsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public Builder addFacts(ai.visma.ava.procedure.v1.Fact value) {
+      if (factsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFactsIsMutable();
+        facts_.add(value);
+        onChanged();
+      } else {
+        factsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public Builder addFacts(
+        int index, ai.visma.ava.procedure.v1.Fact value) {
+      if (factsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureFactsIsMutable();
+        facts_.add(index, value);
+        onChanged();
+      } else {
+        factsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public Builder addFacts(
+        ai.visma.ava.procedure.v1.Fact.Builder builderForValue) {
+      if (factsBuilder_ == null) {
+        ensureFactsIsMutable();
+        facts_.add(builderForValue.build());
+        onChanged();
+      } else {
+        factsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public Builder addFacts(
+        int index, ai.visma.ava.procedure.v1.Fact.Builder builderForValue) {
+      if (factsBuilder_ == null) {
+        ensureFactsIsMutable();
+        facts_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        factsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public Builder addAllFacts(
+        java.lang.Iterable<? extends ai.visma.ava.procedure.v1.Fact> values) {
+      if (factsBuilder_ == null) {
+        ensureFactsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, facts_);
+        onChanged();
+      } else {
+        factsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public Builder clearFacts() {
+      if (factsBuilder_ == null) {
+        facts_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+      } else {
+        factsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public Builder removeFacts(int index) {
+      if (factsBuilder_ == null) {
+        ensureFactsIsMutable();
+        facts_.remove(index);
+        onChanged();
+      } else {
+        factsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public ai.visma.ava.procedure.v1.Fact.Builder getFactsBuilder(
+        int index) {
+      return getFactsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public ai.visma.ava.procedure.v1.FactOrBuilder getFactsOrBuilder(
+        int index) {
+      if (factsBuilder_ == null) {
+        return facts_.get(index);  } else {
+        return factsBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
-     * <code>.ava.procedure.v1.OutputContract outputs = 2 [json_name = "outputs"];</code>
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
      */
-    private com.google.protobuf.SingleFieldBuilder<
-        ai.visma.ava.procedure.v1.OutputContract, ai.visma.ava.procedure.v1.OutputContract.Builder, ai.visma.ava.procedure.v1.OutputContractOrBuilder> 
-        getOutputsFieldBuilder() {
-      if (outputsBuilder_ == null) {
-        outputsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
-            ai.visma.ava.procedure.v1.OutputContract, ai.visma.ava.procedure.v1.OutputContract.Builder, ai.visma.ava.procedure.v1.OutputContractOrBuilder>(
-                getOutputs(),
+    public java.util.List<? extends ai.visma.ava.procedure.v1.FactOrBuilder> 
+         getFactsOrBuilderList() {
+      if (factsBuilder_ != null) {
+        return factsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(facts_);
+      }
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public ai.visma.ava.procedure.v1.Fact.Builder addFactsBuilder() {
+      return getFactsFieldBuilder().addBuilder(
+          ai.visma.ava.procedure.v1.Fact.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public ai.visma.ava.procedure.v1.Fact.Builder addFactsBuilder(
+        int index) {
+      return getFactsFieldBuilder().addBuilder(
+          index, ai.visma.ava.procedure.v1.Fact.getDefaultInstance());
+    }
+    /**
+     * <code>repeated .ava.procedure.v1.Fact facts = 1 [json_name = "facts"];</code>
+     */
+    public java.util.List<ai.visma.ava.procedure.v1.Fact.Builder> 
+         getFactsBuilderList() {
+      return getFactsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        ai.visma.ava.procedure.v1.Fact, ai.visma.ava.procedure.v1.Fact.Builder, ai.visma.ava.procedure.v1.FactOrBuilder> 
+        getFactsFieldBuilder() {
+      if (factsBuilder_ == null) {
+        factsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            ai.visma.ava.procedure.v1.Fact, ai.visma.ava.procedure.v1.Fact.Builder, ai.visma.ava.procedure.v1.FactOrBuilder>(
+                facts_,
+                ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
-        outputs_ = null;
+        facts_ = null;
       }
-      return outputsBuilder_;
+      return factsBuilder_;
+    }
+
+    private com.google.protobuf.LazyStringArrayList produces_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensureProducesIsMutable() {
+      if (!produces_.isModifiable()) {
+        produces_ = new com.google.protobuf.LazyStringArrayList(produces_);
+      }
+      bitField0_ |= 0x00000002;
+    }
+    /**
+     * <code>repeated string produces = 2 [json_name = "produces"];</code>
+     * @return A list containing the produces.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getProducesList() {
+      produces_.makeImmutable();
+      return produces_;
+    }
+    /**
+     * <code>repeated string produces = 2 [json_name = "produces"];</code>
+     * @return The count of produces.
+     */
+    public int getProducesCount() {
+      return produces_.size();
+    }
+    /**
+     * <code>repeated string produces = 2 [json_name = "produces"];</code>
+     * @param index The index of the element to return.
+     * @return The produces at the given index.
+     */
+    public java.lang.String getProduces(int index) {
+      return produces_.get(index);
+    }
+    /**
+     * <code>repeated string produces = 2 [json_name = "produces"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the produces at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getProducesBytes(int index) {
+      return produces_.getByteString(index);
+    }
+    /**
+     * <code>repeated string produces = 2 [json_name = "produces"];</code>
+     * @param index The index to set the value at.
+     * @param value The produces to set.
+     * @return This builder for chaining.
+     */
+    public Builder setProduces(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureProducesIsMutable();
+      produces_.set(index, value);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string produces = 2 [json_name = "produces"];</code>
+     * @param value The produces to add.
+     * @return This builder for chaining.
+     */
+    public Builder addProduces(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensureProducesIsMutable();
+      produces_.add(value);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string produces = 2 [json_name = "produces"];</code>
+     * @param values The produces to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllProduces(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureProducesIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, produces_);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string produces = 2 [json_name = "produces"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearProduces() {
+      produces_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000002);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string produces = 2 [json_name = "produces"];</code>
+     * @param value The bytes of the produces to add.
+     * @return This builder for chaining.
+     */
+    public Builder addProducesBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensureProducesIsMutable();
+      produces_.add(value);
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
     }
 
     private java.lang.Object rootStepId_ = "";
     /**
-     * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
+     * <code>string root_step_id = 3 [json_name = "rootStepId"];</code>
      * @return The rootStepId.
      */
     public java.lang.String getRootStepId() {
@@ -887,7 +1047,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
+     * <code>string root_step_id = 3 [json_name = "rootStepId"];</code>
      * @return The bytes for rootStepId.
      */
     public com.google.protobuf.ByteString
@@ -904,7 +1064,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
+     * <code>string root_step_id = 3 [json_name = "rootStepId"];</code>
      * @param value The rootStepId to set.
      * @return This builder for chaining.
      */
@@ -917,7 +1077,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
+     * <code>string root_step_id = 3 [json_name = "rootStepId"];</code>
      * @return This builder for chaining.
      */
     public Builder clearRootStepId() {
@@ -927,7 +1087,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>string root_step_id = 4 [json_name = "rootStepId"];</code>
+     * <code>string root_step_id = 3 [json_name = "rootStepId"];</code>
      * @param value The bytes for rootStepId to set.
      * @return This builder for chaining.
      */
@@ -954,7 +1114,7 @@ private static final long serialVersionUID = 0L;
         ai.visma.ava.procedure.v1.Step, ai.visma.ava.procedure.v1.Step.Builder, ai.visma.ava.procedure.v1.StepOrBuilder> stepsBuilder_;
 
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public java.util.List<ai.visma.ava.procedure.v1.Step> getStepsList() {
       if (stepsBuilder_ == null) {
@@ -964,7 +1124,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public int getStepsCount() {
       if (stepsBuilder_ == null) {
@@ -974,7 +1134,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public ai.visma.ava.procedure.v1.Step getSteps(int index) {
       if (stepsBuilder_ == null) {
@@ -984,7 +1144,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public Builder setSteps(
         int index, ai.visma.ava.procedure.v1.Step value) {
@@ -1001,7 +1161,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public Builder setSteps(
         int index, ai.visma.ava.procedure.v1.Step.Builder builderForValue) {
@@ -1015,7 +1175,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public Builder addSteps(ai.visma.ava.procedure.v1.Step value) {
       if (stepsBuilder_ == null) {
@@ -1031,7 +1191,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public Builder addSteps(
         int index, ai.visma.ava.procedure.v1.Step value) {
@@ -1048,7 +1208,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public Builder addSteps(
         ai.visma.ava.procedure.v1.Step.Builder builderForValue) {
@@ -1062,7 +1222,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public Builder addSteps(
         int index, ai.visma.ava.procedure.v1.Step.Builder builderForValue) {
@@ -1076,7 +1236,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public Builder addAllSteps(
         java.lang.Iterable<? extends ai.visma.ava.procedure.v1.Step> values) {
@@ -1091,7 +1251,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public Builder clearSteps() {
       if (stepsBuilder_ == null) {
@@ -1104,7 +1264,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public Builder removeSteps(int index) {
       if (stepsBuilder_ == null) {
@@ -1117,14 +1277,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public ai.visma.ava.procedure.v1.Step.Builder getStepsBuilder(
         int index) {
       return getStepsFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public ai.visma.ava.procedure.v1.StepOrBuilder getStepsOrBuilder(
         int index) {
@@ -1134,7 +1294,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public java.util.List<? extends ai.visma.ava.procedure.v1.StepOrBuilder> 
          getStepsOrBuilderList() {
@@ -1145,14 +1305,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public ai.visma.ava.procedure.v1.Step.Builder addStepsBuilder() {
       return getStepsFieldBuilder().addBuilder(
           ai.visma.ava.procedure.v1.Step.getDefaultInstance());
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public ai.visma.ava.procedure.v1.Step.Builder addStepsBuilder(
         int index) {
@@ -1160,7 +1320,7 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.ava.procedure.v1.Step.getDefaultInstance());
     }
     /**
-     * <code>repeated .ava.procedure.v1.Step steps = 5 [json_name = "steps"];</code>
+     * <code>repeated .ava.procedure.v1.Step steps = 4 [json_name = "steps"];</code>
      */
     public java.util.List<ai.visma.ava.procedure.v1.Step.Builder> 
          getStepsBuilderList() {

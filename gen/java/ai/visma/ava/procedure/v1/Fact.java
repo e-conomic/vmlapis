@@ -6,12 +6,12 @@
 package ai.visma.ava.procedure.v1;
 
 /**
- * Protobuf type {@code ava.procedure.v1.FactBinding}
+ * Protobuf type {@code ava.procedure.v1.Fact}
  */
-public final class FactBinding extends
+public final class Fact extends
     com.google.protobuf.GeneratedMessage implements
-    // @@protoc_insertion_point(message_implements:ava.procedure.v1.FactBinding)
-    FactBindingOrBuilder {
+    // @@protoc_insertion_point(message_implements:ava.procedure.v1.Fact)
+    FactOrBuilder {
 private static final long serialVersionUID = 0L;
   static {
     com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
@@ -20,66 +20,66 @@ private static final long serialVersionUID = 0L;
       /* minor= */ 29,
       /* patch= */ 3,
       /* suffix= */ "",
-      FactBinding.class.getName());
+      Fact.class.getName());
   }
-  // Use FactBinding.newBuilder() to construct.
-  private FactBinding(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+  // Use Fact.newBuilder() to construct.
+  private Fact(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
     super(builder);
   }
-  private FactBinding() {
-    factName_ = "";
+  private Fact() {
+    name_ = "";
     type_ = 0;
-    sources_ = java.util.Collections.emptyList();
-    values_ =
+    permitted_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
+    sources_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_FactBinding_descriptor;
+    return ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_Fact_descriptor;
   }
 
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_FactBinding_fieldAccessorTable
+    return ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_Fact_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
-            ai.visma.ava.procedure.v1.FactBinding.class, ai.visma.ava.procedure.v1.FactBinding.Builder.class);
+            ai.visma.ava.procedure.v1.Fact.class, ai.visma.ava.procedure.v1.Fact.Builder.class);
   }
 
-  public static final int FACT_NAME_FIELD_NUMBER = 1;
+  public static final int NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private volatile java.lang.Object factName_ = "";
+  private volatile java.lang.Object name_ = "";
   /**
-   * <code>string fact_name = 1 [json_name = "factName"];</code>
-   * @return The factName.
+   * <code>string name = 1 [json_name = "name"];</code>
+   * @return The name.
    */
   @java.lang.Override
-  public java.lang.String getFactName() {
-    java.lang.Object ref = factName_;
+  public java.lang.String getName() {
+    java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
       return (java.lang.String) ref;
     } else {
       com.google.protobuf.ByteString bs = 
           (com.google.protobuf.ByteString) ref;
       java.lang.String s = bs.toStringUtf8();
-      factName_ = s;
+      name_ = s;
       return s;
     }
   }
   /**
-   * <code>string fact_name = 1 [json_name = "factName"];</code>
-   * @return The bytes for factName.
+   * <code>string name = 1 [json_name = "name"];</code>
+   * @return The bytes for name.
    */
   @java.lang.Override
   public com.google.protobuf.ByteString
-      getFactNameBytes() {
-    java.lang.Object ref = factName_;
+      getNameBytes() {
+    java.lang.Object ref = name_;
     if (ref instanceof java.lang.String) {
       com.google.protobuf.ByteString b = 
           com.google.protobuf.ByteString.copyFromUtf8(
               (java.lang.String) ref);
-      factName_ = b;
+      name_ = b;
       return b;
     } else {
       return (com.google.protobuf.ByteString) ref;
@@ -104,18 +104,55 @@ private static final long serialVersionUID = 0L;
     return result == null ? ai.visma.ava.procedure.v1.FactType.UNRECOGNIZED : result;
   }
 
-  public static final int SOURCES_FIELD_NUMBER = 3;
+  public static final int PERMITTED_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private com.google.protobuf.LazyStringArrayList permitted_ =
+      com.google.protobuf.LazyStringArrayList.emptyList();
+  /**
+   * <code>repeated string permitted = 3 [json_name = "permitted"];</code>
+   * @return A list containing the permitted.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getPermittedList() {
+    return permitted_;
+  }
+  /**
+   * <code>repeated string permitted = 3 [json_name = "permitted"];</code>
+   * @return The count of permitted.
+   */
+  public int getPermittedCount() {
+    return permitted_.size();
+  }
+  /**
+   * <code>repeated string permitted = 3 [json_name = "permitted"];</code>
+   * @param index The index of the element to return.
+   * @return The permitted at the given index.
+   */
+  public java.lang.String getPermitted(int index) {
+    return permitted_.get(index);
+  }
+  /**
+   * <code>repeated string permitted = 3 [json_name = "permitted"];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the permitted at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getPermittedBytes(int index) {
+    return permitted_.getByteString(index);
+  }
+
+  public static final int SOURCES_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private java.util.List<ai.visma.ava.procedure.v1.FactSource> sources_;
   /**
-   * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+   * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
    */
   @java.lang.Override
   public java.util.List<ai.visma.ava.procedure.v1.FactSource> getSourcesList() {
     return sources_;
   }
   /**
-   * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+   * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
    */
   @java.lang.Override
   public java.util.List<? extends ai.visma.ava.procedure.v1.FactSourceOrBuilder> 
@@ -123,63 +160,26 @@ private static final long serialVersionUID = 0L;
     return sources_;
   }
   /**
-   * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+   * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
    */
   @java.lang.Override
   public int getSourcesCount() {
     return sources_.size();
   }
   /**
-   * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+   * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
    */
   @java.lang.Override
   public ai.visma.ava.procedure.v1.FactSource getSources(int index) {
     return sources_.get(index);
   }
   /**
-   * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+   * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
    */
   @java.lang.Override
   public ai.visma.ava.procedure.v1.FactSourceOrBuilder getSourcesOrBuilder(
       int index) {
     return sources_.get(index);
-  }
-
-  public static final int VALUES_FIELD_NUMBER = 5;
-  @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList values_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
-  /**
-   * <code>repeated string values = 5 [json_name = "values"];</code>
-   * @return A list containing the values.
-   */
-  public com.google.protobuf.ProtocolStringList
-      getValuesList() {
-    return values_;
-  }
-  /**
-   * <code>repeated string values = 5 [json_name = "values"];</code>
-   * @return The count of values.
-   */
-  public int getValuesCount() {
-    return values_.size();
-  }
-  /**
-   * <code>repeated string values = 5 [json_name = "values"];</code>
-   * @param index The index of the element to return.
-   * @return The values at the given index.
-   */
-  public java.lang.String getValues(int index) {
-    return values_.get(index);
-  }
-  /**
-   * <code>repeated string values = 5 [json_name = "values"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the values at the given index.
-   */
-  public com.google.protobuf.ByteString
-      getValuesBytes(int index) {
-    return values_.getByteString(index);
   }
 
   private byte memoizedIsInitialized = -1;
@@ -196,17 +196,17 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(factName_)) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 1, factName_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 1, name_);
     }
     if (type_ != ai.visma.ava.procedure.v1.FactType.FACT_TYPE_UNSPECIFIED.getNumber()) {
       output.writeEnum(2, type_);
     }
-    for (int i = 0; i < sources_.size(); i++) {
-      output.writeMessage(3, sources_.get(i));
+    for (int i = 0; i < permitted_.size(); i++) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 3, permitted_.getRaw(i));
     }
-    for (int i = 0; i < values_.size(); i++) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 5, values_.getRaw(i));
+    for (int i = 0; i < sources_.size(); i++) {
+      output.writeMessage(4, sources_.get(i));
     }
     getUnknownFields().writeTo(output);
   }
@@ -217,24 +217,24 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(factName_)) {
-      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, factName_);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(1, name_);
     }
     if (type_ != ai.visma.ava.procedure.v1.FactType.FACT_TYPE_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(2, type_);
     }
-    for (int i = 0; i < sources_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(3, sources_.get(i));
-    }
     {
       int dataSize = 0;
-      for (int i = 0; i < values_.size(); i++) {
-        dataSize += computeStringSizeNoTag(values_.getRaw(i));
+      for (int i = 0; i < permitted_.size(); i++) {
+        dataSize += computeStringSizeNoTag(permitted_.getRaw(i));
       }
       size += dataSize;
-      size += 1 * getValuesList().size();
+      size += 1 * getPermittedList().size();
+    }
+    for (int i = 0; i < sources_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, sources_.get(i));
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -246,18 +246,18 @@ private static final long serialVersionUID = 0L;
     if (obj == this) {
      return true;
     }
-    if (!(obj instanceof ai.visma.ava.procedure.v1.FactBinding)) {
+    if (!(obj instanceof ai.visma.ava.procedure.v1.Fact)) {
       return super.equals(obj);
     }
-    ai.visma.ava.procedure.v1.FactBinding other = (ai.visma.ava.procedure.v1.FactBinding) obj;
+    ai.visma.ava.procedure.v1.Fact other = (ai.visma.ava.procedure.v1.Fact) obj;
 
-    if (!getFactName()
-        .equals(other.getFactName())) return false;
+    if (!getName()
+        .equals(other.getName())) return false;
     if (type_ != other.type_) return false;
+    if (!getPermittedList()
+        .equals(other.getPermittedList())) return false;
     if (!getSourcesList()
         .equals(other.getSourcesList())) return false;
-    if (!getValuesList()
-        .equals(other.getValuesList())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -269,61 +269,61 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    hash = (37 * hash) + FACT_NAME_FIELD_NUMBER;
-    hash = (53 * hash) + getFactName().hashCode();
+    hash = (37 * hash) + NAME_FIELD_NUMBER;
+    hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + type_;
+    if (getPermittedCount() > 0) {
+      hash = (37 * hash) + PERMITTED_FIELD_NUMBER;
+      hash = (53 * hash) + getPermittedList().hashCode();
+    }
     if (getSourcesCount() > 0) {
       hash = (37 * hash) + SOURCES_FIELD_NUMBER;
       hash = (53 * hash) + getSourcesList().hashCode();
-    }
-    if (getValuesCount() > 0) {
-      hash = (37 * hash) + VALUES_FIELD_NUMBER;
-      hash = (53 * hash) + getValuesList().hashCode();
     }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
   }
 
-  public static ai.visma.ava.procedure.v1.FactBinding parseFrom(
+  public static ai.visma.ava.procedure.v1.Fact parseFrom(
       java.nio.ByteBuffer data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ava.procedure.v1.FactBinding parseFrom(
+  public static ai.visma.ava.procedure.v1.Fact parseFrom(
       java.nio.ByteBuffer data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ava.procedure.v1.FactBinding parseFrom(
+  public static ai.visma.ava.procedure.v1.Fact parseFrom(
       com.google.protobuf.ByteString data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ava.procedure.v1.FactBinding parseFrom(
+  public static ai.visma.ava.procedure.v1.Fact parseFrom(
       com.google.protobuf.ByteString data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ava.procedure.v1.FactBinding parseFrom(byte[] data)
+  public static ai.visma.ava.procedure.v1.Fact parseFrom(byte[] data)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data);
   }
-  public static ai.visma.ava.procedure.v1.FactBinding parseFrom(
+  public static ai.visma.ava.procedure.v1.Fact parseFrom(
       byte[] data,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws com.google.protobuf.InvalidProtocolBufferException {
     return PARSER.parseFrom(data, extensionRegistry);
   }
-  public static ai.visma.ava.procedure.v1.FactBinding parseFrom(java.io.InputStream input)
+  public static ai.visma.ava.procedure.v1.Fact parseFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ava.procedure.v1.FactBinding parseFrom(
+  public static ai.visma.ava.procedure.v1.Fact parseFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -331,26 +331,26 @@ private static final long serialVersionUID = 0L;
         .parseWithIOException(PARSER, input, extensionRegistry);
   }
 
-  public static ai.visma.ava.procedure.v1.FactBinding parseDelimitedFrom(java.io.InputStream input)
+  public static ai.visma.ava.procedure.v1.Fact parseDelimitedFrom(java.io.InputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input);
   }
 
-  public static ai.visma.ava.procedure.v1.FactBinding parseDelimitedFrom(
+  public static ai.visma.ava.procedure.v1.Fact parseDelimitedFrom(
       java.io.InputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
   }
-  public static ai.visma.ava.procedure.v1.FactBinding parseFrom(
+  public static ai.visma.ava.procedure.v1.Fact parseFrom(
       com.google.protobuf.CodedInputStream input)
       throws java.io.IOException {
     return com.google.protobuf.GeneratedMessage
         .parseWithIOException(PARSER, input);
   }
-  public static ai.visma.ava.procedure.v1.FactBinding parseFrom(
+  public static ai.visma.ava.procedure.v1.Fact parseFrom(
       com.google.protobuf.CodedInputStream input,
       com.google.protobuf.ExtensionRegistryLite extensionRegistry)
       throws java.io.IOException {
@@ -363,7 +363,7 @@ private static final long serialVersionUID = 0L;
   public static Builder newBuilder() {
     return DEFAULT_INSTANCE.toBuilder();
   }
-  public static Builder newBuilder(ai.visma.ava.procedure.v1.FactBinding prototype) {
+  public static Builder newBuilder(ai.visma.ava.procedure.v1.Fact prototype) {
     return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
   }
   @java.lang.Override
@@ -379,26 +379,26 @@ private static final long serialVersionUID = 0L;
     return builder;
   }
   /**
-   * Protobuf type {@code ava.procedure.v1.FactBinding}
+   * Protobuf type {@code ava.procedure.v1.Fact}
    */
   public static final class Builder extends
       com.google.protobuf.GeneratedMessage.Builder<Builder> implements
-      // @@protoc_insertion_point(builder_implements:ava.procedure.v1.FactBinding)
-      ai.visma.ava.procedure.v1.FactBindingOrBuilder {
+      // @@protoc_insertion_point(builder_implements:ava.procedure.v1.Fact)
+      ai.visma.ava.procedure.v1.FactOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_FactBinding_descriptor;
+      return ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_Fact_descriptor;
     }
 
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_FactBinding_fieldAccessorTable
+      return ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_Fact_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              ai.visma.ava.procedure.v1.FactBinding.class, ai.visma.ava.procedure.v1.FactBinding.Builder.class);
+              ai.visma.ava.procedure.v1.Fact.class, ai.visma.ava.procedure.v1.Fact.Builder.class);
     }
 
-    // Construct using ai.visma.ava.procedure.v1.FactBinding.newBuilder()
+    // Construct using ai.visma.ava.procedure.v1.Fact.newBuilder()
     private Builder() {
 
     }
@@ -412,34 +412,34 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      factName_ = "";
+      name_ = "";
       type_ = 0;
+      permitted_ =
+          com.google.protobuf.LazyStringArrayList.emptyList();
       if (sourcesBuilder_ == null) {
         sources_ = java.util.Collections.emptyList();
       } else {
         sources_ = null;
         sourcesBuilder_.clear();
       }
-      bitField0_ = (bitField0_ & ~0x00000004);
-      values_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000008);
       return this;
     }
 
     @java.lang.Override
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_FactBinding_descriptor;
+      return ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_Fact_descriptor;
     }
 
     @java.lang.Override
-    public ai.visma.ava.procedure.v1.FactBinding getDefaultInstanceForType() {
-      return ai.visma.ava.procedure.v1.FactBinding.getDefaultInstance();
+    public ai.visma.ava.procedure.v1.Fact getDefaultInstanceForType() {
+      return ai.visma.ava.procedure.v1.Fact.getDefaultInstance();
     }
 
     @java.lang.Override
-    public ai.visma.ava.procedure.v1.FactBinding build() {
-      ai.visma.ava.procedure.v1.FactBinding result = buildPartial();
+    public ai.visma.ava.procedure.v1.Fact build() {
+      ai.visma.ava.procedure.v1.Fact result = buildPartial();
       if (!result.isInitialized()) {
         throw newUninitializedMessageException(result);
       }
@@ -447,19 +447,19 @@ private static final long serialVersionUID = 0L;
     }
 
     @java.lang.Override
-    public ai.visma.ava.procedure.v1.FactBinding buildPartial() {
-      ai.visma.ava.procedure.v1.FactBinding result = new ai.visma.ava.procedure.v1.FactBinding(this);
+    public ai.visma.ava.procedure.v1.Fact buildPartial() {
+      ai.visma.ava.procedure.v1.Fact result = new ai.visma.ava.procedure.v1.Fact(this);
       buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
     }
 
-    private void buildPartialRepeatedFields(ai.visma.ava.procedure.v1.FactBinding result) {
+    private void buildPartialRepeatedFields(ai.visma.ava.procedure.v1.Fact result) {
       if (sourcesBuilder_ == null) {
-        if (((bitField0_ & 0x00000004) != 0)) {
+        if (((bitField0_ & 0x00000008) != 0)) {
           sources_ = java.util.Collections.unmodifiableList(sources_);
-          bitField0_ = (bitField0_ & ~0x00000004);
+          bitField0_ = (bitField0_ & ~0x00000008);
         }
         result.sources_ = sources_;
       } else {
@@ -467,45 +467,55 @@ private static final long serialVersionUID = 0L;
       }
     }
 
-    private void buildPartial0(ai.visma.ava.procedure.v1.FactBinding result) {
+    private void buildPartial0(ai.visma.ava.procedure.v1.Fact result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000001) != 0)) {
-        result.factName_ = factName_;
+        result.name_ = name_;
       }
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.type_ = type_;
       }
-      if (((from_bitField0_ & 0x00000008) != 0)) {
-        values_.makeImmutable();
-        result.values_ = values_;
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        permitted_.makeImmutable();
+        result.permitted_ = permitted_;
       }
     }
 
     @java.lang.Override
     public Builder mergeFrom(com.google.protobuf.Message other) {
-      if (other instanceof ai.visma.ava.procedure.v1.FactBinding) {
-        return mergeFrom((ai.visma.ava.procedure.v1.FactBinding)other);
+      if (other instanceof ai.visma.ava.procedure.v1.Fact) {
+        return mergeFrom((ai.visma.ava.procedure.v1.Fact)other);
       } else {
         super.mergeFrom(other);
         return this;
       }
     }
 
-    public Builder mergeFrom(ai.visma.ava.procedure.v1.FactBinding other) {
-      if (other == ai.visma.ava.procedure.v1.FactBinding.getDefaultInstance()) return this;
-      if (!other.getFactName().isEmpty()) {
-        factName_ = other.factName_;
+    public Builder mergeFrom(ai.visma.ava.procedure.v1.Fact other) {
+      if (other == ai.visma.ava.procedure.v1.Fact.getDefaultInstance()) return this;
+      if (!other.getName().isEmpty()) {
+        name_ = other.name_;
         bitField0_ |= 0x00000001;
         onChanged();
       }
       if (other.type_ != 0) {
         setTypeValue(other.getTypeValue());
       }
+      if (!other.permitted_.isEmpty()) {
+        if (permitted_.isEmpty()) {
+          permitted_ = other.permitted_;
+          bitField0_ |= 0x00000004;
+        } else {
+          ensurePermittedIsMutable();
+          permitted_.addAll(other.permitted_);
+        }
+        onChanged();
+      }
       if (sourcesBuilder_ == null) {
         if (!other.sources_.isEmpty()) {
           if (sources_.isEmpty()) {
             sources_ = other.sources_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
           } else {
             ensureSourcesIsMutable();
             sources_.addAll(other.sources_);
@@ -518,7 +528,7 @@ private static final long serialVersionUID = 0L;
             sourcesBuilder_.dispose();
             sourcesBuilder_ = null;
             sources_ = other.sources_;
-            bitField0_ = (bitField0_ & ~0x00000004);
+            bitField0_ = (bitField0_ & ~0x00000008);
             sourcesBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
                  getSourcesFieldBuilder() : null;
@@ -526,16 +536,6 @@ private static final long serialVersionUID = 0L;
             sourcesBuilder_.addAllMessages(other.sources_);
           }
         }
-      }
-      if (!other.values_.isEmpty()) {
-        if (values_.isEmpty()) {
-          values_ = other.values_;
-          bitField0_ |= 0x00000008;
-        } else {
-          ensureValuesIsMutable();
-          values_.addAll(other.values_);
-        }
-        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -564,7 +564,7 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              factName_ = input.readStringRequireUtf8();
+              name_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000001;
               break;
             } // case 10
@@ -574,6 +574,12 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 16
             case 26: {
+              java.lang.String s = input.readStringRequireUtf8();
+              ensurePermittedIsMutable();
+              permitted_.add(s);
+              break;
+            } // case 26
+            case 34: {
               ai.visma.ava.procedure.v1.FactSource m =
                   input.readMessage(
                       ai.visma.ava.procedure.v1.FactSource.parser(),
@@ -585,13 +591,7 @@ private static final long serialVersionUID = 0L;
                 sourcesBuilder_.addMessage(m);
               }
               break;
-            } // case 26
-            case 42: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureValuesIsMutable();
-              values_.add(s);
-              break;
-            } // case 42
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -609,73 +609,73 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.lang.Object factName_ = "";
+    private java.lang.Object name_ = "";
     /**
-     * <code>string fact_name = 1 [json_name = "factName"];</code>
-     * @return The factName.
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The name.
      */
-    public java.lang.String getFactName() {
-      java.lang.Object ref = factName_;
+    public java.lang.String getName() {
+      java.lang.Object ref = name_;
       if (!(ref instanceof java.lang.String)) {
         com.google.protobuf.ByteString bs =
             (com.google.protobuf.ByteString) ref;
         java.lang.String s = bs.toStringUtf8();
-        factName_ = s;
+        name_ = s;
         return s;
       } else {
         return (java.lang.String) ref;
       }
     }
     /**
-     * <code>string fact_name = 1 [json_name = "factName"];</code>
-     * @return The bytes for factName.
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
-        getFactNameBytes() {
-      java.lang.Object ref = factName_;
+        getNameBytes() {
+      java.lang.Object ref = name_;
       if (ref instanceof String) {
         com.google.protobuf.ByteString b = 
             com.google.protobuf.ByteString.copyFromUtf8(
                 (java.lang.String) ref);
-        factName_ = b;
+        name_ = b;
         return b;
       } else {
         return (com.google.protobuf.ByteString) ref;
       }
     }
     /**
-     * <code>string fact_name = 1 [json_name = "factName"];</code>
-     * @param value The factName to set.
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The name to set.
      * @return This builder for chaining.
      */
-    public Builder setFactName(
+    public Builder setName(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      factName_ = value;
+      name_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
     }
     /**
-     * <code>string fact_name = 1 [json_name = "factName"];</code>
+     * <code>string name = 1 [json_name = "name"];</code>
      * @return This builder for chaining.
      */
-    public Builder clearFactName() {
-      factName_ = getDefaultInstance().getFactName();
+    public Builder clearName() {
+      name_ = getDefaultInstance().getName();
       bitField0_ = (bitField0_ & ~0x00000001);
       onChanged();
       return this;
     }
     /**
-     * <code>string fact_name = 1 [json_name = "factName"];</code>
-     * @param value The bytes for factName to set.
+     * <code>string name = 1 [json_name = "name"];</code>
+     * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
-    public Builder setFactNameBytes(
+    public Builder setNameBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      factName_ = value;
+      name_ = value;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
@@ -734,12 +734,123 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.google.protobuf.LazyStringArrayList permitted_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+    private void ensurePermittedIsMutable() {
+      if (!permitted_.isModifiable()) {
+        permitted_ = new com.google.protobuf.LazyStringArrayList(permitted_);
+      }
+      bitField0_ |= 0x00000004;
+    }
+    /**
+     * <code>repeated string permitted = 3 [json_name = "permitted"];</code>
+     * @return A list containing the permitted.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getPermittedList() {
+      permitted_.makeImmutable();
+      return permitted_;
+    }
+    /**
+     * <code>repeated string permitted = 3 [json_name = "permitted"];</code>
+     * @return The count of permitted.
+     */
+    public int getPermittedCount() {
+      return permitted_.size();
+    }
+    /**
+     * <code>repeated string permitted = 3 [json_name = "permitted"];</code>
+     * @param index The index of the element to return.
+     * @return The permitted at the given index.
+     */
+    public java.lang.String getPermitted(int index) {
+      return permitted_.get(index);
+    }
+    /**
+     * <code>repeated string permitted = 3 [json_name = "permitted"];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the permitted at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getPermittedBytes(int index) {
+      return permitted_.getByteString(index);
+    }
+    /**
+     * <code>repeated string permitted = 3 [json_name = "permitted"];</code>
+     * @param index The index to set the value at.
+     * @param value The permitted to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPermitted(
+        int index, java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensurePermittedIsMutable();
+      permitted_.set(index, value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string permitted = 3 [json_name = "permitted"];</code>
+     * @param value The permitted to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPermitted(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ensurePermittedIsMutable();
+      permitted_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string permitted = 3 [json_name = "permitted"];</code>
+     * @param values The permitted to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllPermitted(
+        java.lang.Iterable<java.lang.String> values) {
+      ensurePermittedIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, permitted_);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string permitted = 3 [json_name = "permitted"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPermitted() {
+      permitted_ =
+        com.google.protobuf.LazyStringArrayList.emptyList();
+      bitField0_ = (bitField0_ & ~0x00000004);;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>repeated string permitted = 3 [json_name = "permitted"];</code>
+     * @param value The bytes of the permitted to add.
+     * @return This builder for chaining.
+     */
+    public Builder addPermittedBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ensurePermittedIsMutable();
+      permitted_.add(value);
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
     private java.util.List<ai.visma.ava.procedure.v1.FactSource> sources_ =
       java.util.Collections.emptyList();
     private void ensureSourcesIsMutable() {
-      if (!((bitField0_ & 0x00000004) != 0)) {
+      if (!((bitField0_ & 0x00000008) != 0)) {
         sources_ = new java.util.ArrayList<ai.visma.ava.procedure.v1.FactSource>(sources_);
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
        }
     }
 
@@ -747,7 +858,7 @@ private static final long serialVersionUID = 0L;
         ai.visma.ava.procedure.v1.FactSource, ai.visma.ava.procedure.v1.FactSource.Builder, ai.visma.ava.procedure.v1.FactSourceOrBuilder> sourcesBuilder_;
 
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public java.util.List<ai.visma.ava.procedure.v1.FactSource> getSourcesList() {
       if (sourcesBuilder_ == null) {
@@ -757,7 +868,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public int getSourcesCount() {
       if (sourcesBuilder_ == null) {
@@ -767,7 +878,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public ai.visma.ava.procedure.v1.FactSource getSources(int index) {
       if (sourcesBuilder_ == null) {
@@ -777,7 +888,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public Builder setSources(
         int index, ai.visma.ava.procedure.v1.FactSource value) {
@@ -794,7 +905,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public Builder setSources(
         int index, ai.visma.ava.procedure.v1.FactSource.Builder builderForValue) {
@@ -808,7 +919,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public Builder addSources(ai.visma.ava.procedure.v1.FactSource value) {
       if (sourcesBuilder_ == null) {
@@ -824,7 +935,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public Builder addSources(
         int index, ai.visma.ava.procedure.v1.FactSource value) {
@@ -841,7 +952,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public Builder addSources(
         ai.visma.ava.procedure.v1.FactSource.Builder builderForValue) {
@@ -855,7 +966,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public Builder addSources(
         int index, ai.visma.ava.procedure.v1.FactSource.Builder builderForValue) {
@@ -869,7 +980,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public Builder addAllSources(
         java.lang.Iterable<? extends ai.visma.ava.procedure.v1.FactSource> values) {
@@ -884,12 +995,12 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public Builder clearSources() {
       if (sourcesBuilder_ == null) {
         sources_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000004);
+        bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
       } else {
         sourcesBuilder_.clear();
@@ -897,7 +1008,7 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public Builder removeSources(int index) {
       if (sourcesBuilder_ == null) {
@@ -910,14 +1021,14 @@ private static final long serialVersionUID = 0L;
       return this;
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public ai.visma.ava.procedure.v1.FactSource.Builder getSourcesBuilder(
         int index) {
       return getSourcesFieldBuilder().getBuilder(index);
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public ai.visma.ava.procedure.v1.FactSourceOrBuilder getSourcesOrBuilder(
         int index) {
@@ -927,7 +1038,7 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public java.util.List<? extends ai.visma.ava.procedure.v1.FactSourceOrBuilder> 
          getSourcesOrBuilderList() {
@@ -938,14 +1049,14 @@ private static final long serialVersionUID = 0L;
       }
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public ai.visma.ava.procedure.v1.FactSource.Builder addSourcesBuilder() {
       return getSourcesFieldBuilder().addBuilder(
           ai.visma.ava.procedure.v1.FactSource.getDefaultInstance());
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public ai.visma.ava.procedure.v1.FactSource.Builder addSourcesBuilder(
         int index) {
@@ -953,7 +1064,7 @@ private static final long serialVersionUID = 0L;
           index, ai.visma.ava.procedure.v1.FactSource.getDefaultInstance());
     }
     /**
-     * <code>repeated .ava.procedure.v1.FactSource sources = 3 [json_name = "sources"];</code>
+     * <code>repeated .ava.procedure.v1.FactSource sources = 4 [json_name = "sources"];</code>
      */
     public java.util.List<ai.visma.ava.procedure.v1.FactSource.Builder> 
          getSourcesBuilderList() {
@@ -966,7 +1077,7 @@ private static final long serialVersionUID = 0L;
         sourcesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
             ai.visma.ava.procedure.v1.FactSource, ai.visma.ava.procedure.v1.FactSource.Builder, ai.visma.ava.procedure.v1.FactSourceOrBuilder>(
                 sources_,
-                ((bitField0_ & 0x00000004) != 0),
+                ((bitField0_ & 0x00000008) != 0),
                 getParentForChildren(),
                 isClean());
         sources_ = null;
@@ -974,134 +1085,23 @@ private static final long serialVersionUID = 0L;
       return sourcesBuilder_;
     }
 
-    private com.google.protobuf.LazyStringArrayList values_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureValuesIsMutable() {
-      if (!values_.isModifiable()) {
-        values_ = new com.google.protobuf.LazyStringArrayList(values_);
-      }
-      bitField0_ |= 0x00000008;
-    }
-    /**
-     * <code>repeated string values = 5 [json_name = "values"];</code>
-     * @return A list containing the values.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getValuesList() {
-      values_.makeImmutable();
-      return values_;
-    }
-    /**
-     * <code>repeated string values = 5 [json_name = "values"];</code>
-     * @return The count of values.
-     */
-    public int getValuesCount() {
-      return values_.size();
-    }
-    /**
-     * <code>repeated string values = 5 [json_name = "values"];</code>
-     * @param index The index of the element to return.
-     * @return The values at the given index.
-     */
-    public java.lang.String getValues(int index) {
-      return values_.get(index);
-    }
-    /**
-     * <code>repeated string values = 5 [json_name = "values"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the values at the given index.
-     */
-    public com.google.protobuf.ByteString
-        getValuesBytes(int index) {
-      return values_.getByteString(index);
-    }
-    /**
-     * <code>repeated string values = 5 [json_name = "values"];</code>
-     * @param index The index to set the value at.
-     * @param value The values to set.
-     * @return This builder for chaining.
-     */
-    public Builder setValues(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureValuesIsMutable();
-      values_.set(index, value);
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string values = 5 [json_name = "values"];</code>
-     * @param value The values to add.
-     * @return This builder for chaining.
-     */
-    public Builder addValues(
-        java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureValuesIsMutable();
-      values_.add(value);
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string values = 5 [json_name = "values"];</code>
-     * @param values The values to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllValues(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureValuesIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, values_);
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string values = 5 [json_name = "values"];</code>
-     * @return This builder for chaining.
-     */
-    public Builder clearValues() {
-      values_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000008);;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string values = 5 [json_name = "values"];</code>
-     * @param value The bytes of the values to add.
-     * @return This builder for chaining.
-     */
-    public Builder addValuesBytes(
-        com.google.protobuf.ByteString value) {
-      if (value == null) { throw new NullPointerException(); }
-      checkByteStringIsUtf8(value);
-      ensureValuesIsMutable();
-      values_.add(value);
-      bitField0_ |= 0x00000008;
-      onChanged();
-      return this;
-    }
-
-    // @@protoc_insertion_point(builder_scope:ava.procedure.v1.FactBinding)
+    // @@protoc_insertion_point(builder_scope:ava.procedure.v1.Fact)
   }
 
-  // @@protoc_insertion_point(class_scope:ava.procedure.v1.FactBinding)
-  private static final ai.visma.ava.procedure.v1.FactBinding DEFAULT_INSTANCE;
+  // @@protoc_insertion_point(class_scope:ava.procedure.v1.Fact)
+  private static final ai.visma.ava.procedure.v1.Fact DEFAULT_INSTANCE;
   static {
-    DEFAULT_INSTANCE = new ai.visma.ava.procedure.v1.FactBinding();
+    DEFAULT_INSTANCE = new ai.visma.ava.procedure.v1.Fact();
   }
 
-  public static ai.visma.ava.procedure.v1.FactBinding getDefaultInstance() {
+  public static ai.visma.ava.procedure.v1.Fact getDefaultInstance() {
     return DEFAULT_INSTANCE;
   }
 
-  private static final com.google.protobuf.Parser<FactBinding>
-      PARSER = new com.google.protobuf.AbstractParser<FactBinding>() {
+  private static final com.google.protobuf.Parser<Fact>
+      PARSER = new com.google.protobuf.AbstractParser<Fact>() {
     @java.lang.Override
-    public FactBinding parsePartialFrom(
+    public Fact parsePartialFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
@@ -1120,17 +1120,17 @@ private static final long serialVersionUID = 0L;
     }
   };
 
-  public static com.google.protobuf.Parser<FactBinding> parser() {
+  public static com.google.protobuf.Parser<Fact> parser() {
     return PARSER;
   }
 
   @java.lang.Override
-  public com.google.protobuf.Parser<FactBinding> getParserForType() {
+  public com.google.protobuf.Parser<Fact> getParserForType() {
     return PARSER;
   }
 
   @java.lang.Override
-  public ai.visma.ava.procedure.v1.FactBinding getDefaultInstanceForType() {
+  public ai.visma.ava.procedure.v1.Fact getDefaultInstanceForType() {
     return DEFAULT_INSTANCE;
   }
 
