@@ -31,6 +31,7 @@ private static final long serialVersionUID = 0L;
     label_ = "";
     criterion_ = "";
     when_ = "";
+    outputValue_ = "";
     nextStepId_ = "";
     rationale_ = "";
   }
@@ -40,18 +41,6 @@ private static final long serialVersionUID = 0L;
     return ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_Branch_descriptor;
   }
 
-  @SuppressWarnings({"rawtypes"})
-  @java.lang.Override
-  protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-      int number) {
-    switch (number) {
-      case 5:
-        return internalGetSets();
-      default:
-        throw new RuntimeException(
-            "Invalid map field number: " + number);
-    }
-  }
   @java.lang.Override
   protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internalGetFieldAccessorTable() {
@@ -216,83 +205,43 @@ private static final long serialVersionUID = 0L;
     }
   }
 
-  public static final int SETS_FIELD_NUMBER = 5;
-  private static final class SetsDefaultEntryHolder {
-    static final com.google.protobuf.MapEntry<
-        java.lang.String, java.lang.String> defaultEntry =
-            com.google.protobuf.MapEntry
-            .<java.lang.String, java.lang.String>newDefaultInstance(
-                ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_Branch_SetsEntry_descriptor, 
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "",
-                com.google.protobuf.WireFormat.FieldType.STRING,
-                "");
-  }
+  public static final int OUTPUT_VALUE_FIELD_NUMBER = 5;
   @SuppressWarnings("serial")
-  private com.google.protobuf.MapField<
-      java.lang.String, java.lang.String> sets_;
-  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-  internalGetSets() {
-    if (sets_ == null) {
-      return com.google.protobuf.MapField.emptyMapField(
-          SetsDefaultEntryHolder.defaultEntry);
+  private volatile java.lang.Object outputValue_ = "";
+  /**
+   * <code>string output_value = 5 [json_name = "outputValue"];</code>
+   * @return The outputValue.
+   */
+  @java.lang.Override
+  public java.lang.String getOutputValue() {
+    java.lang.Object ref = outputValue_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      outputValue_ = s;
+      return s;
     }
-    return sets_;
-  }
-  public int getSetsCount() {
-    return internalGetSets().getMap().size();
   }
   /**
-   * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
+   * <code>string output_value = 5 [json_name = "outputValue"];</code>
+   * @return The bytes for outputValue.
    */
   @java.lang.Override
-  public boolean containsSets(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    return internalGetSets().getMap().containsKey(key);
-  }
-  /**
-   * Use {@link #getSetsMap()} instead.
-   */
-  @java.lang.Override
-  @java.lang.Deprecated
-  public java.util.Map<java.lang.String, java.lang.String> getSets() {
-    return getSetsMap();
-  }
-  /**
-   * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
-   */
-  @java.lang.Override
-  public java.util.Map<java.lang.String, java.lang.String> getSetsMap() {
-    return internalGetSets().getMap();
-  }
-  /**
-   * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
-   */
-  @java.lang.Override
-  public /* nullable */
-java.lang.String getSetsOrDefault(
-      java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetSets().getMap();
-    return map.containsKey(key) ? map.get(key) : defaultValue;
-  }
-  /**
-   * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
-   */
-  @java.lang.Override
-  public java.lang.String getSetsOrThrow(
-      java.lang.String key) {
-    if (key == null) { throw new NullPointerException("map key"); }
-    java.util.Map<java.lang.String, java.lang.String> map =
-        internalGetSets().getMap();
-    if (!map.containsKey(key)) {
-      throw new java.lang.IllegalArgumentException();
+  public com.google.protobuf.ByteString
+      getOutputValueBytes() {
+    java.lang.Object ref = outputValue_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      outputValue_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
     }
-    return map.get(key);
   }
 
   public static final int NEXT_STEP_ID_FIELD_NUMBER = 6;
@@ -410,12 +359,9 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(when_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 4, when_);
     }
-    com.google.protobuf.GeneratedMessage
-      .serializeStringMapTo(
-        output,
-        internalGetSets(),
-        SetsDefaultEntryHolder.defaultEntry,
-        5);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(outputValue_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 5, outputValue_);
+    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(nextStepId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 6, nextStepId_);
     }
@@ -446,15 +392,8 @@ java.lang.String defaultValue) {
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(when_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(4, when_);
     }
-    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
-         : internalGetSets().getMap().entrySet()) {
-      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-      sets__ = SetsDefaultEntryHolder.defaultEntry.newBuilderForType()
-          .setKey(entry.getKey())
-          .setValue(entry.getValue())
-          .build();
-      size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(5, sets__);
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(outputValue_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(5, outputValue_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(nextStepId_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(6, nextStepId_);
@@ -489,8 +428,8 @@ java.lang.String defaultValue) {
         .equals(other.getCriterion())) return false;
     if (!getWhen()
         .equals(other.getWhen())) return false;
-    if (!internalGetSets().equals(
-        other.internalGetSets())) return false;
+    if (!getOutputValue()
+        .equals(other.getOutputValue())) return false;
     if (!getNextStepId()
         .equals(other.getNextStepId())) return false;
     if (getIsEscalation()
@@ -516,10 +455,8 @@ java.lang.String defaultValue) {
     hash = (53 * hash) + getCriterion().hashCode();
     hash = (37 * hash) + WHEN_FIELD_NUMBER;
     hash = (53 * hash) + getWhen().hashCode();
-    if (!internalGetSets().getMap().isEmpty()) {
-      hash = (37 * hash) + SETS_FIELD_NUMBER;
-      hash = (53 * hash) + internalGetSets().hashCode();
-    }
+    hash = (37 * hash) + OUTPUT_VALUE_FIELD_NUMBER;
+    hash = (53 * hash) + getOutputValue().hashCode();
     hash = (37 * hash) + NEXT_STEP_ID_FIELD_NUMBER;
     hash = (53 * hash) + getNextStepId().hashCode();
     hash = (37 * hash) + IS_ESCALATION_FIELD_NUMBER;
@@ -636,28 +573,6 @@ java.lang.String defaultValue) {
       return ai.visma.ava.procedure.v1.ProcedureProto.internal_static_ava_procedure_v1_Branch_descriptor;
     }
 
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 5:
-          return internalGetSets();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
-    @SuppressWarnings({"rawtypes"})
-    protected com.google.protobuf.MapFieldReflectionAccessor internalGetMutableMapFieldReflection(
-        int number) {
-      switch (number) {
-        case 5:
-          return internalGetMutableSets();
-        default:
-          throw new RuntimeException(
-              "Invalid map field number: " + number);
-      }
-    }
     @java.lang.Override
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
@@ -684,7 +599,7 @@ java.lang.String defaultValue) {
       label_ = "";
       criterion_ = "";
       when_ = "";
-      internalGetMutableSets().clear();
+      outputValue_ = "";
       nextStepId_ = "";
       isEscalation_ = false;
       rationale_ = "";
@@ -734,8 +649,7 @@ java.lang.String defaultValue) {
         result.when_ = when_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.sets_ = internalGetSets();
-        result.sets_.makeImmutable();
+        result.outputValue_ = outputValue_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
         result.nextStepId_ = nextStepId_;
@@ -780,9 +694,11 @@ java.lang.String defaultValue) {
         bitField0_ |= 0x00000008;
         onChanged();
       }
-      internalGetMutableSets().mergeFrom(
-          other.internalGetSets());
-      bitField0_ |= 0x00000010;
+      if (!other.getOutputValue().isEmpty()) {
+        outputValue_ = other.outputValue_;
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
       if (!other.getNextStepId().isEmpty()) {
         nextStepId_ = other.nextStepId_;
         bitField0_ |= 0x00000020;
@@ -843,11 +759,7 @@ java.lang.String defaultValue) {
               break;
             } // case 34
             case 42: {
-              com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
-              sets__ = input.readMessage(
-                  SetsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
-              internalGetMutableSets().getMutableMap().put(
-                  sets__.getKey(), sets__.getValue());
+              outputValue_ = input.readStringRequireUtf8();
               bitField0_ |= 0x00000010;
               break;
             } // case 42
@@ -1171,130 +1083,75 @@ java.lang.String defaultValue) {
       return this;
     }
 
-    private com.google.protobuf.MapField<
-        java.lang.String, java.lang.String> sets_;
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetSets() {
-      if (sets_ == null) {
-        return com.google.protobuf.MapField.emptyMapField(
-            SetsDefaultEntryHolder.defaultEntry);
+    private java.lang.Object outputValue_ = "";
+    /**
+     * <code>string output_value = 5 [json_name = "outputValue"];</code>
+     * @return The outputValue.
+     */
+    public java.lang.String getOutputValue() {
+      java.lang.Object ref = outputValue_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        outputValue_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
       }
-      return sets_;
     }
-    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
-        internalGetMutableSets() {
-      if (sets_ == null) {
-        sets_ = com.google.protobuf.MapField.newMapField(
-            SetsDefaultEntryHolder.defaultEntry);
+    /**
+     * <code>string output_value = 5 [json_name = "outputValue"];</code>
+     * @return The bytes for outputValue.
+     */
+    public com.google.protobuf.ByteString
+        getOutputValueBytes() {
+      java.lang.Object ref = outputValue_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        outputValue_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
       }
-      if (!sets_.isMutable()) {
-        sets_ = sets_.copy();
-      }
+    }
+    /**
+     * <code>string output_value = 5 [json_name = "outputValue"];</code>
+     * @param value The outputValue to set.
+     * @return This builder for chaining.
+     */
+    public Builder setOutputValue(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      outputValue_ = value;
       bitField0_ |= 0x00000010;
       onChanged();
-      return sets_;
-    }
-    public int getSetsCount() {
-      return internalGetSets().getMap().size();
+      return this;
     }
     /**
-     * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
+     * <code>string output_value = 5 [json_name = "outputValue"];</code>
+     * @return This builder for chaining.
      */
-    @java.lang.Override
-    public boolean containsSets(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      return internalGetSets().getMap().containsKey(key);
-    }
-    /**
-     * Use {@link #getSetsMap()} instead.
-     */
-    @java.lang.Override
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String> getSets() {
-      return getSetsMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
-     */
-    @java.lang.Override
-    public java.util.Map<java.lang.String, java.lang.String> getSetsMap() {
-      return internalGetSets().getMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
-     */
-    @java.lang.Override
-    public /* nullable */
-java.lang.String getSetsOrDefault(
-        java.lang.String key,
-        /* nullable */
-java.lang.String defaultValue) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetSets().getMap();
-      return map.containsKey(key) ? map.get(key) : defaultValue;
-    }
-    /**
-     * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
-     */
-    @java.lang.Override
-    public java.lang.String getSetsOrThrow(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      java.util.Map<java.lang.String, java.lang.String> map =
-          internalGetSets().getMap();
-      if (!map.containsKey(key)) {
-        throw new java.lang.IllegalArgumentException();
-      }
-      return map.get(key);
-    }
-    public Builder clearSets() {
+    public Builder clearOutputValue() {
+      outputValue_ = getDefaultInstance().getOutputValue();
       bitField0_ = (bitField0_ & ~0x00000010);
-      internalGetMutableSets().getMutableMap()
-          .clear();
+      onChanged();
       return this;
     }
     /**
-     * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
+     * <code>string output_value = 5 [json_name = "outputValue"];</code>
+     * @param value The bytes for outputValue to set.
+     * @return This builder for chaining.
      */
-    public Builder removeSets(
-        java.lang.String key) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      internalGetMutableSets().getMutableMap()
-          .remove(key);
-      return this;
-    }
-    /**
-     * Use alternate mutation accessors instead.
-     */
-    @java.lang.Deprecated
-    public java.util.Map<java.lang.String, java.lang.String>
-        getMutableSets() {
+    public Builder setOutputValueBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      outputValue_ = value;
       bitField0_ |= 0x00000010;
-      return internalGetMutableSets().getMutableMap();
-    }
-    /**
-     * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
-     */
-    public Builder putSets(
-        java.lang.String key,
-        java.lang.String value) {
-      if (key == null) { throw new NullPointerException("map key"); }
-      if (value == null) { throw new NullPointerException("map value"); }
-      internalGetMutableSets().getMutableMap()
-          .put(key, value);
-      bitField0_ |= 0x00000010;
-      return this;
-    }
-    /**
-     * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
-     */
-    public Builder putAllSets(
-        java.util.Map<java.lang.String, java.lang.String> values) {
-      internalGetMutableSets().getMutableMap()
-          .putAll(values);
-      bitField0_ |= 0x00000010;
+      onChanged();
       return this;
     }
 

@@ -140,7 +140,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.ava.procedure.v1.Procedure.repeatedFields_ = [1,2,4];
+proto.ava.procedure.v1.Procedure.repeatedFields_ = [1,4];
 
 
 
@@ -175,7 +175,7 @@ proto.ava.procedure.v1.Procedure.toObject = function(includeInstance, msg) {
   var f, obj = {
     factsList: jspb.Message.toObjectList(msg.getFactsList(),
     proto.ava.procedure.v1.Fact.toObject, includeInstance),
-    producesList: (f = jspb.Message.getRepeatedField(msg, 2)) == null ? undefined : f,
+    produces: jspb.Message.getFieldWithDefault(msg, 2, ""),
     rootStepId: jspb.Message.getFieldWithDefault(msg, 3, ""),
     stepsList: jspb.Message.toObjectList(msg.getStepsList(),
     proto.ava.procedure.v1.Step.toObject, includeInstance)
@@ -222,7 +222,7 @@ proto.ava.procedure.v1.Procedure.deserializeBinaryFromReader = function(msg, rea
       break;
     case 2:
       var value = /** @type {string} */ (reader.readString());
-      msg.addProduces(value);
+      msg.setProduces(value);
       break;
     case 3:
       var value = /** @type {string} */ (reader.readString());
@@ -270,9 +270,9 @@ proto.ava.procedure.v1.Procedure.serializeBinaryToWriter = function(message, wri
       proto.ava.procedure.v1.Fact.serializeBinaryToWriter
     );
   }
-  f = message.getProducesList();
+  f = message.getProduces();
   if (f.length > 0) {
-    writer.writeRepeatedString(
+    writer.writeString(
       2,
       f
     );
@@ -334,39 +334,20 @@ proto.ava.procedure.v1.Procedure.prototype.clearFactsList = function() {
 
 
 /**
- * repeated string produces = 2;
- * @return {!Array<string>}
+ * optional string produces = 2;
+ * @return {string}
  */
-proto.ava.procedure.v1.Procedure.prototype.getProducesList = function() {
-  return /** @type {!Array<string>} */ (jspb.Message.getRepeatedField(this, 2));
-};
-
-
-/**
- * @param {!Array<string>} value
- * @return {!proto.ava.procedure.v1.Procedure} returns this
- */
-proto.ava.procedure.v1.Procedure.prototype.setProducesList = function(value) {
-  return jspb.Message.setField(this, 2, value || []);
+proto.ava.procedure.v1.Procedure.prototype.getProduces = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 2, ""));
 };
 
 
 /**
  * @param {string} value
- * @param {number=} opt_index
  * @return {!proto.ava.procedure.v1.Procedure} returns this
  */
-proto.ava.procedure.v1.Procedure.prototype.addProduces = function(value, opt_index) {
-  return jspb.Message.addToRepeatedField(this, 2, value, opt_index);
-};
-
-
-/**
- * Clears the list making it empty but non-null.
- * @return {!proto.ava.procedure.v1.Procedure} returns this
- */
-proto.ava.procedure.v1.Procedure.prototype.clearProducesList = function() {
-  return this.setProducesList([]);
+proto.ava.procedure.v1.Procedure.prototype.setProduces = function(value) {
+  return jspb.Message.setProto3StringField(this, 2, value);
 };
 
 
@@ -1336,7 +1317,7 @@ proto.ava.procedure.v1.Branch.toObject = function(includeInstance, msg) {
     label: jspb.Message.getFieldWithDefault(msg, 2, ""),
     criterion: jspb.Message.getFieldWithDefault(msg, 3, ""),
     when: jspb.Message.getFieldWithDefault(msg, 4, ""),
-    setsMap: (f = msg.getSetsMap()) ? f.toObject(includeInstance, undefined) : [],
+    outputValue: jspb.Message.getFieldWithDefault(msg, 5, ""),
     nextStepId: jspb.Message.getFieldWithDefault(msg, 6, ""),
     isEscalation: jspb.Message.getBooleanFieldWithDefault(msg, 7, false),
     rationale: jspb.Message.getFieldWithDefault(msg, 8, "")
@@ -1393,10 +1374,8 @@ proto.ava.procedure.v1.Branch.deserializeBinaryFromReader = function(msg, reader
       msg.setWhen(value);
       break;
     case 5:
-      var value = msg.getSetsMap();
-      reader.readMessage(value, function(message, reader) {
-        jspb.Map.deserializeBinary(message, reader, jspb.BinaryReader.prototype.readString, jspb.BinaryReader.prototype.readString, null, "", "");
-         });
+      var value = /** @type {string} */ (reader.readString());
+      msg.setOutputValue(value);
       break;
     case 6:
       var value = /** @type {string} */ (reader.readString());
@@ -1467,9 +1446,12 @@ proto.ava.procedure.v1.Branch.serializeBinaryToWriter = function(message, writer
       f
     );
   }
-  f = message.getSetsMap(true);
-  if (f && f.getLength() > 0) {
-    f.serializeBinary(5, writer, jspb.BinaryWriter.prototype.writeString, jspb.BinaryWriter.prototype.writeString);
+  f = message.getOutputValue();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
+      f
+    );
   }
   f = message.getNextStepId();
   if (f.length > 0) {
@@ -1568,25 +1550,20 @@ proto.ava.procedure.v1.Branch.prototype.setWhen = function(value) {
 
 
 /**
- * map<string, string> sets = 5;
- * @param {boolean=} opt_noLazyCreate Do not create the map if
- * empty, instead returning `undefined`
- * @return {!jspb.Map<string,string>}
+ * optional string output_value = 5;
+ * @return {string}
  */
-proto.ava.procedure.v1.Branch.prototype.getSetsMap = function(opt_noLazyCreate) {
-  return /** @type {!jspb.Map<string,string>} */ (
-      jspb.Message.getMapField(this, 5, opt_noLazyCreate,
-      null));
+proto.ava.procedure.v1.Branch.prototype.getOutputValue = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
 };
 
 
 /**
- * Clears values from the map. The map will be non-null.
+ * @param {string} value
  * @return {!proto.ava.procedure.v1.Branch} returns this
  */
-proto.ava.procedure.v1.Branch.prototype.clearSetsMap = function() {
-  this.getSetsMap().clear();
-  return this;
+proto.ava.procedure.v1.Branch.prototype.setOutputValue = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 

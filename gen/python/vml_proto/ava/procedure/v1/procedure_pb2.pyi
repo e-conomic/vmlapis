@@ -48,10 +48,10 @@ class Procedure(_message.Message):
     ROOT_STEP_ID_FIELD_NUMBER: _ClassVar[int]
     STEPS_FIELD_NUMBER: _ClassVar[int]
     facts: _containers.RepeatedCompositeFieldContainer[Fact]
-    produces: _containers.RepeatedScalarFieldContainer[str]
+    produces: str
     root_step_id: str
     steps: _containers.RepeatedCompositeFieldContainer[Step]
-    def __init__(self, facts: _Optional[_Iterable[_Union[Fact, _Mapping]]] = ..., produces: _Optional[_Iterable[str]] = ..., root_step_id: _Optional[str] = ..., steps: _Optional[_Iterable[_Union[Step, _Mapping]]] = ...) -> None: ...
+    def __init__(self, facts: _Optional[_Iterable[_Union[Fact, _Mapping]]] = ..., produces: _Optional[str] = ..., root_step_id: _Optional[str] = ..., steps: _Optional[_Iterable[_Union[Step, _Mapping]]] = ...) -> None: ...
 
 class Fact(_message.Message):
     __slots__ = ("name", "type", "permitted", "sources")
@@ -96,19 +96,12 @@ class Step(_message.Message):
     def __init__(self, step_id: _Optional[str] = ..., kind: _Optional[_Union[StepKind, str]] = ..., question: _Optional[str] = ..., guidance: _Optional[str] = ..., branches: _Optional[_Iterable[_Union[Branch, _Mapping]]] = ..., prompt_ref: _Optional[str] = ..., reads: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class Branch(_message.Message):
-    __slots__ = ("branch_id", "label", "criterion", "when", "sets", "next_step_id", "is_escalation", "rationale")
-    class SetsEntry(_message.Message):
-        __slots__ = ("key", "value")
-        KEY_FIELD_NUMBER: _ClassVar[int]
-        VALUE_FIELD_NUMBER: _ClassVar[int]
-        key: str
-        value: str
-        def __init__(self, key: _Optional[str] = ..., value: _Optional[str] = ...) -> None: ...
+    __slots__ = ("branch_id", "label", "criterion", "when", "output_value", "next_step_id", "is_escalation", "rationale")
     BRANCH_ID_FIELD_NUMBER: _ClassVar[int]
     LABEL_FIELD_NUMBER: _ClassVar[int]
     CRITERION_FIELD_NUMBER: _ClassVar[int]
     WHEN_FIELD_NUMBER: _ClassVar[int]
-    SETS_FIELD_NUMBER: _ClassVar[int]
+    OUTPUT_VALUE_FIELD_NUMBER: _ClassVar[int]
     NEXT_STEP_ID_FIELD_NUMBER: _ClassVar[int]
     IS_ESCALATION_FIELD_NUMBER: _ClassVar[int]
     RATIONALE_FIELD_NUMBER: _ClassVar[int]
@@ -116,8 +109,8 @@ class Branch(_message.Message):
     label: str
     criterion: str
     when: str
-    sets: _containers.ScalarMap[str, str]
+    output_value: str
     next_step_id: str
     is_escalation: bool
     rationale: str
-    def __init__(self, branch_id: _Optional[str] = ..., label: _Optional[str] = ..., criterion: _Optional[str] = ..., when: _Optional[str] = ..., sets: _Optional[_Mapping[str, str]] = ..., next_step_id: _Optional[str] = ..., is_escalation: bool = ..., rationale: _Optional[str] = ...) -> None: ...
+    def __init__(self, branch_id: _Optional[str] = ..., label: _Optional[str] = ..., criterion: _Optional[str] = ..., when: _Optional[str] = ..., output_value: _Optional[str] = ..., next_step_id: _Optional[str] = ..., is_escalation: bool = ..., rationale: _Optional[str] = ...) -> None: ...

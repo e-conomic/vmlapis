@@ -26,7 +26,7 @@ namespace Ava.Procedure.V1 {
           string.Concat(
             "CiBhdmEvcHJvY2VkdXJlL3YxL3Byb2NlZHVyZS5wcm90bxIQYXZhLnByb2Nl",
             "ZHVyZS52MSKlAQoJUHJvY2VkdXJlEiwKBWZhY3RzGAEgAygLMhYuYXZhLnBy",
-            "b2NlZHVyZS52MS5GYWN0UgVmYWN0cxIaCghwcm9kdWNlcxgCIAMoCVIIcHJv",
+            "b2NlZHVyZS52MS5GYWN0UgVmYWN0cxIaCghwcm9kdWNlcxgCIAEoCVIIcHJv",
             "ZHVjZXMSIAoMcm9vdF9zdGVwX2lkGAMgASgJUgpyb290U3RlcElkEiwKBXN0",
             "ZXBzGAQgAygLMhYuYXZhLnByb2NlZHVyZS52MS5TdGVwUgVzdGVwcyKgAQoE",
             "RmFjdBISCgRuYW1lGAEgASgJUgRuYW1lEi4KBHR5cGUYAiABKA4yGi5hdmEu",
@@ -40,27 +40,25 @@ namespace Ava.Procedure.V1 {
             "UgRraW5kEhoKCHF1ZXN0aW9uGAMgASgJUghxdWVzdGlvbhIaCghndWlkYW5j",
             "ZRgEIAEoCVIIZ3VpZGFuY2USNAoIYnJhbmNoZXMYBSADKAsyGC5hdmEucHJv",
             "Y2VkdXJlLnYxLkJyYW5jaFIIYnJhbmNoZXMSHQoKcHJvbXB0X3JlZhgGIAEo",
-            "CVIJcHJvbXB0UmVmEhQKBXJlYWRzGAcgAygJUgVyZWFkcyLDAgoGQnJhbmNo",
+            "CVIJcHJvbXB0UmVmEhQKBXJlYWRzGAcgAygJUgVyZWFkcyL1AQoGQnJhbmNo",
             "EhsKCWJyYW5jaF9pZBgBIAEoCVIIYnJhbmNoSWQSFAoFbGFiZWwYAiABKAlS",
             "BWxhYmVsEhwKCWNyaXRlcmlvbhgDIAEoCVIJY3JpdGVyaW9uEhIKBHdoZW4Y",
-            "BCABKAlSBHdoZW4SNgoEc2V0cxgFIAMoCzIiLmF2YS5wcm9jZWR1cmUudjEu",
-            "QnJhbmNoLlNldHNFbnRyeVIEc2V0cxIgCgxuZXh0X3N0ZXBfaWQYBiABKAlS",
-            "Cm5leHRTdGVwSWQSIwoNaXNfZXNjYWxhdGlvbhgHIAEoCFIMaXNFc2NhbGF0",
-            "aW9uEhwKCXJhdGlvbmFsZRgIIAEoCVIJcmF0aW9uYWxlGjcKCVNldHNFbnRy",
-            "eRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB",
-            "KlgKClNvdXJjZUtpbmQSGwoXU09VUkNFX0tJTkRfVU5TUEVDSUZJRUQQABIU",
-            "ChBTT1VSQ0VfS0lORF9DQVNFEAESFwoTU09VUkNFX0tJTkRfREVSSVZFRBAC",
-            "Kp8BCghGYWN0VHlwZRIZChVGQUNUX1RZUEVfVU5TUEVDSUZJRUQQABIUChBG",
-            "QUNUX1RZUEVfU1RSSU5HEAESEwoPRkFDVF9UWVBFX0ZMT0FUEAISEgoORkFD",
-            "VF9UWVBFX0RBVEUQAxISCg5GQUNUX1RZUEVfQk9PTBAEEhEKDUZBQ1RfVFlQ",
-            "RV9JTlQQBRISCg5GQUNUX1RZUEVfRU5VTRAGKlEKCFN0ZXBLaW5kEhkKFVNU",
-            "RVBfS0lORF9VTlNQRUNJRklFRBAAEhIKDlNURVBfS0lORF9URVNUEAESFgoS",
-            "U1RFUF9LSU5EX0pVREdNRU5UEAJCwwEKGWFpLnZpc21hLmF2YS5wcm9jZWR1",
-            "cmUudjFCDlByb2NlZHVyZVByb3RvUAFaNGdpdGh1Yi5jb20vZS1jb25vbWlj",
-            "L3ZtbGFwaXMvZ2VuL2dvL2F2YS9wcm9jZWR1cmUvdjGiAgNBUFiqAhBBdmEu",
-            "UHJvY2VkdXJlLlYxygIQQXZhXFByb2NlZHVyZVxWMeICHEF2YVxQcm9jZWR1",
-            "cmVcVjFcR1BCTWV0YWRhdGHqAhJBdmE6OlByb2NlZHVyZTo6VjFiBnByb3Rv",
-            "Mw=="));
+            "BCABKAlSBHdoZW4SIQoMb3V0cHV0X3ZhbHVlGAUgASgJUgtvdXRwdXRWYWx1",
+            "ZRIgCgxuZXh0X3N0ZXBfaWQYBiABKAlSCm5leHRTdGVwSWQSIwoNaXNfZXNj",
+            "YWxhdGlvbhgHIAEoCFIMaXNFc2NhbGF0aW9uEhwKCXJhdGlvbmFsZRgIIAEo",
+            "CVIJcmF0aW9uYWxlKlgKClNvdXJjZUtpbmQSGwoXU09VUkNFX0tJTkRfVU5T",
+            "UEVDSUZJRUQQABIUChBTT1VSQ0VfS0lORF9DQVNFEAESFwoTU09VUkNFX0tJ",
+            "TkRfREVSSVZFRBACKp8BCghGYWN0VHlwZRIZChVGQUNUX1RZUEVfVU5TUEVD",
+            "SUZJRUQQABIUChBGQUNUX1RZUEVfU1RSSU5HEAESEwoPRkFDVF9UWVBFX0ZM",
+            "T0FUEAISEgoORkFDVF9UWVBFX0RBVEUQAxISCg5GQUNUX1RZUEVfQk9PTBAE",
+            "EhEKDUZBQ1RfVFlQRV9JTlQQBRISCg5GQUNUX1RZUEVfRU5VTRAGKlEKCFN0",
+            "ZXBLaW5kEhkKFVNURVBfS0lORF9VTlNQRUNJRklFRBAAEhIKDlNURVBfS0lO",
+            "RF9URVNUEAESFgoSU1RFUF9LSU5EX0pVREdNRU5UEAJCwwEKGWFpLnZpc21h",
+            "LmF2YS5wcm9jZWR1cmUudjFCDlByb2NlZHVyZVByb3RvUAFaNGdpdGh1Yi5j",
+            "b20vZS1jb25vbWljL3ZtbGFwaXMvZ2VuL2dvL2F2YS9wcm9jZWR1cmUvdjGi",
+            "AgNBUFiqAhBBdmEuUHJvY2VkdXJlLlYxygIQQXZhXFByb2NlZHVyZVxWMeIC",
+            "HEF2YVxQcm9jZWR1cmVcVjFcR1BCTWV0YWRhdGHqAhJBdmE6OlByb2NlZHVy",
+            "ZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Ava.Procedure.V1.SourceKind), typeof(global::Ava.Procedure.V1.FactType), typeof(global::Ava.Procedure.V1.StepKind), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -68,7 +66,7 @@ namespace Ava.Procedure.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.Procedure.V1.Fact), global::Ava.Procedure.V1.Fact.Parser, new[]{ "Name", "Type", "Permitted", "Sources" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.Procedure.V1.FactSource), global::Ava.Procedure.V1.FactSource.Parser, new[]{ "Kind", "Name", "Field", "Args" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Ava.Procedure.V1.Step), global::Ava.Procedure.V1.Step.Parser, new[]{ "StepId", "Kind", "Question", "Guidance", "Branches", "PromptRef", "Reads" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.Procedure.V1.Branch), global::Ava.Procedure.V1.Branch.Parser, new[]{ "BranchId", "Label", "Criterion", "When", "Sets", "NextStepId", "IsEscalation", "Rationale" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Ava.Procedure.V1.Branch), global::Ava.Procedure.V1.Branch.Parser, new[]{ "BranchId", "Label", "Criterion", "When", "OutputValue", "NextStepId", "IsEscalation", "Rationale" }, null, null, null, null)
           }));
     }
     #endregion
@@ -136,7 +134,7 @@ namespace Ava.Procedure.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Procedure(Procedure other) : this() {
       facts_ = other.facts_.Clone();
-      produces_ = other.produces_.Clone();
+      produces_ = other.produces_;
       rootStepId_ = other.rootStepId_;
       steps_ = other.steps_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -161,13 +159,14 @@ namespace Ava.Procedure.V1 {
 
     /// <summary>Field number for the "produces" field.</summary>
     public const int ProducesFieldNumber = 2;
-    private static readonly pb::FieldCodec<string> _repeated_produces_codec
-        = pb::FieldCodec.ForString(18);
-    private readonly pbc::RepeatedField<string> produces_ = new pbc::RepeatedField<string>();
+    private string produces_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<string> Produces {
+    public string Produces {
       get { return produces_; }
+      set {
+        produces_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "root_step_id" field.</summary>
@@ -209,7 +208,7 @@ namespace Ava.Procedure.V1 {
         return true;
       }
       if(!facts_.Equals(other.facts_)) return false;
-      if(!produces_.Equals(other.produces_)) return false;
+      if (Produces != other.Produces) return false;
       if (RootStepId != other.RootStepId) return false;
       if(!steps_.Equals(other.steps_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -220,7 +219,7 @@ namespace Ava.Procedure.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= facts_.GetHashCode();
-      hash ^= produces_.GetHashCode();
+      if (Produces.Length != 0) hash ^= Produces.GetHashCode();
       if (RootStepId.Length != 0) hash ^= RootStepId.GetHashCode();
       hash ^= steps_.GetHashCode();
       if (_unknownFields != null) {
@@ -242,7 +241,10 @@ namespace Ava.Procedure.V1 {
       output.WriteRawMessage(this);
     #else
       facts_.WriteTo(output, _repeated_facts_codec);
-      produces_.WriteTo(output, _repeated_produces_codec);
+      if (Produces.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Produces);
+      }
       if (RootStepId.Length != 0) {
         output.WriteRawTag(26);
         output.WriteString(RootStepId);
@@ -259,7 +261,10 @@ namespace Ava.Procedure.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       facts_.WriteTo(ref output, _repeated_facts_codec);
-      produces_.WriteTo(ref output, _repeated_produces_codec);
+      if (Produces.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Produces);
+      }
       if (RootStepId.Length != 0) {
         output.WriteRawTag(26);
         output.WriteString(RootStepId);
@@ -276,7 +281,9 @@ namespace Ava.Procedure.V1 {
     public int CalculateSize() {
       int size = 0;
       size += facts_.CalculateSize(_repeated_facts_codec);
-      size += produces_.CalculateSize(_repeated_produces_codec);
+      if (Produces.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Produces);
+      }
       if (RootStepId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RootStepId);
       }
@@ -294,7 +301,9 @@ namespace Ava.Procedure.V1 {
         return;
       }
       facts_.Add(other.facts_);
-      produces_.Add(other.produces_);
+      if (other.Produces.Length != 0) {
+        Produces = other.Produces;
+      }
       if (other.RootStepId.Length != 0) {
         RootStepId = other.RootStepId;
       }
@@ -323,7 +332,7 @@ namespace Ava.Procedure.V1 {
             break;
           }
           case 18: {
-            produces_.AddEntriesFrom(input, _repeated_produces_codec);
+            Produces = input.ReadString();
             break;
           }
           case 26: {
@@ -358,7 +367,7 @@ namespace Ava.Procedure.V1 {
             break;
           }
           case 18: {
-            produces_.AddEntriesFrom(ref input, _repeated_produces_codec);
+            Produces = input.ReadString();
             break;
           }
           case 26: {
@@ -1398,7 +1407,7 @@ namespace Ava.Procedure.V1 {
       label_ = other.label_;
       criterion_ = other.criterion_;
       when_ = other.when_;
-      sets_ = other.sets_.Clone();
+      outputValue_ = other.outputValue_;
       nextStepId_ = other.nextStepId_;
       isEscalation_ = other.isEscalation_;
       rationale_ = other.rationale_;
@@ -1459,15 +1468,16 @@ namespace Ava.Procedure.V1 {
       }
     }
 
-    /// <summary>Field number for the "sets" field.</summary>
-    public const int SetsFieldNumber = 5;
-    private static readonly pbc::MapField<string, string>.Codec _map_sets_codec
-        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
-    private readonly pbc::MapField<string, string> sets_ = new pbc::MapField<string, string>();
+    /// <summary>Field number for the "output_value" field.</summary>
+    public const int OutputValueFieldNumber = 5;
+    private string outputValue_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::MapField<string, string> Sets {
-      get { return sets_; }
+    public string OutputValue {
+      get { return outputValue_; }
+      set {
+        outputValue_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
     }
 
     /// <summary>Field number for the "next_step_id" field.</summary>
@@ -1525,7 +1535,7 @@ namespace Ava.Procedure.V1 {
       if (Label != other.Label) return false;
       if (Criterion != other.Criterion) return false;
       if (When != other.When) return false;
-      if (!Sets.Equals(other.Sets)) return false;
+      if (OutputValue != other.OutputValue) return false;
       if (NextStepId != other.NextStepId) return false;
       if (IsEscalation != other.IsEscalation) return false;
       if (Rationale != other.Rationale) return false;
@@ -1540,7 +1550,7 @@ namespace Ava.Procedure.V1 {
       if (Label.Length != 0) hash ^= Label.GetHashCode();
       if (Criterion.Length != 0) hash ^= Criterion.GetHashCode();
       if (When.Length != 0) hash ^= When.GetHashCode();
-      hash ^= Sets.GetHashCode();
+      if (OutputValue.Length != 0) hash ^= OutputValue.GetHashCode();
       if (NextStepId.Length != 0) hash ^= NextStepId.GetHashCode();
       if (IsEscalation != false) hash ^= IsEscalation.GetHashCode();
       if (Rationale.Length != 0) hash ^= Rationale.GetHashCode();
@@ -1578,7 +1588,10 @@ namespace Ava.Procedure.V1 {
         output.WriteRawTag(34);
         output.WriteString(When);
       }
-      sets_.WriteTo(output, _map_sets_codec);
+      if (OutputValue.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OutputValue);
+      }
       if (NextStepId.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(NextStepId);
@@ -1617,7 +1630,10 @@ namespace Ava.Procedure.V1 {
         output.WriteRawTag(34);
         output.WriteString(When);
       }
-      sets_.WriteTo(ref output, _map_sets_codec);
+      if (OutputValue.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(OutputValue);
+      }
       if (NextStepId.Length != 0) {
         output.WriteRawTag(50);
         output.WriteString(NextStepId);
@@ -1652,7 +1668,9 @@ namespace Ava.Procedure.V1 {
       if (When.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(When);
       }
-      size += sets_.CalculateSize(_map_sets_codec);
+      if (OutputValue.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OutputValue);
+      }
       if (NextStepId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextStepId);
       }
@@ -1686,7 +1704,9 @@ namespace Ava.Procedure.V1 {
       if (other.When.Length != 0) {
         When = other.When;
       }
-      sets_.MergeFrom(other.sets_);
+      if (other.OutputValue.Length != 0) {
+        OutputValue = other.OutputValue;
+      }
       if (other.NextStepId.Length != 0) {
         NextStepId = other.NextStepId;
       }
@@ -1732,7 +1752,7 @@ namespace Ava.Procedure.V1 {
             break;
           }
           case 42: {
-            sets_.AddEntriesFrom(input, _map_sets_codec);
+            OutputValue = input.ReadString();
             break;
           }
           case 50: {
@@ -1783,7 +1803,7 @@ namespace Ava.Procedure.V1 {
             break;
           }
           case 42: {
-            sets_.AddEntriesFrom(ref input, _map_sets_codec);
+            OutputValue = input.ReadString();
             break;
           }
           case 50: {

@@ -8,10 +8,8 @@ export class Procedure extends jspb.Message {
   clearFactsList(): Procedure;
   addFacts(value?: Fact, index?: number): Fact;
 
-  getProducesList(): Array<string>;
-  setProducesList(value: Array<string>): Procedure;
-  clearProducesList(): Procedure;
-  addProduces(value: string, index?: number): Procedure;
+  getProduces(): string;
+  setProduces(value: string): Procedure;
 
   getRootStepId(): string;
   setRootStepId(value: string): Procedure;
@@ -32,7 +30,7 @@ export class Procedure extends jspb.Message {
 export namespace Procedure {
   export type AsObject = {
     factsList: Array<Fact.AsObject>,
-    producesList: Array<string>,
+    produces: string,
     rootStepId: string,
     stepsList: Array<Step.AsObject>,
   }
@@ -163,8 +161,8 @@ export class Branch extends jspb.Message {
   getWhen(): string;
   setWhen(value: string): Branch;
 
-  getSetsMap(): jspb.Map<string, string>;
-  clearSetsMap(): Branch;
+  getOutputValue(): string;
+  setOutputValue(value: string): Branch;
 
   getNextStepId(): string;
   setNextStepId(value: string): Branch;
@@ -189,7 +187,7 @@ export namespace Branch {
     label: string,
     criterion: string,
     when: string,
-    setsMap: Array<[string, string]>,
+    outputValue: string,
     nextStepId: string,
     isEscalation: boolean,
     rationale: string,

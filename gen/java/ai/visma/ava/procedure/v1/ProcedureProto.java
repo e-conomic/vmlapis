@@ -50,11 +50,6 @@ public final class ProcedureProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_ava_procedure_v1_Branch_fieldAccessorTable;
-  static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_ava_procedure_v1_Branch_SetsEntry_descriptor;
-  static final 
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ava_procedure_v1_Branch_SetsEntry_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -67,7 +62,7 @@ public final class ProcedureProto {
       "\n ava/procedure/v1/procedure.proto\022\020ava." +
       "procedure.v1\"\245\001\n\tProcedure\022,\n\005facts\030\001 \003(" +
       "\0132\026.ava.procedure.v1.FactR\005facts\022\032\n\010prod" +
-      "uces\030\002 \003(\tR\010produces\022 \n\014root_step_id\030\003 \001" +
+      "uces\030\002 \001(\tR\010produces\022 \n\014root_step_id\030\003 \001" +
       "(\tR\nrootStepId\022,\n\005steps\030\004 \003(\0132\026.ava.proc" +
       "edure.v1.StepR\005steps\"\240\001\n\004Fact\022\022\n\004name\030\001 " +
       "\001(\tR\004name\022.\n\004type\030\002 \001(\0162\032.ava.procedure." +
@@ -82,29 +77,27 @@ public final class ProcedureProto {
       "ion\030\003 \001(\tR\010question\022\032\n\010guidance\030\004 \001(\tR\010g" +
       "uidance\0224\n\010branches\030\005 \003(\0132\030.ava.procedur" +
       "e.v1.BranchR\010branches\022\035\n\nprompt_ref\030\006 \001(" +
-      "\tR\tpromptRef\022\024\n\005reads\030\007 \003(\tR\005reads\"\303\002\n\006B" +
+      "\tR\tpromptRef\022\024\n\005reads\030\007 \003(\tR\005reads\"\365\001\n\006B" +
       "ranch\022\033\n\tbranch_id\030\001 \001(\tR\010branchId\022\024\n\005la" +
       "bel\030\002 \001(\tR\005label\022\034\n\tcriterion\030\003 \001(\tR\tcri" +
-      "terion\022\022\n\004when\030\004 \001(\tR\004when\0226\n\004sets\030\005 \003(\013" +
-      "2\".ava.procedure.v1.Branch.SetsEntryR\004se" +
-      "ts\022 \n\014next_step_id\030\006 \001(\tR\nnextStepId\022#\n\r" +
-      "is_escalation\030\007 \001(\010R\014isEscalation\022\034\n\trat" +
-      "ionale\030\010 \001(\tR\trationale\0327\n\tSetsEntry\022\020\n\003" +
-      "key\030\001 \001(\tR\003key\022\024\n\005value\030\002 \001(\tR\005value:\0028\001" +
-      "*X\n\nSourceKind\022\033\n\027SOURCE_KIND_UNSPECIFIE" +
-      "D\020\000\022\024\n\020SOURCE_KIND_CASE\020\001\022\027\n\023SOURCE_KIND" +
-      "_DERIVED\020\002*\237\001\n\010FactType\022\031\n\025FACT_TYPE_UNS" +
-      "PECIFIED\020\000\022\024\n\020FACT_TYPE_STRING\020\001\022\023\n\017FACT" +
-      "_TYPE_FLOAT\020\002\022\022\n\016FACT_TYPE_DATE\020\003\022\022\n\016FAC" +
-      "T_TYPE_BOOL\020\004\022\021\n\rFACT_TYPE_INT\020\005\022\022\n\016FACT" +
-      "_TYPE_ENUM\020\006*Q\n\010StepKind\022\031\n\025STEP_KIND_UN" +
-      "SPECIFIED\020\000\022\022\n\016STEP_KIND_TEST\020\001\022\026\n\022STEP_" +
-      "KIND_JUDGMENT\020\002B\303\001\n\031ai.visma.ava.procedu" +
-      "re.v1B\016ProcedureProtoP\001Z4github.com/e-co" +
-      "nomic/vmlapis/gen/go/ava/procedure/v1\242\002\003" +
-      "APX\252\002\020Ava.Procedure.V1\312\002\020Ava\\Procedure\\V" +
-      "1\342\002\034Ava\\Procedure\\V1\\GPBMetadata\352\002\022Ava::" +
-      "Procedure::V1b\006proto3"
+      "terion\022\022\n\004when\030\004 \001(\tR\004when\022!\n\014output_val" +
+      "ue\030\005 \001(\tR\013outputValue\022 \n\014next_step_id\030\006 " +
+      "\001(\tR\nnextStepId\022#\n\ris_escalation\030\007 \001(\010R\014" +
+      "isEscalation\022\034\n\trationale\030\010 \001(\tR\trationa" +
+      "le*X\n\nSourceKind\022\033\n\027SOURCE_KIND_UNSPECIF" +
+      "IED\020\000\022\024\n\020SOURCE_KIND_CASE\020\001\022\027\n\023SOURCE_KI" +
+      "ND_DERIVED\020\002*\237\001\n\010FactType\022\031\n\025FACT_TYPE_U" +
+      "NSPECIFIED\020\000\022\024\n\020FACT_TYPE_STRING\020\001\022\023\n\017FA" +
+      "CT_TYPE_FLOAT\020\002\022\022\n\016FACT_TYPE_DATE\020\003\022\022\n\016F" +
+      "ACT_TYPE_BOOL\020\004\022\021\n\rFACT_TYPE_INT\020\005\022\022\n\016FA" +
+      "CT_TYPE_ENUM\020\006*Q\n\010StepKind\022\031\n\025STEP_KIND_" +
+      "UNSPECIFIED\020\000\022\022\n\016STEP_KIND_TEST\020\001\022\026\n\022STE" +
+      "P_KIND_JUDGMENT\020\002B\303\001\n\031ai.visma.ava.proce" +
+      "dure.v1B\016ProcedureProtoP\001Z4github.com/e-" +
+      "conomic/vmlapis/gen/go/ava/procedure/v1\242" +
+      "\002\003APX\252\002\020Ava.Procedure.V1\312\002\020Ava\\Procedure" +
+      "\\V1\342\002\034Ava\\Procedure\\V1\\GPBMetadata\352\002\022Ava" +
+      "::Procedure::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -139,13 +132,7 @@ public final class ProcedureProto {
     internal_static_ava_procedure_v1_Branch_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_ava_procedure_v1_Branch_descriptor,
-        new java.lang.String[] { "BranchId", "Label", "Criterion", "When", "Sets", "NextStepId", "IsEscalation", "Rationale", });
-    internal_static_ava_procedure_v1_Branch_SetsEntry_descriptor =
-      internal_static_ava_procedure_v1_Branch_descriptor.getNestedTypes().get(0);
-    internal_static_ava_procedure_v1_Branch_SetsEntry_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-        internal_static_ava_procedure_v1_Branch_SetsEntry_descriptor,
-        new java.lang.String[] { "Key", "Value", });
+        new java.lang.String[] { "BranchId", "Label", "Criterion", "When", "OutputValue", "NextStepId", "IsEscalation", "Rationale", });
     descriptor.resolveAllFeaturesImmutable();
   }
 

@@ -34,29 +34,16 @@ public interface ProcedureOrBuilder extends
       int index);
 
   /**
-   * <code>repeated string produces = 2 [json_name = "produces"];</code>
-   * @return A list containing the produces.
+   * <code>string produces = 2 [json_name = "produces"];</code>
+   * @return The produces.
    */
-  java.util.List<java.lang.String>
-      getProducesList();
+  java.lang.String getProduces();
   /**
-   * <code>repeated string produces = 2 [json_name = "produces"];</code>
-   * @return The count of produces.
-   */
-  int getProducesCount();
-  /**
-   * <code>repeated string produces = 2 [json_name = "produces"];</code>
-   * @param index The index of the element to return.
-   * @return The produces at the given index.
-   */
-  java.lang.String getProduces(int index);
-  /**
-   * <code>repeated string produces = 2 [json_name = "produces"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the produces at the given index.
+   * <code>string produces = 2 [json_name = "produces"];</code>
+   * @return The bytes for produces.
    */
   com.google.protobuf.ByteString
-      getProducesBytes(int index);
+      getProducesBytes();
 
   /**
    * <code>string root_step_id = 3 [json_name = "rootStepId"];</code>

@@ -28,8 +28,7 @@ private static final long serialVersionUID = 0L;
   }
   private Procedure() {
     facts_ = java.util.Collections.emptyList();
-    produces_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
+    produces_ = "";
     rootStepId_ = "";
     steps_ = java.util.Collections.emptyList();
   }
@@ -90,39 +89,41 @@ private static final long serialVersionUID = 0L;
 
   public static final int PRODUCES_FIELD_NUMBER = 2;
   @SuppressWarnings("serial")
-  private com.google.protobuf.LazyStringArrayList produces_ =
-      com.google.protobuf.LazyStringArrayList.emptyList();
+  private volatile java.lang.Object produces_ = "";
   /**
-   * <code>repeated string produces = 2 [json_name = "produces"];</code>
-   * @return A list containing the produces.
+   * <code>string produces = 2 [json_name = "produces"];</code>
+   * @return The produces.
    */
-  public com.google.protobuf.ProtocolStringList
-      getProducesList() {
-    return produces_;
+  @java.lang.Override
+  public java.lang.String getProduces() {
+    java.lang.Object ref = produces_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      produces_ = s;
+      return s;
+    }
   }
   /**
-   * <code>repeated string produces = 2 [json_name = "produces"];</code>
-   * @return The count of produces.
+   * <code>string produces = 2 [json_name = "produces"];</code>
+   * @return The bytes for produces.
    */
-  public int getProducesCount() {
-    return produces_.size();
-  }
-  /**
-   * <code>repeated string produces = 2 [json_name = "produces"];</code>
-   * @param index The index of the element to return.
-   * @return The produces at the given index.
-   */
-  public java.lang.String getProduces(int index) {
-    return produces_.get(index);
-  }
-  /**
-   * <code>repeated string produces = 2 [json_name = "produces"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the produces at the given index.
-   */
+  @java.lang.Override
   public com.google.protobuf.ByteString
-      getProducesBytes(int index) {
-    return produces_.getByteString(index);
+      getProducesBytes() {
+    java.lang.Object ref = produces_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      produces_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
   }
 
   public static final int ROOT_STEP_ID_FIELD_NUMBER = 3;
@@ -222,8 +223,8 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < facts_.size(); i++) {
       output.writeMessage(1, facts_.get(i));
     }
-    for (int i = 0; i < produces_.size(); i++) {
-      com.google.protobuf.GeneratedMessage.writeString(output, 2, produces_.getRaw(i));
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(produces_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, produces_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(rootStepId_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 3, rootStepId_);
@@ -244,13 +245,8 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(1, facts_.get(i));
     }
-    {
-      int dataSize = 0;
-      for (int i = 0; i < produces_.size(); i++) {
-        dataSize += computeStringSizeNoTag(produces_.getRaw(i));
-      }
-      size += dataSize;
-      size += 1 * getProducesList().size();
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(produces_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, produces_);
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(rootStepId_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(3, rootStepId_);
@@ -276,8 +272,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getFactsList()
         .equals(other.getFactsList())) return false;
-    if (!getProducesList()
-        .equals(other.getProducesList())) return false;
+    if (!getProduces()
+        .equals(other.getProduces())) return false;
     if (!getRootStepId()
         .equals(other.getRootStepId())) return false;
     if (!getStepsList()
@@ -297,10 +293,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + FACTS_FIELD_NUMBER;
       hash = (53 * hash) + getFactsList().hashCode();
     }
-    if (getProducesCount() > 0) {
-      hash = (37 * hash) + PRODUCES_FIELD_NUMBER;
-      hash = (53 * hash) + getProducesList().hashCode();
-    }
+    hash = (37 * hash) + PRODUCES_FIELD_NUMBER;
+    hash = (53 * hash) + getProduces().hashCode();
     hash = (37 * hash) + ROOT_STEP_ID_FIELD_NUMBER;
     hash = (53 * hash) + getRootStepId().hashCode();
     if (getStepsCount() > 0) {
@@ -445,8 +439,7 @@ private static final long serialVersionUID = 0L;
         factsBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
-      produces_ =
-          com.google.protobuf.LazyStringArrayList.emptyList();
+      produces_ = "";
       rootStepId_ = "";
       if (stepsBuilder_ == null) {
         steps_ = java.util.Collections.emptyList();
@@ -511,7 +504,6 @@ private static final long serialVersionUID = 0L;
     private void buildPartial0(ai.visma.ava.procedure.v1.Procedure result) {
       int from_bitField0_ = bitField0_;
       if (((from_bitField0_ & 0x00000002) != 0)) {
-        produces_.makeImmutable();
         result.produces_ = produces_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
@@ -557,14 +549,9 @@ private static final long serialVersionUID = 0L;
           }
         }
       }
-      if (!other.produces_.isEmpty()) {
-        if (produces_.isEmpty()) {
-          produces_ = other.produces_;
-          bitField0_ |= 0x00000002;
-        } else {
-          ensureProducesIsMutable();
-          produces_.addAll(other.produces_);
-        }
+      if (!other.getProduces().isEmpty()) {
+        produces_ = other.produces_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       if (!other.getRootStepId().isEmpty()) {
@@ -638,9 +625,8 @@ private static final long serialVersionUID = 0L;
               break;
             } // case 10
             case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-              ensureProducesIsMutable();
-              produces_.add(s);
+              produces_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
               break;
             } // case 18
             case 26: {
@@ -918,112 +904,73 @@ private static final long serialVersionUID = 0L;
       return factsBuilder_;
     }
 
-    private com.google.protobuf.LazyStringArrayList produces_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-    private void ensureProducesIsMutable() {
-      if (!produces_.isModifiable()) {
-        produces_ = new com.google.protobuf.LazyStringArrayList(produces_);
+    private java.lang.Object produces_ = "";
+    /**
+     * <code>string produces = 2 [json_name = "produces"];</code>
+     * @return The produces.
+     */
+    public java.lang.String getProduces() {
+      java.lang.Object ref = produces_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        produces_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
       }
-      bitField0_ |= 0x00000002;
     }
     /**
-     * <code>repeated string produces = 2 [json_name = "produces"];</code>
-     * @return A list containing the produces.
-     */
-    public com.google.protobuf.ProtocolStringList
-        getProducesList() {
-      produces_.makeImmutable();
-      return produces_;
-    }
-    /**
-     * <code>repeated string produces = 2 [json_name = "produces"];</code>
-     * @return The count of produces.
-     */
-    public int getProducesCount() {
-      return produces_.size();
-    }
-    /**
-     * <code>repeated string produces = 2 [json_name = "produces"];</code>
-     * @param index The index of the element to return.
-     * @return The produces at the given index.
-     */
-    public java.lang.String getProduces(int index) {
-      return produces_.get(index);
-    }
-    /**
-     * <code>repeated string produces = 2 [json_name = "produces"];</code>
-     * @param index The index of the value to return.
-     * @return The bytes of the produces at the given index.
+     * <code>string produces = 2 [json_name = "produces"];</code>
+     * @return The bytes for produces.
      */
     public com.google.protobuf.ByteString
-        getProducesBytes(int index) {
-      return produces_.getByteString(index);
+        getProducesBytes() {
+      java.lang.Object ref = produces_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        produces_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
     }
     /**
-     * <code>repeated string produces = 2 [json_name = "produces"];</code>
-     * @param index The index to set the value at.
+     * <code>string produces = 2 [json_name = "produces"];</code>
      * @param value The produces to set.
      * @return This builder for chaining.
      */
     public Builder setProduces(
-        int index, java.lang.String value) {
-      if (value == null) { throw new NullPointerException(); }
-      ensureProducesIsMutable();
-      produces_.set(index, value);
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string produces = 2 [json_name = "produces"];</code>
-     * @param value The produces to add.
-     * @return This builder for chaining.
-     */
-    public Builder addProduces(
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
-      ensureProducesIsMutable();
-      produces_.add(value);
+      produces_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string produces = 2 [json_name = "produces"];</code>
-     * @param values The produces to add.
-     * @return This builder for chaining.
-     */
-    public Builder addAllProduces(
-        java.lang.Iterable<java.lang.String> values) {
-      ensureProducesIsMutable();
-      com.google.protobuf.AbstractMessageLite.Builder.addAll(
-          values, produces_);
-      bitField0_ |= 0x00000002;
-      onChanged();
-      return this;
-    }
-    /**
-     * <code>repeated string produces = 2 [json_name = "produces"];</code>
+     * <code>string produces = 2 [json_name = "produces"];</code>
      * @return This builder for chaining.
      */
     public Builder clearProduces() {
-      produces_ =
-        com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000002);;
+      produces_ = getDefaultInstance().getProduces();
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
     /**
-     * <code>repeated string produces = 2 [json_name = "produces"];</code>
-     * @param value The bytes of the produces to add.
+     * <code>string produces = 2 [json_name = "produces"];</code>
+     * @param value The bytes for produces to set.
      * @return This builder for chaining.
      */
-    public Builder addProducesBytes(
+    public Builder setProducesBytes(
         com.google.protobuf.ByteString value) {
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
-      ensureProducesIsMutable();
-      produces_.add(value);
+      produces_ = value;
       bitField0_ |= 0x00000002;
       onChanged();
       return this;

@@ -58,38 +58,16 @@ public interface BranchOrBuilder extends
       getWhenBytes();
 
   /**
-   * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
+   * <code>string output_value = 5 [json_name = "outputValue"];</code>
+   * @return The outputValue.
    */
-  int getSetsCount();
+  java.lang.String getOutputValue();
   /**
-   * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
+   * <code>string output_value = 5 [json_name = "outputValue"];</code>
+   * @return The bytes for outputValue.
    */
-  boolean containsSets(
-      java.lang.String key);
-  /**
-   * Use {@link #getSetsMap()} instead.
-   */
-  @java.lang.Deprecated
-  java.util.Map<java.lang.String, java.lang.String>
-  getSets();
-  /**
-   * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
-   */
-  java.util.Map<java.lang.String, java.lang.String>
-  getSetsMap();
-  /**
-   * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
-   */
-  /* nullable */
-java.lang.String getSetsOrDefault(
-      java.lang.String key,
-      /* nullable */
-java.lang.String defaultValue);
-  /**
-   * <code>map&lt;string, string&gt; sets = 5 [json_name = "sets"];</code>
-   */
-  java.lang.String getSetsOrThrow(
-      java.lang.String key);
+  com.google.protobuf.ByteString
+      getOutputValueBytes();
 
   /**
    * <code>string next_step_id = 6 [json_name = "nextStepId"];</code>
