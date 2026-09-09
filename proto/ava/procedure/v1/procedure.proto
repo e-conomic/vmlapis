@@ -6,7 +6,7 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/ava/procedure/v1";
 
 message Procedure {
   repeated Fact facts = 1;
-  repeated string produces = 2;
+  string produces = 2;
   string root_step_id = 3;
   repeated Step steps = 4;
 }
@@ -62,7 +62,7 @@ message Branch {
   string label = 2;
   string criterion = 3;
   string when = 4;
-  map<string, string> sets = 5;
+  string output_value = 5;
   string next_step_id = 6;
   bool is_escalation = 7;
   string rationale = 8;
