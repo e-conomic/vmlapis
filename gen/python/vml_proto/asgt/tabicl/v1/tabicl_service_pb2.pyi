@@ -25,3 +25,19 @@ class BatchSuggestResponse(_message.Message):
     PREDICTIONS_FIELD_NUMBER: _ClassVar[int]
     predictions: _containers.RepeatedCompositeFieldContainer[_prediction_pb2.Prediction]
     def __init__(self, predictions: _Optional[_Iterable[_Union[_prediction_pb2.Prediction, _Mapping]]] = ...) -> None: ...
+
+class ExampleLogits(_message.Message):
+    __slots__ = ("example_id", "logits")
+    EXAMPLE_ID_FIELD_NUMBER: _ClassVar[int]
+    LOGITS_FIELD_NUMBER: _ClassVar[int]
+    example_id: str
+    logits: _containers.RepeatedScalarFieldContainer[float]
+    def __init__(self, example_id: _Optional[str] = ..., logits: _Optional[_Iterable[float]] = ...) -> None: ...
+
+class BatchSuggestWithLogitsRequest(_message.Message):
+    __slots__ = ("examples", "suggest_limit")
+    EXAMPLES_FIELD_NUMBER: _ClassVar[int]
+    SUGGEST_LIMIT_FIELD_NUMBER: _ClassVar[int]
+    examples: _containers.RepeatedCompositeFieldContainer[ExampleLogits]
+    suggest_limit: int
+    def __init__(self, examples: _Optional[_Iterable[_Union[ExampleLogits, _Mapping]]] = ..., suggest_limit: _Optional[int] = ...) -> None: ...

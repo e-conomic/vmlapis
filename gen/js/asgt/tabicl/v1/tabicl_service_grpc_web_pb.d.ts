@@ -15,6 +15,13 @@ export class TabiclServiceClient {
                response: asgt_tabicl_v1_tabicl_service_pb.BatchSuggestResponse) => void
   ): grpcWeb.ClientReadableStream<asgt_tabicl_v1_tabicl_service_pb.BatchSuggestResponse>;
 
+  batchSuggestWithLogits(
+    request: asgt_tabicl_v1_tabicl_service_pb.BatchSuggestWithLogitsRequest,
+    metadata: grpcWeb.Metadata | undefined,
+    callback: (err: grpcWeb.RpcError,
+               response: asgt_tabicl_v1_tabicl_service_pb.BatchSuggestResponse) => void
+  ): grpcWeb.ClientReadableStream<asgt_tabicl_v1_tabicl_service_pb.BatchSuggestResponse>;
+
 }
 
 export class TabiclServicePromiseClient {
@@ -24,6 +31,11 @@ export class TabiclServicePromiseClient {
 
   batchSuggest(
     request: asgt_tabicl_v1_tabicl_service_pb.BatchSuggestRequest,
+    metadata?: grpcWeb.Metadata
+  ): Promise<asgt_tabicl_v1_tabicl_service_pb.BatchSuggestResponse>;
+
+  batchSuggestWithLogits(
+    request: asgt_tabicl_v1_tabicl_service_pb.BatchSuggestWithLogitsRequest,
     metadata?: grpcWeb.Metadata
   ): Promise<asgt_tabicl_v1_tabicl_service_pb.BatchSuggestResponse>;
 

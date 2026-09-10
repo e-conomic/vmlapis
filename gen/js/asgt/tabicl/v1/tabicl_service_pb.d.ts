@@ -57,3 +57,51 @@ export namespace BatchSuggestResponse {
   }
 }
 
+export class ExampleLogits extends jspb.Message {
+  getExampleId(): string;
+  setExampleId(value: string): ExampleLogits;
+
+  getLogitsList(): Array<number>;
+  setLogitsList(value: Array<number>): ExampleLogits;
+  clearLogitsList(): ExampleLogits;
+  addLogits(value: number, index?: number): ExampleLogits;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): ExampleLogits.AsObject;
+  static toObject(includeInstance: boolean, msg: ExampleLogits): ExampleLogits.AsObject;
+  static serializeBinaryToWriter(message: ExampleLogits, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): ExampleLogits;
+  static deserializeBinaryFromReader(message: ExampleLogits, reader: jspb.BinaryReader): ExampleLogits;
+}
+
+export namespace ExampleLogits {
+  export type AsObject = {
+    exampleId: string,
+    logitsList: Array<number>,
+  }
+}
+
+export class BatchSuggestWithLogitsRequest extends jspb.Message {
+  getExamplesList(): Array<ExampleLogits>;
+  setExamplesList(value: Array<ExampleLogits>): BatchSuggestWithLogitsRequest;
+  clearExamplesList(): BatchSuggestWithLogitsRequest;
+  addExamples(value?: ExampleLogits, index?: number): ExampleLogits;
+
+  getSuggestLimit(): number;
+  setSuggestLimit(value: number): BatchSuggestWithLogitsRequest;
+
+  serializeBinary(): Uint8Array;
+  toObject(includeInstance?: boolean): BatchSuggestWithLogitsRequest.AsObject;
+  static toObject(includeInstance: boolean, msg: BatchSuggestWithLogitsRequest): BatchSuggestWithLogitsRequest.AsObject;
+  static serializeBinaryToWriter(message: BatchSuggestWithLogitsRequest, writer: jspb.BinaryWriter): void;
+  static deserializeBinary(bytes: Uint8Array): BatchSuggestWithLogitsRequest;
+  static deserializeBinaryFromReader(message: BatchSuggestWithLogitsRequest, reader: jspb.BinaryReader): BatchSuggestWithLogitsRequest;
+}
+
+export namespace BatchSuggestWithLogitsRequest {
+  export type AsObject = {
+    examplesList: Array<ExampleLogits.AsObject>,
+    suggestLimit: number,
+  }
+}
+

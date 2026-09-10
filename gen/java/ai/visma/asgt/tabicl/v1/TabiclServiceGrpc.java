@@ -50,6 +50,37 @@ public final class TabiclServiceGrpc {
     return getBatchSuggestMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<ai.visma.asgt.tabicl.v1.BatchSuggestWithLogitsRequest,
+      ai.visma.asgt.tabicl.v1.BatchSuggestResponse> getBatchSuggestWithLogitsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "BatchSuggestWithLogits",
+      requestType = ai.visma.asgt.tabicl.v1.BatchSuggestWithLogitsRequest.class,
+      responseType = ai.visma.asgt.tabicl.v1.BatchSuggestResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<ai.visma.asgt.tabicl.v1.BatchSuggestWithLogitsRequest,
+      ai.visma.asgt.tabicl.v1.BatchSuggestResponse> getBatchSuggestWithLogitsMethod() {
+    io.grpc.MethodDescriptor<ai.visma.asgt.tabicl.v1.BatchSuggestWithLogitsRequest, ai.visma.asgt.tabicl.v1.BatchSuggestResponse> getBatchSuggestWithLogitsMethod;
+    if ((getBatchSuggestWithLogitsMethod = TabiclServiceGrpc.getBatchSuggestWithLogitsMethod) == null) {
+      synchronized (TabiclServiceGrpc.class) {
+        if ((getBatchSuggestWithLogitsMethod = TabiclServiceGrpc.getBatchSuggestWithLogitsMethod) == null) {
+          TabiclServiceGrpc.getBatchSuggestWithLogitsMethod = getBatchSuggestWithLogitsMethod =
+              io.grpc.MethodDescriptor.<ai.visma.asgt.tabicl.v1.BatchSuggestWithLogitsRequest, ai.visma.asgt.tabicl.v1.BatchSuggestResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "BatchSuggestWithLogits"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.tabicl.v1.BatchSuggestWithLogitsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  ai.visma.asgt.tabicl.v1.BatchSuggestResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new TabiclServiceMethodDescriptorSupplier("BatchSuggestWithLogits"))
+              .build();
+        }
+      }
+    }
+    return getBatchSuggestWithLogitsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -123,6 +154,13 @@ public final class TabiclServiceGrpc {
         io.grpc.stub.StreamObserver<ai.visma.asgt.tabicl.v1.BatchSuggestResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchSuggestMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void batchSuggestWithLogits(ai.visma.asgt.tabicl.v1.BatchSuggestWithLogitsRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.asgt.tabicl.v1.BatchSuggestResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getBatchSuggestWithLogitsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -167,6 +205,14 @@ public final class TabiclServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getBatchSuggestMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void batchSuggestWithLogits(ai.visma.asgt.tabicl.v1.BatchSuggestWithLogitsRequest request,
+        io.grpc.stub.StreamObserver<ai.visma.asgt.tabicl.v1.BatchSuggestResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getBatchSuggestWithLogitsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -195,6 +241,13 @@ public final class TabiclServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBatchSuggestMethod(), getCallOptions(), request);
     }
+
+    /**
+     */
+    public ai.visma.asgt.tabicl.v1.BatchSuggestResponse batchSuggestWithLogits(ai.visma.asgt.tabicl.v1.BatchSuggestWithLogitsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBatchSuggestWithLogitsMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -222,6 +275,13 @@ public final class TabiclServiceGrpc {
     public ai.visma.asgt.tabicl.v1.BatchSuggestResponse batchSuggest(ai.visma.asgt.tabicl.v1.BatchSuggestRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getBatchSuggestMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public ai.visma.asgt.tabicl.v1.BatchSuggestResponse batchSuggestWithLogits(ai.visma.asgt.tabicl.v1.BatchSuggestWithLogitsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getBatchSuggestWithLogitsMethod(), getCallOptions(), request);
     }
   }
 
@@ -252,9 +312,18 @@ public final class TabiclServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getBatchSuggestMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<ai.visma.asgt.tabicl.v1.BatchSuggestResponse> batchSuggestWithLogits(
+        ai.visma.asgt.tabicl.v1.BatchSuggestWithLogitsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getBatchSuggestWithLogitsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_BATCH_SUGGEST = 0;
+  private static final int METHODID_BATCH_SUGGEST_WITH_LOGITS = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -275,6 +344,10 @@ public final class TabiclServiceGrpc {
       switch (methodId) {
         case METHODID_BATCH_SUGGEST:
           serviceImpl.batchSuggest((ai.visma.asgt.tabicl.v1.BatchSuggestRequest) request,
+              (io.grpc.stub.StreamObserver<ai.visma.asgt.tabicl.v1.BatchSuggestResponse>) responseObserver);
+          break;
+        case METHODID_BATCH_SUGGEST_WITH_LOGITS:
+          serviceImpl.batchSuggestWithLogits((ai.visma.asgt.tabicl.v1.BatchSuggestWithLogitsRequest) request,
               (io.grpc.stub.StreamObserver<ai.visma.asgt.tabicl.v1.BatchSuggestResponse>) responseObserver);
           break;
         default:
@@ -302,6 +375,13 @@ public final class TabiclServiceGrpc {
               ai.visma.asgt.tabicl.v1.BatchSuggestRequest,
               ai.visma.asgt.tabicl.v1.BatchSuggestResponse>(
                 service, METHODID_BATCH_SUGGEST)))
+        .addMethod(
+          getBatchSuggestWithLogitsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              ai.visma.asgt.tabicl.v1.BatchSuggestWithLogitsRequest,
+              ai.visma.asgt.tabicl.v1.BatchSuggestResponse>(
+                service, METHODID_BATCH_SUGGEST_WITH_LOGITS)))
         .build();
   }
 
@@ -351,6 +431,7 @@ public final class TabiclServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new TabiclServiceFileDescriptorSupplier())
               .addMethod(getBatchSuggestMethod())
+              .addMethod(getBatchSuggestWithLogitsMethod())
               .build();
         }
       }

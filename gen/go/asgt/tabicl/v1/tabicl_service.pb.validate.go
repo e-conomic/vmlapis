@@ -350,3 +350,284 @@ var _ interface {
 	Cause() error
 	ErrorName() string
 } = BatchSuggestResponseValidationError{}
+
+// Validate checks the field values on ExampleLogits with the rules defined in
+// the proto definition for this message. If any rules are violated, the first
+// error encountered is returned, or nil if there are no violations.
+func (m *ExampleLogits) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on ExampleLogits with the rules defined
+// in the proto definition for this message. If any rules are violated, the
+// result is a list of violation errors wrapped in ExampleLogitsMultiError, or
+// nil if none found.
+func (m *ExampleLogits) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *ExampleLogits) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	if utf8.RuneCountInString(m.GetExampleId()) < 1 {
+		err := ExampleLogitsValidationError{
+			field:  "ExampleId",
+			reason: "value length must be at least 1 runes",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(m.GetLogits()) < 1 {
+		err := ExampleLogitsValidationError{
+			field:  "Logits",
+			reason: "value must contain at least 1 item(s)",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return ExampleLogitsMultiError(errors)
+	}
+
+	return nil
+}
+
+// ExampleLogitsMultiError is an error wrapping multiple validation errors
+// returned by ExampleLogits.ValidateAll() if the designated constraints
+// aren't met.
+type ExampleLogitsMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m ExampleLogitsMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m ExampleLogitsMultiError) AllErrors() []error { return m }
+
+// ExampleLogitsValidationError is the validation error returned by
+// ExampleLogits.Validate if the designated constraints aren't met.
+type ExampleLogitsValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e ExampleLogitsValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e ExampleLogitsValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e ExampleLogitsValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e ExampleLogitsValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e ExampleLogitsValidationError) ErrorName() string { return "ExampleLogitsValidationError" }
+
+// Error satisfies the builtin error interface
+func (e ExampleLogitsValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sExampleLogits.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = ExampleLogitsValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = ExampleLogitsValidationError{}
+
+// Validate checks the field values on BatchSuggestWithLogitsRequest with the
+// rules defined in the proto definition for this message. If any rules are
+// violated, the first error encountered is returned, or nil if there are no violations.
+func (m *BatchSuggestWithLogitsRequest) Validate() error {
+	return m.validate(false)
+}
+
+// ValidateAll checks the field values on BatchSuggestWithLogitsRequest with
+// the rules defined in the proto definition for this message. If any rules
+// are violated, the result is a list of violation errors wrapped in
+// BatchSuggestWithLogitsRequestMultiError, or nil if none found.
+func (m *BatchSuggestWithLogitsRequest) ValidateAll() error {
+	return m.validate(true)
+}
+
+func (m *BatchSuggestWithLogitsRequest) validate(all bool) error {
+	if m == nil {
+		return nil
+	}
+
+	var errors []error
+
+	if l := len(m.GetExamples()); l < 1 || l > 512 {
+		err := BatchSuggestWithLogitsRequestValidationError{
+			field:  "Examples",
+			reason: "value must contain between 1 and 512 items, inclusive",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	for idx, item := range m.GetExamples() {
+		_, _ = idx, item
+
+		if all {
+			switch v := interface{}(item).(type) {
+			case interface{ ValidateAll() error }:
+				if err := v.ValidateAll(); err != nil {
+					errors = append(errors, BatchSuggestWithLogitsRequestValidationError{
+						field:  fmt.Sprintf("Examples[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			case interface{ Validate() error }:
+				if err := v.Validate(); err != nil {
+					errors = append(errors, BatchSuggestWithLogitsRequestValidationError{
+						field:  fmt.Sprintf("Examples[%v]", idx),
+						reason: "embedded message failed validation",
+						cause:  err,
+					})
+				}
+			}
+		} else if v, ok := interface{}(item).(interface{ Validate() error }); ok {
+			if err := v.Validate(); err != nil {
+				return BatchSuggestWithLogitsRequestValidationError{
+					field:  fmt.Sprintf("Examples[%v]", idx),
+					reason: "embedded message failed validation",
+					cause:  err,
+				}
+			}
+		}
+
+	}
+
+	if m.GetSuggestLimit() <= 0 {
+		err := BatchSuggestWithLogitsRequestValidationError{
+			field:  "SuggestLimit",
+			reason: "value must be greater than 0",
+		}
+		if !all {
+			return err
+		}
+		errors = append(errors, err)
+	}
+
+	if len(errors) > 0 {
+		return BatchSuggestWithLogitsRequestMultiError(errors)
+	}
+
+	return nil
+}
+
+// BatchSuggestWithLogitsRequestMultiError is an error wrapping multiple
+// validation errors returned by BatchSuggestWithLogitsRequest.ValidateAll()
+// if the designated constraints aren't met.
+type BatchSuggestWithLogitsRequestMultiError []error
+
+// Error returns a concatenation of all the error messages it wraps.
+func (m BatchSuggestWithLogitsRequestMultiError) Error() string {
+	msgs := make([]string, 0, len(m))
+	for _, err := range m {
+		msgs = append(msgs, err.Error())
+	}
+	return strings.Join(msgs, "; ")
+}
+
+// AllErrors returns a list of validation violation errors.
+func (m BatchSuggestWithLogitsRequestMultiError) AllErrors() []error { return m }
+
+// BatchSuggestWithLogitsRequestValidationError is the validation error
+// returned by BatchSuggestWithLogitsRequest.Validate if the designated
+// constraints aren't met.
+type BatchSuggestWithLogitsRequestValidationError struct {
+	field  string
+	reason string
+	cause  error
+	key    bool
+}
+
+// Field function returns field value.
+func (e BatchSuggestWithLogitsRequestValidationError) Field() string { return e.field }
+
+// Reason function returns reason value.
+func (e BatchSuggestWithLogitsRequestValidationError) Reason() string { return e.reason }
+
+// Cause function returns cause value.
+func (e BatchSuggestWithLogitsRequestValidationError) Cause() error { return e.cause }
+
+// Key function returns key value.
+func (e BatchSuggestWithLogitsRequestValidationError) Key() bool { return e.key }
+
+// ErrorName returns error name.
+func (e BatchSuggestWithLogitsRequestValidationError) ErrorName() string {
+	return "BatchSuggestWithLogitsRequestValidationError"
+}
+
+// Error satisfies the builtin error interface
+func (e BatchSuggestWithLogitsRequestValidationError) Error() string {
+	cause := ""
+	if e.cause != nil {
+		cause = fmt.Sprintf(" | caused by: %v", e.cause)
+	}
+
+	key := ""
+	if e.key {
+		key = "key for "
+	}
+
+	return fmt.Sprintf(
+		"invalid %sBatchSuggestWithLogitsRequest.%s: %s%s",
+		key,
+		e.field,
+		e.reason,
+		cause)
+}
+
+var _ error = BatchSuggestWithLogitsRequestValidationError{}
+
+var _ interface {
+	Field() string
+	Reason() string
+	Key() bool
+	Cause() error
+	ErrorName() string
+} = BatchSuggestWithLogitsRequestValidationError{}
