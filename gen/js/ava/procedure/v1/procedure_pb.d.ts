@@ -106,9 +106,6 @@ export class Step extends jspb.Message {
   getStepId(): string;
   setStepId(value: string): Step;
 
-  getKind(): StepKind;
-  setKind(value: StepKind): Step;
-
   getQuestion(): string;
   setQuestion(value: string): Step;
 
@@ -119,14 +116,6 @@ export class Step extends jspb.Message {
   setBranchesList(value: Array<Branch>): Step;
   clearBranchesList(): Step;
   addBranches(value?: Branch, index?: number): Branch;
-
-  getPromptRef(): string;
-  setPromptRef(value: string): Step;
-
-  getReadsList(): Array<string>;
-  setReadsList(value: Array<string>): Step;
-  clearReadsList(): Step;
-  addReads(value: string, index?: number): Step;
 
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): Step.AsObject;
@@ -139,12 +128,9 @@ export class Step extends jspb.Message {
 export namespace Step {
   export type AsObject = {
     stepId: string,
-    kind: StepKind,
     question: string,
     guidance: string,
     branchesList: Array<Branch.AsObject>,
-    promptRef: string,
-    readsList: Array<string>,
   }
 }
 
@@ -207,9 +193,4 @@ export enum FactType {
   FACT_TYPE_BOOL = 4,
   FACT_TYPE_INT = 5,
   FACT_TYPE_ENUM = 6,
-}
-export enum StepKind { 
-  STEP_KIND_UNSPECIFIED = 0,
-  STEP_KIND_TEST = 1,
-  STEP_KIND_JUDGMENT = 2,
 }

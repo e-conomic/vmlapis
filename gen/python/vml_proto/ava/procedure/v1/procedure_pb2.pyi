@@ -21,12 +21,6 @@ class FactType(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
     FACT_TYPE_BOOL: _ClassVar[FactType]
     FACT_TYPE_INT: _ClassVar[FactType]
     FACT_TYPE_ENUM: _ClassVar[FactType]
-
-class StepKind(int, metaclass=_enum_type_wrapper.EnumTypeWrapper):
-    __slots__ = ()
-    STEP_KIND_UNSPECIFIED: _ClassVar[StepKind]
-    STEP_KIND_TEST: _ClassVar[StepKind]
-    STEP_KIND_JUDGMENT: _ClassVar[StepKind]
 SOURCE_KIND_UNSPECIFIED: SourceKind
 SOURCE_KIND_CASE: SourceKind
 SOURCE_KIND_DERIVED: SourceKind
@@ -37,9 +31,6 @@ FACT_TYPE_DATE: FactType
 FACT_TYPE_BOOL: FactType
 FACT_TYPE_INT: FactType
 FACT_TYPE_ENUM: FactType
-STEP_KIND_UNSPECIFIED: StepKind
-STEP_KIND_TEST: StepKind
-STEP_KIND_JUDGMENT: StepKind
 
 class Procedure(_message.Message):
     __slots__ = ("facts", "produces", "root_step_id", "steps")
@@ -78,22 +69,16 @@ class FactSource(_message.Message):
     def __init__(self, kind: _Optional[_Union[SourceKind, str]] = ..., name: _Optional[str] = ..., field: _Optional[str] = ..., args: _Optional[_Iterable[str]] = ...) -> None: ...
 
 class Step(_message.Message):
-    __slots__ = ("step_id", "kind", "question", "guidance", "branches", "prompt_ref", "reads")
+    __slots__ = ("step_id", "question", "guidance", "branches")
     STEP_ID_FIELD_NUMBER: _ClassVar[int]
-    KIND_FIELD_NUMBER: _ClassVar[int]
     QUESTION_FIELD_NUMBER: _ClassVar[int]
     GUIDANCE_FIELD_NUMBER: _ClassVar[int]
     BRANCHES_FIELD_NUMBER: _ClassVar[int]
-    PROMPT_REF_FIELD_NUMBER: _ClassVar[int]
-    READS_FIELD_NUMBER: _ClassVar[int]
     step_id: str
-    kind: StepKind
     question: str
     guidance: str
     branches: _containers.RepeatedCompositeFieldContainer[Branch]
-    prompt_ref: str
-    reads: _containers.RepeatedScalarFieldContainer[str]
-    def __init__(self, step_id: _Optional[str] = ..., kind: _Optional[_Union[StepKind, str]] = ..., question: _Optional[str] = ..., guidance: _Optional[str] = ..., branches: _Optional[_Iterable[_Union[Branch, _Mapping]]] = ..., prompt_ref: _Optional[str] = ..., reads: _Optional[_Iterable[str]] = ...) -> None: ...
+    def __init__(self, step_id: _Optional[str] = ..., question: _Optional[str] = ..., guidance: _Optional[str] = ..., branches: _Optional[_Iterable[_Union[Branch, _Mapping]]] = ...) -> None: ...
 
 class Branch(_message.Message):
     __slots__ = ("branch_id", "label", "criterion", "when", "output_value", "next_step_id", "is_escalation", "rationale")

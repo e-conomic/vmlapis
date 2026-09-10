@@ -43,18 +43,9 @@ enum FactType {
 
 message Step {
   string step_id = 1;
-  StepKind kind = 2;
-  string question = 3;
-  string guidance = 4;
-  repeated Branch branches = 5;
-  string prompt_ref = 6;
-  repeated string reads = 7;
-}
-
-enum StepKind {
-  STEP_KIND_UNSPECIFIED = 0;
-  STEP_KIND_TEST = 1;
-  STEP_KIND_JUDGMENT = 2;
+  string question = 2;
+  string guidance = 3;
+  repeated Branch branches = 4;
 }
 
 message Branch {

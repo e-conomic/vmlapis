@@ -22,98 +22,50 @@ public interface StepOrBuilder extends
       getStepIdBytes();
 
   /**
-   * <code>.ava.procedure.v1.StepKind kind = 2 [json_name = "kind"];</code>
-   * @return The enum numeric value on the wire for kind.
-   */
-  int getKindValue();
-  /**
-   * <code>.ava.procedure.v1.StepKind kind = 2 [json_name = "kind"];</code>
-   * @return The kind.
-   */
-  ai.visma.ava.procedure.v1.StepKind getKind();
-
-  /**
-   * <code>string question = 3 [json_name = "question"];</code>
+   * <code>string question = 2 [json_name = "question"];</code>
    * @return The question.
    */
   java.lang.String getQuestion();
   /**
-   * <code>string question = 3 [json_name = "question"];</code>
+   * <code>string question = 2 [json_name = "question"];</code>
    * @return The bytes for question.
    */
   com.google.protobuf.ByteString
       getQuestionBytes();
 
   /**
-   * <code>string guidance = 4 [json_name = "guidance"];</code>
+   * <code>string guidance = 3 [json_name = "guidance"];</code>
    * @return The guidance.
    */
   java.lang.String getGuidance();
   /**
-   * <code>string guidance = 4 [json_name = "guidance"];</code>
+   * <code>string guidance = 3 [json_name = "guidance"];</code>
    * @return The bytes for guidance.
    */
   com.google.protobuf.ByteString
       getGuidanceBytes();
 
   /**
-   * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
+   * <code>repeated .ava.procedure.v1.Branch branches = 4 [json_name = "branches"];</code>
    */
   java.util.List<ai.visma.ava.procedure.v1.Branch> 
       getBranchesList();
   /**
-   * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
+   * <code>repeated .ava.procedure.v1.Branch branches = 4 [json_name = "branches"];</code>
    */
   ai.visma.ava.procedure.v1.Branch getBranches(int index);
   /**
-   * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
+   * <code>repeated .ava.procedure.v1.Branch branches = 4 [json_name = "branches"];</code>
    */
   int getBranchesCount();
   /**
-   * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
+   * <code>repeated .ava.procedure.v1.Branch branches = 4 [json_name = "branches"];</code>
    */
   java.util.List<? extends ai.visma.ava.procedure.v1.BranchOrBuilder> 
       getBranchesOrBuilderList();
   /**
-   * <code>repeated .ava.procedure.v1.Branch branches = 5 [json_name = "branches"];</code>
+   * <code>repeated .ava.procedure.v1.Branch branches = 4 [json_name = "branches"];</code>
    */
   ai.visma.ava.procedure.v1.BranchOrBuilder getBranchesOrBuilder(
       int index);
-
-  /**
-   * <code>string prompt_ref = 6 [json_name = "promptRef"];</code>
-   * @return The promptRef.
-   */
-  java.lang.String getPromptRef();
-  /**
-   * <code>string prompt_ref = 6 [json_name = "promptRef"];</code>
-   * @return The bytes for promptRef.
-   */
-  com.google.protobuf.ByteString
-      getPromptRefBytes();
-
-  /**
-   * <code>repeated string reads = 7 [json_name = "reads"];</code>
-   * @return A list containing the reads.
-   */
-  java.util.List<java.lang.String>
-      getReadsList();
-  /**
-   * <code>repeated string reads = 7 [json_name = "reads"];</code>
-   * @return The count of reads.
-   */
-  int getReadsCount();
-  /**
-   * <code>repeated string reads = 7 [json_name = "reads"];</code>
-   * @param index The index of the element to return.
-   * @return The reads at the given index.
-   */
-  java.lang.String getReads(int index);
-  /**
-   * <code>repeated string reads = 7 [json_name = "reads"];</code>
-   * @param index The index of the value to return.
-   * @return The bytes of the reads at the given index.
-   */
-  com.google.protobuf.ByteString
-      getReadsBytes(int index);
 }
