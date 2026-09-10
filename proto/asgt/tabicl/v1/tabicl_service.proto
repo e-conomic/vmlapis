@@ -12,9 +12,7 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/tabicl/v1;tabicl";
 // labeled examples.
 service TabiclService {
   rpc BatchSuggest(BatchSuggestRequest) returns (BatchSuggestResponse) {}
-  // BatchSuggestExamples predicts stored examples from their precomputed product type logits,
-  // using the dataset's examples added before them as the support set.
-  rpc BatchSuggestExamples(BatchSuggestExamplesRequest) returns (BatchSuggestExamplesResponse) {}
+  rpc BatchSuggestWithLogits(BatchSuggestWithLogitsRequest) returns (BatchSuggestResponse) {}
 }
 
 message BatchSuggestRequest {
@@ -38,7 +36,7 @@ message ExampleLogits {
   repeated float logits = 2 [(validate.rules).repeated = {min_items: 1}];
 }
 
-message BatchSuggestExamplesRequest {
+message BatchSuggestWithLogitsRequest {
   // Stored examples of one dataset with their precomputed logits.
   repeated ExampleLogits examples = 1 [(validate.rules).repeated = {
     min_items: 1
@@ -47,7 +45,3 @@ message BatchSuggestExamplesRequest {
   int32 suggest_limit = 2 [(validate.rules).int32 = {gt: 0}];
 }
 
-message BatchSuggestExamplesResponse {
-  // One prediction per example, in request order.
-  repeated asgt.type.Prediction predictions = 1;
-}
