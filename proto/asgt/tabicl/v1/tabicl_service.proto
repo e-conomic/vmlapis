@@ -32,12 +32,10 @@ message BatchSuggestResponse {
 
 message ExampleLogits {
   string example_id = 1 [(validate.rules).string = {min_len: 1}];
-  // Product type logits of the example's text, as returned by ProductTypeService.InternalBatchSuggestWithLogits.
   repeated float logits = 2 [(validate.rules).repeated = {min_items: 1}];
 }
 
 message BatchSuggestWithLogitsRequest {
-  // Stored examples of one dataset with their precomputed logits.
   repeated ExampleLogits examples = 1 [(validate.rules).repeated = {
     min_items: 1
     max_items: 512
