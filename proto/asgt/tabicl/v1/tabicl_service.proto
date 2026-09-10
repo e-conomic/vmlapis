@@ -42,4 +42,3 @@ message BatchSuggestWithLogitsRequest {
   }];
   int32 suggest_limit = 2 [(validate.rules).int32 = {gt: 0}];
 }
-
