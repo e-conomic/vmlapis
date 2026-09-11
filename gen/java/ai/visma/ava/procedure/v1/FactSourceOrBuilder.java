@@ -68,4 +68,16 @@ public interface FactSourceOrBuilder extends
    */
   com.google.protobuf.ByteString
       getArgsBytes(int index);
+
+  /**
+   * <code>string question = 5 [json_name = "question"];</code>
+   * @return The question.
+   */
+  java.lang.String getQuestion();
+  /**
+   * <code>string question = 5 [json_name = "question"];</code>
+   * @return The bytes for question.
+   */
+  com.google.protobuf.ByteString
+      getQuestionBytes();
 }
