@@ -23,12 +23,14 @@ message FactSource {
   string name = 2;
   string field = 3;
   repeated string args = 4;
+  string question = 5;
 }
 
 enum SourceKind {
   SOURCE_KIND_UNSPECIFIED = 0;
   SOURCE_KIND_CASE = 1;
   SOURCE_KIND_DERIVED = 2;
+  SOURCE_KIND_INFERRED = 3;
 }
 
 enum FactType {
