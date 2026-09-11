@@ -143,5 +143,66 @@ proto.asgt.tabicl.v1.TabiclServicePromiseClient.prototype.batchSuggest =
 };
 
 
+/**
+ * @const
+ * @type {!grpc.web.MethodDescriptor<
+ *   !proto.asgt.tabicl.v1.BatchSuggestWithLogitsRequest,
+ *   !proto.asgt.tabicl.v1.BatchSuggestResponse>}
+ */
+const methodDescriptor_TabiclService_BatchSuggestWithLogits = new grpc.web.MethodDescriptor(
+  '/asgt.tabicl.v1.TabiclService/BatchSuggestWithLogits',
+  grpc.web.MethodType.UNARY,
+  proto.asgt.tabicl.v1.BatchSuggestWithLogitsRequest,
+  proto.asgt.tabicl.v1.BatchSuggestResponse,
+  /**
+   * @param {!proto.asgt.tabicl.v1.BatchSuggestWithLogitsRequest} request
+   * @return {!Uint8Array}
+   */
+  function(request) {
+    return request.serializeBinary();
+  },
+  proto.asgt.tabicl.v1.BatchSuggestResponse.deserializeBinary
+);
+
+
+/**
+ * @param {!proto.asgt.tabicl.v1.BatchSuggestWithLogitsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>} metadata User defined
+ *     call metadata
+ * @param {function(?grpc.web.RpcError, ?proto.asgt.tabicl.v1.BatchSuggestResponse)}
+ *     callback The callback function(error, response)
+ * @return {!grpc.web.ClientReadableStream<!proto.asgt.tabicl.v1.BatchSuggestResponse>|undefined}
+ *     The XHR Node Readable Stream
+ */
+proto.asgt.tabicl.v1.TabiclServiceClient.prototype.batchSuggestWithLogits =
+    function(request, metadata, callback) {
+  return this.client_.rpcCall(this.hostname_ +
+      '/asgt.tabicl.v1.TabiclService/BatchSuggestWithLogits',
+      request,
+      metadata || {},
+      methodDescriptor_TabiclService_BatchSuggestWithLogits,
+      callback);
+};
+
+
+/**
+ * @param {!proto.asgt.tabicl.v1.BatchSuggestWithLogitsRequest} request The
+ *     request proto
+ * @param {?Object<string, string>=} metadata User defined
+ *     call metadata
+ * @return {!Promise<!proto.asgt.tabicl.v1.BatchSuggestResponse>}
+ *     Promise that resolves to the response
+ */
+proto.asgt.tabicl.v1.TabiclServicePromiseClient.prototype.batchSuggestWithLogits =
+    function(request, metadata) {
+  return this.client_.unaryCall(this.hostname_ +
+      '/asgt.tabicl.v1.TabiclService/BatchSuggestWithLogits',
+      request,
+      metadata || {},
+      methodDescriptor_TabiclService_BatchSuggestWithLogits);
+};
+
+
 module.exports = proto.asgt.tabicl.v1;
 

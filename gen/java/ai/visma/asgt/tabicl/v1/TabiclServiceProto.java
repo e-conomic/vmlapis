@@ -35,6 +35,16 @@ public final class TabiclServiceProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_asgt_tabicl_v1_BatchSuggestResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_tabicl_v1_ExampleLogits_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_asgt_tabicl_v1_ExampleLogits_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -54,15 +64,24 @@ public final class TabiclServiceProto {
       "\222\001\005\010\001\020\200\002R\006inputs\022,\n\rsuggest_limit\030\004 \001(\005B" +
       "\007\372B\004\032\002 \000R\014suggestLimit\"O\n\024BatchSuggestRe" +
       "sponse\0227\n\013predictions\030\001 \003(\0132\025.asgt.type." +
-      "PredictionR\013predictions2l\n\rTabiclService" +
-      "\022[\n\014BatchSuggest\022#.asgt.tabicl.v1.BatchS" +
-      "uggestRequest\032$.asgt.tabicl.v1.BatchSugg" +
-      "estResponse\"\000B\302\001\n\027ai.visma.asgt.tabicl.v" +
-      "1B\022TabiclServiceProtoP\001Z9github.com/e-co" +
-      "nomic/vmlapis/gen/go/asgt/tabicl/v1;tabi" +
-      "cl\242\002\003ATX\252\002\016Asgt.Tabicl.V1\312\002\016Asgt\\Tabicl\\" +
-      "V1\342\002\032Asgt\\Tabicl\\V1\\GPBMetadata\352\002\020Asgt::" +
-      "Tabicl::V1b\006proto3"
+      "PredictionR\013predictions\"Y\n\rExampleLogits" +
+      "\022&\n\nexample_id\030\001 \001(\tB\007\372B\004r\002\020\001R\texampleId" +
+      "\022 \n\006logits\030\002 \003(\002B\010\372B\005\222\001\002\010\001R\006logits\"\225\001\n\035B" +
+      "atchSuggestWithLogitsRequest\022F\n\010examples" +
+      "\030\001 \003(\0132\035.asgt.tabicl.v1.ExampleLogitsB\013\372" +
+      "B\010\222\001\005\010\001\020\200\004R\010examples\022,\n\rsuggest_limit\030\002 " +
+      "\001(\005B\007\372B\004\032\002 \000R\014suggestLimit2\335\001\n\rTabiclSer" +
+      "vice\022[\n\014BatchSuggest\022#.asgt.tabicl.v1.Ba" +
+      "tchSuggestRequest\032$.asgt.tabicl.v1.Batch" +
+      "SuggestResponse\"\000\022o\n\026BatchSuggestWithLog" +
+      "its\022-.asgt.tabicl.v1.BatchSuggestWithLog" +
+      "itsRequest\032$.asgt.tabicl.v1.BatchSuggest" +
+      "Response\"\000B\302\001\n\027ai.visma.asgt.tabicl.v1B\022" +
+      "TabiclServiceProtoP\001Z9github.com/e-conom" +
+      "ic/vmlapis/gen/go/asgt/tabicl/v1;tabicl\242" +
+      "\002\003ATX\252\002\016Asgt.Tabicl.V1\312\002\016Asgt\\Tabicl\\V1\342" +
+      "\002\032Asgt\\Tabicl\\V1\\GPBMetadata\352\002\020Asgt::Tab" +
+      "icl::V1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -83,6 +102,18 @@ public final class TabiclServiceProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_asgt_tabicl_v1_BatchSuggestResponse_descriptor,
         new java.lang.String[] { "Predictions", });
+    internal_static_asgt_tabicl_v1_ExampleLogits_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_asgt_tabicl_v1_ExampleLogits_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_asgt_tabicl_v1_ExampleLogits_descriptor,
+        new java.lang.String[] { "ExampleId", "Logits", });
+    internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_asgt_tabicl_v1_BatchSuggestWithLogitsRequest_descriptor,
+        new java.lang.String[] { "Examples", "SuggestLimit", });
     descriptor.resolveAllFeaturesImmutable();
     ai.visma.asgt.type.DataProto.getDescriptor();
     ai.visma.asgt.type.PredictionProto.getDescriptor();

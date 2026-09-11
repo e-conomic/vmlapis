@@ -33,19 +33,29 @@ namespace Asgt.Tabicl.V1 {
             "LkRhdGFCC/pCCJIBBQgBEIACUgZpbnB1dHMSLAoNc3VnZ2VzdF9saW1pdBgE",
             "IAEoBUIH+kIEGgIgAFIMc3VnZ2VzdExpbWl0Ik8KFEJhdGNoU3VnZ2VzdFJl",
             "c3BvbnNlEjcKC3ByZWRpY3Rpb25zGAEgAygLMhUuYXNndC50eXBlLlByZWRp",
-            "Y3Rpb25SC3ByZWRpY3Rpb25zMmwKDVRhYmljbFNlcnZpY2USWwoMQmF0Y2hT",
-            "dWdnZXN0EiMuYXNndC50YWJpY2wudjEuQmF0Y2hTdWdnZXN0UmVxdWVzdBok",
-            "LmFzZ3QudGFiaWNsLnYxLkJhdGNoU3VnZ2VzdFJlc3BvbnNlIgBCwgEKF2Fp",
-            "LnZpc21hLmFzZ3QudGFiaWNsLnYxQhJUYWJpY2xTZXJ2aWNlUHJvdG9QAVo5",
-            "Z2l0aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC90YWJp",
-            "Y2wvdjE7dGFiaWNsogIDQVRYqgIOQXNndC5UYWJpY2wuVjHKAg5Bc2d0XFRh",
-            "YmljbFxWMeICGkFzZ3RcVGFiaWNsXFYxXEdQQk1ldGFkYXRh6gIQQXNndDo6",
-            "VGFiaWNsOjpWMWIGcHJvdG8z"));
+            "Y3Rpb25SC3ByZWRpY3Rpb25zIlkKDUV4YW1wbGVMb2dpdHMSJgoKZXhhbXBs",
+            "ZV9pZBgBIAEoCUIH+kIEcgIQAVIJZXhhbXBsZUlkEiAKBmxvZ2l0cxgCIAMo",
+            "AkII+kIFkgECCAFSBmxvZ2l0cyKVAQodQmF0Y2hTdWdnZXN0V2l0aExvZ2l0",
+            "c1JlcXVlc3QSRgoIZXhhbXBsZXMYASADKAsyHS5hc2d0LnRhYmljbC52MS5F",
+            "eGFtcGxlTG9naXRzQgv6QgiSAQUIARCABFIIZXhhbXBsZXMSLAoNc3VnZ2Vz",
+            "dF9saW1pdBgCIAEoBUIH+kIEGgIgAFIMc3VnZ2VzdExpbWl0Mt0BCg1UYWJp",
+            "Y2xTZXJ2aWNlElsKDEJhdGNoU3VnZ2VzdBIjLmFzZ3QudGFiaWNsLnYxLkJh",
+            "dGNoU3VnZ2VzdFJlcXVlc3QaJC5hc2d0LnRhYmljbC52MS5CYXRjaFN1Z2dl",
+            "c3RSZXNwb25zZSIAEm8KFkJhdGNoU3VnZ2VzdFdpdGhMb2dpdHMSLS5hc2d0",
+            "LnRhYmljbC52MS5CYXRjaFN1Z2dlc3RXaXRoTG9naXRzUmVxdWVzdBokLmFz",
+            "Z3QudGFiaWNsLnYxLkJhdGNoU3VnZ2VzdFJlc3BvbnNlIgBCwgEKF2FpLnZp",
+            "c21hLmFzZ3QudGFiaWNsLnYxQhJUYWJpY2xTZXJ2aWNlUHJvdG9QAVo5Z2l0",
+            "aHViLmNvbS9lLWNvbm9taWMvdm1sYXBpcy9nZW4vZ28vYXNndC90YWJpY2wv",
+            "djE7dGFiaWNsogIDQVRYqgIOQXNndC5UYWJpY2wuVjHKAg5Bc2d0XFRhYmlj",
+            "bFxWMeICGkFzZ3RcVGFiaWNsXFYxXEdQQk1ldGFkYXRh6gIQQXNndDo6VGFi",
+            "aWNsOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Asgt.Type.DataReflection.Descriptor, global::Asgt.Type.PredictionReflection.Descriptor, global::Validate.ValidateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.BatchSuggestRequest), global::Asgt.Tabicl.V1.BatchSuggestRequest.Parser, new[]{ "DatasetName", "ConsumerName", "Inputs", "SuggestLimit" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.BatchSuggestResponse), global::Asgt.Tabicl.V1.BatchSuggestResponse.Parser, new[]{ "Predictions" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.BatchSuggestResponse), global::Asgt.Tabicl.V1.BatchSuggestResponse.Parser, new[]{ "Predictions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.ExampleLogits), global::Asgt.Tabicl.V1.ExampleLogits.Parser, new[]{ "ExampleId", "Logits" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest), global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest.Parser, new[]{ "Examples", "SuggestLimit" }, null, null, null, null)
           }));
     }
     #endregion
@@ -531,6 +541,456 @@ namespace Asgt.Tabicl.V1 {
             break;
           case 10: {
             predictions_.AddEntriesFrom(ref input, _repeated_predictions_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExampleLogits : pb::IMessage<ExampleLogits>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExampleLogits> _parser = new pb::MessageParser<ExampleLogits>(() => new ExampleLogits());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExampleLogits> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.Tabicl.V1.TabiclServiceReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExampleLogits() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExampleLogits(ExampleLogits other) : this() {
+      exampleId_ = other.exampleId_;
+      logits_ = other.logits_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExampleLogits Clone() {
+      return new ExampleLogits(this);
+    }
+
+    /// <summary>Field number for the "example_id" field.</summary>
+    public const int ExampleIdFieldNumber = 1;
+    private string exampleId_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ExampleId {
+      get { return exampleId_; }
+      set {
+        exampleId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "logits" field.</summary>
+    public const int LogitsFieldNumber = 2;
+    private static readonly pb::FieldCodec<float> _repeated_logits_codec
+        = pb::FieldCodec.ForFloat(18);
+    private readonly pbc::RepeatedField<float> logits_ = new pbc::RepeatedField<float>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<float> Logits {
+      get { return logits_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExampleLogits);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExampleLogits other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ExampleId != other.ExampleId) return false;
+      if(!logits_.Equals(other.logits_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ExampleId.Length != 0) hash ^= ExampleId.GetHashCode();
+      hash ^= logits_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ExampleId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ExampleId);
+      }
+      logits_.WriteTo(output, _repeated_logits_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ExampleId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ExampleId);
+      }
+      logits_.WriteTo(ref output, _repeated_logits_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ExampleId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExampleId);
+      }
+      size += logits_.CalculateSize(_repeated_logits_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExampleLogits other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ExampleId.Length != 0) {
+        ExampleId = other.ExampleId;
+      }
+      logits_.Add(other.logits_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ExampleId = input.ReadString();
+            break;
+          }
+          case 18:
+          case 21: {
+            logits_.AddEntriesFrom(input, _repeated_logits_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ExampleId = input.ReadString();
+            break;
+          }
+          case 18:
+          case 21: {
+            logits_.AddEntriesFrom(ref input, _repeated_logits_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchSuggestWithLogitsRequest : pb::IMessage<BatchSuggestWithLogitsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchSuggestWithLogitsRequest> _parser = new pb::MessageParser<BatchSuggestWithLogitsRequest>(() => new BatchSuggestWithLogitsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchSuggestWithLogitsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Asgt.Tabicl.V1.TabiclServiceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchSuggestWithLogitsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchSuggestWithLogitsRequest(BatchSuggestWithLogitsRequest other) : this() {
+      examples_ = other.examples_.Clone();
+      suggestLimit_ = other.suggestLimit_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchSuggestWithLogitsRequest Clone() {
+      return new BatchSuggestWithLogitsRequest(this);
+    }
+
+    /// <summary>Field number for the "examples" field.</summary>
+    public const int ExamplesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Asgt.Tabicl.V1.ExampleLogits> _repeated_examples_codec
+        = pb::FieldCodec.ForMessage(10, global::Asgt.Tabicl.V1.ExampleLogits.Parser);
+    private readonly pbc::RepeatedField<global::Asgt.Tabicl.V1.ExampleLogits> examples_ = new pbc::RepeatedField<global::Asgt.Tabicl.V1.ExampleLogits>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Asgt.Tabicl.V1.ExampleLogits> Examples {
+      get { return examples_; }
+    }
+
+    /// <summary>Field number for the "suggest_limit" field.</summary>
+    public const int SuggestLimitFieldNumber = 2;
+    private int suggestLimit_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int SuggestLimit {
+      get { return suggestLimit_; }
+      set {
+        suggestLimit_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchSuggestWithLogitsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchSuggestWithLogitsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!examples_.Equals(other.examples_)) return false;
+      if (SuggestLimit != other.SuggestLimit) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= examples_.GetHashCode();
+      if (SuggestLimit != 0) hash ^= SuggestLimit.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      examples_.WriteTo(output, _repeated_examples_codec);
+      if (SuggestLimit != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SuggestLimit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      examples_.WriteTo(ref output, _repeated_examples_codec);
+      if (SuggestLimit != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(SuggestLimit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += examples_.CalculateSize(_repeated_examples_codec);
+      if (SuggestLimit != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SuggestLimit);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchSuggestWithLogitsRequest other) {
+      if (other == null) {
+        return;
+      }
+      examples_.Add(other.examples_);
+      if (other.SuggestLimit != 0) {
+        SuggestLimit = other.SuggestLimit;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            examples_.AddEntriesFrom(input, _repeated_examples_codec);
+            break;
+          }
+          case 16: {
+            SuggestLimit = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            examples_.AddEntriesFrom(ref input, _repeated_examples_codec);
+            break;
+          }
+          case 16: {
+            SuggestLimit = input.ReadInt32();
             break;
           }
         }

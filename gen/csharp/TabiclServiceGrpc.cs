@@ -53,6 +53,8 @@ namespace Asgt.Tabicl.V1 {
     static readonly grpc::Marshaller<global::Asgt.Tabicl.V1.BatchSuggestRequest> __Marshaller_asgt_tabicl_v1_BatchSuggestRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.Tabicl.V1.BatchSuggestRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Asgt.Tabicl.V1.BatchSuggestResponse> __Marshaller_asgt_tabicl_v1_BatchSuggestResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.Tabicl.V1.BatchSuggestResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest> __Marshaller_asgt_tabicl_v1_BatchSuggestWithLogitsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Asgt.Tabicl.V1.BatchSuggestRequest, global::Asgt.Tabicl.V1.BatchSuggestResponse> __Method_BatchSuggest = new grpc::Method<global::Asgt.Tabicl.V1.BatchSuggestRequest, global::Asgt.Tabicl.V1.BatchSuggestResponse>(
@@ -60,6 +62,14 @@ namespace Asgt.Tabicl.V1 {
         __ServiceName,
         "BatchSuggest",
         __Marshaller_asgt_tabicl_v1_BatchSuggestRequest,
+        __Marshaller_asgt_tabicl_v1_BatchSuggestResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest, global::Asgt.Tabicl.V1.BatchSuggestResponse> __Method_BatchSuggestWithLogits = new grpc::Method<global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest, global::Asgt.Tabicl.V1.BatchSuggestResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchSuggestWithLogits",
+        __Marshaller_asgt_tabicl_v1_BatchSuggestWithLogitsRequest,
         __Marshaller_asgt_tabicl_v1_BatchSuggestResponse);
 
     /// <summary>Service descriptor</summary>
@@ -74,6 +84,12 @@ namespace Asgt.Tabicl.V1 {
     {
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Asgt.Tabicl.V1.BatchSuggestResponse> BatchSuggest(global::Asgt.Tabicl.V1.BatchSuggestRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Asgt.Tabicl.V1.BatchSuggestResponse> BatchSuggestWithLogits(global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -127,6 +143,26 @@ namespace Asgt.Tabicl.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchSuggest, null, options, request);
       }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Asgt.Tabicl.V1.BatchSuggestResponse BatchSuggestWithLogits(global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchSuggestWithLogits(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Asgt.Tabicl.V1.BatchSuggestResponse BatchSuggestWithLogits(global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchSuggestWithLogits, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Asgt.Tabicl.V1.BatchSuggestResponse> BatchSuggestWithLogitsAsync(global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchSuggestWithLogitsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Asgt.Tabicl.V1.BatchSuggestResponse> BatchSuggestWithLogitsAsync(global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchSuggestWithLogits, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override TabiclServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -141,7 +177,8 @@ namespace Asgt.Tabicl.V1 {
     public static grpc::ServerServiceDefinition BindService(TabiclServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_BatchSuggest, serviceImpl.BatchSuggest).Build();
+          .AddMethod(__Method_BatchSuggest, serviceImpl.BatchSuggest)
+          .AddMethod(__Method_BatchSuggestWithLogits, serviceImpl.BatchSuggestWithLogits).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -152,6 +189,7 @@ namespace Asgt.Tabicl.V1 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, TabiclServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_BatchSuggest, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Tabicl.V1.BatchSuggestRequest, global::Asgt.Tabicl.V1.BatchSuggestResponse>(serviceImpl.BatchSuggest));
+      serviceBinder.AddMethod(__Method_BatchSuggestWithLogits, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Asgt.Tabicl.V1.BatchSuggestWithLogitsRequest, global::Asgt.Tabicl.V1.BatchSuggestResponse>(serviceImpl.BatchSuggestWithLogits));
     }
 
   }

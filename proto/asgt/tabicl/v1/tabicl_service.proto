@@ -12,6 +12,7 @@ option go_package = "github.com/e-conomic/vmlapis/gen/go/asgt/tabicl/v1;tabicl";
 // labeled examples.
 service TabiclService {
   rpc BatchSuggest(BatchSuggestRequest) returns (BatchSuggestResponse) {}
+  rpc BatchSuggestWithLogits(BatchSuggestWithLogitsRequest) returns (BatchSuggestResponse) {}
 }
 
 message BatchSuggestRequest {
@@ -27,4 +28,17 @@ message BatchSuggestRequest {
 message BatchSuggestResponse {
   // One prediction per input, in request order.
   repeated asgt.type.Prediction predictions = 1;
+}
+
+message ExampleLogits {
+  string example_id = 1 [(validate.rules).string = {min_len: 1}];
+  repeated float logits = 2 [(validate.rules).repeated = {min_items: 1}];
+}
+
+message BatchSuggestWithLogitsRequest {
+  repeated ExampleLogits examples = 1 [(validate.rules).repeated = {
+    min_items: 1
+    max_items: 512
+  }];
+  int32 suggest_limit = 2 [(validate.rules).int32 = {gt: 0}];
 }

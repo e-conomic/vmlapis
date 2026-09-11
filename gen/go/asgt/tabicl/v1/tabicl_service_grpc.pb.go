@@ -19,7 +19,8 @@ import (
 const _ = grpc.SupportPackageIsVersion7
 
 const (
-	TabiclService_BatchSuggest_FullMethodName = "/asgt.tabicl.v1.TabiclService/BatchSuggest"
+	TabiclService_BatchSuggest_FullMethodName           = "/asgt.tabicl.v1.TabiclService/BatchSuggest"
+	TabiclService_BatchSuggestWithLogits_FullMethodName = "/asgt.tabicl.v1.TabiclService/BatchSuggestWithLogits"
 )
 
 // TabiclServiceClient is the client API for TabiclService service.
@@ -27,6 +28,7 @@ const (
 // For semantics around ctx use and closing/ending streaming RPCs, please refer to https://pkg.go.dev/google.golang.org/grpc/?tab=doc#ClientConn.NewStream.
 type TabiclServiceClient interface {
 	BatchSuggest(ctx context.Context, in *BatchSuggestRequest, opts ...grpc.CallOption) (*BatchSuggestResponse, error)
+	BatchSuggestWithLogits(ctx context.Context, in *BatchSuggestWithLogitsRequest, opts ...grpc.CallOption) (*BatchSuggestResponse, error)
 }
 
 type tabiclServiceClient struct {
@@ -46,11 +48,21 @@ func (c *tabiclServiceClient) BatchSuggest(ctx context.Context, in *BatchSuggest
 	return out, nil
 }
 
+func (c *tabiclServiceClient) BatchSuggestWithLogits(ctx context.Context, in *BatchSuggestWithLogitsRequest, opts ...grpc.CallOption) (*BatchSuggestResponse, error) {
+	out := new(BatchSuggestResponse)
+	err := c.cc.Invoke(ctx, TabiclService_BatchSuggestWithLogits_FullMethodName, in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // TabiclServiceServer is the server API for TabiclService service.
 // All implementations should embed UnimplementedTabiclServiceServer
 // for forward compatibility
 type TabiclServiceServer interface {
 	BatchSuggest(context.Context, *BatchSuggestRequest) (*BatchSuggestResponse, error)
+	BatchSuggestWithLogits(context.Context, *BatchSuggestWithLogitsRequest) (*BatchSuggestResponse, error)
 }
 
 // UnimplementedTabiclServiceServer should be embedded to have forward compatible implementations.
@@ -59,6 +71,9 @@ type UnimplementedTabiclServiceServer struct {
 
 func (UnimplementedTabiclServiceServer) BatchSuggest(context.Context, *BatchSuggestRequest) (*BatchSuggestResponse, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method BatchSuggest not implemented")
+}
+func (UnimplementedTabiclServiceServer) BatchSuggestWithLogits(context.Context, *BatchSuggestWithLogitsRequest) (*BatchSuggestResponse, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method BatchSuggestWithLogits not implemented")
 }
 
 // UnsafeTabiclServiceServer may be embedded to opt out of forward compatibility for this service.
@@ -90,6 +105,24 @@ func _TabiclService_BatchSuggest_Handler(srv interface{}, ctx context.Context, d
 	return interceptor(ctx, in, info, handler)
 }
 
+func _TabiclService_BatchSuggestWithLogits_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(BatchSuggestWithLogitsRequest)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(TabiclServiceServer).BatchSuggestWithLogits(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: TabiclService_BatchSuggestWithLogits_FullMethodName,
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(TabiclServiceServer).BatchSuggestWithLogits(ctx, req.(*BatchSuggestWithLogitsRequest))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // TabiclService_ServiceDesc is the grpc.ServiceDesc for TabiclService service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -100,6 +133,10 @@ var TabiclService_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "BatchSuggest",
 			Handler:    _TabiclService_BatchSuggest_Handler,
+		},
+		{
+			MethodName: "BatchSuggestWithLogits",
+			Handler:    _TabiclService_BatchSuggestWithLogits_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

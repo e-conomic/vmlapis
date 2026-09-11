@@ -1,4 +1,4 @@
-FROM buildpack-deps:bullseye-scm
+FROM buildpack-deps:bookworm-scm
 
 COPY --from=golang:1.24-bookworm /usr/local/go/ /usr/local/go/
 
