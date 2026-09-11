@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+package ava.procedure.v1;
+
+option go_package = "github.com/e-conomic/vmlapis/gen/go/ava/procedure/v1";
+
+message Procedure {
+  repeated Fact facts = 1;
+  string produces = 2;
+  string root_step_id = 3;
+  repeated Step steps = 4;
+}
+
+message Fact {
+  string name = 1;
+  FactType type = 2;
+  repeated string permitted = 3;
+  repeated FactSource sources = 4;
+}
+
+message FactSource {
+  SourceKind kind = 1;
+  string name = 2;
+  string field = 3;
+  repeated string args = 4;
+}
+
+enum SourceKind {
+  SOURCE_KIND_UNSPECIFIED = 0;
+  SOURCE_KIND_CASE = 1;
+  SOURCE_KIND_DERIVED = 2;
+}
+
+enum FactType {
+  FACT_TYPE_UNSPECIFIED = 0;
+  FACT_TYPE_STRING = 1;
+  FACT_TYPE_FLOAT = 2;
+  FACT_TYPE_DATE = 3;
+  FACT_TYPE_BOOL = 4;
+  FACT_TYPE_INT = 5;
+  FACT_TYPE_ENUM = 6;
+}
+
+message Step {
+  string step_id = 1;
+  string question = 2;
+  string guidance = 3;
+  repeated Branch branches = 4;
+}
+
+message Branch {
+  string branch_id = 1;
+  string label = 2;
+  string criterion = 3;
+  string when = 4;
+  string output_value = 5;
+  string next_step_id = 6;
+  bool is_escalation = 7;
+  string rationale = 8;
+}
