@@ -85,6 +85,9 @@ export class FactSource extends jspb.Message {
   clearArgsList(): FactSource;
   addArgs(value: string, index?: number): FactSource;
 
+  getQuestion(): string;
+  setQuestion(value: string): FactSource;
+
   serializeBinary(): Uint8Array;
   toObject(includeInstance?: boolean): FactSource.AsObject;
   static toObject(includeInstance: boolean, msg: FactSource): FactSource.AsObject;
@@ -99,6 +102,7 @@ export namespace FactSource {
     name: string,
     field: string,
     argsList: Array<string>,
+    question: string,
   }
 }
 
@@ -184,6 +188,7 @@ export enum SourceKind {
   SOURCE_KIND_UNSPECIFIED = 0,
   SOURCE_KIND_CASE = 1,
   SOURCE_KIND_DERIVED = 2,
+  SOURCE_KIND_INFERRED = 3,
 }
 export enum FactType { 
   FACT_TYPE_UNSPECIFIED = 0,

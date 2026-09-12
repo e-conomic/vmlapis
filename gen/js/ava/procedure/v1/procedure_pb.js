@@ -717,7 +717,8 @@ proto.ava.procedure.v1.FactSource.toObject = function(includeInstance, msg) {
     kind: jspb.Message.getFieldWithDefault(msg, 1, 0),
     name: jspb.Message.getFieldWithDefault(msg, 2, ""),
     field: jspb.Message.getFieldWithDefault(msg, 3, ""),
-    argsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f
+    argsList: (f = jspb.Message.getRepeatedField(msg, 4)) == null ? undefined : f,
+    question: jspb.Message.getFieldWithDefault(msg, 5, "")
   };
 
   if (includeInstance) {
@@ -769,6 +770,10 @@ proto.ava.procedure.v1.FactSource.deserializeBinaryFromReader = function(msg, re
     case 4:
       var value = /** @type {string} */ (reader.readString());
       msg.addArgs(value);
+      break;
+    case 5:
+      var value = /** @type {string} */ (reader.readString());
+      msg.setQuestion(value);
       break;
     default:
       reader.skipField();
@@ -824,6 +829,13 @@ proto.ava.procedure.v1.FactSource.serializeBinaryToWriter = function(message, wr
   if (f.length > 0) {
     writer.writeRepeatedString(
       4,
+      f
+    );
+  }
+  f = message.getQuestion();
+  if (f.length > 0) {
+    writer.writeString(
+      5,
       f
     );
   }
@@ -918,6 +930,24 @@ proto.ava.procedure.v1.FactSource.prototype.addArgs = function(value, opt_index)
  */
 proto.ava.procedure.v1.FactSource.prototype.clearArgsList = function() {
   return this.setArgsList([]);
+};
+
+
+/**
+ * optional string question = 5;
+ * @return {string}
+ */
+proto.ava.procedure.v1.FactSource.prototype.getQuestion = function() {
+  return /** @type {string} */ (jspb.Message.getFieldWithDefault(this, 5, ""));
+};
+
+
+/**
+ * @param {string} value
+ * @return {!proto.ava.procedure.v1.FactSource} returns this
+ */
+proto.ava.procedure.v1.FactSource.prototype.setQuestion = function(value) {
+  return jspb.Message.setProto3StringField(this, 5, value);
 };
 
 
@@ -1517,7 +1547,8 @@ proto.ava.procedure.v1.Branch.prototype.setRationale = function(value) {
 proto.ava.procedure.v1.SourceKind = {
   SOURCE_KIND_UNSPECIFIED: 0,
   SOURCE_KIND_CASE: 1,
-  SOURCE_KIND_DERIVED: 2
+  SOURCE_KIND_DERIVED: 2,
+  SOURCE_KIND_INFERRED: 3
 };
 
 /**
